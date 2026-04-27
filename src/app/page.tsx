@@ -146,8 +146,17 @@ export default function Home() {
 
       <footer className="border-t border-slate-200 bg-white/60 py-6">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} KI-Lernumgebung</p>
-          <p>Hosted on Vercel · Aktivitäten via Firebase</p>
+          <p>Pietro Rossi &amp; Christof Glaus</p>
+          <p>
+            <a
+              href="https://creativecommons.org/licenses/by/4.0/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-slate-700 underline"
+            >
+              CC BY 4.0
+            </a>
+          </p>
         </div>
       </footer>
     </main>
