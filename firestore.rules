@@ -1,0 +1,13 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Aktivitäten: jeder eingeloggte (auch anonyme) Nutzer darf für sich selbst schreiben.
+    // Lesen ist standardmässig gesperrt — Auswertung über Admin-SDK/Console.
+    match /activities/{docId} {
+      allow create: if request.auth != null
+        && request.resource.data.uid == request.auth.uid;
+      allow read, update, delete: if false;
+    }
+  }
+}
