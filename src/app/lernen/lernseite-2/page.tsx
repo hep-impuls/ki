@@ -15,6 +15,19 @@ export default function Lernseite2() {
         </Link>
 
         <header className="mt-8 border-b border-slate-200 pb-8">
+          <div
+            aria-hidden
+            className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-fuchsia-500 to-purple-700 text-white shadow-md"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="h-8 w-8"
+            >
+              <path d="M12 2.5l2.39 5.74 6.21.49-4.72 4.04 1.45 6.06L12 15.77l-5.33 3.06 1.45-6.06L3.4 8.73l6.21-.49L12 2.5z" />
+            </svg>
+          </div>
           <p className="text-xs font-semibold uppercase tracking-wider text-fuchsia-600">
             Modul 2
           </p>
