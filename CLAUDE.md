@@ -28,27 +28,36 @@ NEXT_PUBLIC_FIREBASE_APP_ID
 
 All variables are `NEXT_PUBLIC_` (browser-visible). `.env.local` is gitignored.
 
-## Architecture
+## Design references (authoritative)
 
-A minimal Next.js 16 App Router learning platform for teaching AI concepts, deployed to Vercel with Firebase for anonymous tracking.
+Two handoff docs in [design/](design/) define the **target architecture** this repo is being built toward. Read them before generating UI or touching the data layer:
 
-**Three-layer structure:**
+- **[design/handoff-layout.md](design/handoff-layout.md)** — visual system: MD3 color tokens as space-separated RGB CSS variables, Inter + Material Symbols Outlined fonts, custom Tailwind spacing/typography scale, the four layout components (`TopAppBar`, `SideNav`, `MobileNav`, `AppLayout` shell), responsive breakpoints, page inventory, and the GitHub Actions CI/CD pattern.
+- **[design/handoff-firebase.md](design/handoff-firebase.md)** — data architecture: anonymous student codes in localStorage (no Firebase Auth), classcode + SHA-256-hashed-secret teacher model, Firestore namespaced under `abstimmungen/{unitId}`, Cloud Functions (`europe-west6`) for all teacher operations, App Check rollout.
 
-- `src/app/` — Next.js App Router pages and root layout. `layout.tsx` sets `lang="de"` and global metadata. `page.tsx` is the landing page with module cards. Learning modules live under `lernen/lernseite-{1,2}/page.tsx`.
-- `src/components/ActivityTracker.tsx` — invisible client component (`"use client"`) mounted on each page; triggers anonymous sign-in and logs page-view events to Firestore.
-- `src/lib/` — Firebase singleton (`firebase.ts`) with lazy init guarded against SSR, and `logActivity()` helper (`activity.ts`) that writes to Firestore under `activities/{uid}/events`.
+**When generating content:** new learning pages live inside the `AppLayout` shell described in [handoff-layout.md §1–§2](design/handoff-layout.md), use the design tokens from §3, and follow the page-inventory conventions in §5 (e.g. `/module/[slug]` is the authoritative gate for required-modules). The unit-config object in §8 is the single source of truth for module metadata.
 
-**Data flow:** On first page load, `ActivityTracker` calls `signInAnonymously`, gets a UID, then calls `logActivity(type, payload)` which writes a Firestore document. `firestore.rules` restricts each user to writing only their own activity documents.
+## Architecture (current state)
+
+The repo is a **starting stub** — the handoff docs describe where it's headed. Today:
+
+- `src/app/` — Next.js App Router pages. `layout.tsx` sets `lang="de"` and global metadata. `page.tsx` is the landing page with module cards. Learning modules live under `lernen/lernseite-{1,2}/page.tsx` and are intentional placeholders.
+- `src/components/ActivityTracker.tsx` — invisible client component that signs in anonymously and logs page views. **Will be replaced** by the code+classcode session model from handoff-firebase.md (`lib/session.ts`, `ensureStudent`, no Firebase Auth).
+- `src/lib/` — Firebase singleton + `logActivity()` writing to `activities/{uid}/events`. **Will be reorganized** into `firebase.ts` / `paths.ts` / `session.ts` / `db.ts` / `api.ts` per handoff-firebase.md §5.
+- `firestore.rules` — currently restricts to the per-uid `activities` collection. **Will be replaced** by the `abstimmungen/{abstimmungId}/...` rules in handoff-firebase.md §3.
 
 **Path alias:** `@/*` resolves to `./src/*` (configured in `tsconfig.json`).
 
 ## Tech Stack
 
 - **Next.js 16** (App Router, Turbopack, React 19, TypeScript strict mode)
-- **Firebase 11** — Anonymous Auth + Firestore (client SDK only, no Admin SDK)
-- **Tailwind CSS 3** with a custom `brand` color palette (`tailwind.config.ts`)
-- **Vercel** for deployment (`vercel.json` pins the Next.js framework preset)
+- **Firebase 11** — Firestore client SDK; Cloud Functions for teacher operations (per handoff target). No Admin SDK in the browser.
+- **Tailwind CSS 3** — current config uses a `brand` palette; the target is the MD3 token system in handoff-layout.md §3.
+- **Vercel** for deployment (`vercel.json` pins the Next.js framework preset). Note: handoff-layout.md §6 describes a Firebase Hosting + GitHub Actions deploy — Vercel is the current choice for this repo; the `/api/**` rewrite to the Cloud Function is the only Firebase-Hosting-specific piece to reconcile.
 
-## Content Customization
+## Open questions
 
-New learning modules go under `src/app/lernen/`. Each module is a standard Next.js page file; add `<ActivityTracker page="..." />` to log visits. The existing `lernseite-1` and `lernseite-2` pages are intentional placeholders.
+- **Hosting vs. Cloud Function rewrite.** The handoffs assume Firebase Hosting, which provides the `/api/**` → Cloud Function rewrite that `lib/api.ts` depends on (handoff-firebase.md §5.5, handoff-layout.md §6). This repo deploys to **Vercel**. Before wiring up the teacher backend, decide:
+  - **Option A** — move hosting to Firebase Hosting (matches the handoffs verbatim; lose Vercel's preview deploys and Next.js edge features).
+  - **Option B** — stay on Vercel and replicate the rewrite via `vercel.json` `rewrites` pointing at `https://europe-west6-<project>.cloudfunctions.net/api/:path*` (keeps Vercel; adds a cross-origin hop that needs CORS already enabled in the Cloud Function — it is, in handoff-firebase.md §4.2).
+  - **Option C** — skip Cloud Functions entirely and implement the teacher endpoints as Next.js Route Handlers under `src/app/api/`, using the Firebase Admin SDK server-side. Diverges from the handoff but is the most idiomatic Next-on-Vercel choice.

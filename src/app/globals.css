@@ -4,6 +4,51 @@
 
 :root {
   color-scheme: light;
+
+  --color-primary:                   2 67 123;
+  --color-on-primary:                255 255 255;
+  --color-primary-container:         217 232 244;
+  --color-on-primary-container:      8 42 76;
+  --color-primary-fixed:             217 232 244;
+  --color-primary-fixed-dim:         170 198 226;
+  --color-on-primary-fixed:          8 42 76;
+  --color-on-primary-fixed-variant:  2 67 123;
+  --color-inverse-primary:           170 198 226;
+  --color-surface-tint:              2 67 123;
+
+  --color-secondary:                 90 95 101;
+  --color-on-secondary:              255 255 255;
+  --color-secondary-container:       222 227 235;
+  --color-on-secondary-container:    49 56 64;
+
+  --color-tertiary:                  29 105 64;
+  --color-on-tertiary:               255 255 255;
+  --color-tertiary-container:        205 234 215;
+  --color-on-tertiary-container:     16 64 36;
+
+  --color-error:                     186 26 26;
+  --color-on-error:                  255 255 255;
+  --color-error-container:           255 218 214;
+  --color-on-error-container:        147 0 10;
+
+  --color-background:                250 251 253;
+  --color-on-background:             24 28 34;
+  --color-surface:                   250 251 253;
+  --color-on-surface:                24 28 34;
+  --color-surface-variant:           226 232 240;
+  --color-on-surface-variant:        71 85 105;
+  --color-surface-dim:               220 226 235;
+  --color-surface-bright:            255 255 255;
+  --color-surface-container-lowest:  255 255 255;
+  --color-surface-container-low:     245 248 251;
+  --color-surface-container:         239 243 248;
+  --color-surface-container-high:    232 238 245;
+  --color-surface-container-highest: 226 233 241;
+  --color-inverse-surface:           45 55 72;
+  --color-inverse-on-surface:        237 242 248;
+
+  --color-outline:                   100 116 139;
+  --color-outline-variant:           203 213 225;
 }
 
 html,
@@ -12,5 +57,11 @@ body {
 }
 
 body {
-  @apply bg-slate-50 text-slate-900 antialiased;
+  @apply bg-background text-on-background antialiased font-sans;
 }
+
+/* SideNav collapsible groups (native <details>/<summary>) */
+.sn-group > summary { list-style: none; cursor: pointer; }
+.sn-group > summary::-webkit-details-marker { display: none; }
+.sn-group[open] > summary .sn-chevron { transform: rotate(180deg); }
+.sn-chevron { transition: transform 0.2s ease; }

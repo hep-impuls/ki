@@ -1,84 +1,66 @@
 import Link from "next/link";
 import ActivityTracker from "@/components/ActivityTracker";
-
-const lessons = [
-  {
-    id: "lernseite-1",
-    title: "Lernseite 1",
-    subtitle: "Platzhalter",
-    description:
-      "Hier entsteht das erste Lernmodul. Inhalt, Aufgaben und interaktive Elemente folgen.",
-    href: "/lernen/lernseite-1",
-    accent: "from-brand-500 to-brand-700",
-  },
-  {
-    id: "lernseite-2",
-    title: "Lernseite 2",
-    subtitle: "Platzhalter",
-    description:
-      "Hier entsteht das zweite Lernmodul. Inhalt, Aufgaben und interaktive Elemente folgen.",
-    href: "/lernen/lernseite-2",
-    accent: "from-fuchsia-500 to-purple-700",
-  },
-];
+import { unit } from "@/config/unit";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-hidden">
+    <main className="relative min-h-screen overflow-hidden bg-background">
       <ActivityTracker type="page_view" page="home" />
 
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(52,120,246,0.18),transparent_70%),radial-gradient(40%_40%_at_80%_30%,rgba(192,38,211,0.12),transparent_70%)]"
-      />
+        className="pointer-events-none absolute inset-0 -z-10"
+      >
+        <div className="absolute -top-32 left-1/4 h-[480px] w-[480px] rounded-full bg-primary-container blur-[120px] opacity-60" />
+        <div className="absolute top-32 right-0 h-[400px] w-[400px] rounded-full bg-tertiary-container blur-[120px] opacity-50" />
+      </div>
 
-      <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-        <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900 text-white shadow-sm">
-            <span className="text-lg font-bold">KI</span>
+      <header className="mx-auto flex max-w-[1280px] items-center justify-between px-lg py-lg">
+        <div className="flex items-center gap-sm">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-on-primary shadow-sm">
+            <span className="text-label-md font-bold">{unit.shortTitle}</span>
           </div>
           <div className="leading-tight">
-            <p className="text-sm font-semibold text-slate-900">KI-Lernumgebung</p>
-            <p className="text-xs text-slate-500">Interaktive Lehrmittel</p>
+            <p className="text-body-sm font-semibold text-on-surface">{unit.title}</p>
+            {unit.subtitle && (
+              <p className="text-label-sm text-on-surface-variant">{unit.subtitle}</p>
+            )}
           </div>
         </div>
-        <nav className="hidden gap-6 text-sm font-medium text-slate-600 sm:flex">
-          <a className="hover:text-slate-900" href="#module">
+        <nav className="hidden gap-lg text-body-sm font-medium text-on-surface-variant sm:flex">
+          <a className="hover:text-on-surface transition-colors" href="#module">
             Module
           </a>
-          <a className="hover:text-slate-900" href="#about">
+          <a className="hover:text-on-surface transition-colors" href="#about">
             Über
           </a>
         </nav>
       </header>
 
-      <section className="mx-auto max-w-6xl px-6 pb-12 pt-10 sm:pt-16">
+      <section className="mx-auto max-w-[1280px] px-lg pb-xl pt-lg sm:pt-xl">
         <div className="max-w-3xl">
-          <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-3 py-1 text-xs font-medium text-slate-600 shadow-sm backdrop-blur">
-            <span className="h-2 w-2 rounded-full bg-emerald-500" />
+          <span className="inline-flex items-center gap-sm rounded-xl border border-outline-variant bg-surface-bright/70 px-md py-xs text-label-sm text-on-surface-variant shadow-sm backdrop-blur">
+            <span className="h-2 w-2 rounded-full bg-tertiary" />
             Lernplattform · Beta
           </span>
-          <h1 className="mt-6 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+          <h1 className="mt-lg text-headline-xl text-on-surface">
             Künstliche Intelligenz{" "}
-            <span className="bg-gradient-to-r from-brand-600 to-fuchsia-600 bg-clip-text text-transparent">
-              verständlich entdecken
-            </span>
+            <span className="text-primary">verständlich entdecken</span>
           </h1>
-          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-600">
-            Eine kompakte Lernumgebung mit interaktiven Modulen rund um KI. Wähle
-            unten ein Modul, um direkt loszulegen.
+          <p className="mt-md max-w-2xl text-body-lg text-on-surface-variant">
+            {unit.description} Wähle unten ein Modul, um direkt loszulegen.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-lg flex flex-wrap gap-sm">
             <Link
               href="#module"
-              className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800"
+              className="inline-flex items-center gap-sm rounded-xl bg-primary px-lg py-sm text-label-md text-on-primary shadow-sm transition hover:bg-on-primary-container"
             >
               Jetzt starten
-              <span aria-hidden>→</span>
+              <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
             </Link>
             <a
               href="#about"
-              className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:bg-slate-100"
+              className="inline-flex items-center gap-sm rounded-xl border border-outline-variant bg-surface-bright px-lg py-sm text-label-md text-on-surface shadow-sm transition hover:bg-surface-container"
             >
               Mehr erfahren
             </a>
@@ -86,45 +68,49 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="module" className="mx-auto max-w-6xl px-6 pb-24">
-        <div className="mb-8 flex items-end justify-between">
+      <section id="module" className="mx-auto max-w-[1280px] px-lg pb-xxl">
+        <div className="mb-lg flex items-end justify-between">
           <div>
-            <h2 className="text-2xl font-bold tracking-tight text-slate-900">
-              Lernmodule
-            </h2>
-            <p className="mt-1 text-sm text-slate-600">
-              Zwei Platzhalter — Inhalte folgen.
+            <h2 className="text-headline-lg text-on-surface">Lernmodule</h2>
+            <p className="mt-xs text-body-sm text-on-surface-variant">
+              {unit.modules.length} Platzhalter — Inhalte folgen.
             </p>
           </div>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2">
-          {lessons.map((l) => (
+        <div className="grid gap-md sm:grid-cols-2">
+          {unit.modules.map((m) => (
             <Link
-              key={l.id}
-              href={l.href}
-              className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
+              key={m.slug}
+              href={m.href}
+              className="group relative overflow-hidden rounded-xl border border-outline-variant bg-surface-bright p-lg shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
             >
               <div
                 aria-hidden
-                className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${l.accent}`}
+                className="absolute inset-x-0 top-0 h-1 bg-primary"
               />
-              <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
-                {l.subtitle}
-              </p>
-              <h3 className="mt-2 text-xl font-semibold text-slate-900">
-                {l.title}
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-slate-600">
-                {l.description}
-              </p>
-              <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-700">
+              {m.icon && (
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary-container text-on-primary-container">
+                  <span className="material-symbols-outlined text-[22px]">{m.icon}</span>
+                </div>
+              )}
+              {m.subtitle && (
+                <p className="mt-sm text-label-sm uppercase tracking-wider text-on-surface-variant">
+                  {m.subtitle}
+                </p>
+              )}
+              <h3 className="mt-xs text-headline-sm text-on-surface">{m.title}</h3>
+              {m.description && (
+                <p className="mt-sm text-body-sm text-on-surface-variant">
+                  {m.description}
+                </p>
+              )}
+              <div className="mt-lg inline-flex items-center gap-sm text-label-md text-primary">
                 Modul öffnen
                 <span
-                  aria-hidden
-                  className="transition-transform group-hover:translate-x-1"
+                  className="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1"
                 >
-                  →
+                  arrow_forward
                 </span>
               </div>
             </Link>
@@ -132,10 +118,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="mx-auto max-w-6xl px-6 pb-24">
-        <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-          <h2 className="text-xl font-semibold text-slate-900">Über die Lernumgebung</h2>
-          <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">
+      <section id="about" className="mx-auto max-w-[1280px] px-lg pb-xxl">
+        <div className="rounded-xl border border-outline-variant bg-surface-bright p-lg shadow-sm">
+          <h2 className="text-headline-sm text-on-surface">Über die Lernumgebung</h2>
+          <p className="mt-sm max-w-3xl text-body-sm text-on-surface-variant">
             Diese Plattform bündelt interaktive Module zum Thema Künstliche
             Intelligenz. Lernfortschritt und Aktivitäten werden anonym in Firebase
             gespeichert, sodass du jederzeit dort weitermachen kannst, wo du
@@ -144,15 +130,15 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-slate-200 bg-white/60 py-6">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 text-xs text-slate-500">
+      <footer className="border-t border-outline-variant bg-surface-bright/60 py-md">
+        <div className="mx-auto flex max-w-[1280px] items-center justify-between px-lg text-label-sm text-on-surface-variant">
           <p>Pietro Rossi &amp; Christof Glaus</p>
           <p>
             <a
               href="https://creativecommons.org/licenses/by/4.0/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-slate-700 underline"
+              className="hover:text-on-surface underline"
             >
               CC BY 4.0
             </a>
