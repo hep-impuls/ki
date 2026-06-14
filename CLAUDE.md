@@ -2,6 +2,108 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Workflow & Kollaboration (zwingend)
+
+Das Repo wird von **zwei Personen** gepflegt (Pietro Rossi, Christof Glaus). Diese
+Regeln sind verpflichtend für jede Claude-Session — sie minimieren Merge-Konflikte
+und halten den Code-Stil konsistent.
+
+### Zu Session-Beginn
+
+1. **Diese CLAUDE.md zuerst vollständig lesen.**
+2. **`git pull --rebase origin main`** ausführen, bevor irgendetwas editiert wird.
+
+### Zu Session-Ende
+
+1. Geänderte Dateien mit aussagekräftiger Commit-Message committen.
+2. **`git pull --rebase origin main`** direkt vor dem Push.
+3. **`git push origin main`** — auch wenn der User es nicht explizit verlangt.
+
+### Owner-Mapping (Default)
+
+Wer was editiert, ohne sich vorher abzusprechen:
+
+| Owner | Pfade |
+|---|---|
+| **Pietro** | `src/app/lernen/lernseite-1/**`, `src/config/units/lernseite-1.ts` |
+| **Christof** | `src/app/lernen/lernseite-2/**`, `src/config/units/lernseite-2.ts` |
+| **gemeinsam** | Layout-Komponenten (`src/components/layout/**`), `src/app/page.tsx` (Titelseite), `src/app/layout.tsx`, `globals.css`, `tailwind.config.ts`, `src/config/unit.ts` (Aggregator), `firestore.rules`, `package.json` — **nur nach Absprache** ändern. |
+
+Die Titelseite (`src/app/page.tsx`) wird **am Ende** gemacht — vorher nicht
+inhaltlich anfassen.
+
+### Stil-Bibliothek (verbindlich)
+
+Damit beide Claude-Sessions identischen Code produzieren:
+
+- **Icons:** Material Symbols Outlined via `<span className="material-symbols-outlined">name</span>`. Keine Inline-SVGs, keine Emojis.
+- **Farben / Spacings / Typografie:** ausschliesslich die MD3-Tokens aus
+  [tailwind.config.ts](tailwind.config.ts) + [src/app/globals.css](src/app/globals.css) — z.B. `text-tertiary`,
+  `bg-surface-bright`, `border-outline-variant`, `text-headline-xl`, `gap-md`,
+  `pb-lg`. **Keine** Tailwind-Standardfarben (`slate-`, `fuchsia-`, `brand-`)
+  in neuen Komponenten.
+- **Sprache:** UI-Texte auf Deutsch.
+- **Datei-Layout:** jede Modul-Hub- und Submodul-Page wird in `<AppLayout>`
+  gewrappt und beginnt mit `<ActivityTracker type=... page=... />`.
+
+### Submodul-Template
+
+Eine neue Submodul-Page (`src/app/lernen/lernseite-{1,2}/{slug}/page.tsx`) sieht
+exakt so aus — nur `slug`, `Titel`, `Subtitel` und Inhalt anpassen:
+
+```tsx
+import Link from "next/link";
+import ActivityTracker from "@/components/ActivityTracker";
+import AppLayout from "@/components/layout/AppLayout";
+
+export default function Lernseite2SubmodulX() {
+  return (
+    <AppLayout>
+      <ActivityTracker
+        type="lesson_open"
+        page="lernseite-2/<slug>"
+        lessonId="lernseite-2-<slug>"
+      />
+
+      <Link
+        href="/lernen/lernseite-2"
+        className="inline-flex items-center gap-xs text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
+      >
+        <span className="material-symbols-outlined text-[18px]">arrow_back</span>
+        Zurück zu Lernseite 2
+      </Link>
+
+      <header className="mt-lg border-b border-outline-variant pb-lg">
+        <p className="text-label-md uppercase tracking-wider text-tertiary">
+          Lernseite 2 · <Titel>
+        </p>
+        <h1 className="mt-sm text-headline-xl text-on-surface"><Titel></h1>
+        <p className="mt-sm text-body-lg text-on-surface-variant">
+          <Kurzbeschreibung>
+        </p>
+      </header>
+
+      <section className="mt-xl space-y-md text-body-md text-on-surface-variant max-w-3xl">
+        <p>Inhalt …</p>
+      </section>
+    </AppLayout>
+  );
+}
+```
+
+Zusätzlich den passenden Eintrag in `src/config/units/lernseite-{1,2}.ts`
+ergänzen (`slug`, `title`, `href`, `icon`, `subtitle`, `description`). Die
+Aggregator-Datei `src/config/unit.ts` zieht das automatisch ein.
+
+### Inhalts-Skripte
+
+Inhaltliche Skripte (didaktische Grundlage pro Submodul — Lernziele,
+Schwerpunkte, Reflexionsfragen, Visualisierungsideen) leben in
+[docs/skripte/](docs/skripte/) als Markdown, ein File pro Submodul mit dem
+Namensmuster `lernseite-{n}-submodul-{m}-{kurzname}.md`. Wird vom Owner
+gepflegt und fortlaufend ergänzt. Die `page.tsx` ist die *Umsetzung*; das
+Skript ist die *Quelle*.
+
 ## Commands
 
 ```bash
