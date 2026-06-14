@@ -21,11 +21,11 @@ export default function Lernseite2Submodul1() {
 
       <header className="mt-lg border-b border-outline-variant pb-lg">
         <p className="text-label-md uppercase tracking-wider text-tertiary">
-          Lernseite 2 · Submodul 1
+          Lernseite 2 · Intro
         </p>
-        <h1 className="mt-sm text-headline-xl text-on-surface">Submodul 1</h1>
+        <h1 className="mt-sm text-headline-xl text-on-surface">Intro</h1>
         <p className="mt-sm text-body-lg text-on-surface-variant">
-          Platzhalter für das erste Submodul von Lernseite 2.
+          Worum es geht.
         </p>
       </header>
 

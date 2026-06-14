@@ -2,13 +2,13 @@ import Link from "next/link";
 import ActivityTracker from "@/components/ActivityTracker";
 import AppLayout from "@/components/layout/AppLayout";
 
-export default function Lernseite2Submodul2() {
+export default function Lernseite2Submodul4() {
   return (
     <AppLayout>
       <ActivityTracker
         type="lesson_open"
-        page="lernseite-2/submodul-2"
-        lessonId="lernseite-2-submodul-2"
+        page="lernseite-2/submodul-4"
+        lessonId="lernseite-2-submodul-4"
       />
 
       <Link
@@ -21,10 +21,10 @@ export default function Lernseite2Submodul2() {
 
       <header className="mt-lg border-b border-outline-variant pb-lg">
         <p className="text-label-md uppercase tracking-wider text-tertiary">
-          Lernseite 2 · Quellen, neu aufgespürt
+          Lernseite 2 · AI-Slop macht kreativ
         </p>
         <h1 className="mt-sm text-headline-xl text-on-surface">
-          Quellen, neu aufgespürt
+          AI-Slop macht kreativ
         </h1>
         <p className="mt-sm text-body-lg text-on-surface-variant">
           Inhalt folgt.
