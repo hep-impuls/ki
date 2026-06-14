@@ -10,6 +10,23 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-06-14 — Visualisierungen als Sandbox-Route (Option B)
+
+Inhaltliche Visualisierungen werden vor dem Einbau ins Submodul **im selben
+Repo unter `/sandbox/**`** als Werkstatt-Route entwickelt — nicht als separates
+Vercel-Projekt. Begründung: eigene URL zum Iterieren, kein zweites Repo / kein
+doppeltes Auth-System, minimaler Migrationspfad (Komponenten-Import).
+
+Konvention für solche Visualisierungs-Komponenten: **self-contained Client-
+Komponenten ohne Firebase-/Server-Logik**, damit sie Pietros geplanten Auth-/
+Hosting-Umzug unverändert überstehen.
+
+Erstes Beispiel: `/sandbox/intro-visual` (Akteurs-Modell für das Intro-Submodul
+von Lernseite 2). Sandbox-Routen tauchen nicht in der SideNav auf (die liest
+nur `unit.modules`).
+
+---
+
 ## 2026-06-14 — Inhalts-Skripte in `docs/skripte/`
 
 Jedes Submodul bekommt vor der Umsetzung in `page.tsx` ein **inhaltliches

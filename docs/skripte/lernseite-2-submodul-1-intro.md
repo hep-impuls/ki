@@ -96,21 +96,29 @@ Ideen, was sich in der Submodul-Page interaktiv umsetzen liesse:
 - **Begriffs-Tausch** — denselben Satz mit „Werkzeug", „KI" und „Akteur"
   formulieren, Wirkung vergleichen.
 
-## Mögliche separate Vercel-Seite (offen)
+## Werkstatt-Seite (entschieden: Sandbox-Route)
 
-Christof hat erwogen, eine eigenständige Visualisierungs-Seite zu bauen
-(eigenes Vercel-Projekt oder Sandbox-Route), um die Kernthese visuell
-durchzuspielen, bevor sie ins Hauptprojekt einfliesst.
+Die Visualisierung wird **im selben Repo** als Sandbox-Route entwickelt
+(Option B), nicht als separates Vercel-Projekt. Vorteil: eigene URL zum
+Experimentieren, kein zweites Repo / Auth-System, und der spätere Einbau ins
+Submodul ist nur ein Komponenten-Import.
 
-Drei Anschluss-Optionen, wenn die Visualisierung fertig ist:
+- **Werkstatt-URL:** `/sandbox/intro-visual`
+  ([live](https://hep-ki.vercel.app/sandbox/intro-visual))
+- **Seite:** [src/app/sandbox/intro-visual/page.tsx](../../src/app/sandbox/intro-visual/page.tsx)
+- **Visualisierungs-Komponente:** [src/app/sandbox/intro-visual/AkteursModell.tsx](../../src/app/sandbox/intro-visual/AkteursModell.tsx)
+  — self-contained Client-Komponente, **ohne** Firebase-/Server-Logik, damit
+  sie hosting- und auth-System-agnostisch bleibt.
 
-1. **iframe-Einbettung** in `submodul-1/page.tsx` — schnell, lose gekoppelt.
-2. **Komponente extrahieren** und direkt einbauen — sauber, aber Refactoring nötig.
-3. **Inline-Implementation** hier im Repo bauen, separate Vercel-Seite weglassen
-   — am wenigsten Overhead, wenn das Konzept gefestigt ist.
+**Erste Visualisierung:** *Akteurs-Modell* — Lernende ordnen Eigenschaften den
+drei Akteuren (Mensch · Werkzeug · KI) zu und decken das Muster auf: KI
+überlappt mit beiden, deckt sich aber mit keinem → „etwas Drittes".
 
-Entscheidung steht noch aus — siehe nachfolgenden Vorschlag im Chat oder
-direkter Eintrag in [../decisions.md](../decisions.md), sobald getroffen.
+**Migrationspfad ins Submodul:** Komponente `AkteursModell.tsx` nach
+`src/app/lernen/lernseite-2/submodul-1/` verschieben und in deren `page.tsx`
+importieren. Sandbox-Route danach löschen oder als Werkstatt behalten. Da die
+Komponente keine eigene Firebase-Logik enthält, übersteht sie Pietros
+geplanten Auth-/Hosting-Umzug unverändert.
 
 ## Quellen / Lektüre
 
