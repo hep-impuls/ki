@@ -55,6 +55,14 @@ The repo is a **starting stub** — the handoff docs describe where it's headed.
 - **Tailwind CSS 3** — current config uses a `brand` palette; the target is the MD3 token system in handoff-layout.md §3.
 - **Vercel** for deployment (`vercel.json` pins the Next.js framework preset). Note: handoff-layout.md §6 describes a Firebase Hosting + GitHub Actions deploy — Vercel is the current choice for this repo; the `/api/**` rewrite to the Cloud Function is the only Firebase-Hosting-specific piece to reconcile.
 
+## Decision log
+
+Sprach-, Naming-, Design- und Inhalts-Entscheidungen, die nicht direkt aus dem
+Code ersichtlich sind, werden in [docs/decisions.md](docs/decisions.md)
+festgehalten. Wenn Claude eine solche Entscheidung trifft oder vom User
+mitgeteilt bekommt: dort einen kurzen Eintrag (Datum + Entscheidung + betroffene
+Stellen) ergänzen — jüngste oben.
+
 ## Open questions
 
 - **Hosting vs. Cloud Function rewrite.** The handoffs assume Firebase Hosting, which provides the `/api/**` → Cloud Function rewrite that `lib/api.ts` depends on (handoff-firebase.md §5.5, handoff-layout.md §6). This repo deploys to **Vercel**. Before wiring up the teacher backend, decide:

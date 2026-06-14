@@ -1,4 +1,4 @@
-# KI-Lernumgebung
+# Lernumgebung zu KI
 
 Schlanke Lernplattform mit zwei Platzhalter-Lernseiten. **Next.js 14** (App Router) +
 **Tailwind CSS** + **Firebase** (Anonymous Auth & Firestore zum Aktivitäts-Tracking).

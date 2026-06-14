@@ -32,7 +32,7 @@ export interface UnitConfig {
 
 export const unit: UnitConfig = {
   id: "ki26",
-  title: "KI-Lernumgebung",
+  title: "Lernumgebung zu KI",
   shortTitle: "KI",
   subtitle: "Interaktive Lehrmittel",
   description:
