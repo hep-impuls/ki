@@ -10,6 +10,37 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-06-20 — Anonymität der Einstiegs-Umfrage: Datenminimierung (Modell A)
+
+Die Einstiegs-Umfrage (Perspektiven-Check, Lernseite 2 / Intro) wird so gebaut,
+dass **Einzelantworten möglichst nicht individuell rückführbar** sind. Leitsatz:
+**Datenminimierung schützt stärker als jede Security Rule** — wer Console-/
+Admin-Zugriff hat, umgeht Rules; was nie gespeichert wird, kann niemand
+auswerten (auch kein Admin, auch kein Leck).
+
+**Gewähltes Modell A — nur Aggregat:**
+- Eigene Antworten bleiben **im Browser** (localStorage/State), verlassen das
+  Gerät nicht als verknüpfter Datensatz.
+- Firestore speichert **nur Zähler** (pro Frage/Option `increment(+1)`),
+  inkl. Likes und einer groben Perspektiven-Kategorie — **keine
+  Einzeldatensätze**, also nichts zum Re-Identifizieren.
+- Persönlicher Vergleich „du vs. Gruppe" wird **client-seitig** gegen die
+  öffentlichen Aggregat-Zähler gerechnet.
+- KI kommentiert nur das Aggregat (ein Aufruf) → auch kostengünstig.
+
+**Falls je Einzeldocs nötig (Modell B), dann mit allen Schichten:** create-only/
+kein-read in Rules · Shape-Validierung (`keys().hasOnly([...])`, keine
+Identitätsfelder) · Zeitstempel vergröbern (Datum/Stunde) · k-Anonymität bei
+Anzeige (≥ 5) · kein Freitext in den anonymen Daten · App Check · optional
+ephemer (Function aggregiert, löscht Rohdoc).
+
+**Zuständigkeit:** `firestore.rules` ist gemeinsam/Pietro — Rules werden nach
+diesem Konzept koordiniert gebaut. Umfrage-Inhalt + Anonymitäts-Konzept sind
+Christofs Bereich. Umfrage-Entwurf:
+[skripte/lernseite-2-submodul-1-intro.md](skripte/lernseite-2-submodul-1-intro.md#einstiegs-umfrage--perspektiven-check).
+
+---
+
 ## 2026-06-14 — Visualisierungen als Sandbox-Route (Option B)
 
 Inhaltliche Visualisierungen werden vor dem Einbau ins Submodul **im selben
