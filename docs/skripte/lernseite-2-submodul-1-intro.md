@@ -48,6 +48,10 @@ KI — die weder klassisches **Werkzeug** noch **Person** ist, sondern ein
   Klärung von Begriffen und Perspektiven.
 - Sie erkennen KI als **neuen Akteur** und können benennen, was sie von einem
   Werkzeug unterscheidet.
+- Sie können KI mit Hilfe **philosophischer Perspektiven** einordnen
+  (Systemtheorie/Nassehi, Akteur-Netzwerk-Theorie/Latour, Haraway, nicht-
+  westliche Traditionen, Gabriel) und die **Streitfrage** benennen, ob KI ein
+  Akteur mit Handlungsmacht ist.
 - Sie reflektieren, was diese Verschiebung für ihren **persönlichen** und
   **beruflichen Alltag** bedeutet.
 
@@ -102,7 +106,8 @@ Plötzlich gibt es Systeme, die
 Sie sind weder klassisches **Werkzeug** (passiv, vom Menschen geführt) noch
 **Person** (mit Bewusstsein, Rechten, Verantwortung). Sie sind etwas Drittes —
 und die Sprache dafür fehlt vielen noch. Hier wird die Begriffsarbeit konkret
-(→ Akteurs-Modell unter „Visualisierungen").
+(→ Akteurs-Modell unter „Visualisierungen"; theoretischer Unterbau: Latours
+Akteur-Netzwerk-Theorie, siehe „Philosophische Verortung").
 
 **Leitfrage:** Warum reicht der Werkzeug-Begriff nicht mehr? Und was ist die
 Konsequenz, wenn wir trotzdem so über KI sprechen?
@@ -115,6 +120,87 @@ Konsequenz, wenn wir trotzdem so über KI sprechen?
   Orientierung.
 - **beruflich:** veränderte Rollen, neue Skills; was bleibt menschlich, was wird
   delegiert (branchenübergreifend, Bezug Lehrbetrieb).
+
+## Philosophische Verortung — die Denk-Landkarte
+
+Die „philosophische Perspektive" ist kein Deko-Element, sondern das Gerüst des
+Submoduls. Vier Stationen bauen aufeinander auf: von der **Diagnose** über die
+**Handlungsebene** bis zur **Gegenwart**.
+
+> *Gerüst zum Schärfen.* Christof ist die fachliche Instanz — Formulierungen,
+> Zuspitzungen und Belege bitte prüfen/korrigieren. Werkangaben sind als
+> Orientierung gedacht, nicht als geprüfte Zitate.
+
+### Station 1 — Diagnose: Was ist Digitalisierung? (Nassehi · Systemtheorie)
+
+Armin Nassehi (systemtheoretisch, in der Tradition Luhmanns) liest
+Digitalisierung nicht primär als Technik-, sondern als *Gesellschaftsgeschichte*:
+Die digitale Technik ist so erfolgreich, weil die moderne Gesellschaft längst in
+**Mustern** (Regelmässigkeiten) funktioniert — Digitalisierung entdeckt und
+verarbeitet diese Muster. → *Muster. Theorie der digitalen Gesellschaft* (2019).
+
+- **Einordnung KI:** KI ist die aktuelle Zuspitzung — Mustererkennung im grossen
+  Massstab. Hier *verorten* wir das Phänomen, bevor wir es bewerten.
+- **Leitfrage:** Wenn KI vor allem Muster verarbeitet — was sagt das über *uns*
+  und unsere Gesellschaft?
+
+### Station 2 — Gute Praxis: nicht-menschliche Akteure ernst nehmen (Latour · ANT)
+
+Bruno Latours **Akteur-Netzwerk-Theorie**: Auch *nicht-menschliche* Dinge
+„handeln" — sie ermöglichen, vermitteln, **zwingen** (Latours Beispiele: die
+Türschliessfeder; die „schlafende Polizistin"/Bodenschwelle, die uns zum Bremsen
+zwingt). Das Soziale ist ein Netz aus menschlichen *und* nicht-menschlichen
+Akteuren; beide sind symmetrisch zu beschreiben.
+
+- **Einordnung KI:** KI ist ein mächtiger nicht-menschlicher Akteur, der Handeln
+  mitformt. Gute Praxis heisst: ihre Handlungsmacht und ihren **Zwang** sehen —
+  und sehen, *was* wir an sie delegieren. → direkter Unterbau des
+  **Akteurs-Modells** (Mensch · Werkzeug · KI).
+- **Leitfrage:** Wo „zwingt" dich die KI bereits, ohne dass du es merkst?
+
+### Station 3 — Verflechtung & andere Traditionen (Haraway · nicht-westliche Philosophien)
+
+Donna Haraway (Cyborg-Manifest; „companion species"; „staying with the trouble"):
+Der Mensch ist kein abgetrenntes Subjekt, sondern konstitutiv mit
+Nicht-Menschlichem **verflochten**; Ethik = „response-ability" im Mit-Werden.
+
+Nicht-westliche, besonders **asiatische** Traditionen denken den Umgang mit
+nicht-menschlichen Akteuren oft *ohne* den scharfen westlichen Subjekt/Objekt-
+bzw. Mensch/Natur-Schnitt: Shintō-Animismus (Beseeltheit der Dinge),
+buddhistische **Interdependenz** (bedingtes Entstehen, Nicht-Selbst),
+daoistische Nicht-Dualität. Sie bieten alternative Sprach- und Haltungsangebote
+gegenüber KI.
+
+- **Achtung:** nicht exotisieren / essenzialisieren — als Perspektiven-
+  Erweiterung führen, konkrete Quellen mit Christof.
+- **Leitfrage:** Verändert sich mein Umgang mit KI, wenn ich *nicht* von
+  „Werkzeug gegen Mensch" ausgehe?
+
+### Station 4 — Gegenwart: den Umgang in den Vordergrund (Gabriel · Neuer Realismus)
+
+Markus Gabriel (Neuer Realismus) stellt **Umgang** und **Ethik** ins Zentrum:
+Verantwortung, menschliche Freiheit, die Unterscheidung von Simulation und
+Wirklichkeit. Pointiert: Maschinen „denken" nicht im menschlichen Sinn — eine
+Gefahr liegt in der **Anthropomorphisierung**. → u.a. *Der Sinn des Denkens*
+(2018); Arbeiten zur Ethik der KI / des digitalen Zeitalters.
+
+- **Einordnung KI:** Gabriel liefert die normative Orientierung für die gute
+  Praxis — der Mensch bleibt im Urteil.
+
+### Die Streitfrage (Herzstück)
+
+Hier liegt eine produktive **Spannung**: Latour/Haraway *verteilen*
+Handlungsmacht auf nicht-menschliche Akteure; Gabriel *bestreitet*, dass KI im
+starken Sinn denkt oder handelt, und pocht auf den kategorialen Unterschied und
+die menschliche Verantwortung. **Das Akteurs-Modell („KI als etwas Drittes")
+sitzt genau in dieser Debatte.** Für den Unterricht ist die offene Frage
+wertvoller als eine fertige Antwort:
+
+> *Ist KI ein Akteur mit eigener Handlungsmacht — oder ist genau das ein
+> Kategorienfehler?*
+
+Diese Streitfrage schliesst den Bogen zur Bewertungs-Schleife der Umfrage: dort
+*urteilt am Ende der Mensch* — auch über die KI.
 
 ## Einstiegs-Umfrage — Perspektiven-Check
 
@@ -266,7 +352,20 @@ geplanten Auth-/Hosting-Umzug unverändert.
 
 ## Quellen / Lektüre
 
-*(zu ergänzen)*
+Schlüsselwerke zur „Philosophischen Verortung" *(zur Prüfung/Ergänzung durch
+Christof — Ausgaben/Seitenangaben noch offen)*:
+
+- **Armin Nassehi:** *Muster. Theorie der digitalen Gesellschaft* (2019).
+- **Bruno Latour:** *Eine neue Soziologie für eine neue Gesellschaft*
+  (Reassembling the Social, 2005/2007); *Wir sind nie modern gewesen* (1991);
+  zur „Handlungsmacht der Dinge" u.a. „Where Are the Missing Masses?".
+- **Donna Haraway:** *Ein Manifest für Cyborgs* (1985); *Unruhig bleiben*
+  (Staying with the Trouble, 2016); *When Species Meet* (2008).
+- **Markus Gabriel:** *Der Sinn des Denkens* (2018); *Warum es die Welt nicht
+  gibt* (2013); Beiträge zur Ethik der KI.
+- **Nicht-westliche Traditionen** *(zu konkretisieren):* Shintō-Animismus;
+  buddhistische Interdependenz (pratītyasamutpāda) & Nicht-Selbst (anattā);
+  daoistische Nicht-Dualität (wu wei).
 
 ## Notizen / Offenes
 

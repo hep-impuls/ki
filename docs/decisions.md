@@ -10,6 +10,25 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-06-20 — Philosophische Verortung von Submodul 1 (Denk-Landkarte)
+
+Das Submodul „Philosophische Perspektive" erhält ein **theoretisches Gerüst** mit
+vier Stationen in didaktischer Sequenz: **Nassehi/Systemtheorie** (Diagnose: was
+ist Digitalisierung, KI dort einordnen) → **Latour/Akteur-Netzwerk-Theorie**
+(gute Praxis = nicht-menschliche Akteure und ihren „Zwang" sehen; Unterbau des
+Akteurs-Modells) → **Haraway + nicht-westliche/asiatische Philosophien**
+(Verflechtung Mensch–Nichtmensch; alternative, nicht subjekt/objekt-basierte
+Traditionen) → **Gabriel/Neuer Realismus** (Umgang & Ethik, Mensch bleibt im
+Urteil).
+
+Didaktisches Herzstück ist die **Streitfrage** „Ist KI ein Akteur mit
+Handlungsmacht — oder ist das ein Kategorienfehler?" (Spannung Latour/Haraway ↔
+Gabriel). Inhaltliche Linie kommt von Christof (Fach); Details im
+[Skript](skripte/lernseite-2-submodul-1-intro.md#philosophische-verortung--die-denk-landkarte).
+Werkangaben dort sind noch zu prüfen.
+
+---
+
 ## 2026-06-20 — Submodul 1 „Intro" → „Philosophische Perspektive"
 
 Das erste Submodul von Lernseite 2 heisst neu **„Philosophische Perspektive"**
