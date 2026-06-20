@@ -118,6 +118,14 @@ Konsequenz, wenn wir trotzdem so über KI sprechen?
 
 ## Einstiegs-Umfrage — Perspektiven-Check
 
+> **Interaktiver Entwurf live:** [/sandbox/umfrage](https://hep-ki.vercel.app/sandbox/umfrage)
+> ([Seite](../../src/app/sandbox/umfrage/page.tsx) ·
+> [Komponente](../../src/app/sandbox/umfrage/PerspektivenCheck.tsx)). Der
+> klickbare Entwurf bündelt die Fragen in **drei Kapiteln: Nutzung · Emotion ·
+> Chancen**. Die Kernfrage „Was ist KI für dich?" (F4) wandert ins
+> Akteurs-Modell statt in die Umfrage. Fragen/Optionen stehen als Daten oben in
+> der Komponente — zum Anpassen nur dort editieren.
+
 Die Umfrage ist der **Einstieg** ins Submodul. Sie erfasst die Start-Haltung der
 Lernenden auf drei Ebenen: **Umgang** (wie genutzt), **Gefühl** (was ausgelöst)
 und **Blick** (wie eingeordnet) — und macht so erlebbar, wie unterschiedlich
