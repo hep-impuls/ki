@@ -76,11 +76,12 @@ export const unit: UnitConfig = {
       submodules: [
         {
           slug: "submodul-1",
-          title: "Intro",
+          title: "Philosophische Perspektive",
           href: "/lernen/lernseite-2/submodul-1",
-          icon: "info",
-          subtitle: "Einstieg",
-          description: "Worum es geht.",
+          icon: "psychology",
+          subtitle: "Orientierung",
+          description:
+            "Die digitale Transformation verunsichert. Philosophie hilft, Begriffe zu klären und Orientierung zu finden.",
         },
         {
           slug: "submodul-2",

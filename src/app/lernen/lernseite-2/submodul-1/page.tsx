@@ -21,11 +21,15 @@ export default function Lernseite2Submodul1() {
 
       <header className="mt-lg border-b border-outline-variant pb-lg">
         <p className="text-label-md uppercase tracking-wider text-tertiary">
-          Lernseite 2 · Intro
+          Lernseite 2 · Philosophische Perspektive
         </p>
-        <h1 className="mt-sm text-headline-xl text-on-surface">Intro</h1>
+        <h1 className="mt-sm text-headline-xl text-on-surface">
+          Philosophische Perspektive
+        </h1>
         <p className="mt-sm text-body-lg text-on-surface-variant">
-          Worum es geht.
+          Die digitale Transformation verunsichert — und gerade darum hilft ein
+          philosophischer Blick: Begriffe klären, Perspektiven sortieren,
+          Orientierung finden.
         </p>
       </header>
 

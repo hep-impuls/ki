@@ -10,6 +10,30 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-06-20 — Submodul 1 „Intro" → „Philosophische Perspektive"
+
+Das erste Submodul von Lernseite 2 heisst neu **„Philosophische Perspektive"**
+(vorher „Intro"). Inhaltlicher roter Faden: **digitale Transformation** (erklären)
+→ **wachsende Unsicherheit** (Beispiele) → **Philosophie schafft Orientierung**
+(Begriffe & Perspektiven klären) → **neuer Akteur** (Begriffsarbeit, Akteurs-
+Modell). Die **Umfrage** (Perspektiven-Check) ist der **Einstieg** dieses
+Submoduls.
+
+Slug bleibt `submodul-1` (stabil; nur Anzeige-Titel/Icon geändert). Angepasst in
+[src/config/unit.ts](../src/config/unit.ts) (icon `psychology`, subtitle
+„Orientierung") und [submodul-1/page.tsx](../src/app/lernen/lernseite-2/submodul-1/page.tsx).
+Skript-Datei behält Namen `…-intro.md` (per submodul-1 verschlüsselt), Inhalt
+neu strukturiert.
+
+**Bewertungs-Schleife** als didaktischer Kern: KI kommentiert die
+Gesamtauswertung → Teilnehmende bewerten den Kommentar → KI gibt eine
+Meta-Einschätzung zu dieser Bewertung. Macht sichtbar, dass am Ende der Mensch
+urteilt (auch über die KI). KI-Aufrufe nur auf Aggregat-Ebene, selten ausgelöst,
+günstiges Modell — Details im
+[Skript](skripte/lernseite-2-submodul-1-intro.md#bewertungs-schleife-teilnehmende--ki).
+
+---
+
 ## 2026-06-20 — Anonymität der Einstiegs-Umfrage: Datenminimierung (Modell A)
 
 Die Einstiegs-Umfrage (Perspektiven-Check, Lernseite 2 / Intro) wird so gebaut,

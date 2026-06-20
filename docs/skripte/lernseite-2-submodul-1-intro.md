@@ -1,4 +1,4 @@
-# Skript: Intro — Eine ganz neue Partnerschaft
+# Skript: Philosophische Perspektive (Lernseite 2 · Submodul 1)
 
 > **Pfad in der App:** `/lernen/lernseite-2/submodul-1`
 > **Datei:** [src/app/lernen/lernseite-2/submodul-1/page.tsx](../../src/app/lernen/lernseite-2/submodul-1/page.tsx)
@@ -6,36 +6,91 @@
 > **Status:** Skelett — wird ergänzt
 > **Letzte Bearbeitung:** 2026-06-20
 
-Dieses Skript ist die inhaltliche Grundlage für das Intro-Submodul von
+Dieses Skript ist die inhaltliche Grundlage für das erste Submodul von
 *Lernseite 2 — Eine ganz neue Partnerschaft*. Es wird hier (versioniert im
 Repo) gepflegt und dient als Vorlage für die spätere Umsetzung in der
 Submodul-Page. Christof ergänzt fortlaufend; jede Änderung ist via `git log`
 nachvollziehbar.
 
+Das Submodul hiess zuerst „Intro" und wurde zu **„Philosophische Perspektive"**
+geschärft: Es soll auf **Begrifflichkeiten und Perspektiven** hinweisen — und
+zeigen, dass gerade die Philosophie in der digitalen Transformation wieder
+Orientierung gibt.
+
 ---
+
+## Roter Faden des Submoduls
+
+1. **Einstieg: Umfrage (Perspektiven-Check)** — die eigene Haltung gegenüber KI
+   sichtbar machen, bevor darüber nachgedacht wird.
+2. **Digitale Transformation** — erklären, was sich gerade grundlegend ändert.
+3. **Die Unsicherheit wächst** — an Beispielen zeigen, wo Orientierung verloren
+   geht.
+4. **Philosophie schafft Orientierung** — Begriffe klären, Perspektiven
+   sortieren; warum philosophisches Denken jetzt an Bedeutung gewinnt.
+5. **Ein neuer Akteur** — die zentrale Begriffsarbeit (Akteur vs. Werkzeug),
+   gestützt durch das interaktive Akteurs-Modell.
 
 ## Kernthese
 
-KI ist nicht nur ein neues Werkzeug — sie ist ein **neuer Akteur** auf der
-Bühne. Diese Unterscheidung (Akteur vs. Werkzeug) zu erfassen, ist der zentrale
-Lernschritt. Die Veränderung passierte schnell; entsprechend wichtig ist es,
-sie nicht aus Reflex weiter mit alten Begriffen (Werkzeug, Maschine, Programm)
-zu beschreiben.
+In der digitalen Transformation nimmt die **Unsicherheit** zu — alte Begriffe
+greifen nicht mehr, Routinen verlieren Halt. **Philosophie** ist dann kein
+Luxus, sondern das Werkzeug, um wieder **Orientierung** zu finden: Sie klärt
+Begriffe und macht Perspektiven sichtbar. Das zeigt sich beispielhaft an der
+KI — die weder klassisches **Werkzeug** noch **Person** ist, sondern ein
+**neuer Akteur**. Diese Unterscheidung zu erfassen, ist der zentrale Lernschritt.
 
 ## Lernziele
 
-- Die Lernenden erkennen KI als **neuen Akteur** und können benennen, was sie
-  von einem Werkzeug unterscheidet.
-- Sie reflektieren, was diese Verschiebung für ihren **persönlichen Alltag**
-  bedeutet (Kommunikation, Recherche, Entscheidungen, Kreativität).
-- Sie verstehen, was sie für den **beruflichen Alltag** bedeutet (Rollen, Skills,
-  Verantwortlichkeiten — branchenübergreifend).
-- Sie verstehen, **warum philosophisches Denken wieder an Bedeutung gewinnt**,
-  obwohl es im Curriculum (noch) nicht entsprechend gewichtet ist.
+- Die Lernenden können die **digitale Transformation** in Grundzügen erklären
+  und benennen, warum sie **Unsicherheit** erzeugt.
+- Sie erkennen, dass **philosophisches Denken Orientierung** stiftet — durch
+  Klärung von Begriffen und Perspektiven.
+- Sie erkennen KI als **neuen Akteur** und können benennen, was sie von einem
+  Werkzeug unterscheidet.
+- Sie reflektieren, was diese Verschiebung für ihren **persönlichen** und
+  **beruflichen Alltag** bedeutet.
 
 ## Schwerpunkte
 
-### 1. Ein neuer Akteur tritt auf
+### 1. Digitale Transformation — was sich gerade ändert
+
+*(zu ergänzen — kurze, verständliche Erklärung: Was meint „digitale
+Transformation"? Nicht nur neue Geräte, sondern dass sich Arbeit, Kommunikation,
+Wissen und Entscheidungen verschieben. Bezug zum Alltag der Lernenden.)*
+
+### 2. Die Unsicherheit wächst
+
+Wenn sich vieles gleichzeitig ändert, wird der Halt brüchig. Mögliche Beispiele
+*(zu ergänzen)*:
+
+- Was ist noch **echt** — Bild, Stimme, Video, Text?
+- Worauf kann ich mich beim **Recherchieren** noch verlassen?
+- Welche **Fähigkeiten** lohnen sich noch zu lernen?
+- Wer hat etwas **geschrieben/gemacht** — ich, die KI, beide?
+- Was darf ich, was ist erlaubt, wofür bin ich verantwortlich?
+
+**Leitfrage:** Wo erlebst *du* diese Unsicherheit konkret?
+
+### 3. Philosophie schafft Orientierung
+
+Genau hier setzt die Philosophie an: nicht mit fertigen Antworten, sondern mit
+**klaren Begriffen** und **sortierten Perspektiven**. Fragen, die jetzt *jeden*
+betreffen:
+
+- Was ist **Wissen** — und wann genügt es?
+- Was ist **Wahrheit** — und wer entscheidet darüber?
+- Was ist **Verantwortung** — wenn ein System mitentscheidet?
+- Was ist eigentlich **mein eigener Anteil** an einem Ergebnis?
+
+Diese Fragen sind nicht akademisch. Sie sind die operativen Werkzeuge, um mit KI
+souverän umzugehen. Obwohl im aktuellen ABU-Curriculum nicht entsprechend
+gewichtet, gewinnt philosophisches Denken dadurch an Bedeutung.
+
+**Leitfrage:** Warum gerade jetzt? Was kann Philosophie, was Informatik
+strukturell nicht leisten kann?
+
+### 4. Ein neuer Akteur tritt auf
 
 Plötzlich gibt es Systeme, die
 
@@ -46,46 +101,28 @@ Plötzlich gibt es Systeme, die
 
 Sie sind weder klassisches **Werkzeug** (passiv, vom Menschen geführt) noch
 **Person** (mit Bewusstsein, Rechten, Verantwortung). Sie sind etwas Drittes —
-und die Sprache dafür fehlt vielen noch.
+und die Sprache dafür fehlt vielen noch. Hier wird die Begriffsarbeit konkret
+(→ Akteurs-Modell unter „Visualisierungen").
 
 **Leitfrage:** Warum reicht der Werkzeug-Begriff nicht mehr? Und was ist die
 Konsequenz, wenn wir trotzdem so über KI sprechen?
 
-### 2. Was heisst das für den persönlichen Alltag?
+### 5. Was heisst das im Alltag?
 
-*(zu ergänzen — konkrete Szenen aus dem Alltag der Lernenden: Schreiben,
-Lernen, Recherchieren, Beraten lassen, kreativ sein, sich orientieren)*
+*(zu ergänzen)*
 
-### 3. Was heisst das für den beruflichen Alltag?
-
-*(zu ergänzen — Beispiele aus verschiedenen Branchen; veränderte Rollen,
-neue Skills; was bleibt menschlich, was wird delegiert)*
-
-### 4. Renaissance der Philosophie
-
-Obwohl im aktuellen ABU-Curriculum nicht entsprechend gewichtet: KI macht
-philosophisches Denken **wichtiger**, nicht entbehrlicher. Fragen, die jetzt
-*jeden* betreffen:
-
-- Was ist **Wissen** — und wann genügt es?
-- Was ist **Wahrheit** — und wer entscheidet darüber?
-- Was ist **Verantwortung** — wenn ein System mitentscheidet?
-- Was ist eigentlich **mein eigener Anteil** an einem Ergebnis?
-
-Diese Fragen sind nicht akademisch. Sie sind die operativen Werkzeuge, um mit
-KI souverän umzugehen.
-
-**Leitfrage:** Warum gerade jetzt? Was kann Philosophie, was Informatik
-strukturell nicht leisten kann?
+- **persönlich:** Kommunikation, Recherche, Entscheidungen, Kreativität,
+  Orientierung.
+- **beruflich:** veränderte Rollen, neue Skills; was bleibt menschlich, was wird
+  delegiert (branchenübergreifend, Bezug Lehrbetrieb).
 
 ## Einstiegs-Umfrage — Perspektiven-Check
 
 Die Umfrage ist der **Einstieg** ins Submodul. Sie erfasst die Start-Haltung der
 Lernenden auf drei Ebenen: **Umgang** (wie genutzt), **Gefühl** (was ausgelöst)
-und **Blick** (wie eingeordnet). Nach dem Absenden bekommt jede:r eine
-**persönliche Auswertung im Vergleich zur Gruppe** (ohne KI, reine Statistik);
-die KI kommentiert anschliessend einmalig die **Gesamtauswertung**, und dieser
-Kommentar kann gelikt werden.
+und **Blick** (wie eingeordnet) — und macht so erlebbar, wie unterschiedlich
+man auf dasselbe Phänomen blickt. Das ist der Aufhänger für die Begriffs- und
+Perspektivenarbeit.
 
 Reihenfolge bewusst von konkret → tief: erst Verhalten (leichter Einstieg),
 dann Gefühle, dann Entwicklung, zuletzt die begriffliche Einordnung — Letztere
@@ -149,10 +186,33 @@ zielt direkt auf die Akteurs-These und speist das Akteurs-Modell.
 - **F2.1 (Gefühle)** → Stimmungsbild der Gruppe; die KI kann die vorherrschende
   Stimmung im Gesamt-Kommentar aufgreifen.
 
+### Bewertungs-Schleife (Teilnehmende ↔ KI)
+
+Die Umfrage soll nicht nur ausgewertet, sondern auch **bewertet** werden — und
+die KI reflektiert diese Bewertung. Ziel ist genau der Perspektiven-Wandel:
+sichtbar machen, dass am Ende *der Mensch urteilt*, auch über die KI.
+
+1. Teilnehmende füllen die Umfrage aus.
+2. **Persönliche Auswertung** im Vergleich zur Gruppe (client-seitig, **keine KI**).
+3. **KI-Kommentar zur Gesamtauswertung** — ein Aufruf, liest **nur das Aggregat**.
+4. **Teilnehmende bewerten diesen Kommentar:** „Findest du diese Einschätzung
+   passend?" (z.B. passt / teilweise / passt nicht — bzw. Like). Wird als Zähler
+   aggregiert.
+5. **KI-Meta-Einschätzung:** Die KI gibt eine kurze Einschätzung, *inwiefern sie
+   die Rückmeldung der Teilnehmenden passend findet* — ebenfalls nur auf
+   Aggregat-Ebene und **selten ausgelöst** (z.B. ab N Bewertungen oder durch die
+   Lehrperson), um Kosten zu minimieren.
+
+> **Datenschutz & Kosten:** Nur Aggregat-Zähler (Modell A), kein Freitext, die KI
+> sieht nie Einzelantworten. KI-Aufrufe geschehen **nur auf Aggregat-Ebene**
+> (nicht pro Person), mit günstigem Modell (Claude Haiku) und Caching.
+> Anbindung später, koordiniert mit Pietro (API-Key als Server-Env-Var).
+
 ### Offen
 
 - Genaue Skalen-Beschriftungen, evtl. eine Frage je Teil kürzen (Länge!).
 - Formulierungen jugend-/lehrlingsgerecht gegenlesen.
+- Bewertungs-Skala für Schritt 4 festlegen (Like vs. 3-stufig vs. 1–5).
 
 ## Reflexionsfragen für die Lernenden
 
@@ -163,7 +223,7 @@ zielt direkt auf die Akteurs-These und speist das Akteurs-Modell.
 Ideen, was sich in der Submodul-Page interaktiv umsetzen liesse:
 
 - **Akteurs-Modell** — Vergleich Mensch · Werkzeug · KI als drei Spalten, die
-  Lernenden ordnen Eigenschaften zu.
+  Lernenden ordnen Eigenschaften zu. *(im Sandbox bereits umgesetzt, s.u.)*
 - **Skill-Shift-Diagramm** — was an Routine-Arbeit wegfällt, was an
   Urteilsarbeit dazukommt.
 - **„Wer entscheidet?"-Slider** — Szenarien (Bewerbung, Diagnose, Auswahl von
