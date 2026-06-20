@@ -371,3 +371,59 @@ Christof — Ausgaben/Seitenangaben noch offen)*:
 
 *(freies Notizfeld für Christof — alles, was sich noch nicht in eine Sektion
 einsortieren lässt)*
+
+### Thread: Zeitdiagnose in drei Schritten (Rohgedanke, 2026-06-20)
+
+Wie kam es zum verlorenen „Wir"? Eine **Genealogie in drei Schritten** — taugt
+als historischer Auftakt des Submoduls (vor/zur „Unsicherheit wächst"):
+
+1. **Moderne — das Versprechen:** Es setzt sich durch, dass **Fortschritt**
+   möglich ist und sich der Einzelne **verwirklichen** kann. Das autonome
+   Subjekt, Aufbruch, Machbarkeit. (Aufklärung, Fortschrittsoptimismus.)
+2. **Spätmoderne — die Kehrseite:** Die **Subjektivität nimmt überhand** — jede:r
+   verwirklicht sich, aber es gibt **keinen gemeinsamen Punkt** mehr, keine
+   geteilte Erzählung. *(evtl. Anschlüsse, zu prüfen: Ende der grossen
+   Erzählungen/Lyotard; Individualisierung/Beck; Gesellschaft der
+   Singularitäten/Reckwitz.)*
+3. **Gegenwart — die Vernetzung von allem:** Menschen, Dinge, Daten, KI werden
+   **vernetzt**. Paradox: maximale Verbindung *technisch*, aber das **Wir** fehlt
+   weiter — oder muss neu *komponiert* werden. *(Anschluss: Nassehi/digitale
+   Gesellschaft, Latour/Netz der Akteure; evtl. Castells/Netzwerkgesellschaft.)*
+
+→ **Bogen:** Aus dem Fortschritts- und Selbstverwirklichungsversprechen der
+Moderne wird über die Hyper-Subjektivierung der heutige Zustand **totaler
+Vernetzung** — in dem KI als neuer Akteur auftritt. Genau hier setzt die
+philosophische Orientierung an. Der Thread unten („Zwang / verlorenes Wir")
+ist die *erlebte* Seite dieses dritten Schritts.
+
+### Thread: Der Zwang und das verlorene „Wir" (Rohgedanke, 2026-06-20)
+
+Wir erleben uns oft als **gezwungen**, zu tun, was andere wollen:
+
+- die **Social-Media-Industrie**,
+- die **KI-Unternehmen**,
+- die **Arbeitswelt**, die immer mehr von uns will,
+- die **Freizeit**, die auch noch verplant/optimiert wird,
+- und **wir selbst**, die „alles wollen".
+
+Folge: Wir **stimmen uns nicht mehr untereinander ab** — das **Wir-Gefühl** geht
+verloren (Vereinzelung).
+
+Anschluss an die Denk-Landkarte:
+
+- **Nassehi:** Das Getriebensein ist die Erfahrung der funktional
+  differenzierten Gesellschaft — viele Systeme, kein Steuerungszentrum. Das
+  „Wir" war nie ein Kontrollraum.
+- **Latour:** Ausweg = die Akteure (auch KI) sichtbar machen und den
+  gemeinsamen Welt-Zusammenhang neu *komponieren* — ANT ist nicht fatalistisch.
+- **Gabriel:** liefert das normative „Wir" — moralische Orientierung, neue
+  Aufklärung; ein geteiltes Wir trotz Differenz.
+
+→ **Existenzieller Aufhänger des Submoduls:** „Warum betrifft mich das?" Weil ich
+mich getrieben fühle und das Wir zerfällt. „Gute Praxis mit KI" ist ein
+Spezialfall der grösseren Frage: Wie bleiben *wir gemeinsam* selbstbestimmt,
+wenn Systeme uns treiben?
+
+**Offen / wohin damit:** als Einstiegs-Hook *vor* der Umfrage, oder als
+Vertiefung von Schwerpunkt 2 („Die Unsicherheit wächst")? Der letzte Satz des
+Rohgedankens war evtl. unfertig — Christof ergänzt/entscheidet.
