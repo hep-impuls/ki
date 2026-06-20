@@ -372,6 +372,37 @@ Christof — Ausgaben/Seitenangaben noch offen)*:
 *(freies Notizfeld für Christof — alles, was sich noch nicht in eine Sektion
 einsortieren lässt)*
 
+### Thread: Warum Philosophie & Kunst? — Den Blick sichtbar machen (Leitprinzip, 2026-06-20)
+
+Begründung/Credo des Submoduls: Philosophische Theorien haben **immer schon**
+unsere Perspektive geprägt — Philosophie fasst unseren Blick in **(theoretische)
+Worte**. Kunst tut das Parallele auf der sinnlichen Ebene: sie **macht unseren
+Blick sichtbar**, zeigt uns, *was* wir sehen. Beide enthüllen die Perspektive,
+in der wir immer schon stehen, und machen das Selbstverständliche fragwürdig.
+
+- **Paul Klee:** „Kunst gibt nicht das Sichtbare wieder, sondern macht
+  sichtbar." (*Schöpferische Konfession*, 1920) — fast wörtlich der Punkt.
+- Anschlüsse *(zu prüfen/auswählen):* Wittgenstein (Aspektsehen, „etwas als
+  etwas sehen" — Hase-Ente); Kant (unsere Kategorien strukturieren, was wir
+  überhaupt sehen); Kuhn/Hanson (Theoriegeladenheit der Wahrnehmung); Foucault
+  (der „Blick"/épistème — was in einer Zeit sag- und sichtbar ist); Berger,
+  *Ways of Seeing*; Merleau-Ponty, *Das Auge und der Geist*; Gabriel (Sinnfelder
+  — wir sehen immer in einem Sinnfeld).
+
+Didaktische Pointe — verklammert die Bausteine zu einem Dreiklang:
+
+- Die **Umfrage** macht *deinen* Blick auf KI sichtbar (für dich selbst).
+- Die **Philosophie** (Denk-Landkarte) gibt diesem Blick **Worte** und
+  alternative Perspektiven.
+- Die **Kunst/Visualisierung** (Akteurs-Modell) **macht sichtbar**, was sonst
+  nur Begriff bliebe.
+- **Credo:** Wir behaupten nicht *die Wahrheit über KI* — wir machen deinen Blick
+  sichtbar und geben dir Begriffe, ihn zu verändern. Das *ist* der
+  Perspektiven-Wandel.
+
+→ Taugt als **Begründungs-Absatz** ganz vorne im Submodul („Warum eine
+philosophische Perspektive?").
+
 ### Thread: Zeitdiagnose in drei Schritten (Rohgedanke, 2026-06-20)
 
 Wie kam es zum verlorenen „Wir"? Eine **Genealogie in drei Schritten** — taugt
