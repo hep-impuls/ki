@@ -403,6 +403,26 @@ Didaktische Pointe — verklammert die Bausteine zu einem Dreiklang:
 → Taugt als **Begründungs-Absatz** ganz vorne im Submodul („Warum eine
 philosophische Perspektive?").
 
+### Thread: Philosophie gewinnt gesellschaftlich an Bedeutung (Rohgedanke, 2026-06-20)
+
+Kurz zu zeigen: Gerade in der **aktuellen digitalen Transformation** wird
+Philosophie **gesellschaftlich relevanter** — nicht weniger.
+
+- **Technische Fragen werden zu Wertfragen:** Was soll automatisiert werden? Wer
+  haftet? Was ist fair? Das sind philosophische, keine technischen Fragen — und
+  sie betreffen jetzt *alle*.
+- **Die „grossen Fragen" werden praktisch:** Wahrheit (Deepfakes), Wissen (welche
+  Quelle zählt?), Verantwortung (wer entscheidet?), „was ist KI?" — vom Seminar
+  in Alltag und Politik.
+- **Tempo braucht Orientierung:** je schneller die Technik, desto grösser der
+  Bedarf an Begriffsklärung und ethischer Orientierung.
+- **Rückkehr in die Öffentlichkeit:** Ethikräte, KI-Ethik-Gremien, öffentliche
+  Debatte (z.B. Gabriel).
+
+**Leitfrage:** Warum ist Philosophie heute keine „Orchideen-Disziplin" mehr,
+sondern gesellschaftlich gefragt? → kurzer Baustein für Schwerpunkt 3 / den
+Einstieg.
+
 ### Thread: Zeitdiagnose in drei Schritten (Rohgedanke, 2026-06-20)
 
 Wie kam es zum verlorenen „Wir"? Eine **Genealogie in drei Schritten** — taugt
