@@ -36,8 +36,10 @@ export default function SandboxPhilosophieSchablonen() {
         </h1>
         <p className="mt-sm max-w-3xl text-body-lg text-on-surface-variant">
           Jede Zeit des Umbruchs fand eine Philosophie, die ihr Orientierung gab —
-          eine Schablone, durch die man die Welt neu sehen konnte. Und heute, mit
-          KI? Tippe die Stationen an.
+          eine Schablone, durch die man die Welt neu sehen konnte. Und die Kunst
+          jeder Epoche macht diesen Blick sichtbar. Tippe eine Station an: das
+          ganze Kunstwerk erscheint, mit einer kurzen Erklärung, warum es genau
+          diese Schablone zeigt. Und heute, mit KI?
         </p>
       </header>
 

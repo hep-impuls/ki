@@ -9,7 +9,9 @@ import { useState } from "react";
  * Transformation / KI) suchen wir die nächste.
  *
  * Bilder: gemeinfreie Kunstwerke (Wikimedia Commons), lokal unter /public/art,
- * Nachweis in public/art/CREDITS.md.
+ * Nachweis in public/art/CREDITS.md. Das ganze Werk wird gezeigt (object-contain,
+ * nichts beschnitten). Jede Station erklärt im aufgeklappten Zustand, WARUM
+ * gerade dieses Bild gewählt wurde ("Kunst macht sichtbar").
  *
  * Self-contained Client-Komponente, keine Firebase-/Server-Logik
  * (hosting-/auth-agnostisch, migrationsbereit). Inhalte als Datenstruktur unten.
@@ -27,6 +29,7 @@ interface Station {
   image?: string; // Pfad unter /public
   imageAlt?: string;
   credit?: string; // Bildnachweis (gemeinfrei)
+  imageWhy?: string; // "Warum dieses Bild?" — einfach, spannend
   open?: boolean; // offene Gegenwarts-Station
 }
 
@@ -40,11 +43,11 @@ const STATIONS: Station[] = [
     schablone: "Beobachten, ordnen, begründen",
     quote: "„Alle Menschen streben von Natur aus nach Wissen.“",
     enabled: "Das Fundament von Wissenschaft und Empirie.",
-    image: "/art/orrery.jpg",
-    imageAlt:
-      "Gemälde „A Philosopher Lecturing on the Orrery“ von Joseph Wright of Derby",
-    credit:
-      "J. Wright of Derby, „A Philosopher Lecturing on the Orrery“, um 1766 · gemeinfrei",
+    image: "/art/athens.jpg",
+    imageAlt: "Fresko „Die Schule von Athen“ von Raffael",
+    credit: "Raffael, „Die Schule von Athen“, 1509–1511 · gemeinfrei",
+    imageWhy:
+      "In der Mitte zwei Denker: Platon zeigt nach oben, in die Welt der Ideen — Aristoteles streckt die Hand flach nach unten, zur Erde, zum Beobachtbaren. Genau das ist seine Schablone: Wissen beginnt nicht im Himmel, sondern im genauen Hinsehen. Raffael hält den Moment fest, in dem sich das Denken der Welt zuwendet.",
   },
   {
     id: "augustinus",
@@ -58,8 +61,9 @@ const STATIONS: Station[] = [
       "Orientierung für ein christliches Zeitalter — und die Entdeckung des inneren Selbst.",
     image: "/art/augustine.jpg",
     imageAlt: "Gemälde „Der heilige Augustinus“ von Philippe de Champaigne",
-    credit:
-      "Ph. de Champaigne, „Der heilige Augustinus“, um 1645 · gemeinfrei",
+    credit: "Ph. de Champaigne, „Der heilige Augustinus“, um 1645 · gemeinfrei",
+    imageWhy:
+      "Ein Lichtstrahl der Wahrheit trifft Augustinus mitten ins Herz, das er brennend in der Hand hält. Die Wahrheit kommt für ihn nicht von außen aus der Welt, sondern von innen. Das Bild macht sichtbar, was das christliche Zeitalter neu setzte: Der Blick wendet sich nach innen — zu Glaube und Gewissen.",
   },
   {
     id: "kant",
@@ -76,6 +80,8 @@ const STATIONS: Station[] = [
       "Gemälde „Der Wanderer über dem Nebelmeer“ von Caspar David Friedrich",
     credit:
       "C. D. Friedrich, „Der Wanderer über dem Nebelmeer“, 1818 · gemeinfrei",
+    imageWhy:
+      "Ein einzelner Mensch steht auf dem Gipfel und blickt über ein Nebelmeer — niemand sagt ihm, was er sehen soll, er deutet die Welt selbst. Das ist Kants Schablone: Habe Mut, dich deines eigenen Verstandes zu bedienen. Friedrich malt den mündigen, auf sich gestellten Einzelnen der Moderne.",
   },
   {
     id: "jetzt",
@@ -86,6 +92,8 @@ const STATIONS: Station[] = [
     schablone: "??? — das suchen wir gerade",
     enabled:
       "Genau hier setzt dieses Submodul an: die Schablonen finden, die uns mit KI und einem neuen „Wir“ orientieren (Latour, Haraway, Gabriel …).",
+    imageWhy:
+      "Hier bleibt der Rahmen bewusst leer. Für unsere Zeit — total vernetzt, von KI durchdrungen — gibt es noch kein fertiges Bild und keine fertige Schablone. Genau sie suchen wir in diesem Modul.",
     open: true,
   },
 ];
@@ -126,25 +134,27 @@ export default function SchablonenZeitstrahl() {
                 (s.open ? "border-tertiary border-dashed" : "border-outline-variant")
               }
             >
-              {/* Bild-Banner (gemeinfrei) bzw. offenes Platzhalterfeld */}
+              {/* Bild-Banner: ganzes Werk sichtbar (object-contain), gemeinfrei */}
               {s.image ? (
                 <figure className="m-0">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={s.image}
-                    alt={s.imageAlt ?? ""}
-                    loading="lazy"
-                    className="h-44 w-full object-cover object-top"
-                  />
+                  <div className="flex h-72 items-center justify-center bg-surface-container-low p-sm">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={s.image}
+                      alt={s.imageAlt ?? ""}
+                      loading="lazy"
+                      className="max-h-full max-w-full object-contain"
+                    />
+                  </div>
                   {s.credit && (
-                    <figcaption className="bg-surface-container-low px-md py-xs text-label-sm text-on-surface-variant">
+                    <figcaption className="border-t border-outline-variant bg-surface-container-low px-md py-xs text-label-sm text-on-surface-variant">
                       {s.credit}
                     </figcaption>
                   )}
                 </figure>
               ) : (
-                <div className="flex h-44 w-full flex-col items-center justify-center gap-xs border-b border-dashed border-outline-variant bg-surface-container-low text-on-surface-variant">
-                  <span className="material-symbols-outlined text-[32px] text-tertiary">
+                <div className="flex h-72 w-full flex-col items-center justify-center gap-xs border-b border-dashed border-outline-variant bg-surface-container-low text-on-surface-variant">
+                  <span className="material-symbols-outlined text-[36px] text-tertiary">
                     image_search
                   </span>
                   <span className="text-label-sm">Bild noch offen</span>
@@ -183,14 +193,36 @@ export default function SchablonenZeitstrahl() {
                   </span>
                 </p>
 
+                {!isOpen && (
+                  <p className="mt-md inline-flex items-center gap-xs text-label-sm text-tertiary">
+                    <span className="material-symbols-outlined text-[16px]">
+                      visibility
+                    </span>
+                    Warum dieses Bild? — antippen
+                  </p>
+                )}
+
                 {isOpen && (
-                  <div className="mt-md border-t border-outline-variant pt-md">
+                  <div className="mt-md space-y-md border-t border-outline-variant pt-md">
+                    <div>
+                      <p className="flex items-center gap-xs text-label-sm uppercase tracking-wider text-tertiary">
+                        <span className="material-symbols-outlined text-[16px]">
+                          visibility
+                        </span>
+                        Warum dieses Bild?
+                      </p>
+                      <p className="mt-xs text-body-md text-on-surface-variant">
+                        {s.imageWhy}
+                      </p>
+                    </div>
+
                     {s.quote && (
                       <p className="text-body-md italic text-on-surface-variant">
                         {s.quote}
                       </p>
                     )}
-                    <p className="mt-sm flex items-start gap-sm text-body-sm text-on-surface-variant">
+
+                    <p className="flex items-start gap-sm text-body-sm text-on-surface-variant">
                       <span className="material-symbols-outlined text-[18px] text-tertiary">
                         {s.open ? "trending_flat" : "check_circle"}
                       </span>

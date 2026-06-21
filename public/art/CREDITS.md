@@ -6,7 +6,7 @@ gemeinfrei. Quelle jeweils Wikimedia Commons.
 
 | Datei | Werk | Urheber | Jahr | Symbolisiert |
 |---|---|---|---|---|
-| `orrery.jpg` | A Philosopher Lecturing on the Orrery | Joseph Wright of Derby | um 1766 | Aristoteles · Beobachten, Empirie, Wissenschaft |
+| `athens.jpg` | Die Schule von Athen | Raffael (Raffaello Sanzio) | 1509–1511 | Aristoteles · Beobachten, Empirie, Wissenschaft |
 | `augustine.jpg` | Der heilige Augustinus | Philippe de Champaigne | um 1645–1650 | Augustinus · Innerlichkeit, christliches Zeitalter |
 | `wanderer.jpg` | Der Wanderer über dem Nebelmeer | Caspar David Friedrich | 1818 | Kant · Autonomie, mündiges Individuum |
 
