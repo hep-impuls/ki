@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 /**
  * Schablonen-Zeitstrahl — Visualisierung für das Submodul "Philosophische
@@ -9,9 +9,10 @@ import { useState } from "react";
  * Transformation / KI) suchen wir die nächste.
  *
  * Bilder: gemeinfreie Kunstwerke (Wikimedia Commons), lokal unter /public/art,
- * Nachweis in public/art/CREDITS.md. Das ganze Werk wird gezeigt (object-contain,
- * nichts beschnitten). Jede Station erklärt im aufgeklappten Zustand, WARUM
- * gerade dieses Bild gewählt wurde ("Kunst macht sichtbar").
+ * Nachweis in public/art/CREDITS.md. Das ganze Werk wird gezeigt (object-contain).
+ * Klick aufs Bild öffnet den Vollbild-Modus (Lightbox, schliessen per ✕ / Esc /
+ * Klick auf Hintergrund). Jede Station erklärt aufgeklappt, WARUM das Bild
+ * gewählt wurde ("Kunst macht sichtbar").
  *
  * Self-contained Client-Komponente, keine Firebase-/Server-Logik
  * (hosting-/auth-agnostisch, migrationsbereit). Inhalte als Datenstruktur unten.
@@ -98,143 +99,224 @@ const STATIONS: Station[] = [
   },
 ];
 
+type Lightbox = { src: string; alt: string; credit?: string };
+
 export default function SchablonenZeitstrahl() {
   const [openId, setOpenId] = useState<string | null>("aristoteles");
+  const [lightbox, setLightbox] = useState<Lightbox | null>(null);
+
+  // Esc schliesst, Hintergrund-Scroll sperren, solange Vollbild offen ist
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightbox(null);
+    };
+    document.addEventListener("keydown", onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [lightbox]);
 
   return (
-    <ol className="flex flex-col gap-md">
-      {STATIONS.map((s, i) => {
-        const isOpen = openId === s.id;
-        const isLast = i === STATIONS.length - 1;
-        return (
-          <li key={s.id} className="flex gap-md">
-            {/* Rail: Icon-Knoten + Verbindungslinie */}
-            <div className="flex flex-col items-center">
-              <span
+    <>
+      <ol className="flex flex-col gap-md">
+        {STATIONS.map((s, i) => {
+          const isOpen = openId === s.id;
+          const isLast = i === STATIONS.length - 1;
+          return (
+            <li key={s.id} className="flex gap-md">
+              {/* Rail: Icon-Knoten + Verbindungslinie */}
+              <div className="flex flex-col items-center">
+                <span
+                  className={
+                    s.open
+                      ? "flex h-11 w-11 items-center justify-center rounded-xl bg-tertiary text-on-tertiary shadow-sm"
+                      : "flex h-11 w-11 items-center justify-center rounded-xl bg-tertiary-container text-on-tertiary-container"
+                  }
+                >
+                  <span className="material-symbols-outlined text-[24px]">
+                    {s.icon}
+                  </span>
+                </span>
+                {!isLast && <span className="w-px flex-1 bg-outline-variant" />}
+              </div>
+
+              {/* Karte */}
+              <div
                 className={
-                  s.open
-                    ? "flex h-11 w-11 items-center justify-center rounded-xl bg-tertiary text-on-tertiary shadow-sm"
-                    : "flex h-11 w-11 items-center justify-center rounded-xl bg-tertiary-container text-on-tertiary-container"
+                  "mb-md flex-1 overflow-hidden rounded-xl border bg-surface-bright shadow-sm transition hover:shadow-md " +
+                  (s.open ? "border-tertiary border-dashed" : "border-outline-variant")
                 }
               >
-                <span className="material-symbols-outlined text-[24px]">
-                  {s.icon}
-                </span>
-              </span>
-              {!isLast && <span className="w-px flex-1 bg-outline-variant" />}
-            </div>
-
-            {/* Karte */}
-            <button
-              type="button"
-              onClick={() => setOpenId(isOpen ? null : s.id)}
-              aria-expanded={isOpen}
-              className={
-                "mb-md flex-1 overflow-hidden rounded-xl border bg-surface-bright text-left shadow-sm transition hover:shadow-md " +
-                (s.open ? "border-tertiary border-dashed" : "border-outline-variant")
-              }
-            >
-              {/* Bild-Banner: ganzes Werk sichtbar (object-contain), gemeinfrei */}
-              {s.image ? (
-                <figure className="m-0">
-                  <div className="flex h-72 items-center justify-center bg-surface-container-low p-sm">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={s.image}
-                      alt={s.imageAlt ?? ""}
-                      loading="lazy"
-                      className="max-h-full max-w-full object-contain"
-                    />
-                  </div>
-                  {s.credit && (
-                    <figcaption className="border-t border-outline-variant bg-surface-container-low px-md py-xs text-label-sm text-on-surface-variant">
-                      {s.credit}
-                    </figcaption>
-                  )}
-                </figure>
-              ) : (
-                <div className="flex h-72 w-full flex-col items-center justify-center gap-xs border-b border-dashed border-outline-variant bg-surface-container-low text-on-surface-variant">
-                  <span className="material-symbols-outlined text-[36px] text-tertiary">
-                    image_search
-                  </span>
-                  <span className="text-label-sm">Bild noch offen</span>
-                </div>
-              )}
-
-              <div className="p-lg">
-                <div className="flex items-center justify-between gap-sm">
-                  <span className="inline-flex items-center gap-xs rounded-xl bg-surface-container px-sm py-xs text-label-sm text-on-surface-variant">
-                    {s.epoch}
-                  </span>
-                  <span
-                    className={
-                      "material-symbols-outlined text-[20px] text-on-surface-variant transition-transform " +
-                      (isOpen ? "rotate-180" : "")
-                    }
-                  >
-                    expand_more
-                  </span>
-                </div>
-
-                <p className="mt-sm text-label-sm uppercase tracking-wider text-tertiary">
-                  {s.wandel}
-                </p>
-                <h3 className="mt-xs text-headline-sm text-on-surface">
-                  {s.thinker}
-                </h3>
-
-                <p className="mt-sm flex items-start gap-sm text-body-md text-on-surface">
-                  <span className="material-symbols-outlined text-[18px] text-tertiary">
-                    bookmark
-                  </span>
-                  <span>
-                    <span className="text-on-surface-variant">Schablone: </span>
-                    <strong>{s.schablone}</strong>
-                  </span>
-                </p>
-
-                {!isOpen && (
-                  <p className="mt-md inline-flex items-center gap-xs text-label-sm text-tertiary">
-                    <span className="material-symbols-outlined text-[16px]">
-                      visibility
+                {/* Bild → Klick öffnet Vollbild. Bzw. offenes Platzhalterfeld. */}
+                {s.image ? (
+                  <figure className="m-0">
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setLightbox({
+                          src: s.image!,
+                          alt: s.imageAlt ?? s.thinker,
+                          credit: s.credit,
+                        })
+                      }
+                      aria-label={`${s.imageAlt ?? s.thinker} im Vollbild öffnen`}
+                      className="group relative block w-full cursor-zoom-in"
+                    >
+                      <div className="flex h-72 items-center justify-center bg-surface-container-low p-sm">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={s.image}
+                          alt={s.imageAlt ?? ""}
+                          loading="lazy"
+                          className="max-h-full max-w-full object-contain"
+                        />
+                      </div>
+                      <span className="absolute right-sm top-sm inline-flex items-center gap-xs rounded-lg bg-inverse-surface/70 px-sm py-xs text-label-sm text-inverse-on-surface opacity-80 transition-opacity group-hover:opacity-100">
+                        <span className="material-symbols-outlined text-[16px]">
+                          fullscreen
+                        </span>
+                        Vollbild
+                      </span>
+                    </button>
+                    {s.credit && (
+                      <figcaption className="border-t border-outline-variant bg-surface-container-low px-md py-xs text-label-sm text-on-surface-variant">
+                        {s.credit}
+                      </figcaption>
+                    )}
+                  </figure>
+                ) : (
+                  <div className="flex h-72 w-full flex-col items-center justify-center gap-xs border-b border-dashed border-outline-variant bg-surface-container-low text-on-surface-variant">
+                    <span className="material-symbols-outlined text-[36px] text-tertiary">
+                      image_search
                     </span>
-                    Warum dieses Bild? — antippen
-                  </p>
+                    <span className="text-label-sm">Bild noch offen</span>
+                  </div>
                 )}
 
-                {isOpen && (
-                  <div className="mt-md space-y-md border-t border-outline-variant pt-md">
-                    <div>
-                      <p className="flex items-center gap-xs text-label-sm uppercase tracking-wider text-tertiary">
-                        <span className="material-symbols-outlined text-[16px]">
-                          visibility
+                {/* Text → Klick klappt die Erklärung auf/zu */}
+                <button
+                  type="button"
+                  onClick={() => setOpenId(isOpen ? null : s.id)}
+                  aria-expanded={isOpen}
+                  className="block w-full p-lg text-left"
+                >
+                  <div className="flex items-center justify-between gap-sm">
+                    <span className="inline-flex items-center gap-xs rounded-xl bg-surface-container px-sm py-xs text-label-sm text-on-surface-variant">
+                      {s.epoch}
+                    </span>
+                    <span
+                      className={
+                        "material-symbols-outlined text-[20px] text-on-surface-variant transition-transform " +
+                        (isOpen ? "rotate-180" : "")
+                      }
+                    >
+                      expand_more
+                    </span>
+                  </div>
+
+                  <p className="mt-sm text-label-sm uppercase tracking-wider text-tertiary">
+                    {s.wandel}
+                  </p>
+                  <h3 className="mt-xs text-headline-sm text-on-surface">
+                    {s.thinker}
+                  </h3>
+
+                  <p className="mt-sm flex items-start gap-sm text-body-md text-on-surface">
+                    <span className="material-symbols-outlined text-[18px] text-tertiary">
+                      bookmark
+                    </span>
+                    <span>
+                      <span className="text-on-surface-variant">Schablone: </span>
+                      <strong>{s.schablone}</strong>
+                    </span>
+                  </p>
+
+                  {!isOpen && (
+                    <p className="mt-md inline-flex items-center gap-xs text-label-sm text-tertiary">
+                      <span className="material-symbols-outlined text-[16px]">
+                        visibility
+                      </span>
+                      Warum dieses Bild? — antippen
+                    </p>
+                  )}
+
+                  {isOpen && (
+                    <div className="mt-md space-y-md border-t border-outline-variant pt-md">
+                      <div>
+                        <p className="flex items-center gap-xs text-label-sm uppercase tracking-wider text-tertiary">
+                          <span className="material-symbols-outlined text-[16px]">
+                            visibility
+                          </span>
+                          Warum dieses Bild?
+                        </p>
+                        <p className="mt-xs text-body-md text-on-surface-variant">
+                          {s.imageWhy}
+                        </p>
+                      </div>
+
+                      {s.quote && (
+                        <p className="text-body-md italic text-on-surface-variant">
+                          {s.quote}
+                        </p>
+                      )}
+
+                      <p className="flex items-start gap-sm text-body-sm text-on-surface-variant">
+                        <span className="material-symbols-outlined text-[18px] text-tertiary">
+                          {s.open ? "trending_flat" : "check_circle"}
                         </span>
-                        Warum dieses Bild?
-                      </p>
-                      <p className="mt-xs text-body-md text-on-surface-variant">
-                        {s.imageWhy}
+                        <span>{s.enabled}</span>
                       </p>
                     </div>
-
-                    {s.quote && (
-                      <p className="text-body-md italic text-on-surface-variant">
-                        {s.quote}
-                      </p>
-                    )}
-
-                    <p className="flex items-start gap-sm text-body-sm text-on-surface-variant">
-                      <span className="material-symbols-outlined text-[18px] text-tertiary">
-                        {s.open ? "trending_flat" : "check_circle"}
-                      </span>
-                      <span>{s.enabled}</span>
-                    </p>
-                  </div>
-                )}
+                  )}
+                </button>
               </div>
+            </li>
+          );
+        })}
+      </ol>
+
+      {/* Vollbild-Modus (Lightbox) */}
+      {lightbox && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Bild im Vollbild"
+          onClick={() => setLightbox(null)}
+          className="fixed inset-0 z-[100] flex flex-col gap-md bg-inverse-surface/95 p-md backdrop-blur-sm"
+        >
+          <div className="flex justify-end">
+            <button
+              type="button"
+              onClick={() => setLightbox(null)}
+              aria-label="Vollbild schliessen"
+              className="inline-flex items-center gap-xs rounded-xl bg-inverse-on-surface/10 px-md py-sm text-label-md text-inverse-on-surface transition hover:bg-inverse-on-surface/20"
+            >
+              <span className="material-symbols-outlined text-[20px]">close</span>
+              Schliessen
             </button>
-          </li>
-        );
-      })}
-    </ol>
+          </div>
+
+          <div className="flex min-h-0 flex-1 items-center justify-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={lightbox.src}
+              alt={lightbox.alt}
+              onClick={(e) => e.stopPropagation()}
+              className="max-h-full max-w-full cursor-default rounded-lg object-contain shadow-lg"
+            />
+          </div>
+
+          {lightbox.credit && (
+            <p className="text-center text-label-sm text-inverse-on-surface/80">
+              {lightbox.credit}
+            </p>
+          )}
+        </div>
+      )}
+    </>
   );
 }
