@@ -10,6 +10,18 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-06-21 — Bildlizenzen Schablonen-Zeitstrahl
+
+Die historischen Stationen nutzen **gemeinfreie** Werke (Wikimedia Commons:
+Raffael, Champaigne, C. D. Friedrich). Die **Gegenwarts-Station** („Wir von
+heute") zeigt ein **zeitgenössisches** Werk — Klaus Christ, „Suche nach Bildern",
+2024 — das **mit Genehmigung des Urhebers** verwendet wird (nicht gemeinfrei).
+Die gemeinfrei-Regel ist damit bewusst und dokumentiert für genau dieses eine
+Bild ausgenommen; die CC-BY-4.0-Lizenz der Seite bleibt gewahrt. Nachweis:
+[public/art/CREDITS.md](../public/art/CREDITS.md).
+
+---
+
 ## 2026-06-20 — Philosophische Verortung von Submodul 1 (Denk-Landkarte)
 
 Das Submodul „Philosophische Perspektive" erhält ein **theoretisches Gerüst** mit

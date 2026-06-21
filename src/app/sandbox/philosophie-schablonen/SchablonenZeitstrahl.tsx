@@ -8,8 +8,10 @@ import { useEffect, useState } from "react";
  * Philosophie eine "Schablone" zur Orientierung — und jetzt (digitale
  * Transformation / KI) suchen wir die nächste.
  *
- * Bilder: gemeinfreie Kunstwerke (Wikimedia Commons), lokal unter /public/art,
- * Nachweis in public/art/CREDITS.md. Das ganze Werk wird gezeigt (object-contain).
+ * Bilder: lokal unter /public/art (Nachweis in public/art/CREDITS.md). Die
+ * historischen Stationen nutzen gemeinfreie Werke (Wikimedia Commons); die
+ * Gegenwarts-Station zeigt ein zeitgenössisches Werk (Klaus Christ, 2024), mit
+ * Genehmigung verwendet. Das ganze Werk wird gezeigt (object-contain).
  * Klick aufs Bild öffnet den Vollbild-Modus (Lightbox, schliessen per ✕ / Esc /
  * Klick auf Hintergrund). Jede Station erklärt aufgeklappt, WARUM das Bild
  * gewählt wurde ("Kunst macht sichtbar").
@@ -93,8 +95,12 @@ const STATIONS: Station[] = [
     schablone: "??? — das suchen wir gerade",
     enabled:
       "Genau hier setzt dieses Submodul an: die Schablonen finden, die uns mit KI und einem neuen „Wir“ orientieren (Latour, Haraway, Gabriel …).",
+    image: "/art/wir-netz.png",
+    imageAlt:
+      "Installation „Suche nach Bildern“: ein Netz aus Fäden verbindet Figuren und Objekte — Rohstoffe, Datacenter, Satelliten, Nutzer:innen — rund um einen alten Computer mit Weltkarte.",
+    credit: "Klaus Christ, „Suche nach Bildern“, 2024",
     imageWhy:
-      "Hier bleibt der Rahmen bewusst leer. Für unsere Zeit — total vernetzt, von KI durchdrungen — gibt es noch kein fertiges Bild und keine fertige Schablone. Genau sie suchen wir in diesem Modul.",
+      "Das ist das „Wir“ von heute: kein einzelner Mensch, sondern ein riesiges Netz. Rund um eine simple Bildersuche hängen Rohstoffe, Bergbau, Kabel, Satelliten, Datacenter, Energie, Regierungen — und Menschen: Programmierer:innen, Künstler:innen, Arbeiter:innen, Nutzer:innen. Menschen und nicht-menschliche Akteure ziehen an denselben Fäden — genau Latours Akteur-Netzwerk, sichtbar gemacht. Die Schablone, die uns darin orientiert, suchen wir noch.",
     open: true,
   },
 ];

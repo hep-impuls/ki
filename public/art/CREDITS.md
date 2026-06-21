@@ -1,8 +1,12 @@
-# Bildnachweis — gemeinfreie Kunstwerke
+# Bildnachweis
 
-Alle Bilder sind **gemeinfrei** (Public Domain): die Werke sind alt, die Urheber
-lange verstorben; die originalgetreuen 2D-Reproduktionen sind ebenfalls
-gemeinfrei. Quelle jeweils Wikimedia Commons.
+Verwendet in: `src/app/sandbox/philosophie-schablonen/SchablonenZeitstrahl.tsx`
+(Submodul „Philosophische Perspektive", Lernseite 2).
+
+## Gemeinfrei (Public Domain)
+
+Werke alt, Urheber lange verstorben; die originalgetreuen 2D-Reproduktionen sind
+ebenfalls gemeinfrei. Quelle jeweils Wikimedia Commons.
 
 | Datei | Werk | Urheber | Jahr | Symbolisiert |
 |---|---|---|---|---|
@@ -10,8 +14,14 @@ gemeinfrei. Quelle jeweils Wikimedia Commons.
 | `augustine.jpg` | Der heilige Augustinus | Philippe de Champaigne | um 1645–1650 | Augustinus · Innerlichkeit, christliches Zeitalter |
 | `wanderer.jpg` | Der Wanderer über dem Nebelmeer | Caspar David Friedrich | 1818 | Kant · Autonomie, mündiges Individuum |
 
-Verwendet in: `src/app/sandbox/philosophie-schablonen/SchablonenZeitstrahl.tsx`
-(Submodul „Philosophische Perspektive", Lernseite 2).
+## Zeitgenössisch (mit Genehmigung)
 
-Austauschbar: andere gemeinfreie Werke können einfach hier abgelegt und in der
-Datenstruktur der Komponente referenziert werden.
+| Datei | Werk | Urheber | Jahr | Symbolisiert |
+|---|---|---|---|---|
+| `wir-netz.png` | Suche nach Bildern | Klaus Christ | 2024 | Gegenwart · das vernetzte „Wir", Akteur-Netzwerk |
+
+`wir-netz.png` ist **nicht** gemeinfrei, sondern ein zeitgenössisches Werk, das
+mit Genehmigung des Urhebers im Projekt verwendet wird.
+
+Austauschbar: andere Bilder können hier abgelegt und in der Datenstruktur der
+Komponente referenziert werden.

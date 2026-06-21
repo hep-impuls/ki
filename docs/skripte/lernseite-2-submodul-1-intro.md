@@ -404,10 +404,12 @@ Didaktische Pointe — verklammert die Bausteine zu einem Dreiklang:
 philosophische Perspektive?").
 
 **Visualisierung live:** [/sandbox/philosophie-schablonen](https://hep-ki.vercel.app/sandbox/philosophie-schablonen)
-— interaktiver Zeitstrahl: Aristoteles (Empirie) → Augustinus (christliches
-Zeitalter) → Kant (mündiges Individuum) → *jetzt* (digitale Transformation/KI,
-offene Schablone). Zeigt, dass jede Umbruchszeit ihre orientierende Philosophie
-fand. ([Komponente](../../src/app/sandbox/philosophie-schablonen/SchablonenZeitstrahl.tsx))
+— interaktiver Zeitstrahl mit Kunstwerk pro Station (Vollbild per Klick):
+Aristoteles/Raffael (Empirie) → Augustinus/Champaigne (christliches Zeitalter) →
+Kant/Friedrich (mündiges Individuum) → *jetzt* das vernetzte „Wir" (Klaus Christ,
+„Suche nach Bildern", 2024; Schablone bleibt offen). Zeigt, dass jede
+Umbruchszeit ihre orientierende Philosophie fand.
+([Komponente](../../src/app/sandbox/philosophie-schablonen/SchablonenZeitstrahl.tsx))
 
 ### Thread: Philosophie gewinnt gesellschaftlich an Bedeutung (Rohgedanke, 2026-06-20)
 
