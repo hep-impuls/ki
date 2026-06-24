@@ -10,6 +10,32 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-06-24 — Firebase: bestehendes Projekt `iperka-lms` teilen
+
+`ki26` bekommt **kein eigenes** Firebase-Projekt, sondern nutzt das bestehende
+**`iperka-lms`** (Pietros Account, dasselbe wie `10mio`). Web-Config aus
+`10mio/.env.local` uebernommen und nach `ki26/.env.local` gemappt
+(`PUBLIC_*` → `NEXT_PUBLIC_*`, gitignored).
+
+- **Trennung ueber Namespace:** `NEXT_PUBLIC_UNIT_ID=ki26` → alle Daten unter
+  `abstimmungen/ki26/...`, nie Kollision mit `abstimmungen/10mio-2026/...`.
+- **Keine `firestore.rules`-Aenderung:** die live `iperka-lms`-Rules erlauben
+  bereits `abstimmungen/{id}/polls` + `students/*`. **Aus `ki26` nie Rules
+  deployen** (wuerde `10mio` ueberschreiben — Rules sind projektweit, verwaltet
+  im `10mio`-Repo).
+- **Modell (bewertungsfrei):** nur anonyme Aggregat-Zaehler (`polls.counts`,
+  `increment`); Freitext/„ein Satz" bleibt im Browser. Kein Cloud Function fuer
+  diese Einheit; Klassencode-/LP-Tier kommt spaeter, hat keine Prioritaet.
+- **Christof:** Client-Code frei moeglich (Rules decken `abstimmungen/ki26/*`);
+  braucht eigenes `ki26/.env.local` (gleiche 6 `NEXT_PUBLIC_FIREBASE_*`-Werte,
+  browser-public). Konsole/Deploy-Zugriff → Pietro fuegt ihn im Projekt hinzu.
+
+Betroffen: `ki26/.env.local` (neu, gitignored), [CLAUDE.md](../CLAUDE.md#firebase-projekt-gemeinsam-genutzt--stand-2026-06-24-pietro)
+(Environment + Open questions). Hintergrund-Plan:
+[docs/material-pietro/KI_EINHEIT_GESAMTARCHITEKTUR_v2.md](material-pietro/KI_EINHEIT_GESAMTARCHITEKTUR_v2.md).
+
+---
+
 ## 2026-06-21 — Bildlizenzen Schablonen-Zeitstrahl
 
 Die historischen Stationen nutzen **gemeinfreie** Werke (Wikimedia Commons:

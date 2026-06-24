@@ -130,6 +130,38 @@ NEXT_PUBLIC_FIREBASE_APP_ID
 
 All variables are `NEXT_PUBLIC_` (browser-visible). `.env.local` is gitignored.
 
+### Firebase-Projekt (gemeinsam genutzt — Stand 2026-06-24, Pietro)
+
+Wir nutzen **kein eigenes** Firebase-Projekt fuer `ki26`, sondern **teilen das
+bestehende Projekt `iperka-lms`** (Pietros Account, dasselbe wie `10mio`). Die
+Web-Config wurde aus `10mio/.env.local` uebernommen (Astro-`PUBLIC_*` →
+Next-`NEXT_PUBLIC_*` gemappt) und liegt in `ki26/.env.local` (gitignored).
+
+- **Namespace:** `NEXT_PUBLIC_UNIT_ID=ki26`. **Alle** Firestore-Pfade dieses
+  Lernsets liegen unter `abstimmungen/ki26/...` und kollidieren nie mit
+  `10mio` (`abstimmungen/10mio-2026/...`).
+- **Keine Rules-Aenderung noetig.** Die *live deployten* `iperka-lms`-Rules
+  erlauben bereits `abstimmungen/{beliebigeId}/polls` (read/write) und
+  `abstimmungen/{beliebigeId}/students/*` — beides deckt `ki26` ohne weiteres ab.
+- **⚠️ Rules sind projektweit und werden aus dem `10mio`-Repo verwaltet.**
+  Aus `ki26` **niemals** `firebase deploy --only firestore:rules` ausfuehren —
+  das wuerde die live `10mio`-Rules ueberschreiben. `ki26` braucht keinen
+  Rules-Deploy. (Das `ki26/firestore.rules`-File ist daher nur ein lokaler Stub,
+  nicht die deployte Quelle.)
+- **Datenmodell `ki26` (bewertungsfrei):** nur anonyme **Aggregat-Zaehler**
+  (Poll-`counts` via `increment(+1)`) unter `abstimmungen/ki26/polls/{pollId}`;
+  Einzelantworten / „ein Satz" bleiben im Browser (localStorage). Kein
+  Points-/Progress-Modell, **kein Cloud Function**, App Check vorerst aus.
+- **Christof:** kann Client-Code frei ergaenzen — Reads/Writes auf
+  `abstimmungen/ki26/...` sind durch die Rules gedeckt. Er braucht nur ein
+  eigenes `ki26/.env.local` mit denselben 6 `NEXT_PUBLIC_FIREBASE_*`-Werten
+  (browser-public, gefahrlos teilbar; von Pietro oder aus `10mio/.env.local`).
+  Fuer Konsole-Zugriff / eigene Deploys muss Pietro ihn im Projekt hinzufuegen
+  (Firebase Console → Nutzer und Berechtigungen).
+- **Verifizieren:** lokal `npm run dev`, eine Test-Interaktion ausloesen, in der
+  Firestore-Konsole unter `abstimmungen/ki26/` pruefen, ob der Zaehler ankommt.
+  (Aus der Cowork-Sandbox nicht testbar — kein Netz-Egress zu Firestore.)
+
 ## Design references (authoritative)
 
 Two handoff docs in [design/](design/) define the **target architecture** this repo is being built toward. Read them before generating UI or touching the data layer:
@@ -166,6 +198,11 @@ mitgeteilt bekommt: dort einen kurzen Eintrag (Datum + Entscheidung + betroffene
 Stellen) ergänzen — jüngste oben.
 
 ## Open questions
+
+> **Hinweis (2026-06-24):** Fuer das `ki26`-Lernset (bewertungsfrei, nur
+> Aggregat-Zaehler) ist diese Frage **nicht blockierend** — es laeuft rein ueber
+> das Firestore-Client-SDK ohne Cloud Functions. Relevant wird sie erst, wenn
+> spaeter der Klassencode-/Lehrpersonen-Tier (mit Cloud Functions) ergaenzt wird.
 
 - **Hosting vs. Cloud Function rewrite.** The handoffs assume Firebase Hosting, which provides the `/api/**` → Cloud Function rewrite that `lib/api.ts` depends on (handoff-firebase.md §5.5, handoff-layout.md §6). This repo deploys to **Vercel**. Before wiring up the teacher backend, decide:
   - **Option A** — move hosting to Firebase Hosting (matches the handoffs verbatim; lose Vercel's preview deploys and Next.js edge features).
