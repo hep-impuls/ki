@@ -43,6 +43,15 @@ Damit beide Claude-Sessions identischen Code produzieren:
   `pb-lg`. **Keine** Tailwind-Standardfarben (`slate-`, `fuchsia-`, `brand-`)
   in neuen Komponenten.
 - **Sprache:** UI-Texte auf Deutsch.
+- **Umlaute & Eszett (zwingend):** In **jedem** produktiven Text — UI-Strings,
+  `_data/*`-Inhalte, Kommentare, Commit-Messages — werden **echte Umlaute
+  `ä ö ü` (und `Ä Ö Ü`)** geschrieben, **niemals** die Ersatzschreibung
+  `ae/oe/ue` (kein «Zurueck», «moechte», «fuer», «Geraet» → richtig: «Zurück»,
+  «möchte», «für», «Gerät»). Einzige Ausnahme: technische Identifier, bei denen
+  Umlaute nicht erlaubt/erwünscht sind (Datei-/Variablennamen, `slug`s,
+  Firestore-Doc-IDs, `sourceKey`). Das **Eszett `ß` wird zu `ss`** (Swiss
+  Standard German). Bei jeder Änderung mitlaufend korrigieren, falls noch
+  `ae/oe/ue` im Bestand auftaucht.
 - **Datei-Layout:** jede Modul-Hub- und Submodul-Page wird in `<AppLayout>`
   gewrappt und beginnt mit `<ActivityTracker type=... page=... />`.
 
