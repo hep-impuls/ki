@@ -179,6 +179,7 @@ The repo is a **starting stub** — the handoff docs describe where it's headed.
 - `src/components/ActivityTracker.tsx` — invisible client component that signs in anonymously and logs page views. **Will be replaced** by the code+classcode session model from handoff-firebase.md (`lib/session.ts`, `ensureStudent`, no Firebase Auth).
 - `src/lib/` — Firebase singleton + `logActivity()` writing to `activities/{uid}/events`. **Will be reorganized** into `firebase.ts` / `paths.ts` / `session.ts` / `db.ts` / `api.ts` per handoff-firebase.md §5.
 - `firestore.rules` — currently restricts to the per-uid `activities` collection. **Will be replaced** by the `abstimmungen/{abstimmungId}/...` rules in handoff-firebase.md §3.
+- **KI-Einheit (Lernseite 1, Pietro)** — erste Bausteine nach `docs/material-pietro/KI_EINHEIT_GESAMTARCHITEKTUR_v2.md`: `src/lib/polls.ts` (anonyme Aggregat-Zähler unter `abstimmungen/ki26/polls/{pollId}.counts`; API `castVote`/`loadPollCounts`/`subscribePollCounts`/`totalVotes`/`scaleBucket`), `src/app/lernen/lernseite-1/_data/stationen.ts` (5 Stationen als Daten) + `_components/Station.tsx` (Stations-Mechanik, geschnittene YouTube-/Audio-Player). Persönliche Antworten bleiben im Browser (localStorage); nur optionale Aggregat-Zähler gehen nach Firestore. Details im Decision-Log (2026-06-24).
 
 **Path alias:** `@/*` resolves to `./src/*` (configured in `tsconfig.json`).
 

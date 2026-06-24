@@ -10,6 +10,35 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-06-24 — Poll-/Stations-Architektur (lean, bewertungsfrei)
+
+Erste Bausteine der KI-Einheit (Lernseite 1, Pietro) nach
+[KI_EINHEIT_GESAMTARCHITEKTUR_v2.md](material-pietro/KI_EINHEIT_GESAMTARCHITEKTUR_v2.md):
+
+- **[src/lib/polls.ts](../src/lib/polls.ts)** — anonymer Aggregat-Zähler.
+  API: `castVote(pollId, optionId)`, `loadPollCounts`, `subscribePollCounts`
+  (live), `totalVotes`, `scaleBucket`. Pfad
+  `abstimmungen/ki26/polls/{pollId}.counts`. Kein Auth, durch die live Rules
+  gedeckt; reused `getFirebase()`.
+- **Stationen data-driven:**
+  [_data/stationen.ts](../src/app/lernen/lernseite-1/_data/stationen.ts)
+  (`StationConfig` + alle 5 Stationen; Zeitfenster in Sekunden; YouTube-IDs /
+  mp3-URLs noch `TODO` → `material-pietro/urls.md`) +
+  [_components/Station.tsx](../src/app/lernen/lernseite-1/_components/Station.tsx)
+  (5-Schritt-Mechanik, geschnittene YouTube-/Audio-Player, opt-in Station 4).
+- **Datenschutz:** Position 1/2 und der „eine Satz" bleiben im Browser
+  (localStorage). Nur die optionale Prop `reportPollId` erhöht EINEN anonymen
+  Aggregat-Zähler — kein Einzeldatensatz.
+- **Gemeinsame Konvention:** Christofs Perspektiven-Check kann denselben
+  `polls.ts`-Helfer + die `polls`-Collection (unter ki26-Namespace) nutzen —
+  eine gemeinsame Zähler-Konvention statt zwei.
+
+Privat-Ordner (`_data`, `_components`) werden vom Next-Router ignoriert (kein
+Route). Liegen unter Pietros Owner-Pfad `lernseite-1/**` — kein Konflikt mit
+Christof.
+
+---
+
 ## 2026-06-24 — Firebase: bestehendes Projekt `iperka-lms` teilen
 
 `ki26` bekommt **kein eigenes** Firebase-Projekt, sondern nutzt das bestehende
