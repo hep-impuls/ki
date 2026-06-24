@@ -13,17 +13,21 @@
  */
 
 export interface MediaSpec {
-  kind: "youtube" | "audio";
+  kind: "youtube" | "audio" | "srf";
   /** YouTube-Video-ID (kind: "youtube") */
   youtubeId?: string;
   /** mp3-Direkt-URL (kind: "audio") */
   src?: string;
+  /** SRF-URN (kind: "srf"), z.B. "urn:srf:video:…" oder "urn:srf:audio:…" */
+  urn?: string;
   /** Ausschnitt in Sekunden */
   start: number;
   end: number;
   title: string;
   /** interner Quell-Schlüssel (= Material-Dateiname), nur Doku/Mapping */
   sourceKey?: string;
+  /** optionaler Link zur Original-Quelle (z.B. fuer Placeholder) */
+  externalUrl?: string;
 }
 
 export interface MediaBlock {
@@ -82,7 +86,7 @@ export const STATIONEN: StationConfig[] = [
       media: [
         {
           kind: "youtube",
-          youtubeId: "TODO", // einstein-what-the-fake
+          youtubeId: "3W3HoK1f7nU", // einstein-what-the-fake
           start: 832, // 13:52
           end: 1110, // 18:30
           title: "Einstein: What the Fake — Mitmach-Experiment",
@@ -101,6 +105,14 @@ export const STATIONEN: StationConfig[] = [
           end: 950, // 15:50
           title: "Newsjournal: Stimme klonen",
           sourceKey: "newsjournal-stimme-klonen",
+        },
+        {
+          kind: "srf",
+          urn: "urn:srf:video:8184d9b5-410e-412f-9a67-4194b2f3ecd2",
+          start: 2641, // 44:01
+          end: 2809, // 46:49
+          title: "Rundschau: KI-Kriminalitaet — CEO-Betrug per Stimmklon",
+          sourceKey: "rundschau-ki-kriminalität",
         },
       ],
     },
@@ -122,7 +134,7 @@ export const STATIONEN: StationConfig[] = [
       media: [
         {
           kind: "audio",
-          src: undefined, // TODO
+          src: "/audio/ki-arbeitswelt.mp3",
           start: 21, // 0:21
           end: 178, // 2:58
           title: "News: KI & Arbeitsplätze",
@@ -130,7 +142,7 @@ export const STATIONEN: StationConfig[] = [
         },
         {
           kind: "youtube",
-          youtubeId: "TODO", // einstein-full (Mimic-Segment)
+          youtubeId: "U_2RLRh8w4I", // einstein-full (Mimic-Segment)
           start: 3098, // 51:38
           end: 3491, // 58:11
           title: "Einstein: Mimic-Roboterhand (ETH)",
@@ -168,7 +180,7 @@ export const STATIONEN: StationConfig[] = [
       media: [
         {
           kind: "youtube",
-          youtubeId: "TODO", // einstein-ki-im-kopf
+          youtubeId: "U5bLCVTr9_I", // einstein-ki-im-kopf
           start: 690, // 11:30
           end: 840, // 14:00
           title: "Einstein: KI im Kopf — Lisa baut ihre KI",
@@ -182,7 +194,7 @@ export const STATIONEN: StationConfig[] = [
       media: [
         {
           kind: "youtube",
-          youtubeId: "TODO", // einstein-ki-im-kopf
+          youtubeId: "U5bLCVTr9_I", // einstein-ki-im-kopf
           start: 1917, // 31:57
           end: 2056, // 34:16
           title: "Einstein: KI im Kopf — das Schreib-Experiment",
@@ -210,7 +222,7 @@ export const STATIONEN: StationConfig[] = [
       media: [
         {
           kind: "youtube",
-          youtubeId: "TODO", // puls-seelentröster
+          youtubeId: "jh6Pu-h7rCw", // puls-seelentröster
           start: 1232, // 20:32
           end: 1291, // 21:31
           title: "Puls: Seelentröster — Therapie-Zwilling",
@@ -218,7 +230,7 @@ export const STATIONEN: StationConfig[] = [
         },
         {
           kind: "youtube",
-          youtubeId: "TODO", // einstein-ki-freundin
+          youtubeId: "xBT2Mrfhhso", // einstein-ki-freundin
           start: 1158, // 19:18
           end: 1238, // 20:38
           title: "Einstein: KI-Freundin — echter Mehrwert",
@@ -232,7 +244,7 @@ export const STATIONEN: StationConfig[] = [
       media: [
         {
           kind: "youtube",
-          youtubeId: "TODO", // einstein-ki-freundin
+          youtubeId: "xBT2Mrfhhso", // einstein-ki-freundin
           start: 1705, // 28:25
           end: 1903, // 31:43
           title: "Einstein: KI-Freundin — Pseudo-Nähe",
@@ -247,7 +259,7 @@ export const STATIONEN: StationConfig[] = [
       media: [
         {
           kind: "youtube",
-          youtubeId: "TODO", // puls-seelentröster
+          youtubeId: "jh6Pu-h7rCw", // puls-seelentröster
           start: 1324, // 22:04
           end: 1623, // 27:03
           title: "Puls: Seelentröster — Fall Adam Raine",
@@ -287,7 +299,7 @@ export const STATIONEN: StationConfig[] = [
         },
         {
           kind: "youtube",
-          youtubeId: "TODO", // einstein-full (Inklusions-Segment)
+          youtubeId: "U_2RLRh8w4I", // einstein-full (Inklusions-Segment)
           start: 4413, // 1:13:33
           end: 4850, // 1:20:50
           title: "Einstein: KI für Sehbehinderte",

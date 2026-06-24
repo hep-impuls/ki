@@ -1,8 +1,10 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { castVote, scaleBucket } from "@/lib/polls";
-import type { MediaBlock, MediaSpec, StationConfig } from "../_data/stationen";
+import type { StationConfig } from "../_data/stationen";
+import Skala from "./Skala";
+import MediaBlockView from "./media/MediaBlockView";
 
 /**
  * Station — generische Umsetzung der Stations-Mechanik (v2 §5).
@@ -15,10 +17,11 @@ import type { MediaBlock, MediaSpec, StationConfig } from "../_data/stationen";
  *
  * Datenschutz (decisions.md, Modell A): Position 1/2 und der "eine Satz"
  * bleiben IM BROWSER (localStorage). Nur wenn `reportPollId` gesetzt ist, wird
- * EIN anonymer Aggregat-Zähler der End-Position erhöht (kein Einzeldatensatz).
+ * EIN anonymer Aggregat-Zaehler der End-Position erhoeht (kein Einzeldatensatz).
+ *
+ * Skala und MediaBlockView sind ausgelagert (Handoff §3) und werden geteilt.
  */
 
-const SKALA = [1, 2, 3, 4, 5, 6, 7];
 const SCHRITTE = ["Versprechen", "Hauptgang", "Kehrseite", "Befund"];
 
 interface StationState {
@@ -33,141 +36,17 @@ interface StationProps {
   station: StationConfig;
   /** Wird beim Abschliessen aufgerufen (z.B. Station als erledigt markieren). */
   onComplete?: (r: { pos1: number; pos2: number; satz: string }) => void;
-  /** Optional: anonymer Aggregat-Zähler der End-Position (polls.ts). */
+  /** Optional: anonymer Aggregat-Zaehler der End-Position (polls.ts). */
   reportPollId?: string;
+  /** Optional: zurueck zum Stations-Menue. */
+  onBack?: () => void;
 }
 
 function storageKey(id: string) {
   return `ki26-${id}`;
 }
 
-function fmt(sec: number) {
-  const m = Math.floor(sec / 60);
-  const s = sec % 60;
-  return `${m}:${String(s).padStart(2, "0")}`;
-}
-
-/* ── Media ──────────────────────────────────────────────────────────────── */
-
-function YouTubeClip({ spec }: { spec: MediaSpec }) {
-  if (!spec.youtubeId || spec.youtubeId === "TODO") return <MediaPlaceholder spec={spec} />;
-  // Hinweis: für einen harten Stopp am Ende ist die IFrame Player API
-  // zuverlässiger als der &end-Parameter — für den Entwurf genügt der Param.
-  const url = `https://www.youtube-nocookie.com/embed/${spec.youtubeId}?start=${spec.start}&end=${spec.end}&rel=0`;
-  return (
-    <div className="aspect-video w-full overflow-hidden rounded-lg border border-outline-variant">
-      <iframe
-        src={url}
-        title={spec.title}
-        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        className="h-full w-full"
-      />
-    </div>
-  );
-}
-
-function AudioClip({ spec }: { spec: MediaSpec }) {
-  const ref = useRef<HTMLAudioElement>(null);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const onLoaded = () => {
-      if (spec.start) el.currentTime = spec.start;
-    };
-    const onTime = () => {
-      if (spec.end && el.currentTime >= spec.end) el.pause();
-    };
-    el.addEventListener("loadedmetadata", onLoaded);
-    el.addEventListener("timeupdate", onTime);
-    return () => {
-      el.removeEventListener("loadedmetadata", onLoaded);
-      el.removeEventListener("timeupdate", onTime);
-    };
-  }, [spec]);
-
-  if (!spec.src) return <MediaPlaceholder spec={spec} />;
-  return <audio ref={ref} src={spec.src} controls preload="metadata" className="w-full" />;
-}
-
-function MediaPlaceholder({ spec }: { spec: MediaSpec }) {
-  return (
-    <div className="flex items-center gap-sm rounded-lg border border-dashed border-outline-variant bg-surface-container-low p-md text-body-sm text-on-surface-variant">
-      <span className="material-symbols-outlined text-[20px] text-tertiary">link_off</span>
-      <span>
-        Quelle noch zu hinterlegen — <strong>{spec.sourceKey}</strong>, Ausschnitt{" "}
-        {fmt(spec.start)}–{fmt(spec.end)} (siehe <code>docs/material-pietro/urls.md</code>).
-      </span>
-    </div>
-  );
-}
-
-function MediaBlockView({ block }: { block: MediaBlock }) {
-  return (
-    <div className="flex flex-col gap-md">
-      {block.intro && (
-        <p className="border-l-4 border-primary pl-md text-body-lg text-on-surface-variant">
-          {block.intro}
-        </p>
-      )}
-      {block.media.map((m, i) => (
-        <figure key={i} className="flex flex-col gap-xs">
-          {m.kind === "youtube" ? <YouTubeClip spec={m} /> : <AudioClip spec={m} />}
-          <figcaption className="text-label-sm text-on-surface-variant">
-            {m.title} · {fmt(m.start)}–{fmt(m.end)}
-          </figcaption>
-        </figure>
-      ))}
-    </div>
-  );
-}
-
-/* ── Slider (segmentierte 1–7-Skala, slider-artig) ──────────────────────── */
-
-function Skala({
-  value,
-  onChange,
-  links,
-  rechts,
-}: {
-  value: number | null;
-  onChange: (n: number) => void;
-  links: string;
-  rechts: string;
-}) {
-  return (
-    <div>
-      <div className="flex gap-xs">
-        {SKALA.map((n) => {
-          const on = value === n;
-          return (
-            <button
-              key={n}
-              type="button"
-              onClick={() => onChange(n)}
-              aria-pressed={on}
-              className={
-                on
-                  ? "flex h-11 flex-1 items-center justify-center rounded-lg bg-primary text-label-md text-on-primary"
-                  : "flex h-11 flex-1 items-center justify-center rounded-lg border border-outline-variant bg-surface-bright text-label-md text-on-surface-variant transition-colors hover:bg-surface-container hover:text-on-surface"
-              }
-            >
-              {n}
-            </button>
-          );
-        })}
-      </div>
-      <div className="mt-xs flex justify-between text-label-sm text-on-surface-variant">
-        <span>{links}</span>
-        <span>{rechts}</span>
-      </div>
-    </div>
-  );
-}
-
-/* ── Station ────────────────────────────────────────────────────────────── */
-
-export default function Station({ station, onComplete, reportPollId }: StationProps) {
+export default function Station({ station, onComplete, reportPollId, onBack }: StationProps) {
   const [step, setStep] = useState(0);
   const [s, setS] = useState<StationState>({
     pos1: null,
@@ -210,17 +89,29 @@ export default function Station({ station, onComplete, reportPollId }: StationPr
   return (
     <div className="rounded-xl border border-outline-variant bg-surface-bright p-lg shadow-sm">
       {/* Kopf */}
-      <div className="flex items-start gap-md border-b border-outline-variant pb-md">
-        <div className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary-container text-on-primary-container">
-          <span className="material-symbols-outlined text-[24px]">{station.icon}</span>
+      <div className="flex items-start justify-between gap-md border-b border-outline-variant pb-md">
+        <div className="flex items-start gap-md">
+          <div className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary-container text-on-primary-container">
+            <span className="material-symbols-outlined text-[24px]">{station.icon}</span>
+          </div>
+          <div>
+            <p className="text-label-md uppercase tracking-wider text-primary">
+              Station {station.nummer}
+              {station.freiwillig && " · freiwillig"}
+            </p>
+            <h2 className="mt-xs text-headline-md text-on-surface">{station.frage}</h2>
+          </div>
         </div>
-        <div>
-          <p className="text-label-md uppercase tracking-wider text-primary">
-            Station {station.nummer}
-            {station.freiwillig && " · freiwillig"}
-          </p>
-          <h2 className="mt-xs text-headline-md text-on-surface">{station.frage}</h2>
-        </div>
+        {onBack && (
+          <button
+            type="button"
+            onClick={onBack}
+            className="inline-flex shrink-0 items-center gap-xs text-label-md text-on-surface-variant transition-colors hover:text-on-surface"
+          >
+            <span className="material-symbols-outlined text-[18px]">grid_view</span>
+            Menue
+          </button>
+        )}
       </div>
 
       {/* Schritt-Anzeige */}
@@ -299,7 +190,7 @@ export default function Station({ station, onComplete, reportPollId }: StationPr
                         onClick={() => persist({ ...s, vertiefung: true })}
                         className="rounded-xl bg-primary px-lg py-sm text-label-md text-on-primary"
                       >
-                        Ich möchte sie sehen
+                        Ich moechte sie sehen
                       </button>
                       <button
                         type="button"
@@ -359,18 +250,18 @@ export default function Station({ station, onComplete, reportPollId }: StationPr
 
             <div>
               <label htmlFor={`satz-${station.id}`} className="text-body-md font-semibold text-on-surface">
-                In einem Satz: Was bleibt bei dir hängen?
+                In einem Satz: Was bleibt bei dir haengen?
               </label>
               <textarea
                 id={`satz-${station.id}`}
                 value={s.satz}
                 onChange={(e) => persist({ ...s, satz: e.target.value })}
                 rows={2}
-                placeholder="Ein Satz genügt …"
+                placeholder="Ein Satz genuegt …"
                 className="mt-sm w-full rounded-lg border border-outline-variant bg-surface-bright p-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:border-primary focus:outline-none"
               />
               <p className="mt-xs text-label-sm text-on-surface-variant">
-                Bleibt nur auf deinem Gerät — wird nicht gespeichert oder geteilt.
+                Bleibt nur auf deinem Geraet — wird nicht gespeichert oder geteilt.
               </p>
             </div>
           </div>
@@ -386,7 +277,7 @@ export default function Station({ station, onComplete, reportPollId }: StationPr
           className="inline-flex items-center gap-sm rounded-xl border border-outline-variant bg-surface-bright px-lg py-sm text-label-md text-on-surface transition hover:bg-surface-container disabled:cursor-not-allowed disabled:opacity-40"
         >
           <span className="material-symbols-outlined text-[18px]">arrow_back</span>
-          Zurück
+          Zurueck
         </button>
 
         {step < 3 ? (

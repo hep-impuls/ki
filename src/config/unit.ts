@@ -40,30 +40,12 @@ export const unit: UnitConfig = {
   modules: [
     {
       slug: "lernseite-1",
-      title: "Lernseite 1",
+      title: "Kann KI das? — eine Positionsreise",
       href: "/lernen/lernseite-1",
-      icon: "menu_book",
-      subtitle: "Platzhalter",
+      icon: "explore",
+      subtitle: "Selbstgesteuert · bewertungsfrei",
       description:
-        "Hier entsteht das erste Lernmodul. Inhalt, Aufgaben und interaktive Elemente folgen.",
-      submodules: [
-        {
-          slug: "submodul-1",
-          title: "Submodul 1",
-          href: "/lernen/lernseite-1/submodul-1",
-          icon: "play_lesson",
-          subtitle: "Platzhalter",
-          description: "Erstes Submodul von Lernseite 1.",
-        },
-        {
-          slug: "submodul-2",
-          title: "Submodul 2",
-          href: "/lernen/lernseite-1/submodul-2",
-          icon: "quiz",
-          subtitle: "Platzhalter",
-          description: "Zweites Submodul von Lernseite 1.",
-        },
-      ],
+        "Eine rund 90-minuetige Reise: Du nimmst Position zu KI, durchlaeufst frei gewaehlte Stationen mit Versprechen und Kehrseiten und siehst am Ende im Kollektiv-Spiegel, wo du und die Gruppe stehen.",
     },
     {
       slug: "lernseite-2",

@@ -10,6 +10,43 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-06-24 — KI-Einheit als zusammenhaengender Flow gebaut (MVP)
+
+Die KI-Einheit (Lernseite 1, Pietro) ist als ein einziger orchestrierter Flow
+auf `/lernen/lernseite-1` umgesetzt (Handoff
+[HANDOFF_ki-einheit_tech_v1.md](material-pietro/HANDOFF_ki-einheit_tech_v1.md)).
+Die fruehere Hub-Seite mit Platzhalter-Submodulen ist ersetzt.
+
+- **Orchestrator:** `_components/KiEinheit.tsx` — State-Machine
+  `auftakt → stationen (>=3 von 5) → abschluss → maschinenraum (optional)`,
+  Fortschritt (Phase, Pre-Wert, erledigte Stationen) in localStorage
+  (`_lib/fortschritt.ts`), Reload-fest.
+- **Phasen:** `Auftakt` (Vorwissen + Hype-Opener + globaler Pre-Poll),
+  `StationenMenu` (freie Wahl, Station-4-Badge „freiwillig", Gate bei 3),
+  `Abschluss` + `KollektivSpiegel` (Ich / Klasse / alle — Klasse einmalig,
+  alle live), `Maschinenraum` (Selbsteinschaetzung + Interesse + Vertrauens-
+  Bruecke, kein Test).
+- **Refactor:** `Skala` und `MediaBlockView` (YouTube/Audio/SRF/Placeholder)
+  aus `Station.tsx` in shared-Dateien extrahiert; `MediaSpec` um `kind:"srf"`
+  + `urn` + `externalUrl` erweitert.
+- **Poll-IDs/Klasse:** `_lib/unitPolls.ts` (Schema, `resolveKlasse`,
+  `voteOnce`-Guard). Klassen-Code via `?klasse=<code>` → localStorage.
+- **Medien verdrahtet:** YouTube-IDs (einstein-full/what-the-fake/ki-im-kopf/
+  ki-freundin, puls), SRF-urn Rundschau (Station 1 alt. Dessert), mp3 nach
+  `public/audio/ki-arbeitswelt.mp3` (Station 2).
+- **Bewusst offen (20 %, §12):** Placeholder fuer `newsjournal-stimme-klonen`,
+  `kassensturz-ausbeutung`, `espresso-foodwaste`, `10v10-ki-krieg`; 3Blue1Brown
+  deutsch-synchron (Placeholder + Link zum Original); harter Clip-Stop bei
+  SRF-/YouTube-Embeds (nur Startzeit) — spaeteres Upgrade via Player-API.
+- **unit.ts:** nur der `lernseite-1`-Eintrag chirurgisch angepasst (Titel
+  „Kann KI das? — eine Positionsreise", Platzhalter-Submodule entfernt).
+  Die verwaisten `submodul-1/2/page.tsx` bleiben stehen (nicht loeschen).
+- **Verifikation aus der Cowork-Sandbox:** nur `tsc --noEmit` (Windows-natives
+  `next build` nicht ausfuehrbar). `npm run build`/`npm run lint` + Firestore-
+  Test laufen bei Pietro lokal.
+
+---
+
 ## 2026-06-24 — Poll-/Stations-Architektur (lean, bewertungsfrei)
 
 Erste Bausteine der KI-Einheit (Lernseite 1, Pietro) nach
