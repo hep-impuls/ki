@@ -11,18 +11,8 @@ export default function SideNav() {
 
   return (
     <aside className="bg-surface-container-low h-[calc(100vh-4rem)] w-64 border-r border-outline-variant sticky top-16 flex-shrink-0 hidden lg:flex flex-col overflow-y-auto">
-      <div className="p-lg border-b border-outline-variant">
-        <div className="flex items-center gap-sm">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-on-primary">
-            <span className="material-symbols-outlined text-[20px]">school</span>
-          </div>
-          <div className="leading-tight">
-            <p className="text-body-sm font-semibold text-on-surface">{unit.shortTitle}</p>
-            {unit.subtitle && (
-              <p className="text-label-sm text-on-surface-variant">{unit.subtitle}</p>
-            )}
-          </div>
-        </div>
+      <div className="px-lg py-md border-b border-outline-variant">
+        <img src="/hep-logo.jpg" alt="hep Verlag" className="h-7 w-auto" />
       </div>
 
       <nav className="p-md">

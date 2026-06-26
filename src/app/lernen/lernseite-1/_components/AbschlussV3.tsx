@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { ZERTIFIKAT_SCHWELLE } from "../_data/types";
 import { AUFTAKT_SKALA_POLLS } from "../_data/auftaktPolls";
 import { abgeschlosseneStationen } from "../_lib/stationStore";
+import type { RouteApi } from "../_lib/route";
 import GlobalSlider from "./GlobalSlider";
 import Skala4Frage from "./Skala4Frage";
 import Landkarte from "./Landkarte";
@@ -25,16 +26,34 @@ import Zertifikat from "./Zertifikat";
  * anonym an der Quelle (Polls/Slider/Vorwissen, seit M8). Persönliche Werte
  * (Slider-Bewegung, Landkarte-Ich) bleiben rein lokal.
  */
-export default function AbschlussV3({ onBack }: { onBack?: () => void }) {
+export default function AbschlussV3({
+  nav,
+  onBack,
+}: {
+  /** M10: im orchestrierten Flow gesetzt — die Zertifikat-Ansicht kommt dann aus
+   *  der URL (`#/abschluss/zertifikat`). Ohne `nav` lokaler State-Fallback. */
+  nav?: RouteApi;
+  onBack?: () => void;
+}) {
+  const routed = nav?.route ?? null;
+  const istRouted = nav != null;
   const [anzahl, setAnzahl] = useState(0);
-  const [zeigeZertifikat, setZeigeZertifikat] = useState(false);
+  const [zertLocal, setZertLocal] = useState(false);
 
   useEffect(() => {
     setAnzahl(abgeschlosseneStationen().length);
   }, []);
 
+  const zeigeZertifikat = istRouted
+    ? routed?.phase === "abschluss" && routed.view === "zertifikat"
+    : zertLocal;
+  const zertOeffnen = () =>
+    istRouted ? nav!.push({ phase: "abschluss", view: "zertifikat" }) : setZertLocal(true);
+  const zertSchliessen = () =>
+    istRouted ? nav!.push({ phase: "abschluss", view: "landkarte" }) : setZertLocal(false);
+
   if (zeigeZertifikat) {
-    return <Zertifikat onBack={() => setZeigeZertifikat(false)} />;
+    return <Zertifikat onBack={zertSchliessen} />;
   }
 
   const genug = anzahl >= ZERTIFIKAT_SCHWELLE;
@@ -111,7 +130,7 @@ export default function AbschlussV3({ onBack }: { onBack?: () => void }) {
         )}
         <button
           type="button"
-          onClick={() => setZeigeZertifikat(true)}
+          onClick={zertOeffnen}
           disabled={!genug}
           className="inline-flex items-center gap-sm rounded-xl bg-tertiary px-lg py-sm text-label-md text-on-tertiary shadow-sm transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
           title={genug ? undefined : `Erst ab ${ZERTIFIKAT_SCHWELLE} abgeschlossenen Stationen`}

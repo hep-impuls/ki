@@ -33,7 +33,7 @@ export default function TopAppBar() {
             </div>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-lg ml-lg">
+          <nav className="hidden md:flex lg:hidden items-center gap-lg ml-lg">
             {navLinks.map((link) => {
               const active = isActive(link.href);
               return (
@@ -54,6 +54,7 @@ export default function TopAppBar() {
         </div>
 
         <div className="flex items-center gap-sm">
+          <img src="/hep-logo.jpg" alt="hep" className="h-8 w-auto" />
           <button
             type="button"
             aria-label="Hilfe"

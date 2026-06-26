@@ -6,6 +6,7 @@ import { ZERTIFIKAT_SCHWELLE } from "../_data/types";
 import { STATIONEN_V3 } from "../_data/stationenV3";
 import { BADGE_FAMILIEN } from "../_data/badges";
 import { abgeschlosseneStationen, badgeSammlung } from "../_lib/stationStore";
+import type { RouteApi } from "../_lib/route";
 import StationV3 from "./StationV3";
 import Zertifikat from "./Zertifikat";
 import AbschlussVorschau from "./AbschlussVorschau";
@@ -25,18 +26,56 @@ import AbschlussVorschau from "./AbschlussVorschau";
  */
 
 export default function ZeitstrahlMenu({
+  nav,
   onWeiterZumAbschluss,
 }: {
-  /** Im orchestrierten Flow (KiEinheitV3) gesetzt: «Meine Landkarte» führt dann
-   *  in die echte Abschluss-Phase statt in die eingebettete Vorschau. Ohne diese
-   *  Prop (z.B. /v3-preview) bleibt das alte Vorschau-Verhalten erhalten. */
+  /** M10: im orchestrierten Flow (KiEinheitV3) gesetzt — offene Station +
+   *  Zertifikat-Ansicht + Stations-Frame kommen dann aus der URL. Ohne `nav`
+   *  (z.B. /v3-preview) bleibt der lokale State-Fallback. */
+  nav?: RouteApi;
+  /** Im orchestrierten Flow gesetzt: «Zum Abschluss» führt in die echte
+   *  Abschluss-Phase statt in die eingebettete Vorschau. */
   onWeiterZumAbschluss?: () => void;
 } = {}) {
-  const [offen, setOffen] = useState<Station | null>(null);
-  const [zeigeZertifikat, setZeigeZertifikat] = useState(false);
-  const [zeigeAbschluss, setZeigeAbschluss] = useState(false);
+  const routed = nav?.route ?? null;
+  const istRouted = nav != null;
+
+  // Lokaler Fallback-State (nur ohne nav, z.B. /v3-preview).
+  const [offenLocal, setOffenLocal] = useState<Station | null>(null);
+  const [zertLocal, setZertLocal] = useState(false);
+  const [abschlussLocal, setAbschlussLocal] = useState(false);
+
   const [abgeschlossen, setAbgeschlossen] = useState<string[]>([]);
   const [badges, setBadges] = useState<[BadgeFamilie, number][]>([]);
+
+  // Aktuelle Ansicht: aus der URL (routed) oder aus lokalem State (Preview).
+  const offen: Station | null = istRouted
+    ? routed?.phase === "station"
+      ? STATIONEN_V3.find((s) => s.nummer === routed.nummer) ?? null
+      : null
+    : offenLocal;
+  const zeigeZertifikat = istRouted
+    ? routed?.phase === "stationen" && routed.view === "zertifikat"
+    : zertLocal;
+  const zeigeAbschluss = istRouted ? false : abschlussLocal;
+
+  // Navigations-Helfer: im routed-Modus in die URL, sonst lokaler State.
+  const stationOeffnen = (st: Station) =>
+    istRouted
+      ? nav!.push({ phase: "station", nummer: st.nummer, sub: "auftakt", pos: 1 })
+      : setOffenLocal(st);
+  const zumMenu = () => {
+    if (istRouted) nav!.push({ phase: "stationen", view: "menu" });
+    else {
+      setOffenLocal(null);
+      setZertLocal(false);
+      setAbschlussLocal(false);
+    }
+  };
+  const zertOeffnen = () =>
+    istRouted ? nav!.push({ phase: "stationen", view: "zertifikat" }) : setZertLocal(true);
+  const abschlussOeffnen = () =>
+    onWeiterZumAbschluss ? onWeiterZumAbschluss() : setAbschlussLocal(true);
 
   // Beim Mount und nach jedem Rücksprung ins Menü den lokalen Stand neu lesen
   // (Abschluss wird in StationV3 gesetzt). SSR-sicher: erst nach Mount.
@@ -48,15 +87,29 @@ export default function ZeitstrahlMenu({
   }, [offen, zeigeZertifikat, zeigeAbschluss]);
 
   if (offen) {
-    return <StationV3 station={offen} onBack={() => setOffen(null)} />;
+    return istRouted && routed?.phase === "station" ? (
+      <StationV3
+        station={offen}
+        onBack={zumMenu}
+        frameSub={routed.sub}
+        framePos={routed.pos}
+        onFrame={(sub, pos, replace) =>
+          replace
+            ? nav!.replace({ phase: "station", nummer: offen.nummer, sub, pos })
+            : nav!.push({ phase: "station", nummer: offen.nummer, sub, pos })
+        }
+      />
+    ) : (
+      <StationV3 station={offen} onBack={zumMenu} />
+    );
   }
 
   if (zeigeZertifikat) {
-    return <Zertifikat onBack={() => setZeigeZertifikat(false)} />;
+    return <Zertifikat onBack={zumMenu} />;
   }
 
   if (zeigeAbschluss) {
-    return <AbschlussVorschau onBack={() => setZeigeAbschluss(false)} />;
+    return <AbschlussVorschau onBack={() => setAbschlussLocal(false)} />;
   }
 
   const anzahl = abgeschlossen.length;
@@ -106,7 +159,7 @@ export default function ZeitstrahlMenu({
               <li key={st.id} className="flex w-44 shrink-0 flex-col items-center text-center">
                 <button
                   type="button"
-                  onClick={() => setOffen(st)}
+                  onClick={() => stationOeffnen(st)}
                   aria-label={`Station ${st.nummer}: ${st.frage}${fertig ? " (abgeschlossen)" : ""}`}
                   className="group flex w-full flex-col items-center gap-sm"
                 >
@@ -181,7 +234,7 @@ export default function ZeitstrahlMenu({
       <div className="flex flex-wrap justify-end gap-sm border-t border-outline-variant pt-lg">
         <button
           type="button"
-          onClick={() => (onWeiterZumAbschluss ? onWeiterZumAbschluss() : setZeigeAbschluss(true))}
+          onClick={abschlussOeffnen}
           className="inline-flex items-center gap-sm rounded-xl border border-tertiary px-lg py-sm text-label-md text-tertiary transition hover:bg-tertiary-container"
         >
           <span className="material-symbols-outlined text-[18px]">explore</span>
@@ -189,7 +242,7 @@ export default function ZeitstrahlMenu({
         </button>
         <button
           type="button"
-          onClick={() => setZeigeZertifikat(true)}
+          onClick={zertOeffnen}
           disabled={!genug}
           className="inline-flex items-center gap-sm rounded-xl bg-tertiary px-lg py-sm text-label-md text-on-tertiary shadow-sm transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
           title={genug ? undefined : `Erst ab ${ZERTIFIKAT_SCHWELLE} abgeschlossenen Stationen`}

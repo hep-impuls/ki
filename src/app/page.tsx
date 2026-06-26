@@ -16,17 +16,7 @@ export default function Home() {
       </div>
 
       <header className="mx-auto flex max-w-[1280px] items-center justify-between px-lg py-lg">
-        <div className="flex items-center gap-sm">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-on-primary shadow-sm">
-            <span className="text-label-md font-bold">{unit.shortTitle}</span>
-          </div>
-          <div className="leading-tight">
-            <p className="text-body-sm font-semibold text-on-surface">{unit.title}</p>
-            {unit.subtitle && (
-              <p className="text-label-sm text-on-surface-variant">{unit.subtitle}</p>
-            )}
-          </div>
-        </div>
+        <img src="/hep-logo.jpg" alt="hep Verlag" className="h-8 w-auto" />
         <nav className="hidden gap-lg text-body-sm font-medium text-on-surface-variant sm:flex">
           <a className="hover:text-on-surface transition-colors" href="#module">
             Module
@@ -38,32 +28,32 @@ export default function Home() {
       </header>
 
       <section className="mx-auto max-w-[1280px] px-lg pb-xl pt-lg sm:pt-xl">
-        <div className="max-w-3xl">
-          <span className="inline-flex items-center gap-sm rounded-xl border border-outline-variant bg-surface-bright/70 px-md py-xs text-label-sm text-on-surface-variant shadow-sm backdrop-blur">
-            <span className="h-2 w-2 rounded-full bg-tertiary" />
-            Lernplattform · Beta
-          </span>
-          <h1 className="mt-lg text-headline-xl text-on-surface">
-            Künstliche Intelligenz{" "}
-            <span className="text-primary">verständlich entdecken</span>
-          </h1>
-          <p className="mt-md max-w-2xl text-body-lg text-on-surface-variant">
-            {unit.description} Wähle unten ein Modul, um direkt loszulegen.
-          </p>
-          <div className="mt-lg flex flex-wrap gap-sm">
-            <Link
-              href="#module"
-              className="inline-flex items-center gap-sm rounded-xl bg-primary px-lg py-sm text-label-md text-on-primary shadow-sm transition hover:bg-on-primary-container"
-            >
-              Jetzt starten
-              <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-            </Link>
-            <a
-              href="#about"
-              className="inline-flex items-center gap-sm rounded-xl border border-outline-variant bg-surface-bright px-lg py-sm text-label-md text-on-surface shadow-sm transition hover:bg-surface-container"
-            >
-              Mehr erfahren
-            </a>
+        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-xxl">
+          {/* Left: text */}
+          <div className="flex-1">
+            <h1 className="text-headline-xl text-on-surface">
+              Künstliche Intelligenz{" "}
+              <span className="text-primary">verständlich entdecken</span>
+            </h1>
+            <p className="mt-md max-w-2xl text-body-lg text-on-surface-variant">
+              {unit.description} Wähle unten ein Modul, um direkt loszulegen.
+            </p>
+            <div className="mt-lg flex flex-wrap gap-sm">
+              <Link
+                href="#module"
+                className="inline-flex items-center gap-sm rounded-xl bg-primary px-lg py-sm text-label-md text-on-primary shadow-sm transition hover:bg-on-primary-container"
+              >
+                Jetzt starten
+                <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+              </Link>
+            </div>
+          </div>
+
+          {/* Right: hep logo */}
+          <div className="hidden lg:flex items-center justify-center flex-shrink-0">
+            <div className="flex h-64 w-64 items-center justify-center rounded-3xl border border-outline-variant bg-surface-bright/80 shadow-lg backdrop-blur p-xl">
+              <img src="/hep-logo.jpg" alt="hep Verlag" className="max-h-full max-w-full w-auto h-auto object-contain" />
+            </div>
           </div>
         </div>
       </section>
@@ -94,12 +84,7 @@ export default function Home() {
                   <span className="material-symbols-outlined text-[22px]">{m.icon}</span>
                 </div>
               )}
-              {m.subtitle && (
-                <p className="mt-sm text-label-sm uppercase tracking-wider text-on-surface-variant">
-                  {m.subtitle}
-                </p>
-              )}
-              <h3 className="mt-xs text-headline-sm text-on-surface">{m.title}</h3>
+              <h3 className="mt-sm text-headline-sm text-on-surface">{m.title}</h3>
               {m.description && (
                 <p className="mt-sm text-body-sm text-on-surface-variant">
                   {m.description}

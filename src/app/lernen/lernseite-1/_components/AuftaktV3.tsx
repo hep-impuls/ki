@@ -16,6 +16,7 @@ import { pollWahl, recordPollWahl, recordSwipe, swipePick } from "../_lib/statio
 import { GLOBAL_POLL_ID, GLOBAL_STATION_ID } from "../_lib/landkarteData";
 import { castSwipe, castVorwissen } from "../_lib/unitPolls";
 import { AUTO_ADVANCE_MS } from "../_lib/ui";
+import type { RouteApi } from "../_lib/route";
 import LernzielKarte from "./LernzielKarte";
 import WerteKarte from "./WerteKarte";
 import PollAuswertung from "./PollAuswertung";
@@ -66,14 +67,27 @@ const AUFTAKT_LERNZIEL_V3: LernzielKarteSpec = {
 const SCHRITTE = ["Vorwissen", "Reiz", "Position", "Haltung", "Werte"];
 
 /* ── Schritt 4: 2 globale 4er-Skala-Pre-Polls, paginiert ───────────────────── */
-function HaltungBlock({ onDone, onBack }: { onDone: () => void; onBack: () => void }) {
+function HaltungBlock({
+  i,
+  setI,
+  onDone,
+  onBack,
+}: {
+  /** M10: controlled — Index kommt aus der URL (Auftakt-`inner`). */
+  i: number;
+  setI: (n: number, replace?: boolean) => void;
+  onDone: () => void;
+  onBack: () => void;
+}) {
   const total = AUFTAKT_SKALA_POLLS.length;
-  const [i, setI] = useState(0);
   const istAuswertung = i >= total; // Extra-Seite nach den Fragen: Ich/Klasse/alle (#8)
   const poll = istAuswertung ? null : AUFTAKT_SKALA_POLLS[i];
   const letzteFrage = i === total - 1;
   // Auto-Advance nur zwischen den Fragen — nicht in die Auswertung und nicht auf
   // der letzten Frage (dort bleibt «Weiter» bewusst manuell). Weiter/Zurück immer.
+  // Stale-Schutz via iRef (falls zwischenzeitlich manuell navigiert wurde).
+  const iRef = useRef(i);
+  iRef.current = i;
   const advanceRef = useRef(false);
   useEffect(() => {
     advanceRef.current = false;
@@ -81,7 +95,10 @@ function HaltungBlock({ onDone, onBack }: { onDone: () => void; onBack: () => vo
   const onAnswered = () => {
     if (istAuswertung || letzteFrage || advanceRef.current) return;
     advanceRef.current = true;
-    setTimeout(() => setI((p) => (p === i ? p + 1 : p)), AUTO_ADVANCE_MS);
+    const from = i;
+    setTimeout(() => {
+      if (iRef.current === from) setI(from + 1, true);
+    }, AUTO_ADVANCE_MS);
   };
   return (
     <div className="flex flex-col gap-lg">
@@ -140,11 +157,24 @@ function SwipeKarteFrame({
   return <WerteKarte aussage={karte.aussage} achse={karte.achse} pick={pick} onPick={waehlen} />;
 }
 
-function WerteBlock({ onDone, onBack }: { onDone: () => void; onBack: () => void }) {
-  const [i, setI] = useState(0);
+function WerteBlock({
+  i,
+  setI,
+  onDone,
+  onBack,
+}: {
+  /** M10: controlled — Index kommt aus der URL (Auftakt-`inner`). */
+  i: number;
+  setI: (n: number, replace?: boolean) => void;
+  onDone: () => void;
+  onBack: () => void;
+}) {
   const karte = AUFTAKT_SWIPE_KARTEN[i];
   const letzte = i === AUFTAKT_SWIPE_KARTEN.length - 1;
-  // Auto-Advance wie im HaltungBlock — letzte Karte bleibt manuell («Zu den Stationen»).
+  // Auto-Advance wie im HaltungBlock — letzte Karte bleibt manuell. Stale-Schutz
+  // via iRef (falls zwischenzeitlich manuell navigiert wurde).
+  const iRef = useRef(i);
+  iRef.current = i;
   const advanceRef = useRef(false);
   useEffect(() => {
     advanceRef.current = false;
@@ -152,7 +182,10 @@ function WerteBlock({ onDone, onBack }: { onDone: () => void; onBack: () => void
   const onAnswered = () => {
     if (letzte || advanceRef.current) return;
     advanceRef.current = true;
-    setTimeout(() => setI((p) => (p === i ? p + 1 : p)), AUTO_ADVANCE_MS);
+    const from = i;
+    setTimeout(() => {
+      if (iRef.current === from) setI(from + 1, true);
+    }, AUTO_ADVANCE_MS);
   };
   return (
     <div className="flex flex-col gap-lg">
@@ -207,8 +240,42 @@ function BlockNav({
   );
 }
 
-export default function AuftaktV3({ onComplete }: { onComplete: () => void }) {
-  const [schritt, setSchritt] = useState(0);
+export default function AuftaktV3({
+  nav,
+  onComplete,
+}: {
+  /** M10: im orchestrierten Flow gesetzt — Auftakt-Schritt + Innen-Index kommen
+   *  dann aus der URL (`#/auftakt/<schritt>/<inner>`). Ohne `nav` lokaler State. */
+  nav?: RouteApi;
+  onComplete: () => void;
+}) {
+  const routed = nav?.route ?? null;
+  const istRouted = nav != null;
+  const aRoute = routed?.phase === "auftakt" ? routed : null;
+
+  const [schrittLocal, setSchrittLocal] = useState(0);
+  const [innerLocal, setInnerLocal] = useState(0);
+  const schritt = istRouted ? Math.min(Math.max(0, aRoute?.schritt ?? 0), 4) : schrittLocal;
+  const inner = istRouted ? aRoute?.inner ?? 0 : innerLocal;
+
+  // Schritt-Wechsel (äussere Navigation) — setzt den Innen-Index zurück.
+  const setSchritt = (ziel: number, innerStart = 0) => {
+    if (istRouted) nav!.push({ phase: "auftakt", schritt: ziel, inner: innerStart });
+    else {
+      setSchrittLocal(ziel);
+      setInnerLocal(innerStart);
+    }
+  };
+  // Innen-Index (Haltung/Werte): replace = Auto-Advance, sonst bewusster Schritt.
+  const setInner = (n: number, replace = false) => {
+    if (!istRouted) {
+      setInnerLocal(n);
+      return;
+    }
+    const schreiben = replace ? nav!.replace : nav!.push;
+    schreiben({ phase: "auftakt", schritt, inner: n });
+  };
+
   const [s, setS] = useState<AuftaktState>({ gewaehlt: [], freitext: "" });
   const [schwanzOffen, setSchwanzOffen] = useState(false);
 
@@ -401,12 +468,22 @@ export default function AuftaktV3({ onComplete }: { onComplete: () => void }) {
 
         {/* 4 — Haltung (2 globale 4er-Skala-Pre-Polls) */}
         {schritt === 3 && (
-          <HaltungBlock onDone={() => setSchritt(4)} onBack={() => setSchritt(2)} />
+          <HaltungBlock
+            i={Math.min(Math.max(0, inner), AUFTAKT_SKALA_POLLS.length)}
+            setI={setInner}
+            onDone={() => setSchritt(4)}
+            onBack={() => setSchritt(2)}
+          />
         )}
 
         {/* 5 — Werte (6 Swipe-Karten) */}
         {schritt === 4 && (
-          <WerteBlock onDone={einheitStarten} onBack={() => setSchritt(3)} />
+          <WerteBlock
+            i={Math.min(Math.max(0, inner), AUFTAKT_SWIPE_KARTEN.length - 1)}
+            setI={setInner}
+            onDone={einheitStarten}
+            onBack={() => setSchritt(3)}
+          />
         )}
 
         {/* Äussere Navigation nur für die Schritte 1–3 (Blöcke 4/5 führen selbst). */}
@@ -414,7 +491,7 @@ export default function AuftaktV3({ onComplete }: { onComplete: () => void }) {
           <div className="mt-xl flex items-center justify-between">
             <button
               type="button"
-              onClick={() => setSchritt((x) => Math.max(0, x - 1))}
+              onClick={() => setSchritt(Math.max(0, schritt - 1))}
               disabled={schritt === 0}
               className="inline-flex items-center gap-sm rounded-xl border border-outline-variant bg-surface-bright px-lg py-sm text-label-md text-on-surface transition hover:bg-surface-container disabled:cursor-not-allowed disabled:opacity-40"
             >
@@ -423,7 +500,7 @@ export default function AuftaktV3({ onComplete }: { onComplete: () => void }) {
             </button>
             <button
               type="button"
-              onClick={() => setSchritt((x) => x + 1)}
+              onClick={() => setSchritt(schritt + 1)}
               className="inline-flex items-center gap-sm rounded-xl bg-primary px-lg py-sm text-label-md text-on-primary shadow-sm transition hover:opacity-90"
             >
               Weiter

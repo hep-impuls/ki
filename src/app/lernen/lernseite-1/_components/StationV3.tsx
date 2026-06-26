@@ -834,23 +834,21 @@ function BadgeFrame({ station, onReset }: { station: Station; onReset: () => voi
 export default function StationV3({
   station,
   onBack,
+  frameSub,
+  framePos,
+  onFrame,
 }: {
   station: Station;
   onBack?: () => void;
+  /** M10: controlled-Frame-Routing. Sind die drei gesetzt, kommt der Frame-Index
+   *  aus der URL (Subpage + Position) statt aus lokalem State; jede Navigation
+   *  meldet via `onFrame` zurück (`replace` = Auto-Advance, sonst bewusster
+   *  Schritt). Ohne sie (z.B. /v3-preview) bleibt der lokale State-Fallback. */
+  frameSub?: SubpageKey;
+  framePos?: number;
+  onFrame?: (sub: SubpageKey, pos: number, replace?: boolean) => void;
 }) {
   const frames = useMemo(() => buildFrames(station), [station]);
-  const [i, setI] = useState(0);
-  const [vertiefungOffen, setVertiefungOffen] = useState(false);
-
-  // a11y: bei jedem Frame-Wechsel (Weiter/Zurück) den Fokus auf den neuen
-  // Inhalt setzen, damit Tastatur-/Screenreader-Nutzende mitwandern. Beim ersten
-  // Render NICHT fokussieren (kein Scroll-Sprung / Fokus-Klau beim Seitenaufbau).
-  const inhaltRef = useRef<HTMLDivElement>(null);
-  const gemountet = useRef(false);
-  useEffect(() => {
-    if (gemountet.current) inhaltRef.current?.focus();
-    else gemountet.current = true;
-  }, [i]);
 
   // Frames zu Subpage-Gruppen bündeln (aufeinanderfolgende gleiche `sub`).
   const gruppen = useMemo<Subgruppe[]>(() => {
@@ -862,6 +860,47 @@ export default function StationV3({
     });
     return out;
   }, [frames]);
+
+  // M10: Mapping Frame-Index ⇄ (Subpage, Position). Die URL trägt sub+pos
+  // (robust gegen Inhalts-Umordnung, clamp gegen Overflow); intern bleibt der
+  // lineare Index `i`.
+  const subPosToIndex = (sub: SubpageKey, pos: number): number => {
+    const g = gruppen.find((x) => x.sub === sub) ?? gruppen[0];
+    const k = Math.min(Math.max(0, pos - 1), g.indices.length - 1);
+    return g.indices[k];
+  };
+  const indexToSubPos = (idx: number): { sub: SubpageKey; pos: number } => {
+    const g = gruppen.find((x) => x.indices.includes(idx)) ?? gruppen[0];
+    return { sub: g.sub, pos: g.indices.indexOf(idx) + 1 };
+  };
+
+  const controlled = onFrame != null && frameSub != null && framePos != null;
+  const [iLocal, setILocal] = useState(0);
+  const i = controlled ? subPosToIndex(frameSub!, framePos!) : iLocal;
+
+  const [vertiefungOffen, setVertiefungOffen] = useState(false);
+
+  // Einheitliche Frame-Navigation: im controlled-Modus in die URL (push/replace),
+  // sonst lokaler State. `replace` = Auto-Advance (kein History-Eintrag).
+  const gotoIndex = (idx: number, replace = false) => {
+    const clamped = Math.min(Math.max(0, idx), frames.length - 1);
+    if (controlled) {
+      const { sub, pos } = indexToSubPos(clamped);
+      onFrame!(sub, pos, replace);
+    } else {
+      setILocal(clamped);
+    }
+  };
+
+  // a11y: bei jedem Frame-Wechsel (Weiter/Zurück) den Fokus auf den neuen
+  // Inhalt setzen, damit Tastatur-/Screenreader-Nutzende mitwandern. Beim ersten
+  // Render NICHT fokussieren (kein Scroll-Sprung / Fokus-Klau beim Seitenaufbau).
+  const inhaltRef = useRef<HTMLDivElement>(null);
+  const gemountet = useRef(false);
+  useEffect(() => {
+    if (gemountet.current) inhaltRef.current?.focus();
+    else gemountet.current = true;
+  }, [i]);
 
   const frame = frames[i];
   const banner = station.subpages[frame.sub];
@@ -877,7 +916,10 @@ export default function StationV3({
 
   // Auto-Advance: nach einer diskreten Poll-/Swipe-Antwort automatisch zum nächsten
   // Frame — aber NUR innerhalb derselben Subpage (Subpage-Wechsel bleibt ein
-  // bewusster «Weiter»-Klick). Weiter/Zurück bleiben jederzeit nutzbar.
+  // bewusster «Weiter»-Klick). Weiter/Zurück bleiben jederzeit nutzbar. Stale-
+  // Schutz via iRef, falls zwischenzeitlich manuell navigiert wurde.
+  const iRef = useRef(i);
+  iRef.current = i;
   const autoRef = useRef(false);
   useEffect(() => {
     autoRef.current = false;
@@ -885,7 +927,10 @@ export default function StationV3({
   const autoAdvance = () => {
     if (autoRef.current || !next || next.sub !== frame.sub) return;
     autoRef.current = true;
-    setTimeout(() => setI((p) => (p === i ? p + 1 : p)), AUTO_ADVANCE_MS);
+    const from = i;
+    setTimeout(() => {
+      if (iRef.current === from) gotoIndex(from + 1, true);
+    }, AUTO_ADVANCE_MS);
   };
 
   return (
@@ -933,7 +978,7 @@ export default function StationV3({
       </div>
 
       {/* Subpage-Stepper — die 7 Abschnitte, anklickbar (freie Navigation, v3 §5) */}
-      <SubpageStepper gruppen={gruppen} aktivIdx={aktivGruppe} onJump={(idx) => setI(idx)} />
+      <SubpageStepper gruppen={gruppen} aktivIdx={aktivGruppe} onJump={(idx) => gotoIndex(idx)} />
 
       {/* Banner (persistent je Subpage) */}
       <Banner banner={banner} />
@@ -1034,7 +1079,7 @@ export default function StationV3({
         {frame.kind === "reflexion" && (
           <ReflexionFrame stationId={station.id} prompt={station.reflexion} />
         )}
-        {frame.kind === "befund-badge" && <BadgeFrame station={station} onReset={() => setI(0)} />}
+        {frame.kind === "befund-badge" && <BadgeFrame station={station} onReset={() => gotoIndex(0)} />}
       </div>
 
       {/* Navigation — sticky am unteren Rand (#3), damit Weiter bei langen
@@ -1042,7 +1087,7 @@ export default function StationV3({
       <div className="sticky bottom-0 z-10 -mx-lg -mb-lg flex items-center justify-between gap-md border-t border-outline-variant bg-surface-bright px-lg pb-lg pt-md">
         <button
           type="button"
-          onClick={() => setI((p) => Math.max(0, p - 1))}
+          onClick={() => gotoIndex(i - 1)}
           disabled={erste}
           className="inline-flex items-center gap-xs rounded-lg px-md py-sm text-label-md text-on-surface-variant transition-colors enabled:hover:text-on-surface disabled:opacity-40"
         >
@@ -1052,7 +1097,7 @@ export default function StationV3({
         {!letzte ? (
           <button
             type="button"
-            onClick={() => setI((p) => Math.min(frames.length - 1, p + 1))}
+            onClick={() => gotoIndex(i + 1)}
             className={`inline-flex items-center gap-xs rounded-lg px-lg py-sm text-label-md transition-opacity hover:opacity-90 ${
               wechselt
                 ? "bg-tertiary text-on-tertiary"

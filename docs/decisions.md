@@ -10,6 +10,38 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-06-26 — M10: Hash-Routing für adressierbare Schritte (Lernseite 1)
+
+Der Navigations-Zustand der KI-Einheit v3 lebt jetzt im **URL-Hash**
+(`/lernen/lernseite-1#/station/2/fakten/3`). Jeder Schritt ist adressierbar,
+reload-fest, über Browser-Zurück/Vor blätterbar und deep-linkbar. Nicht-
+offensichtliche Entscheide:
+
+- **Hash statt Query** (Variante B, OPEN DECISIONS 13 liess Query/Hash offen;
+  Pietro war unsicher, Claude-Entscheid): Der ganze v3-Flow ist `"use client"`.
+  Query-Routing (`useSearchParams`) erzwingt eine `<Suspense>`-Grenze und Scroll-
+  Restoration-Eigenheiten; Hash ist rein clientseitig, braucht das nicht, lässt
+  `page.tsx` unberührt und verhält sich identisch auf Vercel. In der fragilen
+  OneDrive/Build-Umgebung das risikoärmere.
+- **Frame-genau (sub + Position), nicht nur Subpage**: Die Acceptance verlangt
+  «Neuladen landet auf demselben Schritt» — ein Schritt ist ein Frame. Encodiert
+  wird die **1-basierte Position innerhalb der Subpage** (robust gegen Inhalts-
+  Umordnung), bei Overflow geklammert.
+- **`_lib/route.ts` ist die einzige Stelle mit `history`-Zugriff.** `KiEinheitV3`
+  besitzt `useRoute()` und reicht `route` + `push`/`replace` als `nav` durch.
+  `pushState` = bewusster Schritt; `replaceState` = Auto-Advance (Browser-Zurück
+  überspringt die automatischen Mikro-Schritte). `localStorage` (`ki26-v3-phase`)
+  bleibt nur **Fallback** bei leerem Hash.
+- **Alle Routing-Props optional.** Ohne `nav` (z.B. `/v3-preview`, das
+  `<ZeitstrahlMenu />` ohne Props rendert) bleibt das alte lokale State-Verhalten;
+  v2-Komponenten unberührt.
+- **ki26-konform:** Der Hash trägt **nur Navigations-State** — keine Antworten,
+  Punkte oder Profile. Persönliche Daten bleiben in localStorage.
+- **In-Sandbox-`tsc` bestätigt unbrauchbar:** Der Cowork-bash-Mount dehydriert
+  per File-Tool editierte OneDrive-Dateien (sah `AbschlussV3.tsx` bei Z.132
+  abgeschnitten → Phantom-«JSX no closing tag»-Fehler). Typprüfung manuell;
+  build/lint macht Pietro auf Windows (massgeblich).
+
 ## 2026-06-26 — v3 Improv-Plan v3: neun UX-/Logik-Verbesserungen an Lernseite 1 (#7 Dark Mode zurückgestellt)
 
 Umsetzung von `docs/improv-plan-v3.md` (Lernseite 1, KI-Einheit). Acht der neun
