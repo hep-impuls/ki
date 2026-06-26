@@ -1,6 +1,7 @@
 "use client";
 
 import { castVote, scaleBucket } from "@/lib/polls";
+import { getSession } from "@/lib/session";
 
 /**
  * Poll-ID-Schema + Klassen-Mechanik für die KI-Einheit (Handoff §4).
@@ -13,16 +14,29 @@ import { castVote, scaleBucket } from "@/lib/polls";
 
 export const GLOBAL_AXIS = { links: "eher Chance", rechts: "eher Bedrohung" };
 
+/** Roh-String zu einer sauberen Firestore-Doc-ID-Form normalisieren. */
+function sanitizeKlasse(raw: string): string {
+  return raw.toLowerCase().replace(/[^a-z0-9-]/g, "").slice(0, 24) || "ohne-klasse";
+}
+
 /**
- * Klassen-Code auflösen (Reihenfolge): URL-Param ?klasse=<code> →
- * localStorage (ki26-klasse) → Fallback "ohne-klasse". Sanitisiert zu sauberen
- * Firestore-Doc-IDs.
+ * Klassen-Code auflösen (Reihenfolge):
+ *   1. Schüler-Session (`teacherCode` aus dem Onboarding) — der echte,
+ *      Lehrer-beanspruchte Klassencode. Damit zählen die `kp-{klasse}-*`-Poll-
+ *      Counter auf denselben Namespace, den der Lehrer-Report liest
+ *      (`klasseNamespace()` in `server/teacherStore.ts`).
+ *   2. URL-Param `?klasse=<code>` (Legacy / Direkt-Link).
+ *   3. localStorage (`ki26-klasse`, Legacy).
+ *   4. Fallback `"ohne-klasse"`.
+ * Sanitisiert zu sauberen Firestore-Doc-IDs.
  */
 export function resolveKlasse(): string {
   if (typeof window === "undefined") return "ohne-klasse";
+  const sessionCode = getSession()?.teacherCode;
+  if (sessionCode) return sanitizeKlasse(sessionCode);
   const url = new URLSearchParams(window.location.search).get("klasse");
   const raw = url ?? localStorage.getItem("ki26-klasse") ?? "";
-  const code = raw.toLowerCase().replace(/[^a-z0-9-]/g, "").slice(0, 24) || "ohne-klasse";
+  const code = sanitizeKlasse(raw);
   if (url) localStorage.setItem("ki26-klasse", code);
   return code;
 }
@@ -86,17 +100,17 @@ export function castPollVote(id: string, optionId: string): void {
  *                (pre/post getrennt → spätere Bewegungs-Aggregation).
  *   Vorwissen  → ein Zähler je gewählte Option (pollId.vorwissen).
  *
- * Alle laufen über `castPollVote`/`voteOnce` → **ein** Cast pro Browser pro
+ * Alle laufen über `castPollVote`/`voteOnce` → ein Cast pro Browser pro
  * Ziel-ID, rein anonyme Aggregat-Zähler (ki26-konform). Persönliche Werte
  * bleiben lokal (stationStore). */
 
-/** 4er-Skala-Stimme — nur **Post** casten (das liest der KlassenSpiegel). */
+/** 4er-Skala-Stimme — nur Post casten (das liest der KlassenSpiegel). */
 export function castSkalaPost(basePollId: string, index: number): void {
   castPollVote(`${basePollId}-post`, scaleBucket(index));
 }
 
 /**
- * 4er-Skala-Stimme **mit Phase** (pre/post) — für die globalen Auftakt/Abschluss-
+ * 4er-Skala-Stimme mit Phase (pre/post) — für die globalen Auftakt/Abschluss-
  * Polls (`AUFTAKT_SKALA_POLLS`), die als Pre/Post-Paar aggregiert werden. Bucket
  * `s{Index}` unter `{basePollId}-{phase}` — identisches Schema wie `castSkalaPost`
  * (für post deckungsgleich), `voteOnce`-geschützt (erste Stufe pro Browser zählt).

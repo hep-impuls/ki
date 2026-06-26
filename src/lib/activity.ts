@@ -1,5 +1,16 @@
 "use client";
 
+/**
+ * @deprecated Seit R6 (2026-06-26) abgeloest durch `src/lib/engagement.ts`.
+ *
+ * Diese Datei schrieb Events in die top-level `activities`-Collection mit einer
+ * anonymen Firebase-Auth-`uid`. Der `ActivityTracker` nutzt diese Funktion nicht
+ * mehr — er richtet stattdessen den namespaced Engagement-Tracker ein
+ * (`abstimmungen/ki26/engagement`, getragen vom Animal-Code). `logActivity`
+ * bleibt vorerst als Fallback erhalten, sollte aber in neuem Code nicht mehr
+ * verwendet werden.
+ */
+
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { ensureAnonymousUser, getFirebase } from "./firebase";
 

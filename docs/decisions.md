@@ -10,6 +10,40 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-06-26 — Volle 10mio-Parität: Registrierung, Klassencode & Lehrer-Report
+
+Architektur-Kurswechsel (mit Pietro): ki26 bekommt denselben Tier wie 10mio —
+freie Registrierung mit **Animal-Code** (`BÄR-334`), optionaler **Klassencode**
+(Lehrer-beansprucht, secret-geschützt, single-owner) und ein **Lehrer-Report**
+mit Pro-Schüler-Fortschritt plus Klasse-vs-alle-Poll-Aggregaten. Umsetzung von
+`docs/PLAN_registrierung-klassencode.md`, Milestones R0–R5. Nicht-offensichtliche
+Entscheide:
+
+- **Backend als Next.js Route Handlers + Firebase Admin SDK** (nicht Cloud
+  Function): ki26 darf nie ins geteilte `iperka-lms` deployen. Das Admin SDK
+  umgeht die Rules → `teachers/*`-Zugriff ohne Rules-Änderung. Service-Account
+  als `FIREBASE_SERVICE_ACCOUNT` (Vercel-Env / `.env.local`).
+- **Datenschutz revidiert**: Das frühere „nur anonyme Aggregate"-Statement
+  (2026-06-20 / 2026-06-24) gilt nicht mehr. ki26 speichert jetzt **pseudonyme
+  Pro-Schüler-Daten** (Animal-Code → Fortschritt) unter
+  `abstimmungen/ki26/students/{code}`. Persönliche Detaildaten (Reflexionen,
+  Werte-Profil, Einzelantworten) bleiben weiterhin **lokal**; gespiegelt wird nur
+  ein minimaler Fortschritts-Snapshot (pct, Quiz-Punkte, Stations-Abschluss).
+- **Spiegel additiv, localStorage bleibt UX-Quelle**: `progressMirror.ts` +
+  `ProgressMirror.tsx` lesen den lokalen Store und schreiben periodisch ein
+  `progress/{moduleId}`-Doc. No-op ohne Session → anonyme Nutzung ohne Code bleibt
+  möglich.
+- **Poll-Klassen-Namespace an echten Code gekoppelt**: `resolveKlasse()` liest
+  jetzt zuerst `session.teacherCode` (statt nur `?klasse=`/localStorage). Die
+  bestehenden `kp-{klasse}-*`-Zähler bleiben unverändert und füttern den Report.
+- **Geteilte Dateien**: Neue `src/lib/*`-Dateien sind „gemeinsam"; `ActivityTracker.tsx`
+  wurde **nicht** angefasst (R6 verschoben). Christofs Anbindung steht in
+  `docs/handoff-firebase-ki26.md`.
+- **Verifikation offen**: Build/Lint/Firestore-Test laufen bei Pietro auf Windows
+  (Cowork-Sandbox kann nicht zuverlässig bauen / kein Firestore-Egress).
+
+---
+
 ## 2026-06-26 — M10: Hash-Routing für adressierbare Schritte (Lernseite 1)
 
 Der Navigations-Zustand der KI-Einheit v3 lebt jetzt im **URL-Hash**
@@ -741,52 +775,4 @@ Christofs Bereich. Umfrage-Entwurf:
 
 Inhaltliche Visualisierungen werden vor dem Einbau ins Submodul **im selben
 Repo unter `/sandbox/**`** als Werkstatt-Route entwickelt — nicht als separates
-Vercel-Projekt. Begründung: eigene URL zum Iterieren, kein zweites Repo / kein
-doppeltes Auth-System, minimaler Migrationspfad (Komponenten-Import).
-
-Konvention für solche Visualisierungs-Komponenten: **self-contained Client-
-Komponenten ohne Firebase-/Server-Logik**, damit sie Pietros geplanten Auth-/
-Hosting-Umzug unverändert überstehen.
-
-Erstes Beispiel: `/sandbox/intro-visual` (Akteurs-Modell für das Intro-Submodul
-von Lernseite 2). Sandbox-Routen tauchen nicht in der SideNav auf (die liest
-nur `unit.modules`).
-
----
-
-## 2026-06-14 — Inhalts-Skripte in `docs/skripte/`
-
-Jedes Submodul bekommt vor der Umsetzung in `page.tsx` ein **inhaltliches
-Skript** als Markdown unter `docs/skripte/lernseite-{n}-submodul-{m}-{kurzname}.md`.
-Das Skript enthält Kernthese, Lernziele, Schwerpunkte, Reflexionsfragen,
-Visualisierungsideen und Notizen — wird vom Owner fortlaufend ergänzt und
-ist via `git log` versioniert (= „safe abgelegt").
-
-Erstes Beispiel: [skripte/lernseite-2-submodul-1-intro.md](skripte/lernseite-2-submodul-1-intro.md).
-
----
-
-## 2026-06-14 — Co-Autoren-Workflow + Owner-Mapping
-
-Verbindliche Regeln zur kollaborativen Arbeit zwischen Pietro und Christof
-sind in [CLAUDE.md](../CLAUDE.md#workflow--kollaboration-zwingend) festgehalten:
-Session-Start-Routine (CLAUDE.md lesen + `git pull --rebase`), Session-Ende
-(commit + pull --rebase + push), Owner-Mapping pro Lernseite, verbindliche
-Stil-Bibliothek (Material Symbols, MD3-Tokens), Submodul-Template.
-
-Auf Feature-Branches wird vorerst verzichtet — Aufwand vs. Nutzen passt für
-ein 2-Personen-Setup nicht.
-
----
-
-## 2026-06-14 — Sprachregelung: „Lernumgebung zu KI"
-
-Die Plattform wird durchgehend mit **„Lernumgebung zu KI"** bezeichnet — nicht
-„KI-Lernumgebung". Klingt offener und weniger als Komposita-Klotz.
-
-Angepasst in:
-- [src/app/layout.tsx](../src/app/layout.tsx) — Metadata-`title`
-- [src/config/unit.ts](../src/config/unit.ts) — `unit.title`
-- [README.md](../README.md) — H1
-
-Gilt für alle künftigen Texte (UI, Doku, README, Commit-Messages).
+Vercel-Projekt. Begründun

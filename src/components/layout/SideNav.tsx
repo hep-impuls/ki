@@ -2,10 +2,19 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { unit } from "@/config/unit";
+import { getSession } from "@/lib/session";
 
 export default function SideNav() {
   const pathname = usePathname();
+
+  // Klassenreport-Link nur zeigen, wenn der Schueler einer Klasse beigetreten ist.
+  // Client-seitig nachgeladen (Session lebt in localStorage) → kein SSR-Mismatch.
+  const [hasClass, setHasClass] = useState(false);
+  useEffect(() => {
+    setHasClass(Boolean(getSession()?.teacherCode));
+  }, [pathname]);
 
   const isActiveModule = (href: string) => pathname?.startsWith(href);
 
@@ -61,6 +70,22 @@ export default function SideNav() {
       </nav>
 
       <div className="flex-grow" />
+
+      {hasClass && (
+        <nav className="p-md pt-0">
+          <Link
+            href="/klassenreport"
+            className={
+              pathname === "/klassenreport"
+                ? "flex items-center gap-sm px-sm py-sm rounded-lg bg-primary/10 text-primary font-semibold"
+                : "flex items-center gap-sm px-sm py-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"
+            }
+          >
+            <span className="material-symbols-outlined text-[20px]">groups</span>
+            <span className="text-body-md">Klassenreport</span>
+          </Link>
+        </nav>
+      )}
 
       <div className="p-md border-t border-outline-variant">
         <p className="text-label-sm text-on-surface-variant">

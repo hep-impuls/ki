@@ -218,3 +218,45 @@ Stellen) ergänzen — jüngste oben.
   - **Option A** — move hosting to Firebase Hosting (matches the handoffs verbatim; lose Vercel's preview deploys and Next.js edge features).
   - **Option B** — stay on Vercel and replicate the rewrite via `vercel.json` `rewrites` pointing at `https://europe-west6-<project>.cloudfunctions.net/api/:path*` (keeps Vercel; adds a cross-origin hop that needs CORS already enabled in the Cloud Function — it is, in handoff-firebase.md §4.2).
   - **Option C** — skip Cloud Functions entirely and implement the teacher endpoints as Next.js Route Handlers under `src/app/api/`, using the Firebase Admin SDK server-side. Diverges from the handoff but is the most idiomatic Next-on-Vercel choice.
+
+## Registrierung, Klassencode & Lehrer-Report (Stand 2026-06-26)
+
+Umsetzung von `docs/PLAN_registrierung-klassencode.md` (R0–R5). **Volle
+10mio-Parität**: Animal-Code-Registrierung, secret-geschützte Klassencodes
+(single-owner), Pro-Schüler-Fortschritts-Docs, Lehrer-Report. Vollständige
+Anleitung (inkl. „wie binde ich Inhalte an Firebase an" für Christof):
+[docs/handoff-firebase-ki26.md](docs/handoff-firebase-ki26.md).
+
+**Neue Infrastruktur (geteilt, `src/lib/`):**
+
+- `session.ts` — `generateCode()`, `Session {studentCode, teacherCode}`,
+  localStorage-CRUD (`ki26-session`).
+- `paths.ts` — Firestore-Pfade unter `abstimmungen/ki26/…` (isomorph).
+- `types.ts` — `Student`, `Progress`, `TeacherPrefs`, Report-Typen.
+- `db.ts` — Client-SDK: `ensureStudent`, `loadStudent`, `linkTeacherCode`,
+  `saveProgress`, `loadProgress`, `hashSecret`.
+- `progressMirror.ts` — `mirrorProgress(moduleId, progress)`; no-op ohne Session.
+- `api.ts` — Client-Wrapper für die Route Handlers (`/api/...`).
+- `firebaseAdmin.ts` — **server-only** Admin-SDK-Singleton aus
+  `FIREBASE_SERVICE_ACCOUNT`.
+- `server/teacherStore.ts` + `server/apiResponse.ts` — Server-Logik (single-owner
+  Secret, Report-Aggregation; umgeht Rules via Admin SDK).
+
+**Neue Routen:** `src/app/api/{teacher/setup,teacher/prefs,teacher/report,student/class-exists,student/class-prefs,student/class-report}/route.ts`
+· `src/app/start/page.tsx` (Onboarding) · `src/app/lehrperson/{,setup,report}/page.tsx`
+· `src/components/SessionGate.tsx` (opt-in Gate).
+
+**Backend-Entscheid:** Lehrer-Tier läuft als **Next.js Route Handlers + Firebase
+Admin SDK** (nicht Cloud Function) — kein Deploy ins geteilte `iperka-lms`, Admin
+SDK umgeht die Rules. **Nötig (Pietro):** `npm install` (zieht `firebase-admin` +
+`server-only`), `FIREBASE_SERVICE_ACCOUNT` als Vercel-/`.env.local`-Env,
+`npm run build` zur Typprüfung. Build/Lint/Firestore-Test bewusst **nicht** in der
+Cowork-Sandbox (dehydriert Dateien / kein Firestore-Egress).
+
+**Datenschutz:** ki26 speichert jetzt pseudonyme Pro-Schüler-Daten (Code →
+Fortschritt). Das frühere „nur anonyme Aggregate"-Statement ist revidiert
+(siehe Decision-Log 2026-06-26). Detaildaten (Reflexion, Profil, Einzelantworten)
+bleiben lokal; gespiegelt wird nur ein minimaler Fortschritts-Snapshot.
+
+**ActivityTracker.tsx unverändert** (R6 — Engagement-Umbau — verschoben, geteilte
+Datei → mit Christof koordinieren).
