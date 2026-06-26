@@ -10,6 +10,16 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-06-26 — v3 M0: Zertifikat-Schwelle = 3 (korrigiert «mind. 2»)
+
+Klarstellung beim M0-Gap-Analyse-Pass ([BUILD_NOTES_v3.md](material-pietro/BUILD_NOTES_v3.md)):
+Die finale Gesamtarchitektur [v3](material-pietro/KI_EINHEIT_GESAMTARCHITEKTUR_v3.md) (§0/§3) legt
+**3 abgeschlossene Stationen** als Schwelle für das Abschluss-Zertifikat fest. Die frühere
+Vorschlags-Notiz weiter unten («mind. 2 statt 3 Pflicht») ist damit **überholt** — bei Konflikt gilt
+v3. Umsetzung in M5 (Zeitstrahl/Zertifikat). Ebenfalls notiert: DEV_PLAN verweist auf
+`src/config/units/lernseite-1.ts`, das nicht existiert — Modul-Metadaten liegen in `src/config/unit.ts`
+(shared, nur nach Absprache ändern).
+
 ## 2026-06-26 — KI-Einheit v3: Domänen-Wahl + Fakten-Selbst-Check (Vorschlag)
 
 Neuer Architektur-Vorschlag
