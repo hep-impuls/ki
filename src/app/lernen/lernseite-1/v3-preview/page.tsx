@@ -29,12 +29,14 @@ export default function Lernseite1V3Preview() {
 
       <header className="mt-lg border-b border-outline-variant pb-lg">
         <p className="text-label-md uppercase tracking-wider text-tertiary">
-          Lernseite 1 · v3-Vorschau (M5)
+          Lernseite 1 · v3-Vorschau (M6)
         </p>
         <h1 className="mt-sm text-headline-xl text-on-surface">Zeitstrahl — Durchklick</h1>
         <p className="mt-sm text-body-lg text-on-surface-variant">
           Sieben Stationen frei wählbar, grün bei Abschluss, mit Fortschritt und
-          Zertifikat ab drei Stationen. Jede Station öffnet die 7-Subpage-Shell.
+          Zertifikat ab drei Stationen. Über «Meine Landkarte» erreichst du die
+          Abschluss-Vorschau: globaler Slider, Chancen-Risiken-Landkarte (Radar)
+          und Klassen-Spiegel. Jede Station öffnet die 7-Subpage-Shell.
         </p>
       </header>
 

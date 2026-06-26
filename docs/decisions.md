@@ -10,6 +10,40 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-06-26 — v3 M6: Landkarte (Radar) + globaler Slider + Klassen-Spiegel (lesen-only, neue Dateien)
+
+M6 baut die rückwärts aus den Polls designte **Chancen-Risiken-Landkarte**, den
+globalen **Bedrohung↔Chance-Slider** und den **Klassen-Spiegel**. Festlegungen,
+die nicht aus dem Code allein ersichtlich sind (mit Pietro abgestimmt):
+
+1. **Anonyme Aggregate in M6 NUR LESEN.** Landkarte/Spiegel lesen
+   `loadPollCounts`/`subscribePollCounts`; das **Schreiben** (`castPollVote` in
+   `PollFrame` + globalem Slider) kommt in **M8**. Bis dahin zeigen «Klasse»/«alle»
+   `n=0`. M6 schreibt **nichts** in die Cloud (ki26-konform).
+2. **Bucket-Schema für M8 festgelegt (vom KlassenSpiegel bereits gelesen):**
+   4er-Skala → `s{Index}` (0..3), Keys `pollId.poll("{pid}-post")` bzw.
+   `pollId.klassePoll(code,"{pid}-post")`; globaler Slider → `scaleBucket`.
+3. **Landkarte = Radar/Spinnennetz** (SVG, keine Chart-Library); Ich-Fläche ab 3
+   Achsen, sonst nur Punkte. Nur Achsen **mit lokalen Daten** werden gezeichnet →
+   wächst mit den Stationen. MD3-Farben via `rgb(var(--color-*))`.
+4. **Werte-Profil (Swipe, mehrachsig) separat** als links/rechts-Balken, nicht als
+   eine Radar-Speiche (3 Achsen liessen sich nicht sinnvoll zu einer Speiche mitteln).
+5. **Globaler Slider** lokal unter Pseudo-Station `"global"`, pollId
+   `"global-chance-bedrohung"` (= `landkarte.ts`-Achse). Pre = Auftakt, Post =
+   Abschluss (in M7 verdrahtet); in M6 beide in der `AbschlussVorschau`, um die
+   Pre→Post-Bewegung zu demonstrieren.
+6. **Surface = v3-Vorschau** (Button «Meine Landkarte» im `ZeitstrahlMenu`), analog
+   M5. Echte Auftakt/Abschluss-Verdrahtung in `KiEinheit` bleibt **M7**.
+7. **4er-Skala-Polarität:** Selektor nimmt Optionen **links→rechts entlang der
+   Achse** an (Index 0 = linker Pol); in M9 pro Frage gegenprüfen.
+
+Neue Dateien: `_lib/landkarteData.ts`, `_components/Landkarte.tsx`,
+`GlobalSlider.tsx`, `KlassenSpiegel.tsx`, `AbschlussVorschau.tsx`. Geändert:
+`ZeitstrahlMenu.tsx` (Button), `v3-preview/page.tsx` (Header). Review:
+[`review/M6-landkarte-spiegel.md`](material-pietro/review/M6-landkarte-spiegel.md).
+
+---
+
 ## 2026-06-26 — v3 M5: Zeitstrahl-Menü + client-seitiges Zertifikat (rein lokal, neue Dateien)
 
 M5 (Timeline + Fortschritt + Zertifikat) bringt die freie Stationswahl und die

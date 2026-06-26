@@ -8,6 +8,7 @@ import { BADGE_FAMILIEN } from "../_data/badges";
 import { abgeschlosseneStationen, badgeSammlung } from "../_lib/stationStore";
 import StationV3 from "./StationV3";
 import Zertifikat from "./Zertifikat";
+import AbschlussVorschau from "./AbschlussVorschau";
 
 /**
  * ZeitstrahlMenu (M5) — die sieben Stationen als Punkte auf einem horizontalen
@@ -26,17 +27,18 @@ import Zertifikat from "./Zertifikat";
 export default function ZeitstrahlMenu() {
   const [offen, setOffen] = useState<Station | null>(null);
   const [zeigeZertifikat, setZeigeZertifikat] = useState(false);
+  const [zeigeAbschluss, setZeigeAbschluss] = useState(false);
   const [abgeschlossen, setAbgeschlossen] = useState<string[]>([]);
   const [badges, setBadges] = useState<[BadgeFamilie, number][]>([]);
 
   // Beim Mount und nach jedem Rücksprung ins Menü den lokalen Stand neu lesen
   // (Abschluss wird in StationV3 gesetzt). SSR-sicher: erst nach Mount.
   useEffect(() => {
-    if (!offen && !zeigeZertifikat) {
+    if (!offen && !zeigeZertifikat && !zeigeAbschluss) {
       setAbgeschlossen(abgeschlosseneStationen());
       setBadges(Object.entries(badgeSammlung()) as [BadgeFamilie, number][]);
     }
-  }, [offen, zeigeZertifikat]);
+  }, [offen, zeigeZertifikat, zeigeAbschluss]);
 
   if (offen) {
     return <StationV3 station={offen} onBack={() => setOffen(null)} />;
@@ -44,6 +46,10 @@ export default function ZeitstrahlMenu() {
 
   if (zeigeZertifikat) {
     return <Zertifikat onBack={() => setZeigeZertifikat(false)} />;
+  }
+
+  if (zeigeAbschluss) {
+    return <AbschlussVorschau onBack={() => setZeigeAbschluss(false)} />;
   }
 
   const anzahl = abgeschlossen.length;
@@ -164,8 +170,16 @@ export default function ZeitstrahlMenu() {
         </div>
       )}
 
-      {/* Zertifikat-Zugang */}
-      <div className="flex justify-end border-t border-outline-variant pt-lg">
+      {/* Abschluss-Vorschau + Zertifikat-Zugang */}
+      <div className="flex flex-wrap justify-end gap-sm border-t border-outline-variant pt-lg">
+        <button
+          type="button"
+          onClick={() => setZeigeAbschluss(true)}
+          className="inline-flex items-center gap-sm rounded-xl border border-tertiary px-lg py-sm text-label-md text-tertiary transition hover:bg-tertiary-container"
+        >
+          <span className="material-symbols-outlined text-[18px]">explore</span>
+          Meine Landkarte
+        </button>
         <button
           type="button"
           onClick={() => setZeigeZertifikat(true)}
