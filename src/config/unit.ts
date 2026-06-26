@@ -45,7 +45,7 @@ export const unit: UnitConfig = {
       icon: "explore",
       subtitle: "Selbstgesteuert · bewertungsfrei",
       description:
-        "Eine rund 90-minütige Reise: Du nimmst Position zu KI, durchläufst frei gewählte Stationen mit Versprechen und Kehrseiten und siehst am Ende im Kollektiv-Spiegel, wo du und die Gruppe stehen.",
+        "Eine rund 90-minütige Reise: Du nimmst Position zu KI, wählst frei Stationen auf dem Zeitstrahl, erlebst je Thema Sonnen- und Schattenseite, sammelst Badges und siehst am Ende auf deiner Chancen-Risiken-Landkarte deine Bewegung — mit Zertifikat ab drei Stationen.",
     },
     {
       slug: "lernseite-2",

@@ -24,10 +24,14 @@ function position(wert: number) {
 export default function GlobalSlider({
   phase,
   zeigeBewegung = false,
+  onChange,
 }: {
   phase: "pre" | "post";
   /** Wenn beide Werte vorliegen: Pre→Post-Bewegung anzeigen (typisch im Post). */
   zeigeBewegung?: boolean;
+  /** Optional: meldet jede Wert-Setzung nach aussen (z.B. um im Auftakt das
+   *  «Weiter» freizuschalten). Rein lokal — der Wert wird ohnehin im Store gehalten. */
+  onChange?: (wert: number) => void;
 }) {
   const [wert, setWert] = useState<number | null>(() => pollWahl(GLOBAL_STATION_ID, GLOBAL_POLL_ID, phase));
   const pre = pollWahl(GLOBAL_STATION_ID, GLOBAL_POLL_ID, "pre");
@@ -36,6 +40,7 @@ export default function GlobalSlider({
   const setzen = (v: number) => {
     setWert(v);
     recordPollWahl(GLOBAL_STATION_ID, GLOBAL_POLL_ID, phase, v);
+    onChange?.(v);
   };
 
   const bewegungBereit = zeigeBewegung && pre != null && post != null;

@@ -10,6 +10,40 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-06-26 — v3 M7: volle Verdrahtung, v3 ist live (Auftakt + Zeitstrahl + Abschluss)
+
+M7 macht die Einheit an der echten Adresse `/lernen/lernseite-1` spielbar. Mit
+Pietro abgestimmte Festlegungen, die nicht aus dem Code allein ersichtlich sind:
+
+1. **v3 geht live.** `page.tsx` rendert neu `KiEinheitV3` (State-Machine
+   `auftakt → stationen → abschluss`, Phase reload-fest in `ki26-v3-phase`). Der
+   **v2-Flow** (`KiEinheit`, `Auftakt`, `Abschluss`, `StationenMenu`) **bleibt im
+   Repo, ist aber nicht mehr eingebunden** — Entfernen erst in einem späteren
+   Aufräum-Schritt (mit Pietro).
+2. **Auftakt = «lean local-only» (Option A).** `AuftaktV3`: Vorwissen
+   (Mehrfachauswahl + Freitext, lokal) → Hype-Opener (Ava-Video) → globaler
+   **Pre-Slider**. **Keine** Cloud-Writes. Bewusst weggelassen und **auf M8
+   verschoben**: 1–2 globale 4er-Skala-Pre-Polls (erst mit Casting sinnvoll) und
+   ein Auftakt-Swipe-Set (Spec §74; neuer, zu reviewender Inhalt). Eigene
+   Lernziel-Karte inline, weil die v2-Karte einen WissenCheck/Stimmungsbild
+   verspricht, die der schlanke Auftakt nicht hat — geteilte `auftakt.ts`
+   unangetastet.
+3. **Abschluss** (`AbschlussV3`): Post-Slider mit Pre→Post-Pfeil + Landkarte +
+   Klassen-Spiegel + Zertifikat-Zugang ab 3. Liest Aggregate nur (Klasse/alle
+   «n=0» bis Casting in M8).
+4. **Additive Prop-Hooks statt Umschreiben** (OneDrive-schonend): `GlobalSlider`
+   bekam optional `onChange`, `ZeitstrahlMenu` optional `onWeiterZumAbschluss`
+   (→ Button «Zum Abschluss»; ohne Prop unverändert = `/v3-preview`).
+5. **Geteilte `src/config/unit.ts`** (mit Pietro abgesprochen): Lernseite-1-
+   Beschreibung von v2-Sprache («Kollektiv-Spiegel») auf v3 umformuliert
+   (Zeitstrahl, Sonnen-/Schattenseite, Badges, Chancen-Risiken-Landkarte,
+   Zertifikat ab drei Stationen).
+
+Verifikation: isolierte `tsc` (echte React-Typen + faithful App-Stubs) → 3 neue
+Dateien EXIT 0. Build/lint macht Pietro auf Windows.
+
+---
+
 ## 2026-06-26 — v3 M6: Landkarte (Radar) + globaler Slider + Klassen-Spiegel (lesen-only, neue Dateien)
 
 M6 baut die rückwärts aus den Polls designte **Chancen-Risiken-Landkarte**, den

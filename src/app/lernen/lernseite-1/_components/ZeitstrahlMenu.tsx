@@ -24,7 +24,14 @@ import AbschlussVorschau from "./AbschlussVorschau";
  * Vorschau-Orchestrator in M7 durch die echte Auftakt/Abschluss-Verdrahtung.
  */
 
-export default function ZeitstrahlMenu() {
+export default function ZeitstrahlMenu({
+  onWeiterZumAbschluss,
+}: {
+  /** Im orchestrierten Flow (KiEinheitV3) gesetzt: «Meine Landkarte» führt dann
+   *  in die echte Abschluss-Phase statt in die eingebettete Vorschau. Ohne diese
+   *  Prop (z.B. /v3-preview) bleibt das alte Vorschau-Verhalten erhalten. */
+  onWeiterZumAbschluss?: () => void;
+} = {}) {
   const [offen, setOffen] = useState<Station | null>(null);
   const [zeigeZertifikat, setZeigeZertifikat] = useState(false);
   const [zeigeAbschluss, setZeigeAbschluss] = useState(false);
@@ -174,11 +181,11 @@ export default function ZeitstrahlMenu() {
       <div className="flex flex-wrap justify-end gap-sm border-t border-outline-variant pt-lg">
         <button
           type="button"
-          onClick={() => setZeigeAbschluss(true)}
+          onClick={() => (onWeiterZumAbschluss ? onWeiterZumAbschluss() : setZeigeAbschluss(true))}
           className="inline-flex items-center gap-sm rounded-xl border border-tertiary px-lg py-sm text-label-md text-tertiary transition hover:bg-tertiary-container"
         >
           <span className="material-symbols-outlined text-[18px]">explore</span>
-          Meine Landkarte
+          {onWeiterZumAbschluss ? "Zum Abschluss" : "Meine Landkarte"}
         </button>
         <button
           type="button"
