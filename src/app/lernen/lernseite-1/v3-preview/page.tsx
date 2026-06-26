@@ -1,14 +1,14 @@
 import Link from "next/link";
 import ActivityTracker from "@/components/ActivityTracker";
 import AppLayout from "@/components/layout/AppLayout";
-import StationV3 from "../_components/StationV3";
-import { STATIONEN_V3 } from "../_data/stationenV3";
+import ZeitstrahlMenu from "../_components/ZeitstrahlMenu";
 
 /**
- * v3-Vorschau (M3) — rendert die neue 7-Subpage-Stations-Shell mit echten
- * Daten aus stationenV3.ts (Station 1). Diente nur zum Durchklicken/Review der
- * Shell; die v2-Einheit (page.tsx → KiEinheit) bleibt unberührt. Wird in M7
- * durch die echte Verdrahtung (Menü/Timeline → KiEinheit) ersetzt.
+ * v3-Vorschau (M3 → M5) — rendert jetzt den **Zeitstrahl** mit allen 7 Stationen
+ * (freie Wahl, grün bei Abschluss, Fortschritt, Zertifikat ab 3). Über das Menü
+ * ist weiterhin jede Stations-Shell (StationV3) erreichbar. Die v2-Einheit
+ * (page.tsx → KiEinheit) bleibt unberührt. Wird in M7 durch die echte
+ * Auftakt/Abschluss-Verdrahtung ersetzt.
  */
 export default function Lernseite1V3Preview() {
   return (
@@ -29,17 +29,17 @@ export default function Lernseite1V3Preview() {
 
       <header className="mt-lg border-b border-outline-variant pb-lg">
         <p className="text-label-md uppercase tracking-wider text-tertiary">
-          Lernseite 1 · v3-Vorschau (M3)
+          Lernseite 1 · v3-Vorschau (M5)
         </p>
-        <h1 className="mt-sm text-headline-xl text-on-surface">Stations-Shell — Durchklick</h1>
+        <h1 className="mt-sm text-headline-xl text-on-surface">Zeitstrahl — Durchklick</h1>
         <p className="mt-sm text-body-lg text-on-surface-variant">
-          7 Subpages, eine Frage bzw. Karte pro Frame, mit Banner und
-          Mikro-Anleitung. Inhalte aus Station 1 (KI &amp; Arbeit).
+          Sieben Stationen frei wählbar, grün bei Abschluss, mit Fortschritt und
+          Zertifikat ab drei Stationen. Jede Station öffnet die 7-Subpage-Shell.
         </p>
       </header>
 
       <section className="mt-xl">
-        <StationV3 station={STATIONEN_V3[0]} />
+        <ZeitstrahlMenu />
       </section>
     </AppLayout>
   );

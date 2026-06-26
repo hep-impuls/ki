@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type {
   BadgeFamilie,
   FaktencheckFakt,
@@ -18,6 +18,21 @@ import Anleitung from "./Anleitung";
 import Hinweis from "./Hinweis";
 import { FAKTEN_FALSCH } from "../_data/faktenPruefung";
 import { QUIZ_BEZUG } from "../_data/quizBezug";
+import {
+  faktZustand,
+  markStationAbgeschlossen,
+  pollWahl,
+  quizErgebnis,
+  quizScore,
+  recordFakt,
+  recordPollWahl,
+  recordQuiz,
+  recordSwipe,
+  reflexion as ladeReflexion,
+  saveReflexion,
+  stationProfil,
+  swipePick,
+} from "../_lib/stationStore";
 
 /**
  * StationV3 — die v3-Stations-Reise als **7 Subpages** (v3 §5), jede ≤ ~2
@@ -26,10 +41,13 @@ import { QUIZ_BEZUG } from "../_data/quizBezug";
  * **Mikro-Anleitung** zwischen den Schritten (v3 §4.3). Video im **Split-Layout**
  * (stapelt mobil).
  *
- * Stand M3 (Shell): Navigation + Banner + Guidance + Medien stehen; die
- * Interaktions-Tiefe (Quiz 8→5 zufällig + Scoring, Swipe-Profil, Poll-Aggregate,
- * Badge-Vergabe, Zertifikat) folgt in **M4/M5/M6**. Persönliche Eingaben bleiben
- * lokal (React-State); **keine** Cloud-Writes in dieser Stufe.
+ * Stand M4 (Interaktions-Tiefe): Navigation + Banner + Guidance + Medien (M3) plus
+ * **Quiz-Scoring + lokale Persistenz**, **Swipe-Werte-Profil**, Faktencheck-/Poll-/
+ * Reflexions-Zustand und **Badge-Vergabe + Stations-Abschluss** — alles über
+ * `_lib/stationStore` (localStorage). Frames hydrieren ihren Zustand aus dem Store,
+ * sodass `key={i}`-Remounts/Zurück-Navigation nichts mehr verlieren. Zertifikat +
+ * Zeitstrahl-«grün» folgen in **M5**, anonyme Poll-/Quiz-Aggregate in **M6/M8**.
+ * Persönliche Eingaben bleiben **lokal**; **keine** Cloud-Writes in dieser Stufe.
  *
  * Reine MD3-Tokens + Material Symbols Outlined, deutsche UI, echte Umlaute.
  */
@@ -64,6 +82,13 @@ const BADGE_INFO: Record<BadgeFamilie, { label: string; icon: string }> = {
   gesellschaft: { label: "Gesellschaft", icon: "groups" },
   wirtschaft: { label: "Wirtschaft", icon: "payments" },
   mensch: { label: "Mensch", icon: "diversity_3" },
+};
+
+/** Lesbare Pol-Labels der Werte-Profil-Achsen (v3 §10); Fallback = roher Key. */
+const PROFIL_LABEL: Record<string, { links: string; rechts: string }> = {
+  "regulierung-innovation": { links: "Regulierung", rechts: "Innovation" },
+  "menschloop-effizienz": { links: "Mensch-im-Loop", rechts: "Effizienz" },
+  "datenschutz-bequemlichkeit": { links: "Datenschutz", rechts: "Bequemlichkeit" },
 };
 
 /* ── Frame-Modell: jede Subpage zerfällt in 1..n Frames (1 Item pro Frame) ─── */
@@ -262,8 +287,21 @@ function Banner({ banner }: { banner: SubpageBanner }) {
 }
 
 /* ── Frame-Inhalte ─────────────────────────────────────────────────────────── */
-function PollFrame({ poll, phase }: { poll: PollFrage; phase: "pre" | "post" }) {
-  const [wert, setWert] = useState<number | null>(null);
+function PollFrame({
+  stationId,
+  poll,
+  phase,
+}: {
+  stationId: string;
+  poll: PollFrage;
+  phase: "pre" | "post";
+}) {
+  // Auswahl lokal hydrieren (back-/reload-fest); Aggregat-Zähler folgt M6/M8.
+  const [wert, setWert] = useState<number | null>(() => pollWahl(stationId, poll.id, phase));
+  const setzen = (v: number) => {
+    setWert(v);
+    recordPollWahl(stationId, poll.id, phase, v);
+  };
   return (
     <div className="flex flex-col gap-md">
       <p className="text-label-sm uppercase tracking-wider text-tertiary">
@@ -276,7 +314,7 @@ function PollFrame({ poll, phase }: { poll: PollFrage; phase: "pre" | "post" }) 
             <button
               key={i}
               type="button"
-              onClick={() => setWert(i)}
+              onClick={() => setzen(i)}
               className={`rounded-lg border p-md text-left text-body-md transition-colors ${
                 wert === i
                   ? "border-primary bg-primary-container text-on-primary-container"
@@ -294,7 +332,7 @@ function PollFrame({ poll, phase }: { poll: PollFrage; phase: "pre" | "post" }) 
             min={0}
             max={100}
             value={wert ?? 50}
-            onChange={(e) => setWert(Number(e.target.value))}
+            onChange={(e) => setzen(Number(e.target.value))}
             className="w-full accent-primary"
           />
           <div className="flex justify-between text-label-sm text-on-surface-variant">
@@ -310,8 +348,16 @@ function PollFrame({ poll, phase }: { poll: PollFrage; phase: "pre" | "post" }) 
   );
 }
 
-function SwipeFrame({ karte }: { karte: SwipeKarte }) {
-  const [pick, setPick] = useState<"links" | "rechts" | null>(null);
+function SwipeFrame({ stationId, karte }: { stationId: string; karte: SwipeKarte }) {
+  // Pick lokal hydrieren; überschreibbar (Haltung, kein richtig/falsch). Speist
+  // das Werte-Profil (stationStore.aggregateProfil) für die Landkarte (M6).
+  const [pick, setPick] = useState<"links" | "rechts" | null>(
+    () => swipePick(stationId, karte.id)?.pick ?? null,
+  );
+  const waehlen = (p: "links" | "rechts") => {
+    setPick(p);
+    recordSwipe(stationId, karte.id, p, karte.profilKey);
+  };
   const links = karte.achse?.links ?? "Ablehnen";
   const rechts = karte.achse?.rechts ?? "Zustimmen";
   return (
@@ -322,7 +368,7 @@ function SwipeFrame({ karte }: { karte: SwipeKarte }) {
       <div className="grid grid-cols-2 gap-md">
         <button
           type="button"
-          onClick={() => setPick("links")}
+          onClick={() => waehlen("links")}
           className={`inline-flex items-center justify-center gap-xs rounded-lg border p-md text-body-md transition-colors ${
             pick === "links"
               ? "border-primary bg-primary-container text-on-primary-container"
@@ -334,7 +380,7 @@ function SwipeFrame({ karte }: { karte: SwipeKarte }) {
         </button>
         <button
           type="button"
-          onClick={() => setPick("rechts")}
+          onClick={() => waehlen("rechts")}
           className={`inline-flex items-center justify-center gap-xs rounded-lg border p-md text-body-md transition-colors ${
             pick === "rechts"
               ? "border-primary bg-primary-container text-on-primary-container"
@@ -349,11 +395,29 @@ function SwipeFrame({ karte }: { karte: SwipeKarte }) {
   );
 }
 
-function FaktFrame({ fakt, index, total }: { fakt: FaktencheckFakt; index: number; total: number }) {
+function FaktFrame({
+  stationId,
+  fakt,
+  index,
+  total,
+}: {
+  stationId: string;
+  fakt: FaktencheckFakt;
+  index: number;
+  total: number;
+}) {
   const falsch = FAKTEN_FALSCH[fakt.id];
-  // Beim Mount (Frame remountet via key={i}) einmalig zufällig wahr/falsch zeigen.
-  const [zeigeWahr] = useState(() => (falsch ? Math.random() < 0.5 : true));
-  const [antwort, setAntwort] = useState<boolean | null>(null);
+  // Gespeicherten Zustand einmalig beim Mount lesen → gezeigte Variante + Antwort
+  // bleiben bei Zurück-Navigation stabil (kein Neu-Würfeln).
+  const [gespeichert] = useState(() => faktZustand(stationId, fakt.id));
+  const [zeigeWahr] = useState(() =>
+    gespeichert ? gespeichert.gezeigtWahr : falsch ? Math.random() < 0.5 : true,
+  );
+  const [antwort, setAntwort] = useState<boolean | null>(gespeichert ? gespeichert.antwort : null);
+  const beantworten = (val: boolean) => {
+    setAntwort(val);
+    recordFakt(stationId, fakt.id, zeigeWahr, val);
+  };
   const aussage = zeigeWahr ? fakt.claim : (falsch ?? fakt.claim);
   const korrekt = antwort != null && antwort === zeigeWahr;
 
@@ -371,7 +435,7 @@ function FaktFrame({ fakt, index, total }: { fakt: FaktencheckFakt; index: numbe
             key={String(val)}
             type="button"
             disabled={antwort !== null}
-            onClick={() => setAntwort(val)}
+            onClick={() => beantworten(val)}
             className={`rounded-lg border p-md text-body-md transition-colors ${
               antwort !== null && val === zeigeWahr
                 ? "border-primary bg-primary-container text-on-primary-container"
@@ -411,16 +475,32 @@ function FaktFrame({ fakt, index, total }: { fakt: FaktencheckFakt; index: numbe
 }
 
 function QuizFrameView({
+  stationId,
   frage,
   index,
   total,
 }: {
+  stationId: string;
   frage: QuizFrage;
   index?: number;
   total?: number;
 }) {
-  const [gewaehlt, setGewaehlt] = useState<number | null>(null);
-  const [tf, setTf] = useState<boolean | null>(null);
+  // Gepunktet, erste Antwort bindet (stationStore). Hydrieren → back-/reload-fest.
+  const [gespeichert] = useState(() => quizErgebnis(stationId, frage.id));
+  const [gewaehlt, setGewaehlt] = useState<number | null>(
+    gespeichert && typeof gespeichert.antwort === "number" ? gespeichert.antwort : null,
+  );
+  const [tf, setTf] = useState<boolean | null>(
+    gespeichert && typeof gespeichert.antwort === "boolean" ? gespeichert.antwort : null,
+  );
+  const waehleMc = (i: number) => {
+    setGewaehlt(i);
+    recordQuiz(stationId, frage.id, i, frage.kind === "mc" && frage.correctIndices.includes(i), frage.punkte ?? 1);
+  };
+  const waehleTf = (val: boolean) => {
+    setTf(val);
+    recordQuiz(stationId, frage.id, val, frage.kind === "tf" && val === frage.correctAnswer, frage.punkte ?? 1);
+  };
   return (
     <div className="flex flex-col gap-md">
       {total != null && (
@@ -440,7 +520,7 @@ function QuizFrameView({
                   key={i}
                   type="button"
                   disabled={zeigen}
-                  onClick={() => setGewaehlt(i)}
+                  onClick={() => waehleMc(i)}
                   className={`rounded-lg border p-md text-left text-body-md transition-colors ${
                     zeigen && istKorrekt
                       ? "border-primary bg-primary-container text-on-primary-container"
@@ -467,7 +547,7 @@ function QuizFrameView({
                 key={String(val)}
                 type="button"
                 disabled={tf !== null}
-                onClick={() => setTf(val)}
+                onClick={() => waehleTf(val)}
                 className={`rounded-lg border p-md text-body-md transition-colors ${
                   tf !== null && val === frage.correctAnswer
                     ? "border-primary bg-primary-container text-on-primary-container"
@@ -491,14 +571,18 @@ function QuizFrameView({
   );
 }
 
-function ReflexionFrame({ prompt }: { prompt: string }) {
-  const [text, setText] = useState("");
+function ReflexionFrame({ stationId, prompt }: { stationId: string; prompt: string }) {
+  const [text, setText] = useState(() => ladeReflexion(stationId));
+  const aendern = (v: string) => {
+    setText(v);
+    saveReflexion(stationId, v);
+  };
   return (
     <div className="flex flex-col gap-md">
       <p className="text-body-lg text-on-surface">{prompt}</p>
       <textarea
         value={text}
-        onChange={(e) => setText(e.target.value)}
+        onChange={(e) => aendern(e.target.value)}
         rows={3}
         placeholder="Dein Satz …"
         className="w-full rounded-lg border border-outline-variant bg-surface-bright p-md text-body-md text-on-surface"
@@ -509,6 +593,16 @@ function ReflexionFrame({ prompt }: { prompt: string }) {
 }
 
 function BadgeFrame({ station }: { station: Station }) {
+  // Beim Erreichen des Befunds: Station als abgeschlossen markieren + Badges
+  // vergeben (idempotent, lokal). Speist Zeitstrahl-«grün», Badge-Sammlung und
+  // Zertifikat (M5). Fortschritt/Zeitstrahl-Anzeige selbst kommt in M5.
+  useEffect(() => {
+    markStationAbgeschlossen(station.id, station.badges);
+  }, [station]);
+
+  const score = quizScore(station.id);
+  const profil = Object.entries(stationProfil(station.id));
+
   return (
     <div className="flex flex-col gap-md">
       <p className="text-body-lg text-on-surface">Geschafft! Diese Station vergibt:</p>
@@ -527,8 +621,45 @@ function BadgeFrame({ station }: { station: Station }) {
           );
         })}
       </div>
+
+      {/* Quiz-Punktestand (lokal, gepunktet) */}
+      {score.beantwortet > 0 && (
+        <div className="flex items-center gap-sm rounded-lg bg-surface-container-low p-md">
+          <span className="material-symbols-outlined text-[22px] text-primary">military_tech</span>
+          <span className="text-body-md text-on-surface">
+            Quiz: <span className="font-semibold">{score.punkte}</span> von {score.max} Punkten
+            <span className="text-on-surface-variant"> · {score.beantwortet} Fragen beantwortet</span>
+          </span>
+        </div>
+      )}
+
+      {/* Werte-Profil-Echo dieser Station (lokal; speist die Landkarte in M6) */}
+      {profil.length > 0 && (
+        <div className="flex flex-col gap-sm rounded-lg bg-surface-container-low p-md">
+          <p className="flex items-center gap-xs text-label-sm uppercase tracking-wider text-tertiary">
+            <span className="material-symbols-outlined text-[18px]">tune</span>
+            Dein Werte-Profil (lokal)
+          </p>
+          {profil.map(([key, achse]) => {
+            const label = PROFIL_LABEL[key] ?? { links: key, rechts: key };
+            const tendenz =
+              achse.links === achse.rechts
+                ? "ausgewogen"
+                : achse.links > achse.rechts
+                  ? label.links
+                  : label.rechts;
+            return (
+              <p key={key} className="text-body-sm text-on-surface-variant">
+                {label.links} ↔ {label.rechts}:{" "}
+                <span className="font-semibold text-on-surface">Tendenz {tendenz}</span>
+              </p>
+            );
+          })}
+        </div>
+      )}
+
       <p className="text-label-sm text-on-surface-variant">
-        Vergabe, Fortschritt und Zertifikat folgen in einem späteren Schritt (M5).
+        Alles bleibt lokal. Zeitstrahl-Fortschritt und Zertifikat folgen in M5.
       </p>
     </div>
   );
@@ -601,7 +732,9 @@ export default function StationV3({
       {/* Frame-Inhalt — key={i} erzwingt Remount pro Frame (setzt lokalen
           Antwort-State zurück; sonst „klebt“ die Auswahl auf der nächsten Frage). */}
       <div key={i} className="min-h-[160px]">
-        {frame.kind === "poll" && <PollFrame poll={frame.poll} phase={frame.phase} />}
+        {frame.kind === "poll" && (
+          <PollFrame stationId={station.id} poll={frame.poll} phase={frame.phase} />
+        )}
         {frame.kind === "media" && (
           <div className="flex flex-col gap-md">
             {frame.warnung && (
@@ -618,7 +751,7 @@ export default function StationV3({
                   Verständnis — direkt zum eben Gesehenen
                 </p>
                 {frame.fragen.map((q) => (
-                  <QuizFrameView key={q.id} frage={q} />
+                  <QuizFrameView key={q.id} stationId={station.id} frage={q} />
                 ))}
               </div>
             )}
@@ -650,14 +783,26 @@ export default function StationV3({
             )}
           </div>
         )}
-        {frame.kind === "swipe" && <SwipeFrame karte={frame.karte} />}
+        {frame.kind === "swipe" && <SwipeFrame stationId={station.id} karte={frame.karte} />}
         {frame.kind === "fakt" && (
-          <FaktFrame fakt={frame.fakt} index={frame.index} total={frame.total} />
+          <FaktFrame
+            stationId={station.id}
+            fakt={frame.fakt}
+            index={frame.index}
+            total={frame.total}
+          />
         )}
         {frame.kind === "quiz" && (
-          <QuizFrameView frage={frame.frage} index={frame.index} total={frame.total} />
+          <QuizFrameView
+            stationId={station.id}
+            frage={frame.frage}
+            index={frame.index}
+            total={frame.total}
+          />
         )}
-        {frame.kind === "reflexion" && <ReflexionFrame prompt={station.reflexion} />}
+        {frame.kind === "reflexion" && (
+          <ReflexionFrame stationId={station.id} prompt={station.reflexion} />
+        )}
         {frame.kind === "befund-badge" && <BadgeFrame station={station} />}
       </div>
 

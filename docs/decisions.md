@@ -10,6 +10,67 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-06-26 — v3 M5: Zeitstrahl-Menü + client-seitiges Zertifikat (rein lokal, neue Dateien)
+
+M5 (Timeline + Fortschritt + Zertifikat) bringt die freie Stationswahl und die
+Belohnung. Festlegungen, die nicht aus dem Code allein ersichtlich sind:
+
+1. **Neue v3-Komponenten statt Umbau der v2-`StationenMenu`.**
+   [`_components/ZeitstrahlMenu.tsx`](../src/app/lernen/lernseite-1/_components/ZeitstrahlMenu.tsx)
+   (Zeitstrahl der 7 Stationen, grün bei Abschluss, Fortschrittsbalken,
+   Badge-Sammlung, Zertifikat-Gate) und
+   [`_components/Zertifikat.tsx`](../src/app/lernen/lernseite-1/_components/Zertifikat.tsx)
+   sind **neu**; die v2-`StationenMenu.tsx`/`_lib/fortschritt.ts` bleiben unberührt
+   bis zur Migration in M7 (gleiche Linie wie stationenV3/StationV3/stationStore).
+2. **M5 liest aus dem v3-Store, nicht aus v2-`fortschritt.ts`.** «grün», Fortschritt
+   und Zertifikat speisen sich aus `stationStore.abgeschlosseneStationen` /
+   `badgeSammlung` / `quizScore` (Abschluss wird in StationV3/BadgeFrame gesetzt).
+   Das Menü liest den Stand beim Rücksprung neu (useEffect, SSR-sicher).
+3. **Zertifikat = rein abgeleitet, kein eigener Store; «grün» = `tertiary`-Token.**
+   Die Urkunde wird client-seitig aus dem lokalen Store berechnet (Stationen,
+   Badges je Familie, Quiz-Punkte-Summe, Datum). **Download vorerst via «Drucken →
+   als PDF speichern»** (`window.print()`, Steuerleiste `print:hidden`); echte
+   Datei-Generierung ist optional (v3 §15.3 lässt das Layout offen). Das Grün der
+   abgeschlossenen Stationen nutzt bewusst das **`tertiary`**-Token (RGB 29 105 64),
+   da es im MD3-System die einzige grüne Rolle ist; `primary` bleibt Blau.
+4. **Keine Cloud-Writes in M5.** Anonyme Aggregat-Zähler (Poll-Verteilung, Quiz
+   «% richtig») bleiben für M6/M8; M5 ist vollständig lokal/ki26-konform.
+5. **`v3-preview` rendert ab jetzt das Menü** statt direkt Station 1 — jede Station
+   ist über das Menü erreichbar (M4-Durchklick bleibt möglich). M7 ersetzt die
+   Vorschau-Route durch die echte Auftakt/Abschluss-Verdrahtung in `KiEinheit`.
+
+---
+
+## 2026-06-26 — v3 M4: lokaler Stations-Store, Persistenz statt Remount-Reset, Aggregate auf M6/M8 verschoben
+
+M4 (Interaktions-Tiefe) legt die stateful Logik unter die M3-Shell. Drei nicht
+aus dem Code allein ersichtliche Festlegungen:
+
+1. **Neuer lokaler Store statt Erweiterung von `_lib/punkte.ts`.** Die v3-Logik
+   (Quiz-Scoring, Swipe-Profil, Faktencheck-Zustand, Poll-Auswahl, Reflexion,
+   Stations-Abschluss + Badge-Sammlung) lebt in der **neuen** Datei
+   [`_lib/stationStore.ts`](../src/app/lernen/lernseite-1/_lib/stationStore.ts)
+   (localStorage-Präfix `ki26-v3-`). `punkte.ts` (v2, per-qid) bleibt unberührt
+   bis zur Migration in M7 — gleiche Linie wie stationenV3/StationV3 (Build-grün >
+   wörtlicher Dateiname).
+2. **Persistenz hebt den M3-Remount-Reset auf.** In M3 erzwang `key={i}` einen
+   Remount, um die „klebende Auswahl“ zu fixen — verlor dabei aber die Antwort.
+   Jetzt **hydrieren** die Frames ihren Anfangszustand aus dem Store, sodass
+   `key={i}` bleiben kann und Zurück-/Vor-Navigation den Stand zeigt. **Quiz/Fakt
+   = erste Antwort bindet** (Lernehrlichkeit); **Swipe = überschreibbar** (Haltung,
+   kein richtig/falsch). Faktencheck-Variante (wahr/falsch) wird gespeichert →
+   kein Neu-Würfeln beim Zurückblättern.
+3. **Anonyme Aggregat-Zähler bewusst nach M6/M8 verschoben.** M4 schreibt **nichts**
+   in Firestore — Quiz-«% richtig» und Poll-Verteilung sind im M4-Text explizit als
+   optional/„see M6/M8“ markiert; M8 verdrahtet alle `abstimmungen/ki26/…`-Aggregate
+   gebündelt. Vorteil: M4 ist rein lokal und in der Sandbox vollständig per
+   isolierter `tsc` prüfbar (Voll-build/lint macht Pietro auf Windows). Station
+   gilt als abgeschlossen beim Erreichen des Befund-Frames (idempotenter
+   `markStationAbgeschlossen`-`useEffect`); `abgeschlosseneStationen` + `badgeSammlung`
+   stehen für das Zertifikat in M5 bereit.
+
+---
+
 ## 2026-06-26 — v3 M3-Iteration nach Pietros Test (Companion-Maps statt stationenV3-Umbau)
 
 Nach dem ersten Durchklick der v3-Vorschau: vier Anpassungen.
