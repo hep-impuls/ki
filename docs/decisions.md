@@ -10,6 +10,45 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-06-26 — v3 Improv-Plan v3: neun UX-/Logik-Verbesserungen an Lernseite 1 (#7 Dark Mode zurückgestellt)
+
+Umsetzung von `docs/improv-plan-v3.md` (Lernseite 1, KI-Einheit). Acht der neun
+Punkte umgesetzt; **#7 Dark Mode bewusst zurückgestellt** (berührt `gemeinsam`-
+Dateien — erst nach Absprache mit Christof). Nicht-offensichtliche Entscheide:
+
+- **«Subpage» → «Schritt» nur im sichtbaren Text** (#5). In `stationenV3.ts`
+  wurden die `inhalt`-Strings ersetzt (`Subpage n/7` → `Schritt n/7`); interne
+  Identifier (`SubpageKey`, `SUBPAGE_*`, `subpages`, `StationSubpages`) bleiben.
+- **Werte-Karten ohne «wischen»** (#1). Es gibt kein Swipe-Gesture, nur zwei
+  Buttons → alle «wische»-Formulierungen entfernt, Buttons «Sehe ich anders /
+  Sehe ich auch so» (Icons `thumb_down`/`thumb_up`), `SUBPAGE_ICON.swipe` =
+  `touch_app`. Die doppelt gepflegte Karte ist jetzt eine geteilte Komponente
+  `_components/WerteKarte.tsx` (Auftakt + Station).
+- **Auto-Advance: 850 ms + Einblend-Animation** (#2). Gemeinsame Konstante
+  `AUTO_ADVANCE_MS = 850` in `_lib/ui.ts` (kein Magic Number). Neue
+  `@keyframes frame-in` + `.animate-frame-in` in `globals.css`, respektiert
+  `prefers-reduced-motion`.
+- **Faktencheck-Scroll + sticky Navigation** (#3). Nach der Antwort scrollt die
+  Auflösung in den Blick; die untere Navigationszeile in `StationV3` ist
+  `sticky bottom-0` → «Weiter» bleibt bei langen Frames erreichbar.
+- **60 %-Gate + Faktencheck-Bonus + Stations-Reset** (#9). Eine Station gilt erst
+  ab **≥ 60 %** der Quiz-Basispunkte als abgeschlossen (`stationErfuellt`,
+  `markStationAbgeschlossen` nur dann). Der **Faktencheck zählt nur als Bonus**
+  (max. **+10 %** des Stations-Totals, `stationBonus`), **nicht** im 100 %-Nenner.
+  Gate pro **Station** (nicht pro Schritt — Pietro-Entscheid). Unter 60 %: klare
+  Meldung + **«Station neu starten»** (`resetStation`, löscht nur die lokalen
+  Daten **dieser** Station nach Bestätigung; kein Einzelfrage-Retry). Hinweis:
+  Reset löscht localStorage-Lernfortschritt, **keine Dateien** — Pietros Regel
+  «nichts ohne Zustimmung löschen» bezieht sich auf Dateien.
+- **Auswertung nach jeder Poll-Serie** (#8). Neuer geteilter Baustein
+  `_components/PollAuswertung.tsx` (aus `KlassenSpiegel` herausgelöst, der ihn nun
+  wiederverwendet → keine Doppelpflege). Erscheint nach der Auftakt-Haltung
+  (pre) und nach den Befund-Post-Polls jeder Station (post): «Ich · meine Klasse ·
+  alle» pro 4er-Skala-Frage. **Pre-Serie (Entscheid a):** kein neues Pre-Aggregat
+  gecastet — `PollAuswertung` liest die vorhandenen `{pollId}-pre`-Buckets (von
+  `Skala4Frage` ohnehin gecastet) und rendert Klasse/Alle freundlich leer, falls
+  noch nichts vorliegt. Nur anonyme Aggregate; persönliche Stufe bleibt lokal.
+
 ## 2026-06-26 — v3 M9 QA: §4 voll konform; ActivityTracker-Telemetrie als geteilter-Datei-Entscheid offen
 
 QA-Pass (zwei Sonnet-Subagenten, read-only Audit + Gegenprüfung in der Hauptsession).

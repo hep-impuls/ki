@@ -265,3 +265,74 @@ export function badgeSammlung(): Partial<Record<BadgeFamilie, number>> {
   }
   return out;
 }
+
+/* ── Score-Gate + Stations-Reset (#9) ──────────────────────────────────────── */
+
+/** Schwelle: Station gilt erst ab diesem Anteil der Basis-Punkte als erfüllt. */
+export const STATION_GATE = 0.6 as const;
+
+/** Basis-Prozentsatz (nur Quiz/Verständnis) — entscheidet über das 60%-Gate. */
+export function stationProzent(stationId: string): number {
+  const { punkte, max } = quizScore(stationId);
+  return max > 0 ? punkte / max : 0;
+}
+
+/** Faktencheck-Score einer Station (Bonus-Basis): korrekte und beantwortete Fakten. */
+export function faktScore(stationId: string): { richtig: number; gesamt: number } {
+  const store = read<FaktStore>("fakt", {});
+  let richtig = 0;
+  let gesamt = 0;
+  for (const [k, e] of Object.entries(store)) {
+    if (!k.startsWith(stationId + ":")) continue;
+    gesamt++;
+    if (e.correct) richtig++;
+  }
+  return { richtig, gesamt };
+}
+
+/**
+ * Faktencheck-Bonus (#9): bis zu **+10 %** des Stations-Totals, oben drauf —
+ * **nicht** Teil der 100 %. Volle +0.10 nur, wenn alle beantworteten Fakten
+ * richtig sind; 0, solange kein Fakt beantwortet wurde.
+ */
+export function stationBonus(stationId: string): number {
+  const { richtig, gesamt } = faktScore(stationId);
+  if (gesamt === 0) return 0;
+  return Math.min(0.1, (richtig / gesamt) * 0.1);
+}
+
+/** Hartes Gate (#9): Station erst ab >= 60 % der Basis-Punkte erfüllt. */
+export function stationErfuellt(stationId: string): boolean {
+  return stationProzent(stationId) >= STATION_GATE;
+}
+
+/**
+ * Stations-Reset (#9): entfernt **nur** die Einträge dieser Station aus allen
+ * lokalen Stores (Quiz, Faktencheck, Poll, Swipe, Reflexion, Abschluss). Andere
+ * Stationen bleiben unberührt. Bewusste Nutzeraktion — löscht ausschliesslich
+ * lokalen Lernfortschritt dieser Station (keine Dateien, nur localStorage).
+ */
+export function resetStation(stationId: string): void {
+  const prefix = stationId + ":";
+  for (const name of ["quiz", "fakt", "poll", "swipe"]) {
+    const store = read<Record<string, unknown>>(name, {});
+    let changed = false;
+    for (const k of Object.keys(store)) {
+      if (k.startsWith(prefix)) {
+        delete store[k];
+        changed = true;
+      }
+    }
+    if (changed) write(name, store);
+  }
+  const refl = read<ReflexionStore>("reflexion", {});
+  if (stationId in refl) {
+    delete refl[stationId];
+    write("reflexion", refl);
+  }
+  const abs = read<AbschlussStore>("abschluss", {});
+  if (stationId in abs) {
+    delete abs[stationId];
+    write("abschluss", abs);
+  }
+}

@@ -8,6 +8,7 @@ import type {
   MediaSegment,
   MediaSpec,
   PollFrage,
+  PollSkala4,
   QuizFrage,
   Station,
   SubpageBanner,
@@ -17,10 +18,14 @@ import type {
 } from "../_data/types";
 import Anleitung from "./Anleitung";
 import Hinweis from "./Hinweis";
+import WerteKarte from "./WerteKarte";
+import PollAuswertung from "./PollAuswertung";
+import { AUTO_ADVANCE_MS } from "../_lib/ui";
 import { FAKTEN_FALSCH } from "../_data/faktenPruefung";
 import { QUIZ_BEZUG } from "../_data/quizBezug";
 import { castSkalaPost, castSlider } from "../_lib/unitPolls";
 import {
+  faktScore,
   faktZustand,
   markStationAbgeschlossen,
   pollWahl,
@@ -31,8 +36,12 @@ import {
   recordQuiz,
   recordSwipe,
   reflexion as ladeReflexion,
+  resetStation,
   saveReflexion,
+  stationBonus,
+  stationErfuellt,
   stationProfil,
+  stationProzent,
   swipePick,
 } from "../_lib/stationStore";
 
@@ -81,7 +90,7 @@ const SUBPAGE_ICON: Record<SubpageKey, string> = {
   auftakt: "flag",
   sonne: "wb_sunny",
   schatten: "nightlight",
-  swipe: "swipe",
+  swipe: "touch_app",
   fakten: "fact_check",
   quiz: "quiz",
   befund: "emoji_events",
@@ -120,6 +129,7 @@ type Frame =
   | { sub: SubpageKey; kind: "swipe"; karte: SwipeKarte }
   | { sub: SubpageKey; kind: "fakt"; fakt: FaktencheckFakt; index: number; total: number }
   | { sub: SubpageKey; kind: "quiz"; frage: QuizFrage; index: number; total: number }
+  | { sub: SubpageKey; kind: "auswertung" }
   | { sub: SubpageKey; kind: "reflexion" }
   | { sub: SubpageKey; kind: "befund-badge" };
 
@@ -161,8 +171,11 @@ function buildFrames(station: Station): Frame[] {
   recapFragen.forEach((frage, i) =>
     frames.push({ sub: "quiz", kind: "quiz", frage, index: i + 1, total: recapFragen.length }),
   );
-  // 7 Befund — 3 Post-Polls + 1 Satz + Badges (je 1 pro Frame)
+  // 7 Befund — 3 Post-Polls + Auswertung (Ich/Klasse/alle) + 1 Satz + Badges
   station.polls.forEach((poll) => frames.push({ sub: "befund", kind: "poll", phase: "post", poll }));
+  if (station.polls.some((p) => p.format === "skala4")) {
+    frames.push({ sub: "befund", kind: "auswertung" });
+  }
   frames.push({ sub: "befund", kind: "reflexion" });
   frames.push({ sub: "befund", kind: "befund-badge" });
   return frames;
@@ -512,43 +525,7 @@ function SwipeFrame({
     recordSwipe(stationId, karte.id, p, karte.profilKey);
     onAnswered?.();
   };
-  const links = karte.achse?.links ?? "Ablehnen";
-  const rechts = karte.achse?.rechts ?? "Zustimmen";
-  return (
-    <div className="flex flex-col gap-lg">
-      <div className="rounded-xl border border-outline-variant bg-surface-bright p-lg text-center text-body-lg text-on-surface shadow-sm">
-        {karte.aussage}
-      </div>
-      <div className="grid grid-cols-2 gap-md">
-        <button
-          type="button"
-          aria-pressed={pick === "links"}
-          onClick={() => waehlen("links")}
-          className={`inline-flex items-center justify-center gap-xs rounded-lg border p-md text-body-md transition-colors ${
-            pick === "links"
-              ? "border-primary bg-primary-container text-on-primary-container"
-              : "border-outline-variant text-on-surface hover:border-primary"
-          }`}
-        >
-          <span className="material-symbols-outlined text-[20px]">arrow_back</span>
-          {links}
-        </button>
-        <button
-          type="button"
-          aria-pressed={pick === "rechts"}
-          onClick={() => waehlen("rechts")}
-          className={`inline-flex items-center justify-center gap-xs rounded-lg border p-md text-body-md transition-colors ${
-            pick === "rechts"
-              ? "border-primary bg-primary-container text-on-primary-container"
-              : "border-outline-variant text-on-surface hover:border-primary"
-          }`}
-        >
-          {rechts}
-          <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
-        </button>
-      </div>
-    </div>
-  );
+  return <WerteKarte aussage={karte.aussage} achse={karte.achse} pick={pick} onPick={waehlen} />;
 }
 
 function FaktFrame({ stationId, fakt }: { stationId: string; fakt: FaktencheckFakt }) {
@@ -566,6 +543,16 @@ function FaktFrame({ stationId, fakt }: { stationId: string; fakt: FaktencheckFa
   };
   const aussage = zeigeWahr ? fakt.claim : (falsch ?? fakt.claim);
   const korrekt = antwort != null && antwort === zeigeWahr;
+
+  // #3: Nach dem Beantworten die Auflösung (und den darunterliegenden Weiter-
+  // Button) in den sichtbaren Bereich scrollen — sonst wird Weiter aus dem Bild
+  // geschoben. `block: "nearest"` scrollt nur so weit wie nötig.
+  const feedbackRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (antwort !== null) {
+      feedbackRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  }, [antwort]);
 
   return (
     <div className="flex flex-col gap-md">
@@ -593,7 +580,7 @@ function FaktFrame({ stationId, fakt }: { stationId: string; fakt: FaktencheckFa
         ))}
       </div>
       {antwort !== null && (
-        <div aria-live="polite" className="flex flex-col gap-sm rounded-lg bg-surface-container-low p-md">
+        <div ref={feedbackRef} aria-live="polite" className="flex flex-col gap-sm rounded-lg bg-surface-container-low p-md">
           <p className="text-body-md font-semibold text-on-surface">
             {korrekt ? "Richtig erkannt." : "Nicht ganz."}{" "}
             {zeigeWahr ? "Die Aussage stimmt." : "Die Aussage ist falsch."}
@@ -721,16 +708,57 @@ function ReflexionFrame({ stationId, prompt }: { stationId: string; prompt: stri
   );
 }
 
-function BadgeFrame({ station }: { station: Station }) {
-  // Beim Erreichen des Befunds: Station als abgeschlossen markieren + Badges
+function BadgeFrame({ station, onReset }: { station: Station; onReset: () => void }) {
+  // #9: Station erst bei erfülltem 60%-Gate als abgeschlossen markieren + Badges
   // vergeben (idempotent, lokal). Speist Zeitstrahl-«grün», Badge-Sammlung und
-  // Zertifikat (M5). Fortschritt/Zeitstrahl-Anzeige selbst kommt in M5.
-  useEffect(() => {
-    markStationAbgeschlossen(station.id, station.badges);
-  }, [station]);
-
+  // Zertifikat. Der Faktencheck zählt nur als Bonus (max. +10 %), nicht ins Gate.
+  const erfuellt = stationErfuellt(station.id);
+  const prozent = Math.round(stationProzent(station.id) * 100);
+  const bonus = Math.round(stationBonus(station.id) * 100);
   const score = quizScore(station.id);
+  const fakt = faktScore(station.id);
   const profil = Object.entries(stationProfil(station.id));
+
+  useEffect(() => {
+    if (erfuellt) markStationAbgeschlossen(station.id, station.badges);
+  }, [erfuellt, station]);
+
+  // Gate nicht erfüllt → klare Meldung + Stations-Reset (kein Einzelfrage-Retry).
+  if (!erfuellt) {
+    return (
+      <div className="flex flex-col gap-md">
+        <p className="flex items-start gap-sm rounded-lg bg-error-container p-md text-body-md text-on-error-container">
+          <span className="material-symbols-outlined mt-[2px] text-[20px]">info</span>
+          <span>
+            Du hast <span className="font-semibold">{prozent} %</span> der Quizpunkte. Für den
+            Abschluss dieser Station brauchst du mindestens 60 %. Du kannst die Station neu starten
+            und die Fragen noch einmal beantworten.
+          </span>
+        </p>
+        {score.beantwortet > 0 && (
+          <p className="text-body-sm text-on-surface-variant">
+            Quiz: {score.punkte} von {score.max} Punkten · {score.beantwortet} Fragen beantwortet.
+          </p>
+        )}
+        <button
+          type="button"
+          onClick={() => {
+            const ok = window.confirm(
+              "Station neu starten? Dein Fortschritt in dieser Station (Quiz, Faktencheck, Werte, Meinung, Reflexion) wird gelöscht. Andere Stationen bleiben erhalten.",
+            );
+            if (ok) {
+              resetStation(station.id);
+              onReset();
+            }
+          }}
+          className="inline-flex w-fit items-center gap-xs rounded-lg bg-primary px-lg py-sm text-label-md text-on-primary transition hover:opacity-90"
+        >
+          <span className="material-symbols-outlined text-[18px]">restart_alt</span>
+          Station neu starten
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col gap-md">
@@ -751,14 +779,22 @@ function BadgeFrame({ station }: { station: Station }) {
         })}
       </div>
 
-      {/* Quiz-Punktestand (lokal, gepunktet) */}
+      {/* Quiz-Punktestand + Faktencheck-Bonus (#9, lokal, gepunktet) */}
       {score.beantwortet > 0 && (
-        <div className="flex items-center gap-sm rounded-lg bg-surface-container-low p-md">
-          <span className="material-symbols-outlined text-[22px] text-primary">military_tech</span>
-          <span className="text-body-md text-on-surface">
-            Quiz: <span className="font-semibold">{score.punkte}</span> von {score.max} Punkten
-            <span className="text-on-surface-variant"> · {score.beantwortet} Fragen beantwortet</span>
-          </span>
+        <div className="flex flex-col gap-xs rounded-lg bg-surface-container-low p-md">
+          <p className="flex items-center gap-sm text-body-md text-on-surface">
+            <span className="material-symbols-outlined text-[22px] text-primary">military_tech</span>
+            <span>
+              Quiz: <span className="font-semibold">{score.punkte}</span> von {score.max} Punkten
+              <span className="text-on-surface-variant"> · {prozent} %</span>
+            </span>
+          </p>
+          {fakt.gesamt > 0 && (
+            <p className="flex items-center gap-sm text-body-sm text-on-surface-variant">
+              <span className="material-symbols-outlined text-[20px] text-tertiary">fact_check</span>
+              Bonus Faktencheck: +{bonus} % ({fakt.richtig} von {fakt.gesamt} richtig)
+            </p>
+          )}
         </div>
       )}
 
@@ -788,7 +824,7 @@ function BadgeFrame({ station }: { station: Station }) {
       )}
 
       <p className="text-label-sm text-on-surface-variant">
-        Alles bleibt lokal. Zeitstrahl-Fortschritt und Zertifikat folgen in M5.
+        Alles bleibt lokal. Deine Station zählt ab 60 % der Quizpunkte als abgeschlossen.
       </p>
     </div>
   );
@@ -849,7 +885,7 @@ export default function StationV3({
   const autoAdvance = () => {
     if (autoRef.current || !next || next.sub !== frame.sub) return;
     autoRef.current = true;
-    setTimeout(() => setI((p) => (p === i ? p + 1 : p)), 350);
+    setTimeout(() => setI((p) => (p === i ? p + 1 : p)), AUTO_ADVANCE_MS);
   };
 
   return (
@@ -880,24 +916,20 @@ export default function StationV3({
         )}
       </div>
 
-      {/* Fortschritt */}
-      <div className="flex items-center gap-sm">
+      {/* Fortschritt — nur der Balken; der sichtbare Zähler entfällt (#6).
+          Die Schritt-Position bleibt für Screenreader über aria-label erhalten. */}
+      <div
+        role="progressbar"
+        aria-valuemin={1}
+        aria-valuemax={frames.length}
+        aria-valuenow={i + 1}
+        aria-label={`Schritt ${i + 1} von ${frames.length}`}
+        className="h-1.5 w-full overflow-hidden rounded-full bg-surface-container-low"
+      >
         <div
-          role="progressbar"
-          aria-valuemin={1}
-          aria-valuemax={frames.length}
-          aria-valuenow={i + 1}
-          aria-label={`Schritt ${i + 1} von ${frames.length}`}
-          className="h-1.5 flex-1 overflow-hidden rounded-full bg-surface-container-low"
-        >
-          <div
-            className="h-full rounded-full bg-primary transition-all"
-            style={{ width: `${((i + 1) / frames.length) * 100}%` }}
-          />
-        </div>
-        <span className="text-label-sm text-on-surface-variant">
-          {i + 1}/{frames.length}
-        </span>
+          className="h-full rounded-full bg-primary transition-all"
+          style={{ width: `${((i + 1) / frames.length) * 100}%` }}
+        />
       </div>
 
       {/* Subpage-Stepper — die 7 Abschnitte, anklickbar (freie Navigation, v3 §5) */}
@@ -921,7 +953,7 @@ export default function StationV3({
       {/* Frame-Inhalt — key={i} erzwingt Remount pro Frame (setzt lokalen
           Antwort-State zurück; sonst „klebt“ die Auswahl auf der nächsten Frage).
           ref+tabIndex: a11y-Fokusziel bei Frame-Wechsel (siehe useEffect oben). */}
-      <div ref={inhaltRef} tabIndex={-1} key={i} className="flex min-h-[160px] flex-col gap-md focus:outline-none">
+      <div ref={inhaltRef} tabIndex={-1} key={i} className="animate-frame-in flex min-h-[160px] flex-col gap-md focus:outline-none">
         {/* Einheitlicher Subpage-Kopf: Typ-Marker + Position (über alle Stationen gleich) */}
         <SubpageKopf sub={frame.sub} pos={posInSub} count={countInSub} />
         {frame.kind === "poll" && (
@@ -948,7 +980,12 @@ export default function StationV3({
                   Verständnis — direkt zum eben Gesehenen
                 </p>
                 {frame.fragen.map((q) => (
-                  <QuizFrameView key={q.id} stationId={station.id} frage={q} />
+                  <div
+                    key={q.id}
+                    className="rounded-xl border border-outline-variant bg-surface-bright p-lg"
+                  >
+                    <QuizFrameView stationId={station.id} frage={q} />
+                  </div>
                 ))}
               </div>
             )}
@@ -985,14 +1022,24 @@ export default function StationV3({
         )}
         {frame.kind === "fakt" && <FaktFrame stationId={station.id} fakt={frame.fakt} />}
         {frame.kind === "quiz" && <QuizFrameView stationId={station.id} frage={frame.frage} />}
+        {frame.kind === "auswertung" && (
+          <PollAuswertung
+            titel="Ich, meine Klasse, alle"
+            eintraege={station.polls
+              .filter((p): p is PollSkala4 => p.format === "skala4")
+              .map((poll) => ({ stationId: station.id, poll, phase: "post" as const }))}
+            hinweis="Nur anonyme Aggregate werden gezeigt. Deine eigene Stufe bleibt lokal."
+          />
+        )}
         {frame.kind === "reflexion" && (
           <ReflexionFrame stationId={station.id} prompt={station.reflexion} />
         )}
-        {frame.kind === "befund-badge" && <BadgeFrame station={station} />}
+        {frame.kind === "befund-badge" && <BadgeFrame station={station} onReset={() => setI(0)} />}
       </div>
 
-      {/* Navigation */}
-      <div className="flex items-center justify-between gap-md border-t border-outline-variant pt-md">
+      {/* Navigation — sticky am unteren Rand (#3), damit Weiter bei langen
+          Frames (Faktencheck-Auflösung, Medien) immer erreichbar bleibt. */}
+      <div className="sticky bottom-0 z-10 -mx-lg -mb-lg flex items-center justify-between gap-md border-t border-outline-variant bg-surface-bright px-lg pb-lg pt-md">
         <button
           type="button"
           onClick={() => setI((p) => Math.max(0, p - 1))}

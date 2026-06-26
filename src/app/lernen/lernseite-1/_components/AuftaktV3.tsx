@@ -15,7 +15,10 @@ import type { LernzielKarteSpec } from "./LernzielKarte";
 import { pollWahl, recordPollWahl, recordSwipe, swipePick } from "../_lib/stationStore";
 import { GLOBAL_POLL_ID, GLOBAL_STATION_ID } from "../_lib/landkarteData";
 import { castSwipe, castVorwissen } from "../_lib/unitPolls";
+import { AUTO_ADVANCE_MS } from "../_lib/ui";
 import LernzielKarte from "./LernzielKarte";
+import WerteKarte from "./WerteKarte";
+import PollAuswertung from "./PollAuswertung";
 import MediaBlockView from "./media/MediaBlockView";
 import Hinweis from "./Hinweis";
 import Anleitung from "./Anleitung";
@@ -64,20 +67,21 @@ const SCHRITTE = ["Vorwissen", "Reiz", "Position", "Haltung", "Werte"];
 
 /* ── Schritt 4: 2 globale 4er-Skala-Pre-Polls, paginiert ───────────────────── */
 function HaltungBlock({ onDone, onBack }: { onDone: () => void; onBack: () => void }) {
+  const total = AUFTAKT_SKALA_POLLS.length;
   const [i, setI] = useState(0);
-  const poll = AUFTAKT_SKALA_POLLS[i];
-  const letzte = i === AUFTAKT_SKALA_POLLS.length - 1;
-  // Auto-Advance: nach der Antwort automatisch zur nächsten Frage (kurze
-  // Verzögerung, damit die Auswahl sichtbar bleibt). Bei der letzten Frage nicht
-  // — dort bleibt «Weiter» bewusst manuell. Weiter/Zurück bleiben immer nutzbar.
+  const istAuswertung = i >= total; // Extra-Seite nach den Fragen: Ich/Klasse/alle (#8)
+  const poll = istAuswertung ? null : AUFTAKT_SKALA_POLLS[i];
+  const letzteFrage = i === total - 1;
+  // Auto-Advance nur zwischen den Fragen — nicht in die Auswertung und nicht auf
+  // der letzten Frage (dort bleibt «Weiter» bewusst manuell). Weiter/Zurück immer.
   const advanceRef = useRef(false);
   useEffect(() => {
     advanceRef.current = false;
   }, [i]);
   const onAnswered = () => {
-    if (letzte || advanceRef.current) return;
+    if (istAuswertung || letzteFrage || advanceRef.current) return;
     advanceRef.current = true;
-    setTimeout(() => setI((p) => (p === i ? p + 1 : p)), 350);
+    setTimeout(() => setI((p) => (p === i ? p + 1 : p)), AUTO_ADVANCE_MS);
   };
   return (
     <div className="flex flex-col gap-lg">
@@ -85,14 +89,32 @@ function HaltungBlock({ onDone, onBack }: { onDone: () => void; onBack: () => vo
         Zwei kurze Haltungsfragen. Es gibt kein Richtig oder Falsch — dieselben Fragen
         beantwortest du am Ende noch einmal und siehst, ob sich etwas bewegt hat.
       </Anleitung>
-      <p className="text-label-sm text-on-surface-variant">
-        Frage {i + 1} von {AUFTAKT_SKALA_POLLS.length}
-      </p>
-      <Skala4Frage key={poll.id} poll={poll} phase="pre" onAnswered={onAnswered} />
+      {istAuswertung ? (
+        <div className="animate-frame-in">
+          <PollAuswertung
+            titel="Ich, meine Klasse, alle"
+            eintraege={AUFTAKT_SKALA_POLLS.map((p) => ({
+              stationId: GLOBAL_STATION_ID,
+              poll: p,
+              phase: "pre" as const,
+            }))}
+            hinweis="Die Klassen- und Gesamtwerte erscheinen, sobald genug abgestimmt haben. Deine eigene Stufe bleibt lokal."
+          />
+        </div>
+      ) : (
+        <>
+          <p className="text-label-sm text-on-surface-variant">
+            Frage {i + 1} von {total}
+          </p>
+          <div key={poll!.id} className="animate-frame-in">
+            <Skala4Frage poll={poll!} phase="pre" onAnswered={onAnswered} />
+          </div>
+        </>
+      )}
       <BlockNav
         zurueck={() => (i > 0 ? setI(i - 1) : onBack())}
-        weiter={() => (letzte ? onDone() : setI(i + 1))}
-        weiterLabel="Weiter"
+        weiter={() => (istAuswertung ? onDone() : setI(i + 1))}
+        weiterLabel={istAuswertung ? "Weiter zu den Werten" : "Weiter"}
       />
     </div>
   );
@@ -115,43 +137,7 @@ function SwipeKarteFrame({
     castSwipe(karte.id, p); // optionaler anonymer Aggregat-Zähler
     onAnswered?.();
   };
-  const links = karte.achse?.links ?? "Ablehnen";
-  const rechts = karte.achse?.rechts ?? "Zustimmen";
-  return (
-    <div className="flex flex-col gap-lg">
-      <div className="rounded-xl border border-outline-variant bg-surface-bright p-lg text-center text-body-lg text-on-surface shadow-sm">
-        {karte.aussage}
-      </div>
-      <div className="grid grid-cols-2 gap-md">
-        <button
-          type="button"
-          aria-pressed={pick === "links"}
-          onClick={() => waehlen("links")}
-          className={`inline-flex items-center justify-center gap-xs rounded-lg border p-md text-body-md transition-colors ${
-            pick === "links"
-              ? "border-primary bg-primary-container text-on-primary-container"
-              : "border-outline-variant text-on-surface hover:border-primary"
-          }`}
-        >
-          <span className="material-symbols-outlined text-[20px]">arrow_back</span>
-          {links}
-        </button>
-        <button
-          type="button"
-          aria-pressed={pick === "rechts"}
-          onClick={() => waehlen("rechts")}
-          className={`inline-flex items-center justify-center gap-xs rounded-lg border p-md text-body-md transition-colors ${
-            pick === "rechts"
-              ? "border-primary bg-primary-container text-on-primary-container"
-              : "border-outline-variant text-on-surface hover:border-primary"
-          }`}
-        >
-          {rechts}
-          <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
-        </button>
-      </div>
-    </div>
-  );
+  return <WerteKarte aussage={karte.aussage} achse={karte.achse} pick={pick} onPick={waehlen} />;
 }
 
 function WerteBlock({ onDone, onBack }: { onDone: () => void; onBack: () => void }) {
@@ -166,18 +152,20 @@ function WerteBlock({ onDone, onBack }: { onDone: () => void; onBack: () => void
   const onAnswered = () => {
     if (letzte || advanceRef.current) return;
     advanceRef.current = true;
-    setTimeout(() => setI((p) => (p === i ? p + 1 : p)), 350);
+    setTimeout(() => setI((p) => (p === i ? p + 1 : p)), AUTO_ADVANCE_MS);
   };
   return (
     <div className="flex flex-col gap-lg">
       <Anleitung>
-        Sechs Wert-Karten. Wische — also tippe — nach links (sehe ich anders) oder rechts
-        (sehe ich auch so). Daraus entsteht dein Werte-Profil auf der Landkarte.
+        Sechs Wert-Karten. Tippe an, ob du eher zustimmst («Sehe ich auch so») oder eher
+        anders denkst («Sehe ich anders»). Daraus entsteht dein Werte-Profil auf der Landkarte.
       </Anleitung>
       <p className="text-label-sm text-on-surface-variant">
         Karte {i + 1} von {AUFTAKT_SWIPE_KARTEN.length}
       </p>
-      <SwipeKarteFrame key={karte.id} karte={karte} onAnswered={onAnswered} />
+      <div key={karte.id} className="animate-frame-in">
+        <SwipeKarteFrame karte={karte} onAnswered={onAnswered} />
+      </div>
       <BlockNav
         zurueck={() => (i > 0 ? setI(i - 1) : onBack())}
         weiter={() => (letzte ? onDone() : setI(i + 1))}

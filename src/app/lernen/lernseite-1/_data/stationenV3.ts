@@ -39,7 +39,7 @@ const station1: Station = {
 
     subpages: {
       auftakt: {
-        inhalt: "Station 1 · Subpage 1/7: Einstieg & Meinung",
+        inhalt: "Station 1 · Schritt 1/7: Einstieg & Meinung",
         dauerMin: 3,
         lernziel:
           "Du hältst deine Ausgangshaltung zu KI und Arbeit fest, bevor du neue Informationen bekommst.",
@@ -47,7 +47,7 @@ const station1: Station = {
           "Beantworte die drei Fragen so, wie du heute denkst — es gibt kein Richtig oder Falsch. Klick «Weiter» nach jeder Frage.",
       },
       sonne: {
-        inhalt: "Station 1 · Subpage 2/7: Sonnenseite",
+        inhalt: "Station 1 · Schritt 2/7: Sonnenseite",
         dauerMin: 5,
         lernziel:
           "Du kannst erklären, was «KI-Exposition» konkret bedeutet und warum die Demografielücke KI zur Chance macht.",
@@ -55,7 +55,7 @@ const station1: Station = {
           "Hör das Audiofenster an. Achte auf den Unterschied zwischen Aufgabenveränderung und Stellenabbau. Was ist dein erster Gedanke danach?",
       },
       schatten: {
-        inhalt: "Station 1 · Subpage 3/7: Schattenseite",
+        inhalt: "Station 1 · Schritt 3/7: Schattenseite",
         dauerMin: 5,
         lernziel:
           "Du kannst benennen, welche Berufsgruppen bereits konkrete Jobverluste spüren, und einordnen, warum gerade Softwareentwickler betroffen sind.",
@@ -63,15 +63,15 @@ const station1: Station = {
           "Schau das SRF-Video ab ca. Minute 1. Notiere eine Aussage, die dich überrascht hat — und eine, die du erwartet hättest.",
       },
       swipe: {
-        inhalt: "Station 1 · Subpage 4/7: Werte-Karten",
+        inhalt: "Station 1 · Schritt 4/7: Werte-Karten",
         dauerMin: 2,
         lernziel:
           "Du schärfst deine eigene Haltung zu drei Wertaussagen rund um KI und Arbeit.",
         anleitung:
-          "Wische jede Karte nach links (ablehnen) oder rechts (zustimmen). Keine Erklärung nötig — erster Impuls zählt.",
+          "Tippe bei jeder Karte auf «Sehe ich anders» oder «Sehe ich auch so». Keine Erklärung nötig — erster Impuls zählt.",
       },
       fakten: {
-        inhalt: "Station 1 · Subpage 5/7: Faktencheck",
+        inhalt: "Station 1 · Schritt 5/7: Faktencheck",
         dauerMin: 3,
         lernziel:
           "Du kennst fünf belegte Fakten zur KI-Wirkung auf den Schweizer Arbeitsmarkt und kannst verbreitete Missverständnisse korrigieren.",
@@ -79,7 +79,7 @@ const station1: Station = {
           "Lies jeden Fakt kurz durch. Wo weicht die Realität von deiner Erwartung ab?",
       },
       quiz: {
-        inhalt: "Station 1 · Subpage 6/7: Quiz",
+        inhalt: "Station 1 · Schritt 6/7: Quiz",
         dauerMin: 3,
         lernziel:
           "Du überprüfst dein Verständnis der Kernaussagen aus Sonnenseite, Schattenseite und Faktencheck.",
@@ -87,7 +87,7 @@ const station1: Station = {
           "Beantworte jede Frage für dich, bevor du klickst. Das Feedback erklärt, warum eine Antwort richtig oder falsch ist.",
       },
       befund: {
-        inhalt: "Station 1 · Subpage 7/7: Befund & Badge",
+        inhalt: "Station 1 · Schritt 7/7: Befund & Badge",
         dauerMin: 3,
         lernziel:
           "Du vergleichst deine Haltung vor und nach der Station und formulierst in einem Satz, was du mitgenommen hast.",
@@ -471,7 +471,7 @@ const station2: Station = {
 
     subpages: {
       auftakt: {
-        inhalt: "Station 2 · Subpage 1/7: Einstieg & Ausgangsmeinung",
+        inhalt: "Station 2 · Schritt 1/7: Einstieg & Ausgangsmeinung",
         dauerMin: 3,
         lernziel:
           "Du hältst deine aktuelle Einschätzung zur Erkennbarkeit von KI-Fälschungen fest.",
@@ -479,7 +479,7 @@ const station2: Station = {
           "Beantworte drei kurze Fragen — es gibt kein Richtig oder Falsch, wir möchten wissen, was du jetzt denkst.",
       },
       sonne: {
-        inhalt: "Station 2 · Subpage 2/7: Sonnenseite — Familien entlarven Fakes",
+        inhalt: "Station 2 · Schritt 2/7: Sonnenseite — Familien entlarven Fakes",
         dauerMin: 6,
         lernziel:
           "Du erkennst, dass Skepsis, Austausch und unterschiedliche Generationenkompetenzen zusammen Fälschungen sichtbar machen können.",
@@ -487,7 +487,7 @@ const station2: Station = {
           "Schau das Video-Experiment (ca. 4 Min.). Achte darauf, welche Strategie den Familien am meisten hilft, Fakes zu durchschauen. Beantworte danach die Frage im Beobachtungsauftrag.",
       },
       schatten: {
-        inhalt: "Station 2 · Subpage 3/7: Schattenseite — Stimmklon in Sekunden",
+        inhalt: "Station 2 · Schritt 3/7: Schattenseite — Stimmklon in Sekunden",
         dauerMin: 5,
         lernziel:
           "Du verstehst, wie schnell eine Stimme geklont werden kann, und weisst von einem realen Schweizer Betrugsfall.",
@@ -495,15 +495,15 @@ const station2: Station = {
           "Hör den Audiobeitrag (ca. 2 Min.). Achte darauf, wie viele Schritte Luzi Sennhauser braucht, um die Stimme des Reporters zu kopieren. Überlege danach: Hätte mich dieser Anruf getäuscht?",
       },
       swipe: {
-        inhalt: "Station 2 · Subpage 4/7: Deine Haltung — drei Aussagen",
+        inhalt: "Station 2 · Schritt 4/7: Deine Haltung — drei Aussagen",
         dauerMin: 2,
         lernziel:
           "Du schärfst dein Werte-Profil zu Regulierung, Medien und Datenschutz.",
         anleitung:
-          "Wische für jede Aussage nach rechts (stimme zu) oder nach links (lehne ab). Kein Richtig oder Falsch — es geht um deine Haltung.",
+          "Tippe bei jeder Aussage auf «Sehe ich auch so» (stimme zu) oder «Sehe ich anders» (lehne ab). Kein Richtig oder Falsch — es geht um deine Haltung.",
       },
       fakten: {
-        inhalt: "Station 2 · Subpage 5/7: Was die Forschung sagt",
+        inhalt: "Station 2 · Schritt 5/7: Was die Forschung sagt",
         dauerMin: 3,
         lernziel:
           "Du kennst fünf belegte Fakten zu Deepfakes, Stimmklon-Betrug und Falschnachrichten.",
@@ -511,7 +511,7 @@ const station2: Station = {
           "Lies jede Faktenkarte durch. Du musst nichts eingeben — das Gehörte wird durch reale Zahlen und Quellen eingeordnet.",
       },
       quiz: {
-        inhalt: "Station 2 · Subpage 6/7: Kurzes Quiz",
+        inhalt: "Station 2 · Schritt 6/7: Kurzes Quiz",
         dauerMin: 3,
         lernziel:
           "Du überprüfst dein Verständnis zu Deepfakes, Stimmklon und Falschnachrichten.",
@@ -519,7 +519,7 @@ const station2: Station = {
           "Beantworte die restlichen Fragen — eine nach der anderen. Du erhältst sofort Rückmeldung. Die Fragen sind gepunktet, aber kein Zeugnis.",
       },
       befund: {
-        inhalt: "Station 2 · Subpage 7/7: Befund & Badge",
+        inhalt: "Station 2 · Schritt 7/7: Befund & Badge",
         dauerMin: 3,
         lernziel:
           "Du vergleichst deine aktuelle Meinung mit deiner Ausgangsmeinung und formulierst deinen persönlichen Befund in einem Satz.",
@@ -1342,7 +1342,7 @@ const station4: Station = {
 
   subpages: {
     auftakt: {
-      inhalt: "Station 4 · Nähe & KI — Subpage 1/7: Einstieg + Meinung 1",
+      inhalt: "Station 4 · Nähe & KI — Schritt 1/7: Einstieg + Meinung 1",
       dauerMin: 3,
       lernziel:
         "Du hältst fest, wie du KI als emotionale Stütze einschätzt — bevor du die Belege gesehen hast.",
@@ -1350,7 +1350,7 @@ const station4: Station = {
         "Beantworte die drei Fragen ehrlich — es gibt kein Richtig oder Falsch. Je eine Frage pro Schritt, dann «Weiter».",
     },
     sonne: {
-      inhalt: "Station 4 · Nähe & KI — Subpage 2/7: Sonnenseite",
+      inhalt: "Station 4 · Nähe & KI — Schritt 2/7: Sonnenseite",
       dauerMin: 5,
       lernziel:
         "Du erkennst konkrete Situationen, in denen KI als Begleitung echten Nutzen stiften kann.",
@@ -1358,7 +1358,7 @@ const station4: Station = {
         "Schau die zwei kurzen Clips. Achte darauf, welcher Mehrwert jeweils konkret genannt wird und ob er dich überzeugt. Notiere dir einen Gedanken dazu.",
     },
     schatten: {
-      inhalt: "Station 4 · Nähe & KI — Subpage 3/7: Schattenseite",
+      inhalt: "Station 4 · Nähe & KI — Schritt 3/7: Schattenseite",
       dauerMin: 5,
       lernziel:
         "Du erkennst, wie Companion-Bots Nähe simulieren, ohne echtes Verstehen — und was das bedeutet.",
@@ -1366,15 +1366,15 @@ const station4: Station = {
         "Schau das Video. Achte darauf, wo der Bot «aus der Rolle fällt» und welche Mechanik dahintersteckt. Was davon findest du problematisch?",
     },
     swipe: {
-      inhalt: "Station 4 · Nähe & KI — Subpage 4/7: Deine Werte",
+      inhalt: "Station 4 · Nähe & KI — Schritt 4/7: Deine Werte",
       dauerMin: 2,
       lernziel:
         "Du schärfst deine eigene Haltung zu KI, Nähe und menschlicher Beziehung.",
       anleitung:
-        "Lies jede Aussage und wische links (ablehnend) oder rechts (zustimmend). Spontan — keine langen Überlegungen.",
+        "Lies jede Aussage und tippe auf «Sehe ich anders» (ablehnend) oder «Sehe ich auch so» (zustimmend). Spontan — keine langen Überlegungen.",
     },
     fakten: {
-      inhalt: "Station 4 · Nähe & KI — Subpage 5/7: Faktencheck",
+      inhalt: "Station 4 · Nähe & KI — Schritt 5/7: Faktencheck",
       dauerMin: 3,
       lernziel:
         "Du kennst belegte Zahlen und Einschätzungen aus Forschung und Fachverbänden zum Thema KI und psychische Gesundheit.",
@@ -1382,7 +1382,7 @@ const station4: Station = {
         "Eine Karte nach der anderen. Lies den Fakt, schau dir die Quelle an — und dann «Weiter».",
     },
     quiz: {
-      inhalt: "Station 4 · Nähe & KI — Subpage 6/7: Quiz",
+      inhalt: "Station 4 · Nähe & KI — Schritt 6/7: Quiz",
       dauerMin: 3,
       lernziel:
         "Du überprüfst, ob du das Gehörte und Gelesene verstanden hast.",
@@ -1390,7 +1390,7 @@ const station4: Station = {
         "5 Fragen, je eine pro Schritt. Bei jeder Option gibt es ein Feedback — auch wenn du danebenliegst.",
     },
     befund: {
-      inhalt: "Station 4 · Nähe & KI — Subpage 7/7: Dein Befund",
+      inhalt: "Station 4 · Nähe & KI — Schritt 7/7: Dein Befund",
       dauerMin: 3,
       lernziel:
         "Du vergleichst deine Meinung von jetzt mit der vom Anfang und hältst in einem Satz fest, was du mitnimmst.",
@@ -1830,7 +1830,7 @@ const station5: Station = {
 
   subpages: {
     auftakt: {
-      inhalt: "Station 5 · Welt besser — Subpage 1/7: Einstieg & Meinung 1",
+      inhalt: "Station 5 · Welt besser — Schritt 1/7: Einstieg & Meinung 1",
       dauerMin: 3,
       lernziel:
         "Du hältst deine Ausgangshaltung fest, ob KI grosse Weltprobleme lösen kann.",
@@ -1839,7 +1839,7 @@ const station5: Station = {
     },
     sonne: {
       inhalt:
-        "Station 5 · Welt besser — Subpage 2/7: Sonnenseite (KI gegen Foodwaste)",
+        "Station 5 · Welt besser — Schritt 2/7: Sonnenseite (KI gegen Foodwaste)",
       dauerMin: 5,
       lernziel:
         "Du erkennst, wie KI in einer Schweizer Bäckerei Bestellprognosen verbessert und Lebensmittelverschwendung reduziert.",
@@ -1848,7 +1848,7 @@ const station5: Station = {
     },
     schatten: {
       inhalt:
-        "Station 5 · Welt besser — Subpage 3/7: Schattenseite (Datenarbeit in Kenia)",
+        "Station 5 · Welt besser — Schritt 3/7: Schattenseite (Datenarbeit in Kenia)",
       dauerMin: 6,
       lernziel:
         "Du kannst benennen, welche menschlichen und sozialen Kosten hinter dem KI-Training stecken, die in Hochlohnländern unsichtbar bleiben.",
@@ -1856,15 +1856,15 @@ const station5: Station = {
         "Schaue ab Minute 21 für rund 5 Minuten. Wer sind die Menschen, die KI im Hintergrund möglich machen? Achte auf Lohn, Arbeitszeit und psychische Belastung. Was davon wusstest du vorher nicht?",
     },
     swipe: {
-      inhalt: "Station 5 · Welt besser — Subpage 4/7: Werte (Swipe)",
+      inhalt: "Station 5 · Welt besser — Schritt 4/7: Werte (Swipe)",
       dauerMin: 2,
       lernziel:
         "Du positionierst dich zu drei Aussagen über KI, Ökologie und globale Gerechtigkeit.",
       anleitung:
-        "Wische rechts, wenn du zustimmst — links, wenn du ablehnst. Kein Richtig oder Falsch; deine Antworten fliessen in dein persönliches Profil ein.",
+        "Tippe auf «Sehe ich auch so», wenn du zustimmst — auf «Sehe ich anders», wenn du ablehnst. Kein Richtig oder Falsch; deine Antworten fliessen in dein persönliches Profil ein.",
     },
     fakten: {
-      inhalt: "Station 5 · Welt besser — Subpage 5/7: Faktencheck",
+      inhalt: "Station 5 · Welt besser — Schritt 5/7: Faktencheck",
       dauerMin: 3,
       lernziel:
         "Du kennst belegte Zahlen zu Lebensmittelverschwendung, Energieverbrauch und Arbeitsbedingungen in der globalen KI-Lieferkette.",
@@ -1872,7 +1872,7 @@ const station5: Station = {
         "Lies jede Karte und ihre Quelle. Welcher Fakt überrascht dich am meisten?",
     },
     quiz: {
-      inhalt: "Station 5 · Welt besser — Subpage 6/7: Quiz",
+      inhalt: "Station 5 · Welt besser — Schritt 6/7: Quiz",
       dauerMin: 3,
       lernziel:
         "Du überprüfst, was du über KI, Foodwaste und versteckte Kosten verstanden hast.",
@@ -1880,7 +1880,7 @@ const station5: Station = {
         "5 Fragen, je eine auf einmal. Du bekommst nach jeder Antwort direktes Feedback.",
     },
     befund: {
-      inhalt: "Station 5 · Welt besser — Subpage 7/7: Meinung 2 & Badge",
+      inhalt: "Station 5 · Welt besser — Schritt 7/7: Meinung 2 & Badge",
       dauerMin: 2,
       lernziel:
         "Du vergleichst deine Haltung vor und nach der Station und formulierst deinen Befund in einem Satz.",
@@ -2296,7 +2296,7 @@ const station6: Station = {
   subpages: {
     auftakt: {
       inhalt:
-        "Station 6 · Maschinen über Leben — Subpage 1/7: Einstieg & Meinung 1",
+        "Station 6 · Maschinen über Leben — Schritt 1/7: Einstieg & Meinung 1",
       dauerMin: 3,
       lernziel:
         "Du hältst deine Ausgangshaltung fest, wie du den Einsatz von KI in militärischen Entscheidungen einschätzt.",
@@ -2305,7 +2305,7 @@ const station6: Station = {
     },
     sonne: {
       inhalt:
-        "Station 6 · Maschinen über Leben — Subpage 2/7: Sonnenseite (KI als Präzisionswerkzeug)",
+        "Station 6 · Maschinen über Leben — Schritt 2/7: Sonnenseite (KI als Präzisionswerkzeug)",
       dauerMin: 5,
       lernziel:
         "Du kannst erklären, was das KI-System Maven leistet und welches Versprechen es im Krieg gibt — mehr Präzision, schnellere Lagebilder, potenziell weniger Zivilopfer.",
@@ -2314,7 +2314,7 @@ const station6: Station = {
     },
     schatten: {
       inhalt:
-        "Station 6 · Maschinen über Leben — Subpage 3/7: Schattenseite (Automation Bias & Mädchenschule)",
+        "Station 6 · Maschinen über Leben — Schritt 3/7: Schattenseite (Automation Bias & Mädchenschule)",
       dauerMin: 5,
       lernziel:
         "Du kannst den Begriff «Automation Bias» erklären und an einem konkreten Beispiel zeigen, welche Folgen er im Krieg haben kann.",
@@ -2323,16 +2323,16 @@ const station6: Station = {
     },
     swipe: {
       inhalt:
-        "Station 6 · Maschinen über Leben — Subpage 4/7: Werte (Swipe)",
+        "Station 6 · Maschinen über Leben — Schritt 4/7: Werte (Swipe)",
       dauerMin: 2,
       lernziel:
         "Du positionierst dich zu drei Aussagen über menschliche Kontrolle, Regulierung und Vertrauen in KI-Entscheidungen.",
       anleitung:
-        "Wische rechts, wenn du zustimmst — links, wenn du ablehnst. Kein Richtig oder Falsch; deine Antworten fliessen in dein persönliches Profil ein.",
+        "Tippe auf «Sehe ich auch so», wenn du zustimmst — auf «Sehe ich anders», wenn du ablehnst. Kein Richtig oder Falsch; deine Antworten fliessen in dein persönliches Profil ein.",
     },
     fakten: {
       inhalt:
-        "Station 6 · Maschinen über Leben — Subpage 5/7: Faktencheck",
+        "Station 6 · Maschinen über Leben — Schritt 5/7: Faktencheck",
       dauerMin: 3,
       lernziel:
         "Du kennst belegte Zahlen zum KI-Einsatz im Krieg, zur internationalen Rechtslage und zum Begriff «meaningful human control».",
@@ -2341,7 +2341,7 @@ const station6: Station = {
     },
     quiz: {
       inhalt:
-        "Station 6 · Maschinen über Leben — Subpage 6/7: Quiz",
+        "Station 6 · Maschinen über Leben — Schritt 6/7: Quiz",
       dauerMin: 3,
       lernziel:
         "Du überprüfst, was du über KI im Krieg, Automation Bias und internationale Regulierung verstanden hast.",
@@ -2350,7 +2350,7 @@ const station6: Station = {
     },
     befund: {
       inhalt:
-        "Station 6 · Maschinen über Leben — Subpage 7/7: Meinung 2 & Badge",
+        "Station 6 · Maschinen über Leben — Schritt 7/7: Meinung 2 & Badge",
       dauerMin: 2,
       lernziel:
         "Du vergleichst deine Haltung vor und nach der Station und formulierst deinen Befund in einem Satz.",
@@ -2765,7 +2765,7 @@ const station7: Station = {
 
   subpages: {
     auftakt: {
-      inhalt: "Station 7 · Technologie — Subpage 1/7: Auftakt",
+      inhalt: "Station 7 · Technologie — Schritt 1/7: Auftakt",
       dauerMin: 3,
       lernziel:
         "Du hältst deine erste Vermutung fest: Weiss die KI, was sie dir antwortet — oder rät sie nur?",
@@ -2773,7 +2773,7 @@ const station7: Station = {
         "Beantworte die drei kurzen Fragen. Deine Antwort ist anonym — es gibt kein Richtig oder Falsch.",
     },
     sonne: {
-      inhalt: "Station 7 · Technologie — Subpage 2/7: Sonnenseite",
+      inhalt: "Station 7 · Technologie — Schritt 2/7: Sonnenseite",
       dauerMin: 5,
       lernziel:
         "Du kannst in eigenen Worten erklären, wie ein Sprachmodell das nächste Wort vorhersagt und warum es sich dabei auf riesige Textmengen stützt.",
@@ -2781,7 +2781,7 @@ const station7: Station = {
         "Schau den Ausschnitt (ca. 3 min, deutsche Audiospur). Achte darauf, was «Training» und «Gewichte» konkret bedeuten. Danach notiere dir einen Satz: «Ein Sprachmodell macht eigentlich …»",
     },
     schatten: {
-      inhalt: "Station 7 · Technologie — Subpage 3/7: Schattenseite",
+      inhalt: "Station 7 · Technologie — Schritt 3/7: Schattenseite",
       dauerMin: 4,
       lernziel:
         "Du erkennst, warum kein Mensch — nicht einmal die Entwickler:innen — genau weiss, warum ein Modell genau diese Antwort gibt, und was das für Halluzinationen bedeutet.",
@@ -2789,15 +2789,15 @@ const station7: Station = {
         "Schau den zweiten Ausschnitt (ca. 45 s). Der Satz «Es ist unglaublich schwer zu sagen, warum das Modell diese Vorhersage macht» ist der Kern. Überlege danach: Was bedeutet das für eine Antwort, die falsch klingt, aber überzeugend wirkt?",
     },
     swipe: {
-      inhalt: "Station 7 · Technologie — Subpage 4/7: Werte",
+      inhalt: "Station 7 · Technologie — Schritt 4/7: Werte",
       dauerMin: 2,
       lernziel:
         "Du verortest dich zu drei Aussagen über Technik-Vertrauen und Transparenz.",
       anleitung:
-        "Wische nach rechts (zustimmen) oder links (ablehnen). Kein Richtig oder Falsch — es geht um deine Haltung.",
+        "Tippe auf «Sehe ich auch so» (zustimmen) oder «Sehe ich anders» (ablehnen). Kein Richtig oder Falsch — es geht um deine Haltung.",
     },
     fakten: {
-      inhalt: "Station 7 · Technologie — Subpage 5/7: Faktencheck",
+      inhalt: "Station 7 · Technologie — Schritt 5/7: Faktencheck",
       dauerMin: 3,
       lernziel:
         "Du kennst 5–6 belegte Zahlen und Befunde dazu, wie zuverlässig Sprachmodelle sind — und wo sie systematisch scheitern.",
@@ -2805,7 +2805,7 @@ const station7: Station = {
         "Lies jede Karte in Ruhe. Quelle und Datum stehen unten. Diese Fakten sind unbenotet — sie ergänzen das Video.",
     },
     quiz: {
-      inhalt: "Station 7 · Technologie — Subpage 6/7: Quiz",
+      inhalt: "Station 7 · Technologie — Schritt 6/7: Quiz",
       dauerMin: 3,
       lernziel:
         "Du prüfst, ob du die Kernbegriffe (Token, Training, Halluzination, Wahrscheinlichkeit) anwenden kannst.",
@@ -2813,7 +2813,7 @@ const station7: Station = {
         "Beantworte die restlichen Fragen aus dem Pool — eine nach der anderen. Lies die Rückmeldung nach jeder Frage; sie erklärt, warum die Antwort stimmt oder nicht.",
     },
     befund: {
-      inhalt: "Station 7 · Technologie — Subpage 7/7: Befund",
+      inhalt: "Station 7 · Technologie — Schritt 7/7: Befund",
       dauerMin: 2,
       lernziel:
         "Du vergleichst deine heutige Einschätzung mit der vom Anfang und erhältst dein Tech-Badge.",
