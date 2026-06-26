@@ -1,6 +1,6 @@
 "use client";
 
-import { castVote } from "@/lib/polls";
+import { castVote, scaleBucket } from "@/lib/polls";
 
 /**
  * Poll-ID-Schema + Klassen-Mechanik für die KI-Einheit (Handoff §4).
@@ -75,4 +75,32 @@ export function castPollVote(id: string, optionId: string): void {
   const klasse = resolveKlasse();
   voteOnce(pollId.poll(id), optionId);
   voteOnce(pollId.klassePoll(klasse, id), optionId);
+}
+
+/* ── v3 Casting-Helfer (M8): anonyme Aggregate je Interaktionstyp ─────────────
+ *
+ * Bucket-Schema (DEV_PLAN_v3 §STATE / OPEN DECISIONS 3):
+ *   4er-Skala  → Bucket "s{Index}" (0..3) unter Basis-Key "{pollId}-post"
+ *                — genau diese Keys liest der KlassenSpiegel.
+ *   Slider     → scaleBucket(0..100) unter Basis-Key "{pollId}-{phase}"
+ *                (pre/post getrennt → spätere Bewegungs-Aggregation).
+ *   Vorwissen  → ein Zähler je gewählte Option (pollId.vorwissen).
+ *
+ * Alle laufen über `castPollVote`/`voteOnce` → **ein** Cast pro Browser pro
+ * Ziel-ID, rein anonyme Aggregat-Zähler (ki26-konform). Persönliche Werte
+ * bleiben lokal (stationStore). */
+
+/** 4er-Skala-Stimme — nur **Post** casten (das liest der KlassenSpiegel). */
+export function castSkalaPost(basePollId: string, index: number): void {
+  castPollVote(`${basePollId}-post`, scaleBucket(index));
+}
+
+/** Slider-Stimme (Pre/Post getrennt; Wert 0..100 → scaleBucket). */
+export function castSlider(basePollId: string, phase: "pre" | "post", value: number): void {
+  castPollVote(`${basePollId}-${phase}`, scaleBucket(value));
+}
+
+/** Vorwissen: zählt jede gewählte Option einmal pro Browser. */
+export function castVorwissen(optId: string): void {
+  voteOnce(pollId.vorwissen(optId), "ja");
 }

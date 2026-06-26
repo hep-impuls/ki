@@ -11,6 +11,7 @@ import {
 import type { LernzielKarteSpec } from "./LernzielKarte";
 import { pollWahl, recordPollWahl } from "../_lib/stationStore";
 import { GLOBAL_POLL_ID, GLOBAL_STATION_ID } from "../_lib/landkarteData";
+import { castVorwissen } from "../_lib/unitPolls";
 import LernzielKarte from "./LernzielKarte";
 import MediaBlockView from "./media/MediaBlockView";
 import Hinweis from "./Hinweis";
@@ -25,11 +26,13 @@ import GlobalSlider from "./GlobalSlider";
  *   2. Reiz — Hype-Opener (Ava-Video), optionaler Versprechen-Schwanz
  *   3. Position — globaler Pre-Slider «Bedrohung ↔ Chance»
  *
- * **ki26-konform:** alles bleibt im Browser (localStorage). **Keine** Cloud-
- * Writes — die anonyme Aggregation (Vorwissen-Zähler, globaler Mittelwert,
- * 4er-Skala-Pre-Polls) und ein Auftakt-Swipe-Set folgen in M8. Der globale
- * Pre-Wert wird über `GlobalSlider` (Store: GLOBAL_STATION_ID/GLOBAL_POLL_ID)
- * festgehalten und speist später den Pre→Post-Pfeil im Abschluss.
+ * **ki26-konform:** persönliche Auswahl + Freitext bleiben im Browser
+ * (localStorage). M8: beim Start zählt je gewählte Vorwissen-Option **ein**
+ * anonymer Aggregat-Zähler (`castVorwissen`); der globale Pre-Wert wird beim
+ * Loslassen des `GlobalSlider` ebenfalls anonym aggregiert. Noch offen (M8-Rest,
+ * OPEN DECISIONS 9): 4er-Skala-Pre-Polls + Auftakt-Swipe-Set. Der globale
+ * Pre-Wert (Store: GLOBAL_STATION_ID/GLOBAL_POLL_ID) speist den Pre→Post-Pfeil
+ * im Abschluss.
  */
 
 const STORAGE = "ki26-v3-auftakt";
@@ -93,6 +96,9 @@ export default function AuftaktV3({ onComplete }: { onComplete: () => void }) {
     if (pollWahl(GLOBAL_STATION_ID, GLOBAL_POLL_ID, "pre") == null) {
       recordPollWahl(GLOBAL_STATION_ID, GLOBAL_POLL_ID, "pre", 50);
     }
+    // M8: Vorwissen anonym aggregieren — ein Zähler je gewählte Option, einmal
+    // pro Browser (voteOnce). Die Auswahl selbst + Freitext bleiben lokal.
+    for (const optId of s.gewaehlt) castVorwissen(optId);
     onComplete();
   }
 

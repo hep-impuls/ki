@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { pollWahl, recordPollWahl } from "../_lib/stationStore";
 import { GLOBAL_POLL_ID, GLOBAL_STATION_ID } from "../_lib/landkarteData";
+import { castSlider } from "../_lib/unitPolls";
 
 /**
  * GlobalSlider (M6) — der **globale Schieberegler** «KI in meinem Leben gesamt:
@@ -10,8 +11,10 @@ import { GLOBAL_POLL_ID, GLOBAL_STATION_ID } from "../_lib/landkarteData";
  * **persönliche Bewegung** zählt — Pre im Auftakt, Post im Abschluss, **gleiches
  * Format**. Zeigt nach dem Post die eigene Verschiebung als **Pre→Post-Pfeil**.
  *
- * **ki26-konform:** rein lokal (localStorage via `recordPollWahl`), **keine**
- * Cloud-Writes. Anonyme Aggregation (Mittelwert) folgt in M8.
+ * **ki26-konform:** persönlicher Pre/Post-Wert bleibt rein lokal (localStorage
+ * via `recordPollWahl`). M8: zusätzlich **ein** anonymer Aggregat-Zähler je
+ * Phase beim Loslassen des Reglers (`castSlider`, Bucket via scaleBucket) —
+ * keine personenbezogenen Daten.
  */
 
 const LINKS = "Bedrohung";
@@ -36,11 +39,23 @@ export default function GlobalSlider({
   const [wert, setWert] = useState<number | null>(() => pollWahl(GLOBAL_STATION_ID, GLOBAL_POLL_ID, phase));
   const pre = pollWahl(GLOBAL_STATION_ID, GLOBAL_POLL_ID, "pre");
   const post = pollWahl(GLOBAL_STATION_ID, GLOBAL_POLL_ID, "post");
+  const letzterWert = useRef<number | null>(wert);
+  const interagiert = useRef(false);
 
   const setzen = (v: number) => {
     setWert(v);
+    letzterWert.current = v;
+    interagiert.current = true;
     recordPollWahl(GLOBAL_STATION_ID, GLOBAL_POLL_ID, phase, v);
     onChange?.(v);
+  };
+
+  // Erst beim Loslassen anonym casten (sonst zählt jeder Zwischenwert beim
+  // Ziehen); voteOnce in castSlider schützt vor Mehrfach-Casts.
+  const release = () => {
+    if (interagiert.current && letzterWert.current != null) {
+      castSlider(GLOBAL_POLL_ID, phase, letzterWert.current);
+    }
   };
 
   const bewegungBereit = zeigeBewegung && pre != null && post != null;
@@ -61,6 +76,8 @@ export default function GlobalSlider({
         max={100}
         value={wert ?? 50}
         onChange={(e) => setzen(Number(e.target.value))}
+        onPointerUp={release}
+        onKeyUp={release}
         className="w-full accent-primary"
         aria-label="Bedrohung bis Chance"
       />

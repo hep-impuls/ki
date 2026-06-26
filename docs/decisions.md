@@ -10,6 +10,36 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-06-26 — v3 M8 (Teil 1): Casting-Kern — erstmals Cloud-Writes (anonyme Aggregate)
+
+M8 in einer abgesprochenen Teil-Lieferung begonnen (mit Pietro: M7 = grün; diese
+Session **nur** der Casting-Kern). Ab jetzt schreibt die Einheit erstmals nach
+Firestore — **ausschliesslich anonyme Aggregat-Zähler**, die die schon
+bestehende Lese-Schicht (`KlassenSpiegel`) füllen.
+
+1. **Was gecastet wird** (`castPollVote`/`voteOnce`, ein Cast pro Browser pro
+   Ziel-ID): 4er-Skala-Polls (**nur Post**), die Schieberegler (global + St. 7
+   `st7-vertrauen`, **beim Loslassen** — sonst zählt jeder Zwischenwert beim
+   Ziehen) und die **Vorwissen**-Auswahl (beim Start). Persönliche Werte bleiben
+   strikt lokal.
+2. **Bucket-Schema:** 4er-Skala → Basis-Key `{pollId}-post`, Bucket `s0..s3`
+   (genau die Keys, die `KlassenSpiegel` liest). Slider → `{pollId}-{phase}`,
+   Bucket `scaleBucket(0..100)`. Vorwissen → `aw-{optId}`, Bucket `ja`. Helfer
+   zentral in `_lib/unitPolls.ts` (`castSkalaPost`/`castSlider`/`castVorwissen`).
+3. **Warum 4er-Skala nur Post:** die Aggregation dient dem Vorher/Nachher-
+   Vergleich im Spiegel (liest Post). Pre bleibt persönlich-lokal. Slider casten
+   pre **und** post (für spätere Bewegungs-Aggregation; Reader folgt).
+4. **Quiz-«% richtig»** bewusst **nicht** gecastet (Spec §6: optional) — bleibt
+   für später offen.
+5. **Verifikation in der Cowork-Sandbox weiterhin eingeschränkt:** OneDrive
+   dehydriert die per File-Tool editierten Dateien (bash las `unitPolls.ts` mit 76
+   alten statt ~115 neuen Zeilen) → in-Sandbox `tsc`/`build` prüfen veralteten
+   Code und sind unbrauchbar. Edits über das Read-Tool (Windows-Sicht) bestätigt +
+   manuell typgeprüft; `npm run build`/`lint` + Firestore-Sichtprüfung macht
+   Pietro auf Windows. Details: `docs/material-pietro/review/M8-casting.md`.
+
+---
+
 ## 2026-06-26 — v3 M7: volle Verdrahtung, v3 ist live (Auftakt + Zeitstrahl + Abschluss)
 
 M7 macht die Einheit an der echten Adresse `/lernen/lernseite-1` spielbar. Mit

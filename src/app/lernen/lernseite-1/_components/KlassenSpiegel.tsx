@@ -17,9 +17,9 @@ import Verteilung, { type VerteilungOption } from "./Verteilung";
  *
  * **ki26-konform:** liest nur anonyme Aggregat-Zähler (`polls.ts`,
  * `abstimmungen/ki26/polls/{pollId}.counts`). Das **Schreiben** dieser Zähler
- * (`castPollVote` in PollFrame) kommt in M8 — bis dahin sind Klasse/alle leer
- * («noch wenige Daten»). Bucket-Schema: `s{Index}` (0..3) je 4er-Skala-Option;
- * gelesen unter `pollId.poll("{pid}-post")` bzw. `pollId.klassePoll(code,"{pid}-post")`.
+ * ist seit M8 verdrahtet (`castSkalaPost` in PollFrame, Post-Phase). Bucket-
+ * Schema: `s{Index}` (0..3) je 4er-Skala-Option; gelesen unter
+ * `pollId.poll("{pid}-post")` bzw. `pollId.klassePoll(code,"{pid}-post")`.
  */
 
 interface SkalaAchse {

@@ -19,8 +19,9 @@ import Zertifikat from "./Zertifikat";
  * verdrahtete Phase (echte Überschrift, Zertifikat-Zugang, Rücksprung zum
  * Zeitstrahl) — die Vorschau bleibt für /v3-preview bestehen.
  *
- * **ki26-konform:** Aggregate werden hier nur **gelesen** (Klasse/alle bleiben
- * «n=0», bis das Casting in M8 dazukommt); persönliche Werte rein lokal.
+ * **ki26-konform:** Aggregate werden hier nur **gelesen**; geschrieben wird
+ * anonym an der Quelle (Polls/Slider/Vorwissen, seit M8). Persönliche Werte
+ * (Slider-Bewegung, Landkarte-Ich) bleiben rein lokal.
  */
 export default function AbschlussV3({ onBack }: { onBack?: () => void }) {
   const [anzahl, setAnzahl] = useState(0);

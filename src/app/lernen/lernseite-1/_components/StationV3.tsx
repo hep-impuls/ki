@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type {
   BadgeFamilie,
   FaktencheckFakt,
   MediaBlock,
+  MediaSegment,
   MediaSpec,
   PollFrage,
   QuizFrage,
@@ -18,6 +19,7 @@ import Anleitung from "./Anleitung";
 import Hinweis from "./Hinweis";
 import { FAKTEN_FALSCH } from "../_data/faktenPruefung";
 import { QUIZ_BEZUG } from "../_data/quizBezug";
+import { castSkalaPost, castSlider } from "../_lib/unitPolls";
 import {
   faktZustand,
   markStationAbgeschlossen,
@@ -296,11 +298,25 @@ function PollFrame({
   poll: PollFrage;
   phase: "pre" | "post";
 }) {
-  // Auswahl lokal hydrieren (back-/reload-fest); Aggregat-Zähler folgt M6/M8.
+  // Auswahl lokal hydrieren (back-/reload-fest). M8: zusätzlich anonymes Casting
+  // — 4er-Skala sofort (Post), Slider erst beim Loslassen (sonst zählt jeder
+  // Zwischenwert beim Ziehen). Persönlicher Wert bleibt lokal (stationStore).
   const [wert, setWert] = useState<number | null>(() => pollWahl(stationId, poll.id, phase));
+  const letzterWert = useRef<number | null>(wert);
+  const interagiert = useRef(false);
   const setzen = (v: number) => {
     setWert(v);
+    letzterWert.current = v;
+    interagiert.current = true;
     recordPollWahl(stationId, poll.id, phase, v);
+    // 4er-Skala: diskrete Wahl → sofort anonym casten (nur Post = Spiegel-Key).
+    if (poll.format === "skala4" && phase === "post") castSkalaPost(poll.pollId, v);
+  };
+  // Slider: erst beim Loslassen casten (PointerUp/KeyUp), voteOnce-geschützt.
+  const sliderRelease = () => {
+    if (poll.format === "slider" && interagiert.current && letzterWert.current != null) {
+      castSlider(poll.pollId, phase, letzterWert.current);
+    }
   };
   return (
     <div className="flex flex-col gap-md">
@@ -333,6 +349,9 @@ function PollFrame({
             max={100}
             value={wert ?? 50}
             onChange={(e) => setzen(Number(e.target.value))}
+            onPointerUp={sliderRelease}
+            onKeyUp={sliderRelease}
+            aria-label={`${poll.achse.links} bis ${poll.achse.rechts}`}
             className="w-full accent-primary"
           />
           <div className="flex justify-between text-label-sm text-on-surface-variant">
@@ -342,7 +361,7 @@ function PollFrame({
         </div>
       )}
       <p className="text-label-sm text-on-surface-variant">
-        Anonym, kein Richtig oder Falsch. (Aggregat-Zähler folgt in einem späteren Schritt.)
+        Anonym, kein Richtig oder Falsch. Nur deine Stufe zählt — ohne Namen — in die Klassen-Statistik.
       </p>
     </div>
   );
