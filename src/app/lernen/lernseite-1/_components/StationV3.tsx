@@ -174,6 +174,61 @@ function MediaPlatzhalter({ spec }: { spec: MediaSpec }) {
   );
 }
 
+/**
+ * AudioClip — MP3-Player mit Fenster-Logik (v3 §9: «Audio-Player mit Start/Stopp;
+ * Zeitfenster über gesetzten Startpunkt und Hinweis steuerbar»). Unterstützt:
+ *  - Einzel-Ausschnitt (`spec.start`/`spec.end`) → springt zum Start, stoppt am Ende;
+ *  - Mehr-Segment (`spec.segments`) → spielt die Fenster nacheinander, überspringt
+ *    die Lücken dazwischen und pausiert nach dem letzten Fenster.
+ * Robust gegen manuelles Scrubben: das aktive Fenster wird pro Tick aus der
+ * aktuellen Position neu bestimmt. Caption (MediaFenster) nennt die Fenster.
+ */
+function AudioClip({ spec }: { spec: MediaSpec }) {
+  const ref = useRef<HTMLAudioElement>(null);
+  const fenster: MediaSegment[] = useMemo(() => {
+    if (spec.segments && spec.segments.length > 0) return spec.segments;
+    if (spec.start != null) {
+      return [{ start: spec.start, end: spec.end ?? Number.POSITIVE_INFINITY }];
+    }
+    return [];
+  }, [spec]);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || fenster.length === 0) return;
+    const onLoaded = () => {
+      el.currentTime = fenster[0].start;
+    };
+    const onTime = () => {
+      const t = el.currentTime;
+      // Sind wir in einem Fenster? Sonst zum nächsten springen bzw. stoppen.
+      const drin = fenster.some((f) => t >= f.start && t < f.end);
+      if (drin) return;
+      const naechstes = fenster.find((f) => f.start > t);
+      if (naechstes) el.currentTime = naechstes.start;
+      else el.pause();
+    };
+    el.addEventListener("loadedmetadata", onLoaded);
+    el.addEventListener("timeupdate", onTime);
+    return () => {
+      el.removeEventListener("loadedmetadata", onLoaded);
+      el.removeEventListener("timeupdate", onTime);
+    };
+  }, [fenster]);
+
+  if (!spec.src) return <MediaPlatzhalter spec={spec} />;
+  return (
+    <audio
+      ref={ref}
+      src={spec.src}
+      controls
+      preload="metadata"
+      aria-label={spec.title}
+      className="w-full"
+    />
+  );
+}
+
 function MediaItem({ spec }: { spec: MediaSpec }) {
   if (spec.kind === "youtube") {
     if (!spec.youtubeId) return <MediaPlatzhalter spec={spec} />;
@@ -210,9 +265,8 @@ function MediaItem({ spec }: { spec: MediaSpec }) {
       </div>
     );
   }
-  // audio
-  if (!spec.src) return <MediaPlatzhalter spec={spec} />;
-  return <audio src={spec.src} controls preload="metadata" className="w-full" />;
+  // audio (MP3) — Fenster-Logik in AudioClip (v3 §9)
+  return <AudioClip spec={spec} />;
 }
 
 function MediaFenster({ spec }: { spec: MediaSpec }) {
@@ -330,6 +384,7 @@ function PollFrame({
             <button
               key={i}
               type="button"
+              aria-pressed={wert === i}
               onClick={() => setzen(i)}
               className={`rounded-lg border p-md text-left text-body-md transition-colors ${
                 wert === i
@@ -387,6 +442,7 @@ function SwipeFrame({ stationId, karte }: { stationId: string; karte: SwipeKarte
       <div className="grid grid-cols-2 gap-md">
         <button
           type="button"
+          aria-pressed={pick === "links"}
           onClick={() => waehlen("links")}
           className={`inline-flex items-center justify-center gap-xs rounded-lg border p-md text-body-md transition-colors ${
             pick === "links"
@@ -399,6 +455,7 @@ function SwipeFrame({ stationId, karte }: { stationId: string; karte: SwipeKarte
         </button>
         <button
           type="button"
+          aria-pressed={pick === "rechts"}
           onClick={() => waehlen("rechts")}
           className={`inline-flex items-center justify-center gap-xs rounded-lg border p-md text-body-md transition-colors ${
             pick === "rechts"
@@ -468,7 +525,7 @@ function FaktFrame({
         ))}
       </div>
       {antwort !== null && (
-        <div className="flex flex-col gap-sm rounded-lg bg-surface-container-low p-md">
+        <div aria-live="polite" className="flex flex-col gap-sm rounded-lg bg-surface-container-low p-md">
           <p className="text-body-md font-semibold text-on-surface">
             {korrekt ? "Richtig erkannt." : "Nicht ganz."}{" "}
             {zeigeWahr ? "Die Aussage stimmt." : "Die Aussage ist falsch."}
@@ -580,7 +637,7 @@ function QuizFrameView({
             ))}
           </div>
           {tf !== null && (
-            <p className="rounded-lg bg-surface-container-low p-md text-body-md text-on-surface-variant">
+            <p aria-live="polite" className="rounded-lg bg-surface-container-low p-md text-body-md text-on-surface-variant">
               {tf === frage.correctAnswer ? frage.feedbackRichtig : frage.feedbackFalsch}
             </p>
           )}
@@ -696,6 +753,16 @@ export default function StationV3({
   const [i, setI] = useState(0);
   const [vertiefungOffen, setVertiefungOffen] = useState(false);
 
+  // a11y: bei jedem Frame-Wechsel (Weiter/Zurück) den Fokus auf den neuen
+  // Inhalt setzen, damit Tastatur-/Screenreader-Nutzende mitwandern. Beim ersten
+  // Render NICHT fokussieren (kein Scroll-Sprung / Fokus-Klau beim Seitenaufbau).
+  const inhaltRef = useRef<HTMLDivElement>(null);
+  const gemountet = useRef(false);
+  useEffect(() => {
+    if (gemountet.current) inhaltRef.current?.focus();
+    else gemountet.current = true;
+  }, [i]);
+
   const frame = frames[i];
   const banner = station.subpages[frame.sub];
   const erste = i === 0;
@@ -731,7 +798,14 @@ export default function StationV3({
 
       {/* Fortschritt */}
       <div className="flex items-center gap-sm">
-        <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-surface-container-low">
+        <div
+          role="progressbar"
+          aria-valuemin={1}
+          aria-valuemax={frames.length}
+          aria-valuenow={i + 1}
+          aria-label={`Schritt ${i + 1} von ${frames.length}`}
+          className="h-1.5 flex-1 overflow-hidden rounded-full bg-surface-container-low"
+        >
           <div
             className="h-full rounded-full bg-primary transition-all"
             style={{ width: `${((i + 1) / frames.length) * 100}%` }}
@@ -745,12 +819,22 @@ export default function StationV3({
       {/* Banner (persistent je Subpage) */}
       <Banner banner={banner} />
 
+      {/* Station-Warnung (Station 4, freiwillig) — bereits am Einstieg (Auftakt-
+          Subpage), damit man die Station vor dem Einlassen überspringen kann (v3 §10). */}
+      {frame.sub === "auftakt" && station.warnung && (
+        <p className="flex items-start gap-sm rounded-lg bg-error-container p-md text-body-md text-on-error-container">
+          <span className="material-symbols-outlined mt-[2px] text-[20px]">warning</span>
+          <span>{station.warnung}</span>
+        </p>
+      )}
+
       {/* Mikro-Anleitung (für Nicht-Medien-Frames; Medien-Frames zeigen sie im Split) */}
       {frame.kind !== "media" && banner.anleitung && <Anleitung>{banner.anleitung}</Anleitung>}
 
       {/* Frame-Inhalt — key={i} erzwingt Remount pro Frame (setzt lokalen
-          Antwort-State zurück; sonst „klebt“ die Auswahl auf der nächsten Frage). */}
-      <div key={i} className="min-h-[160px]">
+          Antwort-State zurück; sonst „klebt“ die Auswahl auf der nächsten Frage).
+          ref+tabIndex: a11y-Fokusziel bei Frame-Wechsel (siehe useEffect oben). */}
+      <div ref={inhaltRef} tabIndex={-1} key={i} className="min-h-[160px] focus:outline-none">
         {frame.kind === "poll" && (
           <PollFrame stationId={station.id} poll={frame.poll} phase={frame.phase} />
         )}

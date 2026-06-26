@@ -10,6 +10,36 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-06-26 — v3 M8 (Teil 2): Medien-Regeln (§9), Station-4-Schutz (§10), a11y
+
+Invarianten-kritische Technik-Politur von M8 (additiv, nur `StationV3.tsx`):
+
+- **§9 Audio:** Der MP3-Renderer war ein nacktes `<audio>` und ignorierte
+  `start`/`end`/`segments` — neue Komponente **`AudioClip`** springt zum Start,
+  stoppt hart am Ende und spielt **Mehr-Segment-Fenster** (`segments[]`)
+  nacheinander, überspringt die Lücken (Station 5 Sonnenseite). Robust gegen
+  Scrubben (aktives Fenster pro `timeupdate` neu bestimmt).
+- **§9 YouTube:** «Mehr-Segment» bleibt bewusst als **geteilte
+  Einzel-Ausschnitte** (zwei Pole auf Sonnen-/Schattenseite) gelöst — **keine**
+  YouTube-IFrame-Player-API. §9 ist erfüllt; der harte Stopp via `&end` bleibt
+  best-effort, die Caption nennt das Fenster.
+- **§9 SRF & Station 7:** unverändert korrekt (iframe immer ganz + `guidance`;
+  3Blue1Brown deutsch) — nur bestätigt.
+- **§10 Station 4:** `station.warnung` erscheint jetzt **zusätzlich am Einstieg**
+  (Auftakt-Subpage), damit man die freiwillige Station vor dem Einlassen skippen
+  kann; Opt-in-Vertiefung + Hilfsangebote **143/147** unverändert.
+- **a11y:** Fokus wandert bei jedem Frame-Wechsel auf den neuen Inhalt
+  (`tabIndex=-1` + `useEffect`, kein Fokus-Klau beim ersten Render),
+  `role="progressbar"`, `aria-pressed` (Skala/Swipe-Auswahl), `aria-live`
+  (Faktencheck- und Wahr/Falsch-Auflösung).
+
+Verifikation: in-Sandbox `tsc` erneut unbrauchbar (OneDrive-Dehydrierung —
+`StationV3.tsx` als 638 statt ~935 Zeilen, Pseudo-Fehler in nicht angefassten
+Dateien). Build/lint massgeblich auf Windows (Pietro). Review:
+`review/M8-medien-a11y.md`.
+
+---
+
 ## 2026-06-26 — v3 M8 (Teil 1): Casting-Kern — erstmals Cloud-Writes (anonyme Aggregate)
 
 M8 in einer abgesprochenen Teil-Lieferung begonnen (mit Pietro: M7 = grün; diese
