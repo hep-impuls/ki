@@ -10,6 +10,53 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-06-26 — v3 M9 QA: §4 voll konform; ActivityTracker-Telemetrie als geteilter-Datei-Entscheid offen
+
+QA-Pass (zwei Sonnet-Subagenten, read-only Audit + Gegenprüfung in der Hauptsession).
+Ergebnis und zwei nicht-offensichtliche Entscheidungen:
+
+- **quizBezug-«Overcount» ist kein Defekt.** Für St1 (sonne=3), St3 (schatten=4),
+  St6 (schatten=3), St7 (sonne=3) sind mehr als 2 Quizfragen einem Medium getaggt.
+  `buildFrames` in `StationV3.tsx` deckelt sonne/schatten aber via
+  `.slice(0, FRAGEN_PRO_MEDIUM)` (=2) und routet **jede** überzählige Frage in
+  `recapFragen` — nichts geht verloren. Damit ist §4.4 («≤2 unter dem Medium, Rest
+  als Recap») zur Laufzeit erfüllt. Tags in `quizBezug.ts` bewusst **nicht**
+  reduziert: welche 2 Fragen unter dem Medium stehen, ist eine didaktische
+  Kuratierung für Pietro, kein Bugfix.
+- **ActivityTracker bleibt vorerst unverändert (Pietro-Entscheid).**
+  `src/lib/activity.ts` schreibt pro Seitenaufruf `{uid, userAgent, page}` nach
+  Firestore `activities`. Das steht in Spannung zu §4.11 (Cloud nur anonyme
+  Aggregate), ist aber (a) eine **geteilte** Basis-App-Datei (Scope-Guard),
+  (b) von Hausregel §2 ausdrücklich auf jeder Seite vorgeschrieben, (c) auch in
+  Christofs lernseite-2 aktiv. Deshalb in M9 **nicht** eigenmächtig geändert,
+  sondern als Entscheid an Pietro übergeben (Optionen A No-op / B cloud-freie
+  Variante + Hausregel §2 nachziehen / C behalten + dokumentieren). Details in
+  `docs/material-pietro/QA_v3.md` §3.
+- **In-Scope-Fix erledigt:** «✔ »-Präfix aus 5 Quiz-Feedbacks in Station 7
+  (`stationenV3.ts`) entfernt — Hausregel «keine Emojis», Stil-Angleichung an die
+  anderen sechs Stationen.
+
+---
+
+## 2026-06-26 — v3 M10 geplant: Subpages als adressierbare Schritte (Variante B, nach M9)
+
+Pietro-Feedback: jeder Schritt soll eine **eigene URL** haben (reload-/back-/deep-fest),
+nicht nur Client-State. Als neuer Milestone **M10** in `DEV_PLAN_v3.md` (§5 + Checkliste)
+festgehalten. Entschieden:
+
+- **Reihenfolge: nach M9.** M9 (Inhalts-/Logik-QA) läuft auf dem stabilen
+  Navigationsmodell; der strukturelle Routing-Umbau kommt danach.
+- **Umsetzung: Variante B** — Schritt-State in die URL der bestehenden Route
+  `/lernen/lernseite-1` spiegeln (Query/Hash + `pushState`/`popstate`), additiv in
+  `KiEinheitV3` (Phase) + `StationV3` (Frame-Index) + Auftakt/Abschluss. Variante A
+  (echte App-Router-Segmente) verworfen — zu grosser Umbau, kollidiert mit dem
+  Single-Page-Orchestrator.
+- **ki26-konform:** die URL trägt **nur Navigations-State**, keine Antworten.
+
+(Noch nicht umgesetzt — Scoping; Umsetzung in einer eigenen M10-Session nach M9.)
+
+---
+
 ## 2026-06-26 — v3 M8 (Teil 4): UX-Verbesserungen (Pietro-Feedback)
 
 Vier Verbesserungen, in dieselbe M8-Arbeit gefaltet (Review: `review/M8-ux.md`):

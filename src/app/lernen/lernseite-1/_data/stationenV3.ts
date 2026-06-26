@@ -2995,7 +2995,7 @@ const station7: Station = {
         {
           label: "Es berechnet für jedes mögliche nächste Wort eine Wahrscheinlichkeit.",
           feedback:
-            "✔ Genau: Das Modell gibt keine feste Antwort zurück, sondern eine Verteilung über alle möglichen nächsten Wörter.",
+            "Genau: Das Modell gibt keine feste Antwort zurück, sondern eine Verteilung über alle möglichen nächsten Wörter.",
         },
         {
           // LANGER DISTRAKTOR
@@ -3027,7 +3027,7 @@ const station7: Station = {
           label:
             "Weil beim Training das Raten belohnt und das Eingestehen von Unsicherheit bestraft wurde.",
           feedback:
-            "✔ OpenAI erklärt genau das: Modelle werden auf «eine Antwort geben» trainiert, nicht auf «ich weiss es nicht» — das fördert Halluzinationen.",
+            "OpenAI erklärt genau das: Modelle werden auf «eine Antwort geben» trainiert, nicht auf «ich weiss es nicht» — das fördert Halluzinationen.",
         },
         {
           // LANGER DISTRAKTOR
@@ -3058,7 +3058,7 @@ const station7: Station = {
         {
           label: "Von 22 % bis 94 %.",
           feedback:
-            "✔ Genau diese Spannweite ermittelte der Stanford AI Index 2026 — auch bekannte Modelle lagen weit auseinander.",
+            "Genau diese Spannweite ermittelte der Stanford AI Index 2026 — auch bekannte Modelle lagen weit auseinander.",
         },
         {
           label: "Von 1 % bis 5 %.",
@@ -3090,7 +3090,7 @@ const station7: Station = {
           label:
             "Um mehr als das 280-Fache — von 20 $ auf 0,07 $ pro Million Token.",
           feedback:
-            "✔ Laut Stanford HAI AI Index 2025 fielen die Kosten in knapp zwei Jahren über 280-fach. Das zeigt, wie schnell KI-Nutzung für viele erschwinglich wird.",
+            "Laut Stanford HAI AI Index 2025 fielen die Kosten in knapp zwei Jahren über 280-fach. Das zeigt, wie schnell KI-Nutzung für viele erschwinglich wird.",
         },
         {
           label: "Um rund 10 %.",
@@ -3122,7 +3122,7 @@ const station7: Station = {
           label:
             "Eine Einheit aus Text, die kleiner als ein Wort sein kann — z. B. ein Wortteil oder ein Satzzeichen.",
           feedback:
-            "✔ Genau: Ein Token kann ein ganzes Wort, aber auch nur ein Wortteil oder ein einzelnes Zeichen sein. Modelle verarbeiten Texte als Folge von Tokens.",
+            "Genau: Ein Token kann ein ganzes Wort, aber auch nur ein Wortteil oder ein einzelnes Zeichen sein. Modelle verarbeiten Texte als Folge von Tokens.",
         },
         {
           label:
