@@ -10,6 +10,28 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-06-26 — v3 M1: Typen in neuen Dateien, v2-`stationen.ts` bleibt bis M3
+
+Bei M1 (Daten-Typen) zeigte sich ein Reihenfolge-Konflikt mit dem DEV_PLAN: dieser nennt als
+Output ein überschriebenes `_data/stationen.ts` (7 Einträge, neue Form). Die v2-Komponenten
+(`Station.tsx`, `KiEinheit.tsx`, `StationenMenu.tsx` …) importieren aber noch die **alte**
+Form (`hauptgang/dessert/checks`) — ein Überschreiben würde Build/Lint sofort brechen, und die
+Komponenten-Migration ist erst M3. Entscheidung: v3-Typen + Skelette in **neue** Dateien, v2
+bleibt unberührt, bis M3 migriert. Build-grün und v3-Spec gewinnen über den wörtlichen Dateinamen.
+
+Neu (alle unter `src/app/lernen/lernseite-1/_data/`):
+- [`types.ts`](../src/app/lernen/lernseite-1/_data/types.ts) — alle v3-Typen; Zähl-Invarianten
+  (§4.4) als Tupel kodiert: 3 Polls, 3 Swipe, ≥5 Fakten, Quiz-Pool 8 = **5 MC + 3 W/F** (Reihenfolge
+  erzwingt die Zusammensetzung), 7 Subpages (`Record<SubpageKey, …>`).
+- [`stationenV3.ts`](../src/app/lernen/lernseite-1/_data/stationenV3.ts) — `STATIONEN_V3` (7 Skelette:
+  echte Titel/Tags/Icons/Badges/Leit-Poll/Reflexion; Inhalt `[M2]`-Platzhalter).
+- [`badges.ts`](../src/app/lernen/lernseite-1/_data/badges.ts) — 5 Familien + §7-Matrix.
+- [`landkarte.ts`](../src/app/lernen/lernseite-1/_data/landkarte.ts) — 8 Achsen + Werte-Profil (§10).
+
+Verifikation in der Cowork-Sandbox: `tsc --noEmit` grün. **`npm run build` / `npm run lint`** konnten
+hier nicht laufen (Mount erlaubt kein Datei-Löschen; Next braucht das fürs `.next`-Cleanup) — von Pietro
+auf Windows zu bestätigen.
+
 ## 2026-06-26 — v3 M0: Zertifikat-Schwelle = 3 (korrigiert «mind. 2»)
 
 Klarstellung beim M0-Gap-Analyse-Pass ([BUILD_NOTES_v3.md](material-pietro/BUILD_NOTES_v3.md)):
