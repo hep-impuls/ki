@@ -79,6 +79,34 @@ export const OPENER_SCHWANZ: MediaSpec[] = [
   },
 ];
 
+/**
+ * Die zwei optionalen Opener-Videos als beschriftete Karten — nebeneinander
+ * gezeigt, damit klar ist, was jedes enthält, und alle frei wählen können, was
+ * sie ansehen (oder eben nicht — beides ist freiwillig).
+ */
+export interface OpenerKarte {
+  media: MediaSpec;
+  titel: string;
+  beschreibung: string;
+  /** Material Symbol (Outlined). */
+  icon: string;
+}
+
+export const OPENER_SCHWANZ_KARTEN: OpenerKarte[] = [
+  {
+    media: OPENER_SCHWANZ[0],
+    titel: "Musik aus dem Rechner",
+    beschreibung: "Eine KI komponiert und spielt live einen Song — hör rein, wie nah das an echter Musik ist.",
+    icon: "music_note",
+  },
+  {
+    media: OPENER_SCHWANZ[1],
+    titel: "Der Roboter, der zugreift",
+    beschreibung: "Ein Roboterarm lernt zu greifen — wie weit ist KI in der echten, körperlichen Welt?",
+    icon: "precision_manufacturing",
+  },
+];
+
 /** (C) Stimmungsbild-PollDeck — 3 Stance-Polls, jede mit Drei-Ebenen-Spiegel. */
 const NUTZUNG_OPT: VerteilungOption[] = [
   { id: "taeglich", label: "täglich" },

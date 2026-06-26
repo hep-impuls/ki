@@ -516,7 +516,7 @@ const station2: Station = {
         lernziel:
           "Du überprüfst dein Verständnis zu Deepfakes, Stimmklon und Falschnachrichten.",
         anleitung:
-          "Beantworte fünf Fragen — eine nach der anderen. Du erhältst sofort Rückmeldung. Die Fragen sind gepunktet, aber kein Zeugnis.",
+          "Beantworte die restlichen Fragen — eine nach der anderen. Du erhältst sofort Rückmeldung. Die Fragen sind gepunktet, aber kein Zeugnis.",
       },
       befund: {
         inhalt: "Station 2 · Subpage 7/7: Befund & Badge",
@@ -2810,7 +2810,7 @@ const station7: Station = {
       lernziel:
         "Du prüfst, ob du die Kernbegriffe (Token, Training, Halluzination, Wahrscheinlichkeit) anwenden kannst.",
       anleitung:
-        "Du erhältst 5 zufällige Fragen aus unserem Pool. Lies die Rückmeldung nach jeder Frage — sie erklärt, warum die Antwort stimmt oder nicht.",
+        "Beantworte die restlichen Fragen aus dem Pool — eine nach der anderen. Lies die Rückmeldung nach jeder Frage; sie erklärt, warum die Antwort stimmt oder nicht.",
     },
     befund: {
       inhalt: "Station 7 · Technologie — Subpage 7/7: Befund",

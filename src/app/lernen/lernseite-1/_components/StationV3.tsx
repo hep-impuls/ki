@@ -75,6 +75,18 @@ const SUBPAGE_LABEL: Record<SubpageKey, string> = {
   befund: "Befund",
 };
 
+/** Material-Symbol je Subpage-Typ — macht jede Subpage über alle Stationen
+ *  konsistent erkennbar (Stepper + Subpage-Kopf). */
+const SUBPAGE_ICON: Record<SubpageKey, string> = {
+  auftakt: "flag",
+  sonne: "wb_sunny",
+  schatten: "nightlight",
+  swipe: "swipe",
+  fakten: "fact_check",
+  quiz: "quiz",
+  befund: "emoji_events",
+};
+
 /** Max. Verständnisfragen, die direkt unter einem Medium gezeigt werden (Rest → Recap). */
 const FRAGEN_PRO_MEDIUM = 2;
 
@@ -342,15 +354,71 @@ function Banner({ banner }: { banner: SubpageBanner }) {
   );
 }
 
+/* ── Subpage-Stepper: die 7 Subpages als anklickbare Chips (v3 §5) ──────────── */
+type Subgruppe = { sub: SubpageKey; indices: number[] };
+
+function SubpageStepper({
+  gruppen,
+  aktivIdx,
+  onJump,
+}: {
+  gruppen: Subgruppe[];
+  aktivIdx: number;
+  onJump: (frameIndex: number) => void;
+}) {
+  return (
+    <nav aria-label="Abschnitte dieser Station" className="flex flex-wrap gap-xs">
+      {gruppen.map((g, idx) => {
+        const aktiv = idx === aktivIdx;
+        const erledigt = idx < aktivIdx;
+        return (
+          <button
+            key={g.sub}
+            type="button"
+            onClick={() => onJump(g.indices[0])}
+            aria-current={aktiv ? "step" : undefined}
+            className={`inline-flex items-center gap-xs rounded-full px-sm py-[3px] text-label-sm transition-colors ${
+              aktiv
+                ? "bg-primary text-on-primary"
+                : erledigt
+                  ? "bg-primary-container text-on-primary-container hover:opacity-90"
+                  : "border border-outline-variant text-on-surface-variant hover:bg-surface-container"
+            }`}
+          >
+            <span className="material-symbols-outlined text-[16px]">
+              {erledigt ? "check" : SUBPAGE_ICON[g.sub]}
+            </span>
+            {SUBPAGE_LABEL[g.sub]}
+          </button>
+        );
+      })}
+    </nav>
+  );
+}
+
+/* ── Subpage-Kopf: einheitlicher Typ-Marker + Position innerhalb der Subpage ── */
+function SubpageKopf({ sub, pos, count }: { sub: SubpageKey; pos: number; count: number }) {
+  return (
+    <p className="flex items-center gap-xs text-label-sm uppercase tracking-wider text-tertiary">
+      <span className="material-symbols-outlined text-[18px]">{SUBPAGE_ICON[sub]}</span>
+      {SUBPAGE_LABEL[sub]}
+      {count > 1 && <span className="text-on-surface-variant">· {pos} von {count}</span>}
+    </p>
+  );
+}
+
 /* ── Frame-Inhalte ─────────────────────────────────────────────────────────── */
 function PollFrame({
   stationId,
   poll,
   phase,
+  onAnswered,
 }: {
   stationId: string;
   poll: PollFrage;
   phase: "pre" | "post";
+  /** Optional: nach diskreter 4er-Skala-Wahl gemeldet (Auto-Advance; Slider nicht). */
+  onAnswered?: () => void;
 }) {
   // Auswahl lokal hydrieren (back-/reload-fest). M8: zusätzlich anonymes Casting
   // — 4er-Skala sofort (Post), Slider erst beim Loslassen (sonst zählt jeder
@@ -365,6 +433,9 @@ function PollFrame({
     recordPollWahl(stationId, poll.id, phase, v);
     // 4er-Skala: diskrete Wahl → sofort anonym casten (nur Post = Spiegel-Key).
     if (poll.format === "skala4" && phase === "post") castSkalaPost(poll.pollId, v);
+    // Auto-Advance nur bei diskreter 4er-Skala-Wahl — beim Slider (kontinuierlich)
+    // wäre das fatal (jede Bewegung würde weiterblättern).
+    if (poll.format === "skala4") onAnswered?.();
   };
   // Slider: erst beim Loslassen casten (PointerUp/KeyUp), voteOnce-geschützt.
   const sliderRelease = () => {
@@ -422,7 +493,15 @@ function PollFrame({
   );
 }
 
-function SwipeFrame({ stationId, karte }: { stationId: string; karte: SwipeKarte }) {
+function SwipeFrame({
+  stationId,
+  karte,
+  onAnswered,
+}: {
+  stationId: string;
+  karte: SwipeKarte;
+  onAnswered?: () => void;
+}) {
   // Pick lokal hydrieren; überschreibbar (Haltung, kein richtig/falsch). Speist
   // das Werte-Profil (stationStore.aggregateProfil) für die Landkarte (M6).
   const [pick, setPick] = useState<"links" | "rechts" | null>(
@@ -431,6 +510,7 @@ function SwipeFrame({ stationId, karte }: { stationId: string; karte: SwipeKarte
   const waehlen = (p: "links" | "rechts") => {
     setPick(p);
     recordSwipe(stationId, karte.id, p, karte.profilKey);
+    onAnswered?.();
   };
   const links = karte.achse?.links ?? "Ablehnen";
   const rechts = karte.achse?.rechts ?? "Zustimmen";
@@ -471,17 +551,7 @@ function SwipeFrame({ stationId, karte }: { stationId: string; karte: SwipeKarte
   );
 }
 
-function FaktFrame({
-  stationId,
-  fakt,
-  index,
-  total,
-}: {
-  stationId: string;
-  fakt: FaktencheckFakt;
-  index: number;
-  total: number;
-}) {
+function FaktFrame({ stationId, fakt }: { stationId: string; fakt: FaktencheckFakt }) {
   const falsch = FAKTEN_FALSCH[fakt.id];
   // Gespeicherten Zustand einmalig beim Mount lesen → gezeigte Variante + Antwort
   // bleiben bei Zurück-Navigation stabil (kein Neu-Würfeln).
@@ -499,9 +569,7 @@ function FaktFrame({
 
   return (
     <div className="flex flex-col gap-md">
-      <p className="text-label-sm uppercase tracking-wider text-tertiary">
-        Fakt {index} von {total} · Stimmt das?
-      </p>
+      <p className="text-label-sm uppercase tracking-wider text-tertiary">Stimmt das?</p>
       <div className="rounded-xl border border-outline-variant bg-surface-bright p-lg text-body-lg text-on-surface shadow-sm">
         {aussage}
       </div>
@@ -550,17 +618,7 @@ function FaktFrame({
   );
 }
 
-function QuizFrameView({
-  stationId,
-  frage,
-  index,
-  total,
-}: {
-  stationId: string;
-  frage: QuizFrage;
-  index?: number;
-  total?: number;
-}) {
+function QuizFrameView({ stationId, frage }: { stationId: string; frage: QuizFrage }) {
   // Gepunktet, erste Antwort bindet (stationStore). Hydrieren → back-/reload-fest.
   const [gespeichert] = useState(() => quizErgebnis(stationId, frage.id));
   const [gewaehlt, setGewaehlt] = useState<number | null>(
@@ -579,11 +637,6 @@ function QuizFrameView({
   };
   return (
     <div className="flex flex-col gap-md">
-      {total != null && (
-        <p className="text-label-sm uppercase tracking-wider text-tertiary">
-          Frage {index} von {total}
-        </p>
-      )}
       {frage.kind === "mc" ? (
         <>
           <p className="text-body-lg text-on-surface">{frage.frage}</p>
@@ -763,10 +816,41 @@ export default function StationV3({
     else gemountet.current = true;
   }, [i]);
 
+  // Frames zu Subpage-Gruppen bündeln (aufeinanderfolgende gleiche `sub`).
+  const gruppen = useMemo<Subgruppe[]>(() => {
+    const out: Subgruppe[] = [];
+    frames.forEach((f, idx) => {
+      const last = out[out.length - 1];
+      if (last && last.sub === f.sub) last.indices.push(idx);
+      else out.push({ sub: f.sub, indices: [idx] });
+    });
+    return out;
+  }, [frames]);
+
   const frame = frames[i];
   const banner = station.subpages[frame.sub];
   const erste = i === 0;
   const letzte = i === frames.length - 1;
+
+  const aktivGruppe = gruppen.findIndex((g) => g.indices.includes(i));
+  const gruppe = gruppen[aktivGruppe];
+  const posInSub = gruppe.indices.indexOf(i) + 1;
+  const countInSub = gruppe.indices.length;
+  const next = frames[i + 1];
+  const wechselt = next != null && next.sub !== frame.sub; // nächster Schritt = neue Subpage?
+
+  // Auto-Advance: nach einer diskreten Poll-/Swipe-Antwort automatisch zum nächsten
+  // Frame — aber NUR innerhalb derselben Subpage (Subpage-Wechsel bleibt ein
+  // bewusster «Weiter»-Klick). Weiter/Zurück bleiben jederzeit nutzbar.
+  const autoRef = useRef(false);
+  useEffect(() => {
+    autoRef.current = false;
+  }, [i]);
+  const autoAdvance = () => {
+    if (autoRef.current || !next || next.sub !== frame.sub) return;
+    autoRef.current = true;
+    setTimeout(() => setI((p) => (p === i ? p + 1 : p)), 350);
+  };
 
   return (
     <div className="flex flex-col gap-lg rounded-xl border border-outline-variant bg-surface-bright p-lg shadow-sm">
@@ -779,7 +863,7 @@ export default function StationV3({
           <div>
             <p className="text-label-md uppercase tracking-wider text-primary">
               Station {station.nummer}
-              {station.freiwillig && " · freiwillig"} · {SUBPAGE_LABEL[frame.sub]}
+              {station.freiwillig && " · freiwillig"}
             </p>
             <h2 className="mt-xs text-headline-md text-on-surface">{station.frage}</h2>
           </div>
@@ -816,6 +900,9 @@ export default function StationV3({
         </span>
       </div>
 
+      {/* Subpage-Stepper — die 7 Abschnitte, anklickbar (freie Navigation, v3 §5) */}
+      <SubpageStepper gruppen={gruppen} aktivIdx={aktivGruppe} onJump={(idx) => setI(idx)} />
+
       {/* Banner (persistent je Subpage) */}
       <Banner banner={banner} />
 
@@ -834,9 +921,16 @@ export default function StationV3({
       {/* Frame-Inhalt — key={i} erzwingt Remount pro Frame (setzt lokalen
           Antwort-State zurück; sonst „klebt“ die Auswahl auf der nächsten Frage).
           ref+tabIndex: a11y-Fokusziel bei Frame-Wechsel (siehe useEffect oben). */}
-      <div ref={inhaltRef} tabIndex={-1} key={i} className="min-h-[160px] focus:outline-none">
+      <div ref={inhaltRef} tabIndex={-1} key={i} className="flex min-h-[160px] flex-col gap-md focus:outline-none">
+        {/* Einheitlicher Subpage-Kopf: Typ-Marker + Position (über alle Stationen gleich) */}
+        <SubpageKopf sub={frame.sub} pos={posInSub} count={countInSub} />
         {frame.kind === "poll" && (
-          <PollFrame stationId={station.id} poll={frame.poll} phase={frame.phase} />
+          <PollFrame
+            stationId={station.id}
+            poll={frame.poll}
+            phase={frame.phase}
+            onAnswered={autoAdvance}
+          />
         )}
         {frame.kind === "media" && (
           <div className="flex flex-col gap-md">
@@ -886,23 +980,11 @@ export default function StationV3({
             )}
           </div>
         )}
-        {frame.kind === "swipe" && <SwipeFrame stationId={station.id} karte={frame.karte} />}
-        {frame.kind === "fakt" && (
-          <FaktFrame
-            stationId={station.id}
-            fakt={frame.fakt}
-            index={frame.index}
-            total={frame.total}
-          />
+        {frame.kind === "swipe" && (
+          <SwipeFrame stationId={station.id} karte={frame.karte} onAnswered={autoAdvance} />
         )}
-        {frame.kind === "quiz" && (
-          <QuizFrameView
-            stationId={station.id}
-            frage={frame.frage}
-            index={frame.index}
-            total={frame.total}
-          />
-        )}
+        {frame.kind === "fakt" && <FaktFrame stationId={station.id} fakt={frame.fakt} />}
+        {frame.kind === "quiz" && <QuizFrameView stationId={station.id} frage={frame.frage} />}
         {frame.kind === "reflexion" && (
           <ReflexionFrame stationId={station.id} prompt={station.reflexion} />
         )}
@@ -924,10 +1006,16 @@ export default function StationV3({
           <button
             type="button"
             onClick={() => setI((p) => Math.min(frames.length - 1, p + 1))}
-            className="inline-flex items-center gap-xs rounded-lg bg-primary px-lg py-sm text-label-md text-on-primary transition-opacity hover:opacity-90"
+            className={`inline-flex items-center gap-xs rounded-lg px-lg py-sm text-label-md transition-opacity hover:opacity-90 ${
+              wechselt
+                ? "bg-tertiary text-on-tertiary"
+                : "bg-primary text-on-primary"
+            }`}
           >
-            Weiter
-            <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+            {wechselt ? `Weiter: ${SUBPAGE_LABEL[next.sub]}` : "Weiter"}
+            <span className="material-symbols-outlined text-[18px]">
+              {wechselt ? "keyboard_double_arrow_right" : "arrow_forward"}
+            </span>
           </button>
         ) : (
           <span className="inline-flex items-center gap-xs rounded-lg bg-primary-container px-lg py-sm text-label-md text-on-primary-container">

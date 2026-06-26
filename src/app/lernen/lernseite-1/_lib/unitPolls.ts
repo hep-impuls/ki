@@ -95,6 +95,25 @@ export function castSkalaPost(basePollId: string, index: number): void {
   castPollVote(`${basePollId}-post`, scaleBucket(index));
 }
 
+/**
+ * 4er-Skala-Stimme **mit Phase** (pre/post) — für die globalen Auftakt/Abschluss-
+ * Polls (`AUFTAKT_SKALA_POLLS`), die als Pre/Post-Paar aggregiert werden. Bucket
+ * `s{Index}` unter `{basePollId}-{phase}` — identisches Schema wie `castSkalaPost`
+ * (für post deckungsgleich), `voteOnce`-geschützt (erste Stufe pro Browser zählt).
+ */
+export function castSkala(basePollId: string, phase: "pre" | "post", index: number): void {
+  castPollVote(`${basePollId}-${phase}`, scaleBucket(index));
+}
+
+/**
+ * Swipe-Karte optional anonym aggregieren — ein Zähler im Bucket "links"/"rechts"
+ * unter `swipe-{cardId}`, einmal pro Browser. Persönliches Profil bleibt lokal
+ * (stationStore); dies ist nur der optionale Aggregat-Zähler (Spec §6).
+ */
+export function castSwipe(cardId: string, pick: "links" | "rechts"): void {
+  castPollVote(`swipe-${cardId}`, pick);
+}
+
 /** Slider-Stimme (Pre/Post getrennt; Wert 0..100 → scaleBucket). */
 export function castSlider(basePollId: string, phase: "pre" | "post", value: number): void {
   castPollVote(`${basePollId}-${phase}`, scaleBucket(value));

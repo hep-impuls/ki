@@ -2,8 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { ZERTIFIKAT_SCHWELLE } from "../_data/types";
+import { AUFTAKT_SKALA_POLLS } from "../_data/auftaktPolls";
 import { abgeschlosseneStationen } from "../_lib/stationStore";
 import GlobalSlider from "./GlobalSlider";
+import Skala4Frage from "./Skala4Frage";
 import Landkarte from "./Landkarte";
 import KlassenSpiegel from "./KlassenSpiegel";
 import Zertifikat from "./Zertifikat";
@@ -57,6 +59,24 @@ export default function AbschlussV3({ onBack }: { onBack?: () => void }) {
           Der gleiche Schieberegler wie im Auftakt — so wird deine persönliche Verschiebung sichtbar.
         </p>
         <GlobalSlider phase="post" zeigeBewegung />
+      </section>
+
+      <section className="flex flex-col gap-md">
+        <h3 className="flex items-center gap-xs text-headline-sm text-on-surface">
+          <span className="material-symbols-outlined text-[22px] text-tertiary">balance</span>
+          Meine Haltung — nachher
+        </h3>
+        <p className="text-body-sm text-on-surface-variant">
+          Dieselben zwei Fragen wie im Auftakt. Im Klassen-Spiegel siehst du gleich, wie du
+          im Vergleich zu deiner Klasse und allen stehst.
+        </p>
+        <div className="flex flex-col gap-lg">
+          {AUFTAKT_SKALA_POLLS.map((poll) => (
+            <div key={poll.id} className="rounded-xl border border-outline-variant bg-surface-bright p-lg">
+              <Skala4Frage poll={poll} phase="post" />
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="flex flex-col gap-md">

@@ -4,7 +4,9 @@ import { useEffect, useState } from "react";
 import { loadPollCounts, subscribePollCounts, type PollCounts } from "@/lib/polls";
 import { pollId, resolveKlasse } from "../_lib/unitPolls";
 import { pollWahl } from "../_lib/stationStore";
+import { GLOBAL_STATION_ID } from "../_lib/landkarteData";
 import { STATIONEN_V3 } from "../_data/stationenV3";
+import { AUFTAKT_SKALA_POLLS } from "../_data/auftaktPolls";
 import { LANDKARTE_ACHSEN } from "../_data/landkarte";
 import type { PollSkala4 } from "../_data/types";
 import Verteilung, { type VerteilungOption } from "./Verteilung";
@@ -24,10 +26,25 @@ import Verteilung, { type VerteilungOption } from "./Verteilung";
 
 interface SkalaAchse {
   stationId: string;
-  stationNummer: number;
+  /** Zeilen-Titel, z.B. "Station 1" oder "Gesamthaltung". */
+  titel: string;
   poll: PollSkala4;
   optionen: VerteilungOption[];
   achse?: { links: string; rechts: string };
+}
+
+/**
+ * Globale Auftakt/Abschluss-4er-Skala-Polls (übergreifende Gesamthaltung). Stehen
+ * im Spiegel **vor** den Stationen; lokaler Wert unter `GLOBAL_STATION_ID`.
+ */
+function globaleAchsen(): SkalaAchse[] {
+  return AUFTAKT_SKALA_POLLS.map((poll) => ({
+    stationId: GLOBAL_STATION_ID,
+    titel: "Gesamthaltung",
+    poll,
+    optionen: poll.optionen.map((label, i) => ({ id: `s${i}`, label })),
+    achse: poll.achse,
+  }));
 }
 
 /** Statische Liste: je Station die erste 4er-Skala-Frage (Aggregations-Achse). */
@@ -39,13 +56,18 @@ function skalaAchsen(): SkalaAchse[] {
     const axis = LANDKARTE_ACHSEN.find((a) => a.id === poll.landkarteAxis);
     out.push({
       stationId: st.id,
-      stationNummer: st.nummer,
+      titel: `Station ${st.nummer}`,
       poll,
       optionen: poll.optionen.map((label, i) => ({ id: `s${i}`, label })),
       achse: axis ? { links: axis.links, rechts: axis.rechts } : undefined,
     });
   }
   return out;
+}
+
+/** Globale Gesamthaltung zuerst, dann die Stationen. */
+function alleAchsen(): SkalaAchse[] {
+  return [...globaleAchsen(), ...skalaAchsen()];
 }
 
 function IchMarker({ idx, optionen }: { idx: number | null; optionen: VerteilungOption[] }) {
@@ -90,7 +112,7 @@ function AchsenZeile({ achse }: { achse: SkalaAchse }) {
   return (
     <section className="flex flex-col gap-md rounded-xl border border-outline-variant bg-surface-bright p-lg">
       <div>
-        <p className="text-label-sm uppercase tracking-wider text-tertiary">Station {achse.stationNummer}</p>
+        <p className="text-label-sm uppercase tracking-wider text-tertiary">{achse.titel}</p>
         <p className="text-body-md text-on-surface">{achse.poll.frage}</p>
       </div>
 
@@ -116,7 +138,7 @@ export default function KlassenSpiegel() {
   // Erst nach Mount: welche Achsen haben einen lokalen Post-Wert?
   const [achsen, setAchsen] = useState<SkalaAchse[] | null>(null);
   useEffect(() => {
-    setAchsen(skalaAchsen().filter((a) => pollWahl(a.stationId, a.poll.id, "post") != null));
+    setAchsen(alleAchsen().filter((a) => pollWahl(a.stationId, a.poll.id, "post") != null));
   }, []);
 
   if (achsen == null) {
@@ -142,7 +164,7 @@ export default function KlassenSpiegel() {
   return (
     <div className="flex flex-col gap-md">
       {achsen.map((a) => (
-        <AchsenZeile key={a.stationId} achse={a} />
+        <AchsenZeile key={`${a.stationId}:${a.poll.id}`} achse={a} />
       ))}
     </div>
   );

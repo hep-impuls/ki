@@ -1,38 +1,43 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   OPENER_FRAGE,
   OPENER_MEDIA,
-  OPENER_SCHWANZ,
+  OPENER_SCHWANZ_KARTEN,
   VORWISSEN_FRAGE,
   VORWISSEN_OPTIONEN,
 } from "../_data/auftakt";
+import { AUFTAKT_SKALA_POLLS } from "../_data/auftaktPolls";
+import { AUFTAKT_SWIPE_KARTEN, AUFTAKT_SWIPE_STATION } from "../_data/auftaktSwipe";
+import type { SwipeKarte } from "../_data/types";
 import type { LernzielKarteSpec } from "./LernzielKarte";
-import { pollWahl, recordPollWahl } from "../_lib/stationStore";
+import { pollWahl, recordPollWahl, recordSwipe, swipePick } from "../_lib/stationStore";
 import { GLOBAL_POLL_ID, GLOBAL_STATION_ID } from "../_lib/landkarteData";
-import { castVorwissen } from "../_lib/unitPolls";
+import { castSwipe, castVorwissen } from "../_lib/unitPolls";
 import LernzielKarte from "./LernzielKarte";
 import MediaBlockView from "./media/MediaBlockView";
 import Hinweis from "./Hinweis";
 import Anleitung from "./Anleitung";
 import GlobalSlider from "./GlobalSlider";
+import Skala4Frage from "./Skala4Frage";
 
 /**
- * AuftaktV3 (M7) — schlanker, **rein lokaler** Auftakt der KI-Einheit v3
- * (Spec §70/§62, «lean local-only»). Drei kurze Schritte:
+ * AuftaktV3 (M7 + M8-Rest) — der Auftakt der KI-Einheit v3 (Spec §3/§70/§74) als
+ * Folge kurzer, paginierter Schritte (eine Frage/Karte pro Frame, §4):
  *
  *   1. Vorwissen — «Wo ist dir KI begegnet?» (Mehrfachauswahl + Freitext)
  *   2. Reiz — Hype-Opener (Ava-Video), optionaler Versprechen-Schwanz
- *   3. Position — globaler Pre-Slider «Bedrohung ↔ Chance»
+ *   3. Position — globaler Pre-Schieberegler «Bedrohung ↔ Chance»
+ *   4. Haltung — 2 globale **4er-Skala**-Pre-Polls (1/Frame), aggregierbar
+ *   5. Werte — **6 Swipe-Karten** (1/Frame) bauen das Werte-Profil auf
  *
- * **ki26-konform:** persönliche Auswahl + Freitext bleiben im Browser
- * (localStorage). M8: beim Start zählt je gewählte Vorwissen-Option **ein**
- * anonymer Aggregat-Zähler (`castVorwissen`); der globale Pre-Wert wird beim
- * Loslassen des `GlobalSlider` ebenfalls anonym aggregiert. Noch offen (M8-Rest,
- * OPEN DECISIONS 9): 4er-Skala-Pre-Polls + Auftakt-Swipe-Set. Der globale
- * Pre-Wert (Store: GLOBAL_STATION_ID/GLOBAL_POLL_ID) speist den Pre→Post-Pfeil
- * im Abschluss.
+ * **ki26-konform:** persönliche Auswahl/Freitext/Profil bleiben im Browser
+ * (localStorage). In die Cloud gehen nur anonyme Aggregat-Zähler: Vorwissen
+ * (`castVorwissen`), Pre-Slider (`castSlider` in `GlobalSlider`), 4er-Skala
+ * (`castSkala` in `Skala4Frage`) und optional Swipe (`castSwipe`). Der globale
+ * Pre-Wert (GLOBAL_STATION_ID/GLOBAL_POLL_ID) speist den Pre→Post-Pfeil im
+ * Abschluss; die 2 Skala-Polls erscheinen post im Abschluss + Klassen-Spiegel.
  */
 
 const STORAGE = "ki26-v3-auftakt";
@@ -50,20 +55,176 @@ const AUFTAKT_LERNZIEL_V3: LernzielKarteSpec = {
     "Du erkennst, dass es hier kein Richtig oder Falsch gibt.",
   ],
   aktivitaet:
-    "Zuerst hältst du fest, wo dir KI begegnet ist. Dann ein gemeinsamer Reiz — und zum Schluss setzt du deine Ausgangsposition auf dem Schieberegler.",
+    "Zuerst hältst du fest, wo dir KI begegnet ist. Dann ein gemeinsamer Reiz, deine Ausgangsposition auf dem Schieberegler, zwei kurze Haltungsfragen — und zum Schluss ein paar Wert-Karten.",
   wasKommt:
     "Danach wählst du auf dem Zeitstrahl deine Stationen frei. Am Ende siehst du auf deiner Landkarte, wie sich deine Haltung bewegt hat.",
 };
 
-const SCHRITTE = ["Vorwissen", "Reiz", "Position"];
+const SCHRITTE = ["Vorwissen", "Reiz", "Position", "Haltung", "Werte"];
+
+/* ── Schritt 4: 2 globale 4er-Skala-Pre-Polls, paginiert ───────────────────── */
+function HaltungBlock({ onDone, onBack }: { onDone: () => void; onBack: () => void }) {
+  const [i, setI] = useState(0);
+  const poll = AUFTAKT_SKALA_POLLS[i];
+  const letzte = i === AUFTAKT_SKALA_POLLS.length - 1;
+  // Auto-Advance: nach der Antwort automatisch zur nächsten Frage (kurze
+  // Verzögerung, damit die Auswahl sichtbar bleibt). Bei der letzten Frage nicht
+  // — dort bleibt «Weiter» bewusst manuell. Weiter/Zurück bleiben immer nutzbar.
+  const advanceRef = useRef(false);
+  useEffect(() => {
+    advanceRef.current = false;
+  }, [i]);
+  const onAnswered = () => {
+    if (letzte || advanceRef.current) return;
+    advanceRef.current = true;
+    setTimeout(() => setI((p) => (p === i ? p + 1 : p)), 350);
+  };
+  return (
+    <div className="flex flex-col gap-lg">
+      <Anleitung>
+        Zwei kurze Haltungsfragen. Es gibt kein Richtig oder Falsch — dieselben Fragen
+        beantwortest du am Ende noch einmal und siehst, ob sich etwas bewegt hat.
+      </Anleitung>
+      <p className="text-label-sm text-on-surface-variant">
+        Frage {i + 1} von {AUFTAKT_SKALA_POLLS.length}
+      </p>
+      <Skala4Frage key={poll.id} poll={poll} phase="pre" onAnswered={onAnswered} />
+      <BlockNav
+        zurueck={() => (i > 0 ? setI(i - 1) : onBack())}
+        weiter={() => (letzte ? onDone() : setI(i + 1))}
+        weiterLabel="Weiter"
+      />
+    </div>
+  );
+}
+
+/* ── Schritt 5: 6 Swipe-Karten, paginiert (1 Karte/Frame) ──────────────────── */
+function SwipeKarteFrame({
+  karte,
+  onAnswered,
+}: {
+  karte: SwipeKarte;
+  onAnswered?: () => void;
+}) {
+  const [pick, setPick] = useState<"links" | "rechts" | null>(
+    () => swipePick(AUFTAKT_SWIPE_STATION, karte.id)?.pick ?? null,
+  );
+  const waehlen = (p: "links" | "rechts") => {
+    setPick(p);
+    recordSwipe(AUFTAKT_SWIPE_STATION, karte.id, p, karte.profilKey);
+    castSwipe(karte.id, p); // optionaler anonymer Aggregat-Zähler
+    onAnswered?.();
+  };
+  const links = karte.achse?.links ?? "Ablehnen";
+  const rechts = karte.achse?.rechts ?? "Zustimmen";
+  return (
+    <div className="flex flex-col gap-lg">
+      <div className="rounded-xl border border-outline-variant bg-surface-bright p-lg text-center text-body-lg text-on-surface shadow-sm">
+        {karte.aussage}
+      </div>
+      <div className="grid grid-cols-2 gap-md">
+        <button
+          type="button"
+          aria-pressed={pick === "links"}
+          onClick={() => waehlen("links")}
+          className={`inline-flex items-center justify-center gap-xs rounded-lg border p-md text-body-md transition-colors ${
+            pick === "links"
+              ? "border-primary bg-primary-container text-on-primary-container"
+              : "border-outline-variant text-on-surface hover:border-primary"
+          }`}
+        >
+          <span className="material-symbols-outlined text-[20px]">arrow_back</span>
+          {links}
+        </button>
+        <button
+          type="button"
+          aria-pressed={pick === "rechts"}
+          onClick={() => waehlen("rechts")}
+          className={`inline-flex items-center justify-center gap-xs rounded-lg border p-md text-body-md transition-colors ${
+            pick === "rechts"
+              ? "border-primary bg-primary-container text-on-primary-container"
+              : "border-outline-variant text-on-surface hover:border-primary"
+          }`}
+        >
+          {rechts}
+          <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function WerteBlock({ onDone, onBack }: { onDone: () => void; onBack: () => void }) {
+  const [i, setI] = useState(0);
+  const karte = AUFTAKT_SWIPE_KARTEN[i];
+  const letzte = i === AUFTAKT_SWIPE_KARTEN.length - 1;
+  // Auto-Advance wie im HaltungBlock — letzte Karte bleibt manuell («Zu den Stationen»).
+  const advanceRef = useRef(false);
+  useEffect(() => {
+    advanceRef.current = false;
+  }, [i]);
+  const onAnswered = () => {
+    if (letzte || advanceRef.current) return;
+    advanceRef.current = true;
+    setTimeout(() => setI((p) => (p === i ? p + 1 : p)), 350);
+  };
+  return (
+    <div className="flex flex-col gap-lg">
+      <Anleitung>
+        Sechs Wert-Karten. Wische — also tippe — nach links (sehe ich anders) oder rechts
+        (sehe ich auch so). Daraus entsteht dein Werte-Profil auf der Landkarte.
+      </Anleitung>
+      <p className="text-label-sm text-on-surface-variant">
+        Karte {i + 1} von {AUFTAKT_SWIPE_KARTEN.length}
+      </p>
+      <SwipeKarteFrame key={karte.id} karte={karte} onAnswered={onAnswered} />
+      <BlockNav
+        zurueck={() => (i > 0 ? setI(i - 1) : onBack())}
+        weiter={() => (letzte ? onDone() : setI(i + 1))}
+        weiterLabel={letzte ? "Zu den Stationen" : "Weiter"}
+      />
+    </div>
+  );
+}
+
+/* ── Geteilte Navigationszeile für die paginierten Blöcke ──────────────────── */
+function BlockNav({
+  zurueck,
+  weiter,
+  weiterLabel,
+}: {
+  zurueck: () => void;
+  weiter: () => void;
+  weiterLabel: string;
+}) {
+  return (
+    <div className="mt-md flex items-center justify-between">
+      <button
+        type="button"
+        onClick={zurueck}
+        className="inline-flex items-center gap-sm rounded-xl border border-outline-variant bg-surface-bright px-lg py-sm text-label-md text-on-surface transition hover:bg-surface-container"
+      >
+        <span className="material-symbols-outlined text-[18px]">arrow_back</span>
+        Zurück
+      </button>
+      <button
+        type="button"
+        onClick={weiter}
+        className="inline-flex items-center gap-sm rounded-xl bg-primary px-lg py-sm text-label-md text-on-primary shadow-sm transition hover:opacity-90"
+      >
+        {weiterLabel}
+        <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+      </button>
+    </div>
+  );
+}
 
 export default function AuftaktV3({ onComplete }: { onComplete: () => void }) {
   const [schritt, setSchritt] = useState(0);
   const [s, setS] = useState<AuftaktState>({ gewaehlt: [], freitext: "" });
   const [schwanzOffen, setSchwanzOffen] = useState(false);
-  const [preGesetzt, setPreGesetzt] = useState(false);
 
-  // Lokalen Stand laden (nur Client). Pre-Wert evtl. schon gesetzt → Gate offen.
+  // Lokalen Stand laden (nur Client).
   useEffect(() => {
     try {
       const raw = localStorage.getItem(STORAGE);
@@ -71,7 +232,6 @@ export default function AuftaktV3({ onComplete }: { onComplete: () => void }) {
     } catch {
       /* ignore */
     }
-    if (pollWahl(GLOBAL_STATION_ID, GLOBAL_POLL_ID, "pre") != null) setPreGesetzt(true);
   }, []);
 
   function persist(next: AuftaktState) {
@@ -96,8 +256,8 @@ export default function AuftaktV3({ onComplete }: { onComplete: () => void }) {
     if (pollWahl(GLOBAL_STATION_ID, GLOBAL_POLL_ID, "pre") == null) {
       recordPollWahl(GLOBAL_STATION_ID, GLOBAL_POLL_ID, "pre", 50);
     }
-    // M8: Vorwissen anonym aggregieren — ein Zähler je gewählte Option, einmal
-    // pro Browser (voteOnce). Die Auswahl selbst + Freitext bleiben lokal.
+    // Vorwissen anonym aggregieren — ein Zähler je gewählte Option, einmal pro
+    // Browser (voteOnce). Die Auswahl selbst + Freitext bleiben lokal.
     for (const optId of s.gewaehlt) castVorwissen(optId);
     onComplete();
   }
@@ -202,17 +362,39 @@ export default function AuftaktV3({ onComplete }: { onComplete: () => void }) {
             <MediaBlockView block={{ media: [OPENER_MEDIA] }} />
 
             <div className="rounded-lg border border-outline-variant bg-surface-container-low p-md">
+              <p className="flex items-center gap-xs text-label-md text-on-surface-variant">
+                <span className="material-symbols-outlined text-[18px] text-tertiary">movie</span>
+                Zwei weitere Ausschnitte — freiwillig. Schau dir an, was dich interessiert.
+              </p>
               {!schwanzOffen ? (
                 <button
                   type="button"
                   onClick={() => setSchwanzOffen(true)}
-                  className="inline-flex items-center gap-sm text-label-md text-primary"
+                  className="mt-sm inline-flex items-center gap-sm text-label-md text-primary"
                 >
                   <span className="material-symbols-outlined text-[18px]">add</span>
-                  Mehr Versprechen sehen (freiwillig)
+                  Videos anzeigen
                 </button>
               ) : (
-                <MediaBlockView block={{ media: OPENER_SCHWANZ }} />
+                <div className="mt-md grid gap-md md:grid-cols-2">
+                  {OPENER_SCHWANZ_KARTEN.map((k) => (
+                    <div
+                      key={k.media.title}
+                      className="flex flex-col gap-sm rounded-lg border border-outline-variant bg-surface-bright p-md"
+                    >
+                      <p className="flex items-center gap-xs text-body-md font-semibold text-on-surface">
+                        <span className="material-symbols-outlined text-[20px] text-tertiary">{k.icon}</span>
+                        {k.titel}
+                      </p>
+                      <p className="text-body-sm text-on-surface-variant">{k.beschreibung}</p>
+                      <span className="inline-flex w-fit items-center gap-xs rounded-full bg-surface-container px-sm py-[2px] text-label-sm text-on-surface-variant">
+                        <span className="material-symbols-outlined text-[14px]">redeem</span>
+                        freiwillig
+                      </span>
+                      <MediaBlockView block={{ media: [k.media] }} />
+                    </div>
+                  ))}
+                </div>
               )}
             </div>
           </div>
@@ -225,23 +407,32 @@ export default function AuftaktV3({ onComplete }: { onComplete: () => void }) {
               Setze deine Ausgangsposition. Bewege den Regler dorthin, wo du heute stehst — am Ende
               siehst du auf deiner Landkarte, ob sich etwas verschoben hat.
             </Anleitung>
-            <GlobalSlider phase="pre" onChange={() => setPreGesetzt(true)} />
+            <GlobalSlider phase="pre" />
           </div>
         )}
 
-        {/* Navigation */}
-        <div className="mt-xl flex items-center justify-between">
-          <button
-            type="button"
-            onClick={() => setSchritt((x) => Math.max(0, x - 1))}
-            disabled={schritt === 0}
-            className="inline-flex items-center gap-sm rounded-xl border border-outline-variant bg-surface-bright px-lg py-sm text-label-md text-on-surface transition hover:bg-surface-container disabled:cursor-not-allowed disabled:opacity-40"
-          >
-            <span className="material-symbols-outlined text-[18px]">arrow_back</span>
-            Zurück
-          </button>
+        {/* 4 — Haltung (2 globale 4er-Skala-Pre-Polls) */}
+        {schritt === 3 && (
+          <HaltungBlock onDone={() => setSchritt(4)} onBack={() => setSchritt(2)} />
+        )}
 
-          {schritt < 2 && (
+        {/* 5 — Werte (6 Swipe-Karten) */}
+        {schritt === 4 && (
+          <WerteBlock onDone={einheitStarten} onBack={() => setSchritt(3)} />
+        )}
+
+        {/* Äussere Navigation nur für die Schritte 1–3 (Blöcke 4/5 führen selbst). */}
+        {schritt <= 2 && (
+          <div className="mt-xl flex items-center justify-between">
+            <button
+              type="button"
+              onClick={() => setSchritt((x) => Math.max(0, x - 1))}
+              disabled={schritt === 0}
+              className="inline-flex items-center gap-sm rounded-xl border border-outline-variant bg-surface-bright px-lg py-sm text-label-md text-on-surface transition hover:bg-surface-container disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              <span className="material-symbols-outlined text-[18px]">arrow_back</span>
+              Zurück
+            </button>
             <button
               type="button"
               onClick={() => setSchritt((x) => x + 1)}
@@ -250,18 +441,8 @@ export default function AuftaktV3({ onComplete }: { onComplete: () => void }) {
               Weiter
               <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
             </button>
-          )}
-          {schritt === 2 && (
-            <button
-              type="button"
-              onClick={einheitStarten}
-              className="inline-flex items-center gap-sm rounded-xl bg-primary px-lg py-sm text-label-md text-on-primary shadow-sm transition hover:opacity-90"
-            >
-              {preGesetzt ? "Zu den Stationen" : "Ohne Position weiter"}
-              <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-            </button>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -10,6 +10,66 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-06-26 — v3 M8 (Teil 4): UX-Verbesserungen (Pietro-Feedback)
+
+Vier Verbesserungen, in dieselbe M8-Arbeit gefaltet (Review: `review/M8-ux.md`):
+
+- **Auto-Advance.** Nach einer **diskreten** Antwort (4er-Skala-Poll *oder*
+  Swipe/Werte) springt automatisch die nächste Frame (≈350 ms). Bewusst **nur
+  innerhalb derselben Subpage** — der Subpage-Wechsel bleibt ein expliziter
+  «Weiter»-Klick. **Slider lösen nie aus** (kontinuierlich). Weiter/Zurück bleiben
+  immer nutzbar; Ref-Guard verhindert Doppelsprung. Damit bleibt §4.2 («eine
+  Frage/Frame, Weiter blättert») erfüllt — «Weiter» existiert weiterhin.
+- **Subpage-Navigation klarer (StationV3).** Anklickbarer **7-Subpage-Stepper**
+  (Sprung zur ersten Frame der Subpage), **einheitlicher Subpage-Kopf** (Typ-Icon +
+  Name + Position, über alle Stationen gleich), **«Weiter: <Name>»** in Tertiärfarbe
+  signalisiert den Übergang in die nächste Subpage. Die bisher frame-internen Zähler
+  («Fakt X von Y», «Frage X von Y») wurden in den Subpage-Kopf zusammengeführt — eine
+  konsistente Stelle statt mehrerer. Der redundante Subpage-Name im Stations-Kopf
+  wurde entfernt (Stepper + Kopf tragen ihn).
+- **Auftakt-Opener-Schwanz.** Die zwei optionalen Videos (Musik-Experiment, Robotik)
+  stehen **nebeneinander** als beschriftete Karten (Titel, Kurzbeschrieb, «freiwillig»),
+  einzeln abspielbar — freie Wahl statt gestapelter Block. Daten:
+  `auftakt.ts` → `OPENER_SCHWANZ_KARTEN`.
+- **Quiz-Recap-Copy.** «Beantworte fünf Fragen …» / «5 zufällige Fragen aus unserem
+  Pool …» → «… die **restlichen** Fragen …» (St. 2 + St. 7). Die Recap-Subpage zeigt
+  die übrigen Pool-Fragen (8 − unter den Medien platzierte = 5–8); der harte Zähler
+  passte nicht zur «… von 6»-Anzeige.
+
+---
+
+## 2026-06-26 — v3 M8 (Teil 3): Auftakt-Neuinhalt (Swipe-Set + globale 4er-Skala-Pre-Polls)
+
+Letzter offener M8-Punkt (Spec §74). Entscheidungen mit Pietro:
+
+- **Globale 4er-Skala-Pre-Polls = «Pre+Post, voll aggregiert».** Zwei
+  übergreifende Haltungsfragen (`global-einschaetzung`,
+  `global-gesellschaft`) als 4er-Skala: **Pre** im Auftakt (Schritt «Haltung»),
+  **identisches Post** im Abschluss (Sektion «Meine Haltung — nachher»), gleiche
+  geteilte Komponente `Skala4Frage` (Spec-§6-Konsistenz). Sie **ergänzen** den
+  globalen Chance↔Bedrohung-**Schieberegler** (persönliche Bewegung); die
+  4er-Skala dient der **Aggregation** (Ich/Klasse/alle). Erscheinen im
+  Klassen-Spiegel als zwei **«Gesamthaltung»-Zeilen vor den Stationen**.
+- **Bewusst KEINE Radar-Landkarte-Achse** für die zwei globalen Polls: ihr
+  `landkarteAxis` zeigt absichtlich auf eine ID **ausserhalb** `LANDKARTE_ACHSEN`,
+  damit `landkarteAchsenMitDaten()` sie nicht ins Radar zieht. Die globale
+  Radar-Achse bleibt der Slider (§10) — die zwei Polls leben nur im Spiegel.
+- **Auftakt-Swipe-Set = 6 Karten + optionale Aggregate.** Sechs Wertaussagen,
+  je 2 pro Werte-Profil-Achse (Regulierung↔Innovation, Mensch-im-Loop↔Effizienz,
+  Datenschutz↔Bequemlichkeit). Profil **lokal** unter Pseudo-Station `auftakt`
+  (speist `werteProfilBalken`); zusätzlich **optionale** anonyme Aggregat-Zähler
+  je Karte (`castSwipe`, Bucket `links`/`rechts`, derzeit nicht angezeigt).
+  **Polaritäts-Konvention:** Zustimmen (rechts) = rechter Pol der Achse.
+- **Auftakt jetzt 5 paginierte Schritte** (eine Frage/Karte pro Frame, §4):
+  Vorwissen · Reiz · Position (Slider) · Haltung (2 Skala-Pre) · Werte (6 Swipe);
+  `einheitStarten` ans Ende verschoben, `preGesetzt`-Gate entfernt.
+- **Neue Dateien:** `_data/auftaktPolls.ts`, `_data/auftaktSwipe.ts`,
+  `_components/Skala4Frage.tsx`. **Geändert:** `AuftaktV3.tsx`, `AbschlussV3.tsx`,
+  `KlassenSpiegel.tsx`, `_lib/unitPolls.ts` (`castSkala`, `castSwipe`). Nur
+  `lernseite-1`; keine gemeinsamen Dateien. Review: `review/M8-auftakt.md`.
+
+---
+
 ## 2026-06-26 — v3 M8 (Teil 2): Medien-Regeln (§9), Station-4-Schutz (§10), a11y
 
 Invarianten-kritische Technik-Politur von M8 (additiv, nur `StationV3.tsx`):
