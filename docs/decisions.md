@@ -10,12 +10,103 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
-## 2026-06-24 — KI-Einheit als zusammenhaengender Flow gebaut (MVP)
+## 2026-06-26 — KI-Einheit v3: Domänen-Wahl + Fakten-Selbst-Check (Vorschlag)
+
+Neuer Architektur-Vorschlag
+[KI_EINHEIT_GESAMTARCHITEKTUR_v3.md](material-pietro/KI_EINHEIT_GESAMTARCHITEKTUR_v3.md),
+gestützt auf alle 18 Material-Summaries. Behält die v2-Linie (selbstgesteuert,
+bewertungsfrei im Kern, Versprechen→Test→Befund, Inkommensurabilität/SK11), aber
+richtet die Einheit neu auf das Lernziel «positive *und* negative KI-Wirkungen
+**pro Lebensbereich** unterscheiden» aus.
+
+- **7 Stationen statt 5, mind. 2 (statt 3) Pflicht** — mehr Bereiche zur Wahl,
+  echtere Interessenleitung. Jede Station trägt sichtbare **Bereich-Tags**
+  (Wirtschaft, Politik, Individuum, Psyche, Gesellschaft, Ökologie, Technologie;
+  Recht/Ethik querschnittlich).
+- **Hybrid-Label:** griffige Ich-Frage + Bereich-Tags (Lernende wählen über die
+  Frage, sehen aber die analytische Kategorie).
+- **Fakten-Selbst-Check** (2–3 wahr/falsch bzw. MC pro Station) prüft
+  *Verständnis*, nicht *Haltung* — bewertungsfrei, Sofort-Feedback, Einzelresultat
+  nur localStorage, optional anonyme Aggregat-Quote via `polls.ts`. Konsistent mit
+  den bereits in v2 eingeführten `WissenCheck`s.
+- **Abschluss = Chancen-Risiken-Landkarte** über die besuchten Bereiche
+  (localStorage, kein Handlungsprodukt) + globaler Post-Poll + Klassen-Spiegel.
+- **Kultur** bleibt bewusst Stöber-Material (Materialdecke zu dünn).
+- Status: Vorschlag — mit Pietro abzustimmen, ob v3 die v2-Didaktik ablöst oder
+  als Variante koexistiert.
+
+### Nachtrag 2026-06-26 (Pietros Feinvorgaben in v3 eingearbeitet)
+
+- **Station 7 = 3Blue1Brown** (deutsch synchronisiert); kassensturz-bots nur noch
+  Ergänzung/Alt.
+- **Badge-System** (5 Familien: KI & Technologie/Ethik/Gesellschaft/Wirtschaft/
+  Mensch); eine Station kann eine Familie mehrfach vergeben (Stufen).
+- **Zwei getrennte Wissens-Elemente:** ungrader **Faktencheck mit
+  deep-search-recherchierten Zusatzdaten** (auch über das Gehörte hinaus) *plus*
+  **gepunktetes 5-Fragen-Quiz** pro Station. Damit ist die Haltung weiter
+  bewertungsfrei, das Verständnis aber gepunktet. Quiz-Bauregel: plausible
+  Distraktoren, **mind. 1 falscher Distraktor länger als die richtige Antwort**.
+- **Zeitstrahl-Wahl**, abgeschlossene Stationen werden **grün**; **Zertifikat ab 3
+  Stationen** (client-seitig, mit Stationen + Badges).
+- **Landkarte rückwärts aus Polls designt** (Vorwissen → Schluss); mehr Stationen
+  = vollständigere Landkarte; je Achse eine `pollId`.
+- **Poll-Mix:** Schieberegler für persönliche Bewegung, **4er-Skala** für
+  Aggregation (Ich/Klasse/alle 500+); Format pro Frage über pre/post konstant.
+  Zusätzlich **Swipe-Karten** (links/rechts) fürs Werte-Profil.
+- **Layout-Regeln:** max. ~2 Bildschirmhöhen pro Seite → Stationen in 3–4
+  **Subpages**; **Banner** (Inhalt/Dauer/Lernziele) auf jeder Seite;
+  **Mikro-Anleitungen** zwischen Schritten; **Video im Split** mit Begleittext.
+- **Medien-Regeln:** YouTube = Ausschnitt/Mehr-Segment; SRF-iframe = nur ganz
+  (lange iframes → Text-Ausschnitt); MP3 = Audio-Player.
+
+## 2026-06-24 — KI-Einheit v2: Wissen-Checks, Punkte, Lernziele, alle Medien
+
+Die KI-Einheit (Lernseite 1, Pietro) ist vom MVP auf das inhaltliche
+Reichtum-Niveau der 10mio-Einheit gehoben (Handoff
+[HANDOFF_ki-einheit_tech_v2.md](material-pietro/HANDOFF_ki-einheit_tech_v2.md)).
+
+- **Lernziel-Karten** (`LernzielKarte`) eröffnen jede Phase/Station: 2–3
+  Lernziele + Aktivitäts-Ansage + «was kommt als Nächstes und warum». Führende
+  Übergänge via `Hinweis` (Erzähler) und `Anleitung` (Regie).
+- **Wissen-Checks** (`WissenCheck` / `WissenCheckGruppe`): pro eingebettetem
+  Hauptgang/Dessert ≥2 Fragen (Mix MC + Richtig/Falsch), inhaltlich aus den
+  lokalen Transkripten belegt (`_data/wissenChecks.ts`). Stil-Regeln:
+  Distraktor-Längen-Regel (mind. 1 falscher Distraktor länger als die richtige
+  Antwort), Fett-Diskriminator, Feedback je Option. Bewusst **kein** Check auf
+  der Station-4-Vertiefung (Suizid-Fall — tonal unpassend).
+- **Punkte** (`_lib/punkte.ts`): lokal (localStorage `ki26-punkte`), erster
+  Versuch bindend (idempotent). Abschluss zeigt eine ruhige Punkte-Übersicht
+  («X von Y», kein Zeugnis) + optionalen Klassen-Schnitt aus den `wc-*`-Zählern.
+- **Generische Polls** (`PollFrage` / `PollDeck`) mit Drei-Ebenen-Spiegel
+  (Ich / Klasse / alle). Auftakt + Abschluss zeigen dasselbe Stimmungsbild
+  (3 Stance-Polls) mit Pre/Post-Vergleich. `Verteilung` aus `KollektivSpiegel`
+  herausgezogen (generisch; 1..7 ist nur ein Spezialfall).
+- **Poll-/Punkte-IDs** (`unitPolls.ts`): neu `pollId.poll`/`klassePoll`
+  (generisch) + `pollId.wissen` (anonym richtig/falsch). `castPollVote` zählt
+  global + Klasse. Datenschutz unverändert: nur anonyme Aggregat-Zähler in
+  Firestore; Position, Punkte, Freitext bleiben im Browser.
+- **Alle Medien verdrahtet** (Handoff §6): SRF-Embeds via `kind:"srf"`/`urn`
+  (Rundschau S1, Kassensturz/ABE S2, 10vor10 S5), remote-mp3 (Regionaljournal
+  S1, Espresso S2-Audio bzw. S5), YouTube (Einstein/Puls), 3Blue1Brown engl.
+  Original (`LPZh9BOjkQs`, `aircAruvnKk`). Keine `youtubeId:"TODO"`/Placeholder
+  mehr. Bewusst offen (§11): Espresso-Offset (mp3 startet ~6:00 vs.
+  Transkript-Marken) — beim Verdrahten 1× zu verifizieren.
+- **Umlaut-Bereinigung:** `ae/oe/ue`→`ä/ö/ü` im gesamten `lernseite-1/**` (UI,
+  `_data/*`, Kommentare) + die v1-Einträge hier. Technische Identifier
+  unverändert.
+- **⚠️ Build-Verifikation:** In der Cowork-Sandbox **nicht** durchführbar — der
+  OneDrive-On-Demand-Mount liefert dem Linux-Sandbox teils gekürzte Dateien
+  (deterministisch, nicht-NUL), sodass `tsc`/`next build` dort unzuverlässig
+  sind. Die Dateien auf Disk sind vollständig (über das Read-Tool/Cloud
+  verifiziert). **`npm run build` lokal bei Pietro/Christof ausführen**, bevor
+  committet wird.
+
+## 2026-06-24 — KI-Einheit als zusammenhängender Flow gebaut (MVP)
 
 Die KI-Einheit (Lernseite 1, Pietro) ist als ein einziger orchestrierter Flow
 auf `/lernen/lernseite-1` umgesetzt (Handoff
 [HANDOFF_ki-einheit_tech_v1.md](material-pietro/HANDOFF_ki-einheit_tech_v1.md)).
-Die fruehere Hub-Seite mit Platzhalter-Submodulen ist ersetzt.
+Die frühere Hub-Seite mit Platzhalter-Submodulen ist ersetzt.
 
 - **Orchestrator:** `_components/KiEinheit.tsx` — State-Machine
   `auftakt → stationen (>=3 von 5) → abschluss → maschinenraum (optional)`,
@@ -24,8 +115,8 @@ Die fruehere Hub-Seite mit Platzhalter-Submodulen ist ersetzt.
 - **Phasen:** `Auftakt` (Vorwissen + Hype-Opener + globaler Pre-Poll),
   `StationenMenu` (freie Wahl, Station-4-Badge „freiwillig", Gate bei 3),
   `Abschluss` + `KollektivSpiegel` (Ich / Klasse / alle — Klasse einmalig,
-  alle live), `Maschinenraum` (Selbsteinschaetzung + Interesse + Vertrauens-
-  Bruecke, kein Test).
+  alle live), `Maschinenraum` (Selbsteinschätzung + Interesse + Vertrauens-
+  Brücke, kein Test).
 - **Refactor:** `Skala` und `MediaBlockView` (YouTube/Audio/SRF/Placeholder)
   aus `Station.tsx` in shared-Dateien extrahiert; `MediaSpec` um `kind:"srf"`
   + `urn` + `externalUrl` erweitert.
@@ -34,15 +125,15 @@ Die fruehere Hub-Seite mit Platzhalter-Submodulen ist ersetzt.
 - **Medien verdrahtet:** YouTube-IDs (einstein-full/what-the-fake/ki-im-kopf/
   ki-freundin, puls), SRF-urn Rundschau (Station 1 alt. Dessert), mp3 nach
   `public/audio/ki-arbeitswelt.mp3` (Station 2).
-- **Bewusst offen (20 %, §12):** Placeholder fuer `newsjournal-stimme-klonen`,
+- **Bewusst offen (20 %, §12):** Placeholder für `newsjournal-stimme-klonen`,
   `kassensturz-ausbeutung`, `espresso-foodwaste`, `10v10-ki-krieg`; 3Blue1Brown
   deutsch-synchron (Placeholder + Link zum Original); harter Clip-Stop bei
-  SRF-/YouTube-Embeds (nur Startzeit) — spaeteres Upgrade via Player-API.
+  SRF-/YouTube-Embeds (nur Startzeit) — späteres Upgrade via Player-API.
 - **unit.ts:** nur der `lernseite-1`-Eintrag chirurgisch angepasst (Titel
   „Kann KI das? — eine Positionsreise", Platzhalter-Submodule entfernt).
-  Die verwaisten `submodul-1/2/page.tsx` bleiben stehen (nicht loeschen).
+  Die verwaisten `submodul-1/2/page.tsx` bleiben stehen (nicht löschen).
 - **Verifikation aus der Cowork-Sandbox:** nur `tsc --noEmit` (Windows-natives
-  `next build` nicht ausfuehrbar). `npm run build`/`npm run lint` + Firestore-
+  `next build` nicht ausführbar). `npm run build`/`npm run lint` + Firestore-
   Test laufen bei Pietro lokal.
 
 ---

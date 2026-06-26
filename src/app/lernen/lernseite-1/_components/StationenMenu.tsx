@@ -8,7 +8,7 @@ import Station from "./Station";
 /**
  * StationenMenu — Handoff §5.2, v2 §5/§6/§7.
  *
- * Karten-Menue der 5 Ich-Fragen. Freie Auswahl, mind. 3 von 5. Erledigte
+ * Karten-Menü der 5 Ich-Fragen. Freie Auswahl, mind. 3 von 5. Erledigte
  * markiert, Station 4 traegt ein "freiwillig"-Badge. Der Abschluss-Button
  * aktiviert sich erst bei >= 3 erledigten Stationen. Kein Wort "Aspekt" im UI.
  */
@@ -45,9 +45,9 @@ export default function StationenMenu({ erledigte, onComplete, onAbschluss }: St
     <div className="flex flex-col gap-lg">
       <header className="border-b border-outline-variant pb-lg">
         <p className="text-label-md uppercase tracking-wider text-primary">Stationen</p>
-        <h1 className="mt-sm text-headline-xl text-on-surface">Waehle deine Fragen</h1>
+        <h1 className="mt-sm text-headline-xl text-on-surface">Wähle deine Fragen</h1>
         <p className="mt-sm max-w-3xl text-body-lg text-on-surface-variant">
-          Fuenf Fragen, fuenf kurze Stationen. Such dir aus, was dich interessiert —
+          Fünf Fragen, fünf kurze Stationen. Such dir aus, was dich interessiert —
           mindestens drei, bevor es zum Abschluss geht. Die Reihenfolge bestimmst du.
         </p>
       </header>

@@ -10,7 +10,7 @@ import type { MediaBlock, MediaSpec } from "../../_data/stationen";
  * Maschinenraum genutzt. Reine MD3-Tokens, Material Symbols, kein Eszett.
  *
  * Bekannte Grenze (Handoff §6.1/§12): YouTube-&end und SRF-startTime liefern
- * keinen zuverlassigen harten Stopp — der Clip startet am Punkt und laeuft
+ * keinen zuverlässigen harten Stopp — der Clip startet am Punkt und läuft
  * weiter; die Caption nennt das Fenster. Audio stoppt hart via timeupdate.
  */
 
@@ -47,8 +47,8 @@ export function MediaPlaceholder({ spec }: { spec: MediaSpec }) {
 
 function YouTubeClip({ spec }: { spec: MediaSpec }) {
   if (!spec.youtubeId || spec.youtubeId === "TODO") return <MediaPlaceholder spec={spec} />;
-  // Hinweis: fuer einen harten Stopp am Ende ist die IFrame Player API
-  // zuverlassiger als der &end-Parameter — fuers MVP genuegt der Param.
+  // Hinweis: für einen harten Stopp am Ende ist die IFrame Player API
+  // zuverlässiger als der &end-Parameter — fürs MVP genügt der Param.
   const url = `https://www.youtube-nocookie.com/embed/${spec.youtubeId}?start=${spec.start}&end=${spec.end}&rel=0`;
   return (
     <div className="aspect-video w-full overflow-hidden rounded-lg border border-outline-variant">
@@ -66,7 +66,7 @@ function YouTubeClip({ spec }: { spec: MediaSpec }) {
 function SrfClip({ spec }: { spec: MediaSpec }) {
   if (!spec.urn) return <MediaPlaceholder spec={spec} />;
   // Verifiziertes Embed-Muster (Handoff §6.1): kennt startTime, aber kein
-  // zuverlassiges hartes Ende — Caption nennt das Fenster.
+  // zuverlässiges hartes Ende — Caption nennt das Fenster.
   const url = `https://www.srf.ch/play/embed?urn=${encodeURIComponent(spec.urn)}&startTime=${spec.start}&subdivisions=false`;
   return (
     <div className="aspect-video w-full overflow-hidden rounded-lg border border-outline-variant">

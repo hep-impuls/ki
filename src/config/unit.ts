@@ -45,7 +45,7 @@ export const unit: UnitConfig = {
       icon: "explore",
       subtitle: "Selbstgesteuert · bewertungsfrei",
       description:
-        "Eine rund 90-minuetige Reise: Du nimmst Position zu KI, durchlaeufst frei gewaehlte Stationen mit Versprechen und Kehrseiten und siehst am Ende im Kollektiv-Spiegel, wo du und die Gruppe stehen.",
+        "Eine rund 90-minütige Reise: Du nimmst Position zu KI, durchläufst frei gewählte Stationen mit Versprechen und Kehrseiten und siehst am Ende im Kollektiv-Spiegel, wo du und die Gruppe stehen.",
     },
     {
       slug: "lernseite-2",

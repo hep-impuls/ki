@@ -3,9 +3,9 @@
 import { castVote } from "@/lib/polls";
 
 /**
- * Poll-ID-Schema + Klassen-Mechanik fuer die KI-Einheit (Handoff §4).
+ * Poll-ID-Schema + Klassen-Mechanik für die KI-Einheit (Handoff §4).
  *
- * Leitplanken: nur anonyme Aggregat-Zaehler. "Klasse" wird ueber einen
+ * Leitplanken: nur anonyme Aggregat-Zähler. "Klasse" wird über einen
  * Klassen-Code realisiert, der die Poll-IDs namespaced — ohne Login, ohne
  * Einzeldaten. Doppel-Vote-Guard via localStorage (ein Cast pro Poll pro
  * Browser).
@@ -14,7 +14,7 @@ import { castVote } from "@/lib/polls";
 export const GLOBAL_AXIS = { links: "eher Chance", rechts: "eher Bedrohung" };
 
 /**
- * Klassen-Code aufloesen (Reihenfolge): URL-Param ?klasse=<code> →
+ * Klassen-Code auflösen (Reihenfolge): URL-Param ?klasse=<code> →
  * localStorage (ki26-klasse) → Fallback "ohne-klasse". Sanitisiert zu sauberen
  * Firestore-Doc-IDs.
  */
@@ -28,6 +28,7 @@ export function resolveKlasse(): string {
 }
 
 export const pollId = {
+  // v1 — Pre/Post-Klammer + Stations-Position + Vorwissen + Maschinenraum:
   globalPre: "g-pos-pre",
   globalPost: "g-pos-post",
   klassePre: (k: string) => `k-${k}-pos-pre`,
@@ -38,11 +39,18 @@ export const pollId = {
   mrPost: "mr-verstaendnis-post",
   mrInteresse: "mr-interesse",
   mrVertrauen: "mr-vertrauen",
+
+  // v2 — generische Stimmungs-/Positions-Polls (beliebige Optionen):
+  poll: (id: string) => `p-${id}`, // global
+  klassePoll: (k: string, id: string) => `kp-${k}-${id}`, // pro Klasse
+
+  // v2 — Wissen-Check Korrektheit (anonym, Bucket "richtig"/"falsch"):
+  wissen: (qid: string) => `wc-${qid}`,
 };
 
 /**
- * Ein Cast pro Poll-ID pro Browser. Der Zaehler selbst ist bewusst
- * idempotenz-frei — der Aufrufer schuetzt via localStorage-Flag.
+ * Ein Cast pro Poll-ID pro Browser. Der Zähler selbst ist bewusst
+ * idempotenz-frei — der Aufrufer schützt via localStorage-Flag.
  */
 export function voteOnce(id: string, optionId: string): void {
   if (typeof window === "undefined") return;
@@ -52,8 +60,19 @@ export function voteOnce(id: string, optionId: string): void {
   localStorage.setItem(flag, "1");
 }
 
-/** Wurde fuer diese Poll-ID in diesem Browser schon abgestimmt? */
+/** Wurde für diese Poll-ID in diesem Browser schon abgestimmt? */
 export function hasVoted(id: string): boolean {
   if (typeof window === "undefined") return false;
   return localStorage.getItem("ki26-voted-" + id) != null;
+}
+
+/**
+ * Eine generische Poll-Stimme casten (PollFrage, §4.1): zählt sowohl den
+ * globalen als auch den klassenweiten Zähler — je ein Cast pro Browser.
+ * `optionId` ist der Bucket-Key (= Options-ID).
+ */
+export function castPollVote(id: string, optionId: string): void {
+  const klasse = resolveKlasse();
+  voteOnce(pollId.poll(id), optionId);
+  voteOnce(pollId.klassePoll(klasse, id), optionId);
 }

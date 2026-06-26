@@ -9,21 +9,29 @@ import {
   voteOnce,
 } from "../_lib/unitPolls";
 import {
+  AUFTAKT_LERNZIEL,
   OPENER_FRAGE,
   OPENER_MEDIA,
   OPENER_SCHWANZ,
   PRE_POLL_FRAGE,
+  STIMMUNG_DECK_PRE,
   VORWISSEN_FRAGE,
   VORWISSEN_OPTIONEN,
 } from "../_data/auftakt";
+import { WC_OPENER } from "../_data/wissenChecks";
 import Skala from "./Skala";
 import MediaBlockView from "./media/MediaBlockView";
+import LernzielKarte from "./LernzielKarte";
+import Anleitung from "./Anleitung";
+import Hinweis from "./Hinweis";
+import WissenCheckGruppe from "./WissenCheckGruppe";
+import PollDeck from "./PollDeck";
 
 /**
- * Auftakt — Handoff §5.1, v2 §3/§9.
+ * Auftakt — Handoff §5.1, v2 §7.1.
  *
- * Drei Schritte: (A) Vorwissen (Mehrfachauswahl + Freitext, rein lokal;
- * Aggregat pro Option), (B) Hype-Opener, (C) globaler Pre-Poll. Bei Abschluss
+ * Lernziel-Karte → (A) Vorwissen → (B) Hype-Opener + Opener-Wissen-Check →
+ * (C) Stimmungsbild-PollDeck → (D) globaler Pre-Poll. Bei Abschluss
  * → onComplete(preWert), Orchestrator wechselt zu "stationen".
  */
 
@@ -38,7 +46,7 @@ interface AuftaktProps {
   onComplete: (preWert: number) => void;
 }
 
-const SCHRITTE = ["Vorwissen", "Opener", "Position"];
+const SCHRITTE = ["Vorwissen", "Opener", "Stimmung", "Position"];
 
 export default function Auftakt({ onComplete }: AuftaktProps) {
   const [schritt, setSchritt] = useState(0);
@@ -88,9 +96,7 @@ export default function Auftakt({ onComplete }: AuftaktProps) {
   return (
     <div className="flex flex-col gap-lg">
       <header className="border-b border-outline-variant pb-lg">
-        <p className="text-label-md uppercase tracking-wider text-primary">
-          Auftakt
-        </p>
+        <p className="text-label-md uppercase tracking-wider text-primary">Auftakt</p>
         <h1 className="mt-sm text-headline-xl text-on-surface">
           Kann KI das? — eine Positionsreise
         </h1>
@@ -99,6 +105,8 @@ export default function Auftakt({ onComplete }: AuftaktProps) {
           Es gibt keine Noten, keine richtigen Antworten. Nur deine Position.
         </p>
       </header>
+
+      <LernzielKarte {...AUFTAKT_LERNZIEL} />
 
       {/* Schritt-Anzeige */}
       <div className="flex flex-wrap gap-xs">
@@ -125,8 +133,8 @@ export default function Auftakt({ onComplete }: AuftaktProps) {
             <div>
               <p className="text-body-md font-semibold text-on-surface">{VORWISSEN_FRAGE}</p>
               <p className="mt-xs text-body-sm text-on-surface-variant">
-                Mehrfachauswahl moeglich. Bleibt auf deinem Geraet — gezaehlt wird
-                nur anonym, wie oft jede Antwort gewaehlt wurde.
+                Mehrfachauswahl möglich. Bleibt auf deinem Gerät — gezählt wird
+                nur anonym, wie oft jede Antwort gewählt wurde.
               </p>
             </div>
             <div className="flex flex-wrap gap-sm">
@@ -152,7 +160,7 @@ export default function Auftakt({ onComplete }: AuftaktProps) {
             </div>
             <div>
               <label htmlFor="auftakt-freitext" className="text-body-md font-semibold text-on-surface">
-                Fallt dir noch etwas ein? (freiwillig)
+                Fällt dir noch etwas ein? (freiwillig)
               </label>
               <input
                 id="auftakt-freitext"
@@ -163,13 +171,13 @@ export default function Auftakt({ onComplete }: AuftaktProps) {
                 className="mt-sm w-full rounded-lg border border-outline-variant bg-surface-bright p-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:border-primary focus:outline-none"
               />
               <p className="mt-xs text-label-sm text-on-surface-variant">
-                Freitext bleibt nur auf deinem Geraet — wird nie gespeichert oder geteilt.
+                Freitext bleibt nur auf deinem Gerät — wird nie gespeichert oder geteilt.
               </p>
             </div>
           </div>
         )}
 
-        {/* B — Hype-Opener */}
+        {/* B — Hype-Opener + Opener-Wissen-Check */}
         {schritt === 1 && (
           <div className="flex flex-col gap-lg">
             <div className="rounded-lg bg-tertiary-container p-md text-on-tertiary-container">
@@ -179,6 +187,10 @@ export default function Auftakt({ onComplete }: AuftaktProps) {
               </p>
               <p className="mt-xs text-headline-sm">{OPENER_FRAGE}</p>
             </div>
+            <Hinweis>
+              Bevor du deine Position festlegst: ein gemeinsamer Reiz. Schau den Ausschnitt — er zeigt,
+              was KI heute alles kann.
+            </Hinweis>
             <MediaBlockView block={{ media: [OPENER_MEDIA] }} />
 
             <div className="rounded-lg border border-outline-variant bg-surface-container-low p-md">
@@ -195,11 +207,25 @@ export default function Auftakt({ onComplete }: AuftaktProps) {
                 <MediaBlockView block={{ media: OPENER_SCHWANZ }} />
               )}
             </div>
+
+            <Anleitung>Kurzer Wissen-Check zum Einstieg — der erste Versuch zählt für deine Punkte.</Anleitung>
+            <WissenCheckGruppe spec={WC_OPENER} />
           </div>
         )}
 
-        {/* C — Globaler Pre-Poll */}
+        {/* C — Stimmungsbild-PollDeck */}
         {schritt === 2 && (
+          <div className="flex flex-col gap-lg">
+            <Hinweis>
+              Bevor es zu deiner Grundposition geht: ein Stimmungsbild. Du siehst nach jeder Stimme,
+              wo du im Verhältnis zu Klasse und allen stehst.
+            </Hinweis>
+            <PollDeck spec={STIMMUNG_DECK_PRE} />
+          </div>
+        )}
+
+        {/* D — Globaler Pre-Poll */}
+        {schritt === 3 && (
           <div className="flex flex-col gap-lg">
             <p className="text-body-md font-semibold text-on-surface">{PRE_POLL_FRAGE}</p>
             <Skala
@@ -209,7 +235,7 @@ export default function Auftakt({ onComplete }: AuftaktProps) {
               rechts={GLOBAL_AXIS.rechts}
             />
             <p className="text-label-sm text-on-surface-variant">
-              Deine Position bleibt lokal. Anonym gezaehlt wird nur, wo die ganze
+              Deine Position bleibt lokal. Anonym gezählt wird nur, wo die ganze
               Gruppe steht — das siehst du am Ende im Kollektiv-Spiegel.
             </p>
           </div>
@@ -224,7 +250,7 @@ export default function Auftakt({ onComplete }: AuftaktProps) {
             className="inline-flex items-center gap-sm rounded-xl border border-outline-variant bg-surface-bright px-lg py-sm text-label-md text-on-surface transition hover:bg-surface-container disabled:cursor-not-allowed disabled:opacity-40"
           >
             <span className="material-symbols-outlined text-[18px]">arrow_back</span>
-            Zurueck
+            Zurück
           </button>
 
           {schritt === 0 && (
@@ -237,17 +263,17 @@ export default function Auftakt({ onComplete }: AuftaktProps) {
               <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
             </button>
           )}
-          {schritt === 1 && (
+          {(schritt === 1 || schritt === 2) && (
             <button
               type="button"
-              onClick={() => setSchritt(2)}
+              onClick={() => setSchritt((x) => x + 1)}
               className="inline-flex items-center gap-sm rounded-xl bg-primary px-lg py-sm text-label-md text-on-primary shadow-sm transition hover:opacity-90"
             >
               Weiter
               <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
             </button>
           )}
-          {schritt === 2 && (
+          {schritt === 3 && (
             <button
               type="button"
               onClick={einheitStarten}

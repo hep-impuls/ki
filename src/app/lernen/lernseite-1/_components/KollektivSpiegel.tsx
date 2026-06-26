@@ -1,13 +1,9 @@
 "use client";
 
 import { useEffect, useState, type ReactNode } from "react";
-import {
-  loadPollCounts,
-  subscribePollCounts,
-  totalVotes,
-  type PollCounts,
-} from "@/lib/polls";
+import { loadPollCounts, subscribePollCounts, type PollCounts } from "@/lib/polls";
 import { GLOBAL_AXIS, pollId, resolveKlasse } from "../_lib/unitPolls";
+import Verteilung, { type VerteilungOption } from "./Verteilung";
 
 /**
  * KollektivSpiegel — Handoff §5.3, v2 §3/§4.
@@ -17,15 +13,13 @@ import { GLOBAL_AXIS, pollId, resolveKlasse } from "../_lib/unitPolls";
  *   - Klasse: Verteilung aus pollId.klassePost (einmalig geladen).
  *   - Alle:   Verteilung aus pollId.globalPost (live via subscribe).
  *
- * Reine CSS/Divs mit MD3-Tokens, keine Chart-Library. Bei n < 5 ein dezenter
- * Hinweis (sanfte k-Anonymitaet fuers Gefuehl).
+ * Die Balken kommen jetzt aus der generischen <Verteilung> — die 1..7-Skala
+ * ist nur ein Spezialfall mit 7 Optionen (s1..s7). Bei n < 5 ein dezenter
+ * Hinweis (sanfte k-Anonymität fürs Gefühl).
  */
 
 const STUFEN = [1, 2, 3, 4, 5, 6, 7];
-
-function bucketWert(counts: PollCounts, n: number): number {
-  return Number(counts[`s${n}`] ?? 0);
-}
+const STUFEN_OPTIONEN: VerteilungOption[] = STUFEN.map((n) => ({ id: `s${n}`, label: `${n}` }));
 
 /* ── Ich: Pre→Post-Marker ─────────────────────────────────────────────────── */
 
@@ -60,45 +54,6 @@ function IchAchse({ pre, post }: { pre: number | null; post: number | null }) {
         <span>{GLOBAL_AXIS.links}</span>
         <span>{GLOBAL_AXIS.rechts}</span>
       </div>
-    </div>
-  );
-}
-
-/* ── Verteilung als Balkenreihe ──────────────────────────────────────────── */
-
-function Verteilung({ counts, farbe }: { counts: PollCounts; farbe: string }) {
-  const total = totalVotes(counts);
-  return (
-    <div className="flex flex-col gap-xs">
-      {STUFEN.map((n) => {
-        const wert = bucketWert(counts, n);
-        const pct = total > 0 ? Math.round((wert / total) * 100) : 0;
-        return (
-          <div key={n} className="flex items-center gap-sm">
-            <span className="w-4 shrink-0 text-right text-label-sm text-on-surface-variant">{n}</span>
-            <div className="h-5 flex-1 overflow-hidden rounded-md bg-surface-container">
-              <div
-                className={`h-full rounded-md ${farbe}`}
-                style={{ width: `${pct}%` }}
-                aria-hidden
-              />
-            </div>
-            <span className="w-16 shrink-0 text-label-sm text-on-surface-variant">
-              {pct}% ({wert})
-            </span>
-          </div>
-        );
-      })}
-      <div className="mt-xs flex justify-between text-label-sm text-on-surface-variant">
-        <span>{GLOBAL_AXIS.links}</span>
-        <span>{GLOBAL_AXIS.rechts}</span>
-      </div>
-      {total < 5 && (
-        <p className="mt-xs inline-flex items-center gap-xs text-label-sm text-on-surface-variant">
-          <span className="material-symbols-outlined text-[16px] text-tertiary">info</span>
-          Noch wenige Daten (n = {total}).
-        </p>
-      )}
     </div>
   );
 }
@@ -142,11 +97,9 @@ export default function KollektivSpiegel({ preWert, postWert }: KollektivSpiegel
   useEffect(() => {
     const code = resolveKlasse();
     let aktiv = true;
-    // Klasse: einmalig laden.
     void loadPollCounts(pollId.klassePost(code)).then((c) => {
       if (aktiv) setKlasse(c);
     });
-    // Alle: live abonnieren.
     const unsub = subscribePollCounts(pollId.globalPost, setAlle);
     return () => {
       aktiv = false;
@@ -154,12 +107,14 @@ export default function KollektivSpiegel({ preWert, postWert }: KollektivSpiegel
     };
   }, []);
 
+  const meinPick = postWert != null ? `s${postWert}` : undefined;
+
   return (
     <div className="flex flex-col gap-md">
       <Block
         icon="person"
         titel="Ich"
-        untertitel="Deine Position vorher und nachher — bleibt auf deinem Geraet."
+        untertitel="Deine Position vorher und nachher — bleibt auf deinem Gerät."
       >
         <IchAchse pre={preWert} post={postWert} />
       </Block>
@@ -169,15 +124,23 @@ export default function KollektivSpiegel({ preWert, postWert }: KollektivSpiegel
         titel="Meine Klasse"
         untertitel="Wo deine Klasse am Ende steht (anonym, aggregiert)."
       >
-        <Verteilung counts={klasse} farbe="bg-tertiary" />
+        <Verteilung
+          counts={klasse}
+          optionen={STUFEN_OPTIONEN}
+          farbe="bg-tertiary"
+          meinPick={meinPick}
+          achse={GLOBAL_AXIS}
+        />
       </Block>
 
-      <Block
-        icon="public"
-        titel="Alle"
-        untertitel="Alle Teilnehmenden — fuellt sich live."
-      >
-        <Verteilung counts={alle} farbe="bg-primary" />
+      <Block icon="public" titel="Alle" untertitel="Alle Teilnehmenden — füllt sich live.">
+        <Verteilung
+          counts={alle}
+          optionen={STUFEN_OPTIONEN}
+          farbe="bg-primary"
+          meinPick={meinPick}
+          achse={GLOBAL_AXIS}
+        />
       </Block>
 
       <p className="rounded-xl bg-surface-container-low px-lg py-md text-body-sm text-on-surface-variant">

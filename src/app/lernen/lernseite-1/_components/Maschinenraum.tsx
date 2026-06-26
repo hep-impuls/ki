@@ -8,21 +8,27 @@ import {
   MR_EXPLAINER_TIEFER,
   MR_INTERESSE_ACHSE,
   MR_INTERESSE_FRAGE,
+  MR_LERNZIEL,
   MR_PRE_ACHSE,
   MR_PRE_FRAGE,
   MR_POST_FRAGE,
   MR_VERTRAUEN_FRAGE,
   MR_VERTRAUEN_OPTIONEN,
 } from "../_data/maschinenraum";
+import { WC_MASCHINENRAUM } from "../_data/wissenChecks";
 import Skala from "./Skala";
 import MediaBlockView from "./media/MediaBlockView";
+import LernzielKarte from "./LernzielKarte";
+import Anleitung from "./Anleitung";
+import WissenCheckGruppe from "./WissenCheckGruppe";
 
 /**
- * Maschinenraum (optional) — Handoff §5.4, v2 §8.
+ * Maschinenraum (optional) — Handoff §5.4, v2 §7.4.
  *
- * Ablauf: Selbsteinschaetzung vorher (1-5) → Explainer → Selbsteinschaetzung
- * nachher + Interesse (1-5) → Bruecke zurueck zur Haltung. KEIN Wissenstest.
- * Persoenliche Werte bleiben lokal; nur anonyme Aggregat-Zaehler gehen raus.
+ * Lernziel-Karte → Selbsteinschätzung vorher (1-5) → Explainer (+ optionaler
+ * leichter Wissen-Check) → Selbsteinschätzung nachher + Interesse → Brücke
+ * zurück zur Haltung. KEIN Wissenstest im Pflichtsinn. Persönliche Werte
+ * bleiben lokal; nur anonyme Aggregat-Zähler gehen raus.
  */
 
 interface MaschinenraumProps {
@@ -65,11 +71,13 @@ export default function Maschinenraum({ onZurueck }: MaschinenraumProps) {
         <h1 className="mt-sm text-headline-xl text-on-surface">Wie funktioniert das eigentlich?</h1>
         <p className="mt-sm max-w-3xl text-body-lg text-on-surface-variant">
           Kein Test, keine Noten. Nur ein Blick unter die Haube — und danach
-          schaust du, ob sich fuer dich etwas veraendert hat.
+          schaust du, ob sich für dich etwas verändert hat.
         </p>
       </header>
 
-      {/* 1 — Selbsteinschaetzung vorher */}
+      <LernzielKarte {...MR_LERNZIEL} />
+
+      {/* 1 — Selbsteinschätzung vorher */}
       <section className="rounded-xl border border-outline-variant bg-surface-bright p-lg">
         <p className="text-body-md font-semibold text-on-surface">{MR_PRE_FRAGE}</p>
         <div className="mt-sm">
@@ -83,7 +91,7 @@ export default function Maschinenraum({ onZurueck }: MaschinenraumProps) {
         </div>
       </section>
 
-      {/* 2 — Explainer */}
+      {/* 2 — Explainer + optionaler leichter Wissen-Check */}
       <section className="flex flex-col gap-md rounded-xl border border-outline-variant bg-surface-bright p-lg">
         <h2 className="text-headline-sm text-on-surface">Der Explainer (~8 Min.)</h2>
         <MediaBlockView block={{ media: [MR_EXPLAINER] }} />
@@ -101,9 +109,12 @@ export default function Maschinenraum({ onZurueck }: MaschinenraumProps) {
             <MediaBlockView block={{ media: [MR_EXPLAINER_TIEFER] }} />
           )}
         </div>
+
+        <Anleitung>Ganz freiwillig: ein leichter Check zum Explainer — nur für dich.</Anleitung>
+        <WissenCheckGruppe spec={WC_MASCHINENRAUM} />
       </section>
 
-      {/* 3 — Selbsteinschaetzung nachher + Interesse */}
+      {/* 3 — Selbsteinschätzung nachher + Interesse */}
       <section className="flex flex-col gap-lg rounded-xl border border-outline-variant bg-surface-bright p-lg">
         <div>
           <p className="text-body-md font-semibold text-on-surface">{MR_POST_FRAGE}</p>
@@ -131,7 +142,7 @@ export default function Maschinenraum({ onZurueck }: MaschinenraumProps) {
         </div>
       </section>
 
-      {/* 4 — Bruecke zurueck zur Haltung */}
+      {/* 4 — Brücke zurück zur Haltung */}
       <section className="rounded-xl border border-outline-variant bg-surface-bright p-lg">
         <p className="text-body-md font-semibold text-on-surface">{MR_VERTRAUEN_FRAGE}</p>
         <div className="mt-sm flex flex-wrap gap-sm">
@@ -164,7 +175,7 @@ export default function Maschinenraum({ onZurueck }: MaschinenraumProps) {
           className="inline-flex items-center gap-sm rounded-xl border border-outline-variant bg-surface-bright px-lg py-sm text-label-md text-on-surface transition hover:bg-surface-container"
         >
           <span className="material-symbols-outlined text-[18px]">arrow_back</span>
-          Zurueck zum Abschluss
+          Zurück zum Abschluss
         </button>
         <button
           type="button"

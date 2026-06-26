@@ -17,12 +17,12 @@ import Maschinenraum from "./Maschinenraum";
 /**
  * KiEinheit — Orchestrator (Handoff §3).
  *
- * Eine einzige State-Machine fuer den ganzen Flow auf /lernen/lernseite-1:
+ * Eine einzige State-Machine für den ganzen Flow auf /lernen/lernseite-1:
  *   auftakt → stationen (>=3 von 5) → abschluss (+ Kollektiv-Spiegel)
  *           → maschinenraum (optional).
  *
- * Geteilter State (preWert fuer das Ich-Delta im Abschluss, erledigte
- * Stationen fuer das "mind. 3"-Gate) lebt hier und wird in localStorage
+ * Geteilter State (preWert für das Ich-Delta im Abschluss, erledigte
+ * Stationen für das "mind. 3"-Gate) lebt hier und wird in localStorage
  * persistiert, damit ein Reload mitten im Flow nichts verliert.
  */
 
@@ -141,7 +141,7 @@ export default function KiEinheit() {
             className="inline-flex items-center gap-xs self-start text-label-md text-on-surface-variant transition-colors hover:text-on-surface"
           >
             <span className="material-symbols-outlined text-[18px]">arrow_back</span>
-            Zurueck zu den Stationen
+            Zurück zu den Stationen
           </button>
         </div>
       )}
@@ -158,7 +158,7 @@ export default function KiEinheit() {
           className="inline-flex items-center gap-xs self-start text-label-sm text-on-surface-variant transition-colors hover:text-on-surface"
         >
           <span className="material-symbols-outlined text-[16px]">restart_alt</span>
-          Auswahl zuruecksetzen
+          Auswahl zurücksetzen
         </button>
       )}
     </div>

@@ -1,28 +1,42 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { castVote, scaleBucket } from "@/lib/polls";
-import type { StationConfig } from "../_data/stationen";
+import {
+  castVote,
+  loadPollCounts,
+  subscribePollCounts,
+  scaleBucket,
+  type PollCounts,
+} from "@/lib/polls";
+import type { StationConfig, MediaBlock } from "../_data/stationen";
 import Skala from "./Skala";
 import MediaBlockView from "./media/MediaBlockView";
+import LernzielKarte from "./LernzielKarte";
+import Anleitung from "./Anleitung";
+import WissenCheckGruppe from "./WissenCheckGruppe";
+import Verteilung, { type VerteilungOption } from "./Verteilung";
 
 /**
- * Station — generische Umsetzung der Stations-Mechanik (v2 §5).
+ * Station — generische Umsetzung der Stations-Mechanik (v2 §5/§7).
  *
- * Vier Schritte (Versprechen + Position 1 sind bewusst ein Screen):
- *   0 Versprechen → Position 1 (Festlegung erzeugt Investment)
- *   1 Hauptgang   (affirmativer Pol)
- *   2 Kehrseite   (dissonanter Pol; Station 4: opt-in Vertiefung mit Warnung)
- *   3 Befund      (Position 2 + ein Satz + Δ)
+ * Vier Schritte (Lernziele + Versprechen + Position 1 sind der Einstieg):
+ *   0 Lernziele + Versprechen → Position 1 (Festlegung erzeugt Investment)
+ *   1 Hauptgang   (affirmativer Pol)  + Wissen-Check-Gruppe (50/50)
+ *   2 Kehrseite   (dissonanter Pol; Station 4: opt-in Vertiefung) + Wissen-Check
+ *   3 Befund      (Position 2 + ein Satz + Δ + Stations-Mini-Spiegel)
  *
  * Datenschutz (decisions.md, Modell A): Position 1/2 und der "eine Satz"
  * bleiben IM BROWSER (localStorage). Nur wenn `reportPollId` gesetzt ist, wird
- * EIN anonymer Aggregat-Zaehler der End-Position erhoeht (kein Einzeldatensatz).
- *
- * Skala und MediaBlockView sind ausgelagert (Handoff §3) und werden geteilt.
+ * EIN anonymer Aggregat-Zähler der End-Position erhöht (kein Einzeldatensatz).
+ * Wissen-Checks vergeben lokale Punkte + casten anonym richtig/falsch.
  */
 
-const SCHRITTE = ["Versprechen", "Hauptgang", "Kehrseite", "Befund"];
+const SCHRITTE = ["Start", "Hauptgang", "Kehrseite", "Befund"];
+
+const STUFEN_OPTIONEN: VerteilungOption[] = [1, 2, 3, 4, 5, 6, 7].map((n) => ({
+  id: `s${n}`,
+  label: `${n}`,
+}));
 
 interface StationState {
   pos1: number | null;
@@ -36,14 +50,30 @@ interface StationProps {
   station: StationConfig;
   /** Wird beim Abschliessen aufgerufen (z.B. Station als erledigt markieren). */
   onComplete?: (r: { pos1: number; pos2: number; satz: string }) => void;
-  /** Optional: anonymer Aggregat-Zaehler der End-Position (polls.ts). */
+  /** Optional: anonymer Aggregat-Zähler der End-Position (polls.ts). */
   reportPollId?: string;
-  /** Optional: zurueck zum Stations-Menue. */
+  /** Optional: zurück zum Stations-Menü. */
   onBack?: () => void;
 }
 
 function storageKey(id: string) {
   return `ki26-${id}`;
+}
+
+/** Medien links, Wissen-Checks rechts (50/50, stapelt mobil) — Handoff §5.3. */
+function GangMitChecks({ block, anleitung }: { block: MediaBlock; anleitung: string }) {
+  if (!block.checks) return <MediaBlockView block={block} />;
+  return (
+    <div className="grid gap-lg lg:grid-cols-2">
+      <div className="min-w-0">
+        <MediaBlockView block={block} />
+      </div>
+      <div className="flex min-w-0 flex-col gap-md">
+        <Anleitung>{anleitung}</Anleitung>
+        <WissenCheckGruppe spec={block.checks} />
+      </div>
+    </div>
+  );
 }
 
 export default function Station({ station, onComplete, reportPollId, onBack }: StationProps) {
@@ -56,6 +86,7 @@ export default function Station({ station, onComplete, reportPollId, onBack }: S
     completed: false,
   });
   const [warnungOffen, setWarnungOffen] = useState(false);
+  const [spiegel, setSpiegel] = useState<PollCounts>({});
 
   // localStorage laden (einmalig, client-seitig)
   useEffect(() => {
@@ -66,6 +97,20 @@ export default function Station({ station, onComplete, reportPollId, onBack }: S
       /* ignore */
     }
   }, [station.id]);
+
+  // Mini-Spiegel: Verteilung der Stations-Endposition (live), sobald im Befund.
+  useEffect(() => {
+    if (step !== 3 || !reportPollId) return;
+    let aktiv = true;
+    void loadPollCounts(reportPollId).then((c) => {
+      if (aktiv) setSpiegel(c);
+    });
+    const unsub = subscribePollCounts(reportPollId, setSpiegel);
+    return () => {
+      aktiv = false;
+      unsub();
+    };
+  }, [step, reportPollId]);
 
   function persist(next: StationState) {
     setS(next);
@@ -85,6 +130,7 @@ export default function Station({ station, onComplete, reportPollId, onBack }: S
   }
 
   const delta = s.pos1 != null && s.pos2 != null ? s.pos2 - s.pos1 : null;
+  const meinPick = s.pos2 != null ? `s${s.pos2}` : undefined;
 
   return (
     <div className="rounded-xl border border-outline-variant bg-surface-bright p-lg shadow-sm">
@@ -109,7 +155,7 @@ export default function Station({ station, onComplete, reportPollId, onBack }: S
             className="inline-flex shrink-0 items-center gap-xs text-label-md text-on-surface-variant transition-colors hover:text-on-surface"
           >
             <span className="material-symbols-outlined text-[18px]">grid_view</span>
-            Menue
+            Menü
           </button>
         )}
       </div>
@@ -133,9 +179,18 @@ export default function Station({ station, onComplete, reportPollId, onBack }: S
       </div>
 
       <div className="mt-lg">
-        {/* 0 — Versprechen + Position 1 */}
+        {/* 0 — Lernziele + Versprechen + Position 1 */}
         {step === 0 && (
           <div className="flex flex-col gap-lg">
+            <LernzielKarte {...station.lernziel} />
+
+            {station.warnung && (
+              <p className="flex items-start gap-sm rounded-lg border border-outline-variant bg-surface-container-low p-md text-body-sm text-on-surface-variant">
+                <span className="material-symbols-outlined text-[20px] text-tertiary">info</span>
+                {station.warnung}
+              </p>
+            )}
+
             <div className="rounded-lg bg-tertiary-container p-md text-on-tertiary-container">
               <p className="flex items-center gap-sm text-label-md uppercase tracking-wider">
                 <span className="material-symbols-outlined text-[18px]">bolt</span>
@@ -159,13 +214,21 @@ export default function Station({ station, onComplete, reportPollId, onBack }: S
           </div>
         )}
 
-        {/* 1 — Hauptgang */}
-        {step === 1 && <MediaBlockView block={station.hauptgang} />}
+        {/* 1 — Hauptgang + Wissen-Check */}
+        {step === 1 && (
+          <GangMitChecks
+            block={station.hauptgang}
+            anleitung="Schau die Clips an — danach beantwortest du die Fragen zum Inhalt. Der erste Versuch zählt für deine Punkte."
+          />
+        )}
 
-        {/* 2 — Kehrseite (+ Station 4: opt-in Vertiefung) */}
+        {/* 2 — Kehrseite (+ Station 4: opt-in Vertiefung) + Wissen-Check */}
         {step === 2 && (
           <div className="flex flex-col gap-lg">
-            <MediaBlockView block={station.dessert} />
+            <GangMitChecks
+              block={station.dessert}
+              anleitung="Auch hier: erst schauen, dann die Fragen zum Inhalt beantworten."
+            />
 
             {station.dessertVertiefung && !s.vertiefung && (
               <div className="rounded-lg border border-outline-variant bg-surface-container-low p-md">
@@ -190,7 +253,7 @@ export default function Station({ station, onComplete, reportPollId, onBack }: S
                         onClick={() => persist({ ...s, vertiefung: true })}
                         className="rounded-xl bg-primary px-lg py-sm text-label-md text-on-primary"
                       >
-                        Ich moechte sie sehen
+                        Ich möchte sie sehen
                       </button>
                       <button
                         type="button"
@@ -217,7 +280,7 @@ export default function Station({ station, onComplete, reportPollId, onBack }: S
           </div>
         )}
 
-        {/* 3 — Befund + Position 2 + ein Satz */}
+        {/* 3 — Befund + Position 2 + ein Satz + Mini-Spiegel */}
         {step === 3 && (
           <div className="flex flex-col gap-lg">
             <div>
@@ -250,20 +313,40 @@ export default function Station({ station, onComplete, reportPollId, onBack }: S
 
             <div>
               <label htmlFor={`satz-${station.id}`} className="text-body-md font-semibold text-on-surface">
-                In einem Satz: Was bleibt bei dir haengen?
+                In einem Satz: Was bleibt bei dir hängen?
               </label>
               <textarea
                 id={`satz-${station.id}`}
                 value={s.satz}
                 onChange={(e) => persist({ ...s, satz: e.target.value })}
                 rows={2}
-                placeholder="Ein Satz genuegt …"
+                placeholder="Ein Satz genügt …"
                 className="mt-sm w-full rounded-lg border border-outline-variant bg-surface-bright p-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:border-primary focus:outline-none"
               />
               <p className="mt-xs text-label-sm text-on-surface-variant">
-                Bleibt nur auf deinem Geraet — wird nicht gespeichert oder geteilt.
+                Bleibt nur auf deinem Gerät — wird nicht gespeichert oder geteilt.
               </p>
             </div>
+
+            {/* Stations-Mini-Spiegel: meine Position vs. alle (live) */}
+            {reportPollId && (s.completed || meinPick) && (
+              <section className="rounded-lg border border-outline-variant bg-surface-container-low p-md">
+                <p className="mb-sm flex items-center gap-sm text-label-md text-on-surface">
+                  <span className="material-symbols-outlined text-[18px] text-primary">groups</span>
+                  Deine Position vs. alle, die diese Station gemacht haben
+                </p>
+                <Verteilung
+                  counts={spiegel}
+                  optionen={STUFEN_OPTIONEN}
+                  farbe="bg-primary"
+                  meinPick={meinPick}
+                  achse={station.achse}
+                />
+                <p className="mt-sm text-label-sm text-on-surface-variant">
+                  Sichtbar wird deine Stimme, sobald du die Station abschliesst.
+                </p>
+              </section>
+            )}
           </div>
         )}
       </div>
@@ -277,7 +360,7 @@ export default function Station({ station, onComplete, reportPollId, onBack }: S
           className="inline-flex items-center gap-sm rounded-xl border border-outline-variant bg-surface-bright px-lg py-sm text-label-md text-on-surface transition hover:bg-surface-container disabled:cursor-not-allowed disabled:opacity-40"
         >
           <span className="material-symbols-outlined text-[18px]">arrow_back</span>
-          Zurueck
+          Zurück
         </button>
 
         {step < 3 ? (

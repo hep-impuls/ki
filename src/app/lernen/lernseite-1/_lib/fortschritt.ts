@@ -1,12 +1,12 @@
 "use client";
 
 /**
- * Fortschritt-Persistenz fuer die KI-Einheit (Handoff §3).
+ * Fortschritt-Persistenz für die KI-Einheit (Handoff §3).
  *
  * Haelt den Orchestrator-State im Browser (localStorage), damit ein Reload
  * mitten im Flow nichts verliert: aktuelle Phase, globaler Pre-/Post-Wert und
  * die erledigten Stationen. Alles rein lokal — nichts davon geht nach
- * Firestore (dort nur anonyme Aggregat-Zaehler, siehe unitPolls).
+ * Firestore (dort nur anonyme Aggregat-Zähler, siehe unitPolls).
  */
 
 export type Phase = "auftakt" | "stationen" | "abschluss" | "maschinenraum";
