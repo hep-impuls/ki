@@ -243,6 +243,18 @@ export interface QuizTF {
 export type QuizFrage = QuizMC | QuizTF;
 
 /**
+ * Bezug einer Verständnisfrage zum konsumierten Inhalt (v3-Erweiterung nach
+ * Pietro-Feedback 2026-06-26): Verständnisfragen werden direkt unter dem Medium
+ * gezeigt, das sie prüfen — nicht nur in der separaten Quiz-Subpage.
+ *   - "sonne"     → prüft die Sonnenseite (affirmativer Pol)
+ *   - "schatten"  → prüft die Schattenseite (dissonanter Pol)
+ *   - "fakten"    → prüft den Faktencheck
+ *   - "allgemein" → übergreifend / Recap
+ * Zuordnung liegt als Companion-Map in `_data/quizBezug.ts` (per Frage-ID).
+ */
+export type QuizBezug = "sonne" | "schatten" | "fakten" | "allgemein";
+
+/**
  * Quiz-Pool: genau 8 Fragen, **5 MC gefolgt von 3 wahr/falsch** (v3 §6).
  * Die Reihenfolge erzwingt die 5+3-Zusammensetzung bereits im Typsystem.
  */

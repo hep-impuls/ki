@@ -10,6 +10,65 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-06-26 — v3 M3-Iteration nach Pietros Test (Companion-Maps statt stationenV3-Umbau)
+
+Nach dem ersten Durchklick der v3-Vorschau: vier Anpassungen.
+1. **Bug Auswahl-Übernahme:** Lokaler Antwort-State „klebte“ auf der nächsten Frage (React behält
+   State an gleicher Baumposition). Fix: `key={i}` am Frame-Container in `StationV3.tsx` → Remount
+   pro Frame, Auswahl wird zurückgesetzt (gilt für Polls und Quiz).
+2. **Faktencheck = Wahr/Falsch:** Pro Fakt eine plausible Falsch-Variante; im UI wird zufällig der
+   echte `claim` (wahr) oder die Falsch-Variante gezeigt; Auto-Grade bei Klick; Auflösung nennt die
+   korrekte Aussage/Zahl + Quelle. Falsch-Varianten in **Companion-Map**
+   [`_data/faktenPruefung.ts`](../src/app/lernen/lernseite-1/_data/faktenPruefung.ts).
+3. **Verständnisfragen unter dem Medium (statt eigener Quiz-Subpage allein):** Jede Quiz-Frage ist
+   per **Companion-Map** [`_data/quizBezug.ts`](../src/app/lernen/lernseite-1/_data/quizBezug.ts)
+   einem Bezug zugeordnet (`QuizBezug` in types.ts). Bis zu 2 „sonne“-/„schatten“-Fragen erscheinen
+   direkt unter dem jeweiligen Medium; der Rest bleibt als kurzer Recap in der Quiz-Subpage. Das
+   weicht von v3 §4.4 („5 von 8 zufällig“) ab — Pietros UX-Entscheidung gewinnt; v3-Plan-STATE ist
+   entsprechend vermerkt (Spec-Update bei Gelegenheit).
+4. **Auto-Grade / weniger Klicks:** Feedback erscheint bei Auswahl (kein separater Prüf-Klick), dann
+   erst „Weiter“.
+
+**Warum Companion-Maps statt Felder direkt in `stationenV3.ts`:** Die 3'200-Zeilen-Datei via
+File-Tools zu erweitern ist im OneDrive-Sandbox-Setup fehleranfällig (Mount dehydriert editierte
+Dateien). Kleine, additive Maps je ID halten die kanonische Inhaltsdatei unangetastet und sind
+leicht prüf- und pflegbar. IDs müssen mit `stationenV3.ts` konsistent bleiben (per-ID-Schlüssel).
+
+## 2026-06-26 — v3 M3: StationV3 als neue Komponente + v3-Vorschau-Route
+
+Analog zu M1 wird die 7-Subpage-Shell als **neue** Komponente
+[`_components/StationV3.tsx`](../src/app/lernen/lernseite-1/_components/StationV3.tsx)
+gebaut statt das v2-`Station.tsx` in-place zu ersetzen — letzteres wird noch von
+`KiEinheit.tsx` mit v2-Props (`hauptgang/dessert/checks`) importiert; ein In-place-Umbau
+bräche Build/Lint sofort. Die echte Verdrahtung (Menü/Timeline → `KiEinheit` → `StationV3`)
+folgt in M7. Zum Durchklicken/Review dient eine eigene Route
+[`v3-preview/page.tsx`](../src/app/lernen/lernseite-1/v3-preview/page.tsx)
+(`/lernen/lernseite-1/v3-preview`, rendert Station 1).
+
+Weitere M3-Festlegungen:
+- **Frame-Modell (v3 §4.2):** Jede Subpage zerfällt in 1..n Frames mit **einer Frage/Karte
+  pro Frame** (3 Pre-Polls, Medien, 3 Swipe, 5–7 Fakten, 5 Quiz, 3 Post-Polls + Satz + Badge) —
+  paginiert, nie gestapelt. Persistentes Banner (Inhalt · Dauer · Lernziel) + Mikro-Anleitung.
+- **v3-Medien-Renderer inline** in `StationV3` (nicht das v2-`MediaBlockView`, dessen `MediaSpec`
+  andere Optionalität hat): YouTube-Ausschnitt/Segment, Audio, **SRF-iframe immer ganz + `guidance`
+  zur Minute** (§9). Video im Split-Layout (stapelt mobil).
+- **Interaktions-Tiefe vertagt:** Quiz 8→5-Zufallsziehung + Scoring, Swipe-Profil, Poll-Aggregate,
+  Badge-Vergabe/Zertifikat sind in M3 nur visuell/lokal; Logik folgt M4/M5/M6. **Keine** Cloud-Writes
+  in dieser Stufe.
+
+## 2026-06-26 — v3 M2: Inhalt integriert + zwei Distraktor-Fixes (§4.5)
+
+Die in den Review-Drafts (`docs/material-pietro/review/station-{1..7}.md`) ausgeschriebenen
+Stations-Inhalte wurden in [`_data/stationenV3.ts`](../src/app/lernen/lernseite-1/_data/stationenV3.ts)
+integriert (7 `const stationN: Station` + Export-Array `STATIONEN_V3`); die `[M2]`-Platzhalter sind weg.
+Die Review-`.md` bleiben die menschenlesbare Quelle/Abzug. Zwei MC-Fragen verletzten die
+Distraktor-Regel §4.5 (mind. ein falscher Distraktor länger als die richtige Antwort), weil die
+richtige Antwort die längste war — behoben durch Verlängern je eines plausiblen Distraktors
+(`st1-mc-4` «Journalistinnen … bei regionalen Tageszeitungen»; `st2-mc-3` «… harmlose Fakes aus dem
+Unterhaltungsbereich»), in TS-Datei **und** Review-`.md` synchron. Verifiziert: `tsc --noEmit`
+(strict, gegen echte `types.ts`) grün; programmatische Prüfung aller §4-Zähl-Invarianten + Distraktor-
+Regel + Station-4-Schutz (freiwillig/Warnung/143-147) + Station-7-Slider bestanden.
+
 ## 2026-06-26 — v3 M1: Typen in neuen Dateien, v2-`stationen.ts` bleibt bis M3
 
 Bei M1 (Daten-Typen) zeigte sich ein Reihenfolge-Konflikt mit dem DEV_PLAN: dieser nennt als
