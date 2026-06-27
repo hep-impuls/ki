@@ -126,18 +126,28 @@ No test suite is configured yet.
 
 ## Environment
 
-Copy `.env.local.example` to `.env.local` and fill in Firebase credentials from the Firebase Console:
+Copy `.env.local.example` to `.env.local`. Vorlage enthält alle Kommentare:
 
 ```
-NEXT_PUBLIC_FIREBASE_API_KEY
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
-NEXT_PUBLIC_FIREBASE_PROJECT_ID
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
-NEXT_PUBLIC_FIREBASE_APP_ID
+NEXT_PUBLIC_FIREBASE_API_KEY=…
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=…
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=iperka-lms
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=…
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=…
+NEXT_PUBLIC_FIREBASE_APP_ID=…
+NEXT_PUBLIC_UNIT_ID=ki26
+FIREBASE_SERVICE_ACCOUNT=<minifiziertes JSON oder Base64>   ← server-only, nur Pietro
 ```
 
-All variables are `NEXT_PUBLIC_` (browser-visible). `.env.local` is gitignored.
+Die sechs `NEXT_PUBLIC_FIREBASE_*`-Werte und `NEXT_PUBLIC_UNIT_ID` sind
+browser-public und für Christof gefahrlos teilbar (direkt aus Pietros
+`.env.local` übernehmen). `FIREBASE_SERVICE_ACCOUNT` braucht nur Pietro
+(Lehrer-Tier / Route Handlers). `.env.local` ist gitignored.
+
+**⚠️ `FIREBASE_SERVICE_ACCOUNT` muss einzeilig sein.** Next.js liest `.env.local`
+zeilenweise — mehrzeiliger JSON-Wert wird nach `{` abgeschnitten → 503.
+Minifizieren: `python -c "import json,sys; print(json.dumps(json.load(open('sa.json')),separators=(',',':')))"`
+oder als Base64. `firebaseAdmin.ts` akzeptiert beides (auto-detect).
 
 ### Firebase-Projekt (gemeinsam genutzt — Stand 2026-06-24, Pietro)
 
@@ -161,15 +171,15 @@ Next-`NEXT_PUBLIC_*` gemappt) und liegt in `ki26/.env.local` (gitignored).
   (Poll-`counts` via `increment(+1)`) unter `abstimmungen/ki26/polls/{pollId}`;
   Einzelantworten / „ein Satz" bleiben im Browser (localStorage). Kein
   Points-/Progress-Modell, **kein Cloud Function**, App Check vorerst aus.
-- **Christof:** kann Client-Code frei ergaenzen — Reads/Writes auf
-  `abstimmungen/ki26/...` sind durch die Rules gedeckt. Er braucht nur ein
-  eigenes `ki26/.env.local` mit denselben 6 `NEXT_PUBLIC_FIREBASE_*`-Werten
-  (browser-public, gefahrlos teilbar; von Pietro oder aus `10mio/.env.local`).
-  Fuer Konsole-Zugriff / eigene Deploys muss Pietro ihn im Projekt hinzufuegen
-  (Firebase Console → Nutzer und Berechtigungen).
+- **Christof:** braucht nur ein eigenes `ki26/.env.local` mit den 7
+  `NEXT_PUBLIC_*`-Werten (von Pietro übernehmen — browser-public). Kein
+  `FIREBASE_SERVICE_ACCOUNT` nötig für `lernseite-2`-Arbeit. Fortschritt
+  spiegeln via `mirrorProgress("lernseite-2/…", snapshot)` — Vorbild:
+  `src/app/lernen/lernseite-1/_lib/progressSnapshot.ts` +
+  `_components/ProgressMirror.tsx`. Vollständige Anleitung:
+  [docs/handoff-firebase-ki26.md § TL;DR für Christof](docs/handoff-firebase-ki26.md).
 - **Verifizieren:** lokal `npm run dev`, eine Test-Interaktion ausloesen, in der
   Firestore-Konsole unter `abstimmungen/ki26/` pruefen, ob der Zaehler ankommt.
-  (Aus der Cowork-Sandbox nicht testbar — kein Netz-Egress zu Firestore.)
 
 ## Design references (authoritative)
 
@@ -182,13 +192,14 @@ Two handoff docs in [design/](design/) define the **target architecture** this r
 
 ## Architecture (current state)
 
-The repo is a **starting stub** — the handoff docs describe where it's headed. Today:
-
-- `src/app/` — Next.js App Router pages. `layout.tsx` sets `lang="de"` and global metadata. `page.tsx` is the landing page with module cards. Learning modules live under `lernen/lernseite-{1,2}/page.tsx` and are intentional placeholders.
-- `src/components/ActivityTracker.tsx` — invisible client component that signs in anonymously and logs page views. **Will be replaced** by the code+classcode session model from handoff-firebase.md (`lib/session.ts`, `ensureStudent`, no Firebase Auth).
-- `src/lib/` — Firebase singleton + `logActivity()` writing to `activities/{uid}/events`. **Will be reorganized** into `firebase.ts` / `paths.ts` / `session.ts` / `db.ts` / `api.ts` per handoff-firebase.md §5.
-- `firestore.rules` — currently restricts to the per-uid `activities` collection. **Will be replaced** by the `abstimmungen/{abstimmungId}/...` rules in handoff-firebase.md §3.
-- **KI-Einheit (Lernseite 1, Pietro)** — erste Bausteine nach `docs/material-pietro/KI_EINHEIT_GESAMTARCHITEKTUR_v2.md`: `src/lib/polls.ts` (anonyme Aggregat-Zähler unter `abstimmungen/ki26/polls/{pollId}.counts`; API `castVote`/`loadPollCounts`/`subscribePollCounts`/`totalVotes`/`scaleBucket`), `src/app/lernen/lernseite-1/_data/stationen.ts` (5 Stationen als Daten) + `_components/Station.tsx` (Stations-Mechanik, geschnittene YouTube-/Audio-Player). Persönliche Antworten bleiben im Browser (localStorage); nur optionale Aggregat-Zähler gehen nach Firestore. Details im Decision-Log (2026-06-24).
+- `src/app/` — Next.js App Router pages. `layout.tsx` setzt `lang="de"` und globale Metadaten. `page.tsx` ist die Titelseite. Lernmodule unter `lernen/lernseite-{1,2}/`.
+- `src/lib/` — geteilte Infrastruktur: `firebase.ts` (Client-Singleton), `session.ts` (Animal-Code + localStorage), `paths.ts` (Firestore-Pfade), `types.ts`, `db.ts` (Client-SDK-Ops), `api.ts` (Route-Handler-Wrapper), `progressMirror.ts`, `polls.ts` (Aggregat-Zähler). Server-only: `firebaseAdmin.ts`, `server/teacherStore.ts`, `server/apiResponse.ts`.
+- `src/app/api/` — 6 Route Handlers (teacher/setup, teacher/prefs, teacher/report, student/class-exists, student/class-prefs, student/class-report). Alle `POST`, alle `runtime="nodejs"` (Admin SDK).
+- `src/app/start/` — Schüler-Onboarding (Animal-Code generieren, Klassencode optional).
+- `src/app/lehrperson/` — Lehrer-UI: Klasse anlegen, Pflichtmodule, Report.
+- `src/components/ActivityTracker.tsx` — bleibt vorerst unverändert (R6 verschoben).
+- `src/components/SessionGate.tsx` — opt-in Gate: ohne Session → Redirect `/start`.
+- **KI-Einheit (Lernseite 1, Pietro)** — vollständige Umsetzung unter `src/app/lernen/lernseite-1/`: Auftakt, 5 Stationen, Abschluss, Landkarte, Zertifikat. Fortschritt wird via `ProgressMirror.tsx` nach Firestore gespiegelt.
 
 **Path alias:** `@/*` resolves to `./src/*` (configured in `tsconfig.json`).
 
@@ -209,15 +220,8 @@ Stellen) ergänzen — jüngste oben.
 
 ## Open questions
 
-> **Hinweis (2026-06-24):** Fuer das `ki26`-Lernset (bewertungsfrei, nur
-> Aggregat-Zaehler) ist diese Frage **nicht blockierend** — es laeuft rein ueber
-> das Firestore-Client-SDK ohne Cloud Functions. Relevant wird sie erst, wenn
-> spaeter der Klassencode-/Lehrpersonen-Tier (mit Cloud Functions) ergaenzt wird.
-
-- **Hosting vs. Cloud Function rewrite.** The handoffs assume Firebase Hosting, which provides the `/api/**` → Cloud Function rewrite that `lib/api.ts` depends on (handoff-firebase.md §5.5, handoff-layout.md §6). This repo deploys to **Vercel**. Before wiring up the teacher backend, decide:
-  - **Option A** — move hosting to Firebase Hosting (matches the handoffs verbatim; lose Vercel's preview deploys and Next.js edge features).
-  - **Option B** — stay on Vercel and replicate the rewrite via `vercel.json` `rewrites` pointing at `https://europe-west6-<project>.cloudfunctions.net/api/:path*` (keeps Vercel; adds a cross-origin hop that needs CORS already enabled in the Cloud Function — it is, in handoff-firebase.md §4.2).
-  - **Option C** — skip Cloud Functions entirely and implement the teacher endpoints as Next.js Route Handlers under `src/app/api/`, using the Firebase Admin SDK server-side. Diverges from the handoff but is the most idiomatic Next-on-Vercel choice.
+- **R6 — Engagement-Tracker-Umbau** (`ActivityTracker.tsx` → Session-basiert): verschoben, geteilte Datei → mit Christof koordinieren.
+- **SessionGate auf lernseite-1**: aktuell nicht aktiv (Lernseite frei zugänglich). Mit Pietro entscheiden ob/wann gaten.
 
 ## Registrierung, Klassencode & Lehrer-Report (Stand 2026-06-26)
 
@@ -248,10 +252,9 @@ Anleitung (inkl. „wie binde ich Inhalte an Firebase an" für Christof):
 
 **Backend-Entscheid:** Lehrer-Tier läuft als **Next.js Route Handlers + Firebase
 Admin SDK** (nicht Cloud Function) — kein Deploy ins geteilte `iperka-lms`, Admin
-SDK umgeht die Rules. **Nötig (Pietro):** `npm install` (zieht `firebase-admin` +
-`server-only`), `FIREBASE_SERVICE_ACCOUNT` als Vercel-/`.env.local`-Env,
-`npm run build` zur Typprüfung. Build/Lint/Firestore-Test bewusst **nicht** in der
-Cowork-Sandbox (dehydriert Dateien / kein Firestore-Egress).
+SDK umgeht die Rules. Setup abgeschlossen (2026-06-27): `firebase-admin 13.10.0`
+installiert, `FIREBASE_SERVICE_ACCOUNT` in `.env.local` (einzeilig) und Vercel,
+E2E-Test lokal + Production (`https://hep-ki.vercel.app`) bestanden.
 
 **Datenschutz:** ki26 speichert jetzt pseudonyme Pro-Schüler-Daten (Code →
 Fortschritt). Das frühere „nur anonyme Aggregate"-Statement ist revidiert
