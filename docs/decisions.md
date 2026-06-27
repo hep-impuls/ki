@@ -10,6 +10,19 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-06-27 — FIREBASE_SERVICE_ACCOUNT muss einzeilig sein
+
+Next.js parst `.env.local` zeilenweise. Ein mehrzeiliger Service-Account-JSON-Wert
+wird nach der ersten Zeile (`{`) abgeschnitten → Route Handlers antworten mit 503.
+Lösung: JSON minifizieren (python one-liner) **oder** als Base64 kodieren. Beides
+dokumentiert in `.env.local.example`. `firebaseAdmin.ts` akzeptiert beides
+(auto-detect: beginnt mit `{` → roh, sonst Base64).
+
+Betrifft: `.env.local` lokal, Vercel-Env (dort kein Problem, da Secret-Felder
+einzeilig gespeichert werden).
+
+---
+
 ## 2026-06-26 — Volle 10mio-Parität: Registrierung, Klassencode & Lehrer-Report
 
 Architektur-Kurswechsel (mit Pietro): ki26 bekommt denselben Tier wie 10mio —
