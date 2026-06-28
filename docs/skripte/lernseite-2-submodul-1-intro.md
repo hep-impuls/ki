@@ -352,6 +352,10 @@ geplanten Auth-/Hosting-Umzug unverändert.
 
 ## Quellen / Lektüre
 
+> **Eigenes Quellenset:** [Technologische Entwicklung und die (In-)Stabilität
+> sozialer Systeme](lernseite-2-submodul-1-quellen.md) — annotiert, westlich &
+> nicht-westlich (Hui, Watsuji, Ramose, Nasr, Gandhi, Escobar …).
+
 Schlüsselwerke zur „Philosophischen Verortung" *(zur Prüfung/Ergänzung durch
 Christof — Ausgaben/Seitenangaben noch offen)*:
 
