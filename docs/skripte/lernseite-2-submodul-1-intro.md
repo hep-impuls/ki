@@ -355,6 +355,10 @@ geplanten Auth-/Hosting-Umzug unverändert.
 > **Eigenes Quellenset:** [Technologische Entwicklung und die (In-)Stabilität
 > sozialer Systeme](lernseite-2-submodul-1-quellen.md) — annotiert, westlich &
 > nicht-westlich (Hui, Watsuji, Ramose, Nasr, Gandhi, Escobar …).
+>
+> **Technik-Zeitachse:** [Technisch-wissenschaftliche Zeitachse](lernseite-2-submodul-1-technik-zeitachse.md)
+> — Basisschicht (Teleskop, Navigation, Buchdruck, Uhr …) zum Überlagern mit den
+> Philosophie-Epochen.
 
 Schlüsselwerke zur „Philosophischen Verortung" *(zur Prüfung/Ergänzung durch
 Christof — Ausgaben/Seitenangaben noch offen)*:
