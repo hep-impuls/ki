@@ -3,19 +3,21 @@
 import { useEffect, useState } from "react";
 
 /**
- * Schablonen-Zeitstrahl (Zwei-Spuren-Version) — Visualisierung für das Submodul
+ * Schablonen-Zeitstrahl (Hegel-Dramaturgie) — Visualisierung für das Submodul
  * "Philosophische Perspektive" (Lernseite 2).
  *
- * Zwei Spuren pro Epoche:
- *   1. TECHNIK (Basisschicht, primary): kompakte Ereignis-Karten — was sich
- *      wissenschaftlich-technisch verschob (Quelle:
- *      docs/skripte/lernseite-2-submodul-1-technik-zeitachse.md).
- *   2. PHILOSOPHIE (Orientierungsschicht, tertiary): die grosse Stations-Karte
- *      mit Kunstwerk — welche "Schablone" der Zeit Orientierung gab.
+ * Drei Schläge pro Epoche («Die Eule der Minerva beginnt erst mit der
+ * einbrechenden Dämmerung ihren Flug»):
+ *   1. TECHNIK (primary): kompakte Ereignis-Karten — was sich verschob
+ *      (Quelle: docs/skripte/lernseite-2-submodul-1-technik-zeitachse.md).
+ *   2. VERUNSICHERUNG (error-Ton): die soziale Erschütterung, mit eigenem
+ *      Kunstwerk — was ins Wanken geriet.
+ *   3. PHILOSOPHIE (tertiary): die Antwort, die *im Nachhinein* Orientierung
+ *      gab — grosse Stations-Karte mit Kunstwerk.
  *
  * Bilder: lokal unter /public/art (Nachweis in public/art/CREDITS.md). Die
- * historischen Stationen nutzen gemeinfreie Werke (Wikimedia Commons); die
- * Gegenwarts-Station zeigt ein zeitgenössisches Werk (Klaus Christ, 2024), mit
+ * historischen Werke sind gemeinfrei (Wikimedia Commons); die Gegenwarts-
+ * Station zeigt ein zeitgenössisches Werk (Klaus Christ, 2024), mit
  * Genehmigung verwendet. Ganzes Werk sichtbar (object-contain), Klick öffnet
  * den Vollbild-Modus (Lightbox, ✕/Esc/Hintergrund schliesst).
  *
@@ -28,6 +30,13 @@ interface TechEvent {
   title: string;
   note: string;
   icon: string;
+}
+
+interface Unrest {
+  text: string;
+  image?: string;
+  imageAlt?: string;
+  credit?: string;
 }
 
 interface Station {
@@ -43,7 +52,8 @@ interface Station {
   imageAlt?: string;
   credit?: string; // Bildnachweis
   imageWhy?: string; // "Warum dieses Bild?" — einfach, spannend
-  tech: TechEvent[]; // Technik-Spur dieser Epoche
+  tech: TechEvent[]; // Spur 1: Technik
+  unrest: Unrest; // Spur 2: soziale Verunsicherung
   open?: boolean; // offene Gegenwarts-Station
 }
 
@@ -56,7 +66,8 @@ const STATIONS: Station[] = [
     icon: "science",
     schablone: "Beobachten, ordnen, begründen",
     quote: "„Alle Menschen streben von Natur aus nach Wissen.“",
-    enabled: "Das Fundament von Wissenschaft und Empirie.",
+    enabled:
+      "Erst nach dem Schock ordnet Aristoteles das Wissen neu — Logik, Naturkunde, Ethik, Politik: das Fundament von Wissenschaft und Empirie.",
     image: "/art/athens.jpg",
     imageAlt: "Fresko „Die Schule von Athen“ von Raffael",
     credit: "Raffael, „Die Schule von Athen“, 1509–1511 · gemeinfrei",
@@ -76,17 +87,23 @@ const STATIONS: Station[] = [
         icon: "visibility",
       },
     ],
+    unrest: {
+      text: "Der Logos entzaubert den Mythos: Die Götter-Erzählungen verlieren ihre Selbstverständlichkeit, die Sophisten verkaufen Argumente wie Waren — nichts scheint mehr festzustehen. Athen reagiert mit Härte: 399 v. Chr. muss Sokrates den Schierlingsbecher trinken, weil sein Fragen die alte Ordnung bedroht.",
+      image: "/art/sokrates.jpg",
+      imageAlt: "Gemälde „Der Tod des Sokrates“ von Jacques-Louis David",
+      credit: "J.-L. David, „Der Tod des Sokrates“, 1787 · gemeinfrei",
+    },
   },
   {
     id: "augustinus",
     epoch: "Spätantike → Mittelalter",
-    wandel: "Eine Welt wird christlich",
+    wandel: "Eine Weltordnung zerbricht",
     thinker: "Augustinus",
     icon: "church",
     schablone: "Innerlichkeit, Glaube, Heilsgeschichte",
     quote: "„Im inneren Menschen wohnt die Wahrheit.“",
     enabled:
-      "Orientierung für ein christliches Zeitalter — und die Entdeckung des inneren Selbst.",
+      "Augustinus antwortet nach dem Schock: „Vom Gottesstaat“ (413–426) — Halt liegt nicht im Reich, sondern im Glauben. Orientierung für ein ganzes Zeitalter, geschrieben, als das alte schon fiel.",
     image: "/art/augustine.jpg",
     imageAlt: "Gemälde „Der heilige Augustinus“ von Philippe de Champaigne",
     credit: "Ph. de Champaigne, „Der heilige Augustinus“, um 1645 · gemeinfrei",
@@ -96,27 +113,30 @@ const STATIONS: Station[] = [
       {
         year: "13.–14. Jh.",
         title: "Die mechanische Uhr",
-        note: "Aus den Klöstern auf die Stadttürme: Gebet, Arbeit und Alltag laufen fortan im Takt der Uhr.",
+        note: "Aus den Klöstern auf die Stadttürme: Gebet, Arbeit und Alltag laufen fortan im Takt der Uhr — die Technik, die die neue Ordnung trägt.",
         icon: "schedule",
       },
-      {
-        year: "um 1440",
-        title: "Gutenbergs Druckpresse",
-        note: "3 600 Seiten am Tag statt einer Handvoll — Wissen wird massenhaft, Reformation und Wissenschaft folgen.",
-        icon: "print",
-      },
     ],
+    unrest: {
+      text: "410 n. Chr. plündern Alarichs Westgoten Rom — die „ewige Stadt“ fällt, und mit ihr die Gewissheit einer ganzen Weltordnung. Heiden geben den Christen die Schuld am Untergang, Christen zweifeln an Gottes Schutz. Wem gehört die Zukunft, wenn das Reich zerbricht?",
+      image: "/art/rom.jpg",
+      imageAlt:
+        "Gemälde „Die Plünderung Roms durch die Barbaren im Jahr 410“ von Joseph-Noël Sylvestre",
+      credit:
+        "J.-N. Sylvestre, „Die Plünderung Roms durch die Barbaren“, 1890 · gemeinfrei",
+    },
   },
   {
     id: "kant",
-    epoch: "Aufklärung",
-    wandel: "Der Mensch wird mündig",
+    epoch: "Frühe Neuzeit → Aufklärung",
+    wandel: "Der Mensch verliert die Mitte — und wird mündig",
     thinker: "Kant",
     icon: "lightbulb",
     schablone: "Autonomie und Selbstdenken",
     quote:
       "„Sapere aude! Habe Mut, dich deines eigenen Verstandes zu bedienen.“",
-    enabled: "Das selbstbestimmte Individuum der Moderne.",
+    enabled:
+      "Kants Antwort kommt spät im Jahrhundert: Wenn weder Himmel noch Kirche Halt geben, muss die Vernunft ihn selbst schaffen — das mündige Individuum der Moderne.",
     image: "/art/wanderer.jpg",
     imageAlt:
       "Gemälde „Der Wanderer über dem Nebelmeer“ von Caspar David Friedrich",
@@ -125,6 +145,12 @@ const STATIONS: Station[] = [
     imageWhy:
       "Ein einzelner Mensch steht auf dem Gipfel und blickt über ein Nebelmeer — niemand sagt ihm, was er sehen soll, er deutet die Welt selbst. Das ist Kants Schablone: Habe Mut, dich deines eigenen Verstandes zu bedienen. Friedrich malt den mündigen, auf sich gestellten Einzelnen der Moderne.",
     tech: [
+      {
+        year: "um 1440",
+        title: "Gutenbergs Druckpresse",
+        note: "3 600 Seiten am Tag statt einer Handvoll — Wissen und Streitschriften erreichen erstmals die Masse.",
+        icon: "print",
+      },
       {
         year: "1543–1687",
         title: "Kopernikanische Wende",
@@ -138,6 +164,13 @@ const STATIONS: Station[] = [
         icon: "explore",
       },
     ],
+    unrest: {
+      text: "Die Druckpresse verbreitet Luthers Thesen — die Christenheit spaltet sich, Religionskriege verwüsten Europa. Das Teleskop nimmt der Erde die Mitte; Pascal gesteht: „Das ewige Schweigen dieser unendlichen Räume erschreckt mich.“ Und 1755 zertrümmert das Erdbeben von Lissabon den Glauben an die gütige Ordnung der Welt.",
+      image: "/art/lissabon.jpg",
+      imageAlt:
+        "Kupferstich der Zerstörung Lissabons durch Erdbeben, Feuer und Flutwelle 1755",
+      credit: "Kupferstich „Destruction de Lisbonne“, 1755 · gemeinfrei",
+    },
   },
   {
     id: "marx",
@@ -148,7 +181,7 @@ const STATIONS: Station[] = [
     schablone: "Den Umbruch begreifen — und gestalten",
     quote: "„Alles Ständische und Stehende verdampft.“",
     enabled:
-      "Die Schablone der Industriemoderne: Gesellschaft ist kein Schicksal, sondern gemacht — und veränderbar. Wandel wird zum Dauerzustand.",
+      "Im Revolutionsjahr 1848 erscheint das Kommunistische Manifest: Die Philosophie erfasst den Umbruch, als er schon in vollem Gang ist — und erklärt Gesellschaft für veränderbar.",
     image: "/art/eisenwalzwerk.jpg",
     imageAlt: "Gemälde „Das Eisenwalzwerk (Moderne Cyklopen)“ von Adolph Menzel",
     credit: "A. Menzel, „Das Eisenwalzwerk“, 1872–1875 · gemeinfrei",
@@ -174,6 +207,13 @@ const STATIONS: Station[] = [
         icon: "cable",
       },
     ],
+    unrest: {
+      text: "Die Fabrik saugt die Menschen vom Land in die Städte: 14-Stunden-Tage, Kinderarbeit, Elendsquartiere im Schatten der Bahnviadukte. Die alten Stände lösen sich auf, Familien- und Dorfordnungen zerreissen — 1848 explodiert Europa in Revolutionen.",
+      image: "/art/london.jpg",
+      imageAlt:
+        "Stich „Over London – by Rail“ von Gustave Doré: enge Hinterhöfe unter einem Eisenbahnviadukt",
+      credit: "G. Doré, „Over London – by Rail“, 1872 · gemeinfrei",
+    },
   },
   {
     id: "jetzt",
@@ -183,7 +223,7 @@ const STATIONS: Station[] = [
     icon: "hub",
     schablone: "??? — das suchen wir gerade",
     enabled:
-      "Genau hier setzt dieses Submodul an: die Schablonen finden, die uns mit KI und einem neuen „Wir“ orientieren (Latour, Haraway, Gabriel …).",
+      "Hegels Eule der Minerva fliegt erst in der Dämmerung — für unsere Zeit ist sie noch nicht gestartet. Die Schablone fehlt noch; genau hier setzt dieses Submodul an (Latour, Haraway, Gabriel …).",
     image: "/art/wir-netz.png",
     imageAlt:
       "Installation „Suche nach Bildern“: ein Netz aus Fäden verbindet Figuren und Objekte — Rohstoffe, Datacenter, Satelliten, Nutzer:innen — rund um einen alten Computer mit Weltkarte.",
@@ -210,6 +250,9 @@ const STATIONS: Station[] = [
         icon: "chat",
       },
     ],
+    unrest: {
+      text: "Was ist noch echt — Bild, Stimme, Video? Worauf kann ich mich beim Recherchieren verlassen, welche Fähigkeiten lohnen sich noch, wer hat das gemacht — ich, die KI, beide? Alles ist vernetzt, alles beschleunigt sich; viele fühlen sich getrieben — und das „Wir“ zerfällt.",
+    },
     open: true,
   },
 ];
@@ -237,15 +280,19 @@ export default function SchablonenZeitstrahl() {
 
   return (
     <>
-      {/* Legende der zwei Spuren */}
+      {/* Legende der drei Schläge */}
       <div className="mb-lg flex flex-wrap gap-sm">
         <span className="inline-flex items-center gap-xs rounded-xl bg-primary-container px-md py-xs text-label-sm text-on-primary-container">
           <span className="material-symbols-outlined text-[16px]">bolt</span>
-          Technik — was die Welt verschob
+          Technik — verschiebt die Welt
+        </span>
+        <span className="inline-flex items-center gap-xs rounded-xl bg-error-container px-md py-xs text-label-sm text-on-error-container">
+          <span className="material-symbols-outlined text-[16px]">warning</span>
+          Verunsicherung — was ins Wanken gerät
         </span>
         <span className="inline-flex items-center gap-xs rounded-xl bg-tertiary-container px-md py-xs text-label-sm text-on-tertiary-container">
           <span className="material-symbols-outlined text-[16px]">psychology</span>
-          Philosophie — was Orientierung gab
+          Philosophie — antwortet im Nachhinein
         </span>
       </div>
 
@@ -272,10 +319,10 @@ export default function SchablonenZeitstrahl() {
               </div>
 
               <div className="min-w-0 flex-1 pb-md">
-                {/* ── Spur 1: Technik (Basisschicht) ── */}
+                {/* ── Schlag 1: Technik ── */}
                 <p className="flex items-center gap-xs text-label-sm uppercase tracking-wider text-primary">
                   <span className="material-symbols-outlined text-[16px]">bolt</span>
-                  Was die Technik verschob
+                  Die Technik verschiebt die Welt
                 </p>
                 <div
                   className={
@@ -308,15 +355,64 @@ export default function SchablonenZeitstrahl() {
                   ))}
                 </div>
 
-                {/* ── Übergang zur Spur 2: Philosophie ── */}
+                {/* ── Schlag 2: Verunsicherung ── */}
+                <p className="mt-md flex items-center gap-xs text-label-sm uppercase tracking-wider text-error">
+                  <span className="material-symbols-outlined text-[16px]">
+                    warning
+                  </span>
+                  Die Verunsicherung wächst
+                </p>
+                <div className="mt-sm overflow-hidden rounded-xl border border-outline-variant bg-surface-bright">
+                  {s.unrest.image && (
+                    <figure className="m-0">
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setLightbox({
+                            src: s.unrest.image!,
+                            alt: s.unrest.imageAlt ?? "",
+                            credit: s.unrest.credit,
+                          })
+                        }
+                        aria-label={`${s.unrest.imageAlt ?? "Bild"} im Vollbild öffnen`}
+                        className="group relative block w-full cursor-zoom-in"
+                      >
+                        <div className="flex h-56 items-center justify-center bg-surface-container-low p-sm">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={s.unrest.image}
+                            alt={s.unrest.imageAlt ?? ""}
+                            loading="lazy"
+                            className="max-h-full max-w-full object-contain"
+                          />
+                        </div>
+                        <span className="absolute right-sm top-sm inline-flex items-center gap-xs rounded-lg bg-inverse-surface/70 px-sm py-xs text-label-sm text-inverse-on-surface opacity-80 transition-opacity group-hover:opacity-100">
+                          <span className="material-symbols-outlined text-[16px]">
+                            fullscreen
+                          </span>
+                          Vollbild
+                        </span>
+                      </button>
+                      {s.unrest.credit && (
+                        <figcaption className="border-t border-outline-variant bg-surface-container-low px-md py-xs text-label-sm text-on-surface-variant">
+                          {s.unrest.credit}
+                        </figcaption>
+                      )}
+                    </figure>
+                  )}
+                  <p className="border-l-4 border-error/50 p-lg text-body-md text-on-surface-variant">
+                    {s.unrest.text}
+                  </p>
+                </div>
+
+                {/* ── Schlag 3: Philosophie ── */}
                 <p className="mt-md flex items-center gap-xs text-label-sm uppercase tracking-wider text-tertiary">
                   <span className="material-symbols-outlined text-[16px]">
-                    arrow_downward
+                    psychology
                   </span>
-                  Die Philosophie, die Orientierung gab
+                  Die Philosophie antwortet — im Nachhinein
                 </p>
 
-                {/* Philosophie-Karte */}
                 <div
                   className={
                     "mt-sm overflow-hidden rounded-xl border bg-surface-bright shadow-sm transition hover:shadow-md " +

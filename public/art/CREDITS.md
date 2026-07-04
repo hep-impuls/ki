@@ -14,6 +14,10 @@ ebenfalls gemeinfrei. Quelle jeweils Wikimedia Commons.
 | `augustine.jpg` | Der heilige Augustinus | Philippe de Champaigne | um 1645–1650 | Augustinus · Innerlichkeit, christliches Zeitalter |
 | `wanderer.jpg` | Der Wanderer über dem Nebelmeer | Caspar David Friedrich | 1818 | Kant · Autonomie, mündiges Individuum |
 | `eisenwalzwerk.jpg` | Das Eisenwalzwerk (Moderne Cyklopen) | Adolph Menzel | 1872–1875 | Marx · Industriemoderne, Fabrik & Arbeit |
+| `sokrates.jpg` | Der Tod des Sokrates | Jacques-Louis David | 1787 | Antike · Verunsicherung (Prozess des Sokrates) |
+| `rom.jpg` | Die Plünderung Roms durch die Barbaren (410) | Joseph-Noël Sylvestre | 1890 | Spätantike · Verunsicherung (Fall Roms) |
+| `lissabon.jpg` | Destruction de Lisbonne (Kupferstich) | unbekannt | 1755 | Aufklärung · Verunsicherung (Erdbeben von Lissabon) |
+| `london.jpg` | Over London – by Rail (aus «London: A Pilgrimage»; Ausschnitt aus Buchseiten-Scan) | Gustave Doré | 1872 | Industriemoderne · Verunsicherung (Elendsquartiere) |
 
 ## Zeitgenössisch (mit Genehmigung)
 

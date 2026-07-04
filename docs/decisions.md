@@ -698,6 +698,30 @@ Betroffen: `ki26/.env.local` (neu, gitignored), [CLAUDE.md](../CLAUDE.md#firebas
 
 ---
 
+## 2026-07-04 — Hegel-Dramaturgie: Dreiklang pro Epoche + Verunsicherungs-Bilder
+
+Der Schablonen-Zeitstrahl erzählt jede Epoche jetzt in **drei Schlägen**:
+**Technik verschiebt die Welt** (primary) → **die Verunsicherung wächst**
+(error-Ton, mit eigenem Kunstwerk) → **die Philosophie antwortet — im
+Nachhinein** (tertiary). Rahmung über Hegels Eule der Minerva («beginnt erst
+mit der einbrechenden Dämmerung ihren Flug», Rechtsphilosophie-Vorrede) als
+Blockzitat im Seitenkopf; die Gegenwarts-Station endet mit «die Eule ist für
+unsere Zeit noch nicht gestartet».
+
+Damit hat jede Epoche **mehr als ein Bild**. Neue gemeinfreie Verunsicherungs-
+Werke: David «Der Tod des Sokrates» (1787) · Sylvestre «Die Plünderung Roms»
+(1890) · Kupferstich «Destruction de Lisbonne» (1755) · Doré «Over London – by
+Rail» (1872, aus Buchseiten-Scan zugeschnitten; eine bebilderte Buchseiten-
+Reproduktion mit Caption wurde verworfen).
+
+Inhaltliche Umhängung für die Chronologie: **Druckpresse** wandert von der
+Augustinus- zur Kant-Station (Druck 1440 → Reformation/Religionskriege →
+Aufklärung als Antwort — hegelisch sauber); Augustinus behält die mechanische
+Uhr als ordnende Technik des christlichen Zeitalters, seine Verunsicherung ist
+der **Fall Roms 410** (De civitate Dei 413–426 als Antwort *nach* dem Schock).
+
+---
+
 ## 2026-07-04 — Zwei-Spuren-Zeitstrahl + Marx-Station (Option A)
 
 Der Schablonen-Zeitstrahl (`/sandbox/philosophie-schablonen`) ist jetzt

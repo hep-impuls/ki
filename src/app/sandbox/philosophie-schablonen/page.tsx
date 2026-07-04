@@ -35,12 +35,21 @@ export default function SandboxPhilosophieSchablonen() {
           Schablonen für den Wandel
         </h1>
         <p className="mt-sm max-w-3xl text-body-lg text-on-surface-variant">
-          Immer wenn Technik die Welt verschob — Uhr, Druckpresse, Teleskop,
-          Dampfmaschine, Kabel im Meer —, fand die Zeit eine Philosophie, die ihr
-          Orientierung gab: eine Schablone, durch die man neu sehen konnte. Und
-          die Kunst jeder Epoche macht diesen Blick sichtbar. Folge den zwei
-          Spuren, öffne die Kunstwerke im Vollbild. Und heute, mit KI?
+          Immer derselbe Dreiklang: Die Technik verschiebt die Welt, die
+          Verunsicherung wächst — und die Philosophie antwortet, immer erst im
+          Nachhinein. Die Kunst jeder Epoche macht beides sichtbar: die
+          Erschütterung und die neue Schablone. Und heute, mit KI?
         </p>
+        <blockquote className="mt-md max-w-3xl border-l-4 border-tertiary pl-md">
+          <p className="text-body-md italic text-on-surface-variant">
+            «Die Eule der Minerva beginnt erst mit der einbrechenden Dämmerung
+            ihren Flug.»
+          </p>
+          <footer className="mt-xs text-label-sm text-on-surface-variant">
+            G. W. F. Hegel — die Philosophie begreift eine Gestalt des Lebens
+            erst, wenn sie alt geworden ist.
+          </footer>
+        </blockquote>
       </header>
 
       <section className="mt-xl max-w-3xl">
