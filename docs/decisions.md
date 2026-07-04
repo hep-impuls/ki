@@ -698,6 +698,25 @@ Betroffen: `ki26/.env.local` (neu, gitignored), [CLAUDE.md](../CLAUDE.md#firebas
 
 ---
 
+## 2026-07-04 — Präzisierung der Hegel-Deutung + Bilderset-Galerie
+
+**Sprachregelung (Christof):** Die Philosophie antwortet **nicht «im
+Nachhinein»** im strengen Sinn. Richtig: Sie **sieht nicht voraus**, sondern
+antwortet **im Blick auf das, was war, auf die Fragen ihrer Gegenwart** —
+populär/wirksam wird die Antwort oft erst später. Entsprechend umformuliert:
+Spur-3-Label («Die Philosophie antwortet — im Blick auf das, was war»),
+Hegel-Glosse im Seitenkopf, Stations-Texte (Kant antwortet auf seine Gegenwart,
+Marx' Antwort wird erst Jahrzehnte später weltweit populär, «Jetzt»-Station).
+Spur-1-Label neu: **«Was die Technik wandelt — und neu ordnet»** (statt
+«verschiebt die Welt»).
+
+**Bilderset-Galerie:** Alle Kunstwerke des Zeitstrahls lassen sich als Set
+durchblättern — Button «Bilderset durchblättern» + ‹/›-Navigation, Pfeiltasten,
+Zähler, Epoche/Rolle und Bildnachweis im Vollbild. Reihenfolge erzählerisch:
+je Epoche Verunsicherung → Antwort.
+
+---
+
 ## 2026-07-04 — Hegel-Dramaturgie: Dreiklang pro Epoche + Verunsicherungs-Bilder
 
 Der Schablonen-Zeitstrahl erzählt jede Epoche jetzt in **drei Schlägen**:

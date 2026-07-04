@@ -35,10 +35,12 @@ export default function SandboxPhilosophieSchablonen() {
           Schablonen für den Wandel
         </h1>
         <p className="mt-sm max-w-3xl text-body-lg text-on-surface-variant">
-          Immer derselbe Dreiklang: Die Technik verschiebt die Welt, die
-          Verunsicherung wächst — und die Philosophie antwortet, immer erst im
-          Nachhinein. Die Kunst jeder Epoche macht beides sichtbar: die
-          Erschütterung und die neue Schablone. Und heute, mit KI?
+          Immer derselbe Dreiklang: Die Technik wandelt und ordnet neu, die
+          Verunsicherung wächst — und die Philosophie antwortet. Sie sieht
+          nicht voraus, aber sie antwortet im Blick auf das, was war, auf die
+          Fragen ihrer Gegenwart; populär wird ihre Antwort oft erst später.
+          Die Kunst jeder Epoche macht beides sichtbar: die Erschütterung und
+          die neue Schablone. Und heute, mit KI?
         </p>
         <blockquote className="mt-md max-w-3xl border-l-4 border-tertiary pl-md">
           <p className="text-body-md italic text-on-surface-variant">
@@ -46,8 +48,8 @@ export default function SandboxPhilosophieSchablonen() {
             ihren Flug.»
           </p>
           <footer className="mt-xs text-label-sm text-on-surface-variant">
-            G. W. F. Hegel — die Philosophie begreift eine Gestalt des Lebens
-            erst, wenn sie alt geworden ist.
+            G. W. F. Hegel — die Philosophie sieht nicht voraus: Sie begreift,
+            was war, und gewinnt daraus Antworten für die Gegenwart.
           </footer>
         </blockquote>
       </header>

@@ -3,23 +3,26 @@
 import { useEffect, useState } from "react";
 
 /**
- * Schablonen-Zeitstrahl (Hegel-Dramaturgie) — Visualisierung für das Submodul
- * "Philosophische Perspektive" (Lernseite 2).
+ * Schablonen-Zeitstrahl — Visualisierung für das Submodul "Philosophische
+ * Perspektive" (Lernseite 2).
  *
- * Drei Schläge pro Epoche («Die Eule der Minerva beginnt erst mit der
- * einbrechenden Dämmerung ihren Flug»):
- *   1. TECHNIK (primary): kompakte Ereignis-Karten — was sich verschob
- *      (Quelle: docs/skripte/lernseite-2-submodul-1-technik-zeitachse.md).
+ * Drei Schläge pro Epoche:
+ *   1. TECHNIK (primary): was die Technik wandelt und neu ordnet — kompakte
+ *      Ereignis-Karten (Quelle: docs/skripte/…-technik-zeitachse.md).
  *   2. VERUNSICHERUNG (error-Ton): die soziale Erschütterung, mit eigenem
- *      Kunstwerk — was ins Wanken geriet.
- *   3. PHILOSOPHIE (tertiary): die Antwort, die *im Nachhinein* Orientierung
- *      gab — grosse Stations-Karte mit Kunstwerk.
+ *      Kunstwerk — was ins Wanken gerät.
+ *   3. PHILOSOPHIE (tertiary): die Antwort — die Philosophie sieht nicht
+ *      voraus, sie antwortet im Blick auf das, was war, auf Fragen der
+ *      Gegenwart; populär wird die Antwort oft erst später (Hegels Eule).
+ *
+ * Bilderset: alle Kunstwerke lassen sich als Galerie durchblättern —
+ * "Bilderset durchblättern" oben oder Klick auf ein Bild öffnet den
+ * Vollbild-Modus mit ‹/›-Navigation, Pfeiltasten, Zähler und Bildnachweis.
  *
  * Bilder: lokal unter /public/art (Nachweis in public/art/CREDITS.md). Die
  * historischen Werke sind gemeinfrei (Wikimedia Commons); die Gegenwarts-
  * Station zeigt ein zeitgenössisches Werk (Klaus Christ, 2024), mit
- * Genehmigung verwendet. Ganzes Werk sichtbar (object-contain), Klick öffnet
- * den Vollbild-Modus (Lightbox, ✕/Esc/Hintergrund schliesst).
+ * Genehmigung verwendet. Ganzes Werk sichtbar (object-contain).
  *
  * Self-contained Client-Komponente, keine Firebase-/Server-Logik
  * (hosting-/auth-agnostisch, migrationsbereit). Inhalte als Datenstruktur unten.
@@ -67,7 +70,7 @@ const STATIONS: Station[] = [
     schablone: "Beobachten, ordnen, begründen",
     quote: "„Alle Menschen streben von Natur aus nach Wissen.“",
     enabled:
-      "Erst nach dem Schock ordnet Aristoteles das Wissen neu — Logik, Naturkunde, Ethik, Politik: das Fundament von Wissenschaft und Empirie.",
+      "Aristoteles blickt auf die Erschütterung zurück und ordnet das Wissen neu — Logik, Naturkunde, Ethik, Politik: das Fundament von Wissenschaft und Empirie.",
     image: "/art/athens.jpg",
     imageAlt: "Fresko „Die Schule von Athen“ von Raffael",
     credit: "Raffael, „Die Schule von Athen“, 1509–1511 · gemeinfrei",
@@ -103,7 +106,7 @@ const STATIONS: Station[] = [
     schablone: "Innerlichkeit, Glaube, Heilsgeschichte",
     quote: "„Im inneren Menschen wohnt die Wahrheit.“",
     enabled:
-      "Augustinus antwortet nach dem Schock: „Vom Gottesstaat“ (413–426) — Halt liegt nicht im Reich, sondern im Glauben. Orientierung für ein ganzes Zeitalter, geschrieben, als das alte schon fiel.",
+      "Augustinus antwortet im Blick auf den Zusammenbruch: „Vom Gottesstaat“ (413–426) — Halt liegt nicht im Reich, sondern im Glauben. Seine Antwort prägt das ganze folgende Jahrtausend.",
     image: "/art/augustine.jpg",
     imageAlt: "Gemälde „Der heilige Augustinus“ von Philippe de Champaigne",
     credit: "Ph. de Champaigne, „Der heilige Augustinus“, um 1645 · gemeinfrei",
@@ -136,14 +139,14 @@ const STATIONS: Station[] = [
     quote:
       "„Sapere aude! Habe Mut, dich deines eigenen Verstandes zu bedienen.“",
     enabled:
-      "Kants Antwort kommt spät im Jahrhundert: Wenn weder Himmel noch Kirche Halt geben, muss die Vernunft ihn selbst schaffen — das mündige Individuum der Moderne.",
+      "Kant blickt auf zwei Jahrhunderte Erschütterung zurück und antwortet auf die Fragen seiner Gegenwart: Wenn weder Himmel noch Kirche Halt geben, muss die Vernunft ihn selbst schaffen — das mündige Individuum der Moderne.",
     image: "/art/wanderer.jpg",
     imageAlt:
       "Gemälde „Der Wanderer über dem Nebelmeer“ von Caspar David Friedrich",
     credit:
       "C. D. Friedrich, „Der Wanderer über dem Nebelmeer“, 1818 · gemeinfrei",
     imageWhy:
-      "Ein einzelner Mensch steht auf dem Gipfel und blickt über ein Nebelmeer — niemand sagt ihm, was er sehen soll, er deutet die Welt selbst. Das ist Kants Schablone: Habe Mut, dich deines eigenen Verstandes zu bedienen. Friedrich malt den mündigen, auf sich gestellten Einzelnen der Moderne.",
+      "Ein einzelner Mensch steht auf dem Gipfel und blickt über ein Nebelmeer — niemand sagt ihm, was er sehen soll, er deutet die Welt selbst. Das ist Kants Schablone: Habe Mut, dich deines eigenen Verstandes zu bedienen. Friedrich malt den mündigen, auf sich gestellten Einzelnen der Moderne — Jahrzehnte nach Kant: erst jetzt wird die Schablone zum Bild.",
     tech: [
       {
         year: "um 1440",
@@ -181,7 +184,7 @@ const STATIONS: Station[] = [
     schablone: "Den Umbruch begreifen — und gestalten",
     quote: "„Alles Ständische und Stehende verdampft.“",
     enabled:
-      "Im Revolutionsjahr 1848 erscheint das Kommunistische Manifest: Die Philosophie erfasst den Umbruch, als er schon in vollem Gang ist — und erklärt Gesellschaft für veränderbar.",
+      "Marx blickt auf ein Jahrhundert Industrialisierung und antwortet 1848 mitten in der Revolution: Gesellschaft ist kein Schicksal, sondern gemacht — und veränderbar. Weltweit populär wird diese Antwort erst Jahrzehnte später.",
     image: "/art/eisenwalzwerk.jpg",
     imageAlt: "Gemälde „Das Eisenwalzwerk (Moderne Cyklopen)“ von Adolph Menzel",
     credit: "A. Menzel, „Das Eisenwalzwerk“, 1872–1875 · gemeinfrei",
@@ -223,7 +226,7 @@ const STATIONS: Station[] = [
     icon: "hub",
     schablone: "??? — das suchen wir gerade",
     enabled:
-      "Hegels Eule der Minerva fliegt erst in der Dämmerung — für unsere Zeit ist sie noch nicht gestartet. Die Schablone fehlt noch; genau hier setzt dieses Submodul an (Latour, Haraway, Gabriel …).",
+      "Die Philosophie sieht nicht voraus — sie antwortet im Blick auf das, was war, auf die Fragen ihrer Gegenwart. Für unsere Zeit entsteht diese Antwort gerade erst; genau hier setzt dieses Submodul an (Latour, Haraway, Gabriel …).",
     image: "/art/wir-netz.png",
     imageAlt:
       "Installation „Suche nach Bildern“: ein Netz aus Fäden verbindet Figuren und Objekte — Rohstoffe, Datacenter, Satelliten, Nutzer:innen — rund um einen alten Computer mit Weltkarte.",
@@ -257,17 +260,55 @@ const STATIONS: Station[] = [
   },
 ];
 
-type Lightbox = { src: string; alt: string; credit?: string };
+/** Bilderset in Erzähl-Reihenfolge: je Epoche Verunsicherung → Antwort. */
+interface GalleryItem {
+  src: string;
+  alt: string;
+  credit?: string;
+  context: string;
+}
+
+const GALLERY: GalleryItem[] = STATIONS.flatMap((s) => {
+  const items: GalleryItem[] = [];
+  if (s.unrest.image) {
+    items.push({
+      src: s.unrest.image,
+      alt: s.unrest.imageAlt ?? "",
+      credit: s.unrest.credit,
+      context: `${s.epoch} · Die Verunsicherung`,
+    });
+  }
+  if (s.image) {
+    items.push({
+      src: s.image,
+      alt: s.imageAlt ?? "",
+      credit: s.credit,
+      context: `${s.epoch} · Die Antwort der Philosophie`,
+    });
+  }
+  return items;
+});
 
 export default function SchablonenZeitstrahl() {
   const [openId, setOpenId] = useState<string | null>("aristoteles");
-  const [lightbox, setLightbox] = useState<Lightbox | null>(null);
+  const [galleryIdx, setGalleryIdx] = useState<number | null>(null);
 
-  // Esc schliesst, Hintergrund-Scroll sperren, solange Vollbild offen ist
+  const openBySrc = (src: string) => {
+    const idx = GALLERY.findIndex((g) => g.src === src);
+    setGalleryIdx(idx >= 0 ? idx : 0);
+  };
+
+  // Esc schliesst, ←/→ blättern, Hintergrund-Scroll sperren, solange offen
   useEffect(() => {
-    if (!lightbox) return;
+    if (galleryIdx === null) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setLightbox(null);
+      if (e.key === "Escape") setGalleryIdx(null);
+      if (e.key === "ArrowRight")
+        setGalleryIdx((i) => (i === null ? i : (i + 1) % GALLERY.length));
+      if (e.key === "ArrowLeft")
+        setGalleryIdx((i) =>
+          i === null ? i : (i - 1 + GALLERY.length) % GALLERY.length
+        );
     };
     document.addEventListener("keydown", onKey);
     const prevOverflow = document.body.style.overflow;
@@ -276,15 +317,17 @@ export default function SchablonenZeitstrahl() {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = prevOverflow;
     };
-  }, [lightbox]);
+  }, [galleryIdx]);
+
+  const current = galleryIdx !== null ? GALLERY[galleryIdx] : null;
 
   return (
     <>
-      {/* Legende der drei Schläge */}
-      <div className="mb-lg flex flex-wrap gap-sm">
+      {/* Legende der drei Schläge + Bilderset-Start */}
+      <div className="mb-lg flex flex-wrap items-center gap-sm">
         <span className="inline-flex items-center gap-xs rounded-xl bg-primary-container px-md py-xs text-label-sm text-on-primary-container">
           <span className="material-symbols-outlined text-[16px]">bolt</span>
-          Technik — verschiebt die Welt
+          Technik — wandelt und ordnet neu
         </span>
         <span className="inline-flex items-center gap-xs rounded-xl bg-error-container px-md py-xs text-label-sm text-on-error-container">
           <span className="material-symbols-outlined text-[16px]">warning</span>
@@ -292,8 +335,18 @@ export default function SchablonenZeitstrahl() {
         </span>
         <span className="inline-flex items-center gap-xs rounded-xl bg-tertiary-container px-md py-xs text-label-sm text-on-tertiary-container">
           <span className="material-symbols-outlined text-[16px]">psychology</span>
-          Philosophie — antwortet im Nachhinein
+          Philosophie — antwortet im Blick auf das, was war
         </span>
+        <button
+          type="button"
+          onClick={() => setGalleryIdx(0)}
+          className="inline-flex items-center gap-xs rounded-xl border border-outline-variant bg-surface-bright px-md py-xs text-label-sm text-on-surface transition hover:bg-surface-container sm:ml-auto"
+        >
+          <span className="material-symbols-outlined text-[16px]">
+            photo_library
+          </span>
+          Bilderset durchblättern
+        </button>
       </div>
 
       <ol className="flex flex-col gap-lg">
@@ -322,7 +375,7 @@ export default function SchablonenZeitstrahl() {
                 {/* ── Schlag 1: Technik ── */}
                 <p className="flex items-center gap-xs text-label-sm uppercase tracking-wider text-primary">
                   <span className="material-symbols-outlined text-[16px]">bolt</span>
-                  Die Technik verschiebt die Welt
+                  Was die Technik wandelt — und neu ordnet
                 </p>
                 <div
                   className={
@@ -367,13 +420,7 @@ export default function SchablonenZeitstrahl() {
                     <figure className="m-0">
                       <button
                         type="button"
-                        onClick={() =>
-                          setLightbox({
-                            src: s.unrest.image!,
-                            alt: s.unrest.imageAlt ?? "",
-                            credit: s.unrest.credit,
-                          })
-                        }
+                        onClick={() => openBySrc(s.unrest.image!)}
                         aria-label={`${s.unrest.imageAlt ?? "Bild"} im Vollbild öffnen`}
                         className="group relative block w-full cursor-zoom-in"
                       >
@@ -410,7 +457,7 @@ export default function SchablonenZeitstrahl() {
                   <span className="material-symbols-outlined text-[16px]">
                     psychology
                   </span>
-                  Die Philosophie antwortet — im Nachhinein
+                  Die Philosophie antwortet — im Blick auf das, was war
                 </p>
 
                 <div
@@ -421,18 +468,12 @@ export default function SchablonenZeitstrahl() {
                       : "border-outline-variant")
                   }
                 >
-                  {/* Bild → Klick öffnet Vollbild */}
+                  {/* Bild → Klick öffnet Vollbild/Galerie */}
                   {s.image ? (
                     <figure className="m-0">
                       <button
                         type="button"
-                        onClick={() =>
-                          setLightbox({
-                            src: s.image!,
-                            alt: s.imageAlt ?? s.thinker,
-                            credit: s.credit,
-                          })
-                        }
+                        onClick={() => openBySrc(s.image!)}
                         aria-label={`${s.imageAlt ?? s.thinker} im Vollbild öffnen`}
                         className="group relative block w-full cursor-zoom-in"
                       >
@@ -552,19 +593,22 @@ export default function SchablonenZeitstrahl() {
         })}
       </ol>
 
-      {/* Vollbild-Modus (Lightbox) */}
-      {lightbox && (
+      {/* Vollbild-Galerie (Bilderset) */}
+      {current && (
         <div
           role="dialog"
           aria-modal="true"
-          aria-label="Bild im Vollbild"
-          onClick={() => setLightbox(null)}
-          className="fixed inset-0 z-[100] flex flex-col gap-md bg-inverse-surface/95 p-md backdrop-blur-sm"
+          aria-label="Bilderset im Vollbild"
+          onClick={() => setGalleryIdx(null)}
+          className="fixed inset-0 z-[100] flex flex-col gap-sm bg-inverse-surface/95 p-md backdrop-blur-sm"
         >
-          <div className="flex justify-end">
+          <div className="flex items-center justify-between">
+            <span className="rounded-xl bg-inverse-on-surface/10 px-md py-sm text-label-md text-inverse-on-surface">
+              {(galleryIdx ?? 0) + 1} / {GALLERY.length}
+            </span>
             <button
               type="button"
-              onClick={() => setLightbox(null)}
+              onClick={() => setGalleryIdx(null)}
               aria-label="Vollbild schliessen"
               className="inline-flex items-center gap-xs rounded-xl bg-inverse-on-surface/10 px-md py-sm text-label-md text-inverse-on-surface transition hover:bg-inverse-on-surface/20"
             >
@@ -573,21 +617,58 @@ export default function SchablonenZeitstrahl() {
             </button>
           </div>
 
-          <div className="flex min-h-0 flex-1 items-center justify-center">
+          <div className="flex min-h-0 flex-1 items-center justify-center gap-sm">
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                setGalleryIdx((i) =>
+                  i === null ? i : (i - 1 + GALLERY.length) % GALLERY.length
+                );
+              }}
+              aria-label="Vorheriges Bild"
+              className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-inverse-on-surface/10 text-inverse-on-surface transition hover:bg-inverse-on-surface/20"
+            >
+              <span className="material-symbols-outlined text-[24px]">
+                chevron_left
+              </span>
+            </button>
+
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={lightbox.src}
-              alt={lightbox.alt}
+              src={current.src}
+              alt={current.alt}
               onClick={(e) => e.stopPropagation()}
-              className="max-h-full max-w-full cursor-default rounded-lg object-contain shadow-lg"
+              className="max-h-full min-w-0 max-w-full cursor-default rounded-lg object-contain shadow-lg"
             />
+
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                setGalleryIdx((i) =>
+                  i === null ? i : (i + 1) % GALLERY.length
+                );
+              }}
+              aria-label="Nächstes Bild"
+              className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-inverse-on-surface/10 text-inverse-on-surface transition hover:bg-inverse-on-surface/20"
+            >
+              <span className="material-symbols-outlined text-[24px]">
+                chevron_right
+              </span>
+            </button>
           </div>
 
-          {lightbox.credit && (
-            <p className="text-center text-label-sm text-inverse-on-surface/80">
-              {lightbox.credit}
+          <div className="text-center">
+            <p className="text-label-md text-inverse-on-surface">
+              {current.context}
             </p>
-          )}
+            {current.credit && (
+              <p className="mt-xs text-label-sm text-inverse-on-surface/80">
+                {current.credit}
+              </p>
+            )}
+          </div>
         </div>
       )}
     </>
