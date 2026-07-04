@@ -698,6 +698,25 @@ Betroffen: `ki26/.env.local` (neu, gitignored), [CLAUDE.md](../CLAUDE.md#firebas
 
 ---
 
+## 2026-07-04 — Zwei-Spuren-Zeitstrahl + Marx-Station (Option A)
+
+Der Schablonen-Zeitstrahl (`/sandbox/philosophie-schablonen`) ist jetzt
+**zweispurig**: pro Epoche zuerst die **Technik-Spur** (kompakte Ereignis-Karten
+aus der [Technik-Zeitachse](skripte/lernseite-2-submodul-1-technik-zeitachse.md),
+primary-blau) und darüber gelegt die **Philosophie-Spur** (Stations-Karte mit
+Kunstwerk, tertiary-grün). Legende oben erklärt die Spuren.
+
+Neu: **Station „Marx · Industriemoderne"** (Option A) als philosophischer
+Gegenpart zu Dampfmaschine, Elektrizität/Elektronik und Telegraf/Seekabel —
+Zitat „Alles Ständische und Stehende verdampft", Kunstwerk **Adolph Menzels
+„Das Eisenwalzwerk"** (1872–1875, gemeinfrei, Google-Art-Project-Scan; die
+zuerst gefundene Reproduktion trug ein Wasserzeichen und wurde verworfen).
+
+Designlinie: klassische Kunstwerke + neutrale Material-Icons statt
+KI-Symbolik; MD3-Token, keine Sonderfarben.
+
+---
+
 ## 2026-06-21 — Bildlizenzen Schablonen-Zeitstrahl
 
 Die historischen Stationen nutzen **gemeinfreie** Werke (Wikimedia Commons:

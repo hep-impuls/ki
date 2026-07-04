@@ -120,9 +120,11 @@ Kabelhersteller, Netzwerkinfrastruktur).
 | Dampfmaschine · Elektrizität (Industrie, Strom) | *(Zwischenstation: Marx/Industriemoderne — evtl. neu)* |
 | Telegraf · Unterseekabel · Computer · Web · KI (Vernetzung) | **Wir — jetzt** (offene Schablone) |
 
-→ Mögliche Umsetzung: der bestehende [Schablonen-Zeitstrahl](../../src/app/sandbox/philosophie-schablonen/SchablonenZeitstrahl.tsx)
-bekommt je Station eine **zweite, technische Spur** (Tech-Ereignis + ggf. Bild),
-sodass Lernende sehen: *jede* Technik-Welle hatte ihre orientierende Philosophie.
+→ **Umgesetzt (2026-07-04):** der [Schablonen-Zeitstrahl](../../src/app/sandbox/philosophie-schablonen/SchablonenZeitstrahl.tsx)
+ist jetzt zweispurig — Technik-Ereignis-Karten (primary) als Basisschicht, die
+Philosophie-Station (tertiary, mit Kunstwerk) darübergelegt. Neu dazu die
+Station **Marx · Industriemoderne** (Menzels „Eisenwalzwerk") als Gegenpart zu
+Dampf/Elektrizität/Seekabel. Live: [/sandbox/philosophie-schablonen](https://hep-ki.vercel.app/sandbox/philosophie-schablonen).
 
 ## Quellen (Web-Recherche, 2026-06-21)
 

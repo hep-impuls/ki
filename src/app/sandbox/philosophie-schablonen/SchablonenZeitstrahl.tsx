@@ -3,22 +3,32 @@
 import { useEffect, useState } from "react";
 
 /**
- * Schablonen-Zeitstrahl — Visualisierung für das Submodul "Philosophische
- * Perspektive" (Lernseite 2). Zeigt: In jeder Zeit des Wandels lieferte die
- * Philosophie eine "Schablone" zur Orientierung — und jetzt (digitale
- * Transformation / KI) suchen wir die nächste.
+ * Schablonen-Zeitstrahl (Zwei-Spuren-Version) — Visualisierung für das Submodul
+ * "Philosophische Perspektive" (Lernseite 2).
+ *
+ * Zwei Spuren pro Epoche:
+ *   1. TECHNIK (Basisschicht, primary): kompakte Ereignis-Karten — was sich
+ *      wissenschaftlich-technisch verschob (Quelle:
+ *      docs/skripte/lernseite-2-submodul-1-technik-zeitachse.md).
+ *   2. PHILOSOPHIE (Orientierungsschicht, tertiary): die grosse Stations-Karte
+ *      mit Kunstwerk — welche "Schablone" der Zeit Orientierung gab.
  *
  * Bilder: lokal unter /public/art (Nachweis in public/art/CREDITS.md). Die
  * historischen Stationen nutzen gemeinfreie Werke (Wikimedia Commons); die
  * Gegenwarts-Station zeigt ein zeitgenössisches Werk (Klaus Christ, 2024), mit
- * Genehmigung verwendet. Das ganze Werk wird gezeigt (object-contain).
- * Klick aufs Bild öffnet den Vollbild-Modus (Lightbox, schliessen per ✕ / Esc /
- * Klick auf Hintergrund). Jede Station erklärt aufgeklappt, WARUM das Bild
- * gewählt wurde ("Kunst macht sichtbar").
+ * Genehmigung verwendet. Ganzes Werk sichtbar (object-contain), Klick öffnet
+ * den Vollbild-Modus (Lightbox, ✕/Esc/Hintergrund schliesst).
  *
  * Self-contained Client-Komponente, keine Firebase-/Server-Logik
  * (hosting-/auth-agnostisch, migrationsbereit). Inhalte als Datenstruktur unten.
  */
+
+interface TechEvent {
+  year: string;
+  title: string;
+  note: string;
+  icon: string;
+}
 
 interface Station {
   id: string;
@@ -31,8 +41,9 @@ interface Station {
   enabled: string;
   image?: string; // Pfad unter /public
   imageAlt?: string;
-  credit?: string; // Bildnachweis (gemeinfrei)
+  credit?: string; // Bildnachweis
   imageWhy?: string; // "Warum dieses Bild?" — einfach, spannend
+  tech: TechEvent[]; // Technik-Spur dieser Epoche
   open?: boolean; // offene Gegenwarts-Station
 }
 
@@ -51,6 +62,20 @@ const STATIONS: Station[] = [
     credit: "Raffael, „Die Schule von Athen“, 1509–1511 · gemeinfrei",
     imageWhy:
       "In der Mitte zwei Denker: Platon zeigt nach oben, in die Welt der Ideen — Aristoteles streckt die Hand flach nach unten, zur Erde, zum Beobachtbaren. Genau das ist seine Schablone: Wissen beginnt nicht im Himmel, sondern im genauen Hinsehen. Raffael hält den Moment fest, in dem sich das Denken der Welt zuwendet.",
+    tech: [
+      {
+        year: "~150 v. Chr.",
+        title: "Antikythera-Mechanismus",
+        note: "Ein Zahnrad-Rechner sagt Sonnen- und Mondfinsternisse voraus — der Himmel wird berechenbar.",
+        icon: "settings",
+      },
+      {
+        year: "um 1021",
+        title: "Buch der Optik",
+        note: "Ibn al-Haytham prüft das Sehen im Experiment (Camera obscura) — die empirische Methode entsteht.",
+        icon: "visibility",
+      },
+    ],
   },
   {
     id: "augustinus",
@@ -67,6 +92,20 @@ const STATIONS: Station[] = [
     credit: "Ph. de Champaigne, „Der heilige Augustinus“, um 1645 · gemeinfrei",
     imageWhy:
       "Ein Lichtstrahl der Wahrheit trifft Augustinus mitten ins Herz, das er brennend in der Hand hält. Die Wahrheit kommt für ihn nicht von außen aus der Welt, sondern von innen. Das Bild macht sichtbar, was das christliche Zeitalter neu setzte: Der Blick wendet sich nach innen — zu Glaube und Gewissen.",
+    tech: [
+      {
+        year: "13.–14. Jh.",
+        title: "Die mechanische Uhr",
+        note: "Aus den Klöstern auf die Stadttürme: Gebet, Arbeit und Alltag laufen fortan im Takt der Uhr.",
+        icon: "schedule",
+      },
+      {
+        year: "um 1440",
+        title: "Gutenbergs Druckpresse",
+        note: "3 600 Seiten am Tag statt einer Handvoll — Wissen wird massenhaft, Reformation und Wissenschaft folgen.",
+        icon: "print",
+      },
+    ],
   },
   {
     id: "kant",
@@ -85,6 +124,56 @@ const STATIONS: Station[] = [
       "C. D. Friedrich, „Der Wanderer über dem Nebelmeer“, 1818 · gemeinfrei",
     imageWhy:
       "Ein einzelner Mensch steht auf dem Gipfel und blickt über ein Nebelmeer — niemand sagt ihm, was er sehen soll, er deutet die Welt selbst. Das ist Kants Schablone: Habe Mut, dich deines eigenen Verstandes zu bedienen. Friedrich malt den mündigen, auf sich gestellten Einzelnen der Moderne.",
+    tech: [
+      {
+        year: "1543–1687",
+        title: "Kopernikanische Wende",
+        note: "Kopernikus rechnet, Galileos Teleskop liefert 1609 den sichtbaren Beweis, Newton das Gesetz — die Erde ist nicht mehr Mittelpunkt.",
+        icon: "star",
+      },
+      {
+        year: "1761",
+        title: "Navigation & Chronometer",
+        note: "Harrisons H4 nimmt die Zeit mit aufs Meer — die Welt wird vermessen und global.",
+        icon: "explore",
+      },
+    ],
+  },
+  {
+    id: "marx",
+    epoch: "Industriemoderne · 19. Jh.",
+    wandel: "Die Maschine ordnet die Gesellschaft neu",
+    thinker: "Marx",
+    icon: "groups",
+    schablone: "Den Umbruch begreifen — und gestalten",
+    quote: "„Alles Ständische und Stehende verdampft.“",
+    enabled:
+      "Die Schablone der Industriemoderne: Gesellschaft ist kein Schicksal, sondern gemacht — und veränderbar. Wandel wird zum Dauerzustand.",
+    image: "/art/eisenwalzwerk.jpg",
+    imageAlt: "Gemälde „Das Eisenwalzwerk (Moderne Cyklopen)“ von Adolph Menzel",
+    credit: "A. Menzel, „Das Eisenwalzwerk“, 1872–1875 · gemeinfrei",
+    imageWhy:
+      "Menzel malt als einer der Ersten das Innere einer Fabrik: glühendes Eisen, Räder, Riemen — und Menschen, die im Takt der Maschine arbeiten. Rechts isst einer hastig, hinten wird schon weitergeschuftet; die Arbeit steht nie still. Das Bild macht sichtbar, was die Dampfmaschine aus der Gesellschaft machte: eine rastlose Maschinerie — und mittendrin der Mensch.",
+    tech: [
+      {
+        year: "1712 / 1769",
+        title: "Die Dampfmaschine",
+        note: "Newcomen pumpt Bergwerke leer, Watt macht die Fabrik überall möglich — Industrialisierung und Urbanisierung.",
+        icon: "factory",
+      },
+      {
+        year: "1831–1906",
+        title: "Elektrizität & Elektronik",
+        note: "Faraday, Edison und Tesla elektrifizieren die Welt; De Forests Verstärker-Röhre (1906) eröffnet Radio und Ferntelefonie.",
+        icon: "bolt",
+      },
+      {
+        year: "1844 / 1866",
+        title: "Telegraf & Seekabel",
+        note: "Botschaften schneller als jeder Bote; das Atlantik-Kabel verbindet die Kontinente. Bis heute laufen ~99 % des Internets durch Kabel im Meer.",
+        icon: "cable",
+      },
+    ],
   },
   {
     id: "jetzt",
@@ -100,7 +189,27 @@ const STATIONS: Station[] = [
       "Installation „Suche nach Bildern“: ein Netz aus Fäden verbindet Figuren und Objekte — Rohstoffe, Datacenter, Satelliten, Nutzer:innen — rund um einen alten Computer mit Weltkarte.",
     credit: "Klaus Christ, „Suche nach Bildern“, 2024",
     imageWhy:
-      "Das ist das „Wir“ von heute: kein einzelner Mensch, sondern ein riesiges Netz. Rund um eine simple Bildersuche hängen Rohstoffe, Bergbau, Kabel, Satelliten, Datacenter, Energie, Regierungen — und Menschen: Programmierer:innen, Künstler:innen, Arbeiter:innen, Nutzer:innen. Menschen und nicht-menschliche Akteure ziehen an denselben Fäden — genau Latours Akteur-Netzwerk, sichtbar gemacht. Die Schablone, die uns darin orientiert, suchen wir noch.",
+      "Das ist das „Wir“ von heute: kein einzelner Mensch, sondern ein riesiges Netz. Rund um eine simple Bildersuche hängen Rohstoffe, Bergbau, Kabel, Satelliten, Datacenter, Energie, Regierungen — und Menschen: Programmierer:innen, Künstler:innen, Arbeiter:innen, Nutzer:innen. Menschen und nicht-menschliche Akteure ziehen an denselben Fäden. Die Schablone, die uns darin orientiert, suchen wir noch.",
+    tech: [
+      {
+        year: "1945 / 1947",
+        title: "Computer & Transistor",
+        note: "ENIAC rechnet elektronisch, der Transistor macht Maschinen klein und zuverlässig — das digitale Zeitalter beginnt.",
+        icon: "memory",
+      },
+      {
+        year: "1969–1991",
+        title: "ARPANET & World Wide Web",
+        note: "Erst vier Rechner, dann das Web für alle — Information wird ortlos, getragen von den Kabeln in den Meeren.",
+        icon: "language",
+      },
+      {
+        year: "2017–2022",
+        title: "Generative KI",
+        note: "Die Transformer-Architektur (2017), dann ChatGPT (2022): Maschinen erzeugen Sprache, Bilder, Code.",
+        icon: "chat",
+      },
+    ],
     open: true,
   },
 ];
@@ -128,7 +237,19 @@ export default function SchablonenZeitstrahl() {
 
   return (
     <>
-      <ol className="flex flex-col gap-md">
+      {/* Legende der zwei Spuren */}
+      <div className="mb-lg flex flex-wrap gap-sm">
+        <span className="inline-flex items-center gap-xs rounded-xl bg-primary-container px-md py-xs text-label-sm text-on-primary-container">
+          <span className="material-symbols-outlined text-[16px]">bolt</span>
+          Technik — was die Welt verschob
+        </span>
+        <span className="inline-flex items-center gap-xs rounded-xl bg-tertiary-container px-md py-xs text-label-sm text-on-tertiary-container">
+          <span className="material-symbols-outlined text-[16px]">psychology</span>
+          Philosophie — was Orientierung gab
+        </span>
+      </div>
+
+      <ol className="flex flex-col gap-lg">
         {STATIONS.map((s, i) => {
           const isOpen = openId === s.id;
           const isLast = i === STATIONS.length - 1;
@@ -150,135 +271,185 @@ export default function SchablonenZeitstrahl() {
                 {!isLast && <span className="w-px flex-1 bg-outline-variant" />}
               </div>
 
-              {/* Karte */}
-              <div
-                className={
-                  "mb-md flex-1 overflow-hidden rounded-xl border bg-surface-bright shadow-sm transition hover:shadow-md " +
-                  (s.open ? "border-tertiary border-dashed" : "border-outline-variant")
-                }
-              >
-                {/* Bild → Klick öffnet Vollbild. Bzw. offenes Platzhalterfeld. */}
-                {s.image ? (
-                  <figure className="m-0">
-                    <button
-                      type="button"
-                      onClick={() =>
-                        setLightbox({
-                          src: s.image!,
-                          alt: s.imageAlt ?? s.thinker,
-                          credit: s.credit,
-                        })
-                      }
-                      aria-label={`${s.imageAlt ?? s.thinker} im Vollbild öffnen`}
-                      className="group relative block w-full cursor-zoom-in"
-                    >
-                      <div className="flex h-72 items-center justify-center bg-surface-container-low p-sm">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src={s.image}
-                          alt={s.imageAlt ?? ""}
-                          loading="lazy"
-                          className="max-h-full max-w-full object-contain"
-                        />
-                      </div>
-                      <span className="absolute right-sm top-sm inline-flex items-center gap-xs rounded-lg bg-inverse-surface/70 px-sm py-xs text-label-sm text-inverse-on-surface opacity-80 transition-opacity group-hover:opacity-100">
-                        <span className="material-symbols-outlined text-[16px]">
-                          fullscreen
-                        </span>
-                        Vollbild
-                      </span>
-                    </button>
-                    {s.credit && (
-                      <figcaption className="border-t border-outline-variant bg-surface-container-low px-md py-xs text-label-sm text-on-surface-variant">
-                        {s.credit}
-                      </figcaption>
-                    )}
-                  </figure>
-                ) : (
-                  <div className="flex h-72 w-full flex-col items-center justify-center gap-xs border-b border-dashed border-outline-variant bg-surface-container-low text-on-surface-variant">
-                    <span className="material-symbols-outlined text-[36px] text-tertiary">
-                      image_search
-                    </span>
-                    <span className="text-label-sm">Bild noch offen</span>
-                  </div>
-                )}
-
-                {/* Text → Klick klappt die Erklärung auf/zu */}
-                <button
-                  type="button"
-                  onClick={() => setOpenId(isOpen ? null : s.id)}
-                  aria-expanded={isOpen}
-                  className="block w-full p-lg text-left"
+              <div className="min-w-0 flex-1 pb-md">
+                {/* ── Spur 1: Technik (Basisschicht) ── */}
+                <p className="flex items-center gap-xs text-label-sm uppercase tracking-wider text-primary">
+                  <span className="material-symbols-outlined text-[16px]">bolt</span>
+                  Was die Technik verschob
+                </p>
+                <div
+                  className={
+                    "mt-sm grid gap-sm " +
+                    (s.tech.length >= 3 ? "sm:grid-cols-3" : "sm:grid-cols-2")
+                  }
                 >
-                  <div className="flex items-center justify-between gap-sm">
-                    <span className="inline-flex items-center gap-xs rounded-xl bg-surface-container px-sm py-xs text-label-sm text-on-surface-variant">
-                      {s.epoch}
-                    </span>
-                    <span
-                      className={
-                        "material-symbols-outlined text-[20px] text-on-surface-variant transition-transform " +
-                        (isOpen ? "rotate-180" : "")
-                      }
+                  {s.tech.map((t) => (
+                    <div
+                      key={t.title}
+                      className="rounded-lg border border-outline-variant bg-surface-bright p-md"
                     >
-                      expand_more
-                    </span>
-                  </div>
-
-                  <p className="mt-sm text-label-sm uppercase tracking-wider text-tertiary">
-                    {s.wandel}
-                  </p>
-                  <h3 className="mt-xs text-headline-sm text-on-surface">
-                    {s.thinker}
-                  </h3>
-
-                  <p className="mt-sm flex items-start gap-sm text-body-md text-on-surface">
-                    <span className="material-symbols-outlined text-[18px] text-tertiary">
-                      bookmark
-                    </span>
-                    <span>
-                      <span className="text-on-surface-variant">Schablone: </span>
-                      <strong>{s.schablone}</strong>
-                    </span>
-                  </p>
-
-                  {!isOpen && (
-                    <p className="mt-md inline-flex items-center gap-xs text-label-sm text-tertiary">
-                      <span className="material-symbols-outlined text-[16px]">
-                        visibility
-                      </span>
-                      Warum dieses Bild? — antippen
-                    </p>
-                  )}
-
-                  {isOpen && (
-                    <div className="mt-md space-y-md border-t border-outline-variant pt-md">
-                      <div>
-                        <p className="flex items-center gap-xs text-label-sm uppercase tracking-wider text-tertiary">
-                          <span className="material-symbols-outlined text-[16px]">
-                            visibility
+                      <div className="flex items-center gap-sm">
+                        <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-primary-container text-on-primary-container">
+                          <span className="material-symbols-outlined text-[18px]">
+                            {t.icon}
                           </span>
-                          Warum dieses Bild?
-                        </p>
-                        <p className="mt-xs text-body-md text-on-surface-variant">
-                          {s.imageWhy}
-                        </p>
-                      </div>
-
-                      {s.quote && (
-                        <p className="text-body-md italic text-on-surface-variant">
-                          {s.quote}
-                        </p>
-                      )}
-
-                      <p className="flex items-start gap-sm text-body-sm text-on-surface-variant">
-                        <span className="material-symbols-outlined text-[18px] text-tertiary">
-                          {s.open ? "trending_flat" : "check_circle"}
                         </span>
-                        <span>{s.enabled}</span>
+                        <div className="min-w-0">
+                          <p className="text-label-sm text-primary">{t.year}</p>
+                          <p className="text-body-sm font-semibold text-on-surface">
+                            {t.title}
+                          </p>
+                        </div>
+                      </div>
+                      <p className="mt-sm text-body-sm text-on-surface-variant">
+                        {t.note}
                       </p>
                     </div>
+                  ))}
+                </div>
+
+                {/* ── Übergang zur Spur 2: Philosophie ── */}
+                <p className="mt-md flex items-center gap-xs text-label-sm uppercase tracking-wider text-tertiary">
+                  <span className="material-symbols-outlined text-[16px]">
+                    arrow_downward
+                  </span>
+                  Die Philosophie, die Orientierung gab
+                </p>
+
+                {/* Philosophie-Karte */}
+                <div
+                  className={
+                    "mt-sm overflow-hidden rounded-xl border bg-surface-bright shadow-sm transition hover:shadow-md " +
+                    (s.open
+                      ? "border-tertiary border-dashed"
+                      : "border-outline-variant")
+                  }
+                >
+                  {/* Bild → Klick öffnet Vollbild */}
+                  {s.image ? (
+                    <figure className="m-0">
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setLightbox({
+                            src: s.image!,
+                            alt: s.imageAlt ?? s.thinker,
+                            credit: s.credit,
+                          })
+                        }
+                        aria-label={`${s.imageAlt ?? s.thinker} im Vollbild öffnen`}
+                        className="group relative block w-full cursor-zoom-in"
+                      >
+                        <div className="flex h-72 items-center justify-center bg-surface-container-low p-sm">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={s.image}
+                            alt={s.imageAlt ?? ""}
+                            loading="lazy"
+                            className="max-h-full max-w-full object-contain"
+                          />
+                        </div>
+                        <span className="absolute right-sm top-sm inline-flex items-center gap-xs rounded-lg bg-inverse-surface/70 px-sm py-xs text-label-sm text-inverse-on-surface opacity-80 transition-opacity group-hover:opacity-100">
+                          <span className="material-symbols-outlined text-[16px]">
+                            fullscreen
+                          </span>
+                          Vollbild
+                        </span>
+                      </button>
+                      {s.credit && (
+                        <figcaption className="border-t border-outline-variant bg-surface-container-low px-md py-xs text-label-sm text-on-surface-variant">
+                          {s.credit}
+                        </figcaption>
+                      )}
+                    </figure>
+                  ) : (
+                    <div className="flex h-72 w-full flex-col items-center justify-center gap-xs border-b border-dashed border-outline-variant bg-surface-container-low text-on-surface-variant">
+                      <span className="material-symbols-outlined text-[36px] text-tertiary">
+                        image_search
+                      </span>
+                      <span className="text-label-sm">Bild noch offen</span>
+                    </div>
                   )}
-                </button>
+
+                  {/* Text → Klick klappt die Erklärung auf/zu */}
+                  <button
+                    type="button"
+                    onClick={() => setOpenId(isOpen ? null : s.id)}
+                    aria-expanded={isOpen}
+                    className="block w-full p-lg text-left"
+                  >
+                    <div className="flex items-center justify-between gap-sm">
+                      <span className="inline-flex items-center gap-xs rounded-xl bg-surface-container px-sm py-xs text-label-sm text-on-surface-variant">
+                        {s.epoch}
+                      </span>
+                      <span
+                        className={
+                          "material-symbols-outlined text-[20px] text-on-surface-variant transition-transform " +
+                          (isOpen ? "rotate-180" : "")
+                        }
+                      >
+                        expand_more
+                      </span>
+                    </div>
+
+                    <p className="mt-sm text-label-sm uppercase tracking-wider text-tertiary">
+                      {s.wandel}
+                    </p>
+                    <h3 className="mt-xs text-headline-sm text-on-surface">
+                      {s.thinker}
+                    </h3>
+
+                    <p className="mt-sm flex items-start gap-sm text-body-md text-on-surface">
+                      <span className="material-symbols-outlined text-[18px] text-tertiary">
+                        bookmark
+                      </span>
+                      <span>
+                        <span className="text-on-surface-variant">
+                          Schablone:{" "}
+                        </span>
+                        <strong>{s.schablone}</strong>
+                      </span>
+                    </p>
+
+                    {!isOpen && (
+                      <p className="mt-md inline-flex items-center gap-xs text-label-sm text-tertiary">
+                        <span className="material-symbols-outlined text-[16px]">
+                          visibility
+                        </span>
+                        Warum dieses Bild? — antippen
+                      </p>
+                    )}
+
+                    {isOpen && (
+                      <div className="mt-md space-y-md border-t border-outline-variant pt-md">
+                        <div>
+                          <p className="flex items-center gap-xs text-label-sm uppercase tracking-wider text-tertiary">
+                            <span className="material-symbols-outlined text-[16px]">
+                              visibility
+                            </span>
+                            Warum dieses Bild?
+                          </p>
+                          <p className="mt-xs text-body-md text-on-surface-variant">
+                            {s.imageWhy}
+                          </p>
+                        </div>
+
+                        {s.quote && (
+                          <p className="text-body-md italic text-on-surface-variant">
+                            {s.quote}
+                          </p>
+                        )}
+
+                        <p className="flex items-start gap-sm text-body-sm text-on-surface-variant">
+                          <span className="material-symbols-outlined text-[18px] text-tertiary">
+                            {s.open ? "trending_flat" : "check_circle"}
+                          </span>
+                          <span>{s.enabled}</span>
+                        </p>
+                      </div>
+                    )}
+                  </button>
+                </div>
               </div>
             </li>
           );

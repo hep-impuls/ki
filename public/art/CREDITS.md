@@ -13,6 +13,7 @@ ebenfalls gemeinfrei. Quelle jeweils Wikimedia Commons.
 | `athens.jpg` | Die Schule von Athen | Raffael (Raffaello Sanzio) | 1509–1511 | Aristoteles · Beobachten, Empirie, Wissenschaft |
 | `augustine.jpg` | Der heilige Augustinus | Philippe de Champaigne | um 1645–1650 | Augustinus · Innerlichkeit, christliches Zeitalter |
 | `wanderer.jpg` | Der Wanderer über dem Nebelmeer | Caspar David Friedrich | 1818 | Kant · Autonomie, mündiges Individuum |
+| `eisenwalzwerk.jpg` | Das Eisenwalzwerk (Moderne Cyklopen) | Adolph Menzel | 1872–1875 | Marx · Industriemoderne, Fabrik & Arbeit |
 
 ## Zeitgenössisch (mit Genehmigung)
 
