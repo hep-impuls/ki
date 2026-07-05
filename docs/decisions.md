@@ -698,6 +698,29 @@ Betroffen: `ki26/.env.local` (neu, gitignored), [CLAUDE.md](../CLAUDE.md#firebas
 
 ---
 
+## 2026-07-05 — Umbau zu Epochen-Panels + Bausteinen + Galerie je Epoche
+
+Auf Wunsch (Christof) neu strukturiert — weg von der erzwungenen Dramaturgie,
+hin zu **modularen, nüchtern betitelten Bausteinen**:
+
+- **Kein globales Bilderset**, sondern **eine Galerie je Epoche** (≥3
+  gemeinfreie „Bilder der Zeit", nur innerhalb der Epoche durchblätterbar;
+  Vollbild mit ‹/›, Pfeiltasten, Zähler, Caption + Nachweis).
+- **Drei einzeln aufklappbare Bausteine pro Epoche**, nüchtern betitelt:
+  **Technische Errungenschaft · Verunsicherung · Philosophische
+  Orientierungshilfe**. Sie sind aufeinander bezogen, **kein erzwungener
+  Kausal-Zusammenhang** — jeder Baustein steht auch für sich. Man klappt auf,
+  was man will (Default: alle zu).
+- Neue gemeinfreie „Bilder der Zeit": Rembrandt „Aristoteles mit Büste Homers"
+  (1653), Très Riches Heures/Oktober (um 1416), Wright „Orrery" (um 1766),
+  Loutherbourg „Coalbrookdale bei Nacht" (1801); für die Gegenwart NASA
+  „Earth at Night" (2012) und „Blue Marble" (1972, beide US-Gov/PD).
+- Hegel-Rahmung entschärft: keine „→ deshalb"-Kausalität mehr; die Idee
+  (Philosophie antwortet im Rückblick, sieht nicht voraus) steckt nur noch im
+  Text der Orientierungshilfe.
+
+---
+
 ## 2026-07-04 — Präzisierung der Hegel-Deutung + Bilderset-Galerie
 
 **Sprachregelung (Christof):** Die Philosophie antwortet **nicht «im

@@ -35,12 +35,12 @@ export default function SandboxPhilosophieSchablonen() {
           Schablonen für den Wandel
         </h1>
         <p className="mt-sm max-w-3xl text-body-lg text-on-surface-variant">
-          Immer derselbe Dreiklang: Die Technik wandelt und ordnet neu, die
-          Verunsicherung wächst — und die Philosophie antwortet. Sie sieht
-          nicht voraus, aber sie antwortet im Blick auf das, was war, auf die
-          Fragen ihrer Gegenwart; populär wird ihre Antwort oft erst später.
-          Die Kunst jeder Epoche macht beides sichtbar: die Erschütterung und
-          die neue Schablone. Und heute, mit KI?
+          Jede Epoche ein Panel: zuerst die Bilder der Zeit, dann drei Bausteine
+          zum Aufklappen — <strong>Technische Errungenschaft</strong>,{" "}
+          <strong>Verunsicherung</strong> und{" "}
+          <strong>Philosophische Orientierungshilfe</strong>. Sie sind
+          aufeinander bezogen, lassen sich aber auch einzeln lesen. Öffne, was
+          dich interessiert. Und heute, mit KI?
         </p>
         <blockquote className="mt-md max-w-3xl border-l-4 border-tertiary pl-md">
           <p className="text-body-md italic text-on-surface-variant">
