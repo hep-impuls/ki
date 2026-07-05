@@ -406,8 +406,16 @@ export default function BildZoom({ images, startIdx, epoch, onClose }: Props) {
                 }}
               >
                 <span className="relative flex h-16 w-16 items-center justify-center">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-inverse-on-surface/20" />
-                  <span className="relative inline-flex h-12 w-12 rounded-full border-2 border-inverse-on-surface/90" />
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-inverse-surface/40" />
+                  {/* Heller Ring mit dunkler Kontur innen+aussen — sichtbar auf
+                      hellen wie dunklen Bildpartien (z.B. Fresko vs. Fabrikhalle). */}
+                  <span
+                    className="relative inline-flex h-12 w-12 rounded-full border-2 border-inverse-on-surface"
+                    style={{
+                      boxShadow:
+                        "0 0 0 2.5px rgb(var(--color-inverse-surface) / 0.9), inset 0 0 0 2.5px rgb(var(--color-inverse-surface) / 0.9)",
+                    }}
+                  />
                 </span>
               </span>
             )}
