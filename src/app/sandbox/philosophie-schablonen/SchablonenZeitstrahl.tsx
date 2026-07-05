@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import BildZoom, { type TourStop } from "./BildZoom";
 
 /**
  * Schablonen-Zeitstrahl — Visualisierung für das Submodul "Philosophische
@@ -31,6 +32,8 @@ interface GalleryImg {
   alt: string;
   credit: string;
   caption: string;
+  /** Optionale «Führung» durchs Bild (Koordinaten in %, von Hand justierbar). */
+  tour?: TourStop[];
 }
 
 interface TechEvent {
@@ -80,6 +83,50 @@ const STATIONS: Station[] = [
         credit: "Raffael, „Die Schule von Athen“, 1509–1511 · gemeinfrei",
         caption:
           "Platon zeigt nach oben in die Welt der Ideen, Aristoteles die Hand flach zur Erde: Wissen beginnt im genauen Hinsehen.",
+        tour: [
+          {
+            x: 50,
+            y: 45,
+            zoom: 1,
+            title: "Die versammelte Philosophie",
+            text: "Raffael malt 1509–1511 im Vatikan eine ideale Halle, in der sich die griechischen Denker aller Zeiten begegnen — kein realer Ort, sondern ein Bild des Denkens selbst.",
+          },
+          {
+            x: 50,
+            y: 42,
+            zoom: 2.6,
+            title: "Platon und Aristoteles",
+            text: "Im Zentrum der Grundkonflikt der Erkenntnis in einer Geste: Platon zeigt nach oben in die Welt der Ideen — Aristoteles hält die Hand flach zur Erde, zum Beobachtbaren. Genau hier beginnt die Schablone der Empirie.",
+          },
+          {
+            x: 37,
+            y: 40,
+            zoom: 2.8,
+            title: "Sokrates im Gespräch",
+            text: "Links im grünen Gewand: Sokrates, an den Fingern seine Argumente abzählend — das Frage-und-Antwort-Spiel, das Athen so provozierte, dass es ihn zum Tod verurteilte.",
+          },
+          {
+            x: 21,
+            y: 64,
+            zoom: 2.8,
+            title: "Pythagoras",
+            text: "Vorne links schreibt Pythagoras, umringt von Schülern — ihm wird eine Harmonie-Tafel vorgehalten: die Idee, dass Zahl und Proportion die Welt ordnen.",
+          },
+          {
+            x: 71,
+            y: 71,
+            zoom: 2.8,
+            title: "Euklid an der Tafel",
+            text: "Rechts beugt sich Euklid mit dem Zirkel über eine Tafel und führt einen Beweis vor — Raffael gab ihm die Züge des Baumeisters Bramante. Geometrie als lehrbares, prüfbares Wissen.",
+          },
+          {
+            x: 84,
+            y: 62,
+            zoom: 2.6,
+            title: "Der Blick in den Kosmos — und aus dem Bild",
+            text: "Ptolemäus hält den Erdglobus, ihm gegenüber die Himmelskugel. Und ganz am Rand blickt ein junger Mann direkt zu uns heraus: Raffael selbst — der Maler stellt sich unter die Denker.",
+          },
+        ],
       },
       {
         src: "/art/aristoteles_rembrandt.jpg",
@@ -95,6 +142,43 @@ const STATIONS: Station[] = [
         credit: "J.-L. David, „Der Tod des Sokrates“, 1787 · gemeinfrei",
         caption:
           "Athen verurteilt den unbequemen Frager zum Tod — das Denken selbst wird gefährlich.",
+        tour: [
+          {
+            x: 50,
+            y: 50,
+            zoom: 1,
+            title: "Die letzte Stunde",
+            text: "399 v. Chr., eine Zelle in Athen: David malt 1787 den Moment, bevor Sokrates das Gift trinkt — und macht daraus ein Lehrstück über Haltung.",
+          },
+          {
+            x: 62,
+            y: 32,
+            zoom: 2.6,
+            title: "Der Finger nach oben",
+            text: "Noch im Sterben unterrichtet Sokrates: Der erhobene Finger verweist auf das, was grösser ist als der Tod — das Argument, die Wahrheit, die Ideen.",
+          },
+          {
+            x: 47,
+            y: 47,
+            zoom: 2.8,
+            title: "Der Becher",
+            text: "Beiläufig, ohne hinzusehen, greift Sokrates nach dem Schierlingsbecher — der Vollstrecker im roten Gewand wendet sich ab, er kann nicht hinschauen.",
+          },
+          {
+            x: 18,
+            y: 56,
+            zoom: 2.6,
+            title: "Platon am Fussende",
+            text: "Gefasst, nach innen gekehrt, sitzt am Fussende der gealterte Platon — historisch war er nicht dabei. David setzt ihn dazu: Er ist es, der das Gespräch aufschreiben und weitertragen wird.",
+          },
+          {
+            x: 82,
+            y: 50,
+            zoom: 2.5,
+            title: "Die Verzweiflung der Schüler",
+            text: "Rechts zerbrechen die Schüler fast an ihrer Trauer. Der Kontrast zur Ruhe des Sokrates ist Davids Botschaft: Vernunft und Haltung gegen die Verzweiflung.",
+          },
+        ],
       },
     ],
     techText:
@@ -331,6 +415,43 @@ const STATIONS: Station[] = [
         credit: "A. Menzel, „Das Eisenwalzwerk“, 1872–1875 · gemeinfrei",
         caption:
           "Glühendes Eisen, Räder, Riemen — und Menschen im Takt der Maschine. Die Arbeit steht nie still.",
+        tour: [
+          {
+            x: 50,
+            y: 50,
+            zoom: 1,
+            title: "Das erste grosse Fabrikbild",
+            text: "Adolph Menzel malt 1872–1875 nach Studien in einem oberschlesischen Walzwerk das Innere einer Fabrik — als eines der ersten grossen Gemälde überhaupt nimmt es Industriearbeit ernst.",
+          },
+          {
+            x: 55,
+            y: 56,
+            zoom: 2.4,
+            title: "Das glühende Eisen",
+            text: "In der Bildmitte wird der glühende Block unter die Walzen geschoben. Sein Licht ist die einzige Sonne dieser Halle — die Maschine gibt Takt, Licht und Richtung vor.",
+          },
+          {
+            x: 32,
+            y: 54,
+            zoom: 2.4,
+            title: "Die Arbeiter an den Zangen",
+            text: "Mit langen Zangen und ganzem Körpereinsatz dirigieren die Arbeiter das Eisen. Hitze, Lärm und Gefahr sind fast körperlich spürbar — Präzisionsarbeit unter Druck.",
+          },
+          {
+            x: 82,
+            y: 71,
+            zoom: 2.6,
+            title: "Essen hinter der Blechwand",
+            text: "Rechts isst eine Schicht hastig hinter einem Blech — mitten in der Halle, denn das Walzwerk kennt keine Pause. Menzel zeigt die neue Zeitordnung der Fabrik.",
+          },
+          {
+            x: 37,
+            y: 33,
+            zoom: 2.2,
+            title: "Das Räderwerk im Hintergrund",
+            text: "Hinter allem: Schwungräder, Wellen, Transmissionsriemen — die Dampfkraft. Der eigentliche Herrscher der Halle ist nicht der Meister, sondern die Maschine.",
+          },
+        ],
       },
       {
         src: "/art/coalbrookdale.jpg",
@@ -418,6 +539,50 @@ const STATIONS: Station[] = [
         credit: "Klaus Christ, „Suche nach Bildern“, 2024",
         caption:
           "Das „Wir“ von heute: kein Einzelner, sondern ein Netz aus Menschen und Dingen — Rohstoffe, Datacenter, Nutzer:innen, alle an denselben Fäden.",
+        tour: [
+          {
+            x: 50,
+            y: 48,
+            zoom: 1,
+            title: "Ein Netz an der Museumswand",
+            text: "«Wir – Netz und Praxis» (2024): eine Installation über eine ganz alltägliche Handlung — die Suche nach Bildern im Internet. Was einfach aussieht, hängt an unzähligen Fäden.",
+          },
+          {
+            x: 47,
+            y: 42,
+            zoom: 2.2,
+            title: "Der Computer in der Mitte",
+            text: "Im Zentrum ein alter Monitor mit Weltkarte, darunter Tastatur und Maus: die Bildersuche. Von hier laufen die Fäden zu allem, was sie möglich macht.",
+          },
+          {
+            x: 22,
+            y: 26,
+            zoom: 2.4,
+            title: "Rohstoffe, Bergbau, Recycling",
+            text: "Links die materielle Seite der digitalen Welt: Rohstoffe, Bergbau, Transport, Recycling, Elektronikmüll. Jede Suche hat ein Gewicht — Geräte, Minen, Abfall.",
+          },
+          {
+            x: 80,
+            y: 30,
+            zoom: 2.4,
+            title: "Netz-Infrastruktur",
+            text: "Rechts die unsichtbare Technik: Netzwerkinfrastruktur, Kabel, Datencentren, Satelliten. Ohne sie kein Bild — sie sind die stillen Mit-Akteure jeder Suche.",
+          },
+          {
+            x: 55,
+            y: 14,
+            zoom: 2.4,
+            title: "Die Menschen im Netz",
+            text: "Oben und an den Seiten die Menschen: Programmier:innen, Künstler:innen, Kabelhersteller, Arbeiter:innen, KI-Expert:innen, Nutzer:innen — viele Hände an denselben Fäden.",
+          },
+          {
+            x: 88,
+            y: 55,
+            zoom: 2.6,
+            title: "Das Museumsetikett",
+            text: "Das Label erklärt das Werk: Eine Bildersuche erscheint einfach — doch sie ist das Ergebnis eines komplexen Netzwerks. Genau das ist die Frage des Moduls: Wer handelt hier eigentlich alles mit?",
+          },
+        ],
       },
       {
         src: "/art/erde_nacht.jpg",
@@ -539,11 +704,11 @@ function Quellen({ items }: { items: Source[] }) {
   );
 }
 
-type Lightbox = { station: number; idx: number };
+type Viewer = { station: number; idx: number };
 
 export default function SchablonenZeitstrahl() {
   const [openKeys, setOpenKeys] = useState<Set<string>>(new Set());
-  const [lightbox, setLightbox] = useState<Lightbox | null>(null);
+  const [viewer, setViewer] = useState<Viewer | null>(null);
 
   const toggle = (key: string) =>
     setOpenKeys((prev) => {
@@ -552,30 +717,6 @@ export default function SchablonenZeitstrahl() {
       else next.add(key);
       return next;
     });
-
-  const gallery = lightbox !== null ? STATIONS[lightbox.station].gallery : null;
-  const current = gallery ? gallery[lightbox!.idx] : null;
-
-  useEffect(() => {
-    if (lightbox === null) return;
-    const len = STATIONS[lightbox.station].gallery.length;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setLightbox(null);
-      if (e.key === "ArrowRight")
-        setLightbox((lb) => (lb ? { ...lb, idx: (lb.idx + 1) % len } : lb));
-      if (e.key === "ArrowLeft")
-        setLightbox((lb) =>
-          lb ? { ...lb, idx: (lb.idx - 1 + len) % len } : lb
-        );
-    };
-    document.addEventListener("keydown", onKey);
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.removeEventListener("keydown", onKey);
-      document.body.style.overflow = prev;
-    };
-  }, [lightbox]);
 
   return (
     <>
@@ -631,7 +772,7 @@ export default function SchablonenZeitstrahl() {
                       <button
                         key={g.src}
                         type="button"
-                        onClick={() => setLightbox({ station: si, idx: gi })}
+                        onClick={() => setViewer({ station: si, idx: gi })}
                         aria-label={`${g.alt} — im Vollbild öffnen`}
                         className="group relative aspect-[4/3] overflow-hidden rounded-lg border border-outline-variant bg-surface-bright"
                       >
@@ -647,6 +788,14 @@ export default function SchablonenZeitstrahl() {
                             fullscreen
                           </span>
                         </span>
+                        {g.tour && (
+                          <span className="absolute bottom-xs left-xs inline-flex items-center gap-xs rounded-lg bg-tertiary px-sm py-xs text-label-sm text-on-tertiary shadow-sm">
+                            <span className="material-symbols-outlined text-[14px]">
+                              tour
+                            </span>
+                            Führung
+                          </span>
+                        )}
                       </button>
                     ))}
                   </div>
@@ -784,84 +933,14 @@ export default function SchablonenZeitstrahl() {
         })}
       </ol>
 
-      {/* Vollbild-Galerie (pro Epoche) */}
-      {current && gallery && (
-        <div
-          role="dialog"
-          aria-modal="true"
-          aria-label="Bild im Vollbild"
-          onClick={() => setLightbox(null)}
-          className="fixed inset-0 z-[100] flex flex-col gap-sm bg-inverse-surface/95 p-md backdrop-blur-sm"
-        >
-          <div className="flex items-center justify-between">
-            <span className="rounded-xl bg-inverse-on-surface/10 px-md py-sm text-label-md text-inverse-on-surface">
-              {STATIONS[lightbox!.station].epoch} · {lightbox!.idx + 1} /{" "}
-              {gallery.length}
-            </span>
-            <button
-              type="button"
-              onClick={() => setLightbox(null)}
-              aria-label="Vollbild schliessen"
-              className="inline-flex items-center gap-xs rounded-xl bg-inverse-on-surface/10 px-md py-sm text-label-md text-inverse-on-surface transition hover:bg-inverse-on-surface/20"
-            >
-              <span className="material-symbols-outlined text-[20px]">close</span>
-              Schliessen
-            </button>
-          </div>
-
-          <div className="flex min-h-0 flex-1 items-center justify-center gap-sm">
-            <button
-              type="button"
-              onClick={(e) => {
-                e.stopPropagation();
-                setLightbox((lb) =>
-                  lb
-                    ? { ...lb, idx: (lb.idx - 1 + gallery.length) % gallery.length }
-                    : lb
-                );
-              }}
-              aria-label="Vorheriges Bild"
-              className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-inverse-on-surface/10 text-inverse-on-surface transition hover:bg-inverse-on-surface/20"
-            >
-              <span className="material-symbols-outlined text-[24px]">
-                chevron_left
-              </span>
-            </button>
-
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={current.src}
-              alt={current.alt}
-              onClick={(e) => e.stopPropagation()}
-              className="max-h-full min-w-0 max-w-full cursor-default rounded-lg object-contain shadow-lg"
-            />
-
-            <button
-              type="button"
-              onClick={(e) => {
-                e.stopPropagation();
-                setLightbox((lb) =>
-                  lb ? { ...lb, idx: (lb.idx + 1) % gallery.length } : lb
-                );
-              }}
-              aria-label="Nächstes Bild"
-              className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-inverse-on-surface/10 text-inverse-on-surface transition hover:bg-inverse-on-surface/20"
-            >
-              <span className="material-symbols-outlined text-[24px]">
-                chevron_right
-              </span>
-            </button>
-          </div>
-
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-body-sm text-inverse-on-surface">
-              {current.caption}
-            </p>
-            <p className="mt-xs text-label-sm text-inverse-on-surface/80">
-              {current.credit}
-            </p>
-          </div>
-        </div>
+      {/* Vollbild-Viewer: freies Zoomen + kuratierte Führungen (pro Epoche) */}
+      {viewer && (
+        <BildZoom
+          images={STATIONS[viewer.station].gallery}
+          startIdx={viewer.idx}
+          epoch={STATIONS[viewer.station].epoch}
+          onClose={() => setViewer(null)}
+        />
       )}
     </>
   );

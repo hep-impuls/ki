@@ -698,6 +698,23 @@ Betroffen: `ki26/.env.local` (neu, gitignored), [CLAUDE.md](../CLAUDE.md#firebas
 
 ---
 
+## 2026-07-05 — Bild-Viewer mit Zoom + kuratierten Führungen (Arts-&-Culture-Stil)
+
+Die Epochen-Galerien öffnen neu in einem **zoombaren Vollbild-Viewer**
+(`BildZoom.tsx`): Mausrad/Pinch/Doppelklick zoomen, Ziehen verschiebt, Buttons
+für Zoom/Einpassen. Bewusst **ohne neue Dependencies** (reines React + CSS-
+Transforms — `package.json` ist geteilter Bereich).
+
+**Führungen:** Vier Bilder haben kuratierte Touren («Führung starten»): die
+Ansicht fährt animiert von Detail zu Detail, mit Titel + Erklärtext und
+Fokus-Ring — Schule von Athen (6 Stopps: Platon/Aristoteles, Sokrates,
+Pythagoras, Euklid, Ptolemäus/Raffael), Tod des Sokrates (5), Eisenwalzwerk
+(5), «Suche nach Bildern» (6). Tour-Stopps sind Prozent-Koordinaten in den
+Daten (von Hand gesetzt, leicht justierbar); Thumbnails mit Tour tragen ein
+«Führung»-Badge. Weitere Touren können einfach als `tour:[…]` ergänzt werden.
+
+---
+
 ## 2026-07-05 — Bausteine quellenbasiert erweitert (Quellen geprüft)
 
 Die drei Bausteine je Epoche haben jetzt **umfangreichere Texte** und je **1–3
