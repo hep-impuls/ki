@@ -698,6 +698,27 @@ Betroffen: `ki26/.env.local` (neu, gitignored), [CLAUDE.md](../CLAUDE.md#firebas
 
 ---
 
+## 2026-07-05 — Bausteine quellenbasiert erweitert (Quellen geprüft)
+
+Die drei Bausteine je Epoche haben jetzt **umfangreichere Texte** und je **1–3
+geprüfte Quellen** (als Links im aufgeklappten Panel, `target=_blank`). Alle
+Quell-URLs wurden am 2026-07-05 per `curl` auf **HTTP 200 / öffentliche
+Zugänglichkeit** getestet — nur bestätigte URLs sind eingebaut.
+
+Genutzte Quelltypen (bewusst autoritativ + frei zugänglich): **Stanford
+Encyclopedia of Philosophy** (Aristoteles, Sophisten, Sokrates, Augustinus,
+Kant, Marx, Philosophie der Technik), **Internet Encyclopedia of Philosophy**,
+**Wikipedia**, **Wikisource** (Kant, „Was ist Aufklärung?“ Volltext), **arXiv**
+(Transformer-Paper), **CERN** (Geburt des Web), **Royal Museums Greenwich**
+(Harrison/Längengrad), **Britannica** (Dampfmaschine), **New Advent** (De
+civitate Dei), **marxists.org** (Manifest-Volltext).
+
+Verworfen: projekt-gutenberg-URL für Kants Aufklärungs-Essay (404) → ersetzt
+durch die deutsche Wikisource-Ausgabe. **Regel:** neue Quellen vor dem Einbau
+auf 200/öffentlich prüfen.
+
+---
+
 ## 2026-07-05 — Umbau zu Epochen-Panels + Bausteinen + Galerie je Epoche
 
 Auf Wunsch (Christof) neu strukturiert — weg von der erzwungenen Dramaturgie,

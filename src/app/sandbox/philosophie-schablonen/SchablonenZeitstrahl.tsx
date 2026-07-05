@@ -9,21 +9,21 @@ import { useEffect, useState } from "react";
  * Lernlogik: Jede Epoche ist ein eigenständiges Panel («ein Strang»):
  *   - Bildergalerie der Zeit (≥3 gemeinfreie Werke), nur für diese Epoche
  *     durchblätterbar (Vollbild mit ‹/›, Pfeiltasten, Zähler, Nachweis).
- *   - Drei nüchtern betitelte Bausteine, je EINZELN aufklappbar (man nimmt
- *     hinzu, was man will — muss aber nichts öffnen):
+ *   - Drei nüchtern betitelte, EINZELN aufklappbare Bausteine — jeder mit
+ *     erweitertem Text und geprüften, öffentlich zugänglichen Quellen:
  *       1. Technische Errungenschaft
  *       2. Verunsicherung
  *       3. Philosophische Orientierungshilfe
- * Die drei sind aufeinander bezogen, aber sie stehen auch je für sich — kein
+ * Die drei sind aufeinander bezogen, stehen aber auch je für sich — kein
  * erzwungener Kausal-Zusammenhang.
  *
- * Bilder: lokal unter /public/art (Nachweis in public/art/CREDITS.md). Die
- * historischen Werke sind gemeinfrei (Wikimedia Commons), die Gegenwarts-Bilder
- * gemeinfrei bzw. NASA-Public-Domain; das Netz-Werk (Klaus Christ, 2024) mit
- * Genehmigung. Ganzes Werk sichtbar (object-contain).
+ * Quellen: alle URLs wurden am 2026-07-05 auf HTTP 200 / öffentliche
+ * Zugänglichkeit geprüft (SEP, IEP, Wikipedia, Wikisource, arXiv, CERN, RMG,
+ * Britannica, New Advent, marxists.org).
  *
- * Self-contained Client-Komponente, keine Firebase-/Server-Logik
- * (hosting-/auth-agnostisch, migrationsbereit). Inhalte als Datenstruktur unten.
+ * Bilder: lokal unter /public/art (Nachweis in public/art/CREDITS.md).
+ *
+ * Self-contained Client-Komponente, keine Firebase-/Server-Logik.
  */
 
 interface GalleryImg {
@@ -40,6 +40,11 @@ interface TechEvent {
   icon: string;
 }
 
+interface Source {
+  label: string;
+  url: string;
+}
+
 interface Station {
   id: string;
   epoch: string;
@@ -47,14 +52,18 @@ interface Station {
   lead: string;
   icon: string;
   gallery: GalleryImg[];
+  techText: string;
   tech: TechEvent[];
+  techSources: Source[];
   unrestLead: string;
   unrest: string;
+  unrestSources: Source[];
   thinker: string;
   schablone: string;
   quote?: string;
   orientation: string;
-  open?: boolean; // offene Gegenwarts-Epoche (gestrichelter Rahmen)
+  orientSources: Source[];
+  open?: boolean;
 }
 
 const STATIONS: Station[] = [
@@ -88,28 +97,60 @@ const STATIONS: Station[] = [
           "Athen verurteilt den unbequemen Frager zum Tod — das Denken selbst wird gefährlich.",
       },
     ],
+    techText:
+      "In der Antike wird aus dem Staunen ein Verfahren. Handwerker und Astronomen bauen Instrumente, die den Lauf der Gestirne nicht nur deuten, sondern berechnen — und arabische Gelehrte machen daraus Jahrhunderte später eine prüfbare Methode.",
     tech: [
       {
-        year: "~150 v. Chr.",
+        year: "~150–100 v. Chr.",
         title: "Antikythera-Mechanismus",
-        note: "Ein Zahnrad-Rechner sagt Sonnen- und Mondfinsternisse voraus — der Himmel wird berechenbar.",
+        note: "Ein bronzenes Zahnrad-Getriebe, das Sonnen- und Mondstände sowie Finsternisse vorausberechnet — der älteste bekannte „Analogcomputer“. Der Himmel wird berechenbar.",
         icon: "settings",
       },
       {
-        year: "um 1021",
-        title: "Buch der Optik",
-        note: "Ibn al-Haytham prüft das Sehen im Experiment (Camera obscura) — die empirische Methode entsteht.",
+        year: "um 1011–1021",
+        title: "Buch der Optik (Ibn al-Haytham)",
+        note: "Mit der Camera obscura prüft al-Haytham das Sehen im Experiment (Beobachtung → Hypothese → Versuch). Ein früher Kern der empirischen Methode — lange vor Newton.",
         icon: "visibility",
+      },
+    ],
+    techSources: [
+      {
+        label: "Antikythera-Mechanismus (Wikipedia)",
+        url: "https://en.wikipedia.org/wiki/Antikythera_mechanism",
+      },
+      {
+        label: "Book of Optics (Wikipedia)",
+        url: "https://en.wikipedia.org/wiki/Book_of_Optics",
       },
     ],
     unrestLead: "Der Logos entzaubert den Mythos.",
     unrest:
-      "Die Götter-Erzählungen verlieren ihre Selbstverständlichkeit, die Sophisten verkaufen Argumente wie Waren — nichts scheint mehr festzustehen. Athen reagiert mit Härte: 399 v. Chr. muss Sokrates den Schierlingsbecher trinken, weil sein Fragen die alte Ordnung bedroht.",
+      "Im Athen des 5. Jahrhunderts v. Chr. verliert der Mythos seine bindende Kraft. Wandernde Lehrer — die Sophisten — bringen gegen Bezahlung bei, wie man jede Position überzeugend vertritt; Wahrheit droht zur Sache der Rhetorik zu werden. Als Sokrates die Bürger mit hartnäckigem Fragen bloßstellt, verurteilt ihn die Stadt 399 v. Chr. wegen „Gottlosigkeit“ und „Verderb der Jugend“ zum Tod. Das Denken selbst wird als Bedrohung erlebt.",
+    unrestSources: [
+      {
+        label: "Die Sophisten (Stanford Encyclopedia)",
+        url: "https://plato.stanford.edu/entries/sophists/",
+      },
+      {
+        label: "Sokrates (Stanford Encyclopedia)",
+        url: "https://plato.stanford.edu/entries/socrates/",
+      },
+    ],
     thinker: "Aristoteles",
     schablone: "Beobachten, ordnen, begründen",
     quote: "„Alle Menschen streben von Natur aus nach Wissen.“",
     orientation:
-      "Aristoteles ordnet das Wissen systematisch: Logik, Naturkunde, Ethik, Politik. Er legt das Fundament, auf dem Wissenschaft und Empirie bis heute stehen — eine Schablone, die aus dem Staunen ein Verfahren macht.",
+      "Aristoteles (384–322 v. Chr.) antwortet mit einer beispiellosen Ordnungsleistung: Er gliedert die Wissenschaften (Logik, Physik, Biologie, Ethik, Politik, Metaphysik), entwickelt mit der Logik ein Werkzeug des gültigen Schließens und gründet Wissen auf Beobachtung und Ursachenanalyse. Nicht fertige Wahrheiten, sondern eine Methode: beobachten, ordnen, begründen — die Schablone, auf der die europäische Wissenschaft aufbaut.",
+    orientSources: [
+      {
+        label: "Aristoteles (Stanford Encyclopedia)",
+        url: "https://plato.stanford.edu/entries/aristotle/",
+      },
+      {
+        label: "Aristotle (Internet Encyclopedia of Philosophy)",
+        url: "https://iep.utm.edu/aristotle/",
+      },
+    ],
   },
   {
     id: "augustinus",
@@ -143,22 +184,46 @@ const STATIONS: Station[] = [
           "410 stürzen die Statuen: Mit dem Fall Roms fällt die Gewissheit einer ganzen Weltordnung.",
       },
     ],
+    techText:
+      "Im Mittelalter gibt ein Ding der Zeit eine neue Ordnung: die mechanische Uhr. Zuerst regelt sie in den Klöstern die Gebetszeiten, dann schlägt sie von den Stadttürmen für alle — Alltag, Arbeit und Handel richten sich fortan nicht mehr nach Sonne und Gefühl, sondern nach abstrakten, gleichen Stunden.",
     tech: [
       {
         year: "13.–14. Jh.",
         title: "Die mechanische Uhr",
-        note: "Aus den Klöstern auf die Stadttürme: Gebet, Arbeit und Alltag laufen fortan im Takt der Uhr.",
+        note: "Die früheste Räderuhr entsteht in klösterlichem Umfeld und wandert auf die Stadttürme. Sie zerlegt den Tag in gleiche Stunden und diszipliniert Gebet, Arbeit und Handel — der Beginn der getakteten Gesellschaft.",
         icon: "schedule",
+      },
+    ],
+    techSources: [
+      {
+        label: "Geschichte der Zeitmessung (Wikipedia)",
+        url: "https://en.wikipedia.org/wiki/History_of_timekeeping_devices",
       },
     ],
     unrestLead: "Rom fällt — wem gehört die Zukunft?",
     unrest:
-      "410 n. Chr. plündern Alarichs Westgoten Rom — die „ewige Stadt“ fällt, und mit ihr die Gewissheit einer ganzen Weltordnung. Heiden geben den Christen die Schuld am Untergang, Christen zweifeln an Gottes Schutz.",
+      "Am 24. August 410 plündern Alarichs Westgoten Rom — zum ersten Mal seit rund 800 Jahren fällt die Stadt an einen äußeren Feind. Der Schock hallt durch das ganze Reich: Für viele bricht mit Rom die Weltordnung selbst zusammen. Heiden machen den neuen christlichen Glauben verantwortlich — man habe die alten Götter verlassen; Christen ringen mit der Frage, warum Gott seine Stadt nicht geschützt habe.",
+    unrestSources: [
+      {
+        label: "Plünderung Roms 410 (Wikipedia)",
+        url: "https://en.wikipedia.org/wiki/Sack_of_Rome_(410)",
+      },
+    ],
     thinker: "Augustinus",
     schablone: "Innerlichkeit, Glaube, Heilsgeschichte",
     quote: "„Im inneren Menschen wohnt die Wahrheit.“",
     orientation:
-      "Augustinus antwortet mit „Vom Gottesstaat“ (413–426): Halt liegt nicht im irdischen Reich, sondern im Glauben und im inneren Menschen. Diese Schablone trägt ein ganzes Jahrtausend.",
+      "Augustinus (354–430) antwortet mit „De civitate Dei“ (Vom Gottesstaat, 413–426): Er unterscheidet den vergänglichen „Staat der Menschen“ vom „Staat Gottes“. Nicht das irdische Reich trägt, sondern der Glaube und das Innere des Menschen — „im inneren Menschen wohnt die Wahrheit“. Diese Schablone wendet den Blick von der äußeren Ordnung nach innen (Gewissen, Heilsgeschichte) und gibt einem ganzen Zeitalter Halt.",
+    orientSources: [
+      {
+        label: "Augustinus (Stanford Encyclopedia)",
+        url: "https://plato.stanford.edu/entries/augustine/",
+      },
+      {
+        label: "De civitate Dei / City of God (New Advent)",
+        url: "https://www.newadvent.org/fathers/1201.htm",
+      },
+    ],
   },
   {
     id: "kant",
@@ -191,35 +256,67 @@ const STATIONS: Station[] = [
           "1755 zertrümmert das Erdbeben von Lissabon den Glauben an eine gütige Ordnung der Welt.",
       },
     ],
+    techText:
+      "Zwischen dem 15. und 18. Jahrhundert häufen sich die Umwälzungen: Der Buchdruck vervielfältigt Wissen, das Teleskop rückt den Kosmos zurecht, präzise Uhren vermessen die Erde. Beobachtung, Rechnung und Maschine verändern, was Menschen wissen können — und wie schnell sich das Wissen verbreitet.",
     tech: [
       {
         year: "um 1440",
         title: "Gutenbergs Druckpresse",
-        note: "3 600 Seiten am Tag statt einer Handvoll — Wissen und Streitschriften erreichen erstmals die Masse.",
+        note: "Bewegliche Lettern erlauben ~3 600 Seiten am Tag statt einer Handvoll. Wissen, Bibeln und Streitschriften erreichen erstmals die Masse — Voraussetzung für Reformation und wissenschaftliche Revolution.",
         icon: "print",
       },
       {
-        year: "1543–1687",
+        year: "1543 → 1609 → 1687",
         title: "Kopernikanische Wende",
-        note: "Kopernikus rechnet, Galileos Teleskop liefert 1609 den sichtbaren Beweis, Newton das Gesetz — die Erde ist nicht mehr Mittelpunkt.",
+        note: "Kopernikus stellt die Sonne ins Zentrum, Galileos Teleskop liefert 1609/10 den sichtbaren Beweis, Newton (1687) das Gesetz. Die Erde ist nicht mehr Mittelpunkt.",
         icon: "star",
       },
       {
         year: "1761",
         title: "Navigation & Chronometer",
-        note: "Harrisons H4 nimmt die Zeit mit aufs Meer — die Welt wird vermessen und global.",
+        note: "John Harrisons Schiffsuhr H4 hält die Zeit auf See exakt mit und löst das Längengrad-Problem — die Welt wird vermessen und global.",
         icon: "explore",
+      },
+    ],
+    techSources: [
+      {
+        label: "Druckpresse (Wikipedia)",
+        url: "https://en.wikipedia.org/wiki/Printing_press",
+      },
+      {
+        label: "Kopernikanische Wende (Wikipedia)",
+        url: "https://en.wikipedia.org/wiki/Copernican_Revolution",
+      },
+      {
+        label: "Harrison & das Längengrad-Problem (Royal Museums Greenwich)",
+        url: "https://www.rmg.co.uk/stories/topics/harrisons-clocks-longitude-problem",
       },
     ],
     unrestLead: "Glaubensspaltung, Kopernikus, Lissabon.",
     unrest:
-      "Die Druckpresse verbreitet Luthers Thesen — die Christenheit spaltet sich, Religionskriege verwüsten Europa. Das Teleskop nimmt der Erde die Mitte; Pascal gesteht: „Das ewige Schweigen dieser unendlichen Räume erschreckt mich.“ Und 1755 erschüttert das Erdbeben von Lissabon den Glauben an die gütige Ordnung der Welt.",
+      "Die Erschütterungen kommen von allen Seiten: Der Buchdruck trägt Luthers Thesen in die Welt, die Christenheit spaltet sich, Religionskriege verwüsten Europa. Kopernikus und Galileo nehmen der Erde — und damit dem Menschen — die Mitte des Kosmos; Pascal notiert erschrocken über „das ewige Schweigen dieser unendlichen Räume“. Und am 1. November 1755 zerstört ein Erdbeben mit Feuer und Flutwelle Lissabon und tötet Zehntausende — der Streit um einen gütigen Weltplan (Voltaire, Rousseau) bricht offen aus.",
+    unrestSources: [
+      {
+        label: "Erdbeben von Lissabon 1755 (Wikipedia)",
+        url: "https://en.wikipedia.org/wiki/1755_Lisbon_earthquake",
+      },
+    ],
     thinker: "Kant",
     schablone: "Autonomie und Selbstdenken",
     quote:
       "„Sapere aude! Habe Mut, dich deines eigenen Verstandes zu bedienen.“",
     orientation:
-      "Kant antwortet auf die Fragen seiner Gegenwart: Wenn weder Himmel noch Kirche Halt geben, muss die Vernunft ihn selbst schaffen. Seine Schablone ist das selbstbestimmte, mündige Individuum der Moderne.",
+      "Kant (1724–1804) bündelt die Antwort der Aufklärung in einer Formel: „Aufklärung ist der Ausgang des Menschen aus seiner selbstverschuldeten Unmündigkeit“ (Beantwortung der Frage: Was ist Aufklärung?, 1784). Wenn weder Kirche noch überlieferte Autorität sicheren Halt geben, muss der Mensch selbst denken, urteilen — und Verantwortung tragen. Kants Schablone ist das autonome, mündige Individuum, das der Moderne ihr Selbstbild gibt.",
+    orientSources: [
+      {
+        label: "Immanuel Kant (Stanford Encyclopedia)",
+        url: "https://plato.stanford.edu/entries/kant/",
+      },
+      {
+        label: "„Was ist Aufklärung?“ — Volltext (Wikisource)",
+        url: "https://de.wikisource.org/wiki/Beantwortung_der_Frage:_Was_ist_Aufkl%C3%A4rung%3F",
+      },
+    ],
   },
   {
     id: "marx",
@@ -251,34 +348,62 @@ const STATIONS: Station[] = [
           "Enge Hinterhöfe im Schatten des Bahnviadukts: die Kehrseite des Fortschritts.",
       },
     ],
+    techText:
+      "Das 19. Jahrhundert wird von Maschinen umgepflügt: Die Dampfmaschine treibt Fabriken und Eisenbahnen, Elektrizität und Verstärker-Röhre eröffnen ein neues Zeitalter von Energie und Kommunikation, Telegraf und Seekabel verbinden erstmals die Kontinente in Minuten.",
     tech: [
       {
         year: "1712 / 1769",
         title: "Die Dampfmaschine",
-        note: "Newcomen pumpt Bergwerke leer, Watt macht die Fabrik überall möglich — Industrialisierung und Urbanisierung.",
+        note: "Newcomen pumpt Bergwerke leer, Watts verbesserte Maschine (1769) macht die Fabrik überall möglich — Industrialisierung, Eisenbahn, Urbanisierung.",
         icon: "local_fire_department",
       },
       {
         year: "1831–1906",
         title: "Elektrizität & Elektronik",
-        note: "Faraday, Edison und Tesla elektrifizieren die Welt; De Forests Verstärker-Röhre (1906) eröffnet Radio und Ferntelefonie.",
+        note: "Faraday (Induktion 1831), Edison und Tesla elektrifizieren die Welt; De Forests Verstärker-Röhre (1906) eröffnet Radio und Ferntelefonie.",
         icon: "bolt",
       },
       {
         year: "1844 / 1866",
         title: "Telegraf & Seekabel",
-        note: "Botschaften schneller als jeder Bote; das Atlantik-Kabel verbindet die Kontinente. Bis heute laufen ~99 % des Internets durch Kabel im Meer.",
+        note: "Morse sendet 1844 die erste Ferndepesche; 1866 verbindet ein dauerhaftes Atlantik-Kabel die Kontinente. Bis heute laufen rund 99 % des Internets durch Kabel im Meer.",
         icon: "cable",
+      },
+    ],
+    techSources: [
+      {
+        label: "Watt-Dampfmaschine (Britannica)",
+        url: "https://www.britannica.com/technology/steam-engine",
+      },
+      {
+        label: "Transatlantisches Telegrafenkabel (Wikipedia)",
+        url: "https://en.wikipedia.org/wiki/Transatlantic_telegraph_cable",
       },
     ],
     unrestLead: "Fabrik, Elend, Revolution 1848.",
     unrest:
-      "Die Fabrik saugt die Menschen vom Land in die Städte: 14-Stunden-Tage, Kinderarbeit, Elendsquartiere im Schatten der Bahnviadukte. Die alten Stände lösen sich auf, Familien- und Dorfordnungen zerreissen — 1848 explodiert Europa in Revolutionen.",
+      "Die Industrialisierung reisst die alte Gesellschaft auseinander: Millionen ziehen vom Land in die Städte, arbeiten 14 Stunden am Tag, Kinder in Fabriken und Bergwerken; Elendsquartiere wachsen im Schatten der Viadukte. Ständische Sicherheiten sowie Dorf- und Familienordnungen lösen sich auf. 1848 entlädt sich die Spannung in einer Welle von Revolutionen quer durch Europa.",
+    unrestSources: [
+      {
+        label: "Revolutionen von 1848 (Wikipedia)",
+        url: "https://en.wikipedia.org/wiki/Revolutions_of_1848",
+      },
+    ],
     thinker: "Marx",
     schablone: "Den Umbruch begreifen — und gestalten",
     quote: "„Alles Ständische und Stehende verdampft.“",
     orientation:
-      "Marx begreift den Umbruch mitten in der Revolution von 1848: Gesellschaft ist kein Schicksal, sondern gemacht — und darum veränderbar. Weltweit populär wird diese Antwort erst Jahrzehnte später.",
+      "Marx (1818–1883) begreift den Umbruch, während er geschieht: Im „Manifest der Kommunistischen Partei“ (1848, mit Friedrich Engels) beschreibt er, wie der Kapitalismus „alles Ständische und Stehende verdampfen“ lässt — und zieht daraus den Schluss, dass gesellschaftliche Verhältnisse nicht Natur oder Schicksal sind, sondern gemacht und darum veränderbar. Weltweite Wirkung entfaltet diese Antwort erst Jahrzehnte später.",
+    orientSources: [
+      {
+        label: "Karl Marx (Stanford Encyclopedia)",
+        url: "https://plato.stanford.edu/entries/marx/",
+      },
+      {
+        label: "Manifest der Kommunistischen Partei — Volltext (marxists.org)",
+        url: "https://www.marxists.org/archive/marx/works/1848/communist-manifesto/",
+      },
+    ],
   },
   {
     id: "jetzt",
@@ -309,61 +434,110 @@ const STATIONS: Station[] = [
           "Der „Blaue Planet“ — eine Welt ohne Grenzen von aussen gesehen: Bezugspunkt eines globalen „Wir“.",
       },
     ],
+    techText:
+      "Die digitale Welle folgt in rascher Kette: Der Transistor macht Rechner klein und zuverlässig, ARPANET und World Wide Web machen Information ortlos, und seit 2017 erzeugen Systeme auf Basis der Transformer-Architektur selbst Sprache, Bilder und Code.",
     tech: [
       {
         year: "1945 / 1947",
         title: "Computer & Transistor",
-        note: "ENIAC rechnet elektronisch, der Transistor macht Maschinen klein und zuverlässig — das digitale Zeitalter beginnt.",
+        note: "ENIAC rechnet elektronisch (1945), der Transistor (Bell Labs 1947) macht Maschinen klein und zuverlässig — das digitale Zeitalter beginnt.",
         icon: "memory",
       },
       {
         year: "1969–1991",
         title: "ARPANET & World Wide Web",
-        note: "Erst vier Rechner, dann das Web für alle — Information wird ortlos, getragen von den Kabeln in den Meeren.",
+        note: "Erst vier vernetzte Rechner (1969), dann Tim Berners-Lees Web für alle (1989/91) — Information wird ortlos, getragen von den Kabeln in den Meeren.",
         icon: "language",
       },
       {
         year: "2017–2022",
         title: "Generative KI",
-        note: "Die Transformer-Architektur (2017), dann ChatGPT (2022): Maschinen erzeugen Sprache, Bilder, Code.",
+        note: "Die Transformer-Architektur („Attention Is All You Need“, 2017) und darauf aufbauend ChatGPT (2022): Maschinen erzeugen Sprache, Bilder und Code.",
         icon: "chat",
+      },
+    ],
+    techSources: [
+      {
+        label: "„Attention Is All You Need“ — Transformer-Paper (arXiv)",
+        url: "https://arxiv.org/abs/1706.03762",
+      },
+      {
+        label: "Die Geburt des Web (CERN)",
+        url: "https://www.home.cern/science/computing/birth-web",
       },
     ],
     unrestLead: "Was ist noch echt? Das „Wir“ zerfällt.",
     unrest:
-      "Was ist noch echt — Bild, Stimme, Video? Worauf kann ich mich beim Recherchieren verlassen, welche Fähigkeiten lohnen sich noch, wer hat das gemacht — ich, die KI, beide? Alles ist vernetzt, alles beschleunigt sich; viele fühlen sich getrieben — und das „Wir“ zerfällt.",
+      "Die Verunsicherung ist neuer Art: Bilder, Stimmen und Videos lassen sich täuschend echt fälschen (Deepfakes), Suchergebnisse und Texte sind womöglich maschinell erzeugt. Was ist noch echt, worauf kann man sich verlassen, welche Fähigkeiten lohnen sich noch — und wer hat etwas gemacht: ich, die Maschine, beide? Alles ist vernetzt und beschleunigt sich; viele erleben sich als getrieben, und das gemeinsame „Wir“ droht zu zerfallen.",
+    unrestSources: [
+      {
+        label: "Deepfake (Wikipedia)",
+        url: "https://en.wikipedia.org/wiki/Deepfake",
+      },
+    ],
     thinker: "Wir — jetzt",
     schablone: "??? — das suchen wir gerade",
     orientation:
-      "Die Philosophie sieht nicht voraus — sie antwortet im Blick auf das, was war, auf die Fragen ihrer Gegenwart. Für unsere Zeit entsteht diese Antwort gerade erst; genau hier setzt dieses Submodul an (Latour, Haraway, Gabriel …).",
+      "Für unsere Zeit entsteht die Antwort gerade erst. Die Philosophie sieht nicht voraus — sie denkt im Blick auf das, was geschieht: Wie sollen wir mit einem nicht-menschlichen Akteur wie der KI umgehen (Bruno Latour), wie leben wir mit dem Technischen verflochten (Donna Haraway, „A Cyborg Manifesto“), woran halten wir moralisch fest (Markus Gabriel)? Die Schablone ist noch offen — genau daran arbeitet dieses Submodul.",
+    orientSources: [
+      {
+        label: "Philosophie der Technik (Stanford Encyclopedia)",
+        url: "https://plato.stanford.edu/entries/technology/",
+      },
+      {
+        label: "A Cyborg Manifesto (Wikipedia)",
+        url: "https://en.wikipedia.org/wiki/A_Cyborg_Manifesto",
+      },
+    ],
     open: true,
   },
 ];
 
-/** Baustein-Definitionen (nüchterne Titel, neutrale Icons, gedämpfte Akzente). */
 const BAUSTEINE = [
   {
     key: "tech",
     label: "Technische Errungenschaft",
     icon: "precision_manufacturing",
     chip: "bg-primary-container text-on-primary-container",
-    accent: "text-primary",
   },
   {
     key: "unrest",
     label: "Verunsicherung",
     icon: "warning",
     chip: "bg-error-container text-on-error-container",
-    accent: "text-error",
   },
   {
     key: "orientation",
     label: "Philosophische Orientierungshilfe",
     icon: "explore",
     chip: "bg-tertiary-container text-on-tertiary-container",
-    accent: "text-tertiary",
   },
 ] as const;
+
+function Quellen({ items }: { items: Source[] }) {
+  if (!items || items.length === 0) return null;
+  return (
+    <div className="mt-md flex flex-wrap items-center gap-x-md gap-y-xs border-t border-outline-variant pt-sm">
+      <span className="text-label-sm uppercase tracking-wider text-on-surface-variant">
+        Quellen
+      </span>
+      {items.map((s) => (
+        <a
+          key={s.url}
+          href={s.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-xs text-label-sm text-primary underline underline-offset-2 hover:text-on-primary-container"
+        >
+          <span className="material-symbols-outlined text-[14px]">
+            open_in_new
+          </span>
+          {s.label}
+        </a>
+      ))}
+    </div>
+  );
+}
 
 type Lightbox = { station: number; idx: number };
 
@@ -382,7 +556,6 @@ export default function SchablonenZeitstrahl() {
   const gallery = lightbox !== null ? STATIONS[lightbox.station].gallery : null;
   const current = gallery ? gallery[lightbox!.idx] : null;
 
-  // Esc schliesst, ←/→ blättern innerhalb der Epoche, Scroll sperren
   useEffect(() => {
     if (lightbox === null) return;
     const len = STATIONS[lightbox.station].gallery.length;
@@ -411,7 +584,6 @@ export default function SchablonenZeitstrahl() {
           const isLast = si === STATIONS.length - 1;
           return (
             <li key={s.id} className="flex gap-md">
-              {/* Rail: Icon-Knoten + Verbindungslinie */}
               <div className="flex flex-col items-center">
                 <span
                   className={
@@ -427,7 +599,6 @@ export default function SchablonenZeitstrahl() {
                 {!isLast && <span className="w-px flex-1 bg-outline-variant" />}
               </div>
 
-              {/* Epochen-Panel */}
               <div
                 className={
                   "min-w-0 flex-1 overflow-hidden rounded-xl border bg-surface-bright shadow-sm " +
@@ -447,7 +618,7 @@ export default function SchablonenZeitstrahl() {
                   </p>
                 </div>
 
-                {/* Bildergalerie der Zeit */}
+                {/* Bildergalerie */}
                 <div className="bg-surface-container-low p-lg">
                   <p className="mb-sm flex items-center gap-xs text-label-sm uppercase tracking-wider text-on-surface-variant">
                     <span className="material-symbols-outlined text-[16px]">
@@ -481,7 +652,7 @@ export default function SchablonenZeitstrahl() {
                   </div>
                 </div>
 
-                {/* Drei Bausteine — je einzeln aufklappbar */}
+                {/* Drei Bausteine */}
                 <div className="divide-y divide-outline-variant border-t border-outline-variant">
                   {BAUSTEINE.map((b) => {
                     const key = `${s.id}:${b.key}`;
@@ -531,63 +702,75 @@ export default function SchablonenZeitstrahl() {
                         {isOpen && (
                           <div className="px-lg pb-lg">
                             {b.key === "tech" && (
-                              <div className="grid gap-sm sm:grid-cols-2">
-                                {s.tech.map((t) => (
-                                  <div
-                                    key={t.title}
-                                    className="rounded-lg border border-outline-variant bg-surface-container-low p-md"
-                                  >
-                                    <div className="flex items-center gap-sm">
-                                      <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-primary-container text-on-primary-container">
-                                        <span className="material-symbols-outlined text-[18px]">
-                                          {t.icon}
+                              <>
+                                <p className="mb-md text-body-md text-on-surface-variant">
+                                  {s.techText}
+                                </p>
+                                <div className="grid gap-sm sm:grid-cols-2">
+                                  {s.tech.map((t) => (
+                                    <div
+                                      key={t.title}
+                                      className="rounded-lg border border-outline-variant bg-surface-container-low p-md"
+                                    >
+                                      <div className="flex items-center gap-sm">
+                                        <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-primary-container text-on-primary-container">
+                                          <span className="material-symbols-outlined text-[18px]">
+                                            {t.icon}
+                                          </span>
                                         </span>
-                                      </span>
-                                      <div className="min-w-0">
-                                        <p className="text-label-sm text-primary">
-                                          {t.year}
-                                        </p>
-                                        <p className="text-body-sm font-semibold text-on-surface">
-                                          {t.title}
-                                        </p>
+                                        <div className="min-w-0">
+                                          <p className="text-label-sm text-primary">
+                                            {t.year}
+                                          </p>
+                                          <p className="text-body-sm font-semibold text-on-surface">
+                                            {t.title}
+                                          </p>
+                                        </div>
                                       </div>
+                                      <p className="mt-sm text-body-sm text-on-surface-variant">
+                                        {t.note}
+                                      </p>
                                     </div>
-                                    <p className="mt-sm text-body-sm text-on-surface-variant">
-                                      {t.note}
-                                    </p>
-                                  </div>
-                                ))}
-                              </div>
+                                  ))}
+                                </div>
+                                <Quellen items={s.techSources} />
+                              </>
                             )}
 
                             {b.key === "unrest" && (
-                              <p className="border-l-4 border-error/40 pl-md text-body-md text-on-surface-variant">
-                                {s.unrest}
-                              </p>
+                              <>
+                                <p className="border-l-4 border-error/40 pl-md text-body-md text-on-surface-variant">
+                                  {s.unrest}
+                                </p>
+                                <Quellen items={s.unrestSources} />
+                              </>
                             )}
 
                             {b.key === "orientation" && (
-                              <div className="space-y-sm">
-                                <p className="flex items-start gap-sm text-body-md text-on-surface">
-                                  <span className="material-symbols-outlined text-[18px] text-tertiary">
-                                    bookmark
-                                  </span>
-                                  <span>
-                                    <span className="text-on-surface-variant">
-                                      {s.thinker} · Schablone:{" "}
+                              <>
+                                <div className="space-y-sm">
+                                  <p className="flex items-start gap-sm text-body-md text-on-surface">
+                                    <span className="material-symbols-outlined text-[18px] text-tertiary">
+                                      bookmark
                                     </span>
-                                    <strong>{s.schablone}</strong>
-                                  </span>
-                                </p>
-                                {s.quote && (
-                                  <p className="text-body-md italic text-on-surface-variant">
-                                    {s.quote}
+                                    <span>
+                                      <span className="text-on-surface-variant">
+                                        {s.thinker} · Schablone:{" "}
+                                      </span>
+                                      <strong>{s.schablone}</strong>
+                                    </span>
                                   </p>
-                                )}
-                                <p className="text-body-md text-on-surface-variant">
-                                  {s.orientation}
-                                </p>
-                              </div>
+                                  {s.quote && (
+                                    <p className="text-body-md italic text-on-surface-variant">
+                                      {s.quote}
+                                    </p>
+                                  )}
+                                  <p className="text-body-md text-on-surface-variant">
+                                    {s.orientation}
+                                  </p>
+                                </div>
+                                <Quellen items={s.orientSources} />
+                              </>
                             )}
                           </div>
                         )}
