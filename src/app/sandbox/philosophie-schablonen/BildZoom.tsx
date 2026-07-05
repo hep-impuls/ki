@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 /**
  * BildZoom — Vollbild-Viewer im Stil von Google Arts & Culture für die
@@ -29,6 +29,8 @@ export interface ZoomImg {
   credit: string;
   caption: string;
   tour?: TourStop[];
+  /** Abschluss-Text: verknüpft das Bild mit Technik & Verunsicherung der Epoche. */
+  contextNote?: string;
 }
 
 interface Props {
@@ -50,7 +52,24 @@ const MAX_Z = 4;
 export default function BildZoom({ images, startIdx, epoch, onClose }: Props) {
   const [idx, setIdx] = useState(startIdx);
   const img = images[idx];
-  const tour = img.tour ?? null;
+  // Effektive Führung: an eine kuratierte Tour wird — wenn vorhanden — ein
+  // abschliessender «Im Kontext der Zeit»-Stopp angehängt, der das Bild mit der
+  // technischen Errungenschaft und der gesellschaftlichen Verunsicherung der
+  // Epoche verknüpft (Gesamtblick, zoom 1).
+  const tour = useMemo(() => {
+    if (!img.tour) return null;
+    if (!img.contextNote) return img.tour;
+    return [
+      ...img.tour,
+      {
+        x: 50,
+        y: 50,
+        zoom: 1,
+        title: "Im Kontext der Zeit",
+        text: img.contextNote,
+      },
+    ];
+  }, [img]);
 
   const [tourIdx, setTourIdx] = useState<number | null>(null);
   const [view, setView] = useState<View>({ z: 1, tx: 0, ty: 0 });
@@ -60,10 +79,31 @@ export default function BildZoom({ images, startIdx, epoch, onClose }: Props) {
   const [dragging, setDragging] = useState(false);
 
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const rootRef = useRef<HTMLDivElement | null>(null);
+  const [isFs, setIsFs] = useState(false);
   const viewRef = useRef(view);
   viewRef.current = view;
   const pointers = useRef(new Map<number, { x: number; y: number }>());
   const pinchDist = useRef<number | null>(null);
+
+  // Echtes Vollbild (Fullscreen-API) — Status spiegeln, beim Schliessen verlassen
+  useEffect(() => {
+    const onFs = () => setIsFs(!!document.fullscreenElement);
+    document.addEventListener("fullscreenchange", onFs);
+    return () => {
+      document.removeEventListener("fullscreenchange", onFs);
+      if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
+    };
+  }, []);
+
+  const toggleFs = useCallback(() => {
+    try {
+      if (document.fullscreenElement) document.exitFullscreen();
+      else rootRef.current?.requestFullscreen?.();
+    } catch {
+      /* Fullscreen nicht verfügbar — In-Page-Overlay bleibt bestehen. */
+    }
+  }, []);
 
   // Container-Grösse beobachten
   useEffect(() => {
@@ -281,10 +321,11 @@ export default function BildZoom({ images, startIdx, epoch, onClose }: Props) {
 
   return (
     <div
+      ref={rootRef}
       role="dialog"
       aria-modal="true"
       aria-label={`${img.alt} — Vollbild`}
-      className="fixed inset-0 z-[100] flex flex-col bg-inverse-surface/95 backdrop-blur-sm"
+      className="fixed inset-0 z-[100] flex flex-col bg-inverse-surface"
     >
       {/* Kopfzeile */}
       <div className="flex flex-wrap items-center gap-sm p-md">
@@ -341,8 +382,18 @@ export default function BildZoom({ images, startIdx, epoch, onClose }: Props) {
           </button>
           <button
             type="button"
+            onClick={toggleFs}
+            aria-label={isFs ? "Vollbild verlassen" : "Ganzer Bildschirm"}
+            className="flex h-10 w-10 items-center justify-center rounded-xl bg-inverse-on-surface/10 text-inverse-on-surface transition hover:bg-inverse-on-surface/20"
+          >
+            <span className="material-symbols-outlined text-[20px]">
+              {isFs ? "fullscreen_exit" : "fullscreen"}
+            </span>
+          </button>
+          <button
+            type="button"
             onClick={onClose}
-            aria-label="Vollbild schliessen"
+            aria-label="Ansicht schliessen"
             className="inline-flex items-center gap-xs rounded-xl bg-inverse-on-surface/10 px-md py-sm text-label-md text-inverse-on-surface transition hover:bg-inverse-on-surface/20"
           >
             <span className="material-symbols-outlined text-[20px]">close</span>

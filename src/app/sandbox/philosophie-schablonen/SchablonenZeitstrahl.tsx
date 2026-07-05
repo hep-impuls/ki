@@ -34,6 +34,8 @@ interface GalleryImg {
   caption: string;
   /** Optionale «Führung» durchs Bild (Koordinaten in %, von Hand justierbar). */
   tour?: TourStop[];
+  /** Schluss-Stopp der Führung: verknüpft das Bild mit Technik & Verunsicherung. */
+  contextNote?: string;
 }
 
 interface TechEvent {
@@ -79,6 +81,8 @@ const STATIONS: Station[] = [
     gallery: [
       {
         src: "/art/athens.jpg",
+        contextNote:
+          "Raffaels Halle der Denker steht für die Antwort der Antike auf ihre Verunsicherung: Als der Mythos zerfiel und die Sophisten jede Wahrheit verkäuflich machten, gründete Aristoteles das Wissen neu — dieselbe ordnende Haltung, die Instrumente wie den Antikythera-Mechanismus überhaupt möglich machte.",
         alt: "Fresko „Die Schule von Athen“ von Raffael",
         credit: "Raffael, „Die Schule von Athen“, 1509–1511 · gemeinfrei",
         caption:
@@ -130,6 +134,8 @@ const STATIONS: Station[] = [
       },
       {
         src: "/art/aristoteles_rembrandt.jpg",
+        contextNote:
+          "Rembrandts nachdenklicher Aristoteles verkörpert die Schablone dieser Epoche: Als Mythos und Sophistik den Halt nahmen (die Verunsicherung), gründete Aristoteles Wissen auf Beobachtung und Logik — die Methode hinter Errungenschaften wie dem Antikythera-Getriebe und der späteren empirischen Optik.",
         tour: [
           {
             x: 50,
@@ -161,6 +167,8 @@ const STATIONS: Station[] = [
       },
       {
         src: "/art/sokrates.jpg",
+        contextNote:
+          "Der Tod des Sokrates ist die Verunsicherung der Antike in einem Bild: eine Stadt, die ihren klügsten Frager tötet, weil der Mythos nicht mehr trägt. Die Antwort darauf — Wissen methodisch zu ordnen — wurde zum Fundament der Wissenschaft, bis hin zu Instrumenten und empirischer Methode.",
         alt: "Gemälde „Der Tod des Sokrates“ von Jacques-Louis David",
         credit: "J.-L. David, „Der Tod des Sokrates“, 1787 · gemeinfrei",
         caption:
@@ -268,6 +276,8 @@ const STATIONS: Station[] = [
     gallery: [
       {
         src: "/art/augustine.jpg",
+        contextNote:
+          "Champaignes Augustinus verkörpert die Antwort auf den Schock von 410 (die Verunsicherung): Als das Römische Reich zerbrach, verlegte er den Halt ins Innere und in den Glauben. Diese neue Ordnung wurde später auch technisch hörbar — im Stundenschlag der Klosteruhr.",
         tour: [
           {
             x: 50,
@@ -299,6 +309,8 @@ const STATIONS: Station[] = [
       },
       {
         src: "/art/mittelalter_stundenbuch.jpg",
+        contextNote:
+          "Das Kalenderblatt zeigt die getaktete Welt, die nach dem Zusammenbruch Roms entstand: Burg, Feldarbeit, Kirchenjahr. Die technische Errungenschaft der Epoche — die mechanische Uhr — zerlegte genau diesen Tag bald in gleiche Stunden.",
         tour: [
           {
             x: 50,
@@ -330,6 +342,8 @@ const STATIONS: Station[] = [
       },
       {
         src: "/art/rom.jpg",
+        contextNote:
+          "Der Fall Roms ist die Verunsicherung dieser Epoche in Reinform. Augustins „Gottesstaat“ gab darauf die Orientierung; die neue, vom Kloster getaktete Zeit — die mechanische Uhr — wurde ihr technisches Rückgrat.",
         tour: [
           {
             x: 50,
@@ -410,6 +424,8 @@ const STATIONS: Station[] = [
     gallery: [
       {
         src: "/art/wanderer.jpg",
+        contextNote:
+          "Friedrichs einsamer Wanderer ist das Sinnbild der Kant'schen Antwort: Nachdem Buchdruck und Teleskop das Weltbild verschoben und das Erdbeben von Lissabon (die Verunsicherung) den Glauben an einen gütigen Plan erschüttert hatten, muss der Einzelne die Welt selbst deuten.",
         tour: [
           {
             x: 50,
@@ -441,6 +457,8 @@ const STATIONS: Station[] = [
       },
       {
         src: "/art/orrery.jpg",
+        contextNote:
+          "Das Orrery zeigt die technische Seite des Umbruchs: Der Kosmos wird mechanisch erklärbar. Genau dieser Verlust der Mitte (Kopernikus, Teleskop) verunsicherte die Zeit — Kant machte daraus das Programm des Selbstdenkens.",
         tour: [
           {
             x: 50,
@@ -472,6 +490,8 @@ const STATIONS: Station[] = [
       },
       {
         src: "/art/lissabon.jpg",
+        contextNote:
+          "Lissabon 1755 ist die Verunsicherung dieser Epoche schlechthin. Während Presse und Teleskop das Weltbild ohnehin erschütterten, zerstörte das Beben den Glauben an einen gütigen Plan — Kants Ausweg war der Mut zum eigenen Verstand.",
         tour: [
           {
             x: 50,
@@ -572,6 +592,8 @@ const STATIONS: Station[] = [
     gallery: [
       {
         src: "/art/eisenwalzwerk.jpg",
+        contextNote:
+          "Menzels Fabrik zeigt beides zugleich: die technische Wucht der Dampfmaschine und die soziale Verunsicherung der pausenlosen Arbeit. Marx begriff genau diesen Umbruch als gemacht — und darum veränderbar.",
         alt: "Gemälde „Das Eisenwalzwerk (Moderne Cyklopen)“ von Adolph Menzel",
         credit: "A. Menzel, „Das Eisenwalzwerk“, 1872–1875 · gemeinfrei",
         caption:
@@ -616,6 +638,8 @@ const STATIONS: Station[] = [
       },
       {
         src: "/art/coalbrookdale.jpg",
+        contextNote:
+          "Coalbrookdale ist die Dampfmaschine als Landschaft — die technische Errungenschaft der Epoche. Ihre Kehrseite (Elend, Entwurzelung, 1848: die Verunsicherung) suchte Marx zu begreifen: Gesellschaft als Ergebnis von Kräften, die man verändern kann.",
         tour: [
           {
             x: 50,
@@ -647,6 +671,8 @@ const STATIONS: Station[] = [
       },
       {
         src: "/art/london.jpg",
+        contextNote:
+          "Dorés Hinterhöfe zeigen die Verunsicherung der Industriemoderne: entwurzelte Massen im Schatten der Eisenbahn. Die Technik (Dampf, Schiene, Telegraf) trieb den Wandel — Marx lieferte die Deutung, dass er gestaltbar ist.",
         tour: [
           {
             x: 50,
@@ -742,6 +768,8 @@ const STATIONS: Station[] = [
     gallery: [
       {
         src: "/art/wir-netz.png",
+        contextNote:
+          "Das Netz-Werk führt beide Fäden zusammen: die Technik (Rechner, Kabel, KI) und die Verunsicherung (wer handelt hier, was ist echt?). Genau diese Frage — wie wir uns darin orientieren — ist die offene Schablone, an der dieses Submodul arbeitet.",
         alt: "Installation „Suche nach Bildern“ von Klaus Christ: ein Netz aus Fäden verbindet Figuren und Objekte rund um einen alten Computer.",
         credit: "Klaus Christ, „Suche nach Bildern“, 2024",
         caption:
@@ -793,6 +821,8 @@ const STATIONS: Station[] = [
       },
       {
         src: "/art/erde_nacht.jpg",
+        contextNote:
+          "Die nächtliche Erde zeigt die vernetzte, von KI durchdrungene Welt (die Technik) — und zugleich ihre Ungleichheit. Was das für ein gemeinsames „Wir“ heisst, wenn zugleich alles fälschbar wird (die Verunsicherung), ist die offene Frage dieser Zeit.",
         tour: [
           {
             x: 50,
@@ -823,6 +853,8 @@ const STATIONS: Station[] = [
       },
       {
         src: "/art/erde_tag.jpg",
+        contextNote:
+          "Der „Blue Marble“ ist der Traum vom einen „Wir“ — herausgefordert durch eine Technik, die alles vernetzt und zugleich verunsichert (Deepfakes, Beschleunigung). Die philosophische Orientierung dazu entsteht gerade erst.",
         tour: [
           {
             x: 50,

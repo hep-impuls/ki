@@ -698,6 +698,29 @@ Betroffen: `ki26/.env.local` (neu, gitignored), [CLAUDE.md](../CLAUDE.md#firebas
 
 ---
 
+## 2026-07-05 — Viewer-Fix (Performance/Vollbild) + Kontext-Verknüpfung in Führungen
+
+**Problem (Christof):** Der Vollbild-Viewer wirkte «funktioniert nicht». Zwei
+Ursachen behoben:
+- **`backdrop-blur-sm` entfernt** → opakes Overlay (`bg-inverse-surface`). Der
+  Blur über die ganze Fläche mit grossem Bild dahinter ist teuer und liess den
+  Viewer auf manchen Geräten ruckeln/hängen (im Preview reproduzierbar: der
+  Screenshot-Renderer blieb hängen).
+- **Echtes Vollbild ergänzt:** Fullscreen-API-Toggle (⛶) im Viewer-Kopf —
+  `requestFullscreen`/`exitFullscreen` auf dem Dialog-Root, gestengesteuert,
+  mit try/catch-Fallback aufs In-Page-Overlay.
+
+**Kontext-Verknüpfung:** Jedes Bild hat neu eine `contextNote`; der Viewer
+hängt sie als Schluss-Stopp **«Im Kontext der Zeit»** an die Führung an (Gesamt-
+blick). Sie verknüpft das Bild textlich mit der **technischen Errungenschaft**
+und der **gesellschaftlichen Verunsicherung** der Epoche — so zeigen die
+Führungen nicht nur Bilddetails, sondern ordnen sie ein.
+
+Verifiziert im Preview (DOM): Viewer öffnet, Overlay opak, Vollbild-Button da,
+Führung Schule von Athen 6 → 7 Stopps, Marker auf Detail-Stopps sichtbar.
+
+---
+
 ## 2026-07-05 — Bild-Viewer mit Zoom + kuratierten Führungen (Arts-&-Culture-Stil)
 
 Die Epochen-Galerien öffnen neu in einem **zoombaren Vollbild-Viewer**
