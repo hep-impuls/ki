@@ -130,6 +130,29 @@ const STATIONS: Station[] = [
       },
       {
         src: "/art/aristoteles_rembrandt.jpg",
+        tour: [
+          {
+            x: 50,
+            y: 42,
+            zoom: 1,
+            title: "Rembrandt, 1653",
+            text: "Aristoteles in kostbarem Gewand, nachdenklich im Halbdunkel — Rembrandt malt nicht eine Tat, sondern das Denken selbst.",
+          },
+          {
+            x: 30,
+            y: 72,
+            zoom: 2.3,
+            title: "Die Hand auf Homers Büste",
+            text: "Aristoteles berührt den Kopf des blinden Dichters Homer: Ehrfurcht vor der Überlieferung, auf der das eigene Wissen aufbaut.",
+          },
+          {
+            x: 52,
+            y: 30,
+            zoom: 2.2,
+            title: "Der Blick nach innen",
+            text: "Die Augen gehen ins Leere — nicht auf die Welt gerichtet, sondern in Gedanken. So wird Nachdenken zum Bildthema.",
+          },
+        ],
         alt: "Gemälde „Aristoteles mit einer Büste Homers“ von Rembrandt",
         credit:
           "Rembrandt, „Aristoteles mit einer Büste Homers“, 1653 · gemeinfrei",
@@ -245,6 +268,29 @@ const STATIONS: Station[] = [
     gallery: [
       {
         src: "/art/augustine.jpg",
+        tour: [
+          {
+            x: 50,
+            y: 40,
+            zoom: 1,
+            title: "Champaigne, um 1645",
+            text: "Augustinus als Bischof, umgeben von Buch, brennendem Herz und einem Lichtstrahl von oben — ein Bild über die Quelle der Wahrheit.",
+          },
+          {
+            x: 60,
+            y: 52,
+            zoom: 2.4,
+            title: "Das brennende Herz",
+            text: "Das flammende Herz in seiner Hand: Sinnbild der von Gott entzündeten Liebe — die Wahrheit kommt für Augustinus von innen, nicht aus der Welt.",
+          },
+          {
+            x: 45,
+            y: 18,
+            zoom: 2.2,
+            title: "Der Strahl der Wahrheit",
+            text: "Sein Blick geht nach oben, dem Licht entgegen. Erkenntnis ist Einkehr und Zuwendung zu Gott, nicht äussere Beobachtung.",
+          },
+        ],
         alt: "Gemälde „Der heilige Augustinus“ von Philippe de Champaigne",
         credit:
           "Ph. de Champaigne, „Der heilige Augustinus“, um 1645 · gemeinfrei",
@@ -253,6 +299,29 @@ const STATIONS: Station[] = [
       },
       {
         src: "/art/mittelalter_stundenbuch.jpg",
+        tour: [
+          {
+            x: 50,
+            y: 50,
+            zoom: 1,
+            title: "Ein Kalenderblatt, um 1416",
+            text: "Der Oktober aus einem Stundenbuch der Brüder Limburg: Himmelszeichen oben, Burg in der Mitte, Feldarbeit unten — die Welt als geordneter Kreislauf.",
+          },
+          {
+            x: 50,
+            y: 40,
+            zoom: 2.1,
+            title: "Die Burg in der Mitte",
+            text: "Der mittelalterliche Louvre in Paris, prächtig und wehrhaft: das feste Zentrum von Herrschaft und Ordnung.",
+          },
+          {
+            x: 52,
+            y: 80,
+            zoom: 2.2,
+            title: "Sämann und Feldarbeit",
+            text: "Unten sät ein Bauer, ein Reiter eggt den Acker, Vögel picken die Körner. Das Leben folgt dem Takt der Jahreszeiten und des Glaubens.",
+          },
+        ],
         alt: "Buchmalerei „Oktober“ aus den Très Riches Heures des Duc de Berry",
         credit:
           "Brüder Limburg, „Très Riches Heures“ (Oktober), um 1416 · gemeinfrei",
@@ -261,6 +330,29 @@ const STATIONS: Station[] = [
       },
       {
         src: "/art/rom.jpg",
+        tour: [
+          {
+            x: 50,
+            y: 50,
+            zoom: 1,
+            title: "Sylvestre, 1890",
+            text: "Ein Historiengemälde der Plünderung Roms 410: Barbaren stürzen im brennenden Rom die Statue eines Kaisers.",
+          },
+          {
+            x: 52,
+            y: 26,
+            zoom: 2.2,
+            title: "Der Sturz des Kaisers",
+            text: "Ein Krieger klettert an der Statue hoch und holt zum Schlag aus — das Sinnbild der Macht wird buchstäblich vom Sockel gerissen.",
+          },
+          {
+            x: 50,
+            y: 84,
+            zoom: 2.2,
+            title: "Viele Hände am Seil",
+            text: "Unten zieht die Menge das Standbild nieder. Die alte Weltordnung fällt nicht von selbst — sie wird umgestürzt.",
+          },
+        ],
         alt: "Gemälde „Die Plünderung Roms durch die Barbaren im Jahr 410“ von Joseph-Noël Sylvestre",
         credit:
           "J.-N. Sylvestre, „Die Plünderung Roms durch die Barbaren“, 1890 · gemeinfrei",
@@ -318,6 +410,29 @@ const STATIONS: Station[] = [
     gallery: [
       {
         src: "/art/wanderer.jpg",
+        tour: [
+          {
+            x: 50,
+            y: 45,
+            zoom: 1,
+            title: "Friedrich, 1818",
+            text: "Ein Mann steht allein auf einem Felsgipfel vor einem Meer aus Nebel — eines der berühmtesten Bilder der Romantik.",
+          },
+          {
+            x: 50,
+            y: 38,
+            zoom: 2.2,
+            title: "Der Blick über die Schulter",
+            text: "Wir sehen ihn von hinten — er blickt stellvertretend für uns. Der Einzelne stellt sich der Welt und deutet sie selbst.",
+          },
+          {
+            x: 50,
+            y: 66,
+            zoom: 2,
+            title: "Das Nebelmeer",
+            text: "Der Nebel verbirgt mehr, als er zeigt: die Welt als offene, ungewisse Aufgabe — das Lebensgefühl der beginnenden Moderne.",
+          },
+        ],
         alt: "Gemälde „Der Wanderer über dem Nebelmeer“ von Caspar David Friedrich",
         credit:
           "C. D. Friedrich, „Der Wanderer über dem Nebelmeer“, 1818 · gemeinfrei",
@@ -326,6 +441,29 @@ const STATIONS: Station[] = [
       },
       {
         src: "/art/orrery.jpg",
+        tour: [
+          {
+            x: 50,
+            y: 50,
+            zoom: 1,
+            title: "Wright of Derby, um 1766",
+            text: "Eine Runde versammelt sich im Dunkeln um ein Orrery — ein mechanisches Modell des Sonnensystems.",
+          },
+          {
+            x: 50,
+            y: 52,
+            zoom: 2.2,
+            title: "Eine Lampe als Sonne",
+            text: "In der Mitte ersetzt eine Lampe die Sonne; ihr Licht fällt auf die Gesichter. Die Wissenschaft rückt an die Stelle, wo einst das Heilige stand.",
+          },
+          {
+            x: 36,
+            y: 44,
+            zoom: 2.2,
+            title: "Staunende Kinder",
+            text: "Die vom Licht erfassten Kinder machen das Lernen zum Erlebnis: Aufklärung als Staunen über eine erklärbare Welt.",
+          },
+        ],
         alt: "Gemälde „A Philosopher Lecturing on the Orrery“ von Joseph Wright of Derby",
         credit:
           "J. Wright of Derby, „A Philosopher … on the Orrery“, um 1766 · gemeinfrei",
@@ -334,6 +472,29 @@ const STATIONS: Station[] = [
       },
       {
         src: "/art/lissabon.jpg",
+        tour: [
+          {
+            x: 50,
+            y: 50,
+            zoom: 1,
+            title: "Kupferstich, 1755",
+            text: "Ein zeitgenössisches Blatt zeigt Lissabon zugleich von Erdbeben, Feuer und Flutwelle getroffen — die dreifache Katastrophe.",
+          },
+          {
+            x: 50,
+            y: 28,
+            zoom: 2.2,
+            title: "Die brennende Stadt",
+            text: "An Allerheiligen stürzen die vollen Kirchen ein und Brände breiten sich aus — Zehntausende sterben.",
+          },
+          {
+            x: 50,
+            y: 66,
+            zoom: 2.2,
+            title: "Die Flutwelle im Hafen",
+            text: "Im Hafen kentern die Schiffe in der Welle, Menschen fliehen in Booten. Die Frage nach einem gütigen Weltplan bricht offen auf.",
+          },
+        ],
         alt: "Kupferstich der Zerstörung Lissabons durch Erdbeben, Feuer und Flutwelle 1755",
         credit: "Kupferstich „Destruction de Lisbonne“, 1755 · gemeinfrei",
         caption:
@@ -455,6 +616,29 @@ const STATIONS: Station[] = [
       },
       {
         src: "/art/coalbrookdale.jpg",
+        tour: [
+          {
+            x: 50,
+            y: 50,
+            zoom: 1,
+            title: "Loutherbourg, 1801",
+            text: "Das Eisenwerk Coalbrookdale bei Nacht — eine der Wiegen der Industrialisierung, gemalt als düsteres Schauspiel.",
+          },
+          {
+            x: 52,
+            y: 56,
+            zoom: 2.2,
+            title: "Die künstliche Sonne",
+            text: "Der Feuerschein der Hochöfen färbt den Nachthimmel orange — schön und unheimlich zugleich: das Erhabene der Industrie.",
+          },
+          {
+            x: 40,
+            y: 82,
+            zoom: 2.2,
+            title: "Last im Schlamm",
+            text: "Vorne schleppen Pferde gegossene Zylinder durch den Morast — die harte, schmutzige Kehrseite des Fortschritts.",
+          },
+        ],
         alt: "Gemälde „Coalbrookdale bei Nacht“ von Philippe-Jacques de Loutherbourg",
         credit:
           "P.-J. de Loutherbourg, „Coalbrookdale bei Nacht“, 1801 · gemeinfrei",
@@ -463,6 +647,29 @@ const STATIONS: Station[] = [
       },
       {
         src: "/art/london.jpg",
+        tour: [
+          {
+            x: 50,
+            y: 50,
+            zoom: 1,
+            title: "Doré, 1872",
+            text: "Blick über die Hinterhöfe des industriellen London, gerahmt von einem Eisenbahnviadukt — aus dem Bildband „London: A Pilgrimage“.",
+          },
+          {
+            x: 38,
+            y: 52,
+            zoom: 2.2,
+            title: "Enge Hinterhöfe",
+            text: "Reihe an Reihe dicht gedrängte Häuser, Wäscheleinen, kaum Licht: die Wohnwirklichkeit der Arbeiterfamilien.",
+          },
+          {
+            x: 72,
+            y: 22,
+            zoom: 2.2,
+            title: "Der Zug darüber",
+            text: "Oben zieht die Eisenbahn vorbei — der Fortschritt fährt buchstäblich über die Köpfe der Ärmsten hinweg.",
+          },
+        ],
         alt: "Stich „Over London – by Rail“ von Gustave Doré",
         credit: "G. Doré, „Over London – by Rail“, 1872 · gemeinfrei",
         caption:
@@ -586,6 +793,29 @@ const STATIONS: Station[] = [
       },
       {
         src: "/art/erde_nacht.jpg",
+        tour: [
+          {
+            x: 50,
+            y: 50,
+            zoom: 1,
+            title: "Die Erde bei Nacht (NASA, 2012)",
+            text: "Ein Satellitenkomposit der nächtlichen Erde: Jedes Lichtpünktchen ist menschliche Besiedlung und Energie.",
+          },
+          {
+            x: 50,
+            y: 34,
+            zoom: 2.2,
+            title: "Lichtbänder des Netzes",
+            text: "Europa, Indien, Ostasien, die US-Küsten glühen: Wo Strom fliesst, ist das Netz — die elektrifizierte, verbundene Welt.",
+          },
+          {
+            x: 55,
+            y: 60,
+            zoom: 2.2,
+            title: "Die dunklen Flächen",
+            text: "Weite Gebiete bleiben dunkel: Die Vernetzung ist ungleich verteilt — auch das gehört zum „Wir“ von heute.",
+          },
+        ],
         alt: "Satellitenbild der Erde bei Nacht mit den Lichtern der Städte",
         credit: "NASA/NOAA, „Earth at Night“, 2012 · gemeinfrei (US-Gov)",
         caption:
@@ -593,6 +823,29 @@ const STATIONS: Station[] = [
       },
       {
         src: "/art/erde_tag.jpg",
+        tour: [
+          {
+            x: 50,
+            y: 50,
+            zoom: 1,
+            title: "„Blue Marble“ (NASA, 1972)",
+            text: "Von der Apollo-17-Crew aufgenommen: die Erde als ganze Kugel, zum ersten Mal so von Menschen fotografiert.",
+          },
+          {
+            x: 50,
+            y: 50,
+            zoom: 1.7,
+            title: "Ein Planet, keine Grenzen",
+            text: "Von hier oben keine Nationen, keine Linien — ein einziger Planet. Das Bild wurde zur Ikone der Umwelt- und Menschheitsbewegung.",
+          },
+          {
+            x: 50,
+            y: 44,
+            zoom: 2,
+            title: "Wolken, Meere, Kontinente",
+            text: "Alles in einem Blick: Bezugspunkt für die Idee eines gemeinsamen, globalen „Wir“.",
+          },
+        ],
         alt: "Foto der Erde aus dem All („Blue Marble“, Apollo 17)",
         credit: "NASA, „Blue Marble“ (Apollo 17), 1972 · gemeinfrei (US-Gov)",
         caption:
