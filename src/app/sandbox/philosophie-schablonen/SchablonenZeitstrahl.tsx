@@ -18,9 +18,9 @@ import BildZoom, { type TourStop } from "./BildZoom";
  * Die drei sind aufeinander bezogen, stehen aber auch je für sich — kein
  * erzwungener Kausal-Zusammenhang.
  *
- * Quellen: alle URLs wurden am 2026-07-05 auf HTTP 200 / öffentliche
- * Zugänglichkeit geprüft (SEP, IEP, Wikipedia, Wikisource, arXiv, CERN, RMG,
- * Britannica, New Advent, marxists.org).
+ * Quellen: durchgehend deutschsprachig. Alle URLs wurden am 2026-07-07 auf
+ * Existenz / HTTP 200 geprüft (de.wikipedia.org via MediaWiki-API,
+ * de.wikisource.org, marxists.org/deutsch).
  *
  * Bilder: lokal unter /public/art (Nachweis in public/art/CREDITS.md).
  *
@@ -230,12 +230,12 @@ const STATIONS: Station[] = [
     ],
     techSources: [
       {
-        label: "Antikythera-Mechanismus (Wikipedia)",
-        url: "https://en.wikipedia.org/wiki/Antikythera_mechanism",
+        label: "Mechanismus von Antikythera (Wikipedia)",
+        url: "https://de.wikipedia.org/wiki/Mechanismus_von_Antikythera",
       },
       {
-        label: "Book of Optics (Wikipedia)",
-        url: "https://en.wikipedia.org/wiki/Book_of_Optics",
+        label: "Alhazen / Buch der Optik (Wikipedia)",
+        url: "https://de.wikipedia.org/wiki/Alhazen",
       },
     ],
     unrestLead: "Der Logos entzaubert den Mythos.",
@@ -243,12 +243,12 @@ const STATIONS: Station[] = [
       "Im Athen des 5. Jahrhunderts v. Chr. verliert der Mythos seine bindende Kraft. Wandernde Lehrer — die Sophisten — bringen gegen Bezahlung bei, wie man jede Position überzeugend vertritt; Wahrheit droht zur Sache der Rhetorik zu werden. Als Sokrates die Bürger mit hartnäckigem Fragen bloßstellt, verurteilt ihn die Stadt 399 v. Chr. wegen „Gottlosigkeit“ und „Verderb der Jugend“ zum Tod. Das Denken selbst wird als Bedrohung erlebt.",
     unrestSources: [
       {
-        label: "Die Sophisten (Stanford Encyclopedia)",
-        url: "https://plato.stanford.edu/entries/sophists/",
+        label: "Sophisten (Wikipedia)",
+        url: "https://de.wikipedia.org/wiki/Sophisten",
       },
       {
-        label: "Sokrates (Stanford Encyclopedia)",
-        url: "https://plato.stanford.edu/entries/socrates/",
+        label: "Sokrates (Wikipedia)",
+        url: "https://de.wikipedia.org/wiki/Sokrates",
       },
     ],
     thinker: "Aristoteles",
@@ -258,12 +258,12 @@ const STATIONS: Station[] = [
       "Aristoteles (384–322 v. Chr.) antwortet mit einer beispiellosen Ordnungsleistung: Er gliedert die Wissenschaften (Logik, Physik, Biologie, Ethik, Politik, Metaphysik), entwickelt mit der Logik ein Werkzeug des gültigen Schließens und gründet Wissen auf Beobachtung und Ursachenanalyse. Nicht fertige Wahrheiten, sondern eine Methode: beobachten, ordnen, begründen — die Schablone, auf der die europäische Wissenschaft aufbaut.",
     orientSources: [
       {
-        label: "Aristoteles (Stanford Encyclopedia)",
-        url: "https://plato.stanford.edu/entries/aristotle/",
+        label: "Aristoteles (Wikipedia)",
+        url: "https://de.wikipedia.org/wiki/Aristoteles",
       },
       {
-        label: "Aristotle (Internet Encyclopedia of Philosophy)",
-        url: "https://iep.utm.edu/aristotle/",
+        label: "Metaphysik des Aristoteles (Wikipedia)",
+        url: "https://de.wikipedia.org/wiki/Metaphysik_(Aristoteles)",
       },
     ],
   },
@@ -386,8 +386,12 @@ const STATIONS: Station[] = [
     ],
     techSources: [
       {
-        label: "Geschichte der Zeitmessung (Wikipedia)",
-        url: "https://en.wikipedia.org/wiki/History_of_timekeeping_devices",
+        label: "Räderuhr (Wikipedia)",
+        url: "https://de.wikipedia.org/wiki/R%C3%A4deruhr",
+      },
+      {
+        label: "Turmuhr (Wikipedia)",
+        url: "https://de.wikipedia.org/wiki/Turmuhr",
       },
     ],
     unrestLead: "Rom fällt — wem gehört die Zukunft?",
@@ -395,8 +399,8 @@ const STATIONS: Station[] = [
       "Am 24. August 410 plündern Alarichs Westgoten Rom — zum ersten Mal seit rund 800 Jahren fällt die Stadt an einen äußeren Feind. Der Schock hallt durch das ganze Reich: Für viele bricht mit Rom die Weltordnung selbst zusammen. Heiden machen den neuen christlichen Glauben verantwortlich — man habe die alten Götter verlassen; Christen ringen mit der Frage, warum Gott seine Stadt nicht geschützt habe.",
     unrestSources: [
       {
-        label: "Plünderung Roms 410 (Wikipedia)",
-        url: "https://en.wikipedia.org/wiki/Sack_of_Rome_(410)",
+        label: "Plünderung Roms (410) (Wikipedia)",
+        url: "https://de.wikipedia.org/wiki/Pl%C3%BCnderung_Roms_(410)",
       },
     ],
     thinker: "Augustinus",
@@ -406,12 +410,12 @@ const STATIONS: Station[] = [
       "Augustinus (354–430) antwortet mit „De civitate Dei“ (Vom Gottesstaat, 413–426): Er unterscheidet den vergänglichen „Staat der Menschen“ vom „Staat Gottes“. Nicht das irdische Reich trägt, sondern der Glaube und das Innere des Menschen — „im inneren Menschen wohnt die Wahrheit“. Diese Schablone wendet den Blick von der äußeren Ordnung nach innen (Gewissen, Heilsgeschichte) und gibt einem ganzen Zeitalter Halt.",
     orientSources: [
       {
-        label: "Augustinus (Stanford Encyclopedia)",
-        url: "https://plato.stanford.edu/entries/augustine/",
+        label: "Augustinus von Hippo (Wikipedia)",
+        url: "https://de.wikipedia.org/wiki/Augustinus_von_Hippo",
       },
       {
-        label: "De civitate Dei / City of God (New Advent)",
-        url: "https://www.newadvent.org/fathers/1201.htm",
+        label: "Vom Gottesstaat / De civitate Dei (Wikipedia)",
+        url: "https://de.wikipedia.org/wiki/De_civitate_Dei",
       },
     ],
   },
@@ -545,16 +549,16 @@ const STATIONS: Station[] = [
     ],
     techSources: [
       {
-        label: "Druckpresse (Wikipedia)",
-        url: "https://en.wikipedia.org/wiki/Printing_press",
+        label: "Buchdruck (Wikipedia)",
+        url: "https://de.wikipedia.org/wiki/Buchdruck",
       },
       {
         label: "Kopernikanische Wende (Wikipedia)",
-        url: "https://en.wikipedia.org/wiki/Copernican_Revolution",
+        url: "https://de.wikipedia.org/wiki/Kopernikanische_Wende",
       },
       {
-        label: "Harrison & das Längengrad-Problem (Royal Museums Greenwich)",
-        url: "https://www.rmg.co.uk/stories/topics/harrisons-clocks-longitude-problem",
+        label: "Das Längenproblem (Wikipedia)",
+        url: "https://de.wikipedia.org/wiki/L%C3%A4ngenproblem",
       },
     ],
     unrestLead: "Glaubensspaltung, Kopernikus, Lissabon.",
@@ -563,7 +567,7 @@ const STATIONS: Station[] = [
     unrestSources: [
       {
         label: "Erdbeben von Lissabon 1755 (Wikipedia)",
-        url: "https://en.wikipedia.org/wiki/1755_Lisbon_earthquake",
+        url: "https://de.wikipedia.org/wiki/Erdbeben_von_Lissabon_1755",
       },
     ],
     thinker: "Kant",
@@ -574,8 +578,8 @@ const STATIONS: Station[] = [
       "Kant (1724–1804) bündelt die Antwort der Aufklärung in einer Formel: „Aufklärung ist der Ausgang des Menschen aus seiner selbstverschuldeten Unmündigkeit“ (Beantwortung der Frage: Was ist Aufklärung?, 1784). Wenn weder Kirche noch überlieferte Autorität sicheren Halt geben, muss der Mensch selbst denken, urteilen — und Verantwortung tragen. Kants Schablone ist das autonome, mündige Individuum, das der Moderne ihr Selbstbild gibt.",
     orientSources: [
       {
-        label: "Immanuel Kant (Stanford Encyclopedia)",
-        url: "https://plato.stanford.edu/entries/kant/",
+        label: "Immanuel Kant (Wikipedia)",
+        url: "https://de.wikipedia.org/wiki/Immanuel_Kant",
       },
       {
         label: "„Was ist Aufklärung?“ — Volltext (Wikisource)",
@@ -726,12 +730,12 @@ const STATIONS: Station[] = [
     ],
     techSources: [
       {
-        label: "Watt-Dampfmaschine (Britannica)",
-        url: "https://www.britannica.com/technology/steam-engine",
+        label: "Dampfmaschine (Wikipedia)",
+        url: "https://de.wikipedia.org/wiki/Dampfmaschine",
       },
       {
         label: "Transatlantisches Telegrafenkabel (Wikipedia)",
-        url: "https://en.wikipedia.org/wiki/Transatlantic_telegraph_cable",
+        url: "https://de.wikipedia.org/wiki/Transatlantisches_Telegrafenkabel",
       },
     ],
     unrestLead: "Fabrik, Elend, Revolution 1848.",
@@ -739,8 +743,8 @@ const STATIONS: Station[] = [
       "Die Industrialisierung reisst die alte Gesellschaft auseinander: Millionen ziehen vom Land in die Städte, arbeiten 14 Stunden am Tag, Kinder in Fabriken und Bergwerken; Elendsquartiere wachsen im Schatten der Viadukte. Ständische Sicherheiten sowie Dorf- und Familienordnungen lösen sich auf. 1848 entlädt sich die Spannung in einer Welle von Revolutionen quer durch Europa.",
     unrestSources: [
       {
-        label: "Revolutionen von 1848 (Wikipedia)",
-        url: "https://en.wikipedia.org/wiki/Revolutions_of_1848",
+        label: "Revolutionen 1848/1849 (Wikipedia)",
+        url: "https://de.wikipedia.org/wiki/Revolutionen_1848/1849",
       },
     ],
     thinker: "Marx",
@@ -750,12 +754,12 @@ const STATIONS: Station[] = [
       "Marx (1818–1883) begreift den Umbruch, während er geschieht: Im „Manifest der Kommunistischen Partei“ (1848, mit Friedrich Engels) beschreibt er, wie der Kapitalismus „alles Ständische und Stehende verdampfen“ lässt — und zieht daraus den Schluss, dass gesellschaftliche Verhältnisse nicht Natur oder Schicksal sind, sondern gemacht und darum veränderbar. Weltweite Wirkung entfaltet diese Antwort erst Jahrzehnte später.",
     orientSources: [
       {
-        label: "Karl Marx (Stanford Encyclopedia)",
-        url: "https://plato.stanford.edu/entries/marx/",
+        label: "Karl Marx (Wikipedia)",
+        url: "https://de.wikipedia.org/wiki/Karl_Marx",
       },
       {
-        label: "Manifest der Kommunistischen Partei — Volltext (marxists.org)",
-        url: "https://www.marxists.org/archive/marx/works/1848/communist-manifesto/",
+        label: "Manifest der Kommunistischen Partei — Volltext, deutsch (marxists.org)",
+        url: "https://www.marxists.org/deutsch/archiv/marx-engels/1848/manifest/index.htm",
       },
     ],
   },
@@ -908,12 +912,12 @@ const STATIONS: Station[] = [
     ],
     techSources: [
       {
-        label: "„Attention Is All You Need“ — Transformer-Paper (arXiv)",
-        url: "https://arxiv.org/abs/1706.03762",
+        label: "Transformer (Maschinelles Lernen) (Wikipedia)",
+        url: "https://de.wikipedia.org/wiki/Transformer_(Maschinelles_Lernen)",
       },
       {
-        label: "Die Geburt des Web (CERN)",
-        url: "https://www.home.cern/science/computing/birth-web",
+        label: "Geschichte des Internets (Wikipedia)",
+        url: "https://de.wikipedia.org/wiki/Geschichte_des_Internets",
       },
     ],
     unrestLead: "Was ist noch echt? Das „Wir“ zerfällt.",
@@ -922,7 +926,7 @@ const STATIONS: Station[] = [
     unrestSources: [
       {
         label: "Deepfake (Wikipedia)",
-        url: "https://en.wikipedia.org/wiki/Deepfake",
+        url: "https://de.wikipedia.org/wiki/Deepfake",
       },
     ],
     thinker: "Wir — jetzt",
@@ -931,12 +935,20 @@ const STATIONS: Station[] = [
       "Für unsere Zeit entsteht die Antwort gerade erst. Die Philosophie sieht nicht voraus — sie denkt im Blick auf das, was geschieht: Wie sollen wir mit einem nicht-menschlichen Akteur wie der KI umgehen (Bruno Latour), wie leben wir mit dem Technischen verflochten (Donna Haraway, „A Cyborg Manifesto“), woran halten wir moralisch fest (Markus Gabriel)? Die Schablone ist noch offen — genau daran arbeitet dieses Submodul.",
     orientSources: [
       {
-        label: "Philosophie der Technik (Stanford Encyclopedia)",
-        url: "https://plato.stanford.edu/entries/technology/",
+        label: "Akteur-Netzwerk-Theorie — Latour (Wikipedia)",
+        url: "https://de.wikipedia.org/wiki/Akteur-Netzwerk-Theorie",
       },
       {
-        label: "A Cyborg Manifesto (Wikipedia)",
-        url: "https://en.wikipedia.org/wiki/A_Cyborg_Manifesto",
+        label: "Donna Haraway — Manifest für Cyborgs (Wikipedia)",
+        url: "https://de.wikipedia.org/wiki/Donna_Haraway",
+      },
+      {
+        label: "Markus Gabriel (Wikipedia)",
+        url: "https://de.wikipedia.org/wiki/Markus_Gabriel",
+      },
+      {
+        label: "Technikphilosophie (Wikipedia)",
+        url: "https://de.wikipedia.org/wiki/Technikphilosophie",
       },
     ],
     open: true,

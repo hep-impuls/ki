@@ -10,6 +10,26 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-07 — Quellenlinks durchgehend deutschsprachig
+
+Im Submodul „Philosophische Perspektive" (Schablonen-Zeitstrahl) führten die
+Belege der drei Bausteine (Technische Errungenschaft / Verunsicherung /
+Philosophische Orientierungshilfe) mehrheitlich auf **englische** Seiten (Stanford
+Encyclopedia of Philosophy, IEP, en.wikipedia, Britannica, arXiv, CERN, New
+Advent). Für eine deutschsprachige Lernumgebung wurde alles auf **deutsche**
+Entsprechungen umgestellt: de.wikipedia.org (Existenz je Artikel via
+MediaWiki-API geprüft), de.wikisource.org (Kant, „Was ist Aufklärung?") und das
+**deutsche Original** des Kommunistischen Manifests auf marxists.org/deutsch.
+Statt der englischsprachigen SEP-Artikel zu Technikphilosophie/Cyborg-Manifest
+verweisen die Gegenwarts-Belege jetzt direkt auf die im Text genannten Denker:
+Akteur-Netzwerk-Theorie (Latour), Donna Haraway, Markus Gabriel. Alle 29 URLs
+am 2026-07-07 live auf HTTP 200 geprüft.
+
+Betrifft: `src/app/sandbox/philosophie-schablonen/SchablonenZeitstrahl.tsx`
+(`techSources`/`unrestSources`/`orientSources` aller fünf Epochen + Header-Notiz).
+
+---
+
 ## 2026-06-27 — FIREBASE_SERVICE_ACCOUNT muss einzeilig sein
 
 Next.js parst `.env.local` zeilenweise. Ein mehrzeiliger Service-Account-JSON-Wert
