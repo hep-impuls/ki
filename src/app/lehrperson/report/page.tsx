@@ -3,68 +3,123 @@
 import { Suspense, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { loadTeacherReportSecure } from "@/lib/api";
+import { describePoll } from "@/lib/pollLabels";
 import type { PollAggregate, TeacherReport } from "@/lib/types";
 
 /**
  * Lehrer-Report (Vorbild: 10mio `teacher.astro`-Report + `klassenreport`).
  *
  * Einzel-Schueler-Tabelle (Code, Fortschritt je Modul, Quiz-Punkte) plus
- * Poll-Aggregate Klasse vs. alle (zwei Balken pro Option). Code + Secret aus
- * Query-Params; der Server verifiziert das Secret und liefert die Codes nur bei
- * Erfolg.
+ * Poll-Aggregate Klasse vs. alle. Statt technischer Poll-IDs zeigt der Report
+ * die echte Frage + den Ort in der Einheit (via `describePoll`). Code + Secret
+ * aus Query-Params; der Server verifiziert das Secret und liefert die Codes nur
+ * bei Erfolg.
  */
 
 function pct(n: number): string {
   return `${Math.round(n)}%`;
 }
 
-function PollCard({ agg }: { agg: PollAggregate }) {
-  const options = useMemo(() => {
-    const keys = new Set([...Object.keys(agg.klasse), ...Object.keys(agg.alle)]);
-    return Array.from(keys).sort();
-  }, [agg]);
+const sumCounts = (rec: Record<string, number>) =>
+  Object.values(rec).reduce((a, b) => a + (Number(b) || 0), 0);
 
-  const sum = (rec: Record<string, number>) =>
-    Object.values(rec).reduce((a, b) => a + (Number(b) || 0), 0);
-  const klasseTotal = sum(agg.klasse);
-  const alleTotal = sum(agg.alle);
+/** Bucket-Reihenfolge: s0..sN numerisch, dann bekannte Pole, sonst alphabetisch. */
+function sortBuckets(keys: string[]): string[] {
+  const rank = (k: string): [number, number, string] => {
+    const m = /^s(\d+)$/.exec(k);
+    if (m) return [0, Number(m[1]), ""];
+    const fixed: Record<string, number> = {
+      richtig: 1, falsch: 2, links: 1, rechts: 2, ja: 1, teils: 2, nein: 3,
+    };
+    if (fixed[k] != null) return [1, fixed[k], ""];
+    return [2, 0, k];
+  };
+  return [...keys].sort((a, b) => {
+    const ra = rank(a);
+    const rb = rank(b);
+    return ra[0] - rb[0] || ra[1] - rb[1] || ra[2].localeCompare(rb[2]);
+  });
+}
+
+/** Gewichteter Mittelwert eines Slider-Aggregats (Bucket "sN" → N). */
+function sliderAverage(rec: Record<string, number>): { avg: number; n: number } {
+  let sum = 0;
+  let n = 0;
+  for (const [k, c] of Object.entries(rec)) {
+    const m = /^s(\d+)$/.exec(k);
+    if (!m) continue;
+    sum += Number(m[1]) * (Number(c) || 0);
+    n += Number(c) || 0;
+  }
+  return { avg: n ? Math.round(sum / n) : 0, n };
+}
+
+function Bar({ label, value, count, tone }: {
+  label: string; value: number; count: number; tone: "primary" | "tertiary";
+}) {
+  return (
+    <div className="flex items-center gap-sm">
+      <div className="h-3 flex-grow overflow-hidden rounded-full bg-surface-dim">
+        <div
+          className={tone === "primary" ? "h-full bg-primary" : "h-full bg-tertiary"}
+          style={{ width: `${value}%` }}
+        />
+      </div>
+      <span className="w-28 shrink-0 text-label-sm text-on-surface-variant">
+        {label} {pct(value)} ({count})
+      </span>
+    </div>
+  );
+}
+
+function PollCard({ agg }: { agg: PollAggregate }) {
+  const meta = useMemo(() => describePoll(agg.pollId), [agg.pollId]);
+  const klasseTotal = sumCounts(agg.klasse);
+  const alleTotal = sumCounts(agg.alle);
+
+  const options = useMemo(
+    () => sortBuckets([...new Set([...Object.keys(agg.klasse), ...Object.keys(agg.alle)])]),
+    [agg],
+  );
 
   return (
     <div className="rounded-xl border border-outline-variant bg-surface-bright p-lg shadow-sm">
-      <h3 className="text-label-md text-on-surface-variant">{agg.pollId}</h3>
-      <div className="mt-md space-y-md">
-        {options.map((opt) => {
-          const k = agg.klasse[opt] ?? 0;
-          const a = agg.alle[opt] ?? 0;
-          const kPct = klasseTotal ? (k / klasseTotal) * 100 : 0;
-          const aPct = alleTotal ? (a / alleTotal) * 100 : 0;
+      <p className="text-label-sm uppercase tracking-wider text-tertiary">{meta.kontext}</p>
+      <h3 className="mt-xs text-body-md font-medium text-on-surface">{meta.frage}</h3>
+
+      {meta.format === "slider" ? (
+        (() => {
+          const k = sliderAverage(agg.klasse);
+          const a = sliderAverage(agg.alle);
           return (
-            <div key={opt}>
-              <div className="flex justify-between text-label-sm text-on-surface-variant">
-                <span>{opt}</span>
-              </div>
-              <div className="mt-xs space-y-xs">
-                <div className="flex items-center gap-sm">
-                  <div className="h-3 flex-grow overflow-hidden rounded-full bg-surface-dim">
-                    <div className="h-full bg-primary" style={{ width: `${kPct}%` }} />
-                  </div>
-                  <span className="w-24 shrink-0 text-label-sm text-on-surface-variant">
-                    Klasse {pct(kPct)} ({k})
-                  </span>
-                </div>
-                <div className="flex items-center gap-sm">
-                  <div className="h-3 flex-grow overflow-hidden rounded-full bg-surface-dim">
-                    <div className="h-full bg-tertiary" style={{ width: `${aPct}%` }} />
-                  </div>
-                  <span className="w-24 shrink-0 text-label-sm text-on-surface-variant">
-                    alle {pct(aPct)} ({a})
-                  </span>
-                </div>
-              </div>
+            <div className="mt-md space-y-xs">
+              <Bar label="Klasse Ø" value={k.avg} count={k.n} tone="primary" />
+              <Bar label="alle Ø" value={a.avg} count={a.n} tone="tertiary" />
+              <p className="pt-xs text-label-sm text-on-surface-variant">
+                {meta.optionLabel("s0").replace(/^0\/100 \(|\)$/g, "")} · Skala 0–100
+              </p>
             </div>
           );
-        })}
-      </div>
+        })()
+      ) : (
+        <div className="mt-md space-y-md">
+          {options.map((opt) => {
+            const k = agg.klasse[opt] ?? 0;
+            const a = agg.alle[opt] ?? 0;
+            const kPct = klasseTotal ? (k / klasseTotal) * 100 : 0;
+            const aPct = alleTotal ? (a / alleTotal) * 100 : 0;
+            return (
+              <div key={opt}>
+                <div className="text-label-sm text-on-surface">{meta.optionLabel(opt)}</div>
+                <div className="mt-xs space-y-xs">
+                  <Bar label="Klasse" value={kPct} count={k} tone="primary" />
+                  <Bar label="alle" value={aPct} count={a} tone="tertiary" />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }
@@ -95,6 +150,13 @@ function ReportFlow() {
     const set = new Set<string>();
     for (const s of report.students) for (const m of Object.keys(s.modulePct)) set.add(m);
     return Array.from(set).sort();
+  }, [report]);
+
+  const polls = useMemo(() => {
+    if (!report) return [];
+    return [...report.polls].sort((a, b) =>
+      describePoll(a.pollId).sortKey.localeCompare(describePoll(b.pollId).sortKey),
+    );
   }, [report]);
 
   return (
@@ -160,13 +222,16 @@ function ReportFlow() {
             )}
           </section>
 
-          {report.polls.length > 0 && (
+          {polls.length > 0 && (
             <section className="mt-xl">
               <h2 className="text-headline-sm text-on-surface">
                 Abstimmungen — Klasse vs. alle
               </h2>
+              <p className="mt-xs text-body-sm text-on-surface-variant">
+                Blau = deine Klasse · Orange = alle Klassen zusammen.
+              </p>
               <div className="mt-md grid gap-md sm:grid-cols-2">
-                {report.polls.map((agg) => (
+                {polls.map((agg) => (
                   <PollCard key={agg.pollId} agg={agg} />
                 ))}
               </div>
