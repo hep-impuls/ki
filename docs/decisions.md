@@ -10,6 +10,36 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-11 — Vorhang-Opener: Ratespiel «Woher stammt das?» (3 Herkünfte, verräterfrei)
+
+Der Zitat-Opener von «Vorhang auf» ist von «aufdecken» zu einem echten
+**Ratespiel** geworden (`ZitatReveal.tsx`): 10 Aussagen über Maschinen,
+Denken und Arbeit — Hoffnung *und* Furcht. Pro Karte rät man die Herkunft
+aus drei Kategorien:
+- **Heute über KI** (2023): Hinton (NYT), «Pause Giant AI Experiments» ×2.
+- **Früher, andere Technik**: Leibniz «Calculemus» (~1685) + Leibniz über
+  seine Rechenmaschine (1685) — die Wurzel des Algorithmus, auf Wunsch
+  Christof ergänzt; Keynes «technologische Arbeitslosigkeit» (1930); Tesla
+  «riesiges Gehirn» (Collier's 1926).
+- **Aus der Literatur**: Swift/Lagado-Schreibmaschine (1726), Butler
+  «Erewhon» (1872), Čapek «R.U.R.» (1920).
+
+**Kernprinzip (Feedback Christof):** die Fragmente sind bewusst
+**verräterfrei** — kein Techname, kein Jahr, kein Eigenname, neutraler Stil —
+damit man wirklich raten muss. Genau das ist die Pointe: Euphorie wie Angst
+klingen quer durch 300 Jahre gleich. Auflösung je Karte mit Jahr, Urheber,
+Technik, Einordnung und Quelle; Punktezähler «x von y richtig». Alle
+Wortlaute am 2026-07-11 an öffentlichen Quellen verifiziert (futureoflife,
+Wikiquote, MacTutor, marxists.org, gutenberg.org, technologyreview),
+Nicht-Deutsche als «übersetzt» markiert.
+
+Ersetzt den früheren «Alt — oder von heute?»-Aufdecker. Orakel-Spur bleibt
+`vorhang-auf:zitat:i` (Total im Dashboard 5→10). Das Elisabeth-I.-Zitat
+(Strumpfwirkstuhl) wurde **verworfen** — laut Historikern eine Erfindung
+des 19. Jh.
+
+---
+
 ## 2026-07-11 — «Vorhang auf» neu dramatisiert: Zitate-Rätsel + KI-Storyboard, Akteurs-Modell entfernt
 
 Neue Dramaturgie des Auftakts (Wunsch Christof):

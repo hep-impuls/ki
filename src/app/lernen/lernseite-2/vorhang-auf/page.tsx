@@ -144,12 +144,15 @@ export default function Lernseite2VorhangAuf() {
         ]}
       />
 
-      {/* 1 — Zitate-Rätsel: alte Stimmen, die nach heute klingen */}
-      <section className="mt-xl max-w-3xl" aria-label="Alt oder von heute?">
-        <h2 className="text-headline-md text-on-surface">Alt — oder von heute?</h2>
+      {/* 1 — Ratespiel: Woher stammt das? */}
+      <section className="mt-xl max-w-3xl" aria-label="Woher stammt das?">
+        <h2 className="text-headline-md text-on-surface">Woher stammt das?</h2>
         <p className="mt-sm text-body-md text-on-surface-variant">
-          Fünf Stimmen über künstliche Wesen. Sie könnten aus dem heutigen
-          KI-Diskurs stammen — decke auf, von wann sie wirklich sind.
+          Zehn Aussagen über Maschinen, Denken und Arbeit — Hoffnung wie Furcht.
+          Rate bei jeder: Ist das <strong>heute über KI</strong> gesagt, stammt es
+          von <strong>früher über eine andere Technik</strong>, oder{" "}
+          <strong>aus der Literatur</strong>? Achtung — sie klingen alle
+          verblüffend aktuell.
         </p>
         <ZitatReveal className="mt-lg" />
       </section>

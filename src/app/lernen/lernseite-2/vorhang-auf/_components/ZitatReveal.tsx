@@ -4,134 +4,244 @@ import { useState } from "react";
 import { merkeSpur } from "../../_lib/spuren";
 
 /**
- * ZitatReveal — der Opener von «Vorhang auf»: fünf Stimmen über künstliche
- * Wesen, die klingen, als stammten sie aus dem KI-Zeitalter. Erst das
- * Aufdecken zeigt: Alle sind zwischen 1816 und 1920 entstanden.
+ * ZitatReveal — der Opener von «Vorhang auf»: ein Ratespiel «Woher stammt
+ * das?». Zehn Aussagen über Maschinen, Denken und Automatisierung, alle auf
+ * verräterfreie Fragmente gekürzt (kein Techname, kein Jahr, kein Eigenname).
+ * Die Lernenden raten die Herkunft:
+ *   - «Heute über KI» (2023),
+ *   - «Früher, andere Technik» (Leibniz' Rechenmaschine bis Tesla),
+ *   - «Aus der Literatur» (erdachte Maschinen und Wesen).
+ * Der Clou: Begeisterung wie Furcht klingen quer durch 300 Jahre gleich.
  *
- * Alle Zitate wurden am 2026-07-11 an öffentlich zugänglichen Quelltexten
- * verifiziert (de.wikisource.org, gutenberg.org, fourmilab.ch); Übersetzungen
- * aus dem Englischen sind als solche gekennzeichnet. Aufgedeckte Zitate
- * zählen als lokale Spur fürs Orakel (vorhang-auf:zitat:i).
+ * Alle Wortlaute wurden am 2026-07-11 an öffentlich zugänglichen Quellen
+ * verifiziert (futureoflife.org, Wikiquote, MacTutor, marxists.org,
+ * gutenberg.org, technologyreview.com). Nicht-deutsche Originale sind als
+ * «übersetzt» gekennzeichnet. Beantwortete Aussagen zählen als lokale Spur
+ * fürs Orakel (vorhang-auf:zitat:i).
  */
 
-interface Zitat {
+type Kategorie = "ki" | "technik" | "literatur";
+
+interface Aussage {
   text: string;
-  /** Brücke: warum das nach heute klingt. */
-  heute: string;
-  werk: string;
+  kategorie: Kategorie;
   jahr: string;
-  kontext: string;
+  wer: string;
+  was: string;
+  note: string;
   quelleLabel: string;
   quelleUrl: string;
 }
 
-const ZITATE: Zitat[] = [
+const KATEGORIEN: { id: Kategorie; label: string; kurz: string; icon: string }[] = [
+  { id: "ki", label: "Heute über KI", kurz: "Heute über KI", icon: "smart_toy" },
+  { id: "technik", label: "Früher, über eine andere Technik", kurz: "Frühere Technik", icon: "precision_manufacturing" },
+  { id: "literatur", label: "Aus der Literatur", kurz: "Literatur", icon: "auto_stories" },
+];
+
+const AUSSAGEN: Aussage[] = [
   {
-    text: "O du herrliche, himmlische Frau! … du tiefes Gemüt, in dem sich mein ganzes Sein spiegelt.",
-    heute: "Klingt wie eine Liebeserklärung an einen Companion-Chatbot.",
-    werk: "E. T. A. Hoffmann, «Der Sandmann»",
-    jahr: "1816",
-    kontext:
-      "Nathanael schwärmt von Olimpia — einer Automate, die nur «Ach, ach!» seufzt. Die Verwechslung von Maschine und Gegenüber ist über 200 Jahre alt.",
-    quelleLabel: "Volltext (Wikisource)",
-    quelleUrl: "https://de.wikisource.org/wiki/Der_Sandmann",
+    text: "Es ist schwer zu sehen, wie man die bösen Akteure daran hindert, sie für schlechte Zwecke einzusetzen.",
+    kategorie: "ki",
+    jahr: "2023",
+    wer: "Geoffrey Hinton, «Pate der KI»",
+    was: "im Interview kurz nach seinem Rückzug von Google.",
+    note: "Er spricht über KI — doch das «sie» könnte jede mächtige Technik meinen.",
+    quelleLabel: "MIT Technology Review (übersetzt)",
+    quelleUrl:
+      "https://www.technologyreview.com/2023/05/01/1072478/deep-learning-pioneer-geoffrey-hinton-quits-google/",
   },
   {
-    text: "Fast zwei Jahre hatte ich hart gearbeitet — mit dem einzigen Ziel, einem leblosen Körper Leben einzuhauchen.",
-    heute: "Könnte aus dem Blog eines KI-Labors stammen.",
-    werk: "Mary Shelley, «Frankenstein» (übersetzt)",
-    jahr: "1818",
-    kontext:
-      "Victor Frankenstein über sein Projekt. Kaum lebt das Geschöpf, entzieht sich ihm die Verantwortung — bis heute DIE Erzählung über Technik und ihre Schöpfer.",
-    quelleLabel: "Volltext (Project Gutenberg)",
-    quelleUrl: "https://www.gutenberg.org/ebooks/84",
+    text: "Sollen wir riskieren, die Kontrolle über unsere Zivilisation zu verlieren?",
+    kategorie: "ki",
+    jahr: "2023",
+    wer: "Offener Brief «Pause Giant AI Experiments»",
+    was: "unterzeichnet u. a. von Bengio, Russell, Musk und Harari (über 30 000 Unterschriften).",
+    note: "Gemeint sind grosse KI-Modelle wie GPT-4.",
+    quelleLabel: "Future of Life Institute (übersetzt)",
+    quelleUrl: "https://futureoflife.org/open-letter/pause-giant-ai-experiments/",
   },
   {
-    text: "Die Analytische Maschine erhebt keinerlei Anspruch, irgendetwas eigenständig hervorzubringen. Sie kann tun, was immer wir ihr zu befehlen wissen.",
-    heute: "Mitten in der heutigen Debatte: Kann KI Eigenes schaffen?",
-    werk: "Ada Lovelace, Anmerkung G (übersetzt)",
-    jahr: "1843",
-    kontext:
-      "Die erste Programmiererin der Geschichte — über Babbages Maschine. Ihr Einwand wird bis heute in jeder Diskussion über KI-Kreativität zitiert.",
-    quelleLabel: "Originaltext (fourmilab.ch)",
-    quelleUrl: "https://www.fourmilab.ch/babbage/sketch.html",
+    text: "Sollen wir wirklich alle Arbeitsplätze wegautomatisieren, auch die erfüllenden?",
+    kategorie: "ki",
+    jahr: "2023",
+    wer: "Offener Brief «Pause Giant AI Experiments»",
+    was: "aus derselben Reihe rhetorischer Fragen des Briefs.",
+    note: "Fast wortgleich mit einer Sorge von 1930 — siehe Keynes in dieser Runde.",
+    quelleLabel: "Future of Life Institute (übersetzt)",
+    quelleUrl: "https://futureoflife.org/open-letter/pause-giant-ai-experiments/",
   },
   {
-    text: "Dass Maschinen heute wenig Bewusstsein besitzen, ist keine Sicherheit dagegen, dass sie am Ende ein maschinelles Bewusstsein entwickeln.",
-    heute: "Liest sich wie ein Leitartikel über künstliche Intelligenz.",
-    werk: "Samuel Butler, «Erewhon» (übersetzt)",
+    text: "Erhebt sich ein Streit, müssen zwei Denker nicht länger zanken als zwei Rechenmeister: Sie greifen zur Feder und sagen — lasst uns rechnen.",
+    kategorie: "technik",
+    jahr: "um 1685",
+    wer: "Gottfried Wilhelm Leibniz",
+    was: "sein Traum von einer Sprache, die jedes Denken auf Rechnen zurückführt — die Idee des Algorithmus.",
+    note: "Der Grundgedanke jeder KI: Denken als Rechnen — über 300 Jahre alt.",
+    quelleLabel: "Wikiquote (übersetzt)",
+    quelleUrl: "https://en.wikiquote.org/wiki/Gottfried_Leibniz",
+  },
+  {
+    text: "Es ist eines vortrefflichen Menschen unwürdig, wie ein Sklave Stunden mit Berechnungen zu verlieren, die man getrost einer Maschine überlassen könnte.",
+    kategorie: "technik",
+    jahr: "1685",
+    wer: "Gottfried Wilhelm Leibniz über seine Rechenmaschine",
+    was: "die er selbst gebaut hatte, um Astronomen die stumpfe Rechenarbeit abzunehmen.",
+    note: "Die Hoffnung, dass Maschinen uns die Plackerei abnehmen — 340 Jahre alt.",
+    quelleLabel: "MacTutor History of Mathematics (übersetzt)",
+    quelleUrl: "https://mathshistory.st-andrews.ac.uk/Biographies/Leibniz/quotations/",
+  },
+  {
+    text: "Wir werden von einer neuen Krankheit heimgesucht: Die Arbeit schwindet schneller, als wir neue Beschäftigung dafür finden.",
+    kategorie: "technik",
+    jahr: "1930",
+    wer: "John Maynard Keynes",
+    was: "er nennt es «technologische Arbeitslosigkeit».",
+    note: "Dieselbe Angst wie heute vor der KI — fast 100 Jahre früher.",
+    quelleLabel: "«Economic Possibilities for our Grandchildren» (übersetzt)",
+    quelleUrl:
+      "https://www.marxists.org/reference/subject/economics/keynes/1930/our-grandchildren.htm",
+  },
+  {
+    text: "Die ganze Erde wird sich in ein einziges riesiges Gehirn verwandeln; über jede Entfernung hinweg werden wir einander sehen und hören.",
+    kategorie: "technik",
+    jahr: "1926",
+    wer: "Nikola Tesla",
+    was: "über die drahtlose Zukunft — später gelesen als Vorhersage von Internet und Smartphone.",
+    note: "Klingt wie eine globale KI — ist aber fast 100 Jahre alt.",
+    quelleLabel: "Wikiquote (Collier's, 1926; übersetzt)",
+    quelleUrl: "https://en.wikiquote.org/wiki/Nikola_Tesla",
+  },
+  {
+    text: "Der unwissendste Mensch könnte damit Bücher über Philosophie, Dichtung, Recht und Mathematik verfassen — ganz ohne Genie oder Studium.",
+    kategorie: "literatur",
+    jahr: "1726",
+    wer: "Jonathan Swift, «Gullivers Reisen»",
+    was: "über die Schreibmaschine der Akademie von Lagado — als Satire gemeint.",
+    note: "Eine Maschine, die auf Knopfdruck Texte erzeugt — 300 Jahre vor ChatGPT.",
+    quelleLabel: "Project Gutenberg (übersetzt)",
+    quelleUrl: "https://www.gutenberg.org/ebooks/829",
+  },
+  {
+    text: "Es gibt keine Sicherheit dagegen, dass die Maschinen am Ende ein Bewusstsein entwickeln.",
+    kategorie: "literatur",
     jahr: "1872",
-    kontext:
-      "Aus dem Kapitel «Das Buch der Maschinen»: ein Roman warnt vor der Evolution der Maschinen — Jahrzehnte vor dem ersten Computer.",
-    quelleLabel: "Volltext (Project Gutenberg)",
+    wer: "Samuel Butler, «Erewhon»",
+    was: "aus dem eingeschobenen «Buch der Maschinen».",
+    note: "Die Frage nach dem Maschinenbewusstsein — im Roman, lange vor dem Computer.",
+    quelleLabel: "Project Gutenberg (übersetzt)",
     quelleUrl: "https://www.gutenberg.org/ebooks/1906",
   },
   {
-    text: "Ich wollte die ganze Menschheit in eine Aristokratie der Welt verwandeln — ernährt von Millionen mechanischer Sklaven.",
-    heute: "Das Versprechen mancher KI-Visionäre, fast wortgleich.",
-    werk: "Karel Čapek, «R.U.R.» (übersetzt)",
+    text: "Ich wollte die ganze Menschheit in eine Aristokratie verwandeln — getragen von Millionen mechanischer Sklaven.",
+    kategorie: "literatur",
     jahr: "1920",
-    kontext:
-      "Fabrikdirektor Domin in dem Theaterstück, das dem «Roboter» seinen Namen gab. Utopie und Katastrophe liegen darin dicht beieinander.",
-    quelleLabel: "Volltext (Project Gutenberg)",
+    wer: "Karel Čapek, «R.U.R.»",
+    was: "das Theaterstück, das dem Wort «Roboter» seinen Namen gab.",
+    note: "Das Utopie-Versprechen mancher KI-Visionäre — schon 1920 auf der Bühne.",
+    quelleLabel: "Project Gutenberg (übersetzt)",
     quelleUrl: "https://www.gutenberg.org/ebooks/59112",
   },
 ];
 
-export default function ZitatReveal({ className = "" }: { className?: string }) {
-  const [offen, setOffen] = useState<Set<number>>(new Set());
+function katLabel(id: Kategorie): string {
+  return KATEGORIEN.find((k) => k.id === id)!.label;
+}
 
-  function aufdecken(i: number) {
-    setOffen((prev) => {
-      if (prev.has(i)) return prev;
-      const next = new Set(prev);
-      next.add(i);
-      return next;
-    });
+export default function ZitatReveal({ className = "" }: { className?: string }) {
+  // Antwort je Aussage-Index: die getippte Kategorie (oder nichts).
+  const [antworten, setAntworten] = useState<Record<number, Kategorie>>({});
+
+  function raten(i: number, wahl: Kategorie) {
+    if (antworten[i]) return; // eine Antwort pro Aussage
+    setAntworten((prev) => ({ ...prev, [i]: wahl }));
     merkeSpur(`vorhang-auf:zitat:${i}`);
   }
 
-  const alle = offen.size === ZITATE.length;
+  const beantwortet = Object.keys(antworten).length;
+  const richtig = Object.entries(antworten).filter(
+    ([i, wahl]) => AUSSAGEN[Number(i)].kategorie === wahl,
+  ).length;
+  const fertig = beantwortet === AUSSAGEN.length;
 
   return (
     <div className={className}>
-      <p className="mb-sm flex items-center gap-xs text-label-sm uppercase tracking-wider text-on-surface-variant">
+      <p className="mb-md flex items-center gap-xs text-label-sm uppercase tracking-wider text-on-surface-variant">
         <span className="material-symbols-outlined text-[16px] text-tertiary">
-          {alle ? "done_all" : "history_edu"}
+          {fertig ? "done_all" : "quiz"}
         </span>
-        {alle
-          ? "Alle 5 aufgedeckt — der Traum ist älter als jeder Computer"
-          : `${offen.size} von ${ZITATE.length} aufgedeckt`}
+        {beantwortet === 0
+          ? "Rate bei jeder Aussage: Woher stammt sie?"
+          : `${richtig} von ${beantwortet} richtig${fertig ? " — alle erraten" : ""}`}
       </p>
 
       <ol className="flex flex-col gap-md">
-        {ZITATE.map((z, i) => {
-          const ist = offen.has(i);
+        {AUSSAGEN.map((a, i) => {
+          const wahl = antworten[i];
+          const beantwortetI = Boolean(wahl);
+          const korrekt = wahl === a.kategorie;
           return (
             <li
               key={i}
               className="overflow-hidden rounded-xl border border-outline-variant bg-surface-bright shadow-sm"
             >
               <div className="p-lg">
-                <p className="text-body-lg italic text-on-surface">«{z.text}»</p>
-                <p className="mt-xs text-body-sm text-on-surface-variant">
-                  {z.heute}
-                </p>
+                <p className="text-body-lg italic text-on-surface">«{a.text}»</p>
               </div>
 
-              {ist ? (
+              {/* Rate-Knöpfe oder Auflösung */}
+              {!beantwortetI ? (
+                <div className="border-t border-outline-variant bg-surface-container-low p-md">
+                  <p className="mb-sm text-label-sm uppercase tracking-wider text-on-surface-variant">
+                    Woher stammt das?
+                  </p>
+                  <div className="flex flex-col gap-sm sm:flex-row">
+                    {KATEGORIEN.map((k) => (
+                      <button
+                        key={k.id}
+                        type="button"
+                        onClick={() => raten(i, k.id)}
+                        className="inline-flex flex-1 items-center justify-center gap-xs rounded-xl border border-outline-variant bg-surface-bright px-md py-sm text-label-md text-on-surface transition hover:-translate-y-0.5 hover:border-tertiary hover:text-tertiary hover:shadow-sm"
+                      >
+                        <span className="material-symbols-outlined text-[18px]">
+                          {k.icon}
+                        </span>
+                        {k.kurz}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              ) : (
                 <div className="animate-frame-in border-t border-outline-variant bg-surface-container-low p-lg">
-                  <div className="flex flex-wrap items-baseline gap-x-md gap-y-xs">
-                    <span className="text-headline-md text-tertiary">{z.jahr}</span>
+                  {/* Treffer-Zeile */}
+                  <p
+                    className={
+                      "flex items-center gap-sm text-body-md font-semibold " +
+                      (korrekt ? "text-tertiary" : "text-error")
+                    }
+                  >
+                    <span className="material-symbols-outlined text-[20px]">
+                      {korrekt ? "check_circle" : "cancel"}
+                    </span>
+                    {korrekt
+                      ? "Richtig geraten!"
+                      : `Knapp daneben — du tipptest «${katLabel(wahl)}».`}
+                  </p>
+
+                  {/* Auflösung */}
+                  <div className="mt-sm flex flex-wrap items-baseline gap-x-md gap-y-xs">
+                    <span className="text-headline-md text-tertiary">{a.jahr}</span>
                     <span className="text-body-md font-semibold text-on-surface">
-                      {z.werk}
+                      {a.wer}
+                    </span>
+                    <span className="rounded-lg bg-tertiary-container px-sm py-xs text-label-sm text-on-tertiary-container">
+                      {katLabel(a.kategorie)}
                     </span>
                   </div>
-                  <p className="mt-sm text-body-sm text-on-surface-variant">
-                    {z.kontext}
-                  </p>
+                  <p className="mt-sm text-body-sm text-on-surface-variant">{a.was}</p>
+                  <p className="mt-xs text-body-sm text-on-surface">{a.note}</p>
                   <a
-                    href={z.quelleUrl}
+                    href={a.quelleUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-sm inline-flex items-center gap-xs text-label-sm text-primary underline underline-offset-2 hover:text-on-primary-container"
@@ -139,21 +249,8 @@ export default function ZitatReveal({ className = "" }: { className?: string }) 
                     <span className="material-symbols-outlined text-[14px]">
                       open_in_new
                     </span>
-                    {z.quelleLabel}
+                    {a.quelleLabel}
                   </a>
-                </div>
-              ) : (
-                <div className="border-t border-outline-variant p-md">
-                  <button
-                    type="button"
-                    onClick={() => aufdecken(i)}
-                    className="inline-flex items-center gap-sm rounded-xl border border-outline-variant bg-surface-bright px-lg py-sm text-label-md text-tertiary transition hover:bg-surface-container"
-                  >
-                    <span className="material-symbols-outlined text-[18px]">
-                      visibility
-                    </span>
-                    Von wann stammt das? Aufdecken
-                  </button>
                 </div>
               )}
             </li>
@@ -161,13 +258,15 @@ export default function ZitatReveal({ className = "" }: { className?: string }) 
         })}
       </ol>
 
-      {alle && (
+      {fertig && (
         <div className="animate-frame-in mt-md rounded-xl border border-tertiary/40 bg-tertiary-container/30 p-lg">
           <p className="text-body-md text-on-surface">
-            Alle fünf Stimmen sind zwischen <strong>1816 und 1920</strong>{" "}
-            entstanden. Der Traum, Dingen Leben einzuhauchen — und die Unruhe
-            darüber — sind viel älter als der Computer. Die Geschichte dazu
-            steht im Storyboard gleich unten.
+            Egal ob Begeisterung oder Furcht — die Sätze stammen aus{" "}
+            <strong>drei Jahrhunderten</strong>, von Leibniz’ Rechenmaschine bis
+            zu heutigen KI-Warnungen, und klingen doch fast gleich. Der Traum,
+            das Denken an Maschinen zu übergeben — und die Unruhe darüber — ist
+            viel älter als die KI. Die Geschichte dazu steht im Storyboard gleich
+            unten.
           </p>
         </div>
       )}

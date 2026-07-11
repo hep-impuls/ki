@@ -26,7 +26,7 @@ import { leseSpuren, SPUR_EVENT, SPUREN_POLL_ID } from "../../_lib/spuren";
 /* ── Bereiche der eigenen Spur (Totale = Anzahl Knoten je Interaktion) ──── */
 
 const BEREICHE: { prefix: string; label: string; total: number; href: string }[] = [
-  { prefix: "vorhang-auf:zitat", label: "Zitate aufgedeckt (Alt — oder von heute?)", total: 5, href: "/lernen/lernseite-2/vorhang-auf" },
+  { prefix: "vorhang-auf:zitat", label: "Ratespiel «Woher stammt das?»", total: 10, href: "/lernen/lernseite-2/vorhang-auf" },
   { prefix: "vorhang-auf:weisheit", label: "Weisheiten am Auftritts-Stern", total: 7, href: "/lernen/lernseite-2/vorhang-auf" },
   { prefix: "vorhang-auf:netz", label: "Das Netz der neuen Akteurin", total: 7, href: "/lernen/lernseite-2/vorhang-auf" },
   { prefix: "philosophische-perspektive:weisheit", label: "Epochen-Weisheiten", total: 5, href: "/lernen/lernseite-2/philosophische-perspektive" },
