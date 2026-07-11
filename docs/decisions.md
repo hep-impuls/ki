@@ -10,6 +10,40 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-11 — Lernseite 2 neu strukturiert: drei Themenbereiche + Gewebe-Design
+
+**Struktur:** Lernseite 2 («Eine ganz neue Partnerschaft») hat neu **drei
+Themenbereiche** statt vier Platzhalter-Submodule:
+
+1. **Vorhang auf — eine neue Akteurin** (`vorhang-auf`) — Auftakt in drei
+   Szenen (Auftritt, Irritation, Frage) + interaktives Akteurs-Modell
+   (aus `sandbox/intro-visual` übernommen).
+2. **Philosophische Perspektive** (`philosophische-perspektive`) — der
+   Schablonen-Zeitstrahl, aus `sandbox/philosophie-schablonen` ins Modul
+   portiert (Komponenten in `_components/`).
+3. **Kulturelle Perspektive** (`kulturelle-perspektive`) — neu, im Aufbau:
+   Erzählungen/Kunst prägen den Blick auf KI.
+
+Die früheren Platzhalter «Quellen, neu aufgespürt», «Ich bin ganz Ohr» und
+«AI-Slop macht kreativ» sind aus der Navigation entfernt (Git-History hat
+sie); Teile davon können später in der kulturellen Perspektive aufgehen.
+Alte Sandbox-URLs bleiben als Redirects gültig. `sandbox/umfrage`
+(Perspektiven-Check) bleibt Werkstatt — vorgesehen für den Auftakt.
+
+**Design:** Neues grafisches Leitmotiv für Lernseite 2 — nicht typische
+KI-Symbolik (Roboter/Neuronen-Glow), sondern das **Fadenhafte, Knotenhafte,
+Gewebhafte** (Akteure als Knoten, Beziehungen als Fäden; Referenzen:
+natalitaet.com, antrhizom.com — hier bewusst noch reduzierter: keine
+Gradients, kein Glow, nur feine Linien + Knoten in MD3-Tokens).
+Wiederverwendbare SVG-Deko in `lernseite-2/_components/Gewebe.tsx`
+(GewebeBand, FadenVertikal, Knoten, FadenDivider, Signatur je Thema); der
+Hub zeigt die drei Themen als Stationen an einem durchlaufenden Faden.
+
+Betrifft: `src/config/unit.ts` (nur lernseite-2-Block), `src/app/lernen/lernseite-2/**`,
+`src/app/sandbox/{philosophie-schablonen,intro-visual}/page.tsx` (Redirects).
+
+---
+
 ## 2026-07-07 — Quellenlinks durchgehend deutschsprachig
 
 Im Submodul „Philosophische Perspektive" (Schablonen-Zeitstrahl) führten die

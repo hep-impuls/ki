@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 
 /**
- * Akteurs-Modell — interaktive Visualisierung zur Kernthese des Intro-Submoduls
+ * Akteurs-Modell — interaktive Visualisierung zur Kernthese von Lernseite 2
  * "Eine ganz neue Partnerschaft": KI ist weder klassisches Werkzeug noch Person,
  * sondern etwas Drittes.
  *
@@ -11,9 +11,9 @@ import { useMemo, useState } from "react";
  * Beim Aufdecken des Musters wird sichtbar, dass KI sich mit beiden überlappt,
  * aber mit keinem deckungsgleich ist.
  *
- * Self-contained Client-Komponente — keine Firebase-/Server-Logik, damit sie
- * hosting- und auth-System-agnostisch bleibt und sich später unverändert in
- * src/app/lernen/lernseite-2/submodul-1/page.tsx einbauen lässt.
+ * Self-contained Client-Komponente — keine Firebase-/Server-Logik. Lebt im
+ * Auftakt-Thema «Vorhang auf — eine neue Akteurin»
+ * (src/app/lernen/lernseite-2/vorhang-auf/page.tsx).
  */
 
 type ActorKey = "mensch" | "werkzeug" | "ki";

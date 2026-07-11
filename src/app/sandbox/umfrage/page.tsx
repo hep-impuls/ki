@@ -19,11 +19,11 @@ export default function SandboxUmfrage() {
       </div>
 
       <Link
-        href="/lernen/lernseite-2/submodul-1"
+        href="/lernen/lernseite-2/vorhang-auf"
         className="mt-lg inline-flex items-center gap-xs text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
       >
         <span className="material-symbols-outlined text-[18px]">arrow_back</span>
-        Zur Philosophischen Perspektive
+        Zum Auftakt «Vorhang auf»
       </Link>
 
       <header className="mt-lg border-b border-outline-variant pb-lg">
