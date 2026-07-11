@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ActivityTracker from "@/components/ActivityTracker";
 import AppLayout from "@/components/layout/AppLayout";
+import KnotenNetz from "../_components/KnotenNetz";
 import WeisheitsFaden from "../_components/WeisheitsFaden";
 import SchablonenZeitstrahl from "./_components/SchablonenZeitstrahl";
 
@@ -90,6 +91,68 @@ export default function Lernseite2PhilosophischePerspektive() {
           },
         ]}
       />
+
+      {/* Interaktive Signatur: fünf Epochen als anklickbare Karte */}
+      <section className="mt-xl max-w-3xl" aria-label="Fünf Epochen im Überblick">
+        <h2 className="text-headline-md text-on-surface">
+          Fünf Epochen im Überblick
+        </h2>
+        <p className="mt-sm text-body-md text-on-surface-variant">
+          Die Zeitlinie steigt von der Antike bis heute. Tippe eine Epoche an —
+          und spring von dort direkt zu ihrem Panel im Zeitstrahl.
+        </p>
+        <KnotenNetz
+          className="mt-lg"
+          einladung="Fünf Knoten, fünf Epochen — tippe einen an, um Denker und Schablone zu sehen."
+          sprungLabel="Zur Epoche im Zeitstrahl"
+          deko={[
+            "M24 144 C44 132 56 124 72 116 C88 108 104 104 120 100 C136 96 152 88 168 80 C184 72 200 62 216 52",
+          ]}
+          knoten={[
+            {
+              x: 24,
+              y: 144,
+              label: "Antike",
+              titel: "Antike — Aristoteles",
+              text: "Der Mythos trägt nicht mehr, die Sophisten machen jede Wahrheit verkäuflich — Aristoteles antwortet mit der Schablone: beobachten, ordnen, begründen.",
+              ziel: "epoche-antike",
+            },
+            {
+              x: 72,
+              y: 116,
+              label: "Mittelalter",
+              titel: "Spätantike & Mittelalter — Augustinus",
+              text: "Rom fällt, eine Weltordnung zerbricht — Augustinus verlegt den Halt nach innen: Glaube, Gewissen, Heilsgeschichte.",
+              ziel: "epoche-augustinus",
+            },
+            {
+              x: 120,
+              y: 100,
+              label: "Aufklärung",
+              titel: "Aufklärung — Kant",
+              text: "Kopernikus und Lissabon erschüttern den Weltplan — Kant fordert: Habe Mut, dich deines eigenen Verstandes zu bedienen.",
+              ziel: "epoche-kant",
+            },
+            {
+              x: 168,
+              y: 80,
+              label: "Moderne",
+              titel: "Industriemoderne — Marx",
+              text: "Die Maschine ordnet die Gesellschaft neu — Marx begreift den Umbruch als menschengemacht und darum veränderbar.",
+              ziel: "epoche-marx",
+            },
+            {
+              x: 216,
+              y: 52,
+              label: "Jetzt",
+              akzent: true,
+              titel: "Gegenwart — wir",
+              text: "Alles ist vernetzt, KI tritt auf — die Schablone unserer Zeit ist noch offen. Genau daran arbeitet dieses Modul.",
+              ziel: "epoche-jetzt",
+            },
+          ]}
+        />
+      </section>
 
       <section className="mt-xl max-w-3xl">
         <SchablonenZeitstrahl />

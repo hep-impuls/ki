@@ -1021,7 +1021,7 @@ export default function SchablonenZeitstrahl() {
         {STATIONS.map((s, si) => {
           const isLast = si === STATIONS.length - 1;
           return (
-            <li key={s.id} className="flex gap-md">
+            <li key={s.id} id={`epoche-${s.id}`} className="flex scroll-mt-[96px] gap-md">
               <div className="flex flex-col items-center">
                 <span
                   className={

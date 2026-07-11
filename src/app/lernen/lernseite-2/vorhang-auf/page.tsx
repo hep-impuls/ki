@@ -2,6 +2,7 @@ import Link from "next/link";
 import ActivityTracker from "@/components/ActivityTracker";
 import AppLayout from "@/components/layout/AppLayout";
 import { FadenDivider, Signatur } from "../_components/Gewebe";
+import KnotenNetz from "../_components/KnotenNetz";
 import WeisheitsFaden from "../_components/WeisheitsFaden";
 import AkteursModell from "./_components/AkteursModell";
 
@@ -123,6 +124,77 @@ export default function Lernseite2VorhangAuf() {
             </li>
           ))}
         </ol>
+      </section>
+
+      <FadenDivider className="mt-xl" />
+
+      {/* Interaktive Signatur: das Netz der neuen Akteurin */}
+      <section className="mt-xl max-w-3xl" aria-label="Das Netz der neuen Akteurin">
+        <h2 className="text-headline-md text-on-surface">
+          Das Netz der neuen Akteurin
+        </h2>
+        <p className="mt-sm text-body-md text-on-surface-variant">
+          Die neue Akteurin steht nie allein: Wer mit ihr spricht, zieht an
+          einem ganzen Geflecht. Tippe die Knoten an — wer oder was zieht mit?
+        </p>
+        <KnotenNetz
+          className="mt-lg"
+          einladung="Sechs Fäden laufen im Zentrum zusammen — tippe die Knoten an und entdecke, wer alles mitzieht."
+          deko={[
+            "M120 96 L36 40",
+            "M120 96 L116 16",
+            "M120 96 L204 32",
+            "M120 96 L28 148",
+            "M120 96 L128 180",
+            "M120 96 L208 156",
+          ]}
+          dekoFein={["M36 40 L116 16", "M204 32 L208 156"]}
+          knoten={[
+            {
+              x: 120,
+              y: 96,
+              akzent: true,
+              titel: "KI — die neue Akteurin",
+              text: "Sie steht nie allein: Von ihr laufen Fäden zu Menschen, Material und Regeln. Genau dieses Geflecht macht sie zur Akteurin — nicht ein einzelner Chip.",
+            },
+            {
+              x: 36,
+              y: 40,
+              titel: "Nutzer:innen",
+              text: "Deine Fragen und Formulierungen führen die Akteurin. Ohne Eingabe bleibt sie stumm — mit dir wird sie zur Mitspielerin.",
+            },
+            {
+              x: 116,
+              y: 16,
+              titel: "Sprache",
+              text: "Gelernt aus Milliarden Sätzen: Unsere Wörter, Geschichten und auch unsere Fehler sind ihr Material.",
+            },
+            {
+              x: 204,
+              y: 32,
+              titel: "Datencentren",
+              text: "Jede Antwort läuft durch riesige Rechenhallen — Strom, Kühlung und Seekabel inklusive.",
+            },
+            {
+              x: 28,
+              y: 148,
+              titel: "Rohstoffe",
+              text: "Chips brauchen Metalle, Minen und Fabriken. Die Akteurin hat ein materielles Gewicht.",
+            },
+            {
+              x: 128,
+              y: 180,
+              titel: "Unternehmen",
+              text: "Firmen bauen, trainieren und steuern sie — mit eigenen Zielen und Geschäftsmodellen.",
+            },
+            {
+              x: 208,
+              y: 156,
+              titel: "Regeln",
+              text: "Gesetze und Abmachungen entscheiden, was sie darf — und wer haftet, wenn etwas schiefgeht.",
+            },
+          ]}
+        />
       </section>
 
       <FadenDivider className="mt-xl" />

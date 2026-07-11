@@ -10,6 +10,29 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-11 — KnotenNetz: die Signatur-Symbole gross und bedienbar
+
+Die drei Konstellations-Signaturen vom Hub gibt es jetzt auf ihren Seiten
+in gross und **interaktiv** (`lernseite-2/_components/KnotenNetz.tsx`):
+Knoten antippen (oder per Tastatur) → Erklär-Karte darunter (aria-live),
+besuchte Knoten bleiben markiert, Zähler «n von m Knoten entdeckt»,
+Hover lässt Knoten wachsen.
+
+- **Vorhang auf — «Das Netz der neuen Akteurin»** (Auftritts-Signatur):
+  Zentrum KI + sechs Fäden zu Nutzer:innen, Sprache, Datencentren,
+  Rohstoffen, Unternehmen, Regeln — die Akteur-Netzwerk-Idee zum Antippen
+  (spiegelt die «Wir – Netz»-Installation).
+- **Philosophische Perspektive — «Fünf Epochen im Überblick»**
+  (Epochen-Signatur, beschriftet): je Knoten Denker + Schablone, dazu Knopf
+  «Zur Epoche im Zeitstrahl» — springt zum Panel (Anker `epoche-{id}` +
+  `scroll-mt` im Zeitstrahl). Wichtig: `scrollIntoView({behavior:"smooth"})`
+  ist in manchen Umgebungen wirkungslos → Fallback nach 350 ms hart springen.
+- **Kulturelle Perspektive — «Figuren im Gewebe»** (Gewebe-Signatur):
+  an den Kreuzungen Golem, Frankenstein, HAL 9000, Samantha («Her»), im
+  Zentrum «Dein Blick — heute».
+
+---
+
 ## 2026-07-11 — WeisheitsFaden: interaktive Muster auf allen Themenseiten
 
 Das Gewebe-Motiv wird interaktiv: Auf allen drei Themenseiten von Lernseite 2
