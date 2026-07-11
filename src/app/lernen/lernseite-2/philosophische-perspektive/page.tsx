@@ -71,6 +71,7 @@ export default function Lernseite2PhilosophischePerspektive() {
         className="mt-xl max-w-3xl"
         hoehe={210}
         svgKlasse="aspect-[720/290] sm:aspect-[720/210]"
+        spurKey="philosophische-perspektive:weisheit"
         einladung="Fahr der Zeitlinie nach — von der Antike bis heute. Jede Epoche zeigt ihre Schablone und springt auf Wunsch zu ihrem Panel."
         sprungLabel="Zur Epoche im Zeitstrahl"
         straenge={[

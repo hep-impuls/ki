@@ -55,6 +55,7 @@ export default function Lernseite2KulturellePerspektive() {
         className="mt-xl max-w-3xl"
         hoehe={220}
         svgKlasse="aspect-[720/300] sm:aspect-[720/220]"
+        spurKey="kulturelle-perspektive:weisheit"
         einladung="Kett- und Schussfäden kreuzen sich — such dir deinen Weg durchs Gewebe; an den Kreuzungen warten Weisheiten."
         straenge={[
           {
@@ -148,6 +149,7 @@ export default function Lernseite2KulturellePerspektive() {
         </p>
         <KnotenNetz
           className="mt-lg"
+          spurKey="kulturelle-perspektive:figur"
           einladung="An den Kreuzungen warten vier Figuren aus Sage, Roman und Film — und in der Mitte dein eigener Blick."
           deko={[
             "M12 64 C28 60 44 58 60 56 C92 52 156 60 188 56 C204 54 216 58 228 62",

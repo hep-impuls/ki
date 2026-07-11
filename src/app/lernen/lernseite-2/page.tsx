@@ -23,6 +23,7 @@ const SIGNATUREN: Record<string, SignaturVariante> = {
   "vorhang-auf": "auftritt",
   "philosophische-perspektive": "epochen",
   "kulturelle-perspektive": "gewebe",
+  "das-orakel": "orakel",
 };
 
 export default function Lernseite2Hub() {

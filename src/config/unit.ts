@@ -83,6 +83,15 @@ export const unit: UnitConfig = {
           description:
             "Erzählungen und Kunst prägen, was wir in der KI sehen — vom Golem bis zur Gegenwartskunst. Dieser Themenbereich folgt den Bildern hinter unserem Blick.",
         },
+        {
+          slug: "das-orakel",
+          title: "Das Orakel — erkenne dich selbst",
+          href: "/lernen/lernseite-2/das-orakel",
+          icon: "insights",
+          subtitle: "Rückblick & Vergleich",
+          description:
+            "Dein Rückblick: welche Wege du gegangen bist und deine Antwort auf die offene Frage — im anonymen Vergleich mit allen. Das Orakel deutet den Querschnitt.",
+        },
       ],
     },
   ],

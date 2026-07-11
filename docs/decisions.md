@@ -10,6 +10,48 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-11 — Thema 04 «Das Orakel»: Dashboard, anonyme Zweifach-Sammlung, KI-Querschnitt
+
+Lernseite 2 hat einen **vierten Themenbereich**: `das-orakel` («Das Orakel —
+erkenne dich selbst», Delphi-Motto). Persönlicher Rückblick + anonymer
+Vergleich + KI-Deutung.
+
+**Datenschutz-Architektur (zweifach gesammelt, wie mit Christof besprochen):**
+
+1. **Lokal (Browser):** die eigenen Spuren (welche Knoten in FadenNetz,
+   KnotenNetz, Zeitstrahl-Bausteinen, Akteurs-Modell besucht wurden —
+   `lernseite-2/_lib/spuren.ts`, localStorage `ki26-spuren-lernseite-2`),
+   der eigene Satz, die eigene Poll-Wahl. Verlässt das Gerät nie.
+2. **Anonym (Firebase):** (a) pro besuchtem Knoten nur `+1` auf einen
+   Aggregat-Zähler (bestehende Poll-Mechanik,
+   `abstimmungen/ki26/polls/spuren-lernseite-2`) — ohne Namen/Code, gleiche
+   Klasse wie die bisherigen anonymen Polls; (b) Sätze zur offenen Frage
+   NUR auf ausdrücklichen Klick «Anonym teilen»
+   (`abstimmungen/ki26/orakel-aussagen`, via Route Handler + Admin SDK,
+   ohne studentCode/IP); (c) Poll «orakel-blick».
+
+**KI ohne Datenzugriff:** Die KI greift NIE auf Firestore oder Browser-Daten
+zu. `/api/orakel/querschnitt` (Admin SDK) verdichtet die anonyme Sammlung
+serverseitig zu einer Text-Zusammenfassung (Zähler + geteilte Sätze) und
+reicht nur diese an die Messages API. Der Vergleich «du ↔ alle» wird im
+Browser gerechnet (lokales Exemplar neben anonymen Gesamtzahlen).
+
+**Kosten:** Modell `claude-haiku-4-5` (günstigstes geeignetes, Vorgabe
+«möglichst wenig Kosten»); Kommentar wird in
+`abstimmungen/ki26/orakel-meta/stand` gecacht und höchstens neu erzeugt,
+wenn ≥5 neue Sätze UND >30 Min. seit dem letzten Lauf (bzw. beim ersten Mal
+ab 3 Sätzen). Aufruf per `fetch` statt SDK — `package.json` ist geteilt,
+kein neues Paket ohne Absprache. Server-Env `ANTHROPIC_API_KEY`
+(`.env.local.example` ergänzt; in Vercel setzen). Ohne Schlüssel läuft alles,
+das Orakel meldet dann, dass es noch schweigt.
+
+Betrifft: `src/app/lernen/lernseite-2/das-orakel/**`, `_lib/spuren.ts`,
+FadenNetz/KnotenNetz (`spurKey`), Zeitstrahl-`toggle`, AkteursModell,
+`src/app/api/orakel/{aussage,querschnitt}/route.ts`, `unit.ts`
+(lernseite-2-Block), Hub-Signatur «orakel».
+
+---
+
 ## 2026-07-11 — FadenNetz: individuelle Muster statt Einheits-Faden am Seitenkopf
 
 Der Weisheits-Faden am Kopf der Themenseiten (ein Bogen, überall gleich) ist

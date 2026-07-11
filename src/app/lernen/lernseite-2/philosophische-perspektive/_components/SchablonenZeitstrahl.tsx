@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { merkeSpur } from "../../_lib/spuren";
 import BildZoom, { type TourStop } from "./BildZoom";
 
 /**
@@ -1007,13 +1008,16 @@ export default function SchablonenZeitstrahl() {
   const [openKeys, setOpenKeys] = useState<Set<string>>(new Set());
   const [viewer, setViewer] = useState<Viewer | null>(null);
 
-  const toggle = (key: string) =>
+  const toggle = (key: string) => {
+    // Erstes Aufklappen eines Bausteins als lokale Spur merken (fürs Orakel).
+    if (!openKeys.has(key)) merkeSpur(`philosophische-perspektive:baustein:${key}`);
     setOpenKeys((prev) => {
       const next = new Set(prev);
       if (next.has(key)) next.delete(key);
       else next.add(key);
       return next;
     });
+  };
 
   return (
     <>

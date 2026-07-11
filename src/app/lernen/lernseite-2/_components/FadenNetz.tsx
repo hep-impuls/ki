@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { merkeSpur } from "../_lib/spuren";
 
 /**
  * FadenNetz — das interaktive Kopf-Muster der Themenseiten von Lernseite 2.
@@ -71,6 +72,7 @@ export default function FadenNetz({
   sprungLabel = "Hinspringen",
   svgKlasse = "",
   className = "",
+  spurKey,
 }: {
   knoten: FadenKnoten[];
   straenge: FadenStrang[];
@@ -81,6 +83,9 @@ export default function FadenNetz({
   /** Aspekt-Klassen fürs SVG (Literalstrings der Seite, z.B. "aspect-[720/300] sm:aspect-[720/220]"). */
   svgKlasse?: string;
   className?: string;
+  /** Optionaler Spur-Präfix (z.B. "vorhang-auf:weisheit") — besuchte Knoten
+   *  werden dann lokal fürs Orakel-Dashboard gemerkt (nur localStorage). */
+  spurKey?: string;
 }) {
   const n = knoten.length;
   const svgRef = useRef<SVGSVGElement>(null);
@@ -150,6 +155,8 @@ export default function FadenNetz({
     });
     if (bs < 0 || Math.sqrt(bd) > FANG) return;
 
+    // Nur die Spur ausdehnen — Knoten-Erkennung macht der Effect darunter
+    // (setState-Updater müssen pur bleiben).
     setPainted((prev) => {
       const cur = prev[bs];
       let neu: Bereich;
@@ -163,36 +170,43 @@ export default function FadenNetz({
       }
       const next = prev.slice();
       next[bs] = neu;
-
-      // Erreichte Knoten einsammeln (Spur berührt ihren Abtastpunkt).
-      let zuletzt: number | null = null;
-      const dazu: number[] = [];
-      m.adj.forEach((list, k) => {
-        if (visited.has(k)) return;
-        const erreicht = list.some(({ s, idx }) => {
-          const b = next[s];
-          return b !== null && idx >= b.lo - REICH_EPS && idx <= b.hi + REICH_EPS;
-        });
-        if (erreicht) {
-          dazu.push(k);
-          zuletzt = k;
-        }
-      });
-      if (dazu.length > 0) {
-        setVisited((v) => {
-          const nx = new Set(v);
-          dazu.forEach((k) => nx.add(k));
-          return nx;
-        });
-        setActive(zuletzt);
-      }
       return next;
     });
   }
 
+  // Erreichte Knoten einsammeln (Spur berührt ihren Abtastpunkt) — der
+  // zuletzt erreichte zeigt seine Weisheit; besuchte Knoten werden optional
+  // als lokale Spur gemerkt.
+  useEffect(() => {
+    const m = messRef.current;
+    if (!m) return;
+    let zuletzt: number | null = null;
+    const dazu: number[] = [];
+    m.adj.forEach((list, k) => {
+      if (visited.has(k)) return;
+      const erreicht = list.some(({ s, idx }) => {
+        const b = painted[s];
+        return b !== null && idx >= b.lo - REICH_EPS && idx <= b.hi + REICH_EPS;
+      });
+      if (erreicht) {
+        dazu.push(k);
+        zuletzt = k;
+      }
+    });
+    if (dazu.length === 0) return;
+    setVisited((v) => {
+      const nx = new Set(v);
+      dazu.forEach((k) => nx.add(k));
+      return nx;
+    });
+    setActive(zuletzt);
+    if (spurKey) dazu.forEach((k) => merkeSpur(`${spurKey}:${k}`));
+  }, [painted, visited, spurKey]);
+
   function reveal(i: number) {
     setVisited((prev) => new Set(prev).add(i));
     setActive(i);
+    if (spurKey) merkeSpur(`${spurKey}:${i}`);
   }
 
   function springe(ziel: string) {

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { merkeSpur } from "../_lib/spuren";
 
 /**
  * KnotenNetz — die Signatur-Konstellationen (Gewebe.tsx) in gross und
@@ -37,6 +38,7 @@ export default function KnotenNetz({
   einladung,
   sprungLabel = "Hinspringen",
   className = "",
+  spurKey,
 }: {
   knoten: NetzKnoten[];
   /** Fäden als SVG-Pfade (stroke-outline-variant). */
@@ -47,6 +49,9 @@ export default function KnotenNetz({
   einladung: string;
   sprungLabel?: string;
   className?: string;
+  /** Optionaler Spur-Präfix (z.B. "kulturelle-perspektive:figur") — besuchte
+   *  Knoten werden dann lokal fürs Orakel-Dashboard gemerkt (nur localStorage). */
+  spurKey?: string;
 }) {
   const n = knoten.length;
   const [active, setActive] = useState<number | null>(null);
@@ -55,6 +60,7 @@ export default function KnotenNetz({
   function reveal(i: number) {
     setVisited((prev) => new Set(prev).add(i));
     setActive(i);
+    if (spurKey) merkeSpur(`${spurKey}:${i}`);
   }
 
   function springe(ziel: string) {

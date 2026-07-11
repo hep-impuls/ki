@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { merkeSpur } from "../../_lib/spuren";
 
 /**
  * Akteurs-Modell — interaktive Visualisierung zur Kernthese von Lernseite 2
@@ -159,7 +160,10 @@ export default function AkteursModell() {
       <div className="mt-lg flex flex-wrap items-center gap-sm">
         <button
           type="button"
-          onClick={() => setRevealed(true)}
+          onClick={() => {
+            setRevealed(true);
+            merkeSpur("vorhang-auf:akteursmodell:aufgedeckt");
+          }}
           disabled={assignedCount === 0}
           className="inline-flex items-center gap-sm rounded-xl bg-tertiary px-lg py-sm text-label-md text-on-tertiary shadow-sm transition hover:bg-on-tertiary-container disabled:cursor-not-allowed disabled:opacity-40"
         >

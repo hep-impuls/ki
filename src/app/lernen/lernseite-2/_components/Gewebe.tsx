@@ -133,13 +133,14 @@ export function FadenDivider({ className = "" }: { className?: string }) {
   );
 }
 
-export type SignaturVariante = "auftritt" | "epochen" | "gewebe";
+export type SignaturVariante = "auftritt" | "epochen" | "gewebe" | "orakel";
 
 /**
  * Kleine Konstellations-Signatur je Themenbereich:
  *  - «auftritt»: ein neuer Knoten tritt ins Netz (Zentrum mit Fäden nach aussen)
  *  - «epochen»: fünf Knoten auf einer Zeitlinie, der letzte (Gegenwart) betont
  *  - «gewebe»:  kleines Geflecht aus Kett- und Schussfäden mit Kreuzungsknoten
+ *  - «orakel»:  Fäden laufen in einem Knoten zusammen, der antwortet (Bögen)
  */
 export function Signatur({
   variante,
@@ -194,6 +195,27 @@ export function Signatur({
         ))}
         <circle cx="108" cy="26" r="8" fill="none" strokeWidth="1" className={"stroke-tertiary " + HOVER_RING} opacity="0.45" />
         <circle cx="108" cy="26" r="3.5" className={"fill-tertiary " + HOVER_DOT} />
+      </svg>
+    );
+  }
+
+  if (variante === "orakel") {
+    return (
+      <svg viewBox="0 0 120 96" aria-hidden className={"group h-20 w-24 " + className}>
+        {/* Drei Fäden laufen im Orakel zusammen */}
+        <path d="M8 18 C30 26 52 37 72 46" fill="none" strokeWidth="1" className="stroke-outline-variant" />
+        <path d="M6 50 C28 50 50 49 70 48" fill="none" strokeWidth="1" className="stroke-outline-variant" />
+        <path d="M10 82 C32 72 53 60 72 50" fill="none" strokeWidth="1" className="stroke-outline-variant" />
+        <circle cx="8" cy="18" r="2" className={"fill-outline " + HOVER_DOT} opacity="0.6" />
+        <circle cx="6" cy="50" r="2" className={"fill-outline " + HOVER_DOT} opacity="0.6" />
+        <circle cx="10" cy="82" r="2" className={"fill-outline " + HOVER_DOT} opacity="0.6" />
+        {/* Das Orakel: Ring + Kern */}
+        <circle cx="76" cy="48" r="14" fill="none" strokeWidth="1" className="stroke-outline-variant" opacity="0.7" />
+        <circle cx="76" cy="48" r="8" fill="none" strokeWidth="1" className={"stroke-tertiary " + HOVER_RING} opacity="0.45" />
+        <circle cx="76" cy="48" r="3.5" className={"fill-tertiary " + HOVER_DOT} />
+        {/* Es antwortet: Bögen nach rechts */}
+        <path d="M96 36 C102 44 102 52 96 60" fill="none" strokeWidth="1" className={"stroke-tertiary " + HOVER_RING} opacity="0.4" />
+        <path d="M104 30 C112 40 112 56 104 66" fill="none" strokeWidth="0.75" className="stroke-outline-variant" opacity="0.6" />
       </svg>
     );
   }

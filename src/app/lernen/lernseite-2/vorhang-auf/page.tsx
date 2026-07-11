@@ -74,6 +74,7 @@ export default function Lernseite2VorhangAuf() {
         className="mt-xl max-w-3xl"
         hoehe={220}
         svgKlasse="aspect-[720/300] sm:aspect-[720/220]"
+        spurKey="vorhang-auf:weisheit"
         einladung="Sechs Fäden treffen sich in der Mitte — wähle deinen Weg und sammle die Weisheiten ein."
         straenge={[
           { d: "M360 112 L84 48" },
@@ -189,6 +190,7 @@ export default function Lernseite2VorhangAuf() {
         </p>
         <KnotenNetz
           className="mt-lg"
+          spurKey="vorhang-auf:netz"
           einladung="Sechs Fäden laufen im Zentrum zusammen — tippe die Knoten an und entdecke, wer alles mitzieht."
           deko={[
             "M120 96 L36 40",
