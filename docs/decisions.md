@@ -10,6 +10,36 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-11 — Ausbau II: reiche Auflösungen, webende Flächen, bleibende Karten
+
+Feedback Christof, zwei Stränge:
+
+**1. Ratespiel («Einschätzungsaufgabe») — «ein Satz ist zu wenig»:** Jede
+Auflösung erzählt jetzt ausführlich (`hintergrund`, 3–5 Sätze: Person, Werk,
+Umfeld, Bezug zu heute) plus eine hervorgehobene `pointe`. Design: Zitate in
+headline-sm (20 px), Karten alternieren im Grund (bright /
+surface-container-low), die Auflösungs-Box ist **je Kategorie getönt**
+(Heute über KI → primary-container/25, Frühere Technik →
+secondary-container/30, Literatur → tertiary-container/25), Kategorie-Chip
+mit Icon. Sektionen auf max-w-5xl verbreitert (Storyboard neu lg:grid-cols-4).
+
+**2. FadenNetz — Flächen & bleibende Zitate:** Zwischen besuchten Knoten
+füllen sich die entstehenden **Flächen** (neues Prop `flaechen`: Polygon +
+Knoten-Bedingung), abwechselnd mit sanfter Farbe (tertiary 9 %),
+**Schraffur** und **Punktmuster** (SVG-`<pattern>`, nur Tokens): beim Stern
+sechs Sektoren, bei der Epochen-Linie die wachsende Silhouette unter der
+Kurve, beim Gewebe vier Stoff-Zellen. Eingesammelte Weisheiten **bleiben
+stehen** (nummerierte Sammel-Liste in Einsammel-Reihenfolge, neuste
+hervorgehoben, alternierende Grundflächen) und tragen neu eine ausführliche
+`deutung` (2–4 Sätze) — 17 Deutungen über die drei Seiten geschrieben.
+Muster liegt auf eigener «Bühne» (rounded, surface-container-low/60).
+
+Firebase: bereits abgedeckt — jeder Knoten-/Zitat-Kontakt läuft über
+merkeSpur (lokal + anonymer +1 in polls/spuren-lernseite-2), keine
+Code-Änderung nötig.
+
+---
+
 ## 2026-07-11 — Vorhang-Opener: Ratespiel «Woher stammt das?» (3 Herkünfte, verräterfrei)
 
 Der Zitat-Opener von «Vorhang auf» ist von «aufdecken» zu einem echten

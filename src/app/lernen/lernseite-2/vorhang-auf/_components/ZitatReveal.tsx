@@ -13,11 +13,13 @@ import { merkeSpur } from "../../_lib/spuren";
  *   - «Aus der Literatur» (erdachte Maschinen und Wesen).
  * Der Clou: Begeisterung wie Furcht klingen quer durch 300 Jahre gleich.
  *
- * Alle Wortlaute wurden am 2026-07-11 an öffentlich zugänglichen Quellen
- * verifiziert (futureoflife.org, Wikiquote, MacTutor, marxists.org,
- * gutenberg.org, technologyreview.com). Nicht-deutsche Originale sind als
- * «übersetzt» gekennzeichnet. Beantwortete Aussagen zählen als lokale Spur
- * fürs Orakel (vorhang-auf:zitat:i).
+ * Jede Auflösung erzählt ausführlich (Person, Werk, Umfeld, Bezug zu heute) —
+ * die Boxen sind je Kategorie leicht unterschiedlich getönt. Alle Wortlaute
+ * wurden am 2026-07-11 an öffentlich zugänglichen Quellen verifiziert
+ * (futureoflife.org, Wikiquote, MacTutor, marxists.org, gutenberg.org,
+ * technologyreview.com). Nicht-deutsche Originale sind als «übersetzt»
+ * gekennzeichnet. Beantwortete Aussagen zählen als lokale Spur + anonymer
+ * Firebase-Zähler (vorhang-auf:zitat:i, via merkeSpur).
  */
 
 type Kategorie = "ki" | "technik" | "literatur";
@@ -27,16 +29,47 @@ interface Aussage {
   kategorie: Kategorie;
   jahr: string;
   wer: string;
-  was: string;
-  note: string;
+  /** Ausführliche Auflösung: Person, Werk, Umfeld, Bezug zu heute. */
+  hintergrund: string;
+  /** Pointe in einem Satz (hervorgehoben). */
+  pointe: string;
   quelleLabel: string;
   quelleUrl: string;
 }
 
-const KATEGORIEN: { id: Kategorie; label: string; kurz: string; icon: string }[] = [
-  { id: "ki", label: "Heute über KI", kurz: "Heute über KI", icon: "smart_toy" },
-  { id: "technik", label: "Früher, über eine andere Technik", kurz: "Frühere Technik", icon: "precision_manufacturing" },
-  { id: "literatur", label: "Aus der Literatur", kurz: "Literatur", icon: "auto_stories" },
+const KATEGORIEN: {
+  id: Kategorie;
+  label: string;
+  kurz: string;
+  icon: string;
+  /** Tönung der Auflösungs-Box + Chip (je Kategorie leicht anders). */
+  box: string;
+  chip: string;
+}[] = [
+  {
+    id: "ki",
+    label: "Heute über KI",
+    kurz: "Heute über KI",
+    icon: "smart_toy",
+    box: "bg-primary-container/25",
+    chip: "bg-primary-container text-on-primary-container",
+  },
+  {
+    id: "technik",
+    label: "Früher, über eine andere Technik",
+    kurz: "Frühere Technik",
+    icon: "precision_manufacturing",
+    box: "bg-secondary-container/30",
+    chip: "bg-secondary-container text-on-secondary-container",
+  },
+  {
+    id: "literatur",
+    label: "Aus der Literatur",
+    kurz: "Literatur",
+    icon: "auto_stories",
+    box: "bg-tertiary-container/25",
+    chip: "bg-tertiary-container text-on-tertiary-container",
+  },
 ];
 
 const AUSSAGEN: Aussage[] = [
@@ -45,8 +78,10 @@ const AUSSAGEN: Aussage[] = [
     kategorie: "ki",
     jahr: "2023",
     wer: "Geoffrey Hinton, «Pate der KI»",
-    was: "im Interview kurz nach seinem Rückzug von Google.",
-    note: "Er spricht über KI — doch das «sie» könnte jede mächtige Technik meinen.",
+    hintergrund:
+      "Geoffrey Hinton gilt als «Pate der KI»: Seine Arbeiten zu neuronalen Netzen legten die Grundlage für die heutigen Systeme — 2018 erhielt er dafür den Turing-Award, 2024 den Physik-Nobelpreis. Im Mai 2023 verliess er Google, um frei über die Risiken seiner eigenen Erfindung sprechen zu können; einen Teil seines Lebenswerks, sagte er, bereue er. Der Satz fiel im Gespräch mit der New York Times und ging um die Welt.",
+    pointe:
+      "Bemerkenswert ist, wie zeitlos der Satz formuliert ist: Er würde auf Buchdruck, Dynamit oder das Internet genauso passen — genau darum ist er so schwer zuzuordnen.",
     quelleLabel: "MIT Technology Review (übersetzt)",
     quelleUrl:
       "https://www.technologyreview.com/2023/05/01/1072478/deep-learning-pioneer-geoffrey-hinton-quits-google/",
@@ -56,8 +91,10 @@ const AUSSAGEN: Aussage[] = [
     kategorie: "ki",
     jahr: "2023",
     wer: "Offener Brief «Pause Giant AI Experiments»",
-    was: "unterzeichnet u. a. von Bengio, Russell, Musk und Harari (über 30 000 Unterschriften).",
-    note: "Gemeint sind grosse KI-Modelle wie GPT-4.",
+    hintergrund:
+      "Im März 2023 — vier Monate nach dem Start von ChatGPT — forderte dieser offene Brief des Future of Life Institute eine sechsmonatige Pause für das Training der grössten KI-Modelle. Über 30 000 Menschen unterschrieben, darunter KI-Pioniere wie Yoshua Bengio und Stuart Russell, aber auch Elon Musk und Yuval Noah Harari. Die Pause kam nie. Der Brief machte aber eine Frage öffentlich, die vorher nur in Fachkreisen diskutiert wurde: Wer entscheidet eigentlich, wie schnell diese Technik entwickelt wird?",
+    pointe:
+      "Der Satz ist eine von vier rhetorischen Fragen im Kern des Briefs — bewusst so gross formuliert, dass niemand «ja» sagen möchte.",
     quelleLabel: "Future of Life Institute (übersetzt)",
     quelleUrl: "https://futureoflife.org/open-letter/pause-giant-ai-experiments/",
   },
@@ -66,8 +103,10 @@ const AUSSAGEN: Aussage[] = [
     kategorie: "ki",
     jahr: "2023",
     wer: "Offener Brief «Pause Giant AI Experiments»",
-    was: "aus derselben Reihe rhetorischer Fragen des Briefs.",
-    note: "Fast wortgleich mit einer Sorge von 1930 — siehe Keynes in dieser Runde.",
+    hintergrund:
+      "Auch diese Frage stammt aus dem «Pause»-Brief vom März 2023 — sie steht dort direkt neben der Frage nach dem Kontrollverlust. Interessant ist das kleine Wort «erfüllend»: Die Sorge gilt nicht mehr nur der Fliessbandarbeit, sondern gerade den Tätigkeiten, die Menschen gerne tun — Schreiben, Gestalten, Programmieren. Damit kehrt sich die alte Automatisierungserzählung um: Die Maschine nimmt nicht zuerst das Mühsame, sondern womöglich das Sinnstiftende.",
+    pointe:
+      "Vergleiche diese Sorge mit der Diagnose von Keynes aus dem Jahr 1930 in dieser Runde — fast ein Jahrhundert liegt dazwischen.",
     quelleLabel: "Future of Life Institute (übersetzt)",
     quelleUrl: "https://futureoflife.org/open-letter/pause-giant-ai-experiments/",
   },
@@ -76,8 +115,10 @@ const AUSSAGEN: Aussage[] = [
     kategorie: "technik",
     jahr: "um 1685",
     wer: "Gottfried Wilhelm Leibniz",
-    was: "sein Traum von einer Sprache, die jedes Denken auf Rechnen zurückführt — die Idee des Algorithmus.",
-    note: "Der Grundgedanke jeder KI: Denken als Rechnen — über 300 Jahre alt.",
+    hintergrund:
+      "Gottfried Wilhelm Leibniz — Philosoph, Mathematiker, Erfinder — träumte von einer «characteristica universalis»: einer Zeichensprache, in der sich jeder Gedanke so exakt ausdrücken lässt, dass Streitfragen durch blosses Rechnen entschieden werden können. «Calculemus!» — lasst uns rechnen — ist die berühmteste Verdichtung dieses Traums. Es ist die Geburtsidee des Algorithmus: Denken als regelgeleitetes Verarbeiten von Zeichen.",
+    pointe:
+      "Jedes heutige Sprachmodell steht in der Nachfolge dieser Idee — es tut buchstäblich, was Leibniz vorschwebte: Es rechnet mit Sprache.",
     quelleLabel: "Wikiquote (übersetzt)",
     quelleUrl: "https://en.wikiquote.org/wiki/Gottfried_Leibniz",
   },
@@ -86,8 +127,10 @@ const AUSSAGEN: Aussage[] = [
     kategorie: "technik",
     jahr: "1685",
     wer: "Gottfried Wilhelm Leibniz über seine Rechenmaschine",
-    was: "die er selbst gebaut hatte, um Astronomen die stumpfe Rechenarbeit abzunehmen.",
-    note: "Die Hoffnung, dass Maschinen uns die Plackerei abnehmen — 340 Jahre alt.",
+    hintergrund:
+      "Leibniz baute ab 1673 eine der ersten Rechenmaschinen der Geschichte, die alle vier Grundrechenarten beherrschte — gedacht unter anderem für Astronomen, die damals Wochen ihres Lebens mit Zahlenkolonnen verbrachten. Der Satz begründet die Erfindung: Kluge Köpfe sollen ihre Zeit nicht mit mechanischer Arbeit vergeuden, die eine Maschine übernehmen kann. Das ist das Urversprechen jeder Automatisierung, von der Waschmaschine bis zum Sprachmodell: Die Maschine übernimmt das Stumpfe, der Mensch behält das Schöpferische.",
+    pointe:
+      "Ob diese Rechnung aufgeht, ist seit 340 Jahren die offene Frage — sie ist der rote Faden dieses Moduls.",
     quelleLabel: "MacTutor History of Mathematics (übersetzt)",
     quelleUrl: "https://mathshistory.st-andrews.ac.uk/Biographies/Leibniz/quotations/",
   },
@@ -96,8 +139,10 @@ const AUSSAGEN: Aussage[] = [
     kategorie: "technik",
     jahr: "1930",
     wer: "John Maynard Keynes",
-    was: "er nennt es «technologische Arbeitslosigkeit».",
-    note: "Dieselbe Angst wie heute vor der KI — fast 100 Jahre früher.",
+    hintergrund:
+      "Der Ökonom John Maynard Keynes schrieb 1930 — mitten in der Weltwirtschaftskrise — einen erstaunlich optimistischen Essay über die «wirtschaftlichen Möglichkeiten unserer Enkelkinder». Darin prägte er den Begriff der «technologischen Arbeitslosigkeit»: Maschinen ersetzen Arbeit schneller, als neue entsteht. Keynes hielt das ausdrücklich für eine vorübergehende «Anpassungskrankheit» und sagte für unsere Gegenwart die Fünfzehn-Stunden-Woche voraus — das eigentliche Problem werde sein, was wir mit all der freien Zeit anfangen.",
+    pointe:
+      "Die Diagnose kehrt seither bei jeder Technikwelle wieder — zuletzt fast wortgleich in den KI-Debatten von 2023.",
     quelleLabel: "«Economic Possibilities for our Grandchildren» (übersetzt)",
     quelleUrl:
       "https://www.marxists.org/reference/subject/economics/keynes/1930/our-grandchildren.htm",
@@ -107,8 +152,10 @@ const AUSSAGEN: Aussage[] = [
     kategorie: "technik",
     jahr: "1926",
     wer: "Nikola Tesla",
-    was: "über die drahtlose Zukunft — später gelesen als Vorhersage von Internet und Smartphone.",
-    note: "Klingt wie eine globale KI — ist aber fast 100 Jahre alt.",
+    hintergrund:
+      "Der Erfinder Nikola Tesla gab 1926 dem Magazin Collier's ein grosses Interview über die drahtlose Zukunft. Seine Vision: Die Erde wird ein einziges Gehirn, jeder Mensch erreicht jeden, und das Gerät dafür passt in die Westentasche — weshalb der Text heute gern als Vorhersage des Smartphones gelesen wird. Tesla sprach aus Begeisterung, nicht aus Angst: Für ihn war die totale Vernetzung ein Versprechen von Verständigung und Frieden.",
+    pointe:
+      "Ein weltumspannendes «Gehirn» aus Technik — die Metapher klingt nach KI, meinte aber Funktechnik. Die Euphorie der Vernetzung ist hundert Jahre älter als das Internet.",
     quelleLabel: "Wikiquote (Collier's, 1926; übersetzt)",
     quelleUrl: "https://en.wikiquote.org/wiki/Nikola_Tesla",
   },
@@ -117,8 +164,10 @@ const AUSSAGEN: Aussage[] = [
     kategorie: "literatur",
     jahr: "1726",
     wer: "Jonathan Swift, «Gullivers Reisen»",
-    was: "über die Schreibmaschine der Akademie von Lagado — als Satire gemeint.",
-    note: "Eine Maschine, die auf Knopfdruck Texte erzeugt — 300 Jahre vor ChatGPT.",
+    hintergrund:
+      "In «Gullivers Reisen» besucht Gulliver die Akademie von Lagado, wo ein Professor eine Maschine vorführt: einen Rahmen voller Wörter, der durch Kurbeln immer neue Satzbruchstücke erzeugt — daraus soll ein vollständiges Wissen aller Künste und Wissenschaften entstehen. Jonathan Swift meinte das als beissende Satire auf die Wissenschaftsgläubigkeit seiner Zeit und auf die Idee, Erkenntnis liesse sich mechanisch herstellen.",
+    pointe:
+      "Dreihundert Jahre später existiert die Maschine wirklich — und Swifts Spott liest sich wie eine Produktbeschreibung. Dass Satire zur Realität wird, sagt weniger über Swift als über uns.",
     quelleLabel: "Project Gutenberg (übersetzt)",
     quelleUrl: "https://www.gutenberg.org/ebooks/829",
   },
@@ -127,8 +176,10 @@ const AUSSAGEN: Aussage[] = [
     kategorie: "literatur",
     jahr: "1872",
     wer: "Samuel Butler, «Erewhon»",
-    was: "aus dem eingeschobenen «Buch der Maschinen».",
-    note: "Die Frage nach dem Maschinenbewusstsein — im Roman, lange vor dem Computer.",
+    hintergrund:
+      "Samuel Butler schob in seinen Roman «Erewhon» das «Buch der Maschinen» ein: Ein fiktives Land hat alle Maschinen verboten, weil sie sich — nach Darwins Logik — weiterentwickeln und eines Tages Bewusstsein erlangen könnten. Butler schrieb nur gut ein Jahrzehnt nach Darwins «Entstehung der Arten» und übertrug als Erster die Evolutionstheorie auf die Technik: Auch Maschinen haben Vorfahren, Varianten, Auslese. Sein Erzähler argumentiert: Dass Maschinen heute wenig Bewusstsein haben, beweist nichts — eine Muschel hat auch nicht viel davon.",
+    pointe:
+      "Das Argument kehrt heute in jeder Debatte über Maschinenbewusstsein wieder — es ist 150 Jahre alt und immer noch unentschieden.",
     quelleLabel: "Project Gutenberg (übersetzt)",
     quelleUrl: "https://www.gutenberg.org/ebooks/1906",
   },
@@ -137,15 +188,17 @@ const AUSSAGEN: Aussage[] = [
     kategorie: "literatur",
     jahr: "1920",
     wer: "Karel Čapek, «R.U.R.»",
-    was: "das Theaterstück, das dem Wort «Roboter» seinen Namen gab.",
-    note: "Das Utopie-Versprechen mancher KI-Visionäre — schon 1920 auf der Bühne.",
+    hintergrund:
+      "Karel Čapeks Theaterstück «R.U.R. — Rossums Universal-Roboter» schenkte der Welt das Wort «Roboter», abgeleitet vom tschechischen robota: Frondienst, Zwangsarbeit. Fabrikdirektor Domin spricht den Satz als aufrichtige Utopie: Künstliche Arbeiter befreien die Menschheit von aller Mühsal, niemand muss mehr dienen, alle werden Aristokraten des Geistes. Im Stück endet das Versprechen im Aufstand der Roboter — und im Untergang der Menschen.",
+    pointe:
+      "Utopie und Katastrophe im selben Satz: Dieses Muster begleitet die Automatisierungsdebatte bis heute — man hört es in mancher KI-Vision fast wortgleich.",
     quelleLabel: "Project Gutenberg (übersetzt)",
     quelleUrl: "https://www.gutenberg.org/ebooks/59112",
   },
 ];
 
-function katLabel(id: Kategorie): string {
-  return KATEGORIEN.find((k) => k.id === id)!.label;
+function kat(id: Kategorie) {
+  return KATEGORIEN.find((k) => k.id === id)!;
 }
 
 export default function ZitatReveal({ className = "" }: { className?: string }) {
@@ -166,8 +219,8 @@ export default function ZitatReveal({ className = "" }: { className?: string }) 
 
   return (
     <div className={className}>
-      <p className="mb-md flex items-center gap-xs text-label-sm uppercase tracking-wider text-on-surface-variant">
-        <span className="material-symbols-outlined text-[16px] text-tertiary">
+      <p className="mb-md flex items-center gap-xs text-label-md uppercase tracking-wider text-on-surface-variant">
+        <span className="material-symbols-outlined text-[18px] text-tertiary">
           {fertig ? "done_all" : "quiz"}
         </span>
         {beantwortet === 0
@@ -175,24 +228,33 @@ export default function ZitatReveal({ className = "" }: { className?: string }) 
           : `${richtig} von ${beantwortet} richtig${fertig ? " — alle erraten" : ""}`}
       </p>
 
-      <ol className="flex flex-col gap-md">
+      <ol className="flex flex-col gap-lg">
         {AUSSAGEN.map((a, i) => {
           const wahl = antworten[i];
           const beantwortetI = Boolean(wahl);
           const korrekt = wahl === a.kategorie;
+          const loesung = kat(a.kategorie);
           return (
             <li
               key={i}
-              className="overflow-hidden rounded-xl border border-outline-variant bg-surface-bright shadow-sm"
+              className={
+                "overflow-hidden rounded-xl border border-outline-variant shadow-sm " +
+                (i % 2 === 0 ? "bg-surface-bright" : "bg-surface-container-low")
+              }
             >
-              <div className="p-lg">
-                <p className="text-body-lg italic text-on-surface">«{a.text}»</p>
+              <div className="flex items-start gap-md p-lg">
+                <span className="mt-xs hidden h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-surface-container-high text-label-md text-on-surface-variant sm:flex">
+                  {i + 1}
+                </span>
+                <p className="text-headline-sm italic text-on-surface">
+                  «{a.text}»
+                </p>
               </div>
 
               {/* Rate-Knöpfe oder Auflösung */}
               {!beantwortetI ? (
-                <div className="border-t border-outline-variant bg-surface-container-low p-md">
-                  <p className="mb-sm text-label-sm uppercase tracking-wider text-on-surface-variant">
+                <div className="border-t border-outline-variant bg-surface-container/60 p-md sm:p-lg">
+                  <p className="mb-sm text-label-md uppercase tracking-wider text-on-surface-variant">
                     Woher stammt das?
                   </p>
                   <div className="flex flex-col gap-sm sm:flex-row">
@@ -201,9 +263,9 @@ export default function ZitatReveal({ className = "" }: { className?: string }) 
                         key={k.id}
                         type="button"
                         onClick={() => raten(i, k.id)}
-                        className="inline-flex flex-1 items-center justify-center gap-xs rounded-xl border border-outline-variant bg-surface-bright px-md py-sm text-label-md text-on-surface transition hover:-translate-y-0.5 hover:border-tertiary hover:text-tertiary hover:shadow-sm"
+                        className="inline-flex flex-1 items-center justify-center gap-sm rounded-xl border border-outline-variant bg-surface-bright px-md py-md text-label-md text-on-surface transition hover:-translate-y-0.5 hover:border-tertiary hover:text-tertiary hover:shadow-sm"
                       >
-                        <span className="material-symbols-outlined text-[18px]">
+                        <span className="material-symbols-outlined text-[20px]">
                           {k.icon}
                         </span>
                         {k.kurz}
@@ -212,41 +274,56 @@ export default function ZitatReveal({ className = "" }: { className?: string }) 
                   </div>
                 </div>
               ) : (
-                <div className="animate-frame-in border-t border-outline-variant bg-surface-container-low p-lg">
+                <div
+                  className={
+                    "animate-frame-in border-t border-outline-variant p-lg " +
+                    loesung.box
+                  }
+                >
                   {/* Treffer-Zeile */}
                   <p
                     className={
-                      "flex items-center gap-sm text-body-md font-semibold " +
+                      "flex items-center gap-sm text-body-lg font-semibold " +
                       (korrekt ? "text-tertiary" : "text-error")
                     }
                   >
-                    <span className="material-symbols-outlined text-[20px]">
+                    <span className="material-symbols-outlined text-[22px]">
                       {korrekt ? "check_circle" : "cancel"}
                     </span>
                     {korrekt
                       ? "Richtig geraten!"
-                      : `Knapp daneben — du tipptest «${katLabel(wahl)}».`}
+                      : `Knapp daneben — du tipptest «${kat(wahl).label}».`}
                   </p>
 
                   {/* Auflösung */}
-                  <div className="mt-sm flex flex-wrap items-baseline gap-x-md gap-y-xs">
-                    <span className="text-headline-md text-tertiary">{a.jahr}</span>
-                    <span className="text-body-md font-semibold text-on-surface">
-                      {a.wer}
-                    </span>
-                    <span className="rounded-lg bg-tertiary-container px-sm py-xs text-label-sm text-on-tertiary-container">
-                      {katLabel(a.kategorie)}
+                  <div className="mt-md flex flex-wrap items-baseline gap-x-md gap-y-xs">
+                    <span className="text-headline-lg text-tertiary">{a.jahr}</span>
+                    <span className="text-headline-sm text-on-surface">{a.wer}</span>
+                    <span
+                      className={
+                        "inline-flex items-center gap-xs rounded-lg px-sm py-xs text-label-md " +
+                        loesung.chip
+                      }
+                    >
+                      <span className="material-symbols-outlined text-[16px]">
+                        {loesung.icon}
+                      </span>
+                      {loesung.label}
                     </span>
                   </div>
-                  <p className="mt-sm text-body-sm text-on-surface-variant">{a.was}</p>
-                  <p className="mt-xs text-body-sm text-on-surface">{a.note}</p>
+                  <p className="mt-md max-w-4xl text-body-md text-on-surface-variant">
+                    {a.hintergrund}
+                  </p>
+                  <p className="mt-sm max-w-4xl text-body-md font-semibold text-on-surface">
+                    {a.pointe}
+                  </p>
                   <a
                     href={a.quelleUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-sm inline-flex items-center gap-xs text-label-sm text-primary underline underline-offset-2 hover:text-on-primary-container"
+                    className="mt-md inline-flex items-center gap-xs text-label-md text-primary underline underline-offset-2 hover:text-on-primary-container"
                   >
-                    <span className="material-symbols-outlined text-[14px]">
+                    <span className="material-symbols-outlined text-[16px]">
                       open_in_new
                     </span>
                     {a.quelleLabel}
@@ -259,14 +336,14 @@ export default function ZitatReveal({ className = "" }: { className?: string }) 
       </ol>
 
       {fertig && (
-        <div className="animate-frame-in mt-md rounded-xl border border-tertiary/40 bg-tertiary-container/30 p-lg">
-          <p className="text-body-md text-on-surface">
+        <div className="animate-frame-in mt-lg rounded-xl border border-tertiary/40 bg-tertiary-container/30 p-lg">
+          <p className="text-body-lg text-on-surface">
             Egal ob Begeisterung oder Furcht — die Sätze stammen aus{" "}
             <strong>drei Jahrhunderten</strong>, von Leibniz’ Rechenmaschine bis
             zu heutigen KI-Warnungen, und klingen doch fast gleich. Der Traum,
             das Denken an Maschinen zu übergeben — und die Unruhe darüber — ist
-            viel älter als die KI. Die Geschichte dazu steht im Storyboard gleich
-            unten.
+            viel älter als die KI. Die Geschichte dazu steht im Storyboard
+            gleich unten.
           </p>
         </div>
       )}

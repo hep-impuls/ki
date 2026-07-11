@@ -250,7 +250,7 @@ export default function Storyboard({ className = "" }: { className?: string }) {
   return (
     <div className={className}>
       {/* Zwölf Stationen */}
-      <ol className="grid gap-md sm:grid-cols-2 lg:grid-cols-3">
+      <ol className="grid gap-md sm:grid-cols-2 lg:grid-cols-4">
         {STATIONEN.map((s) => (
           <li
             key={s.nr}

@@ -73,13 +73,14 @@ export default function Lernseite2VorhangAuf() {
       </header>
 
       {/* Interaktives Muster der Seite: der Auftritts-Stern — sechs Fäden,
-          sechs Wege, in der Mitte die Bühne */}
+          sechs Wege, in der Mitte die Bühne. Zwischen besuchten Knoten
+          füllen sich die Flächen (Farbe / Schraffur / Punkte). */}
       <FadenNetz
-        className="mt-xl max-w-3xl"
+        className="mt-xl max-w-5xl"
         hoehe={220}
         svgKlasse="aspect-[720/300] sm:aspect-[720/220]"
         spurKey="vorhang-auf:weisheit"
-        einladung="Sechs Fäden treffen sich in der Mitte — wähle deinen Weg und sammle die Weisheiten ein."
+        einladung="Sechs Fäden treffen sich in der Mitte — wähle deinen Weg, sammle die Weisheiten ein und webe die Flächen dazwischen."
         straenge={[
           { d: "M360 112 L84 48" },
           { d: "M360 112 L300 24" },
@@ -90,6 +91,14 @@ export default function Lernseite2VorhangAuf() {
           { d: "M84 48 L300 24", fein: true },
           { d: "M596 38 L636 172", fein: true },
         ]}
+        flaechen={[
+          { punkte: [[360, 112], [84, 48], [300, 24]], knoten: [0, 1, 2] },
+          { punkte: [[360, 112], [300, 24], [596, 38]], knoten: [0, 2, 3] },
+          { punkte: [[360, 112], [596, 38], [636, 172]], knoten: [0, 3, 6] },
+          { punkte: [[360, 112], [636, 172], [420, 198]], knoten: [0, 6, 5] },
+          { punkte: [[360, 112], [420, 198], [76, 182]], knoten: [0, 5, 4] },
+          { punkte: [[360, 112], [76, 182], [84, 48]], knoten: [0, 4, 1] },
+        ]}
         knoten={[
           {
             x: 360,
@@ -98,20 +107,26 @@ export default function Lernseite2VorhangAuf() {
             text: "Die ganze Welt ist Bühne, und alle Frauen und Männer blosse Spieler",
             quelle: "William Shakespeare, «Wie es euch gefällt»",
             kommentar: "Vorhang auf — welche Rolle geben wir der neuen Akteurin?",
+            deutung:
+              "Shakespeare lässt die Welt als Bühne beschreiben: Wir alle spielen Rollen, treten auf und wieder ab. Wer der KI begegnet, verteilt ebenfalls Rollen — Werkzeug, Kollegin, Orakel, Bedrohung. Welche Rolle wir ihr zuschreiben, entscheidet mit, wie die Partnerschaft gelingt. Genau darum beginnt dieses Modul mit einem Auftritt.",
           },
           {
             x: 84,
             y: 48,
             text: "Alles fliesst",
             quelle: "Heraklit",
-            kommentar: "Panta rhei: auch der Werkzeug-Begriff bleibt nicht stehen.",
+            kommentar: "Panta rhei — kein Begriff bleibt, wie er war.",
+            deutung:
+              "Für Heraklit ist die Welt kein fester Bestand, sondern ein Fluss: Nichts bleibt, alles wird. Auch unsere Begriffe altern — «Werkzeug», «Maschine», «Intelligenz» sind Ufer, an denen der Strom längst weitergezogen ist. Wer die neue Akteurin verstehen will, muss bereit sein, alte Wörter loszulassen und neue zu prüfen.",
           },
           {
             x: 300,
             y: 24,
             text: "Ich weiss, dass ich nichts weiss",
             quelle: "nach Sokrates",
-            kommentar: "Ein guter Anfang — auch im Umgang mit der neuen Akteurin.",
+            kommentar: "Der Anfang der Philosophie — und ein guter Anfang hier.",
+            deutung:
+              "Das berühmte Nichtwissen ist keine Ausrede, sondern eine Methode: Erst wer zugibt, nicht zu wissen, beginnt wirklich zu fragen. Gegenüber einer Technik, die auf alles eine Antwort zu haben scheint, ist diese Haltung wertvoller denn je — die Frage hinter der Antwort suchen, statt die Antwort für das Ende des Denkens zu halten.",
           },
           {
             x: 596,
@@ -119,6 +134,8 @@ export default function Lernseite2VorhangAuf() {
             text: "Die Grenzen meiner Sprache bedeuten die Grenzen meiner Welt",
             quelle: "Ludwig Wittgenstein",
             kommentar: "Was verschiebt sich, wenn Maschinen sprechen?",
+            deutung:
+              "Sprache ist für Wittgenstein nicht Verpackung des Denkens, sondern seine Grenze. Wenn nun Maschinen sprechen, verschieben sich diese Grenzen: Neue Sätze werden möglich — neue Missverständnisse auch. Und eine alte Frage kehrt scharf zurück: Was heisst «verstehen», wenn es scheinbar auch ohne Erleben funktioniert?",
           },
           {
             x: 76,
@@ -126,6 +143,8 @@ export default function Lernseite2VorhangAuf() {
             text: "Ich denke, also bin ich",
             quelle: "René Descartes",
             kommentar: "Und die Maschine? Sie rechnet — ist das schon Denken?",
+            deutung:
+              "Descartes suchte den einen unbezweifelbaren Punkt — und fand ihn im Denken: Wer zweifelt, denkt; wer denkt, ist. Die Maschine rechnet, gewichtet, formuliert. Aber zweifelt sie? An der Frage, ob Rechnen schon Denken ist, scheiden sich seit Leibniz die Geister — und sie ist der Kern der heutigen KI-Debatte.",
           },
           {
             x: 420,
@@ -133,21 +152,25 @@ export default function Lernseite2VorhangAuf() {
             text: "Können Maschinen denken?",
             quelle: "Alan Turing, 1950",
             kommentar: "Die Frage, mit der das KI-Zeitalter beginnt.",
+            deutung:
+              "Turing stellte die Frage 1950 — und ersetzte sie sogleich durch ein Spiel: Kann eine Maschine im Gespräch für einen Menschen gehalten werden? Damit verschob er die Debatte vom Inneren (Bewusstsein) auf das Beobachtbare (Verhalten). Unsere täglichen Chats mit KI sind sein Gedankenexperiment — im Weltmassstab durchgeführt.",
           },
           {
             x: 636,
             y: 172,
             text: "Mit jedem Anfang kommt etwas Neues in die Welt",
             quelle: "nach Hannah Arendt",
-            kommentar: "Anfangen können — vielleicht die menschlichste aller Fähigkeiten.",
+            kommentar: "Anfangen können — vielleicht die menschlichste Fähigkeit.",
+            deutung:
+              "Arendt nennt die Fähigkeit anzufangen «Natalität»: Weil jeder Mensch geboren wird, kommt mit jedem etwas Unerwartetes in die Welt. Maschinen setzen fort, was in ihnen angelegt ist — anfangen im starken Sinn können bisher nur wir. Vielleicht liegt genau hier der Kern der neuen Arbeitsteilung zwischen Mensch und KI.",
           },
         ]}
       />
 
       {/* 1 — Ratespiel: Woher stammt das? */}
-      <section className="mt-xl max-w-3xl" aria-label="Woher stammt das?">
-        <h2 className="text-headline-md text-on-surface">Woher stammt das?</h2>
-        <p className="mt-sm text-body-md text-on-surface-variant">
+      <section className="mt-xl max-w-5xl" aria-label="Woher stammt das?">
+        <h2 className="text-headline-lg text-on-surface">Woher stammt das?</h2>
+        <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
           Zehn Aussagen über Maschinen, Denken und Arbeit — Hoffnung wie Furcht.
           Rate bei jeder: Ist das <strong>heute über KI</strong> gesagt, stammt es
           von <strong>früher über eine andere Technik</strong>, oder{" "}
@@ -160,11 +183,11 @@ export default function Lernseite2VorhangAuf() {
       <FadenDivider className="mt-xl" />
 
       {/* 2 — Die KI-Story als Storyboard */}
-      <section className="mt-xl max-w-3xl" aria-label="Die KI-Story">
-        <h2 className="text-headline-md text-on-surface">
+      <section className="mt-xl max-w-5xl" aria-label="Die KI-Story">
+        <h2 className="text-headline-lg text-on-surface">
           Die KI-Story — ein Storyboard
         </h2>
-        <p className="mt-sm text-body-md text-on-surface-variant">
+        <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
           Vom Traum, Dingen Leben einzuhauchen, bis zur Gegenwart: zwölf
           Stationen — und Phasen, deren letzte noch niemand kennt.
         </p>

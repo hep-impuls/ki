@@ -52,11 +52,17 @@ export default function Lernseite2KulturellePerspektive() {
       {/* Interaktives Muster der Seite: das Gewebe — Kett- und Schussfäden,
           mehrere Wege, Weisheiten an den Kreuzungen */}
       <FadenNetz
-        className="mt-xl max-w-3xl"
+        className="mt-xl max-w-5xl"
         hoehe={220}
         svgKlasse="aspect-[720/300] sm:aspect-[720/220]"
         spurKey="kulturelle-perspektive:weisheit"
-        einladung="Kett- und Schussfäden kreuzen sich — such dir deinen Weg durchs Gewebe; an den Kreuzungen warten Weisheiten."
+        flaechen={[
+          { punkte: [[140, 64], [360, 60], [360, 120], [140, 122]], knoten: [1, 0] },
+          { punkte: [[360, 60], [580, 64], [580, 122], [360, 120]], knoten: [2, 0] },
+          { punkte: [[140, 122], [360, 120], [360, 174], [140, 176]], knoten: [3, 0] },
+          { punkte: [[360, 120], [580, 122], [580, 176], [360, 174]], knoten: [4, 0] },
+        ]}
+        einladung="Kett- und Schussfäden kreuzen sich — such dir deinen Weg durchs Gewebe. An den Kreuzungen warten Weisheiten, und zwischen ihnen füllt sich Zelle um Zelle der Stoff."
         straenge={[
           {
             d: "M28 70 C66 67 103 65 140 64 C213 62 287 60 360 60 C433 60 507 62 580 64 C617 65 655 67 692 70",
@@ -88,6 +94,8 @@ export default function Lernseite2KulturellePerspektive() {
             text: "Kunst gibt nicht das Sichtbare wieder, sondern macht sichtbar",
             quelle: "Paul Klee",
             kommentar: "Genau darum geht es hier: sehen, wie wir sehen.",
+            deutung:
+              "Klee dreht das Verhältnis um: Kunst bildet nicht ab, was ohnehin da ist — sie macht sichtbar, was wir sonst übersehen würden. Genau das leistet die kulturelle Perspektive in diesem Modul: Sie zeigt nicht die KI selbst, sondern unseren Blick auf sie — die Bilder, Hoffnungen und Ängste, die wir schon mitbringen, bevor wir das erste Mal mit ihr sprechen.",
           },
           {
             x: 140,
@@ -95,6 +103,8 @@ export default function Lernseite2KulturellePerspektive() {
             text: "Man erblickt nur, was man schon weiss und versteht",
             quelle: "Johann Wolfgang von Goethe",
             kommentar: "Unsere Bilder entscheiden, was wir in der KI erkennen.",
+            deutung:
+              "Was wir erkennen, hängt davon ab, was wir mitbringen: Begriffe, Geschichten, Erwartungen. Wer in der KI ein Monster sieht, hat Frankenstein im Kopf; wer eine Gefährtin sieht, kennt andere Erzählungen. Goethes Satz erklärt, warum zwei Menschen im selben Chat völlig Verschiedenes erleben — ihr Wissen sitzt im Auge.",
           },
           {
             x: 580,
@@ -102,6 +112,8 @@ export default function Lernseite2KulturellePerspektive() {
             text: "Das Leben ahmt die Kunst weit mehr nach als die Kunst das Leben",
             quelle: "Oscar Wilde",
             kommentar: "Science-Fiction schrieb das Drehbuch, lange bevor KI kam.",
+            deutung:
+              "Wildes Umkehrung ist ernster, als sie klingt: Erst erfindet die Kunst ein Bild, dann richtet sich das Leben danach. Science-Fiction hat Jahrzehnte an der KI geschrieben, bevor es sie gab — und die Erbauer haben mitgelesen: Manche heutige Benutzeroberfläche, manche Firmenvision zitiert wörtlich das Kino. Wer die Filme kennt, erkennt die Drehbücher hinter den Produkten.",
           },
           {
             x: 140,
@@ -109,6 +121,8 @@ export default function Lernseite2KulturellePerspektive() {
             text: "Der Mensch ist nur da ganz Mensch, wo er spielt",
             quelle: "Friedrich Schiller",
             kommentar: "Auch der Umgang mit KI beginnt oft im Spiel.",
+            deutung:
+              "Im Spiel, sagt Schiller, ist der Mensch ganz Mensch: frei, probierend, ohne Zweckdruck. Tatsächlich begegnen die meisten der KI zuerst spielerisch — man testet, neckt, reizt sie aus. Das ist keine verlorene Zeit: Gerade im Spiel zeigt sich, was die Technik kann, wo sie scheitert und was uns dabei wichtig wird.",
           },
           {
             x: 580,
@@ -116,6 +130,8 @@ export default function Lernseite2KulturellePerspektive() {
             text: "Die Malerei ist eine Poesie, die man sieht",
             quelle: "nach Leonardo da Vinci",
             kommentar: "Bilder sprechen zu uns — lange bevor Begriffe da sind.",
+            deutung:
+              "Bilder wirken schneller als Begriffe: Sie stimmen uns, bevor wir denken. Deshalb beginnt diese Perspektive bei Gemälden, Sagen und Filmfiguren — sie sind die Poesie, durch die wir Technik immer schon sehen. Wer die eigenen inneren Bilder kennt, kann freier entscheiden, welchen er trauen will.",
           },
         ]}
       />

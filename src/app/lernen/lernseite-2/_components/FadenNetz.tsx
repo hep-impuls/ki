@@ -1,21 +1,23 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { merkeSpur } from "../_lib/spuren";
 
 /**
  * FadenNetz — das interaktive Kopf-Muster der Themenseiten von Lernseite 2.
  *
- * Nachfolger des einfachen Weisheits-Fadens (ein einzelner Bogen, für alle
- * Seiten gleich): Statt einem Faden trägt jede Seite ihr individuelles
- * Muster (Auftritts-Stern, Epochen-Linie, Gewebe) — aus mehreren Fäden,
- * denen man einzeln und auf
- * unterschiedlichen Wegen mit Maus oder Finger nachfahren kann. Der
- * Akzentfaden wächst dort, wo man entlangfährt (in beide Richtungen,
- * ohne Teleport-Sprünge). Erreicht die Spur einen Knoten — auch mitten
- * auf einer Kreuzung —, erscheint dessen Weisheit in der Karte darunter.
- * Knoten sind zusätzlich direkt antipp- und per Tastatur bedienbar;
- * optional springt ein Knopf zu einem Ziel-Anker (z.B. Epochen-Panel).
+ * Jede Seite trägt ihr individuelles Muster (Auftritts-Stern, Epochen-Linie,
+ * Gewebe) aus mehreren Fäden, denen man einzeln und auf unterschiedlichen
+ * Wegen mit Maus oder Finger nachfahren kann. Erreicht die Spur einen
+ * Knoten — auch mitten auf einer Kreuzung —, wird dessen Weisheit
+ * «eingesammelt»: Sie bleibt stehen und wächst zu einer Sammlung unter dem
+ * Muster (Zitat + Quelle + ausführliche Deutung). Zwischen besuchten Knoten
+ * füllen sich die entstehenden Flächen — abwechselnd mit Farbe, Schraffur
+ * und Punktmuster (siehe `flaechen`).
+ *
+ * Aktivitäten werden zweifach registriert (siehe _lib/spuren.ts): lokal im
+ * Browser (fürs Orakel-Dashboard «du») und als anonymer +1-Zähler in
+ * Firebase (fürs «alle») — ohne Namen, ohne Code.
  *
  * Gestaltung wie Gewebe.tsx: nur Theme-Tokens, feine Linien + Knoten,
  * keine Verläufe/Filter, deterministische Koordinaten. Vermessung
@@ -29,8 +31,10 @@ export interface FadenKnoten {
   text: string;
   /** Urheber — bei Paraphrasen «nach …». */
   quelle: string;
-  /** Optionaler Brückensatz zum Seitenthema. */
+  /** Kurzer Brückensatz (erscheint unter der Quelle). */
   kommentar?: string;
+  /** Ausführliche Deutung (2–4 Sätze) — der Hauptteil der Karte. */
+  deutung?: string;
   /** Optionales kurzes Label direkt im SVG (z.B. Epochenname). */
   label?: string;
   /** Hervorgehobener Knoten (Tertiary-Ring). */
@@ -44,6 +48,15 @@ export interface FadenStrang {
   d: string;
   /** Feiner Nebenfaden (dünner, halbtransparent) — trotzdem nachfahrbar. */
   fein?: boolean;
+}
+
+export interface FadenFlaeche {
+  /** Polygon in viewBox-Koordinaten. */
+  punkte: [number, number][];
+  /** Erscheint, sobald alle diese Knoten (Indizes) besucht sind. */
+  knoten: number[];
+  /** Füllung: sanfte Farbe, Schraffur oder Punktmuster. */
+  muster?: "voll" | "schraffur" | "punkte";
 }
 
 const VB_W = 720;
@@ -67,6 +80,7 @@ type Messung = {
 export default function FadenNetz({
   knoten,
   straenge,
+  flaechen = [],
   hoehe = 220,
   einladung,
   sprungLabel = "Hinspringen",
@@ -76,6 +90,8 @@ export default function FadenNetz({
 }: {
   knoten: FadenKnoten[];
   straenge: FadenStrang[];
+  /** Flächen, die sich beim Einsammeln der Knoten füllen. */
+  flaechen?: FadenFlaeche[];
   /** viewBox-Höhe (Breite fix 720). */
   hoehe?: number;
   einladung: string;
@@ -84,20 +100,22 @@ export default function FadenNetz({
   svgKlasse?: string;
   className?: string;
   /** Optionaler Spur-Präfix (z.B. "vorhang-auf:weisheit") — besuchte Knoten
-   *  werden dann lokal fürs Orakel-Dashboard gemerkt (nur localStorage). */
+   *  werden lokal + als anonymer Firebase-Zähler gemerkt. */
   spurKey?: string;
 }) {
   const n = knoten.length;
   const svgRef = useRef<SVGSVGElement>(null);
   const pathRefs = useRef<(SVGPathElement | null)[]>([]);
   const messRef = useRef<Messung | null>(null);
+  const musterId = useId().replace(/[^a-zA-Z0-9]/g, "");
 
   const [ready, setReady] = useState(false);
   const [painted, setPainted] = useState<Bereich[]>(() =>
     straenge.map(() => null)
   );
   const [visited, setVisited] = useState<Set<number>>(new Set());
-  const [active, setActive] = useState<number | null>(null);
+  /** Einsammel-Reihenfolge — die Karten bleiben in dieser Ordnung stehen. */
+  const [gesammelt, setGesammelt] = useState<number[]>([]);
 
   // Fäden vermessen + Knoten den Fäden zuordnen (auch Kreuzungen mittendrin).
   useEffect(() => {
@@ -174,13 +192,10 @@ export default function FadenNetz({
     });
   }
 
-  // Erreichte Knoten einsammeln (Spur berührt ihren Abtastpunkt) — der
-  // zuletzt erreichte zeigt seine Weisheit; besuchte Knoten werden optional
-  // als lokale Spur gemerkt.
+  // Erreichte Knoten einsammeln (Spur berührt ihren Abtastpunkt).
   useEffect(() => {
     const m = messRef.current;
     if (!m) return;
-    let zuletzt: number | null = null;
     const dazu: number[] = [];
     m.adj.forEach((list, k) => {
       if (visited.has(k)) return;
@@ -188,10 +203,7 @@ export default function FadenNetz({
         const b = painted[s];
         return b !== null && idx >= b.lo - REICH_EPS && idx <= b.hi + REICH_EPS;
       });
-      if (erreicht) {
-        dazu.push(k);
-        zuletzt = k;
-      }
+      if (erreicht) dazu.push(k);
     });
     if (dazu.length === 0) return;
     setVisited((v) => {
@@ -199,14 +211,16 @@ export default function FadenNetz({
       dazu.forEach((k) => nx.add(k));
       return nx;
     });
-    setActive(zuletzt);
+    setGesammelt((g) => [...g, ...dazu.filter((k) => !g.includes(k))]);
     if (spurKey) dazu.forEach((k) => merkeSpur(`${spurKey}:${k}`));
   }, [painted, visited, spurKey]);
 
   function reveal(i: number) {
-    setVisited((prev) => new Set(prev).add(i));
-    setActive(i);
-    if (spurKey) merkeSpur(`${spurKey}:${i}`);
+    if (!visited.has(i)) {
+      setVisited((prev) => new Set(prev).add(i));
+      setGesammelt((g) => (g.includes(i) ? g : [...g, i]));
+      if (spurKey) merkeSpur(`${spurKey}:${i}`);
+    }
   }
 
   function springe(ziel: string) {
@@ -227,179 +241,257 @@ export default function FadenNetz({
 
   const done = visited.size === n;
   const started = visited.size > 0 || painted.some((b) => b !== null);
-  const aktiv = active !== null ? knoten[active] : null;
 
   return (
     <section aria-label="Muster zum Nachfahren" className={className}>
-      <p className="mb-sm flex items-center gap-xs text-label-sm uppercase tracking-wider text-on-surface-variant">
-        <span className="material-symbols-outlined text-[16px] text-tertiary">
+      <p className="mb-sm flex items-center gap-xs text-label-md uppercase tracking-wider text-on-surface-variant">
+        <span className="material-symbols-outlined text-[18px] text-tertiary">
           {done ? "done_all" : "swipe"}
         </span>
         {done
-          ? `Alle ${n} Knoten besucht`
+          ? `Alle ${n} Knoten besucht — das Muster ist gewoben`
           : started
           ? `${visited.size} von ${n} Knoten besucht`
           : "Fahr den Fäden nach — mehrere Wege sind möglich"}
       </p>
 
-      <svg
-        ref={svgRef}
-        viewBox={`0 0 ${VB_W} ${hoehe}`}
-        preserveAspectRatio="none"
-        onPointerMove={handlePointer}
-        onPointerDown={handlePointer}
-        className={"block w-full select-none touch-pan-y " + svgKlasse}
-      >
-        {/* Grundfäden */}
-        {straenge.map((st, s) => (
-          <path
-            key={`b${s}`}
-            ref={(el) => {
-              pathRefs.current[s] = el;
-            }}
-            d={st.d}
-            fill="none"
-            strokeWidth={st.fein ? 0.9 : 1.25}
-            className="stroke-outline-variant"
-            opacity={st.fein ? 0.6 : 1}
-          />
-        ))}
-        {/* Nachgefahrene Spuren */}
-        {ready &&
-          straenge.map((st, s) => {
-            const b = painted[s];
-            const m = messRef.current!.mess[s];
-            if (!b) return null;
-            const loLen = m.samples[b.lo].len;
-            const hiLen = m.samples[b.hi].len;
-            if (hiLen - loLen < 0.5) return null;
-            return (
-              <path
-                key={`p${s}`}
-                d={st.d}
-                fill="none"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeDasharray={`${hiLen - loLen} ${m.total + 10}`}
-                strokeDashoffset={-loLen}
-                style={{
-                  transition:
-                    "stroke-dashoffset 90ms linear, stroke-dasharray 90ms linear",
-                }}
+      {/* Muster-Bühne: eigener, leicht abgesetzter Grund */}
+      <div className="overflow-hidden rounded-xl border border-outline-variant bg-surface-container-low/60 p-sm sm:p-md">
+        <svg
+          ref={svgRef}
+          viewBox={`0 0 ${VB_W} ${hoehe}`}
+          preserveAspectRatio="none"
+          onPointerMove={handlePointer}
+          onPointerDown={handlePointer}
+          className={"block w-full select-none touch-pan-y " + svgKlasse}
+        >
+          <defs>
+            <pattern
+              id={`${musterId}-schraffur`}
+              width="9"
+              height="9"
+              patternUnits="userSpaceOnUse"
+              patternTransform="rotate(45)"
+            >
+              <line
+                x1="0"
+                y1="0"
+                x2="0"
+                y2="9"
+                strokeWidth="1.4"
                 className="stroke-tertiary"
-                opacity="0.85"
+                opacity="0.30"
+              />
+            </pattern>
+            <pattern
+              id={`${musterId}-punkte`}
+              width="11"
+              height="11"
+              patternUnits="userSpaceOnUse"
+            >
+              <circle cx="3" cy="3" r="1.4" className="fill-tertiary" opacity="0.32" />
+            </pattern>
+          </defs>
+
+          {/* Flächen — füllen sich, sobald ihre Knoten eingesammelt sind */}
+          {flaechen.map((f, i) => {
+            const aktiv = f.knoten.every((k) => visited.has(k));
+            const art = f.muster ?? (["voll", "schraffur", "punkte"] as const)[i % 3];
+            const fill =
+              art === "voll"
+                ? undefined
+                : `url(#${musterId}-${art === "schraffur" ? "schraffur" : "punkte"})`;
+            return (
+              <polygon
+                key={`f${i}`}
+                points={f.punkte.map(([x, y]) => `${x},${y}`).join(" ")}
+                fill={fill}
+                className={
+                  "transition-opacity duration-700 " +
+                  (art === "voll" ? "fill-tertiary" : "")
+                }
+                opacity={aktiv ? (art === "voll" ? 0.09 : 1) : 0}
               />
             );
           })}
-        {/* Puls am ersten Knoten als Einladung */}
-        {!started && (
-          <circle
-            cx={knoten[0].x}
-            cy={knoten[0].y}
-            r="11"
-            className="fill-tertiary opacity-30 animate-ping origin-center [transform-box:fill-box] motion-reduce:hidden"
-          />
-        )}
-        {/* Knoten */}
-        {knoten.map((k, i) => {
-          const reached = visited.has(i);
-          const isActive = active === i;
-          return (
-            <g
-              key={i}
-              tabIndex={0}
-              role="button"
-              aria-label={`Weisheit ${i + 1} von ${n}: ${k.quelle}`}
-              onClick={() => reveal(i)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  e.preventDefault();
-                  reveal(i);
-                }
-              }}
-              className="group cursor-pointer outline-none"
-            >
-              <circle cx={k.x} cy={k.y} r="22" fill="transparent" />
-              {isActive && (
-                <circle
-                  cx={k.x}
-                  cy={k.y}
-                  r="14"
-                  fill="none"
-                  strokeWidth="1"
-                  className="stroke-tertiary"
-                  opacity="0.5"
-                />
-              )}
-              {(reached || k.akzent) && (
-                <circle
-                  cx={k.x}
-                  cy={k.y}
-                  r="9"
-                  fill="none"
-                  strokeWidth="1"
-                  className="stroke-tertiary"
-                  opacity="0.45"
-                />
-              )}
-              <circle
-                cx={k.x}
-                cy={k.y}
-                r={k.akzent ? 5.5 : 4.5}
-                className={
-                  (reached || k.akzent ? "fill-tertiary" : "fill-outline") +
-                  " origin-center [transform-box:fill-box] transition-transform duration-300 group-hover:scale-125 group-focus-visible:scale-125"
-                }
-                opacity={reached || k.akzent ? 1 : 0.65}
-              />
-              {k.label && (
-                <text
-                  x={k.x}
-                  y={k.y + 22}
-                  textAnchor="middle"
-                  fontSize="11"
-                  className="fill-on-surface-variant"
-                >
-                  {k.label}
-                </text>
-              )}
-            </g>
-          );
-        })}
-      </svg>
 
-      {/* Weisheits-Karte */}
-      <div
-        aria-live="polite"
-        className="mt-sm min-h-[104px] rounded-xl border border-outline-variant bg-surface-container-low p-md"
-      >
-        {aktiv === null ? (
-          <p className="flex items-start gap-sm text-body-sm text-on-surface-variant">
-            <span className="material-symbols-outlined text-[18px] text-tertiary">
-              explore
-            </span>
-            {einladung}
-          </p>
-        ) : (
-          <blockquote key={active} className="animate-frame-in">
-            <p className="text-body-md italic text-on-surface">«{aktiv.text}»</p>
-            <footer className="mt-xs text-label-sm text-on-surface-variant">
-              — {aktiv.quelle}
-              {aktiv.kommentar && <> · {aktiv.kommentar}</>}
-            </footer>
-            {aktiv.ziel && (
-              <button
-                type="button"
-                onClick={() => springe(aktiv.ziel!)}
-                className="mt-sm inline-flex items-center gap-xs rounded-lg border border-outline-variant bg-surface-bright px-sm py-xs text-label-md text-tertiary transition-colors hover:bg-surface-container"
+          {/* Grundfäden */}
+          {straenge.map((st, s) => (
+            <path
+              key={`b${s}`}
+              ref={(el) => {
+                pathRefs.current[s] = el;
+              }}
+              d={st.d}
+              fill="none"
+              strokeWidth={st.fein ? 0.9 : 1.25}
+              className="stroke-outline-variant"
+              opacity={st.fein ? 0.6 : 1}
+            />
+          ))}
+          {/* Nachgefahrene Spuren */}
+          {ready &&
+            straenge.map((st, s) => {
+              const b = painted[s];
+              const m = messRef.current!.mess[s];
+              if (!b) return null;
+              const loLen = m.samples[b.lo].len;
+              const hiLen = m.samples[b.hi].len;
+              if (hiLen - loLen < 0.5) return null;
+              return (
+                <path
+                  key={`p${s}`}
+                  d={st.d}
+                  fill="none"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeDasharray={`${hiLen - loLen} ${m.total + 10}`}
+                  strokeDashoffset={-loLen}
+                  style={{
+                    transition:
+                      "stroke-dashoffset 90ms linear, stroke-dasharray 90ms linear",
+                  }}
+                  className="stroke-tertiary"
+                  opacity="0.85"
+                />
+              );
+            })}
+          {/* Puls am ersten Knoten als Einladung */}
+          {!started && (
+            <circle
+              cx={knoten[0].x}
+              cy={knoten[0].y}
+              r="11"
+              className="fill-tertiary opacity-30 animate-ping origin-center [transform-box:fill-box] motion-reduce:hidden"
+            />
+          )}
+          {/* Knoten */}
+          {knoten.map((k, i) => {
+            const reached = visited.has(i);
+            return (
+              <g
+                key={i}
+                tabIndex={0}
+                role="button"
+                aria-label={`Weisheit ${i + 1} von ${n}: ${k.quelle}`}
+                onClick={() => reveal(i)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    reveal(i);
+                  }
+                }}
+                className="group cursor-pointer outline-none"
               >
-                <span className="material-symbols-outlined text-[16px]">
-                  arrow_downward
-                </span>
-                {sprungLabel}
-              </button>
-            )}
-          </blockquote>
+                <circle cx={k.x} cy={k.y} r="22" fill="transparent" />
+                {(reached || k.akzent) && (
+                  <circle
+                    cx={k.x}
+                    cy={k.y}
+                    r="9"
+                    fill="none"
+                    strokeWidth="1"
+                    className="stroke-tertiary"
+                    opacity="0.45"
+                  />
+                )}
+                <circle
+                  cx={k.x}
+                  cy={k.y}
+                  r={k.akzent ? 5.5 : 4.5}
+                  className={
+                    (reached || k.akzent ? "fill-tertiary" : "fill-outline") +
+                    " origin-center [transform-box:fill-box] transition-transform duration-300 group-hover:scale-125 group-focus-visible:scale-125"
+                  }
+                  opacity={reached || k.akzent ? 1 : 0.65}
+                />
+                {k.label && (
+                  <text
+                    x={k.x}
+                    y={k.y + 22}
+                    textAnchor="middle"
+                    fontSize="12"
+                    className="fill-on-surface-variant"
+                  >
+                    {k.label}
+                  </text>
+                )}
+              </g>
+            );
+          })}
+        </svg>
+      </div>
+
+      {/* Eingesammelte Weisheiten — bleiben stehen, in Einsammel-Reihenfolge */}
+      <div aria-live="polite" className="mt-md">
+        {gesammelt.length === 0 ? (
+          <div className="rounded-xl border border-outline-variant bg-surface-container-low p-lg">
+            <p className="flex items-start gap-sm text-body-md text-on-surface-variant">
+              <span className="material-symbols-outlined text-[20px] text-tertiary">
+                explore
+              </span>
+              {einladung}
+            </p>
+          </div>
+        ) : (
+          <ol className="flex flex-col gap-md">
+            {gesammelt.map((idx, pos) => {
+              const k = knoten[idx];
+              const neuste = pos === gesammelt.length - 1;
+              return (
+                <li
+                  key={idx}
+                  className={
+                    "rounded-xl border p-lg " +
+                    (neuste
+                      ? "animate-frame-in border-tertiary/50 bg-tertiary-container/25"
+                      : pos % 2 === 0
+                      ? "border-outline-variant bg-surface-bright"
+                      : "border-outline-variant bg-surface-container-low")
+                  }
+                >
+                  <div className="flex items-start gap-md">
+                    <span className="mt-xs flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-tertiary-container text-label-md text-on-tertiary-container">
+                      {pos + 1}
+                    </span>
+                    <div className="min-w-0">
+                      <blockquote>
+                        <p className="text-body-lg italic text-on-surface">
+                          «{k.text}»
+                        </p>
+                        <footer className="mt-xs text-label-md text-tertiary">
+                          — {k.quelle}
+                          {k.kommentar && (
+                            <span className="text-on-surface-variant">
+                              {" "}
+                              · {k.kommentar}
+                            </span>
+                          )}
+                        </footer>
+                      </blockquote>
+                      {k.deutung && (
+                        <p className="mt-sm text-body-md text-on-surface-variant">
+                          {k.deutung}
+                        </p>
+                      )}
+                      {k.ziel && (
+                        <button
+                          type="button"
+                          onClick={() => springe(k.ziel!)}
+                          className="mt-md inline-flex items-center gap-xs rounded-lg border border-outline-variant bg-surface-bright px-md py-xs text-label-md text-tertiary transition-colors hover:bg-surface-container"
+                        >
+                          <span className="material-symbols-outlined text-[16px]">
+                            arrow_downward
+                          </span>
+                          {sprungLabel}
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
         )}
       </div>
     </section>
