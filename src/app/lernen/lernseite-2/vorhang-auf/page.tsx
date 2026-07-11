@@ -2,8 +2,8 @@ import Link from "next/link";
 import ActivityTracker from "@/components/ActivityTracker";
 import AppLayout from "@/components/layout/AppLayout";
 import { FadenDivider, Signatur } from "../_components/Gewebe";
+import FadenNetz from "../_components/FadenNetz";
 import KnotenNetz from "../_components/KnotenNetz";
-import WeisheitsFaden from "../_components/WeisheitsFaden";
 import AkteursModell from "./_components/AkteursModell";
 
 /**
@@ -62,26 +62,70 @@ export default function Lernseite2VorhangAuf() {
         </p>
       </header>
 
-      {/* Interaktives Muster: dem Faden nachfahren, Weisheiten einsammeln */}
-      <WeisheitsFaden
+      {/* Interaktives Muster der Seite: der Auftritts-Stern — sechs Fäden,
+          sechs Wege, in der Mitte die Bühne */}
+      <FadenNetz
         className="mt-xl max-w-3xl"
-        weisheiten={[
+        hoehe={220}
+        svgKlasse="aspect-[720/300] sm:aspect-[720/220]"
+        einladung="Sechs Fäden treffen sich in der Mitte — wähle deinen Weg und sammle die Weisheiten ein."
+        straenge={[
+          { d: "M360 112 L84 48" },
+          { d: "M360 112 L300 24" },
+          { d: "M360 112 L596 38" },
+          { d: "M360 112 L76 182" },
+          { d: "M360 112 L420 198" },
+          { d: "M360 112 L636 172" },
+          { d: "M84 48 L300 24", fein: true },
+          { d: "M596 38 L636 172", fein: true },
+        ]}
+        knoten={[
           {
+            x: 360,
+            y: 112,
+            akzent: true,
             text: "Die ganze Welt ist Bühne, und alle Frauen und Männer blosse Spieler",
             quelle: "William Shakespeare, «Wie es euch gefällt»",
             kommentar: "Vorhang auf — welche Rolle geben wir der neuen Akteurin?",
           },
           {
+            x: 84,
+            y: 48,
             text: "Alles fliesst",
             quelle: "Heraklit",
             kommentar: "Panta rhei: auch der Werkzeug-Begriff bleibt nicht stehen.",
           },
           {
+            x: 300,
+            y: 24,
+            text: "Ich weiss, dass ich nichts weiss",
+            quelle: "nach Sokrates",
+            kommentar: "Ein guter Anfang — auch im Umgang mit der neuen Akteurin.",
+          },
+          {
+            x: 596,
+            y: 38,
             text: "Die Grenzen meiner Sprache bedeuten die Grenzen meiner Welt",
             quelle: "Ludwig Wittgenstein",
             kommentar: "Was verschiebt sich, wenn Maschinen sprechen?",
           },
           {
+            x: 76,
+            y: 182,
+            text: "Ich denke, also bin ich",
+            quelle: "René Descartes",
+            kommentar: "Und die Maschine? Sie rechnet — ist das schon Denken?",
+          },
+          {
+            x: 420,
+            y: 198,
+            text: "Können Maschinen denken?",
+            quelle: "Alan Turing, 1950",
+            kommentar: "Die Frage, mit der das KI-Zeitalter beginnt.",
+          },
+          {
+            x: 636,
+            y: 172,
             text: "Mit jedem Anfang kommt etwas Neues in die Welt",
             quelle: "nach Hannah Arendt",
             kommentar: "Anfangen können — vielleicht die menschlichste aller Fähigkeiten.",

@@ -10,6 +10,30 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-11 — FadenNetz: individuelle Muster statt Einheits-Faden am Seitenkopf
+
+Der Weisheits-Faden am Kopf der Themenseiten (ein Bogen, überall gleich) ist
+durch **FadenNetz** ersetzt (`lernseite-2/_components/FadenNetz.tsx`,
+`WeisheitsFaden.tsx` gelöscht): Jede Seite trägt oben ihr **individuelles
+Muster aus mehreren Fäden**, denen man einzeln, in beide Richtungen und auf
+**unterschiedlichen Wegen** nachfahren kann (pro Faden eigene Spur, kein
+Teleport; Knoten zählen auch mitten auf Kreuzungen als erreicht).
+
+- **Vorhang auf — Auftritts-Stern:** 6 Strahlen + 2 Nebenfäden, 7 Weisheiten
+  (Zentrum Shakespeare/Bühne; aussen Heraklit, nach Sokrates, Wittgenstein,
+  Descartes, Turing 1950 «Können Maschinen denken?», nach Arendt).
+- **Philosophische Perspektive — Epochen-Linie:** 5 beschriftete Knoten
+  (Antike→Jetzt) mit den Schablonen-Zitaten und Sprung-Knopf zum
+  Zeitstrahl-Panel. Der frühere separate Abschnitt «Fünf Epochen im
+  Überblick» (KnotenNetz) ist entfernt — war nach dem Umbau ein Duplikat.
+- **Kulturelle Perspektive — Gewebe:** 3 Schuss- + 3 Kettfäden, Weisheiten
+  an den Kreuzungen (Zentrum Klee; Goethe, Wilde, Schiller, nach da Vinci).
+
+Die KnotenNetz-Abschnitte «Das Netz der neuen Akteurin» (Vorhang auf) und
+«Figuren im Gewebe» (Kulturell) bleiben — anderes Thema als die Weisheiten.
+
+---
+
 ## 2026-07-11 — KnotenNetz: die Signatur-Symbole gross und bedienbar
 
 Die drei Konstellations-Signaturen vom Hub gibt es jetzt auf ihren Seiten

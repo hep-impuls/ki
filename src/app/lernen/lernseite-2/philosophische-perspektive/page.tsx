@@ -1,8 +1,7 @@
 import Link from "next/link";
 import ActivityTracker from "@/components/ActivityTracker";
 import AppLayout from "@/components/layout/AppLayout";
-import KnotenNetz from "../_components/KnotenNetz";
-import WeisheitsFaden from "../_components/WeisheitsFaden";
+import FadenNetz from "../_components/FadenNetz";
 import SchablonenZeitstrahl from "./_components/SchablonenZeitstrahl";
 
 /**
@@ -60,99 +59,69 @@ export default function Lernseite2PhilosophischePerspektive() {
         </blockquote>
       </header>
 
-      {/* Interaktives Muster: fünf Epochen-Knoten, je eine Schablone */}
-      <WeisheitsFaden
+      {/* Interaktives Muster der Seite: die Epochen-Linie — von der Antike
+          bis heute, jeder Knoten mit Schablone und Sprung ins Panel */}
+      <FadenNetz
         className="mt-xl max-w-3xl"
-        weisheiten={[
+        hoehe={210}
+        svgKlasse="aspect-[720/290] sm:aspect-[720/210]"
+        einladung="Fahr der Zeitlinie nach — von der Antike bis heute. Jede Epoche zeigt ihre Schablone und springt auf Wunsch zu ihrem Panel."
+        sprungLabel="Zur Epoche im Zeitstrahl"
+        straenge={[
+          { d: "M60 176 C110 162 160 152 210 140" },
+          { d: "M210 140 C260 130 310 121 360 112" },
+          { d: "M360 112 C410 103 460 92 510 82" },
+          { d: "M510 82 C560 72 610 57 660 44" },
+        ]}
+        knoten={[
           {
+            x: 60,
+            y: 176,
+            label: "Antike",
             text: "Alle Menschen streben von Natur aus nach Wissen",
             quelle: "Aristoteles · Antike",
             kommentar: "Schablone: beobachten, ordnen, begründen.",
+            ziel: "epoche-antike",
           },
           {
+            x: 210,
+            y: 140,
+            label: "Mittelalter",
             text: "Im inneren Menschen wohnt die Wahrheit",
             quelle: "Augustinus · Spätantike",
             kommentar: "Schablone: Innerlichkeit, Glaube, Heilsgeschichte.",
+            ziel: "epoche-augustinus",
           },
           {
+            x: 360,
+            y: 112,
+            label: "Aufklärung",
             text: "Habe Mut, dich deines eigenen Verstandes zu bedienen",
             quelle: "Immanuel Kant · Aufklärung",
             kommentar: "Schablone: Autonomie und Selbstdenken.",
+            ziel: "epoche-kant",
           },
           {
+            x: 510,
+            y: 82,
+            label: "Moderne",
             text: "Alles Ständische und Stehende verdampft",
             quelle: "Karl Marx · Industriemoderne",
             kommentar: "Schablone: den Umbruch begreifen — und gestalten.",
+            ziel: "epoche-marx",
           },
           {
+            x: 660,
+            y: 44,
+            label: "Jetzt",
+            akzent: true,
             text: "Welche Schablone trägt uns durch die Zeit der KI?",
             quelle: "Wir — jetzt",
             kommentar: "Die Antwort entsteht gerade — unten im Zeitstrahl.",
+            ziel: "epoche-jetzt",
           },
         ]}
       />
-
-      {/* Interaktive Signatur: fünf Epochen als anklickbare Karte */}
-      <section className="mt-xl max-w-3xl" aria-label="Fünf Epochen im Überblick">
-        <h2 className="text-headline-md text-on-surface">
-          Fünf Epochen im Überblick
-        </h2>
-        <p className="mt-sm text-body-md text-on-surface-variant">
-          Die Zeitlinie steigt von der Antike bis heute. Tippe eine Epoche an —
-          und spring von dort direkt zu ihrem Panel im Zeitstrahl.
-        </p>
-        <KnotenNetz
-          className="mt-lg"
-          einladung="Fünf Knoten, fünf Epochen — tippe einen an, um Denker und Schablone zu sehen."
-          sprungLabel="Zur Epoche im Zeitstrahl"
-          deko={[
-            "M24 144 C44 132 56 124 72 116 C88 108 104 104 120 100 C136 96 152 88 168 80 C184 72 200 62 216 52",
-          ]}
-          knoten={[
-            {
-              x: 24,
-              y: 144,
-              label: "Antike",
-              titel: "Antike — Aristoteles",
-              text: "Der Mythos trägt nicht mehr, die Sophisten machen jede Wahrheit verkäuflich — Aristoteles antwortet mit der Schablone: beobachten, ordnen, begründen.",
-              ziel: "epoche-antike",
-            },
-            {
-              x: 72,
-              y: 116,
-              label: "Mittelalter",
-              titel: "Spätantike & Mittelalter — Augustinus",
-              text: "Rom fällt, eine Weltordnung zerbricht — Augustinus verlegt den Halt nach innen: Glaube, Gewissen, Heilsgeschichte.",
-              ziel: "epoche-augustinus",
-            },
-            {
-              x: 120,
-              y: 100,
-              label: "Aufklärung",
-              titel: "Aufklärung — Kant",
-              text: "Kopernikus und Lissabon erschüttern den Weltplan — Kant fordert: Habe Mut, dich deines eigenen Verstandes zu bedienen.",
-              ziel: "epoche-kant",
-            },
-            {
-              x: 168,
-              y: 80,
-              label: "Moderne",
-              titel: "Industriemoderne — Marx",
-              text: "Die Maschine ordnet die Gesellschaft neu — Marx begreift den Umbruch als menschengemacht und darum veränderbar.",
-              ziel: "epoche-marx",
-            },
-            {
-              x: 216,
-              y: 52,
-              label: "Jetzt",
-              akzent: true,
-              titel: "Gegenwart — wir",
-              text: "Alles ist vernetzt, KI tritt auf — die Schablone unserer Zeit ist noch offen. Genau daran arbeitet dieses Modul.",
-              ziel: "epoche-jetzt",
-            },
-          ]}
-        />
-      </section>
 
       <section className="mt-xl max-w-3xl">
         <SchablonenZeitstrahl />

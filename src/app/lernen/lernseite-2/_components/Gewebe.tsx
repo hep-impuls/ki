@@ -18,7 +18,8 @@
  *    treten hervor — beim Überfahren des Musters selbst («group» auf dem
  *    SVG) oder der umgebenden Karte («group» auf dem Link).
  *
- * Interaktives Gegenstück (Nachfahren + Weisheiten): WeisheitsFaden.tsx.
+ * Interaktive Gegenstücke: FadenNetz.tsx (Muster zum Nachfahren mit
+ * Weisheiten) und KnotenNetz.tsx (antippbare Konstellationen).
  */
 
 /** Hover-Klassen für Akzentknoten (Punkt wächst) bzw. -ringe/-fäden. */

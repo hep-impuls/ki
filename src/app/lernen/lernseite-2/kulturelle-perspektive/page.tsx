@@ -2,8 +2,8 @@ import Link from "next/link";
 import ActivityTracker from "@/components/ActivityTracker";
 import AppLayout from "@/components/layout/AppLayout";
 import { FadenDivider, Signatur } from "../_components/Gewebe";
+import FadenNetz from "../_components/FadenNetz";
 import KnotenNetz from "../_components/KnotenNetz";
-import WeisheitsFaden from "../_components/WeisheitsFaden";
 
 /**
  * Thema 03 — «Kulturelle Perspektive» (im Aufbau).
@@ -49,24 +49,72 @@ export default function Lernseite2KulturellePerspektive() {
         </div>
       </header>
 
-      {/* Interaktives Muster: dem Faden nachfahren, Weisheiten einsammeln */}
-      <WeisheitsFaden
+      {/* Interaktives Muster der Seite: das Gewebe — Kett- und Schussfäden,
+          mehrere Wege, Weisheiten an den Kreuzungen */}
+      <FadenNetz
         className="mt-xl max-w-3xl"
-        weisheiten={[
+        hoehe={220}
+        svgKlasse="aspect-[720/300] sm:aspect-[720/220]"
+        einladung="Kett- und Schussfäden kreuzen sich — such dir deinen Weg durchs Gewebe; an den Kreuzungen warten Weisheiten."
+        straenge={[
           {
+            d: "M28 70 C66 67 103 65 140 64 C213 62 287 60 360 60 C433 60 507 62 580 64 C617 65 655 67 692 70",
+          },
+          {
+            d: "M28 124 C138 122 249 120 360 120 C471 120 582 122 692 124",
+          },
+          {
+            d: "M28 182 C66 179 103 177 140 176 C213 174 287 174 360 174 C433 174 507 174 580 176 C617 177 655 179 692 182",
+          },
+          {
+            d: "M144 24 C142 37 140 50 140 64 C140 101 140 139 140 176 C140 189 142 202 144 214",
+            fein: true,
+          },
+          {
+            d: "M364 20 C363 33 361 46 360 60 C360 80 360 100 360 120 C360 146 361 172 362 198",
+            fein: true,
+          },
+          {
+            d: "M584 24 C582 37 580 50 580 64 C580 101 580 139 580 176 C580 189 582 202 584 214",
+            fein: true,
+          },
+        ]}
+        knoten={[
+          {
+            x: 360,
+            y: 120,
+            akzent: true,
             text: "Kunst gibt nicht das Sichtbare wieder, sondern macht sichtbar",
             quelle: "Paul Klee",
             kommentar: "Genau darum geht es hier: sehen, wie wir sehen.",
           },
           {
+            x: 140,
+            y: 64,
             text: "Man erblickt nur, was man schon weiss und versteht",
             quelle: "Johann Wolfgang von Goethe",
             kommentar: "Unsere Bilder entscheiden, was wir in der KI erkennen.",
           },
           {
+            x: 580,
+            y: 64,
             text: "Das Leben ahmt die Kunst weit mehr nach als die Kunst das Leben",
             quelle: "Oscar Wilde",
             kommentar: "Science-Fiction schrieb das Drehbuch, lange bevor KI kam.",
+          },
+          {
+            x: 140,
+            y: 176,
+            text: "Der Mensch ist nur da ganz Mensch, wo er spielt",
+            quelle: "Friedrich Schiller",
+            kommentar: "Auch der Umgang mit KI beginnt oft im Spiel.",
+          },
+          {
+            x: 580,
+            y: 176,
+            text: "Die Malerei ist eine Poesie, die man sieht",
+            quelle: "nach Leonardo da Vinci",
+            kommentar: "Bilder sprechen zu uns — lange bevor Begriffe da sind.",
           },
         ]}
       />
