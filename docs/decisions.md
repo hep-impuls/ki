@@ -10,6 +10,33 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-11 — WeisheitsFaden: interaktive Muster auf allen Themenseiten
+
+Das Gewebe-Motiv wird interaktiv: Auf allen drei Themenseiten von Lernseite 2
+liegt unter dem Header ein **WeisheitsFaden**
+(`lernseite-2/_components/WeisheitsFaden.tsx`) — ein Faden, dem man mit Maus
+oder Finger **nachfahren** kann (Akzentfaden zieht mit, Springen ist bewusst
+blockiert — nur Vorwärtsbewegung nahe am Faden zählt). An den Knoten
+erscheint je eine **Weisheit** (Zitat + Brückensatz zum Seitenthema); Knoten
+sind auch direkt antipp- und per Tastatur fokussierbar (aria-live-Karte).
+Einladung über Puls am Fadenanfang + Hinweiszeile («Fahr dem Faden nach»),
+Zähler «n von m Knoten besucht».
+
+Weisheiten je Seite (gemeinfreie Denker bzw. gekennzeichnete Paraphrase):
+- **Vorhang auf:** Shakespeare (Bühne), Heraklit (panta rhei), Wittgenstein
+  (Grenzen der Sprache), «nach Hannah Arendt» (Anfangen).
+- **Philosophische Perspektive:** die fünf Epochen-Schablonen (Aristoteles,
+  Augustinus, Kant, Marx, «Wir — jetzt» als offene Frage) — spiegelt den
+  Zeitstrahl darunter.
+- **Kulturelle Perspektive:** Klee (macht sichtbar), Goethe (man erblickt,
+  was man weiss), Wilde (Leben ahmt Kunst nach).
+
+Zusätzlich reagieren die statischen Muster (GewebeBand, Knoten, FadenDivider,
+Signaturen) jetzt auf Hover: Akzentknoten wachsen, Akzentfäden treten hervor
+(CSS-only, `motion-reduce` respektiert beim Puls).
+
+---
+
 ## 2026-07-11 — Lernseite 2 neu strukturiert: drei Themenbereiche + Gewebe-Design
 
 **Struktur:** Lernseite 2 («Eine ganz neue Partnerschaft») hat neu **drei

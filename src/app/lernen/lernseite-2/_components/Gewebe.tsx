@@ -13,8 +13,18 @@
  *  - alle Koordinaten deterministisch von Hand gesetzt (kein Math.random —
  *    Server- und Client-Render müssen identisch sein);
  *  - Knoten liegen exakt auf Fadenenden bzw. -kreuzungen;
- *  - alles rein dekorativ (aria-hidden), Server-kompatibel (kein "use client").
+ *  - alles rein dekorativ (aria-hidden), Server-kompatibel (kein "use client");
+ *  - sanfte Hover-Reaktion (CSS-only): Akzentknoten wachsen, Akzentfäden
+ *    treten hervor — beim Überfahren des Musters selbst («group» auf dem
+ *    SVG) oder der umgebenden Karte («group» auf dem Link).
+ *
+ * Interaktives Gegenstück (Nachfahren + Weisheiten): WeisheitsFaden.tsx.
  */
+
+/** Hover-Klassen für Akzentknoten (Punkt wächst) bzw. -ringe/-fäden. */
+const HOVER_DOT =
+  "origin-center [transform-box:fill-box] transition-transform duration-300 group-hover:scale-125";
+const HOVER_RING = "transition-opacity duration-300 group-hover:opacity-90";
 
 /** Loses Fadenband für Seitenköpfe: eine Fadenspur mit Knoten, zwei Querfäden. */
 export function GewebeBand({ className = "" }: { className?: string }) {
@@ -35,7 +45,7 @@ export function GewebeBand({ className = "" }: { className?: string }) {
       viewBox="0 0 720 96"
       preserveAspectRatio="xMidYMid meet"
       aria-hidden
-      className={"h-16 w-full max-w-3xl sm:h-20 " + className}
+      className={"group h-16 w-full max-w-3xl sm:h-20 " + className}
     >
       {/* Hauptfaden — läuft durch alle Knoten */}
       <path
@@ -53,18 +63,18 @@ export function GewebeBand({ className = "" }: { className?: string }) {
         d="M10 58 C80 72 140 70 190 66 C250 60 310 58 370 54"
         fill="none"
         strokeWidth="1"
-        className="stroke-tertiary"
+        className={"stroke-tertiary " + HOVER_RING}
         opacity="0.55"
       />
       {/* Knoten */}
       {knots.map(([x, y], i) =>
         i === 4 ? (
           <g key={i}>
-            <circle cx={x} cy={y} r="6.5" fill="none" strokeWidth="1" className="stroke-tertiary" opacity="0.5" />
-            <circle cx={x} cy={y} r="3" className="fill-tertiary" />
+            <circle cx={x} cy={y} r="6.5" fill="none" strokeWidth="1" className={"stroke-tertiary " + HOVER_RING} opacity="0.5" />
+            <circle cx={x} cy={y} r="3" className={"fill-tertiary " + HOVER_DOT} />
           </g>
         ) : (
-          <circle key={i} cx={x} cy={y} r="2" className="fill-outline" opacity="0.7" />
+          <circle key={i} cx={x} cy={y} r="2" className={"fill-outline " + HOVER_DOT} opacity="0.7" />
         )
       )}
     </svg>
@@ -94,9 +104,9 @@ export function FadenVertikal({ className = "" }: { className?: string }) {
 /** Stations-Knoten auf dem Faden (Ring + Punkt). */
 export function Knoten({ className = "" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 40 40" aria-hidden className={"h-10 w-10 flex-shrink-0 " + className}>
-      <circle cx="20" cy="20" r="11" fill="none" strokeWidth="1" className="stroke-tertiary" opacity="0.45" />
-      <circle cx="20" cy="20" r="5" className="fill-tertiary" />
+    <svg viewBox="0 0 40 40" aria-hidden className={"group h-10 w-10 flex-shrink-0 " + className}>
+      <circle cx="20" cy="20" r="11" fill="none" strokeWidth="1" className={"stroke-tertiary " + HOVER_RING} opacity="0.45" />
+      <circle cx="20" cy="20" r="5" className={"fill-tertiary " + HOVER_DOT} />
     </svg>
   );
 }
@@ -108,7 +118,7 @@ export function FadenDivider({ className = "" }: { className?: string }) {
       viewBox="0 0 480 24"
       preserveAspectRatio="xMidYMid meet"
       aria-hidden
-      className={"h-6 w-full max-w-3xl " + className}
+      className={"group h-6 w-full max-w-3xl " + className}
     >
       <path
         d="M0 12 C80 6 160 18 240 12 C320 6 400 18 480 12"
@@ -116,8 +126,8 @@ export function FadenDivider({ className = "" }: { className?: string }) {
         strokeWidth="1"
         className="stroke-outline-variant"
       />
-      <circle cx="240" cy="12" r="5.5" fill="none" strokeWidth="1" className="stroke-tertiary" opacity="0.5" />
-      <circle cx="240" cy="12" r="2.5" className="fill-tertiary" />
+      <circle cx="240" cy="12" r="5.5" fill="none" strokeWidth="1" className={"stroke-tertiary " + HOVER_RING} opacity="0.5" />
+      <circle cx="240" cy="12" r="2.5" className={"fill-tertiary " + HOVER_DOT} />
     </svg>
   );
 }
@@ -147,17 +157,17 @@ export function Signatur({
       [104, 78],
     ];
     return (
-      <svg viewBox="0 0 120 96" aria-hidden className={"h-20 w-24 " + className}>
+      <svg viewBox="0 0 120 96" aria-hidden className={"group h-20 w-24 " + className}>
         {outer.map(([x, y], i) => (
           <line key={i} x1="60" y1="48" x2={x} y2={y} strokeWidth="1" className="stroke-outline-variant" />
         ))}
         <line x1="18" y1="20" x2="58" y2="8" strokeWidth="0.75" className="stroke-outline-variant" opacity="0.5" />
         <line x1="102" y1="16" x2="104" y2="78" strokeWidth="0.75" className="stroke-outline-variant" opacity="0.5" />
         {outer.map(([x, y], i) => (
-          <circle key={i} cx={x} cy={y} r="2" className="fill-outline" opacity="0.6" />
+          <circle key={i} cx={x} cy={y} r="2" className={"fill-outline " + HOVER_DOT} opacity="0.6" />
         ))}
-        <circle cx="60" cy="48" r="9" fill="none" strokeWidth="1" className="stroke-tertiary" opacity="0.45" />
-        <circle cx="60" cy="48" r="4" className="fill-tertiary" />
+        <circle cx="60" cy="48" r="9" fill="none" strokeWidth="1" className={"stroke-tertiary " + HOVER_RING} opacity="0.45" />
+        <circle cx="60" cy="48" r="4" className={"fill-tertiary " + HOVER_DOT} />
       </svg>
     );
   }
@@ -171,7 +181,7 @@ export function Signatur({
       [108, 26],
     ];
     return (
-      <svg viewBox="0 0 120 96" aria-hidden className={"h-20 w-24 " + className}>
+      <svg viewBox="0 0 120 96" aria-hidden className={"group h-20 w-24 " + className}>
         <path
           d="M12 72 C22 66 28 62 36 58 C44 54 52 52 60 50 C68 48 76 44 84 40 C92 36 100 31 108 26"
           fill="none"
@@ -179,17 +189,17 @@ export function Signatur({
           className="stroke-outline-variant"
         />
         {pts.slice(0, 4).map(([x, y], i) => (
-          <circle key={i} cx={x} cy={y} r="2.5" className="fill-outline" opacity="0.65" />
+          <circle key={i} cx={x} cy={y} r="2.5" className={"fill-outline " + HOVER_DOT} opacity="0.65" />
         ))}
-        <circle cx="108" cy="26" r="8" fill="none" strokeWidth="1" className="stroke-tertiary" opacity="0.45" />
-        <circle cx="108" cy="26" r="3.5" className="fill-tertiary" />
+        <circle cx="108" cy="26" r="8" fill="none" strokeWidth="1" className={"stroke-tertiary " + HOVER_RING} opacity="0.45" />
+        <circle cx="108" cy="26" r="3.5" className={"fill-tertiary " + HOVER_DOT} />
       </svg>
     );
   }
 
   // «gewebe»
   return (
-    <svg viewBox="0 0 120 96" aria-hidden className={"h-20 w-24 " + className}>
+    <svg viewBox="0 0 120 96" aria-hidden className={"group h-20 w-24 " + className}>
       {/* Schussfäden (waagrecht) */}
       <path d="M6 32 C14 30 22 29 30 28 C46 26 78 30 94 28 C102 27 108 29 114 31" fill="none" strokeWidth="1" className="stroke-outline-variant" />
       <path d="M6 50 C24 51 44 52 62 52 C80 52 98 53 114 51" fill="none" strokeWidth="1" className="stroke-outline-variant" />
@@ -199,12 +209,12 @@ export function Signatur({
       <path d="M60 8 C61 22 62 37 62 52 C62 66 61 80 60 94" fill="none" strokeWidth="0.75" className="stroke-outline-variant" opacity="0.7" />
       <path d="M96 8 C95 14 94 21 94 28 C94 44 94 60 94 76 C94 83 95 89 96 94" fill="none" strokeWidth="0.75" className="stroke-outline-variant" opacity="0.7" />
       {/* Kreuzungsknoten */}
-      <circle cx="30" cy="28" r="2.5" className="fill-outline" opacity="0.65" />
-      <circle cx="94" cy="28" r="2.5" className="fill-outline" opacity="0.65" />
-      <circle cx="30" cy="76" r="2.5" className="fill-outline" opacity="0.65" />
-      <circle cx="94" cy="76" r="2.5" className="fill-outline" opacity="0.65" />
-      <circle cx="62" cy="52" r="7" fill="none" strokeWidth="1" className="stroke-tertiary" opacity="0.45" />
-      <circle cx="62" cy="52" r="3.5" className="fill-tertiary" />
+      <circle cx="30" cy="28" r="2.5" className={"fill-outline " + HOVER_DOT} opacity="0.65" />
+      <circle cx="94" cy="28" r="2.5" className={"fill-outline " + HOVER_DOT} opacity="0.65" />
+      <circle cx="30" cy="76" r="2.5" className={"fill-outline " + HOVER_DOT} opacity="0.65" />
+      <circle cx="94" cy="76" r="2.5" className={"fill-outline " + HOVER_DOT} opacity="0.65" />
+      <circle cx="62" cy="52" r="7" fill="none" strokeWidth="1" className={"stroke-tertiary " + HOVER_RING} opacity="0.45" />
+      <circle cx="62" cy="52" r="3.5" className={"fill-tertiary " + HOVER_DOT} />
     </svg>
   );
 }

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ActivityTracker from "@/components/ActivityTracker";
 import AppLayout from "@/components/layout/AppLayout";
+import WeisheitsFaden from "../_components/WeisheitsFaden";
 import SchablonenZeitstrahl from "./_components/SchablonenZeitstrahl";
 
 /**
@@ -57,6 +58,38 @@ export default function Lernseite2PhilosophischePerspektive() {
           </footer>
         </blockquote>
       </header>
+
+      {/* Interaktives Muster: fünf Epochen-Knoten, je eine Schablone */}
+      <WeisheitsFaden
+        className="mt-xl max-w-3xl"
+        weisheiten={[
+          {
+            text: "Alle Menschen streben von Natur aus nach Wissen",
+            quelle: "Aristoteles · Antike",
+            kommentar: "Schablone: beobachten, ordnen, begründen.",
+          },
+          {
+            text: "Im inneren Menschen wohnt die Wahrheit",
+            quelle: "Augustinus · Spätantike",
+            kommentar: "Schablone: Innerlichkeit, Glaube, Heilsgeschichte.",
+          },
+          {
+            text: "Habe Mut, dich deines eigenen Verstandes zu bedienen",
+            quelle: "Immanuel Kant · Aufklärung",
+            kommentar: "Schablone: Autonomie und Selbstdenken.",
+          },
+          {
+            text: "Alles Ständische und Stehende verdampft",
+            quelle: "Karl Marx · Industriemoderne",
+            kommentar: "Schablone: den Umbruch begreifen — und gestalten.",
+          },
+          {
+            text: "Welche Schablone trägt uns durch die Zeit der KI?",
+            quelle: "Wir — jetzt",
+            kommentar: "Die Antwort entsteht gerade — unten im Zeitstrahl.",
+          },
+        ]}
+      />
 
       <section className="mt-xl max-w-3xl">
         <SchablonenZeitstrahl />

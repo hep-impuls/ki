@@ -2,6 +2,7 @@ import Link from "next/link";
 import ActivityTracker from "@/components/ActivityTracker";
 import AppLayout from "@/components/layout/AppLayout";
 import { FadenDivider, Signatur } from "../_components/Gewebe";
+import WeisheitsFaden from "../_components/WeisheitsFaden";
 
 /**
  * Thema 03 — «Kulturelle Perspektive» (im Aufbau).
@@ -46,6 +47,28 @@ export default function Lernseite2KulturellePerspektive() {
           <Signatur variante="gewebe" className="hidden flex-shrink-0 sm:block" />
         </div>
       </header>
+
+      {/* Interaktives Muster: dem Faden nachfahren, Weisheiten einsammeln */}
+      <WeisheitsFaden
+        className="mt-xl max-w-3xl"
+        weisheiten={[
+          {
+            text: "Kunst gibt nicht das Sichtbare wieder, sondern macht sichtbar",
+            quelle: "Paul Klee",
+            kommentar: "Genau darum geht es hier: sehen, wie wir sehen.",
+          },
+          {
+            text: "Man erblickt nur, was man schon weiss und versteht",
+            quelle: "Johann Wolfgang von Goethe",
+            kommentar: "Unsere Bilder entscheiden, was wir in der KI erkennen.",
+          },
+          {
+            text: "Das Leben ahmt die Kunst weit mehr nach als die Kunst das Leben",
+            quelle: "Oscar Wilde",
+            kommentar: "Science-Fiction schrieb das Drehbuch, lange bevor KI kam.",
+          },
+        ]}
+      />
 
       <section className="mt-xl max-w-3xl space-y-md text-body-md text-on-surface-variant">
         <p>

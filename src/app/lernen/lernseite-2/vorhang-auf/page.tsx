@@ -2,6 +2,7 @@ import Link from "next/link";
 import ActivityTracker from "@/components/ActivityTracker";
 import AppLayout from "@/components/layout/AppLayout";
 import { FadenDivider, Signatur } from "../_components/Gewebe";
+import WeisheitsFaden from "../_components/WeisheitsFaden";
 import AkteursModell from "./_components/AkteursModell";
 
 /**
@@ -59,6 +60,33 @@ export default function Lernseite2VorhangAuf() {
           schauen wir hin: Was genau ist da eigentlich auf die Bühne getreten?
         </p>
       </header>
+
+      {/* Interaktives Muster: dem Faden nachfahren, Weisheiten einsammeln */}
+      <WeisheitsFaden
+        className="mt-xl max-w-3xl"
+        weisheiten={[
+          {
+            text: "Die ganze Welt ist Bühne, und alle Frauen und Männer blosse Spieler",
+            quelle: "William Shakespeare, «Wie es euch gefällt»",
+            kommentar: "Vorhang auf — welche Rolle geben wir der neuen Akteurin?",
+          },
+          {
+            text: "Alles fliesst",
+            quelle: "Heraklit",
+            kommentar: "Panta rhei: auch der Werkzeug-Begriff bleibt nicht stehen.",
+          },
+          {
+            text: "Die Grenzen meiner Sprache bedeuten die Grenzen meiner Welt",
+            quelle: "Ludwig Wittgenstein",
+            kommentar: "Was verschiebt sich, wenn Maschinen sprechen?",
+          },
+          {
+            text: "Mit jedem Anfang kommt etwas Neues in die Welt",
+            quelle: "nach Hannah Arendt",
+            kommentar: "Anfangen können — vielleicht die menschlichste aller Fähigkeiten.",
+          },
+        ]}
+      />
 
       {/* Drei Szenen am Faden */}
       <section className="mt-xl max-w-3xl" aria-label="Drei Szenen">
