@@ -1,7 +1,23 @@
 # Bildnachweis
 
-Verwendet in: `src/app/sandbox/philosophie-schablonen/SchablonenZeitstrahl.tsx`
-(Submodul „Philosophische Perspektive", Lernseite 2).
+Verwendet in: `src/app/lernen/lernseite-2/philosophische-perspektive/_components/SchablonenZeitstrahl.tsx`
+(Thema „Philosophische Perspektive") und
+`src/app/lernen/lernseite-2/vorhang-auf/_components/Storyboard.tsx`
+(Thema „Vorhang auf", Ordner `storyboard/`).
+
+## Storyboard «Vorhang auf» (storyboard/, gemeinfrei)
+
+Quelle jeweils Wikimedia Commons (Special:FilePath, Breite 900px);
+Lizenzstatus dort am 2026-07-11 geprüft («Public domain»).
+
+| Datei | Commons-Datei | Urheber / Jahr |
+|---|---|---|
+| `storyboard/golem.jpg` | Ales golem.jpg | Mikoláš Aleš, 1899 |
+| `storyboard/homunkulus.jpg` | Homunculus Simm Faust.jpg | Franz Simm (Illustration zu Goethes «Faust II»), 19. Jh. |
+| `storyboard/schachtuerke.jpg` | Racknitz - The Turk 3.jpg | Joseph Friedrich zu Racknitz, 1789 |
+| `storyboard/frankenstein.jpg` | Frontispiece to Frankenstein 1831.jpg | Theodor von Holst, 1831 |
+| `storyboard/babbage.jpg` | Difference engine plate 1853.jpg | Holzstich, 1853 |
+| `storyboard/supercomputer.jpg` | Pleiades supercomputer.jpg | NASA (US-Gov, gemeinfrei) |
 
 ## Gemeinfrei (Public Domain)
 

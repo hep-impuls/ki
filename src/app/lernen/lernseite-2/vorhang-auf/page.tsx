@@ -4,16 +4,20 @@ import AppLayout from "@/components/layout/AppLayout";
 import { FadenDivider, Signatur } from "../_components/Gewebe";
 import FadenNetz from "../_components/FadenNetz";
 import KnotenNetz from "../_components/KnotenNetz";
-import AkteursModell from "./_components/AkteursModell";
+import Storyboard from "./_components/Storyboard";
+import ZitatReveal from "./_components/ZitatReveal";
 
 /**
  * Thema 01 — «Vorhang auf: eine neue Akteurin».
  *
- * Auftakt von Lernseite 2: In drei kurzen Szenen (Auftritt, Irritation,
- * Frage) wird gezeigt, dass mit KI etwas aufgetreten ist, das weder in die
- * Werkzeug- noch in die Personen-Schublade passt. Das interaktive
- * Akteurs-Modell lässt die Lernenden das selbst herausarbeiten; am Ende
- * öffnen sich die zwei Perspektiven (philosophisch, kulturell).
+ * Dramaturgie des Auftakts:
+ *  1. Zitate-Rätsel «Alt — oder von heute?» (alte Literatur, die nach
+ *     KI-Zeitalter klingt — zum Aufdecken, Quellen verifiziert),
+ *  2. die KI-Story als Storyboard (vom Golem bis zur Gegenwart, die
+ *     letzten Phasen bewusst offen),
+ *  3. drei kurze Szenen (Auftritt, Irritation, Frage),
+ *  4. das Netz der neuen Akteurin — dann öffnen sich die zwei
+ *     Perspektiven (philosophisch, kulturell).
  */
 
 const SZENEN = [
@@ -140,6 +144,32 @@ export default function Lernseite2VorhangAuf() {
         ]}
       />
 
+      {/* 1 — Zitate-Rätsel: alte Stimmen, die nach heute klingen */}
+      <section className="mt-xl max-w-3xl" aria-label="Alt oder von heute?">
+        <h2 className="text-headline-md text-on-surface">Alt — oder von heute?</h2>
+        <p className="mt-sm text-body-md text-on-surface-variant">
+          Fünf Stimmen über künstliche Wesen. Sie könnten aus dem heutigen
+          KI-Diskurs stammen — decke auf, von wann sie wirklich sind.
+        </p>
+        <ZitatReveal className="mt-lg" />
+      </section>
+
+      <FadenDivider className="mt-xl" />
+
+      {/* 2 — Die KI-Story als Storyboard */}
+      <section className="mt-xl max-w-3xl" aria-label="Die KI-Story">
+        <h2 className="text-headline-md text-on-surface">
+          Die KI-Story — ein Storyboard
+        </h2>
+        <p className="mt-sm text-body-md text-on-surface-variant">
+          Vom Traum, Dingen Leben einzuhauchen, bis zur Gegenwart: zwölf
+          Stationen — und Phasen, deren letzte noch niemand kennt.
+        </p>
+        <Storyboard className="mt-lg" />
+      </section>
+
+      <FadenDivider className="mt-xl" />
+
       {/* Drei Szenen am Faden */}
       <section className="mt-xl max-w-3xl" aria-label="Drei Szenen">
         <ol className="flex flex-col gap-lg">
@@ -247,23 +277,6 @@ export default function Lernseite2VorhangAuf() {
             },
           ]}
         />
-      </section>
-
-      <FadenDivider className="mt-xl" />
-
-      {/* Interaktion: Akteur oder Werkzeug? */}
-      <section className="mt-xl max-w-3xl" aria-label="Akteurs-Modell">
-        <h2 className="text-headline-md text-on-surface">
-          Akteurin oder Werkzeug? Ordne selbst zu
-        </h2>
-        <p className="mt-sm text-body-md text-on-surface-variant">
-          Erarbeite selbst, warum die alten Begriffe nicht mehr greifen: Ordne
-          jede Eigenschaft den Akteuren zu, auf die sie zutrifft — und decke
-          dann das Muster auf.
-        </p>
-        <div className="mt-lg">
-          <AkteursModell />
-        </div>
       </section>
 
       <FadenDivider className="mt-xl" />

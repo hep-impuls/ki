@@ -10,6 +10,37 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-11 — «Vorhang auf» neu dramatisiert: Zitate-Rätsel + KI-Storyboard, Akteurs-Modell entfernt
+
+Neue Dramaturgie des Auftakts (Wunsch Christof):
+
+1. **«Alt — oder von heute?»** (`ZitatReveal.tsx`): fünf Literatur-Zitate,
+   die nach heutigem KI-Diskurs klingen, zum Aufdecken (Jahr + Werk +
+   Kontext + Quellen-Link). Alle fünf am Quelltext verifiziert
+   (2026-07-11): Hoffmann «Der Sandmann» 1816 (de.wikisource, wörtlich),
+   Shelley «Frankenstein» 1818 (gutenberg.org #84, übersetzt), Lovelace
+   Anmerkung G 1843 (fourmilab.ch, übersetzt), Butler «Erewhon» 1872
+   (gutenberg.org #1906, übersetzt), Čapek «R.U.R.» 1920 (gutenberg.org
+   #59112, Selver-Übersetzung, übersetzt). Aufdecken zählt als Spur
+   (`vorhang-auf:zitat:i`).
+2. **«Die KI-Story — ein Storyboard»** (`Storyboard.tsx`): 12 Stationen vom
+   Golem zur Gegenwart — 6 gemeinfreie Bilder (public/art/storyboard/,
+   Nachweis in CREDITS.md: Aleš-Golem, Simm-Homunkulus, Racknitz-
+   Schachtürke, Holst-Frankenstein, Babbage-Holzstich, NASA-Supercomputer)
+   + 6 gestaltete Panels im Gewebe-Stil (Dartmouth-Tafelrunde, WENN/DANN,
+   Expertensystem-Terminal, KI-Winter, Streudiagramm, Schichten-Netz).
+   Danach «Phasen der aktuellen KI» (Wahrnehmung, Verstehen, Generieren,
+   Entscheiden) — **die letzten beiden (Kollaborieren, Transzendieren?)
+   bewusst offen** (gestrichelte Karten): Kollaborieren ist das Thema des
+   Moduls selbst.
+3. Danach wie gehabt: drei Szenen, Netz der Akteurin, Weiter-Links.
+
+**Entfernt:** das Einschätzungs-Raster «Akteurs-Modell» (Eigenschaften
+Mensch/Werkzeug/KI zuordnen) — Datei gelöscht, Spur-Bereich im
+Orakel-Dashboard durch «Zitate aufgedeckt» (5) ersetzt (Gesamt neu 49).
+
+---
+
 ## 2026-07-11 — Thema 04 «Das Orakel»: Dashboard, anonyme Zweifach-Sammlung, KI-Querschnitt
 
 Lernseite 2 hat einen **vierten Themenbereich**: `das-orakel` («Das Orakel —
