@@ -49,17 +49,23 @@ export default function Lernseite2VorhangAuf() {
       </Link>
 
       <header className="mt-lg border-b border-outline-variant pb-lg">
-        <p className="text-label-md uppercase tracking-wider text-tertiary">
-          Thema 01 · Auftakt
-        </p>
-        <h1 className="mt-sm text-headline-xl text-on-surface">
-          Vorhang auf — eine neue Akteurin
-        </h1>
-        <p className="mt-sm max-w-3xl text-body-lg text-on-surface-variant">
-          Mit KI ist eine neue Art von Akteurin aufgetreten — weder ein
-          klassisches Werkzeug noch eine Person. Bevor wir sie einordnen,
-          schauen wir hin: Was genau ist da eigentlich auf die Bühne getreten?
-        </p>
+        <div className="flex items-end justify-between gap-md">
+          <div className="min-w-0">
+            <p className="text-label-md uppercase tracking-wider text-tertiary">
+              Thema 01 · Auftakt
+            </p>
+            <h1 className="mt-sm text-headline-xl text-on-surface">
+              Vorhang auf — eine neue Akteurin
+            </h1>
+            <p className="mt-sm max-w-3xl text-body-lg text-on-surface-variant">
+              Mit KI ist eine neue Art von Akteurin aufgetreten — weder ein
+              klassisches Werkzeug noch eine Person. Bevor wir sie einordnen,
+              schauen wir hin: Was genau ist da eigentlich auf die Bühne
+              getreten?
+            </p>
+          </div>
+          <Signatur variante="auftritt" className="hidden flex-shrink-0 sm:block" />
+        </div>
       </header>
 
       {/* Interaktives Muster der Seite: der Auftritts-Stern — sechs Fäden,

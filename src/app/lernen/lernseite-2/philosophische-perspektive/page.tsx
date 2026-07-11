@@ -2,6 +2,7 @@ import Link from "next/link";
 import ActivityTracker from "@/components/ActivityTracker";
 import AppLayout from "@/components/layout/AppLayout";
 import FadenNetz from "../_components/FadenNetz";
+import { Signatur } from "../_components/Gewebe";
 import SchablonenZeitstrahl from "./_components/SchablonenZeitstrahl";
 
 /**
@@ -31,22 +32,27 @@ export default function Lernseite2PhilosophischePerspektive() {
       </Link>
 
       <header className="mt-lg border-b border-outline-variant pb-lg">
-        <p className="text-label-md uppercase tracking-wider text-tertiary">
-          Thema 02 · Orientierung
-        </p>
-        <h1 className="mt-sm text-headline-xl text-on-surface">
-          Philosophische Perspektive
-        </h1>
-        <p className="mt-sm max-w-3xl text-body-lg text-on-surface-variant">
-          Technische Umbrüche verunsichern — das ist nicht neu. Der Zeitstrahl
-          zeigt fünf Epochen, jede als eigenes Panel: zuerst die Bilder der
-          Zeit, dann drei Bausteine zum Aufklappen —{" "}
-          <strong>Technische Errungenschaft</strong>,{" "}
-          <strong>Verunsicherung</strong> und{" "}
-          <strong>Philosophische Orientierungshilfe</strong>. Sie sind
-          aufeinander bezogen, lassen sich aber auch einzeln lesen. Öffne, was
-          dich interessiert. Und heute, mit KI?
-        </p>
+        <div className="flex items-end justify-between gap-md">
+          <div className="min-w-0">
+            <p className="text-label-md uppercase tracking-wider text-tertiary">
+              Thema 02 · Orientierung
+            </p>
+            <h1 className="mt-sm text-headline-xl text-on-surface">
+              Philosophische Perspektive
+            </h1>
+            <p className="mt-sm max-w-3xl text-body-lg text-on-surface-variant">
+              Technische Umbrüche verunsichern — das ist nicht neu. Der
+              Zeitstrahl zeigt fünf Epochen, jede als eigenes Panel: zuerst die
+              Bilder der Zeit, dann drei Bausteine zum Aufklappen —{" "}
+              <strong>Technische Errungenschaft</strong>,{" "}
+              <strong>Verunsicherung</strong> und{" "}
+              <strong>Philosophische Orientierungshilfe</strong>. Sie sind
+              aufeinander bezogen, lassen sich aber auch einzeln lesen. Öffne,
+              was dich interessiert. Und heute, mit KI?
+            </p>
+          </div>
+          <Signatur variante="epochen" className="hidden flex-shrink-0 sm:block" />
+        </div>
         <blockquote className="mt-md max-w-3xl border-l-4 border-tertiary pl-md">
           <p className="text-body-md italic text-on-surface-variant">
             «Die Eule der Minerva beginnt erst mit der einbrechenden Dämmerung
