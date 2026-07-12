@@ -3,6 +3,7 @@
 import { useEffect, useId, useRef, useState } from "react";
 import {
   leseSpurenIndices,
+  loescheSpuren,
   merkeSpur,
   SPUR_EVENT,
   zieheSpurenAusCloud,
@@ -272,21 +273,44 @@ export default function FadenNetz({
     }, 350);
   }
 
+  /** «Muster zurücksetzen»: Spuren des Musters löschen, von vorn beginnen —
+   *  die Karten sammeln sich danach in neuer Reihenfolge. */
+  function zuruecksetzen() {
+    setPainted(straenge.map(() => null));
+    setVisited(new Set());
+    setGesammelt([]);
+    if (spurKey) loescheSpuren(spurKey);
+  }
+
   const done = visited.size === n;
   const started = visited.size > 0 || painted.some((b) => b !== null);
 
   return (
     <section aria-label="Muster zum Nachfahren" className={className}>
-      <p className="mb-sm flex items-center gap-xs text-label-md uppercase tracking-wider text-on-surface-variant">
-        <span className="material-symbols-outlined text-[18px] text-tertiary">
-          {done ? "done_all" : "swipe"}
-        </span>
-        {done
-          ? `Alle ${n} Knoten besucht — das Muster ist gewoben`
-          : started
-          ? `${visited.size} von ${n} Knoten besucht`
-          : "Fahr den Fäden nach — mehrere Wege sind möglich"}
-      </p>
+      <div className="mb-sm flex flex-wrap items-center justify-between gap-sm">
+        <p className="flex items-center gap-xs text-label-md uppercase tracking-wider text-on-surface-variant">
+          <span className="material-symbols-outlined text-[18px] text-tertiary">
+            {done ? "done_all" : "swipe"}
+          </span>
+          {done
+            ? `Alle ${n} Knoten besucht — das Muster ist gewoben`
+            : started
+            ? `${visited.size} von ${n} Knoten besucht`
+            : "Fahr den Fäden nach — mehrere Wege sind möglich"}
+        </p>
+        {started && (
+          <button
+            type="button"
+            onClick={zuruecksetzen}
+            className="inline-flex items-center gap-xs rounded-lg border border-outline-variant bg-surface-bright px-sm py-xs text-label-md text-on-surface-variant transition-colors hover:bg-surface-container hover:text-on-surface"
+          >
+            <span className="material-symbols-outlined text-[16px]">
+              restart_alt
+            </span>
+            Muster zurücksetzen
+          </button>
+        )}
+      </div>
 
       {/* Muster-Bühne: eigener, leicht abgesetzter Grund */}
       <div className="overflow-hidden rounded-xl border border-outline-variant bg-surface-container-low/60 p-sm sm:p-md">
@@ -508,6 +532,26 @@ export default function FadenNetz({
         </svg>
       </div>
 
+      {/* Erklärendes Abschluss-Feld — direkt unter dem Muster, dezent
+          schraffiert statt farbig */}
+      {abschluss && done && (
+        <div
+          className="animate-frame-in mt-md rounded-xl border border-outline-variant bg-surface-bright p-lg"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(45deg, rgb(var(--color-tertiary) / 0.07) 0px, rgb(var(--color-tertiary) / 0.07) 2px, transparent 2px, transparent 10px)",
+          }}
+        >
+          <p className="flex items-center gap-sm text-headline-sm text-on-surface">
+            <span className="material-symbols-outlined text-tertiary">
+              done_all
+            </span>
+            Das Muster ist gewoben
+          </p>
+          <p className="mt-sm text-body-lg text-on-surface">{abschluss}</p>
+        </div>
+      )}
+
       {/* Eingesammelte Weisheiten — bleiben stehen, in Einsammel-Reihenfolge */}
       <div aria-live="polite" className="mt-md">
         {gesammelt.length === 0 ? (
@@ -580,17 +624,6 @@ export default function FadenNetz({
           </ol>
         )}
       </div>
-
-      {/* Erklärendes Abschluss-Feld — sobald das Muster gewoben ist */}
-      {abschluss && done && (
-        <div className="animate-frame-in mt-md rounded-xl border border-tertiary/50 bg-tertiary-container/30 p-lg">
-          <p className="flex items-center gap-sm text-headline-sm text-on-surface">
-            <span className="material-symbols-outlined text-tertiary">hub</span>
-            Das Muster ist gewoben
-          </p>
-          <p className="mt-sm text-body-lg text-on-surface">{abschluss}</p>
-        </div>
-      )}
     </section>
   );
 }

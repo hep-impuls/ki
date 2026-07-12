@@ -26,6 +26,10 @@ import { generateCode, getSession, saveSession } from "@/lib/session";
  */
 
 const KEY = "ki26-spuren-lernseite-2";
+/** Dauerhaftes Zähl-Register: welche IDs je anonym gezählt wurden. Übersteht
+ *  ein «Muster zurücksetzen», damit erneutes Sammeln die Aggregat-Zähler
+ *  nicht aufbläht. */
+const KEY_GEZAEHLT = "ki26-spuren-gezaehlt";
 /** Eigenes Event, damit offene Ansichten (Muster, Orakel) live mitzählen. */
 export const SPUR_EVENT = "ki26-spur";
 /** Poll-Doc für die anonymen Aktivitäts-Zähler (counts[spurId] += 1). */
@@ -96,6 +100,23 @@ function scheduleMirror(): void {
   }, 1500);
 }
 
+/** Wurde die ID schon einmal anonym gezählt? Falls nein: jetzt registrieren. */
+function schonGezaehlt(id: string): boolean {
+  try {
+    const raw = window.localStorage.getItem(KEY_GEZAEHLT);
+    const arr = raw ? (JSON.parse(raw) as unknown) : [];
+    const set = new Set(
+      Array.isArray(arr) ? arr.filter((x): x is string => typeof x === "string") : [],
+    );
+    if (set.has(id)) return true;
+    set.add(id);
+    window.localStorage.setItem(KEY_GEZAEHLT, JSON.stringify([...set]));
+    return false;
+  } catch {
+    return false;
+  }
+}
+
 /** Eine Spur setzen (idempotent). Lokal + anonymer Zähler + Cloud-Spiegel. */
 export function merkeSpur(id: string): void {
   if (typeof window === "undefined" || !id) return;
@@ -104,11 +125,38 @@ export function merkeSpur(id: string): void {
   spuren.push({ id, t: Date.now() });
   schreiben(spuren);
   window.dispatchEvent(new CustomEvent(SPUR_EVENT, { detail: { id } }));
-  // Anonymer Aggregat-Zähler fürs «alle».
-  void castVote(SPUREN_POLL_ID, id);
+  // Anonymer Aggregat-Zähler fürs «alle» — nur beim allerersten Mal (das
+  // Register übersteht ein «Muster zurücksetzen»).
+  if (!schonGezaehlt(id)) void castVote(SPUREN_POLL_ID, id);
   // Pro-Nutzer-Spiegel (erzeugt bei Bedarf einen Hintergrund-Code).
   ensureCode();
   scheduleMirror();
+}
+
+/**
+ * Alle Spuren eines Musters löschen («Muster zurücksetzen»): lokal entfernen,
+ * Cloud-Spiegel SOFORT überschreiben (damit kein späterer Pull sie
+ * zurückbringt) und SPUR_EVENT feuern. Das Zähl-Register bleibt bestehen —
+ * erneutes Sammeln zählt anonym nicht doppelt.
+ */
+export function loescheSpuren(prefix: string): void {
+  if (typeof window === "undefined" || !prefix) return;
+  const rest = lesen().filter(
+    (s) => s.id !== prefix && !s.id.startsWith(`${prefix}:`),
+  );
+  schreiben(rest);
+  window.dispatchEvent(
+    new CustomEvent(SPUR_EVENT, { detail: { geloescht: prefix } }),
+  );
+  const code = getSession()?.studentCode;
+  if (!code) return;
+  const ref = spurenDocRef(code);
+  if (!ref) return;
+  void setDoc(
+    ref,
+    { ids: rest.map((s) => s.id), updatedAt: serverTimestamp() },
+    { merge: true },
+  ).catch((err) => console.warn("[spuren] reset mirror failed", err));
 }
 
 /** Alle Spuren lesen (nur lokal). */

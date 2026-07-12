@@ -72,47 +72,40 @@ export default function Lernseite2VorhangAuf() {
         </div>
       </header>
 
-      {/* Interaktives Muster der Seite: der Auftritts-Stern — sieben Merkmale
-          als Strahlen aus einer dekorativen Nabe. Zwischen besuchten Knoten
-          füllen sich die Flächen (Farbe / Schraffur / Punkte); ist das Muster
-          gewoben, erscheint darunter das erklärende Abschluss-Feld. */}
+      {/* Interaktives Muster der Seite: sieben Merkmale als loses, unregel-
+          mässiges Geflecht ohne Zentrum — nicht alle Knoten sind aufeinander
+          bezogen. Zwischen besuchten Knoten füllen sich die Flächen (Farbe /
+          Schraffur / Punkte); ist das Muster gewoben, erscheint direkt
+          darunter das erklärende Abschluss-Feld (dezent schraffiert). */}
       <FadenNetz
         className="mt-xl max-w-5xl"
         hoehe={220}
         svgKlasse="aspect-[720/300] sm:aspect-[720/220]"
         spurKey="vorhang-auf:weisheit"
-        einladung="Sieben Merkmale der neuen Akteurin — fahr die Fäden von der Nabe nach aussen. Ist das Muster gewoben, fügt sich unten das Bild zusammen."
-        nabe={[360, 112]}
+        einladung="Sieben Merkmale, lose verwoben — fahr den Fäden auf deinen eigenen Wegen nach. Zwischen besuchten Knoten füllen sich die Flächen; ist das Muster gewoben, erscheint darunter das Fazit."
         abschluss="Diese sieben Eigenschaften treffen sich in einem einzigen Gegenüber — und darin liegt das eigentlich Neue: Nicht eine einzelne Fähigkeit, sondern ihre Bündelung macht die KI zu einer Akteurin. Sie spricht, erzeugt, erkennt, lernt, erinnert, handelt und verbindet die Sinne — und wird so zu etwas, dem wir mehr Potenzial zurechnen, auf unser Handeln Einfluss zu nehmen, als je einer Technik zuvor."
         straenge={[
-          { d: "M360 112 L360 20" },
-          { d: "M360 112 L602 55" },
-          { d: "M360 112 L662 132" },
-          { d: "M360 112 L495 195" },
-          { d: "M360 112 L226 195" },
-          { d: "M360 112 L58 133" },
-          { d: "M360 112 L118 55" },
-          { d: "M360 20 L602 55", fein: true },
-          { d: "M602 55 L662 132", fein: true },
-          { d: "M662 132 L495 195", fein: true },
-          { d: "M495 195 L226 195", fein: true },
-          { d: "M226 195 L58 133", fein: true },
-          { d: "M58 133 L118 55", fein: true },
-          { d: "M118 55 L360 20", fein: true },
+          { d: "M108 50 L598 40" },
+          { d: "M64 128 L300 26" },
+          { d: "M300 26 L430 196" },
+          { d: "M64 128 L430 196" },
+          { d: "M598 40 L652 150" },
+          { d: "M652 150 L196 190" },
+          { d: "M196 190 L108 50" },
+          { d: "M430 196 L598 40", fein: true },
+          { d: "M300 26 L652 150", fein: true },
         ]}
         flaechen={[
-          { punkte: [[360, 112], [360, 20], [602, 55]], knoten: [0, 1] },
-          { punkte: [[360, 112], [602, 55], [662, 132]], knoten: [1, 2] },
-          { punkte: [[360, 112], [662, 132], [495, 195]], knoten: [2, 3] },
-          { punkte: [[360, 112], [495, 195], [226, 195]], knoten: [3, 4] },
-          { punkte: [[360, 112], [226, 195], [58, 133]], knoten: [4, 5] },
-          { punkte: [[360, 112], [58, 133], [118, 55]], knoten: [5, 6] },
-          { punkte: [[360, 112], [118, 55], [360, 20]], knoten: [6, 0] },
+          { punkte: [[64, 128], [300, 26], [430, 196]], knoten: [5, 0, 3] },
+          { punkte: [[300, 26], [598, 40], [430, 196]], knoten: [0, 1, 3] },
+          { punkte: [[598, 40], [652, 150], [430, 196]], knoten: [1, 2, 3] },
+          { punkte: [[108, 50], [300, 26], [64, 128]], knoten: [6, 0, 5] },
+          { punkte: [[196, 190], [430, 196], [64, 128]], knoten: [4, 3, 5] },
         ]}
         knoten={[
           {
-            x: 360,
-            y: 20,
+            x: 300,
+            y: 26,
             text: "Die heisseste neue Programmiersprache ist Englisch.",
             quelle: "Andrej Karpathy (OpenAI/Tesla), 2023 · übersetzt",
             kommentar: "Merkmal: dialoghaft.",
@@ -120,8 +113,8 @@ export default function Lernseite2VorhangAuf() {
               "Früher steuerte man Computer über Code; heute genügt ein Satz Alltagssprache. Karpathy bringt es auf den Punkt: Die Schnittstelle ist die Sprache selbst. Das Dialoghafte ist das Erste, was uns an KI berührt — wir weisen sie an, fragen nach, widersprechen, wie einem Gegenüber.",
           },
           {
-            x: 602,
-            y: 55,
+            x: 598,
+            y: 40,
             text: "Eigentlich sollte man von Konfabulationen sprechen.",
             quelle: "Katharina Zweig, «Spektrum der Wissenschaft», Edition KI, 2026",
             kommentar: "Merkmal: generativ.",
@@ -129,8 +122,8 @@ export default function Lernseite2VorhangAuf() {
               "Ein Sprachmodell erzeugt fortlaufend neuen Text, indem es das nächste Wort vorhersagt — es besitzt aber keine Wissensdatenbank zum Nachschlagen. Wo es danebenliegt, spricht man von «Halluzination»; Katharina Zweig hält das für psychologisch falsch und schlägt «Konfabulation» vor — wie bei Menschen, die flüssig Wörter aneinanderreihen, ohne Wissen dahinter. Erzeugen und Erfinden sind hier dieselbe Münze.",
           },
           {
-            x: 662,
-            y: 132,
+            x: 652,
+            y: 150,
             text: "Ein Modell, das über Audio, Bild und Text hinweg in Echtzeit denkt.",
             quelle: "OpenAI, zur Vorstellung von GPT-4o, 2024 · übersetzt",
             kommentar: "Merkmal: multimodal.",
@@ -138,8 +131,8 @@ export default function Lernseite2VorhangAuf() {
               "Lange konnte ein System entweder Text oder Bild oder Ton. Multimodale Modelle verbinden diese Sinne in einem einzigen Netz: Sie lesen, sehen und hören — und antworten wahlweise mit Text, Bild oder Stimme. Damit rückt die Maschine näher an die Art, wie Menschen die Welt aufnehmen: nicht in getrennten Kanälen, sondern zusammen. Aus dem Textautomaten wird ein Gegenüber, das eine Skizze, ein Foto oder einen gesprochenen Satz versteht.",
           },
           {
-            x: 495,
-            y: 195,
+            x: 430,
+            y: 196,
             text: "Agent = LLM + Gedächtnis + Planung + Werkzeuggebrauch.",
             quelle: "Lilian Weng (OpenAI), 2023 · übersetzt",
             kommentar: "Merkmal: agentenhaft.",
@@ -147,8 +140,8 @@ export default function Lernseite2VorhangAuf() {
               "Weng fasst die agentenhafte KI in eine Formel: ein Sprachmodell als «Gehirn», dazu Gedächtnis, die Fähigkeit, ein Ziel in Schritte zu zerlegen, und der Griff zu Werkzeugen — Websuche, Code, andere Programme. So wird aus dem Antwortgeber ein Akteur, der eigenständig handelt. Genau hier verschwimmt die alte Grenze zwischen Werkzeug und Gegenüber.",
           },
           {
-            x: 226,
-            y: 195,
+            x: 196,
+            y: 190,
             text: "Während des Trainings werden die Gewichte so angepasst, dass sie eine Aufgabe möglichst gut erfüllen.",
             quelle: "«Spektrum der Wissenschaft», Edition KI, 2026",
             kommentar: "Merkmal: speicherabhängig — wo kein Speicher, kein Training.",
@@ -156,8 +149,8 @@ export default function Lernseite2VorhangAuf() {
               "Alles, was ein Modell «kann», steckt in Milliarden gespeicherten Zahlen — den Gewichten. Training heisst nichts anderes, als diese Werte so lange zu verstellen, bis die Antworten stimmen: Ohne Speicher gäbe es nichts festzuhalten — also auch kein Lernen. Und im Betrieb braucht es weiter Speicher: als Kurzzeitgedächtnis (den Kontext) und als durchsuchbare Ablage fürs Langzeitgedächtnis. Speicher ist damit nicht Zubehör, sondern Voraussetzung.",
           },
           {
-            x: 58,
-            y: 133,
+            x: 64,
+            y: 128,
             text: "Die Lernalgorithmen sind die Samen, die Daten der Boden, die gelernten Programme die Pflanzen.",
             quelle: "Pedro Domingos, «The Master Algorithm», 2015 · übersetzt",
             kommentar: "Merkmal: datenbasiert.",
@@ -165,8 +158,8 @@ export default function Lernseite2VorhangAuf() {
               "Der Machine-Learning-Forscher Pedro Domingos vergleicht das Lernen mit Landwirtschaft: Der Algorithmus ist nur das Saatgut — wachsen lässt ihn erst der Boden aus Daten. Ohne riesige Datenmengen bleibt die klügste Methode unfruchtbar. Deshalb dreht sich in der KI alles um Daten — und um die Frage, wessen Daten das sind und was in ihnen steckt.",
           },
           {
-            x: 118,
-            y: 55,
+            x: 108,
+            y: 50,
             text: "Die Maschine versteht nicht, warum welches Wort in welchen Kontext passt.",
             quelle: "Katharina Zweig, «Spektrum der Wissenschaft», Edition KI, 2026",
             kommentar: "Merkmal: mustererkennend.",

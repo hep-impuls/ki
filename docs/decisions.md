@@ -35,7 +35,20 @@ pro-Nutzer-Spiegel (fürs Wiedererkennen). No-op ohne Firebase-Config.
 "kein-schluessel"` — Pietro hat `ANTHROPIC_API_KEY` in Vercel noch **nicht**
 hinterlegt; das Orakel schweigt bis dahin (alles andere läuft).
 
-**Auftritts-Stern final (2026-07-12, Feedback Christof):** Sieben getrennte
+**Merkmal-Geflecht statt Heptagon (2026-07-12, Feedback Christof):** Das
+regelmässige Siebeneck mit Nabe wirkte zu «aufeinander bezogen». Neu: ein
+**loses, unregelmässiges Geflecht ohne Zentrum** (9 Fäden, 7 davon kreuzen
+sich mehrfach; 5 unterschiedlich gefüllte Flächen zwischen Knoten-Tripeln).
+Neu in FadenNetz: **«Muster zurücksetzen»**-Knopf (erscheint sobald
+begonnen) — leert Spur/Karten/Flächen; die Karten sammeln sich danach in
+neuer Reihenfolge. Dazu `loescheSpuren(prefix)` in spuren.ts (lokal löschen +
+Cloud-Spiegel sofort überschreiben) und ein dauerhaftes Zähl-Register
+(`ki26-spuren-gezaehlt`), damit erneutes Sammeln die anonymen
+Aggregat-Zähler nicht aufbläht. Das Abschluss-Feld «Das Muster ist gewoben»
+steht jetzt **direkt unter dem Muster** (vor der Kartenliste) und ist
+dezent schraffiert (repeating-linear-gradient, tertiary 7 %) statt farbig.
+
+**Auftritts-Stern final (überholt durch Geflecht, 2026-07-12):** Sieben getrennte
 Merkmal-Strahlen aus einer dekorativen **Nabe** (Zentrum ist kein anklickbarer
 Knoten mehr — die frühere Übersichts-Karte «5» wirkte wie ein Kommentar).
 dialoghaft (Karpathy) und generativ (Zweig «Konfabulation») wieder getrennt;
