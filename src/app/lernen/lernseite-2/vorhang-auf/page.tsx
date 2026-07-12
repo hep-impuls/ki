@@ -108,16 +108,16 @@ export default function Lernseite2VorhangAuf() {
             quelle: "Die neue Akteurin",
             kommentar: "Fahr die sechs Fäden nach.",
             deutung:
-              "Was die heutige KI neu macht, ist selten eine einzelne Zauberzutat — es ist die Verdichtung vertrauter Fähigkeiten: Sie spricht mit uns, erkennt Muster, lernt aus Daten, braucht Gedächtnis, handelt selbstständig und erzeugt Neues. Jeder Strahl zeigt eines dieser Merkmale, in den Worten von Fachleuten aus der KI-Community selbst. Zusammen ergeben sie das Profil der neuen Akteurin.",
+              "Was die heutige KI neu macht, ist selten eine einzelne Zauberzutat — es ist die Verdichtung vertrauter Fähigkeiten: Sie spricht und erzeugt Sprache, erkennt Muster, lernt aus Daten, hängt an Speicher, handelt selbstständig und verbindet Text, Bild und Ton. Jeder Strahl zeigt eines dieser Merkmale, in den Worten von Fachleuten aus der KI-Community. Zusammen ergeben sie das Profil der neuen Akteurin.",
           },
           {
             x: 84,
             y: 48,
             text: "Die heisseste neue Programmiersprache ist Englisch.",
             quelle: "Andrej Karpathy (OpenAI/Tesla), 2023 · übersetzt",
-            kommentar: "Merkmal: dialoghaft.",
+            kommentar: "Merkmal: dialoghaft & generativ.",
             deutung:
-              "Früher steuerte man Computer über Code; jetzt genügt oft ein Satz Alltagssprache. Karpathy — einer der einflussreichsten KI-Ingenieure — bringt es auf den Punkt: Die Schnittstelle ist die Sprache selbst. Das Dialoghafte ist das Erste, was uns an KI berührt — wir weisen sie an, fragen nach, widersprechen, wie einem Gegenüber.",
+              "Früher steuerte man Computer über Code; jetzt genügt ein Satz Alltagssprache — und dieselbe Sprachfähigkeit, mit der sie uns versteht, lässt sie auch erzeugen. Dialoghaft und generativ sind zwei Seiten derselben Medaille: Wir reden mit ihr, und sie schreibt zurück — Texte, Bilder, Code, die so nie eingegeben wurden. Die Kehrseite benennt Katharina Zweig: Das Modell sagt bloss das nächste Wort voraus, ohne Wissensbasis — es «konfabuliert» eher, als dass es halluziniert.",
           },
           {
             x: 300,
@@ -140,11 +140,11 @@ export default function Lernseite2VorhangAuf() {
           {
             x: 76,
             y: 182,
-            text: "Langzeitgedächtnis: Information über lange Zeit behalten und abrufen — über einen externen Speicher mit schnellem Zugriff.",
-            quelle: "Lilian Weng (OpenAI), «LLM Powered Autonomous Agents», 2023 · übersetzt",
-            kommentar: "Merkmal: gedächtnisbedürftig.",
+            text: "Während des Trainings werden die Gewichte so angepasst, dass sie eine Aufgabe möglichst gut erfüllen.",
+            quelle: "«Spektrum der Wissenschaft», Edition KI, 2026",
+            kommentar: "Merkmal: speicherabhängig — wo kein Speicher, kein Training.",
             deutung:
-              "Ein Sprachmodell für sich vergisst nach jeder Antwort alles. Lilian Weng, KI-Forscherin bei OpenAI, beschreibt darum zwei Gedächtnisse: das Kurzzeitgedächtnis im laufenden Kontext und ein Langzeitgedächtnis in einem externen Speicher, den das System durchsucht. Erst mit Gedächtnis wird aus einem Reflex ein Gegenüber, das sich erinnert — und über die Zeit kohärent bleibt.",
+              "Alles, was ein Modell «kann», steckt in Milliarden gespeicherten Zahlen — den Gewichten. Training heisst nichts anderes, als diese Werte so lange zu verstellen, bis die Antworten stimmen: Ohne Speicher gäbe es nichts festzuhalten — also auch kein Lernen. Und im Betrieb braucht es weiter Speicher: als Kurzzeitgedächtnis (den Kontext) und als durchsuchbare Ablage fürs Langzeitgedächtnis. Speicher ist damit nicht Zubehör, sondern Voraussetzung.",
           },
           {
             x: 420,
@@ -158,11 +158,11 @@ export default function Lernseite2VorhangAuf() {
           {
             x: 636,
             y: 172,
-            text: "Eigentlich sollte man von Konfabulationen sprechen.",
-            quelle: "Katharina Zweig, «Spektrum der Wissenschaft», Edition KI, 2026",
-            kommentar: "Merkmal: generativ — und wo es kippt.",
+            text: "Ein Modell, das über Audio, Bild und Text hinweg in Echtzeit denkt.",
+            quelle: "OpenAI, zur Vorstellung von GPT-4o, 2024 · übersetzt",
+            kommentar: "Merkmal: multimodal.",
             deutung:
-              "Ein Sprachmodell erzeugt fortlaufend neuen Text, indem es das nächste Wort vorhersagt — es besitzt aber keine Wissensdatenbank, in der es nachschlagen könnte. Wo es danebenliegt, spricht man meist von «Halluzination». Katharina Zweig hält das für psychologisch falsch: Halluzinationen sind Sinnestäuschungen ohne realen Anlass. Näher liege der Begriff Konfabulation — wie bei Menschen, die flüssig Wörter aneinanderreihen, ohne dass Wissen dahintersteht. Erzeugen und Erfinden sind hier dieselbe Münze.",
+              "Lange konnte ein System entweder Text oder Bild oder Ton. Multimodale Modelle verbinden diese Sinne in einem einzigen Netz: Sie lesen, sehen und hören — und antworten wahlweise mit Text, Bild oder Stimme. Damit rückt die Maschine näher an die Art, wie Menschen die Welt aufnehmen: nicht in getrennten Kanälen, sondern zusammen. Aus dem Textautomaten wird ein Gegenüber, das eine Skizze, ein Foto oder einen gesprochenen Satz versteht.",
           },
         ]}
       />

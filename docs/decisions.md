@@ -35,6 +35,17 @@ pro-Nutzer-Spiegel (fürs Wiedererkennen). No-op ohne Firebase-Config.
 "kein-schluessel"` — Pietro hat `ANTHROPIC_API_KEY` in Vercel noch **nicht**
 hinterlegt; das Orakel schweigt bis dahin (alles andere läuft).
 
+**Merkmale-Feinschliff (2026-07-12, Feedback Christof):** Auftritts-Stern
+umstrukturiert, bleibt bei 6 Strahlen: (1) «dialoghaft & generativ»
+zusammengefasst (Karpathy «Englisch als Programmiersprache»; Zweigs
+Konfabulations-Kritik in die Deutung gefaltet); (2) Mustererkennung —
+Katharina Zweig; (3) datenbasiert — Domingos; (4) neu «speicherabhängig —
+wo kein Speicher, kein Training» (Zitat zum Training der Gewichte,
+Spektrum Edition KI 2026); (5) agentenhaft — Lilian Weng; (6) neu
+«multimodal» (OpenAI zur GPT-4o-Vorstellung 2024, «über Audio, Bild und
+Text hinweg in Echtzeit»). Alle Zitate kurz + zugeschrieben, Deutungen als
+Paraphrase; Geometrie/Fäden/Flächen unverändert.
+
 **Auftritts-Stern zeigt neu die KI-Merkmale** (Feedback Christof: die
 philosophischen Zitate waren fehl am Platz — Philosophie kommt in Thema 2):
 Die sechs Strahlen betonen jetzt, was sich an der KI *verstärkt* hat, belegt
