@@ -35,6 +35,19 @@ pro-Nutzer-Spiegel (fürs Wiedererkennen). No-op ohne Firebase-Config.
 "kein-schluessel"` — Pietro hat `ANTHROPIC_API_KEY` in Vercel noch **nicht**
 hinterlegt; das Orakel schweigt bis dahin (alles andere läuft).
 
+**Auftritts-Stern final (2026-07-12, Feedback Christof):** Sieben getrennte
+Merkmal-Strahlen aus einer dekorativen **Nabe** (Zentrum ist kein anklickbarer
+Knoten mehr — die frühere Übersichts-Karte «5» wirkte wie ein Kommentar).
+dialoghaft (Karpathy) und generativ (Zweig «Konfabulation») wieder getrennt;
+dazu mustererkennend (Zweig), datenbasiert (Domingos), speicherabhängig
+(Spektrum), agentenhaft (Weng), multimodal (OpenAI). Neu in FadenNetz: Prop
+`nabe` (dekorativer Hub) und `abschluss` (erklärendes Feld unter dem Muster,
+sobald alle Knoten besucht) — Text: die KI als Akteurin, deren *gebündelte*
+Eigenschaften ihr mehr Potenzial zurechnen, auf unser Handeln Einfluss zu
+nehmen als je zuvor. Hover/Fokus über einem Knoten zeigt neu einen Tooltip
+mit der Kurz-Bezeichnung (aus dem «Merkmal:»-Kommentar abgeleitet). Geometrie
+neu (Heptagon, 7 Rays + 7 Umfang-Nebenfäden, 7 Sektor-Flächen).
+
 **Merkmale-Feinschliff (2026-07-12, Feedback Christof):** Auftritts-Stern
 umstrukturiert, bleibt bei 6 Strahlen: (1) «dialoghaft & generativ»
 zusammengefasst (Karpathy «Englisch als Programmiersprache»; Zweigs

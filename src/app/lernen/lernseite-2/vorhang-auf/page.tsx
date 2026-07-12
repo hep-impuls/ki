@@ -72,83 +72,74 @@ export default function Lernseite2VorhangAuf() {
         </div>
       </header>
 
-      {/* Interaktives Muster der Seite: der Auftritts-Stern — sechs Fäden,
-          sechs Wege, in der Mitte die Bühne. Zwischen besuchten Knoten
-          füllen sich die Flächen (Farbe / Schraffur / Punkte). */}
+      {/* Interaktives Muster der Seite: der Auftritts-Stern — sieben Merkmale
+          als Strahlen aus einer dekorativen Nabe. Zwischen besuchten Knoten
+          füllen sich die Flächen (Farbe / Schraffur / Punkte); ist das Muster
+          gewoben, erscheint darunter das erklärende Abschluss-Feld. */}
       <FadenNetz
         className="mt-xl max-w-5xl"
         hoehe={220}
         svgKlasse="aspect-[720/300] sm:aspect-[720/220]"
         spurKey="vorhang-auf:weisheit"
-        einladung="Sechs Fäden, sechs Merkmale der neuen Akteurin — fahr sie nach und entdecke in den Worten der KI-Fachleute, was sich an ihr verstärkt hat."
+        einladung="Sieben Merkmale der neuen Akteurin — fahr die Fäden von der Nabe nach aussen. Ist das Muster gewoben, fügt sich unten das Bild zusammen."
+        nabe={[360, 112]}
+        abschluss="Diese sieben Eigenschaften treffen sich in einem einzigen Gegenüber — und darin liegt das eigentlich Neue: Nicht eine einzelne Fähigkeit, sondern ihre Bündelung macht die KI zu einer Akteurin. Sie spricht, erzeugt, erkennt, lernt, erinnert, handelt und verbindet die Sinne — und wird so zu etwas, dem wir mehr Potenzial zurechnen, auf unser Handeln Einfluss zu nehmen, als je einer Technik zuvor."
         straenge={[
-          { d: "M360 112 L84 48" },
-          { d: "M360 112 L300 24" },
-          { d: "M360 112 L596 38" },
-          { d: "M360 112 L76 182" },
-          { d: "M360 112 L420 198" },
-          { d: "M360 112 L636 172" },
-          { d: "M84 48 L300 24", fein: true },
-          { d: "M596 38 L636 172", fein: true },
+          { d: "M360 112 L360 20" },
+          { d: "M360 112 L602 55" },
+          { d: "M360 112 L662 132" },
+          { d: "M360 112 L495 195" },
+          { d: "M360 112 L226 195" },
+          { d: "M360 112 L58 133" },
+          { d: "M360 112 L118 55" },
+          { d: "M360 20 L602 55", fein: true },
+          { d: "M602 55 L662 132", fein: true },
+          { d: "M662 132 L495 195", fein: true },
+          { d: "M495 195 L226 195", fein: true },
+          { d: "M226 195 L58 133", fein: true },
+          { d: "M58 133 L118 55", fein: true },
+          { d: "M118 55 L360 20", fein: true },
         ]}
         flaechen={[
-          { punkte: [[360, 112], [84, 48], [300, 24]], knoten: [0, 1, 2] },
-          { punkte: [[360, 112], [300, 24], [596, 38]], knoten: [0, 2, 3] },
-          { punkte: [[360, 112], [596, 38], [636, 172]], knoten: [0, 3, 6] },
-          { punkte: [[360, 112], [636, 172], [420, 198]], knoten: [0, 6, 5] },
-          { punkte: [[360, 112], [420, 198], [76, 182]], knoten: [0, 5, 4] },
-          { punkte: [[360, 112], [76, 182], [84, 48]], knoten: [0, 4, 1] },
+          { punkte: [[360, 112], [360, 20], [602, 55]], knoten: [0, 1] },
+          { punkte: [[360, 112], [602, 55], [662, 132]], knoten: [1, 2] },
+          { punkte: [[360, 112], [662, 132], [495, 195]], knoten: [2, 3] },
+          { punkte: [[360, 112], [495, 195], [226, 195]], knoten: [3, 4] },
+          { punkte: [[360, 112], [226, 195], [58, 133]], knoten: [4, 5] },
+          { punkte: [[360, 112], [58, 133], [118, 55]], knoten: [5, 6] },
+          { punkte: [[360, 112], [118, 55], [360, 20]], knoten: [6, 0] },
         ]}
         knoten={[
           {
             x: 360,
-            y: 112,
-            akzent: true,
-            text: "Sechs Merkmale — jedes gibt es seit Jahrzehnten, doch die KI dreht sie alle zugleich auf.",
-            quelle: "Die neue Akteurin",
-            kommentar: "Fahr die sechs Fäden nach.",
-            deutung:
-              "Was die heutige KI neu macht, ist selten eine einzelne Zauberzutat — es ist die Verdichtung vertrauter Fähigkeiten: Sie spricht und erzeugt Sprache, erkennt Muster, lernt aus Daten, hängt an Speicher, handelt selbstständig und verbindet Text, Bild und Ton. Jeder Strahl zeigt eines dieser Merkmale, in den Worten von Fachleuten aus der KI-Community. Zusammen ergeben sie das Profil der neuen Akteurin.",
-          },
-          {
-            x: 84,
-            y: 48,
+            y: 20,
             text: "Die heisseste neue Programmiersprache ist Englisch.",
             quelle: "Andrej Karpathy (OpenAI/Tesla), 2023 · übersetzt",
-            kommentar: "Merkmal: dialoghaft & generativ.",
+            kommentar: "Merkmal: dialoghaft.",
             deutung:
-              "Früher steuerte man Computer über Code; jetzt genügt ein Satz Alltagssprache — und dieselbe Sprachfähigkeit, mit der sie uns versteht, lässt sie auch erzeugen. Dialoghaft und generativ sind zwei Seiten derselben Medaille: Wir reden mit ihr, und sie schreibt zurück — Texte, Bilder, Code, die so nie eingegeben wurden. Die Kehrseite benennt Katharina Zweig: Das Modell sagt bloss das nächste Wort voraus, ohne Wissensbasis — es «konfabuliert» eher, als dass es halluziniert.",
+              "Früher steuerte man Computer über Code; heute genügt ein Satz Alltagssprache. Karpathy bringt es auf den Punkt: Die Schnittstelle ist die Sprache selbst. Das Dialoghafte ist das Erste, was uns an KI berührt — wir weisen sie an, fragen nach, widersprechen, wie einem Gegenüber.",
           },
           {
-            x: 300,
-            y: 24,
-            text: "Die Maschine versteht nicht, warum welches Wort in welchen Kontext passt.",
+            x: 602,
+            y: 55,
+            text: "Eigentlich sollte man von Konfabulationen sprechen.",
             quelle: "Katharina Zweig, «Spektrum der Wissenschaft», Edition KI, 2026",
-            kommentar: "Merkmal: Mustererkennung — statistisch, nicht verstehend.",
+            kommentar: "Merkmal: generativ.",
             deutung:
-              "Mustererkennung wird gern als blosse Wahrscheinlichkeitsrechnung abgetan. Die Informatikerin Katharina Zweig schärft das Bild: Das System leitet aus grossen Datenmengen statistische Muster als Regeln ab und hat bestimmte Wörter schlicht häufig in bestimmten Kontexten gelesen. Es erkennt Muster verlässlich — versteht aber nicht, warum. Ihr nüchternes Fazit: Noch seien diese Systeme gar nicht intelligent.",
+              "Ein Sprachmodell erzeugt fortlaufend neuen Text, indem es das nächste Wort vorhersagt — es besitzt aber keine Wissensdatenbank zum Nachschlagen. Wo es danebenliegt, spricht man von «Halluzination»; Katharina Zweig hält das für psychologisch falsch und schlägt «Konfabulation» vor — wie bei Menschen, die flüssig Wörter aneinanderreihen, ohne Wissen dahinter. Erzeugen und Erfinden sind hier dieselbe Münze.",
           },
           {
-            x: 596,
-            y: 38,
-            text: "Die Lernalgorithmen sind die Samen, die Daten der Boden, die gelernten Programme die Pflanzen.",
-            quelle: "Pedro Domingos, «The Master Algorithm», 2015 · übersetzt",
-            kommentar: "Merkmal: datenbasiert.",
+            x: 662,
+            y: 132,
+            text: "Ein Modell, das über Audio, Bild und Text hinweg in Echtzeit denkt.",
+            quelle: "OpenAI, zur Vorstellung von GPT-4o, 2024 · übersetzt",
+            kommentar: "Merkmal: multimodal.",
             deutung:
-              "Der Machine-Learning-Forscher Pedro Domingos vergleicht das Lernen mit Landwirtschaft: Der Algorithmus ist nur das Saatgut — wachsen lässt ihn erst der Boden aus Daten. Ohne riesige Datenmengen bleibt die klügste Methode unfruchtbar. Deshalb dreht sich in der KI alles um Daten — und um die Frage, wessen Daten das sind und was in ihnen steckt.",
+              "Lange konnte ein System entweder Text oder Bild oder Ton. Multimodale Modelle verbinden diese Sinne in einem einzigen Netz: Sie lesen, sehen und hören — und antworten wahlweise mit Text, Bild oder Stimme. Damit rückt die Maschine näher an die Art, wie Menschen die Welt aufnehmen: nicht in getrennten Kanälen, sondern zusammen. Aus dem Textautomaten wird ein Gegenüber, das eine Skizze, ein Foto oder einen gesprochenen Satz versteht.",
           },
           {
-            x: 76,
-            y: 182,
-            text: "Während des Trainings werden die Gewichte so angepasst, dass sie eine Aufgabe möglichst gut erfüllen.",
-            quelle: "«Spektrum der Wissenschaft», Edition KI, 2026",
-            kommentar: "Merkmal: speicherabhängig — wo kein Speicher, kein Training.",
-            deutung:
-              "Alles, was ein Modell «kann», steckt in Milliarden gespeicherten Zahlen — den Gewichten. Training heisst nichts anderes, als diese Werte so lange zu verstellen, bis die Antworten stimmen: Ohne Speicher gäbe es nichts festzuhalten — also auch kein Lernen. Und im Betrieb braucht es weiter Speicher: als Kurzzeitgedächtnis (den Kontext) und als durchsuchbare Ablage fürs Langzeitgedächtnis. Speicher ist damit nicht Zubehör, sondern Voraussetzung.",
-          },
-          {
-            x: 420,
-            y: 198,
+            x: 495,
+            y: 195,
             text: "Agent = LLM + Gedächtnis + Planung + Werkzeuggebrauch.",
             quelle: "Lilian Weng (OpenAI), 2023 · übersetzt",
             kommentar: "Merkmal: agentenhaft.",
@@ -156,13 +147,31 @@ export default function Lernseite2VorhangAuf() {
               "Weng fasst die agentenhafte KI in eine Formel: ein Sprachmodell als «Gehirn», dazu Gedächtnis, die Fähigkeit, ein Ziel in Schritte zu zerlegen, und der Griff zu Werkzeugen — Websuche, Code, andere Programme. So wird aus dem Antwortgeber ein Akteur, der eigenständig handelt. Genau hier verschwimmt die alte Grenze zwischen Werkzeug und Gegenüber.",
           },
           {
-            x: 636,
-            y: 172,
-            text: "Ein Modell, das über Audio, Bild und Text hinweg in Echtzeit denkt.",
-            quelle: "OpenAI, zur Vorstellung von GPT-4o, 2024 · übersetzt",
-            kommentar: "Merkmal: multimodal.",
+            x: 226,
+            y: 195,
+            text: "Während des Trainings werden die Gewichte so angepasst, dass sie eine Aufgabe möglichst gut erfüllen.",
+            quelle: "«Spektrum der Wissenschaft», Edition KI, 2026",
+            kommentar: "Merkmal: speicherabhängig — wo kein Speicher, kein Training.",
             deutung:
-              "Lange konnte ein System entweder Text oder Bild oder Ton. Multimodale Modelle verbinden diese Sinne in einem einzigen Netz: Sie lesen, sehen und hören — und antworten wahlweise mit Text, Bild oder Stimme. Damit rückt die Maschine näher an die Art, wie Menschen die Welt aufnehmen: nicht in getrennten Kanälen, sondern zusammen. Aus dem Textautomaten wird ein Gegenüber, das eine Skizze, ein Foto oder einen gesprochenen Satz versteht.",
+              "Alles, was ein Modell «kann», steckt in Milliarden gespeicherten Zahlen — den Gewichten. Training heisst nichts anderes, als diese Werte so lange zu verstellen, bis die Antworten stimmen: Ohne Speicher gäbe es nichts festzuhalten — also auch kein Lernen. Und im Betrieb braucht es weiter Speicher: als Kurzzeitgedächtnis (den Kontext) und als durchsuchbare Ablage fürs Langzeitgedächtnis. Speicher ist damit nicht Zubehör, sondern Voraussetzung.",
+          },
+          {
+            x: 58,
+            y: 133,
+            text: "Die Lernalgorithmen sind die Samen, die Daten der Boden, die gelernten Programme die Pflanzen.",
+            quelle: "Pedro Domingos, «The Master Algorithm», 2015 · übersetzt",
+            kommentar: "Merkmal: datenbasiert.",
+            deutung:
+              "Der Machine-Learning-Forscher Pedro Domingos vergleicht das Lernen mit Landwirtschaft: Der Algorithmus ist nur das Saatgut — wachsen lässt ihn erst der Boden aus Daten. Ohne riesige Datenmengen bleibt die klügste Methode unfruchtbar. Deshalb dreht sich in der KI alles um Daten — und um die Frage, wessen Daten das sind und was in ihnen steckt.",
+          },
+          {
+            x: 118,
+            y: 55,
+            text: "Die Maschine versteht nicht, warum welches Wort in welchen Kontext passt.",
+            quelle: "Katharina Zweig, «Spektrum der Wissenschaft», Edition KI, 2026",
+            kommentar: "Merkmal: mustererkennend.",
+            deutung:
+              "Mustererkennung wird gern als blosse Wahrscheinlichkeitsrechnung abgetan. Die Informatikerin Katharina Zweig schärft das Bild: Das System leitet aus grossen Datenmengen statistische Muster als Regeln ab und hat bestimmte Wörter schlicht häufig in bestimmten Kontexten gelesen. Es erkennt Muster verlässlich — versteht aber nicht, warum. Ihr nüchternes Fazit: Noch seien diese Systeme gar nicht intelligent.",
           },
         ]}
       />

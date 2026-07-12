@@ -84,6 +84,8 @@ export default function FadenNetz({
   knoten,
   straenge,
   flaechen = [],
+  nabe,
+  abschluss,
   hoehe = 220,
   einladung,
   sprungLabel = "Hinspringen",
@@ -95,6 +97,12 @@ export default function FadenNetz({
   straenge: FadenStrang[];
   /** Flächen, die sich beim Einsammeln der Knoten füllen. */
   flaechen?: FadenFlaeche[];
+  /** Dekorative Nabe (Ring + Punkt), in der die Fäden zusammenlaufen —
+   *  kein Knoten, nicht anklickbar. */
+  nabe?: [number, number];
+  /** Erklärendes Abschluss-Feld unter dem Muster, sobald alle Knoten
+   *  besucht sind. */
+  abschluss?: string;
   /** viewBox-Höhe (Breite fix 720). */
   hoehe?: number;
   einladung: string;
@@ -381,6 +389,21 @@ export default function FadenNetz({
                 />
               );
             })}
+          {/* Dekorative Nabe: hier laufen die Fäden zusammen (kein Knoten) */}
+          {nabe && (
+            <g aria-hidden>
+              <circle
+                cx={nabe[0]}
+                cy={nabe[1]}
+                r="11"
+                fill="none"
+                strokeWidth="1"
+                className="stroke-tertiary"
+                opacity="0.4"
+              />
+              <circle cx={nabe[0]} cy={nabe[1]} r="4.5" className="fill-tertiary" opacity="0.75" />
+            </g>
+          )}
           {/* Puls am ersten Knoten als Einladung */}
           {!started && (
             <circle
@@ -393,6 +416,22 @@ export default function FadenNetz({
           {/* Knoten */}
           {knoten.map((k, i) => {
             const reached = visited.has(i);
+            // Kurze Bezeichnung für den Hover-Tooltip: aus dem
+            // «Merkmal: …»-Kommentar der Name vor dem Gedankenstrich.
+            const merk =
+              k.kommentar && /^Merkmal:/.test(k.kommentar)
+                ? k.kommentar
+                    .replace(/^Merkmal:\s*/, "")
+                    .split("—")[0]
+                    .replace(/\.\s*$/, "")
+                    .trim()
+                : null;
+            const tipW = merk ? Math.max(46, merk.length * 7 + 18) : 0;
+            const tipAbove = k.y >= 46;
+            const tipY = tipAbove ? k.y - 38 : k.y + 14;
+            const tipX = merk
+              ? Math.min(VB_W - tipW - 3, Math.max(3, k.x - tipW / 2))
+              : 0;
             return (
               <g
                 key={i}
@@ -440,6 +479,28 @@ export default function FadenNetz({
                   >
                     {k.label}
                   </text>
+                )}
+                {merk && (
+                  <g className="pointer-events-none opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100">
+                    <rect
+                      x={tipX}
+                      y={tipY}
+                      width={tipW}
+                      height="24"
+                      rx="6"
+                      className="fill-inverse-surface"
+                    />
+                    <text
+                      x={tipX + tipW / 2}
+                      y={tipY + 16}
+                      textAnchor="middle"
+                      fontSize="12"
+                      fontWeight="600"
+                      className="fill-inverse-on-surface"
+                    >
+                      {merk}
+                    </text>
+                  </g>
                 )}
               </g>
             );
@@ -519,6 +580,17 @@ export default function FadenNetz({
           </ol>
         )}
       </div>
+
+      {/* Erklärendes Abschluss-Feld — sobald das Muster gewoben ist */}
+      {abschluss && done && (
+        <div className="animate-frame-in mt-md rounded-xl border border-tertiary/50 bg-tertiary-container/30 p-lg">
+          <p className="flex items-center gap-sm text-headline-sm text-on-surface">
+            <span className="material-symbols-outlined text-tertiary">hub</span>
+            Das Muster ist gewoben
+          </p>
+          <p className="mt-sm text-body-lg text-on-surface">{abschluss}</p>
+        </div>
+      )}
     </section>
   );
 }
