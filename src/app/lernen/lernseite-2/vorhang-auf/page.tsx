@@ -80,7 +80,7 @@ export default function Lernseite2VorhangAuf() {
         hoehe={220}
         svgKlasse="aspect-[720/300] sm:aspect-[720/220]"
         spurKey="vorhang-auf:weisheit"
-        einladung="Sechs Fäden treffen sich in der Mitte — wähle deinen Weg, sammle die Weisheiten ein und webe die Flächen dazwischen."
+        einladung="Sechs Fäden, sechs Merkmale der neuen Akteurin — fahr sie nach und entdecke in den Worten der KI-Fachleute, was sich an ihr verstärkt hat."
         straenge={[
           { d: "M360 112 L84 48" },
           { d: "M360 112 L300 24" },
@@ -104,65 +104,65 @@ export default function Lernseite2VorhangAuf() {
             x: 360,
             y: 112,
             akzent: true,
-            text: "Die ganze Welt ist Bühne, und alle Frauen und Männer blosse Spieler",
-            quelle: "William Shakespeare, «Wie es euch gefällt»",
-            kommentar: "Vorhang auf — welche Rolle geben wir der neuen Akteurin?",
+            text: "Sechs Merkmale — jedes gibt es seit Jahrzehnten, doch die KI dreht sie alle zugleich auf.",
+            quelle: "Die neue Akteurin",
+            kommentar: "Fahr die sechs Fäden nach.",
             deutung:
-              "Shakespeare lässt die Welt als Bühne beschreiben: Wir alle spielen Rollen, treten auf und wieder ab. Wer der KI begegnet, verteilt ebenfalls Rollen — Werkzeug, Kollegin, Orakel, Bedrohung. Welche Rolle wir ihr zuschreiben, entscheidet mit, wie die Partnerschaft gelingt. Genau darum beginnt dieses Modul mit einem Auftritt.",
+              "Was die heutige KI neu macht, ist selten eine einzelne Zauberzutat — es ist die Verdichtung vertrauter Fähigkeiten: Sie spricht mit uns, erkennt Muster, lernt aus Daten, braucht Gedächtnis, handelt selbstständig und erzeugt Neues. Jeder Strahl zeigt eines dieser Merkmale, in den Worten von Fachleuten aus der KI-Community selbst. Zusammen ergeben sie das Profil der neuen Akteurin.",
           },
           {
             x: 84,
             y: 48,
-            text: "Alles fliesst",
-            quelle: "Heraklit",
-            kommentar: "Panta rhei — kein Begriff bleibt, wie er war.",
+            text: "Die heisseste neue Programmiersprache ist Englisch.",
+            quelle: "Andrej Karpathy (OpenAI/Tesla), 2023 · übersetzt",
+            kommentar: "Merkmal: dialoghaft.",
             deutung:
-              "Für Heraklit ist die Welt kein fester Bestand, sondern ein Fluss: Nichts bleibt, alles wird. Auch unsere Begriffe altern — «Werkzeug», «Maschine», «Intelligenz» sind Ufer, an denen der Strom längst weitergezogen ist. Wer die neue Akteurin verstehen will, muss bereit sein, alte Wörter loszulassen und neue zu prüfen.",
+              "Früher steuerte man Computer über Code; jetzt genügt oft ein Satz Alltagssprache. Karpathy — einer der einflussreichsten KI-Ingenieure — bringt es auf den Punkt: Die Schnittstelle ist die Sprache selbst. Das Dialoghafte ist das Erste, was uns an KI berührt — wir weisen sie an, fragen nach, widersprechen, wie einem Gegenüber.",
           },
           {
             x: 300,
             y: 24,
-            text: "Ich weiss, dass ich nichts weiss",
-            quelle: "nach Sokrates",
-            kommentar: "Der Anfang der Philosophie — und ein guter Anfang hier.",
+            text: "Das Lernen aufeinanderfolgender Schichten immer bedeutungsvollerer Repräsentationen — aus Daten.",
+            quelle: "François Chollet (Keras), «Deep Learning with Python», 2018 · übersetzt",
+            kommentar: "Merkmal: Mustererkennung / Lernen.",
             deutung:
-              "Das berühmte Nichtwissen ist keine Ausrede, sondern eine Methode: Erst wer zugibt, nicht zu wissen, beginnt wirklich zu fragen. Gegenüber einer Technik, die auf alles eine Antwort zu haben scheint, ist diese Haltung wertvoller denn je — die Frage hinter der Antwort suchen, statt die Antwort für das Ende des Denkens zu halten.",
+              "Chollet, Schöpfer der verbreiteten KI-Bibliothek Keras, beschreibt, was ein neuronales Netz tut: Es schichtet Muster übereinander — von Kanten zu Formen zu Gesichtern —, jede Schicht bedeutungsvoller als die darunter. Nichts davon wird programmiert; es wird aus Beispielen gelernt. Diese Fähigkeit, Muster selbst zu finden, ist der Motor hinter Bild-, Sprach- und Texterkennung.",
           },
           {
             x: 596,
             y: 38,
-            text: "Die Grenzen meiner Sprache bedeuten die Grenzen meiner Welt",
-            quelle: "Ludwig Wittgenstein",
-            kommentar: "Was verschiebt sich, wenn Maschinen sprechen?",
+            text: "Die Lernalgorithmen sind die Samen, die Daten der Boden, die gelernten Programme die Pflanzen.",
+            quelle: "Pedro Domingos, «The Master Algorithm», 2015 · übersetzt",
+            kommentar: "Merkmal: datenbasiert.",
             deutung:
-              "Sprache ist für Wittgenstein nicht Verpackung des Denkens, sondern seine Grenze. Wenn nun Maschinen sprechen, verschieben sich diese Grenzen: Neue Sätze werden möglich — neue Missverständnisse auch. Und eine alte Frage kehrt scharf zurück: Was heisst «verstehen», wenn es scheinbar auch ohne Erleben funktioniert?",
+              "Der Machine-Learning-Forscher Pedro Domingos vergleicht das Lernen mit Landwirtschaft: Der Algorithmus ist nur das Saatgut — wachsen lässt ihn erst der Boden aus Daten. Ohne riesige Datenmengen bleibt die klügste Methode unfruchtbar. Deshalb dreht sich in der KI alles um Daten — und um die Frage, wessen Daten das sind und was in ihnen steckt.",
           },
           {
             x: 76,
             y: 182,
-            text: "Ich denke, also bin ich",
-            quelle: "René Descartes",
-            kommentar: "Und die Maschine? Sie rechnet — ist das schon Denken?",
+            text: "Langzeitgedächtnis: Information über lange Zeit behalten und abrufen — über einen externen Speicher mit schnellem Zugriff.",
+            quelle: "Lilian Weng (OpenAI), «LLM Powered Autonomous Agents», 2023 · übersetzt",
+            kommentar: "Merkmal: gedächtnisbedürftig.",
             deutung:
-              "Descartes suchte den einen unbezweifelbaren Punkt — und fand ihn im Denken: Wer zweifelt, denkt; wer denkt, ist. Die Maschine rechnet, gewichtet, formuliert. Aber zweifelt sie? An der Frage, ob Rechnen schon Denken ist, scheiden sich seit Leibniz die Geister — und sie ist der Kern der heutigen KI-Debatte.",
+              "Ein Sprachmodell für sich vergisst nach jeder Antwort alles. Lilian Weng, KI-Forscherin bei OpenAI, beschreibt darum zwei Gedächtnisse: das Kurzzeitgedächtnis im laufenden Kontext und ein Langzeitgedächtnis in einem externen Speicher, den das System durchsucht. Erst mit Gedächtnis wird aus einem Reflex ein Gegenüber, das sich erinnert — und über die Zeit kohärent bleibt.",
           },
           {
             x: 420,
             y: 198,
-            text: "Können Maschinen denken?",
-            quelle: "Alan Turing, 1950",
-            kommentar: "Die Frage, mit der das KI-Zeitalter beginnt.",
+            text: "Agent = LLM + Gedächtnis + Planung + Werkzeuggebrauch.",
+            quelle: "Lilian Weng (OpenAI), 2023 · übersetzt",
+            kommentar: "Merkmal: agentenhaft.",
             deutung:
-              "Turing stellte die Frage 1950 — und ersetzte sie sogleich durch ein Spiel: Kann eine Maschine im Gespräch für einen Menschen gehalten werden? Damit verschob er die Debatte vom Inneren (Bewusstsein) auf das Beobachtbare (Verhalten). Unsere täglichen Chats mit KI sind sein Gedankenexperiment — im Weltmassstab durchgeführt.",
+              "Weng fasst die agentenhafte KI in eine Formel: ein Sprachmodell als «Gehirn», dazu Gedächtnis, die Fähigkeit, ein Ziel in Schritte zu zerlegen, und der Griff zu Werkzeugen — Websuche, Code, andere Programme. So wird aus dem Antwortgeber ein Akteur, der eigenständig handelt. Genau hier verschwimmt die alte Grenze zwischen Werkzeug und Gegenüber.",
           },
           {
             x: 636,
             y: 172,
-            text: "Mit jedem Anfang kommt etwas Neues in die Welt",
-            quelle: "nach Hannah Arendt",
-            kommentar: "Anfangen können — vielleicht die menschlichste Fähigkeit.",
+            text: "Halluzinieren ist alles, was LLMs tun — es sind Traum-Maschinen. Wir lenken ihre Träume mit Prompts.",
+            quelle: "Andrej Karpathy, 2023 · übersetzt",
+            kommentar: "Merkmal: generativ.",
             deutung:
-              "Arendt nennt die Fähigkeit anzufangen «Natalität»: Weil jeder Mensch geboren wird, kommt mit jedem etwas Unerwartetes in die Welt. Maschinen setzen fort, was in ihnen angelegt ist — anfangen im starken Sinn können bisher nur wir. Vielleicht liegt genau hier der Kern der neuen Arbeitsteilung zwischen Mensch und KI.",
+              "Karpathy dreht den Vorwurf des «Halluzinierens» um: Ein Sprachmodell ruft nichts ab, es träumt fortwährend Neues — und meistens landet der Traum bei etwas Brauchbarem. Das Generative ist keine Panne, sondern das Grundprinzip: Es erzeugt Texte, Bilder und Code, die so nie eingegeben wurden. Damit rührt die KI an eine alte Grenze — ob eine Maschine wirklich Neues «schaffen» kann (siehe Ada Lovelace im Ratespiel oben).",
           },
         ]}
       />

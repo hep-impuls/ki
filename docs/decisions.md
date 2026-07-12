@@ -35,10 +35,26 @@ pro-Nutzer-Spiegel (fürs Wiedererkennen). No-op ohne Firebase-Config.
 "kein-schluessel"` — Pietro hat `ANTHROPIC_API_KEY` in Vercel noch **nicht**
 hinterlegt; das Orakel schweigt bis dahin (alles andere läuft).
 
-Offen (Vorschlag an Christof, noch nicht umgesetzt): die (zu
-philosophischen) Auftritts-Stern-Knoten durch KI-**Merkmale** ersetzen
-(dialoghaft, mustererkennend, datenbasiert, gedächtnisbedürftig, agentenhaft
-…) mit belegten Quellenzitaten.
+**Auftritts-Stern zeigt neu die KI-Merkmale** (Feedback Christof: die
+philosophischen Zitate waren fehl am Platz — Philosophie kommt in Thema 2):
+Die sechs Strahlen betonen jetzt, was sich an der KI *verstärkt* hat, belegt
+mit **technisch-anschaulichen Aussagen aus der KI-Community selbst** (Wunsch:
+Fachleute, nicht zwingend prominent; alle Wortlaute am 2026-07-12
+verifiziert, Nicht-Deutsche als «übersetzt»):
+- dialoghaft — Andrej Karpathy, «Die heisseste neue Programmiersprache ist
+  Englisch» (2023);
+- Mustererkennung/Lernen — François Chollet, «Schichten immer bedeutungs-
+  vollerer Repräsentationen aus Daten» (2018);
+- datenbasiert — Pedro Domingos, «Samen/Boden/Pflanzen» (Master Algorithm,
+  2015);
+- gedächtnisbedürftig — Lilian Weng, Kurz-/Langzeitgedächtnis (2023);
+- agentenhaft — Lilian Weng, «Agent = LLM + Gedächtnis + Planung +
+  Werkzeuggebrauch» (2023);
+- generativ — Andrej Karpathy, «hallucination is all LLMs do … dream
+  machines» (2023), mit Brücke zu Ada Lovelace im Ratespiel.
+Zentrum = Leitfrage-Hub. Jede Karte mit ausführlicher Deutung. spurKey
+unverändert (vorhang-auf:weisheit); Orakel-Dashboard-Label →
+«Merkmale der neuen Akteurin».
 
 ---
 
