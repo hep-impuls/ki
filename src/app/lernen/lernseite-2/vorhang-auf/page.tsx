@@ -89,6 +89,8 @@ export default function Lernseite2VorhangAuf() {
               mmf: "fiktion",
               jahr: "Sage",
               text: "Aus Lehm geformt, durch Schriftzeichen belebt. Die Ursage vom Menschen, der einem Ding Leben einhaucht.",
+              geschichte:
+                "Die Prager Sage erzählt von Rabbi Löw, der aus Lehm eine Gestalt formt und sie durch Schriftzeichen zum Leben erweckt — und der sie wieder stilllegen muss, als sie ihm entgleitet. Schon die Ursage handelt nicht nur vom Erschaffen, sondern vom Kontrollverlust: Wer belebt, muss hüten können.",
               bild: {
                 src: "/art/storyboard/golem.jpg",
                 alt: "Zeichnung: Rabbi Löw erweckt den Golem",
@@ -102,6 +104,8 @@ export default function Lernseite2VorhangAuf() {
               mmf: "fiktion",
               jahr: "Alchemie",
               text: "Leben aus der Retorte, im Labor erschaffen. Der Traum, Schöpfung technisch herzustellen.",
+              geschichte:
+                "Alchemisten wie Paracelsus beschrieben Rezepte, um künstliches Leben in der Retorte zu zeugen; in Goethes «Faust II» leuchtet der Homunkulus als Menschlein in der Phiole. Der Traum dahinter: Schöpfung nicht mehr empfangen, sondern selbst herstellen — im Labor, aus Wissen und Handwerk.",
               bild: {
                 src: "/art/storyboard/homunkulus.jpg",
                 alt: "Stich: Wagner und Mephisto vor dem Homunkulus in der Phiole (Faust II)",
@@ -115,6 +119,8 @@ export default function Lernseite2VorhangAuf() {
               mmf: "maschine",
               jahr: "1770",
               text: "Der «Schachtürke» scheint zu denken — und täuscht ganz Europa. Mechanik weckt erstmals den Verdacht, Maschinen könnten klug sein.",
+              geschichte:
+                "Wolfgang von Kempelens Schach spielender «Türke» schlug ab 1770 Fürsten und Kaiser — im Innern sass ein verborgener Mensch. Europa stritt jahrzehntelang darüber, ob eine Maschine denken könne; die Täuschung bewies vor allem eines: wie bereitwillig wir es glauben.",
               bild: {
                 src: "/art/storyboard/schachtuerke.jpg",
                 alt: "Kupferstich des Schachtürken von Wolfgang von Kempelen",
@@ -128,6 +134,8 @@ export default function Lernseite2VorhangAuf() {
               mmf: "fiktion",
               jahr: "1818",
               text: "Das erschaffene Wesen entgleitet seinem Schöpfer. Die Literatur stellt die Verantwortungsfrage — lange vor der Technik.",
+              geschichte:
+                "Mary Shelleys Roman von 1818 lässt Victor Frankenstein ein Wesen erschaffen, das er im Augenblick des Gelingens verstösst. Das eigentliche Ungeheuer der Geschichte ist nicht die Kreatur, sondern die verweigerte Verantwortung — eine Frage, die seither jede Schöpfungstechnik begleitet.",
               bild: {
                 src: "/art/storyboard/frankenstein.jpg",
                 alt: "Frontispiz der Frankenstein-Ausgabe von 1831",
@@ -141,6 +149,8 @@ export default function Lernseite2VorhangAuf() {
               mmf: "maschine",
               jahr: "1685–1843",
               text: "Von Leibniz' Rechenrad zu Babbage und Lovelace: Die programmierbare Maschine wird gedacht. Denken als Rechnen wird vorstellbar.",
+              geschichte:
+                "Leibniz baute um 1673 eine Maschine für alle vier Grundrechenarten und träumte davon, Streitfragen durchs Rechnen zu entscheiden. Babbage entwarf die programmierbare Analytical Engine; Ada Lovelace schrieb 1843 dazu das erste Programm — und hielt zugleich fest, die Maschine könne nur, was man ihr aufzutragen weiss.",
               bild: {
                 src: "/art/storyboard/babbage.jpg",
                 alt: "Holzstich der Differenzmaschine von Charles Babbage",
@@ -154,6 +164,8 @@ export default function Lernseite2VorhangAuf() {
               mmf: "mensch",
               jahr: "1956",
               text: "In Dartmouth wird der Begriff «Künstliche Intelligenz» geprägt. Aus alten Träumen wird ein Forschungsprogramm.",
+              geschichte:
+                "Im Sommer 1956 trafen sich am Dartmouth College Forscher um John McCarthy und Marvin Minsky mit dem Anspruch, jede Facette der Intelligenz maschinell nachzubilden. Der alte Traum bekam einen Namen und ein Budget — und man rechnete mit Durchbrüchen binnen weniger Jahre.",
             },
             {
               titel: "Symbolische KI",
@@ -162,6 +174,8 @@ export default function Lernseite2VorhangAuf() {
               mmf: "maschine",
               jahr: "1960er",
               text: "Intelligenz als Regelwerk: WENN–DANN-Systeme dominieren. Logik gilt als Königsweg.",
+              geschichte:
+                "Die frühe KI baute Intelligenz aus Symbolen und Logik: Wissen wurde in Regeln gefasst, Schliessen als Ableiten verstanden. In engen Welten — Schach, Logikbeweise, Klötzchenwelten — glänzte der Ansatz; an der offenen, mehrdeutigen Alltagswelt biss er sich fest.",
             },
             {
               titel: "Expertensysteme",
@@ -170,6 +184,8 @@ export default function Lernseite2VorhangAuf() {
               mmf: "maschine",
               jahr: "1970/80er",
               text: "Fachwissen wird in Regeln gegossen und löst Spezialaufgaben. Die erhoffte breite Intelligenz bleibt aus.",
+              geschichte:
+                "Systeme wie MYCIN gossen in den 1970er- und 80er-Jahren das Wissen von Fachleuten in Tausende Regeln — etwa für die Diagnose von Infektionen. In ihrer Nische stark, blieben sie teuer im Unterhalt und starr gegenüber allem, was in keiner Regel stand.",
             },
             {
               titel: "KI-Winter",
@@ -178,6 +194,8 @@ export default function Lernseite2VorhangAuf() {
               mmf: "mensch",
               jahr: "1980/90er",
               text: "Enttäuschte Erwartungen: Geld und Glaube frieren ein. Die grossen Versprechen überwintern.",
+              geschichte:
+                "Als die grossen Versprechen ausblieben, froren Forschungsgelder ein: Kritische Berichte und gescheiterte Projekte liessen den Glauben an die KI abkühlen. Der Begriff war zeitweise so belastet, dass Forschende ihre Arbeit lieber anders nannten.",
             },
             {
               titel: "Statistische KI",
@@ -186,6 +204,8 @@ export default function Lernseite2VorhangAuf() {
               mmf: "mensch",
               jahr: "1990er",
               text: "Die Wende: Maschinen lernen aus Beispielen statt aus Regeln. Daten werden wichtiger als Logik.",
+              geschichte:
+                "Statt Regeln von Hand zu schreiben, liess man Maschinen ab den 1990er-Jahren Muster aus Beispielen lernen — Spam erkennen, Handschrift lesen, Sprache erraten. Die Wende: Nicht mehr das aufgeschriebene Wissen der Fachleute zählte, sondern die Menge und Qualität der Daten.",
             },
             {
               titel: "Deep Learning",
@@ -194,6 +214,8 @@ export default function Lernseite2VorhangAuf() {
               mmf: "maschine",
               jahr: "ab 2012",
               text: "Neuronale Netze mit vielen Schichten erkennen Bilder und Sprache. Der Durchbruch kommt über die Tiefe.",
+              geschichte:
+                "2012 gewann ein tiefes neuronales Netz den ImageNet-Bildwettbewerb mit grossem Vorsprung — trainiert auf Grafikkarten, gefüttert mit Millionen Bildern. Schicht für Schicht lernen solche Netze eigene Merkmale, statt sie vorgesagt zu bekommen; seither dominiert das Prinzip die Bild-, Sprach- und Texterkennung.",
             },
             {
               titel: "Big Data & Gegenwart",
@@ -202,6 +224,8 @@ export default function Lernseite2VorhangAuf() {
               mmf: "maschine",
               jahr: "heute",
               text: "Riesige Datenmengen und Rechenzentren machen die neue Akteurin möglich. KI durchdringt den Alltag.",
+              geschichte:
+                "Heutige Modelle trainieren auf riesigen Text- und Bildmengen, in Rechenzentren mit Zehntausenden von Chips. So entstand die neue Akteurin dieses Moduls: dialogfähig, generativ — und Alltag von der Suchmaschine bis zum Schreibassistenten.",
               bild: {
                 src: "/art/storyboard/supercomputer.jpg",
                 alt: "Rechnerreihen des Pleiades-Supercomputers der NASA",

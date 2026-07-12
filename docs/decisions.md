@@ -10,6 +10,32 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-12 — KI-Story: flexibles Gewebe mit Drag, Bilder + Geschichten zurück
+
+**Nachschärfung Christof («wirklich wie natalität»):** Die Story-Box ist jetzt
+ein **flexibles, federndes Gewebe**: Punkte lassen sich mit Maus/Finger
+**selbst verschieben** (Drag), die Verbindungen bleiben fix — das Netz
+schwingt mit. Eigene Mini-Simulation (Abstossung, Federn entlang der Kanten,
+Zentrierung, Boxgrenzen) statt d3-force, weil `package.json` geteilt ist
+(keine neue Abhängigkeit ohne Absprache). Tippen ohne Ziehen (< 4 px) öffnet
+die Karte — Unterscheidung wie bei natalität.
+
+- **Ansichten neu:** «Gewebe» (frei, Standard) · «Zeitlich» (chronologisch,
+  nur gewählte) · «Mensch · Maschine · Fiktion». Die Ansicht **«Technologisch»
+  (vier Stränge) ist gestrichen** — «zu komplex» (Christof). Die
+  Themen-Gruppierung der Auswahl-Chips bleibt (sie strukturiert nur die Wahl).
+- **Bilder + längere Geschichten zurück:** Jede Station trägt neben dem
+  Zwei-Satz-Einstieg wieder eine ausführlichere `geschichte` (2–3 Sätze,
+  Lehrbuchwissen ohne Zitate) und ggf. die gemeinfreie Bildtafel — beides
+  erscheint **erst bei Aktivierung** des Knotens in der Karte (Bild jetzt
+  grösser, natalität-Panel-Stil, auf Mobile ausgeblendet).
+- **Robustheit:** Der gezogene Punkt folgt dem Zeiger direkt; Nachfedern der
+  Nachbarn läuft zusätzlich synchron pro Move/Release (requestAnimationFrame
+  wird in Hintergrund-Tabs gedrosselt — der Loop macht es nur flüssiger).
+  SSR rendert deterministische Kreis-Startpositionen; die Simulation rechnet
+  erst im Effect (kein Hydration-Mismatch). `touch-none` nur auf den Knoten,
+  damit die Seite über der Box scrollbar bleibt.
+
 ## 2026-07-12 — KI-Story als wählbares Gewebe (Vorbild natalität)
 
 **Auftrag Christof (Verweis auf natalitaet.com/gewebe):** Die KI-Story wird zum

@@ -10,24 +10,31 @@ import {
 } from "../_lib/spuren";
 
 /**
- * StoryGewebe — die KI-Story als wählbares Teil-Gewebe (Vorbild: das «Gewebe»
- * von natalitaet.com).
+ * StoryGewebe — die KI-Story als flexibles Teil-Gewebe (Vorbild: das
+ * «Gewebe» von natalitaet.com).
  *
- * Ablauf: Oben wählt man in einer Knotenauswahl, WELCHE Stationen im Muster
- * erscheinen (nach Themen gruppiert). Der Struktur-Umschalter bestimmt, WIE
- * die gewählten Stationen angeordnet werden:
- *   - «Zeitlich»    → chronologisch (nur die gewählten Punkte), als Serpentine;
- *   - «Mensch · Maschine · Fiktion» → drei Stränge;
- *   - «Technologisch» → vier Stränge (Erzählung, Mechanik, Regeln, Daten).
- * Feine Bögen zeigen Einflüsse, die quer durch die Zeit wirken.
+ * Oben wählt man in einer Knotenauswahl (nach Themen gruppierte Chips),
+ * WELCHE Stationen erscheinen; «Zufall (3)» zieht drei zufällig. Die
+ * gewählten Punkte verknüpfen und kombinieren sich je nach Wahl neu:
+ * chronologisch aufeinanderfolgende Stationen hängen am Erzähl-Faden,
+ * feine gestrichelte Bögen zeigen Einflüsse quer durch die Zeit.
  *
- * Ein Klick auf einen Punkt «aktiviert» ihn: seine Karte (zwei Sätze, ggf.
- * mit Bild) blendet unten ein und bleibt stehen. Die Bilder erscheinen also
- * erst bei Aktivierung. Aktivierte Stationen werden wie überall dreifach
- * registriert (_lib/spuren.ts) und bleiben geräteübergreifend offen.
+ * Drei Ansichten:
+ *  - «Gewebe» (Standard): freies, federndes Netz — eine Box, in der man
+ *    die Punkte selbst VERSCHIEBEN kann (Drag); die Verbindungen bleiben
+ *    fix, das Netz schwingt mit. Eigene Mini-Simulation (Abstossung,
+ *    Federn, Zentrierung) statt d3-force — package.json ist geteilt,
+ *    keine neue Abhängigkeit.
+ *  - «Zeitlich»: chronologisch angeordnet — nur die gewählten Punkte.
+ *  - «Mensch · Maschine · Fiktion»: drei Stränge.
  *
- * Nur Theme-Tokens, deterministische Koordinaten (Positionen im Effect wären
- * nicht nötig — sie werden rein rechnerisch aus Auswahl × Struktur bestimmt).
+ * Ein Klick (ohne Ziehen) aktiviert einen Punkt: seine Karte blendet unten
+ * ein und bleibt stehen — mit Bild (falls vorhanden) und der längeren
+ * Geschichte. Bilder erscheinen also erst bei Aktivierung; Punkte mit Bild
+ * tragen im Muster ein kleines Bild-Symbol. Aktivierte Stationen werden
+ * dreifach registriert (_lib/spuren.ts) und bleiben geräteübergreifend
+ * offen. Nur Theme-Tokens; SSR rendert deterministische Startpositionen
+ * (Kreis), die Simulation rechnet erst im Effect.
  */
 
 export type StoryKat = "erzaehlung" | "mechanik" | "regeln" | "daten";
@@ -38,17 +45,19 @@ export interface StoryStation {
   /** Kurzform fürs Muster + die Auswahl-Chips. */
   kurz: string;
   jahr: string;
-  /** Inhalt der Karte — maximal zwei Sätze. */
+  /** Kurzer Einstieg (zwei Sätze). */
   text: string;
-  /** Themen-Gruppe (Auswahl + technologischer Strang). */
+  /** Die längere Geschichte — erscheint in der Karte unter dem Einstieg. */
+  geschichte?: string;
+  /** Themen-Gruppe der Auswahl. */
   kat: StoryKat;
-  /** Strang in der Anordnung «Mensch · Maschine · Fiktion». */
+  /** Strang in der Ansicht «Mensch · Maschine · Fiktion». */
   mmf: StoryMMF;
   bild?: { src: string; alt: string; credit: string };
 }
 
-/** Einfluss quer durch die Zeit (Index → Index), als feiner Bogen gezeichnet,
- *  wenn beide Enden gewählt sind. */
+/** Einfluss quer durch die Zeit (Index → Index), als feiner gestrichelter
+ *  Bogen gezeichnet, wenn beide Enden gewählt sind. */
 export interface StoryEinfluss {
   von: number;
   zu: number;
@@ -56,6 +65,8 @@ export interface StoryEinfluss {
 
 const W = 720;
 const H = 300;
+/** Bewegungsraum der Punkte (Labels brauchen unten Platz). */
+const RAND = { x0: 44, x1: 676, y0: 34, y1: 258 };
 
 const KAT_LABEL: Record<StoryKat, string> = {
   erzaehlung: "Mythos & Fiktion",
@@ -65,11 +76,13 @@ const KAT_LABEL: Record<StoryKat, string> = {
 };
 const KAT_ORDER: StoryKat[] = ["erzaehlung", "mechanik", "regeln", "daten"];
 
-const STRUKTUREN: {
-  id: string;
-  label: string;
-  hinweis: string;
-}[] = [
+const ANSICHTEN = [
+  {
+    id: "gewebe",
+    label: "Gewebe",
+    hinweis:
+      "Freies Netz — zieh die Punkte mit Maus oder Finger, das Gewebe federt mit. Verbunden bleibt, was zusammengehört.",
+  },
   {
     id: "zeit",
     label: "Zeitlich",
@@ -80,104 +93,79 @@ const STRUKTUREN: {
     label: "Mensch · Maschine · Fiktion",
     hinweis: "Drei Stränge: erzählte Wesen, menschliche Erwartungen, gebaute Maschinen.",
   },
-  {
-    id: "tech",
-    label: "Technologisch",
-    hinweis: "Vier Stränge: Erzählung, Mechanik, Regeln & Symbole, Daten & Lernen.",
-  },
-];
+] as const;
 
 function lerp(a: number, b: number, t: number) {
   return a + (b - a) * t;
 }
+function clamp(v: number, lo: number, hi: number) {
+  return Math.max(lo, Math.min(hi, v));
+}
 
-type Pos = Map<number, { x: number; y: number }>;
-type Layout = {
-  pos: Pos;
-  /** Strang-Beschriftungen (links im Muster). */
-  labels: { x: number; y: number; text: string }[];
-  /** Sequenz-Fäden: geordnete Indexketten je Strang. */
-  ketten: number[][];
-};
+/** Deterministische Startposition (Kreis um die Boxmitte) — auch das
+ *  SSR-Markup nutzt sie; die Simulation übernimmt erst im Browser. */
+function startPos(i: number, n: number) {
+  const wink = (i / Math.max(1, n)) * 2 * Math.PI - Math.PI / 2;
+  return { x: 360 + 150 * Math.cos(wink), y: 148 + 88 * Math.sin(wink) };
+}
 
-/** Positionen rein rechnerisch aus (Struktur × Auswahl). Nur gewählte
- *  Stationen, chronologisch geordnet. */
-function baueLayout(
-  strukturId: string,
+/** Zielpositionen der geordneten Ansichten (zeit / mmf) — rein rechnerisch
+ *  aus der aktuellen Auswahl. */
+function zielPositionen(
+  ansichtId: string,
   gewaehltSortiert: number[],
   stationen: StoryStation[],
-): Layout {
-  const pos: Pos = new Map();
+): { pos: Map<number, { x: number; y: number }>; labels: { x: number; y: number; text: string }[] } {
+  const pos = new Map<number, { x: number; y: number }>();
+  const labels: { x: number; y: number; text: string }[] = [];
   const m = gewaehltSortiert.length;
-  if (m === 0) return { pos, labels: [], ketten: [] };
+  if (m === 0) return { pos, labels };
 
-  if (strukturId === "zeit") {
+  if (ansichtId === "zeit") {
     if (m <= 6) {
       gewaehltSortiert.forEach((id, j) => {
-        const x = m === 1 ? 365 : lerp(70, 660, j / (m - 1));
-        const y = 150 + (j % 2 === 0 ? -18 : 18);
-        pos.set(id, { x, y });
+        const x = m === 1 ? 360 : lerp(70, 660, j / (m - 1));
+        pos.set(id, { x, y: 150 + (j % 2 === 0 ? -18 : 18) });
       });
     } else {
-      // Serpentine: obere Reihe links→rechts, untere rechts→links.
       const top = Math.ceil(m / 2);
       const bot = m - top;
       gewaehltSortiert.forEach((id, j) => {
         if (j < top) {
-          const x = top === 1 ? 365 : lerp(70, 660, j / (top - 1));
-          pos.set(id, { x, y: 108 });
+          pos.set(id, { x: top === 1 ? 360 : lerp(70, 660, j / (top - 1)), y: 108 });
         } else {
           const k = j - top;
-          const x = bot === 1 ? 365 : lerp(70, 660, (bot - 1 - k) / (bot - 1));
-          pos.set(id, { x, y: 210 });
+          pos.set(id, {
+            x: bot === 1 ? 360 : lerp(70, 660, (bot - 1 - k) / (bot - 1)),
+            y: 214,
+          });
         }
       });
     }
-    return {
-      pos,
-      labels: [{ x: 12, y: 22, text: "Früher  →  heute" }],
-      ketten: [gewaehltSortiert],
-    };
+    labels.push({ x: 12, y: 22, text: "Früher  →  heute" });
+    return { pos, labels };
   }
 
-  // Mehr-Strang-Anordnungen (mmf / tech)
-  const gruppen: { text: string; indices: number[] }[] =
-    strukturId === "mmf"
-      ? (
-          [
-            ["fiktion", "Fiktion"],
-            ["mensch", "Mensch"],
-            ["maschine", "Maschine"],
-          ] as const
-        ).map(([key, text]) => ({
-          text,
-          indices: gewaehltSortiert.filter((i) => stationen[i].mmf === key),
-        }))
-      : KAT_ORDER.map((key) => ({
-          text:
-            key === "erzaehlung"
-              ? "Erzählung"
-              : key === "mechanik"
-                ? "Mechanik"
-                : key === "regeln"
-                  ? "Regeln"
-                  : "Daten",
-          indices: gewaehltSortiert.filter((i) => stationen[i].kat === key),
-        }));
-
-  const ns = gruppen.length;
-  const labels: Layout["labels"] = [];
+  // «Mensch · Maschine · Fiktion»
+  const gruppen = (
+    [
+      ["fiktion", "Fiktion"],
+      ["mensch", "Mensch"],
+      ["maschine", "Maschine"],
+    ] as const
+  ).map(([key, text]) => ({
+    text,
+    indices: gewaehltSortiert.filter((i) => stationen[i].mmf === key),
+  }));
   gruppen.forEach((g, s) => {
-    const y = ns === 1 ? H / 2 : lerp(56, 244, s / (ns - 1));
-    const mm = g.indices.length;
+    const y = lerp(60, 244, s / (gruppen.length - 1));
     g.indices.forEach((id, j) => {
-      const x = mm === 1 ? 150 : lerp(150, 660, j / (mm - 1));
+      const x = g.indices.length === 1 ? 170 : lerp(170, 660, j / (g.indices.length - 1));
       pos.set(id, { x, y });
     });
     labels.push({ x: 12, y: y + 4, text: g.text });
   });
-
-  return { pos, labels, ketten: gruppen.map((g) => g.indices) };
+  return { pos, labels };
 }
 
 /** Kleines «Bild vorhanden»-Symbol auf einem Knoten (nach natalität). */
@@ -198,6 +186,8 @@ function BildSymbol() {
   );
 }
 
+type SimPunkt = { x: number; y: number; vx: number; vy: number; fx: number | null; fy: number | null };
+
 export default function StoryGewebe({
   stationen,
   einfluesse = [],
@@ -216,38 +206,264 @@ export default function StoryGewebe({
   const n = stationen.length;
   const alle = useMemo(() => stationen.map((_, i) => i), [stationen]);
 
-  // Auswahl (welche Knoten erscheinen) — Start: alle. Getrennt von der
-  // Aktivierung (welche Karten gelesen sind).
   const [gewaehlt, setGewaehlt] = useState<Set<number>>(() => new Set(alle));
-  const [struktur, setStruktur] = useState(0);
+  const [ansicht, setAnsicht] = useState(0);
   const [gesammelt, setGesammelt] = useState<number[]>([]);
-  const [aktiv, setAktiv] = useState<number | null>(null);
 
-  const strukturId = STRUKTUREN[struktur].id;
-  const gewaehltSortiert = useMemo(
-    () => alle.filter((i) => gewaehlt.has(i)),
-    [alle, gewaehlt],
+  const svgRef = useRef<SVGSVGElement>(null);
+  /** Simulation/Positionen — eine Quelle für alle Ansichten. */
+  const simRef = useRef<Map<number, SimPunkt>>(new Map());
+  const rafRef = useRef<number | null>(null);
+  const alphaRef = useRef(0);
+  const dragRef = useRef<{ id: number; startX: number; startY: number; moved: boolean } | null>(null);
+  const [, force] = useState(0);
+  /** Während Drag/Nachschwingen keine CSS-Transition (sonst schwammig). */
+  const [live, setLive] = useState(false);
+
+  const ansichtId = ANSICHTEN[ansicht].id;
+  const gewaehltSortiert = useMemo(() => alle.filter((i) => gewaehlt.has(i)), [alle, gewaehlt]);
+
+  const ziel = useMemo(
+    () => zielPositionen(ansichtId, gewaehltSortiert, stationen),
+    [ansichtId, gewaehltSortiert, stationen],
   );
 
-  const layout = useMemo(
-    () => baueLayout(strukturId, gewaehltSortiert, stationen),
-    [strukturId, gewaehltSortiert, stationen],
-  );
-
+  /** Kanten: Erzähl-Faden (chronologisch aufeinanderfolgende gewählte) +
+   *  Einfluss-Bögen — in der MMF-Ansicht Strang-Fäden statt Erzähl-Faden. */
   const kanten = useMemo(() => {
     const out: { a: number; b: number; fein: boolean }[] = [];
-    layout.ketten.forEach((k) => {
-      for (let i = 1; i < k.length; i++) out.push({ a: k[i - 1], b: k[i], fein: false });
-    });
+    if (ansichtId === "mmf") {
+      (["fiktion", "mensch", "maschine"] as const).forEach((key) => {
+        const strang = gewaehltSortiert.filter((i) => stationen[i].mmf === key);
+        for (let i = 1; i < strang.length; i++)
+          out.push({ a: strang[i - 1], b: strang[i], fein: false });
+      });
+    } else {
+      for (let i = 1; i < gewaehltSortiert.length; i++)
+        out.push({ a: gewaehltSortiert[i - 1], b: gewaehltSortiert[i], fein: false });
+    }
     einfluesse.forEach((e) => {
-      if (gewaehlt.has(e.von) && gewaehlt.has(e.zu))
-        out.push({ a: e.von, b: e.zu, fein: true });
+      if (gewaehlt.has(e.von) && gewaehlt.has(e.zu)) out.push({ a: e.von, b: e.zu, fein: true });
     });
     return out;
-  }, [layout, einfluesse, gewaehlt]);
+  }, [ansichtId, gewaehltSortiert, gewaehlt, einfluesse, stationen]);
+
+  function punktVon(i: number): SimPunkt {
+    let p = simRef.current.get(i);
+    if (!p) {
+      const s = startPos(i, n);
+      p = { x: s.x, y: s.y, vx: 0, vy: 0, fx: null, fy: null };
+      simRef.current.set(i, p);
+    }
+    return p;
+  }
+
+  /** Ein Simulationsschritt (nur «Gewebe»): Abstossung, Federn entlang der
+   *  Kanten, sanfte Zentrierung, Boxgrenzen. */
+  function simSchritt() {
+    const alpha = alphaRef.current;
+    const pts = gewaehltSortiert.map((i) => ({ i, p: punktVon(i) }));
+    // Abstossung (n ist klein — O(n²) ist unkritisch)
+    for (let a = 0; a < pts.length; a++) {
+      for (let b = a + 1; b < pts.length; b++) {
+        const P = pts[a].p;
+        const Q = pts[b].p;
+        let dx = Q.x - P.x;
+        let dy = Q.y - P.y;
+        let d2 = dx * dx + dy * dy;
+        if (d2 < 1) {
+          dx = (a - b) * 0.7;
+          dy = 0.5;
+          d2 = 1;
+        }
+        const f = (5200 * alpha) / d2;
+        const d = Math.sqrt(d2);
+        const ux = dx / d;
+        const uy = dy / d;
+        P.vx -= ux * f;
+        P.vy -= uy * f;
+        Q.vx += ux * f;
+        Q.vy += uy * f;
+      }
+    }
+    // Federn entlang der Kanten (Ziel-Länge 120; Einflüsse weicher)
+    kanten.forEach((k) => {
+      const P = punktVon(k.a);
+      const Q = punktVon(k.b);
+      const dx = Q.x - P.x;
+      const dy = Q.y - P.y;
+      const d = Math.max(1, Math.sqrt(dx * dx + dy * dy));
+      const f = (d - 120) * (k.fein ? 0.008 : 0.02) * alpha * 6;
+      const ux = dx / d;
+      const uy = dy / d;
+      P.vx += ux * f;
+      P.vy += uy * f;
+      Q.vx -= ux * f;
+      Q.vy -= uy * f;
+    });
+    // Zentrierung + Integration
+    pts.forEach(({ p }) => {
+      p.vx += (360 - p.x) * 0.004 * alpha * 6;
+      p.vy += (148 - p.y) * 0.006 * alpha * 6;
+      p.vx *= 0.82;
+      p.vy *= 0.82;
+      if (p.fx !== null) {
+        p.x = p.fx;
+        p.y = p.fy!;
+        p.vx = 0;
+        p.vy = 0;
+      } else {
+        p.x = clamp(p.x + p.vx, RAND.x0, RAND.x1);
+        p.y = clamp(p.y + p.vy, RAND.y0, RAND.y1);
+      }
+    });
+  }
+
+  /** Gewebe synchron einschwingen lassen (wie natalitäts sim.tick(320)). */
+  function einschwingen() {
+    alphaRef.current = 1;
+    for (let t = 0; t < 300; t++) {
+      simSchritt();
+      alphaRef.current *= 0.985;
+    }
+    alphaRef.current = 0;
+  }
+
+  /** rAF-Loop während Drag/Nachschwingen. */
+  function loopStart() {
+    if (rafRef.current !== null) return;
+    setLive(true);
+    const step = () => {
+      simSchritt();
+      if (dragRef.current === null) alphaRef.current *= 0.94;
+      force((c) => c + 1);
+      if (dragRef.current !== null || alphaRef.current > 0.01) {
+        rafRef.current = requestAnimationFrame(step);
+      } else {
+        rafRef.current = null;
+        setLive(false);
+      }
+    };
+    rafRef.current = requestAnimationFrame(step);
+  }
+  useEffect(
+    () => () => {
+      if (rafRef.current !== null) cancelAnimationFrame(rafRef.current);
+    },
+    [],
+  );
+
+  // Ansicht/Auswahl anwenden: Gewebe → einschwingen; zeit/mmf → Zielplätze.
+  const auswahlKey = gewaehltSortiert.join(",");
+  useEffect(() => {
+    if (ansichtId === "gewebe") {
+      gewaehltSortiert.forEach((i) => {
+        punktVon(i).fx = null;
+        punktVon(i).fy = null;
+      });
+      einschwingen();
+    } else {
+      gewaehltSortiert.forEach((i) => {
+        const z = ziel.pos.get(i);
+        const p = punktVon(i);
+        if (z) {
+          p.x = z.x;
+          p.y = z.y;
+          p.vx = 0;
+          p.vy = 0;
+          p.fx = null;
+          p.fy = null;
+        }
+      });
+    }
+    force((c) => c + 1);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ansichtId, auswahlKey]);
+
+  /* ── Zeigerlogik: Ziehen verschiebt, Tippen liest ─────────────────────── */
+
+  function toSvg(e: React.PointerEvent) {
+    const r = svgRef.current!.getBoundingClientRect();
+    return {
+      x: ((e.clientX - r.left) / r.width) * W,
+      y: ((e.clientY - r.top) / r.height) * H,
+    };
+  }
+  function onDown(e: React.PointerEvent, i: number) {
+    dragRef.current = { id: i, startX: e.clientX, startY: e.clientY, moved: false };
+    try {
+      (e.currentTarget as Element).setPointerCapture(e.pointerId);
+    } catch {
+      /* synthetische Events ohne gültige pointerId */
+    }
+  }
+  function onMove(e: React.PointerEvent) {
+    const d = dragRef.current;
+    if (!d) return;
+    if (!d.moved) {
+      const dx = e.clientX - d.startX;
+      const dy = e.clientY - d.startY;
+      if (dx * dx + dy * dy < 16) return;
+      d.moved = true;
+      alphaRef.current = Math.max(alphaRef.current, 0.5);
+      loopStart();
+    }
+    const p = punktVon(d.id);
+    const s = toSvg(e);
+    // Der gezogene Punkt folgt dem Zeiger DIREKT (nicht erst im nächsten
+    // Simulationsschritt — sonst hinkt er, und ein schnelles Ziehen+Loslassen
+    // verpuffte ganz); die Simulation federt nur die Nachbarn nach.
+    p.fx = clamp(s.x, RAND.x0, RAND.x1);
+    p.fy = clamp(s.y, RAND.y0, RAND.y1);
+    p.x = p.fx;
+    p.y = p.fy;
+    p.vx = 0;
+    p.vy = 0;
+    if (ansichtId === "gewebe") {
+      // Nachbarn synchron nachfedern lassen — unabhängig davon, ob
+      // requestAnimationFrame gerade läuft (Hintergrund-Tabs drosseln es).
+      alphaRef.current = Math.max(alphaRef.current, 0.4);
+      simSchritt();
+      simSchritt();
+    }
+    force((c) => c + 1);
+  }
+  function onUp(e: React.PointerEvent) {
+    const d = dragRef.current;
+    if (!d) return;
+    dragRef.current = null;
+    const p = punktVon(d.id);
+    if (!d.moved) {
+      p.fx = null;
+      p.fy = null;
+      aktiviere(d.id);
+      return;
+    }
+    if (ansichtId === "gewebe") {
+      // loslassen: das Netz federt nach — der Punkt bleibt ungefähr liegen.
+      // Synchron ausfedern (falls requestAnimationFrame gedrosselt ist),
+      // der Loop macht es nur noch flüssig.
+      p.fx = null;
+      p.fy = null;
+      alphaRef.current = Math.max(alphaRef.current, 0.3);
+      for (let t = 0; t < 36; t++) {
+        simSchritt();
+        alphaRef.current *= 0.94;
+      }
+      force((c) => c + 1);
+      loopStart();
+    } else {
+      // geordnete Ansichten: liegt, wo abgelegt (bis zur nächsten Anordnung)
+      p.fx = null;
+      p.fy = null;
+      setLive(false);
+    }
+    void e;
+  }
+
+  /* ── Lesen, Auswahl, Zufall, Reset ────────────────────────────────────── */
 
   function aktiviere(i: number) {
-    setAktiv(i);
     if (!gesammelt.includes(i)) {
       setGesammelt((g) => [...g, i]);
       if (spurKey) merkeSpur(`${spurKey}:${i}`);
@@ -272,8 +488,6 @@ export default function StoryGewebe({
     setGewaehlt(new Set(ids.slice(0, Math.min(k, n))));
   }
 
-  // Wiederherstellen: gelesene Stationen aus der Spur öffnen (lokal, dann
-  // Cloud-Union via SPUR_EVENT). Gelesene werden auch wieder eingeblendet.
   useEffect(() => {
     if (!spurKey) return;
     function restore() {
@@ -298,9 +512,9 @@ export default function StoryGewebe({
   function zuruecksetzen() {
     if (spurKey) loescheSpuren(spurKey);
     setGesammelt([]);
-    setAktiv(null);
     setGewaehlt(new Set(alle));
-    setStruktur(0);
+    setAnsicht(0);
+    simRef.current.clear();
   }
 
   const started = gesammelt.length > 0;
@@ -314,7 +528,7 @@ export default function StoryGewebe({
           </span>
           {started
             ? `${gesammelt.length} von ${n} Stationen gelesen`
-            : "Stationen wählen, dann antippen und lesen"}
+            : "Stationen wählen, ziehen — und antippen zum Lesen"}
         </p>
         {started && (
           <button
@@ -328,42 +542,42 @@ export default function StoryGewebe({
         )}
       </div>
 
-      {/* Struktur-Umschalter */}
+      {/* Ansicht-Umschalter */}
       <div className="mb-sm">
         <div
           role="group"
-          aria-label="Anordnung der Stationen"
+          aria-label="Anordnung der Punkte"
           className="inline-flex flex-wrap overflow-hidden rounded-lg border border-outline-variant"
         >
-          {STRUKTUREN.map((s, i) => (
+          {ANSICHTEN.map((a, i) => (
             <button
-              key={s.id}
+              key={a.id}
               type="button"
-              onClick={() => setStruktur(i)}
-              aria-pressed={i === struktur}
+              onClick={() => setAnsicht(i)}
+              aria-pressed={i === ansicht}
               className={
                 "px-sm py-xs text-label-md transition-colors " +
-                (i === struktur
+                (i === ansicht
                   ? "bg-tertiary-container text-on-tertiary-container"
                   : "bg-surface-bright text-on-surface-variant hover:bg-surface-container hover:text-on-surface") +
                 (i > 0 ? " border-l border-outline-variant" : "")
               }
             >
-              {s.label}
+              {a.label}
             </button>
           ))}
         </div>
         <p className="mt-xs text-label-md text-on-surface-variant">
-          {STRUKTUREN[struktur].hinweis}
+          {ANSICHTEN[ansicht].hinweis}
         </p>
       </div>
 
-      {/* Knotenauswahl — welche Stationen erscheinen */}
+      {/* Knotenauswahl — welche Stationen im Gewebe hängen */}
       <div className="mb-sm rounded-xl border border-outline-variant bg-surface-container-low/60 p-md">
         <div className="mb-sm flex flex-wrap items-center justify-between gap-sm">
           <p className="flex items-center gap-xs text-label-md uppercase tracking-wider text-tertiary">
             <span className="material-symbols-outlined text-[16px]">filter_alt</span>
-            Wähle Stationen — angeordnet nach deiner Strukturwahl
+            Wähle Stationen — sie verknüpfen sich neu
           </p>
           <div className="flex gap-xs">
             <button
@@ -416,7 +630,7 @@ export default function StoryGewebe({
         </div>
       </div>
 
-      {/* Muster-Bühne */}
+      {/* Die Box: das Gewebe */}
       <div
         className={
           "overflow-hidden rounded-xl border border-outline-variant p-sm sm:p-md " +
@@ -424,36 +638,39 @@ export default function StoryGewebe({
         }
       >
         <svg
+          ref={svgRef}
           viewBox={`0 0 ${W} ${H}`}
           preserveAspectRatio="none"
-          className="block w-full select-none touch-pan-y aspect-[720/400] sm:aspect-[720/300]"
+          onPointerMove={onMove}
+          onPointerUp={onUp}
+          onPointerLeave={onUp}
+          className="block w-full select-none aspect-[720/400] sm:aspect-[720/300]"
           role="img"
-          aria-label="Teil-Gewebe der gewählten KI-Stationen, angeordnet nach der Strukturwahl."
+          aria-label="Teil-Gewebe der gewählten KI-Stationen — Punkte lassen sich ziehen und antippen."
         >
-          {/* Strang-Beschriftungen */}
-          {layout.labels.map((l, i) => (
-            <text
-              key={`l${strukturId}-${i}`}
-              x={l.x}
-              y={l.y}
-              fontSize="11"
-              letterSpacing="0.06em"
-              className="fill-on-surface-variant uppercase"
-              opacity="0.75"
-            >
-              {l.text}
-            </text>
-          ))}
+          {/* Strang-/Zeit-Beschriftungen der geordneten Ansichten */}
+          {ansichtId !== "gewebe" &&
+            ziel.labels.map((l, i) => (
+              <text
+                key={`l${ansichtId}-${i}`}
+                x={l.x}
+                y={l.y}
+                fontSize="11"
+                letterSpacing="0.06em"
+                className="fill-on-surface-variant uppercase"
+                opacity="0.75"
+              >
+                {l.text}
+              </text>
+            ))}
 
-          {/* Verbindungen: Sequenz-Fäden + feine Einfluss-Bögen */}
+          {/* Verbindungen — fix; nur ihre Enden bewegen sich */}
           {kanten.map((k, i) => {
-            const a = layout.pos.get(k.a);
-            const b = layout.pos.get(k.b);
-            if (!a || !b) return null;
+            const a = punktVon(k.a);
+            const b = punktVon(k.b);
             if (k.fein) {
-              // sanfter Bogen für Einflüsse quer durch die Zeit
               const mx = (a.x + b.x) / 2;
-              const my = (a.y + b.y) / 2 - Math.min(70, Math.abs(b.x - a.x) * 0.28);
+              const my = (a.y + b.y) / 2 - Math.min(60, Math.abs(b.x - a.x) * 0.25 + 14);
               return (
                 <path
                   key={`k${i}`}
@@ -479,24 +696,22 @@ export default function StoryGewebe({
             );
           })}
 
-          {/* Punkte */}
+          {/* Punkte — ziehen verschiebt, tippen liest */}
           {gewaehltSortiert.map((i) => {
-            const p = layout.pos.get(i);
-            if (!p) return null;
+            const p = punktVon(i);
             const st = stationen[i];
             const gelesen = gesammelt.includes(i);
-            const istAktiv = aktiv === i;
             const name = st.kurz;
             const halb = (name.length * 5.7) / 2;
-            const labelX = Math.max(halb + 6, Math.min(W - halb - 6, p.x)) - p.x;
+            const labelX = clamp(p.x, halb + 6, W - halb - 6) - p.x;
             return (
               <g
                 key={i}
                 role="button"
                 tabIndex={0}
-                aria-label={`${st.titel} (${st.jahr}) — Station lesen`}
+                aria-label={`${st.titel} (${st.jahr}) — antippen zum Lesen, ziehen zum Verschieben`}
                 aria-pressed={gelesen}
-                onClick={() => aktiviere(i)}
+                onPointerDown={(e) => onDown(e, i)}
                 onKeyDown={(e) => {
                   if (e.key === "Enter" || e.key === " ") {
                     e.preventDefault();
@@ -505,12 +720,12 @@ export default function StoryGewebe({
                 }}
                 style={{
                   transform: `translate(${p.x}px, ${p.y}px)`,
-                  transition: "transform 500ms cubic-bezier(0.4, 0, 0.2, 1)",
+                  transition: live ? "none" : "transform 500ms cubic-bezier(0.4, 0, 0.2, 1)",
                 }}
-                className="group cursor-pointer outline-none"
+                className="group cursor-grab touch-none outline-none active:cursor-grabbing"
               >
                 <circle cx="0" cy="0" r="18" fill="transparent" />
-                {(gelesen || istAktiv) && (
+                {gelesen && (
                   <circle
                     cx="0"
                     cy="0"
@@ -518,7 +733,7 @@ export default function StoryGewebe({
                     fill="none"
                     strokeWidth="1"
                     className="stroke-tertiary"
-                    opacity={istAktiv ? 0.7 : 0.45}
+                    opacity="0.45"
                   />
                 )}
                 <circle
@@ -537,7 +752,10 @@ export default function StoryGewebe({
                   y="22"
                   textAnchor="middle"
                   fontSize="11"
-                  className={gelesen ? "fill-on-surface" : "fill-on-surface-variant"}
+                  className={
+                    (gelesen ? "fill-on-surface" : "fill-on-surface-variant") +
+                    " pointer-events-none"
+                  }
                 >
                   {name}
                 </text>
@@ -546,6 +764,9 @@ export default function StoryGewebe({
           })}
         </svg>
       </div>
+      <p className="mt-xs text-label-sm text-on-surface-variant">
+        Punkte ziehen · antippen für die Geschichte
+      </p>
 
       {/* Gelesene Stationen — bleiben stehen, in Lese-Reihenfolge */}
       <div aria-live="polite" className="mt-md">
@@ -555,9 +776,9 @@ export default function StoryGewebe({
               <span className="material-symbols-outlined text-[20px] text-tertiary">
                 explore
               </span>
-              Wähle oben Stationen und tippe einen Punkt an — seine Karte (zwei
-              Sätze, teils mit Bild) blendet hier ein und bleibt stehen. Mit dem
-              Umschalter ordnest du die gewählten Stationen neu.
+              Wähle oben Stationen und tippe einen Punkt an — seine Karte
+              (Geschichte, teils mit Bild) blendet hier ein und bleibt stehen.
+              Im Gewebe kannst du die Punkte auch selbst verschieben.
             </p>
           </div>
         ) : (
@@ -582,13 +803,15 @@ export default function StoryGewebe({
                       {pos + 1}
                     </span>
                     {st.bild && (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img
-                        src={st.bild.src}
-                        alt={st.bild.alt}
-                        loading="lazy"
-                        className="h-16 w-16 flex-shrink-0 rounded-lg border border-outline-variant object-cover"
-                      />
+                      <div className="hidden flex-shrink-0 rounded-lg border border-outline-variant bg-surface-bright p-xs sm:block">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={st.bild.src}
+                          alt={st.bild.alt}
+                          loading="lazy"
+                          className="block w-28 rounded-md object-cover"
+                        />
+                      </div>
                     )}
                     <div className="min-w-0">
                       <p className="text-body-lg font-medium text-on-surface">
@@ -597,9 +820,14 @@ export default function StoryGewebe({
                           {st.jahr}
                         </span>
                       </p>
-                      <p className="mt-xs text-body-md text-on-surface-variant">{st.text}</p>
+                      <p className="mt-xs text-body-md text-on-surface">{st.text}</p>
+                      {st.geschichte && (
+                        <p className="mt-sm text-body-md text-on-surface-variant">
+                          {st.geschichte}
+                        </p>
+                      )}
                       {st.bild && (
-                        <p className="mt-xs text-label-sm text-on-surface-variant opacity-70">
+                        <p className="mt-sm text-label-sm text-on-surface-variant opacity-70">
                           {st.bild.credit}
                         </p>
                       )}
