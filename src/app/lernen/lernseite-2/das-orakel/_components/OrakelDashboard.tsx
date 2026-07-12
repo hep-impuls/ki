@@ -12,7 +12,7 @@ import { FadenDivider } from "../../_components/Gewebe";
 import { leseSpuren, SPUR_EVENT, SPUREN_POLL_ID } from "../../_lib/spuren";
 
 /**
- * Orakel-Dashboard (Thema 04) — «erkenne dich selbst».
+ * Orakel-Dashboard (Thema 03) — «erkenne dich selbst».
  *
  * Zweifach gesammelte Daten, ein Vergleich:
  *  - DEINS bleibt im Browser (Spuren, dein Satz, deine Poll-Wahl).
@@ -31,8 +31,6 @@ const BEREICHE: { prefix: string; label: string; total: number; href: string }[]
   { prefix: "vorhang-auf:netz", label: "Das Netz der Akteurin", total: 7, href: "/lernen/lernseite-2/vorhang-auf" },
   { prefix: "philosophische-perspektive:weisheit", label: "Epochen-Weisheiten", total: 5, href: "/lernen/lernseite-2/philosophische-perspektive" },
   { prefix: "philosophische-perspektive:baustein", label: "Bausteine im Zeitstrahl", total: 15, href: "/lernen/lernseite-2/philosophische-perspektive" },
-  { prefix: "kulturelle-perspektive:weisheit", label: "Gewebe-Weisheiten", total: 5, href: "/lernen/lernseite-2/kulturelle-perspektive" },
-  { prefix: "kulturelle-perspektive:figur", label: "Figuren im Gewebe", total: 5, href: "/lernen/lernseite-2/kulturelle-perspektive" },
 ];
 
 const GESAMT_TOTAL = BEREICHE.reduce((s, b) => s + b.total, 0);

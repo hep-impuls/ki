@@ -164,7 +164,7 @@ export function leseSpuren(): Spur[] {
   return lesen();
 }
 
-/** Anzahl Spuren mit einem Präfix, z.B. "kulturelle-perspektive:weisheit". */
+/** Anzahl Spuren mit einem Präfix, z.B. "philosophische-perspektive:weisheit". */
 export function zaehleSpuren(prefix: string): number {
   return lesen().filter((s) => s.id.startsWith(prefix)).length;
 }

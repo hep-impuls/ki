@@ -5,7 +5,7 @@ import { Signatur } from "../_components/Gewebe";
 import OrakelDashboard from "./_components/OrakelDashboard";
 
 /**
- * Thema 04 — «Das Orakel — erkenne dich selbst».
+ * Thema 03 — «Das Orakel — erkenne dich selbst».
  *
  * Persönlicher Rückblick (Wege, eigene Antwort) im anonymen Vergleich mit
  * allen; die KI deutet als Orakel den Querschnitt der anonymen Sammlung.
@@ -34,7 +34,7 @@ export default function Lernseite2DasOrakel() {
         <div className="flex items-end justify-between gap-md">
           <div className="min-w-0">
             <p className="text-label-md uppercase tracking-wider text-tertiary">
-              Thema 04 · Rückblick &amp; Vergleich
+              Thema 03 · Rückblick &amp; Vergleich
             </p>
             <h1 className="mt-sm text-headline-xl text-on-surface">
               Das Orakel — erkenne dich selbst

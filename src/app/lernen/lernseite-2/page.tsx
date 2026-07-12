@@ -22,7 +22,6 @@ import {
 const SIGNATUREN: Record<string, SignaturVariante> = {
   "vorhang-auf": "auftritt",
   "philosophische-perspektive": "epochen",
-  "kulturelle-perspektive": "gewebe",
   "das-orakel": "orakel",
 };
 
@@ -46,14 +45,13 @@ export default function Lernseite2Hub() {
         <GewebeBand className="mt-lg" />
       </header>
 
-      <section className="mt-xl" aria-label="Drei Themenbereiche">
+      <section className="mt-xl" aria-label="Themen des Moduls">
         <div className="mb-lg">
           <h2 className="text-headline-md text-on-surface">Der Faden durch das Modul</h2>
           <p className="mt-xs max-w-3xl text-body-sm text-on-surface-variant">
-            Drei Themenbereiche, ein Zusammenhang: Zuerst tritt die neue
-            Akteurin auf, dann ordnet die philosophische Perspektive ein, und
-            die kulturelle Perspektive zeigt, welche Bilder unseren Blick
-            prägen.
+            Ein Zusammenhang: Zuerst tritt die neue Akteurin auf, dann ordnet
+            die philosophische Perspektive ein — und am Ende spiegelt das
+            Orakel deinen eigenen Weg durchs Modul.
           </p>
         </div>
 

@@ -18,8 +18,8 @@
  *    treten hervor — beim Überfahren des Musters selbst («group» auf dem
  *    SVG) oder der umgebenden Karte («group» auf dem Link).
  *
- * Interaktive Gegenstücke: FadenNetz.tsx (Muster zum Nachfahren mit
- * Weisheiten) und KnotenNetz.tsx (antippbare Konstellationen).
+ * Interaktives Gegenstück: KnotenLandschaft.tsx (Punkte verbinden,
+ * Inhalte einblenden).
  */
 
 /** Hover-Klassen für Akzentknoten (Punkt wächst) bzw. -ringe/-fäden. */

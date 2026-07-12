@@ -54,7 +54,7 @@ export const unit: UnitConfig = {
       icon: "auto_awesome",
       subtitle: "Mensch & KI",
       description:
-        "Mit KI ist eine neue Akteurin aufgetreten. Drei Themenbereiche spannen den Bogen: der Auftakt «Vorhang auf», die philosophische und die kulturelle Perspektive.",
+        "Mit KI ist eine neue Akteurin aufgetreten. Der Auftakt «Vorhang auf» und die philosophische Perspektive spannen den Bogen — das Orakel spiegelt am Ende deinen eigenen Weg.",
       submodules: [
         {
           slug: "vorhang-auf",
@@ -63,7 +63,7 @@ export const unit: UnitConfig = {
           icon: "curtains",
           subtitle: "Auftakt",
           description:
-            "Mit KI tritt eine neue Art von Akteurin auf die Bühne — weder Werkzeug noch Person. Der Auftakt zeigt in drei Szenen, warum die alten Begriffe nicht mehr greifen.",
+            "Mit KI tritt eine neue Art von Akteurin auf die Bühne — weder Werkzeug noch Person. Drei Knotenlandschaften zeigen ihre Geschichte, ihre Merkmale und ihr Netz.",
         },
         {
           slug: "philosophische-perspektive",
@@ -73,15 +73,6 @@ export const unit: UnitConfig = {
           subtitle: "Orientierung",
           description:
             "Technische Umbrüche verunsichern — seit der Antike. Fünf Epochen zeigen, wie Philosophie Orientierung stiftet: von Aristoteles bis zur offenen Frage der Gegenwart.",
-        },
-        {
-          slug: "kulturelle-perspektive",
-          title: "Kulturelle Perspektive",
-          href: "/lernen/lernseite-2/kulturelle-perspektive",
-          icon: "theater_comedy",
-          subtitle: "Bilder & Erzählungen",
-          description:
-            "Erzählungen und Kunst prägen, was wir in der KI sehen — vom Golem bis zur Gegenwartskunst. Dieser Themenbereich folgt den Bildern hinter unserem Blick.",
         },
         {
           slug: "das-orakel",

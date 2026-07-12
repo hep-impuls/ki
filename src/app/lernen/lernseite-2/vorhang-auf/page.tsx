@@ -482,9 +482,9 @@ export default function Lernseite2VorhangAuf() {
       <section className="mt-xl max-w-3xl" aria-label="Weiter im Modul">
         <h2 className="text-headline-md text-on-surface">Der Faden läuft weiter</h2>
         <p className="mt-sm text-body-md text-on-surface-variant">
-          Zwei Perspektiven nehmen die neue Akteurin in den Blick:
+          Die philosophische Perspektive nimmt die neue Akteurin in den Blick:
         </p>
-        <div className="mt-lg grid gap-md sm:grid-cols-2">
+        <div className="mt-lg">
           <Link
             href="/lernen/lernseite-2/philosophische-perspektive"
             className="group flex items-start justify-between gap-md rounded-xl border border-outline-variant bg-surface-bright p-lg shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
@@ -504,26 +504,6 @@ export default function Lernseite2VorhangAuf() {
               </span>
             </div>
             <Signatur variante="epochen" className="hidden flex-shrink-0 sm:block" />
-          </Link>
-          <Link
-            href="/lernen/lernseite-2/kulturelle-perspektive"
-            className="group flex items-start justify-between gap-md rounded-xl border border-outline-variant bg-surface-bright p-lg shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
-          >
-            <div className="min-w-0">
-              <p className="text-label-sm uppercase tracking-wider text-on-surface-variant">
-                Thema 03
-              </p>
-              <h3 className="mt-xs text-headline-sm text-on-surface">
-                Kulturelle Perspektive
-              </h3>
-              <span className="mt-md inline-flex items-center gap-sm text-label-md text-tertiary">
-                Öffnen
-                <span className="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">
-                  arrow_forward
-                </span>
-              </span>
-            </div>
-            <Signatur variante="gewebe" className="hidden flex-shrink-0 sm:block" />
           </Link>
         </div>
       </section>

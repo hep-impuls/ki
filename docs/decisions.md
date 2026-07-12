@@ -10,6 +10,29 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-12 — Kulturelle Perspektive entfernt · Orakel-KI live
+
+**Kulturelle Perspektive gestrichen (Auftrag Christof):** Thema 03 «Kulturelle
+Perspektive» komplett entfernt. Gelöscht: `kulturelle-perspektive/page.tsx`
+und das dadurch verwaiste `_components/KnotenNetz.tsx` (wurde nur dort noch
+genutzt — vorhang-auf hatte es beim Knotenlandschaft-Umbau bereits verloren).
+Betroffene Anpassungen: `src/config/unit.ts` (Submodul-Eintrag raus,
+Modul-Beschreibung ohne «kulturelle»), Hub `lernseite-2/page.tsx`
+(SIGNATUREN-Map, Intro), `vorhang-auf/page.tsx` («Der Faden läuft weiter» nur
+noch philosophische), Orakel-Dashboard (Bereiche «Gewebe-Weisheiten» + «Figuren
+im Gewebe» raus → Gesamt-Total 56 → **46**), Doc-Kommentare in `Gewebe.tsx`/
+`spuren.ts`. **Orakel neu Thema 03** (vorher 04) — Nummerierung überall
+angeglichen. Alte `kulturelle-perspektive:*`-Spuren bleiben harmlos liegen.
+Das Modul hat neu zwei inhaltliche Bereiche (Auftakt, philosophische
+Perspektive) plus das Orakel als Rückblick.
+
+**Orakel-KI ist scharf:** Live-Check `/api/orakel/querschnitt` liefert neu
+`grund: "zu-wenig"` (vorher `"kein-schluessel"`). Laut Route-Logik wird
+`"zu-wenig"` **nur bei gesetztem Key** zurückgegeben (sonst `"kein-schluessel"`)
+— Pietro hat den `ANTHROPIC_API_KEY` in Vercel also hinterlegt. Das Orakel
+spricht, sobald **≥3 Sätze** anonym geteilt wurden (aktuell 0). Der Kommentar
+wird dann in `orakel-meta/stand` gecacht (Modell `claude-haiku-4-5`).
+
 ## 2026-07-12 — Vorhang auf: drei Knotenlandschaften, Klicken statt Streifen
 
 **Grosser Umbau (Auftrag Christof):** Die Auftakt-Seite besteht neu aus **drei
