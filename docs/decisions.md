@@ -10,6 +10,43 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-12 — Vorhang auf: drei Knotenlandschaften, Klicken statt Streifen
+
+**Grosser Umbau (Auftrag Christof):** Die Auftakt-Seite besteht neu aus **drei
+Knotenlandschaften mit überall gleichem Ablauf** — Punkte antippen (werden
+beschriftet, Inhalt blendet ein) oder **Verbindungslinien anklicken**
+(«einloggen»: Linie färbt sich und öffnet beide Enden). Das Nachfahren/
+Streifen entfällt auf dieser Seite komplett. Inhalte radikal reduziert:
+**maximal zwei Sätze, ohne Zitat** (die verifizierten Zitate bleiben in der
+Git-Historie dokumentiert). Reihenfolge: **KI-Story → Merkmale → Netz**.
+
+- **Entfernt:** Ratespiel «Woher stammt das?» (`ZitatReveal.tsx` gelöscht),
+  «Phasen der aktuellen KI», die drei Szenen (Auftritt/Irritation/Frage),
+  `Storyboard.tsx` (Grid) und die `KnotenNetz`-Verwendung auf vorhang-auf
+  (Komponente bleibt — die Kultur-Seite nutzt sie weiter).
+- **Neu `_components/KnotenLandschaft.tsx`:** Klick-Interaktion, klickbare
+  Kanten mit Einzeichen-Animation, Flächen wie gehabt, Abschluss-Feld
+  (schraffiert) direkt unterm Muster, Reset. **Mehrere Anordnungen** pro
+  Landschaft (Umschalter, Punkte gleiten per CSS-Transform) und
+  **Zufalls-Knopf** («n Punkte ziehen» — Idee «Gewebe der Natalität»).
+- **KI-Story (12 Stationen, `vorhang-auf:story`):** linear als Serpentine,
+  feine **Einfluss-Bögen** zwischen Stationen, die einander prägen (Golem→
+  Frankenstein, Automaten→Dartmouth, Rechenmaschinen→Symbolische KI,
+  Statistik→Gegenwart); Anordnungen **Zeitlich / Mensch·Maschine·Fiktion /
+  Technologisch**; die sechs gemeinfreien Bilder als Thumbnails in den Karten.
+- **Netz der Akteurin:** neu ohne Zentrum — die KI ist *ein Knoten unter
+  sieben* (Latour-konformer: sie steht *im* Netz). Spur-Keys
+  `vorhang-auf:weisheit`/`netz` bleiben kompatibel (gleiche Indizes).
+- **Bühnen-Tönung je Landschaft** (neues Prop `buehneKlasse`): Story
+  `bg-primary-container/20`, Merkmale neutral, Netz `bg-secondary-container/25`.
+- **Kanten-Spuren:** eigener Präfix `vorhang-auf:kanten-{story,weisheit,netz}`
+  (mit `-`, nicht `:` — kollidiert so nie mit der `startsWith`-Zählung der
+  Punkte im Orakel). Reset-Detail: erst *beide* Präfixe löschen, dann State
+  leeren — `loescheSpuren` feuert `SPUR_EVENT`, dessen Restore sonst aus dem
+  zweiten Präfix sofort wieder auffüllt.
+- **Orakel-Dashboard:** Zeile «Ratespiel» (10) raus, «Die KI-Story» (12) rein
+  → Gesamt-Total 56. Alte `vorhang-auf:zitat`-Spuren bleiben harmlos liegen.
+
 ## 2026-07-12 — Lückenloses Nachfahren + geräteübergreifende Persistenz der Knoten
 
 **Lücken-Fix (Feedback Christof):** Beim Nachfahren der Fäden entstanden

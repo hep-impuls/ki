@@ -26,9 +26,9 @@ import { leseSpuren, SPUR_EVENT, SPUREN_POLL_ID } from "../../_lib/spuren";
 /* ── Bereiche der eigenen Spur (Totale = Anzahl Knoten je Interaktion) ──── */
 
 const BEREICHE: { prefix: string; label: string; total: number; href: string }[] = [
-  { prefix: "vorhang-auf:zitat", label: "Ratespiel «Woher stammt das?»", total: 10, href: "/lernen/lernseite-2/vorhang-auf" },
+  { prefix: "vorhang-auf:story", label: "Die KI-Story", total: 12, href: "/lernen/lernseite-2/vorhang-auf" },
   { prefix: "vorhang-auf:weisheit", label: "Merkmale der neuen Akteurin", total: 7, href: "/lernen/lernseite-2/vorhang-auf" },
-  { prefix: "vorhang-auf:netz", label: "Das Netz der neuen Akteurin", total: 7, href: "/lernen/lernseite-2/vorhang-auf" },
+  { prefix: "vorhang-auf:netz", label: "Das Netz der Akteurin", total: 7, href: "/lernen/lernseite-2/vorhang-auf" },
   { prefix: "philosophische-perspektive:weisheit", label: "Epochen-Weisheiten", total: 5, href: "/lernen/lernseite-2/philosophische-perspektive" },
   { prefix: "philosophische-perspektive:baustein", label: "Bausteine im Zeitstrahl", total: 15, href: "/lernen/lernseite-2/philosophische-perspektive" },
   { prefix: "kulturelle-perspektive:weisheit", label: "Gewebe-Weisheiten", total: 5, href: "/lernen/lernseite-2/kulturelle-perspektive" },
