@@ -122,11 +122,11 @@ export default function Lernseite2VorhangAuf() {
           {
             x: 300,
             y: 24,
-            text: "Das Lernen aufeinanderfolgender Schichten immer bedeutungsvollerer Repräsentationen — aus Daten.",
-            quelle: "François Chollet (Keras), «Deep Learning with Python», 2018 · übersetzt",
-            kommentar: "Merkmal: Mustererkennung / Lernen.",
+            text: "Die Maschine versteht nicht, warum welches Wort in welchen Kontext passt.",
+            quelle: "Katharina Zweig, «Spektrum der Wissenschaft», Edition KI, 2026",
+            kommentar: "Merkmal: Mustererkennung — statistisch, nicht verstehend.",
             deutung:
-              "Chollet, Schöpfer der verbreiteten KI-Bibliothek Keras, beschreibt, was ein neuronales Netz tut: Es schichtet Muster übereinander — von Kanten zu Formen zu Gesichtern —, jede Schicht bedeutungsvoller als die darunter. Nichts davon wird programmiert; es wird aus Beispielen gelernt. Diese Fähigkeit, Muster selbst zu finden, ist der Motor hinter Bild-, Sprach- und Texterkennung.",
+              "Mustererkennung wird gern als blosse Wahrscheinlichkeitsrechnung abgetan. Die Informatikerin Katharina Zweig schärft das Bild: Das System leitet aus grossen Datenmengen statistische Muster als Regeln ab und hat bestimmte Wörter schlicht häufig in bestimmten Kontexten gelesen. Es erkennt Muster verlässlich — versteht aber nicht, warum. Ihr nüchternes Fazit: Noch seien diese Systeme gar nicht intelligent.",
           },
           {
             x: 596,
@@ -158,11 +158,11 @@ export default function Lernseite2VorhangAuf() {
           {
             x: 636,
             y: 172,
-            text: "Halluzinieren ist alles, was LLMs tun — es sind Traum-Maschinen. Wir lenken ihre Träume mit Prompts.",
-            quelle: "Andrej Karpathy, 2023 · übersetzt",
-            kommentar: "Merkmal: generativ.",
+            text: "Eigentlich sollte man von Konfabulationen sprechen.",
+            quelle: "Katharina Zweig, «Spektrum der Wissenschaft», Edition KI, 2026",
+            kommentar: "Merkmal: generativ — und wo es kippt.",
             deutung:
-              "Karpathy dreht den Vorwurf des «Halluzinierens» um: Ein Sprachmodell ruft nichts ab, es träumt fortwährend Neues — und meistens landet der Traum bei etwas Brauchbarem. Das Generative ist keine Panne, sondern das Grundprinzip: Es erzeugt Texte, Bilder und Code, die so nie eingegeben wurden. Damit rührt die KI an eine alte Grenze — ob eine Maschine wirklich Neues «schaffen» kann (siehe Ada Lovelace im Ratespiel oben).",
+              "Ein Sprachmodell erzeugt fortlaufend neuen Text, indem es das nächste Wort vorhersagt — es besitzt aber keine Wissensdatenbank, in der es nachschlagen könnte. Wo es danebenliegt, spricht man meist von «Halluzination». Katharina Zweig hält das für psychologisch falsch: Halluzinationen sind Sinnestäuschungen ohne realen Anlass. Näher liege der Begriff Konfabulation — wie bei Menschen, die flüssig Wörter aneinanderreihen, ohne dass Wissen dahintersteht. Erzeugen und Erfinden sind hier dieselbe Münze.",
           },
         ]}
       />
