@@ -1,7 +1,12 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
-import { merkeSpur } from "../_lib/spuren";
+import {
+  leseSpurenIndices,
+  merkeSpur,
+  SPUR_EVENT,
+  zieheSpurenAusCloud,
+} from "../_lib/spuren";
 
 /**
  * FadenNetz — das interaktive Kopf-Muster der Themenseiten von Lernseite 2.
@@ -61,13 +66,11 @@ export interface FadenFlaeche {
 
 const VB_W = 720;
 /** Fangradius fürs Nachfahren (viewBox-Einheiten). */
-const FANG = 36;
+const FANG = 44;
 /** Abtastpunkte pro Faden. */
 const N = 90;
 /** Toleranz (in Abtastpunkten), mit der ein Knoten als erreicht gilt. */
 const REICH_EPS = 3;
-/** Max. Sprung (in Abtastpunkten) beim Weiterfahren auf demselben Faden. */
-const SPRUNG = 10;
 
 type Bereich = { lo: number; hi: number } | null;
 
@@ -174,18 +177,15 @@ export default function FadenNetz({
     if (bs < 0 || Math.sqrt(bd) > FANG) return;
 
     // Nur die Spur ausdehnen — Knoten-Erkennung macht der Effect darunter
-    // (setState-Updater müssen pur bleiben).
+    // (setState-Updater müssen pur bleiben). Union bis zum berührten Punkt:
+    // kein Sprung-Limit mehr — genau das erzeugte beim schnellen Fahren die
+    // Lücken. Die Spur wächst lückenlos auf dem berührten Faden.
     setPainted((prev) => {
       const cur = prev[bs];
-      let neu: Bereich;
-      if (!cur) {
-        neu = { lo: bi, hi: bi };
-      } else if (bi >= cur.lo - SPRUNG && bi <= cur.hi + SPRUNG) {
-        neu = { lo: Math.min(cur.lo, bi), hi: Math.max(cur.hi, bi) };
-        if (neu.lo === cur.lo && neu.hi === cur.hi) return prev;
-      } else {
-        return prev; // kein Teleport innerhalb eines Fadens
-      }
+      const neu = cur
+        ? { lo: Math.min(cur.lo, bi), hi: Math.max(cur.hi, bi) }
+        : { lo: bi, hi: bi };
+      if (cur && neu.lo === cur.lo && neu.hi === cur.hi) return prev;
       const next = prev.slice();
       next[bs] = neu;
       return next;
@@ -214,6 +214,31 @@ export default function FadenNetz({
     setGesammelt((g) => [...g, ...dazu.filter((k) => !g.includes(k))]);
     if (spurKey) dazu.forEach((k) => merkeSpur(`${spurKey}:${k}`));
   }, [painted, visited, spurKey]);
+
+  // Wiederherstellen: besuchte Knoten aus der gespeicherten Spur öffnen —
+  // damit sie beim erneuten (und geräteübergreifenden) Zugriff offen bleiben.
+  // Beim Mounten zuerst die Cloud-Spur ziehen (feuert SPUR_EVENT), dann aus
+  // dem lokalen Bestand die Indizes übernehmen; auf SPUR_EVENT nachführen.
+  useEffect(() => {
+    if (!spurKey) return;
+    function restore() {
+      const idx = leseSpurenIndices(spurKey!).filter((i) => i >= 0 && i < n);
+      if (idx.length === 0) return;
+      setVisited((prev) => {
+        const nx = new Set(prev);
+        idx.forEach((i) => nx.add(i));
+        return nx;
+      });
+      setGesammelt((g) => {
+        const fehlend = idx.filter((i) => !g.includes(i));
+        return fehlend.length ? [...g, ...fehlend] : g;
+      });
+    }
+    restore();
+    void zieheSpurenAusCloud();
+    window.addEventListener(SPUR_EVENT, restore);
+    return () => window.removeEventListener(SPUR_EVENT, restore);
+  }, [spurKey, n]);
 
   function reveal(i: number) {
     if (!visited.has(i)) {

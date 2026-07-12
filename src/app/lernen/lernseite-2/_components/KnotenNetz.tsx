@@ -1,7 +1,12 @@
 "use client";
 
-import { useState } from "react";
-import { merkeSpur } from "../_lib/spuren";
+import { useEffect, useState } from "react";
+import {
+  leseSpurenIndices,
+  merkeSpur,
+  SPUR_EVENT,
+  zieheSpurenAusCloud,
+} from "../_lib/spuren";
 
 /**
  * KnotenNetz — die Signatur-Konstellationen (Gewebe.tsx) in gross und
@@ -62,6 +67,25 @@ export default function KnotenNetz({
     setActive(i);
     if (spurKey) merkeSpur(`${spurKey}:${i}`);
   }
+
+  // Wiederherstellen: besuchte Knoten aus der gespeicherten Spur (lokal +
+  // Cloud) offen halten — geräteübergreifend über den Nutzer-Code.
+  useEffect(() => {
+    if (!spurKey) return;
+    function restore() {
+      const idx = leseSpurenIndices(spurKey!).filter((i) => i >= 0 && i < n);
+      if (idx.length === 0) return;
+      setVisited((prev) => {
+        const nx = new Set(prev);
+        idx.forEach((i) => nx.add(i));
+        return nx;
+      });
+    }
+    restore();
+    void zieheSpurenAusCloud();
+    window.addEventListener(SPUR_EVENT, restore);
+    return () => window.removeEventListener(SPUR_EVENT, restore);
+  }, [spurKey, n]);
 
   function springe(ziel: string) {
     const el = document.getElementById(ziel);

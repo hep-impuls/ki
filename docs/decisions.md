@@ -10,6 +10,38 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-12 — Lückenloses Nachfahren + geräteübergreifende Persistenz der Knoten
+
+**Lücken-Fix (Feedback Christof):** Beim Nachfahren der Fäden entstanden
+Lücken. Ursache war ein Sprung-Limit (`SPRUNG`) im `handlePointer`, das bei
+schnellem Ziehen Extensions verwarf. Neu: die Spur wächst als **Union** bis
+zum berührten Punkt (kein Limit mehr) → lückenlos; Fangradius leicht erhöht
+(36 → 44). Betrifft `_components/FadenNetz.tsx`.
+
+**Knoten bleiben offen — auch geräteübergreifend:** `_lib/spuren.ts` spiegelt
+die Spur jetzt zusätzlich pro Nutzer nach Firestore, nach **Pietros
+Code-Modell** (ohne dessen `src/lib` zu ändern — nur `session.ts`/`paths.ts`/
+`firebase.ts` *genutzt*): bei der ersten Interaktion wird im Hintergrund ein
+Animal-Code erzeugt (`ensureCode`, via `saveSession`), die vollständige
+Spur-Liste landet unter `students/{code}/progress/lernseite-2-spuren`
+(debounced). Beim Laden zieht `zieheSpurenAusCloud()` die Spur (Union, nie
+löschen) und feuert `SPUR_EVENT`; FadenNetz und KnotenNetz stellen ihre
+besuchten Knoten daraus wieder her (`leseSpurenIndices`). Wer denselben Code
+via /start eingibt, bekommt seine offenen Knoten auf jedem Gerät zurück.
+Dreistufig: lokal (sofort) · anonymer Aggregat-Zähler (fürs «alle») ·
+pro-Nutzer-Spiegel (fürs Wiedererkennen). No-op ohne Firebase-Config.
+
+**Status API-Key:** Live-Check `/api/orakel/querschnitt` → `grund:
+"kein-schluessel"` — Pietro hat `ANTHROPIC_API_KEY` in Vercel noch **nicht**
+hinterlegt; das Orakel schweigt bis dahin (alles andere läuft).
+
+Offen (Vorschlag an Christof, noch nicht umgesetzt): die (zu
+philosophischen) Auftritts-Stern-Knoten durch KI-**Merkmale** ersetzen
+(dialoghaft, mustererkennend, datenbasiert, gedächtnisbedürftig, agentenhaft
+…) mit belegten Quellenzitaten.
+
+---
+
 ## 2026-07-11 — Ausbau II: reiche Auflösungen, webende Flächen, bleibende Karten
 
 Feedback Christof, zwei Stränge:
