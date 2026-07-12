@@ -3,6 +3,7 @@ import ActivityTracker from "@/components/ActivityTracker";
 import AppLayout from "@/components/layout/AppLayout";
 import { FadenDivider, Signatur } from "../_components/Gewebe";
 import KnotenLandschaft from "../_components/KnotenLandschaft";
+import StoryGewebe from "../_components/StoryGewebe";
 
 /**
  * Thema 01 — «Vorhang auf: eine neue Akteurin».
@@ -68,22 +69,24 @@ export default function Lernseite2VorhangAuf() {
           Stationen. Die Geschichte ist linear — aber ihre Vorstellungen
           beeinflussen einander quer durch die Zeit.
         </p>
-        <KnotenLandschaft
+        <StoryGewebe
           className="mt-lg"
-          ariaLabel="Knotenlandschaft: Die KI-Story"
-          hoehe={260}
-          svgKlasse="aspect-[720/360] sm:aspect-[720/260]"
-          buehneKlasse="bg-primary-container/20"
           spurKey="vorhang-auf:story"
-          kantenSpurKey="vorhang-auf:kanten-story"
-          zufall={3}
-          zufallLabel="Drei Stationen ziehen"
-          einladung="Zwölf Stationen — ziehe drei per Zufall oder tippe Punkte und Verbindungen direkt an. Wechsle die Anordnung: zeitlich, Mensch · Maschine · Fiktion oder technologisch."
-          abschluss="Der Traum vom belebten Ding ist viel älter als der Computer: Was heute auftritt, trägt Mythen, Mechanik, Regeln und Daten in sich. Die Linie läuft weiter — ihr nächstes Stück ist offen."
-          knoten={[
+          buehneKlasse="bg-primary-container/20"
+          einfluesse={[
+            { von: 0, zu: 3 },
+            { von: 1, zu: 3 },
+            { von: 2, zu: 5 },
+            { von: 4, zu: 6 },
+            { von: 8, zu: 9 },
+            { von: 3, zu: 11 },
+          ]}
+          stationen={[
             {
               titel: "Der Golem",
               kurz: "Golem",
+              kat: "erzaehlung",
+              mmf: "fiktion",
               jahr: "Sage",
               text: "Aus Lehm geformt, durch Schriftzeichen belebt. Die Ursage vom Menschen, der einem Ding Leben einhaucht.",
               bild: {
@@ -95,6 +98,8 @@ export default function Lernseite2VorhangAuf() {
             {
               titel: "Der Homunkulus",
               kurz: "Homunkulus",
+              kat: "erzaehlung",
+              mmf: "fiktion",
               jahr: "Alchemie",
               text: "Leben aus der Retorte, im Labor erschaffen. Der Traum, Schöpfung technisch herzustellen.",
               bild: {
@@ -106,6 +111,8 @@ export default function Lernseite2VorhangAuf() {
             {
               titel: "Frühe Automaten",
               kurz: "Automaten",
+              kat: "mechanik",
+              mmf: "maschine",
               jahr: "1770",
               text: "Der «Schachtürke» scheint zu denken — und täuscht ganz Europa. Mechanik weckt erstmals den Verdacht, Maschinen könnten klug sein.",
               bild: {
@@ -117,6 +124,8 @@ export default function Lernseite2VorhangAuf() {
             {
               titel: "Frankenstein",
               kurz: "Frankenstein",
+              kat: "erzaehlung",
+              mmf: "fiktion",
               jahr: "1818",
               text: "Das erschaffene Wesen entgleitet seinem Schöpfer. Die Literatur stellt die Verantwortungsfrage — lange vor der Technik.",
               bild: {
@@ -128,6 +137,8 @@ export default function Lernseite2VorhangAuf() {
             {
               titel: "Rechenmaschinen",
               kurz: "Rechenmaschinen",
+              kat: "mechanik",
+              mmf: "maschine",
               jahr: "1685–1843",
               text: "Von Leibniz' Rechenrad zu Babbage und Lovelace: Die programmierbare Maschine wird gedacht. Denken als Rechnen wird vorstellbar.",
               bild: {
@@ -139,42 +150,56 @@ export default function Lernseite2VorhangAuf() {
             {
               titel: "Geburt der KI",
               kurz: "Dartmouth",
+              kat: "regeln",
+              mmf: "mensch",
               jahr: "1956",
               text: "In Dartmouth wird der Begriff «Künstliche Intelligenz» geprägt. Aus alten Träumen wird ein Forschungsprogramm.",
             },
             {
               titel: "Symbolische KI",
               kurz: "Symbolische KI",
+              kat: "regeln",
+              mmf: "maschine",
               jahr: "1960er",
               text: "Intelligenz als Regelwerk: WENN–DANN-Systeme dominieren. Logik gilt als Königsweg.",
             },
             {
               titel: "Expertensysteme",
               kurz: "Expertensysteme",
+              kat: "regeln",
+              mmf: "maschine",
               jahr: "1970/80er",
               text: "Fachwissen wird in Regeln gegossen und löst Spezialaufgaben. Die erhoffte breite Intelligenz bleibt aus.",
             },
             {
               titel: "KI-Winter",
               kurz: "KI-Winter",
+              kat: "regeln",
+              mmf: "mensch",
               jahr: "1980/90er",
               text: "Enttäuschte Erwartungen: Geld und Glaube frieren ein. Die grossen Versprechen überwintern.",
             },
             {
               titel: "Statistische KI",
               kurz: "Statistische KI",
+              kat: "daten",
+              mmf: "mensch",
               jahr: "1990er",
               text: "Die Wende: Maschinen lernen aus Beispielen statt aus Regeln. Daten werden wichtiger als Logik.",
             },
             {
               titel: "Deep Learning",
               kurz: "Deep Learning",
+              kat: "daten",
+              mmf: "maschine",
               jahr: "ab 2012",
               text: "Neuronale Netze mit vielen Schichten erkennen Bilder und Sprache. Der Durchbruch kommt über die Tiefe.",
             },
             {
               titel: "Big Data & Gegenwart",
               kurz: "Gegenwart",
+              kat: "daten",
+              mmf: "maschine",
               jahr: "heute",
               text: "Riesige Datenmengen und Rechenzentren machen die neue Akteurin möglich. KI durchdringt den Alltag.",
               bild: {
@@ -182,123 +207,6 @@ export default function Lernseite2VorhangAuf() {
                 alt: "Rechnerreihen des Pleiades-Supercomputers der NASA",
                 credit: "NASA (Pleiades) · gemeinfrei (US-Gov)",
               },
-            },
-          ]}
-          anordnungen={[
-            {
-              id: "zeit",
-              label: "Zeitlich",
-              hinweis:
-                "Die Geschichte als Linie — feine Bögen zeigen, wo Vorstellungen einander beeinflussen.",
-              pos: [
-                [66, 56],
-                [182, 56],
-                [298, 56],
-                [414, 56],
-                [530, 56],
-                [646, 56],
-                [646, 186],
-                [530, 186],
-                [414, 186],
-                [298, 186],
-                [182, 186],
-                [66, 186],
-              ],
-              kanten: [
-                { von: 0, zu: 1 },
-                { von: 1, zu: 2 },
-                { von: 2, zu: 3 },
-                { von: 3, zu: 4 },
-                { von: 4, zu: 5 },
-                { von: 5, zu: 6 },
-                { von: 6, zu: 7 },
-                { von: 7, zu: 8 },
-                { von: 8, zu: 9 },
-                { von: 9, zu: 10 },
-                { von: 10, zu: 11 },
-                { von: 0, zu: 3, fein: true, bogen: -46 },
-                { von: 2, zu: 5, fein: true, bogen: -30 },
-                { von: 4, zu: 6, fein: true },
-                { von: 9, zu: 11, fein: true, bogen: -50 },
-              ],
-            },
-            {
-              id: "mmf",
-              label: "Mensch · Maschine · Fiktion",
-              hinweis:
-                "Drei Stränge: erzählte Wesen, menschliche Erwartungen, gebaute Maschinen.",
-              pos: [
-                [96, 70],
-                [70, 150],
-                [478, 42],
-                [150, 205],
-                [600, 58],
-                [320, 60],
-                [668, 120],
-                [560, 120],
-                [350, 160],
-                [486, 190],
-                [600, 200],
-                [676, 215],
-              ],
-              kanten: [
-                { von: 0, zu: 1 },
-                { von: 1, zu: 3 },
-                { von: 5, zu: 8 },
-                { von: 2, zu: 4 },
-                { von: 4, zu: 6 },
-                { von: 6, zu: 7 },
-                { von: 7, zu: 9 },
-                { von: 9, zu: 10 },
-                { von: 10, zu: 11 },
-                { von: 0, zu: 5, fein: true },
-                { von: 5, zu: 6, fein: true },
-                { von: 8, zu: 9, fein: true },
-              ],
-              beschriftungen: [
-                { x: 64, y: 26, text: "Fiktion" },
-                { x: 296, y: 26, text: "Mensch" },
-                { x: 520, y: 20, text: "Maschine" },
-              ],
-            },
-            {
-              id: "tech",
-              label: "Technologisch",
-              hinweis:
-                "Vier Stränge: Erzählungen, Mechanik, Regeln, Daten — Einflüsse springen über.",
-              pos: [
-                [110, 42],
-                [280, 42],
-                [180, 108],
-                [450, 42],
-                [400, 108],
-                [140, 174],
-                [330, 174],
-                [520, 174],
-                [660, 174],
-                [200, 232],
-                [420, 232],
-                [640, 232],
-              ],
-              kanten: [
-                { von: 0, zu: 1 },
-                { von: 1, zu: 3 },
-                { von: 2, zu: 4 },
-                { von: 5, zu: 6 },
-                { von: 6, zu: 7 },
-                { von: 7, zu: 8 },
-                { von: 9, zu: 10 },
-                { von: 10, zu: 11 },
-                { von: 1, zu: 2, fein: true },
-                { von: 4, zu: 6, fein: true },
-                { von: 8, zu: 9, fein: true },
-              ],
-              beschriftungen: [
-                { x: 36, y: 22, text: "Erzählung" },
-                { x: 36, y: 90, text: "Mechanik" },
-                { x: 36, y: 156, text: "Regeln & Symbole" },
-                { x: 36, y: 214, text: "Daten & Lernen" },
-              ],
             },
           ]}
         />

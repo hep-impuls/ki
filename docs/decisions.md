@@ -10,6 +10,32 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-12 — KI-Story als wählbares Gewebe (Vorbild natalität)
+
+**Auftrag Christof (Verweis auf natalitaet.com/gewebe):** Die KI-Story wird zum
+wählbaren Teil-Gewebe. Neue Komponente `_components/StoryGewebe.tsx` (ersetzt
+für die Story die `KnotenLandschaft`; Merkmale + Netz behalten `KnotenLandschaft`).
+
+- **Knotenauswahl oben** (wie natalität): nach Themen gruppierte Chips —
+  *Mythos & Fiktion · Mechanik & Rechnen · KI & ihre Regeln · Lernen aus Daten*.
+  Man wählt, WELCHE Stationen erscheinen; «Zufall (3)» zieht drei zufällig,
+  «Alle» zeigt alle. Start: alle gewählt.
+- **Anordnung nach Strukturwahl** (auf die gewählten Punkte angewendet):
+  *Zeitlich* = chronologisch (Serpentine ab 7 Punkten), *Mensch · Maschine ·
+  Fiktion* = 3 Stränge, *Technologisch* = 4 Stränge. Positionen werden rein
+  rechnerisch aus Auswahl × Struktur bestimmt (kein d3-force wie natalität —
+  bewusst strukturiert statt organisch; keine neue Abhängigkeit). Feine Bögen
+  zeigen Einflüsse quer durch die Zeit (Golem→Frankenstein, Automaten→Dartmouth,
+  Rechenmaschinen→Symbolische KI, KI-Winter→Statistische KI, Frankenstein→
+  Gegenwart).
+- **Bilder erst bei Aktivierung:** Ein Klick auf einen Punkt blendet seine Karte
+  (zwei Sätze, ggf. mit Bild) unten ein; Punkte mit Bild tragen im Muster ein
+  kleines Bild-Symbol (nach natalität). Bilder werden also nicht vorab gezeigt.
+- **Spuren unverändert kompatibel:** Aktivierte Stationen → `vorhang-auf:story:N`
+  (12, Orakel-Total bleibt 56). Kein Kanten-Einloggen mehr in der Story; der
+  frühere `vorhang-auf:kanten-story`-Präfix ist ungenutzt (harmlos). Auswahl ist
+  ephemer (nicht gespiegelt); gelesene Karten bleiben geräteübergreifend offen.
+
 ## 2026-07-12 — Kulturelle Perspektive entfernt · Orakel-KI live
 
 **Kulturelle Perspektive gestrichen (Auftrag Christof):** Thema 03 «Kulturelle
