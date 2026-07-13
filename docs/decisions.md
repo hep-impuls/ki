@@ -10,6 +10,27 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-13 — Zeitlich = hängende Perlenschnur · MMF-Ansicht entfernt
+
+**Feedback Christof (Screenshots Zeitlich + MMF):** Die «Zeitlich»-Ansicht ist
+neu eine **hängende Perlenschnur** nach dem Vorbild von natalitäts «Log»
+(`LogPerlschnur.tsx`): die Stationen als Perlen von oben (früher) nach unten
+(heute) an einem Faden aufgereiht, mit Verlet-Physik — bewegt man den Zeiger
+durchs Muster, schwingt die Kette hin und her; eine Perle lässt sich auch
+direkt ziehen, das Antippen öffnet die Karte. Die Ansicht **«Mensch · Maschine
+· Fiktion» ist entfernt** — ohne Strang-Struktur wäre sie nur eine Kopie des
+Gewebes («und es sieht wie beim Gewebe aus»). Es bleiben zwei Ansichten:
+**Gewebe** (frei, federnd) und **Zeitlich** (Perlenschnur). Das Feld `mmf`
+bleibt als ungenutzte Metadaten.
+
+**Technik-Detail (wichtig für Pane-Tests):** Die Perlschnur rechnet ihre Physik
+sowohl im `requestAnimationFrame`-Loop als auch **synchron bei jedem
+Zeiger-Event** (ein `stepRef`, den beide aufrufen). Grund: eingebettete
+Vorschau-Panes drosseln rAF, dann fror die Kette am Startpunkt ein. Verifiziert
+mit synthetischen Events: Perle folgt beim Ziehen dem Cursor (235→385), Nachbar
+zieht mit, Zeiger-Näherung schiebt Perlen weg (351→272). Rücklauf in die
+Senkrechte nach dem Loslassen braucht rAF (nur im echten Browser sichtbar).
+
 ## 2026-07-13 — Story-Auswahl: Themen-Gruppierung entfernt (flache Liste)
 
 **Feedback Christof (Screenshot mit Kreis um die Kategorien):** Die
