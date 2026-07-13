@@ -91,24 +91,6 @@ function startPos(i: number, n: number) {
   return { x: 360 + 150 * Math.cos(wink), y: 148 + 88 * Math.sin(wink) };
 }
 
-/** Kleines «Bild vorhanden»-Symbol auf einem Knoten (nach natalität). */
-function BildSymbol() {
-  return (
-    <g
-      className="stroke-surface-bright"
-      fill="none"
-      strokeWidth={0.9}
-      strokeLinejoin="round"
-      strokeLinecap="round"
-      style={{ pointerEvents: "none" }}
-    >
-      <rect x={-3.2} y={-2.5} width={6.4} height={5} rx={1.1} />
-      <circle cx={-1.3} cy={-0.9} r={0.7} className="fill-surface-bright" stroke="none" />
-      <path d={`M -2.7 1.9 L -0.9 -0.1 L 0.4 1 L 1.6 -0.1 L 2.7 1.6`} />
-    </g>
-  );
-}
-
 /* ══════════════════════════════════ Perlenschnur (Ansicht «Zeitlich») ═══ */
 
 type Verlet = { x: number; y: number; ox: number; oy: number };
@@ -362,7 +344,6 @@ function StoryPerlschnur({
               strokeWidth="1.4"
               opacity={gelesen ? 1 : 0.8}
             />
-            <g transform={`translate(${p.x},${p.y})`}>{st.bild && <BildSymbol />}</g>
             {/* grössere Trefferfläche */}
             <circle cx={p.x} cy={p.y} r="15" fill="transparent" />
             <text
@@ -850,7 +831,6 @@ export default function StoryGewebe({
                     }
                     opacity={gelesen ? 1 : 0.7}
                   />
-                  {st.bild && <BildSymbol />}
                   <text
                     x={labelX}
                     y="22"
@@ -912,17 +892,6 @@ export default function StoryGewebe({
                     <span className="mt-xs flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-tertiary-container text-label-md text-on-tertiary-container">
                       {pos + 1}
                     </span>
-                    {st.bild && (
-                      <div className="hidden flex-shrink-0 rounded-lg border border-outline-variant bg-surface-bright p-xs sm:block">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src={st.bild.src}
-                          alt={st.bild.alt}
-                          loading="lazy"
-                          className="block w-28 rounded-md object-cover"
-                        />
-                      </div>
-                    )}
                     <div className="min-w-0">
                       <p className="text-body-lg font-medium text-on-surface">
                         {st.titel}
@@ -933,11 +902,6 @@ export default function StoryGewebe({
                       <p className="mt-xs text-body-md text-on-surface">{st.text}</p>
                       {st.geschichte && (
                         <p className="mt-sm text-body-md text-on-surface-variant">{st.geschichte}</p>
-                      )}
-                      {st.bild && (
-                        <p className="mt-sm text-label-sm text-on-surface-variant opacity-70">
-                          {st.bild.credit}
-                        </p>
                       )}
                     </div>
                   </div>

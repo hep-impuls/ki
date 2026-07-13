@@ -4,26 +4,83 @@ import AppLayout from "@/components/layout/AppLayout";
 import { FadenDivider, Signatur } from "../_components/Gewebe";
 import KnotenLandschaft from "../_components/KnotenLandschaft";
 import StoryGewebe from "../_components/StoryGewebe";
+import BilderSet, { type Bild } from "../_components/BilderSet";
+import AktivitaetsNetz from "../_components/AktivitaetsNetz";
 
 /**
  * Thema 01 — «Vorhang auf: eine neue Akteurin».
  *
- * Drei Knotenlandschaften, überall derselbe Ablauf: Punkte antippen oder
- * Verbindungen einloggen — die Inhalte (maximal zwei Sätze, ohne Zitat)
- * blenden sich ein, die Punkte werden beschriftet. Kein Zentrum, nirgends.
+ * Ein schwebendes Aktivitätsnetz misst laufend, was man tut (Knoten,
+ * Kombinationen, Bilder). Darunter drei interaktive Landschaften, dazwischen
+ * eine Bilderstrecke:
  *
- *  1. Die KI-Story — linear erzählt (Serpentine), aber mit feinen
- *     Einfluss-Bögen zwischen Stationen, die einander prägen; per Zufall
- *     lassen sich drei Stationen ziehen, und die Anordnung ist umschaltbar
- *     (zeitlich / Mensch·Maschine·Fiktion / technologisch).
- *  2. Die Merkmale der neuen Akteurin — loses Geflecht aus sieben Punkten,
- *     zwischen besuchten Punkten füllen sich die Flächen.
- *  3. Das Netz der Akteurin — die KI als ein Knoten unter sieben, ohne
- *     Zentrum: Wer mit ihr spricht, zieht am ganzen Geflecht.
+ *  1. Die KI-Story — als flexibles Gewebe (frei ziehbar) oder als hängende
+ *     Perlenschnur (zeitlich); Punkte antippen öffnet die Geschichte.
+ *  2. Bilderstrecke — die gemeinfreien historischen Bilder als Set zum
+ *     Durchgehen; Hover erklärt, Ansehen zählt fürs Aktivitätsnetz.
+ *  3. Die Merkmale der neuen Akteurin — loses Geflecht aus sieben Punkten.
+ *  4. Das Netz der Akteurin — die KI als ein Knoten unter sieben.
  *
- * Jede Landschaft hat eine leicht andere Bühnen-Tönung (Theme-Tokens).
  * Bilder: public/art/storyboard/ (Nachweis in public/art/CREDITS.md).
  */
+
+/** Die gemeinfreien Bilder als eigenständige Strecke (aus der Story gelöst). */
+const BILDER: Bild[] = [
+  {
+    src: "/art/storyboard/golem.jpg",
+    alt: "Zeichnung: Rabbi Löw erweckt den Golem",
+    titel: "Der Golem",
+    jahr: "Sage",
+    erklaerung:
+      "Aus Lehm geformt, durch Schriftzeichen belebt — und wieder stillgelegt, als er entgleitet. Die Ursage vom belebten Ding handelt schon vom Kontrollverlust.",
+    credit: "Mikoláš Aleš, 1899 · gemeinfrei",
+  },
+  {
+    src: "/art/storyboard/homunkulus.jpg",
+    alt: "Stich: Wagner und Mephisto vor dem Homunkulus in der Phiole (Faust II)",
+    titel: "Der Homunkulus",
+    jahr: "Alchemie",
+    erklaerung:
+      "Künstliches Leben aus der Retorte — bei Paracelsus und in Goethes «Faust II». Der Traum, Schöpfung nicht zu empfangen, sondern selbst herzustellen.",
+    credit: "F. Simm, Illustration zu «Faust II» · gemeinfrei",
+  },
+  {
+    src: "/art/storyboard/schachtuerke.jpg",
+    alt: "Kupferstich des Schachtürken von Wolfgang von Kempelen",
+    titel: "Der Schachtürke",
+    jahr: "1770",
+    erklaerung:
+      "Ein Automat schlägt Fürsten im Schach — im Innern sass ein versteckter Mensch. Die Täuschung zeigt, wie bereitwillig wir Maschinen Denken zutrauen.",
+    credit: "J. F. zu Racknitz, 1789 · gemeinfrei",
+  },
+  {
+    src: "/art/storyboard/frankenstein.jpg",
+    alt: "Frontispiz der Frankenstein-Ausgabe von 1831",
+    titel: "Frankenstein",
+    jahr: "1818",
+    erklaerung:
+      "Victor Frankenstein verstösst sein Geschöpf im Augenblick des Gelingens. Das Ungeheuer ist die verweigerte Verantwortung — nicht die Kreatur.",
+    credit: "Th. von Holst, Frontispiz 1831 · gemeinfrei",
+  },
+  {
+    src: "/art/storyboard/babbage.jpg",
+    alt: "Holzstich der Differenzmaschine von Charles Babbage",
+    titel: "Rechenmaschinen",
+    jahr: "1685–1843",
+    erklaerung:
+      "Von Leibniz' Rechenrad zu Babbages Analytical Engine und Ada Lovelaces erstem Programm: Denken wird als Rechnen vorstellbar.",
+    credit: "Holzstich, 1853 · gemeinfrei",
+  },
+  {
+    src: "/art/storyboard/supercomputer.jpg",
+    alt: "Rechnerreihen des Pleiades-Supercomputers der NASA",
+    titel: "Big Data & Gegenwart",
+    jahr: "heute",
+    erklaerung:
+      "Riesige Datenmengen in Rechenzentren mit Zehntausenden von Chips machen die neue Akteurin möglich — dialogfähig und generativ.",
+    credit: "NASA (Pleiades) · gemeinfrei (US-Gov)",
+  },
+];
 
 export default function Lernseite2VorhangAuf() {
   return (
@@ -61,6 +118,13 @@ export default function Lernseite2VorhangAuf() {
         </div>
       </header>
 
+      {/* Schwebendes Aktivitätsnetz — misst laufend die eigene Aktivität */}
+      <AktivitaetsNetz
+        className="mt-xl"
+        schwebend
+        unterzeile="Es misst live, was du tust: angeklickte Knoten, eingeloggte Kombinationen und angeschaute Bilder. Dasselbe Netz begrüsst dich im Orakel."
+      />
+
       {/* 1 — Die KI-Story als lineare Knotenlandschaft mit Einfluss-Bögen */}
       <section className="mt-xl max-w-5xl" aria-label="Die KI-Story">
         <h2 className="text-headline-lg text-on-surface">Die KI-Story</h2>
@@ -91,11 +155,6 @@ export default function Lernseite2VorhangAuf() {
               text: "Aus Lehm geformt, durch Schriftzeichen belebt. Die Ursage vom Menschen, der einem Ding Leben einhaucht.",
               geschichte:
                 "Die Prager Sage erzählt von Rabbi Löw, der aus Lehm eine Gestalt formt und sie durch Schriftzeichen zum Leben erweckt — und der sie wieder stilllegen muss, als sie ihm entgleitet. Schon die Ursage handelt nicht nur vom Erschaffen, sondern vom Kontrollverlust: Wer belebt, muss hüten können.",
-              bild: {
-                src: "/art/storyboard/golem.jpg",
-                alt: "Zeichnung: Rabbi Löw erweckt den Golem",
-                credit: "Mikoláš Aleš, 1899 · gemeinfrei",
-              },
             },
             {
               titel: "Der Homunkulus",
@@ -106,11 +165,6 @@ export default function Lernseite2VorhangAuf() {
               text: "Leben aus der Retorte, im Labor erschaffen. Der Traum, Schöpfung technisch herzustellen.",
               geschichte:
                 "Alchemisten wie Paracelsus beschrieben Rezepte, um künstliches Leben in der Retorte zu zeugen; in Goethes «Faust II» leuchtet der Homunkulus als Menschlein in der Phiole. Der Traum dahinter: Schöpfung nicht mehr empfangen, sondern selbst herstellen — im Labor, aus Wissen und Handwerk.",
-              bild: {
-                src: "/art/storyboard/homunkulus.jpg",
-                alt: "Stich: Wagner und Mephisto vor dem Homunkulus in der Phiole (Faust II)",
-                credit: "F. Simm, Illustration zu «Faust II» · gemeinfrei",
-              },
             },
             {
               titel: "Frühe Automaten",
@@ -121,11 +175,6 @@ export default function Lernseite2VorhangAuf() {
               text: "Der «Schachtürke» scheint zu denken — und täuscht ganz Europa. Mechanik weckt erstmals den Verdacht, Maschinen könnten klug sein.",
               geschichte:
                 "Wolfgang von Kempelens Schach spielender «Türke» schlug ab 1770 Fürsten und Kaiser — im Innern sass ein verborgener Mensch. Europa stritt jahrzehntelang darüber, ob eine Maschine denken könne; die Täuschung bewies vor allem eines: wie bereitwillig wir es glauben.",
-              bild: {
-                src: "/art/storyboard/schachtuerke.jpg",
-                alt: "Kupferstich des Schachtürken von Wolfgang von Kempelen",
-                credit: "J. F. zu Racknitz, 1789 · gemeinfrei",
-              },
             },
             {
               titel: "Frankenstein",
@@ -136,11 +185,6 @@ export default function Lernseite2VorhangAuf() {
               text: "Das erschaffene Wesen entgleitet seinem Schöpfer. Die Literatur stellt die Verantwortungsfrage — lange vor der Technik.",
               geschichte:
                 "Mary Shelleys Roman von 1818 lässt Victor Frankenstein ein Wesen erschaffen, das er im Augenblick des Gelingens verstösst. Das eigentliche Ungeheuer der Geschichte ist nicht die Kreatur, sondern die verweigerte Verantwortung — eine Frage, die seither jede Schöpfungstechnik begleitet.",
-              bild: {
-                src: "/art/storyboard/frankenstein.jpg",
-                alt: "Frontispiz der Frankenstein-Ausgabe von 1831",
-                credit: "Th. von Holst, Frontispiz 1831 · gemeinfrei",
-              },
             },
             {
               titel: "Rechenmaschinen",
@@ -151,11 +195,6 @@ export default function Lernseite2VorhangAuf() {
               text: "Von Leibniz' Rechenrad zu Babbage und Lovelace: Die programmierbare Maschine wird gedacht. Denken als Rechnen wird vorstellbar.",
               geschichte:
                 "Leibniz baute um 1673 eine Maschine für alle vier Grundrechenarten und träumte davon, Streitfragen durchs Rechnen zu entscheiden. Babbage entwarf die programmierbare Analytical Engine; Ada Lovelace schrieb 1843 dazu das erste Programm — und hielt zugleich fest, die Maschine könne nur, was man ihr aufzutragen weiss.",
-              bild: {
-                src: "/art/storyboard/babbage.jpg",
-                alt: "Holzstich der Differenzmaschine von Charles Babbage",
-                credit: "Holzstich, 1853 · gemeinfrei",
-              },
             },
             {
               titel: "Geburt der KI",
@@ -226,14 +265,22 @@ export default function Lernseite2VorhangAuf() {
               text: "Riesige Datenmengen und Rechenzentren machen die neue Akteurin möglich. KI durchdringt den Alltag.",
               geschichte:
                 "Heutige Modelle trainieren auf riesigen Text- und Bildmengen, in Rechenzentren mit Zehntausenden von Chips. So entstand die neue Akteurin dieses Moduls: dialogfähig, generativ — und Alltag von der Suchmaschine bis zum Schreibassistenten.",
-              bild: {
-                src: "/art/storyboard/supercomputer.jpg",
-                alt: "Rechnerreihen des Pleiades-Supercomputers der NASA",
-                credit: "NASA (Pleiades) · gemeinfrei (US-Gov)",
-              },
             },
           ]}
         />
+      </section>
+
+      <FadenDivider className="mt-xl" />
+
+      {/* Bilderstrecke zwischen den Aktivitäten */}
+      <section className="mt-xl max-w-5xl" aria-label="Bilderstrecke">
+        <h2 className="text-headline-lg text-on-surface">Bilder der Vorstellung</h2>
+        <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
+          Lange bevor es KI gab, hat sich die Menschheit ausgemalt, Dingen Leben
+          einzuhauchen. Geh die Bilder durch — fahr über eines, dann erzählt es
+          seine Geschichte.
+        </p>
+        <BilderSet className="mt-lg" bilder={BILDER} spurKey="vorhang-auf:bild" />
       </section>
 
       <FadenDivider className="mt-xl" />

@@ -225,3 +225,29 @@ export async function zieheSpurenAusCloud(): Promise<void> {
 export function aktuellerCode(): string | null {
   return getSession()?.studentCode ?? null;
 }
+
+export interface AktivitaetsZahlen {
+  /** Angeklickte/gelesene Knoten (alle Landschaften). */
+  knoten: number;
+  /** Eingeloggte Verbindungen (Kombinationen aus zwei Knoten). */
+  kombinationen: number;
+  /** Angeschaute Bilder der Bilderstrecke. */
+  bilder: number;
+}
+
+/**
+ * Aktivitäts-Kennzahlen aus dem lokalen Spuren-Bestand — fürs Aktivitätsnetz.
+ * Kanten-Spuren (`…:kanten-…`) zählen als Kombinationen, Bild-Spuren
+ * (`…:bild:…`) als angeschaute Bilder, alles Übrige als Knoten.
+ */
+export function zaehleAktivitaet(): AktivitaetsZahlen {
+  let knoten = 0;
+  let kombinationen = 0;
+  let bilder = 0;
+  for (const s of lesen()) {
+    if (s.id.includes(":kanten-")) kombinationen++;
+    else if (s.id.includes(":bild:")) bilder++;
+    else knoten++;
+  }
+  return { knoten, kombinationen, bilder };
+}

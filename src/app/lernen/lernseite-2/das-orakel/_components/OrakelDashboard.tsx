@@ -9,6 +9,7 @@ import {
   type PollCounts,
 } from "@/lib/polls";
 import { FadenDivider } from "../../_components/Gewebe";
+import AktivitaetsNetz from "../../_components/AktivitaetsNetz";
 import { leseSpuren, SPUR_EVENT, SPUREN_POLL_ID } from "../../_lib/spuren";
 
 /**
@@ -205,6 +206,14 @@ export default function OrakelDashboard() {
 
   return (
     <div className="max-w-3xl">
+      {/* Aktivitätsnetz — gleich zu Beginn, dein Weg als Konstellation */}
+      <AktivitaetsNetz
+        className="mb-xl"
+        schwebend
+        titel="Dein Aktivitätsnetz"
+        unterzeile="Was du bisher im Modul getan hast — angeklickte Knoten, eingeloggte Kombinationen und angeschaute Bilder, zusammen als ein Netz."
+      />
+
       {/* Datenschutz-Erklärung — die Architektur in drei Sätzen */}
       <div className="flex items-start gap-sm rounded-xl border border-outline-variant bg-surface-container-low p-md">
         <span className="material-symbols-outlined mt-xs text-[20px] text-tertiary">

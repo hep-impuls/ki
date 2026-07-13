@@ -10,6 +10,32 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-13 — Bilderstrecke ausgelagert · Aktivitätsnetz (Auftakt + Orakel)
+
+**Auftrag Christof:** Die Bilder ganz aus der KI-Story lösen, als eigene
+durchgeh-bare Strecke zwischen die Aktivitäten setzen (Hover erklärt), und ein
+schwebendes «Aktivitätsnetz» ergänzen, das die Aktivität misst — auch zuoberst
+im Orakel.
+
+- **Bilder raus aus `StoryGewebe`:** kein Bild-Symbol auf den Knoten, keine
+  Bilder/Credits in den Story-Karten mehr (`bild`-Felder aus den Story-Stationen
+  entfernt; die Story-Karten zeigen nur noch Titel/Jahr/Text/Geschichte).
+- **Neue `BilderSet.tsx`:** die sechs gemeinfreien Bilder als seitwärts
+  durchblätterbare Strecke (Filmstrip, snap-scroll), platziert zwischen KI-Story
+  und Merkmalen. Hover/Fokus zeigt die Erklärung als Overlay; das erste Ansehen
+  eines Bildes wird als Spur `vorhang-auf:bild:{i}` registriert (dreifach wie
+  gehabt) und mit «angeschaut»-Häkchen markiert.
+- **Neue `AktivitaetsNetz.tsx`:** ein kleines, futuristisch-rechnerisches
+  Netzwerk (Kern + drei farbige Naben mit Satelliten, monospace-Zahlen), das
+  aus dem lokalen Spuren-Bestand live drei Kennzahlen zeigt: **Knoten**
+  (angeklickte Stationen), **Kombinationen** (eingeloggte Verbindungen,
+  `…:kanten-…`), **Bilder** (angeschaute Bilder, `…:bild:…`). Neu in
+  `_lib/spuren.ts`: `zaehleAktivitaet()`. Das Netz steht schwebend zuoberst auf
+  der Auftakt-Seite (misst live beim Tun) und **gleich zu Beginn im Orakel**.
+- Verifiziert: Bilder aus der Story weg, Strecke mit 6 Bildern + Zähler,
+  Ansehen erhöht Netz-Bilder live (03), Knoten-Klick erhöht Netz-Knoten live,
+  Netz als erste Section im Orakel. `zufall`/MMF unberührt.
+
 ## 2026-07-13 — Zeitlich = hängende Perlenschnur · MMF-Ansicht entfernt
 
 **Feedback Christof (Screenshots Zeitlich + MMF):** Die «Zeitlich»-Ansicht ist
