@@ -10,6 +10,18 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-13 — Aktivitätsnetz als mitwanderndes Symbol (Auftakt)
+
+**Feedback Christof:** Das Aktivitätsnetz soll mitwandern — ein kleines Symbol
+mit pulsierenden Punkten, das beim Scrollen sichtbar bleibt und beim Klick zum
+vollen Netz «aufgeht». Neue `AktivitaetsNetzFloat.tsx`: unten rechts schwebendes
+Mini-Netz (Kern + drei farbige Punkte, die pulsieren, wenn die jeweilige
+Kennzahl > 0 ist) mit Gesamt-Zähler; Klick öffnet ein Panel mit dem vollen
+`AktivitaetsNetz` (schliessen per X, Backdrop oder Escape). Über der mobilen
+Bottom-Nav platziert (`bottom-20 md:bottom-6`, z-50). Auf der Auftakt-Seite
+ersetzt das schwebende Symbol die frühere Inline-Karte; im Orakel bleibt das
+volle Netz zuoberst inline (das «aufgegangene» Netz als Ziel/Rückblick).
+
 ## 2026-07-13 — Bilderstrecke ausgelagert · Aktivitätsnetz (Auftakt + Orakel)
 
 **Auftrag Christof:** Die Bilder ganz aus der KI-Story lösen, als eigene

@@ -5,7 +5,7 @@ import { FadenDivider, Signatur } from "../_components/Gewebe";
 import KnotenLandschaft from "../_components/KnotenLandschaft";
 import StoryGewebe from "../_components/StoryGewebe";
 import BilderSet, { type Bild } from "../_components/BilderSet";
-import AktivitaetsNetz from "../_components/AktivitaetsNetz";
+import AktivitaetsNetzFloat from "../_components/AktivitaetsNetzFloat";
 
 /**
  * Thema 01 — «Vorhang auf: eine neue Akteurin».
@@ -118,12 +118,9 @@ export default function Lernseite2VorhangAuf() {
         </div>
       </header>
 
-      {/* Schwebendes Aktivitätsnetz — misst laufend die eigene Aktivität */}
-      <AktivitaetsNetz
-        className="mt-xl"
-        schwebend
-        unterzeile="Es misst live, was du tust: angeklickte Knoten, eingeloggte Kombinationen und angeschaute Bilder. Dasselbe Netz begrüsst dich im Orakel."
-      />
+      {/* Aktivitätsnetz als mitwanderndes Symbol (schwebt unten rechts, geht
+          beim Klick zum vollen Netz auf) */}
+      <AktivitaetsNetzFloat />
 
       {/* 1 — Die KI-Story als lineare Knotenlandschaft mit Einfluss-Bögen */}
       <section className="mt-xl max-w-5xl" aria-label="Die KI-Story">
