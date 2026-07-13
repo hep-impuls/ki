@@ -4,7 +4,6 @@ import AppLayout from "@/components/layout/AppLayout";
 import { FadenDivider, Signatur } from "../_components/Gewebe";
 import KnotenLandschaft from "../_components/KnotenLandschaft";
 import StoryGewebe from "../_components/StoryGewebe";
-import BilderSet, { type Bild } from "../_components/BilderSet";
 import BilderAnschauung, { type AnschauBild } from "../_components/BilderAnschauung";
 import AktivitaetsNetzFloat from "../_components/AktivitaetsNetzFloat";
 
@@ -25,61 +24,173 @@ import AktivitaetsNetzFloat from "../_components/AktivitaetsNetzFloat";
  * Bilder: public/art/storyboard/ (Nachweis in public/art/CREDITS.md).
  */
 
-/** Die gemeinfreien Bilder als eigenständige Strecke (aus der Story gelöst). */
-const BILDER: Bild[] = [
+/**
+ * Erste Bilderstrecke (Anschauungsmodus mit Hotspots): die gemeinfreien
+ * historischen Bilder vom Traum, Dingen Leben einzuhauchen — aus der Story
+ * gelöst, jedes mit anklickbaren Hotspots.
+ */
+const BILDER_STORY: AnschauBild[] = [
   {
     src: "/art/storyboard/golem.jpg",
     alt: "Zeichnung: Rabbi Löw erweckt den Golem",
     titel: "Der Golem",
     jahr: "Sage",
-    erklaerung:
-      "Aus Lehm geformt, durch Schriftzeichen belebt — und wieder stillgelegt, als er entgleitet. Die Ursage vom belebten Ding handelt schon vom Kontrollverlust.",
-    credit: "Mikoláš Aleš, 1899 · gemeinfrei",
+    kurz: "Mikoláš Aleš, 1899 · die Ursage vom belebten Ding",
+    hotspots: [
+      {
+        x: 28,
+        y: 14,
+        titel: "Das belebende Wort",
+        text: "Ein Schriftzeichen auf der Stirn erweckt den Golem — nimmt man es weg, erstarrt er. Wie ein Programm, das eine Maschine belebt oder anhält.",
+      },
+      {
+        x: 60,
+        y: 23,
+        titel: "Der Schöpfer",
+        text: "Rabbi Löw beschwört das Wesen — und muss es hüten. Wer belebt, trägt Verantwortung für das, was er in die Welt setzt.",
+      },
+      {
+        x: 22,
+        y: 67,
+        titel: "Die Beschwörung",
+        text: "Aus Rauch und Ritual steigt die Gestalt. Der Traum, aus Totem Lebendiges zu machen, ist uralt.",
+      },
+    ],
   },
   {
     src: "/art/storyboard/homunkulus.jpg",
     alt: "Stich: Wagner und Mephisto vor dem Homunkulus in der Phiole (Faust II)",
     titel: "Der Homunkulus",
     jahr: "Alchemie",
-    erklaerung:
-      "Künstliches Leben aus der Retorte — bei Paracelsus und in Goethes «Faust II». Der Traum, Schöpfung nicht zu empfangen, sondern selbst herzustellen.",
-    credit: "F. Simm, Illustration zu «Faust II» · gemeinfrei",
+    kurz: "F. Simm zu «Faust II» · Leben aus dem Labor",
+    hotspots: [
+      {
+        x: 25,
+        y: 46,
+        titel: "Leben im Glas",
+        text: "Im leuchtenden Kolben regt sich künstliches Leben. Der Homunkulus ist im Labor gemacht, nicht geboren.",
+      },
+      {
+        x: 47,
+        y: 53,
+        titel: "Der Macher",
+        text: "Der Gelehrte Wagner erschafft Leben durch Wissen und Handwerk — der Mensch als Konstrukteur.",
+      },
+      {
+        x: 68,
+        y: 38,
+        titel: "Der Preis",
+        text: "Mephisto steht daneben und grinst: Hinter dem Wunder lauert der Handel. Jede Macht hat ihren Preis.",
+      },
+    ],
   },
   {
     src: "/art/storyboard/schachtuerke.jpg",
     alt: "Kupferstich des Schachtürken von Wolfgang von Kempelen",
     titel: "Der Schachtürke",
     jahr: "1770",
-    erklaerung:
-      "Ein Automat schlägt Fürsten im Schach — im Innern sass ein versteckter Mensch. Die Täuschung zeigt, wie bereitwillig wir Maschinen Denken zutrauen.",
-    credit: "J. F. zu Racknitz, 1789 · gemeinfrei",
+    kurz: "J. F. zu Racknitz, 1789 · der scheinbar denkende Automat",
+    hotspots: [
+      {
+        x: 44,
+        y: 18,
+        titel: "Der Schein",
+        text: "Der «Türke» scheint selbständig Schach zu denken — ein Wunderautomat des 18. Jahrhunderts.",
+      },
+      {
+        x: 57,
+        y: 57,
+        titel: "Der versteckte Mensch",
+        text: "Im Innern kauert ein Mensch und zieht die Fäden. Die «Intelligenz» der Maschine war menschlich — auch heute steckt oft mehr Handarbeit drin, als man sieht.",
+      },
+      {
+        x: 20,
+        y: 55,
+        titel: "Die Attrappe",
+        text: "Links dreht sich Getriebe bloss zur Schau. Vorsicht vor der Illusion der Selbständigkeit.",
+      },
+    ],
   },
   {
     src: "/art/storyboard/frankenstein.jpg",
     alt: "Frontispiz der Frankenstein-Ausgabe von 1831",
     titel: "Frankenstein",
     jahr: "1818",
-    erklaerung:
-      "Victor Frankenstein verstösst sein Geschöpf im Augenblick des Gelingens. Das Ungeheuer ist die verweigerte Verantwortung — nicht die Kreatur.",
-    credit: "Th. von Holst, Frontispiz 1831 · gemeinfrei",
+    kurz: "Th. von Holst, 1831 · das erschaffene Wesen",
+    hotspots: [
+      {
+        x: 32,
+        y: 62,
+        titel: "Das erschaffene Wesen",
+        text: "Eben belebt, betrachtet die Kreatur sich selbst. Ein neues Wesen ist in der Welt — und niemand hat es gefragt.",
+      },
+      {
+        x: 72,
+        y: 30,
+        titel: "Die Flucht des Schöpfers",
+        text: "Victor Frankenstein flieht entsetzt vor seinem Werk. Das eigentliche Unheil ist die verweigerte Verantwortung.",
+      },
+      {
+        x: 24,
+        y: 90,
+        titel: "Wissen und sein Preis",
+        text: "Zu Füssen liegen Buch und Schädel: das Wissen, das belebt — und der Tod, der ihm folgt.",
+      },
+    ],
   },
   {
     src: "/art/storyboard/babbage.jpg",
     alt: "Holzstich der Differenzmaschine von Charles Babbage",
     titel: "Rechenmaschinen",
     jahr: "1685–1843",
-    erklaerung:
-      "Von Leibniz' Rechenrad zu Babbages Analytical Engine und Ada Lovelaces erstem Programm: Denken wird als Rechnen vorstellbar.",
-    credit: "Holzstich, 1853 · gemeinfrei",
+    kurz: "Holzstich, 1853 · die programmierbare Rechenmaschine",
+    hotspots: [
+      {
+        x: 13,
+        y: 9,
+        titel: "Von Hand angetrieben",
+        text: "Eine Kurbel treibt das Werk — noch ohne Strom, aber die Rechenlogik ist schon da.",
+      },
+      {
+        x: 45,
+        y: 45,
+        titel: "Rechnen in Rädern",
+        text: "Zahlen werden in Ziffernrädern gespeichert und verrechnet — der mechanische Urahn des Prozessors.",
+      },
+      {
+        x: 52,
+        y: 17,
+        titel: "Das Programm",
+        text: "«Calculation complete»: Die Maschine führt eine feste Folge von Schritten aus. Ada Lovelace sah, dass sie Anweisungen folgen kann.",
+      },
+    ],
   },
   {
     src: "/art/storyboard/supercomputer.jpg",
     alt: "Rechnerreihen des Pleiades-Supercomputers der NASA",
     titel: "Big Data & Gegenwart",
     jahr: "heute",
-    erklaerung:
-      "Riesige Datenmengen in Rechenzentren mit Zehntausenden von Chips machen die neue Akteurin möglich — dialogfähig und generativ.",
-    credit: "NASA (Pleiades) · gemeinfrei (US-Gov)",
+    kurz: "NASA (Pleiades) · die Rechenhallen der Gegenwart",
+    hotspots: [
+      {
+        x: 62,
+        y: 38,
+        titel: "Die Rechenhallen",
+        text: "Reihe um Reihe von Prozessoren — hier «denkt» die KI tatsächlich, in riesigen Rechenzentren.",
+      },
+      {
+        x: 45,
+        y: 17,
+        titel: "Datenströme",
+        text: "Kabel und Netze verbinden alles. Ohne diese Ströme keine Antwort.",
+      },
+      {
+        x: 24,
+        y: 52,
+        titel: "Kühlung & Strom",
+        text: "Solche Maschinen brauchen ständig Strom und Kühlung — der unsichtbare Energiehunger der Rechenleistung.",
+      },
+    ],
   },
 ];
 
@@ -359,15 +470,19 @@ export default function Lernseite2VorhangAuf() {
 
       <FadenDivider className="mt-xl" />
 
-      {/* Bilderstrecke zwischen den Aktivitäten */}
-      <section className="mt-xl max-w-5xl" aria-label="Bilderstrecke">
+      {/* Bilderstrecke zwischen den Aktivitäten — Anschauungsmodus mit Hotspots */}
+      <section className="mt-xl max-w-5xl" aria-label="Bilderstrecke: Bilder der Vorstellung">
         <h2 className="text-headline-lg text-on-surface">Bilder der Vorstellung</h2>
         <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
           Lange bevor es KI gab, hat sich die Menschheit ausgemalt, Dingen Leben
-          einzuhauchen. Geh die Bilder durch — fahr über eines, dann erzählt es
-          seine Geschichte.
+          einzuhauchen. Klick ein Bild an und geh den leuchtenden Punkten nach —
+          jeder erzählt etwas.
         </p>
-        <BilderSet className="mt-lg" bilder={BILDER} spurKey="vorhang-auf:bild" />
+        <BilderAnschauung
+          className="mt-lg"
+          bilder={BILDER_STORY}
+          spurKey="vorhang-auf:bild"
+        />
       </section>
 
       <FadenDivider className="mt-xl" />

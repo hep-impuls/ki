@@ -10,6 +10,20 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-13 — Erste Bilderstrecke auf denselben Anschauungsmodus umgestellt
+
+**Feedback Christof:** Die «Bilder der Vorstellung» sollen gleich funktionieren
+wie «Womit die Akteurin verwoben ist». Die erste Strecke nutzt jetzt ebenfalls
+`BilderAnschauung` (Klick → Lightbox → Hotspots) statt des alten Hover-Streifens.
+Die sechs `storyboard/`-Bilder haben je drei Hotspots bekommen (Koordinaten
+anhand der tatsächlichen Bildinhalte gesetzt — Bilder dafür angeschaut):
+Golem (Wort/Schöpfer/Beschwörung), Homunkulus (Glas/Macher/Preis), Schachtürke
+(Schein/versteckter Mensch/Attrappe), Frankenstein (Wesen/Flucht/Wissen),
+Rechenmaschinen (Kurbel/Ziffernräder/Programm), Supercomputer (Rechenhallen/
+Datenströme/Kühlung). `BilderSet.tsx` (Hover-Streifen) ist damit verwaist und
+gelöscht. spurKey bleibt `vorhang-auf:bild` (Zählung im Aktivitätsnetz
+unverändert).
+
 ## 2026-07-13 — Zweite Bilderstrecke mit Anschauungsmodus + Hotspots (vor dem Netz)
 
 **Auftrag Christof:** Die «Bilder der Vorstellung» kommen ein zweites Mal —
