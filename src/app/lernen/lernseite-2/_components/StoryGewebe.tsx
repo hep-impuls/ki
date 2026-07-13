@@ -68,14 +68,6 @@ const H = 300;
 /** Bewegungsraum der Punkte (Labels brauchen unten Platz). */
 const RAND = { x0: 44, x1: 676, y0: 34, y1: 258 };
 
-const KAT_LABEL: Record<StoryKat, string> = {
-  erzaehlung: "Mythos & Fiktion",
-  mechanik: "Mechanik & Rechnen",
-  regeln: "KI & ihre Regeln",
-  daten: "Lernen aus Daten",
-};
-const KAT_ORDER: StoryKat[] = ["erzaehlung", "mechanik", "regeln", "daten"];
-
 const ANSICHTEN = [
   {
     id: "gewebe",
@@ -598,35 +590,26 @@ export default function StoryGewebe({
             </button>
           </div>
         </div>
-        <div className="flex flex-col gap-sm">
-          {KAT_ORDER.map((kat) => (
-            <div key={kat} className="flex flex-wrap items-center gap-xs">
-              <span className="mr-xs w-full text-label-sm uppercase tracking-wider text-on-surface-variant sm:w-auto sm:min-w-[8.5rem]">
-                {KAT_LABEL[kat]}
-              </span>
-              {alle
-                .filter((i) => stationen[i].kat === kat)
-                .map((i) => {
-                  const on = gewaehlt.has(i);
-                  return (
-                    <button
-                      key={i}
-                      type="button"
-                      onClick={() => toggleWahl(i)}
-                      aria-pressed={on}
-                      className={
-                        "rounded-full border px-sm py-xs text-label-md transition-colors " +
-                        (on
-                          ? "border-tertiary bg-tertiary-container text-on-tertiary-container"
-                          : "border-outline-variant bg-surface-bright text-on-surface-variant hover:bg-surface-container hover:text-on-surface")
-                      }
-                    >
-                      {stationen[i].kurz}
-                    </button>
-                  );
-                })}
-            </div>
-          ))}
+        <div className="flex flex-wrap gap-xs">
+          {alle.map((i) => {
+            const on = gewaehlt.has(i);
+            return (
+              <button
+                key={i}
+                type="button"
+                onClick={() => toggleWahl(i)}
+                aria-pressed={on}
+                className={
+                  "rounded-full border px-sm py-xs text-label-md transition-colors " +
+                  (on
+                    ? "border-tertiary bg-tertiary-container text-on-tertiary-container"
+                    : "border-outline-variant bg-surface-bright text-on-surface-variant hover:bg-surface-container hover:text-on-surface")
+                }
+              >
+                {stationen[i].kurz}
+              </button>
+            );
+          })}
         </div>
       </div>
 

@@ -10,6 +10,18 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-13 — Story-Auswahl: Themen-Gruppierung entfernt (flache Liste)
+
+**Feedback Christof (Screenshot mit Kreis um die Kategorien):** Die
+Themen-Gruppierung der Knotenauswahl (Mythos & Fiktion / Mechanik & Rechnen /
+KI & ihre Regeln / Lernen aus Daten) war zu komplex und musste weg. Die
+Auswahl ist jetzt eine **schlichte, flache Liste aller zwölf Stationen** in
+chronologischer Reihenfolge (plus «Zufall (3)» / «Alle»). `KAT_LABEL` und
+`KAT_ORDER` entfernt; das Feld `kat` bleibt als (aktuell ungenutzte)
+Metadaten im Datenmodell stehen. Die «Technologisch»-Ansicht war bereits im
+Commit zuvor (3f9f495) entfernt — der Screenshot zeigte eine gecachte
+Vorversion.
+
 ## 2026-07-12 — KI-Story: flexibles Gewebe mit Drag, Bilder + Geschichten zurück
 
 **Nachschärfung Christof («wirklich wie natalität»):** Die Story-Box ist jetzt
