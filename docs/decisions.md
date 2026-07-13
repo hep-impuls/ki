@@ -10,6 +10,31 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-13 — Zweite Bilderstrecke mit Anschauungsmodus + Hotspots (vor dem Netz)
+
+**Auftrag Christof:** Die «Bilder der Vorstellung» kommen ein zweites Mal —
+andere Bilder, direkt vor dem «Netz der Akteurin». Klick öffnet einen
+Anschauungsmodus (Lightbox); auf den Bildern sind Hotspots anklickbar, die
+etwas erzählen.
+
+- **Neue `BilderAnschauung.tsx`:** Thumbnail-Raster → Klick öffnet eine
+  Vollbild-Lightbox (z-[60], Body-Scroll gesperrt) mit dem Bild gross und
+  nummerierten, pulsierenden Hotspots (Position in %). Ein Hotspot-Klick zeigt
+  seinen Text in einer Erzähl-Leiste unten; Prev/Next + Pfeiltasten blättern,
+  Escape/X/Zähler schliessen. Ansehen eines Bildes → Spur
+  `vorhang-auf:bildnetz:{i}` (zählt als «Bilder» im Aktivitätsnetz).
+- **Platzierung:** eigene Sektion «Womit die Akteurin verwoben ist» zwischen
+  Merkmalen und «Das Netz der Akteurin».
+- **Bilder (gemeinfrei, schon im Repo, mit Hotspots zur KI-Infrastruktur):**
+  Menzel «Eisenwalzwerk» (Material/Maschine/Arbeit), NASA «Erde bei Nacht»
+  (Energie/Netz/Ungleichheit), Doré «Over London — by Rail» (Infrastruktur/
+  Kehrseite). Hotspot-Koordinaten anhand der tatsächlichen Bildinhalte gesetzt.
+- **`zaehleAktivitaet()`** zählt neu `:bild` als Substring — beide Bild-Sets
+  (`:bild:` und `:bildnetz:`) fliessen als «Bilder» ins Aktivitätsnetz.
+- Fix: `wechseln()` rief `merkeSpur`/`setState` im `setOffen`-Updater auf →
+  „setState während Render" (SPUR_EVENT → Aktivitätsnetz). Seiteneffekte aus dem
+  Updater in den Handler gezogen; im frischen Tab keine Konsolenfehler mehr.
+
 ## 2026-07-13 — Aktivitätsnetz als mitwanderndes Symbol (Auftakt)
 
 **Feedback Christof:** Das Aktivitätsnetz soll mitwandern — ein kleines Symbol

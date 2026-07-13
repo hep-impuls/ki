@@ -246,7 +246,7 @@ export function zaehleAktivitaet(): AktivitaetsZahlen {
   let bilder = 0;
   for (const s of lesen()) {
     if (s.id.includes(":kanten-")) kombinationen++;
-    else if (s.id.includes(":bild:")) bilder++;
+    else if (s.id.includes(":bild")) bilder++;
     else knoten++;
   }
   return { knoten, kombinationen, bilder };

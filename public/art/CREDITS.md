@@ -1,9 +1,10 @@
 # Bildnachweis
 
 Verwendet in: `src/app/lernen/lernseite-2/philosophische-perspektive/_components/SchablonenZeitstrahl.tsx`
-(Thema „Philosophische Perspektive") und
-`src/app/lernen/lernseite-2/vorhang-auf/_components/Storyboard.tsx`
-(Thema „Vorhang auf", Ordner `storyboard/`).
+(Thema „Philosophische Perspektive") und auf der Auftakt-Seite „Vorhang auf"
+(`vorhang-auf/page.tsx`): die `storyboard/`-Bilder in der Bilderstrecke
+(`BilderSet.tsx`), die Bilder `eisenwalzwerk.jpg`, `erde_nacht.jpg`,
+`london.jpg` zusätzlich im Anschauungsmodus mit Hotspots (`BilderAnschauung.tsx`).
 
 ## Storyboard «Vorhang auf» (storyboard/, gemeinfrei)
 

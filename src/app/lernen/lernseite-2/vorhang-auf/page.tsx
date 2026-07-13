@@ -5,6 +5,7 @@ import { FadenDivider, Signatur } from "../_components/Gewebe";
 import KnotenLandschaft from "../_components/KnotenLandschaft";
 import StoryGewebe from "../_components/StoryGewebe";
 import BilderSet, { type Bild } from "../_components/BilderSet";
+import BilderAnschauung, { type AnschauBild } from "../_components/BilderAnschauung";
 import AktivitaetsNetzFloat from "../_components/AktivitaetsNetzFloat";
 
 /**
@@ -79,6 +80,95 @@ const BILDER: Bild[] = [
     erklaerung:
       "Riesige Datenmengen in Rechenzentren mit Zehntausenden von Chips machen die neue Akteurin möglich — dialogfähig und generativ.",
     credit: "NASA (Pleiades) · gemeinfrei (US-Gov)",
+  },
+];
+
+/**
+ * Zweite Bilderstrecke (Anschauungsmodus mit Hotspots), vor dem «Netz der
+ * Akteurin»: drei gemeinfreie Bilder, die das materielle/energetische/
+ * menschliche Geflecht sichtbar machen, in dem die KI hängt.
+ */
+const BILDER_NETZ: AnschauBild[] = [
+  {
+    src: "/art/eisenwalzwerk.jpg",
+    alt: "Adolph Menzel, Das Eisenwalzwerk (Moderne Cyklopen), 1875",
+    titel: "Das Eisenwalzwerk",
+    jahr: "1875",
+    kurz: "Adolph Menzel · Material, Maschine und Arbeit",
+    hotspots: [
+      {
+        x: 50,
+        y: 57,
+        titel: "Menschliche Arbeit",
+        text: "Am glühenden Eisen stehen Menschen — nicht die Maschine allein. Auch hinter der KI arbeiten Menschen: Sie sammeln und beschriften Daten, prüfen Antworten und halten die Systeme am Laufen.",
+      },
+      {
+        x: 87,
+        y: 22,
+        titel: "Die Maschine",
+        text: "Schwungräder und Riemen treiben das Werk an. Bei der KI sind es Rechenzentren voller Chips — die Maschine ist grösser und unsichtbarer geworden, aber sie ist da.",
+      },
+      {
+        x: 83,
+        y: 77,
+        titel: "Der Preis",
+        text: "Am Rand ruht ein erschöpfter Arbeiter. Jeder Fortschritt hat einen Preis in Körpern, Zeit und Rohstoffen — die Frage ist, wer ihn trägt.",
+      },
+    ],
+  },
+  {
+    src: "/art/erde_nacht.jpg",
+    alt: "Die Erde bei Nacht, Satellitenkomposit der NASA, 2012",
+    titel: "Die Erde bei Nacht",
+    jahr: "2012",
+    kurz: "NASA · Energie und globales Netz",
+    hotspots: [
+      {
+        x: 51,
+        y: 20,
+        titel: "Energiehunger",
+        text: "Wo es hell leuchtet, wird viel Strom verbraucht. KI-Rechenzentren brauchen enorm viel Energie und Kühlung — jede Antwort hat einen Fussabdruck.",
+      },
+      {
+        x: 55,
+        y: 57,
+        titel: "Im Dunkeln",
+        text: "Grosse Teile der Welt bleiben dunkel. Zugang zu Strom, Netz und KI ist ungleich verteilt — nicht alle sind gleich verbunden.",
+      },
+      {
+        x: 85,
+        y: 31,
+        titel: "Wo gebaut wird",
+        text: "In Ostasien schlägt das Herz der Chip-Produktion. Die KI hängt an Fabriken, Lieferketten und Metallen aus aller Welt.",
+      },
+    ],
+  },
+  {
+    src: "/art/london.jpg",
+    alt: "Gustave Doré, Over London — by Rail, 1872",
+    titel: "Over London — by Rail",
+    jahr: "1872",
+    kurz: "Gustave Doré · die Kehrseite der Infrastruktur",
+    hotspots: [
+      {
+        x: 62,
+        y: 14,
+        titel: "Die Infrastruktur",
+        text: "Über den Dächern läuft die Eisenbahn — die Ader, die alles verbindet. Heute sind es Seekabel und Datenleitungen, die die KI mit der Welt verknüpfen.",
+      },
+      {
+        x: 31,
+        y: 62,
+        titel: "Die Verdichteten",
+        text: "Dicht gedrängte Hinterhöfe, Wäscheleinen, Menschen. Jede grosse Technik ordnet mit, wie Menschen leben und arbeiten — sichtbar oder nicht.",
+      },
+      {
+        x: 45,
+        y: 30,
+        titel: "Der Rauch",
+        text: "Unzählige Schlote qualmen. Was den Fortschritt antreibt, hinterlässt Spuren in Luft und Umwelt — auch das gehört zum Netz.",
+      },
+    ],
   },
 ];
 
@@ -363,6 +453,28 @@ export default function Lernseite2VorhangAuf() {
             { punkte: [[108, 50], [300, 26], [64, 128]], knoten: [6, 0, 5] },
             { punkte: [[196, 190], [430, 196], [64, 128]], knoten: [4, 3, 5] },
           ]}
+        />
+      </section>
+
+      <FadenDivider className="mt-xl" />
+
+      {/* Bilderstrecke 2 — Anschauungsmodus mit Hotspots, direkt vor dem Netz */}
+      <section
+        className="mt-xl max-w-5xl"
+        aria-label="Bilderstrecke: Womit die Akteurin verwoben ist"
+      >
+        <h2 className="text-headline-lg text-on-surface">
+          Womit die Akteurin verwoben ist
+        </h2>
+        <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
+          Bevor wir das Netz der Akteurin selbst betrachten: drei Bilder, die
+          sichtbar machen, was sonst verborgen bleibt — Material, Energie und die
+          Menschen dahinter. Klick ein Bild an und geh den leuchtenden Punkten nach.
+        </p>
+        <BilderAnschauung
+          className="mt-lg"
+          bilder={BILDER_NETZ}
+          spurKey="vorhang-auf:bildnetz"
         />
       </section>
 
