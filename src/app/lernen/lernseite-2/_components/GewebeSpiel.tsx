@@ -1,6 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import {
+  leseSpurenIndices,
+  loescheSpuren,
+  merkeSpur,
+  SPUR_EVENT,
+  zieheSpurenAusCloud,
+} from "../_lib/spuren";
 
 /**
  * GewebeSpiel — das Kopf-Muster des Hubs als kleines interaktives Spiel.
@@ -11,8 +18,11 @@ import { useState } from "react";
  * Theme-Farben (tertiary / primary / secondary, sanfte Deckkraft). So webt
  * man spielerisch sein eigenes Muster in den Titel der Seite.
  *
- * Rein dekorativ-spielerisch: kein Tracking, kein Zustand ausserhalb der
- * Seite. Nur Theme-Tokens, deterministische Koordinaten.
+ * Das gewobene Muster BLEIBT: Jeder Punkt wird als Spur gemerkt
+ * (_lib/spuren.ts — lokal, anonymer Zähler, Pro-Nutzer-Cloud-Spiegel) und
+ * beim Wiederkommen wiederhergestellt, auch geräteübergreifend. Abwählen
+ * löscht die einzelne Spur wieder. Nur Theme-Tokens, deterministische
+ * Koordinaten.
  */
 
 const VB_W = 720;
@@ -37,8 +47,29 @@ const PUNKTE: [number, number][] = [
 /** Füllfarben der Felder, rotierend (Theme-Tokens). */
 const FARBEN = ["fill-tertiary", "fill-primary", "fill-secondary"] as const;
 
-export default function GewebeSpiel({ className = "" }: { className?: string }) {
+export default function GewebeSpiel({
+  className = "",
+  spurKey = "lernseite-2:gewebe",
+}: {
+  className?: string;
+  /** Spur-Präfix fürs Merken des Musters. */
+  spurKey?: string;
+}) {
   const [aktiv, setAktiv] = useState<Set<number>>(new Set());
+
+  // Wiederherstellen: das Muster exakt aus dem Spuren-Bestand übernehmen
+  // (beim Laden zuerst lokal, dann Cloud-Union via SPUR_EVENT). Exakt statt
+  // Union, damit auch das Abwählen eines Punktes bestehen bleibt.
+  useEffect(() => {
+    function restore() {
+      const idx = leseSpurenIndices(spurKey).filter((i) => i >= 0 && i < PUNKTE.length);
+      setAktiv(new Set(idx));
+    }
+    restore();
+    void zieheSpurenAusCloud();
+    window.addEventListener(SPUR_EVENT, restore);
+    return () => window.removeEventListener(SPUR_EVENT, restore);
+  }, [spurKey]);
 
   function toggle(i: number) {
     setAktiv((prev) => {
@@ -47,6 +78,9 @@ export default function GewebeSpiel({ className = "" }: { className?: string }) 
       else nx.add(i);
       return nx;
     });
+    // Spur setzen bzw. gezielt wieder löschen (id-genau) — lokal + Cloud.
+    if (aktiv.has(i)) loescheSpuren(`${spurKey}:${i}`);
+    else merkeSpur(`${spurKey}:${i}`);
   }
 
   const n = PUNKTE.length;

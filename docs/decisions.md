@@ -10,6 +10,19 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-16 — Gewebe-Spiel bleibt gespeichert
+
+**Nachfrage Christof:** Das gewobene Muster im Hub-Kopf bleibt jetzt erhalten.
+`GewebeSpiel` hängt am Spuren-Gedächtnis (`_lib/spuren.ts`, Präfix
+`lernseite-2:gewebe`): Anwählen setzt eine Spur (lokal + anonymer Zähler +
+Pro-Nutzer-Cloud-Spiegel), Abwählen löscht **gezielt die eine Spur**
+(`loescheSpuren` mit id-genauem Präfix). Wiederherstellung beim Laden **exakt**
+(Set statt Union), damit auch Abwahlen bestehen bleiben; Cloud-Pull via
+SPUR_EVENT wie überall — das Muster kommt auch geräteübergreifend zurück.
+Die Punkte zählen im Aktivitätsnetz als «Knoten» mit (bewusst: es sind
+bewusste Interaktionen); im Orakel-Bereichs-Vergleich tauchen sie nicht auf
+(kein BEREICHE-Eintrag).
+
 ## 2026-07-16 — Hub: neuer Partnerschafts-Text + Gewebe-Spiel im Kopf
 
 **Auftrag Christof:** Für den Hub von Lernseite 2 einen tragenden Text zur
