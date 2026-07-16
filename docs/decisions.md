@@ -10,6 +10,27 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-16 — Hub: neuer Partnerschafts-Text + Gewebe-Spiel im Kopf
+
+**Auftrag Christof:** Für den Hub von Lernseite 2 einen tragenden Text zur
+«ganz neuen Partnerschaft» (5–10 Sätze) und das Kopf-Muster als interaktives
+Spiel.
+
+- **Text (7 Sätze, zwei Absätze, direkt in `lernseite-2/page.tsx`):** Bezug auf
+  die Komplexität einer Welt in Transformation, auf berufliche wie private
+  Lebenswelt, und auf den Kern: keine Partnerschaft mit einem blossen Werkzeug,
+  sondern mit einer Technologie, die interaktiver und sprachlicher ist als
+  alles bisher Gekannte («Sie spricht unsere Sprache, sie antwortet, sie
+  schlägt vor, sie handelt»). Schluss: Partnerschaft verlangt Kennen des
+  Gegenübers — und wird davon geprägt, wie wir sie gestalten. Die kurze
+  `description` in `unit.ts` bleibt unverändert (für Karten-Kontexte).
+- **Neues `GewebeSpiel.tsx`** ersetzt das statische `GewebeBand` im Hub-Kopf:
+  ein Zickzack-Band aus 12 Punkten (Dreiecksstreifen, 10 Felder). Punkte sind
+  an-/abwählbar (Toggle); sind alle drei Ecken eines Feldes aktiv, füllt es
+  sich — die Felder rotierend in **tertiary / primary / secondary** (Deckkraft
+  0.16). Rein spielerisch, kein Tracking. `GewebeBand` bleibt in `Gewebe.tsx`
+  (aktuell ungenutzt).
+
 ## 2026-07-13 — Erste Bilderstrecke auf denselben Anschauungsmodus umgestellt
 
 **Feedback Christof:** Die «Bilder der Vorstellung» sollen gleich funktionieren

@@ -4,11 +4,11 @@ import AppLayout from "@/components/layout/AppLayout";
 import { unit } from "@/config/unit";
 import {
   FadenVertikal,
-  GewebeBand,
   Knoten,
   Signatur,
   type SignaturVariante,
 } from "./_components/Gewebe";
+import GewebeSpiel from "./_components/GewebeSpiel";
 
 /**
  * Hub von Lernseite 2 («Eine ganz neue Partnerschaft»).
@@ -39,10 +39,28 @@ export default function Lernseite2Hub() {
           Lernseite 2 · Mensch &amp; KI
         </p>
         <h1 className="mt-sm text-headline-xl text-on-surface">{mod.title}</h1>
-        <p className="mt-sm max-w-3xl text-body-lg text-on-surface-variant">
-          {mod.description}
-        </p>
-        <GewebeBand className="mt-lg" />
+        <div className="mt-sm max-w-3xl space-y-sm text-body-lg text-on-surface-variant">
+          <p>
+            Die Welt ist in Transformation: Arbeit, Wissen, Kommunikation —
+            vieles ordnet sich gleichzeitig neu, und die Zusammenhänge werden
+            komplexer, als eine Einzelne sie überblicken kann. Mitten in diesem
+            Umbruch tritt eine Technologie auf, die anders ist als alles, was
+            wir bisher kannten: Sie spricht unsere Sprache, sie antwortet, sie
+            schlägt vor, sie handelt. Werkzeuge haben wir benutzt und wieder
+            weggelegt — dieses Gegenüber aber begleitet uns: im Beruf, wo es
+            mitschreibt, mitrechnet und mitentwirft, und im Privaten, wo es
+            erklärt, übersetzt und zuhört. Damit beginnt etwas, das man eine
+            ganz neue Partnerschaft nennen kann.
+          </p>
+          <p>
+            Eine Partnerschaft ist kein blindes Vertrauen: Sie verlangt, das
+            Gegenüber zu kennen — seine Stärken, seine Grenzen und das Netz,
+            an dem es hängt. Genau dazu lädt dieses Modul ein: hinschauen,
+            einordnen, den eigenen Umgang finden. Denn wie jede Partnerschaft
+            wird auch diese davon geprägt, wie wir sie gestalten.
+          </p>
+        </div>
+        <GewebeSpiel className="mt-lg" />
       </header>
 
       <section className="mt-xl" aria-label="Themen des Moduls">
