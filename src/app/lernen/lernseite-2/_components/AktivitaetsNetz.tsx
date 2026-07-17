@@ -13,9 +13,10 @@ import {
  * Aktivität misst und rechnerisch-futuristisch darstellt:
  *   · Knoten        — angeklickte/gelesene Stationen (alle Landschaften)
  *   · Kombinationen — eingeloggte Verbindungen zwischen Knoten
- *   · Bilder        — angeschaute Bilder der Bilderstrecke
+ *   · Bilder        — angeschaute Bilder der Bilderstrecken
+ *   · Videos        — geschaute Video-Impulse
  *
- * Drei farbige Naben strahlen vom Kern aus; jede trägt so viele Satelliten,
+ * Vier farbige Naben strahlen vom Kern aus; jede trägt so viele Satelliten,
  * wie die Kennzahl zählt (gedeckelt, die Zahl bleibt exakt). Die Werte kommen
  * live aus dem lokalen Spuren-Bestand (SPUR_EVENT) — dieselbe Komponente wird
  * auf der Auftakt-Seite (schwebend) und zuoberst im Orakel gezeigt.
@@ -25,8 +26,8 @@ import {
  */
 
 const VB_W = 360;
-const VB_H = 232;
-const CORE = { x: 176, y: 116 };
+const VB_H = 252;
+const CORE = { x: 176, y: 118 };
 const CAP = 16; // sichtbare Satelliten je Nabe (Zahl bleibt exakt)
 
 type Nabe = {
@@ -43,9 +44,10 @@ type Nabe = {
 };
 
 const NABEN: Nabe[] = [
-  { key: "knoten", label: "Knoten", hx: 176, hy: 40, dir: -90, fill: "fill-tertiary", stroke: "stroke-tertiary", text: "text-tertiary" },
-  { key: "kombinationen", label: "Kombinationen", hx: 70, hy: 176, dir: 150, fill: "fill-primary", stroke: "stroke-primary", text: "text-primary" },
-  { key: "bilder", label: "Bilder", hx: 282, hy: 176, dir: 30, fill: "fill-secondary", stroke: "stroke-secondary", text: "text-secondary" },
+  { key: "knoten", label: "Knoten", hx: 176, hy: 38, dir: -90, fill: "fill-tertiary", stroke: "stroke-tertiary", text: "text-tertiary" },
+  { key: "kombinationen", label: "Kombinationen", hx: 62, hy: 118, dir: 180, fill: "fill-primary", stroke: "stroke-primary", text: "text-primary" },
+  { key: "bilder", label: "Bilder", hx: 290, hy: 118, dir: 0, fill: "fill-secondary", stroke: "stroke-secondary", text: "text-secondary" },
+  { key: "videos", label: "Videos", hx: 176, hy: 198, dir: 90, fill: "fill-on-surface", stroke: "stroke-on-surface", text: "text-on-surface" },
 ];
 
 const RAD = Math.PI / 180;
@@ -76,7 +78,12 @@ export default function AktivitaetsNetz({
   schwebend?: boolean;
   className?: string;
 }) {
-  const [z, setZ] = useState<AktivitaetsZahlen>({ knoten: 0, kombinationen: 0, bilder: 0 });
+  const [z, setZ] = useState<AktivitaetsZahlen>({
+    knoten: 0,
+    kombinationen: 0,
+    bilder: 0,
+    videos: 0,
+  });
 
   useEffect(() => {
     const lesen = () => setZ(zaehleAktivitaet());
@@ -86,7 +93,7 @@ export default function AktivitaetsNetz({
     return () => window.removeEventListener(SPUR_EVENT, lesen);
   }, []);
 
-  const gesamt = z.knoten + z.kombinationen + z.bilder;
+  const gesamt = z.knoten + z.kombinationen + z.bilder + z.videos;
 
   return (
     <section
@@ -127,7 +134,7 @@ export default function AktivitaetsNetz({
           viewBox={`0 0 ${VB_W} ${VB_H}`}
           className="block w-full"
           role="img"
-          aria-label={`Netz mit ${z.knoten} Knoten, ${z.kombinationen} Kombinationen, ${z.bilder} Bildern.`}
+          aria-label={`Netz mit ${z.knoten} Knoten, ${z.kombinationen} Kombinationen, ${z.bilder} Bildern, ${z.videos} Videos.`}
         >
           {/* Verbindungen Kern → Naben */}
           {NABEN.map((nb) => (

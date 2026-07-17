@@ -6,6 +6,7 @@ import KnotenLandschaft from "../_components/KnotenLandschaft";
 import StoryGewebe from "../_components/StoryGewebe";
 import BilderAnschauung, { type AnschauBild } from "../_components/BilderAnschauung";
 import AktivitaetsNetzFloat from "../_components/AktivitaetsNetzFloat";
+import VideoImpuls from "../_components/VideoImpuls";
 
 /**
  * Thema 01 — «Vorhang auf: eine neue Akteurin».
@@ -322,6 +323,14 @@ export default function Lernseite2VorhangAuf() {
       {/* Aktivitätsnetz als mitwanderndes Symbol (schwebt unten rechts, geht
           beim Klick zum vollen Netz auf) */}
       <AktivitaetsNetzFloat />
+
+      {/* Video-Impuls zum Einstieg — YouTube-ID folgt (Prop videoId) */}
+      <VideoImpuls
+        className="mt-xl"
+        spurId="video:vorhang-auf"
+        titel="Vorhang auf — die neue Akteurin"
+        beschreibung="Ein kurzer Input zum Auftakt: Was ist da auf die Bühne getreten — und warum passt es in keine unserer alten Schubladen?"
+      />
 
       {/* 1 — Die KI-Story als lineare Knotenlandschaft mit Einfluss-Bögen */}
       <section className="mt-xl max-w-5xl" aria-label="Die KI-Story">

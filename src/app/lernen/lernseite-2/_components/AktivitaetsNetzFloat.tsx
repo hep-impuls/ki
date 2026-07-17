@@ -19,12 +19,13 @@ import AktivitaetsNetz from "./AktivitaetsNetz";
  * platziert (bottom-20), damit nichts überlappt.
  */
 
-/** Mini-Netz fürs Symbol: Kern + drei farbige Punkte, die pulsieren. */
+/** Mini-Netz fürs Symbol: Kern + vier farbige Punkte, die pulsieren. */
 function MiniNetz({ zahlen }: { zahlen: AktivitaetsZahlen }) {
   const punkte = [
-    { x: 20, y: 7, cls: "fill-tertiary", aktiv: zahlen.knoten > 0 },
-    { x: 33, y: 28, cls: "fill-secondary", aktiv: zahlen.bilder > 0 },
-    { x: 7, y: 28, cls: "fill-primary", aktiv: zahlen.kombinationen > 0 },
+    { x: 20, y: 6, cls: "fill-tertiary", aktiv: zahlen.knoten > 0 },
+    { x: 34, y: 19, cls: "fill-secondary", aktiv: zahlen.bilder > 0 },
+    { x: 6, y: 19, cls: "fill-primary", aktiv: zahlen.kombinationen > 0 },
+    { x: 20, y: 33, cls: "fill-on-surface", aktiv: zahlen.videos > 0 },
   ];
   return (
     <svg viewBox="0 0 40 40" className="h-7 w-7" aria-hidden>
@@ -59,7 +60,12 @@ function MiniNetz({ zahlen }: { zahlen: AktivitaetsZahlen }) {
 
 export default function AktivitaetsNetzFloat() {
   const [offen, setOffen] = useState(false);
-  const [z, setZ] = useState<AktivitaetsZahlen>({ knoten: 0, kombinationen: 0, bilder: 0 });
+  const [z, setZ] = useState<AktivitaetsZahlen>({
+    knoten: 0,
+    kombinationen: 0,
+    bilder: 0,
+    videos: 0,
+  });
 
   useEffect(() => {
     const lesen = () => setZ(zaehleAktivitaet());
@@ -78,7 +84,7 @@ export default function AktivitaetsNetzFloat() {
     return () => window.removeEventListener("keydown", onKey);
   }, [offen]);
 
-  const gesamt = z.knoten + z.kombinationen + z.bilder;
+  const gesamt = z.knoten + z.kombinationen + z.bilder + z.videos;
 
   return (
     <>

@@ -32,6 +32,7 @@ const BEREICHE: { prefix: string; label: string; total: number; href: string }[]
   { prefix: "vorhang-auf:netz", label: "Das Netz der Akteurin", total: 7, href: "/lernen/lernseite-2/vorhang-auf" },
   { prefix: "philosophische-perspektive:weisheit", label: "Epochen-Weisheiten", total: 5, href: "/lernen/lernseite-2/philosophische-perspektive" },
   { prefix: "philosophische-perspektive:baustein", label: "Bausteine im Zeitstrahl", total: 15, href: "/lernen/lernseite-2/philosophische-perspektive" },
+  { prefix: "video:", label: "Video-Impulse", total: 3, href: "/lernen/lernseite-2" },
 ];
 
 const GESAMT_TOTAL = BEREICHE.reduce((s, b) => s + b.total, 0);

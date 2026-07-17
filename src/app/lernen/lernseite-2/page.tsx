@@ -9,6 +9,7 @@ import {
   type SignaturVariante,
 } from "./_components/Gewebe";
 import GewebeSpiel from "./_components/GewebeSpiel";
+import VideoImpuls from "./_components/VideoImpuls";
 
 /**
  * Hub von Lernseite 2 («Eine ganz neue Partnerschaft»).
@@ -62,6 +63,14 @@ export default function Lernseite2Hub() {
         </div>
         <GewebeSpiel className="mt-lg" />
       </header>
+
+      {/* Video-Impuls zum Einstieg — YouTube-ID folgt (Prop videoId) */}
+      <VideoImpuls
+        className="mt-xl"
+        spurId="video:hub"
+        titel="Eine ganz neue Partnerschaft — worum es geht"
+        beschreibung="Ein kurzer Einstieg ins Modul: Was ist da aufgetreten, und warum lohnt es sich, genauer hinzuschauen?"
+      />
 
       <section className="mt-xl" aria-label="Themen des Moduls">
         <div className="mb-lg">

@@ -10,6 +10,28 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-17 — Video-Impulse (Hub, Vorhang auf, Philosophie) + Videos im Aktivitätsnetz
+
+**Auftrag Christof:** Auf Startseite (Hub), «Vorhang auf» und «Philosophische
+Perspektive» je ein kurzes Erklär-Video nach Einstiegstext bzw. -muster; im
+Orakel sichtbar, ob geschaut; zählt zur Aktivität.
+
+- **Neue `VideoImpuls.tsx`:** datenschutzfreundliche **Zwei-Klick-Lösung**
+  (Schulkontext) — beim Laden wird nichts von YouTube geladen, nur eine eigene
+  Vorschau-Fläche; erst der Play-Klick lädt den iframe von
+  `youtube-nocookie.com` und setzt die Spur. Ohne `videoId`-Prop zeigt die
+  Komponente einen deutlichen Platzhalter («Video folgt», Play deaktiviert) —
+  **die drei YouTube-IDs trägt Christof später als Prop ein** (je eine Zeile
+  in den drei page.tsx).
+- **Platzierung:** Hub nach Text + Gewebe-Spiel (`video:hub`), Vorhang auf nach
+  dem Header (`video:vorhang-auf`), Philosophie nach dem Epochen-Muster
+  (`video:philosophie`).
+- **Aktivität:** `zaehleAktivitaet()` kennt neu die Kategorie **videos**
+  (`video:`-Präfix); das Aktivitätsnetz hat eine **vierte Nabe «Videos»**
+  (fill-on-surface, unten), das Mini-Symbol einen vierten Puls-Punkt.
+- **Orakel:** neue Bereichs-Zeile «Video-Impulse» (Präfix `video:`, total 3)
+  → Gesamt-Total 46 → **49**.
+
 ## 2026-07-16 — Gewebe-Spiel bleibt gespeichert
 
 **Nachfrage Christof:** Das gewobene Muster im Hub-Kopf bleibt jetzt erhalten.

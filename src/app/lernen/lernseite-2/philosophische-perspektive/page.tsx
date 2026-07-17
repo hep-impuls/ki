@@ -3,6 +3,7 @@ import ActivityTracker from "@/components/ActivityTracker";
 import AppLayout from "@/components/layout/AppLayout";
 import FadenNetz from "../_components/FadenNetz";
 import { Signatur } from "../_components/Gewebe";
+import VideoImpuls from "../_components/VideoImpuls";
 import SchablonenZeitstrahl from "./_components/SchablonenZeitstrahl";
 
 /**
@@ -144,6 +145,14 @@ export default function Lernseite2PhilosophischePerspektive() {
             ziel: "epoche-jetzt",
           },
         ]}
+      />
+
+      {/* Video-Impuls nach dem Einstiegsmuster — YouTube-ID folgt (Prop videoId) */}
+      <VideoImpuls
+        className="mt-xl"
+        spurId="video:philosophie"
+        titel="Philosophie als Orientierung — fünf Epochen, vier Schablonen"
+        beschreibung="Ein kurzer Input, bevor du in den Zeitstrahl eintauchst: Wie hat Philosophie schon viermal Orientierung gestiftet, wenn Technik die Welt verunsicherte?"
       />
 
       <section className="mt-xl max-w-3xl">

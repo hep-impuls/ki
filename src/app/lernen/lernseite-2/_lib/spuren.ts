@@ -231,23 +231,28 @@ export interface AktivitaetsZahlen {
   knoten: number;
   /** Eingeloggte Verbindungen (Kombinationen aus zwei Knoten). */
   kombinationen: number;
-  /** Angeschaute Bilder der Bilderstrecke. */
+  /** Angeschaute Bilder der Bilderstrecken. */
   bilder: number;
+  /** Geschaute Video-Impulse. */
+  videos: number;
 }
 
 /**
  * Aktivitäts-Kennzahlen aus dem lokalen Spuren-Bestand — fürs Aktivitätsnetz.
  * Kanten-Spuren (`…:kanten-…`) zählen als Kombinationen, Bild-Spuren
- * (`…:bild:…`) als angeschaute Bilder, alles Übrige als Knoten.
+ * (`…:bild…`) als angeschaute Bilder, Video-Spuren (`video:…`) als
+ * geschaute Videos, alles Übrige als Knoten.
  */
 export function zaehleAktivitaet(): AktivitaetsZahlen {
   let knoten = 0;
   let kombinationen = 0;
   let bilder = 0;
+  let videos = 0;
   for (const s of lesen()) {
-    if (s.id.includes(":kanten-")) kombinationen++;
+    if (s.id.startsWith("video:")) videos++;
+    else if (s.id.includes(":kanten-")) kombinationen++;
     else if (s.id.includes(":bild")) bilder++;
     else knoten++;
   }
-  return { knoten, kombinationen, bilder };
+  return { knoten, kombinationen, bilder, videos };
 }
