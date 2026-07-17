@@ -10,22 +10,39 @@ import GewebeSpiel from "../_components/GewebeSpiel";
 import VideoImpuls from "../_components/VideoImpuls";
 
 /**
- * Das Muster dieser Seite: ein sich öffnender Fächer — der Vorhang geht auf.
- * Elliptischer Bogen, Punkte alternierend aussen/innen (Dreiecksstreifen
- * fürs GewebeSpiel).
+ * Das Muster dieser Seite: die Auftritts-Signatur (oben rechts im Kopf),
+ * gross nachgebaut — ein neuer Knoten tritt ins Netz, Fäden laufen vom
+ * Zentrum zu sechs Aussenpunkten (plus zwei feine Aussenkanten, wie in der
+ * Signatur). Index 0 = Zentrum (Akzent), 1–6 = Aussenpunkte im Umlauf.
  */
-const FAECHER: [number, number][] = [
-  [30, 150],
-  [189, 135],
-  [93, 81],
-  [254, 110],
-  [258, 38],
-  [360, 100],
-  [462, 38],
-  [466, 110],
-  [627, 81],
-  [531, 135],
-  [690, 150],
+const AUFTRITT_PUNKTE: [number, number][] = [
+  [387, 139],
+  [198, 58],
+  [378, 23],
+  [576, 46],
+  [585, 226],
+  [405, 261],
+  [180, 215],
+];
+const AUFTRITT_KANTEN: [number, number][] = [
+  [0, 1],
+  [0, 2],
+  [0, 3],
+  [0, 4],
+  [0, 5],
+  [0, 6],
+];
+const AUFTRITT_FEIN: [number, number][] = [
+  [1, 2],
+  [3, 4],
+];
+const AUFTRITT_FELDER: number[][] = [
+  [0, 1, 2],
+  [0, 2, 3],
+  [0, 3, 4],
+  [0, 4, 5],
+  [0, 5, 6],
+  [0, 6, 1],
 ];
 
 /**
@@ -356,13 +373,17 @@ export default function Lernseite2VorhangAuf() {
         </div>
       </header>
 
-      {/* Das Muster der Seite — der Vorhang öffnet sich als Fächer,
-          interaktiv wie das Gewebe-Spiel der Startseite */}
+      {/* Das Muster der Seite — die Auftritts-Signatur gross und interaktiv,
+          wie das Gewebe-Spiel der Startseite */}
       <GewebeSpiel
         className="mt-xl max-w-5xl"
         spurKey="vorhang-auf:gewebe"
-        punkte={FAECHER}
-        hoehe={168}
+        punkte={AUFTRITT_PUNKTE}
+        kanten={AUFTRITT_KANTEN}
+        kantenFein={AUFTRITT_FEIN}
+        felder={AUFTRITT_FELDER}
+        akzent={0}
+        hoehe={285}
       />
 
       {/* Aktivitätsnetz als mitwanderndes Symbol (schwebt unten rechts, geht

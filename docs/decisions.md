@@ -23,10 +23,13 @@ Verzicht auf Features) — hier festhalten.
   «Knotenteppiche» — korrekte Bezeichnung Quipus verwendet; passt zum
   Faden-Leitmotiv).
 - **Grosses interaktives Seiten-Muster nach dem Text** (wie auf der
-  Startseite): `GewebeSpiel` generalisiert (Props `punkte`, `hoehe`) und auf
-  vorhang-auf mit einem **Fächer** eingesetzt — elliptischer Bogen, Punkte
-  alternierend aussen/innen, «der Vorhang öffnet sich». Eigener Spur-Key
-  `vorhang-auf:gewebe`, Persistenz wie beim Hub-Band.
+  Startseite): `GewebeSpiel` generalisiert — Props `punkte`, `kanten`,
+  `kantenFein`, `felder`, `akzent`, `hoehe`; ohne Topologie-Props gilt der
+  Zickzack-Streifen des Hubs. Auf vorhang-auf ist es **exakt die
+  Auftritts-Signatur, gross nachgebaut** (Feedback Christof mit Screenshot,
+  ersetzt den ersten Fächer-Entwurf): Zentrum mit sechs Strahlen, zwei feine
+  Aussenkanten, sechs Sektor-Felder, Zentrum als Akzent (tertiärer Punkt mit
+  Ring). Eigener Spur-Key `vorhang-auf:gewebe`, Persistenz wie beim Hub-Band.
 - **Aufgaben genauer beschrieben:** alle fünf Sektionen von vorhang-auf haben
   jetzt einen «Deine Aufgabe: …»-Block (was tun, wie, Ziel); ebenso die
   Epochen-Einladung auf der Philosophie-Seite.
