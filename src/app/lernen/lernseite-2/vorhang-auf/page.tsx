@@ -6,7 +6,27 @@ import KnotenLandschaft from "../_components/KnotenLandschaft";
 import StoryGewebe from "../_components/StoryGewebe";
 import BilderAnschauung, { type AnschauBild } from "../_components/BilderAnschauung";
 import AktivitaetsNetzFloat from "../_components/AktivitaetsNetzFloat";
+import GewebeSpiel from "../_components/GewebeSpiel";
 import VideoImpuls from "../_components/VideoImpuls";
+
+/**
+ * Das Muster dieser Seite: ein sich öffnender Fächer — der Vorhang geht auf.
+ * Elliptischer Bogen, Punkte alternierend aussen/innen (Dreiecksstreifen
+ * fürs GewebeSpiel).
+ */
+const FAECHER: [number, number][] = [
+  [30, 150],
+  [189, 135],
+  [93, 81],
+  [254, 110],
+  [258, 38],
+  [360, 100],
+  [462, 38],
+  [466, 110],
+  [627, 81],
+  [531, 135],
+  [690, 150],
+];
 
 /**
  * Thema 01 — «Vorhang auf: eine neue Akteurin».
@@ -310,15 +330,40 @@ export default function Lernseite2VorhangAuf() {
             <h1 className="mt-sm text-headline-xl text-on-surface">
               Vorhang auf — eine neue Akteurin
             </h1>
-            <p className="mt-sm max-w-3xl text-body-lg text-on-surface-variant">
-              Mit KI ist eine neue Art von Akteurin aufgetreten — weder ein
-              klassisches Werkzeug noch eine Person. Drei Knotenlandschaften
-              zum Verbinden: ihre Geschichte, ihre Merkmale, ihr Netz.
-            </p>
+            <div className="mt-sm max-w-3xl space-y-sm text-body-lg text-on-surface-variant">
+              <p>
+                Auf dieser Seite veranschaulichen wir die KI und ihre
+                Geschichte. Denn die Vorstellung, Dingen Denken oder Leben
+                einzuhauchen, ist viel älter als jeder Computer: Sie ist eine
+                alte Phantasie des Menschen, die ihn umtreibt — und die er
+                immer wieder in Kunstprodukten sichtbar gemacht hat, vom Golem
+                über den Homunkulus bis zu Frankensteins Geschöpf.
+              </p>
+              <p>
+                Daneben läuft eine zweite, technische Spur: Seit Jahrhunderten
+                lagert der Mensch kognitive Leistungen in Dinge aus — das
+                Rechnen in Maschinen wie Leibniz&apos; Rechenrad, das Zählen
+                und Erinnern in die Knotenschnüre (Quipus) der Andenkulturen.
+                In der heutigen KI laufen beide Spuren zusammen: die erzählte
+                Phantasie vom belebten Ding und die reale Auslagerung des
+                Denkens. Die Landschaften und Bilderstrecken dieser Seite
+                folgen dieser doppelten Spur — bis zum Netz, in dem die neue
+                Akteurin hängt.
+              </p>
+            </div>
           </div>
           <Signatur variante="auftritt" className="hidden flex-shrink-0 sm:block" />
         </div>
       </header>
+
+      {/* Das Muster der Seite — der Vorhang öffnet sich als Fächer,
+          interaktiv wie das Gewebe-Spiel der Startseite */}
+      <GewebeSpiel
+        className="mt-xl max-w-5xl"
+        spurKey="vorhang-auf:gewebe"
+        punkte={FAECHER}
+        hoehe={168}
+      />
 
       {/* Aktivitätsnetz als mitwanderndes Symbol (schwebt unten rechts, geht
           beim Klick zum vollen Netz auf) */}
@@ -337,8 +382,14 @@ export default function Lernseite2VorhangAuf() {
         <h2 className="text-headline-lg text-on-surface">Die KI-Story</h2>
         <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
           Vom Traum, Dingen Leben einzuhauchen, bis zur Gegenwart: zwölf
-          Stationen. Die Geschichte ist linear — aber ihre Vorstellungen
-          beeinflussen einander quer durch die Zeit.
+          Stationen, deren Vorstellungen einander quer durch die Zeit
+          beeinflussen. <strong>Deine Aufgabe:</strong> Drei Stationen sind per
+          Zufall eingeblendet — hole dir in der Auswahl nach und nach alle
+          übrigen dazu. Tippe jeden Punkt im Muster an, um seine Geschichte zu
+          lesen; im Gewebe kannst du die Punkte auch verschieben, das Netz
+          federt mit. Wechsle auf «Zeitlich», um die gewählten Stationen als
+          Perlenschnur von früher nach heute zu sehen. Ziel: alle zwölf
+          Geschichten gelesen.
         </p>
         <StoryGewebe
           className="mt-lg"
@@ -483,9 +534,13 @@ export default function Lernseite2VorhangAuf() {
       <section className="mt-xl max-w-5xl" aria-label="Bilderstrecke: Bilder der Vorstellung">
         <h2 className="text-headline-lg text-on-surface">Bilder der Vorstellung</h2>
         <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
-          Lange bevor es KI gab, hat sich die Menschheit ausgemalt, Dingen Leben
-          einzuhauchen. Klick ein Bild an und geh den leuchtenden Punkten nach —
-          jeder erzählt etwas.
+          Lange bevor es KI gab, hat sich die Menschheit ausgemalt, Dingen
+          Leben einzuhauchen — und hat diese Phantasie in Kunstwerken sichtbar
+          gemacht. <strong>Deine Aufgabe:</strong> Klicke jedes der sechs
+          Bilder an — es öffnet sich gross im Anschauungsmodus. Tippe dort die
+          leuchtenden, nummerierten Punkte an: Jeder erzählt ein Detail des
+          Bildes. Mit den Pfeilen (oder den Pfeiltasten) blätterst du zum
+          nächsten Bild. Ziel: alle sechs Bilder samt ihren Punkten.
         </p>
         <BilderAnschauung
           className="mt-lg"
@@ -503,7 +558,13 @@ export default function Lernseite2VorhangAuf() {
         </h2>
         <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
           Was ist da eigentlich aufgetreten? Sieben Eigenschaften — nicht eine
-          allein, ihre Bündelung macht das Neue aus.
+          allein, ihre Bündelung macht das Neue aus.{" "}
+          <strong>Deine Aufgabe:</strong> Tippe die sieben Punkte im Geflecht
+          an — jeder wird beschriftet und zeigt unten seine Definition. Tippe
+          auch auf die Verbindungslinien: Das loggt die Verbindung ein und
+          öffnet gleich beide Enden. Zwischen besuchten Punkten füllen sich
+          die Flächen. Ziel: alle sieben Merkmale offen — dann erscheint unter
+          dem Muster das Fazit.
         </p>
         <KnotenLandschaft
           className="mt-lg"
@@ -592,8 +653,11 @@ export default function Lernseite2VorhangAuf() {
         </h2>
         <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
           Bevor wir das Netz der Akteurin selbst betrachten: drei Bilder, die
-          sichtbar machen, was sonst verborgen bleibt — Material, Energie und die
-          Menschen dahinter. Klick ein Bild an und geh den leuchtenden Punkten nach.
+          sichtbar machen, was sonst verborgen bleibt — Material, Energie und
+          die Menschen dahinter. <strong>Deine Aufgabe:</strong> Öffne alle
+          drei Bilder im Anschauungsmodus und geh in jedem den drei leuchtenden
+          Punkten nach — sie verbinden das historische Bild mit der
+          Infrastruktur der heutigen KI.
         </p>
         <BilderAnschauung
           className="mt-lg"
@@ -609,7 +673,11 @@ export default function Lernseite2VorhangAuf() {
         <h2 className="text-headline-lg text-on-surface">Das Netz der Akteurin</h2>
         <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
           Die neue Akteurin steht nie allein: Wer mit ihr spricht, zieht an
-          einem ganzen Geflecht — und sie ist darin ein Knoten unter Knoten.
+          einem ganzen Geflecht — und sie ist darin ein Knoten unter Knoten.{" "}
+          <strong>Deine Aufgabe:</strong> Tippe alle sieben Knoten an und lies,
+          wer oder was mitzieht — oder tippe auf eine Verbindungslinie, das
+          öffnet gleich beide Enden. Ziel: alle sieben besucht — dann erscheint
+          das Fazit.
         </p>
         <KnotenLandschaft
           className="mt-lg"

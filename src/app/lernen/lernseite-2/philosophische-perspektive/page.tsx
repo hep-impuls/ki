@@ -73,7 +73,7 @@ export default function Lernseite2PhilosophischePerspektive() {
         hoehe={210}
         svgKlasse="aspect-[720/290] sm:aspect-[720/210]"
         spurKey="philosophische-perspektive:weisheit"
-        einladung="Fahr der Zeitlinie nach — von der Antike bis heute. Jede Epoche zeigt ihre Schablone; unter der Linie wächst mit jedem Schritt die Silhouette der Geschichte."
+        einladung="Deine Aufgabe: Fahr der Zeitlinie mit Maus oder Finger nach — von der Antike bis heute — oder tippe die fünf Epochen-Punkte direkt an. Erreichst du einen Punkt, öffnet sich seine Epochen-Weisheit hier unten und bleibt stehen; unter der Linie wächst mit jedem Schritt die Silhouette der Geschichte. Ziel: alle fünf Epochen einsammeln, dann in den Zeitstrahl darunter eintauchen."
         sprungLabel="Zur Epoche im Zeitstrahl"
         straenge={[
           { d: "M60 176 C110 162 160 152 210 140" },

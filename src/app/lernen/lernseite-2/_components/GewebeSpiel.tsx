@@ -26,10 +26,9 @@ import {
  */
 
 const VB_W = 720;
-const VB_H = 132;
 
-/** Zickzack-Band: gerade Indizes unten, ungerade oben — leicht unregelmässig. */
-const PUNKTE: [number, number][] = [
+/** Zickzack-Band (Default, Hub): gerade Indizes unten, ungerade oben. */
+const BAND: [number, number][] = [
   [26, 82],
   [80, 30],
   [148, 96],
@@ -50,11 +49,19 @@ const FARBEN = ["fill-tertiary", "fill-primary", "fill-secondary"] as const;
 export default function GewebeSpiel({
   className = "",
   spurKey = "lernseite-2:gewebe",
+  punkte = BAND,
+  hoehe = 132,
 }: {
   className?: string;
   /** Spur-Präfix fürs Merken des Musters. */
   spurKey?: string;
+  /** Punktfolge des Musters (Dreiecksstreifen i, i+1, i+2) — jede Seite
+   *  kann ihre eigene Form tragen (Band, Fächer, …). */
+  punkte?: [number, number][];
+  /** viewBox-Höhe (Breite fix 720). */
+  hoehe?: number;
 }) {
+  const PUNKTE = punkte;
   const [aktiv, setAktiv] = useState<Set<number>>(new Set());
 
   // Wiederherstellen: das Muster exakt aus dem Spuren-Bestand übernehmen
@@ -69,7 +76,7 @@ export default function GewebeSpiel({
     void zieheSpurenAusCloud();
     window.addEventListener(SPUR_EVENT, restore);
     return () => window.removeEventListener(SPUR_EVENT, restore);
-  }, [spurKey]);
+  }, [spurKey, PUNKTE.length]);
 
   function toggle(i: number) {
     setAktiv((prev) => {
@@ -89,7 +96,7 @@ export default function GewebeSpiel({
   return (
     <div className={className}>
       <svg
-        viewBox={`0 0 ${VB_W} ${VB_H}`}
+        viewBox={`0 0 ${VB_W} ${hoehe}`}
         className="block h-auto w-full select-none"
         role="group"
         aria-label="Gewebe-Spiel: Punkte antippen — zwischen aktiven Punkten färben sich die Felder."

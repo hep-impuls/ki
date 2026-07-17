@@ -10,6 +10,31 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-17 — Vorhang auf: langer Einstieg, Fächer-Muster, klare Aufgaben, Story-Start = 3
+
+**Auftrag Christof (vier Punkte):**
+
+- **Längerer Einstiegstext** (2 Absätze): Die Seite veranschaulicht KI und ihre
+  Geschichte entlang einer doppelten Spur — (a) KI als alte Phantasie des
+  Menschen, die ihn umtreibt und in Kunstprodukten sichtbar wird (Golem,
+  Homunkulus, Frankenstein); (b) die technische Auslagerung kognitiver
+  Leistungen: Rechnen in Maschinen (Leibniz' Rechenrad), Zählen/Erinnern in
+  den **Knotenschnüren (Quipus) der Andenkulturen** (Christofs
+  «Knotenteppiche» — korrekte Bezeichnung Quipus verwendet; passt zum
+  Faden-Leitmotiv).
+- **Grosses interaktives Seiten-Muster nach dem Text** (wie auf der
+  Startseite): `GewebeSpiel` generalisiert (Props `punkte`, `hoehe`) und auf
+  vorhang-auf mit einem **Fächer** eingesetzt — elliptischer Bogen, Punkte
+  alternierend aussen/innen, «der Vorhang öffnet sich». Eigener Spur-Key
+  `vorhang-auf:gewebe`, Persistenz wie beim Hub-Band.
+- **Aufgaben genauer beschrieben:** alle fünf Sektionen von vorhang-auf haben
+  jetzt einen «Deine Aufgabe: …»-Block (was tun, wie, Ziel); ebenso die
+  Epochen-Einladung auf der Philosophie-Seite.
+- **KI-Story startet mit 3 Zufalls-Stationen** statt allen zwölf (wie
+  natalitäts START_SEEDS): Mount-Effect wählt 3 zufällig (SSR rendert leer —
+  kein Hydration-Mismatch), gelesene Stationen kommen per Union zurück, der
+  Rest wird aktiv dazugeholt; «Muster zurücksetzen» zieht wieder 3 neue.
+
 ## 2026-07-17 — Video-Impulse (Hub, Vorhang auf, Philosophie) + Videos im Aktivitätsnetz
 
 **Auftrag Christof:** Auf Startseite (Hub), «Vorhang auf» und «Philosophische

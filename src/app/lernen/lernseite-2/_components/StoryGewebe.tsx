@@ -383,9 +383,23 @@ export default function StoryGewebe({
   const n = stationen.length;
   const alle = useMemo(() => stationen.map((_, i) => i), [stationen]);
 
-  const [gewaehlt, setGewaehlt] = useState<Set<number>>(() => new Set(alle));
+  // Start: LEER auf dem Server (deterministisch, kein Hydration-Mismatch) —
+  // im Browser werden gleich drei Stationen per Zufall gewählt; den Rest
+  // holt man sich aktiv selbst dazu. Läuft VOR dem Restore-Effect, damit
+  // bereits gelesene Stationen danach per Union wieder dazukommen.
+  const [gewaehlt, setGewaehlt] = useState<Set<number>>(() => new Set());
   const [ansicht, setAnsicht] = useState(0);
   const [gesammelt, setGesammelt] = useState<number[]>([]);
+
+  useEffect(() => {
+    const ids = stationen.map((_, i) => i);
+    for (let i = ids.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [ids[i], ids[j]] = [ids[j], ids[i]];
+    }
+    setGewaehlt(new Set(ids.slice(0, Math.min(3, ids.length))));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const svgRef = useRef<SVGSVGElement>(null);
   const simRef = useRef<Map<number, SimPunkt>>(new Map());
@@ -635,7 +649,7 @@ export default function StoryGewebe({
   function zuruecksetzen() {
     if (spurKey) loescheSpuren(spurKey);
     setGesammelt([]);
-    setGewaehlt(new Set(alle));
+    zufall(3);
     setAnsicht(0);
     simRef.current.clear();
   }
@@ -651,7 +665,7 @@ export default function StoryGewebe({
           </span>
           {started
             ? `${gesammelt.length} von ${n} Stationen gelesen`
-            : "Stationen wählen, ziehen — und antippen zum Lesen"}
+            : "Drei Stationen per Zufall — den Rest holst du dir selbst"}
         </p>
         {started && (
           <button
@@ -698,7 +712,7 @@ export default function StoryGewebe({
         <div className="mb-sm flex flex-wrap items-center justify-between gap-sm">
           <p className="flex items-center gap-xs text-label-md uppercase tracking-wider text-tertiary">
             <span className="material-symbols-outlined text-[16px]">filter_alt</span>
-            Wähle Stationen — sie verknüpfen sich neu
+            Drei Stationen sind per Zufall gesetzt — hol dir die übrigen dazu
           </p>
           <div className="flex gap-xs">
             <button
@@ -867,8 +881,12 @@ export default function StoryGewebe({
           <div className="rounded-xl border border-outline-variant bg-surface-container-low p-lg">
             <p className="flex items-start gap-sm text-body-md text-on-surface-variant">
               <span className="material-symbols-outlined text-[20px] text-tertiary">explore</span>
-              Wähle oben Stationen und tippe einen Punkt an — seine Karte
-              (Geschichte, teils mit Bild) blendet hier ein und bleibt stehen.
+              So geht es: Drei Stationen sind per Zufall eingeblendet. Tippe
+              einen Punkt an — seine Geschichte erscheint hier und bleibt
+              stehen. Hole dir dann oben die übrigen Stationen einzeln dazu
+              (oder «Alle») und lies sie, bis alle zwölf offen sind. Im Gewebe
+              kannst du die Punkte auch ziehen; «Zeitlich» reiht sie als
+              Perlenschnur von früher nach heute.
             </p>
           </div>
         ) : (
