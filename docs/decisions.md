@@ -10,6 +10,24 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-17 — Perlschnur: ruhiger (natalität-Physik) + leuchtende Perlenfarben
+
+**Feedback Christof:** Die Perlschnur (Zeitlich-Ansicht der KI-Story) soll wie
+bei natalität weniger stark beweglich sein, und jede Perle bekommt eine eigene,
+bewusst **leuchtende** Farbe.
+
+- **Physik exakt wie natalitäts `LogPerlschnur`:** Schwerkraft 0.5→0.42,
+  Reibung 0.98→0.97, Abstoss-Radius 46→24, Abstoss-Kraft 7→6,
+  Constraint-Iterationen 6→5; der synchrone Zeiger-Schritt läuft nur noch
+  1× pro Move (statt 2×) — die Kette schwingt, statt zu zappeln.
+- **Perlenfarben:** 12 leuchtende Hex-Farben (warm→kalt, chronologisch nach
+  Stationsindex — jede Station behält ihre Farbe unabhängig von der Auswahl).
+  **Bewusste, punktuelle Ausnahme von der reinen MD3-Token-Regel** — von
+  Christof ausdrücklich gewünscht («hier kannst du tatsächlich einmal
+  leuchtendere farben einbauen»); gilt NUR für die Perlen der Perlschnur.
+  Darstellung nach natalität: ungelesen = heller Kern mit farbigem Rand,
+  gelesen = voll gefüllt (+ farbiger Aussenring).
+
 ## 2026-07-17 — Vorhang auf: langer Einstieg, Fächer-Muster, klare Aufgaben, Story-Start = 3
 
 **Auftrag Christof (vier Punkte):**

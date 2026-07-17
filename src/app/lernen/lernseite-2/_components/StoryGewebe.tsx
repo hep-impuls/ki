@@ -99,9 +99,30 @@ const P_W = 720;
 const P_SEG = 40;
 const P_AX = 210;
 const P_AY = 24;
-const P_GRAV = 0.5;
-const P_FRIC = 0.98;
-const P_REPEL = 46;
+/** Physik wie bei natalitäts «Log»-Perlschnur — ruhig, nicht fahrig. */
+const P_GRAV = 0.42;
+const P_FRIC = 0.97;
+const P_REPEL = 24;
+
+/**
+ * Jede Perle hat ihre eigene, bewusst LEUCHTENDE Farbe (chronologisch von
+ * warm nach kalt) — auf Wunsch eine punktuelle Ausnahme von der reinen
+ * Token-Palette, nur hier in der Perlschnur.
+ */
+const PERLEN_FARBEN = [
+  "#f94144",
+  "#f3722c",
+  "#f8961e",
+  "#f9c74f",
+  "#90be6d",
+  "#43aa8b",
+  "#4d908e",
+  "#577590",
+  "#277da1",
+  "#5e60ce",
+  "#9d4edd",
+  "#d81159",
+] as const;
 
 function StoryPerlschnur({
   stationen,
@@ -159,12 +180,12 @@ function StoryPerlschnur({
         const d = Math.hypot(dx, dy);
         if (d < P_REPEL && d > 0.01) {
           const f = (P_REPEL - d) / P_REPEL;
-          p.x += (dx / d) * f * 7;
-          p.y += (dy / d) * f * 7;
+          p.x += (dx / d) * f * 6;
+          p.y += (dy / d) * f * 6;
         }
       }
     }
-    for (let it = 0; it < 6; it++) {
+    for (let it = 0; it < 5; it++) {
       if (P[0]) {
         P[0].x = P_AX;
         P[0].y = P_AY;
@@ -256,8 +277,8 @@ function StoryPerlschnur({
         p.oy = p.y;
       }
     }
-    // Synchron rechnen — unabhängig vom rAF-Takt.
-    stepRef.current();
+    // Ein synchroner Schritt — unabhängig vom rAF-Takt, aber ruhig
+    // (natalität rechnet ebenfalls einen Schritt pro Frame).
     stepRef.current();
     force((c) => c + 1);
   }
@@ -316,6 +337,7 @@ function StoryPerlschnur({
         if (!p) return null;
         const st = stationen[idx];
         const gelesen = gesammelt.includes(idx);
+        const farbe = PERLEN_FARBEN[idx % PERLEN_FARBEN.length];
         return (
           <g
             key={idx}
@@ -333,16 +355,17 @@ function StoryPerlschnur({
             className="group cursor-grab touch-none outline-none active:cursor-grabbing"
           >
             {gelesen && (
-              <circle cx={p.x} cy={p.y} r="9.5" fill="none" strokeWidth="1" className="stroke-tertiary" opacity="0.45" />
+              <circle cx={p.x} cy={p.y} r="10" fill="none" strokeWidth="1" stroke={farbe} opacity="0.5" />
             )}
+            {/* Perle in ihrer eigenen Farbe — ungelesen als heller Kern mit
+                farbigem Rand, gelesen voll gefüllt (nach natalität) */}
             <circle
               cx={p.x}
               cy={p.y}
               r="6.5"
-              className={gelesen ? "fill-tertiary" : "fill-outline"}
-              stroke="rgb(var(--color-surface-bright))"
-              strokeWidth="1.4"
-              opacity={gelesen ? 1 : 0.8}
+              fill={gelesen ? farbe : "rgb(var(--color-surface-bright))"}
+              stroke={gelesen ? "rgb(var(--color-surface-bright))" : farbe}
+              strokeWidth={gelesen ? 1.4 : 1.8}
             />
             {/* grössere Trefferfläche */}
             <circle cx={p.x} cy={p.y} r="15" fill="transparent" />
