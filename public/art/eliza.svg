@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Illustration des Chatbots ELIZA (1966): ein Fernschreiber-Ausdruck mit einem Wechselgespräch zwischen Mensch und Programm.">
+  <rect width="800" height="600" fill="#eceae3"/>
+  <!-- Fernschreiber-Korpus -->
+  <rect x="70" y="70" width="660" height="70" rx="10" fill="#3c4650"/>
+  <rect x="70" y="70" width="660" height="70" rx="10" fill="none" stroke="#2a323a" stroke-width="4"/>
+  <circle cx="110" cy="105" r="12" fill="#b26a3b"/>
+  <circle cx="145" cy="105" r="12" fill="#4f7a5b"/>
+  <text x="180" y="113" fill="#efe7d8" font-family="ui-monospace, monospace" font-size="22" font-weight="700" letter-spacing="2">ELIZA · DOCTOR · MIT 1966</text>
+  <!-- Papierbogen -->
+  <rect x="90" y="150" width="620" height="400" rx="6" fill="#f6f1e5" stroke="#d8ccae" stroke-width="2"/>
+  <!-- Lochung links -->
+  <g fill="#e3d8bd"><circle cx="112" cy="180" r="4"/><circle cx="112" cy="230" r="4"/><circle cx="112" cy="280" r="4"/><circle cx="112" cy="330" r="4"/><circle cx="112" cy="380" r="4"/><circle cx="112" cy="430" r="4"/><circle cx="112" cy="480" r="4"/><circle cx="112" cy="530" r="4"/></g>
+  <!-- Dialog: Mensch dunkel, ELIZA in Akzentfarbe eingerückt -->
+  <g font-family="ui-monospace, monospace" font-size="23">
+    <text x="150" y="205" fill="#33302a" font-weight="700">&gt; MEN ARE ALL ALIKE</text>
+    <text x="185" y="250" fill="#2f6a48" font-weight="700">IN WHAT WAY?</text>
+    <text x="150" y="300" fill="#33302a" font-weight="700">&gt; THEY ALWAYS BUG US</text>
+    <text x="185" y="345" fill="#2f6a48" font-weight="700">CAN YOU GIVE AN EXAMPLE?</text>
+    <text x="150" y="395" fill="#33302a" font-weight="700">&gt; WELL, MY BOSS...</text>
+    <text x="185" y="440" fill="#2f6a48" font-weight="700">TELL ME MORE ABOUT</text>
+    <text x="185" y="470" fill="#2f6a48" font-weight="700">YOUR BOSS.</text>
+    <!-- blinkender Cursor -->
+    <rect x="150" y="505" width="16" height="26" fill="#33302a"/>
+  </g>
+</svg>

@@ -72,29 +72,31 @@ const AUFTRITT_FELDER: number[][] = [
  */
 const BILDER_STORY: AnschauBild[] = [
   {
-    src: "/art/quipu.svg",
-    alt: "Illustration einer Anden-Knotenschnur (Quipu): Hauptschnur mit geknoteten Nebenschnüren.",
+    src: "/art/quipu-pd.jpg",
+    alt: "Historisches Foto einer Anden-Knotenschnur (Quipu): eine Hauptschnur im Bogen mit vielen herabhängenden, geknoteten Nebenschnüren.",
     titel: "Quipu — Knoten der Anden",
     jahr: "Anden, ~1400",
-    kurz: "Andenkulturen · Rechnen und Erinnern in Knoten",
+    kurz: "Historische Aufnahme · Rechnen und Erinnern in Knoten",
+    quelle:
+      "Foto «The Ancient Quipu Plate XXII» · Wikimedia Commons · gemeinfrei (Public Domain)",
     hotspots: [
       {
         x: 50,
-        y: 22,
+        y: 16,
         titel: "Die Hauptschnur",
-        text: "An einer waagrechten Trägerschnur hängen die Nebenschnüre. Das Quipu ist ein Speicher aus Fäden — Buchhaltung und Chronik der Inka.",
+        text: "An der waagrechten Trägerschnur oben hängen alle Nebenschnüre. Das Quipu ist ein Speicher aus Fäden — Buchhaltung und Chronik der Inka.",
       },
       {
-        x: 59,
-        y: 45,
+        x: 42,
+        y: 44,
         titel: "Knoten sind Zahlen",
-        text: "Art und Höhe eines Knotens codieren Werte im Zehnersystem. Rechnen und Erinnern werden hier nicht ins Rad ausgelagert, sondern in den Faden.",
+        text: "Art, Zahl und Höhe der Knoten codieren Werte im Zehnersystem. Rechnen und Erinnern werden hier nicht ins Rad ausgelagert, sondern in den Faden.",
       },
       {
-        x: 31,
-        y: 42,
-        titel: "Farbe trägt Bedeutung",
-        text: "Farbe, Drehrichtung und Anordnung der Schnüre tragen weitere Information — eine Datenbank aus Textil, lange vor dem Computer.",
+        x: 60,
+        y: 70,
+        titel: "Ein Gewebe aus Daten",
+        text: "Dutzende herabhängende Schnüre, teils weiter verzweigt — eine ganze Datenbank aus Textil. Auch Farbe und Drehrichtung der Fäden trugen Bedeutung, lange vor dem Computer.",
       },
     ],
   },
@@ -103,7 +105,9 @@ const BILDER_STORY: AnschauBild[] = [
     alt: "Kupferstich des Schachtürken von Wolfgang von Kempelen",
     titel: "Der Schachtürke",
     jahr: "1770",
-    kurz: "J. F. zu Racknitz, 1789 · der scheinbar denkende Automat",
+    kurz: "der scheinbar denkende Automat",
+    quelle:
+      "Kupferstich, Joseph Friedrich zu Racknitz, 1789 · Wikimedia Commons · gemeinfrei",
     hotspots: [
       {
         x: 44,
@@ -130,7 +134,9 @@ const BILDER_STORY: AnschauBild[] = [
     alt: "Frontispiz der Frankenstein-Ausgabe von 1831",
     titel: "Frankenstein",
     jahr: "1818",
-    kurz: "Th. von Holst, 1831 · das erschaffene Wesen",
+    kurz: "das erschaffene Wesen",
+    quelle:
+      "Frontispiz der Frankenstein-Ausgabe, Theodor von Holst, 1831 · Wikimedia Commons · gemeinfrei",
     hotspots: [
       {
         x: 32,
@@ -157,7 +163,9 @@ const BILDER_STORY: AnschauBild[] = [
     alt: "Holzstich der Differenzmaschine von Charles Babbage",
     titel: "Rechenmaschinen",
     jahr: "1685–1843",
-    kurz: "Holzstich, 1853 · die programmierbare Rechenmaschine",
+    kurz: "die programmierbare Rechenmaschine",
+    quelle:
+      "Holzstich der Differenzmaschine von Charles Babbage, 1853 · Wikimedia Commons · gemeinfrei",
     hotspots: [
       {
         x: 13,
@@ -180,29 +188,60 @@ const BILDER_STORY: AnschauBild[] = [
     ],
   },
   {
-    src: "/art/turing-bombe.svg",
-    alt: "Illustration von Turings Code-Knack-Maschine (Bombe): Reihen drehbarer Rotoren und ein Lochstreifen mit entschlüsseltem Text.",
+    src: "/art/bombe.jpg",
+    alt: "Historisches Foto der «Bombe»: eine Bedienerin an einer grossen Maschine mit Reihen drehbarer Trommeln, die Enigma-Funksprüche entschlüsselt.",
     titel: "Turings Code-Knacker",
     jahr: "1939–1945",
     kurz: "Alan Turing · die «Bombe» entschlüsselt Enigma",
+    quelle:
+      "Foto der «Bombe», US National Security Agency · Wikimedia Commons · gemeinfrei (US-Regierung)",
     hotspots: [
       {
-        x: 32,
-        y: 50,
-        titel: "Die Rotoren",
-        text: "Reihen von Trommeln bilden die Walzen der Enigma nach. Die Maschine ahmt das Chiffriergerät nach, um es zu überlisten.",
+        x: 55,
+        y: 58,
+        titel: "Die Trommeln",
+        text: "Die Reihen runder Trommeln bilden die Walzen der Enigma nach. Die Maschine ahmt das deutsche Chiffriergerät nach, um es zu überlisten.",
       },
       {
-        x: 50,
+        x: 40,
         y: 29,
         titel: "Systematisch durchprobieren",
-        text: "Die «Bombe» testet mechanisch Tausende Walzenstellungen und scheidet die unmöglichen aus. Rechnen wird hier zur Suche.",
+        text: "An den oberen Rädchen wird die Maschine eingestellt. Die «Bombe» testet mechanisch Tausende Walzenstellungen und scheidet die unmöglichen aus — Rechnen wird zur Suche.",
       },
       {
-        x: 84,
-        y: 60,
-        titel: "Der Klartext",
-        text: "Am Ende steht die entschlüsselte Nachricht. Aus Turings Idee der universellen Rechenmaschine wird ein reales, kriegsentscheidendes Werkzeug — die Geburtsstunde des Computers.",
+        x: 27,
+        y: 52,
+        titel: "Menschen an der Maschine",
+        text: "Bedienerinnen richteten die Bombe ein und lasen sie ab, rund um die Uhr. Aus Turings Idee der universellen Rechenmaschine wird ein reales, kriegsentscheidendes Werkzeug — eine Geburtsstunde des Computers.",
+      },
+    ],
+  },
+  {
+    src: "/art/eliza.svg",
+    alt: "Illustration des Chatbots ELIZA (1966): ein Fernschreiber-Ausdruck mit einem Wechselgespräch zwischen Mensch und Programm.",
+    titel: "ELIZA — der erste Chatbot",
+    jahr: "1966",
+    kurz: "Weizenbaums sprechendes Programm",
+    quelle: "Schematische Illustration, mit KI erstellt für dieses Lehrmittel · kein Foto",
+    ki: true,
+    hotspots: [
+      {
+        x: 38,
+        y: 37,
+        titel: "Die Therapeutin (DOCTOR)",
+        text: "Das bekannteste Skript imitierte eine Psychotherapeutin: Es gab Aussagen als Fragen zurück — «In welcher Weise?», «Erzähl mir mehr».",
+      },
+      {
+        x: 62,
+        y: 62,
+        titel: "Ein Skript, kein Verstehen",
+        text: "ELIZA folgte einfachen Mustern und spiegelte Sätze zurück. Sie verstand nichts — und wirkte doch verblüffend menschlich.",
+      },
+      {
+        x: 30,
+        y: 82,
+        titel: "Der ELIZA-Effekt",
+        text: "Menschen vertrauten sich dem Programm an wie einem Menschen. Bis heute überschätzen wir gern, was Maschinen «verstehen».",
       },
     ],
   },
@@ -212,6 +251,8 @@ const BILDER_STORY: AnschauBild[] = [
     titel: "Maschinelles Lernen",
     jahr: "ab 1990er",
     kurz: "Daten als Punkte im mehrdimensionalen Raum",
+    quelle: "Schematische Illustration, mit KI erstellt für dieses Lehrmittel · kein Foto",
+    ki: true,
     hotspots: [
       {
         x: 19,
@@ -234,11 +275,42 @@ const BILDER_STORY: AnschauBild[] = [
     ],
   },
   {
+    src: "/art/tamagotchi.svg",
+    alt: "Illustration eines Tamagotchi (1996): ein eiförmiges Taschengerät mit kleinem Pixel-Wesen auf dem Bildschirm und drei Knöpfen.",
+    titel: "Tamagotchi — das virtuelle Haustier",
+    jahr: "1996",
+    kurz: "Bindung an ein digitales Wesen",
+    quelle: "Schematische Illustration, mit KI erstellt für dieses Lehrmittel · kein Foto",
+    ki: true,
+    hotspots: [
+      {
+        x: 50,
+        y: 44,
+        titel: "Gefühle für Pixel",
+        text: "Millionen banden sich emotional an ein paar Bildpunkte. Wir behandeln Maschinen erstaunlich leicht wie Lebewesen.",
+      },
+      {
+        x: 50,
+        y: 74,
+        titel: "Ein Wesen zum Umsorgen",
+        text: "Füttern, spielen, sauber machen: Das Ei verlangte Pflege rund um die Uhr — sonst «starb» das Wesen.",
+      },
+      {
+        x: 24,
+        y: 20,
+        titel: "Wegbereiter",
+        text: "Tamagotchis ebneten den Weg für virtuelle Haustiere und Gefährten — heute für sprechende KI-Begleiter.",
+      },
+    ],
+  },
+  {
     src: "/art/dqn-spiel.svg",
     alt: "Illustration: eine KI lernt ein einfaches Ziegel-Spiel; eine Belohnungskurve steigt an.",
     titel: "Lernen durch Spielen (DQN)",
     jahr: "2013–2015",
     kurz: "Deep Q-Network lernt Arcade-Spiele selbst",
+    quelle: "Schematische Illustration, mit KI erstellt für dieses Lehrmittel · kein Foto",
+    ki: true,
     hotspots: [
       {
         x: 32,
@@ -257,6 +329,64 @@ const BILDER_STORY: AnschauBild[] = [
         y: 80,
         titel: "Versuch und Irrtum",
         text: "Ohne Anleitung lernt sie erstaunliche Strategien — 2013–2015 zeigte «Deep Q-Network», dass Maschinen im Spiel stärker werden als Menschen.",
+      },
+    ],
+  },
+  {
+    src: "/art/dalle.svg",
+    alt: "Illustration von DALL·E (2021): aus einem geschriebenen Satz entsteht ein neues Bild — hier ein Sessel in Form einer Avocado.",
+    titel: "DALL·E — Bilder aus Worten",
+    jahr: "Januar 2021",
+    kurz: "Text wird zum Bild — und das vor ChatGPT",
+    quelle: "Schematische Illustration, mit KI erstellt für dieses Lehrmittel · kein Foto",
+    ki: true,
+    hotspots: [
+      {
+        x: 26,
+        y: 50,
+        titel: "Sprache als Pinsel",
+        text: "Ein Satz genügt — «ein Sessel in Form einer Avocado» — und die KI malt ein Bild, das so noch nie fotografiert wurde.",
+      },
+      {
+        x: 75,
+        y: 42,
+        titel: "Erfunden, nicht gefunden",
+        text: "Das Bild existiert nirgends. Das Modell erzeugt es neu aus dem, was es aus Millionen Bildern gelernt hat.",
+      },
+      {
+        x: 66,
+        y: 84,
+        titel: "Früher als ChatGPT",
+        text: "Das vergisst man leicht: DALL·E kam im Januar 2021 — fast zwei Jahre vor ChatGPT. Die Bild-KI war zuerst da.",
+      },
+    ],
+  },
+  {
+    src: "/art/chatgpt.svg",
+    alt: "Illustration von ChatGPT (2022): ein Chatfenster mit einer Frage in Alltagssprache und einer flüssig getippten KI-Antwort.",
+    titel: "ChatGPT — KI für alle",
+    jahr: "November 2022",
+    kurz: "der Chatbot, der KI in den Alltag brachte",
+    quelle: "Schematische Illustration, mit KI erstellt für dieses Lehrmittel · kein Foto",
+    ki: true,
+    hotspots: [
+      {
+        x: 61,
+        y: 29,
+        titel: "Einfach reden",
+        text: "Man tippt eine Frage in ganz normaler Sprache — die KI antwortet flüssig. Keine Fachkenntnis, kein Befehl nötig.",
+      },
+      {
+        x: 40,
+        y: 60,
+        titel: "Wort für Wort",
+        text: "Das Modell setzt immer den wahrscheinlich nächsten Textbaustein — verblüffend gut, aber ohne echtes Wissen. Es kann auch überzeugend irren.",
+      },
+      {
+        x: 50,
+        y: 88,
+        titel: "Der Durchbruch",
+        text: "Innert Wochen nutzten Millionen ChatGPT — der Moment, in dem KI im Alltag vieler Menschen ankam.",
       },
     ],
   },
@@ -553,13 +683,13 @@ export default function Lernseite2VorhangAuf() {
       <section className="mt-xl max-w-5xl" aria-label="Bilderstrecke: Bilder zur KI-Geschichte">
         <h2 className="text-headline-lg text-on-surface">Bilder zur KI-Geschichte</h2>
         <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
-          Sieben Bilder spannen den Bogen: vom Auslagern des Denkens in
-          Knotenschnüre über die programmierbare Maschine und Turings
-          Code-Knacker bis zu den lernenden Systemen von heute.{" "}
+          Elf Bilder spannen den Bogen: vom Auslagern des Denkens in
+          Knotenschnüre über Turings Code-Knacker und den ersten Chatbot ELIZA
+          bis zu DALL·E und ChatGPT.{" "}
           <strong>Deine Aufgabe:</strong> Klicke ein Bild an — es öffnet sich
           gross im Anschauungsmodus. Tippe dort die leuchtenden, nummerierten
           Punkte an: Jeder erzählt ein Detail. Mit den Pfeilen (oder den
-          Pfeiltasten) blätterst du weiter. Ziel: alle sieben Bilder samt ihren
+          Pfeiltasten) blätterst du weiter. Ziel: alle elf Bilder samt ihren
           Punkten.
         </p>
         <BilderAnschauung

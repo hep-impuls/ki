@@ -29,8 +29,12 @@ export interface AnschauBild {
   alt: string;
   titel: string;
   jahr: string;
-  /** Kurze Bildunterschrift (Urheber / Motiv). */
+  /** Kurze Bildunterschrift (Motiv). */
   kurz: string;
+  /** Präziser Herkunftsnachweis: Werk, Quelle, Lizenz. */
+  quelle: string;
+  /** true, wenn das Bild KI-erstellt ist (kein Foto/keine historische Vorlage). */
+  ki?: boolean;
   hotspots: AnschauHotspot[];
 }
 
@@ -146,6 +150,12 @@ export default function BilderAnschauung({
                     <span className="material-symbols-outlined text-[16px]">check</span>
                   </span>
                 )}
+                {b.ki && (
+                  <span className="absolute left-2 top-2 flex items-center gap-1 rounded-full bg-inverse-surface/80 px-2 py-0.5 text-label-sm text-inverse-on-surface shadow-sm">
+                    <span className="material-symbols-outlined text-[13px]">auto_awesome</span>
+                    KI-erstellt
+                  </span>
+                )}
               </div>
               <div className="border-t border-outline-variant p-sm">
                 <p className="flex items-baseline justify-between gap-sm">
@@ -184,8 +194,20 @@ export default function BilderAnschauung({
               <p className="truncate text-body-lg font-medium">
                 {bild.titel}
                 <span className="ml-sm text-label-md opacity-70">{bild.jahr}</span>
+                {bild.ki && (
+                  <span className="ml-sm inline-flex items-center gap-1 rounded-full border border-inverse-on-surface/40 px-2 py-0.5 align-middle text-label-sm opacity-90">
+                    <span className="material-symbols-outlined text-[13px]">auto_awesome</span>
+                    KI-erstellt
+                  </span>
+                )}
               </p>
               <p className="truncate text-label-sm opacity-70">{bild.kurz}</p>
+              <p className="mt-0.5 flex items-start gap-1 text-label-sm opacity-60">
+                <span className="material-symbols-outlined mt-px text-[13px]">
+                  {bild.ki ? "auto_awesome" : "photo_library"}
+                </span>
+                <span className="min-w-0">{bild.quelle}</span>
+              </p>
             </div>
             <div className="flex flex-shrink-0 items-center gap-sm">
               <span

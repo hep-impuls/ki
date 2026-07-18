@@ -6,17 +6,25 @@ Verwendet in: `src/app/lernen/lernseite-2/philosophische-perspektive/_components
 (`BilderAnschauung.tsx`): daraus die `storyboard/`-Bilder `schachtuerke.jpg`,
 `frankenstein.jpg`, `babbage.jpg` sowie die eigenen Illustrationen unten.
 
-## Eigene Illustrationen (Vorhang auf, CC0 / selbst erstellt)
+## KI-erstellte Illustrationen (Vorhang auf, kein Foto)
 
-Für die Bilderstrecke „Bilder zur KI-Geschichte" selbst gezeichnete SVGs (keine
-Fremdrechte; ersetzbar durch lizenzierte Fotos):
+Für die Bilderstrecke „Bilder zur KI-Geschichte" mit KI erstellte, schematische
+SVG-Illustrationen (keine Fotos, keine historische Vorlage; keine Fremdrechte).
+In der App sind sie sichtbar als **„KI-erstellt"** gekennzeichnet (Badge auf dem
+Thumbnail und in der Grossansicht):
 
 | Datei | Motiv |
 |---|---|
-| `quipu.svg` | Anden-Knotenschnur (Quipu) — Rechnen/Erinnern in Knoten |
-| `turing-bombe.svg` | Turings «Bombe» — Enigma-Code-Knacker (Rotoren, Lochstreifen) |
+| `eliza.svg` | ELIZA (1966) — erster Chatbot, Fernschreiber-Dialog |
 | `ml-raum.svg` | Maschinelles Lernen — Datenpunkte im mehrdimensionalen Merkmalsraum |
+| `tamagotchi.svg` | Tamagotchi (1996) — virtuelles Haustier (generisches Gerät, keine Marke) |
 | `dqn-spiel.svg` | Verstärkendes Lernen — DQN lernt ein (generisches) Arcade-Spiel |
+| `dalle.svg` | DALL·E (Jan 2021) — Text wird zum Bild (Avocado-Sessel als Motiv) |
+| `chatgpt.svg` | ChatGPT (Nov 2022) — Chatfenster mit KI-Antwort |
+
+Die Stationen Quipu und Turing wurden von eigenen SVGs auf echte gemeinfreie
+Fotos umgestellt (`quipu-pd.jpg`, `bombe.jpg`, siehe PD-Tabelle unten); die
+früheren `quipu.svg` / `turing-bombe.svg` sind entfernt.
 
 Nicht mehr in „Vorhang auf" verwendet (aber weiterhin abgelegt): `golem.jpg`,
 `homunkulus.jpg`, `supercomputer.jpg` (storyboard) sowie `eisenwalzwerk.jpg`,
@@ -35,6 +43,8 @@ Lizenzstatus dort am 2026-07-11 geprüft («Public domain»).
 | `storyboard/frankenstein.jpg` | Frontispiece to Frankenstein 1831.jpg | Theodor von Holst, 1831 |
 | `storyboard/babbage.jpg` | Difference engine plate 1853.jpg | Holzstich, 1853 |
 | `storyboard/supercomputer.jpg` | Pleiades supercomputer.jpg | NASA (US-Gov, gemeinfrei) |
+| `quipu-pd.jpg` | The Ancient Quipu Plate XXII.jpg | historische Aufnahme (PD, Urheber lange verstorben) |
+| `bombe.jpg` | 'bombe'.jpg | US National Security Agency (US-Gov, gemeinfrei) |
 
 ## Gemeinfrei (Public Domain)
 

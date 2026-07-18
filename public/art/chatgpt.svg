@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Illustration von ChatGPT (2022): ein Chatfenster mit einer Frage in Alltagssprache und einer flüssig getippten KI-Antwort.">
+  <rect width="800" height="600" fill="#f1efe8"/>
+  <!-- Chatfenster -->
+  <rect x="120" y="60" width="560" height="480" rx="16" fill="#ffffff" stroke="#cfc7b4" stroke-width="3"/>
+  <!-- Kopfleiste -->
+  <path d="M120 76 a16 16 0 0 1 16 -16 h528 a16 16 0 0 1 16 16 v34 h-560 z" fill="#4f7a5b"/>
+  <text x="150" y="99" fill="#f2f5ee" font-family="ui-sans-serif, sans-serif" font-size="20" font-weight="700">KI-Chat</text>
+  <!-- Nutzer-Blase (rechts) -->
+  <rect x="330" y="140" width="320" height="70" rx="18" fill="#dfe7d9"/>
+  <g font-family="ui-sans-serif, sans-serif" font-size="19" fill="#2b3a2f">
+    <text x="352" y="172">Erklär mir, wie ein</text>
+    <text x="352" y="197">Regenbogen entsteht.</text>
+  </g>
+  <!-- KI-Blase (links) -->
+  <circle cx="168" cy="270" r="18" fill="#4f7a5b"/>
+  <text x="161" y="277" fill="#f2f5ee" font-family="ui-sans-serif, sans-serif" font-size="18" font-weight="700">KI</text>
+  <rect x="150" y="250" width="470" height="210" rx="18" fill="#f3f1ea"/>
+  <g font-family="ui-sans-serif, sans-serif" font-size="19" fill="#33302a">
+    <text x="176" y="292">Sonnenlicht trifft auf</text>
+    <text x="176" y="322">Regentropfen. Jeder Tropfen</text>
+    <text x="176" y="352">bricht das Licht und zerlegt es</text>
+    <text x="176" y="382">in seine Farben — so entsteht</text>
+    <text x="176" y="412">der Bogen am Himmel.</text>
+  </g>
+  <!-- tippender Cursor -->
+  <rect x="474" y="396" width="12" height="22" fill="#4f7a5b"/>
+  <!-- Eingabezeile -->
+  <rect x="150" y="480" width="470" height="44" rx="22" fill="#ffffff" stroke="#cfc7b4" stroke-width="2"/>
+  <text x="176" y="508" fill="#9a927f" font-family="ui-sans-serif, sans-serif" font-size="18">Frag irgendetwas …</text>
+  <circle cx="596" cy="502" r="18" fill="#4f7a5b"/>
+  <path d="M588 502 l16 0 M598 495 l8 7 l-8 7" fill="none" stroke="#f2f5ee" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
