@@ -403,7 +403,6 @@ export default function StoryGewebe({
   // bereits gelesene Stationen danach per Union wieder dazukommen.
   const [gewaehlt, setGewaehlt] = useState<Set<number>>(() => new Set());
   const [ansicht, setAnsicht] = useState(0);
-  const [gesammelt, setGesammelt] = useState<number[]>([]);
 
   useEffect(() => {
     const ids = stationen.map((_, i) => i);
@@ -425,6 +424,8 @@ export default function StoryGewebe({
 
   const ansichtId = ANSICHTEN[ansicht].id;
   const gewaehltSortiert = useMemo(() => alle.filter((i) => gewaehlt.has(i)), [alle, gewaehlt]);
+  // Hervorgehoben = geöffnet: jede gewählte Station zeigt ihre Karte unten.
+  const gesammelt = gewaehltSortiert;
 
   /** Das GANZE Gewebe (immer sichtbar): Erzähl-Faden über ALLE Stationen der
    *  Reihe nach + feine Einfluss-Bögen. `aktiv` = beide Enden sind gewählt →
@@ -616,20 +617,23 @@ export default function StoryGewebe({
   /* ── Lesen, Auswahl, Zufall, Reset ────────────────────────────────────── */
 
   function aktiviere(i: number) {
-    // Antippen liest die Station UND hebt sie hervor (fett + eingefärbte Kanten).
-    setGewaehlt((prev) => (prev.has(i) ? prev : new Set(prev).add(i)));
-    if (!gesammelt.includes(i)) {
-      setGesammelt((g) => [...g, i]);
+    // Antippen öffnet die Station: hebt sie hervor (fett + eingefärbte Kanten)
+    // UND zeigt ihre Karte unten.
+    if (!gewaehlt.has(i)) {
+      setGewaehlt((prev) => new Set(prev).add(i));
       if (spurKey) merkeSpur(`${spurKey}:${i}`);
     }
   }
   function toggleWahl(i: number) {
+    const neu = !gewaehlt.has(i);
     setGewaehlt((prev) => {
       const nx = new Set(prev);
       if (nx.has(i)) nx.delete(i);
       else nx.add(i);
       return nx;
     });
+    // Auswahl eines Stichworts zählt als Öffnen → Karte + Aktivität.
+    if (neu && spurKey) merkeSpur(`${spurKey}:${i}`);
   }
   function zufall(k: number) {
     const ids = alle.slice();
@@ -645,10 +649,6 @@ export default function StoryGewebe({
     function restore() {
       const idx = leseSpurenIndices(spurKey!).filter((i) => i >= 0 && i < n);
       if (idx.length === 0) return;
-      setGesammelt((g) => {
-        const fehlend = idx.filter((i) => !g.includes(i));
-        return fehlend.length ? [...g, ...fehlend] : g;
-      });
       setGewaehlt((prev) => {
         const nx = new Set(prev);
         idx.forEach((i) => nx.add(i));
@@ -663,7 +663,6 @@ export default function StoryGewebe({
 
   function zuruecksetzen() {
     if (spurKey) loescheSpuren(spurKey);
-    setGesammelt([]);
     zufall(3);
     setAnsicht(0);
     simRef.current.clear();
@@ -679,8 +678,8 @@ export default function StoryGewebe({
             {gesammelt.length === n ? "done_all" : "touch_app"}
           </span>
           {started
-            ? `${gesammelt.length} von ${n} Stationen gelesen`
-            : "Drei Stationen per Zufall — den Rest holst du dir selbst"}
+            ? `${gesammelt.length} von ${n} Stationen hervorgehoben`
+            : "Stichworte oben antippen, um Stationen hervorzuheben"}
         </p>
         {started && (
           <button
