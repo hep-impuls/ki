@@ -35,6 +35,9 @@ export interface AnschauBild {
   quelle: string;
   /** true, wenn das Bild KI-erstellt ist (kein Foto/keine historische Vorlage). */
   ki?: boolean;
+  /** Längere Geschichte/Einordnung — beschreibt Bild und Kontext, erscheint
+   *  in der Erzähl-Leiste, solange kein Hotspot gewählt ist. */
+  geschichte?: string;
   hotspots: AnschauHotspot[];
 }
 
@@ -87,7 +90,7 @@ export default function BilderAnschauung({
     }
   }
 
-  // Escape schliesst, Pfeiltasten blättern; Body-Scroll sperren, solange offen.
+  // Escape schliesst, Pfeiltasten blättern.
   useEffect(() => {
     if (offen === null) return;
     const onKey = (e: KeyboardEvent) => {
@@ -96,14 +99,25 @@ export default function BilderAnschauung({
       else if (e.key === "ArrowLeft") wechseln(-1);
     };
     window.addEventListener("keydown", onKey);
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      window.removeEventListener("keydown", onKey);
-      document.body.style.overflow = prev;
-    };
+    return () => window.removeEventListener("keydown", onKey);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [offen, bilder.length]);
+
+  // Body-Scroll sperren, solange die Lightbox offen ist — und die
+  // Scrollposition merken/wiederherstellen, damit man beim Schliessen NICHT
+  // an den Seitenanfang zurückfällt, sondern bei der Bilderstrecke bleibt.
+  // Nur beim echten Öffnen/Schliessen (Boolean-Dep), nicht bei jedem Wechsel.
+  const istOffen = offen !== null;
+  useEffect(() => {
+    if (!istOffen) return;
+    const y = window.scrollY;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      window.scrollTo(0, y);
+    };
+  }, [istOffen]);
 
   const bild = offen !== null ? bilder[offen] : null;
 
@@ -292,8 +306,8 @@ export default function BilderAnschauung({
             )}
           </div>
 
-          {/* Erzähl-Leiste unten */}
-          <div className="min-h-[92px] border-t border-inverse-on-surface/15 px-md py-md">
+          {/* Erzähl-Leiste unten — Standard: Bild-Geschichte; Hotspot-Tipp: Detail */}
+          <div className="max-h-[36vh] min-h-[92px] overflow-y-auto border-t border-inverse-on-surface/15 px-md py-md">
             {hot !== null && bild.hotspots[hot] ? (
               <div className="animate-frame-in mx-auto flex max-w-3xl items-start gap-md text-inverse-on-surface">
                 <span
@@ -308,6 +322,20 @@ export default function BilderAnschauung({
                     {bild.hotspots[hot].text}
                   </p>
                 </div>
+              </div>
+            ) : bild.geschichte ? (
+              <div className="animate-frame-in mx-auto max-w-3xl text-inverse-on-surface">
+                <p className="flex items-center gap-xs text-label-sm uppercase tracking-wider opacity-70">
+                  <span className="material-symbols-outlined text-[16px]">history_edu</span>
+                  Kontext &amp; Geschichte
+                </p>
+                <p className="mt-xs text-body-sm leading-relaxed opacity-90">
+                  {bild.geschichte}
+                </p>
+                <p className="mt-sm flex items-center gap-xs text-label-sm opacity-60">
+                  <span className="material-symbols-outlined text-[16px]">touch_app</span>
+                  Tippe die leuchtenden Punkte im Bild an — jeder erzählt ein Detail.
+                </p>
               </div>
             ) : (
               <p className="mx-auto flex max-w-3xl items-center gap-sm text-body-sm text-inverse-on-surface opacity-75">

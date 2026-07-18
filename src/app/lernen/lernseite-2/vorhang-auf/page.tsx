@@ -80,6 +80,8 @@ const BILDER_STORY: AnschauBild[] = [
     kurz: "Historische Aufnahme · Rechnen und Erinnern in Knoten",
     quelle:
       "Foto «The Ancient Quipu Plate XXII» · Wikimedia Commons · gemeinfrei (Public Domain)",
+    geschichte:
+      "Quipus waren das Buchhaltungs- und Erinnerungssystem der Inka und älterer Andenkulturen. Statt Zahlen zu schreiben, knüpfte man sie: An einer Hauptschnur hängen Nebenschnüre, deren Knotenart, -zahl und -höhe Werte im Zehnersystem festhalten; Farbe, Drehrichtung und Anordnung trugen zusätzliche Bedeutung. Eigene Spezialisten — die «Quipucamayocs» — legten sie an und lasen sie vor. Rechnen und Erinnern wurden hier nicht ins Rad, sondern in den Faden ausgelagert: eine Datenbank aus Textil, Jahrhunderte vor dem Computer. Diese Aufnahme zeigt ein erhaltenes Quipu.",
     hotspots: [
       {
         x: 50,
@@ -109,6 +111,8 @@ const BILDER_STORY: AnschauBild[] = [
     kurz: "der scheinbar denkende Automat",
     quelle:
       "Kupferstich, Joseph Friedrich zu Racknitz, 1789 · Wikimedia Commons · gemeinfrei",
+    geschichte:
+      "Der «Schachtürke» war ein Schach spielender Automat, den Wolfgang von Kempelen 1770 am Wiener Hof vorführte: eine lebensgrosse, als Türke kostümierte Figur an einer Truhe voller Zahnräder. Er schlug jahrzehntelang prominente Gegner — der Legende nach auch Napoleon und Benjamin Franklin — und liess ganz Europa rätseln, ob eine Maschine denken könne. In Wahrheit sass im Innern ein versteckter Schachmeister, der die Figur über Hebel und Magnete steuerte; beim Öffnen zeigte man geschickt immer nur einen Teil des Kastens. Nach Kempelens Tod tourte Johann Nepomuk Mälzel den Automaten um die Welt, bis er 1854 bei einem Brand zerstört wurde. Dieses Bild ist ein Kupferstich von Joseph Friedrich zu Racknitz (1789), der den vermuteten Mechanismus samt verborgenem Bediener zu erklären versuchte. Der Schachtürke ist bis heute das Sinnbild dafür, wie bereitwillig wir Maschinen Intelligenz zuschreiben — und wie oft «automatische» Leistung in Wahrheit versteckte menschliche Arbeit ist. Nicht zufällig heisst Amazons Klickarbeiter-Plattform «Mechanical Turk».",
     hotspots: [
       {
         x: 44,
@@ -138,6 +142,8 @@ const BILDER_STORY: AnschauBild[] = [
     kurz: "das erschaffene Wesen",
     quelle:
       "Frontispiz der Frankenstein-Ausgabe, Theodor von Holst, 1831 · Wikimedia Commons · gemeinfrei",
+    geschichte:
+      "Mary Shelley schrieb «Frankenstein oder der moderne Prometheus» mit achtzehn Jahren; der Roman erschien 1818. Victor Frankenstein erschafft aus toter Materie ein lebendes Wesen — und flieht im Augenblick des Gelingens entsetzt vor seinem Werk. Die Kreatur ist nicht böse geboren; erst Zurückweisung und Einsamkeit machen sie zum Rächer. Der eigentliche Fehler ist also nicht die Schöpfung, sondern die verweigerte Verantwortung. Dieses Bild ist das Frontispiz der Ausgabe von 1831 (Stich nach Theodor von Holst) und zeigt den Moment der Flucht. Bis heute steht «Frankenstein» für die Angst vor Technik, die sich der Kontrolle entzieht — und für die Frage, wer für das Gemachte einsteht.",
     hotspots: [
       {
         x: 32,
@@ -167,6 +173,8 @@ const BILDER_STORY: AnschauBild[] = [
     kurz: "die programmierbare Rechenmaschine",
     quelle:
       "Holzstich der Differenzmaschine von Charles Babbage, 1853 · Wikimedia Commons · gemeinfrei",
+    geschichte:
+      "Der Traum vom mechanischen Rechnen reicht von Leibniz' Rechenrad (um 1673) bis zu Charles Babbage. Ab 1837 entwarf Babbage die «Analytical Engine» — eine universelle, programmierbare Maschine, die zu seinen Lebzeiten nie fertig gebaut wurde. Ada Lovelace erkannte 1843, dass eine solche Maschine nicht nur Zahlen, sondern beliebige Symbole verarbeiten könnte, und schrieb das, was oft als erstes Computerprogramm gilt — hielt aber zugleich fest, die Maschine bringe nichts «von sich aus» hervor. Der Holzstich (1853) zeigt einen Teil von Babbages Differenzmaschine: den mechanischen Urahn des Prozessors, angetrieben von Hand.",
     hotspots: [
       {
         x: 13,
@@ -196,6 +204,8 @@ const BILDER_STORY: AnschauBild[] = [
     kurz: "Alan Turing · die «Bombe» entschlüsselt Enigma",
     quelle:
       "Foto der «Bombe», US National Security Agency · Wikimedia Commons · gemeinfrei (US-Regierung)",
+    geschichte:
+      "Im Zweiten Weltkrieg verschlüsselte die deutsche Wehrmacht ihren Funk mit der Enigma. In Bletchley Park (England) entwarf Alan Turing die «Bombe» — eine elektromechanische Maschine, die Tausende möglicher Walzenstellungen systematisch durchprobierte und die unmöglichen ausschied. Das Knacken der Enigma verkürzte den Krieg erheblich. Turing hatte 1936 die theoretische Grundlage jedes Computers gelegt und fragte 1950, ob Maschinen denken können. Das Foto zeigt eine US-Version der Bombe mit einer Bedienerin: Die Maschinen liefen rund um die Uhr, bedient meist von Frauen. Aus Turings Idee der universellen Rechenmaschine wurde hier ein reales, kriegsentscheidendes Werkzeug — eine Geburtsstunde des Computers.",
     hotspots: [
       {
         x: 55,
@@ -224,6 +234,8 @@ const BILDER_STORY: AnschauBild[] = [
     jahr: "1966",
     kurz: "Weizenbaums sprechendes Programm",
     quelle: "Schematische Illustration, mit KI erstellt für dieses Lehrmittel · kein Foto",
+    geschichte:
+      "ELIZA schrieb Joseph Weizenbaum 1966 am MIT — eines der ersten «sprechenden» Programme. Sein bekanntestes Skript, «DOCTOR», imitierte eine Psychotherapeutin und spiegelte die Eingaben als Fragen zurück («In welcher Weise?»). ELIZA verstand nichts — sie folgte einfachen Mustern —, wirkte aber verblüffend menschlich. Weizenbaum erschrak, wie sehr sich Menschen dem Programm anvertrauten, und wurde später zu einem frühen Kritiker der KI. Der «ELIZA-Effekt» beschreibt bis heute unsere Neigung, hinter flüssiger Sprache echtes Verstehen zu vermuten. (KI-erstellte Illustration eines Fernschreiber-Dialogs.)",
     ki: true,
     hotspots: [
       {
@@ -253,6 +265,8 @@ const BILDER_STORY: AnschauBild[] = [
     jahr: "ab 1990er",
     kurz: "Daten als Punkte im mehrdimensionalen Raum",
     quelle: "Schematische Illustration, mit KI erstellt für dieses Lehrmittel · kein Foto",
+    geschichte:
+      "Ab den 1990er-Jahren verschob sich die KI vom Regeln-Schreiben zum Lernen aus Beispielen. Ein Modell fasst jedes Beispiel als Punkt in einem Raum mit vielen Merkmalen auf — oft Hunderte oder Tausende Dimensionen; Ähnliches liegt nah beieinander. «Lernen» heisst dann, eine Grenze zu finden, die Gruppen trennt: Danach kann das Modell Neues einordnen. Es «versteht» dabei keine Bedeutung, sondern rechnet mit Lage und Abstand. Diese Denkweise ist die Grundlage fast aller heutigen KI. (KI-erstellte, schematische Illustration.)",
     ki: true,
     hotspots: [
       {
@@ -282,6 +296,8 @@ const BILDER_STORY: AnschauBild[] = [
     jahr: "1996",
     kurz: "Bindung an ein digitales Wesen",
     quelle: "Foto: Museum Rotterdam · Wikimedia Commons · CC BY-SA 3.0",
+    geschichte:
+      "Das Tamagotchi kam 1996 in Japan (Bandai) auf den Markt: ein eiförmiges Taschengerät mit einem digitalen Wesen, das gefüttert, gepflegt und beschäftigt werden wollte — sonst «starb» es. Millionen banden sich emotional an ein paar Bildpunkte; an Schulen wurden die piepsenden Geräte zeitweise verboten. Tamagotchis zeigen, wie leicht wir Maschinen wie Lebewesen behandeln — ein früher Vorläufer der virtuellen Haustiere und der heutigen KI-Begleiter. Dieses Foto zeigt ein erhaltenes Gerät aus einer Museumssammlung.",
     hotspots: [
       {
         x: 53,
@@ -310,6 +326,8 @@ const BILDER_STORY: AnschauBild[] = [
     jahr: "2013–2015",
     kurz: "Deep Q-Network lernt Arcade-Spiele selbst",
     quelle: "Schematische Illustration, mit KI erstellt für dieses Lehrmittel · kein Foto",
+    geschichte:
+      "2013–2015 zeigte «Deep Q-Network» (DeepMind), dass eine KI klassische Arcade-Spiele allein durch Ausprobieren lernen kann — sie sah nur die Bildpunkte des Schirms und den Punktestand, keine Regeln. Über viele Partien hinweg richtete sie ihr Verhalten auf die Belohnung (Punkte) aus und übertraf bei manchen Spielen den Menschen. Dieses «verstärkende Lernen» wurde später zur Grundlage von Systemen wie AlphaGo, das 2016 den weltbesten Go-Spieler schlug. (KI-erstellte, schematische Illustration; kein Originalspiel.)",
     ki: true,
     hotspots: [
       {
@@ -340,6 +358,8 @@ const BILDER_STORY: AnschauBild[] = [
     kurz: "Text wird zum Bild — und das vor ChatGPT",
     quelle:
       "Von DALL·E 2 erzeugtes Bild (2022) · Wikimedia Commons · KI-generiert, urheberrechtlich nicht geschützt",
+    geschichte:
+      "DALL·E (OpenAI) erzeugt Bilder aus Textbeschreibungen. DALL·E 1 kam im Januar 2021, das deutlich stärkere DALL·E 2 im April 2022 — rund ein halbes Jahr vor ChatGPT. Man gibt einen Satz ein, und das Modell «malt» ein Bild, das so nie fotografiert wurde; es setzt es Punkt für Punkt neu aus Gelerntem zusammen. Damit wurde generative KI erstmals einem breiten Publikum sichtbar. Dieses Bild ist selbst ein DALL·E-2-Ergebnis (eine zeichnende Roboterhand) und als KI-erzeugtes Werk urheberrechtlich nicht geschützt.",
     ki: true,
     hotspots: [
       {
@@ -369,6 +389,8 @@ const BILDER_STORY: AnschauBild[] = [
     jahr: "November 2022",
     kurz: "der Chatbot, der KI in den Alltag brachte",
     quelle: "Schematische Illustration, mit KI erstellt für dieses Lehrmittel · kein Foto",
+    geschichte:
+      "ChatGPT (OpenAI) erschien im November 2022 und machte KI für alle bedienbar: ein Chatfenster, normale Sprache, sofort nutzbar. Innert weniger Wochen nutzten es Millionen — der Moment, in dem KI im Alltag ankam. Das Modell setzt Wort für Wort den wahrscheinlich nächsten Textbaustein; das gelingt verblüffend gut, kann aber auch überzeugend falsch sein. Zusätzlich wurde es mit menschlichem Feedback trainiert, um hilfreicher und harmloser zu antworten. (KI-erstellte Illustration eines Chatfensters.)",
     ki: true,
     hotspots: [
       {
@@ -761,11 +783,11 @@ export default function Lernseite2VorhangAuf() {
               kat: "daten",
               mmf: "maschine",
               jahr: "ab 2023",
-              text: "Nach ChatGPT entsteht ein Wettbewerb: GPT, Claude, Gemini und Llama ringen um die besten Modelle. Manche sind offen, andere geschlossen.",
+              text: "Nach ChatGPT entstand ein weltweiter Wettbewerb: Neben den US-Modellen GPT, Claude, Gemini und Llama traten chinesische, europäische und sogar schweizerische Modelle an.",
               geschichte:
-                "Ab 2023 traten neben OpenAIs GPT weitere Familien an: Anthropics Claude, Googles Gemini und Metas Llama. Sie konkurrieren um Qualität, Preis und Sicherheit — und treiben sich gegenseitig in immer kürzeren Abständen zu neuen Versionen.",
+                "Ab 2023 rangen viele Familien um die besten Modelle: aus den USA GPT (OpenAI), Claude (Anthropic), Gemini (Google) und das offene Llama (Meta). Anfang 2025 sorgte das chinesische DeepSeek für Aufsehen, weil es mit vergleichsweise wenig Aufwand mithielt; auch Alibabas Qwen zählt dazu. Aus Europa kommt Mistral (Frankreich), und aus der Schweiz das vollständig offene «Apertus» (ETH Zürich, EPFL und das Supercomputer-Zentrum CSCS, 2025).",
               mehr:
-                "Ein wichtiger Unterschied ist offen gegen geschlossen: Llama etwa wird mit frei verfügbaren Gewichten veröffentlicht, GPT, Claude und Gemini laufen als Dienste. Der Wettbewerb senkt Preise und beschleunigt den Fortschritt, wirft aber auch Fragen auf — zu Energieverbrauch, Datenherkunft und der Macht weniger grosser Anbieter.",
+                "Der Wettbewerb hat auch eine geopolitische und sprachliche Seite: Wer eigene Modelle baut, macht sich unabhängiger. Ein wichtiger Unterschied ist offen gegen geschlossen — Llama, DeepSeek und Apertus veröffentlichen ihre Gewichte, GPT, Claude und Gemini laufen als Dienste. Apertus legt sogar Trainingsdaten und Methoden offen und deckt über 1000 Sprachen ab, darunter Schweizerdeutsch und Rätoromanisch — ein Beispiel für «souveräne», öffentlich getragene KI neben den grossen kommerziellen Anbietern.",
             },
             {
               titel: "Multimodalität: KI sieht und hört",
