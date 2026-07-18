@@ -19,7 +19,6 @@ Thumbnail und in der Grossansicht):
 | `ml-raum.svg` | Maschinelles Lernen — Datenpunkte im mehrdimensionalen Merkmalsraum |
 | `tamagotchi.svg` | Tamagotchi (1996) — virtuelles Haustier (generisches Gerät, keine Marke) |
 | `dqn-spiel.svg` | Verstärkendes Lernen — DQN lernt ein (generisches) Arcade-Spiel |
-| `dalle.svg` | DALL·E (Jan 2021) — Text wird zum Bild (Avocado-Sessel als Motiv) |
 | `chatgpt.svg` | ChatGPT (Nov 2022) — Chatfenster mit KI-Antwort |
 
 Die Stationen Quipu und Turing wurden von eigenen SVGs auf echte gemeinfreie
@@ -45,6 +44,7 @@ Lizenzstatus dort am 2026-07-11 geprüft («Public domain»).
 | `storyboard/supercomputer.jpg` | Pleiades supercomputer.jpg | NASA (US-Gov, gemeinfrei) |
 | `quipu-pd.jpg` | The Ancient Quipu Plate XXII.jpg | historische Aufnahme (PD, Urheber lange verstorben) |
 | `bombe.jpg` | 'bombe'.jpg | US National Security Agency (US-Gov, gemeinfrei) |
+| `dalle2.jpg` | DALL-E 2 "A photo of a robot hand drawing, digital art".jpg | von DALL·E 2 erzeugt (2022); KI-generiert, urheberrechtlich nicht geschützt |
 
 ## Gemeinfrei (Public Domain)
 
