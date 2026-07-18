@@ -275,31 +275,30 @@ const BILDER_STORY: AnschauBild[] = [
     ],
   },
   {
-    src: "/art/tamagotchi.svg",
-    alt: "Illustration eines Tamagotchi (1996): ein eiförmiges Taschengerät mit kleinem Pixel-Wesen auf dem Bildschirm und drei Knöpfen.",
+    src: "/art/tamagotchi-foto.jpg",
+    alt: "Foto eines gelben Tamagotchi (1996): ein eiförmiges Taschengerät mit kleinem Bildschirm, drei Knöpfen und einer Kugelkette.",
     titel: "Tamagotchi — das virtuelle Haustier",
     jahr: "1996",
     kurz: "Bindung an ein digitales Wesen",
-    quelle: "Schematische Illustration, mit KI erstellt für dieses Lehrmittel · kein Foto",
-    ki: true,
+    quelle: "Foto: Museum Rotterdam · Wikimedia Commons · CC BY-SA 3.0",
     hotspots: [
       {
-        x: 50,
-        y: 44,
+        x: 53,
+        y: 42,
         titel: "Gefühle für Pixel",
-        text: "Millionen banden sich emotional an ein paar Bildpunkte. Wir behandeln Maschinen erstaunlich leicht wie Lebewesen.",
+        text: "Auf dem kleinen Schirm lebte ein paar Bildpunkte grosses Wesen. Millionen banden sich emotional daran — wir behandeln Maschinen erstaunlich leicht wie Lebewesen.",
       },
       {
-        x: 50,
-        y: 74,
+        x: 70,
+        y: 67,
         titel: "Ein Wesen zum Umsorgen",
-        text: "Füttern, spielen, sauber machen: Das Ei verlangte Pflege rund um die Uhr — sonst «starb» das Wesen.",
+        text: "Mit drei Knöpfen wurde gefüttert, gespielt, sauber gemacht — Pflege rund um die Uhr, sonst «starb» das Wesen.",
       },
       {
-        x: 24,
-        y: 20,
+        x: 22,
+        y: 50,
         titel: "Wegbereiter",
-        text: "Tamagotchis ebneten den Weg für virtuelle Haustiere und Gefährten — heute für sprechende KI-Begleiter.",
+        text: "An der Kette hing es immer am Körper. Tamagotchis ebneten den Weg für virtuelle Haustiere und Gefährten — heute für sprechende KI-Begleiter.",
       },
     ],
   },
@@ -474,9 +473,9 @@ export default function Lernseite2VorhangAuf() {
       <section className="mt-xl max-w-5xl" aria-label="Die KI-Story">
         <h2 className="text-headline-lg text-on-surface">Die KI-Story</h2>
         <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
-          Vom antiken Traum, Dingen Leben einzuhauchen, bis zur Gegenwart:
-          vierzehn Stationen, deren Vorstellungen einander quer durch die Zeit
-          beeinflussen. <strong>Deine Aufgabe:</strong> Drei Stationen sind per
+          Vom antiken Traum, Dingen Leben einzuhauchen, über die Geschichte des
+          Algorithmus bis zur Gegenwart: siebzehn Stationen, deren Vorstellungen
+          einander quer durch die Zeit beeinflussen. <strong>Deine Aufgabe:</strong> Drei Stationen sind per
           Zufall eingeblendet — hole dir in der Auswahl weitere dazu, die dich
           interessieren. Tippe einen Punkt an, um seine Geschichte zu lesen;
           unter jeder Karte kannst du «Mehr lesen» aufklappen und mit «Das
@@ -484,7 +483,7 @@ export default function Lernseite2VorhangAuf() {
           Punkte verschieben, «Zeitlich» reiht sie als Perlenschnur von früher
           nach heute.
         </p>
-        <InfoPunkt className="mt-md" label="Muss ich allen 14 nachgehen?">
+        <InfoPunkt className="mt-md" label="Muss ich allen 17 nachgehen?">
           Nein — du musst nicht jede Station öffnen. Geh dem nach, was dich
           neugierig macht. Die Aktivitätsmessung registriert aber, was du
           anschaust, verschiebst und weiterverfolgst — nicht als Note, sondern
@@ -500,10 +499,14 @@ export default function Lernseite2VorhangAuf() {
             { von: 1, zu: 4 },
             { von: 2, zu: 5 },
             { von: 3, zu: 5 },
-            { von: 4, zu: 7 },
-            { von: 6, zu: 8 },
-            { von: 10, zu: 11 },
-            { von: 5, zu: 13 },
+            { von: 4, zu: 8 },
+            { von: 6, zu: 7 },
+            { von: 6, zu: 9 },
+            { von: 7, zu: 13 },
+            { von: 11, zu: 12 },
+            { von: 12, zu: 14 },
+            { von: 14, zu: 16 },
+            { von: 5, zu: 16 },
           ]}
           stationen={[
             {
@@ -591,6 +594,18 @@ export default function Lernseite2VorhangAuf() {
                 "Leibniz träumte von einer «characteristica universalis», mit der sich jeder Streit durchs Rechnen klären liesse — «Lasst uns rechnen!». Babbages «Analytical Engine» (ab 1837) war als universelle, programmierbare Maschine gedacht; Ada Lovelace erkannte, dass sie nicht nur Zahlen, sondern beliebige Symbole verarbeiten könnte — und dass sie doch nichts «von sich aus» hervorbringe.",
             },
             {
+              titel: "Der Algorithmus wird ausführbar",
+              kurz: "Algorithmus",
+              kat: "regeln",
+              mmf: "maschine",
+              jahr: "1936–1950er",
+              text: "Ein Algorithmus ist eine Schritt-für-Schritt-Anleitung zum Rechnen. Mit den ersten Computern wird er ausführbar — die Maschine arbeitet das Verfahren selbsttätig ab.",
+              geschichte:
+                "Das Wort geht auf den Gelehrten al-Chwarizmi (~820) zurück, Verfahren wie Euklids Algorithmus sind noch älter. Doch erst Alan Turings gedankliche «Maschine» (1936) und die ersten elektronischen Rechner der 1940er-Jahre machten Algorithmen zu etwas, das eine Maschine Schritt für Schritt selbst ausführt — nicht mehr ein Mensch mit Papier und Bleistift.",
+              mehr:
+                "Turing zeigte 1936, dass eine einzige, universelle Maschine jedes berechenbare Verfahren ausführen kann — die theoretische Grundlage jedes Computers. 1950 fragte er in «Computing Machinery and Intelligence», ob Maschinen denken können, und schlug das «Imitationsspiel» (den Turing-Test) vor. Damit wird der Algorithmus vom Rechenrezept zum Motor der KI: Alles, was Computer und später KI tun, ist im Kern das Abarbeiten von Algorithmen.",
+            },
+            {
               titel: "Geburt der KI",
               kurz: "Dartmouth",
               kat: "regeln",
@@ -651,6 +666,30 @@ export default function Lernseite2VorhangAuf() {
                 "Statistische Verfahren lernen Wahrscheinlichkeiten aus Beispielen, statt Regeln vorgegeben zu bekommen. Mit wachsender Rechenkraft wurde das überlegen — sichtbar 1997, als IBMs «Deep Blue» den Schachweltmeister Kasparow schlug: nicht durch Verstehen, sondern durch Rechnen und Erfahrung.",
             },
             {
+              titel: "Algorithmen filtern das Internet",
+              kurz: "Internet-Filter",
+              kat: "daten",
+              mmf: "maschine",
+              jahr: "1994–1998",
+              text: "Als das Web wächst, sortieren Algorithmen die Flut. Empfehlungs- und Rangfolge-Verfahren entscheiden, was wir zuerst sehen.",
+              geschichte:
+                "1994 schlug das Projekt GroupLens vor, Beiträge automatisch nach dem Geschmack ähnlicher Nutzer zu empfehlen — die Geburt des «kollaborativen Filterns». 1998 ordnete Googles PageRank Webseiten danach, wie viele andere Seiten auf sie verweisen. Zum ersten Mal entschied nicht ein Mensch, sondern ein Algorithmus im grossen Massstab über Reihenfolge und Sichtbarkeit.",
+              mehr:
+                "GroupLens begann mit Empfehlungen für Usenet-Diskussionen; dasselbe Prinzip steckt heute in Produkt- und Film-Empfehlungen. PageRank machte Google gross, weil es Relevanz aus der Verlinkungsstruktur des Webs errechnete. Beide markieren den Wendepunkt: Der Algorithmus wird vom Werkzeug im Hintergrund zum Türsteher der Aufmerksamkeit — er bestimmt mit, was Millionen Menschen finden und was unsichtbar bleibt.",
+            },
+            {
+              titel: "Algorithmen kuratieren Social Media",
+              kurz: "Social-Media-Feed",
+              kat: "daten",
+              mmf: "maschine",
+              jahr: "ab 2006",
+              text: "Statt einfach chronologisch zeigt der Feed, was ein Algorithmus für relevant hält. Lernende Ranking-Systeme entscheiden pro Person, welche Beiträge oben stehen.",
+              geschichte:
+                "2006 führte Facebook den «News Feed» ein — Beiträge wurden gebündelt und gewichtet statt bloss der Reihe nach angezeigt. Später bestimmten lernende Ranking-Systeme anhand jeder Reaktion, jedes Klicks und jeder Verweildauer, was einzelne Nutzer zu sehen bekamen. Aus einer Liste wurde eine für jede Person anders zusammengestellte Bühne.",
+              mehr:
+                "Ranking-Algorithmen optimieren auf Kennzahlen wie Interaktion und Verweildauer — mit Nebenwirkungen: Was Aufmerksamkeit bindet, wird verstärkt, Polarisierendes oft besonders. Damit ist der Algorithmus nicht mehr nur Filter, sondern Mit-Gestalter des öffentlichen Gesprächs. Genau hier wird die «neue Akteurin» gesellschaftlich wirksam: Sie sieht nichts und versteht nichts — und prägt doch, worüber wir streiten.",
+            },
+            {
               titel: "Deep Learning",
               kurz: "Deep Learning",
               kat: "daten",
@@ -673,6 +712,98 @@ export default function Lernseite2VorhangAuf() {
                 "Heutige Modelle trainieren auf riesigen Text- und Bildmengen, in Rechenzentren mit Zehntausenden von Chips. So entstand die neue Akteurin dieses Moduls: dialogfähig, generativ — und Alltag von der Suchmaschine bis zum Schreibassistenten.",
               mehr:
                 "Mit GPT-3 (2020) und ChatGPT (Ende 2022) wurde Sprach-KI erstmals einer breiten Öffentlichkeit zugänglich — und alltagstauglich. Was als jahrtausendealte Phantasie begann, ist heute Werkzeug und Gegenüber zugleich: Genau das macht es zum Thema dieser Einheit.",
+            },
+          ]}
+        />
+      </section>
+
+      <FadenDivider className="mt-xl" />
+
+      {/* 1b — Anschluss: die Ära der Sprachmodelle (eigenes, kleineres Gewebe,
+          damit die grosse Zeitleiste oben übersichtlich bleibt) */}
+      <section className="mt-xl max-w-5xl" aria-label="Anschluss: die Ära der Sprachmodelle">
+        <h2 className="text-headline-lg text-on-surface">
+          Anschluss: die Ära der Sprachmodelle
+        </h2>
+        <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
+          Ab hier beschleunigt sich alles. Die jüngste Etappe — von der
+          Transformer-Architektur bis zu Modellen, die sehen und hören —
+          bekommt ihr eigenes kleines Gewebe, damit die grosse Zeitleiste oben
+          übersichtlich bleibt. <strong>Deine Aufgabe:</strong> wie oben — Punkte
+          antippen, lesen, mit «Das verfolge ich weiter» merken; «Zeitlich»
+          reiht sie von 2017 bis heute.
+        </p>
+        <StoryGewebe
+          className="mt-lg"
+          spurKey="vorhang-auf:sprachmodelle"
+          wunschKey="vorhang-auf:sprachmodelle"
+          buehneKlasse="bg-primary-container/20"
+          einfluesse={[
+            { von: 0, zu: 2 },
+            { von: 1, zu: 3 },
+            { von: 2, zu: 4 },
+            { von: 0, zu: 4 },
+          ]}
+          stationen={[
+            {
+              titel: "Der Transformer",
+              kurz: "Transformer",
+              kat: "daten",
+              mmf: "maschine",
+              jahr: "2017",
+              text: "2017 stellen Google-Forscher die «Transformer»-Architektur vor. Sie lernt, welche Wörter im Satz aufeinander achten müssen — die Grundlage aller heutigen Sprachmodelle.",
+              geschichte:
+                "Der Aufsatz «Attention Is All You Need» (2017) führte den Aufmerksamkeits-Mechanismus ein: Das Modell gewichtet, welche Teile eines Textes für welche anderen wichtig sind — über lange Passagen hinweg und hochgradig parallel berechenbar. Damit liessen sich Modelle erstmals auf riesige Textmengen skalieren.",
+              mehr:
+                "«GPT» steht für Generative Pretrained Transformer — der Name trägt die Architektur schon in sich. Der Transformer löste ältere Ansätze ab, weil er Zusammenhänge nicht Wort für Wort, sondern im Ganzen erfasst und sich effizient auf viele Chips verteilen lässt. Fast alle grossen Text-, Bild- und Sprachmodelle der Folgejahre bauen darauf auf.",
+            },
+            {
+              titel: "Die GPT-Welle",
+              kurz: "GPT-Welle",
+              kat: "daten",
+              mmf: "maschine",
+              jahr: "2018–2020",
+              text: "Sprachmodelle werden grösser und grösser. Mit jeder Stufe — GPT-1, GPT-2, GPT-3 — wächst, was sie ohne eigenes Training für eine Aufgabe können.",
+              geschichte:
+                "Ab 2018 zeigten OpenAIs GPT-Modelle, dass reines «Vorhersagen des nächsten Wortes» auf riesigen Textmengen erstaunlich weit trägt. GPT-3 (2020) mit 175 Milliarden Parametern konnte Texte schreiben, übersetzen und Fragen beantworten, ohne für jede Aufgabe eigens trainiert zu werden.",
+              mehr:
+                "Der Sprung kam vor allem durch Grösse — mehr Daten, mehr Parameter, mehr Rechenzeit («Scaling»). Damit tauchten Fähigkeiten auf, die niemand einzeln einprogrammiert hatte. Zugleich zeigten sich die Kehrseiten: Die Modelle geben falsche Auskünfte selbstsicher wieder und übernehmen Verzerrungen aus ihren Trainingsdaten.",
+            },
+            {
+              titel: "ChatGPT — der Massenmoment",
+              kurz: "ChatGPT",
+              kat: "daten",
+              mmf: "mensch",
+              jahr: "November 2022",
+              text: "ChatGPT macht Sprach-KI dialogfähig und für alle bedienbar. Innert Wochen nutzen Millionen den Chatbot — KI kommt im Alltag an.",
+              geschichte:
+                "Im November 2022 veröffentlichte OpenAI ChatGPT: ein auf Gespräch getrimmtes Sprachmodell, das auf einfache Fragen flüssig antwortet. Es erreichte in Rekordzeit hunderte Millionen Nutzer und löste einen weltweiten KI-Wettlauf aus.",
+              mehr:
+                "Neu war weniger das Modell als die Zugänglichkeit: ein Chatfenster, normale Sprache, sofort nutzbar. Trainiert wurde es zusätzlich mit menschlichem Feedback (RLHF), um hilfreicher und harmloser zu antworten. Aus einer Forschungstechnik wurde ein Alltagswerkzeug — und die Debatte über Verlässlichkeit, Schule und Arbeit begann breit.",
+            },
+            {
+              titel: "Wettbewerb der Modellfamilien",
+              kurz: "Modellfamilien",
+              kat: "daten",
+              mmf: "maschine",
+              jahr: "ab 2023",
+              text: "Nach ChatGPT entsteht ein Wettbewerb: GPT, Claude, Gemini und Llama ringen um die besten Modelle. Manche sind offen, andere geschlossen.",
+              geschichte:
+                "Ab 2023 traten neben OpenAIs GPT weitere Familien an: Anthropics Claude, Googles Gemini und Metas Llama. Sie konkurrieren um Qualität, Preis und Sicherheit — und treiben sich gegenseitig in immer kürzeren Abständen zu neuen Versionen.",
+              mehr:
+                "Ein wichtiger Unterschied ist offen gegen geschlossen: Llama etwa wird mit frei verfügbaren Gewichten veröffentlicht, GPT, Claude und Gemini laufen als Dienste. Der Wettbewerb senkt Preise und beschleunigt den Fortschritt, wirft aber auch Fragen auf — zu Energieverbrauch, Datenherkunft und der Macht weniger grosser Anbieter.",
+            },
+            {
+              titel: "Multimodalität: KI sieht und hört",
+              kurz: "Multimodalität",
+              kat: "daten",
+              mmf: "maschine",
+              jahr: "2023–2024",
+              text: "Die Modelle bleiben nicht beim Text: Sie verarbeiten auch Bilder, Sprache und teils Video. KI beginnt zu sehen und zu hören.",
+              geschichte:
+                "Ab 2023/24 wurden führende Systeme multimodal. Claude 3 (2024) konnte Bilder verstehen und beschreiben; GPT-4o (2024) nahm Text, Bild und Ton in einem Modell entgegen und antwortete in Echtzeit gesprochen. Aus dem Textautomaten wird ein Gegenüber, das mehrere Sinne verbindet.",
+              mehr:
+                "Multimodal heisst: dieselbe Architektur verarbeitet verschiedene «Modalitäten» — geschriebenen Text, Fotos, Diagramme, Sprache, teils bewegte Bilder. Damit kann man ein Foto zeigen und darüber sprechen, statt alles zu tippen. Genau diese Bündelung — sprechen, sehen, hören, erzeugen — macht die «neue Akteurin» aus, um die es in diesem Modul geht.",
             },
           ]}
         />

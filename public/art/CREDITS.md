@@ -17,7 +17,6 @@ Thumbnail und in der Grossansicht):
 |---|---|
 | `eliza.svg` | ELIZA (1966) — erster Chatbot, Fernschreiber-Dialog |
 | `ml-raum.svg` | Maschinelles Lernen — Datenpunkte im mehrdimensionalen Merkmalsraum |
-| `tamagotchi.svg` | Tamagotchi (1996) — virtuelles Haustier (generisches Gerät, keine Marke) |
 | `dqn-spiel.svg` | Verstärkendes Lernen — DQN lernt ein (generisches) Arcade-Spiel |
 | `chatgpt.svg` | ChatGPT (Nov 2022) — Chatfenster mit KI-Antwort |
 
@@ -72,6 +71,15 @@ ebenfalls gemeinfrei. Quelle jeweils Wikimedia Commons.
 |---|---|---|---|---|
 | `erde_nacht.jpg` | Earth at Night (Lichter der Städte) | NASA / NOAA | 2012 | Gegenwart · elektrifizierte, vernetzte Welt |
 | `erde_tag.jpg` | Blue Marble (Erde aus dem All) | NASA (Apollo 17) | 1972 | Gegenwart · der eine Planet, globales „Wir" |
+
+## Creative Commons (mit Namensnennung)
+
+Nicht gemeinfrei, aber mit Namensnennung frei nutzbar (CC BY-SA 3.0,
+share-alike). Der Nachweis erscheint in der App in der Quellenzeile des Bildes.
+
+| Datei | Commons-Datei | Urheber | Lizenz |
+|---|---|---|---|
+| `tamagotchi-foto.jpg` | Gele tamagotchi, objectnr 78041.JPG | Museum Rotterdam | CC BY-SA 3.0 |
 
 ## Zeitgenössisch (mit Genehmigung)
 
