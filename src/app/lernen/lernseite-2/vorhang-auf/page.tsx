@@ -8,6 +8,7 @@ import BilderAnschauung, { type AnschauBild } from "../_components/BilderAnschau
 import AktivitaetsNetzFloat from "../_components/AktivitaetsNetzFloat";
 import GewebeSpiel from "../_components/GewebeSpiel";
 import VideoImpuls from "../_components/VideoImpuls";
+import InfoPunkt from "../_components/InfoPunkt";
 
 /**
  * Das Muster dieser Seite: die Auftritts-Signatur (oben rechts im Kopf),
@@ -316,14 +317,20 @@ export default function Lernseite2VorhangAuf() {
           Vom antiken Traum, Dingen Leben einzuhauchen, bis zur Gegenwart:
           vierzehn Stationen, deren Vorstellungen einander quer durch die Zeit
           beeinflussen. <strong>Deine Aufgabe:</strong> Drei Stationen sind per
-          Zufall eingeblendet — hole dir in der Auswahl nach und nach alle
-          übrigen dazu. Tippe jeden Punkt im Muster an, um seine Geschichte zu
-          lesen; unter jeder Karte kannst du «Mehr lesen» aufklappen und dir mit
-          «Mehr dazu wissen» ein Merkzeichen setzen. Im Gewebe lassen sich die
+          Zufall eingeblendet — hole dir in der Auswahl weitere dazu, die dich
+          interessieren. Tippe einen Punkt an, um seine Geschichte zu lesen;
+          unter jeder Karte kannst du «Mehr lesen» aufklappen und mit «Das
+          verfolge ich weiter» ein Merkzeichen setzen. Im Gewebe lassen sich die
           Punkte verschieben, «Zeitlich» reiht sie als Perlenschnur von früher
-          nach heute. Du kannst so viel anklicken, wie du möchtest — deine
-          Aktivität wird dir später im Orakel gezeigt.
+          nach heute.
         </p>
+        <InfoPunkt className="mt-md" label="Muss ich allen 14 nachgehen?">
+          Nein — du musst nicht jede Station öffnen. Geh dem nach, was dich
+          neugierig macht. Die Aktivitätsmessung registriert aber, was du
+          anschaust, verschiebst und weiterverfolgst — nicht als Note, sondern
+          um dir am Ende im Orakel eine persönliche Rückmeldung zu deinem Weg
+          durchs Modul zu geben.
+        </InfoPunkt>
         <StoryGewebe
           className="mt-lg"
           spurKey="vorhang-auf:story"
@@ -561,43 +568,43 @@ export default function Lernseite2VorhangAuf() {
           knoten={[
             {
               titel: "dialoghaft",
-              text: "Man steuert sie mit Alltagssprache — und sie antwortet in Sprache. Das Gespräch selbst ist die Bedienoberfläche.",
+              text: "Man steuert sie mit Alltagssprache — und sie antwortet in Sprache. Das Gespräch selbst ist die Bedienoberfläche: Man fragt, präzisiert, widerspricht, wie bei einem Gegenüber. Keine Menüs, keine Knöpfe — nur Worte.",
               mehr:
                 "Bis vor kurzem musste man Computer in Programmiersprachen anweisen. Sprachmodelle kehren das um: Die Anweisung ist normaler Text — «die heisseste neue Programmiersprache ist Englisch», sagt der KI-Forscher Andrej Karpathy. Das macht die Technik für alle bedienbar, verwischt aber auch die Grenze zwischen Befehl und Gespräch.",
             },
             {
               titel: "generativ",
-              text: "Sie erzeugt laufend Neues — Text, Bild, Code — durch Vorhersage des nächsten Bausteins. Erzeugen und Erfinden liegen dabei dicht beieinander.",
+              text: "Sie erzeugt laufend Neues — Text, Bild, Code — statt Fertiges nur abzurufen. Jedes Wort ist die wahrscheinlichste Fortsetzung des Vorherigen. So entsteht Verblüffendes ebenso wie frei Erfundenes: Erzeugen und Erfinden liegen dicht beieinander.",
               mehr:
                 "«Generativ» heisst: Sie stellt Neues her, statt nur Vorhandenes abzurufen — Wort für Wort als wahrscheinlichste Fortsetzung. Dieselbe Fähigkeit bringt Brillantes wie Erfundenes hervor; die Informatikerin Katharina Zweig schlägt statt «Halluzination» das Wort «Konfabulation» vor: flüssig geredet, ohne Wissen dahinter.",
             },
             {
               titel: "multimodal",
-              text: "Text, Bild und Ton laufen in einem einzigen Modell zusammen. Sie liest, sieht und hört — und antwortet in allen drei Formen.",
+              text: "Text, Bild und Ton laufen in einem einzigen Modell zusammen. Sie liest, sieht und hört — und antwortet wahlweise in Wort, Bild oder Stimme. Man kann ihr ein Foto zeigen, eine Skizze oder einen gesprochenen Satz; sie nimmt die Welt in mehreren Kanälen zugleich auf.",
               mehr:
                 "Frühe Modelle konnten entweder Text oder Bild oder Ton. Multimodale Modelle verbinden diese Kanäle in einem Netz und rücken damit näher an die menschliche Wahrnehmung, die auch nicht in getrennten Sinnen denkt. Ein Foto, eine Skizze, ein gesprochener Satz — alles kann Eingabe sein.",
             },
             {
               titel: "agentenhaft",
-              text: "Sie zerlegt Ziele in Schritte und greift selbständig zu Werkzeugen. Aus dem Antwortgeber wird ein handelnder Akteur.",
+              text: "Sie bleibt nicht beim Antworten stehen: Sie zerlegt ein Ziel in Schritte und greift selbständig zu Werkzeugen — Websuche, Programme, Code. Aus dem Antwortgeber wird ein Akteur, der Dinge erledigt. Genau hier verschwimmt die Grenze zwischen Werkzeug und Gegenüber.",
               mehr:
                 "Ein «Agent» ist mehr als ein Antwortgeber: ein Sprachmodell mit Gedächtnis, der Fähigkeit, ein Ziel in Schritte zu zerlegen, und Zugriff auf Werkzeuge — Websuche, Code, andere Programme. Damit handelt die KI eigenständig in der Welt; genau hier verschwimmt die alte Grenze zwischen Werkzeug und Gegenüber.",
             },
             {
               titel: "speicherabhängig",
-              text: "Ihr ganzes Können steckt in gespeicherten Gewichten — wo kein Speicher, da kein Training. Auch im Betrieb braucht sie Kurz- und Langzeitgedächtnis.",
+              text: "Ihr ganzes Können steckt in gespeicherten Zahlen, den «Gewichten» — wo kein Speicher, da kein Training. Auch im Betrieb braucht sie Gedächtnis: den Kontext des Gesprächs und durchsuchbare Ablagen. Ohne Speichern gäbe es weder Lernen noch Erinnern.",
               mehr:
                 "Alles, was ein Modell «kann», steckt in Milliarden gespeicherten Zahlen, den Gewichten. Training heisst, diese Werte so lange zu verstellen, bis die Antworten stimmen — ohne Speicher kein Lernen. Und im Betrieb braucht es weiter Speicher: als Kurzzeitgedächtnis (den Kontext) und als durchsuchbare Ablage fürs Langzeitgedächtnis.",
             },
             {
               titel: "datenbasiert",
-              text: "Ihre Fähigkeiten wachsen aus riesigen Datenmengen, nicht aus einprogrammierten Regeln. Ohne Daten bleibt der beste Algorithmus leer.",
+              text: "Ihre Fähigkeiten wachsen aus riesigen Datenmengen, nicht aus einprogrammierten Regeln. Ohne Daten bleibt der beste Algorithmus leer. Darum ist entscheidend, wessen Daten sie gelernt hat — und welche Einseitigkeiten darin stecken.",
               mehr:
                 "«Die Lernalgorithmen sind die Samen, die Daten der Boden», schreibt der Forscher Pedro Domingos. Ohne riesige Datenmengen bleibt die klügste Methode unfruchtbar. Deshalb dreht sich in der KI alles um Daten — und um die Frage, wessen Daten das sind und welche Verzerrungen in ihnen stecken.",
             },
             {
               titel: "mustererkennend",
-              text: "Sie liest statistische Muster aus Daten und wendet sie verlässlich an. Warum etwas passt, versteht sie nicht.",
+              text: "Sie liest statistische Muster aus Unmengen von Beispielen und wendet sie verlässlich an. Was oft zusammen vorkommt, hält sie für zusammengehörig. Warum etwas passt, versteht sie dabei nicht — sie erkennt, ohne zu begreifen.",
               mehr:
                 "Mustererkennung wird gern als reine Wahrscheinlichkeitsrechnung abgetan. Katharina Zweig schärft das Bild: Das System leitet aus Daten statistische Muster ab und hat bestimmte Wörter schlicht oft in bestimmten Kontexten gelesen — es erkennt verlässlich, versteht aber nicht, warum. Ihr nüchternes Fazit: Noch seien diese Systeme gar nicht intelligent.",
             },
@@ -665,43 +672,43 @@ export default function Lernseite2VorhangAuf() {
             {
               titel: "KI — die neue Akteurin",
               kurz: "KI",
-              text: "Sie steht nie allein: Was sie kann, hängt am ganzen Geflecht. Kein Zentrum — ein Knoten unter Knoten.",
+              text: "Sie steht nie allein: Was sie kann, hängt am ganzen Geflecht — an Menschen, Sprache, Rechnern, Rohstoffen, Firmen und Regeln. Kein Zentrum, das für sich funktioniert; die KI ist ein Knoten unter Knoten. Wer mit ihr spricht, zieht immer am ganzen Netz mit.",
               mehr:
                 "In der Akteur-Netzwerk-Theorie (Bruno Latour) handelt nie ein Ding allein — Wirkung entsteht im Geflecht von Menschen und Dingen. So gesehen ist «die KI» kein Kasten, sondern ein Knotenpunkt, an dem Sprache, Rechner, Rohstoffe, Firmen und Regeln zusammenlaufen.",
             },
             {
               titel: "Nutzer:innen",
-              text: "Deine Fragen und Formulierungen führen sie; ohne Eingabe bleibt sie stumm. Mit dir wird sie zur Mitspielerin.",
+              text: "Deine Fragen und Formulierungen führen sie; ohne Eingabe bleibt sie stumm. Wie du fragst, formt, was zurückkommt — mit dir wird sie zur Mitspielerin, nicht zur blossen Auskunft. Und oft fliessen deine Eingaben und Rückmeldungen ins nächste Training zurück.",
               mehr:
                 "Ein Sprachmodell tut von sich aus nichts — es wartet auf eine Eingabe. Wie du fragst (der «Prompt»), formt die Antwort stark; damit bist du Teil des Systems, nicht bloss Zuschauerin. Auch deine Rückmeldungen fliessen oft ins nächste Training zurück.",
             },
             {
               titel: "Sprache",
-              text: "Gelernt aus Milliarden Sätzen — unsere Wörter sind ihr Material. Auch unsere Fehler stecken darin.",
+              text: "Gelernt aus Milliarden Sätzen — unsere Wörter, Geschichten und Begriffe sind ihr Material. Sie gibt zurück, was Menschen geschrieben haben. Also stecken auch unsere Vorurteile, Lücken und Fehler mit darin.",
               mehr:
                 "Trainiert wird auf riesigen Textmengen aus dem Internet, aus Büchern und Foren. Darin steckt viel Wissen der Menschheit — aber auch ihre Vorurteile, Lücken und Fehler, die das Modell mitlernt und weitergibt.",
             },
             {
               titel: "Datencentren",
-              text: "Jede Antwort läuft durch riesige Rechenhallen. Strom, Kühlung und Seekabel inklusive.",
+              text: "Jede Antwort läuft durch riesige Rechenhallen voller Chips. Sie brauchen viel Strom und Wasser zur Kühlung — und Seekabel, die die Kontinente verbinden. Die Wolke ist in Wahrheit sehr handfest.",
               mehr:
                 "Rechenzentren verbrauchen enorm viel Strom und Wasser zur Kühlung; ihr Energiebedarf wächst mit der KI rasant. Physisch hängt jede Antwort an Serverhallen, Stromnetzen und den Seekabeln, die die Kontinente verbinden.",
             },
             {
               titel: "Rohstoffe",
-              text: "Chips brauchen Metalle, Minen und Fabriken. Die Akteurin hat ein materielles Gewicht.",
+              text: "Chips brauchen Silizium, seltene Erden und Metalle wie Kobalt — aus Minen und Fabriken rund um die Welt. Die scheinbar virtuelle KI hat damit ein sehr reales Gewicht. Und der Abbau geschieht oft unter harten Bedingungen.",
               mehr:
                 "Chips brauchen Silizium, seltene Erden und Metalle wie Kobalt — abgebaut in Minen, oft unter harten Bedingungen. Die scheinbar «virtuelle» KI hat damit einen sehr realen ökologischen und sozialen Fussabdruck.",
             },
             {
               titel: "Unternehmen",
-              text: "Firmen bauen, trainieren und steuern sie — mit eigenen Zielen und Geschäftsmodellen.",
+              text: "Die grossen Modelle bauen wenige, kapitalstarke Firmen — mit eigenen Zielen und Geschäftsmodellen. Wer eine KI trainiert und betreibt, entscheidet mit, was sie darf und was sie kostet. Damit steckt in jeder Antwort auch ein Interesse.",
               mehr:
                 "Die grossen Modelle bauen wenige, kapitalstarke Firmen — mit eigenen Zielen und Geschäftsmodellen. Wer eine KI trainiert und betreibt, entscheidet mit, was sie darf, was sie kostet und wessen Interessen sie dient.",
             },
             {
               titel: "Regeln",
-              text: "Gesetze und Abmachungen bestimmen, was sie darf. Und wer haftet, wenn etwas schiefgeht.",
+              text: "Gesetze und Abmachungen bestimmen, was sie darf — und wer haftet, wenn etwas schiefgeht. Die EU-KI-Verordnung versucht das seit 2024 zu ordnen. Doch die Technik ist oft schneller als die Regeln.",
               mehr:
                 "Gesetze wie die EU-KI-Verordnung (AI Act, ab 2024) versuchen, Risiken einzuhegen und Verantwortung zu klären. Doch die Technik ist oft schneller als die Regulierung — und die Frage, wer haftet, wenn eine KI Schaden anrichtet, ist vielerorts noch offen.",
             },

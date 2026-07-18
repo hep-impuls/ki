@@ -8,10 +8,10 @@ import { leseSpuren, loescheSpuren, merkeSpur, SPUR_EVENT } from "../_lib/spuren
  * (KI-Geschichte, Merkmale, Netz):
  *
  *  1. «Mehr lesen» — klappt einen längeren Vertiefungstext (`mehr`) auf/zu.
- *  2. «Mehr dazu wissen» — ein Merkzeichen (Wunsch): ich möchte zu diesem
- *     Punkt später mehr erfahren. Wird als Spur `wunsch:…` registriert
- *     (lokal + anonymer Zähler + Cloud-Spiegel wie alles) und im Orakel
- *     gezeigt; erneutes Antippen nimmt das Merkzeichen zurück.
+ *  2. «Das verfolge ich weiter» — ein Merkzeichen: diesen Faden möchte ich
+ *     weiterverfolgen. Wird als Spur `wunsch:…` registriert (lokal + anonymer
+ *     Zähler + Cloud-Spiegel wie alles) und im Orakel gezeigt; erneutes
+ *     Antippen nimmt das Merkzeichen zurück.
  *
  * Nur Theme-Tokens.
  */
@@ -75,7 +75,7 @@ export default function KartenAktion({
         <span className="material-symbols-outlined text-[16px]">
           {wunsch ? "bookmark_added" : "bookmark_add"}
         </span>
-        {wunsch ? "Merkzeichen gesetzt" : "Mehr dazu wissen"}
+        {wunsch ? "Wird weiterverfolgt" : "Das verfolge ich weiter"}
       </button>
 
       {mehr && offen && (

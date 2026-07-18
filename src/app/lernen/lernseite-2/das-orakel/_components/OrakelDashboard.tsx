@@ -278,17 +278,17 @@ export default function OrakelDashboard() {
             bookmark_added
           </span>
           <p className="text-body-sm text-on-surface-variant">
-            <strong className="text-on-surface">Wozu du mehr wissen möchtest:</strong>{" "}
+            <strong className="text-on-surface">Was du weiterverfolgen willst:</strong>{" "}
             {meineWuensche === 0
-              ? "Du hast noch kein Merkzeichen gesetzt. Setze bei einer Karte «Mehr dazu wissen», wenn dich ein Punkt besonders interessiert."
+              ? "Du hast noch kein Merkzeichen gesetzt. Setze bei einer Karte «Das verfolge ich weiter», wenn ein Punkt dich neugierig macht."
               : `${meineWuensche} Merkzeichen gesetzt`}
             {" · "}
             <span className="text-on-surface-variant">
               alle zusammen {summeMitPrefix(alleSpuren, "wunsch:")}×
             </span>
             . Deine Merkzeichen bleiben auf dem Gerät; anonym zählt nur, wie oft
-            ein Thema klassenweit gewünscht wird — ein Hinweis, was zu vertiefen
-            wäre.
+            ein Thema klassenweit weiterverfolgt werden möchte — ein Hinweis für
+            die Lehrperson, was zu vertiefen wäre.
           </p>
         </div>
       </section>

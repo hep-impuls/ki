@@ -10,6 +10,23 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-18 — Erste Ebene länger · Merkzeichen umbenannt · Info-Punkt
+
+**Feedback Christof:**
+
+- **Erste Ebene mehr Text:** Die (vorher knappen) Karten von Merkmalen und Netz
+  haben jetzt einen fülligeren Basistext (3–4 Sätze, sichtbar ohne Aufklappen);
+  «Mehr lesen» bleibt die Vertiefung.
+- **Merkzeichen umbenannt:** «Mehr dazu wissen» → **«Das verfolge ich weiter»**
+  (aktiv: «Wird weiterverfolgt») — greift «weiter verfolgen» auf und passt zum
+  Faden-Motiv. Orakel-Zeile entsprechend «Was du weiterverfolgen willst».
+  (Zwischenvariante «Lust auf mehr?» vom User wieder verworfen.)
+- **Neue `InfoPunkt.tsx`** (ⓘ zum Aufklappen): In der KI-Story ein Info-Punkt
+  «Muss ich allen 14 nachgehen?» — nein, man muss nicht; die Aktivitätsmessung
+  registriert aber, was man anschaut/verschiebt/weiterverfolgt, nicht als Note,
+  sondern für eine persönliche Rückmeldung im Orakel. Der Begleittext ist dafür
+  entschlackt.
+
 ## 2026-07-18 — Vertiefung: frühere Geschichten, Merkzeichen, Mehr-lesen
 
 **Auftrag Christof (mehrteilig):**
