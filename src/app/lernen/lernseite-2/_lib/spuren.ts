@@ -235,6 +235,8 @@ export interface AktivitaetsZahlen {
   bilder: number;
   /** Geschaute Video-Impulse. */
   videos: number;
+  /** «Mehr dazu wissen»-Merkzeichen (Wünsche nach Vertiefung). */
+  wuensche: number;
 }
 
 /**
@@ -248,11 +250,13 @@ export function zaehleAktivitaet(): AktivitaetsZahlen {
   let kombinationen = 0;
   let bilder = 0;
   let videos = 0;
+  let wuensche = 0;
   for (const s of lesen()) {
-    if (s.id.startsWith("video:")) videos++;
+    if (s.id.startsWith("wunsch:")) wuensche++;
+    else if (s.id.startsWith("video:")) videos++;
     else if (s.id.includes(":kanten-")) kombinationen++;
     else if (s.id.includes(":bild")) bilder++;
     else knoten++;
   }
-  return { knoten, kombinationen, bilder, videos };
+  return { knoten, kombinationen, bilder, videos, wuensche };
 }

@@ -8,6 +8,7 @@ import {
   SPUR_EVENT,
   zieheSpurenAusCloud,
 } from "../_lib/spuren";
+import KartenAktion from "./KartenAktion";
 
 /**
  * StoryGewebe — die KI-Story als flexibles Teil-Gewebe (Vorbild: das
@@ -48,6 +49,8 @@ export interface StoryStation {
   text: string;
   /** Die längere Geschichte — erscheint in der Karte unter dem Einstieg. */
   geschichte?: string;
+  /** Vertiefung hinter «Mehr lesen». */
+  mehr?: string;
   /** Ehemalige Gruppierungs-/Strang-Metadaten — aktuell ungenutzt. */
   kat?: StoryKat;
   mmf?: StoryMMF;
@@ -379,12 +382,15 @@ export default function StoryGewebe({
   stationen,
   einfluesse = [],
   spurKey,
+  wunschKey,
   className = "",
   buehneKlasse = "bg-primary-container/20",
 }: {
   stationen: StoryStation[];
   einfluesse?: StoryEinfluss[];
   spurKey?: string;
+  /** Präfix für die «Mehr dazu wissen»-Merkzeichen (Default: spurKey). */
+  wunschKey?: string;
   className?: string;
   buehneKlasse?: string;
 }) {
@@ -892,7 +898,7 @@ export default function StoryGewebe({
               So geht es: Drei Stationen sind per Zufall eingeblendet. Tippe
               einen Punkt an — seine Geschichte erscheint hier und bleibt
               stehen. Hole dir dann oben die übrigen Stationen einzeln dazu
-              (oder «Alle») und lies sie, bis alle zwölf offen sind. Im Gewebe
+              (oder «Alle») und lies sie, bis alle offen sind. Im Gewebe
               kannst du die Punkte auch ziehen; «Zeitlich» reiht sie als
               Perlenschnur von früher nach heute.
             </p>
@@ -929,6 +935,10 @@ export default function StoryGewebe({
                       {st.geschichte && (
                         <p className="mt-sm text-body-md text-on-surface-variant">{st.geschichte}</p>
                       )}
+                      <KartenAktion
+                        mehr={st.mehr}
+                        wunschId={`wunsch:${wunschKey ?? spurKey ?? "story"}:${idx}`}
+                      />
                     </div>
                   </div>
                 </li>

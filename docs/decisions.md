@@ -10,6 +10,31 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-18 — Vertiefung: frühere Geschichten, Merkzeichen, Mehr-lesen
+
+**Auftrag Christof (mehrteilig):**
+
+- **«Womit die Akteurin verwoben ist» entfernt** (zweite Bilderstrecke +
+  `BILDER_NETZ`). Die erste Bilderstrecke bleibt.
+- **KI-Geschichte-Begleittext:** Hinweis ergänzt, dass man so viel anklicken
+  kann wie gewünscht und die Aktivität später (im Orakel) gezeigt wird.
+- **Frühere Geschichten + präzise Datierungen (gut recherchiert):** Die Story
+  beginnt neu mit zwei antiken Stationen — **Hephaistos & Talos** (Homer,
+  ~8. Jh. v. Chr.) und **Yan Shi's Automat** (China, «Liezi», ~4. Jh. n. Chr.,
+  eine der frühesten Automaten-Erzählungen) — also 14 statt 12 Stationen. Alle
+  vagen Zeitmarken («Sage», «Alchemie», «heute») durch konkrete ersetzt
+  (Golem «Prag, 16. Jh.» mit Talmud-Hinweis, Homunkulus «16. Jh.»/Faust 1832,
+  Rechenmaschinen «1673–1843», Gegenwart «ab 2020» usw.). Einfluss-Bögen neu
+  indexiert.
+- **Neue `KartenAktion.tsx`** (geteilt von Story, Merkmale, Netz): «Mehr
+  lesen» klappt einen Vertiefungstext (`mehr`) auf; «Mehr dazu wissen» setzt
+  ein Merkzeichen (Spur `wunsch:…`, dreifach registriert). Jede Station/jedes
+  Merkmal/jeder Netz-Knoten hat jetzt einen recherchierten `mehr`-Text.
+- **Aktivität:** `zaehleAktivitaet()` kennt neu `wuensche` (`wunsch:`-Präfix,
+  aus «Knoten» ausgenommen). Im Orakel neue Zeile «Wozu du mehr wissen
+  möchtest» (du-Anzahl + anonymer Klassen-Zähler — Hinweis für die Lehrperson,
+  was zu vertiefen wäre). Story-Total 12 → 14.
+
 ## 2026-07-18 — Perlschnur: Bewegung nur beim Ziehen (Hover-Schwingen raus)
 
 **Feedback Christof:** Die Perlschnur bewegte sich schon beim Drüberfahren zu

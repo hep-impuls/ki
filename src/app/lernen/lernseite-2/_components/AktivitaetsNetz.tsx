@@ -83,6 +83,7 @@ export default function AktivitaetsNetz({
     kombinationen: 0,
     bilder: 0,
     videos: 0,
+    wuensche: 0,
   });
 
   useEffect(() => {

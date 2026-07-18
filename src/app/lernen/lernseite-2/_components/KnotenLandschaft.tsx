@@ -9,6 +9,7 @@ import {
   SPUR_EVENT,
   zieheSpurenAusCloud,
 } from "../_lib/spuren";
+import KartenAktion from "./KartenAktion";
 
 /**
  * KnotenLandschaft — die einheitliche Interaktion der Auftakt-Seite:
@@ -46,8 +47,10 @@ export interface LandKnoten {
   kurz?: string;
   /** Kleine Zeitmarke im Kartenkopf (z.B. «1818», «Sage»). */
   jahr?: string;
-  /** Inhalt der Karte — maximal zwei Sätze. */
+  /** Inhalt der Karte. */
   text: string;
+  /** Vertiefung hinter «Mehr lesen». */
+  mehr?: string;
   /** Optionales kleines Bild in der Karte (mit Nachweis). */
   bild?: { src: string; alt: string; credit: string };
 }
@@ -198,6 +201,7 @@ export default function KnotenLandschaft({
   className = "",
   spurKey,
   kantenSpurKey,
+  wunschKey,
   ariaLabel = "Knotenlandschaft",
 }: {
   knoten: LandKnoten[];
@@ -224,6 +228,8 @@ export default function KnotenLandschaft({
   /** Eigener Spur-Präfix für eingeloggte Verbindungen — getrennt vom
    *  spurKey, damit die Orakel-Zählung der Punkte stimmt. */
   kantenSpurKey?: string;
+  /** Präfix für die «Mehr dazu wissen»-Merkzeichen (Default: spurKey). */
+  wunschKey?: string;
   ariaLabel?: string;
 }) {
   const n = knoten.length;
@@ -687,6 +693,10 @@ export default function KnotenLandschaft({
                           {k.bild.credit}
                         </p>
                       )}
+                      <KartenAktion
+                        mehr={k.mehr}
+                        wunschId={`wunsch:${wunschKey ?? spurKey ?? "knoten"}:${idx}`}
+                      />
                     </div>
                   </div>
                 </li>

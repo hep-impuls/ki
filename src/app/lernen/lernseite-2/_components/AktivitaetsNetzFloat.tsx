@@ -65,6 +65,7 @@ export default function AktivitaetsNetzFloat() {
     kombinationen: 0,
     bilder: 0,
     videos: 0,
+    wuensche: 0,
   });
 
   useEffect(() => {

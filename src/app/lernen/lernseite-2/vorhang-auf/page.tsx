@@ -232,95 +232,6 @@ const BILDER_STORY: AnschauBild[] = [
   },
 ];
 
-/**
- * Zweite Bilderstrecke (Anschauungsmodus mit Hotspots), vor dem «Netz der
- * Akteurin»: drei gemeinfreie Bilder, die das materielle/energetische/
- * menschliche Geflecht sichtbar machen, in dem die KI hängt.
- */
-const BILDER_NETZ: AnschauBild[] = [
-  {
-    src: "/art/eisenwalzwerk.jpg",
-    alt: "Adolph Menzel, Das Eisenwalzwerk (Moderne Cyklopen), 1875",
-    titel: "Das Eisenwalzwerk",
-    jahr: "1875",
-    kurz: "Adolph Menzel · Material, Maschine und Arbeit",
-    hotspots: [
-      {
-        x: 50,
-        y: 57,
-        titel: "Menschliche Arbeit",
-        text: "Am glühenden Eisen stehen Menschen — nicht die Maschine allein. Auch hinter der KI arbeiten Menschen: Sie sammeln und beschriften Daten, prüfen Antworten und halten die Systeme am Laufen.",
-      },
-      {
-        x: 87,
-        y: 22,
-        titel: "Die Maschine",
-        text: "Schwungräder und Riemen treiben das Werk an. Bei der KI sind es Rechenzentren voller Chips — die Maschine ist grösser und unsichtbarer geworden, aber sie ist da.",
-      },
-      {
-        x: 83,
-        y: 77,
-        titel: "Der Preis",
-        text: "Am Rand ruht ein erschöpfter Arbeiter. Jeder Fortschritt hat einen Preis in Körpern, Zeit und Rohstoffen — die Frage ist, wer ihn trägt.",
-      },
-    ],
-  },
-  {
-    src: "/art/erde_nacht.jpg",
-    alt: "Die Erde bei Nacht, Satellitenkomposit der NASA, 2012",
-    titel: "Die Erde bei Nacht",
-    jahr: "2012",
-    kurz: "NASA · Energie und globales Netz",
-    hotspots: [
-      {
-        x: 51,
-        y: 20,
-        titel: "Energiehunger",
-        text: "Wo es hell leuchtet, wird viel Strom verbraucht. KI-Rechenzentren brauchen enorm viel Energie und Kühlung — jede Antwort hat einen Fussabdruck.",
-      },
-      {
-        x: 55,
-        y: 57,
-        titel: "Im Dunkeln",
-        text: "Grosse Teile der Welt bleiben dunkel. Zugang zu Strom, Netz und KI ist ungleich verteilt — nicht alle sind gleich verbunden.",
-      },
-      {
-        x: 85,
-        y: 31,
-        titel: "Wo gebaut wird",
-        text: "In Ostasien schlägt das Herz der Chip-Produktion. Die KI hängt an Fabriken, Lieferketten und Metallen aus aller Welt.",
-      },
-    ],
-  },
-  {
-    src: "/art/london.jpg",
-    alt: "Gustave Doré, Over London — by Rail, 1872",
-    titel: "Over London — by Rail",
-    jahr: "1872",
-    kurz: "Gustave Doré · die Kehrseite der Infrastruktur",
-    hotspots: [
-      {
-        x: 62,
-        y: 14,
-        titel: "Die Infrastruktur",
-        text: "Über den Dächern läuft die Eisenbahn — die Ader, die alles verbindet. Heute sind es Seekabel und Datenleitungen, die die KI mit der Welt verknüpfen.",
-      },
-      {
-        x: 31,
-        y: 62,
-        titel: "Die Verdichteten",
-        text: "Dicht gedrängte Hinterhöfe, Wäscheleinen, Menschen. Jede grosse Technik ordnet mit, wie Menschen leben und arbeiten — sichtbar oder nicht.",
-      },
-      {
-        x: 45,
-        y: 30,
-        titel: "Der Rauch",
-        text: "Unzählige Schlote qualmen. Was den Fortschritt antreibt, hinterlässt Spuren in Luft und Umwelt — auch das gehört zum Netz.",
-      },
-    ],
-  },
-];
-
 export default function Lernseite2VorhangAuf() {
   return (
     <AppLayout>
@@ -402,48 +313,79 @@ export default function Lernseite2VorhangAuf() {
       <section className="mt-xl max-w-5xl" aria-label="Die KI-Story">
         <h2 className="text-headline-lg text-on-surface">Die KI-Story</h2>
         <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
-          Vom Traum, Dingen Leben einzuhauchen, bis zur Gegenwart: zwölf
-          Stationen, deren Vorstellungen einander quer durch die Zeit
+          Vom antiken Traum, Dingen Leben einzuhauchen, bis zur Gegenwart:
+          vierzehn Stationen, deren Vorstellungen einander quer durch die Zeit
           beeinflussen. <strong>Deine Aufgabe:</strong> Drei Stationen sind per
           Zufall eingeblendet — hole dir in der Auswahl nach und nach alle
           übrigen dazu. Tippe jeden Punkt im Muster an, um seine Geschichte zu
-          lesen; im Gewebe kannst du die Punkte auch verschieben, das Netz
-          federt mit. Wechsle auf «Zeitlich», um die gewählten Stationen als
-          Perlenschnur von früher nach heute zu sehen. Ziel: alle zwölf
-          Geschichten gelesen.
+          lesen; unter jeder Karte kannst du «Mehr lesen» aufklappen und dir mit
+          «Mehr dazu wissen» ein Merkzeichen setzen. Im Gewebe lassen sich die
+          Punkte verschieben, «Zeitlich» reiht sie als Perlenschnur von früher
+          nach heute. Du kannst so viel anklicken, wie du möchtest — deine
+          Aktivität wird dir später im Orakel gezeigt.
         </p>
         <StoryGewebe
           className="mt-lg"
           spurKey="vorhang-auf:story"
           buehneKlasse="bg-primary-container/20"
           einfluesse={[
-            { von: 0, zu: 3 },
-            { von: 1, zu: 3 },
+            { von: 0, zu: 2 },
+            { von: 1, zu: 4 },
             { von: 2, zu: 5 },
-            { von: 4, zu: 6 },
-            { von: 8, zu: 9 },
-            { von: 3, zu: 11 },
+            { von: 3, zu: 5 },
+            { von: 4, zu: 7 },
+            { von: 6, zu: 8 },
+            { von: 10, zu: 11 },
+            { von: 5, zu: 13 },
           ]}
           stationen={[
+            {
+              titel: "Hephaistos & Talos",
+              kurz: "Antike Mythen",
+              kat: "erzaehlung",
+              mmf: "fiktion",
+              jahr: "~8. Jh. v. Chr.",
+              text: "Schon in der griechischen Antike träumte man von künstlichen Wesen aus Metall. Der Schmiedegott Hephaistos schuf sich denkende Helferinnen aus Gold.",
+              geschichte:
+                "In Homers «Ilias» (um das 8. Jahrhundert v. Chr.) dienen dem Schmiedegott goldene Mägde, die Verstand, Stimme und Kraft besitzen, sowie selbstfahrende Dreifüsse. Und Talos, der bronzene Riese, umkreiste als Wächter die Insel Kreta — ein Automat, lange bevor es das Wort dafür gab.",
+              mehr:
+                "Diese Mythen zeigen: Die Idee gebauter, quasi-lebendiger Diener und Wächter ist rund 3000 Jahre alt. Schon damals verband sich damit beides — die Faszination der nützlichen Kraft und die Angst vor dem Wächter, der ausser Kontrolle gerät und Fremde mit glühendem Körper erschlägt.",
+            },
+            {
+              titel: "Yan Shi's Automat",
+              kurz: "Yan Shi",
+              kat: "erzaehlung",
+              mmf: "fiktion",
+              jahr: "~4. Jh. n. Chr.",
+              text: "Auch in China erzählt man früh von einem künstlichen Menschen. Ein Handwerker führt dem König eine täuschend lebendige Figur vor.",
+              geschichte:
+                "Im daoistischen «Liezi» (Text um das 4. Jahrhundert n. Chr., die Erzählung spielt weit früher) präsentiert der Mechaniker Yan Shi dem König Mu von Zhou einen künstlichen Menschen, der geht, singt und den Hofdamen zuzwinkert. Als der König Betrug vermutet, zerlegt Yan Shi ihn — er besteht aus Leder, Holz, Leim und Lack.",
+              mehr:
+                "Es ist eine der frühesten Automaten-Erzählungen überhaupt — und erstaunlich modern: Sie handelt vom Verdacht, ob hinter der Maschine nicht doch ein Mensch stecke, und von der Grenze zwischen echtem und nachgeahmtem Leben. Dieselbe Frage kehrt beim Schachtürken und bei heutiger KI wieder.",
+            },
             {
               titel: "Der Golem",
               kurz: "Golem",
               kat: "erzaehlung",
               mmf: "fiktion",
-              jahr: "Sage",
-              text: "Aus Lehm geformt, durch Schriftzeichen belebt. Die Ursage vom Menschen, der einem Ding Leben einhaucht.",
+              jahr: "Prag, 16. Jh.",
+              text: "Aus Lehm geformt, durch ein Schriftzeichen belebt: der Golem. Die Ursage vom Menschen, der einem Ding Leben einhaucht.",
               geschichte:
-                "Die Prager Sage erzählt von Rabbi Löw, der aus Lehm eine Gestalt formt und sie durch Schriftzeichen zum Leben erweckt — und der sie wieder stilllegen muss, als sie ihm entgleitet. Schon die Ursage handelt nicht nur vom Erschaffen, sondern vom Kontrollverlust: Wer belebt, muss hüten können.",
+                "Die Prager Sage schreibt Rabbi Löw (dem Maharal, ~1520–1609) einen Golem zu, den er aus Lehm formt und durch das Wort «emet» (Wahrheit) auf der Stirn erweckt — löscht man einen Buchstaben, erlischt er. Als die Gestalt ihm entgleitet, muss er sie stilllegen.",
+              mehr:
+                "Die Idee ist älter als Prag: Schon der Talmud (Spätantike) erzählt, der Gelehrte Rava habe einen künstlichen Menschen erschaffen. Der Golem gilt oft als Urbild der KI — belebt durch ein Zeichen wie ein Programm, fleissig, aber ohne eigenes Urteil; das Gleichnis warnt vor dem, was man in Gang setzt, ohne es hüten zu können.",
             },
             {
               titel: "Der Homunkulus",
               kurz: "Homunkulus",
               kat: "erzaehlung",
               mmf: "fiktion",
-              jahr: "Alchemie",
+              jahr: "16. Jh.",
               text: "Leben aus der Retorte, im Labor erschaffen. Der Traum, Schöpfung technisch herzustellen.",
               geschichte:
-                "Alchemisten wie Paracelsus beschrieben Rezepte, um künstliches Leben in der Retorte zu zeugen; in Goethes «Faust II» leuchtet der Homunkulus als Menschlein in der Phiole. Der Traum dahinter: Schöpfung nicht mehr empfangen, sondern selbst herstellen — im Labor, aus Wissen und Handwerk.",
+                "Der Arzt und Alchemist Paracelsus beschrieb im 16. Jahrhundert ein Rezept, um in der Retorte ein winziges künstliches Menschlein zu «zeugen». In Goethes «Faust II» (1832) leuchtet der Homunkulus als kluges Wesen in der gläsernen Phiole.",
+              mehr:
+                "Im Homunkulus verschiebt sich der Traum: Nicht mehr ein Gott oder ein Rabbi belebt Totes, sondern der Mensch als Wissenschaftler und Konstrukteur. Damit rückt die Schöpfung ins Labor — und die Frage, wer für das Gemachte Verantwortung trägt, wird zu einer menschlichen.",
             },
             {
               titel: "Frühe Automaten",
@@ -454,6 +396,8 @@ export default function Lernseite2VorhangAuf() {
               text: "Der «Schachtürke» scheint zu denken — und täuscht ganz Europa. Mechanik weckt erstmals den Verdacht, Maschinen könnten klug sein.",
               geschichte:
                 "Wolfgang von Kempelens Schach spielender «Türke» schlug ab 1770 Fürsten und Kaiser — im Innern sass ein verborgener Mensch. Europa stritt jahrzehntelang darüber, ob eine Maschine denken könne; die Täuschung bewies vor allem eines: wie bereitwillig wir es glauben.",
+              mehr:
+                "Das 18. Jahrhundert war das Zeitalter der Automaten: Vaucansons «Ente» verdaute scheinbar, Jaquet-Droz baute schreibende Puppen. Der Schachtürke trieb es auf die Spitze — und wurde erst nach Jahrzehnten als Trick entlarvt. Die Lehre: Wir schreiben Maschinen sehr schnell echtes Denken zu, auch wo keines ist.",
             },
             {
               titel: "Frankenstein",
@@ -464,16 +408,20 @@ export default function Lernseite2VorhangAuf() {
               text: "Das erschaffene Wesen entgleitet seinem Schöpfer. Die Literatur stellt die Verantwortungsfrage — lange vor der Technik.",
               geschichte:
                 "Mary Shelleys Roman von 1818 lässt Victor Frankenstein ein Wesen erschaffen, das er im Augenblick des Gelingens verstösst. Das eigentliche Ungeheuer der Geschichte ist nicht die Kreatur, sondern die verweigerte Verantwortung — eine Frage, die seither jede Schöpfungstechnik begleitet.",
+              mehr:
+                "Mary Shelley schrieb den Roman mit achtzehn Jahren; der Untertitel «Der moderne Prometheus» verweist auf den Titanen, der den Menschen das Feuer brachte und dafür büsste. Frankenstein verschiebt die Warnung von der Schöpfung zur Fürsorge: Das Unglück kommt nicht daher, dass das Wesen erschaffen, sondern dass es verstossen und allein gelassen wird.",
             },
             {
               titel: "Rechenmaschinen",
               kurz: "Rechenmaschinen",
               kat: "mechanik",
               mmf: "maschine",
-              jahr: "1685–1843",
+              jahr: "1673–1843",
               text: "Von Leibniz' Rechenrad zu Babbage und Lovelace: Die programmierbare Maschine wird gedacht. Denken als Rechnen wird vorstellbar.",
               geschichte:
                 "Leibniz baute um 1673 eine Maschine für alle vier Grundrechenarten und träumte davon, Streitfragen durchs Rechnen zu entscheiden. Babbage entwarf die programmierbare Analytical Engine; Ada Lovelace schrieb 1843 dazu das erste Programm — und hielt zugleich fest, die Maschine könne nur, was man ihr aufzutragen weiss.",
+              mehr:
+                "Leibniz träumte von einer «characteristica universalis», mit der sich jeder Streit durchs Rechnen klären liesse — «Lasst uns rechnen!». Babbages «Analytical Engine» (ab 1837) war als universelle, programmierbare Maschine gedacht; Ada Lovelace erkannte, dass sie nicht nur Zahlen, sondern beliebige Symbole verarbeiten könnte — und dass sie doch nichts «von sich aus» hervorbringe.",
             },
             {
               titel: "Geburt der KI",
@@ -484,36 +432,44 @@ export default function Lernseite2VorhangAuf() {
               text: "In Dartmouth wird der Begriff «Künstliche Intelligenz» geprägt. Aus alten Träumen wird ein Forschungsprogramm.",
               geschichte:
                 "Im Sommer 1956 trafen sich am Dartmouth College Forscher um John McCarthy und Marvin Minsky mit dem Anspruch, jede Facette der Intelligenz maschinell nachzubilden. Der alte Traum bekam einen Namen und ein Budget — und man rechnete mit Durchbrüchen binnen weniger Jahre.",
+              mehr:
+                "Der Förderantrag von 1955 behauptete kühn, jeder Aspekt des Lernens lasse sich so präzise beschreiben, dass eine Maschine ihn nachahmen könne. Aus der Konferenz stammt der Name «Artificial Intelligence» — und ein Optimismus, der schon bald mit der Wirklichkeit kollidierte.",
             },
             {
               titel: "Symbolische KI",
               kurz: "Symbolische KI",
               kat: "regeln",
               mmf: "maschine",
-              jahr: "1960er",
+              jahr: "1956–1970er",
               text: "Intelligenz als Regelwerk: WENN–DANN-Systeme dominieren. Logik gilt als Königsweg.",
               geschichte:
                 "Die frühe KI baute Intelligenz aus Symbolen und Logik: Wissen wurde in Regeln gefasst, Schliessen als Ableiten verstanden. In engen Welten — Schach, Logikbeweise, Klötzchenwelten — glänzte der Ansatz; an der offenen, mehrdeutigen Alltagswelt biss er sich fest.",
+              mehr:
+                "Programme wie der «Logic Theorist» oder der «General Problem Solver» bewiesen Sätze und lösten Rätsel durch Regelanwendung. Der Ansatz — später «Good Old-Fashioned AI» genannt — setzt darauf, dass Intelligenz aus manipulierbaren Symbolen besteht. Er scheiterte an allem, was Kontext, Mehrdeutigkeit und Alltagswissen verlangt.",
             },
             {
               titel: "Expertensysteme",
               kurz: "Expertensysteme",
               kat: "regeln",
               mmf: "maschine",
-              jahr: "1970/80er",
+              jahr: "1970er–80er",
               text: "Fachwissen wird in Regeln gegossen und löst Spezialaufgaben. Die erhoffte breite Intelligenz bleibt aus.",
               geschichte:
                 "Systeme wie MYCIN gossen in den 1970er- und 80er-Jahren das Wissen von Fachleuten in Tausende Regeln — etwa für die Diagnose von Infektionen. In ihrer Nische stark, blieben sie teuer im Unterhalt und starr gegenüber allem, was in keiner Regel stand.",
+              mehr:
+                "In der Blüte der 1980er investierten Firmen und Staaten Milliarden — Japans «Fifth Generation Project» war das bekannteste. Doch Wissen liess sich nur mühsam von Hand in Regeln fassen, und die Systeme konnten nicht dazulernen. Als der Aufwand den Nutzen überstieg, brach der Markt ein.",
             },
             {
               titel: "KI-Winter",
               kurz: "KI-Winter",
               kat: "regeln",
               mmf: "mensch",
-              jahr: "1980/90er",
+              jahr: "1974–1993",
               text: "Enttäuschte Erwartungen: Geld und Glaube frieren ein. Die grossen Versprechen überwintern.",
               geschichte:
                 "Als die grossen Versprechen ausblieben, froren Forschungsgelder ein: Kritische Berichte und gescheiterte Projekte liessen den Glauben an die KI abkühlen. Der Begriff war zeitweise so belastet, dass Forschende ihre Arbeit lieber anders nannten.",
+              mehr:
+                "«KI-Winter» heissen die Phasen, in denen Förderung und Erwartungen einbrachen — ausgelöst unter anderem durch den kritischen Lighthill-Report (1973) und später den Zusammenbruch des Expertensystem-Marktes. Zweimal galt die KI als gescheitert — und kehrte doch zurück, jedes Mal mit einem neuen Ansatz.",
             },
             {
               titel: "Statistische KI",
@@ -524,6 +480,8 @@ export default function Lernseite2VorhangAuf() {
               text: "Die Wende: Maschinen lernen aus Beispielen statt aus Regeln. Daten werden wichtiger als Logik.",
               geschichte:
                 "Statt Regeln von Hand zu schreiben, liess man Maschinen ab den 1990er-Jahren Muster aus Beispielen lernen — Spam erkennen, Handschrift lesen, Sprache erraten. Die Wende: Nicht mehr das aufgeschriebene Wissen der Fachleute zählte, sondern die Menge und Qualität der Daten.",
+              mehr:
+                "Statistische Verfahren lernen Wahrscheinlichkeiten aus Beispielen, statt Regeln vorgegeben zu bekommen. Mit wachsender Rechenkraft wurde das überlegen — sichtbar 1997, als IBMs «Deep Blue» den Schachweltmeister Kasparow schlug: nicht durch Verstehen, sondern durch Rechnen und Erfahrung.",
             },
             {
               titel: "Deep Learning",
@@ -534,16 +492,20 @@ export default function Lernseite2VorhangAuf() {
               text: "Neuronale Netze mit vielen Schichten erkennen Bilder und Sprache. Der Durchbruch kommt über die Tiefe.",
               geschichte:
                 "2012 gewann ein tiefes neuronales Netz den ImageNet-Bildwettbewerb mit grossem Vorsprung — trainiert auf Grafikkarten, gefüttert mit Millionen Bildern. Schicht für Schicht lernen solche Netze eigene Merkmale, statt sie vorgesagt zu bekommen; seither dominiert das Prinzip die Bild-, Sprach- und Texterkennung.",
+              mehr:
+                "Künstliche neuronale Netze gab es seit den 1950er-Jahren; erst Grafikkarten und riesige Datensätze machten «tiefe» Netze praktikabel. 2017 kam die «Transformer»-Architektur dazu — die Grundlage heutiger Sprachmodelle: Sie gewichtet Zusammenhänge über lange Textpassagen hinweg.",
             },
             {
               titel: "Big Data & Gegenwart",
               kurz: "Gegenwart",
               kat: "daten",
               mmf: "maschine",
-              jahr: "heute",
+              jahr: "ab 2020",
               text: "Riesige Datenmengen und Rechenzentren machen die neue Akteurin möglich. KI durchdringt den Alltag.",
               geschichte:
                 "Heutige Modelle trainieren auf riesigen Text- und Bildmengen, in Rechenzentren mit Zehntausenden von Chips. So entstand die neue Akteurin dieses Moduls: dialogfähig, generativ — und Alltag von der Suchmaschine bis zum Schreibassistenten.",
+              mehr:
+                "Mit GPT-3 (2020) und ChatGPT (Ende 2022) wurde Sprach-KI erstmals einer breiten Öffentlichkeit zugänglich — und alltagstauglich. Was als jahrtausendealte Phantasie begann, ist heute Werkzeug und Gegenüber zugleich: Genau das macht es zum Thema dieser Einheit.",
             },
           ]}
         />
@@ -600,30 +562,44 @@ export default function Lernseite2VorhangAuf() {
             {
               titel: "dialoghaft",
               text: "Man steuert sie mit Alltagssprache — und sie antwortet in Sprache. Das Gespräch selbst ist die Bedienoberfläche.",
+              mehr:
+                "Bis vor kurzem musste man Computer in Programmiersprachen anweisen. Sprachmodelle kehren das um: Die Anweisung ist normaler Text — «die heisseste neue Programmiersprache ist Englisch», sagt der KI-Forscher Andrej Karpathy. Das macht die Technik für alle bedienbar, verwischt aber auch die Grenze zwischen Befehl und Gespräch.",
             },
             {
               titel: "generativ",
               text: "Sie erzeugt laufend Neues — Text, Bild, Code — durch Vorhersage des nächsten Bausteins. Erzeugen und Erfinden liegen dabei dicht beieinander.",
+              mehr:
+                "«Generativ» heisst: Sie stellt Neues her, statt nur Vorhandenes abzurufen — Wort für Wort als wahrscheinlichste Fortsetzung. Dieselbe Fähigkeit bringt Brillantes wie Erfundenes hervor; die Informatikerin Katharina Zweig schlägt statt «Halluzination» das Wort «Konfabulation» vor: flüssig geredet, ohne Wissen dahinter.",
             },
             {
               titel: "multimodal",
               text: "Text, Bild und Ton laufen in einem einzigen Modell zusammen. Sie liest, sieht und hört — und antwortet in allen drei Formen.",
+              mehr:
+                "Frühe Modelle konnten entweder Text oder Bild oder Ton. Multimodale Modelle verbinden diese Kanäle in einem Netz und rücken damit näher an die menschliche Wahrnehmung, die auch nicht in getrennten Sinnen denkt. Ein Foto, eine Skizze, ein gesprochener Satz — alles kann Eingabe sein.",
             },
             {
               titel: "agentenhaft",
               text: "Sie zerlegt Ziele in Schritte und greift selbständig zu Werkzeugen. Aus dem Antwortgeber wird ein handelnder Akteur.",
+              mehr:
+                "Ein «Agent» ist mehr als ein Antwortgeber: ein Sprachmodell mit Gedächtnis, der Fähigkeit, ein Ziel in Schritte zu zerlegen, und Zugriff auf Werkzeuge — Websuche, Code, andere Programme. Damit handelt die KI eigenständig in der Welt; genau hier verschwimmt die alte Grenze zwischen Werkzeug und Gegenüber.",
             },
             {
               titel: "speicherabhängig",
               text: "Ihr ganzes Können steckt in gespeicherten Gewichten — wo kein Speicher, da kein Training. Auch im Betrieb braucht sie Kurz- und Langzeitgedächtnis.",
+              mehr:
+                "Alles, was ein Modell «kann», steckt in Milliarden gespeicherten Zahlen, den Gewichten. Training heisst, diese Werte so lange zu verstellen, bis die Antworten stimmen — ohne Speicher kein Lernen. Und im Betrieb braucht es weiter Speicher: als Kurzzeitgedächtnis (den Kontext) und als durchsuchbare Ablage fürs Langzeitgedächtnis.",
             },
             {
               titel: "datenbasiert",
               text: "Ihre Fähigkeiten wachsen aus riesigen Datenmengen, nicht aus einprogrammierten Regeln. Ohne Daten bleibt der beste Algorithmus leer.",
+              mehr:
+                "«Die Lernalgorithmen sind die Samen, die Daten der Boden», schreibt der Forscher Pedro Domingos. Ohne riesige Datenmengen bleibt die klügste Methode unfruchtbar. Deshalb dreht sich in der KI alles um Daten — und um die Frage, wessen Daten das sind und welche Verzerrungen in ihnen stecken.",
             },
             {
               titel: "mustererkennend",
               text: "Sie liest statistische Muster aus Daten und wendet sie verlässlich an. Warum etwas passt, versteht sie nicht.",
+              mehr:
+                "Mustererkennung wird gern als reine Wahrscheinlichkeitsrechnung abgetan. Katharina Zweig schärft das Bild: Das System leitet aus Daten statistische Muster ab und hat bestimmte Wörter schlicht oft in bestimmten Kontexten gelesen — es erkennt verlässlich, versteht aber nicht, warum. Ihr nüchternes Fazit: Noch seien diese Systeme gar nicht intelligent.",
             },
           ]}
           anordnungen={[
@@ -664,31 +640,6 @@ export default function Lernseite2VorhangAuf() {
 
       <FadenDivider className="mt-xl" />
 
-      {/* Bilderstrecke 2 — Anschauungsmodus mit Hotspots, direkt vor dem Netz */}
-      <section
-        className="mt-xl max-w-5xl"
-        aria-label="Bilderstrecke: Womit die Akteurin verwoben ist"
-      >
-        <h2 className="text-headline-lg text-on-surface">
-          Womit die Akteurin verwoben ist
-        </h2>
-        <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
-          Bevor wir das Netz der Akteurin selbst betrachten: drei Bilder, die
-          sichtbar machen, was sonst verborgen bleibt — Material, Energie und
-          die Menschen dahinter. <strong>Deine Aufgabe:</strong> Öffne alle
-          drei Bilder im Anschauungsmodus und geh in jedem den drei leuchtenden
-          Punkten nach — sie verbinden das historische Bild mit der
-          Infrastruktur der heutigen KI.
-        </p>
-        <BilderAnschauung
-          className="mt-lg"
-          bilder={BILDER_NETZ}
-          spurKey="vorhang-auf:bildnetz"
-        />
-      </section>
-
-      <FadenDivider className="mt-xl" />
-
       {/* 3 — Das Netz der Akteurin: die KI als ein Knoten unter sieben */}
       <section className="mt-xl max-w-5xl" aria-label="Das Netz der Akteurin">
         <h2 className="text-headline-lg text-on-surface">Das Netz der Akteurin</h2>
@@ -715,30 +666,44 @@ export default function Lernseite2VorhangAuf() {
               titel: "KI — die neue Akteurin",
               kurz: "KI",
               text: "Sie steht nie allein: Was sie kann, hängt am ganzen Geflecht. Kein Zentrum — ein Knoten unter Knoten.",
+              mehr:
+                "In der Akteur-Netzwerk-Theorie (Bruno Latour) handelt nie ein Ding allein — Wirkung entsteht im Geflecht von Menschen und Dingen. So gesehen ist «die KI» kein Kasten, sondern ein Knotenpunkt, an dem Sprache, Rechner, Rohstoffe, Firmen und Regeln zusammenlaufen.",
             },
             {
               titel: "Nutzer:innen",
               text: "Deine Fragen und Formulierungen führen sie; ohne Eingabe bleibt sie stumm. Mit dir wird sie zur Mitspielerin.",
+              mehr:
+                "Ein Sprachmodell tut von sich aus nichts — es wartet auf eine Eingabe. Wie du fragst (der «Prompt»), formt die Antwort stark; damit bist du Teil des Systems, nicht bloss Zuschauerin. Auch deine Rückmeldungen fliessen oft ins nächste Training zurück.",
             },
             {
               titel: "Sprache",
               text: "Gelernt aus Milliarden Sätzen — unsere Wörter sind ihr Material. Auch unsere Fehler stecken darin.",
+              mehr:
+                "Trainiert wird auf riesigen Textmengen aus dem Internet, aus Büchern und Foren. Darin steckt viel Wissen der Menschheit — aber auch ihre Vorurteile, Lücken und Fehler, die das Modell mitlernt und weitergibt.",
             },
             {
               titel: "Datencentren",
               text: "Jede Antwort läuft durch riesige Rechenhallen. Strom, Kühlung und Seekabel inklusive.",
+              mehr:
+                "Rechenzentren verbrauchen enorm viel Strom und Wasser zur Kühlung; ihr Energiebedarf wächst mit der KI rasant. Physisch hängt jede Antwort an Serverhallen, Stromnetzen und den Seekabeln, die die Kontinente verbinden.",
             },
             {
               titel: "Rohstoffe",
               text: "Chips brauchen Metalle, Minen und Fabriken. Die Akteurin hat ein materielles Gewicht.",
+              mehr:
+                "Chips brauchen Silizium, seltene Erden und Metalle wie Kobalt — abgebaut in Minen, oft unter harten Bedingungen. Die scheinbar «virtuelle» KI hat damit einen sehr realen ökologischen und sozialen Fussabdruck.",
             },
             {
               titel: "Unternehmen",
               text: "Firmen bauen, trainieren und steuern sie — mit eigenen Zielen und Geschäftsmodellen.",
+              mehr:
+                "Die grossen Modelle bauen wenige, kapitalstarke Firmen — mit eigenen Zielen und Geschäftsmodellen. Wer eine KI trainiert und betreibt, entscheidet mit, was sie darf, was sie kostet und wessen Interessen sie dient.",
             },
             {
               titel: "Regeln",
               text: "Gesetze und Abmachungen bestimmen, was sie darf. Und wer haftet, wenn etwas schiefgeht.",
+              mehr:
+                "Gesetze wie die EU-KI-Verordnung (AI Act, ab 2024) versuchen, Risiken einzuhegen und Verantwortung zu klären. Doch die Technik ist oft schneller als die Regulierung — und die Frage, wer haftet, wenn eine KI Schaden anrichtet, ist vielerorts noch offen.",
             },
           ]}
           anordnungen={[

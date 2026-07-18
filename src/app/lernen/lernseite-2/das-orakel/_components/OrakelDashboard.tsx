@@ -27,7 +27,7 @@ import { leseSpuren, SPUR_EVENT, SPUREN_POLL_ID } from "../../_lib/spuren";
 /* ── Bereiche der eigenen Spur (Totale = Anzahl Knoten je Interaktion) ──── */
 
 const BEREICHE: { prefix: string; label: string; total: number; href: string }[] = [
-  { prefix: "vorhang-auf:story", label: "Die KI-Story", total: 12, href: "/lernen/lernseite-2/vorhang-auf" },
+  { prefix: "vorhang-auf:story", label: "Die KI-Story", total: 14, href: "/lernen/lernseite-2/vorhang-auf" },
   { prefix: "vorhang-auf:weisheit", label: "Merkmale der neuen Akteurin", total: 7, href: "/lernen/lernseite-2/vorhang-auf" },
   { prefix: "vorhang-auf:netz", label: "Das Netz der Akteurin", total: 7, href: "/lernen/lernseite-2/vorhang-auf" },
   { prefix: "philosophische-perspektive:weisheit", label: "Epochen-Weisheiten", total: 5, href: "/lernen/lernseite-2/philosophische-perspektive" },
@@ -72,6 +72,7 @@ function summeMitPrefix(counts: PollCounts, prefix: string): number {
 export default function OrakelDashboard() {
   /* deine Spur (lokal) */
   const [meine, setMeine] = useState<Record<string, number>>({});
+  const [meineWuensche, setMeineWuensche] = useState(0);
   /* alle (anonymer Zähler) */
   const [alleSpuren, setAlleSpuren] = useState<PollCounts>({});
   /* Satz */
@@ -94,6 +95,7 @@ export default function OrakelDashboard() {
       proBereich[b.prefix] = spuren.filter((s) => s.id.startsWith(b.prefix)).length;
     }
     setMeine(proBereich);
+    setMeineWuensche(spuren.filter((s) => s.id.startsWith("wunsch:")).length);
   }, []);
 
   useEffect(() => {
@@ -268,6 +270,26 @@ export default function OrakelDashboard() {
               </a>
             );
           })}
+        </div>
+
+        {/* Merkzeichen «Mehr dazu wissen» */}
+        <div className="mt-md flex items-start gap-sm rounded-xl border border-outline-variant bg-surface-container-low p-md">
+          <span className="material-symbols-outlined mt-xs text-[20px] text-tertiary">
+            bookmark_added
+          </span>
+          <p className="text-body-sm text-on-surface-variant">
+            <strong className="text-on-surface">Wozu du mehr wissen möchtest:</strong>{" "}
+            {meineWuensche === 0
+              ? "Du hast noch kein Merkzeichen gesetzt. Setze bei einer Karte «Mehr dazu wissen», wenn dich ein Punkt besonders interessiert."
+              : `${meineWuensche} Merkzeichen gesetzt`}
+            {" · "}
+            <span className="text-on-surface-variant">
+              alle zusammen {summeMitPrefix(alleSpuren, "wunsch:")}×
+            </span>
+            . Deine Merkzeichen bleiben auf dem Gerät; anonym zählt nur, wie oft
+            ein Thema klassenweit gewünscht wird — ein Hinweis, was zu vertiefen
+            wäre.
+          </p>
         </div>
       </section>
 
