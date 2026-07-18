@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Illustration des verstärkenden Lernens: eine KI lernt durch Versuch und Irrtum ein einfaches Ziegel-Spiel; eine Belohnungskurve steigt an.">
+  <rect width="800" height="600" fill="#eeece5"/>
+  <!-- Spielschirm (abstraktes Ziegel-Spiel, kein Original) -->
+  <rect x="70" y="70" width="380" height="440" rx="14" fill="#14181d"/>
+  <rect x="70" y="70" width="380" height="440" rx="14" fill="none" stroke="#0c0f12" stroke-width="4"/>
+  <!-- Ziegelreihen -->
+  <g>
+    <g fill="#b5603a"><rect x="95" y="100" width="52" height="20" rx="3"/><rect x="152" y="100" width="52" height="20" rx="3"/><rect x="209" y="100" width="52" height="20" rx="3"/><rect x="266" y="100" width="52" height="20" rx="3"/><rect x="323" y="100" width="52" height="20" rx="3"/><rect x="380" y="100" width="45" height="20" rx="3"/></g>
+    <g fill="#c99a3d"><rect x="95" y="126" width="52" height="20" rx="3"/><rect x="152" y="126" width="52" height="20" rx="3"/><rect x="209" y="126" width="52" height="20" rx="3"/><rect x="266" y="126" width="52" height="20" rx="3"/><rect x="323" y="126" width="52" height="20" rx="3"/><rect x="380" y="126" width="45" height="20" rx="3"/></g>
+    <g fill="#4f8a5b"><rect x="95" y="152" width="52" height="20" rx="3"/><rect x="152" y="152" width="52" height="20" rx="3"/><rect x="266" y="152" width="52" height="20" rx="3"/><rect x="323" y="152" width="52" height="20" rx="3"/><rect x="380" y="152" width="45" height="20" rx="3"/></g>
+    <g fill="#4b7a9c"><rect x="95" y="178" width="52" height="20" rx="3"/><rect x="209" y="178" width="52" height="20" rx="3"/><rect x="266" y="178" width="52" height="20" rx="3"/><rect x="380" y="178" width="45" height="20" rx="3"/></g>
+  </g>
+  <!-- Ball + Flugbahn -->
+  <path d="M300 360 L 340 300 L 300 250" fill="none" stroke="#efe7d8" stroke-width="2" stroke-dasharray="5 6" opacity="0.7"/>
+  <circle cx="300" cy="360" r="9" fill="#f2ead9"/>
+  <!-- Schläger -->
+  <rect x="250" y="470" width="90" height="16" rx="8" fill="#e7e0d0"/>
+  <!-- Belohnungskurve rechts -->
+  <g>
+    <text x="560" y="110" fill="#5b5347" font-family="ui-sans-serif, sans-serif" font-size="20" font-weight="600">Belohnung</text>
+    <line x1="520" y1="150" x2="520" y2="470" stroke="#5b5347" stroke-width="3" stroke-linecap="round"/>
+    <line x1="520" y1="470" x2="760" y2="470" stroke="#5b5347" stroke-width="3" stroke-linecap="round"/>
+    <text x="700" y="500" fill="#7a7264" font-family="ui-sans-serif, sans-serif" font-size="16" font-style="italic">Spiele</text>
+    <!-- ansteigende, zappelige Lernkurve -->
+    <path d="M520 460 L 545 452 L 560 458 L 585 430 L 605 440 L 630 400 L 650 410 L 675 350 L 695 365 L 715 270 L 735 300 L 752 190"
+          fill="none" stroke="#3f7a55" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="752" cy="190" r="6" fill="#3f7a55"/>
+  </g>
+  <!-- Agenten-Schleife unten: Aktion -> Umgebung -> Belohnung -->
+  <g font-family="ui-sans-serif, sans-serif" font-size="16" fill="#33302a">
+    <rect x="120" y="536" width="120" height="40" rx="20" fill="#dfd9cb"/>
+    <text x="150" y="561">Aktion</text>
+    <rect x="300" y="536" width="150" height="40" rx="20" fill="#dfd9cb"/>
+    <text x="322" y="561">Belohnung</text>
+    <g stroke="#8a7a55" stroke-width="3" fill="none">
+      <path d="M245 556 L 295 556"/>
+    </g>
+    <path d="M295 556 l-14 -6 l0 12 z" fill="#8a7a55"/>
+  </g>
+</svg>

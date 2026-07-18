@@ -2,10 +2,25 @@
 
 Verwendet in: `src/app/lernen/lernseite-2/philosophische-perspektive/_components/SchablonenZeitstrahl.tsx`
 (Thema „Philosophische Perspektive") und auf der Auftakt-Seite „Vorhang auf"
-(`vorhang-auf/page.tsx`) in zwei Bilderstrecken mit Anschauungsmodus + Hotspots
-(`BilderAnschauung.tsx`): die `storyboard/`-Bilder als „Bilder der Vorstellung",
-sowie `eisenwalzwerk.jpg`, `erde_nacht.jpg`, `london.jpg` als „Womit die
-Akteurin verwoben ist".
+(`vorhang-auf/page.tsx`) in der Bilderstrecke „Bilder zur KI-Geschichte"
+(`BilderAnschauung.tsx`): daraus die `storyboard/`-Bilder `schachtuerke.jpg`,
+`frankenstein.jpg`, `babbage.jpg` sowie die eigenen Illustrationen unten.
+
+## Eigene Illustrationen (Vorhang auf, CC0 / selbst erstellt)
+
+Für die Bilderstrecke „Bilder zur KI-Geschichte" selbst gezeichnete SVGs (keine
+Fremdrechte; ersetzbar durch lizenzierte Fotos):
+
+| Datei | Motiv |
+|---|---|
+| `quipu.svg` | Anden-Knotenschnur (Quipu) — Rechnen/Erinnern in Knoten |
+| `turing-bombe.svg` | Turings «Bombe» — Enigma-Code-Knacker (Rotoren, Lochstreifen) |
+| `ml-raum.svg` | Maschinelles Lernen — Datenpunkte im mehrdimensionalen Merkmalsraum |
+| `dqn-spiel.svg` | Verstärkendes Lernen — DQN lernt ein (generisches) Arcade-Spiel |
+
+Nicht mehr in „Vorhang auf" verwendet (aber weiterhin abgelegt): `golem.jpg`,
+`homunkulus.jpg`, `supercomputer.jpg` (storyboard) sowie `eisenwalzwerk.jpg`,
+`erde_nacht.jpg`, `london.jpg`.
 
 ## Storyboard «Vorhang auf» (storyboard/, gemeinfrei)
 

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Illustration des maschinellen Lernens: Datenpunkte als farbige Cluster in einem dreidimensionalen Merkmalsraum, getrennt durch eine gelernte Grenzfläche.">
+  <rect width="800" height="600" fill="#f1efe8"/>
+  <!-- Achsen (perspektivisch) -->
+  <g stroke="#5b5347" stroke-width="3" stroke-linecap="round">
+    <line x1="150" y1="470" x2="660" y2="470"/>            <!-- x -->
+    <line x1="150" y1="470" x2="150" y2="90"/>             <!-- y -->
+    <line x1="150" y1="470" x2="300" y2="560"/>            <!-- z (Tiefe) -->
+  </g>
+  <g fill="#5b5347">
+    <path d="M660 470 l-16 -7 l0 14 z"/>
+    <path d="M150 90 l-7 16 l14 0 z"/>
+    <path d="M300 560 l-3 -17 l14 6 z"/>
+  </g>
+  <g fill="#7a7264" font-family="ui-sans-serif, sans-serif" font-size="18" font-style="italic">
+    <text x="600" y="500">Merkmal 1</text>
+    <text x="60" y="110">Merkmal 2</text>
+    <text x="270" y="556">Merkmal 3</text>
+  </g>
+  <!-- gelernte Grenzfläche (Trennebene) -->
+  <polygon points="330,150 560,210 470,430 250,360" fill="#c2703d" opacity="0.16"/>
+  <polygon points="330,150 560,210 470,430 250,360" fill="none" stroke="#c2703d" stroke-width="2" stroke-dasharray="6 5" opacity="0.7"/>
+  <!-- Cluster A (grün, oben links) -->
+  <g fill="#3f7a55">
+    <circle cx="250" cy="180" r="9"/><circle cx="285" cy="205" r="9"/><circle cx="230" cy="225" r="9"/>
+    <circle cx="300" cy="165" r="9"/><circle cx="265" cy="245" r="9"/><circle cx="320" cy="220" r="9"/>
+    <circle cx="240" cy="270" r="8"/><circle cx="295" cy="285" r="8"/>
+  </g>
+  <!-- Cluster B (blau, rechts) -->
+  <g fill="#3f6588">
+    <circle cx="520" cy="250" r="9"/><circle cx="555" cy="280" r="9"/><circle cx="500" cy="300" r="9"/>
+    <circle cx="560" cy="330" r="9"/><circle cx="525" cy="345" r="9"/><circle cx="580" cy="300" r="8"/>
+    <circle cx="540" cy="220" r="8"/><circle cx="505" cy="270" r="8"/>
+  </g>
+  <!-- Cluster C (warm, unten) -->
+  <g fill="#b26a3b">
+    <circle cx="360" cy="400" r="9"/><circle cx="400" cy="420" r="9"/><circle cx="345" cy="430" r="9"/>
+    <circle cx="405" cy="385" r="8"/><circle cx="380" cy="445" r="8"/>
+  </g>
+</svg>

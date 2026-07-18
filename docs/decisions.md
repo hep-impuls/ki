@@ -10,6 +10,25 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-18 — Bilderstrecke neu: KI-Geschichte statt Mythen-Set
+
+**Auftrag Christof:** Bilder auswechseln — Golem und Homunkulus raus (nur
+Frankenstein bleibt), dafür Anden-Quipu, Turings Code-Knacker, ein Bild vom
+maschinellen Lernen (Daten im mehrdimensionalen Raum) und eines vom Lernen
+durch Spielen (DQN/Atari).
+
+- **Set neu (7):** Quipu (Anden, ~1400) · Schachtürke (1770) · Frankenstein
+  (1818) · Rechenmaschinen (1685–1843) · Turings Code-Knacker (1939–1945) ·
+  Maschinelles Lernen (ab 1990er) · Lernen durch Spielen/DQN (2013–2015).
+  Golem, Homunkulus und Big-Data-Supercomputer entfernt. Sektion umbenannt
+  («Bilder zur KI-Geschichte»).
+- **Vier neue Motive als eigene SVG-Illustrationen** (`public/art/quipu.svg`,
+  `turing-bombe.svg`, `ml-raum.svg`, `dqn-spiel.svg`) — bewusst KEINE
+  heruntergeladenen Fotos (Lizenz/Downloads heikel; Atari-Screenshots
+  urheberrechtlich geschützt). DQN-Spiel als generisches Ziegel-Spiel, nicht
+  Atari-Original. Jede mit 3 recherchierten Hotspots; CREDITS ergänzt.
+  Ersetzbar durch lizenzierte Fotos (datengetriebene Komponente).
+
 ## 2026-07-18 — Erste Ebene länger · Merkzeichen umbenannt · Info-Punkt
 
 **Feedback Christof:**

@@ -64,62 +64,37 @@ const AUFTRITT_FELDER: number[][] = [
  */
 
 /**
- * Erste Bilderstrecke (Anschauungsmodus mit Hotspots): die gemeinfreien
- * historischen Bilder vom Traum, Dingen Leben einzuhauchen — aus der Story
- * gelöst, jedes mit anklickbaren Hotspots.
+ * Erste Bilderstrecke (Anschauungsmodus mit Hotspots): ein Bogen durch die
+ * KI-Geschichte — vom antiken Auslagern des Denkens (Anden-Quipu) über die
+ * mechanischen Illusionen bis zu Turings Code-Knacker und den lernenden
+ * Maschinen. Historische gemeinfreie Bilder und eigene Illustrationen
+ * gemischt (Nachweis in public/art/CREDITS.md).
  */
 const BILDER_STORY: AnschauBild[] = [
   {
-    src: "/art/storyboard/golem.jpg",
-    alt: "Zeichnung: Rabbi Löw erweckt den Golem",
-    titel: "Der Golem",
-    jahr: "Sage",
-    kurz: "Mikoláš Aleš, 1899 · die Ursage vom belebten Ding",
+    src: "/art/quipu.svg",
+    alt: "Illustration einer Anden-Knotenschnur (Quipu): Hauptschnur mit geknoteten Nebenschnüren.",
+    titel: "Quipu — Knoten der Anden",
+    jahr: "Anden, ~1400",
+    kurz: "Andenkulturen · Rechnen und Erinnern in Knoten",
     hotspots: [
       {
-        x: 28,
-        y: 14,
-        titel: "Das belebende Wort",
-        text: "Ein Schriftzeichen auf der Stirn erweckt den Golem — nimmt man es weg, erstarrt er. Wie ein Programm, das eine Maschine belebt oder anhält.",
+        x: 50,
+        y: 22,
+        titel: "Die Hauptschnur",
+        text: "An einer waagrechten Trägerschnur hängen die Nebenschnüre. Das Quipu ist ein Speicher aus Fäden — Buchhaltung und Chronik der Inka.",
       },
       {
-        x: 60,
-        y: 23,
-        titel: "Der Schöpfer",
-        text: "Rabbi Löw beschwört das Wesen — und muss es hüten. Wer belebt, trägt Verantwortung für das, was er in die Welt setzt.",
+        x: 59,
+        y: 45,
+        titel: "Knoten sind Zahlen",
+        text: "Art und Höhe eines Knotens codieren Werte im Zehnersystem. Rechnen und Erinnern werden hier nicht ins Rad ausgelagert, sondern in den Faden.",
       },
       {
-        x: 22,
-        y: 67,
-        titel: "Die Beschwörung",
-        text: "Aus Rauch und Ritual steigt die Gestalt. Der Traum, aus Totem Lebendiges zu machen, ist uralt.",
-      },
-    ],
-  },
-  {
-    src: "/art/storyboard/homunkulus.jpg",
-    alt: "Stich: Wagner und Mephisto vor dem Homunkulus in der Phiole (Faust II)",
-    titel: "Der Homunkulus",
-    jahr: "Alchemie",
-    kurz: "F. Simm zu «Faust II» · Leben aus dem Labor",
-    hotspots: [
-      {
-        x: 25,
-        y: 46,
-        titel: "Leben im Glas",
-        text: "Im leuchtenden Kolben regt sich künstliches Leben. Der Homunkulus ist im Labor gemacht, nicht geboren.",
-      },
-      {
-        x: 47,
-        y: 53,
-        titel: "Der Macher",
-        text: "Der Gelehrte Wagner erschafft Leben durch Wissen und Handwerk — der Mensch als Konstrukteur.",
-      },
-      {
-        x: 68,
-        y: 38,
-        titel: "Der Preis",
-        text: "Mephisto steht daneben und grinst: Hinter dem Wunder lauert der Handel. Jede Macht hat ihren Preis.",
+        x: 31,
+        y: 42,
+        titel: "Farbe trägt Bedeutung",
+        text: "Farbe, Drehrichtung und Anordnung der Schnüre tragen weitere Information — eine Datenbank aus Textil, lange vor dem Computer.",
       },
     ],
   },
@@ -205,29 +180,83 @@ const BILDER_STORY: AnschauBild[] = [
     ],
   },
   {
-    src: "/art/storyboard/supercomputer.jpg",
-    alt: "Rechnerreihen des Pleiades-Supercomputers der NASA",
-    titel: "Big Data & Gegenwart",
-    jahr: "heute",
-    kurz: "NASA (Pleiades) · die Rechenhallen der Gegenwart",
+    src: "/art/turing-bombe.svg",
+    alt: "Illustration von Turings Code-Knack-Maschine (Bombe): Reihen drehbarer Rotoren und ein Lochstreifen mit entschlüsseltem Text.",
+    titel: "Turings Code-Knacker",
+    jahr: "1939–1945",
+    kurz: "Alan Turing · die «Bombe» entschlüsselt Enigma",
     hotspots: [
       {
-        x: 62,
-        y: 38,
-        titel: "Die Rechenhallen",
-        text: "Reihe um Reihe von Prozessoren — hier «denkt» die KI tatsächlich, in riesigen Rechenzentren.",
+        x: 32,
+        y: 50,
+        titel: "Die Rotoren",
+        text: "Reihen von Trommeln bilden die Walzen der Enigma nach. Die Maschine ahmt das Chiffriergerät nach, um es zu überlisten.",
       },
       {
-        x: 45,
-        y: 17,
-        titel: "Datenströme",
-        text: "Kabel und Netze verbinden alles. Ohne diese Ströme keine Antwort.",
+        x: 50,
+        y: 29,
+        titel: "Systematisch durchprobieren",
+        text: "Die «Bombe» testet mechanisch Tausende Walzenstellungen und scheidet die unmöglichen aus. Rechnen wird hier zur Suche.",
       },
       {
-        x: 24,
-        y: 52,
-        titel: "Kühlung & Strom",
-        text: "Solche Maschinen brauchen ständig Strom und Kühlung — der unsichtbare Energiehunger der Rechenleistung.",
+        x: 84,
+        y: 60,
+        titel: "Der Klartext",
+        text: "Am Ende steht die entschlüsselte Nachricht. Aus Turings Idee der universellen Rechenmaschine wird ein reales, kriegsentscheidendes Werkzeug — die Geburtsstunde des Computers.",
+      },
+    ],
+  },
+  {
+    src: "/art/ml-raum.svg",
+    alt: "Illustration: Datenpunkte als farbige Cluster in einem dreidimensionalen Merkmalsraum, getrennt durch eine gelernte Grenzfläche.",
+    titel: "Maschinelles Lernen",
+    jahr: "ab 1990er",
+    kurz: "Daten als Punkte im mehrdimensionalen Raum",
+    hotspots: [
+      {
+        x: 19,
+        y: 78,
+        titel: "Achsen sind Merkmale",
+        text: "Jede Achse steht für ein Merkmal der Daten — oft sind es Hunderte oder Tausende, hier nur drei angedeutet.",
+      },
+      {
+        x: 33,
+        y: 34,
+        titel: "Ähnliches liegt nah",
+        text: "Verwandte Beispiele landen dicht beieinander und bilden Gruppen. So «versteht» das Modell nicht Bedeutung, sondern Lage im Raum.",
+      },
+      {
+        x: 55,
+        y: 48,
+        titel: "Die gelernte Grenze",
+        text: "Das Modell sucht eine Fläche, die die Gruppen trennt. «Lernen» heisst: diese Grenze aus Beispielen immer besser ziehen — dann kann es Neues einordnen.",
+      },
+    ],
+  },
+  {
+    src: "/art/dqn-spiel.svg",
+    alt: "Illustration: eine KI lernt ein einfaches Ziegel-Spiel; eine Belohnungskurve steigt an.",
+    titel: "Lernen durch Spielen (DQN)",
+    jahr: "2013–2015",
+    kurz: "Deep Q-Network lernt Arcade-Spiele selbst",
+    hotspots: [
+      {
+        x: 32,
+        y: 24,
+        titel: "Die Umgebung",
+        text: "Das Spiel ist die Umgebung — die KI sieht nur die Bildpunkte des Schirms und den Punktestand, keine Regeln.",
+      },
+      {
+        x: 89,
+        y: 50,
+        titel: "Belohnung steigt",
+        text: "Punkte sind Belohnung. Über viele Spiele hinweg versucht die KI, sie zu maximieren — die Kurve klettert.",
+      },
+      {
+        x: 37,
+        y: 80,
+        titel: "Versuch und Irrtum",
+        text: "Ohne Anleitung lernt sie erstaunliche Strategien — 2013–2015 zeigte «Deep Q-Network», dass Maschinen im Spiel stärker werden als Menschen.",
       },
     ],
   },
@@ -521,16 +550,17 @@ export default function Lernseite2VorhangAuf() {
       <FadenDivider className="mt-xl" />
 
       {/* Bilderstrecke zwischen den Aktivitäten — Anschauungsmodus mit Hotspots */}
-      <section className="mt-xl max-w-5xl" aria-label="Bilderstrecke: Bilder der Vorstellung">
-        <h2 className="text-headline-lg text-on-surface">Bilder der Vorstellung</h2>
+      <section className="mt-xl max-w-5xl" aria-label="Bilderstrecke: Bilder zur KI-Geschichte">
+        <h2 className="text-headline-lg text-on-surface">Bilder zur KI-Geschichte</h2>
         <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
-          Lange bevor es KI gab, hat sich die Menschheit ausgemalt, Dingen
-          Leben einzuhauchen — und hat diese Phantasie in Kunstwerken sichtbar
-          gemacht. <strong>Deine Aufgabe:</strong> Klicke jedes der sechs
-          Bilder an — es öffnet sich gross im Anschauungsmodus. Tippe dort die
-          leuchtenden, nummerierten Punkte an: Jeder erzählt ein Detail des
-          Bildes. Mit den Pfeilen (oder den Pfeiltasten) blätterst du zum
-          nächsten Bild. Ziel: alle sechs Bilder samt ihren Punkten.
+          Sieben Bilder spannen den Bogen: vom Auslagern des Denkens in
+          Knotenschnüre über die programmierbare Maschine und Turings
+          Code-Knacker bis zu den lernenden Systemen von heute.{" "}
+          <strong>Deine Aufgabe:</strong> Klicke ein Bild an — es öffnet sich
+          gross im Anschauungsmodus. Tippe dort die leuchtenden, nummerierten
+          Punkte an: Jeder erzählt ein Detail. Mit den Pfeilen (oder den
+          Pfeiltasten) blätterst du weiter. Ziel: alle sieben Bilder samt ihren
+          Punkten.
         </p>
         <BilderAnschauung
           className="mt-lg"
