@@ -10,6 +10,18 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-18 — Perlschnur: Bewegung nur beim Ziehen (Hover-Schwingen raus)
+
+**Feedback Christof:** Die Perlschnur bewegte sich schon beim Drüberfahren zu
+stark — einzelne Perlen liessen sich kaum anklicken. Fix: das **Zeiger-
+Abstossen (Hover-Repel) komplett entfernt** (`mouse`-Ref und `P_REPEL` weg).
+Der Ruhezustand ist jetzt die **senkrecht hängende Kette** (x = Anker), direkt
+gesetzt — es läuft KEINE Dauerschleife mehr. Die Verlet-Simulation startet nur
+noch **beim Ziehen einer Perle** (`ensureLoop`) und schwingt nach dem Loslassen
+zurück ins Lot, dann stoppt sie. So hängt die Kette still und jede Perle ist
+einzeln anklickbar (Klick ohne Ziehen = lesen). Verifiziert: Hover bewegt
+nichts, Klick liest (1→2/12), Ziehen folgt dem Cursor + Nachbarn + Rückschwung.
+
 ## 2026-07-17 — Perlschnur: ruhiger (natalität-Physik) + leuchtende Perlenfarben
 
 **Feedback Christof:** Die Perlschnur (Zeitlich-Ansicht der KI-Story) soll wie

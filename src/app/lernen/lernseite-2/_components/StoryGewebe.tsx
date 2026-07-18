@@ -99,10 +99,11 @@ const P_W = 720;
 const P_SEG = 40;
 const P_AX = 210;
 const P_AY = 24;
-/** Physik wie bei natalitäts «Log»-Perlschnur — ruhig, nicht fahrig. */
+/** Physik wie bei natalitäts «Log»-Perlschnur — ruhig, nicht fahrig.
+ *  Bewegung entsteht NUR beim Ziehen einer Perle (kein Zeiger-Abstossen),
+ *  damit die Kette im Ruhezustand still hängt und anklickbar bleibt. */
 const P_GRAV = 0.42;
 const P_FRIC = 0.97;
-const P_REPEL = 24;
 
 /**
  * Jede Perle hat ihre eigene, bewusst LEUCHTENDE Farbe (chronologisch von
@@ -140,7 +141,6 @@ function StoryPerlschnur({
   const P_H = P_AY + Math.max(1, N) * P_SEG + 46;
   const svgRef = useRef<SVGSVGElement>(null);
   const pts = useRef<Verlet[]>([]);
-  const mouse = useRef<{ x: number; y: number } | null>(null);
   const drag = useRef<{ k: number; moved: boolean; sx: number; sy: number } | null>(null);
   const raf = useRef<number | null>(null);
   const stepRef = useRef<() => void>(() => {});
@@ -148,8 +148,9 @@ function StoryPerlschnur({
 
   // Kette (neu) aufbauen, wenn sich die Anzahl der Perlen ändert.
   useEffect(() => {
+    // Ruhelage = senkrecht hängende Kette (still, sofort anklickbar).
     pts.current = Array.from({ length: N + 1 }, (_, k) => {
-      const x = P_AX + (k === 0 ? 0 : 16 - k * 0.5);
+      const x = P_AX;
       const y = P_AY + k * P_SEG;
       return { x, y, ox: x, oy: y };
     });
@@ -162,7 +163,6 @@ function StoryPerlschnur({
   // (z.B. in eingebetteten Vorschau-Panes).
   stepRef.current = () => {
     const P = pts.current;
-    const m = mouse.current;
     const dg = drag.current;
     const pinned = dg && dg.moved ? dg.k : -1;
     for (let k = 1; k <= N; k++) {
@@ -174,16 +174,6 @@ function StoryPerlschnur({
       p.oy = p.y;
       p.x += vx;
       p.y += vy + P_GRAV;
-      if (m) {
-        const dx = p.x - m.x;
-        const dy = p.y - m.y;
-        const d = Math.hypot(dx, dy);
-        if (d < P_REPEL && d > 0.01) {
-          const f = (P_REPEL - d) / P_REPEL;
-          p.x += (dx / d) * f * 6;
-          p.y += (dy / d) * f * 6;
-        }
-      }
     }
     for (let it = 0; it < 5; it++) {
       if (P[0]) {
@@ -222,64 +212,60 @@ function StoryPerlschnur({
     }
   };
 
-  useEffect(() => {
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const P = pts.current;
-    if (reduce || N === 0) {
-      for (let k = 0; k <= N; k++) {
-        if (!P[k]) continue;
-        P[k].x = P_AX;
-        P[k].y = P_AY + k * P_SEG;
-        P[k].ox = P[k].x;
-        P[k].oy = P[k].y;
-      }
-      force((c) => c + 1);
-      return;
-    }
+  // Schleife läuft NUR während/nach dem Ziehen (Ausschwingen ins Lot); im
+  // Ruhezustand steht sie still — so bleibt jede Perle einzeln anklickbar.
+  function ensureLoop() {
+    if (raf.current !== null) return;
     const tick = () => {
       stepRef.current();
       let bewegt = false;
       for (let k = 1; k <= N; k++) {
         const p = pts.current[k];
-        if (p && (Math.abs(p.x - p.ox) > 0.04 || Math.abs(p.y - p.oy) > 0.04)) {
+        if (p && (Math.abs(p.x - p.ox) > 0.05 || Math.abs(p.y - p.oy) > 0.05)) {
           bewegt = true;
           break;
         }
       }
-      if (bewegt || mouse.current || drag.current) force((c) => c + 1);
-      raf.current = requestAnimationFrame(tick);
+      force((c) => c + 1);
+      if (bewegt || drag.current) {
+        raf.current = requestAnimationFrame(tick);
+      } else {
+        raf.current = null;
+      }
     };
     raf.current = requestAnimationFrame(tick);
+  }
+
+  useEffect(() => {
     return () => {
-      if (raf.current !== null) cancelAnimationFrame(raf.current);
+      if (raf.current !== null) {
+        cancelAnimationFrame(raf.current);
+        raf.current = null;
+      }
     };
-  }, [N]);
+  }, []);
 
   function toSvg(e: React.PointerEvent) {
     const r = svgRef.current!.getBoundingClientRect();
     return { x: ((e.clientX - r.left) / r.width) * P_W, y: ((e.clientY - r.top) / r.height) * P_H };
   }
   function onMove(e: React.PointerEvent) {
-    mouse.current = toSvg(e);
     const d = drag.current;
-    if (d) {
-      if (!d.moved) {
-        const dx = e.clientX - d.sx;
-        const dy = e.clientY - d.sy;
-        if (dx * dx + dy * dy >= 16) d.moved = true;
-      }
-      if (d.moved) {
-        const p = pts.current[d.k];
-        const s = toSvg(e);
-        p.x = clamp(s.x, 40, P_W - 40);
-        p.y = clamp(s.y, P_AY, P_H - 12);
-        p.ox = p.x;
-        p.oy = p.y;
-      }
+    if (!d) return; // ohne aktiven Zug: keine Bewegung (Perlen bleiben anklickbar)
+    if (!d.moved) {
+      const dx = e.clientX - d.sx;
+      const dy = e.clientY - d.sy;
+      if (dx * dx + dy * dy >= 16) d.moved = true;
     }
-    // Ein synchroner Schritt — unabhängig vom rAF-Takt, aber ruhig
-    // (natalität rechnet ebenfalls einen Schritt pro Frame).
-    stepRef.current();
+    if (!d.moved) return;
+    const p = pts.current[d.k];
+    const s = toSvg(e);
+    p.x = clamp(s.x, 40, P_W - 40);
+    p.y = clamp(s.y, P_AY, P_H - 12);
+    p.ox = p.x;
+    p.oy = p.y;
+    stepRef.current(); // Nachbarn folgen synchron (auch bei gedrosseltem rAF)
+    ensureLoop();
     force((c) => c + 1);
   }
   function onDown(e: React.PointerEvent, k: number) {
@@ -294,14 +280,13 @@ function StoryPerlschnur({
     const d = drag.current;
     drag.current = null;
     if (d && !d.moved) {
-      mouse.current = null;
-      onRead(reihe[d.k - 1]);
+      onRead(reihe[d.k - 1]); // reiner Klick ohne Ziehen → lesen
       return;
     }
-    // Loslassen: ein paar Schritte synchron ausschwingen lassen.
-    mouse.current = null;
-    for (let t = 0; t < 22; t++) stepRef.current();
+    // Loslassen: zurück ins Lot schwingen lassen.
+    for (let t = 0; t < 20; t++) stepRef.current();
     force((c) => c + 1);
+    ensureLoop();
   }
 
   const P = pts.current;
