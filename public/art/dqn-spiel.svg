@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Illustration des verstärkenden Lernens: eine KI lernt durch Versuch und Irrtum ein einfaches Ziegel-Spiel; eine Belohnungskurve steigt an.">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Illustration des verstärkenden Lernens: eine KI lernt durch Versuch und Irrtum ein einfaches Ziegel-Spiel; eine Belohnungskurve steigt an.">
   <rect width="800" height="600" fill="#eeece5"/>
   <!-- Spielschirm (abstraktes Ziegel-Spiel, kein Original) -->
   <rect x="70" y="70" width="380" height="440" rx="14" fill="#14181d"/>
