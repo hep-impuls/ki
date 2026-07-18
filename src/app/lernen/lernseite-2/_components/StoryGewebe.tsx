@@ -426,17 +426,15 @@ export default function StoryGewebe({
   const ansichtId = ANSICHTEN[ansicht].id;
   const gewaehltSortiert = useMemo(() => alle.filter((i) => gewaehlt.has(i)), [alle, gewaehlt]);
 
-  /** Kanten (nur «Gewebe»): Erzähl-Faden (chronologisch aufeinanderfolgende
-   *  gewählte) + feine Einfluss-Bögen. */
+  /** Das GANZE Gewebe (immer sichtbar): Erzähl-Faden über ALLE Stationen der
+   *  Reihe nach + feine Einfluss-Bögen. `aktiv` = beide Enden sind gewählt →
+   *  die Kante wird beim Zeichnen leicht eingefärbt. */
   const kanten = useMemo(() => {
     const out: { a: number; b: number; fein: boolean }[] = [];
-    for (let i = 1; i < gewaehltSortiert.length; i++)
-      out.push({ a: gewaehltSortiert[i - 1], b: gewaehltSortiert[i], fein: false });
-    einfluesse.forEach((e) => {
-      if (gewaehlt.has(e.von) && gewaehlt.has(e.zu)) out.push({ a: e.von, b: e.zu, fein: true });
-    });
+    for (let i = 1; i < alle.length; i++) out.push({ a: alle[i - 1], b: alle[i], fein: false });
+    einfluesse.forEach((e) => out.push({ a: e.von, b: e.zu, fein: true }));
     return out;
-  }, [gewaehltSortiert, gewaehlt, einfluesse]);
+  }, [alle, einfluesse]);
 
   function punktVon(i: number): SimPunkt {
     let p = simRef.current.get(i);
@@ -450,7 +448,7 @@ export default function StoryGewebe({
 
   function simSchritt() {
     const alpha = alphaRef.current;
-    const pts = gewaehltSortiert.map((i) => ({ i, p: punktVon(i) }));
+    const pts = alle.map((i) => ({ i, p: punktVon(i) }));
     for (let a = 0; a < pts.length; a++) {
       for (let b = a + 1; b < pts.length; b++) {
         const P = pts[a].p;
@@ -463,7 +461,7 @@ export default function StoryGewebe({
           dy = 0.5;
           d2 = 1;
         }
-        const f = (5200 * alpha) / d2;
+        const f = (2600 * alpha) / d2;
         const d = Math.sqrt(d2);
         const ux = dx / d;
         const uy = dy / d;
@@ -479,7 +477,7 @@ export default function StoryGewebe({
       const dx = Q.x - P.x;
       const dy = Q.y - P.y;
       const d = Math.max(1, Math.sqrt(dx * dx + dy * dy));
-      const f = (d - 120) * (k.fein ? 0.008 : 0.02) * alpha * 6;
+      const f = (d - 78) * (k.fein ? 0.006 : 0.018) * alpha * 6;
       const ux = dx / d;
       const uy = dy / d;
       P.vx += ux * f;
@@ -536,10 +534,11 @@ export default function StoryGewebe({
     [],
   );
 
-  const auswahlKey = gewaehltSortiert.join(",");
   useEffect(() => {
     if (ansichtId === "gewebe") {
-      gewaehltSortiert.forEach((i) => {
+      // Ganzes Netz einmal einschwingen; Auswahl ändert nur die Hervorhebung,
+      // nicht das Layout (kein Zappeln bei jedem Stichwort-Klick).
+      alle.forEach((i) => {
         const p = punktVon(i);
         p.fx = null;
         p.fy = null;
@@ -552,7 +551,7 @@ export default function StoryGewebe({
       setLive(false);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ansichtId, auswahlKey]);
+  }, [ansichtId]);
 
   /* ── Gewebe-Zeiger: Ziehen verschiebt, Tippen liest ───────────────────── */
 
@@ -617,6 +616,8 @@ export default function StoryGewebe({
   /* ── Lesen, Auswahl, Zufall, Reset ────────────────────────────────────── */
 
   function aktiviere(i: number) {
+    // Antippen liest die Station UND hebt sie hervor (fett + eingefärbte Kanten).
+    setGewaehlt((prev) => (prev.has(i) ? prev : new Set(prev).add(i)));
     if (!gesammelt.includes(i)) {
       setGesammelt((g) => [...g, i]);
       if (spurKey) merkeSpur(`${spurKey}:${i}`);
@@ -791,6 +792,9 @@ export default function StoryGewebe({
             {kanten.map((k, i) => {
               const a = punktVon(k.a);
               const b = punktVon(k.b);
+              // aktiv = beide Enden gewählt → Verbindung leicht einfärben,
+              // sonst blass im Hintergrund (das ganze Gewebe bleibt sichtbar).
+              const aktiv = gewaehlt.has(k.a) && gewaehlt.has(k.b);
               if (k.fein) {
                 const mx = (a.x + b.x) / 2;
                 const my = (a.y + b.y) / 2 - Math.min(60, Math.abs(b.x - a.x) * 0.25 + 14);
@@ -799,10 +803,10 @@ export default function StoryGewebe({
                     key={`k${i}`}
                     d={`M${a.x} ${a.y} Q${mx} ${my} ${b.x} ${b.y}`}
                     fill="none"
-                    strokeWidth="0.9"
+                    strokeWidth={aktiv ? 1.1 : 0.7}
                     strokeDasharray="3 4"
-                    className="stroke-tertiary"
-                    opacity="0.5"
+                    className="stroke-tertiary transition-opacity duration-300"
+                    opacity={aktiv ? 0.55 : 0.12}
                   />
                 );
               }
@@ -813,18 +817,25 @@ export default function StoryGewebe({
                   y1={a.y}
                   x2={b.x}
                   y2={b.y}
-                  strokeWidth="1.25"
-                  className="stroke-outline-variant"
+                  strokeWidth={aktiv ? 1.6 : 1}
+                  className={
+                    (aktiv ? "stroke-tertiary" : "stroke-outline-variant") +
+                    " transition-opacity duration-300"
+                  }
+                  opacity={aktiv ? 0.5 : 0.18}
                 />
               );
             })}
-            {gewaehltSortiert.map((i) => {
+            {alle.map((i) => {
               const p = punktVon(i);
               const st = stationen[i];
               const gelesen = gesammelt.includes(i);
+              const gewaehltJa = gewaehlt.has(i);
+              const hervor = gelesen || gewaehltJa; // fett markiert
               const name = st.kurz;
               const halb = (name.length * 5.7) / 2;
               const labelX = clamp(p.x, halb + 6, W - halb - 6) - p.x;
+              const r = gelesen ? 6 : gewaehltJa ? 5.5 : 3.4;
               return (
                 <g
                   key={i}
@@ -852,24 +863,34 @@ export default function StoryGewebe({
                   <circle
                     cx="0"
                     cy="0"
-                    r="5.5"
+                    r={r}
                     className={
-                      (gelesen ? "fill-tertiary" : "fill-outline") +
-                      " origin-center [transform-box:fill-box] transition-transform duration-300 group-hover:scale-125 group-focus-visible:scale-125"
+                      (hervor ? "fill-tertiary" : "fill-outline") +
+                      " origin-center [transform-box:fill-box] transition-all duration-300 group-hover:scale-125 group-focus-visible:scale-125"
                     }
-                    opacity={gelesen ? 1 : 0.7}
+                    opacity={gelesen ? 1 : gewaehltJa ? 0.9 : 0.4}
                   />
-                  <text
-                    x={labelX}
-                    y="22"
-                    textAnchor="middle"
-                    fontSize="11"
-                    className={
-                      (gelesen ? "fill-on-surface" : "fill-on-surface-variant") + " pointer-events-none"
-                    }
-                  >
-                    {name}
-                  </text>
+                  {hervor ? (
+                    <text
+                      x={labelX}
+                      y="22"
+                      textAnchor="middle"
+                      fontSize="11"
+                      className="fill-on-surface font-semibold pointer-events-none"
+                    >
+                      {name}
+                    </text>
+                  ) : (
+                    <text
+                      x={labelX}
+                      y="22"
+                      textAnchor="middle"
+                      fontSize="11"
+                      className="fill-on-surface-variant pointer-events-none opacity-0 group-hover:opacity-70 group-focus-visible:opacity-70"
+                    >
+                      {name}
+                    </text>
+                  )}
                 </g>
               );
             })}
@@ -885,7 +906,7 @@ export default function StoryGewebe({
       </div>
       <p className="mt-xs text-label-sm text-on-surface-variant">
         {ansichtId === "gewebe"
-          ? "Punkte ziehen · antippen für die Geschichte"
+          ? "Das ganze Gewebe ist sichtbar · Stichworte oben heben Punkte hervor · Punkt antippen liest die Geschichte · ziehen verschiebt"
           : "Zeiger durchs Muster bewegen lässt die Kette schwingen · Perle antippen für die Geschichte"}
       </p>
 
@@ -895,12 +916,13 @@ export default function StoryGewebe({
           <div className="rounded-xl border border-outline-variant bg-surface-container-low p-lg">
             <p className="flex items-start gap-sm text-body-md text-on-surface-variant">
               <span className="material-symbols-outlined text-[20px] text-tertiary">explore</span>
-              So geht es: Drei Stationen sind per Zufall eingeblendet. Tippe
+              So geht es: Das ganze Gewebe ist sichtbar — drei Punkte sind
+              schon hervorgehoben. Über die Stichworte oben hebst du weitere
+              Punkte fett hervor, und ihre Verbindungen färben sich ein. Tippe
               einen Punkt an — seine Geschichte erscheint hier und bleibt
-              stehen. Hole dir dann oben die übrigen Stationen einzeln dazu
-              (oder «Alle») und lies sie, bis alle offen sind. Im Gewebe
-              kannst du die Punkte auch ziehen; «Zeitlich» reiht sie als
-              Perlenschnur von früher nach heute.
+              stehen. Im Gewebe lassen sich die Punkte auch ziehen; «Zeitlich»
+              reiht die hervorgehobenen Stationen als Perlenschnur von früher
+              nach heute.
             </p>
           </div>
         ) : (

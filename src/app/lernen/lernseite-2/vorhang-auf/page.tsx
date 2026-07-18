@@ -476,13 +476,13 @@ export default function Lernseite2VorhangAuf() {
           Vom antiken Traum, Dingen Leben einzuhauchen, über die Geschichte des
           Algorithmus bis zu den heutigen Sprachmodellen: zweiundzwanzig
           Stationen, deren Vorstellungen einander quer durch die Zeit
-          beeinflussen. <strong>Deine Aufgabe:</strong> Drei Stationen sind per
-          Zufall eingeblendet — hole dir in der Auswahl weitere dazu, die dich
-          interessieren. Tippe einen Punkt an, um seine Geschichte zu lesen;
-          unter jeder Karte kannst du «Mehr lesen» aufklappen und mit «Das
-          verfolge ich weiter» ein Merkzeichen setzen. Im Gewebe lassen sich die
-          Punkte verschieben, «Zeitlich» reiht sie als Perlenschnur von früher
-          nach heute.
+          beeinflussen. <strong>Deine Aufgabe:</strong> Das ganze Gewebe ist
+          sichtbar — über die Stichworte oben hebst du einzelne Punkte fett
+          hervor, und ihre Verbindungen färben sich ein. Tippe einen Punkt an,
+          um seine Geschichte zu lesen; unter jeder Karte kannst du «Mehr lesen»
+          aufklappen und mit «Das verfolge ich weiter» ein Merkzeichen setzen.
+          Im Gewebe lassen sich die Punkte verschieben, «Zeitlich» reiht die
+          hervorgehobenen als Perlenschnur von früher nach heute.
         </p>
         <InfoPunkt className="mt-md" label="Muss ich allen 22 nachgehen?">
           Nein — du musst nicht jede Station öffnen. Geh dem nach, was dich
