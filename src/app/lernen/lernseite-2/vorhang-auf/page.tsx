@@ -474,8 +474,9 @@ export default function Lernseite2VorhangAuf() {
         <h2 className="text-headline-lg text-on-surface">Die KI-Story</h2>
         <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
           Vom antiken Traum, Dingen Leben einzuhauchen, über die Geschichte des
-          Algorithmus bis zur Gegenwart: siebzehn Stationen, deren Vorstellungen
-          einander quer durch die Zeit beeinflussen. <strong>Deine Aufgabe:</strong> Drei Stationen sind per
+          Algorithmus bis zu den heutigen Sprachmodellen: zweiundzwanzig
+          Stationen, deren Vorstellungen einander quer durch die Zeit
+          beeinflussen. <strong>Deine Aufgabe:</strong> Drei Stationen sind per
           Zufall eingeblendet — hole dir in der Auswahl weitere dazu, die dich
           interessieren. Tippe einen Punkt an, um seine Geschichte zu lesen;
           unter jeder Karte kannst du «Mehr lesen» aufklappen und mit «Das
@@ -483,7 +484,7 @@ export default function Lernseite2VorhangAuf() {
           Punkte verschieben, «Zeitlich» reiht sie als Perlenschnur von früher
           nach heute.
         </p>
-        <InfoPunkt className="mt-md" label="Muss ich allen 17 nachgehen?">
+        <InfoPunkt className="mt-md" label="Muss ich allen 22 nachgehen?">
           Nein — du musst nicht jede Station öffnen. Geh dem nach, was dich
           neugierig macht. Die Aktivitätsmessung registriert aber, was du
           anschaust, verschiebst und weiterverfolgst — nicht als Note, sondern
@@ -505,8 +506,12 @@ export default function Lernseite2VorhangAuf() {
             { von: 7, zu: 13 },
             { von: 11, zu: 12 },
             { von: 12, zu: 14 },
-            { von: 14, zu: 16 },
-            { von: 5, zu: 16 },
+            { von: 14, zu: 18 },
+            { von: 5, zu: 18 },
+            { von: 15, zu: 16 },
+            { von: 16, zu: 19 },
+            { von: 17, zu: 20 },
+            { von: 19, zu: 21 },
           ]}
           stationen={[
             {
@@ -702,50 +707,6 @@ export default function Lernseite2VorhangAuf() {
                 "Künstliche neuronale Netze gab es seit den 1950er-Jahren; erst Grafikkarten und riesige Datensätze machten «tiefe» Netze praktikabel. 2017 kam die «Transformer»-Architektur dazu — die Grundlage heutiger Sprachmodelle: Sie gewichtet Zusammenhänge über lange Textpassagen hinweg.",
             },
             {
-              titel: "Big Data & Gegenwart",
-              kurz: "Gegenwart",
-              kat: "daten",
-              mmf: "maschine",
-              jahr: "ab 2020",
-              text: "Riesige Datenmengen und Rechenzentren machen die neue Akteurin möglich. KI durchdringt den Alltag.",
-              geschichte:
-                "Heutige Modelle trainieren auf riesigen Text- und Bildmengen, in Rechenzentren mit Zehntausenden von Chips. So entstand die neue Akteurin dieses Moduls: dialogfähig, generativ — und Alltag von der Suchmaschine bis zum Schreibassistenten.",
-              mehr:
-                "Mit GPT-3 (2020) und ChatGPT (Ende 2022) wurde Sprach-KI erstmals einer breiten Öffentlichkeit zugänglich — und alltagstauglich. Was als jahrtausendealte Phantasie begann, ist heute Werkzeug und Gegenüber zugleich: Genau das macht es zum Thema dieser Einheit.",
-            },
-          ]}
-        />
-      </section>
-
-      <FadenDivider className="mt-xl" />
-
-      {/* 1b — Anschluss: die Ära der Sprachmodelle (eigenes, kleineres Gewebe,
-          damit die grosse Zeitleiste oben übersichtlich bleibt) */}
-      <section className="mt-xl max-w-5xl" aria-label="Anschluss: die Ära der Sprachmodelle">
-        <h2 className="text-headline-lg text-on-surface">
-          Anschluss: die Ära der Sprachmodelle
-        </h2>
-        <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
-          Ab hier beschleunigt sich alles. Die jüngste Etappe — von der
-          Transformer-Architektur bis zu Modellen, die sehen und hören —
-          bekommt ihr eigenes kleines Gewebe, damit die grosse Zeitleiste oben
-          übersichtlich bleibt. <strong>Deine Aufgabe:</strong> wie oben — Punkte
-          antippen, lesen, mit «Das verfolge ich weiter» merken; «Zeitlich»
-          reiht sie von 2017 bis heute.
-        </p>
-        <StoryGewebe
-          className="mt-lg"
-          spurKey="vorhang-auf:sprachmodelle"
-          wunschKey="vorhang-auf:sprachmodelle"
-          buehneKlasse="bg-primary-container/20"
-          einfluesse={[
-            { von: 0, zu: 2 },
-            { von: 1, zu: 3 },
-            { von: 2, zu: 4 },
-            { von: 0, zu: 4 },
-          ]}
-          stationen={[
-            {
               titel: "Der Transformer",
               kurz: "Transformer",
               kat: "daten",
@@ -768,6 +729,18 @@ export default function Lernseite2VorhangAuf() {
                 "Ab 2018 zeigten OpenAIs GPT-Modelle, dass reines «Vorhersagen des nächsten Wortes» auf riesigen Textmengen erstaunlich weit trägt. GPT-3 (2020) mit 175 Milliarden Parametern konnte Texte schreiben, übersetzen und Fragen beantworten, ohne für jede Aufgabe eigens trainiert zu werden.",
               mehr:
                 "Der Sprung kam vor allem durch Grösse — mehr Daten, mehr Parameter, mehr Rechenzeit («Scaling»). Damit tauchten Fähigkeiten auf, die niemand einzeln einprogrammiert hatte. Zugleich zeigten sich die Kehrseiten: Die Modelle geben falsche Auskünfte selbstsicher wieder und übernehmen Verzerrungen aus ihren Trainingsdaten.",
+            },
+            {
+              titel: "Big Data & Gegenwart",
+              kurz: "Gegenwart",
+              kat: "daten",
+              mmf: "maschine",
+              jahr: "ab 2020",
+              text: "Riesige Datenmengen und Rechenzentren machen die neue Akteurin möglich. KI durchdringt den Alltag.",
+              geschichte:
+                "Heutige Modelle trainieren auf riesigen Text- und Bildmengen, in Rechenzentren mit Zehntausenden von Chips. So entstand die neue Akteurin dieses Moduls: dialogfähig, generativ — und Alltag von der Suchmaschine bis zum Schreibassistenten.",
+              mehr:
+                "Riesige Text- und Bildmengen, trainiert in Rechenzentren mit Zehntausenden Chips, wurden zur Voraussetzung der neuen Akteurin. Was danach kam — dialogfähige Chatbots, konkurrierende Modellfamilien, sehende und hörende KI — baut alles auf dieser Infrastruktur auf.",
             },
             {
               titel: "ChatGPT — der Massenmoment",
