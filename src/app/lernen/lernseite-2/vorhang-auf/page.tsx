@@ -3,6 +3,7 @@ import ActivityTracker from "@/components/ActivityTracker";
 import AppLayout from "@/components/layout/AppLayout";
 import { FadenDivider, Signatur } from "../_components/Gewebe";
 import KnotenLandschaft from "../_components/KnotenLandschaft";
+import KontextAkkordeon from "../_components/KontextAkkordeon";
 import StoryGewebe from "../_components/StoryGewebe";
 import BilderAnschauung, { type AnschauBild } from "../_components/BilderAnschauung";
 import AktivitaetsNetzFloat from "../_components/AktivitaetsNetzFloat";
@@ -58,7 +59,7 @@ const AUFTRITT_FELDER: number[][] = [
  *  2. Bilderstrecke — die gemeinfreien historischen Bilder als Set zum
  *     Durchgehen; Hover erklärt, Ansehen zählt fürs Aktivitätsnetz.
  *  3. Die Merkmale der neuen Akteurin — loses Geflecht aus sieben Punkten.
- *  4. Das Netz der Akteurin — die KI als ein Knoten unter sieben.
+ *  4. Die KI im Kontext — vier Kontexte mit aufklappbaren Aspekten.
  *
  * Bilder: public/art/storyboard/ (Nachweis in public/art/CREDITS.md).
  */
@@ -912,104 +913,100 @@ export default function Lernseite2VorhangAuf() {
 
       <FadenDivider className="mt-xl" />
 
-      {/* 3 — Das Netz der Akteurin: die KI als ein Knoten unter sieben */}
-      <section className="mt-xl max-w-5xl" aria-label="Das Netz der Akteurin">
-        <h2 className="text-headline-lg text-on-surface">Das Netz der Akteurin</h2>
+      {/* 3 — Die KI im Kontext: vier Kontexte mit aufklappbaren Aspekten */}
+      <section className="mt-xl max-w-5xl" aria-label="Die KI im Kontext">
+        <h2 className="text-headline-lg text-on-surface">Die KI im Kontext</h2>
         <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
-          Die neue Akteurin steht nie allein: Wer mit ihr spricht, zieht an
-          einem ganzen Geflecht — und sie ist darin ein Knoten unter Knoten.{" "}
-          <strong>Deine Aufgabe:</strong> Tippe alle sieben Knoten an und lies,
-          wer oder was mitzieht — oder tippe auf eine Verbindungslinie, das
-          öffnet gleich beide Enden. Ziel: alle sieben besucht — dann erscheint
-          das Fazit.
+          Um das Phänomen KI besser zu verstehen, stellt man es in seine
+          Kontexte. Vier Blickwinkel — technologisch, wirtschaftlich,
+          rechtlich-politisch und kulturell — zeigen, worin die neue Akteurin
+          eingebettet ist. <strong>Deine Aufgabe:</strong> Klappe die Aspekte
+          auf, die dich interessieren; jeder erklärt einen Faden des Geflechts.
         </p>
-        <KnotenLandschaft
+        <KontextAkkordeon
           className="mt-lg"
-          ariaLabel="Knotenlandschaft: Das Netz der Akteurin"
-          hoehe={230}
-          svgKlasse="aspect-[720/310] sm:aspect-[720/230]"
-          buehneKlasse="bg-secondary-container/25"
-          spurKey="vorhang-auf:netz"
-          kantenSpurKey="vorhang-auf:kanten-netz"
-          einladung="Sieben Knoten, kein Zentrum — tippe an, wer und was mitzieht, wenn du mit der Akteurin sprichst."
-          abschluss="Wer mit der neuen Akteurin spricht, zieht am ganzen Geflecht: an Menschen und ihrer Sprache, an Hallen voller Rechner, an Minen, Firmen und Gesetzen. Sie hat kein Zentrum — sie ist das Netz."
-          knoten={[
+          spurKey="vorhang-auf:kontext"
+          kapitel={[
             {
-              titel: "KI — die neue Akteurin",
-              kurz: "KI",
-              text: "Sie steht nie allein: Was sie kann, hängt am ganzen Geflecht — an Menschen, Sprache, Rechnern, Rohstoffen, Firmen und Regeln. Kein Zentrum, das für sich funktioniert; die KI ist ein Knoten unter Knoten. Wer mit ihr spricht, zieht immer am ganzen Netz mit.",
-              mehr:
-                "In der Akteur-Netzwerk-Theorie (Bruno Latour) handelt nie ein Ding allein — Wirkung entsteht im Geflecht von Menschen und Dingen. So gesehen ist «die KI» kein Kasten, sondern ein Knotenpunkt, an dem Sprache, Rechner, Rohstoffe, Firmen und Regeln zusammenlaufen.",
-            },
-            {
-              titel: "Nutzer:innen",
-              text: "Deine Fragen und Formulierungen führen sie; ohne Eingabe bleibt sie stumm. Wie du fragst, formt, was zurückkommt — mit dir wird sie zur Mitspielerin, nicht zur blossen Auskunft. Und oft fliessen deine Eingaben und Rückmeldungen ins nächste Training zurück.",
-              mehr:
-                "Ein Sprachmodell tut von sich aus nichts — es wartet auf eine Eingabe. Wie du fragst (der «Prompt»), formt die Antwort stark; damit bist du Teil des Systems, nicht bloss Zuschauerin. Auch deine Rückmeldungen fliessen oft ins nächste Training zurück.",
-            },
-            {
-              titel: "Sprache",
-              text: "Gelernt aus Milliarden Sätzen — unsere Wörter, Geschichten und Begriffe sind ihr Material. Sie gibt zurück, was Menschen geschrieben haben. Also stecken auch unsere Vorurteile, Lücken und Fehler mit darin.",
-              mehr:
-                "Trainiert wird auf riesigen Textmengen aus dem Internet, aus Büchern und Foren. Darin steckt viel Wissen der Menschheit — aber auch ihre Vorurteile, Lücken und Fehler, die das Modell mitlernt und weitergibt.",
-            },
-            {
-              titel: "Datencentren",
-              text: "Jede Antwort läuft durch riesige Rechenhallen voller Chips. Sie brauchen viel Strom und Wasser zur Kühlung — und Seekabel, die die Kontinente verbinden. Die Wolke ist in Wahrheit sehr handfest.",
-              mehr:
-                "Rechenzentren verbrauchen enorm viel Strom und Wasser zur Kühlung; ihr Energiebedarf wächst mit der KI rasant. Physisch hängt jede Antwort an Serverhallen, Stromnetzen und den Seekabeln, die die Kontinente verbinden.",
-            },
-            {
-              titel: "Rohstoffe",
-              text: "Chips brauchen Silizium, seltene Erden und Metalle wie Kobalt — aus Minen und Fabriken rund um die Welt. Die scheinbar virtuelle KI hat damit ein sehr reales Gewicht. Und der Abbau geschieht oft unter harten Bedingungen.",
-              mehr:
-                "Chips brauchen Silizium, seltene Erden und Metalle wie Kobalt — abgebaut in Minen, oft unter harten Bedingungen. Die scheinbar «virtuelle» KI hat damit einen sehr realen ökologischen und sozialen Fussabdruck.",
-            },
-            {
-              titel: "Unternehmen",
-              text: "Die grossen Modelle bauen wenige, kapitalstarke Firmen — mit eigenen Zielen und Geschäftsmodellen. Wer eine KI trainiert und betreibt, entscheidet mit, was sie darf und was sie kostet. Damit steckt in jeder Antwort auch ein Interesse.",
-              mehr:
-                "Die grossen Modelle bauen wenige, kapitalstarke Firmen — mit eigenen Zielen und Geschäftsmodellen. Wer eine KI trainiert und betreibt, entscheidet mit, was sie darf, was sie kostet und wessen Interessen sie dient.",
-            },
-            {
-              titel: "Regeln",
-              text: "Gesetze und Abmachungen bestimmen, was sie darf — und wer haftet, wenn etwas schiefgeht. Die EU-KI-Verordnung versucht das seit 2024 zu ordnen. Doch die Technik ist oft schneller als die Regeln.",
-              mehr:
-                "Gesetze wie die EU-KI-Verordnung (AI Act, ab 2024) versuchen, Risiken einzuhegen und Verantwortung zu klären. Doch die Technik ist oft schneller als die Regulierung — und die Frage, wer haftet, wenn eine KI Schaden anrichtet, ist vielerorts noch offen.",
-            },
-          ]}
-          anordnungen={[
-            {
-              id: "netz",
-              label: "Netz",
-              pos: [
-                [430, 96],
-                [120, 52],
-                [306, 34],
-                [642, 58],
-                [596, 188],
-                [330, 198],
-                [92, 162],
-              ],
-              kanten: [
-                { von: 1, zu: 2 },
-                { von: 2, zu: 0 },
-                { von: 0, zu: 3 },
-                { von: 3, zu: 4 },
-                { von: 4, zu: 5 },
-                { von: 5, zu: 0 },
-                { von: 5, zu: 6 },
-                { von: 6, zu: 1 },
-                { von: 2, zu: 5, fein: true },
-                { von: 0, zu: 4, fein: true },
+              icon: "memory",
+              titel: "Technologischer Kontext",
+              intro:
+                "KI ist eine Weiterentwicklung der Automatisierung. Wer sie verstehen will, schaut auf ihre materielle Basis — Rechenleistung, Energie und Infrastruktur.",
+              punkte: [
+                {
+                  titel: "Rechen- und Speicherkapazität",
+                  text: "Leistungsfähige KI benötigt grosse Mengen an Chips, Servern und Speicher, die nur wenigen Unternehmen und Staaten zur Verfügung stehen.",
+                },
+                {
+                  titel: "Energie und Ressourcen",
+                  text: "Training und Betrieb verbrauchen Strom, Kühlwasser und Rohstoffe; Effizienzgewinne stehen einer stark wachsenden Nutzung gegenüber.",
+                },
+                {
+                  titel: "Rechenzentren",
+                  text: "Neue Anlagen schaffen digitale Kapazitäten, konkurrieren lokal aber um Energie, Wasser, Fläche und Netzanschlüsse.",
+                },
               ],
             },
-          ]}
-          flaechen={[
-            { punkte: [[306, 34], [430, 96], [330, 198]], knoten: [2, 0, 5] },
-            { punkte: [[430, 96], [642, 58], [596, 188]], knoten: [0, 3, 4] },
-            { punkte: [[120, 52], [306, 34], [92, 162]], knoten: [1, 2, 6] },
-            { punkte: [[92, 162], [330, 198], [120, 52]], knoten: [6, 5, 1] },
+            {
+              icon: "payments",
+              titel: "Wirtschaftlicher Kontext",
+              intro:
+                "In einer kapitalistischen Gesellschaft dient KI der Rationalisierung — Kosten senken, Geld verdienen. Das prägt, wer sie baut, wem sie nützt und wie sich Arbeit verändert.",
+              punkte: [
+                {
+                  titel: "Technologisch-kapitalistische Organisation",
+                  text: "Die Entwicklung leistungsfähiger KI ist überwiegend in privatwirtschaftlichen Plattformunternehmen organisiert. Kapital, Daten, Rechenzentren und Patente konzentrieren sich dadurch bei wenigen Akteuren, deren wirtschaftliche Interessen die technische Entwicklung mitbestimmen.",
+                },
+                {
+                  titel: "Zugang",
+                  text: "Kosten, Infrastruktur, Sprache und digitale Kompetenzen entscheiden darüber, wer KI nutzen und mitgestalten kann.",
+                },
+                {
+                  titel: "Arbeitsmarkt",
+                  text: "KI ersetzt vor allem einzelne Tätigkeiten, verändert Berufsbilder und erzeugt zugleich neue Aufgaben und Qualifikationsanforderungen.",
+                },
+                {
+                  titel: "Rollenverschiebung",
+                  text: "Menschen wechseln teilweise vom Ausführen zum Anleiten, Überprüfen und Verantworten maschinell erzeugter Ergebnisse.",
+                },
+              ],
+            },
+            {
+              icon: "balance",
+              titel: "Rechtlicher und politischer Kontext",
+              intro:
+                "Chancen und Risiken müssen mit rechtlichen Leitplanken kanalisiert werden — und Staaten ringen politisch um Einfluss und Unabhängigkeit.",
+              punkte: [
+                {
+                  titel: "Regulierung",
+                  text: "Gesetze sollen Grundrechte, Sicherheit, Datenschutz und Urheberrecht schützen, ohne Forschung und Innovation unverhältnismässig einzuschränken.",
+                },
+                {
+                  titel: "Geopolitik",
+                  text: "Staaten und Unternehmen konkurrieren um Chips, Daten, Fachkräfte, Energie, Standards und technologische Unabhängigkeit.",
+                },
+              ],
+            },
+            {
+              icon: "diversity_3",
+              titel: "Kultureller Kontext",
+              intro:
+                "Je nach Weltbild fällt der Blick auf KI anders aus — westliche und etwa asiatische Kulturen deuten das Phänomen unterschiedlich. Auch der Umgang mit Wissen und Überlieferung steht auf dem Spiel.",
+              punkte: [
+                {
+                  titel: "Kultureller Bias und Technikverständnis",
+                  text: "KI-Systeme spiegeln häufig dominante westliche Sprachen, Werte und Wissensordnungen. Gleichzeitig unterscheiden sich kulturelle Vorstellungen von Individualität, Datenschutz, Technik, Staat und Gemeinschaft — wobei «West» und «Ost» keine einheitlichen Blöcke sind.",
+                },
+                {
+                  titel: "Text- und Archivkompetenz",
+                  text: "KI erleichtert Suche und Auswertung, ersetzt aber nicht Quellenkritik, Kontextwissen, Herkunftsnachweise und die Kontrolle am Original.",
+                },
+                {
+                  titel: "Wissensmacht",
+                  text: "Was digitalisiert, zugänglich und in Trainingsdaten enthalten ist, wird sichtbarer; fehlende oder ausgeschlossene Überlieferungen können weiter an Bedeutung verlieren.",
+                },
+              ],
+            },
           ]}
         />
       </section>
