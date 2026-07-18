@@ -10,6 +10,8 @@ import {
   zieheSpurenAusCloud,
 } from "../_lib/spuren";
 import KartenAktion from "./KartenAktion";
+import GewichtungWahl from "./GewichtungWahl";
+import { GEWICHT_EVENT, gewichtungsStaerke } from "../_lib/gewichtung";
 
 /**
  * KnotenLandschaft — die einheitliche Interaktion der Auftakt-Seite:
@@ -203,6 +205,7 @@ export default function KnotenLandschaft({
   kantenSpurKey,
   wunschKey,
   ariaLabel = "Knotenlandschaft",
+  gewichtung,
 }: {
   knoten: LandKnoten[];
   /** Eine oder mehrere Anordnungen; bei mehreren erscheint ein Umschalter. */
@@ -231,8 +234,20 @@ export default function KnotenLandschaft({
   /** Präfix für die «Mehr dazu wissen»-Merkzeichen (Default: spurKey). */
   wunschKey?: string;
   ariaLabel?: string;
+  /** Optional: pro Knoten eine Drei-Stufen-Gewichtung in der Karte; ihre
+   *  aggregierte Stärke verstärkt die Konturen des Musters (Gestalt). */
+  gewichtung?: { prefix: string; frage: string; stufen: [string, string, string] };
 }) {
   const n = knoten.length;
+  // Aggregierte Kontur-Stärke (0..1) aus den Gewichtungen — live.
+  const [konturStaerke, setKonturStaerke] = useState(0);
+  useEffect(() => {
+    if (!gewichtung) return;
+    const lade = () => setKonturStaerke(gewichtungsStaerke(gewichtung.prefix, n));
+    lade();
+    window.addEventListener(GEWICHT_EVENT, lade);
+    return () => window.removeEventListener(GEWICHT_EVENT, lade);
+  }, [gewichtung, n]);
   const musterId = useId().replace(/[^a-zA-Z0-9]/g, "");
   const anordnungenRef = useRef(anordnungen);
   anordnungenRef.current = anordnungen;
@@ -464,16 +479,25 @@ export default function KnotenLandschaft({
                 art === "voll"
                   ? undefined
                   : `url(#${musterId}-${art === "schraffur" ? "schraffur" : "punkte"})`;
+              // Gestalt-Gewichtung verstärkt Füllung UND zeichnet eine Kontur:
+              // mehr «deutlich» → deutlichere Umrisse.
+              const grundOpazitaet = art === "voll" ? 0.09 : 1;
+              const fuellOpazitaet = gewichtung
+                ? grundOpazitaet * (0.55 + 0.9 * konturStaerke)
+                : grundOpazitaet;
               return (
                 <polygon
                   key={`f${i}`}
                   points={f.punkte.map(([x, y]) => `${x},${y}`).join(" ")}
                   fill={fill}
                   className={
-                    "pointer-events-none transition-opacity duration-700 " +
-                    (art === "voll" ? "fill-tertiary" : "")
+                    "pointer-events-none transition-all duration-700 " +
+                    (art === "voll" ? "fill-tertiary " : "") +
+                    (gewichtung ? "stroke-tertiary" : "")
                   }
-                  opacity={aktiv ? (art === "voll" ? 0.09 : 1) : 0}
+                  strokeWidth={gewichtung ? 0.4 + 2.2 * konturStaerke : 0}
+                  strokeOpacity={gewichtung ? Math.min(1, 0.15 + 0.85 * konturStaerke) : 0}
+                  opacity={aktiv ? Math.min(1, fuellOpazitaet) : 0}
                 />
               );
             })}
@@ -697,6 +721,15 @@ export default function KnotenLandschaft({
                         mehr={k.mehr}
                         wunschId={`wunsch:${wunschKey ?? spurKey ?? "knoten"}:${idx}`}
                       />
+                      {gewichtung && (
+                        <GewichtungWahl
+                          className="mt-sm border-t border-outline-variant pt-sm"
+                          prefix={gewichtung.prefix}
+                          index={idx}
+                          frage={gewichtung.frage}
+                          stufen={gewichtung.stufen}
+                        />
+                      )}
                     </div>
                   </div>
                 </li>

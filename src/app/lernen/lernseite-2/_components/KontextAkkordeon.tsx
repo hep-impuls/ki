@@ -7,6 +7,14 @@ import {
   SPUR_EVENT,
   zieheSpurenAusCloud,
 } from "../_lib/spuren";
+import { GEWICHT_EVENT, leseGewichtungen } from "../_lib/gewichtung";
+import GewichtungWahl from "./GewichtungWahl";
+
+/** Warme Skala für das Achtsamkeits-Muster: mehr Achtsamkeit → farbiger,
+ *  rötlicher. Bewusste Ausnahme von der reinen Token-Palette (wie die
+ *  leuchtenden Perlenfarben), weil die Farbe hier die Bedeutung trägt. */
+const ACHTSAMKEIT_FARBEN = ["#ded9cc", "#e7c489", "#e58a3c", "#d13417"] as const;
+// Index: 0 = nicht bewertet/wenig-Grundton … hier separat gehandhabt.
 
 /**
  * KontextAkkordeon — «Die KI im Kontext». Vier Kontext-Kapitel (technologisch,
@@ -32,11 +40,15 @@ export interface KontextKapitel {
 export default function KontextAkkordeon({
   kapitel,
   spurKey,
+  gewichtung,
   className = "",
 }: {
   kapitel: KontextKapitel[];
   /** Spur-Präfix, z.B. "vorhang-auf:kontext". */
   spurKey: string;
+  /** Optional: pro Aspekt eine Drei-Stufen-Achtsamkeits-Gewichtung; sie färbt
+   *  das Kontext-Muster (mehr Achtsamkeit → farbiger, rötlicher). */
+  gewichtung?: { prefix: string; frage: string; stufen: [string, string, string] };
   className?: string;
 }) {
   // Flache, stabile globale Indizes (Kapitel- dann Punkt-Reihenfolge).
@@ -51,6 +63,15 @@ export default function KontextAkkordeon({
 
   const [offen, setOffen] = useState<Set<number>>(new Set());
   const [gelesen, setGelesen] = useState<Set<number>>(new Set());
+  const [gewichtungen, setGewichtungen] = useState<Record<number, number>>({});
+
+  useEffect(() => {
+    if (!gewichtung) return;
+    const lade = () => setGewichtungen(leseGewichtungen(gewichtung.prefix));
+    lade();
+    window.addEventListener(GEWICHT_EVENT, lade);
+    return () => window.removeEventListener(GEWICHT_EVENT, lade);
+  }, [gewichtung]);
 
   useEffect(() => {
     function restore() {
@@ -91,6 +112,76 @@ export default function KontextAkkordeon({
           ? `${gesamt} Aspekte in vier Kontexten — tippe sie auf`
           : `${gelesen.size} von ${gesamt} Aspekten geöffnet`}
       </div>
+
+      {/* Achtsamkeits-Muster — je mehr Aspekte hoch gewichtet sind, desto
+          farbiger und rötlicher wird der Ring. */}
+      {gewichtung && (
+        <div className="mb-lg flex flex-col items-center gap-sm rounded-2xl border border-outline-variant bg-surface-container-low p-md sm:flex-row sm:gap-lg sm:p-lg">
+          <svg
+            viewBox="0 0 220 220"
+            className="h-40 w-40 flex-shrink-0"
+            role="img"
+            aria-label="Achtsamkeits-Muster: jeder Ringabschnitt steht für einen Aspekt; mehr Achtsamkeit färbt ihn rötlicher."
+          >
+            {flach.map((_, gi) => {
+              const step = 360 / gesamt;
+              const luecke = 2.2;
+              const a0 = gi * step - 90 + luecke / 2;
+              const a1 = (gi + 1) * step - 90 - luecke / 2;
+              const ri = 42;
+              const ro = 100;
+              const rad = (d: number) => (d * Math.PI) / 180;
+              const px = (r: number, d: number) => 110 + r * Math.cos(rad(d));
+              const py = (r: number, d: number) => 110 + r * Math.sin(rad(d));
+              const d = [
+                `M ${px(ri, a0)} ${py(ri, a0)}`,
+                `L ${px(ro, a0)} ${py(ro, a0)}`,
+                `A ${ro} ${ro} 0 0 1 ${px(ro, a1)} ${py(ro, a1)}`,
+                `L ${px(ri, a1)} ${py(ri, a1)}`,
+                `A ${ri} ${ri} 0 0 0 ${px(ri, a0)} ${py(ri, a0)}`,
+                "Z",
+              ].join(" ");
+              const s = gewichtungen[gi];
+              const farbe = ACHTSAMKEIT_FARBEN[s == null ? 0 : s + 1];
+              return (
+                <path
+                  key={gi}
+                  d={d}
+                  fill={farbe}
+                  className="stroke-surface-container-low transition-[fill] duration-500"
+                  strokeWidth={1.5}
+                />
+              );
+            })}
+          </svg>
+          <div className="min-w-0 text-center sm:text-left">
+            <p className="text-body-md font-medium text-on-surface">
+              Dein Achtsamkeits-Muster
+            </p>
+            <p className="mt-xs text-body-sm text-on-surface-variant">
+              Jeder Abschnitt steht für einen Aspekt (im Uhrzeigersinn, Kapitel
+              für Kapitel). Je mehr Achtsamkeit du ihm gibst, desto farbiger und
+              rötlicher wird er.
+            </p>
+            <div className="mt-sm flex flex-wrap items-center justify-center gap-md sm:justify-start">
+              {[
+                ["nicht bewertet", ACHTSAMKEIT_FARBEN[0]],
+                ["wenig", ACHTSAMKEIT_FARBEN[1]],
+                ["mittel", ACHTSAMKEIT_FARBEN[2]],
+                ["viel", ACHTSAMKEIT_FARBEN[3]],
+              ].map(([label, farbe]) => (
+                <span key={label} className="flex items-center gap-xs text-label-sm text-on-surface-variant">
+                  <span
+                    className="inline-block h-3 w-3 rounded-full"
+                    style={{ backgroundColor: farbe as string }}
+                  />
+                  {label}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className="space-y-lg">
         {kapitel.map((k, ki) => (
@@ -152,6 +243,15 @@ export default function KontextAkkordeon({
                         <p className="text-body-md leading-relaxed text-on-surface-variant">
                           {p.text}
                         </p>
+                        {gewichtung && (
+                          <GewichtungWahl
+                            className="mt-sm"
+                            prefix={gewichtung.prefix}
+                            index={gi}
+                            frage={gewichtung.frage}
+                            stufen={gewichtung.stufen}
+                          />
+                        )}
                       </div>
                     )}
                   </li>

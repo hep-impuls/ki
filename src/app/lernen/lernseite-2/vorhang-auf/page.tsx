@@ -829,7 +829,12 @@ export default function Lernseite2VorhangAuf() {
           svgKlasse="aspect-[720/310] sm:aspect-[720/230]"
           spurKey="vorhang-auf:weisheit"
           kantenSpurKey="vorhang-auf:kanten-weisheit"
-          einladung="Sieben Merkmale, lose verwoben — tippe die Punkte an oder logge Verbindungen ein. Zwischen besuchten Punkten füllen sich die Flächen; ist das Muster gewoben, erscheint darunter das Fazit."
+          gewichtung={{
+            prefix: "vorhang-auf:gestalt",
+            frage: "Macht dieses Merkmal die Gestalt der KI …",
+            stufen: ["unkenntlich", "verschwommen", "deutlich"],
+          }}
+          einladung="Sieben Merkmale, lose verwoben — tippe die Punkte an oder logge Verbindungen ein. Zwischen besuchten Punkten füllen sich die Flächen; ist das Muster gewoben, erscheint darunter das Fazit. Gewichte in jeder Karte, wie deutlich das Merkmal die Gestalt der KI macht — je mehr «deutlich», desto stärker die Konturen."
           abschluss="Diese sieben Eigenschaften treffen sich in einem einzigen Gegenüber — und darin liegt das eigentlich Neue: Nicht eine einzelne Fähigkeit, sondern ihre Bündelung macht die KI zu einer Akteurin. Sie spricht, erzeugt, erkennt, lernt, erinnert, handelt und verbindet die Sinne — und wird so zu etwas, dem wir mehr Potenzial zurechnen, auf unser Handeln Einfluss zu nehmen, als je einer Technik zuvor."
           knoten={[
             {
@@ -922,10 +927,17 @@ export default function Lernseite2VorhangAuf() {
           rechtlich-politisch und kulturell — zeigen, worin die neue Akteurin
           eingebettet ist. <strong>Deine Aufgabe:</strong> Klappe die Aspekte
           auf, die dich interessieren; jeder erklärt einen Faden des Geflechts.
+          Gewichte dabei, wie viel Achtsamkeit ein Aspekt verdient — das
+          Achtsamkeits-Muster oben wird dadurch farbiger und rötlicher.
         </p>
         <KontextAkkordeon
           className="mt-lg"
           spurKey="vorhang-auf:kontext"
+          gewichtung={{
+            prefix: "vorhang-auf:achtsamkeit",
+            frage: "Wie viel Achtsamkeit verdient dieser Aspekt?",
+            stufen: ["wenig", "mittel", "viel"],
+          }}
           kapitel={[
             {
               icon: "memory",
