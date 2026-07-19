@@ -4,6 +4,7 @@ import AppLayout from "@/components/layout/AppLayout";
 import FadenNetz from "../_components/FadenNetz";
 import { Signatur } from "../_components/Gewebe";
 import VideoImpuls from "../_components/VideoImpuls";
+import AkkordeonPosten from "../_components/AkkordeonPosten";
 import SchablonenZeitstrahl from "./_components/SchablonenZeitstrahl";
 
 /**
@@ -65,6 +66,50 @@ export default function Lernseite2PhilosophischePerspektive() {
           </footer>
         </blockquote>
       </header>
+
+      {/* 0 — Einstieg: Was ist Philosophie? (erster Aktivitätsposten) */}
+      <section className="mt-xl max-w-4xl" aria-label="Was ist Philosophie?">
+        <h2 className="text-headline-lg text-on-surface">
+          Was ist Philosophie — und warum jetzt?
+        </h2>
+        <p className="mt-sm text-body-lg text-on-surface-variant">
+          Bevor wir in die Geschichte eintauchen: Was ist Philosophie überhaupt?
+          Wörtlich heisst sie «Liebe zur Weisheit». Sie gibt keine fertigen
+          Antworten wie eine Einzelwissenschaft, sondern stellt die
+          grundlegenden Fragen — nach Wissen, Wahrheit, Recht, dem guten Leben
+          und dem Menschen selbst — und prüft, wie wir sie begründen. Gerade
+          heute, wo Maschinen sprechen, entscheiden und gestalten, brechen diese
+          Fragen neu auf: Was ist der Mensch, wenn eine Maschine vieles ebenso
+          gut kann? Philosophie hilft, im Umbruch Orientierung zu finden, statt
+          der Technik nur hinterherzulaufen.{" "}
+          <strong>Deine Aufgabe:</strong> Klappe die Punkte auf, die dich
+          neugierig machen.
+        </p>
+        <AkkordeonPosten
+          className="mt-lg"
+          spurKey="philosophische-perspektive:einstieg"
+          begriff="Fragen"
+          ariaLabel="Was ist Philosophie? — aufklappbare Punkte"
+          punkte={[
+            {
+              titel: "Sie beginnt mit Staunen und Zweifeln",
+              text: "Schon Platon und Aristoteles sagten: Am Anfang der Philosophie steht das Staunen — das Innehalten vor dem, was selbstverständlich schien. Dazu kommt der Zweifel: Descartes' «Ich denke, also bin ich» beginnt damit, alles anzuzweifeln, bis ein sicherer Punkt bleibt. Staunen öffnet die Frage, Zweifel prüft die Antwort.",
+            },
+            {
+              titel: "Ihre Hauptfrage: Was ist der Mensch?",
+              text: "Immanuel Kant bündelte die Philosophie in vier Fragen: Was kann ich wissen? Was soll ich tun? Was darf ich hoffen? — und, so Kant, alle laufen zusammen in der einen: Was ist der Mensch? Was uns auszeichnet — Vernunft, Sprache, Bewusstsein, Freiheit — stand immer im Zentrum.",
+            },
+            {
+              titel: "Die KI stellt diese Frage neu — und dringlich",
+              text: "Nicht wörtlich: «Was ist der Mensch?» wird laut Google Trends kaum häufiger gesucht als früher. Aber in unzähligen Reden und Texten über KI kehrt die Frage in konkreter Form wieder — müssen wir überhaupt noch selbst denken und schreiben? Wie verändert uns die tägliche Nutzung? Und welche Rolle bekommen wir neben der Maschine: eher anleitend, prüfend und verantwortend statt ausführend? So taucht die alte philosophische Frage nach dem Menschen neu auf, mitten im Alltag.",
+            },
+            {
+              titel: "Sie gibt keine Rezepte, sondern Orientierung",
+              text: "Philosophie liefert keine Bedienungsanleitung und keine Prognose. Sie ordnet Begriffe, deckt verborgene Annahmen auf und wägt Gründe ab — sie hilft zu klären, worüber wir eigentlich streiten. Hegels Bild der «Eule der Minerva» (oben) sagt: Verstehen kommt oft erst im Rückblick — aber genau dieses Begreifen brauchen wir, um die Gegenwart zu gestalten.",
+            },
+          ]}
+        />
+      </section>
 
       {/* Interaktives Muster der Seite: die Epochen-Linie — von der Antike
           bis heute, jeder Knoten mit Schablone und Sprung ins Panel */}
