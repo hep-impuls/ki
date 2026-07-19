@@ -27,9 +27,12 @@ Sobald ein Video auf YouTube ist: Video-ID als `videoId="…"` an die jeweilige
 *Platzierung: `lernseite-2/page.tsx`, `spurId="video:hub"`.*
 
 **Kernbotschaft:** Neue Technik verunsichert — und wir stecken gerade mitten in
-einer solchen Zeit, ausgelöst durch KI. Nicht mehr Technik, sondern eine
-philosophische Orientierung hilft, diese Verunsicherung einzuordnen. Das ist das
-Ziel dieses Lernsets.
+einer solchen Zeit, ausgelöst durch KI. Wieder wird häufiger gefragt: Was ist der
+Mensch, und wie behält er die Orientierung? Dieses Set beantwortet das auf eine
+bestimmte Weise: nicht «Ich benutze ein Werkzeug», sondern «Ich bin eingebunden
+und hänge von vielen Akteuren ab — neu auch von der KI». Und das Set führt diese
+Eingebundenheit selbst vor: Sein Design wäre ohne KI so nicht möglich gewesen —
+Form und Funktion liegen nah beieinander.
 
 ### Sprechtext
 
@@ -39,12 +42,24 @@ leben? Wir stecken gerade wieder mitten in einer solchen Zeit — und ihr Name i
 Künstliche Intelligenz. Sie verändert Arbeit, Wissen und Kommunikation in
 atemberaubendem Tempo, sie spricht unsere Sprache, sie schlägt vor und handelt —
 und lässt viele ratlos zurück: fasziniert, überfordert, misstrauisch, alles
-zugleich. Dieses Lernset geht nicht davon aus, dass noch mehr Technik diese
-Ratlosigkeit auflöst. Es setzt auf etwas anderes: auf eine philosophische
-Orientierung, die hilft, die Komplexität einzuordnen — ruhiger, klarer, mit mehr
-Übersicht. Dazu gehen wir in drei Schritten vor. Im ersten Modul, «Vorhang auf»,
-gehen wir der Frage nach, was da eigentlich aufgetreten ist: dass KI eine neue Art
-von Akteurin ist, die Wandel auslöst und verunsichert. Im zweiten, der
+zugleich. In solchen Zeiten kommt eine alte Frage zurück: Was ist der Mensch — und
+wie behält er die Orientierung, wenn die Welt komplizierter wird, als eine
+Einzelne sie überblicken kann? Dieses Lernset setzt nicht darauf, dass noch mehr
+Technik die Ratlosigkeit auflöst, sondern auf eine philosophische Orientierung,
+die hilft, die Komplexität einzuordnen — ruhiger, klarer, mit mehr Übersicht.
+Und es tut das auf eine bestimmte Weise. Lange dachte man: Hier bin ich, das
+Subjekt, dort das Werkzeug, das Objekt — ich benutze es, fertig. Neuere Ansätze
+aus dem Netzwerkdenken zeigen etwas anderes: Ob etwas gelingt, hängt davon ab, wer
+und was alles daran beteiligt ist. Wir handeln nie ganz allein — wir sind
+eingebunden und voneinander abhängig, von Menschen, Dingen und Techniken. Die
+bessere Frage ist deshalb nicht «Wie benutze ich das?», sondern «Von wem und wovon
+hänge ich hier ab — und wie gestalte ich dieses Miteinander?». Und ein Beteiligter
+ist neu dazugekommen: die KI. Dieses Set zeigt das nicht nur, es lebt es vor —
+seine Gewebe und Muster machen die Eingebundenheit sichtbar, und in dieser Form
+wäre es ohne KI gar nicht entstanden. Wie es gemacht ist, sagt schon, worum es
+geht. Dazu gehen wir in drei Schritten vor. Im ersten Modul, «Vorhang auf», gehen
+wir der Frage nach, was da eigentlich aufgetreten ist: dass KI eine neue Art von
+Akteurin ist, die Wandel auslöst und verunsichert. Im zweiten, der
 «philosophischen Perspektive», gehen wir dem Muster nach — dass solche
 Verunsicherung nicht neu ist und wie Philosophie schon früher Orientierung gegeben
 hat und heute geben kann. Und im dritten, dem «Orakel», gehst du deinem eigenen
@@ -53,13 +68,19 @@ an — bei der Verunsicherung.
 
 ### Was vermittelt wird & wo die Komplexität liegt
 
-- **Vermittelt wird:** der Zweck des ganzen Sets — Verunsicherung durch KI ernst
-  nehmen und ihr mit *Orientierung* statt mit noch mehr Technik begegnen.
-- **Die Komplexität:** Verunsicherung ist unangenehm und drängt zu schnellen
-  Urteilen («KI ist super» / «KI ist gefährlich»). Orientierung heisst, diese
-  Spannung auszuhalten und einzuordnen, statt sie vorschnell aufzulösen.
-- **B-Roll:** Tempo/Umbruch (Nachrichtenschlagzeilen, Arbeitswelt), dann Ruhe;
-  die drei Module als Weg/Faden.
+- **Vermittelt wird:** Orientierung nicht durch mehr Technik, sondern durch einen
+  Perspektivwechsel — weg vom «Ich benutze ein Werkzeug» (Subjekt–Objekt), hin zur
+  **Eingebundenheit**: Gelingen hängt daran, wer alles beteiligt ist und wovon man
+  abhängt. Die KI ist ein neuer solcher Akteur.
+- **Selbstbezug:** Das Set führt diese Eingebundenheit im eigenen Design vor — es
+  wäre ohne KI so nicht machbar gewesen. Form ≈ Funktion.
+- **Die Komplexität:** Verunsicherung drängt zu schnellen Urteilen («KI ist super»
+  / «KI ist gefährlich»); Orientierung heisst, diese Spannung auszuhalten. Und der
+  Perspektivwechsel selbst ist ungewohnt: sich als abhängig-eingebunden zu sehen
+  statt als alleinigen Macher.
+- **B-Roll:** Tempo/Umbruch (Schlagzeilen, Arbeitswelt), dann Ruhe; ein Netz aus
+  vielen Knoten statt einer einzelnen Hand am Werkzeug; die Gewebe/Muster des Sets
+  selbst.
 
 ---
 
