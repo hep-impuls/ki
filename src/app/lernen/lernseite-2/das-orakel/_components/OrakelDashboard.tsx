@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { createPortal } from "react-dom";
 import {
   castVote,
   loadPollCounts,
@@ -83,6 +84,7 @@ const STILE: { id: Stil; label: string; icon: string; beschreibung: string }[] =
 /* ── lokale Schlüssel ─────────────────────────────────────────────────────── */
 
 const KEY_BLICK = "ki26-orakel-blick";
+const KEY_NAME = "ki26-orakel-name";
 
 function summeMitPrefix(counts: PollCounts, prefix: string): number {
   return Object.entries(counts).reduce(
@@ -136,6 +138,10 @@ export default function OrakelDashboard() {
     literarisch: LEER,
     fantastisch: LEER,
   });
+  /* Ausdruck */
+  const [name, setName] = useState("");
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
   /* lokale Spuren + Bewertungen lesen + live nachführen */
   const lokalLesen = useCallback(() => {
@@ -173,14 +179,24 @@ export default function OrakelDashboard() {
     };
   }, [lokalLesen]);
 
-  /* Poll-Wahl laden */
+  /* Poll-Wahl + Name laden */
   useEffect(() => {
     try {
       setBlickWahl(window.localStorage.getItem(KEY_BLICK));
+      setName(window.localStorage.getItem(KEY_NAME) ?? "");
     } catch {
       /* Privatmodus */
     }
   }, []);
+
+  function nameAendern(wert: string) {
+    setName(wert);
+    try {
+      window.localStorage.setItem(KEY_NAME, wert);
+    } catch {
+      /* Privatmodus */
+    }
+  }
 
   /* anonyme Zähler abonnieren (alle) */
   useEffect(() => {
@@ -667,6 +683,41 @@ export default function OrakelDashboard() {
                   </p>
                 )}
               </div>
+
+              {/* Ausdrucken — Name eingeben, dann drucken */}
+              <div className="mt-lg border-t border-outline-variant/60 pt-md">
+                <label
+                  htmlFor="orakel-name"
+                  className="block text-body-sm text-on-surface-variant"
+                >
+                  Dein Name für den Ausdruck (bleibt auf diesem Gerät):
+                </label>
+                <div className="mt-sm flex flex-wrap items-center gap-sm">
+                  <input
+                    id="orakel-name"
+                    type="text"
+                    value={name}
+                    onChange={(e) => nameAendern(e.target.value)}
+                    maxLength={60}
+                    placeholder="Vor- und Nachname"
+                    className="min-w-[12rem] flex-1 rounded-xl border border-outline-variant bg-surface-bright px-md py-sm text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:border-tertiary focus:outline-none"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => window.print()}
+                    className="inline-flex items-center gap-sm rounded-xl bg-tertiary px-lg py-sm text-label-md text-on-tertiary shadow-sm transition hover:bg-on-tertiary-container"
+                  >
+                    <span className="material-symbols-outlined text-[18px]">print</span>
+                    Deutung ausdrucken
+                  </button>
+                </div>
+                {!name.trim() && (
+                  <p className="mt-xs text-label-sm text-on-surface-variant">
+                    Tipp: Trage zuerst deinen Namen ein — er erscheint dann auf dem
+                    Ausdruck.
+                  </p>
+                )}
+              </div>
             </>
           )}
         </div>
@@ -720,6 +771,62 @@ export default function OrakelDashboard() {
           keinen Namen, keinen Code, keine Einzeltexte.
         </p>
       </div>
+
+      {/* Druck-Stil: beim Drucken nur die Druckansicht zeigen */}
+      <style>{`
+        @media print {
+          body > *:not(#orakel-print-root) { display: none !important; }
+          #orakel-print-root { display: block !important; }
+        }
+      `}</style>
+
+      {/* Druckansicht (Portal auf <body>, damit die App-Rahmen ausgeblendet
+          werden können). Nur mit vorhandener Deutung. */}
+      {mounted &&
+        aktuell.status === "ok" &&
+        aktuell.text &&
+        createPortal(
+          <div
+            id="orakel-print-root"
+            className="hidden"
+            style={{ color: "#111", background: "#fff", padding: "2rem", fontFamily: "Inter, system-ui, sans-serif" }}
+          >
+            <p style={{ fontSize: "0.8rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#555", margin: 0 }}>
+              Lernumgebung zu KI · Eine ganz neue Partnerschaft · Das Orakel
+            </p>
+            <h1 style={{ fontSize: "1.6rem", margin: "0.4rem 0 0" }}>Meine Orakel-Deutung</h1>
+            <p style={{ margin: "0.75rem 0 0", fontSize: "1rem" }}>
+              <strong>Name:</strong> {name.trim() || "—"}
+              {"    "}
+              <strong style={{ marginLeft: "1.5rem" }}>Datum:</strong>{" "}
+              {new Date().toLocaleDateString("de-CH")}
+            </p>
+            <p style={{ margin: "0.25rem 0 0", fontSize: "1rem" }}>
+              <strong>Form:</strong> {STILE.find((s) => s.id === stil)?.label}
+            </p>
+
+            <h2 style={{ fontSize: "1.1rem", margin: "1.5rem 0 0.4rem" }}>Die Deutung</h2>
+            <p style={{ margin: 0, fontSize: "1.05rem", lineHeight: 1.6, whiteSpace: "pre-line" }}>
+              {aktuell.text}
+            </p>
+
+            <h2 style={{ fontSize: "1.1rem", margin: "1.75rem 0 0.4rem" }}>Meine Aktivität in Zahlen</h2>
+            <ul style={{ margin: 0, paddingLeft: "1.1rem", fontSize: "1rem", lineHeight: 1.7 }}>
+              {perspektiven.map((p) => (
+                <li key={p.titel}>
+                  <strong>{p.titel}:</strong> {p.wert}
+                </li>
+              ))}
+            </ul>
+
+            <p style={{ marginTop: "2rem", fontSize: "0.8rem", color: "#666" }}>
+              Erstellt im Lernset «Eine ganz neue Partnerschaft». Die Deutung
+              beruht auf anonymen Kennzahlen der eigenen Aktivität; die
+              Detaildaten bleiben auf dem Gerät.
+            </p>
+          </div>,
+          document.body,
+        )}
     </div>
   );
 }
