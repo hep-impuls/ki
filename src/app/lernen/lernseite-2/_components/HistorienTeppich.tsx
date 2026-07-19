@@ -21,11 +21,11 @@ import KartenAktion from "./KartenAktion";
  * Token-Farben für die drei Fäden) und Material Symbols.
  */
 
-export type FadenArt = "technologie" | "entdeckungen" | "ereignisse";
+export type FadenArt = "technologie" | "entdeckungen" | "ereignisse" | "praxen";
 
 export interface TeppichPunkt {
   faden: FadenArt;
-  /** Position im 720×260-Gewebe. */
+  /** Position im 720×300-Gewebe. */
   x: number;
   y: number;
   titel: string;
@@ -33,12 +33,15 @@ export interface TeppichPunkt {
   jahr: string;
   text: string;
   mehr?: string;
-  /** Verunsicherungs-Stopp — Inhalt folgt in einem weiteren Schritt. */
+  /** Beschriftung über statt unter dem Punkt (zur Kollisionsvermeidung). */
+  labelOben?: boolean;
+  /** Verunsicherungs-Stopp — verknüpft den Punkt mit der Verunsicherung
+   *  seiner Zeit (abgestimmt auf den Epochen-Zeitstrahl darunter). */
   verunsicherung?: string;
 }
 
 const W = 720;
-const H = 260;
+const H = 300;
 
 const FADEN_META: Record<
   FadenArt,
@@ -61,6 +64,12 @@ const FADEN_META: Record<
     strich: "stroke-primary",
     punkt: "fill-primary",
     chip: "bg-primary",
+  },
+  praxen: {
+    label: "Kulturelle Praxen",
+    strich: "stroke-error",
+    punkt: "fill-error",
+    chip: "bg-error",
   },
 };
 
@@ -172,7 +181,7 @@ export default function HistorienTeppich({
         <svg
           viewBox={`0 0 ${W} ${H}`}
           preserveAspectRatio="none"
-          className="block w-full select-none aspect-[720/340] sm:aspect-[720/260]"
+          className="block w-full select-none aspect-[720/430] sm:aspect-[720/300]"
           role="img"
           aria-label="Historischer Teppich: drei Fäden — Technologie, Entdeckungen, gesellschaftliche Ereignisse — weben sich durchs Antippen der Punkte ein."
         >
@@ -213,9 +222,10 @@ export default function HistorienTeppich({
           {punkte.map((p, i) => {
             const da = besucht.has(i);
             const meta = FADEN_META[p.faden];
-            const halb = (p.kurz.length * 5.4) / 2;
+            const beschriftung = `${p.kurz} · ${p.jahr}`;
+            const halb = (beschriftung.length * 5) / 2;
             const labelX = Math.max(halb + 4, Math.min(W - halb - 4, p.x)) - p.x;
-            const labelUnten = p.y < H - 40;
+            const labelUnten = !p.labelOben;
             return (
               <g
                 key={i}
@@ -264,17 +274,16 @@ export default function HistorienTeppich({
                 />
                 <text
                   x={labelX}
-                  y={labelUnten ? 24 : -16}
+                  y={labelUnten ? 22 : -14}
                   textAnchor="middle"
-                  fontSize="10.5"
+                  fontSize="10"
                   className={
                     (da
-                      ? "fill-on-surface font-semibold opacity-100"
-                      : "fill-on-surface-variant opacity-0 group-hover:opacity-80 group-focus-visible:opacity-80") +
-                    " pointer-events-none"
+                      ? "fill-on-surface font-semibold"
+                      : "fill-on-surface-variant opacity-80") + " pointer-events-none"
                   }
                 >
-                  {p.kurz} · {p.jahr}
+                  {beschriftung}
                 </text>
               </g>
             );
