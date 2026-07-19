@@ -10,18 +10,23 @@ import {
 import KartenAktion from "./KartenAktion";
 import GewichtungWahl from "./GewichtungWahl";
 import { GlossarText } from "./Glossar";
+import BildZoom from "../philosophische-perspektive/_components/BildZoom";
 
 /**
  * VerunsicherungsEpochen — «Philosophie in Zeiten der Verunsicherung».
- * Acht Epochen-Panels, je mit zwei Kunstwerken und drei aufklappbaren,
- * bewertbaren Bausteinen: Technologie, Verunsicherung, Philosophie. Jeder
- * Baustein hat «Mehr lesen» + «Das verfolge ich weiter» (KartenAktion) und
- * eine eigene Bewertungsskala. Das Öffnen zählt als Aktivität (Spur).
- * Abgestimmt auf den «Teppich des Wandels» darüber.
+ * Acht Epochen-Panels, je mit zwei Kunstwerken (frei zoombar via BildZoom) und
+ * drei aufklappbaren, bewertbaren Bausteinen: Technologie, Verunsicherung,
+ * Philosophie. Jeder Baustein: ausführlicher, belegter Text (mit Quellen-
+ * Verweisen) + «Mehr lesen» + «Das verfolge ich weiter» + eine Bewertung.
+ * Fachbegriffe werden per Glossar gehovert.
  */
 
 const SPUR = "philosophische-perspektive:epochen";
 
+interface Quelle {
+  label: string;
+  url: string;
+}
 interface Bild {
   src: string;
   alt: string;
@@ -31,6 +36,7 @@ interface Bild {
 interface Baustein {
   text: string;
   mehr: string;
+  quellen: Quelle[];
 }
 interface Epoche {
   epoche: string;
@@ -81,6 +87,8 @@ const BAUSTEINE = [
   },
 ];
 
+const w = (lemma: string): string => `https://de.wikipedia.org/wiki/${lemma}`;
+
 const EPOCHEN: Epoche[] = [
   {
     epoche: "Antike",
@@ -101,16 +109,28 @@ const EPOCHEN: Epoche[] = [
       },
     ],
     technologie: {
-      text: "Alphabetschrift und Münzgeld: Wissen wird festhaltbar, Wert wird zählbar. Beides löst Menschen aus Herkunft und Tradition.",
-      mehr: "Die griechische Alphabetschrift war so einfach, dass nicht mehr nur Priester lesen konnten. Münzgeld machte Leistung anonym vergleichbar — wer zahlen kann, zählt, egal woher er kommt.",
+      text: "Zwei Erfindungen tragen den Wandel. Die griechische Alphabetschrift (ab etwa 800 v. Chr.) kommt mit rund zwei Dutzend Zeichen aus — Lesen und Schreiben sind nicht mehr Sache einer Priesterkaste. Und gemünztes Geld (in Kleinasien und Griechenland ab dem 7./6. Jahrhundert v. Chr.) macht Werte zählbar, teilbar und übertragbar, unabhängig von Person und Stand.",
+      mehr: "Mit der Schrift lassen sich Gesetze, Verträge und Argumente festhalten und überprüfen — die Grundlage von Recht und Wissenschaft. Münzgeld beschleunigt Handel und Arbeitsteilung und lässt eine bewegliche Schicht von Kaufleuten neben dem alten Grundbesitz entstehen.",
+      quellen: [
+        { label: "Griechisches Alphabet (Wikipedia)", url: w("Griechisches_Alphabet") },
+        { label: "Geschichte des Geldes (Wikipedia)", url: w("Geschichte_des_Geldes") },
+      ],
     },
     verunsicherung: {
-      text: "Besonders der alte Geburtsadel verliert den Boden: In Demokratie und Republik zählen Rede und Stimme, nicht Abstammung. Und die Sophisten machen jede Wahrheit verkäuflich.",
-      mehr: "Der Prozess gegen Sokrates (399 v. Chr.) zeigt die Nervosität einer verunsicherten Stadt: Der unbequeme Frager wird zum Tode verurteilt. Wenn alles verhandelbar wird, wächst die Angst, dass gar nichts mehr gilt.",
+      text: "Besonders der alte Geburtsadel verliert den Boden: In der attischen Demokratie (ab ~500 v. Chr.) und der römischen Republik zählen Abstimmung, Amt und öffentliche Rede, nicht mehr allein die Abstammung. Zugleich lehren die Sophisten gegen Bezahlung Redekunst und vertreten, man könne zu jeder Sache das Gegenteil ebenso gut begründen. Der Prozess gegen Sokrates (399 v. Chr.), der mit dem Todesurteil endet, zeigt, wie nervös eine verunsicherte Stadt reagiert.",
+      mehr: "Wenn sich alles «weg­reden» lässt, wächst die Angst, dass gar nichts mehr gilt. Sokrates wurde wegen «Verderbnis der Jugend» und «Gottlosigkeit» angeklagt — im Kern, weil sein unermüdliches Fragen die Gewissheiten der Bürger erschütterte.",
+      quellen: [
+        { label: "Sophisten (Wikipedia)", url: w("Sophisten") },
+        { label: "Prozess des Sokrates (Wikipedia)", url: w("Prozess_des_Sokrates") },
+      ],
     },
     philosophie: {
-      text: "Aristoteles in einem Satz: Schau genau hin, ordne, begründe — statt zu glauben, was alle sagen. Diese Haltung steckt heute in jedem «Beleg bitte».",
-      mehr: "Aus dieser Schablone wurde die ganze abendländische Wissenschaft. Alltagssprachlich sagen wir «das ist doch logisch» oder «beweis es mir» — reine Aristoteles-Erbschaft.",
+      text: "Aristoteles (384–322 v. Chr.) setzt dem eine Methode entgegen: beobachten, unterscheiden, in Begriffe ordnen und aus Voraussetzungen schlüssig folgern (Logik). Nicht wer am besten redet, soll recht behalten, sondern was sich am besten begründen lässt. Im Alltag lebt das als Selbstverständlichkeit fort, dass man Behauptungen belegt («beweis es») und Widersprüche als Fehler gelten.",
+      mehr: "Aristoteles' Schriften zur Logik («Organon») blieben bis ins 19. Jahrhundert massgeblich. Seine Trennung von Beobachtung und Begründung ist bis heute das Grundgerüst wissenschaftlichen Arbeitens — und der Grund, warum wir Quellen und Belege verlangen.",
+      quellen: [
+        { label: "Aristoteles (Wikipedia)", url: w("Aristoteles") },
+        { label: "Logik (Wikipedia)", url: w("Logik") },
+      ],
     },
   },
   {
@@ -132,16 +152,28 @@ const EPOCHEN: Epoche[] = [
       },
     ],
     technologie: {
-      text: "Hier verunsichert nicht neue, sondern verlorene Technik: Fernstrassen, Wasserleitungen und Verwaltung verfallen. Die Welt wird kleiner, langsamer, unsicherer.",
-      mehr: "Ein seltener Fall im Teppich: Rückschritt. Handel und Geldwirtschaft schrumpfen, das Leben zieht sich aufs Dorf und ins Kloster zurück — Wissen überlebt fast nur noch in den Abschriften der Mönche.",
+      text: "Hier verunsichert nicht neue, sondern verlorene Technik. Mit dem Weströmischen Reich (476 n. Chr.) verfallen Fernstrassen, Aquädukte, Münzwesen und die staatliche Verwaltung. Fähigkeiten wie Betonbau in römischer Qualität gehen für Jahrhunderte verloren; die Welt wird kleiner, langsamer und unsicherer.",
+      mehr: "Handel und Geldwirtschaft schrumpfen, das Leben zieht sich auf Dorf, Gutshof und Kloster zurück (Naturalwirtschaft). Schriftliches Wissen überlebt vor allem in den Skriptorien der Klöster, wo Mönche antike Texte abschreiben — ein schmaler Faden, an dem die Überlieferung hängt.",
+      quellen: [
+        { label: "Untergang des Weströmischen Reiches (Wikipedia)", url: w("Untergang_des_Weströmischen_Reiches") },
+        { label: "Skriptorium (Wikipedia)", url: w("Skriptorium") },
+      ],
     },
     verunsicherung: {
-      text: "Betroffen sind alle, besonders die städtischen Eliten: Wer sich auf Rom verlassen hatte, steht ohne Ordnung da. Heiden wie Christen fragen: Warum?",
-      mehr: "Als Rom 410 geplündert wird, geben viele den Christen die Schuld — sie hätten die alten Götter erzürnt. Augustinus schreibt dagegen sein Hauptwerk «Der Gottesstaat».",
+      text: "Betroffen sind alle, besonders die städtischen Eliten: Wer sich auf Rom und seine Ordnung verlassen hatte, steht plötzlich ohne Schutz da. Nach der Plünderung Roms 410 durch die Westgoten geben viele den Christen die Schuld — sie hätten mit dem Abfall von den alten Göttern das Unglück heraufbeschworen.",
+      mehr: "Die Erschütterung ist auch eine Sinnkrise: Wenn die «ewige Stadt» fallen kann, worauf ist dann Verlass? Augustinus schreibt gegen den Vorwurf sein Hauptwerk «De civitate Dei» («Vom Gottesstaat»).",
+      quellen: [
+        { label: "Plünderung Roms (410) (Wikipedia)", url: w("Plünderung_Roms_(410)") },
+        { label: "De civitate Dei (Wikipedia)", url: w("De_civitate_Dei") },
+      ],
     },
     philosophie: {
-      text: "Augustinus: Wenn aussen alles fällt, liegt der Halt innen — in Glaube, Gewissen und Erinnerung. «Hör auf dein Gewissen» und «geh in dich» stammen aus diesem Denken.",
-      mehr: "Augustinus macht das Innenleben zum Thema: Seine «Bekenntnisse» gelten als erste grosse Autobiografie. Aus dem äusseren Reich wird das innere Reich.",
+      text: "Augustinus (354–430) verlegt den Halt vom äusseren Reich nach innen: Nicht Mauern und Macht tragen, sondern Glaube, Gewissen und Erinnerung. Er unterscheidet den vergänglichen «Gottesstaat» vom irdischen Staat und deutet die Geschichte als Heilsweg. Alltagssprachlich lebt das fort in «hör auf dein Gewissen» und «geh in dich».",
+      mehr: "Augustinus macht das Innenleben zum philosophischen Thema; seine «Confessiones» («Bekenntnisse») gelten als erste grosse Autobiografie der Weltliteratur. Aus dem äusseren Reich wird das innere — eine Schablone, die dem lateinischen Europa fast tausend Jahre Orientierung gab.",
+      quellen: [
+        { label: "Augustinus von Hippo (Wikipedia)", url: w("Augustinus_von_Hippo") },
+        { label: "Confessiones (Wikipedia)", url: w("Confessiones") },
+      ],
     },
   },
   {
@@ -163,16 +195,28 @@ const EPOCHEN: Epoche[] = [
       },
     ],
     technologie: {
-      text: "Buchdruck, Kompass und doppelte Buchführung: Ideen, Schiffe und Kapital kommen in Bewegung. Was zählbar ist, wird beherrschbar.",
-      mehr: "Der Buchdruck macht aus einer Gelehrtendebatte eine europäische Revolution (Reformation). Die doppelte Buchführung verwandelt Handel in ein Rechenwerk — der Beginn des rechnenden Kapitalismus.",
+      text: "Drei Techniken beschleunigen alles. Der Buchdruck mit beweglichen Lettern (Gutenberg, um 1450) macht Texte massenhaft und billig. Kompass und ozeantaugliche Schiffe öffnen die Seewege. Und die doppelte Buchführung (in Italien seit dem 14. Jahrhundert, systematisiert von Luca Pacioli 1494) verwandelt Handel in ein nachprüfbares Rechenwerk.",
+      mehr: "Der Buchdruck lässt Auflagen von Tausenden entstehen, wo zuvor einzelne Handschriften standen — Wissen entzieht sich der Kontrolle von Kloster und Hof. Die doppelte Buchführung mit Soll und Haben ist die Rechenmaschine des frühen Kapitalismus: Sie macht Gewinn planbar.",
+      quellen: [
+        { label: "Buchdruck (Wikipedia)", url: w("Buchdruck") },
+        { label: "Doppelte Buchführung (Wikipedia)", url: w("Doppelte_Buchführung") },
+      ],
     },
     verunsicherung: {
-      text: "Besonders getroffen: die Deutungshüter (Klerus, Kopisten), die Bauern (Bauernkrieg 1525) und die Völker Amerikas, deren Welten überrannt werden. Und Kopernikus nimmt der Erde die Mitte.",
-      mehr: "Holbeins «Gesandte» zeigen Reichtum und Wissenschaft — und einen schräg verzerrten Totenkopf im Bild: Mitten im Triumph liegt der Riss, die Erinnerung an die Vergänglichkeit.",
+      text: "Getroffen werden mehrere Gruppen zugleich: die Deutungshüter (Klerus und Handschriften-Kopisten) verlieren ihr Wissensmonopol; die Bauern erheben sich im Deutschen Bauernkrieg (1525); und die Völker Amerikas werden nach 1492 erobert und dezimiert. Zugleich nimmt Kopernikus (1543) der Erde die Mitte des Kosmos.",
+      mehr: "In Holbeins «Gesandten» (1533) liegt quer im Bild ein stark verzerrter Totenkopf (eine sogenannte Anamorphose): Mitten in Reichtum und Wissenschaft die Erinnerung an den Tod. Das Bild fasst die Epoche — grosser Aufstieg und untergründige Verunsicherung im selben Rahmen.",
+      quellen: [
+        { label: "Deutscher Bauernkrieg (Wikipedia)", url: w("Deutscher_Bauernkrieg") },
+        { label: "Die Gesandten / Anamorphose (Wikipedia)", url: w("Die_Gesandten_(Holbein)") },
+      ],
     },
     philosophie: {
-      text: "Pico della Mirandola: Der Mensch ist nicht festgelegt — er formt sich selbst. Montaigne fragt bescheiden zurück: «Was weiss ich schon?» — «jeder ist seines Glückes Schmied» ist der Alltagsableger.",
-      mehr: "Zum ersten Mal gilt Selbstformung als Würde des Menschen — die Wurzel des modernen Individualismus. Montaignes Zweifel wird zur Methode: erst prüfen, dann glauben.",
+      text: "Pico della Mirandola (1463–1494) formuliert in seiner «Rede über die Würde des Menschen», der Mensch sei nicht auf eine feste Natur festgelegt, sondern forme sich selbst. Montaigne (1533–1592) setzt die skeptische Frage dagegen: «Que sais-je?» — «Was weiss ich schon?». Alltagssprachlich lebt beides fort in «jeder ist seines Glückes Schmied» und im Bekenntnis, etwas zu hinterfragen.",
+      mehr: "Erstmals gilt die Selbstformung als Würde des Menschen — eine Wurzel des modernen Individualismus. Montaignes «Essais» begründen zugleich eine neue, prüfende Haltung: erst zweifeln und beobachten, dann urteilen.",
+      quellen: [
+        { label: "Über die Würde des Menschen (Wikipedia)", url: w("Über_die_Würde_des_Menschen") },
+        { label: "Michel de Montaigne (Wikipedia)", url: w("Michel_de_Montaigne") },
+      ],
     },
   },
   {
@@ -194,16 +238,28 @@ const EPOCHEN: Epoche[] = [
       },
     ],
     technologie: {
-      text: "Teleskop, Mikroskop und Pendeluhr: Die Welt wird messbar und getaktet. Sie erscheint als grosses Uhrwerk — berechenbar, aber auch entzaubert.",
-      mehr: "Newtons Physik erklärt Planeten und fallende Äpfel mit denselben Gesetzen. Die Uhr taktet zunehmend Arbeit und Alltag — Zeit wird zum Massstab von allem.",
+      text: "Neue Messinstrumente ordnen die Welt. Teleskop und Mikroskop (ab ~1600) erweitern das Sichtbare nach aussen und innen; die Pendeluhr (Huygens, 1657) macht die Zeit genau messbar. Newtons «Principia» (1687) erklären Himmel und Erde mit denselben Gesetzen — die Welt erscheint als berechenbares Uhrwerk.",
+      mehr: "Die genaue Uhr taktet zunehmend Arbeit, Handel und Alltag. Und die Enzyklopädie von Diderot und d'Alembert (ab 1751) bündelt das Wissen der Zeit in geordneter, allgemein zugänglicher Form — ein Leitprojekt der Aufklärung.",
+      quellen: [
+        { label: "Philosophiae Naturalis Principia Mathematica (Wikipedia)", url: w("Philosophiae_Naturalis_Principia_Mathematica") },
+        { label: "Encyclopédie (Wikipedia)", url: w("Encyclopédie") },
+      ],
     },
     verunsicherung: {
-      text: "Autoritäten wanken: Kirche und Adel verlieren ihr Wahrheitsmonopol. Das Erdbeben von Lissabon (1755) trifft besonders die fromme Bevölkerung — wie passt das Leid zu einem gütigen Gott?",
-      mehr: "Am Allerheiligentag zerstört das Beben die frommste Stadt Europas. Voltaire spottet über den Optimismus, Kant grübelt über die Ursachen — viele finden keine tröstende Antwort mehr.",
+      text: "Die Autoritäten wanken: Kirche und Adel verlieren ihr Monopol auf Wahrheit und Ordnung. Besonders trifft es die fromme Bevölkerung, als am 1. November 1755 ein Erdbeben mit Feuer und Flutwelle Lissabon zerstört — mitten im Gottesdienst, am Allerheiligentag. Wie passt solches Leid zu einem gütigen Gott?",
+      mehr: "Das Beben wurde zum Debattenstoff Europas. Voltaire verspottete in «Candide» den Optimismus, alles sei «die beste aller möglichen Welten»; Kant verfasste drei Abhandlungen über mögliche Ursachen und gilt damit als früher Erdbebenforscher.",
+      quellen: [
+        { label: "Erdbeben von Lissabon 1755 (Wikipedia)", url: w("Erdbeben_von_Lissabon_1755") },
+        { label: "Candide (Wikipedia)", url: w("Candide") },
+      ],
     },
     philosophie: {
-      text: "Kant: Habe Mut, dich deines eigenen Verstandes zu bedienen — denk selbst, verlass dich auf keine Autorität. «Das musst du selbst entscheiden» ist Kant im Alltag.",
-      mehr: "Aufklärung heisst für Kant der Ausgang aus selbstverschuldeter Unmündigkeit. Gepaart mit Newtons Naturwissenschaft entsteht das moderne Selbstbild: prüfen, urteilen, verantworten.",
+      text: "Kant (1724–1804) fasst die Aufklärung in einem Satz: «Habe Mut, dich deines eigenen Verstandes zu bedienen.» Aufklärung sei der «Ausgang des Menschen aus seiner selbstverschuldeten Unmündigkeit» — verlass dich nicht auf Autoritäten, urteile selbst und trage die Verantwortung. Alltagssprachlich: «das musst du selbst entscheiden», «sei mündig».",
+      mehr: "Kant verbindet dieses Selbstdenken mit strenger Vernunftprüfung (seine «Kritik der reinen Vernunft», 1781) und mit einer Ethik der Selbstgesetzgebung (kategorischer Imperativ). Gepaart mit Newtons Naturwissenschaft entsteht das moderne Selbstbild: prüfen, urteilen, verantworten.",
+      quellen: [
+        { label: "Beantwortung der Frage: Was ist Aufklärung? (Wikipedia)", url: w("Beantwortung_der_Frage:_Was_ist_Aufklärung%3F") },
+        { label: "Immanuel Kant (Wikipedia)", url: w("Immanuel_Kant") },
+      ],
     },
   },
   {
@@ -225,16 +281,28 @@ const EPOCHEN: Epoche[] = [
       },
     ],
     technologie: {
-      text: "Dampfmaschine, Eisenbahn, Telegraf und Fabrikuhr: Kraft, Tempo und Nachricht sprengen alle alten Masse. Die Arbeit wird getaktet und automatisiert.",
-      mehr: "Zum ersten Mal wirken fast alle Züge der Verunsicherung zugleich mit voller Wucht: Beschleunigung, Landflucht, Maschinenarbeit, Lohnabhängigkeit — und die ersten grossen Umweltschäden durch Kohle.",
+      text: "Die verbesserte Dampfmaschine (James Watt, 1769) setzt erstmals Kraft frei, die nicht von Muskel, Wind oder Wasser stammt. Sie treibt Fabriken, Eisenbahnen und Dampfschiffe; der elektrische Telegraf (ab 1837) trennt die Nachricht vom Boten. Die Fabrikuhr taktet die Arbeit in Schichten.",
+      mehr: "Zum ersten Mal wirken fast alle Züge der Verunsicherung zugleich mit voller Wucht: Beschleunigung, Landflucht, Automatisierung der Arbeit, Lohnabhängigkeit — und, durch Kohle, die ersten grossflächigen Umweltschäden. Die Eisenbahn erzwingt sogar die einheitliche Uhrzeit.",
+      quellen: [
+        { label: "Industrielle Revolution (Wikipedia)", url: w("Industrielle_Revolution") },
+        { label: "Dampfmaschine (Wikipedia)", url: w("Dampfmaschine") },
+      ],
     },
     verunsicherung: {
-      text: "Besonders getroffen: Handwerker und Weber, deren Können die Maschine entwertet, und die Landbevölkerung, die in Elendsquartieren landet. Kinder schuften in Fabriken.",
-      mehr: "Die Weber zerschlagen teils die Maschinen, die sie arbeitslos machen (Maschinenstürmer). 1848 entlädt sich die Spannung in einer Welle von Revolutionen quer durch Europa.",
+      text: "Besonders getroffen werden Handwerker und Weber, deren Können die Maschine entwertet, und die Landbevölkerung, die in Elendsquartieren der Städte landet. Kinder arbeiten in Fabriken und Bergwerken. In England zerschlagen Weber ab 1811 die Maschinen, die sie arbeitslos machen (die «Ludditen»); 1848 entlädt sich die Spannung in einer Revolutionswelle quer durch Europa.",
+      mehr: "Die schlesischen Weber erheben sich 1844 gegen Hungerlöhne — ein Aufstand, den Heinrich Heine und später Gerhart Hauptmann verarbeiten. Die soziale Frage wird zum bestimmenden Thema des 19. Jahrhunderts.",
+      quellen: [
+        { label: "Maschinenstürmer / Ludditen (Wikipedia)", url: w("Maschinenstürmer") },
+        { label: "Weberaufstand 1844 (Wikipedia)", url: w("Weberaufstand") },
+      ],
     },
     philosophie: {
-      text: "Marx: Die gesellschaftlichen Verhältnisse sind gemacht, kein Schicksal — wer sie versteht, kann sie ändern. «Das ist doch menschengemacht» trägt sein Erbe.",
-      mehr: "Marx begreift den Umbruch, während er geschieht. Ob man ihm folgt oder nicht: Der Gedanke, dass Wirtschaft und Gesellschaft veränderbar sind, prägt bis heute jede Reformdebatte.",
+      text: "Karl Marx (1818–1883) deutet den Umbruch, während er geschieht: Die gesellschaftlichen Verhältnisse seien nicht Natur oder Schicksal, sondern von Menschen gemacht — und damit veränderbar. Wirtschaft und Klassen bestimmten das Bewusstsein mit. Alltagssprachlich lebt das fort in «das ist doch menschengemacht» und im Ruf nach «gerechten Verhältnissen».",
+      mehr: "Ob man Marx' Schlüssen folgt oder nicht: Der Gedanke, dass Ökonomie und Gesellschaft analysierbar und gestaltbar sind, prägt bis heute jede Reformdebatte, die Sozialpolitik und die Gewerkschaften. «Das Kapital» (1867) versucht, die Gesetze dieser neuen Wirtschaft zu fassen.",
+      quellen: [
+        { label: "Karl Marx (Wikipedia)", url: w("Karl_Marx") },
+        { label: "Soziale Frage (Wikipedia)", url: w("Soziale_Frage") },
+      ],
     },
   },
   {
@@ -256,16 +324,28 @@ const EPOCHEN: Epoche[] = [
       },
     ],
     technologie: {
-      text: "Maschinengewehr, Giftgas, Atombombe und der Rundfunk als Propagandamaschine: Technik automatisiert das Töten und die Lenkung der Massen.",
-      mehr: "Dieselbe Forschung, die den Atomkern erklärt, baut die Bombe. Und dieselben Rechenmaschinen, die den Krieg gewinnen helfen (Turings «Bombe»), werden zu den ersten Computern.",
+      text: "Technik automatisiert das Töten. Im Ersten Weltkrieg schaffen Maschinengewehr, Artillerie und Giftgas die anonyme Materialschlacht mit Millionen Toten. Der Rundfunk (ab den 1920ern) wird zum Massenmedium — und zum Propaganda-Werkzeug der Diktaturen. 1945 zeigt die Atombombe, dass Menschen die Welt vernichten können.",
+      mehr: "Dieselbe Physik, die den Atomkern erklärt, baut die Bombe; dieselben Rechenmaschinen, die den Krieg entscheiden helfen (etwa Turings «Bombe» gegen die Enigma), werden zu den ersten Computern. Fortschritt und Vernichtung stammen aus derselben Werkstatt.",
+      quellen: [
+        { label: "Materialschlacht (Wikipedia)", url: w("Materialschlacht") },
+        { label: "Kernwaffe / Atombombe (Wikipedia)", url: w("Kernwaffe") },
+      ],
     },
     verunsicherung: {
-      text: "Betroffen sind zuerst die Soldaten der Materialschlachten und die von den Nazis Verfolgten und Ermordeten — dann, mit der Atombombe, buchstäblich alle.",
-      mehr: "Kirchner malt sich 1915 als Soldat mit abgeschnittener Malhand. Nussbaum zeigt sich mit dem Stempel im Judenpass, kurz bevor er ermordet wird: der Mensch, dem das Menschsein aberkannt wird.",
+      text: "Betroffen sind zuerst die Soldaten der Materialschlachten und die von den Nationalsozialisten Verfolgten und Ermordeten — im Völkermord an den europäischen Juden (Schoah) und weiteren Gruppen. Mit der Atombombe wird die Bedrohung schliesslich universell: Erstmals kann die Menschheit sich selbst auslöschen.",
+      mehr: "Kirchner malt sich 1915 als Soldat mit abgeschnittener Malhand — Sinnbild der seelischen Versehrung. Nussbaum zeigt sich um 1943 mit dem Stempel im Judenpass, kurz bevor er in Auschwitz ermordet wird: der Mensch, dem das Menschsein amtlich aberkannt wird.",
+      quellen: [
+        { label: "Holocaust (Wikipedia)", url: w("Holocaust") },
+        { label: "Ernst Ludwig Kirchner (Wikipedia)", url: w("Ernst_Ludwig_Kirchner") },
+      ],
     },
     philosophie: {
-      text: "Sartre: Es gibt kein Geländer mehr — der Mensch ist «zur Freiheit verurteilt» und trägt darum die volle Verantwortung. «Du hast immer eine Wahl» ist der Alltagsableger.",
-      mehr: "Neben Sartre: Hannah Arendt mahnt, selbst zu urteilen statt mitzulaufen; Wittgenstein, klar zu sagen, was sich sagen lässt. (Heidegger denkt die Technik als «Gestell» — mit klarem Blick auf seine Verstrickung in den Nationalsozialismus.)",
+      text: "Der Existenzialismus antwortet auf den Zusammenbruch aller Geländer. Jean-Paul Sartre (1905–1980): Der Mensch sei «zur Freiheit verurteilt» — es gibt keine vorgegebene Natur und keine letzte Autorität mehr, also trägt er die volle Verantwortung für das, was er aus sich macht. Alltagssprachlich: «du hast immer eine Wahl — und musst dazu stehen».",
+      mehr: "Daneben: Hannah Arendt mahnt (am Prozess gegen Eichmann) zum eigenen Urteil statt zum Mitlaufen und prägt das Wort von der «Banalität des Bösen»; Wittgenstein fordert, klar zu sagen, was sich klar sagen lässt. (Heidegger denkt die Technik als «Gestell» — bei aller Wirkung mit klarem Blick auf seine Verstrickung in den Nationalsozialismus.)",
+      quellen: [
+        { label: "Existentialismus (Wikipedia)", url: w("Existentialismus") },
+        { label: "Hannah Arendt (Wikipedia)", url: w("Hannah_Arendt") },
+      ],
     },
   },
   {
@@ -287,16 +367,28 @@ const EPOCHEN: Epoche[] = [
       },
     ],
     technologie: {
-      text: "PC, Internet und Container vernetzen und beschleunigen alles. Individualisierung und Markt werden grenzenlos — Selbstverwirklichung wird fast zur Pflicht.",
-      mehr: "Manche riefen das «Ende der Geschichte» aus — die endgültige Weltordnung. Rückblickend begann ein neuer Umbruch: Globalisierung und Digitalisierung, deren Verunsicherung wir heute spüren.",
+      text: "Der Personal Computer (ab 1981) und das World Wide Web (freigegeben 1991) bringen Rechenkraft und Information in jeden Haushalt. Der genormte Container macht globalen Warentransport billig und schnell. Zusammen vernetzen und beschleunigen sie Wirtschaft und Alltag fast grenzenlos.",
+      mehr: "Mit dem Ende des Kalten Krieges wird der Markt zum Leitprinzip fast überall. Der Politikwissenschaftler Francis Fukuyama spricht 1992 vom «Ende der Geschichte» — die liberale Demokratie als Endpunkt. Rückblickend begann stattdessen ein neuer Umbruch: Globalisierung und Digitalisierung.",
+      quellen: [
+        { label: "World Wide Web (Wikipedia)", url: w("World_Wide_Web") },
+        { label: "Das Ende der Geschichte (Wikipedia)", url: w("Das_Ende_der_Geschichte") },
+      ],
     },
     verunsicherung: {
-      text: "Besonders betroffen: die Industriearbeiter des Westens (ihre Fabriken wandern ab) und die Menschen des früheren Ostblocks, deren ganzes System über Nacht verschwindet.",
-      mehr: "Wenn alles möglich ist und jeder «sein eigenes Ding» macht, wächst paradox die Leere. Der Soziologe Hartmut Rosa nennt die Folge Beschleunigung ohne Resonanz — getrieben, aber ohne Verbindung.",
+      text: "Besonders betroffen sind die Industriearbeiter des Westens, deren Fabriken in Billiglohnländer abwandern (Deindustrialisierung), und die Menschen des früheren Ostblocks, deren gesamtes politisches und wirtschaftliches System über Nacht verschwindet. Sicher geglaubte Biografien werden entwertet.",
+      mehr: "Zugleich wächst eine paradoxe Verunsicherung: Wenn alles möglich ist und jeder «sein eigenes Ding» macht, fehlt der gemeinsame Halt. Der Soziologe Hartmut Rosa nennt die Folge soziale Beschleunigung — ein Leben, das immer schneller läuft, ohne dass mehr Zeit entsteht.",
+      quellen: [
+        { label: "Deindustrialisierung (Wikipedia)", url: w("Deindustrialisierung") },
+        { label: "Soziale Beschleunigung (Wikipedia)", url: w("Soziale_Beschleunigung") },
+      ],
     },
     philosophie: {
-      text: "Die Postmoderne (Lyotard): Die grossen gemeinsamen Erzählungen sind vorbei — jeder erzählt sich selbst. «Das ist halt deine Wahrheit» ist Postmoderne im Alltag.",
-      mehr: "Foucault fragt zugleich: Wer hat die Macht zu bestimmen, was als normal und wahr gilt? Der Hoch-Individualismus dieser Jahre ist die Schablone, die sich gerade erschöpft.",
+      text: "Die Postmoderne beschreibt diese Lage. Jean-François Lyotard erklärt 1979 das «Ende der grossen Erzählungen»: Es gibt nicht mehr die eine verbindliche Geschichte von Fortschritt oder Heil, sondern viele kleine, nebeneinander. Michel Foucault fragt zugleich, wer die Macht hat zu bestimmen, was als «normal» und «wahr» gilt.",
+      mehr: "Alltagssprachlich schlägt sich das nieder in «das ist halt deine Wahrheit» und «jeder nach seiner Fasson». Der Hoch-Individualismus dieser Jahre bringt Freiheit — und die Erschöpfung des Immer-selbst-Wählen-Müssens, an deren Grenze wir heute stehen.",
+      quellen: [
+        { label: "Postmoderne (Wikipedia)", url: w("Postmoderne") },
+        { label: "Michel Foucault (Wikipedia)", url: w("Michel_Foucault") },
+      ],
     },
   },
   {
@@ -318,16 +410,28 @@ const EPOCHEN: Epoche[] = [
       },
     ],
     technologie: {
-      text: "KI, Smartphone und globale Lieferketten auf fossiler Infrastruktur: Die Automatisierung erreicht Denken und Sprache, die Naturzerstörung wird erstmals überlebensbedrohend.",
-      mehr: "Was als jahrtausendealte Phantasie begann — dem Ding Leben einhauchen —, ist heute Werkzeug und Gegenüber zugleich. Und der ökologische Fussabdruck der scheinbar virtuellen Technik ist sehr real.",
+      text: "Künstliche Intelligenz (mit ChatGPT ab 2022 alltäglich), das Smartphone und globale, digital gesteuerte Lieferketten laufen auf einer noch immer fossilen Infrastruktur. Die Automatisierung erreicht nun Sprache und Kopfarbeit; die Naturzerstörung erreicht mit der Klimakrise erstmals eine überlebensbedrohende Grössenordnung.",
+      mehr: "Was als jahrtausendealte Phantasie begann — einem Ding Leben einzuhauchen —, ist heute Werkzeug und Gegenüber zugleich. Und der ökologische Fussabdruck der scheinbar «virtuellen» Technik (Rechenzentren, Chips, Strom, Wasser) ist sehr real.",
+      quellen: [
+        { label: "Künstliche Intelligenz (Wikipedia)", url: w("Künstliche_Intelligenz") },
+        { label: "Anthropozän (Wikipedia)", url: w("Anthropozän") },
+      ],
     },
     verunsicherung: {
-      text: "Betroffen: die junge Generation (ihre Klimazukunft), die Wissens- und Kreativberufe (durch KI) und der globale Süden — und erstmals ausdrücklich auch nicht-menschliche Akteure: Arten, Klima, Ökosysteme.",
-      mehr: "Erstmals ist die Verunsicherung planetar: Es geht nicht nur um Berufe und Weltbilder, sondern um die Lebensgrundlagen selbst — und um Wesen und Systeme, die nicht mitreden können.",
+      text: "Betroffen sind die junge Generation (ihre Klimazukunft), die Wissens- und Kreativberufe (durch KI) und der globale Süden, der die Folgen der Erwärmung am härtesten trägt. Und erstmals stehen ausdrücklich auch nicht-menschliche Akteure im Blick: Arten, Klima und Ökosysteme, die nicht mitreden können.",
+      mehr: "Zum ersten Mal ist die Verunsicherung planetar: Es geht nicht mehr nur um Berufe und Weltbilder, sondern um die Lebensgrundlagen selbst. Wer trägt Verantwortung, wenn Ursache und Wirkung über den ganzen Globus und über Generationen verteilt sind?",
+      quellen: [
+        { label: "Klimakrise / globale Erwärmung (Wikipedia)", url: w("Globale_Erwärmung") },
+        { label: "Auswirkungen der KI auf die Arbeitswelt (Wikipedia)", url: w("Künstliche_Intelligenz") },
+      ],
     },
     philosophie: {
-      text: "Bruno Latour: Kein Akteur handelt allein. Verstehe die Abhängigkeiten — auch von dem, was nicht Mensch ist: Klima, Dinge, KI. «Alles hängt mit allem zusammen» ist ein erster Anklang.",
-      mehr: "Neben Latour arbeiten Donna Haraway (Verbundenheit über Artgrenzen), Hartmut Rosa (Resonanz statt Beschleunigung) und Markus Gabriel daran. Die Schablone unserer Zeit ist noch nicht geschrieben — vielleicht schreibst du an ihr mit.",
+      text: "Bruno Latour (1947–2022) liefert mit der Akteur-Netzwerk-Theorie eine neue Sichtweise: Kein Akteur handelt allein; Wirkung entsteht im Geflecht von Menschen UND Dingen. Um die Krisen zu verstehen, müsse man die Abhängigkeiten ernst nehmen — auch die von dem, was nicht Mensch ist: Klima, Viren, Technik, KI.",
+      mehr: "Verwandte Stimmen: Donna Haraway denkt Verbundenheit über Artgrenzen hinweg; Hartmut Rosa setzt der Beschleunigung die «Resonanz» entgegen (ein antwortendes Verhältnis zur Welt); Markus Gabriel streitet für einen «neuen Realismus» und universelle Werte. Die Schablone unserer Zeit ist noch nicht geschrieben — vielleicht schreibst du daran mit.",
+      quellen: [
+        { label: "Akteur-Netzwerk-Theorie (Wikipedia)", url: w("Akteur-Netzwerk-Theorie") },
+        { label: "Bruno Latour (Wikipedia)", url: w("Bruno_Latour") },
+      ],
     },
   },
 ];
@@ -336,6 +440,7 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
   const gesamt = EPOCHEN.length * BAUSTEINE.length;
   const [offen, setOffen] = useState<Set<number>>(new Set());
   const [gelesen, setGelesen] = useState<Set<number>>(new Set());
+  const [zoom, setZoom] = useState<{ ep: number; bild: number } | null>(null);
 
   useEffect(() => {
     function restore() {
@@ -390,17 +495,28 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
               <p className="mt-xs max-w-3xl text-body-md text-on-surface-variant">{e.lead}</p>
             </div>
 
-            {/* Zwei Kunstwerke */}
+            {/* Zwei Kunstwerke — anklicken öffnet den Zoom-Viewer */}
             <div className="grid gap-md p-md sm:grid-cols-2 sm:p-lg">
               {e.bilder.map((b, bi) => (
                 <figure key={bi} className="min-w-0">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={b.src}
-                    alt={b.alt}
-                    loading="lazy"
-                    className="max-h-72 w-full rounded-lg border border-outline-variant bg-surface-container-low object-contain"
-                  />
+                  <button
+                    type="button"
+                    onClick={() => setZoom({ ep: ei, bild: bi })}
+                    aria-label={`${b.alt} — vergrössern und zoomen`}
+                    className="group relative block w-full overflow-hidden rounded-lg border border-outline-variant bg-surface-container-low outline-none focus-visible:ring-2 focus-visible:ring-tertiary"
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={b.src}
+                      alt={b.alt}
+                      loading="lazy"
+                      className="max-h-72 w-full object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+                    />
+                    <span className="absolute right-2 top-2 flex items-center gap-1 rounded-full bg-inverse-surface/70 px-2 py-0.5 text-label-sm text-inverse-on-surface opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
+                      <span className="material-symbols-outlined text-[15px]">zoom_in</span>
+                      zoomen
+                    </span>
+                  </button>
                   <figcaption className="mt-xs text-body-sm text-on-surface">
                     {b.caption}
                     <span className="mt-0.5 block text-label-sm text-on-surface-variant opacity-80">
@@ -462,7 +578,29 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
                           stufen={bs.gewStufen}
                         />
                         <KartenAktion
-                          mehr={<GlossarText text={inhalt.mehr} />}
+                          mehr={
+                            <span className="block">
+                              <GlossarText text={inhalt.mehr} />
+                              {inhalt.quellen.length > 0 && (
+                                <span className="mt-sm block text-label-sm text-on-surface-variant">
+                                  Verweise:{" "}
+                                  {inhalt.quellen.map((q, qi) => (
+                                    <span key={qi}>
+                                      {qi > 0 && " · "}
+                                      <a
+                                        href={q.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-tertiary underline underline-offset-2 hover:text-on-surface"
+                                      >
+                                        {q.label}
+                                      </a>
+                                    </span>
+                                  ))}
+                                </span>
+                              )}
+                            </span>
+                          }
                           wunschId={`wunsch:${SPUR}:${gi}`}
                         />
                       </div>
@@ -474,6 +612,20 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
           </article>
         ))}
       </div>
+
+      {zoom && (
+        <BildZoom
+          images={EPOCHEN[zoom.ep].bilder.map((b) => ({
+            src: b.src,
+            alt: b.alt,
+            caption: b.caption,
+            credit: b.credit,
+          }))}
+          startIdx={zoom.bild}
+          epoch={EPOCHEN[zoom.ep].epoche}
+          onClose={() => setZoom(null)}
+        />
+      )}
     </section>
   );
 }

@@ -156,6 +156,34 @@ export const GLOSSAR: Record<string, string> = {
     "Die weltweiten Stationen, die ein Produkt vom Rohstoff bis in den Laden durchläuft.",
   Freihandelsabkommen:
     "Verträge, die Zölle und Handelsschranken zwischen Staaten abbauen.",
+  Naturalwirtschaft:
+    "Wirtschaft ohne Geld: Man tauscht Waren und Dienste direkt, statt zu kaufen und verkaufen.",
+  Skriptorien:
+    "Schreibstuben mittelalterlicher Klöster, in denen Mönche Bücher von Hand abschrieben.",
+  Anamorphose:
+    "Ein absichtlich verzerrtes Bild, das erst aus einem bestimmten Blickwinkel richtig erscheint.",
+  Enzyklopädie:
+    "Grosses Nachschlagewerk, das das Wissen einer Zeit geordnet zusammenfasst.",
+  "kategorischer Imperativ":
+    "Kants Grundregel der Moral: Handle so, dass dein Handeln allgemeines Gesetz sein könnte.",
+  Materialschlacht:
+    "Massenschlacht des industrialisierten Kriegs, in der Menschenleben gegen Material «verrechnet» werden.",
+  Ludditen:
+    "Englische Arbeiter, die ab 1811 Maschinen zerstörten, weil sie ihre Arbeit vernichteten.",
+  Rundfunk:
+    "Verbreitung von Ton (später Bild) an ein Massenpublikum über Funkwellen — Radio und Fernsehen.",
+  Existenzialismus:
+    "Philosophie des 20. Jh.: Der Mensch hat kein festes Wesen, sondern macht sich durch seine Wahl.",
+  "Banalität des Bösen":
+    "Hannah Arendts Befund: Grosse Verbrechen werden oft von unauffälligen Mitläufern begangen, die nicht selbst denken.",
+  Postmoderne:
+    "Denkrichtung, die «grosse», allgemeingültige Erzählungen bezweifelt und Vielfalt betont.",
+  Deindustrialisierung:
+    "Rückgang der Fabrikarbeit in einer Region, weil Produktion abwandert oder wegfällt.",
+  Resonanz:
+    "Bei Hartmut Rosa: ein antwortendes, lebendiges Verhältnis zur Welt — Gegenbegriff zur blossen Beschleunigung.",
+  "Akteur-Netzwerk-Theorie":
+    "Bruno Latours Ansatz: Wirkung entsteht im Netz aus Menschen UND Dingen — nichts handelt allein.",
 };
 
 function escapeRegExp(s: string): string {
