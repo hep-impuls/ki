@@ -83,6 +83,47 @@ function segmentPfad(a: { x: number; y: number }, b: { x: number; y: number }) {
 
 type XY = { x: number; y: number };
 
+/**
+ * Teppich-Palette: Jede Masche bekommt ihre eigene, bewusst LEUCHTENDE Farbe
+ * plus Webtextur — je mehr Zwischenfelder gefüllt sind, desto vielfältiger
+ * wird der Teppich. Wie die Perlenfarben der KI-Story eine dokumentierte,
+ * punktuelle Ausnahme von der reinen Token-Palette (die Farbe trägt hier die
+ * Teppich-Ästhetik).
+ */
+const MASCHEN_FARBEN = [
+  "#f94144",
+  "#f3722c",
+  "#f8961e",
+  "#f9c74f",
+  "#90be6d",
+  "#43aa8b",
+  "#4d908e",
+  "#577590",
+  "#277da1",
+  "#5e60ce",
+  "#9d4edd",
+  "#d81159",
+] as const;
+
+/** Vier Webtexturen (Schuss-Richtungen), zyklisch mit den Farben kombiniert. */
+function MaschenPattern({ id, farbe, variante }: { id: string; farbe: string; variante: number }) {
+  return (
+    <pattern id={id} patternUnits="userSpaceOnUse" width="10" height="10">
+      <rect width="10" height="10" fill={farbe} opacity="0.3" />
+      {variante === 0 && (
+        <path d="M0 10 L10 0 M-2.5 2.5 L2.5 -2.5 M7.5 12.5 L12.5 7.5" stroke={farbe} strokeWidth="1.6" opacity="0.7" />
+      )}
+      {variante === 1 && (
+        <path d="M0 0 L10 10 M-2.5 7.5 L2.5 12.5 M7.5 -2.5 L12.5 2.5" stroke={farbe} strokeWidth="1.6" opacity="0.7" />
+      )}
+      {variante === 2 && <circle cx="5" cy="5" r="1.8" fill={farbe} opacity="0.8" />}
+      {variante === 3 && (
+        <path d="M5 1.5 L5 8.5 M1.5 5 L8.5 5" stroke={farbe} strokeWidth="1.5" opacity="0.7" />
+      )}
+    </pattern>
+  );
+}
+
 /** Umkreis-Mittelpunkt + Radius² dreier Punkte (für Delaunay). */
 function umkreis(a: XY, b: XY, c: XY) {
   const ad = a.x * a.x + a.y * a.y;
@@ -163,7 +204,7 @@ export default function HistorienTeppich({
   // (lokale) Maschen füllen den Teppich, wenn alle drei Ecken besucht sind.
   const maschen = useMemo(() => {
     const xy = punkte.map((p) => ({ x: p.x, y: p.y }));
-    const MAX_KANTE = 210;
+    const MAX_KANTE = 260;
     return trianguliere(xy).filter((t) => {
       const [a, b, c] = t.map((i) => xy[i]);
       const e = (p: XY, q: XY) => Math.hypot(p.x - q.x, p.y - q.y);
@@ -324,24 +365,12 @@ export default function HistorienTeppich({
           role="img"
           aria-label="Historischer Teppich: vier Fäden — Technologie, Entdeckungen, gesellschaftliche Ereignisse und kulturelle Praxen — weben sich durchs Antippen der Punkte ein; zwischen besuchten Punkten füllen sich gemusterte Maschen."
         >
-          {/* Webmuster je Faden — feine Tönung + Textur, füllt die Maschen */}
+          {/* Webmuster — 12 leuchtende Farb-/Textur-Kombinationen; jede neue
+              Masche bringt die nächste, so wächst die Vielfalt mit dem Füllen */}
           <defs>
-            <pattern id="tpat-technologie" patternUnits="userSpaceOnUse" width="12" height="12">
-              <rect width="12" height="12" className="fill-tertiary" opacity="0.1" />
-              <path d="M0 12 L12 0 M-3 3 L3 -3 M9 15 L15 9" className="stroke-tertiary" strokeWidth="1" opacity="0.4" />
-            </pattern>
-            <pattern id="tpat-entdeckungen" patternUnits="userSpaceOnUse" width="12" height="12">
-              <rect width="12" height="12" className="fill-secondary" opacity="0.1" />
-              <path d="M0 0 L12 12 M-3 9 L3 15 M9 -3 L15 3" className="stroke-secondary" strokeWidth="1" opacity="0.4" />
-            </pattern>
-            <pattern id="tpat-ereignisse" patternUnits="userSpaceOnUse" width="12" height="12">
-              <rect width="12" height="12" className="fill-primary" opacity="0.1" />
-              <circle cx="6" cy="6" r="1.6" className="fill-primary" opacity="0.5" />
-            </pattern>
-            <pattern id="tpat-praxen" patternUnits="userSpaceOnUse" width="12" height="12">
-              <rect width="12" height="12" className="fill-error" opacity="0.1" />
-              <path d="M6 2 L6 10 M2 6 L10 6" className="stroke-error" strokeWidth="1" opacity="0.4" />
-            </pattern>
+            {MASCHEN_FARBEN.map((farbe, i) => (
+              <MaschenPattern key={i} id={`tpat-${i}`} farbe={farbe} variante={i % 4} />
+            ))}
           </defs>
 
           {/* Kettfäden des Teppichs (feiner Hintergrund) */}
@@ -358,29 +387,22 @@ export default function HistorienTeppich({
             />
           ))}
 
-          {/* Gewebe-Maschen: gefüllt + gemustert, sobald alle drei Ecken besucht */}
+          {/* Gewebe-Maschen: gefüllt + gemustert, sobald alle drei Ecken
+              besucht sind — jede Masche mit eigener Farbe/Textur aus der
+              Teppich-Palette, die Vielfalt wächst mit jedem Feld */}
           {maschen.map((t, i) => {
             const sichtbar = t.every((v) => besucht.has(v));
-            const zaehl: Partial<Record<FadenArt, number>> = {};
-            let art: FadenArt = punkte[t[0]].faden;
-            let best = 0;
-            t.forEach((v) => {
-              const f = punkte[v].faden;
-              zaehl[f] = (zaehl[f] ?? 0) + 1;
-              if (zaehl[f]! > best) {
-                best = zaehl[f]!;
-                art = f;
-              }
-            });
+            const k = i % MASCHEN_FARBEN.length;
             const pts = t.map((v) => `${punkte[v].x},${punkte[v].y}`).join(" ");
             return (
               <polygon
                 key={`m${i}`}
                 points={pts}
-                fill={`url(#tpat-${art})`}
-                strokeWidth="0.4"
-                className={`${FADEN_META[art].strich} transition-opacity duration-700`}
-                strokeOpacity="0.25"
+                fill={`url(#tpat-${k})`}
+                stroke={MASCHEN_FARBEN[k]}
+                strokeWidth="0.5"
+                strokeOpacity="0.35"
+                className="transition-opacity duration-700"
                 opacity={sichtbar ? 1 : 0}
               />
             );
