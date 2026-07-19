@@ -109,16 +109,16 @@ const MASCHEN_FARBEN = [
 function MaschenPattern({ id, farbe, variante }: { id: string; farbe: string; variante: number }) {
   return (
     <pattern id={id} patternUnits="userSpaceOnUse" width="10" height="10">
-      <rect width="10" height="10" fill={farbe} opacity="0.16" />
+      <rect width="10" height="10" fill={farbe} opacity="0.08" />
       {variante === 0 && (
-        <path d="M0 10 L10 0 M-2.5 2.5 L2.5 -2.5 M7.5 12.5 L12.5 7.5" stroke={farbe} strokeWidth="1.4" opacity="0.4" />
+        <path d="M0 10 L10 0 M-2.5 2.5 L2.5 -2.5 M7.5 12.5 L12.5 7.5" stroke={farbe} strokeWidth="1.2" opacity="0.22" />
       )}
       {variante === 1 && (
-        <path d="M0 0 L10 10 M-2.5 7.5 L2.5 12.5 M7.5 -2.5 L12.5 2.5" stroke={farbe} strokeWidth="1.4" opacity="0.4" />
+        <path d="M0 0 L10 10 M-2.5 7.5 L2.5 12.5 M7.5 -2.5 L12.5 2.5" stroke={farbe} strokeWidth="1.2" opacity="0.22" />
       )}
-      {variante === 2 && <circle cx="5" cy="5" r="1.7" fill={farbe} opacity="0.5" />}
+      {variante === 2 && <circle cx="5" cy="5" r="1.6" fill={farbe} opacity="0.3" />}
       {variante === 3 && (
-        <path d="M5 1.5 L5 8.5 M1.5 5 L8.5 5" stroke={farbe} strokeWidth="1.3" opacity="0.4" />
+        <path d="M5 1.5 L5 8.5 M1.5 5 L8.5 5" stroke={farbe} strokeWidth="1.1" opacity="0.22" />
       )}
     </pattern>
   );
@@ -401,7 +401,7 @@ export default function HistorienTeppich({
                 fill={`url(#tpat-${k})`}
                 stroke={MASCHEN_FARBEN[k]}
                 strokeWidth="0.5"
-                strokeOpacity="0.25"
+                strokeOpacity="0.15"
                 className="transition-opacity duration-700"
                 opacity={sichtbar ? 1 : 0}
               />
