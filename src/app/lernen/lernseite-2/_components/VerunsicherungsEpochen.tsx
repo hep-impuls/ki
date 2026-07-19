@@ -109,7 +109,7 @@ const EPOCHEN: Epoche[] = [
       },
     ],
     technologie: {
-      text: "Zwei Erfindungen tragen den Wandel. Die griechische Alphabetschrift (ab etwa 800 v. Chr.) kommt mit rund zwei Dutzend Zeichen aus — Lesen und Schreiben sind nicht mehr Sache einer Priesterkaste. Und gemünztes Geld (in Kleinasien und Griechenland ab dem 7./6. Jahrhundert v. Chr.) macht Werte zählbar, teilbar und übertragbar, unabhängig von Person und Stand.",
+      text: "Zwei Erfindungen tragen den Wandel. Die griechische Alphabetschrift (ab etwa 800 v. Chr.) kommt mit rund zwei Dutzend Zeichen aus — Lesen und Schreiben sind nicht mehr Sache einer Priesterkaste. Und gemünztes Geld (in Kleinasien und Griechenland ab dem 7./6. Jahrhundert v. Chr.) macht Werte zählbar, teilbar und übertragbar, unabhängig von Person und Stand. Durchsetzen konnten sie sich, weil eine see- und handelstreibende Welt Aufzeichnungen, Verträge und ein verlässliches Tauschmittel brauchte: Das Alphabet entstand aus der Handelsschrift der Phönizier, das Silber für die Münzen kam aus Bergwerken wie dem attischen Laurion.",
       mehr: "Mit der Schrift lassen sich Gesetze, Verträge und Argumente festhalten und überprüfen — die Grundlage von Recht und Wissenschaft. Münzgeld beschleunigt Handel und Arbeitsteilung und lässt eine bewegliche Schicht von Kaufleuten neben dem alten Grundbesitz entstehen.",
       quellen: [
         { label: "Griechisches Alphabet (Wikipedia)", url: w("Griechisches_Alphabet") },
@@ -152,7 +152,7 @@ const EPOCHEN: Epoche[] = [
       },
     ],
     technologie: {
-      text: "Hier verunsichert nicht neue, sondern verlorene Technik. Mit dem Weströmischen Reich (476 n. Chr.) verfallen Fernstrassen, Aquädukte, Münzwesen und die staatliche Verwaltung. Fähigkeiten wie Betonbau in römischer Qualität gehen für Jahrhunderte verloren; die Welt wird kleiner, langsamer und unsicherer.",
+      text: "Hier verunsichert nicht neue, sondern verlorene Technik. Mit dem Weströmischen Reich (476 n. Chr.) verfallen Fernstrassen, Aquädukte, Münzwesen und die staatliche Verwaltung. Fähigkeiten wie Betonbau in römischer Qualität gehen für Jahrhunderte verloren; die Welt wird kleiner, langsamer und unsicherer. Verloren gingen sie, weil ihre Grundlage wegbrach: Ohne Zentralmacht, Steuern und Fernhandel gab es niemanden mehr, der Strassen unterhielt oder Münzen prägte — Technik überlebt nur mit ihrer wirtschaftlichen und politischen Basis.",
       mehr: "Handel und Geldwirtschaft schrumpfen, das Leben zieht sich auf Dorf, Gutshof und Kloster zurück (Naturalwirtschaft). Schriftliches Wissen überlebt vor allem in den Skriptorien der Klöster, wo Mönche antike Texte abschreiben — ein schmaler Faden, an dem die Überlieferung hängt.",
       quellen: [
         { label: "Untergang des Weströmischen Reiches (Wikipedia)", url: w("Untergang_des_Weströmischen_Reiches") },
@@ -195,7 +195,7 @@ const EPOCHEN: Epoche[] = [
       },
     ],
     technologie: {
-      text: "Drei Techniken beschleunigen alles. Der Buchdruck mit beweglichen Lettern (Gutenberg, um 1450) macht Texte massenhaft und billig. Kompass und ozeantaugliche Schiffe öffnen die Seewege. Und die doppelte Buchführung (in Italien seit dem 14. Jahrhundert, systematisiert von Luca Pacioli 1494) verwandelt Handel in ein nachprüfbares Rechenwerk.",
+      text: "Drei Techniken beschleunigen alles. Der Buchdruck mit beweglichen Lettern (Gutenberg, um 1450) macht Texte massenhaft und billig. Kompass und ozeantaugliche Schiffe öffnen die Seewege. Und die doppelte Buchführung (in Italien seit dem 14. Jahrhundert, systematisiert von Luca Pacioli 1494) verwandelt Handel in ein nachprüfbares Rechenwerk. Durchsetzen konnte sich der Buchdruck erst, als billiges Papier (über die islamische Welt aus China) und eine wachsende, lesehungrige Stadt- und Handelsschicht zusammenkamen; die doppelte Buchführung entsprang dem Bedarf der italienischen Handelshäuser, Kredite und Gewinne zu verfolgen.",
       mehr: "Der Buchdruck lässt Auflagen von Tausenden entstehen, wo zuvor einzelne Handschriften standen — Wissen entzieht sich der Kontrolle von Kloster und Hof. Die doppelte Buchführung mit Soll und Haben ist die Rechenmaschine des frühen Kapitalismus: Sie macht Gewinn planbar.",
       quellen: [
         { label: "Buchdruck (Wikipedia)", url: w("Buchdruck") },
@@ -238,7 +238,7 @@ const EPOCHEN: Epoche[] = [
       },
     ],
     technologie: {
-      text: "Neue Messinstrumente ordnen die Welt. Teleskop und Mikroskop (ab ~1600) erweitern das Sichtbare nach aussen und innen; die Pendeluhr (Huygens, 1657) macht die Zeit genau messbar. Newtons «Principia» (1687) erklären Himmel und Erde mit denselben Gesetzen — die Welt erscheint als berechenbares Uhrwerk.",
+      text: "Neue Messinstrumente ordnen die Welt. Teleskop und Mikroskop (ab ~1600) erweitern das Sichtbare nach aussen und innen; die Pendeluhr (Huygens, 1657) macht die Zeit genau messbar. Newtons «Principia» (1687) erklären Himmel und Erde mit denselben Gesetzen — die Welt erscheint als berechenbares Uhrwerk. Möglich wurden diese Instrumente durch das Schleifhandwerk der Linsen (in den Niederlanden), den Buchdruck zur raschen Verbreitung der Funde und handfeste Bedürfnisse wie die Navigation auf See; Newton selbst baute auf Kopernikus, Galilei und Kepler auf.",
       mehr: "Die genaue Uhr taktet zunehmend Arbeit, Handel und Alltag. Und die Enzyklopädie von Diderot und d'Alembert (ab 1751) bündelt das Wissen der Zeit in geordneter, allgemein zugänglicher Form — ein Leitprojekt der Aufklärung.",
       quellen: [
         { label: "Philosophiae Naturalis Principia Mathematica (Wikipedia)", url: w("Philosophiae_Naturalis_Principia_Mathematica") },
@@ -281,7 +281,7 @@ const EPOCHEN: Epoche[] = [
       },
     ],
     technologie: {
-      text: "Die verbesserte Dampfmaschine (James Watt, 1769) setzt erstmals Kraft frei, die nicht von Muskel, Wind oder Wasser stammt. Sie treibt Fabriken, Eisenbahnen und Dampfschiffe; der elektrische Telegraf (ab 1837) trennt die Nachricht vom Boten. Die Fabrikuhr taktet die Arbeit in Schichten.",
+      text: "Die verbesserte Dampfmaschine (James Watt, 1769) setzt erstmals Kraft frei, die nicht von Muskel, Wind oder Wasser stammt. Sie treibt Fabriken, Eisenbahnen und Dampfschiffe; der elektrische Telegraf (ab 1837) trennt die Nachricht vom Boten. Die Fabrikuhr taktet die Arbeit in Schichten. Durchgesetzt hat sich die Dampfmaschine, weil sie ein konkretes Problem löste — das Abpumpen von Wasser aus Kohlebergwerken — und weil in Grossbritannien Kohle, Eisen und Kapital aus dem Kolonialhandel reichlich vorhanden waren; sie verbesserte die ältere Newcomen-Maschine.",
       mehr: "Zum ersten Mal wirken fast alle Züge der Verunsicherung zugleich mit voller Wucht: Beschleunigung, Landflucht, Automatisierung der Arbeit, Lohnabhängigkeit — und, durch Kohle, die ersten grossflächigen Umweltschäden. Die Eisenbahn erzwingt sogar die einheitliche Uhrzeit.",
       quellen: [
         { label: "Industrielle Revolution (Wikipedia)", url: w("Industrielle_Revolution") },
@@ -324,7 +324,7 @@ const EPOCHEN: Epoche[] = [
       },
     ],
     technologie: {
-      text: "Technik automatisiert das Töten. Im Ersten Weltkrieg schaffen Maschinengewehr, Artillerie und Giftgas die anonyme Materialschlacht mit Millionen Toten. Der Rundfunk (ab den 1920ern) wird zum Massenmedium — und zum Propaganda-Werkzeug der Diktaturen. 1945 zeigt die Atombombe, dass Menschen die Welt vernichten können.",
+      text: "Technik automatisiert das Töten. Im Ersten Weltkrieg schaffen Maschinengewehr, Artillerie und Giftgas die anonyme Materialschlacht mit Millionen Toten. Der Rundfunk (ab den 1920ern) wird zum Massenmedium — und zum Propaganda-Werkzeug der Diktaturen. 1945 zeigt die Atombombe, dass Menschen die Welt vernichten können. Möglich wurde diese Zerstörungskraft durch die industrielle Massenfertigung und die organisierte Wissenschaft: Der Staat der «totalen Kriege» lenkte Forschung, Fabriken und Rohstoffe auf ein einziges Ziel — die Atombombe entstand im gigantischen «Manhattan-Projekt».",
       mehr: "Dieselbe Physik, die den Atomkern erklärt, baut die Bombe; dieselben Rechenmaschinen, die den Krieg entscheiden helfen (etwa Turings «Bombe» gegen die Enigma), werden zu den ersten Computern. Fortschritt und Vernichtung stammen aus derselben Werkstatt.",
       quellen: [
         { label: "Materialschlacht (Wikipedia)", url: w("Materialschlacht") },
@@ -367,7 +367,7 @@ const EPOCHEN: Epoche[] = [
       },
     ],
     technologie: {
-      text: "Der Personal Computer (ab 1981) und das World Wide Web (freigegeben 1991) bringen Rechenkraft und Information in jeden Haushalt. Der genormte Container macht globalen Warentransport billig und schnell. Zusammen vernetzen und beschleunigen sie Wirtschaft und Alltag fast grenzenlos.",
+      text: "Der Personal Computer (ab 1981) und das World Wide Web (freigegeben 1991) bringen Rechenkraft und Information in jeden Haushalt. Der genormte Container macht globalen Warentransport billig und schnell. Zusammen vernetzen und beschleunigen sie Wirtschaft und Alltag fast grenzenlos. Durchsetzen konnten sie sich, weil die Elektronik immer kleiner und billiger wurde (vom Transistor zum Mikrochip), weil militärische Forschung das Netz vorfinanzierte (ARPANET) und weil die Normung des Containers die Kosten des Welthandels einbrechen liess.",
       mehr: "Mit dem Ende des Kalten Krieges wird der Markt zum Leitprinzip fast überall. Der Politikwissenschaftler Francis Fukuyama spricht 1992 vom «Ende der Geschichte» — die liberale Demokratie als Endpunkt. Rückblickend begann stattdessen ein neuer Umbruch: Globalisierung und Digitalisierung.",
       quellen: [
         { label: "World Wide Web (Wikipedia)", url: w("World_Wide_Web") },
@@ -410,7 +410,7 @@ const EPOCHEN: Epoche[] = [
       },
     ],
     technologie: {
-      text: "Künstliche Intelligenz (mit ChatGPT ab 2022 alltäglich), das Smartphone und globale, digital gesteuerte Lieferketten laufen auf einer noch immer fossilen Infrastruktur. Die Automatisierung erreicht nun Sprache und Kopfarbeit; die Naturzerstörung erreicht mit der Klimakrise erstmals eine überlebensbedrohende Grössenordnung.",
+      text: "Künstliche Intelligenz (mit ChatGPT ab 2022 alltäglich), das Smartphone und globale, digital gesteuerte Lieferketten laufen auf einer noch immer fossilen Infrastruktur. Die Automatisierung erreicht nun Sprache und Kopfarbeit; die Naturzerstörung erreicht mit der Klimakrise erstmals eine überlebensbedrohende Grössenordnung. Die KI setzte sich nicht wegen einer neuen Idee durch — die ist alt —, sondern weil drei Grundlagen zusammenkamen: riesige Datenmengen aus dem Internet, billige Parallel-Rechenleistung (Grafikchips) und die Transformer-Architektur von 2017, dazu enormes privates Kapital.",
       mehr: "Was als jahrtausendealte Phantasie begann — einem Ding Leben einzuhauchen —, ist heute Werkzeug und Gegenüber zugleich. Und der ökologische Fussabdruck der scheinbar «virtuellen» Technik (Rechenzentren, Chips, Strom, Wasser) ist sehr real.",
       quellen: [
         { label: "Künstliche Intelligenz (Wikipedia)", url: w("Künstliche_Intelligenz") },

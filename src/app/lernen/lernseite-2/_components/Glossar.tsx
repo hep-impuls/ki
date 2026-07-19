@@ -184,6 +184,12 @@ export const GLOSSAR: Record<string, string> = {
     "Bei Hartmut Rosa: ein antwortendes, lebendiges Verhältnis zur Welt — Gegenbegriff zur blossen Beschleunigung.",
   "Akteur-Netzwerk-Theorie":
     "Bruno Latours Ansatz: Wirkung entsteht im Netz aus Menschen UND Dingen — nichts handelt allein.",
+  "Manhattan-Projekt":
+    "Das geheime US-Grossprojekt (1942–45), das die erste Atombombe baute.",
+  Transformer:
+    "Die KI-Architektur von 2017 («Attention»), Grundlage heutiger Sprachmodelle wie ChatGPT.",
+  "Newcomen-Maschine":
+    "Frühe Dampfmaschine (1712) zum Abpumpen von Grubenwasser — Vorläuferin von Watts Maschine.",
 };
 
 function escapeRegExp(s: string): string {
