@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   leseSpurenIndices,
   loescheSpuren,
@@ -9,6 +9,7 @@ import {
   zieheSpurenAusCloud,
 } from "../_lib/spuren";
 import KartenAktion from "./KartenAktion";
+import GewichtungWahl from "./GewichtungWahl";
 
 /**
  * HistorienTeppich — drei Fäden durch die Geschichte: Technologie,
@@ -83,21 +84,30 @@ export default function HistorienTeppich({
   punkte,
   spurKey,
   wunschKey,
+  bewertungen = [],
   className = "",
 }: {
   punkte: TeppichPunkt[];
   /** Spur-Präfix, z.B. "philosophische-perspektive:teppich". */
   spurKey: string;
   wunschKey?: string;
+  /** Bewertungs-Zeilen pro Karte (z.B. Bekanntheit, Lebensrelevanz) —
+   *  jeweils eine Drei-Stufen-Gewichtung mit eigenem Präfix. */
+  bewertungen?: { prefix: string; frage: string; stufen: [string, string, string] }[];
   className?: string;
 }) {
   const n = punkte.length;
   const [besucht, setBesucht] = useState<Set<number>>(new Set());
   const [reihenfolge, setReihenfolge] = useState<number[]>([]);
+  /** Bewusst wieder weggeklickte Punkte — bleiben beim Spur-Restore draussen,
+   *  damit die Leiste unten nicht überquillt (die Aktivität bleibt gezählt). */
+  const abgewaehlt = useRef<Set<number>>(new Set());
 
   useEffect(() => {
     function restore() {
-      const idx = leseSpurenIndices(spurKey).filter((i) => i >= 0 && i < n);
+      const idx = leseSpurenIndices(spurKey).filter(
+        (i) => i >= 0 && i < n && !abgewaehlt.current.has(i),
+      );
       if (idx.length === 0) return;
       setBesucht((prev) => {
         const nx = new Set(prev);
@@ -115,15 +125,53 @@ export default function HistorienTeppich({
     return () => window.removeEventListener(SPUR_EVENT, restore);
   }, [spurKey, n]);
 
+  /** Antippen wählt an — erneutes Antippen wählt wieder ab. */
   function besuche(i: number) {
-    if (besucht.has(i)) return;
+    if (besucht.has(i)) {
+      abgewaehlt.current.add(i);
+      setBesucht((prev) => {
+        const nx = new Set(prev);
+        nx.delete(i);
+        return nx;
+      });
+      setReihenfolge((prev) => prev.filter((x) => x !== i));
+      return;
+    }
+    abgewaehlt.current.delete(i);
     setBesucht((prev) => new Set(prev).add(i));
     setReihenfolge((prev) => (prev.includes(i) ? prev : [...prev, i]));
     merkeSpur(`${spurKey}:${i}`);
   }
 
+  /** Legende: ganzen Faden an- oder abwählen. */
+  function toggleFaden(art: FadenArt) {
+    const idx = punkte.map((p, i) => ({ p, i })).filter(({ p }) => p.faden === art).map(({ i }) => i);
+    const alleAn = idx.every((i) => besucht.has(i));
+    if (alleAn) {
+      idx.forEach((i) => abgewaehlt.current.add(i));
+      setBesucht((prev) => {
+        const nx = new Set(prev);
+        idx.forEach((i) => nx.delete(i));
+        return nx;
+      });
+      setReihenfolge((prev) => prev.filter((x) => !idx.includes(x)));
+    } else {
+      idx.forEach((i) => {
+        abgewaehlt.current.delete(i);
+        if (!besucht.has(i)) merkeSpur(`${spurKey}:${i}`);
+      });
+      setBesucht((prev) => {
+        const nx = new Set(prev);
+        idx.forEach((i) => nx.add(i));
+        return nx;
+      });
+      setReihenfolge((prev) => [...prev, ...idx.filter((i) => !prev.includes(i))]);
+    }
+  }
+
   function zuruecksetzen() {
     loescheSpuren(spurKey);
+    abgewaehlt.current = new Set();
     setBesucht(new Set());
     setReihenfolge([]);
   }
@@ -163,17 +211,35 @@ export default function HistorienTeppich({
         )}
       </div>
 
-      {/* Legende der drei Fäden */}
-      <div className="mb-sm flex flex-wrap items-center gap-md">
-        {(Object.keys(FADEN_META) as FadenArt[]).map((art) => (
-          <span
-            key={art}
-            className="flex items-center gap-xs text-label-sm text-on-surface-variant"
-          >
-            <span className={`inline-block h-3 w-3 rounded-full ${FADEN_META[art].chip}`} />
-            {FADEN_META[art].label}
-          </span>
-        ))}
+      {/* Legende — pro Faden ein Schalter: ganzen Faden an- oder abwählen */}
+      <div className="mb-sm flex flex-wrap items-center gap-sm">
+        {(Object.keys(FADEN_META) as FadenArt[]).map((art) => {
+          const idx = punkte
+            .map((p, i) => ({ p, i }))
+            .filter(({ p }) => p.faden === art)
+            .map(({ i }) => i);
+          const alleAn = idx.length > 0 && idx.every((i) => besucht.has(i));
+          return (
+            <button
+              key={art}
+              type="button"
+              onClick={() => toggleFaden(art)}
+              aria-pressed={alleAn}
+              className={
+                "flex items-center gap-xs rounded-full border px-sm py-xs text-label-sm transition-colors " +
+                (alleAn
+                  ? "border-tertiary bg-tertiary-container text-on-tertiary-container"
+                  : "border-outline-variant bg-surface-bright text-on-surface-variant hover:bg-surface-container hover:text-on-surface")
+              }
+            >
+              <span className={`inline-block h-3 w-3 rounded-full ${FADEN_META[art].chip}`} />
+              {FADEN_META[art].label}
+              <span className="material-symbols-outlined text-[14px]">
+                {alleAn ? "check" : "add"}
+              </span>
+            </button>
+          );
+        })}
       </div>
 
       {/* Der Teppich */}
@@ -231,7 +297,7 @@ export default function HistorienTeppich({
                 key={i}
                 role="button"
                 tabIndex={0}
-                aria-label={`${p.titel} (${p.jahr}) — antippen zum Lesen`}
+                aria-label={`${p.titel} (${p.jahr}) — antippen zum Lesen, erneut antippen zum Abwählen`}
                 aria-pressed={da}
                 onClick={() => besuche(i)}
                 onKeyDown={(e) => {
@@ -292,7 +358,9 @@ export default function HistorienTeppich({
       </div>
       <p className="mt-xs text-label-sm text-on-surface-variant">
         Punkt antippen liest die Geschichte und webt den Faden ein — sichtbar
-        wird ein Fadenstück, sobald seine beiden Enden besucht sind.
+        wird ein Fadenstück, sobald seine beiden Enden besucht sind. Erneutes
+        Antippen wählt einen Punkt wieder ab; die Legende oben schaltet ganze
+        Fäden an und aus.
       </p>
 
       {/* Besuchte Punkte — bleiben stehen, in Besuchs-Reihenfolge */}
@@ -358,6 +426,19 @@ export default function HistorienTeppich({
                         mehr={p.mehr}
                         wunschId={`wunsch:${wunschKey ?? spurKey}:${idx}`}
                       />
+                      {bewertungen.length > 0 && (
+                        <div className="mt-sm space-y-xs border-t border-outline-variant pt-sm">
+                          {bewertungen.map((b) => (
+                            <GewichtungWahl
+                              key={b.prefix}
+                              prefix={b.prefix}
+                              index={idx}
+                              frage={b.frage}
+                              stufen={b.stufen}
+                            />
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </li>

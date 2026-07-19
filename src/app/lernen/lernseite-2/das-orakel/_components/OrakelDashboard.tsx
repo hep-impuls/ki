@@ -31,7 +31,7 @@ const BEREICHE: { prefix: string; label: string; total: number; href: string }[]
   { prefix: "vorhang-auf:weisheit", label: "Merkmale der neuen Akteurin", total: 7, href: "/lernen/lernseite-2/vorhang-auf" },
   { prefix: "vorhang-auf:kontext", label: "Die KI im Kontext", total: 12, href: "/lernen/lernseite-2/vorhang-auf" },
   { prefix: "philosophische-perspektive:einstieg", label: "Was ist Philosophie?", total: 4, href: "/lernen/lernseite-2/philosophische-perspektive" },
-  { prefix: "philosophische-perspektive:teppich", label: "Der historische Teppich", total: 28, href: "/lernen/lernseite-2/philosophische-perspektive" },
+  { prefix: "philosophische-perspektive:teppich", label: "Der historische Teppich", total: 33, href: "/lernen/lernseite-2/philosophische-perspektive" },
   { prefix: "philosophische-perspektive:baustein", label: "Bausteine im Zeitstrahl", total: 15, href: "/lernen/lernseite-2/philosophische-perspektive" },
   { prefix: "video:", label: "Video-Impulse", total: 3, href: "/lernen/lernseite-2" },
 ];

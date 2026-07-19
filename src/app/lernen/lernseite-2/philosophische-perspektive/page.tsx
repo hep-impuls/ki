@@ -125,17 +125,32 @@ export default function Lernseite2PhilosophischePerspektive() {
           verschieben, <strong>gesellschaftliche Ereignisse</strong>, die alles
           umwälzen — und <strong>kulturelle Praxen</strong> wie Ackerbau,
           Gewürzhandel oder Kaffeehaus-Gespräch, in denen Menschen ihr
-          Zusammenleben ordnen. Der Teppich beginnt bei Pflug und Schrift und
-          reicht bis zur KI. Manchmal kreuzen sich die Fäden, manchmal laufen
-          sie allein — und an einigen Punkten wartet ein{" "}
+          Zusammenleben ordnen. Der Teppich beginnt bei Pflug, Rad und Schrift,
+          spannt sich über die ganze Welt — Mesopotamien, Ägypten, Indien,
+          China, Bagdad, Europa — und reicht bis zur KI. Manchmal kreuzen sich
+          die Fäden, manchmal laufen sie allein; an einigen Punkten wartet ein{" "}
           <strong>Verunsicherungs-Stopp</strong>, der zur passenden Epoche im
           Zeitstrahl weiter unten führt. <strong>Deine Aufgabe:</strong> Tippe
           die Punkte an — jeder erzählt seine Geschichte, und Stück für Stück
-          webt sich der Teppich.
+          webt sich der Teppich. Bewerte in jeder Karte, ob dir der Punkt
+          bekannt war und wie relevant er für dein Leben ist. Erneutes Antippen
+          wählt ab; die Legende schaltet ganze Fäden an und aus.
         </p>
         <HistorienTeppich
           className="mt-lg"
           spurKey="philosophische-perspektive:teppich"
+          bewertungen={[
+            {
+              prefix: "philosophische-perspektive:bekanntheit",
+              frage: "War dir das bekannt?",
+              stufen: ["neu für mich", "schon gehört", "gut gekannt"],
+            },
+            {
+              prefix: "philosophische-perspektive:relevanz",
+              frage: "Relevant für dein Leben?",
+              stufen: ["wenig", "mittel", "sehr"],
+            },
+          ]}
           punkte={[
             /* ── Faden: gesellschaftliche Ereignisse ── */
             {
@@ -242,30 +257,61 @@ export default function Lernseite2PhilosophischePerspektive() {
             /* ── Faden: Technologie ── */
             {
               faden: "technologie",
-              x: 55,
+              x: 50,
               y: 140,
               labelOben: true,
               titel: "Der Pflug",
               kurz: "Pflug",
               jahr: "Jungsteinzeit",
               text: "Der Pflug vervielfacht, was ein Feld hergibt. Mit ihm werden Überschüsse möglich — und damit Städte, Arbeitsteilung und Herrschaft.",
-              mehr: "Vom Grabstock zum Hakenpflug zum Räderpflug: Jede Verbesserung veränderte, wie viele Menschen ein Stück Land ernähren kann. Der Pflug ist das Urbild der Technologie — ein Werkzeug, das nicht nur Arbeit erleichtert, sondern die Gesellschaft umbaut, die es benutzt.",
+              mehr: "Vom Grabstock zum Hakenpflug zum Räderpflug — entwickelt in Mesopotamien, Ägypten, Indien und China unabhängig voneinander. Der Pflug ist das Urbild der Technologie: ein Werkzeug, das nicht nur Arbeit erleichtert, sondern die Gesellschaft umbaut, die es benutzt.",
             },
             {
               faden: "technologie",
-              x: 85,
-              y: 75,
+              x: 78,
+              y: 235,
+              titel: "Das Rad",
+              kurz: "Rad",
+              jahr: "~3500 v. Chr.",
+              text: "Töpferscheibe und Wagenrad entstehen in Mesopotamien und dem Schwarzmeerraum. Das Rad macht Lasten beweglich — Transport, Handel und Krieg verändern sich.",
+              mehr: "Das Rad ist keine europäische Erfindung — die ältesten Belege stammen aus Mesopotamien und dem Kaukasus. Bemerkenswert: Die Hochkulturen Amerikas kannten das Rad (an Spielzeugfiguren), nutzten es aber nicht für Transport, unter anderem mangels Zugtieren. Technik setzt sich nur durch, wo sie in Umwelt und Praxis passt.",
+            },
+            {
+              faden: "technologie",
+              x: 100,
+              y: 70,
               labelOben: true,
               titel: "Die Schrift",
               kurz: "Schrift",
               jahr: "~3300 v. Chr.",
               text: "In Mesopotamien entsteht die Schrift — zuerst für Buchhaltung und Vorräte. Denken und Erinnern werden erstmals ausserhalb des Kopfes gespeichert.",
-              mehr: "Die frühesten Keilschrifttafeln sind Verwaltungslisten: Getreide, Vieh, Schulden. Aus der Buchhaltung wächst die Literatur. Die Schrift eröffnet die Medienlinie dieses Teppichs — Buchdruck, Internet und KI setzen sie fort: Immer mehr Denken wandert in Dinge aus.",
+              mehr: "Die frühesten Keilschrifttafeln sind Verwaltungslisten: Getreide, Vieh, Schulden. Schrift entstand mehrfach unabhängig — in Mesopotamien, China und Mittelamerika; die Anden-Kulturen speicherten stattdessen in Knotenschnüren (Quipus). Die Schrift eröffnet die Medienlinie dieses Teppichs — Buchdruck, Internet und KI setzen sie fort: Immer mehr Denken wandert in Dinge aus.",
             },
             {
               faden: "technologie",
-              x: 270,
-              y: 65,
+              x: 126,
+              y: 105,
+              labelOben: true,
+              titel: "Papyrus und Papier",
+              kurz: "Papyrus & Papier",
+              jahr: "Ägypten · China",
+              text: "In Ägypten wird aus Schilf Papyrus (~3000 v. Chr.), in China erfindet Cai Lun das Papier (105 n. Chr.): leichte, billige Schreibflächen. Wissen wird tragbar.",
+              mehr: "Das Papier wanderte über die islamische Welt nach Europa — Papiermühlen in Samarkand und Bagdad ab dem 8. Jahrhundert. Erst mit billigem Papier lohnte sich später der Buchdruck. Die Medienlinie dieses Teppichs ist eine Weltreise: Ägypten, China, Bagdad, Mainz.",
+            },
+            {
+              faden: "technologie",
+              x: 262,
+              y: 130,
+              titel: "Kompass und Schiesspulver",
+              kurz: "Kompass",
+              jahr: "China, ~1000",
+              text: "Chinesische Seefahrer navigieren mit der Magnetnadel; über arabische und indische Händler erreicht sie Europa. Ohne Kompass keine Ozeanfahrt.",
+              mehr: "Auch Schiesspulver und der Druck mit beweglichen Lettern (Bi Sheng, ~1040) stammen aus China; Koreas «Jikji» (1377) ist das älteste erhaltene Buch aus Metalllettern. Viele «europäische Erfindungen» stehen auf den Schultern anderer Weltgegenden — Technikgeschichte ist Weltgeschichte.",
+            },
+            {
+              faden: "technologie",
+              x: 278,
+              y: 60,
               labelOben: true,
               titel: "Der Buchdruck",
               kurz: "Buchdruck",
@@ -281,7 +327,7 @@ export default function Lernseite2PhilosophischePerspektive() {
               kurz: "Seefahrt",
               jahr: "15. Jh.",
               text: "Karavelle, Kompass und Kanonen machen die Ozeane befahrbar. Der Beginn der europäischen Schifffahrt öffnet die Welt — und ebnet der Kolonialisierung den Weg.",
-              mehr: "Technik ist nie neutral: Dieselben Schiffe, die Entdeckungen ermöglichten, transportierten Eroberer und versklavte Menschen. Die Verflechtung von technischem Können und Machtinteresse, die hier beginnt, ist bei Rechenzentren und KI-Chips heute nicht anders.",
+              mehr: "Ozeanfahrt war keine europäische Premiere: Schon 1405–1433 segelten Zheng Hes riesige chinesische Flotten bis Ostafrika, polynesische Seefahrer querten den Pazifik Jahrhunderte früher. Und Technik ist nie neutral: Dieselben Schiffe, die Entdeckungen ermöglichten, transportierten Eroberer und versklavte Menschen — die Verflechtung von Können und Machtinteresse ist bei Rechenzentren und KI-Chips heute nicht anders.",
             },
             {
               faden: "technologie",
@@ -330,27 +376,37 @@ export default function Lernseite2PhilosophischePerspektive() {
             {
               faden: "technologie",
               x: 708,
-              y: 95,
+              y: 120,
               labelOben: true,
-              titel: "KI-Sprachmodelle",
+              titel: "KI wird öffentlich",
               kurz: "KI",
-              jahr: "2022",
-              text: "Mit ChatGPT wird KI alltäglich: Eine Maschine schreibt, erklärt und gestaltet. Der jüngste Knoten im Teppich — und der Anlass dieser ganzen Lernumgebung.",
-              mehr: "Alle Fäden laufen hier zusammen: die Technologielinie der Automatisierung, die Entdeckungslinie des Weltverstehens, die gesellschaftliche Frage, wer wir neben der Maschine sind — und die Praxen, in denen wir täglich mit ihr umgehen. Welche Orientierung diese Zeit trägt, wird gerade erst geschrieben.",
+              jahr: "1956 → 2022",
+              text: "Erfunden wurde die KI nicht 2022: Benannt und erforscht wird sie seit 1956 (Dartmouth-Konferenz). Mit GPT und ChatGPT tritt sie 2022 an die Öffentlichkeit — und wird alltäglich.",
+              mehr: "Dazwischen liegen Jahrzehnte von Aufbrüchen und «KI-Wintern»: symbolische KI, Expertensysteme, statistisches Lernen, Deep Learning. 2022 änderte sich nicht die Erfindung, sondern der Zugang — ein Chatfenster machte KI für alle bedienbar. Alle Fäden laufen hier zusammen: die Technologielinie der Automatisierung, die Entdeckungslinie des Weltverstehens, die gesellschaftliche Frage, wer wir neben der Maschine sind — und die Praxen, in denen wir täglich mit ihr umgehen.",
               verunsicherung:
                 "Bilder, Stimmen und Texte lassen sich täuschend echt erzeugen: Was ist noch echt, welche Fähigkeiten lohnen sich noch — und wer hat etwas gemacht: ich, die Maschine, beide? Im Zeitstrahl unten sucht die Epoche «Jetzt» nach der Schablone unserer Zeit.",
             },
             /* ── Faden: Entdeckungen ── */
             {
               faden: "entdeckungen",
-              x: 155,
-              y: 60,
+              x: 160,
+              y: 45,
               labelOben: true,
               titel: "Die Erde wird vermessen",
               kurz: "Erdumfang",
               jahr: "~240 v. Chr.",
               text: "Eratosthenes berechnet den Erdumfang — mit Schatten, Brunnen und Geometrie, erstaunlich genau. Die Welt wird messbar.",
               mehr: "Zwei Städte, ein Sonnenstand, ein Winkel: Aus einfachsten Beobachtungen erschliesst Eratosthenes die Grösse des Planeten. Die antike Entdeckung zeigt, was die neue Denk-Schablone — beobachten, ordnen, begründen — leisten kann.",
+            },
+            {
+              faden: "entdeckungen",
+              x: 205,
+              y: 90,
+              titel: "Die Null und das Stellenwertsystem",
+              kurz: "Die Null",
+              jahr: "Indien, ~500–700",
+              text: "Indische Gelehrte machen die Null zur Zahl und schaffen das Stellenwertsystem — unsere heutigen Ziffern. Rechnen wird einfach genug für alle.",
+              mehr: "Über arabische Gelehrte kam das System nach Europa — deshalb «arabische Ziffern». Al-Chwarizmi beschrieb es um 820 in Bagdad; aus seinem Namen wurde das Wort «Algorithmus». Ohne die indische Null keine Informatik: Auch der Computer rechnet mit Stellenwerten aus 0 und 1.",
             },
             {
               faden: "entdeckungen",
@@ -406,7 +462,7 @@ export default function Lernseite2PhilosophischePerspektive() {
             },
             {
               faden: "praxen",
-              x: 185,
+              x: 160,
               y: 250,
               titel: "Gewürz- und Seidenhandel",
               kurz: "Gewürzhandel",
@@ -416,7 +472,18 @@ export default function Lernseite2PhilosophischePerspektive() {
             },
             {
               faden: "praxen",
-              x: 238,
+              x: 218,
+              y: 258,
+              labelOben: true,
+              titel: "Das Haus der Weisheit",
+              kurz: "Haus der Weisheit",
+              jahr: "Bagdad, ~820",
+              text: "Im Bagdader «Haus der Weisheit» übersetzen, sammeln und erweitern Gelehrte das Wissen Griechenlands, Persiens und Indiens. Wissenschaft als organisierte Praxis — Jahrhunderte vor Europas Universitäten.",
+              mehr: "Hier wirkte al-Chwarizmi, dessen Rechenverfahren dem «Algorithmus» den Namen gaben. Die islamische Blütezeit bewahrte und verband das Wissen der Welt; über Übersetzerschulen wie Toledo floss es später nach Europa. Wissensgeschichte ist Weltgeschichte — und was in Archiven oder Trainingsdaten fehlt, verschwindet auch heute aus dem Blick.",
+            },
+            {
+              faden: "praxen",
+              x: 248,
               y: 190,
               labelOben: true,
               titel: "Die Universität",
