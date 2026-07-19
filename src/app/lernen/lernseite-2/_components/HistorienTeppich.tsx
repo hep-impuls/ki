@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   leseSpurenIndices,
   loescheSpuren,
@@ -81,6 +81,67 @@ function segmentPfad(a: { x: number; y: number }, b: { x: number; y: number }) {
   return `M${a.x} ${a.y} C${mx} ${a.y}, ${mx} ${b.y}, ${b.x} ${b.y}`;
 }
 
+type XY = { x: number; y: number };
+
+/** Umkreis-Mittelpunkt + Radius² dreier Punkte (für Delaunay). */
+function umkreis(a: XY, b: XY, c: XY) {
+  const ad = a.x * a.x + a.y * a.y;
+  const bd = b.x * b.x + b.y * b.y;
+  const cd = c.x * c.x + c.y * c.y;
+  const d = 2 * (a.x * (b.y - c.y) + b.x * (c.y - a.y) + c.x * (a.y - b.y));
+  if (Math.abs(d) < 1e-9) return { x: 0, y: 0, r2: Infinity };
+  const x = (ad * (b.y - c.y) + bd * (c.y - a.y) + cd * (a.y - b.y)) / d;
+  const y = (ad * (c.x - b.x) + bd * (a.x - c.x) + cd * (b.x - a.x)) / d;
+  const r2 = (a.x - x) ** 2 + (a.y - y) ** 2;
+  return { x, y, r2 };
+}
+
+/**
+ * Delaunay-Triangulation (Bowyer–Watson) über die Punkte — liefert Tripel von
+ * Punkt-Indizes. Bei ≤ ein paar Dutzend Punkten problemlos. Deterministisch.
+ */
+function trianguliere(pts: XY[]): [number, number, number][] {
+  const n = pts.length;
+  if (n < 3) return [];
+  let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+  for (const p of pts) {
+    minX = Math.min(minX, p.x); minY = Math.min(minY, p.y);
+    maxX = Math.max(maxX, p.x); maxY = Math.max(maxY, p.y);
+  }
+  const dmax = Math.max(maxX - minX, maxY - minY) || 1;
+  const midX = (minX + maxX) / 2, midY = (minY + maxY) / 2;
+  const verts: XY[] = [
+    ...pts,
+    { x: midX - 20 * dmax, y: midY - dmax },
+    { x: midX, y: midY + 20 * dmax },
+    { x: midX + 20 * dmax, y: midY - dmax },
+  ];
+  let tris: [number, number, number][] = [[n, n + 1, n + 2]];
+  for (let i = 0; i < n; i++) {
+    const p = verts[i];
+    const kaputt: [number, number, number][] = [];
+    tris = tris.filter((t) => {
+      const cc = umkreis(verts[t[0]], verts[t[1]], verts[t[2]]);
+      const drin = (p.x - cc.x) ** 2 + (p.y - cc.y) ** 2 <= cc.r2;
+      if (drin) kaputt.push(t);
+      return !drin;
+    });
+    const kanten: [number, number][] = [];
+    kaputt.forEach((t) => {
+      kanten.push([t[0], t[1]], [t[1], t[2]], [t[2], t[0]]);
+    });
+    kanten.forEach((e, idx) => {
+      const geteilt = kanten.some(
+        (f, j) =>
+          j !== idx &&
+          ((f[0] === e[0] && f[1] === e[1]) || (f[0] === e[1] && f[1] === e[0])),
+      );
+      if (!geteilt) tris.push([e[0], e[1], i]);
+    });
+  }
+  return tris.filter((t) => t.every((v) => v < n));
+}
+
 export default function HistorienTeppich({
   punkte,
   spurKey,
@@ -98,6 +159,17 @@ export default function HistorienTeppich({
   className?: string;
 }) {
   const n = punkte.length;
+  // Gewebe-Maschen: Delaunay-Dreiecke über die Punkte; nur nicht zu grosse
+  // (lokale) Maschen füllen den Teppich, wenn alle drei Ecken besucht sind.
+  const maschen = useMemo(() => {
+    const xy = punkte.map((p) => ({ x: p.x, y: p.y }));
+    const MAX_KANTE = 210;
+    return trianguliere(xy).filter((t) => {
+      const [a, b, c] = t.map((i) => xy[i]);
+      const e = (p: XY, q: XY) => Math.hypot(p.x - q.x, p.y - q.y);
+      return Math.max(e(a, b), e(b, c), e(c, a)) <= MAX_KANTE;
+    });
+  }, [punkte]);
   const [besucht, setBesucht] = useState<Set<number>>(new Set());
   const [reihenfolge, setReihenfolge] = useState<number[]>([]);
   /** Bewusst wieder weggeklickte Punkte — bleiben beim Spur-Restore draussen,
@@ -250,8 +322,28 @@ export default function HistorienTeppich({
           preserveAspectRatio="none"
           className="block w-full select-none aspect-[720/430] sm:aspect-[720/300]"
           role="img"
-          aria-label="Historischer Teppich: drei Fäden — Technologie, Entdeckungen, gesellschaftliche Ereignisse — weben sich durchs Antippen der Punkte ein."
+          aria-label="Historischer Teppich: vier Fäden — Technologie, Entdeckungen, gesellschaftliche Ereignisse und kulturelle Praxen — weben sich durchs Antippen der Punkte ein; zwischen besuchten Punkten füllen sich gemusterte Maschen."
         >
+          {/* Webmuster je Faden — feine Tönung + Textur, füllt die Maschen */}
+          <defs>
+            <pattern id="tpat-technologie" patternUnits="userSpaceOnUse" width="12" height="12">
+              <rect width="12" height="12" className="fill-tertiary" opacity="0.1" />
+              <path d="M0 12 L12 0 M-3 3 L3 -3 M9 15 L15 9" className="stroke-tertiary" strokeWidth="1" opacity="0.4" />
+            </pattern>
+            <pattern id="tpat-entdeckungen" patternUnits="userSpaceOnUse" width="12" height="12">
+              <rect width="12" height="12" className="fill-secondary" opacity="0.1" />
+              <path d="M0 0 L12 12 M-3 9 L3 15 M9 -3 L15 3" className="stroke-secondary" strokeWidth="1" opacity="0.4" />
+            </pattern>
+            <pattern id="tpat-ereignisse" patternUnits="userSpaceOnUse" width="12" height="12">
+              <rect width="12" height="12" className="fill-primary" opacity="0.1" />
+              <circle cx="6" cy="6" r="1.6" className="fill-primary" opacity="0.5" />
+            </pattern>
+            <pattern id="tpat-praxen" patternUnits="userSpaceOnUse" width="12" height="12">
+              <rect width="12" height="12" className="fill-error" opacity="0.1" />
+              <path d="M6 2 L6 10 M2 6 L10 6" className="stroke-error" strokeWidth="1" opacity="0.4" />
+            </pattern>
+          </defs>
+
           {/* Kettfäden des Teppichs (feiner Hintergrund) */}
           {Array.from({ length: 13 }, (_, i) => 40 + i * 53).map((x) => (
             <line
@@ -265,6 +357,34 @@ export default function HistorienTeppich({
               opacity="0.35"
             />
           ))}
+
+          {/* Gewebe-Maschen: gefüllt + gemustert, sobald alle drei Ecken besucht */}
+          {maschen.map((t, i) => {
+            const sichtbar = t.every((v) => besucht.has(v));
+            const zaehl: Partial<Record<FadenArt, number>> = {};
+            let art: FadenArt = punkte[t[0]].faden;
+            let best = 0;
+            t.forEach((v) => {
+              const f = punkte[v].faden;
+              zaehl[f] = (zaehl[f] ?? 0) + 1;
+              if (zaehl[f]! > best) {
+                best = zaehl[f]!;
+                art = f;
+              }
+            });
+            const pts = t.map((v) => `${punkte[v].x},${punkte[v].y}`).join(" ");
+            return (
+              <polygon
+                key={`m${i}`}
+                points={pts}
+                fill={`url(#tpat-${art})`}
+                strokeWidth="0.4"
+                className={`${FADEN_META[art].strich} transition-opacity duration-700`}
+                strokeOpacity="0.25"
+                opacity={sichtbar ? 1 : 0}
+              />
+            );
+          })}
 
           {/* Fadensegmente — erscheinen, wenn beide Endpunkte besucht sind */}
           {faeden.map(({ art, idx }) =>
