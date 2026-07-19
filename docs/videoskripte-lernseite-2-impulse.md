@@ -1,18 +1,22 @@
 # Videoskripte — die drei Impuls-Videos (Lernseite 2)
 
-Je ein Einstiegs-Video pro Seite (eingebettet als `VideoImpuls`). Anders als ein
-Tour-Guide erklären diese Skripte **die Sache selbst**: die Kernidee der Seite,
-was didaktisch vermittelt werden soll und **wo die eigentliche Schwierigkeit
-liegt**. Die Bedienung («tippe an, ziehe») ist Nebensache und wird nur gestreift.
+Je ein Einstiegs-Video pro Seite (eingebettet als `VideoImpuls`). Diese Skripte
+erklären **die Sache selbst**: Kernidee, was vermittelt werden soll und **wo die
+eigentliche Schwierigkeit liegt** — nicht die Bedienung.
 
-Pro Skript: **Kernbotschaft** (der eine Gedanke) · **Sprechtext** (HeyGen-fertig,
-Du-Form, ~90–110 s) · **Was vermittelt wird & wo die Komplexität liegt** (für
-Klarheit und Bild/Schnitt).
+**Roter Faden des ganzen Lernsets:** Technologischer Wandel löst Verunsicherung
+aus. Wir sind gerade wieder in einer solchen Zeit — ihr Name ist KI. Eine
+**philosophische Orientierung** soll helfen, diese Komplexität besser
+einzuordnen. Das ist das Ziel des Sets aus drei Modulen. Das Hub-Video trägt
+diesen Bogen; die beiden anderen docken daran an.
+
+Pro Skript: **Kernbotschaft** · **Sprechtext** (HeyGen-fertig, Du-Form, ~90–110 s)
+· **Was vermittelt wird & wo die Komplexität liegt**.
 
 Sobald ein Video auf YouTube ist: Video-ID als `videoId="…"` an die jeweilige
 `VideoImpuls`-Komponente hängen (bis dahin «Video folgt»-Platzhalter).
 
-> Daneben gibt es das längere Set-Intro `videoskript-lernseite-2-vorhang-auf.md`
+> Daneben: das längere Set-Intro `videoskript-lernseite-2-vorhang-auf.md`
 > (~2 Min., Überblick über alle Seiten). Diese drei hier sind kürzer,
 > seitenspezifisch und inhaltlich.
 
@@ -22,39 +26,40 @@ Sobald ein Video auf YouTube ist: Video-ID als `videoId="…"` an die jeweilige
 
 *Platzierung: `lernseite-2/page.tsx`, `spurId="video:hub"`.*
 
-**Kernbotschaft:** KI passt in keine unserer alten Schubladen — sie ist ein
-Gegenüber ohne Bewusstsein, ein Werkzeug, das zurückredet. Darum müssen wir sie
-kennenlernen, statt sie nur zu benutzen oder zu bestaunen.
+**Kernbotschaft:** Neue Technik verunsichert — und wir stecken gerade mitten in
+einer solchen Zeit, ausgelöst durch KI. Nicht mehr Technik, sondern eine
+philosophische Orientierung hilft, diese Verunsicherung einzuordnen. Das ist das
+Ziel dieses Lernsets.
 
 ### Sprechtext
 
-Wir stecken Technik gewohnheitsmässig in zwei Schubladen: Werkzeug oder Person.
-Ein Hammer ist ein Werkzeug — er tut nichts, bis wir ihn führen. Ein Mensch ist
-ein Gegenüber — er versteht, entscheidet, verantwortet. Künstliche Intelligenz
-passt in keine der beiden. Sie spricht unsere Sprache, sie schlägt vor, sie
-entwirft, sie handelt — und trotzdem versteht sie nicht, was sie sagt, und trägt
-keine Verantwortung. Genau das macht sie so schwer fassbar: ein Gegenüber ohne
-Bewusstsein, ein Werkzeug, das zurückredet. Dieses Modul nimmt diese
-Zwischenstellung ernst. Statt zuerst zu fragen, ob KI gut oder schlecht ist,
-fragen wir: Was ist das eigentlich, mit dem wir es zu tun haben? Wir nennen es
-eine Partnerschaft — nicht, weil die Maschine ein Partner wäre, sondern weil
-unser Umgang mit ihr einer Beziehung gleicht, die wir gestalten müssen: ihre
-Stärken nutzen, ihre Grenzen kennen und das Netz sehen, an dem sie hängt — Technik,
-Wirtschaft, Recht, Kultur. In drei Schritten: Zuerst tritt die neue Akteurin auf.
-Dann ordnet die Philosophie die Verunsicherung ein, die neue Technik immer
-auslöst. Und am Ende zeigt dir das Orakel, welchen Weg du selbst durch all das
-genommen hast.
+Immer wenn eine neue Technologie die Welt umkrempelt, verunsichert das die
+Menschen: Was gilt jetzt noch? Worauf kann ich mich verlassen? Wie soll ich
+leben? Wir stecken gerade wieder mitten in einer solchen Zeit — und ihr Name ist
+Künstliche Intelligenz. Sie verändert Arbeit, Wissen und Kommunikation in
+atemberaubendem Tempo, sie spricht unsere Sprache, sie schlägt vor und handelt —
+und lässt viele ratlos zurück: fasziniert, überfordert, misstrauisch, alles
+zugleich. Dieses Lernset geht nicht davon aus, dass noch mehr Technik diese
+Ratlosigkeit auflöst. Es setzt auf etwas anderes: auf eine philosophische
+Orientierung, die hilft, die Komplexität einzuordnen — ruhiger, klarer, mit mehr
+Übersicht. Dazu gehen wir in drei Schritten vor. Im ersten Modul, «Vorhang auf»,
+gehen wir der Frage nach, was da eigentlich aufgetreten ist: dass KI eine neue Art
+von Akteurin ist, die Wandel auslöst und verunsichert. Im zweiten, der
+«philosophischen Perspektive», gehen wir dem Muster nach — dass solche
+Verunsicherung nicht neu ist und wie Philosophie schon früher Orientierung gegeben
+hat und heute geben kann. Und im dritten, dem «Orakel», gehst du deinem eigenen
+Weg nach: wie du dich durch diese Fragen bewegt hast und wo du stehst. Fangen wir
+an — bei der Verunsicherung.
 
 ### Was vermittelt wird & wo die Komplexität liegt
 
-- **Vermittelt wird** eine Haltung: informiertes Gestalten statt Bestaunen oder
-  blosses Benutzen.
-- **Die Komplexität:** die Zwischenstellung. Unsere Sprache und unsere Intuition
-  haben keine Kategorie für ein Nicht-Menschliches, das an Sprache und
-  Entscheidungen mitwirkt. Wer KI vermenschlicht, überschätzt sie; wer sie als
-  blosses Werkzeug abtut, unterschätzt ihre Wirkung.
-- **B-Roll:** Hammer ↔ Gesprächspartner als Kontrast; der Faden/Knoten-Aufbau der
-  Hub-Seite als Bild fürs «Netz, an dem sie hängt».
+- **Vermittelt wird:** der Zweck des ganzen Sets — Verunsicherung durch KI ernst
+  nehmen und ihr mit *Orientierung* statt mit noch mehr Technik begegnen.
+- **Die Komplexität:** Verunsicherung ist unangenehm und drängt zu schnellen
+  Urteilen («KI ist super» / «KI ist gefährlich»). Orientierung heisst, diese
+  Spannung auszuhalten und einzuordnen, statt sie vorschnell aufzulösen.
+- **B-Roll:** Tempo/Umbruch (Nachrichtenschlagzeilen, Arbeitswelt), dann Ruhe;
+  die drei Module als Weg/Faden.
 
 ---
 
@@ -62,39 +67,40 @@ genommen hast.
 
 *Platzierung: `vorhang-auf/page.tsx`, `spurId="video:vorhang-auf"`.*
 
-**Kernbotschaft:** Die heutige KI ist kein einzelner Geniestreich, sondern das
-Zusammenlaufen alter Fäden — und ihre «Intelligenz» ist statistische
-Mustervervollständigung: mächtig und begrenzt aus demselben Grund.
+**Kernbotschaft:** Erster Schritt des Sets. Damit man die Verunsicherung einordnen
+kann, muss man zuerst wissen, *was* da auftritt: KI ist kein Geniestreich aus dem
+Nichts, sondern die Verwebung alter Fäden — und ihre «Intelligenz» ist
+statistische Mustervervollständigung: mächtig und begrenzt aus demselben Grund.
 
 ### Sprechtext
 
-Woher kommt diese KI — und was ist sie eigentlich? Die KI-Story zeigt: Sie ist
-keine einzelne Erfindung, sondern das Zusammenlaufen mehrerer alter Fäden. Der
+Bevor wir die Verunsicherung einordnen können, müssen wir wissen, was sie
+auslöst. Also: Was ist diese KI eigentlich? Die KI-Story zeigt, dass sie keine
+einzelne Erfindung ist, sondern das Zusammenlaufen mehrerer alter Fäden. Der
 uralte Traum, tote Materie zu beleben. Die Idee, Denken in Rechenschritte zu
 zerlegen — von den Rechenmaschinen bis zu Turing. Und schliesslich die Statistik:
 Maschinen, die nicht mehr Regel für Regel programmiert werden, sondern aus
 riesigen Datenmengen lernen. Erst als sich diese Fäden verwoben, entstand, was wir
-heute ChatGPT nennen. Und da liegt der oft übersehene Punkt: Die heutige KI
-versteht nicht — sie rechnet Wahrscheinlichkeiten und setzt das nächste
-wahrscheinliche Wort. Sie vervollständigt Muster. Aus genau dieser einen
-Eigenschaft folgt beides: ihre verblüffende Kreativität und ihre Fähigkeit,
-überzeugend Falsches zu behaupten. Die zwölf Merkmale machen das greifbar —
-algorithmisch, datenbasiert, wahrscheinlichkeitsbasiert, generativ, agentenfähig.
-Du gewichtest, wie deutlich jedes die Gestalt dieser Akteurin zeigt, denn die
-Schwierigkeit steckt im Zusammenspiel: Erst zusammen ergeben diese Eigenschaften
-das eigenartige Wesen, das wir vor uns haben. Und weil kein Werkzeug für sich
-steht, kommt zum Schluss der Kontext dazu — dieselbe Technik nützt oder schadet,
-je nachdem, wie Wirtschaft, Recht und Kultur sie einbetten. Kurz: Was hier
-auftritt, ist mächtig, aber nicht magisch. Genau das gilt es zu durchschauen.
+heute ChatGPT nennen. Und da liegt der oft übersehene Punkt — der Grund für einen
+Teil der Verunsicherung: Diese KI versteht nicht, sie rechnet Wahrscheinlichkeiten
+und setzt das nächste wahrscheinliche Wort. Sie vervollständigt Muster. Aus genau
+dieser einen Eigenschaft folgt beides: ihre verblüffende Kreativität und ihre
+Fähigkeit, überzeugend Falsches zu behaupten. Die zwölf Merkmale machen greifbar,
+was für ein Akteur das ist — algorithmisch, datenbasiert,
+wahrscheinlichkeitsbasiert, generativ, agentenfähig. Und weil kein Werkzeug für
+sich steht, kommt der Kontext dazu: Dieselbe Technik nützt oder schadet, je
+nachdem, wie Wirtschaft, Recht und Kultur sie einbetten. Kurz: Was hier auftritt,
+ist mächtig, aber nicht magisch. Wer das durchschaut, ist der ersten Ratlosigkeit
+schon ein Stück entwachsen.
 
 ### Was vermittelt wird & wo die Komplexität liegt
 
-- **Vermittelt wird:** die KI entzaubern, ohne sie zu verharmlosen — präzise
-  benennen, *was für ein* Akteur das ist.
+- **Vermittelt wird:** die KI so genau kennen, dass die Verunsicherung fassbar
+  wird — entzaubern, ohne zu verharmlosen.
 - **Die Komplexität:** (1) Anthropomorphismus — wir hören «Verstehen», wo eine
   Maschine Wahrscheinlichkeiten rechnet. (2) Kreativität und Halluzination sind
-  **dieselbe** Eigenschaft, nicht zwei. (3) Ob KI nützt oder schadet, entscheidet
-  nicht die Technik allein, sondern ihr Kontext — Verantwortung ist verteilt.
+  **dieselbe** Eigenschaft. (3) Ob KI nützt oder schadet, entscheidet nicht die
+  Technik allein, sondern ihr Kontext — Verantwortung ist verteilt.
 - **B-Roll:** die drei zusammenlaufenden Fäden (Mythos/Automat, Rechnen/Turing,
   Daten/Lernen); ein Merkmal-Geflecht, das sich beim Gewichten schärft.
 
@@ -104,39 +110,40 @@ auftritt, ist mächtig, aber nicht magisch. Genau das gilt es zu durchschauen.
 
 *Platzierung: `philosophische-perspektive/page.tsx`, `spurId="video:philosophie"`.*
 
-**Kernbotschaft:** Technische Umbrüche verunsichern seit je — das ist ein
-wiederkehrendes Muster. Philosophie stiftet Orientierung, indem sie die
-Grundfragen neu gewichtet; und die Aufregung um KI reimt sich auf frühere Brüche.
+**Kernbotschaft:** Zweiter Schritt und das Herzstück des Ziels: Die Verunsicherung
+durch neue Technik ist ein wiederkehrendes Muster. Philosophie stiftet
+Orientierung, indem sie die Grundfragen neu gewichtet — und die Aufregung um KI
+reimt sich auf frühere Umbrüche.
 
 ### Sprechtext
 
-Neue Technik verunsichert — und das ist keine Laune der Gegenwart, sondern ein
-Muster, das sich durch die ganze Geschichte zieht. Immer wenn Werkzeuge,
-Entdeckungen oder Ereignisse die Welt umkrempelten, geriet auch das
-Selbstverständnis ins Wanken: Was ist der Mensch? Was können wir wissen? Wie
+Jetzt zur eigentlichen Absicht dieses Lernsets: die Verunsicherung einordnen. Und
+das Erste, was dabei hilft, ist eine Entdeckung — nämlich, dass sie nicht neu ist.
+Immer wenn Werkzeuge, Entdeckungen oder Ereignisse die Welt umkrempelten, geriet
+das Selbstverständnis ins Wanken: Was ist der Mensch? Was können wir wissen? Wie
 sollen wir leben? Genau hier arbeitet die Philosophie. Sie liefert keine schnellen
 Rezepte, sondern Orientierung — sie fragt nach dem Grundsätzlichen und ordnet neu,
 was durcheinandergeraten ist. Manchmal bringt schon eine neue Gewichtung der
 grundlegenden Lebenselemente mehr Klarheit als jede weitere Technik. Der «Teppich
-des Wandels» macht zuerst etwas Wichtiges sichtbar: Geschichte ist nie eine gerade
-Linie. Technologie, Entdeckungen, gesellschaftliche Ereignisse und kulturelle
-Praxen verweben sich — Wandel hat nie nur eine Ursache. Dann gehst du durch acht
-Epochen, von der Antike bis zu Umwelt und KI heute. Jede zeigt dasselbe Dreieck:
-eine Technologie, die Verunsicherung, die sie auslöste, und die Philosophie, die
-Halt gab. Wer dieses Muster einmal erkennt, sieht die eigene Gegenwart mit anderen
+des Wandels» macht zuerst etwas sichtbar: Geschichte ist nie eine gerade Linie.
+Technologie, Entdeckungen, gesellschaftliche Ereignisse und kulturelle Praxen
+verweben sich — Wandel hat nie nur eine Ursache. Dann gehst du durch acht Epochen,
+von der Antike bis zu Umwelt und KI heute. Jede zeigt dasselbe Dreieck: eine
+Technologie, die Verunsicherung, die sie auslöste, und die Philosophie, die Halt
+gab. Wer dieses Muster einmal erkennt, sieht die eigene Gegenwart mit anderen
 Augen: Die Aufregung um KI reimt sich auf den Buchdruck, auf die
-Industrialisierung. Und darin liegt zugleich die eigentliche Schwierigkeit und der
-Gewinn — abstrakte Gedanken so zu übersetzen, dass sie im eigenen, konkreten Leben
-Orientierung geben.
+Industrialisierung. Das nimmt der Verunsicherung nicht ihre Ernsthaftigkeit — aber
+es gibt dir einen Standort, von dem aus du sie betrachten kannst.
 
 ### Was vermittelt wird & wo die Komplexität liegt
 
 - **Vermittelt wird:** das wiederkehrende Muster «Technologie → Verunsicherung →
-  philosophische Orientierung» erkennen und auf die KI-Gegenwart übertragen.
-- **Die Komplexität:** (1) Kausalität ist ein Gewebe, keine Linie — mehrere Fäden
-  zugleich. (2) Die Gegenwart ist Wiederholung *mit Variation*: vertraut und neu
-  zugleich. (3) Die härteste Übersetzungsleistung: abstrakte Philosophie ins
-  konkrete Alltagshandeln überführen.
+  philosophische Orientierung» erkennen und auf die KI-Gegenwart übertragen — das
+  eigentliche Ziel des Sets.
+- **Die Komplexität:** (1) Kausalität ist ein Gewebe, keine Linie. (2) Die
+  Gegenwart ist Wiederholung *mit Variation* — vertraut und neu zugleich. (3) Die
+  härteste Übersetzungsleistung: abstrakte Philosophie ins konkrete Alltagshandeln
+  überführen.
 - **B-Roll:** das Vier-Fäden-Gewebe des Teppichs; je Epoche das Dreieck
   Technik–Verunsicherung–Philosophie; Kunstwerke der Epochen (Bildzoom).
 
@@ -148,5 +155,6 @@ Orientierung geben.
   als gehetzt.
 - **Aussprache (HeyGen):** «ChatGPT» → ggf. «Tschätt-Dschi-pi-ti».
 - **Untertitel** einschalten (Barrierefreiheit, viele schauen ohne Ton).
-- **Zahlen aktuell halten:** die Skripte nennen konkrete Zahlen (zwölf Merkmale,
-  acht Epochen, vier Fäden/Kontexte). Ändern sich Inhalte, hier nachziehen.
+- **Zahlen aktuell halten:** die Skripte nennen konkrete Zahlen (drei Module,
+  zwölf Merkmale, acht Epochen, vier Fäden/Kontexte). Ändern sich Inhalte, hier
+  nachziehen.
