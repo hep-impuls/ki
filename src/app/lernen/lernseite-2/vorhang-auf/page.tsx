@@ -10,6 +10,7 @@ import AktivitaetsNetzFloat from "../_components/AktivitaetsNetzFloat";
 import GewebeSpiel from "../_components/GewebeSpiel";
 import VideoImpuls from "../_components/VideoImpuls";
 import InfoPunkt from "../_components/InfoPunkt";
+import SeitenNavigation from "../_components/SeitenNavigation";
 
 /**
  * Das Muster dieser Seite: die Auftritts-Signatur (oben rechts im Kopf),
@@ -1123,6 +1124,13 @@ export default function Lernseite2VorhangAuf() {
           </Link>
         </div>
       </section>
+
+      <SeitenNavigation
+        weiter={{
+          href: "/lernen/lernseite-2/philosophische-perspektive",
+          label: "Philosophische Perspektive",
+        }}
+      />
     </AppLayout>
   );
 }

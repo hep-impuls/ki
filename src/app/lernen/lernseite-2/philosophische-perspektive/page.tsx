@@ -6,6 +6,7 @@ import VideoImpuls from "../_components/VideoImpuls";
 import AkkordeonPosten from "../_components/AkkordeonPosten";
 import HistorienTeppich from "../_components/HistorienTeppich";
 import VerunsicherungsEpochen from "../_components/VerunsicherungsEpochen";
+import SeitenNavigation from "../_components/SeitenNavigation";
 
 /**
  * Thema 02 — «Philosophische Perspektive».
@@ -560,6 +561,17 @@ export default function Lernseite2PhilosophischePerspektive() {
         </p>
         <VerunsicherungsEpochen className="mt-lg" />
       </section>
+
+      <SeitenNavigation
+        zurueck={{
+          href: "/lernen/lernseite-2/vorhang-auf",
+          label: "Vorhang auf",
+        }}
+        weiter={{
+          href: "/lernen/lernseite-2/das-orakel",
+          label: "Das Orakel",
+        }}
+      />
     </AppLayout>
   );
 }

@@ -3,6 +3,7 @@ import ActivityTracker from "@/components/ActivityTracker";
 import AppLayout from "@/components/layout/AppLayout";
 import { Signatur } from "../_components/Gewebe";
 import OrakelDashboard from "./_components/OrakelDashboard";
+import SeitenNavigation from "../_components/SeitenNavigation";
 
 /**
  * Thema 03 — «Das Orakel — erkenne dich selbst».
@@ -53,6 +54,13 @@ export default function Lernseite2DasOrakel() {
       <section className="mt-xl">
         <OrakelDashboard />
       </section>
+
+      <SeitenNavigation
+        zurueck={{
+          href: "/lernen/lernseite-2/philosophische-perspektive",
+          label: "Philosophische Perspektive",
+        }}
+      />
     </AppLayout>
   );
 }
