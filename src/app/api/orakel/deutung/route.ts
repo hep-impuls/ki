@@ -38,7 +38,6 @@ interface Aktivitaet {
   philoKeinSinn: number;
   gestaltDeutlich: number;
   blickWahl: string | null;
-  satz: string | null;
 }
 
 const STIL_SYSTEM: Record<Stil, string> = {
@@ -90,7 +89,6 @@ function baueZusammenfassung(a: Aktivitaet): string {
     `Philosophische Sichtweisen, die heute helfen: ${a.philoHilft}; die keinen Sinn ergeben: ${a.philoKeinSinn}.`,
     `KI-Merkmale, die als «deutlich» gewichtet wurden: ${a.gestaltDeutlich}.`,
     a.blickWahl ? `Selbst gewählte Grundhaltung zur KI: ${a.blickWahl}.` : "",
-    a.satz ? `Eigene Antwort auf die offene Frage «Welche Schablone trägt uns durch die KI-Zeit?»: «${a.satz}».` : "",
   ];
   return zeilen.filter(Boolean).join("\n");
 }

@@ -34,6 +34,14 @@ ist damit abgelöst; `api/orakel/querschnitt` bleibt vorerst ungenutzt liegen.
 `OrakelDashboard.tsx` (`FINDMIND_FEEDBACK_URL`, `FINDMIND_GEFALLEN_URL`) — leer =
 Hinweis «Link folgt».
 
+**Nachtrag (gleicher Tag):** «Die offene Frage» (Satz schreiben + anonym teilen)
+komplett entfernt — damit ist `api/orakel/aussage` und der Querschnitt-Orakel
+endgültig obsolet. Neu im Orakel-Abschnitt eine Zeile **«Gesamtnutzung aller
+Teilnehmenden»** (Summe aller anonymen Zähler). Datenschutz-Text
+umgeschrieben/geschärft: klare Trennung zwischen dem **anonymen Zähler** (+1 pro
+Knoten, fliesst in «Gesamtnutzung»/«alle», nicht rückverfolgbar) und den
+**Detaildaten** (welche Punkte genau, Bewertungen — bleiben nur im Browser).
+
 ## 2026-07-19 — «Teppich des Wandels» (Naming) + Glossar-Pflicht
 
 **Auftrag Christof:** Das interaktive Vier-Fäden-Gewebe auf der

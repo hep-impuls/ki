@@ -82,8 +82,6 @@ const STILE: { id: Stil; label: string; icon: string; beschreibung: string }[] =
 
 /* ── lokale Schlüssel ─────────────────────────────────────────────────────── */
 
-const KEY_SATZ = "ki26-orakel-satz";
-const KEY_SATZ_GETEILT = "ki26-orakel-satz-geteilt";
 const KEY_BLICK = "ki26-orakel-blick";
 
 function summeMitPrefix(counts: PollCounts, prefix: string): number {
@@ -128,11 +126,6 @@ export default function OrakelDashboard() {
   });
   /* alle (anonymer Zähler) */
   const [alleSpuren, setAlleSpuren] = useState<PollCounts>({});
-  /* Satz */
-  const [satz, setSatz] = useState("");
-  const [geteilt, setGeteilt] = useState(false);
-  const [teilStatus, setTeilStatus] = useState<"idle" | "laeuft" | "fehler">("idle");
-  const [teilFehler, setTeilFehler] = useState<string | null>(null);
   /* Blick-Poll */
   const [blickWahl, setBlickWahl] = useState<string | null>(null);
   const [blickCounts, setBlickCounts] = useState<PollCounts>({});
@@ -180,11 +173,9 @@ export default function OrakelDashboard() {
     };
   }, [lokalLesen]);
 
-  /* lokalen Satz + Poll-Wahl laden */
+  /* Poll-Wahl laden */
   useEffect(() => {
     try {
-      setSatz(window.localStorage.getItem(KEY_SATZ) ?? "");
-      setGeteilt(window.localStorage.getItem(KEY_SATZ_GETEILT) === "1");
       setBlickWahl(window.localStorage.getItem(KEY_BLICK));
     } catch {
       /* Privatmodus */
@@ -212,6 +203,12 @@ export default function OrakelDashboard() {
     () => BEREICHE.reduce((s, b) => s + summeMitPrefix(alleSpuren, b.prefix), 0),
     [alleSpuren],
   );
+  /* Gesamtnutzung aller: Summe sämtlicher anonymer Zähler (Knoten, Kanten,
+   * Bilder, Videos, Merkzeichen) — so viele Interaktionen aller zusammen. */
+  const gesamtNutzung = useMemo(
+    () => Object.values(alleSpuren).reduce((s, n) => s + (Number(n) || 0), 0),
+    [alleSpuren],
+  );
   const blickTotal = totalVotes(blickCounts);
 
   /* Aktivitäts-Snapshot fürs Orakel bauen */
@@ -230,49 +227,8 @@ export default function OrakelDashboard() {
       videos: meineVideos,
       ...bew,
       blickWahl,
-      satz: satz.trim() || null,
     };
-  }, [meine, meineGesamt, meineWuensche, meineKombis, meineBilder, meineVideos, bew, blickWahl, satz]);
-
-  /* Aktionen — Satz */
-  function satzAendern(wert: string) {
-    setSatz(wert);
-    try {
-      window.localStorage.setItem(KEY_SATZ, wert);
-    } catch {
-      /* Privatmodus */
-    }
-  }
-
-  async function satzTeilen() {
-    const text = satz.trim();
-    if (text.length < 3) {
-      setTeilFehler("Bitte zuerst einen Satz schreiben (mind. 3 Zeichen).");
-      setTeilStatus("fehler");
-      return;
-    }
-    setTeilStatus("laeuft");
-    setTeilFehler(null);
-    try {
-      const res = await fetch("/api/orakel/aussage", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ text }),
-      });
-      const data = (await res.json().catch(() => null)) as { error?: string } | null;
-      if (!res.ok) throw new Error(data?.error ?? `Fehler ${res.status}`);
-      setGeteilt(true);
-      setTeilStatus("idle");
-      try {
-        window.localStorage.setItem(KEY_SATZ_GETEILT, "1");
-      } catch {
-        /* Privatmodus */
-      }
-    } catch (err) {
-      setTeilFehler(err instanceof Error ? err.message : "Teilen fehlgeschlagen.");
-      setTeilStatus("fehler");
-    }
-  }
+  }, [meine, meineGesamt, meineWuensche, meineKombis, meineBilder, meineVideos, bew, blickWahl]);
 
   /* Aktionen — Blick-Poll */
   function blickWaehlen(id: string) {
@@ -537,52 +493,7 @@ export default function OrakelDashboard() {
 
       <FadenDivider className="mt-xl" />
 
-      {/* 4 — Die offene Frage */}
-      <section className="mt-xl" aria-label="Die offene Frage">
-        <h2 className="text-headline-md text-on-surface">Die offene Frage</h2>
-        <blockquote className="mt-sm border-l-4 border-tertiary pl-md">
-          <p className="text-body-lg italic text-on-surface">
-            «Welche Schablone trägt uns durch die KI-Zeit?»
-          </p>
-        </blockquote>
-        <p className="mt-sm text-body-sm text-on-surface-variant">
-          Antworte in einem Satz. Er bleibt hier auf dem Gerät — bis du ihn
-          ausdrücklich anonym teilst.
-        </p>
-        <textarea
-          value={satz}
-          onChange={(e) => satzAendern(e.target.value)}
-          maxLength={220}
-          rows={3}
-          placeholder="Mein Satz …"
-          className="mt-md w-full rounded-xl border border-outline-variant bg-surface-bright p-md text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:border-tertiary focus:outline-none"
-        />
-        <div className="mt-sm flex flex-wrap items-center gap-sm">
-          <button
-            type="button"
-            onClick={() => void satzTeilen()}
-            disabled={teilStatus === "laeuft" || satz.trim().length < 3}
-            className="inline-flex items-center gap-sm rounded-xl bg-tertiary px-lg py-sm text-label-md text-on-tertiary shadow-sm transition hover:bg-on-tertiary-container disabled:cursor-not-allowed disabled:opacity-40"
-          >
-            <span className="material-symbols-outlined text-[18px]">share</span>
-            {teilStatus === "laeuft" ? "Wird geteilt …" : "Anonym teilen"}
-          </button>
-          <span className="text-label-sm text-on-surface-variant">
-            {satz.length}/220
-            {geteilt && (
-              <>
-                {" · "}
-                <span className="text-tertiary">bereits einmal geteilt ✓</span>
-              </>
-            )}
-          </span>
-        </div>
-        {teilFehler && <p className="mt-sm text-body-sm text-error">{teilFehler}</p>}
-      </section>
-
-      <FadenDivider className="mt-xl" />
-
-      {/* 5 — Das Orakel: KI deutet deine Aktivität */}
+      {/* 4 — Das Orakel: KI deutet deine Aktivität */}
       <section className="mt-xl" aria-label="Das Orakel spricht">
         <h2 className="text-headline-md text-on-surface">Das Orakel spricht</h2>
         <p className="mt-xs text-body-sm text-on-surface-variant">
@@ -590,6 +501,18 @@ export default function OrakelDashboard() {
           Form — und wenn sie dir nicht zusagt, befrage es in einer anderen. Dazu
           schickt dein Browser nur anonyme Kennzahlen (Zähler, Bewertungen), nie
           deinen Namen.
+        </p>
+
+        {/* Gesamtnutzung aller Teilnehmenden */}
+        <p className="mt-md flex items-center gap-sm rounded-xl border border-outline-variant bg-surface-container-low px-md py-sm text-body-sm text-on-surface-variant">
+          <span className="material-symbols-outlined text-[20px] text-tertiary">
+            groups
+          </span>
+          <span>
+            Gesamtnutzung aller Teilnehmenden:{" "}
+            <strong className="text-on-surface">{gesamtNutzung.toLocaleString("de-CH")}</strong>{" "}
+            Interaktionen in diesem Lernset — anonym gezählt, ohne Namen.
+          </span>
         </p>
 
         {/* Stil-Wahl */}
@@ -751,7 +674,7 @@ export default function OrakelDashboard() {
 
       <FadenDivider className="mt-xl" />
 
-      {/* 6 — Rückmeldung: zwei Findmind-Umfragen */}
+      {/* 5 — Rückmeldung: zwei Findmind-Umfragen */}
       <section className="mt-xl" aria-label="Deine Rückmeldung">
         <h2 className="text-headline-md text-on-surface">Deine Rückmeldung</h2>
         <p className="mt-xs text-body-sm text-on-surface-variant">
@@ -783,12 +706,18 @@ export default function OrakelDashboard() {
         </span>
         <p className="text-body-sm text-on-surface-variant">
           <strong className="text-on-surface">So funktioniert das Orakel:</strong>{" "}
-          Deine Wege, Bewertungen und dein Satz bleiben auf diesem Gerät. Nach
-          Firebase geht nur Anonymes — Zähler ohne Namen (+1 pro besuchtem
-          Knoten) und die Sätze, die du ausdrücklich teilst. Fragst du das Orakel,
-          schickt dein Browser ausschliesslich anonyme Kennzahlen an die KI —
-          keinen Namen, keinen Code, keine Einzeltexte. Den Vergleich «du ↔ alle»
-          rechnet dein Browser selbst.
+          Es werden zwei Dinge unterschieden.{" "}
+          <strong className="text-on-surface">Ein anonymer Zähler</strong> zählt
+          bei jedem besuchten Knoten eine 1 dazu — ohne Namen, ohne Code, nicht
+          rückverfolgbar. Diese Zähler ergeben die «Gesamtnutzung aller» und die
+          «alle»-Vergleiche; deine Klicks fliessen dort also mit ein, aber nur als
+          anonyme Summe.{" "}
+          <strong className="text-on-surface">Die Detaildaten</strong> — welche
+          Punkte genau du besucht und wie du sie bewertet hast — bleiben allein in
+          diesem Browser (localStorage) und werden nirgends personenbezogen
+          gespeichert. Fragst du das Orakel, schickt dein Browser der KI
+          ausschliesslich diese anonymen Kennzahlen (Zähler, Bewertungs-Summen) —
+          keinen Namen, keinen Code, keine Einzeltexte.
         </p>
       </div>
     </div>
