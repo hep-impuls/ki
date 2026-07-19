@@ -1,17 +1,20 @@
 # Videoskripte — die drei Impuls-Videos (Lernseite 2)
 
-Je ein kurzes Einstiegs-/Impuls-Video pro Seite, das dort als `VideoImpuls`
-eingebettet ist. Ziel: ~60–90 Sekunden, ruhig, Du-Form, einladend. Pro Skript
-zuerst der **reine Sprechtext** (direkt in HeyGen einfügbar), dann eine
-**Stichwort-Zusammenfassung** der Seiteninhalte als Bild-/Schnitt-Grundlage.
+Je ein Einstiegs-Video pro Seite (eingebettet als `VideoImpuls`). Anders als ein
+Tour-Guide erklären diese Skripte **die Sache selbst**: die Kernidee der Seite,
+was didaktisch vermittelt werden soll und **wo die eigentliche Schwierigkeit
+liegt**. Die Bedienung («tippe an, ziehe») ist Nebensache und wird nur gestreift.
 
-Sobald ein Video produziert und auf YouTube ist: die Video-ID als Prop
-`videoId="…"` an die jeweilige `VideoImpuls`-Komponente hängen (bis dahin zeigt
-sie einen «Video folgt»-Platzhalter).
+Pro Skript: **Kernbotschaft** (der eine Gedanke) · **Sprechtext** (HeyGen-fertig,
+Du-Form, ~90–110 s) · **Was vermittelt wird & wo die Komplexität liegt** (für
+Klarheit und Bild/Schnitt).
 
-> Hinweis: Es gibt zusätzlich das längere Set-Intro
-> `videoskript-lernseite-2-vorhang-auf.md` (~2 Min., Überblick über alle Seiten).
-> Die drei Skripte hier sind kürzer und **seitenspezifisch**.
+Sobald ein Video auf YouTube ist: Video-ID als `videoId="…"` an die jeweilige
+`VideoImpuls`-Komponente hängen (bis dahin «Video folgt»-Platzhalter).
+
+> Daneben gibt es das längere Set-Intro `videoskript-lernseite-2-vorhang-auf.md`
+> (~2 Min., Überblick über alle Seiten). Diese drei hier sind kürzer,
+> seitenspezifisch und inhaltlich.
 
 ---
 
@@ -19,29 +22,39 @@ sie einen «Video folgt»-Platzhalter).
 
 *Platzierung: `lernseite-2/page.tsx`, `spurId="video:hub"`.*
 
+**Kernbotschaft:** KI passt in keine unserer alten Schubladen — sie ist ein
+Gegenüber ohne Bewusstsein, ein Werkzeug, das zurückredet. Darum müssen wir sie
+kennenlernen, statt sie nur zu benutzen oder zu bestaunen.
+
 ### Sprechtext
 
-Die Welt ordnet sich gerade neu: Arbeit, Wissen, Kommunikation — vieles
-verschiebt sich gleichzeitig, und die Zusammenhänge werden komplexer, als eine
-Einzelne sie überblicken kann. Mitten in diesem Umbruch tritt eine Technologie
-auf, die anders ist als alles bisher: Sie spricht unsere Sprache, sie antwortet,
-sie schlägt vor, sie handelt. Ein Werkzeug legt man weg, wenn man es nicht mehr
-braucht — dieses Gegenüber aber begleitet uns, im Beruf wie im Privaten. Man kann
-das eine ganz neue Partnerschaft nennen. Und Partnerschaft heisst nicht blindes
-Vertrauen, sondern das Gegenüber kennen: seine Stärken, seine Grenzen, das Netz,
-an dem es hängt. Genau dazu lädt dieses Modul ein — hinschauen, einordnen, den
-eigenen Umgang finden. In drei Schritten: zuerst tritt die neue Akteurin auf,
-dann ordnet die philosophische Perspektive ein, und am Ende spiegelt dir das
-Orakel deinen eigenen Weg. Fang einfach an.
+Wir stecken Technik gewohnheitsmässig in zwei Schubladen: Werkzeug oder Person.
+Ein Hammer ist ein Werkzeug — er tut nichts, bis wir ihn führen. Ein Mensch ist
+ein Gegenüber — er versteht, entscheidet, verantwortet. Künstliche Intelligenz
+passt in keine der beiden. Sie spricht unsere Sprache, sie schlägt vor, sie
+entwirft, sie handelt — und trotzdem versteht sie nicht, was sie sagt, und trägt
+keine Verantwortung. Genau das macht sie so schwer fassbar: ein Gegenüber ohne
+Bewusstsein, ein Werkzeug, das zurückredet. Dieses Modul nimmt diese
+Zwischenstellung ernst. Statt zuerst zu fragen, ob KI gut oder schlecht ist,
+fragen wir: Was ist das eigentlich, mit dem wir es zu tun haben? Wir nennen es
+eine Partnerschaft — nicht, weil die Maschine ein Partner wäre, sondern weil
+unser Umgang mit ihr einer Beziehung gleicht, die wir gestalten müssen: ihre
+Stärken nutzen, ihre Grenzen kennen und das Netz sehen, an dem sie hängt — Technik,
+Wirtschaft, Recht, Kultur. In drei Schritten: Zuerst tritt die neue Akteurin auf.
+Dann ordnet die Philosophie die Verunsicherung ein, die neue Technik immer
+auslöst. Und am Ende zeigt dir das Orakel, welchen Weg du selbst durch all das
+genommen hast.
 
-### Zusammenfassung der Seite (für Bild/Schnitt)
+### Was vermittelt wird & wo die Komplexität liegt
 
-- Rahmen: Welt in Transformation; KI als neuartiges «Gegenüber» statt blossem
-  Werkzeug (spricht, antwortet, schlägt vor, handelt).
-- Leitbild: «Partnerschaft» = Stärken, Grenzen und Kontext kennen.
-- Drei Themen als Faden: **Vorhang auf** → **Philosophische Perspektive** →
-  **Das Orakel**.
-- B-Roll: der Faden/Knoten-Aufbau der Hub-Seite, das Gewebe-Spiel.
+- **Vermittelt wird** eine Haltung: informiertes Gestalten statt Bestaunen oder
+  blosses Benutzen.
+- **Die Komplexität:** die Zwischenstellung. Unsere Sprache und unsere Intuition
+  haben keine Kategorie für ein Nicht-Menschliches, das an Sprache und
+  Entscheidungen mitwirkt. Wer KI vermenschlicht, überschätzt sie; wer sie als
+  blosses Werkzeug abtut, unterschätzt ihre Wirkung.
+- **B-Roll:** Hammer ↔ Gesprächspartner als Kontrast; der Faden/Knoten-Aufbau der
+  Hub-Seite als Bild fürs «Netz, an dem sie hängt».
 
 ---
 
@@ -49,31 +62,41 @@ Orakel deinen eigenen Weg. Fang einfach an.
 
 *Platzierung: `vorhang-auf/page.tsx`, `spurId="video:vorhang-auf"`.*
 
+**Kernbotschaft:** Die heutige KI ist kein einzelner Geniestreich, sondern das
+Zusammenlaufen alter Fäden — und ihre «Intelligenz» ist statistische
+Mustervervollständigung: mächtig und begrenzt aus demselben Grund.
+
 ### Sprechtext
 
-Vorhang auf. Auf der Bühne steht etwas Neues — und es passt in keine unserer alten
-Schubladen: kein blosses Werkzeug, keine Person. Auf dieser Seite schaust du der
-neuen Akteurin von drei Seiten zu. Zuerst die KI-Story: eine Zeitreise vom antiken
-Traum, Dingen Leben einzuhauchen, über Turings Code-Knacker bis zu ChatGPT — tippe
-die Punkte an, und nach und nach webt sich ein Netz durch die Zeit. Dann die Bilder
-zur KI-Geschichte: Klick eines gross, und die leuchtenden Stellen verraten dir
-Detail um Detail. Weiter zu den Merkmalen: zwölf Eigenschaften machen diese Akteurin
-aus — algorithmisch, lernend, generativ, agentenfähig — und du gewichtest, wie
-deutlich jede ihre Gestalt zeigt. Und schliesslich die KI im Kontext: kein Werkzeug
-steht für sich, Technik, Wirtschaft, Recht und Kultur bilden das Geflecht, in dem
-sie wirkt. Du musst nicht alles anschauen — geh dem nach, was dich neugierig macht.
+Woher kommt diese KI — und was ist sie eigentlich? Die KI-Story zeigt: Sie ist
+keine einzelne Erfindung, sondern das Zusammenlaufen mehrerer alter Fäden. Der
+uralte Traum, tote Materie zu beleben. Die Idee, Denken in Rechenschritte zu
+zerlegen — von den Rechenmaschinen bis zu Turing. Und schliesslich die Statistik:
+Maschinen, die nicht mehr Regel für Regel programmiert werden, sondern aus
+riesigen Datenmengen lernen. Erst als sich diese Fäden verwoben, entstand, was wir
+heute ChatGPT nennen. Und da liegt der oft übersehene Punkt: Die heutige KI
+versteht nicht — sie rechnet Wahrscheinlichkeiten und setzt das nächste
+wahrscheinliche Wort. Sie vervollständigt Muster. Aus genau dieser einen
+Eigenschaft folgt beides: ihre verblüffende Kreativität und ihre Fähigkeit,
+überzeugend Falsches zu behaupten. Die zwölf Merkmale machen das greifbar —
+algorithmisch, datenbasiert, wahrscheinlichkeitsbasiert, generativ, agentenfähig.
+Du gewichtest, wie deutlich jedes die Gestalt dieser Akteurin zeigt, denn die
+Schwierigkeit steckt im Zusammenspiel: Erst zusammen ergeben diese Eigenschaften
+das eigenartige Wesen, das wir vor uns haben. Und weil kein Werkzeug für sich
+steht, kommt zum Schluss der Kontext dazu — dieselbe Technik nützt oder schadet,
+je nachdem, wie Wirtschaft, Recht und Kultur sie einbetten. Kurz: Was hier
+auftritt, ist mächtig, aber nicht magisch. Genau das gilt es zu durchschauen.
 
-### Zusammenfassung der Seite (für Bild/Schnitt)
+### Was vermittelt wird & wo die Komplexität liegt
 
-- **Die KI-Story:** interaktive Zeitreise (antike Automaten → Turing → ChatGPT),
-  Knoten antippbar, verweben sich zu einem Netz.
-- **Bilder zur KI-Geschichte:** Lightbox mit anklickbaren Hotspots.
-- **Merkmale der neuen Akteurin:** 12 Eigenschaften (algorithmisch, datenbasiert,
-  mustererkennend, wahrscheinlichkeitsbasiert, generalisierend, kontextsensitiv,
-  adaptiv, dialoghaft, interaktiv, generativ, multimodal, agentenfähig) —
-  gewichtbar.
-- **Die KI im Kontext:** vier Kontexte (Technologie, Wirtschaft, Recht, Kultur),
-  Achtsamkeit gewichtbar.
+- **Vermittelt wird:** die KI entzaubern, ohne sie zu verharmlosen — präzise
+  benennen, *was für ein* Akteur das ist.
+- **Die Komplexität:** (1) Anthropomorphismus — wir hören «Verstehen», wo eine
+  Maschine Wahrscheinlichkeiten rechnet. (2) Kreativität und Halluzination sind
+  **dieselbe** Eigenschaft, nicht zwei. (3) Ob KI nützt oder schadet, entscheidet
+  nicht die Technik allein, sondern ihr Kontext — Verantwortung ist verteilt.
+- **B-Roll:** die drei zusammenlaufenden Fäden (Mythos/Automat, Rechnen/Turing,
+  Daten/Lernen); ein Merkmal-Geflecht, das sich beim Gewichten schärft.
 
 ---
 
@@ -81,41 +104,49 @@ sie wirkt. Du musst nicht alles anschauen — geh dem nach, was dich neugierig m
 
 *Platzierung: `philosophische-perspektive/page.tsx`, `spurId="video:philosophie"`.*
 
+**Kernbotschaft:** Technische Umbrüche verunsichern seit je — das ist ein
+wiederkehrendes Muster. Philosophie stiftet Orientierung, indem sie die
+Grundfragen neu gewichtet; und die Aufregung um KI reimt sich auf frühere Brüche.
+
 ### Sprechtext
 
-Neue Technik verunsichert — und das ist keine Erfindung der Gegenwart. Immer wenn
-sich die Welt stark verändert hat, geriet auch das Selbstverständnis ins Wanken:
-Was ist der Mensch, was zählt, wie sollen wir leben? Genau hier setzt Philosophie
-an. Sie liefert keine schnellen Antworten, aber Orientierung: Sie fragt nach dem
-Grundsätzlichen und hilft, in der Verunsicherung neue Muster zu finden. Auf dieser
-Seite klärst du zuerst kurz, was Philosophie eigentlich ist und warum gerade jetzt.
-Dann webst du den «Teppich des Wandels»: ein Gewebe aus Entdeckungen, Ereignissen,
-Technologien und Praktiken, deren Punkte du danach bewertest — was kanntest du
-schon, was prägt dein Leben? Und schliesslich gehst du durch acht Epochen, von der
-Antike bis zu Umwelt und KI heute. Zu jeder gibt es Bilder und drei Bausteine:
-die Technologie, die Verunsicherung und die Philosophie, die Halt gab. Bewerte,
-was dich noch heute betrifft.
+Neue Technik verunsichert — und das ist keine Laune der Gegenwart, sondern ein
+Muster, das sich durch die ganze Geschichte zieht. Immer wenn Werkzeuge,
+Entdeckungen oder Ereignisse die Welt umkrempelten, geriet auch das
+Selbstverständnis ins Wanken: Was ist der Mensch? Was können wir wissen? Wie
+sollen wir leben? Genau hier arbeitet die Philosophie. Sie liefert keine schnellen
+Rezepte, sondern Orientierung — sie fragt nach dem Grundsätzlichen und ordnet neu,
+was durcheinandergeraten ist. Manchmal bringt schon eine neue Gewichtung der
+grundlegenden Lebenselemente mehr Klarheit als jede weitere Technik. Der «Teppich
+des Wandels» macht zuerst etwas Wichtiges sichtbar: Geschichte ist nie eine gerade
+Linie. Technologie, Entdeckungen, gesellschaftliche Ereignisse und kulturelle
+Praxen verweben sich — Wandel hat nie nur eine Ursache. Dann gehst du durch acht
+Epochen, von der Antike bis zu Umwelt und KI heute. Jede zeigt dasselbe Dreieck:
+eine Technologie, die Verunsicherung, die sie auslöste, und die Philosophie, die
+Halt gab. Wer dieses Muster einmal erkennt, sieht die eigene Gegenwart mit anderen
+Augen: Die Aufregung um KI reimt sich auf den Buchdruck, auf die
+Industrialisierung. Und darin liegt zugleich die eigentliche Schwierigkeit und der
+Gewinn — abstrakte Gedanken so zu übersetzen, dass sie im eigenen, konkreten Leben
+Orientierung geben.
 
-### Zusammenfassung der Seite (für Bild/Schnitt)
+### Was vermittelt wird & wo die Komplexität liegt
 
-- **Was ist Philosophie — und warum jetzt:** reflexiv, fragt nach dem
-  Grundsätzlichen, stiftet Orientierung in Zeiten der Verunsicherung.
-- **Der Teppich des Wandels:** Vier-Fäden-Gewebe (Entdeckungen, Ereignisse,
-  Technologien, Praktiken); Punkte bewertbar nach «war mir bekannt» und «prägt
-  mein Leben».
-- **Philosophie in Zeiten der Verunsicherung:** 8 Epochen (Antike → Zerbrechen
-  der Ordnung → Renaissance → Aufklärung → Industriemoderne → Zeitalter der
-  Katastrophen → «Ende der Geschichte» → Jetzt: Umwelt & KI), je 2 Kunstwerke
-  (Bildzoom mit Bildstellen) und 3 bewertbare Bausteine (Technologie /
-  Verunsicherung / Philosophie).
+- **Vermittelt wird:** das wiederkehrende Muster «Technologie → Verunsicherung →
+  philosophische Orientierung» erkennen und auf die KI-Gegenwart übertragen.
+- **Die Komplexität:** (1) Kausalität ist ein Gewebe, keine Linie — mehrere Fäden
+  zugleich. (2) Die Gegenwart ist Wiederholung *mit Variation*: vertraut und neu
+  zugleich. (3) Die härteste Übersetzungsleistung: abstrakte Philosophie ins
+  konkrete Alltagshandeln überführen.
+- **B-Roll:** das Vier-Fäden-Gewebe des Teppichs; je Epoche das Dreieck
+  Technik–Verunsicherung–Philosophie; Kunstwerke der Epochen (Bildzoom).
 
 ---
 
 ## Produktionshinweise
 
-- **Ton:** ruhig, freundlich, nicht werblich. Lieber knapp unter der Zielzeit als
-  gehetzt.
+- **Ton:** klar, ruhig, denkend — nicht werblich. Lieber knapp unter der Zielzeit
+  als gehetzt.
 - **Aussprache (HeyGen):** «ChatGPT» → ggf. «Tschätt-Dschi-pi-ti».
 - **Untertitel** einschalten (Barrierefreiheit, viele schauen ohne Ton).
 - **Zahlen aktuell halten:** die Skripte nennen konkrete Zahlen (zwölf Merkmale,
-  vier Kontexte, acht Epochen). Ändern sich Inhalte, hier nachziehen.
+  acht Epochen, vier Fäden/Kontexte). Ändern sich Inhalte, hier nachziehen.
