@@ -1016,9 +1016,9 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
                       loading="lazy"
                       className="max-h-72 w-full object-contain transition-transform duration-500 group-hover:scale-[1.02]"
                     />
-                    <span className="absolute right-2 top-2 flex items-center gap-1 rounded-full bg-inverse-surface/70 px-2 py-0.5 text-label-sm text-inverse-on-surface opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
-                      <span className="material-symbols-outlined text-[15px]">zoom_in</span>
-                      zoomen
+                    <span className="absolute right-2 top-2 flex items-center gap-1 rounded-full bg-inverse-surface/75 px-2 py-1 text-label-sm text-inverse-on-surface shadow-sm transition-transform group-hover:scale-105">
+                      <span className="material-symbols-outlined text-[16px]">zoom_in</span>
+                      Anklicken &amp; Bildstellen entdecken
                     </span>
                   </button>
                   <figcaption className="mt-xs text-body-sm text-on-surface">

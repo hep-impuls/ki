@@ -223,7 +223,7 @@ export default function BildZoom({ images, startIdx, epoch, onClose }: Props) {
     [tour, tourIdx, focusStop, resetView]
   );
 
-  // Tastatur + Scroll-Sperre
+  // Tastatur
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -237,13 +237,21 @@ export default function BildZoom({ images, startIdx, epoch, onClose }: Props) {
       }
     };
     document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [onClose, tourIdx, stepTour, gotoImage, idx]);
+
+  // Body-Scroll sperren, solange offen — und die Scrollposition merken/
+  // wiederherstellen, damit man beim Schliessen NICHT an den Seitenanfang
+  // zurückfällt, sondern bei der Epoche bleibt. Nur einmal (Mount/Unmount).
+  useEffect(() => {
+    const y = window.scrollY;
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => {
-      document.removeEventListener("keydown", onKey);
       document.body.style.overflow = prev;
+      window.scrollTo(0, y);
     };
-  }, [onClose, tourIdx, stepTour, gotoImage, idx]);
+  }, []);
 
   // Mausrad-Zoom (non-passive, um Seiten-Scroll zu verhindern)
   useEffect(() => {
