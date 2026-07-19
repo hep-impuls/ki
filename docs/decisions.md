@@ -10,6 +10,30 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-19 — Orakel-Umbau: deutet die EIGENE Aktivität (3 Stile) + Findmind
+
+**Auftrag Christof:** Das Orakel (Thema 03) wurde stark umgebaut. Es beginnt mit
+einer Erklärung und zeigt die eigene Aktivität im Lernset aus sechs Perspektiven
+(Angeklicktes, Muster/Kombinationen genutzt, Weiterverfolgen-Merkzeichen, was
+relevant war, was ohne Bedeutung blieb, was noch verunsichert) — die ersten drei
+neben den anonymen Werten aller (Spuren-/Kanten-/Wunsch-Zähler), die letzten drei
+aus den lokalen Bewertungen (`gewichtung.ts`, nur auf dem Gerät).
+
+**Neu — persönliches Orakel:** Die KI deutet die *eigene* Aktivität in wenigen
+Sätzen, in einem von drei Stilen (**wissenschaftlich / literarisch /
+fantastisch**). Man kann die Deutung bewerten (zufrieden ja/nein) und eine andere
+Form wählen. **Datenschutz-Änderung:** Fürs Orakel schickt der Browser auf
+Knopfdruck NUR anonyme Kennzahlen (Zähler, Bewertungs-Verteilungen) an die KI —
+keinen Namen, keinen Code, keine Einzeltexte. Neue Route
+`src/app/api/orakel/deutung/route.ts` (POST, `claude-haiku-4-5`, kein Cache, kein
+Speichern). Der frühere Querschnitt-Orakel (Deutung der anonym geteilten Sätze)
+ist damit abgelöst; `api/orakel/querschnitt` bleibt vorerst ungenutzt liegen.
+
+**Findmind:** Zwei Umfragen am Seitenende (1× konkrete Rückmeldung/Fehler melden,
+1× wie gefällt das Lernset). URLs stehen als Platzhalter-Konstanten oben in
+`OrakelDashboard.tsx` (`FINDMIND_FEEDBACK_URL`, `FINDMIND_GEFALLEN_URL`) — leer =
+Hinweis «Link folgt».
+
 ## 2026-07-19 — «Teppich des Wandels» (Naming) + Glossar-Pflicht
 
 **Auftrag Christof:** Das interaktive Vier-Fäden-Gewebe auf der
