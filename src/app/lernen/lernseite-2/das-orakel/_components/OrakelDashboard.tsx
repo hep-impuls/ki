@@ -362,6 +362,34 @@ export default function OrakelDashboard() {
         </p>
       </section>
 
+      {/* Gesamtnutzung aller — direkt nach der Einleitung */}
+      <div className="mt-lg flex flex-wrap items-center gap-x-lg gap-y-sm rounded-xl border border-outline-variant bg-surface-container-low px-md py-md">
+        <span className="flex items-center gap-sm">
+          <span className="material-symbols-outlined text-[24px] text-tertiary">groups</span>
+          <span className="text-label-md text-on-surface-variant">
+            So oft wurde das Lernset schon genutzt
+          </span>
+        </span>
+        <span className="flex items-baseline gap-xs">
+          <strong className="text-headline-sm text-on-surface">
+            {gesamtNutzung.toLocaleString("de-CH")}
+          </strong>
+          <span className="text-body-sm text-on-surface-variant">Interaktionen</span>
+        </span>
+        <span className="flex items-baseline gap-xs">
+          <strong className="text-headline-sm text-on-surface">
+            {blickTotal.toLocaleString("de-CH")}
+          </strong>
+          <span className="text-body-sm text-on-surface-variant">
+            Teilnehmende mit Grundhaltung
+          </span>
+        </span>
+        <span className="w-full text-label-sm text-on-surface-variant">
+          Anonym gezählt, ohne Namen — die Summe aller Klicks aller
+          Teilnehmenden.
+        </span>
+      </div>
+
       {/* Aktivitätsnetz — dein Weg als Konstellation */}
       <AktivitaetsNetz
         className="mt-xl mb-lg"
@@ -517,18 +545,6 @@ export default function OrakelDashboard() {
           Form — und wenn sie dir nicht zusagt, befrage es in einer anderen. Dazu
           schickt dein Browser nur anonyme Kennzahlen (Zähler, Bewertungen), nie
           deinen Namen.
-        </p>
-
-        {/* Gesamtnutzung aller Teilnehmenden */}
-        <p className="mt-md flex items-center gap-sm rounded-xl border border-outline-variant bg-surface-container-low px-md py-sm text-body-sm text-on-surface-variant">
-          <span className="material-symbols-outlined text-[20px] text-tertiary">
-            groups
-          </span>
-          <span>
-            Gesamtnutzung aller Teilnehmenden:{" "}
-            <strong className="text-on-surface">{gesamtNutzung.toLocaleString("de-CH")}</strong>{" "}
-            Interaktionen in diesem Lernset — anonym gezählt, ohne Namen.
-          </span>
         </p>
 
         {/* Stil-Wahl */}
@@ -768,7 +784,12 @@ export default function OrakelDashboard() {
           diesem Browser (localStorage) und werden nirgends personenbezogen
           gespeichert. Fragst du das Orakel, schickt dein Browser der KI
           ausschliesslich diese anonymen Kennzahlen (Zähler, Bewertungs-Summen) —
-          keinen Namen, keinen Code, keine Einzeltexte.
+          keinen Namen, keinen Code, keine Einzeltexte.{" "}
+          <strong className="text-on-surface">Achtung:</strong> Weil diese
+          Detaildaten nur in diesem Browser liegen, gehen sie verloren, wenn du
+          den Browserverlauf bzw. die Website-Daten löschst, im privaten Modus
+          surfst oder das Gerät bzw. den Browser wechselst. Willst du deine
+          Deutung behalten, drucke sie aus.
         </p>
       </div>
 
