@@ -28,7 +28,7 @@ import { leseSpuren, SPUR_EVENT, SPUREN_POLL_ID } from "../../_lib/spuren";
 
 const BEREICHE: { prefix: string; label: string; total: number; href: string }[] = [
   { prefix: "vorhang-auf:story", label: "Die KI-Story", total: 22, href: "/lernen/lernseite-2/vorhang-auf" },
-  { prefix: "vorhang-auf:weisheit", label: "Merkmale der neuen Akteurin", total: 7, href: "/lernen/lernseite-2/vorhang-auf" },
+  { prefix: "vorhang-auf:weisheit", label: "Merkmale der neuen Akteurin", total: 12, href: "/lernen/lernseite-2/vorhang-auf" },
   { prefix: "vorhang-auf:kontext", label: "Die KI im Kontext", total: 12, href: "/lernen/lernseite-2/vorhang-auf" },
   { prefix: "philosophische-perspektive:einstieg", label: "Was ist Philosophie?", total: 4, href: "/lernen/lernseite-2/philosophische-perspektive" },
   { prefix: "philosophische-perspektive:teppich", label: "Der historische Teppich", total: 33, href: "/lernen/lernseite-2/philosophische-perspektive" },

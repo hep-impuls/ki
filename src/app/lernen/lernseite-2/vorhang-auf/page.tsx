@@ -835,20 +835,20 @@ export default function Lernseite2VorhangAuf() {
           Die Merkmale der neuen Akteurin
         </h2>
         <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
-          Was ist da eigentlich aufgetreten? Sieben Eigenschaften — nicht eine
+          Was ist da eigentlich aufgetreten? Zwölf Eigenschaften — nicht eine
           allein, ihre Bündelung macht das Neue aus.{" "}
-          <strong>Deine Aufgabe:</strong> Tippe die sieben Punkte im Geflecht
+          <strong>Deine Aufgabe:</strong> Tippe die zwölf Punkte im Geflecht
           an — jeder wird beschriftet und zeigt unten seine Definition. Tippe
           auch auf die Verbindungslinien: Das loggt die Verbindung ein und
           öffnet gleich beide Enden. Zwischen besuchten Punkten füllen sich
-          die Flächen. Ziel: alle sieben Merkmale offen — dann erscheint unter
+          die Flächen. Ziel: alle zwölf Merkmale offen — dann erscheint unter
           dem Muster das Fazit.
         </p>
         <KnotenLandschaft
           className="mt-lg"
           ariaLabel="Knotenlandschaft: Die Merkmale"
-          hoehe={230}
-          svgKlasse="aspect-[720/310] sm:aspect-[720/230]"
+          hoehe={260}
+          svgKlasse="aspect-[720/350] sm:aspect-[720/260]"
           spurKey="vorhang-auf:weisheit"
           kantenSpurKey="vorhang-auf:kanten-weisheit"
           gewichtung={{
@@ -856,14 +856,62 @@ export default function Lernseite2VorhangAuf() {
             frage: "Macht dieses Merkmal die Gestalt der KI …",
             stufen: ["unkenntlich", "verschwommen", "deutlich"],
           }}
-          einladung="Sieben Merkmale, lose verwoben — tippe die Punkte an oder logge Verbindungen ein. Zwischen besuchten Punkten füllen sich die Flächen; ist das Muster gewoben, erscheint darunter das Fazit. Gewichte in jeder Karte, wie deutlich das Merkmal die Gestalt der KI macht — je mehr «deutlich», desto stärker die Konturen."
-          abschluss="Diese sieben Eigenschaften treffen sich in einem einzigen Gegenüber — und darin liegt das eigentlich Neue: Nicht eine einzelne Fähigkeit, sondern ihre Bündelung macht die KI zu einer Akteurin. Sie spricht, erzeugt, erkennt, lernt, erinnert, handelt und verbindet die Sinne — und wird so zu etwas, dem wir mehr Potenzial zurechnen, auf unser Handeln Einfluss zu nehmen, als je einer Technik zuvor."
+          einladung="Zwölf Merkmale, lose verwoben — tippe die Punkte an oder logge Verbindungen ein. Zwischen besuchten Punkten füllen sich die Flächen; ist das Muster gewoben, erscheint darunter das Fazit. Gewichte in jeder Karte, wie deutlich das Merkmal die Gestalt der KI macht — je mehr «deutlich», desto stärker die Konturen."
+          abschluss="Diese zwölf Eigenschaften treffen sich in einem einzigen Gegenüber — und darin liegt das eigentlich Neue: Nicht eine einzelne Fähigkeit, sondern ihre Bündelung macht die KI zu einer Akteurin. Sie rechnet, lernt aus Daten, erkennt Muster, wettet auf Wahrscheinlichkeiten, überträgt Gelerntes, liest den Kontext, passt sich an, spricht, arbeitet im Wechselspiel, erzeugt, verbindet die Sinne und handelt — und wird so zu etwas, dem wir mehr Potenzial zurechnen, auf unser Handeln Einfluss zu nehmen, als je einer Technik zuvor."
           knoten={[
+            {
+              titel: "algorithmisch",
+              text: "Im Kern arbeitet sie ein Rechenverfahren ab — Schritt für Schritt, ohne Willkür. Jede Antwort ist das Ergebnis von Berechnungen, nicht von Einsicht. Was wie Spontaneität wirkt, ist ausgeführter Algorithmus.",
+              mehr:
+                "Ein Algorithmus ist eine eindeutige Schritt-für-Schritt-Anleitung — das Wort geht auf den Bagdader Gelehrten al-Chwarizmi zurück. Auch das «Lernen» der KI ist ein Algorithmus: einer, der Milliarden Zahlenwerte so lange verstellt, bis die Ausgaben passen. Das erdet jede Rede vom «Denken» der Maschine.",
+            },
+            {
+              titel: "datenbasiert",
+              text: "Ihre Fähigkeiten wachsen aus riesigen Datenmengen, nicht aus einprogrammierten Regeln. Ohne Daten bleibt der beste Algorithmus leer. Darum ist entscheidend, wessen Daten sie gelernt hat — und welche Einseitigkeiten darin stecken.",
+              mehr:
+                "«Die Lernalgorithmen sind die Samen, die Daten der Boden», schreibt der Forscher Pedro Domingos. Ohne riesige Datenmengen bleibt die klügste Methode unfruchtbar. Deshalb dreht sich in der KI alles um Daten — und um die Frage, wessen Daten das sind und welche Verzerrungen in ihnen stecken.",
+            },
+            {
+              titel: "mustererkennend",
+              text: "Sie liest statistische Muster aus Unmengen von Beispielen und wendet sie verlässlich an. Was oft zusammen vorkommt, hält sie für zusammengehörig. Warum etwas passt, versteht sie dabei nicht — sie erkennt, ohne zu begreifen.",
+              mehr:
+                "Mustererkennung wird gern als reine Wahrscheinlichkeitsrechnung abgetan. Katharina Zweig schärft das Bild: Das System leitet aus Daten statistische Muster ab und hat bestimmte Wörter schlicht oft in bestimmten Kontexten gelesen — es erkennt verlässlich, versteht aber nicht, warum. Ihr nüchternes Fazit: Noch seien diese Systeme gar nicht intelligent.",
+            },
+            {
+              titel: "wahrscheinlichkeitsbasiert",
+              text: "Sie rechnet nicht mit Gewissheiten, sondern mit Wahrscheinlichkeiten: Welches Wort folgt am ehesten? Ihre Antworten sind Wetten mit sehr guten Quoten — aber Wetten. Darum kann sie überzeugend klingen und trotzdem falsch liegen.",
+              mehr:
+                "Für jede Fortsetzung berechnet das Modell eine Wahrscheinlichkeitsverteilung über alle möglichen nächsten Wortbausteine und wählt daraus. Eine Prise eingebauter Zufall (die «Temperatur») macht Antworten lebendig — und erklärt, warum dieselbe Frage zweimal verschieden beantwortet wird.",
+            },
+            {
+              titel: "generalisierend",
+              text: "Sie überträgt Gelerntes auf Neues: Auch Sätze, die nie geschrieben wurden, kann sie sinnvoll fortsetzen. Aus Beispielen wird ein allgemeines Muster. Genau das unterscheidet Lernen vom blossen Auswendigwissen.",
+              mehr:
+                "Generalisierung ist das Herz des maschinellen Lernens: Das Modell soll nicht die Trainingsdaten nachplappern («Überanpassung»), sondern die Regelhaftigkeit dahinter erfassen. Wo Generalisierung gelingt, wirkt die KI klug — wo sie übergeneralisiert, entstehen Klischees und Verzerrungen.",
+            },
+            {
+              titel: "kontextsensitiv",
+              text: "Dieselbe Frage — andere Antwort, je nach Zusammenhang. Sie bezieht ein, was vorher gesagt wurde, welche Rolle sie spielen soll, welche Unterlagen vorliegen. Der Kontext ist ihr Arbeitsmaterial.",
+              mehr:
+                "Technisch heisst das Kontextfenster: alles, was das Modell in einem Gespräch «vor Augen» hat — Anweisungen, bisheriger Dialog, mitgegebene Texte. Die Transformer-Architektur gewichtet laufend, welche Teile davon füreinander wichtig sind («Attention»). Wer den Kontext gestaltet, steuert die Antwort — deshalb ist gutes Prompten eine Kunst.",
+            },
+            {
+              titel: "adaptiv",
+              text: "Sie passt sich an — an deinen Ton, deine Beispiele, deine Korrekturen. Aus Rückmeldungen der Nutzenden wird sie laufend nachjustiert. Was du ihr heute zeigst, prägt womöglich ihr Morgen.",
+              mehr:
+                "Anpassung geschieht auf mehreren Ebenen: im Gespräch (sie greift deinen Stil auf), im Feintuning mit menschlichem Feedback (RLHF) und in neuen Modellversionen, in die Nutzungsdaten einfliessen können. Adaptivität macht sie hilfreich — und wirft die Frage auf, wer da eigentlich wen erzieht.",
+            },
             {
               titel: "dialoghaft",
               text: "Man steuert sie mit Alltagssprache — und sie antwortet in Sprache. Das Gespräch selbst ist die Bedienoberfläche: Man fragt, präzisiert, widerspricht, wie bei einem Gegenüber. Keine Menüs, keine Knöpfe — nur Worte.",
               mehr:
                 "Bis vor kurzem musste man Computer in Programmiersprachen anweisen. Sprachmodelle kehren das um: Die Anweisung ist normaler Text — «die heisseste neue Programmiersprache ist Englisch», sagt der KI-Forscher Andrej Karpathy. Das macht die Technik für alle bedienbar, verwischt aber auch die Grenze zwischen Befehl und Gespräch.",
+            },
+            {
+              titel: "interaktiv",
+              text: "Sie wartet nicht auf ein fertiges Werkstück, sondern arbeitet im Wechselspiel: Vorschlag, Rückmeldung, neuer Vorschlag. Man formt das Ergebnis gemeinsam, in Runden. Aus Bedienen wird Zusammenarbeiten.",
+              mehr:
+                "Interaktivität unterscheidet die KI vom klassischen Programm: Statt einer Eingabe und einer Ausgabe entsteht eine Schleife aus Versuchen und Verfeinern. Das verändert die Rolle des Menschen — vom Ausführenden zum Anleitenden, Prüfenden und Verantwortenden des Ergebnisses.",
             },
             {
               titel: "generativ",
@@ -878,28 +926,10 @@ export default function Lernseite2VorhangAuf() {
                 "Frühe Modelle konnten entweder Text oder Bild oder Ton. Multimodale Modelle verbinden diese Kanäle in einem Netz und rücken damit näher an die menschliche Wahrnehmung, die auch nicht in getrennten Sinnen denkt. Ein Foto, eine Skizze, ein gesprochener Satz — alles kann Eingabe sein.",
             },
             {
-              titel: "agentenhaft",
+              titel: "agentenfähig",
               text: "Sie bleibt nicht beim Antworten stehen: Sie zerlegt ein Ziel in Schritte und greift selbständig zu Werkzeugen — Websuche, Programme, Code. Aus dem Antwortgeber wird ein Akteur, der Dinge erledigt. Genau hier verschwimmt die Grenze zwischen Werkzeug und Gegenüber.",
               mehr:
                 "Ein «Agent» ist mehr als ein Antwortgeber: ein Sprachmodell mit Gedächtnis, der Fähigkeit, ein Ziel in Schritte zu zerlegen, und Zugriff auf Werkzeuge — Websuche, Code, andere Programme. Damit handelt die KI eigenständig in der Welt; genau hier verschwimmt die alte Grenze zwischen Werkzeug und Gegenüber.",
-            },
-            {
-              titel: "speicherabhängig",
-              text: "Ihr ganzes Können steckt in gespeicherten Zahlen, den «Gewichten» — wo kein Speicher, da kein Training. Auch im Betrieb braucht sie Gedächtnis: den Kontext des Gesprächs und durchsuchbare Ablagen. Ohne Speichern gäbe es weder Lernen noch Erinnern.",
-              mehr:
-                "Alles, was ein Modell «kann», steckt in Milliarden gespeicherten Zahlen, den Gewichten. Training heisst, diese Werte so lange zu verstellen, bis die Antworten stimmen — ohne Speicher kein Lernen. Und im Betrieb braucht es weiter Speicher: als Kurzzeitgedächtnis (den Kontext) und als durchsuchbare Ablage fürs Langzeitgedächtnis.",
-            },
-            {
-              titel: "datenbasiert",
-              text: "Ihre Fähigkeiten wachsen aus riesigen Datenmengen, nicht aus einprogrammierten Regeln. Ohne Daten bleibt der beste Algorithmus leer. Darum ist entscheidend, wessen Daten sie gelernt hat — und welche Einseitigkeiten darin stecken.",
-              mehr:
-                "«Die Lernalgorithmen sind die Samen, die Daten der Boden», schreibt der Forscher Pedro Domingos. Ohne riesige Datenmengen bleibt die klügste Methode unfruchtbar. Deshalb dreht sich in der KI alles um Daten — und um die Frage, wessen Daten das sind und welche Verzerrungen in ihnen stecken.",
-            },
-            {
-              titel: "mustererkennend",
-              text: "Sie liest statistische Muster aus Unmengen von Beispielen und wendet sie verlässlich an. Was oft zusammen vorkommt, hält sie für zusammengehörig. Warum etwas passt, versteht sie dabei nicht — sie erkennt, ohne zu begreifen.",
-              mehr:
-                "Mustererkennung wird gern als reine Wahrscheinlichkeitsrechnung abgetan. Katharina Zweig schärft das Bild: Das System leitet aus Daten statistische Muster ab und hat bestimmte Wörter schlicht oft in bestimmten Kontexten gelesen — es erkennt verlässlich, versteht aber nicht, warum. Ihr nüchternes Fazit: Noch seien diese Systeme gar nicht intelligent.",
             },
           ]}
           anordnungen={[
@@ -907,33 +937,50 @@ export default function Lernseite2VorhangAuf() {
               id: "geflecht",
               label: "Geflecht",
               pos: [
-                [300, 26],
-                [598, 40],
-                [652, 150],
-                [430, 196],
-                [196, 190],
-                [64, 128],
-                [108, 50],
+                [96, 44],
+                [286, 26],
+                [470, 34],
+                [636, 54],
+                [664, 158],
+                [548, 232],
+                [356, 244],
+                [166, 232],
+                [56, 148],
+                [252, 122],
+                [420, 120],
+                [336, 182],
               ],
               kanten: [
-                { von: 6, zu: 1 },
-                { von: 5, zu: 0 },
-                { von: 0, zu: 3 },
-                { von: 5, zu: 3 },
+                { von: 0, zu: 1 },
                 { von: 1, zu: 2 },
-                { von: 2, zu: 4 },
-                { von: 4, zu: 6 },
-                { von: 3, zu: 1, fein: true },
-                { von: 0, zu: 2, fein: true },
+                { von: 2, zu: 3 },
+                { von: 3, zu: 4 },
+                { von: 4, zu: 5 },
+                { von: 5, zu: 6 },
+                { von: 6, zu: 7 },
+                { von: 7, zu: 8 },
+                { von: 8, zu: 0 },
+                { von: 9, zu: 10 },
+                { von: 10, zu: 11 },
+                { von: 7, zu: 9 },
+                { von: 5, zu: 11 },
+                { von: 2, zu: 10, fein: true },
+                { von: 1, zu: 9, fein: true },
+                { von: 0, zu: 9, fein: true },
               ],
             },
           ]}
           flaechen={[
-            { punkte: [[64, 128], [300, 26], [430, 196]], knoten: [5, 0, 3] },
-            { punkte: [[300, 26], [598, 40], [430, 196]], knoten: [0, 1, 3] },
-            { punkte: [[598, 40], [652, 150], [430, 196]], knoten: [1, 2, 3] },
-            { punkte: [[108, 50], [300, 26], [64, 128]], knoten: [6, 0, 5] },
-            { punkte: [[196, 190], [430, 196], [64, 128]], knoten: [4, 3, 5] },
+            { punkte: [[96, 44], [286, 26], [252, 122]], knoten: [0, 1, 9] },
+            { punkte: [[286, 26], [470, 34], [420, 120]], knoten: [1, 2, 10] },
+            { punkte: [[470, 34], [636, 54], [420, 120]], knoten: [2, 3, 10] },
+            { punkte: [[636, 54], [664, 158], [336, 182]], knoten: [3, 4, 11] },
+            { punkte: [[664, 158], [548, 232], [336, 182]], knoten: [4, 5, 11] },
+            { punkte: [[548, 232], [356, 244], [336, 182]], knoten: [5, 6, 11] },
+            { punkte: [[356, 244], [166, 232], [252, 122]], knoten: [6, 7, 9] },
+            { punkte: [[166, 232], [56, 148], [252, 122]], knoten: [7, 8, 9] },
+            { punkte: [[56, 148], [96, 44], [252, 122]], knoten: [8, 0, 9] },
+            { punkte: [[252, 122], [420, 120], [336, 182]], knoten: [9, 10, 11] },
           ]}
         />
       </section>
