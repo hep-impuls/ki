@@ -10,6 +10,16 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-19 — «Teppich des Wandels» (Naming) + Glossar-Pflicht
+
+**Auftrag Christof:** Das interaktive Vier-Fäden-Gewebe auf der
+Philosophie-Seite heisst **«Der Teppich des Wandels»** (nicht mehr
+«historischer Teppich»). Zudem gilt für die Teppich-Karten: **mindestens zwei
+Glossar-Hover-Begriffe pro Punkt** (Laien-Publikum!) — Fachbegriffe bekommen
+eine Kurzerklärung beim Hovern/Antippen (`_components/Glossar.tsx`, ~70
+Begriffe). Betroffen: `philosophische-perspektive/page.tsx`,
+`_components/HistorienTeppich.tsx`, Orakel-Label.
+
 ## 2026-07-18 — Bilderstrecke neu: KI-Geschichte statt Mythen-Set
 
 **Auftrag Christof:** Bilder auswechseln — Golem und Homunkulus raus (nur

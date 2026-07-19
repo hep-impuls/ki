@@ -119,12 +119,12 @@ export default function Lernseite2PhilosophischePerspektive() {
         />
       </section>
 
-      {/* Interaktives Muster der Seite: der historische Teppich — drei Fäden
-          (Technologie, Entdeckungen, gesellschaftliche Ereignisse), die sich
-          erst durchs Anklicken der Punkte einweben */}
-      <section className="mt-xl max-w-5xl" aria-label="Der historische Teppich">
+      {/* Interaktives Muster der Seite: der Teppich des Wandels — vier Fäden
+          (Technologie, Entdeckungen, gesellschaftliche Ereignisse, kulturelle
+          Praxen), die sich erst durchs Anklicken der Punkte einweben */}
+      <section className="mt-xl max-w-5xl" aria-label="Teppich des Wandels">
         <h2 className="text-headline-lg text-on-surface">
-          Der historische Teppich
+          Der Teppich des Wandels
         </h2>
         <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
           Geschichte verläuft nicht als eine Linie von Epoche zu Epoche. Vier

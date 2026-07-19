@@ -13,8 +13,9 @@ import GewichtungWahl from "./GewichtungWahl";
 import { GlossarText } from "./Glossar";
 
 /**
- * HistorienTeppich — drei Fäden durch die Geschichte: Technologie,
- * Entdeckungen und gesellschaftliche Ereignisse. Die Punkte sind sichtbar;
+ * HistorienTeppich («Teppich des Wandels») — vier Fäden durch die Geschichte:
+ * Technologie, Entdeckungen, gesellschaftliche Ereignisse und kulturelle
+ * Praxen. Die Punkte sind sichtbar;
  * die Fäden weben sich erst durchs Anklicken ein (ein Fadensegment erscheint,
  * sobald beide Endpunkte besucht sind). Die Fäden kreuzen sich zwischendurch,
  * laufen aber auch allein. Karten der besuchten Punkte bleiben unten stehen.
@@ -303,7 +304,7 @@ export default function HistorienTeppich({
   const alleBesucht = besucht.size === n;
 
   return (
-    <section aria-label="Historischer Teppich" className={className}>
+    <section aria-label="Teppich des Wandels" className={className}>
       <div className="mb-sm flex flex-wrap items-center justify-between gap-sm">
         <p className="flex items-center gap-xs text-label-md uppercase tracking-wider text-on-surface-variant">
           <span className="material-symbols-outlined text-[18px] text-tertiary">
@@ -363,7 +364,7 @@ export default function HistorienTeppich({
           preserveAspectRatio="none"
           className="block w-full select-none aspect-[720/430] sm:aspect-[720/300]"
           role="img"
-          aria-label="Historischer Teppich: vier Fäden — Technologie, Entdeckungen, gesellschaftliche Ereignisse und kulturelle Praxen — weben sich durchs Antippen der Punkte ein; zwischen besuchten Punkten füllen sich gemusterte Maschen."
+          aria-label="Teppich des Wandels: vier Fäden — Technologie, Entdeckungen, gesellschaftliche Ereignisse und kulturelle Praxen — weben sich durchs Antippen der Punkte ein; zwischen besuchten Punkten füllen sich gemusterte Maschen."
         >
           {/* Webmuster — 12 leuchtende Farb-/Textur-Kombinationen; jede neue
               Masche bringt die nächste, so wächst die Vielfalt mit dem Füllen */}

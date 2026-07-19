@@ -56,6 +56,106 @@ export const GLOSSAR: Record<string, string> = {
     "Die Chiffriermaschine, mit der die deutsche Wehrmacht ihren Funk verschlüsselte.",
   Container:
     "Genormte Stahlboxen, die weltweiten Warentransport billig und schnell machten.",
+  Platon:
+    "Athener Philosoph (Schüler des Sokrates); seine Dialoge begründen die abendländische Philosophie.",
+  Aristoteles:
+    "Griechischer Philosoph (Schüler Platons); Begründer von Logik und beobachtender Wissenschaft.",
+  Philosophie:
+    "Wörtlich «Liebe zur Weisheit» — das begründende Nachdenken über die Grundfragen.",
+  Völkerwanderung:
+    "Umbruchszeit (4.–6. Jh.), in der germanische Verbände ins Römische Reich zogen.",
+  Augustinus:
+    "Kirchenvater (354–430); verlegte nach dem Fall Roms den Halt nach innen — Glaube und Gewissen.",
+  Mittelalter:
+    "Epoche zwischen Antike und Neuzeit (~500–1500), geprägt von Christentum und Feudalordnung.",
+  Bias: "Systematische Verzerrung — etwa wenn Daten bestimmte Gruppen bevorzugen oder ausblenden.",
+  Flugschriften:
+    "Billige Druckblätter — das schnelle Massenmedium der Reformationszeit.",
+  Algorithmen:
+    "Eindeutige Schritt-für-Schritt-Anleitungen, nach denen Computer arbeiten.",
+  Voltaire:
+    "Französischer Aufklärer (1694–1778), scharfzüngiger Kritiker von Kirche und Autoritäten.",
+  Terror:
+    "Die Schreckensherrschaft 1793/94: Die Revolution liess Tausende unter der Guillotine hinrichten.",
+  Kant: "Immanuel Kant (1724–1804): «Habe Mut, dich deines eigenen Verstandes zu bedienen.»",
+  Radar: "Ortung per Funkwellen — im Zweiten Weltkrieg entscheidend weiterentwickelt.",
+  ENIAC:
+    "Einer der ersten elektronischen Computer (USA, 1945), gebaut für Militärberechnungen.",
+  Colossus:
+    "Britischer Röhrenrechner (1943) zum Knacken deutscher Chiffren — lange geheim gehalten.",
+  Sputnik:
+    "Der erste Satellit im All (Sowjetunion, 1957) — löste im Westen den «Sputnik-Schock» aus.",
+  Ostblock:
+    "Die sozialistischen Staaten unter sowjetischer Führung bis 1989/91.",
+  Digitalisierung:
+    "Die Verlagerung von Information und Abläufen in Computer und Netze.",
+  "World Wide Web":
+    "Das 1991 freigegebene, verlinkte Seitensystem, das das Internet alltagstauglich machte.",
+  Arbeitsteilung:
+    "Aufteilung der Arbeit in spezialisierte Tätigkeiten — Grundlage von Städten und Handel.",
+  Mesopotamien:
+    "Das Zweistromland (im heutigen Irak) — früher Schauplatz von Schrift, Rad und Stadt.",
+  Hochkulturen:
+    "Frühe komplexe Gesellschaften mit Städten, Schrift und Verwaltung.",
+  Keilschrifttafeln:
+    "Tontafeln mit eingedrückten keilförmigen Zeichen — die ältesten Schriftdokumente.",
+  Buchdruck:
+    "Gutenbergs Verfahren (um 1450), Texte mit beweglichen Lettern massenhaft zu vervielfältigen.",
+  Jikji: "Koreanische Schrift von 1377 — das älteste erhaltene Buch aus beweglichen Metalllettern.",
+  Schiesspulver:
+    "In China entwickelte Explosivmischung — veränderte Krieg und Machtverhältnisse weltweit.",
+  Lettern: "Einzelne, bewegliche Druckbuchstaben aus Metall.",
+  Kompass:
+    "Instrument mit Magnetnadel zur Richtungsbestimmung — kam aus China nach Europa.",
+  Automatisierung:
+    "Maschinen übernehmen Abläufe, die vorher Menschen ausführten.",
+  Landflucht: "Massenhafte Abwanderung vom Land in die Städte.",
+  Marx: "Karl Marx (1818–1883): analysierte Kapitalismus und Industriegesellschaft — Verhältnisse sind gemacht, also veränderbar.",
+  Industriemoderne:
+    "Die von Fabrik, Dampfkraft und Stadt geprägte Epoche des 19. Jahrhunderts.",
+  V2: "Deutsche Grossrakete des Zweiten Weltkriegs — als Waffe gebaut, technisch der erste Schritt ins All.",
+  Satelliten:
+    "Künstliche Himmelskörper in der Erdumlaufbahn — für Funk, Navigation, Wetter und Militär.",
+  ChatGPT: "Der 2022 veröffentlichte Chatbot von OpenAI, der KI massentauglich machte.",
+  Expertensysteme:
+    "Frühe KI der 1970er/80er, die Fachwissen in Wenn-dann-Regeln goss.",
+  Eratosthenes:
+    "Griechischer Gelehrter in Alexandria (~276–194 v. Chr.); berechnete den Erdumfang.",
+  Geometrie: "Mathematik der Formen, Flächen und Winkel.",
+  Kolumbus:
+    "Genuesischer Seefahrer in spanischem Dienst; erreichte 1492 Amerika.",
+  "al-Chwarizmi":
+    "Gelehrter in Bagdad (~780–850); aus seinem Namen entstand das Wort «Algorithmus».",
+  Informatik: "Die Wissenschaft der automatischen Informationsverarbeitung.",
+  Kopernikus:
+    "Astronom (1473–1543); setzte die Sonne ins Zentrum des Weltbilds.",
+  Psychoanalyse:
+    "Sigmund Freuds Lehre vom Unbewussten — der Mensch ist «nicht Herr im eigenen Haus».",
+  Evolutionstheorie:
+    "Darwins Erklärung, wie Arten durch Variation und Auslese entstehen.",
+  Atomkern:
+    "Das winzige Zentrum des Atoms; seine Spaltung setzt enorme Energie frei.",
+  Hiroshima:
+    "Japanische Stadt, am 6. August 1945 durch die erste Atombombe zerstört.",
+  "neolithische Revolution":
+    "Der Übergang zu Ackerbau und Sesshaftigkeit — die tiefste Umwälzung der Menschheitsgeschichte.",
+  Eigentum:
+    "Rechtlich anerkannte Verfügung über Dinge — entsteht historisch mit Vorräten und Feldern.",
+  Karawanen: "Handelszüge aus Lasttieren durch Wüsten und Steppen.",
+  "islamische Blütezeit":
+    "Etwa 8.–13. Jahrhundert: Wissenschaft und Kultur der islamischen Welt in voller Blüte.",
+  Trainingsdaten:
+    "Die Beispielsammlungen, aus denen eine KI ihre Muster lernt.",
+  Disputation:
+    "Das geregelte wissenschaftliche Streitgespräch der mittelalterlichen Universität.",
+  institutionalisiert:
+    "Etwas bekommt feste Regeln, Ämter und Dauer — es wird zur Einrichtung.",
+  Öffentlichkeit:
+    "Der Raum, in dem Bürgerinnen und Bürger gemeinsam über Angelegenheiten aller verhandeln.",
+  Lieferketten:
+    "Die weltweiten Stationen, die ein Produkt vom Rohstoff bis in den Laden durchläuft.",
+  Freihandelsabkommen:
+    "Verträge, die Zölle und Handelsschranken zwischen Staaten abbauen.",
 };
 
 function escapeRegExp(s: string): string {
