@@ -19,8 +19,9 @@ export default function KartenAktion({
   mehr,
   wunschId,
 }: {
-  /** Optionaler Vertiefungstext hinter «Mehr lesen». */
-  mehr?: string;
+  /** Optionaler Vertiefungstext hinter «Mehr lesen» (Text oder bereits mit
+   *  Glossar-Begriffen angereicherter Knoten). */
+  mehr?: React.ReactNode;
   /** Spur-ID des Merkzeichens, z.B. "wunsch:vorhang-auf:story:3". */
   wunschId: string;
 }) {

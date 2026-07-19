@@ -67,6 +67,14 @@ export default function Lernseite2PhilosophischePerspektive() {
         </blockquote>
       </header>
 
+      {/* Video-Impuls zum Auftakt — vor «Was ist Philosophie» (YouTube-ID folgt) */}
+      <VideoImpuls
+        className="mt-xl"
+        spurId="video:philosophie"
+        titel="Philosophie als Orientierung"
+        beschreibung="Ein kurzer Input zum Auftakt: Wie hat Philosophie schon mehrfach Orientierung gestiftet, wenn Technik und Ereignisse die Welt verunsicherten?"
+      />
+
       {/* 0 — Einstieg: Was ist Philosophie? (erster Aktivitätsposten) */}
       <section className="mt-xl max-w-4xl" aria-label="Was ist Philosophie?">
         <h2 className="text-headline-lg text-on-surface">
@@ -142,13 +150,13 @@ export default function Lernseite2PhilosophischePerspektive() {
           bewertungen={[
             {
               prefix: "philosophische-perspektive:bekanntheit",
-              frage: "War dir das bekannt?",
-              stufen: ["neu für mich", "schon gehört", "gut gekannt"],
+              frage: "Das war mir bekannt:",
+              stufen: ["gar nicht", "etwas", "gut"],
             },
             {
               prefix: "philosophische-perspektive:relevanz",
-              frage: "Relevant für dein Leben?",
-              stufen: ["wenig", "mittel", "sehr"],
+              frage: "Mein Leben sähe ohne diesen Punkt anders aus:",
+              stufen: ["kaum", "etwas", "stark"],
             },
           ]}
           punkte={[
@@ -187,7 +195,7 @@ export default function Lernseite2PhilosophischePerspektive() {
               kurz: "Kolonialisierung",
               jahr: "ab 1492",
               text: "Mit den neuen Schiffen greifen europäische Mächte über die Ozeane aus: Eroberung, Handel, Sklaverei. Der Reichtum Europas und das Leid ganzer Kontinente hängen am selben Faden.",
-              mehr: "Die Kolonialisierung verband Technologie (Schiffe, Waffen, Kompass), Entdeckung (neue Kontinente aus europäischer Sicht) und Gewaltgeschichte. Ihre Folgen — globale Handelswege, Ausbeutung, kulturelle Dominanz — wirken bis in heutige Debatten über Wissensmacht und kulturellen Bias der KI nach.",
+              mehr: "Die Kolonialisierung verband Technologie (Schiffe, Waffen, Kompass), Entdeckung (neue Kontinente aus europäischer Sicht) und Gewaltgeschichte — sie ist die gewaltsame Seite der frühen Globalisierung. Ihre Folgen — globale Handelswege, Ausbeutung, kulturelle Dominanz — wirken bis in heutige Debatten über Wissensmacht und kulturellen Bias der KI nach.",
             },
             {
               faden: "ereignisse",
@@ -468,7 +476,7 @@ export default function Lernseite2PhilosophischePerspektive() {
               kurz: "Gewürzhandel",
               jahr: "ab ~100 v. Chr.",
               text: "Karawanen und Schiffe verbinden China, Indien, Arabien und Europa: Seide, Pfeffer, Zimt — und mit den Waren reisen Ideen, Techniken und Krankheiten.",
-              mehr: "Handel ist eine kulturelle Praxis, die Welten verknüpft, lange vor der Globalisierung: Papier, Schiesspulver und unsere Ziffern kamen über diese Routen nach Europa. Der Gewürzhandel wurde später zum Hauptmotiv der europäischen Seefahrt — hier kreuzen sich Praxis, Technologie und Ereignis.",
+              mehr: "Handel ist eine kulturelle Praxis, die Welten verknüpft — eine frühe Form der Globalisierung: Papier, Schiesspulver und unsere Ziffern kamen über diese Routen nach Europa. Der Gewürzhandel wurde später zum Hauptmotiv der europäischen Seefahrt — hier kreuzen sich Praxis, Technologie und Ereignis.",
             },
             {
               faden: "praxen",
@@ -508,23 +516,15 @@ export default function Lernseite2PhilosophischePerspektive() {
               x: 668,
               y: 255,
               labelOben: true,
-              titel: "Globalisierung",
-              kurz: "Globalisierung",
+              titel: "Grenzenloser Welthandel",
+              kurz: "Welthandel",
               jahr: "ab 1990",
-              text: "Container, Freihandel und das Internet verflechten die Weltwirtschaft. Waren, Kapital und Information zirkulieren global — Lieferketten spannen sich um den Planeten.",
-              mehr: "Nach dem Ende des Kalten Kriegs beschleunigt sich die Verflechtung dramatisch. Auch die KI ist ein Kind dieser Praxis: global gesammelte Daten, Chips aus Taiwan, Rechenzentren in aller Welt — und weltweit geteilte Antworten.",
+              text: "Container, Freihandelsabkommen und das Internet verflechten die Weltwirtschaft fast grenzenlos: Waren, Kapital und Daten zirkulieren rund um den Planeten. Es ist die jüngste und dichteste Form der Globalisierung.",
+              mehr: "«Globalisierung» zieht sich als roter Faden durch den ganzen Teppich — Gewürzhandel, Kolonialisierung und Weltmission waren frühere Formen davon. Nach dem Ende des Kalten Kriegs erreichte sie eine neue Stufe: weltweite Lieferketten nahezu in Echtzeit. Auch die KI ist ihr Kind — global gesammelte Daten, Chips aus Taiwan, Rechenzentren überall und weltweit geteilte Antworten.",
             },
           ]}
         />
       </section>
-
-      {/* Video-Impuls nach dem Einstiegsmuster — YouTube-ID folgt (Prop videoId) */}
-      <VideoImpuls
-        className="mt-xl"
-        spurId="video:philosophie"
-        titel="Philosophie als Orientierung — fünf Epochen, vier Schablonen"
-        beschreibung="Ein kurzer Input, bevor du in den Zeitstrahl eintauchst: Wie hat Philosophie schon viermal Orientierung gestiftet, wenn Technik die Welt verunsicherte?"
-      />
 
       <section className="mt-xl max-w-3xl">
         <SchablonenZeitstrahl />

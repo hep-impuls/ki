@@ -10,6 +10,7 @@ import {
 } from "../_lib/spuren";
 import KartenAktion from "./KartenAktion";
 import GewichtungWahl from "./GewichtungWahl";
+import { GlossarText } from "./Glossar";
 
 /**
  * HistorienTeppich — drei Fäden durch die Geschichte: Technologie,
@@ -369,12 +370,14 @@ export default function HistorienTeppich({
           <div className="rounded-xl border border-outline-variant bg-surface-container-low p-lg">
             <p className="flex items-start gap-sm text-body-md text-on-surface-variant">
               <span className="material-symbols-outlined text-[20px] text-tertiary">explore</span>
-              So geht es: Im Teppich liegen drei Fäden verborgen — Technologie,
-              Entdeckungen und gesellschaftliche Ereignisse. Tippe einen Punkt
-              an: Seine Geschichte erscheint hier, und sobald zwei benachbarte
-              Punkte desselben Fadens besucht sind, wird das Fadenstück
-              dazwischen sichtbar. Die Fäden kreuzen sich zwischendurch — und
-              laufen auch allein.
+              So geht es: Im Teppich liegen vier Fäden verborgen — Technologie,
+              Entdeckungen, gesellschaftliche Ereignisse und kulturelle Praxen.
+              Tippe einen Punkt an: Seine Geschichte erscheint hier, und sobald
+              zwei benachbarte Punkte desselben Fadens besucht sind, wird das
+              Fadenstück dazwischen sichtbar. Über die Legende oben lassen sich
+              ganze Fäden ein- und ausblenden; erneutes Antippen wählt einen
+              Punkt wieder ab. Die Fäden kreuzen sich zwischendurch — und laufen
+              auch allein.
             </p>
           </div>
         ) : (
@@ -408,7 +411,9 @@ export default function HistorienTeppich({
                           {meta.label}
                         </span>
                       </p>
-                      <p className="mt-xs text-body-md text-on-surface">{p.text}</p>
+                      <p className="mt-xs text-body-md text-on-surface">
+                        <GlossarText text={p.text} />
+                      </p>
                       {p.verunsicherung && (
                         <div className="mt-sm rounded-lg border border-outline-variant bg-surface-container-low p-sm">
                           <p className="flex items-center gap-xs text-label-sm uppercase tracking-wider text-tertiary">
@@ -418,12 +423,12 @@ export default function HistorienTeppich({
                             Verunsicherungs-Stopp
                           </p>
                           <p className="mt-xs text-body-sm text-on-surface-variant">
-                            {p.verunsicherung}
+                            <GlossarText text={p.verunsicherung} />
                           </p>
                         </div>
                       )}
                       <KartenAktion
-                        mehr={p.mehr}
+                        mehr={p.mehr ? <GlossarText text={p.mehr} /> : undefined}
                         wunschId={`wunsch:${wunschKey ?? spurKey}:${idx}`}
                       />
                       {bewertungen.length > 0 && (
