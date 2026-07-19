@@ -534,11 +534,21 @@ export default function Lernseite2PhilosophischePerspektive() {
         </h2>
         <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
           Der Teppich des Wandels hat die Verunsicherungs-Stopps markiert — hier
-          folgt, wie die Philosophie jeweils geantwortet hat. Auffällig: In der
-          westlichen Geschichte kehren dieselben Züge der Verunsicherung immer
-          wieder, nur anders gewichtet — <strong>Beschleunigung</strong> durch
-          Technik, <strong>Verstädterung</strong>, <strong>Automatisierung</strong>{" "}
-          der Arbeit, <strong>Kapitalisierung</strong> des Lebens (was bezahlbar
+          folgt, wie die Philosophie jeweils geantwortet hat. Denn gerade in
+          Zeiten der Verunsicherung braucht es neue Deutungen und
+          Orientierungsmuster — und die liefert, oder erdenkt zumindest, die
+          Philosophie. Sie arbeitet langsam und <strong>reflexiv</strong>, an
+          Grundlagen, die sich nicht ständig ändern. Genau das macht sie
+          wertvoll: Manchmal bringt schon eine <strong>neue Gewichtung
+          grundlegender Lebenselemente</strong> mehr Klarheit als jede neue
+          Technik.
+        </p>
+        <p className="mt-md max-w-4xl text-body-lg text-on-surface-variant">
+          Auffällig: In der westlichen Geschichte kehren dieselben Züge der
+          Verunsicherung immer wieder, nur anders gewichtet —{" "}
+          <strong>Beschleunigung</strong> durch Technik,{" "}
+          <strong>Verstädterung</strong>, <strong>Automatisierung</strong> der
+          Arbeit, <strong>Kapitalisierung</strong> des Lebens (was bezahlbar
           ist, wird aneigenbar), <strong>Individualisierung</strong>,{" "}
           <strong>Naturzerstörung</strong>, dazu die verschobene{" "}
           <strong>Deutungsmacht</strong> durch neue Medien und die{" "}
