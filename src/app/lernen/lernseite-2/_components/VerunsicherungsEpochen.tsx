@@ -51,6 +51,8 @@ interface Epoche {
   epoche: string;
   span: string;
   lead: string;
+  /** Vertiefung im Kopf-Akkordeon «Mehr wissen» — ordnet die Epoche ein. */
+  leadMehr: string;
   bilder: [Bild, Bild];
   technologie: Baustein;
   verunsicherung: Baustein;
@@ -102,7 +104,9 @@ const EPOCHEN: Epoche[] = [
   {
     epoche: "Antike",
     span: "Athen & Rom · ~500 v.–500 n. Chr.",
-    lead: "Zum ersten Mal ordnen sich Menschen nicht über Herkunft und Mythos, sondern über Bürgerrecht, Markt und Argument.",
+    lead: "Zum ersten Mal ordnen sich Menschen nicht über Herkunft und Mythos, sondern über Bürgerrecht, Markt und Argument. In den griechischen Stadtstaaten und der römischen Republik entsteht die Idee, dass Regeln aushandelbar sind und Bürger mitreden. Wissen soll nicht mehr geglaubt, sondern begründet werden — das ist aufregend und beunruhigend zugleich.",
+    leadMehr:
+      "«Antike» meint hier rund tausend Jahre — vom klassischen Athen des 5. Jahrhunderts v. Chr. bis zum Ende des Weströmischen Reiches. In dieser Zeit entstehen zentrale Bausteine unserer Welt: Demokratie und Republik, das geschriebene Recht, die Philosophie, die Geometrie, das Theater. Vieles davon war an Sklaverei und den Ausschluss von Frauen gebunden — die Idee der Gleichheit galt nur einem kleinen Kreis. Und doch stammt von hier die Grundüberzeugung, dass sich die Welt mit dem Verstand ordnen und begründen lässt.",
     bilder: [
       {
         src: "/art/athens.jpg",
@@ -213,7 +217,9 @@ const EPOCHEN: Epoche[] = [
   {
     epoche: "Zerbrechen der Ordnung",
     span: "Spätantike & Mittelalter · ~400–1400",
-    lead: "Rom zerfällt — und mit den Strassen, Städten und Gesetzen wankt die ganze Weltordnung.",
+    lead: "Rom zerfällt — und mit den Strassen, Städten und Gesetzen wankt die ganze Weltordnung. Was tausend Jahre selbstverständlich schien, löst sich auf: Handel schrumpft, Städte leeren sich, Wissen zieht sich in die Klöster zurück. Die Menschen suchen einen neuen Halt — und finden ihn nicht mehr im Reich, sondern im Glauben.",
+    leadMehr:
+      "Der Übergang von der Spätantike ins Mittelalter dauert Jahrhunderte und verläuft nicht überall gleich: Während im Westen die römische Ordnung zerfällt, blühen das oströmische (byzantinische) Reich und wenig später die islamische Welt kulturell auf und bewahren viel antikes Wissen. Im lateinischen Europa wird die Kirche zur wichtigsten Klammer — sie stellt Schrift, Recht, Zeitrechnung und Trost. «Mittelalter» ist ein Sammelbegriff für sehr verschiedene Jahrhunderte, nicht die pauschal «dunkle Zeit», als die es oft dargestellt wird.",
     bilder: [
       {
         src: "/art/rom.jpg",
@@ -310,7 +316,9 @@ const EPOCHEN: Epoche[] = [
   {
     epoche: "Renaissance & Aufbruch",
     span: "~1400–1600",
-    lead: "Neue Welten, neue Medien, neues Geld: Der Mensch rückt sich selbst ins Zentrum — und verliert zugleich seine Mitte im Kosmos.",
+    lead: "Neue Welten, neue Medien, neues Geld: Der Mensch rückt sich selbst ins Zentrum — und verliert zugleich seine Mitte im Kosmos. Die Wiederentdeckung der Antike, die Eroberung Amerikas und der Buchdruck lassen das Selbstbewusstsein wachsen: Der Mensch traut sich zu, die Welt zu vermessen und neu zu gestalten. Gleichzeitig zeigt Kopernikus, dass die Erde nicht der Mittelpunkt ist — Grösse und Kränkung liegen dicht beieinander.",
+    leadMehr:
+      "«Renaissance» heisst «Wiedergeburt» — gemeint war die Rückbesinnung auf Kunst und Wissen der Antike, ausgehend von den reichen Städten Italiens (Florenz, Venedig) ab dem 14. Jahrhundert. Sie ist untrennbar mit dem Humanismus verbunden: der Idee, dass Bildung den Menschen formt. Zugleich ist es die Zeit der Kolonialgewalt, der Hexenverfolgung und der Glaubenskriege — der «Aufbruch» hatte eine sehr dunkle Rückseite. Kunst, Wissenschaft und Kapitalismus nehmen hier gemeinsam Fahrt auf.",
     bilder: [
       {
         src: "/art/bruegel-babel.jpg",
@@ -421,7 +429,9 @@ const EPOCHEN: Epoche[] = [
   {
     epoche: "Aufklärung",
     span: "~1600–1800",
-    lead: "Die Naturwissenschaft entziffert den Himmel, und die Vernunft klopft bei jeder Autorität an: Warum eigentlich?",
+    lead: "Die Naturwissenschaft entziffert den Himmel, und die Vernunft klopft bei jeder Autorität an: Warum eigentlich? Immer mehr Menschen wollen nichts mehr einfach glauben, sondern selbst prüfen — in Wissenschaft, Religion und Politik. Aus diesem Selbstdenken erwachsen die Ideen von Menschenrechten, Gewaltenteilung und Fortschritt, die bis heute unsere Demokratien tragen.",
+    leadMehr:
+      "Die Aufklärung ist eine Bewegung des 17. und 18. Jahrhunderts, getragen von Denkern wie Locke, Voltaire, Rousseau, Diderot und Kant. Ihr Vertrauen in Vernunft und Fortschritt veränderte Europa tiefgreifend und mündete politisch in die Amerikanische und die Französische Revolution. Doch schon Zeitgenossen sahen die Ambivalenz: Dieselbe Vernunft, die befreit, kann auch kühl berechnen und beherrschen — eine Spannung, die bis zu KI und Datenauswertung reicht.",
     bilder: [
       {
         src: "/art/orrery.jpg",
@@ -518,7 +528,9 @@ const EPOCHEN: Epoche[] = [
   {
     epoche: "Industriemoderne",
     span: "~1800–1914",
-    lead: "Die Dampfmaschine pflügt die Gesellschaft um: Millionen ziehen in die Fabrikstädte, Fortschritt und Elend wachsen zusammen.",
+    lead: "Die Dampfmaschine pflügt die Gesellschaft um: Millionen ziehen in die Fabrikstädte, Fortschritt und Elend wachsen zusammen. Innerhalb weniger Generationen verändert sich das Leben radikaler als in tausend Jahren zuvor — Arbeit, Wohnen, Zeit und Familie werden neu geordnet. Der Wohlstand wächst, und mit ihm eine neue Klasse von Lohnarbeitern, die kaum daran teilhat.",
+    leadMehr:
+      "Die Industrialisierung begann um 1780 in England (Textil, Kohle, Eisen) und erfasste im 19. Jahrhundert Kontinentaleuropa und die USA. Sie brachte Eisenbahn, Grossstadt und Weltmarkt — und die «soziale Frage»: Wie geht man mit Massenarmut, Kinderarbeit und Ausbeutung um? Aus dieser Zeit stammen die Gewerkschaften, die ersten Sozialgesetze und die grossen politischen Strömungen (Liberalismus, Sozialismus, Konservatismus), die das 20. Jahrhundert prägten.",
     bilder: [
       {
         src: "/art/eisenwalzwerk.jpg",
@@ -622,7 +634,9 @@ const EPOCHEN: Epoche[] = [
   {
     epoche: "Zeitalter der Katastrophen",
     span: "1914–1970",
-    lead: "Zwei Weltkriege, Völkermord und die Atombombe zertrümmern den Fortschrittsglauben — der Mensch erlebt sich als fähig zur totalen Zerstörung.",
+    lead: "Zwei Weltkriege, Völkermord und die Atombombe zertrümmern den Fortschrittsglauben — der Mensch erlebt sich als fähig zur totalen Zerstörung. Ausgerechnet die technisch fortschrittlichsten Nationen begehen die grössten Verbrechen der Geschichte. Die Gewissheit, dass Wissenschaft und Bildung von selbst zum Guten führen, zerbricht.",
+    leadMehr:
+      "Der Historiker Eric Hobsbawm nannte die Jahre 1914–1991 das «kurze 20. Jahrhundert» und «Zeitalter der Extreme». In wenigen Jahrzehnten drängen sich Erster Weltkrieg, Weltwirtschaftskrise, Faschismus und Stalinismus, Zweiter Weltkrieg, Schoah und Hiroshima; danach der Kalte Krieg mit der ständigen Drohung atomarer Vernichtung. Aus dem Erschrecken über diese Abgründe entstehen die Vereinten Nationen, die Allgemeine Erklärung der Menschenrechte (1948) und der Gedanke, dass es Grenzen geben muss, die keine Macht überschreiten darf.",
     bilder: [
       {
         src: "/art/kirchner-soldat.jpg",
@@ -733,7 +747,9 @@ const EPOCHEN: Epoche[] = [
   {
     epoche: "«Ende der Geschichte»",
     span: "1989–~2015",
-    lead: "Der Kalte Krieg endet, der Markt scheint zu siegen — und im Überfluss der Möglichkeiten geht die Orientierung gerade dann verloren.",
+    lead: "Der Kalte Krieg endet, der Markt scheint zu siegen — und im Überfluss der Möglichkeiten geht die Orientierung gerade dann verloren. Mit dem Fall der Mauer glauben viele, die grossen Konflikte seien vorbei und die liberale Demokratie habe endgültig gewonnen. Doch statt Ruhe kommen Beschleunigung, Vereinzelung und das Gefühl, in lauter Möglichkeiten den Halt zu verlieren.",
+    leadMehr:
+      "Der Ausdruck «Ende der Geschichte» stammt von Francis Fukuyama (1992): Nach dem Zusammenbruch des Ostblocks schien die liberale Marktdemokratie alternativlos. Es folgten Globalisierung, Internet und ein Boom des Individualismus — «Selbstverwirklichung» wurde zum Leitwert. Rückblickend war es keine Ruhephase, sondern die Startrampe der digitalen Umwälzung. Und die These vom Ende der Geschichte gilt spätestens seit den Krisen der 2010er-Jahre (Finanzkrise, Klima, neue Autoritarismen) als widerlegt.",
     bilder: [
       {
         src: "/art/mauerfall.jpg",
@@ -837,7 +853,9 @@ const EPOCHEN: Epoche[] = [
   {
     epoche: "Jetzt: Umwelt & KI",
     span: "heute",
-    lead: "Klimakrise und Künstliche Intelligenz zugleich: Der Individualismus allein trägt nicht mehr — es braucht ein neues Wir.",
+    lead: "Klimakrise und Künstliche Intelligenz zugleich: Der Individualismus allein trägt nicht mehr — es braucht ein neues Wir. Zum ersten Mal sind die Folgen unseres Handelns global und langfristig: Was wir heute tun, entscheidet über das Klima kommender Generationen. Und mit der KI tritt ein Gegenüber auf, das spricht und gestaltet, ohne Mensch zu sein — das zwingt zur Frage, wer eigentlich handelt und wer verantwortlich ist.",
+    leadMehr:
+      "Zwei Umbrüche fallen zusammen: die ökologische Krise (Klima, Artensterben, Ressourcen) und die digitale (KI, Plattformen, Daten). Beide sind planetar und von keinem Land und keinem Einzelnen allein zu lösen. Forschende sprechen vom «Anthropozän» — einem Erdzeitalter, das der Mensch selbst prägt. Die Leitfrage dieser Lernumgebung: Welche Schablone, welches «Wir» trägt uns durch eine Zeit, in der Menschen, Maschinen und Natur untrennbar verflochten sind?",
     bilder: [
       {
         src: "/art/erde_tag.jpg",
@@ -944,6 +962,7 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
   const gesamt = EPOCHEN.length * BAUSTEINE.length;
   const [offen, setOffen] = useState<Set<number>>(new Set());
   const [gelesen, setGelesen] = useState<Set<number>>(new Set());
+  const [leadOffen, setLeadOffen] = useState<Set<number>>(new Set());
   const [zoom, setZoom] = useState<{ ep: number; bild: number } | null>(null);
 
   useEffect(() => {
@@ -997,6 +1016,29 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
               <p className="text-label-sm uppercase tracking-wider text-tertiary">{e.span}</p>
               <h3 className="mt-xs text-headline-sm text-on-surface">{e.epoche}</h3>
               <p className="mt-xs max-w-3xl text-body-md text-on-surface-variant">{e.lead}</p>
+              <button
+                type="button"
+                onClick={() =>
+                  setLeadOffen((prev) => {
+                    const nx = new Set(prev);
+                    if (nx.has(ei)) nx.delete(ei);
+                    else nx.add(ei);
+                    return nx;
+                  })
+                }
+                aria-expanded={leadOffen.has(ei)}
+                className="mt-sm inline-flex items-center gap-xs rounded-full border border-outline-variant bg-surface-bright px-sm py-xs text-label-md text-on-surface-variant transition-colors hover:border-tertiary hover:text-tertiary"
+              >
+                <span className="material-symbols-outlined text-[16px] text-tertiary">
+                  {leadOffen.has(ei) ? "expand_less" : "menu_book"}
+                </span>
+                {leadOffen.has(ei) ? "Weniger" : "Mehr wissen"}
+              </button>
+              {leadOffen.has(ei) && (
+                <p className="animate-frame-in mt-sm max-w-3xl text-body-md leading-relaxed text-on-surface-variant">
+                  <GlossarText text={e.leadMehr} />
+                </p>
+              )}
             </div>
 
             {/* Zwei Kunstwerke — anklicken öffnet den Zoom-Viewer */}

@@ -190,6 +190,12 @@ export const GLOSSAR: Record<string, string> = {
     "Die KI-Architektur von 2017 («Attention»), Grundlage heutiger Sprachmodelle wie ChatGPT.",
   "Newcomen-Maschine":
     "Frühe Dampfmaschine (1712) zum Abpumpen von Grubenwasser — Vorläuferin von Watts Maschine.",
+  Humanismus:
+    "Bildungsbewegung der Renaissance: Der Mensch und seine Formung durch Bildung rücken ins Zentrum.",
+  Gewaltenteilung:
+    "Aufteilung der Staatsmacht in Gesetzgebung, Regierung und Gerichte — zum Schutz vor Machtmissbrauch.",
+  Anthropozän:
+    "Vorgeschlagenes Erdzeitalter, in dem der Mensch die Erde (Klima, Arten, Gestein) prägend verändert.",
 };
 
 function escapeRegExp(s: string): string {
