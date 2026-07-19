@@ -1,0 +1,362 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import {
+  leseSpurenIndices,
+  loescheSpuren,
+  merkeSpur,
+  SPUR_EVENT,
+  zieheSpurenAusCloud,
+} from "../_lib/spuren";
+import KartenAktion from "./KartenAktion";
+
+/**
+ * HistorienTeppich — drei Fäden durch die Geschichte: Technologie,
+ * Entdeckungen und gesellschaftliche Ereignisse. Die Punkte sind sichtbar;
+ * die Fäden weben sich erst durchs Anklicken ein (ein Fadensegment erscheint,
+ * sobald beide Endpunkte besucht sind). Die Fäden kreuzen sich zwischendurch,
+ * laufen aber auch allein. Karten der besuchten Punkte bleiben unten stehen.
+ * Pro Punkt ist ein optionaler «Verunsicherungs-Stopp» vorgesehen
+ * (Feld `verunsicherung` — Inhalte folgen). Nur Theme-Tokens (drei
+ * Token-Farben für die drei Fäden) und Material Symbols.
+ */
+
+export type FadenArt = "technologie" | "entdeckungen" | "ereignisse";
+
+export interface TeppichPunkt {
+  faden: FadenArt;
+  /** Position im 720×260-Gewebe. */
+  x: number;
+  y: number;
+  titel: string;
+  kurz: string;
+  jahr: string;
+  text: string;
+  mehr?: string;
+  /** Verunsicherungs-Stopp — Inhalt folgt in einem weiteren Schritt. */
+  verunsicherung?: string;
+}
+
+const W = 720;
+const H = 260;
+
+const FADEN_META: Record<
+  FadenArt,
+  { label: string; strich: string; punkt: string; chip: string }
+> = {
+  technologie: {
+    label: "Technologie",
+    strich: "stroke-tertiary",
+    punkt: "fill-tertiary",
+    chip: "bg-tertiary",
+  },
+  entdeckungen: {
+    label: "Entdeckungen",
+    strich: "stroke-secondary",
+    punkt: "fill-secondary",
+    chip: "bg-secondary",
+  },
+  ereignisse: {
+    label: "Gesellschaftliche Ereignisse",
+    strich: "stroke-primary",
+    punkt: "fill-primary",
+    chip: "bg-primary",
+  },
+};
+
+/** Weiches Fadensegment zwischen zwei Punkten (horizontal gespannte Kurve). */
+function segmentPfad(a: { x: number; y: number }, b: { x: number; y: number }) {
+  const mx = (a.x + b.x) / 2;
+  return `M${a.x} ${a.y} C${mx} ${a.y}, ${mx} ${b.y}, ${b.x} ${b.y}`;
+}
+
+export default function HistorienTeppich({
+  punkte,
+  spurKey,
+  wunschKey,
+  className = "",
+}: {
+  punkte: TeppichPunkt[];
+  /** Spur-Präfix, z.B. "philosophische-perspektive:teppich". */
+  spurKey: string;
+  wunschKey?: string;
+  className?: string;
+}) {
+  const n = punkte.length;
+  const [besucht, setBesucht] = useState<Set<number>>(new Set());
+  const [reihenfolge, setReihenfolge] = useState<number[]>([]);
+
+  useEffect(() => {
+    function restore() {
+      const idx = leseSpurenIndices(spurKey).filter((i) => i >= 0 && i < n);
+      if (idx.length === 0) return;
+      setBesucht((prev) => {
+        const nx = new Set(prev);
+        idx.forEach((i) => nx.add(i));
+        return nx;
+      });
+      setReihenfolge((prev) => {
+        const fehlend = idx.filter((i) => !prev.includes(i));
+        return fehlend.length ? [...prev, ...fehlend] : prev;
+      });
+    }
+    restore();
+    void zieheSpurenAusCloud();
+    window.addEventListener(SPUR_EVENT, restore);
+    return () => window.removeEventListener(SPUR_EVENT, restore);
+  }, [spurKey, n]);
+
+  function besuche(i: number) {
+    if (besucht.has(i)) return;
+    setBesucht((prev) => new Set(prev).add(i));
+    setReihenfolge((prev) => (prev.includes(i) ? prev : [...prev, i]));
+    merkeSpur(`${spurKey}:${i}`);
+  }
+
+  function zuruecksetzen() {
+    loescheSpuren(spurKey);
+    setBesucht(new Set());
+    setReihenfolge([]);
+  }
+
+  // Fäden: Indizes je Fadenart, nach x sortiert (chronologisch).
+  const faeden = (Object.keys(FADEN_META) as FadenArt[]).map((art) => ({
+    art,
+    idx: punkte
+      .map((p, i) => ({ p, i }))
+      .filter(({ p }) => p.faden === art)
+      .sort((a, b) => a.p.x - b.p.x)
+      .map(({ i }) => i),
+  }));
+
+  const alleBesucht = besucht.size === n;
+
+  return (
+    <section aria-label="Historischer Teppich" className={className}>
+      <div className="mb-sm flex flex-wrap items-center justify-between gap-sm">
+        <p className="flex items-center gap-xs text-label-md uppercase tracking-wider text-on-surface-variant">
+          <span className="material-symbols-outlined text-[18px] text-tertiary">
+            {alleBesucht ? "done_all" : "touch_app"}
+          </span>
+          {besucht.size === 0
+            ? "Tippe die Punkte an — die Fäden weben sich ein"
+            : `${besucht.size} von ${n} Punkten besucht`}
+        </p>
+        {besucht.size > 0 && (
+          <button
+            type="button"
+            onClick={zuruecksetzen}
+            className="inline-flex items-center gap-xs rounded-lg border border-outline-variant bg-surface-bright px-sm py-xs text-label-md text-on-surface-variant transition-colors hover:bg-surface-container hover:text-on-surface"
+          >
+            <span className="material-symbols-outlined text-[16px]">restart_alt</span>
+            Teppich zurücksetzen
+          </button>
+        )}
+      </div>
+
+      {/* Legende der drei Fäden */}
+      <div className="mb-sm flex flex-wrap items-center gap-md">
+        {(Object.keys(FADEN_META) as FadenArt[]).map((art) => (
+          <span
+            key={art}
+            className="flex items-center gap-xs text-label-sm text-on-surface-variant"
+          >
+            <span className={`inline-block h-3 w-3 rounded-full ${FADEN_META[art].chip}`} />
+            {FADEN_META[art].label}
+          </span>
+        ))}
+      </div>
+
+      {/* Der Teppich */}
+      <div className="overflow-hidden rounded-xl border border-outline-variant bg-surface-container-low/60 p-sm sm:p-md">
+        <svg
+          viewBox={`0 0 ${W} ${H}`}
+          preserveAspectRatio="none"
+          className="block w-full select-none aspect-[720/340] sm:aspect-[720/260]"
+          role="img"
+          aria-label="Historischer Teppich: drei Fäden — Technologie, Entdeckungen, gesellschaftliche Ereignisse — weben sich durchs Antippen der Punkte ein."
+        >
+          {/* Kettfäden des Teppichs (feiner Hintergrund) */}
+          {Array.from({ length: 13 }, (_, i) => 40 + i * 53).map((x) => (
+            <line
+              key={`k${x}`}
+              x1={x}
+              y1={16}
+              x2={x}
+              y2={H - 16}
+              strokeWidth="0.6"
+              className="stroke-outline-variant"
+              opacity="0.35"
+            />
+          ))}
+
+          {/* Fadensegmente — erscheinen, wenn beide Endpunkte besucht sind */}
+          {faeden.map(({ art, idx }) =>
+            idx.slice(1).map((bIdx, k) => {
+              const aIdx = idx[k];
+              const sichtbar = besucht.has(aIdx) && besucht.has(bIdx);
+              return (
+                <path
+                  key={`${art}-${k}`}
+                  d={segmentPfad(punkte[aIdx], punkte[bIdx])}
+                  fill="none"
+                  strokeWidth="2.4"
+                  strokeLinecap="round"
+                  className={`${FADEN_META[art].strich} transition-opacity duration-700`}
+                  opacity={sichtbar ? 0.75 : 0}
+                />
+              );
+            }),
+          )}
+
+          {/* Punkte */}
+          {punkte.map((p, i) => {
+            const da = besucht.has(i);
+            const meta = FADEN_META[p.faden];
+            const halb = (p.kurz.length * 5.4) / 2;
+            const labelX = Math.max(halb + 4, Math.min(W - halb - 4, p.x)) - p.x;
+            const labelUnten = p.y < H - 40;
+            return (
+              <g
+                key={i}
+                role="button"
+                tabIndex={0}
+                aria-label={`${p.titel} (${p.jahr}) — antippen zum Lesen`}
+                aria-pressed={da}
+                onClick={() => besuche(i)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    besuche(i);
+                  }
+                }}
+                transform={`translate(${p.x}, ${p.y})`}
+                className="group cursor-pointer outline-none"
+              >
+                <circle cx="0" cy="0" r="16" fill="transparent" />
+                {!da && (
+                  <circle
+                    cx="0"
+                    cy="0"
+                    r="9"
+                    fill="none"
+                    strokeWidth="1"
+                    className={`${meta.strich} animate-ping opacity-30 motion-reduce:hidden`}
+                  />
+                )}
+                {da && (
+                  <circle
+                    cx="0"
+                    cy="0"
+                    r="10"
+                    fill="none"
+                    strokeWidth="1.2"
+                    className={meta.strich}
+                    opacity="0.5"
+                  />
+                )}
+                <circle
+                  cx="0"
+                  cy="0"
+                  r={da ? 6.5 : 5}
+                  className={`${meta.punkt} origin-center [transform-box:fill-box] transition-transform duration-300 group-hover:scale-125 group-focus-visible:scale-125`}
+                  opacity={da ? 1 : 0.75}
+                />
+                <text
+                  x={labelX}
+                  y={labelUnten ? 24 : -16}
+                  textAnchor="middle"
+                  fontSize="10.5"
+                  className={
+                    (da
+                      ? "fill-on-surface font-semibold opacity-100"
+                      : "fill-on-surface-variant opacity-0 group-hover:opacity-80 group-focus-visible:opacity-80") +
+                    " pointer-events-none"
+                  }
+                >
+                  {p.kurz} · {p.jahr}
+                </text>
+              </g>
+            );
+          })}
+        </svg>
+      </div>
+      <p className="mt-xs text-label-sm text-on-surface-variant">
+        Punkt antippen liest die Geschichte und webt den Faden ein — sichtbar
+        wird ein Fadenstück, sobald seine beiden Enden besucht sind.
+      </p>
+
+      {/* Besuchte Punkte — bleiben stehen, in Besuchs-Reihenfolge */}
+      <div aria-live="polite" className="mt-md">
+        {reihenfolge.length === 0 ? (
+          <div className="rounded-xl border border-outline-variant bg-surface-container-low p-lg">
+            <p className="flex items-start gap-sm text-body-md text-on-surface-variant">
+              <span className="material-symbols-outlined text-[20px] text-tertiary">explore</span>
+              So geht es: Im Teppich liegen drei Fäden verborgen — Technologie,
+              Entdeckungen und gesellschaftliche Ereignisse. Tippe einen Punkt
+              an: Seine Geschichte erscheint hier, und sobald zwei benachbarte
+              Punkte desselben Fadens besucht sind, wird das Fadenstück
+              dazwischen sichtbar. Die Fäden kreuzen sich zwischendurch — und
+              laufen auch allein.
+            </p>
+          </div>
+        ) : (
+          <ol className="flex flex-col gap-sm">
+            {reihenfolge.map((idx, pos) => {
+              const p = punkte[idx];
+              const meta = FADEN_META[p.faden];
+              const neuste = pos === reihenfolge.length - 1;
+              return (
+                <li
+                  key={idx}
+                  className={
+                    "rounded-xl border p-md sm:p-lg " +
+                    (neuste
+                      ? "animate-frame-in border-tertiary/50 bg-tertiary-container/25"
+                      : pos % 2 === 0
+                        ? "border-outline-variant bg-surface-bright"
+                        : "border-outline-variant bg-surface-container-low")
+                  }
+                >
+                  <div className="flex items-start gap-md">
+                    <span className="mt-xs flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-tertiary-container text-label-md text-on-tertiary-container">
+                      {pos + 1}
+                    </span>
+                    <div className="min-w-0">
+                      <p className="flex flex-wrap items-baseline gap-x-sm text-body-lg font-medium text-on-surface">
+                        {p.titel}
+                        <span className="text-label-md font-normal text-tertiary">{p.jahr}</span>
+                        <span className="flex items-center gap-xs text-label-sm font-normal text-on-surface-variant">
+                          <span className={`inline-block h-2.5 w-2.5 rounded-full ${meta.chip}`} />
+                          {meta.label}
+                        </span>
+                      </p>
+                      <p className="mt-xs text-body-md text-on-surface">{p.text}</p>
+                      {p.verunsicherung && (
+                        <div className="mt-sm rounded-lg border border-outline-variant bg-surface-container-low p-sm">
+                          <p className="flex items-center gap-xs text-label-sm uppercase tracking-wider text-tertiary">
+                            <span className="material-symbols-outlined text-[16px]">
+                              psychology_alt
+                            </span>
+                            Verunsicherungs-Stopp
+                          </p>
+                          <p className="mt-xs text-body-sm text-on-surface-variant">
+                            {p.verunsicherung}
+                          </p>
+                        </div>
+                      )}
+                      <KartenAktion
+                        mehr={p.mehr}
+                        wunschId={`wunsch:${wunschKey ?? spurKey}:${idx}`}
+                      />
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
+        )}
+      </div>
+    </section>
+  );
+}
