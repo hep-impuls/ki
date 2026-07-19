@@ -13,6 +13,11 @@ import { FadenDivider } from "../../_components/Gewebe";
 import AktivitaetsNetz from "../../_components/AktivitaetsNetz";
 import { leseSpuren, SPUR_EVENT, SPUREN_POLL_ID } from "../../_lib/spuren";
 import { GEWICHT_EVENT, leseGewichtungen } from "../../_lib/gewichtung";
+import {
+  AUSWERTUNG_EVENT,
+  leseAuswertung,
+  type AuswertungEintrag,
+} from "../../_lib/auswertung";
 
 /**
  * Orakel-Dashboard (Thema 03) — «erkenne dich selbst».
@@ -93,14 +98,6 @@ function summeMitPrefix(counts: PollCounts, prefix: string): number {
   );
 }
 
-/* Kombinationen (Kanten) aus den anonymen Zählern zählen. */
-function summeKanten(counts: PollCounts): number {
-  return Object.entries(counts).reduce(
-    (s, [id, n]) => (id.includes(":kanten-") ? s + (Number(n) || 0) : s),
-    0,
-  );
-}
-
 interface OrakelZustand {
   text: string | null;
   status: "idle" | "laedt" | "ok" | "fehler" | "kein-schluessel" | "zu-wenig";
@@ -126,6 +123,8 @@ export default function OrakelDashboard() {
     philoKeinSinn: 0,
     gestaltDeutlich: 0,
   });
+  /* Flächen + Interesse (gemeldet von Teppich & KI-Story) */
+  const [auswertung, setAuswertung] = useState<AuswertungEintrag[]>([]);
   /* alle (anonymer Zähler) */
   const [alleSpuren, setAlleSpuren] = useState<PollCounts>({});
   /* Blick-Poll */
@@ -165,16 +164,19 @@ export default function OrakelDashboard() {
       philoKeinSinn: zaehleStufe(P_PHILO, 2),
       gestaltDeutlich: zaehleStufe(P_GESTALT, 2),
     });
+    setAuswertung(leseAuswertung());
   }, []);
 
   useEffect(() => {
     lokalLesen();
     window.addEventListener(SPUR_EVENT, lokalLesen);
     window.addEventListener(GEWICHT_EVENT, lokalLesen);
+    window.addEventListener(AUSWERTUNG_EVENT, lokalLesen);
     window.addEventListener("storage", lokalLesen);
     return () => {
       window.removeEventListener(SPUR_EVENT, lokalLesen);
       window.removeEventListener(GEWICHT_EVENT, lokalLesen);
+      window.removeEventListener(AUSWERTUNG_EVENT, lokalLesen);
       window.removeEventListener("storage", lokalLesen);
     };
   }, [lokalLesen]);
@@ -226,6 +228,15 @@ export default function OrakelDashboard() {
     [alleSpuren],
   );
   const blickTotal = totalVotes(blickCounts);
+  /* Geknüpfte Flächen (Maschen) über alle Weben-Bereiche (Teppich + KI-Story). */
+  const flaechenGefuellt = useMemo(
+    () => auswertung.reduce((s, a) => s + a.flaechenGefuellt, 0),
+    [auswertung],
+  );
+  const flaechenTotal = useMemo(
+    () => auswertung.reduce((s, a) => s + a.flaechenTotal, 0),
+    [auswertung],
+  );
 
   /* Aktivitäts-Snapshot fürs Orakel bauen */
   const baueAktivitaet = useCallback(() => {
@@ -243,8 +254,25 @@ export default function OrakelDashboard() {
       videos: meineVideos,
       ...bew,
       blickWahl,
+      flaechenGefuellt,
+      flaechenTotal,
+      interessen: auswertung
+        .filter((a) => a.labels.length > 0)
+        .map((a) => ({ bereich: a.bereich, labels: a.labels })),
     };
-  }, [meine, meineGesamt, meineWuensche, meineKombis, meineBilder, meineVideos, bew, blickWahl]);
+  }, [
+    meine,
+    meineGesamt,
+    meineWuensche,
+    meineKombis,
+    meineBilder,
+    meineVideos,
+    bew,
+    blickWahl,
+    flaechenGefuellt,
+    flaechenTotal,
+    auswertung,
+  ]);
 
   /* Aktionen — Blick-Poll */
   function blickWaehlen(id: string) {
@@ -307,13 +335,13 @@ export default function OrakelDashboard() {
       text: `Knoten hast du auf diesem Gerät geöffnet. Alle zusammen waren ${alleGesamt}× unterwegs.`,
     },
     {
-      icon: "hub",
-      titel: "Muster genutzt",
-      wert: `${meineKombis}`,
+      icon: "dashboard",
+      titel: "Flächen geknüpft",
+      wert: `${flaechenGefuellt} / ${flaechenTotal || "–"}`,
       text:
-        meineKombis === 0
-          ? "Du hast die Punkte einzeln erkundet — noch keine Verbindung im Muster eingeloggt."
-          : `Verbindungen hast du im Muster verknüpft. Alle zusammen: ${summeKanten(alleSpuren)}×.`,
+        flaechenTotal === 0
+          ? "Noch keine Fläche geknüpft — besuche im Teppich und in der KI-Story benachbarte Punkte, dann füllen sich Maschen."
+          : `Maschen, die du im Gewebe (Teppich + KI-Story) vollständig geknüpft hast — je mehr benachbarte Punkte du besuchst, desto mehr Flächen entstehen.`,
     },
     {
       icon: "bookmark_added",
@@ -428,6 +456,48 @@ export default function OrakelDashboard() {
           ))}
         </div>
       </section>
+
+      {/* 1b — Was dich besonders interessiert hat (analytisch, aus den
+          tatsächlich gewählten Inhalten) */}
+      {auswertung.some((a) => a.labels.length > 0) && (
+        <section className="mt-xl" aria-label="Was dich besonders interessiert hat">
+          <h2 className="text-headline-md text-on-surface">
+            Was dich besonders interessiert hat
+          </h2>
+          <p className="mt-xs text-body-sm text-on-surface-variant">
+            Die Inhalte, die du ausgewählt hast — die Grundlage, aus der das
+            Orakel weiter unten dein Interesse deutet.
+          </p>
+          <div className="mt-md flex flex-col gap-md">
+            {auswertung
+              .filter((a) => a.labels.length > 0)
+              .map((a) => (
+                <div
+                  key={a.bereich}
+                  className="rounded-xl border border-outline-variant bg-surface-bright p-md"
+                >
+                  <p className="text-label-md uppercase tracking-wider text-tertiary">
+                    {a.bereich}
+                    <span className="ml-sm normal-case tracking-normal text-on-surface-variant">
+                      {a.labels.length}{" "}
+                      {a.labels.length === 1 ? "Inhalt" : "Inhalte"}
+                    </span>
+                  </p>
+                  <div className="mt-sm flex flex-wrap gap-xs">
+                    {a.labels.map((l, i) => (
+                      <span
+                        key={`${l}-${i}`}
+                        className="rounded-full border border-outline-variant bg-surface-container-low px-sm py-xs text-label-sm text-on-surface"
+                      >
+                        {l}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+          </div>
+        </section>
+      )}
 
       {/* 2 — Angeklickte Punkte im Detail (du vs alle) */}
       <section className="mt-xl" aria-label="Angeklickte Punkte im Detail">

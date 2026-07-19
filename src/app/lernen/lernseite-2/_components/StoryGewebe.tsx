@@ -9,6 +9,8 @@ import {
   zieheSpurenAusCloud,
 } from "../_lib/spuren";
 import KartenAktion from "./KartenAktion";
+import { maschen as berechneMaschen, zaehleGefuellt } from "../_lib/flaechen";
+import { melde } from "../_lib/auswertung";
 
 /**
  * StoryGewebe — die KI-Story als flexibles Teil-Gewebe (Vorbild: das
@@ -437,6 +439,34 @@ export default function StoryGewebe({
     return out;
   }, [alle, einfluesse]);
 
+  /** Flächen-Topologie (feste Maschen wie beim «Teppich des Wandels»): über
+   *  ein deterministisches, flächig füllendes Layout trianguliert — so bleibt
+   *  die ZAHL der möglichen Flächen stabil, während die Maschen beim Zeichnen
+   *  den aktuellen (gezogenen) Punktpositionen folgen. */
+  const storyMaschen = useMemo(() => {
+    const cx = 360, cy = 148, rx = 285, ry = 118;
+    const coords = Array.from({ length: n }, (_, i) => {
+      const r = Math.sqrt((i + 0.5) / Math.max(1, n));
+      const ang = i * 2.399963229; // goldener Winkel → gleichmässige Streuung
+      return { x: cx + rx * r * Math.cos(ang), y: cy + ry * r * Math.sin(ang) };
+    });
+    return berechneMaschen(coords);
+  }, [n]);
+
+  // Flächen-Bilanz + gewählte Titel ans Orakel melden.
+  useEffect(() => {
+    if (!spurKey) return;
+    const labels = gewaehltSortiert
+      .map((i) => stationen[i]?.kurz)
+      .filter((s): s is string => Boolean(s));
+    melde(spurKey, {
+      bereich: "Die KI-Story",
+      flaechenGefuellt: zaehleGefuellt(storyMaschen, gewaehlt),
+      flaechenTotal: storyMaschen.length,
+      labels,
+    });
+  }, [gewaehlt, gewaehltSortiert, storyMaschen, spurKey, stationen]);
+
   function punktVon(i: number): SimPunkt {
     let p = simRef.current.get(i);
     if (!p) {
@@ -786,8 +816,32 @@ export default function StoryGewebe({
             onPointerLeave={onUp}
             className="block w-full select-none aspect-[720/400] sm:aspect-[720/300]"
             role="img"
-            aria-label="Teil-Gewebe der gewählten KI-Stationen — Punkte lassen sich ziehen und antippen."
+            aria-label="Teil-Gewebe der gewählten KI-Stationen — Punkte lassen sich ziehen und antippen; zwischen hervorgehobenen Punkten entstehen gefüllte Flächen."
           >
+            {/* Gefüllte Flächen (Maschen): erscheinen, sobald alle drei Ecken
+                hervorgehoben sind — leuchtend wie die Perlen der Story */}
+            {storyMaschen.map((t, i) => {
+              if (!t.every((v) => gewaehlt.has(v))) return null;
+              const farbe = PERLEN_FARBEN[i % PERLEN_FARBEN.length];
+              const pts = t
+                .map((v) => {
+                  const p = punktVon(v);
+                  return `${p.x},${p.y}`;
+                })
+                .join(" ");
+              return (
+                <polygon
+                  key={`m${i}`}
+                  points={pts}
+                  fill={farbe}
+                  fillOpacity={0.16}
+                  stroke={farbe}
+                  strokeOpacity={0.32}
+                  strokeWidth={0.6}
+                  className="transition-opacity duration-500"
+                />
+              );
+            })}
             {kanten.map((k, i) => {
               const a = punktVon(k.a);
               const b = punktVon(k.b);

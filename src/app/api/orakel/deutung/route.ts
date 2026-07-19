@@ -38,6 +38,9 @@ interface Aktivitaet {
   philoKeinSinn: number;
   gestaltDeutlich: number;
   blickWahl: string | null;
+  flaechenGefuellt?: number;
+  flaechenTotal?: number;
+  interessen?: { bereich: string; labels: string[] }[];
 }
 
 const STIL_SYSTEM: Record<Stil, string> = {
@@ -88,10 +91,23 @@ function baueZusammenfassung(a: Aktivitaet): string {
     `Verunsicherungen, die noch heute betreffen: ${a.verunsichertNochHeute}.`,
     `Philosophische Sichtweisen, die heute helfen: ${a.philoHilft}; die keinen Sinn ergeben: ${a.philoKeinSinn}.`,
     `KI-Merkmale, die als «deutlich» gewichtet wurden: ${a.gestaltDeutlich}.`,
+    `Geknüpfte Flächen im Gewebe: ${a.flaechenGefuellt ?? 0} von ${a.flaechenTotal ?? 0}.`,
     a.blickWahl ? `Selbst gewählte Grundhaltung zur KI: ${a.blickWahl}.` : "",
+    ...(a.interessen?.length
+      ? a.interessen.map(
+          (x) => `Ausgewählte Inhalte in «${x.bereich}»: ${x.labels.join(", ")}.`,
+        )
+      : []),
   ];
   return zeilen.filter(Boolean).join("\n");
 }
+
+/** Für alle Stile: die tatsächlich gewählten Inhalte aufgreifen, nichts
+ *  dazuerfinden. */
+const GEMEINSAM =
+  " Sind konkrete «Ausgewählte Inhalte» genannt, greif ein bis drei davon " +
+  "namentlich auf und deute daraus das Interesse der Person — erfinde keine " +
+  "Inhalte, die nicht in der Liste stehen.";
 
 async function deute(stil: Stil, zusammenfassung: string): Promise<string | null> {
   const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -107,7 +123,7 @@ async function deute(stil: Stil, zusammenfassung: string): Promise<string | null
       body: JSON.stringify({
         model: MODELL,
         max_tokens: 350,
-        system: STIL_SYSTEM[stil],
+        system: STIL_SYSTEM[stil] + GEMEINSAM,
         messages: [
           {
             role: "user",

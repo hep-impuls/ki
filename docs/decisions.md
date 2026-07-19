@@ -42,6 +42,32 @@ umgeschrieben/geschärft: klare Trennung zwischen dem **anonymen Zähler** (+1 p
 Knoten, fliesst in «Gesamtnutzung»/«alle», nicht rückverfolgbar) und den
 **Detaildaten** (welche Punkte genau, Bewertungen — bleiben nur im Browser).
 
+## 2026-07-19 — Geknüpfte Flächen (Story + Teppich) + Interessens-Analyse
+
+**Auftrag Christof:** (1) Die KI-Story bildet jetzt — wie der «Teppich des
+Wandels» — **gefüllte Flächen (Maschen)** zwischen hervorgehobenen Punkten. (2)
+Das Orakel-Kästchen «Muster» zeigt neu **«X von Y Flächen geknüpft»** (statt
+Kanten), summiert über Teppich + Story. (3) Neue **analytische
+Interessens-Rückmeldung**: welche Inhalte vor allem gewählt wurden.
+
+**Architektur-Entscheid (programmierung vs. KI):** hybrid. Die Fakten (welche
+Inhalte gewählt, wie viele Flächen) werden **programmatisch** ermittelt — exakt,
+gratis, keine Halluzination. Die **Deutung** dieses Interesses macht die KI, aber
+nur auf Basis der mitgelieferten Fakten (Prompt: «erfinde keine Inhalte, die
+nicht in der Liste stehen»).
+
+- Neue Geometrie-Lib `_lib/flaechen.ts` (Delaunay `trianguliere`, `maschen`,
+  `zaehleGefuellt`) — aus `HistorienTeppich` extrahiert, jetzt geteilt.
+- Neuer Melde-Store `_lib/auswertung.ts`: Teppich & Story **melden** Flächen-
+  Bilanz + gewählte Titel; das Orakel liest sie (kein Datenmodell-Duplikat, kein
+  Cloud-Spiegel — rein lokal wie spuren/gewichtung).
+- KI-Story-Flächen: feste Topologie aus deterministischem Layout (goldener
+  Winkel) → stabile Gesamtzahl; gezeichnet auf den aktuellen (ziehbaren)
+  Punktpositionen. Farben: die leuchtenden Perlen-Farben der Story.
+- Orakel: Flächen-Kachel, neuer Abschnitt «Was dich besonders interessiert hat»
+  (Chips der gewählten Inhalte), und Flächen+Interessen fliessen in den
+  Deutungs-Aufruf (`api/orakel/deutung`).
+
 ## 2026-07-19 — «Teppich des Wandels» (Naming) + Glossar-Pflicht
 
 **Auftrag Christof:** Das interaktive Vier-Fäden-Gewebe auf der
