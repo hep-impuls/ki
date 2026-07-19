@@ -5,7 +5,7 @@ import { Signatur } from "../_components/Gewebe";
 import VideoImpuls from "../_components/VideoImpuls";
 import AkkordeonPosten from "../_components/AkkordeonPosten";
 import HistorienTeppich from "../_components/HistorienTeppich";
-import SchablonenZeitstrahl from "./_components/SchablonenZeitstrahl";
+import VerunsicherungsEpochen from "../_components/VerunsicherungsEpochen";
 
 /**
  * Thema 02 — «Philosophische Perspektive».
@@ -526,8 +526,29 @@ export default function Lernseite2PhilosophischePerspektive() {
         />
       </section>
 
-      <section className="mt-xl max-w-3xl">
-        <SchablonenZeitstrahl />
+      {/* Philosophie in Zeiten der Verunsicherung — acht Epochen, je 2 Bilder
+          und 3 bewertbare Bausteine (Technologie, Verunsicherung, Philosophie) */}
+      <section className="mt-xl max-w-5xl" aria-label="Philosophie in Zeiten der Verunsicherung">
+        <h2 className="text-headline-lg text-on-surface">
+          Philosophie in Zeiten der Verunsicherung
+        </h2>
+        <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
+          Der Teppich des Wandels hat die Verunsicherungs-Stopps markiert — hier
+          folgt, wie die Philosophie jeweils geantwortet hat. Auffällig: In der
+          westlichen Geschichte kehren dieselben Züge der Verunsicherung immer
+          wieder, nur anders gewichtet — <strong>Beschleunigung</strong> durch
+          Technik, <strong>Verstädterung</strong>, <strong>Automatisierung</strong>{" "}
+          der Arbeit, <strong>Kapitalisierung</strong> des Lebens (was bezahlbar
+          ist, wird aneigenbar), <strong>Individualisierung</strong>,{" "}
+          <strong>Naturzerstörung</strong>, dazu die verschobene{" "}
+          <strong>Deutungsmacht</strong> durch neue Medien und die{" "}
+          <strong>Entwertung von Wissen und Können</strong>. Je nach Epoche
+          trifft es andere Menschen besonders hart.{" "}
+          <strong>Deine Aufgabe:</strong> Klappe in jeder Epoche die drei
+          Bausteine auf — Technologie, Verunsicherung, Philosophie —, lies sie
+          einfach erklärt, und bewerte, was dich noch heute betrifft.
+        </p>
+        <VerunsicherungsEpochen className="mt-lg" />
       </section>
     </AppLayout>
   );

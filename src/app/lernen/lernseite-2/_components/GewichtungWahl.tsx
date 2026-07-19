@@ -14,6 +14,7 @@ export default function GewichtungWahl({
   index,
   frage,
   stufen,
+  stapeln = false,
   className = "",
 }: {
   prefix: string;
@@ -22,6 +23,8 @@ export default function GewichtungWahl({
   frage: string;
   /** Genau drei Stufenbezeichnungen, aufsteigend (schwach → stark). */
   stufen: [string, string, string];
+  /** true → Optionen untereinander (für lange Beschriftungen). */
+  stapeln?: boolean;
   className?: string;
 }) {
   const [stufe, setStufe] = useState<number | null>(null);
@@ -40,6 +43,35 @@ export default function GewichtungWahl({
     const neu = stufe === s ? null : s;
     setzeGewichtung(prefix, index, neu);
     setStufe(neu);
+  }
+
+  if (stapeln) {
+    return (
+      <div className={className}>
+        <span className="flex items-center gap-xs text-label-sm text-on-surface-variant">
+          <span className="material-symbols-outlined text-[16px] text-tertiary">tune</span>
+          {frage}
+        </span>
+        <div role="group" aria-label={frage} className="mt-xs flex flex-col gap-xs sm:flex-row sm:flex-wrap">
+          {stufen.map((st, i) => (
+            <button
+              key={i}
+              type="button"
+              onClick={() => waehle(i)}
+              aria-pressed={stufe === i}
+              className={
+                "rounded-lg border px-sm py-xs text-left text-label-sm transition-colors " +
+                (stufe === i
+                  ? "border-tertiary bg-tertiary-container text-on-tertiary-container"
+                  : "border-outline-variant bg-surface-bright text-on-surface-variant hover:bg-surface-container hover:text-on-surface")
+              }
+            >
+              {st}
+            </button>
+          ))}
+        </div>
+      </div>
+    );
   }
 
   return (

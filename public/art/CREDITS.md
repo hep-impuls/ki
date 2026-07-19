@@ -64,6 +64,10 @@ ebenfalls gemeinfrei. Quelle jeweils Wikimedia Commons.
 | `mittelalter_stundenbuch.jpg` | Très Riches Heures (Oktober) | Brüder Limburg | um 1416 | Mittelalter · Bild der Zeit |
 | `orrery.jpg` | A Philosopher Lecturing on the Orrery | Joseph Wright of Derby | um 1766 | Aufklärung · Bild der Zeit (Wissenschaft) |
 | `coalbrookdale.jpg` | Coalbrookdale bei Nacht | Philippe-Jacques de Loutherbourg | 1801 | Industriemoderne · Bild der Zeit |
+| `bruegel-babel.jpg` | Der Turmbau zu Babel (Wien) | Pieter Bruegel d. Ä. | 1563 | Renaissance · Technik-Hybris |
+| `holbein-gesandte.jpg` | Die Gesandten | Hans Holbein d. J. | 1533 | Renaissance · Reichtum/Wissenschaft & Vergänglichkeit (Anamorphose-Totenkopf) |
+| `kirchner-soldat.jpg` | Selbstbildnis als Soldat | Ernst Ludwig Kirchner (†1938) | 1915 | Katastrophenzeit · Zerfall des Menschlichen (WK I) |
+| `nussbaum-judenpass.jpg` | Selbstbildnis mit Judenpass | Felix Nussbaum (†1944) | um 1943 | Katastrophenzeit · Schoah, der verfolgte Mensch |
 
 ## Public Domain (US-Government / NASA)
 
@@ -80,6 +84,7 @@ share-alike). Der Nachweis erscheint in der App in der Quellenzeile des Bildes.
 | Datei | Commons-Datei | Urheber | Lizenz |
 |---|---|---|---|
 | `tamagotchi-foto.jpg` | Gele tamagotchi, objectnr 78041.JPG | Museum Rotterdam | CC BY-SA 3.0 |
+| `mauerfall.jpg` | Bundesarchiv Bild 183-1989-1222-016, Berlin, Grenzöffnung Brandenburger Tor | Bundesarchiv (Fotograf ebd.) | CC BY-SA 3.0 de |
 
 ## Zeitgenössisch (mit Genehmigung)
 
