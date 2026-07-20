@@ -107,7 +107,9 @@ function baueZusammenfassung(a: Aktivitaet): string {
 const GEMEINSAM =
   " Sind konkrete «Ausgewählte Inhalte» genannt, greif ein bis drei davon " +
   "namentlich auf und deute daraus das Interesse der Person — erfinde keine " +
-  "Inhalte, die nicht in der Liste stehen.";
+  "Inhalte, die nicht in der Liste stehen. Sind viele Flächen geknüpft, aber " +
+  "kaum Inhalte ausgewählt, deute das behutsam als «vor allem die Muster " +
+  "bespielt» — spielerisch erkundet, inhaltlich noch offen.";
 
 async function deute(stil: Stil, zusammenfassung: string): Promise<string | null> {
   const apiKey = process.env.ANTHROPIC_API_KEY;

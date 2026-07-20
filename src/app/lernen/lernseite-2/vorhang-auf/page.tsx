@@ -838,11 +838,10 @@ export default function Lernseite2VorhangAuf() {
           Was ist da eigentlich aufgetreten? Zwölf Eigenschaften — nicht eine
           allein, ihre Bündelung macht das Neue aus.{" "}
           <strong>Deine Aufgabe:</strong> Tippe die zwölf Punkte im Geflecht
-          an — jeder wird beschriftet und zeigt unten seine Definition. Tippe
-          auch auf die Verbindungslinien: Das loggt die Verbindung ein und
-          öffnet gleich beide Enden. Zwischen besuchten Punkten füllen sich
-          die Flächen. Ziel: alle zwölf Merkmale offen — dann erscheint unter
-          dem Muster das Fazit.
+          an — jeder wird beschriftet und zeigt unten seine Definition.
+          Zwischen besuchten Punkten füllen sich Flächen; je mehr Punkte du
+          besuchst, desto dichter wird das Gewebe. Ziel: alle zwölf Merkmale
+          offen — dann erscheint unter dem Muster das Fazit.
         </p>
         <KnotenLandschaft
           className="mt-lg"
@@ -850,13 +849,14 @@ export default function Lernseite2VorhangAuf() {
           hoehe={260}
           svgKlasse="aspect-[720/350] sm:aspect-[720/260]"
           spurKey="vorhang-auf:weisheit"
-          kantenSpurKey="vorhang-auf:kanten-weisheit"
+          kantenInteraktiv={false}
+          bereichLabel="Die Merkmale der neuen Akteurin"
           gewichtung={{
             prefix: "vorhang-auf:gestalt",
             frage: "Macht dieses Merkmal die Gestalt der KI …",
             stufen: ["unkenntlich", "verschwommen", "deutlich"],
           }}
-          einladung="Zwölf Merkmale, lose verwoben — tippe die Punkte an oder logge Verbindungen ein. Zwischen besuchten Punkten füllen sich die Flächen; ist das Muster gewoben, erscheint darunter das Fazit. Gewichte in jeder Karte, wie deutlich das Merkmal die Gestalt der KI macht — je mehr «deutlich», desto stärker die Konturen."
+          einladung="Zwölf Merkmale, lose verwoben — tippe die Punkte an. Zwischen besuchten Punkten füllen sich die Flächen; ist das Muster gewoben, erscheint darunter das Fazit. Gewichte in jeder Karte, wie deutlich das Merkmal die Gestalt der KI macht — je mehr «deutlich», desto stärker die Konturen."
           abschluss="Diese zwölf Eigenschaften treffen sich in einem einzigen Gegenüber — und darin liegt das eigentlich Neue: Nicht eine einzelne Fähigkeit, sondern ihre Bündelung macht die KI zu einer Akteurin. Sie rechnet, lernt aus Daten, erkennt Muster, wettet auf Wahrscheinlichkeiten, überträgt Gelerntes, liest den Kontext, passt sich an, spricht, arbeitet im Wechselspiel, erzeugt, verbindet die Sinne und handelt — und wird so zu etwas, dem wir mehr Potenzial zurechnen, auf unser Handeln Einfluss zu nehmen, als je einer Technik zuvor."
           knoten={[
             {

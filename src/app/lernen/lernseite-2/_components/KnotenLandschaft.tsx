@@ -12,6 +12,7 @@ import {
 import KartenAktion from "./KartenAktion";
 import GewichtungWahl from "./GewichtungWahl";
 import { GEWICHT_EVENT, gewichtungsStaerke } from "../_lib/gewichtung";
+import { melde } from "../_lib/auswertung";
 
 /**
  * KnotenLandschaft — die einheitliche Interaktion der Auftakt-Seite:
@@ -206,6 +207,8 @@ export default function KnotenLandschaft({
   wunschKey,
   ariaLabel = "Knotenlandschaft",
   gewichtung,
+  kantenInteraktiv = true,
+  bereichLabel,
 }: {
   knoten: LandKnoten[];
   /** Eine oder mehrere Anordnungen; bei mehreren erscheint ein Umschalter. */
@@ -237,6 +240,11 @@ export default function KnotenLandschaft({
   /** Optional: pro Knoten eine Drei-Stufen-Gewichtung in der Karte; ihre
    *  aggregierte Stärke verstärkt die Konturen des Musters (Gestalt). */
   gewichtung?: { prefix: string; frage: string; stufen: [string, string, string] };
+  /** false → Verbindungslinien sind nur sichtbare Fäden, nicht anklickbar
+   *  (kein Einloggen/Zählen). Der Fokus liegt auf Punkten + Flächen. */
+  kantenInteraktiv?: boolean;
+  /** Wenn gesetzt: Flächen-Bilanz + gewählte Titel ans Orakel melden. */
+  bereichLabel?: string;
 }) {
   const n = knoten.length;
   // Aggregierte Kontur-Stärke (0..1) aus den Gewichtungen — live.
@@ -354,6 +362,23 @@ export default function KnotenLandschaft({
   const offenAnzahl = n - visited.size;
   const mehrereAnordnungen = anordnungen.length > 1;
 
+  // Flächen-Bilanz + gewählte Titel ans Orakel melden (falls bereichLabel).
+  useEffect(() => {
+    if (!bereichLabel) return;
+    const gefuellt = flaechen.filter((f) => f.knoten.every((k) => visited.has(k))).length;
+    const labels = gesammelt
+      .map((i) => knoten[i]?.kurz ?? knoten[i]?.titel)
+      .filter((s): s is string => Boolean(s));
+    melde(spurKey ?? bereichLabel, {
+      bereich: bereichLabel,
+      flaechenGefuellt: gefuellt,
+      flaechenTotal: flaechen.length,
+      labels,
+    });
+    // knoten/flaechen sind stabile Props → nicht in die Deps.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [visited, gesammelt, bereichLabel, spurKey]);
+
   return (
     <section aria-label={ariaLabel} className={className}>
       <div className="mb-sm flex flex-wrap items-center justify-between gap-sm">
@@ -367,7 +392,9 @@ export default function KnotenLandschaft({
             ? `${visited.size} von ${n} Punkten besucht${
                 kantenAktiv.size > 0 ? ` · ${kantenAktiv.size} Verbindungen` : ""
               }`
-            : "Punkte antippen, Verbindungen einloggen"}
+            : kantenInteraktiv
+            ? "Punkte antippen, Verbindungen einloggen"
+            : "Punkte antippen — zwischen ihnen füllen sich Flächen"}
         </p>
         {started && (
           <button
@@ -517,16 +544,30 @@ export default function KnotenLandschaft({
             </text>
           ))}
 
-          {/* Verbindungen — anklicken loggt sie ein und öffnet beide Enden */}
+          {/* Verbindungen — interaktiv: anklicken loggt sie ein und öffnet
+              beide Enden. Nicht-interaktiv: nur sichtbare Fäden im Geflecht. */}
           {anordnung.kanten.map((ka, ki) => {
             const a = anordnung.pos[ka.von];
             const b = anordnung.pos[ka.zu];
             if (!a || !b) return null;
+            const d = kantenPfad(a, b, ka.bogen);
+            if (!kantenInteraktiv) {
+              return (
+                <path
+                  key={`${anordnung.id}-${ki}`}
+                  d={d}
+                  fill="none"
+                  strokeWidth={ka.fein ? 0.9 : 1.25}
+                  className="stroke-outline-variant"
+                  opacity={ka.fein ? 0.6 : 1}
+                />
+              );
+            }
             const key = `${modus}:${ki}`;
             return (
               <Kante
                 key={`${anordnung.id}-${ki}`}
-                d={kantenPfad(a, b, ka.bogen)}
+                d={d}
                 fein={ka.fein}
                 aktiv={kantenAktiv.has(key)}
                 onKlick={() => kanteKlick(ki)}
