@@ -11,10 +11,10 @@ import SeitenNavigation from "../_components/SeitenNavigation";
 /**
  * Thema 02 — «Philosophische Perspektive».
  *
- * Kernstück: der Schablonen-Zeitstrahl (fünf Epochen — Bilder der Zeit,
- * Technische Errungenschaft, Verunsicherung, Philosophische
- * Orientierungshilfe), portiert aus der Sandbox-Werkstatt
- * (/sandbox/philosophie-schablonen, dort jetzt Redirect hierhin).
+ * Drei Schritte: (0) «Was ist Philosophie?» (AkkordeonPosten), (1) «Teppich des
+ * Wandels» (HistorienTeppich — Vier-Fäden-Gewebe), (2) «Philosophie in Zeiten
+ * der Verunsicherung» (VerunsicherungsEpochen — acht Epochen, je Bausteine
+ * Technologie / Verunsicherung / Philosophie).
  */
 
 export default function Lernseite2PhilosophischePerspektive() {
@@ -44,14 +44,17 @@ export default function Lernseite2PhilosophischePerspektive() {
               Philosophische Perspektive
             </h1>
             <p className="mt-sm max-w-3xl text-body-lg text-on-surface-variant">
-              Technische Umbrüche verunsichern — das ist nicht neu. Der
-              Zeitstrahl zeigt fünf Epochen, jede als eigenes Panel: zuerst die
-              Bilder der Zeit, dann drei Bausteine zum Aufklappen —{" "}
-              <strong>Technische Errungenschaft</strong>,{" "}
-              <strong>Verunsicherung</strong> und{" "}
-              <strong>Philosophische Orientierungshilfe</strong>. Sie sind
-              aufeinander bezogen, lassen sich aber auch einzeln lesen. Öffne,
-              was dich interessiert. Und heute, mit KI?
+              Technische Umbrüche verunsichern — das ist nicht neu. Diese Seite
+              geht dem in drei Schritten nach: Zuerst klärst du kurz, was{" "}
+              <strong>Philosophie</strong> überhaupt ist und warum gerade jetzt.
+              Dann webst du den <strong>«Teppich des Wandels»</strong> — ein
+              Gewebe aus Technologien, Entdeckungen, Ereignissen und kulturellen
+              Praxen, das zeigt: Wandel hat nie nur eine Ursache. Und schliesslich
+              gehst du durch <strong>acht Epochen</strong>, von der Antike bis zu
+              Umwelt und KI heute — jede mit einer Technologie, der Verunsicherung,
+              die sie auslöste, und der Philosophie, die Halt gab, als
+              aufklappbare, bewertbare Bausteine. Öffne, was dich interessiert.
+              Und heute, mit KI?
             </p>
           </div>
           <Signatur variante="epochen" className="hidden flex-shrink-0 sm:block" />
@@ -139,7 +142,8 @@ export default function Lernseite2PhilosophischePerspektive() {
           China, Bagdad, Europa — und reicht bis zur KI. Manchmal kreuzen sich
           die Fäden, manchmal laufen sie allein; an einigen Punkten wartet ein{" "}
           <strong>Verunsicherungs-Stopp</strong>, der zur passenden Epoche im
-          Zeitstrahl weiter unten führt. <strong>Deine Aufgabe:</strong> Tippe
+          Abschnitt «Philosophie in Zeiten der Verunsicherung» weiter unten
+          führt. <strong>Deine Aufgabe:</strong> Tippe
           die Punkte an — jeder erzählt seine Geschichte, und Stück für Stück
           webt sich der Teppich. Bewerte in jeder Karte, ob dir der Punkt
           bekannt war und wie relevant er für dein Leben ist. Erneutes Antippen
@@ -172,7 +176,7 @@ export default function Lernseite2PhilosophischePerspektive() {
               text: "Athen verurteilt seinen unbequemsten Frager zum Tod. Der Prozess zeigt eine Stadt in der Krise — zwischen alter Ordnung und neuem Denken.",
               mehr: "Sokrates hatte nichts geschrieben, nur gefragt — und damit Gewissheiten zersetzt. Sein Todesurteil machte ihn zur Gründungsfigur der Philosophie: Platon, sein Schüler, baute auf diesem Schock sein Werk auf.",
               verunsicherung:
-                "Die alte, mythische Ordnung trägt nicht mehr, die Sophisten machen jede Wahrheit verhandelbar — die Antike ist zutiefst verunsichert. Im Zeitstrahl unten zeigt die Epoche der Antike, wie Aristoteles darauf antwortet: beobachten, ordnen, begründen.",
+                "Die alte, mythische Ordnung trägt nicht mehr, die Sophisten machen jede Wahrheit verhandelbar — die Antike ist zutiefst verunsichert. In den Epochen unten zeigt die Antike, wie Aristoteles darauf antwortet: beobachten, ordnen, begründen.",
             },
             {
               faden: "ereignisse",
@@ -185,7 +189,7 @@ export default function Lernseite2PhilosophischePerspektive() {
               text: "Rom wird 410 geplündert, 476 endet das weströmische Reich. Für die Zeitgenossen wankt die Weltordnung selbst.",
               mehr: "Der Zusammenbruch war ein langer Prozess aus Völkerwanderung, Wirtschaftskrise und innerem Zerfall. Wichtig für diese Seite: Aus der Erschütterung entstand eine neue Orientierung, die tausend Jahre trug.",
               verunsicherung:
-                "Mit Rom fällt für die Zeitgenossen die Ordnung der Welt. Im Zeitstrahl unten zeigt die Epoche des Mittelalters, wie Augustinus den Halt vom äusseren Reich nach innen verlegt: Glaube, Gewissen, Erinnerung.",
+                "Mit Rom fällt für die Zeitgenossen die Ordnung der Welt. In den Epochen unten zeigt «Zerbrechen der Ordnung», wie Augustinus den Halt vom äusseren Reich nach innen verlegt: Glaube, Gewissen, Erinnerung.",
             },
             {
               faden: "ereignisse",
@@ -218,7 +222,7 @@ export default function Lernseite2PhilosophischePerspektive() {
               text: "Am Allerheiligentag zerstören Beben, Feuer und Flutwelle die fromme Stadt. Ganz Europa fragt: Wie kann ein gütiger Gott das zulassen?",
               mehr: "Das Beben wurde zum Medienereignis der Aufklärung: Voltaire spottete über den «besten aller Welten»-Optimismus, Kant schrieb drei Abhandlungen über die Ursachen — ein früher Schritt zur wissenschaftlichen Erdbebenkunde.",
               verunsicherung:
-                "Mit der Stadt zerbricht der Glaube an einen gütigen Weltplan. Im Zeitstrahl unten zeigt die Epoche der Aufklärung, wie daraus Kants Zumutung wird: Verlass dich nicht auf Autoritäten — denke selbst.",
+                "Mit der Stadt zerbricht der Glaube an einen gütigen Weltplan. In den Epochen unten zeigt die Aufklärung, wie daraus Kants Zumutung wird: Verlass dich nicht auf Autoritäten — denke selbst.",
             },
             {
               faden: "ereignisse",
@@ -349,7 +353,7 @@ export default function Lernseite2PhilosophischePerspektive() {
               text: "Watts Dampfmaschine setzt erstmals Kraft frei, die nicht von Muskel, Wind oder Wasser stammt. Fabriken, Eisenbahnen und Städte wachsen — die Industrialisierung pflügt die Gesellschaft um.",
               mehr: "Mit der Dampfmaschine beginnt die Automatisierung: Maschinen übernehmen körperliche Arbeit, Menschen wandern in neue Rollen. Die KI setzt diese Linie bei der Kopf- und Sprachaufgabe fort — deshalb lohnt der Vergleich mit den Umbrüchen und Ängsten von damals.",
               verunsicherung:
-                "Die Industrialisierung reisst die alte Gesellschaft auseinander: Landflucht, Kinderarbeit, Elendsquartiere im Schatten der Fabriken — 1848 entlädt sich die Spannung in Revolutionen quer durch Europa. Im Zeitstrahl unten zeigt die Industriemoderne, wie Marx den Umbruch begreift.",
+                "Die Industrialisierung reisst die alte Gesellschaft auseinander: Landflucht, Kinderarbeit, Elendsquartiere im Schatten der Fabriken — 1848 entlädt sich die Spannung in Revolutionen quer durch Europa. In den Epochen unten zeigt die Industriemoderne, wie Marx den Umbruch begreift.",
             },
             {
               faden: "technologie",
@@ -393,7 +397,7 @@ export default function Lernseite2PhilosophischePerspektive() {
               text: "Erfunden wurde die KI nicht 2022: Benannt und erforscht wird sie seit 1956 (Dartmouth-Konferenz). Mit GPT und ChatGPT tritt sie 2022 an die Öffentlichkeit — und wird alltäglich.",
               mehr: "Dazwischen liegen Jahrzehnte von Aufbrüchen und «KI-Wintern»: symbolische KI, Expertensysteme, statistisches Lernen, Deep Learning. 2022 änderte sich nicht die Erfindung, sondern der Zugang — ein Chatfenster machte KI für alle bedienbar. Alle Fäden laufen hier zusammen: die Technologielinie der Automatisierung, die Entdeckungslinie des Weltverstehens, die gesellschaftliche Frage, wer wir neben der Maschine sind — und die Praxen, in denen wir täglich mit ihr umgehen.",
               verunsicherung:
-                "Bilder, Stimmen und Texte lassen sich täuschend echt erzeugen: Was ist noch echt, welche Fähigkeiten lohnen sich noch — und wer hat etwas gemacht: ich, die Maschine, beide? Im Zeitstrahl unten sucht die Epoche «Jetzt» nach der Schablone unserer Zeit.",
+                "Bilder, Stimmen und Texte lassen sich täuschend echt erzeugen: Was ist noch echt, welche Fähigkeiten lohnen sich noch — und wer hat etwas gemacht: ich, die Maschine, beide? In den Epochen unten sucht «Jetzt: Umwelt & KI» nach der Schablone unserer Zeit.",
             },
             /* ── Faden: Entdeckungen ── */
             {
