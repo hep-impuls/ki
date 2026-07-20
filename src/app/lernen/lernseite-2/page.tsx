@@ -64,10 +64,11 @@ export default function Lernseite2Hub() {
         <GewebeSpiel className="mt-lg" />
       </header>
 
-      {/* Video-Impuls zum Einstieg — YouTube-ID folgt (Prop videoId) */}
+      {/* Video-Impuls zum Einstieg */}
       <VideoImpuls
         className="mt-xl"
         spurId="video:hub"
+        videoId="68gqPEFTskA"
         titel="Eine ganz neue Partnerschaft — worum es geht"
         beschreibung="Ein kurzer Einstieg ins Modul: Was ist da aufgetreten, und warum lohnt es sich, genauer hinzuschauen?"
       />
