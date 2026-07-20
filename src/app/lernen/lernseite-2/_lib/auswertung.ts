@@ -76,6 +76,11 @@ export function leseAuswertung(): AuswertungEintrag[] {
   return Object.values(lesen());
 }
 
+/** Wie leseAuswertung, aber mit dem Melde-Schlüssel (z.B. Spur-Präfix). */
+export function leseAuswertungMap(): Record<string, AuswertungEintrag> {
+  return lesen();
+}
+
 /** Geknüpfte Flächen über alle Bereiche — fürs Aktivitätsnetz/Orakel. */
 export function zaehleFlaechen(): { gefuellt: number; total: number } {
   return leseAuswertung().reduce(

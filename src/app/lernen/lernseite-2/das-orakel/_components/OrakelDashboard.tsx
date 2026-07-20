@@ -16,6 +16,7 @@ import { GEWICHT_EVENT, leseGewichtungen } from "../../_lib/gewichtung";
 import {
   AUSWERTUNG_EVENT,
   leseAuswertung,
+  leseAuswertungMap,
   type AuswertungEintrag,
 } from "../../_lib/auswertung";
 
@@ -54,6 +55,97 @@ const BEREICHE: { prefix: string; label: string; total: number; href: string }[]
 ];
 
 const GESAMT_TOTAL = BEREICHE.reduce((s, b) => s + b.total, 0);
+const BILDER_TOTAL = 11; // Bilderstrecke «Bilder zur KI-Geschichte»
+const VIDEO_TOTAL = 3;
+
+/* ── Aufgaben-Konfiguration fürs Pro-Aufgabe-Accordion ─────────────────────
+ * Jede Aufgabe: Spur-Präfix (besuchte Punkte), Total, optional Flächen-
+ * Bereichsschlüssel (aus dem Auswertungs-Store) und Bewertungs-Dimensionen
+ * (aus gewichtung.ts, für die Stufen-Verteilung). */
+interface RatingDim {
+  prefix: string;
+  frage: string;
+  stufen: [string, string, string];
+}
+interface Aufgabe {
+  prefix: string;
+  label: string;
+  href: string;
+  total: number;
+  /** Zähl-Einheit der besuchten Punkte. */
+  einheit?: string;
+  /** Auswertungs-Schlüssel für Flächen (können mehrere sein). */
+  flaechen?: string[];
+  ratings?: RatingDim[];
+  /** true → keine «besucht»-Zeile (z.B. Einstiegsmuster: nur Flächen). */
+  nurFlaechen?: boolean;
+}
+const AUFGABEN_GRUPPEN: { gruppe: string; href: string; items: Aufgabe[] }[] = [
+  {
+    gruppe: "Vorhang auf",
+    href: "/lernen/lernseite-2/vorhang-auf",
+    items: [
+      { prefix: "vorhang-auf:story", label: "Die KI-Story", href: "/lernen/lernseite-2/vorhang-auf", total: 22, einheit: "Stationen", flaechen: ["vorhang-auf:story"] },
+      { prefix: "vorhang-auf:bild", label: "Bilder zur KI-Geschichte", href: "/lernen/lernseite-2/vorhang-auf", total: BILDER_TOTAL, einheit: "Bilder" },
+      {
+        prefix: "vorhang-auf:weisheit",
+        label: "Merkmale der neuen Akteurin",
+        href: "/lernen/lernseite-2/vorhang-auf",
+        total: 12,
+        einheit: "Merkmale",
+        flaechen: ["vorhang-auf:weisheit"],
+        ratings: [{ prefix: "vorhang-auf:gestalt", frage: "Macht die Gestalt der KI", stufen: ["unkenntlich", "verschwommen", "deutlich"] }],
+      },
+      {
+        prefix: "vorhang-auf:kontext",
+        label: "Die KI im Kontext",
+        href: "/lernen/lernseite-2/vorhang-auf",
+        total: 12,
+        einheit: "Aspekte",
+        ratings: [{ prefix: "vorhang-auf:achtsamkeit", frage: "Verdient Achtsamkeit", stufen: ["wenig", "mittel", "viel"] }],
+      },
+      { prefix: "lernseite-2:gewebe", label: "Einstiegsmuster", href: "/lernen/lernseite-2", total: 0, nurFlaechen: true, flaechen: ["lernseite-2:gewebe", "vorhang-auf:gewebe"] },
+    ],
+  },
+  {
+    gruppe: "Philosophische Perspektive",
+    href: "/lernen/lernseite-2/philosophische-perspektive",
+    items: [
+      { prefix: "philosophische-perspektive:einstieg", label: "Was ist Philosophie?", href: "/lernen/lernseite-2/philosophische-perspektive", total: 4, einheit: "Fragen" },
+      {
+        prefix: "philosophische-perspektive:teppich",
+        label: "Der Teppich des Wandels",
+        href: "/lernen/lernseite-2/philosophische-perspektive",
+        total: 33,
+        einheit: "Punkte",
+        flaechen: ["philosophische-perspektive:teppich"],
+        ratings: [
+          { prefix: "philosophische-perspektive:bekanntheit", frage: "War mir bekannt", stufen: ["gar nicht", "etwas", "gut"] },
+          { prefix: "philosophische-perspektive:relevanz", frage: "Mein Leben ohne diesen Punkt", stufen: ["kaum", "etwas", "stark"] },
+        ],
+      },
+      {
+        prefix: "philosophische-perspektive:epochen",
+        label: "Philosophie in Zeiten der Verunsicherung",
+        href: "/lernen/lernseite-2/philosophische-perspektive",
+        total: 24,
+        einheit: "Bausteine",
+        ratings: [
+          { prefix: "philosophische-perspektive:technikwert", frage: "Diese Technologie", stufen: ["bin froh", "keine Bedeutung", "nie einführen"] },
+          { prefix: "philosophische-perspektive:verunsicherung-heute", frage: "Diese Verunsicherung", stufen: ["noch heute", "ein wenig", "gar nicht"] },
+          { prefix: "philosophische-perspektive:philo-hilft", frage: "Diese Sichtweise", stufen: ["hilft heute", "neu für mich", "kein Sinn"] },
+        ],
+      },
+    ],
+  },
+  {
+    gruppe: "Das Orakel",
+    href: "/lernen/lernseite-2/das-orakel",
+    items: [
+      { prefix: "video:", label: "Video-Impulse", href: "/lernen/lernseite-2", total: VIDEO_TOTAL, einheit: "Videos" },
+    ],
+  },
+];
 
 /* ── Bewertungs-Präfixe (lokal, aus gewichtung.ts) ────────────────────────── */
 
@@ -125,6 +217,10 @@ export default function OrakelDashboard() {
   });
   /* Flächen + Interesse (gemeldet von Teppich & KI-Story) */
   const [auswertung, setAuswertung] = useState<AuswertungEintrag[]>([]);
+  /* alle Spur-IDs (roh) + Flächen-Map keyed — fürs Pro-Aufgabe-Accordion */
+  const [spurIds, setSpurIds] = useState<string[]>([]);
+  const [ausMap, setAusMap] = useState<Record<string, AuswertungEintrag>>({});
+  const [offeneAufgabe, setOffeneAufgabe] = useState<Set<string>>(new Set());
   /* alle (anonymer Zähler) */
   const [alleSpuren, setAlleSpuren] = useState<PollCounts>({});
   /* Blick-Poll */
@@ -152,6 +248,7 @@ export default function OrakelDashboard() {
       proBereich[b.prefix] = spuren.filter((s) => s.id.startsWith(b.prefix)).length;
     }
     setMeine(proBereich);
+    setSpurIds(spuren.map((s) => s.id));
     setMeineWuensche(spuren.filter((s) => s.id.startsWith("wunsch:")).length);
     setMeineKombis(spuren.filter((s) => s.id.includes(":kanten-")).length);
     setMeineBilder(spuren.filter((s) => s.id.includes(":bild")).length);
@@ -167,6 +264,7 @@ export default function OrakelDashboard() {
       gestaltDeutlich: zaehleStufe(P_GESTALT, 2),
     });
     setAuswertung(leseAuswertung());
+    setAusMap(leseAuswertungMap());
   }, []);
 
   useEffect(() => {
@@ -369,7 +467,19 @@ export default function OrakelDashboard() {
       text:
         flaechenTotal === 0
           ? "Noch keine Fläche geknüpft — besuche im Teppich und in der KI-Story benachbarte Punkte, dann füllen sich Maschen."
-          : `Maschen, die du im Gewebe (Teppich + KI-Story) vollständig geknüpft hast — je mehr benachbarte Punkte du besuchst, desto mehr Flächen entstehen.`,
+          : `Maschen, die du in den Geweben (Teppich, KI-Story, Merkmale, Muster) vollständig geknüpft hast — je mehr benachbarte Punkte du besuchst, desto mehr Flächen entstehen.`,
+    },
+    {
+      icon: "imagesmode",
+      titel: "Bilder angeschaut",
+      wert: `${meineBilder} / ${BILDER_TOTAL}`,
+      text: "Bilder der Strecke «Bilder zur KI-Geschichte», die du im Anschauungsmodus geöffnet hast.",
+    },
+    {
+      icon: "smart_display",
+      titel: "Videos geschaut",
+      wert: `${meineVideos} / ${VIDEO_TOTAL}`,
+      text: "Video-Impulse, die du bis zu Ende angeschaut hast.",
     },
     {
       icon: "bookmark_added",
@@ -399,6 +509,35 @@ export default function OrakelDashboard() {
       text: `Verunsicherungen aus den Epochen, die dich bis heute betreffen. KI-Merkmale, die dir «deutlich» wurden: ${bew.gestaltDeutlich}.`,
     },
   ];
+
+  /* ── Helfer fürs Pro-Aufgabe-Accordion ────────────────────────────────── */
+  const zaehleSpurPrefix = (prefix: string) =>
+    spurIds.filter((id) => id.startsWith(prefix)).length;
+  const flaechenVon = (keys?: string[]) =>
+    (keys ?? []).reduce(
+      (acc, k) => ({
+        g: acc.g + (ausMap[k]?.flaechenGefuellt ?? 0),
+        t: acc.t + (ausMap[k]?.flaechenTotal ?? 0),
+      }),
+      { g: 0, t: 0 },
+    );
+  const ratingVerteilung = (prefix: string): [number, number, number] => {
+    const m = leseGewichtungen(prefix);
+    const v: [number, number, number] = [0, 0, 0];
+    for (const s of Object.values(m)) if (s >= 0 && s <= 2) v[s]++;
+    return v;
+  };
+  const aufgabeAktiv = (a: Aufgabe) =>
+    (a.nurFlaechen ? 0 : zaehleSpurPrefix(a.prefix)) +
+    flaechenVon(a.flaechen).g +
+    (a.ratings ?? []).reduce((s, r) => s + ratingVerteilung(r.prefix).reduce((x, y) => x + y, 0), 0);
+  const toggleAufgabe = (p: string) =>
+    setOffeneAufgabe((prev) => {
+      const nx = new Set(prev);
+      if (nx.has(p)) nx.delete(p);
+      else nx.add(p);
+      return nx;
+    });
 
   return (
     <div className="max-w-3xl">
@@ -460,9 +599,9 @@ export default function OrakelDashboard() {
           Perspektiven auf deine Aktivität
         </h2>
         <p className="mt-xs text-body-sm text-on-surface-variant">
-          Sechs Blickwinkel auf deinen Weg. Die ersten drei stehen neben den
-          anonymen Zahlen aller; die letzten drei entstehen aus deinen eigenen
-          Bewertungen und bleiben auf diesem Gerät.
+          Der Gesamtüberblick über deinen Weg. Die Zähler (Punkte, Flächen,
+          Bilder, Videos) messen dein Tun; die letzten drei entstehen aus deinen
+          eigenen Bewertungen. Weiter unten dann alles pro Aufgabe.
         </p>
         <div className="mt-md grid grid-cols-1 gap-md sm:grid-cols-2 lg:grid-cols-3">
           {perspektiven.map((p) => (
@@ -603,47 +742,126 @@ export default function OrakelDashboard() {
         </section>
       )}
 
-      {/* 2 — Angeklickte Punkte im Detail (du vs alle) */}
-      <section className="mt-xl" aria-label="Angeklickte Punkte im Detail">
+      {/* 2 — Deine Aktivität pro Aufgabe (aufklappbar) */}
+      <section className="mt-xl" aria-label="Deine Aktivität pro Aufgabe">
         <h2 className="text-headline-md text-on-surface">
-          Deine Spur durchs Gewebe
+          Deine Aktivität pro Aufgabe
         </h2>
         <p className="mt-xs text-body-sm text-on-surface-variant">
-          {meineGesamt} von {GESAMT_TOTAL} Knoten hast du besucht — daneben, wie
-          oft alle zusammen dort waren. Tippe einen Bereich an, um dorthin
-          zurückzukehren.
+          {meineGesamt} von {GESAMT_TOTAL} Knoten besucht — hier aufgeschlüsselt
+          nach Aufgabe. Tippe eine Aufgabe an, um Details zu sehen (besuchte
+          Punkte neben den anonymen Zahlen aller, geknüpfte Flächen, deine
+          Bewertungen).
         </p>
-        <div className="mt-md overflow-hidden rounded-xl border border-outline-variant bg-surface-bright">
-          {BEREICHE.map((b, i) => {
-            const mein = meine[b.prefix] ?? 0;
-            const alle = summeMitPrefix(alleSpuren, b.prefix);
-            const anteil = Math.min(1, mein / b.total);
-            return (
-              <a
-                key={b.prefix}
-                href={b.href}
-                className={
-                  "block p-md transition-colors hover:bg-surface-container-low" +
-                  (i > 0 ? " border-t border-outline-variant" : "")
-                }
-              >
-                <div className="flex items-baseline justify-between gap-md">
-                  <span className="text-body-sm font-semibold text-on-surface">
-                    {b.label}
-                  </span>
-                  <span className="flex-shrink-0 text-label-sm text-on-surface-variant">
-                    du {mein}/{b.total} · alle {alle}×
-                  </span>
-                </div>
-                <div className="mt-sm h-1.5 overflow-hidden rounded-full bg-surface-container-high">
-                  <div
-                    className="h-full rounded-full bg-tertiary transition-[width] duration-500"
-                    style={{ width: `${anteil * 100}%` }}
-                  />
-                </div>
-              </a>
-            );
-          })}
+        <div className="mt-md space-y-lg">
+          {AUFGABEN_GRUPPEN.map((grp) => (
+            <div key={grp.gruppe}>
+              <p className="mb-sm flex items-center gap-xs text-label-md uppercase tracking-wider text-tertiary">
+                <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+                {grp.gruppe}
+              </p>
+              <div className="overflow-hidden rounded-xl border border-outline-variant bg-surface-bright">
+                {grp.items.map((a, i) => {
+                  const offen = offeneAufgabe.has(a.prefix);
+                  const besucht = zaehleSpurPrefix(a.prefix);
+                  const alle = summeMitPrefix(alleSpuren, a.prefix);
+                  const fl = flaechenVon(a.flaechen);
+                  const labels = ausMap[a.prefix]?.labels ?? [];
+                  const aktiv = aufgabeAktiv(a);
+                  const teile: string[] = [];
+                  if (!a.nurFlaechen) teile.push(`${besucht}/${a.total} ${a.einheit ?? "Punkte"}`);
+                  if (fl.t > 0) teile.push(`${fl.g}/${fl.t} Flächen`);
+                  return (
+                    <div key={a.prefix} className={i > 0 ? "border-t border-outline-variant" : ""}>
+                      <button
+                        type="button"
+                        onClick={() => toggleAufgabe(a.prefix)}
+                        aria-expanded={offen}
+                        className="flex w-full items-center gap-sm p-md text-left transition-colors hover:bg-surface-container-low"
+                      >
+                        <span className="min-w-0 flex-1">
+                          <span className="flex items-center gap-sm">
+                            <span className="text-body-sm font-semibold text-on-surface">{a.label}</span>
+                            {aktiv > 0 && (
+                              <span className="flex h-2 w-2 flex-shrink-0 rounded-full bg-tertiary" aria-hidden />
+                            )}
+                          </span>
+                          <span className="mt-xs block text-label-sm text-on-surface-variant">
+                            {teile.length ? teile.join(" · ") : "noch nichts getan"}
+                          </span>
+                        </span>
+                        <span
+                          className={
+                            "material-symbols-outlined flex-shrink-0 text-[22px] text-on-surface-variant transition-transform duration-300 " +
+                            (offen ? "rotate-180" : "")
+                          }
+                        >
+                          expand_more
+                        </span>
+                      </button>
+                      {offen && (
+                        <div className="animate-frame-in space-y-sm border-t border-outline-variant/60 px-md pb-md pt-sm">
+                          {!a.nurFlaechen && (
+                            <div>
+                              <div className="flex items-baseline justify-between gap-md text-label-sm">
+                                <span className="text-on-surface-variant">Besucht</span>
+                                <span className="text-on-surface-variant">
+                                  du {besucht}/{a.total} · alle {alle}×
+                                </span>
+                              </div>
+                              <div className="mt-xs h-1.5 overflow-hidden rounded-full bg-surface-container-high">
+                                <div
+                                  className="h-full rounded-full bg-tertiary transition-[width] duration-500"
+                                  style={{ width: `${Math.min(1, a.total ? besucht / a.total : 0) * 100}%` }}
+                                />
+                              </div>
+                            </div>
+                          )}
+                          {fl.t > 0 && (
+                            <p className="flex items-center gap-xs text-label-sm text-on-surface-variant">
+                              <span className="material-symbols-outlined text-[16px] text-tertiary">dashboard</span>
+                              Flächen geknüpft: {fl.g} von {fl.t}
+                            </p>
+                          )}
+                          {(a.ratings ?? []).map((r) => {
+                            const v = ratingVerteilung(r.prefix);
+                            const bewertet = v[0] + v[1] + v[2];
+                            return (
+                              <p key={r.prefix} className="text-label-sm text-on-surface-variant">
+                                <span className="text-on-surface">{r.frage}:</span>{" "}
+                                {bewertet === 0
+                                  ? "noch nicht bewertet"
+                                  : r.stufen.map((s, si) => `${s} ${v[si]}`).join(" · ")}
+                              </p>
+                            );
+                          })}
+                          {labels.length > 0 && (
+                            <div className="flex flex-wrap gap-xs pt-xs">
+                              {labels.map((l, li) => (
+                                <span
+                                  key={`${l}-${li}`}
+                                  className="rounded-full border border-outline-variant bg-surface-container-low px-sm py-xs text-label-sm text-on-surface"
+                                >
+                                  {l}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                          <a
+                            href={a.href}
+                            className="inline-flex items-center gap-xs pt-xs text-label-md text-tertiary hover:underline"
+                          >
+                            Zur Aufgabe
+                            <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+                          </a>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -924,16 +1142,16 @@ export default function OrakelDashboard() {
         </p>
         <div className="mt-md flex flex-col gap-lg">
           <UmfrageKarte
-            icon="rate_review"
-            titel="Rückmeldung & Fehler melden"
-            text="Konkrete Verbesserungen, Anregungen oder falsche Inhalte? Sag es uns hier."
-            url={FINDMIND_FEEDBACK_URL}
-          />
-          <UmfrageKarte
             icon="sentiment_satisfied"
             titel="Wie hat dir das Lernset gefallen?"
             text="Ein kurzer Eindruck: Was hat gewirkt, was weniger?"
             url={FINDMIND_GEFALLEN_URL}
+          />
+          <UmfrageKarte
+            icon="rate_review"
+            titel="Rückmeldung & Fehler melden"
+            text="Konkrete Verbesserungen, Anregungen oder falsche Inhalte? Sag es uns hier."
+            url={FINDMIND_FEEDBACK_URL}
           />
         </div>
       </section>
