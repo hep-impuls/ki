@@ -28,6 +28,12 @@ export default function KartenAktion({
   const [offen, setOffen] = useState(false);
   const [wunsch, setWunsch] = useState(false);
 
+  /** Spur-ID fürs «Mehr gelesen» — aus der wunschId abgeleitet
+   *  ("wunsch:…" → "mehr:…"), damit das Vertiefen als Aktivität zählt. */
+  const mehrId = wunschId.startsWith("wunsch:")
+    ? `mehr:${wunschId.slice("wunsch:".length)}`
+    : `mehr:${wunschId}`;
+
   useEffect(() => {
     function restore() {
       setWunsch(leseSpuren().some((s) => s.id === wunschId));
@@ -36,6 +42,15 @@ export default function KartenAktion({
     window.addEventListener(SPUR_EVENT, restore);
     return () => window.removeEventListener(SPUR_EVENT, restore);
   }, [wunschId]);
+
+  function toggleMehr() {
+    setOffen((o) => {
+      // Beim ersten Aufklappen als Aktivität registrieren (merkeSpur ist
+      // idempotent — mehrfaches Auf/Zu zählt nur einmal).
+      if (!o) merkeSpur(mehrId);
+      return !o;
+    });
+  }
 
   function toggleWunsch() {
     if (wunsch) {
@@ -52,7 +67,7 @@ export default function KartenAktion({
       {mehr && (
         <button
           type="button"
-          onClick={() => setOffen((o) => !o)}
+          onClick={toggleMehr}
           aria-expanded={offen}
           className="inline-flex items-center gap-xs rounded-full border border-outline-variant bg-surface-bright px-md py-xs text-label-md text-on-surface-variant transition-colors hover:border-tertiary hover:text-tertiary"
         >

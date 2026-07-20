@@ -16,7 +16,6 @@ import { GEWICHT_EVENT, leseGewichtungen } from "../../_lib/gewichtung";
 import {
   AUSWERTUNG_EVENT,
   leseAuswertung,
-  leseAuswertungMap,
   type AuswertungEintrag,
 } from "../../_lib/auswertung";
 
@@ -57,95 +56,6 @@ const BEREICHE: { prefix: string; label: string; total: number; href: string }[]
 const GESAMT_TOTAL = BEREICHE.reduce((s, b) => s + b.total, 0);
 const BILDER_TOTAL = 11; // Bilderstrecke «Bilder zur KI-Geschichte»
 const VIDEO_TOTAL = 3;
-
-/* ── Aufgaben-Konfiguration fürs Pro-Aufgabe-Accordion ─────────────────────
- * Jede Aufgabe: Spur-Präfix (besuchte Punkte), Total, optional Flächen-
- * Bereichsschlüssel (aus dem Auswertungs-Store) und Bewertungs-Dimensionen
- * (aus gewichtung.ts, für die Stufen-Verteilung). */
-interface RatingDim {
-  prefix: string;
-  frage: string;
-  stufen: [string, string, string];
-}
-interface Aufgabe {
-  prefix: string;
-  label: string;
-  href: string;
-  total: number;
-  /** Zähl-Einheit der besuchten Punkte. */
-  einheit?: string;
-  /** Auswertungs-Schlüssel für Flächen (können mehrere sein). */
-  flaechen?: string[];
-  ratings?: RatingDim[];
-  /** true → keine «besucht»-Zeile (z.B. Einstiegsmuster: nur Flächen). */
-  nurFlaechen?: boolean;
-}
-const AUFGABEN_GRUPPEN: { gruppe: string; href: string; items: Aufgabe[] }[] = [
-  {
-    gruppe: "Vorhang auf",
-    href: "/lernen/lernseite-2/vorhang-auf",
-    items: [
-      { prefix: "vorhang-auf:story", label: "Die KI-Story", href: "/lernen/lernseite-2/vorhang-auf", total: 22, einheit: "Stationen", flaechen: ["vorhang-auf:story"] },
-      { prefix: "vorhang-auf:bild", label: "Bilder zur KI-Geschichte", href: "/lernen/lernseite-2/vorhang-auf", total: BILDER_TOTAL, einheit: "Bilder" },
-      {
-        prefix: "vorhang-auf:weisheit",
-        label: "Merkmale der neuen Akteurin",
-        href: "/lernen/lernseite-2/vorhang-auf",
-        total: 12,
-        einheit: "Merkmale",
-        flaechen: ["vorhang-auf:weisheit"],
-        ratings: [{ prefix: "vorhang-auf:gestalt", frage: "Macht die Gestalt der KI", stufen: ["unkenntlich", "verschwommen", "deutlich"] }],
-      },
-      {
-        prefix: "vorhang-auf:kontext",
-        label: "Die KI im Kontext",
-        href: "/lernen/lernseite-2/vorhang-auf",
-        total: 12,
-        einheit: "Aspekte",
-        ratings: [{ prefix: "vorhang-auf:achtsamkeit", frage: "Verdient Achtsamkeit", stufen: ["wenig", "mittel", "viel"] }],
-      },
-      { prefix: "lernseite-2:gewebe", label: "Einstiegsmuster", href: "/lernen/lernseite-2", total: 0, nurFlaechen: true, flaechen: ["lernseite-2:gewebe", "vorhang-auf:gewebe"] },
-    ],
-  },
-  {
-    gruppe: "Philosophische Perspektive",
-    href: "/lernen/lernseite-2/philosophische-perspektive",
-    items: [
-      { prefix: "philosophische-perspektive:einstieg", label: "Was ist Philosophie?", href: "/lernen/lernseite-2/philosophische-perspektive", total: 4, einheit: "Fragen" },
-      {
-        prefix: "philosophische-perspektive:teppich",
-        label: "Der Teppich des Wandels",
-        href: "/lernen/lernseite-2/philosophische-perspektive",
-        total: 33,
-        einheit: "Punkte",
-        flaechen: ["philosophische-perspektive:teppich"],
-        ratings: [
-          { prefix: "philosophische-perspektive:bekanntheit", frage: "War mir bekannt", stufen: ["gar nicht", "etwas", "gut"] },
-          { prefix: "philosophische-perspektive:relevanz", frage: "Mein Leben ohne diesen Punkt", stufen: ["kaum", "etwas", "stark"] },
-        ],
-      },
-      {
-        prefix: "philosophische-perspektive:epochen",
-        label: "Philosophie in Zeiten der Verunsicherung",
-        href: "/lernen/lernseite-2/philosophische-perspektive",
-        total: 24,
-        einheit: "Bausteine",
-        ratings: [
-          { prefix: "philosophische-perspektive:technikwert", frage: "Diese Technologie", stufen: ["bin froh", "keine Bedeutung", "nie einführen"] },
-          { prefix: "philosophische-perspektive:verunsicherung-heute", frage: "Diese Verunsicherung", stufen: ["noch heute", "ein wenig", "gar nicht"] },
-          { prefix: "philosophische-perspektive:philo-hilft", frage: "Diese Sichtweise", stufen: ["hilft heute", "neu für mich", "kein Sinn"] },
-        ],
-      },
-    ],
-  },
-  {
-    gruppe: "Das Orakel",
-    href: "/lernen/lernseite-2/das-orakel",
-    items: [
-      { prefix: "video:", label: "Video-Impulse", href: "/lernen/lernseite-2", total: VIDEO_TOTAL, einheit: "Videos" },
-    ],
-  },
-];
 
 /* ── Bewertungs-Präfixe (lokal, aus gewichtung.ts) ────────────────────────── */
 
@@ -201,6 +111,7 @@ export default function OrakelDashboard() {
   /* deine Spur (lokal) */
   const [meine, setMeine] = useState<Record<string, number>>({});
   const [meineWuensche, setMeineWuensche] = useState(0);
+  const [meineMehr, setMeineMehr] = useState(0);
   const [meineKombis, setMeineKombis] = useState(0);
   const [meineBilder, setMeineBilder] = useState(0);
   const [meineVideos, setMeineVideos] = useState(0);
@@ -217,10 +128,6 @@ export default function OrakelDashboard() {
   });
   /* Flächen + Interesse (gemeldet von Teppich & KI-Story) */
   const [auswertung, setAuswertung] = useState<AuswertungEintrag[]>([]);
-  /* alle Spur-IDs (roh) + Flächen-Map keyed — fürs Pro-Aufgabe-Accordion */
-  const [spurIds, setSpurIds] = useState<string[]>([]);
-  const [ausMap, setAusMap] = useState<Record<string, AuswertungEintrag>>({});
-  const [offeneAufgabe, setOffeneAufgabe] = useState<Set<string>>(new Set());
   /* alle (anonymer Zähler) */
   const [alleSpuren, setAlleSpuren] = useState<PollCounts>({});
   /* Blick-Poll */
@@ -248,8 +155,8 @@ export default function OrakelDashboard() {
       proBereich[b.prefix] = spuren.filter((s) => s.id.startsWith(b.prefix)).length;
     }
     setMeine(proBereich);
-    setSpurIds(spuren.map((s) => s.id));
     setMeineWuensche(spuren.filter((s) => s.id.startsWith("wunsch:")).length);
+    setMeineMehr(spuren.filter((s) => s.id.startsWith("mehr:")).length);
     setMeineKombis(spuren.filter((s) => s.id.includes(":kanten-")).length);
     setMeineBilder(spuren.filter((s) => s.id.includes(":bild")).length);
     setMeineVideos(spuren.filter((s) => s.id.startsWith("video:")).length);
@@ -264,7 +171,6 @@ export default function OrakelDashboard() {
       gestaltDeutlich: zaehleStufe(P_GESTALT, 2),
     });
     setAuswertung(leseAuswertung());
-    setAusMap(leseAuswertungMap());
   }, []);
 
   useEffect(() => {
@@ -491,6 +397,15 @@ export default function OrakelDashboard() {
           : `Merkzeichen gesetzt. Klassenweit: ${summeMitPrefix(alleSpuren, "wunsch:")}×.`,
     },
     {
+      icon: "menu_book",
+      titel: "Mehr gelesen",
+      wert: `${meineMehr}`,
+      text:
+        meineMehr === 0
+          ? "Noch keine Vertiefung geöffnet — hinter «Mehr lesen» steckt zu vielen Punkten ein längerer Text."
+          : `Mal hast du «Mehr lesen» geöffnet und in die Tiefe gelesen. Klassenweit: ${summeMitPrefix(alleSpuren, "mehr:")}×.`,
+    },
+    {
       icon: "favorite",
       titel: "Für dich relevant",
       wert: `${bew.relevanzStark + bew.philoHilft + bew.technikFroh}`,
@@ -509,35 +424,6 @@ export default function OrakelDashboard() {
       text: `Verunsicherungen aus den Epochen, die dich bis heute betreffen. KI-Merkmale, die dir «deutlich» wurden: ${bew.gestaltDeutlich}.`,
     },
   ];
-
-  /* ── Helfer fürs Pro-Aufgabe-Accordion ────────────────────────────────── */
-  const zaehleSpurPrefix = (prefix: string) =>
-    spurIds.filter((id) => id.startsWith(prefix)).length;
-  const flaechenVon = (keys?: string[]) =>
-    (keys ?? []).reduce(
-      (acc, k) => ({
-        g: acc.g + (ausMap[k]?.flaechenGefuellt ?? 0),
-        t: acc.t + (ausMap[k]?.flaechenTotal ?? 0),
-      }),
-      { g: 0, t: 0 },
-    );
-  const ratingVerteilung = (prefix: string): [number, number, number] => {
-    const m = leseGewichtungen(prefix);
-    const v: [number, number, number] = [0, 0, 0];
-    for (const s of Object.values(m)) if (s >= 0 && s <= 2) v[s]++;
-    return v;
-  };
-  const aufgabeAktiv = (a: Aufgabe) =>
-    (a.nurFlaechen ? 0 : zaehleSpurPrefix(a.prefix)) +
-    flaechenVon(a.flaechen).g +
-    (a.ratings ?? []).reduce((s, r) => s + ratingVerteilung(r.prefix).reduce((x, y) => x + y, 0), 0);
-  const toggleAufgabe = (p: string) =>
-    setOffeneAufgabe((prev) => {
-      const nx = new Set(prev);
-      if (nx.has(p)) nx.delete(p);
-      else nx.add(p);
-      return nx;
-    });
 
   return (
     <div className="max-w-3xl">
@@ -742,126 +628,47 @@ export default function OrakelDashboard() {
         </section>
       )}
 
-      {/* 2 — Deine Aktivität pro Aufgabe (aufklappbar) */}
-      <section className="mt-xl" aria-label="Deine Aktivität pro Aufgabe">
+      {/* 2 — Angeklickte Punkte im Detail (du vs alle) */}
+      <section className="mt-xl" aria-label="Angeklickte Punkte im Detail">
         <h2 className="text-headline-md text-on-surface">
-          Deine Aktivität pro Aufgabe
+          Deine Spur durchs Gewebe
         </h2>
         <p className="mt-xs text-body-sm text-on-surface-variant">
-          {meineGesamt} von {GESAMT_TOTAL} Knoten besucht — hier aufgeschlüsselt
-          nach Aufgabe. Tippe eine Aufgabe an, um Details zu sehen (besuchte
-          Punkte neben den anonymen Zahlen aller, geknüpfte Flächen, deine
-          Bewertungen).
+          {meineGesamt} von {GESAMT_TOTAL} Knoten hast du besucht — daneben, wie
+          oft alle zusammen dort waren. Tippe einen Bereich an, um dorthin
+          zurückzukehren.
         </p>
-        <div className="mt-md space-y-lg">
-          {AUFGABEN_GRUPPEN.map((grp) => (
-            <div key={grp.gruppe}>
-              <p className="mb-sm flex items-center gap-xs text-label-md uppercase tracking-wider text-tertiary">
-                <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
-                {grp.gruppe}
-              </p>
-              <div className="overflow-hidden rounded-xl border border-outline-variant bg-surface-bright">
-                {grp.items.map((a, i) => {
-                  const offen = offeneAufgabe.has(a.prefix);
-                  const besucht = zaehleSpurPrefix(a.prefix);
-                  const alle = summeMitPrefix(alleSpuren, a.prefix);
-                  const fl = flaechenVon(a.flaechen);
-                  const labels = ausMap[a.prefix]?.labels ?? [];
-                  const aktiv = aufgabeAktiv(a);
-                  const teile: string[] = [];
-                  if (!a.nurFlaechen) teile.push(`${besucht}/${a.total} ${a.einheit ?? "Punkte"}`);
-                  if (fl.t > 0) teile.push(`${fl.g}/${fl.t} Flächen`);
-                  return (
-                    <div key={a.prefix} className={i > 0 ? "border-t border-outline-variant" : ""}>
-                      <button
-                        type="button"
-                        onClick={() => toggleAufgabe(a.prefix)}
-                        aria-expanded={offen}
-                        className="flex w-full items-center gap-sm p-md text-left transition-colors hover:bg-surface-container-low"
-                      >
-                        <span className="min-w-0 flex-1">
-                          <span className="flex items-center gap-sm">
-                            <span className="text-body-sm font-semibold text-on-surface">{a.label}</span>
-                            {aktiv > 0 && (
-                              <span className="flex h-2 w-2 flex-shrink-0 rounded-full bg-tertiary" aria-hidden />
-                            )}
-                          </span>
-                          <span className="mt-xs block text-label-sm text-on-surface-variant">
-                            {teile.length ? teile.join(" · ") : "noch nichts getan"}
-                          </span>
-                        </span>
-                        <span
-                          className={
-                            "material-symbols-outlined flex-shrink-0 text-[22px] text-on-surface-variant transition-transform duration-300 " +
-                            (offen ? "rotate-180" : "")
-                          }
-                        >
-                          expand_more
-                        </span>
-                      </button>
-                      {offen && (
-                        <div className="animate-frame-in space-y-sm border-t border-outline-variant/60 px-md pb-md pt-sm">
-                          {!a.nurFlaechen && (
-                            <div>
-                              <div className="flex items-baseline justify-between gap-md text-label-sm">
-                                <span className="text-on-surface-variant">Besucht</span>
-                                <span className="text-on-surface-variant">
-                                  du {besucht}/{a.total} · alle {alle}×
-                                </span>
-                              </div>
-                              <div className="mt-xs h-1.5 overflow-hidden rounded-full bg-surface-container-high">
-                                <div
-                                  className="h-full rounded-full bg-tertiary transition-[width] duration-500"
-                                  style={{ width: `${Math.min(1, a.total ? besucht / a.total : 0) * 100}%` }}
-                                />
-                              </div>
-                            </div>
-                          )}
-                          {fl.t > 0 && (
-                            <p className="flex items-center gap-xs text-label-sm text-on-surface-variant">
-                              <span className="material-symbols-outlined text-[16px] text-tertiary">dashboard</span>
-                              Flächen geknüpft: {fl.g} von {fl.t}
-                            </p>
-                          )}
-                          {(a.ratings ?? []).map((r) => {
-                            const v = ratingVerteilung(r.prefix);
-                            const bewertet = v[0] + v[1] + v[2];
-                            return (
-                              <p key={r.prefix} className="text-label-sm text-on-surface-variant">
-                                <span className="text-on-surface">{r.frage}:</span>{" "}
-                                {bewertet === 0
-                                  ? "noch nicht bewertet"
-                                  : r.stufen.map((s, si) => `${s} ${v[si]}`).join(" · ")}
-                              </p>
-                            );
-                          })}
-                          {labels.length > 0 && (
-                            <div className="flex flex-wrap gap-xs pt-xs">
-                              {labels.map((l, li) => (
-                                <span
-                                  key={`${l}-${li}`}
-                                  className="rounded-full border border-outline-variant bg-surface-container-low px-sm py-xs text-label-sm text-on-surface"
-                                >
-                                  {l}
-                                </span>
-                              ))}
-                            </div>
-                          )}
-                          <a
-                            href={a.href}
-                            className="inline-flex items-center gap-xs pt-xs text-label-md text-tertiary hover:underline"
-                          >
-                            Zur Aufgabe
-                            <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
-                          </a>
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
+        <div className="mt-md overflow-hidden rounded-xl border border-outline-variant bg-surface-bright">
+          {BEREICHE.map((b, i) => {
+            const mein = meine[b.prefix] ?? 0;
+            const alle = summeMitPrefix(alleSpuren, b.prefix);
+            const anteil = Math.min(1, mein / b.total);
+            return (
+              <a
+                key={b.prefix}
+                href={b.href}
+                className={
+                  "block p-md transition-colors hover:bg-surface-container-low" +
+                  (i > 0 ? " border-t border-outline-variant" : "")
+                }
+              >
+                <div className="flex items-baseline justify-between gap-md">
+                  <span className="text-body-sm font-semibold text-on-surface">
+                    {b.label}
+                  </span>
+                  <span className="flex-shrink-0 text-label-sm text-on-surface-variant">
+                    du {mein}/{b.total} · alle {alle}×
+                  </span>
+                </div>
+                <div className="mt-sm h-1.5 overflow-hidden rounded-full bg-surface-container-high">
+                  <div
+                    className="h-full rounded-full bg-tertiary transition-[width] duration-500"
+                    style={{ width: `${anteil * 100}%` }}
+                  />
+                </div>
+              </a>
+            );
+          })}
         </div>
       </section>
 
@@ -1091,42 +898,49 @@ export default function OrakelDashboard() {
                   </p>
                 )}
               </div>
-
-              {/* Ausdrucken — Name eingeben, dann drucken */}
-              <div className="mt-lg border-t border-outline-variant/60 pt-md">
-                <label
-                  htmlFor="orakel-name"
-                  className="block text-body-sm text-on-surface-variant"
-                >
-                  Dein Name für den Ausdruck (bleibt auf diesem Gerät):
-                </label>
-                <div className="mt-sm flex flex-wrap items-center gap-sm">
-                  <input
-                    id="orakel-name"
-                    type="text"
-                    value={name}
-                    onChange={(e) => nameAendern(e.target.value)}
-                    maxLength={60}
-                    placeholder="Vor- und Nachname"
-                    className="min-w-[12rem] flex-1 rounded-xl border border-outline-variant bg-surface-bright px-md py-sm text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:border-tertiary focus:outline-none"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => window.print()}
-                    className="inline-flex items-center gap-sm rounded-xl bg-tertiary px-lg py-sm text-label-md text-on-tertiary shadow-sm transition hover:bg-on-tertiary-container"
-                  >
-                    <span className="material-symbols-outlined text-[18px]">print</span>
-                    Deutung ausdrucken
-                  </button>
-                </div>
-                {!name.trim() && (
-                  <p className="mt-xs text-label-sm text-on-surface-variant">
-                    Tipp: Trage zuerst deinen Namen ein — er erscheint dann auf dem
-                    Ausdruck.
-                  </p>
-                )}
-              </div>
             </>
+          )}
+        </div>
+
+        {/* Ausdruck / PDF — reduzierte Zusammenfassung: Name, Aktivität in
+            Zahlen und beide Orakel-Stimmen. Immer verfügbar. */}
+        <div className="mt-lg rounded-xl border border-outline-variant bg-surface-container-low p-md">
+          <p className="flex items-center gap-sm text-label-md uppercase tracking-wider text-tertiary">
+            <span className="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+            Als PDF ausdrucken
+          </p>
+          <p className="mt-xs text-body-sm text-on-surface-variant">
+            Eine reduzierte Zusammenfassung: dein Name, deine Aktivität in Zahlen
+            und die Deutungen des Orakels. Im Druckdialog «Als PDF speichern»
+            wählen.
+          </p>
+          <label htmlFor="orakel-name" className="mt-md block text-body-sm text-on-surface-variant">
+            Dein Name für den Ausdruck (bleibt auf diesem Gerät):
+          </label>
+          <div className="mt-sm flex flex-wrap items-center gap-sm">
+            <input
+              id="orakel-name"
+              type="text"
+              value={name}
+              onChange={(e) => nameAendern(e.target.value)}
+              maxLength={60}
+              placeholder="Vor- und Nachname"
+              className="min-w-[12rem] flex-1 rounded-xl border border-outline-variant bg-surface-bright px-md py-sm text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:border-tertiary focus:outline-none"
+            />
+            <button
+              type="button"
+              onClick={() => window.print()}
+              className="inline-flex items-center gap-sm rounded-xl bg-tertiary px-lg py-sm text-label-md text-on-tertiary shadow-sm transition hover:bg-on-tertiary-container"
+            >
+              <span className="material-symbols-outlined text-[18px]">print</span>
+              Ausdrucken / PDF
+            </button>
+          </div>
+          {!name.trim() && (
+            <p className="mt-xs text-label-sm text-on-surface-variant">
+              Tipp: Trage zuerst deinen Namen ein — er erscheint dann auf dem
+              Ausdruck.
+            </p>
           )}
         </div>
       </section>
@@ -1194,10 +1008,9 @@ export default function OrakelDashboard() {
       `}</style>
 
       {/* Druckansicht (Portal auf <body>, damit die App-Rahmen ausgeblendet
-          werden können). Nur mit vorhandener Deutung. */}
+          werden können) — reduziert: Name, Aktivität in Zahlen, beide
+          Orakel-Stimmen. Immer vorhanden (auch ohne Deutung). */}
       {mounted &&
-        aktuell.status === "ok" &&
-        aktuell.text &&
         createPortal(
           <div
             id="orakel-print-root"
@@ -1207,23 +1020,15 @@ export default function OrakelDashboard() {
             <p style={{ fontSize: "0.8rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#555", margin: 0 }}>
               Lernumgebung zu KI · Eine ganz neue Partnerschaft · Das Orakel
             </p>
-            <h1 style={{ fontSize: "1.6rem", margin: "0.4rem 0 0" }}>Meine Orakel-Deutung</h1>
+            <h1 style={{ fontSize: "1.6rem", margin: "0.4rem 0 0" }}>Mein Orakel</h1>
             <p style={{ margin: "0.75rem 0 0", fontSize: "1rem" }}>
               <strong>Name:</strong> {name.trim() || "—"}
               {"    "}
               <strong style={{ marginLeft: "1.5rem" }}>Datum:</strong>{" "}
               {new Date().toLocaleDateString("de-CH")}
             </p>
-            <p style={{ margin: "0.25rem 0 0", fontSize: "1rem" }}>
-              <strong>Form:</strong> {STILE.find((s) => s.id === stil)?.label}
-            </p>
 
-            <h2 style={{ fontSize: "1.1rem", margin: "1.5rem 0 0.4rem" }}>Die Deutung</h2>
-            <p style={{ margin: 0, fontSize: "1.05rem", lineHeight: 1.6, whiteSpace: "pre-line" }}>
-              {aktuell.text}
-            </p>
-
-            <h2 style={{ fontSize: "1.1rem", margin: "1.75rem 0 0.4rem" }}>Meine Aktivität in Zahlen</h2>
+            <h2 style={{ fontSize: "1.1rem", margin: "1.5rem 0 0.4rem" }}>Meine Aktivität in Zahlen</h2>
             <ul style={{ margin: 0, paddingLeft: "1.1rem", fontSize: "1rem", lineHeight: 1.7 }}>
               {perspektiven.map((p) => (
                 <li key={p.titel}>
@@ -1232,9 +1037,37 @@ export default function OrakelDashboard() {
               ))}
             </ul>
 
+            {intOrakel.status === "ok" && intOrakel.text && (
+              <>
+                <h2 style={{ fontSize: "1.1rem", margin: "1.75rem 0 0.4rem" }}>
+                  Das Orakel zu meinem Interesse
+                </h2>
+                <p style={{ margin: 0, fontSize: "1.05rem", lineHeight: 1.6, whiteSpace: "pre-line" }}>
+                  {intOrakel.text}
+                </p>
+              </>
+            )}
+
+            {aktuell.status === "ok" && aktuell.text && (
+              <>
+                <h2 style={{ fontSize: "1.1rem", margin: "1.75rem 0 0.4rem" }}>
+                  {STILE.find((s) => s.id === stil)?.label}e Deutung
+                </h2>
+                <p style={{ margin: 0, fontSize: "1.05rem", lineHeight: 1.6, whiteSpace: "pre-line" }}>
+                  {aktuell.text}
+                </p>
+              </>
+            )}
+
+            {intOrakel.status !== "ok" && aktuell.status !== "ok" && (
+              <p style={{ marginTop: "1.5rem", fontSize: "1rem", color: "#444" }}>
+                (Befrage das Orakel oben, damit seine Deutungen hier erscheinen.)
+              </p>
+            )}
+
             <p style={{ marginTop: "2rem", fontSize: "0.8rem", color: "#666" }}>
-              Erstellt im Lernset «Eine ganz neue Partnerschaft». Die Deutung
-              beruht auf anonymen Kennzahlen der eigenen Aktivität; die
+              Erstellt im Lernset «Eine ganz neue Partnerschaft». Die Deutungen
+              beruhen auf anonymen Kennzahlen der eigenen Aktivität; die
               Detaildaten bleiben auf dem Gerät.
             </p>
           </div>,
