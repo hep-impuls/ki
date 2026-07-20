@@ -11,6 +11,7 @@ import KartenAktion from "./KartenAktion";
 import GewichtungWahl from "./GewichtungWahl";
 import InfoPunkt from "./InfoPunkt";
 import { GlossarText } from "./Glossar";
+import { melde } from "../_lib/auswertung";
 import BildZoom, { type TourStop } from "../philosophische-perspektive/_components/BildZoom";
 
 /**
@@ -980,6 +981,23 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
     window.addEventListener(SPUR_EVENT, restore);
     return () => window.removeEventListener(SPUR_EVENT, restore);
   }, [gesamt]);
+
+  // Welche Epochen inhaltlich betreten wurden (mind. ein Baustein geöffnet) —
+  // ans Orakel melden, damit die KI den inhaltlichen Weg mitdeuten kann.
+  useEffect(() => {
+    const eiSet = new Set<number>();
+    gelesen.forEach((gi) => eiSet.add(Math.floor(gi / BAUSTEINE.length)));
+    const labels = [...eiSet]
+      .sort((a, b) => a - b)
+      .map((ei) => EPOCHEN[ei]?.epoche)
+      .filter((s): s is string => Boolean(s));
+    melde(SPUR, {
+      bereich: "Philosophie in Zeiten der Verunsicherung",
+      flaechenGefuellt: 0,
+      flaechenTotal: 0,
+      labels,
+    });
+  }, [gelesen]);
 
   function toggle(gi: number) {
     setOffen((prev) => {
