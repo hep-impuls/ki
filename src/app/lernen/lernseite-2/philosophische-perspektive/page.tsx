@@ -7,6 +7,7 @@ import AkkordeonPosten from "../_components/AkkordeonPosten";
 import HistorienTeppich from "../_components/HistorienTeppich";
 import VerunsicherungsEpochen from "../_components/VerunsicherungsEpochen";
 import SeitenNavigation from "../_components/SeitenNavigation";
+import AktivitaetsNetzFloat from "../_components/AktivitaetsNetzFloat";
 
 /**
  * Thema 02 — «Philosophische Perspektive».
@@ -25,6 +26,9 @@ export default function Lernseite2PhilosophischePerspektive() {
         page="lernseite-2/philosophische-perspektive"
         lessonId="lernseite-2-philosophische-perspektive"
       />
+
+      {/* Mitfahrendes Aktivitätsnetz — wie auf Hub & Auftakt */}
+      <AktivitaetsNetzFloat />
 
       <Link
         href="/lernen/lernseite-2"

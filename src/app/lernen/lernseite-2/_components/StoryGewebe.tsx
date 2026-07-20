@@ -630,7 +630,7 @@ export default function StoryGewebe({
     if (!d.moved) {
       p.fx = null;
       p.fy = null;
-      aktiviere(d.id);
+      punktTippen(d.id);
       return;
     }
     p.fx = null;
@@ -654,6 +654,22 @@ export default function StoryGewebe({
       if (spurKey) merkeSpur(`${spurKey}:${i}`);
     }
   }
+  /** Antippen eines Punkts IM GEWEBE togglet: schaltet ihn frei bzw. wieder ab.
+   *  Abwählen löscht auch die Spur, damit der Punkt beim Wiederkommen offen
+   *  bleibt. */
+  function punktTippen(i: number) {
+    const drin = gewaehlt.has(i);
+    setGewaehlt((prev) => {
+      const nx = new Set(prev);
+      if (drin) nx.delete(i);
+      else nx.add(i);
+      return nx;
+    });
+    if (spurKey) {
+      if (drin) loescheSpuren(`${spurKey}:${i}`);
+      else merkeSpur(`${spurKey}:${i}`);
+    }
+  }
   function toggleWahl(i: number) {
     const neu = !gewaehlt.has(i);
     setGewaehlt((prev) => {
@@ -662,8 +678,12 @@ export default function StoryGewebe({
       else nx.add(i);
       return nx;
     });
-    // Auswahl eines Stichworts zählt als Öffnen → Karte + Aktivität.
-    if (neu && spurKey) merkeSpur(`${spurKey}:${i}`);
+    // Auswahl eines Stichworts zählt als Öffnen → Karte + Aktivität; Abwählen
+    // löscht die Spur wieder (bleibt dann auch nach Neuladen abgewählt).
+    if (spurKey) {
+      if (neu) merkeSpur(`${spurKey}:${i}`);
+      else loescheSpuren(`${spurKey}:${i}`);
+    }
   }
   function zufall(k: number) {
     const ids = alle.slice();
@@ -894,13 +914,13 @@ export default function StoryGewebe({
                   key={i}
                   role="button"
                   tabIndex={0}
-                  aria-label={`${st.titel} (${st.jahr}) — antippen zum Lesen, ziehen zum Verschieben`}
+                  aria-label={`${st.titel} (${st.jahr}) — antippen zum Öffnen/Schliessen, ziehen zum Verschieben`}
                   aria-pressed={gelesen}
                   onPointerDown={(e) => onDown(e, i)}
                   onKeyDown={(e) => {
                     if (e.key === "Enter" || e.key === " ") {
                       e.preventDefault();
-                      aktiviere(i);
+                      punktTippen(i);
                     }
                   }}
                   style={{
