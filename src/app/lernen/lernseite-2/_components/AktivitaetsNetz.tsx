@@ -5,16 +5,16 @@ import {
   SPUR_EVENT,
   zaehleAktivitaet,
   zieheSpurenAusCloud,
-  type AktivitaetsZahlen,
 } from "../_lib/spuren";
+import { AUSWERTUNG_EVENT, zaehleFlaechen } from "../_lib/auswertung";
 
 /**
  * AktivitaetsNetz — ein kleines, schwebendes Netzwerk, das die eigene
  * Aktivität misst und rechnerisch-futuristisch darstellt:
- *   · Knoten        — angeklickte/gelesene Stationen (alle Landschaften)
- *   · Kombinationen — eingeloggte Verbindungen zwischen Knoten
- *   · Bilder        — angeschaute Bilder der Bilderstrecken
- *   · Videos        — geschaute Video-Impulse
+ *   · Knoten   — angeklickte/gelesene Stationen (alle Landschaften)
+ *   · Flächen  — geknüpfte Maschen in den Geweben (Teppich, Story, Muster)
+ *   · Bilder   — angeschaute Bilder der Bilderstrecken
+ *   · Videos   — geschaute Video-Impulse
  *
  * Vier farbige Naben strahlen vom Kern aus; jede trägt so viele Satelliten,
  * wie die Kennzahl zählt (gedeckelt, die Zahl bleibt exakt). Die Werte kommen
@@ -30,8 +30,11 @@ const VB_H = 252;
 const CORE = { x: 176, y: 118 };
 const CAP = 16; // sichtbare Satelliten je Nabe (Zahl bleibt exakt)
 
+/** Die vier dargestellten Kennzahlen. */
+type NetzWerte = { knoten: number; flaechen: number; bilder: number; videos: number };
+
 type Nabe = {
-  key: keyof AktivitaetsZahlen;
+  key: keyof NetzWerte;
   label: string;
   hx: number;
   hy: number;
@@ -45,7 +48,7 @@ type Nabe = {
 
 const NABEN: Nabe[] = [
   { key: "knoten", label: "Knoten", hx: 176, hy: 38, dir: -90, fill: "fill-tertiary", stroke: "stroke-tertiary", text: "text-tertiary" },
-  { key: "kombinationen", label: "Kombinationen", hx: 62, hy: 118, dir: 180, fill: "fill-primary", stroke: "stroke-primary", text: "text-primary" },
+  { key: "flaechen", label: "Flächen", hx: 62, hy: 118, dir: 180, fill: "fill-primary", stroke: "stroke-primary", text: "text-primary" },
   { key: "bilder", label: "Bilder", hx: 290, hy: 118, dir: 0, fill: "fill-secondary", stroke: "stroke-secondary", text: "text-secondary" },
   { key: "videos", label: "Videos", hx: 176, hy: 198, dir: 90, fill: "fill-on-surface", stroke: "stroke-on-surface", text: "text-on-surface" },
 ];
@@ -78,23 +81,34 @@ export default function AktivitaetsNetz({
   schwebend?: boolean;
   className?: string;
 }) {
-  const [z, setZ] = useState<AktivitaetsZahlen>({
+  const [z, setZ] = useState<NetzWerte>({
     knoten: 0,
-    kombinationen: 0,
+    flaechen: 0,
     bilder: 0,
     videos: 0,
-    wuensche: 0,
   });
 
   useEffect(() => {
-    const lesen = () => setZ(zaehleAktivitaet());
+    const lesen = () => {
+      const a = zaehleAktivitaet();
+      setZ({
+        knoten: a.knoten,
+        flaechen: zaehleFlaechen().gefuellt,
+        bilder: a.bilder,
+        videos: a.videos,
+      });
+    };
     lesen();
     void zieheSpurenAusCloud();
     window.addEventListener(SPUR_EVENT, lesen);
-    return () => window.removeEventListener(SPUR_EVENT, lesen);
+    window.addEventListener(AUSWERTUNG_EVENT, lesen);
+    return () => {
+      window.removeEventListener(SPUR_EVENT, lesen);
+      window.removeEventListener(AUSWERTUNG_EVENT, lesen);
+    };
   }, []);
 
-  const gesamt = z.knoten + z.kombinationen + z.bilder + z.videos;
+  const gesamt = z.knoten + z.flaechen + z.bilder + z.videos;
 
   return (
     <section
@@ -135,7 +149,7 @@ export default function AktivitaetsNetz({
           viewBox={`0 0 ${VB_W} ${VB_H}`}
           className="block w-full"
           role="img"
-          aria-label={`Netz mit ${z.knoten} Knoten, ${z.kombinationen} Kombinationen, ${z.bilder} Bildern, ${z.videos} Videos.`}
+          aria-label={`Netz mit ${z.knoten} Knoten, ${z.flaechen} Flächen, ${z.bilder} Bildern, ${z.videos} Videos.`}
         >
           {/* Verbindungen Kern → Naben */}
           {NABEN.map((nb) => (

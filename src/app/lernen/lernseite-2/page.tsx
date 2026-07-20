@@ -10,6 +10,7 @@ import {
 } from "./_components/Gewebe";
 import GewebeSpiel from "./_components/GewebeSpiel";
 import VideoImpuls from "./_components/VideoImpuls";
+import AktivitaetsNetzFloat from "./_components/AktivitaetsNetzFloat";
 
 /**
  * Hub von Lernseite 2 («Eine ganz neue Partnerschaft»).
@@ -67,6 +68,9 @@ export default function Lernseite2Hub() {
           bereichLabel="Einstiegsmuster (Hub)"
         />
       </header>
+
+      {/* Mitfahrendes Aktivitätsnetz — wie auf der Auftakt-Seite */}
+      <AktivitaetsNetzFloat />
 
       {/* Video-Impuls zum Einstieg */}
       <VideoImpuls

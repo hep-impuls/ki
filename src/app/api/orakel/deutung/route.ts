@@ -19,7 +19,7 @@ export const runtime = "nodejs";
 
 const MODELL = "claude-haiku-4-5";
 
-type Stil = "wissenschaftlich" | "literarisch" | "fantastisch";
+type Stil = "wissenschaftlich" | "literarisch" | "fantastisch" | "interesse";
 
 interface Aktivitaet {
   knotenDu: number;
@@ -71,6 +71,17 @@ const STIL_SYSTEM: Record<Stil, string> = {
     "Weissagung), aber bleibe an den tatsächlichen Zahlen und erfinde keine",
     "Fakten. 60–90 Wörter, Deutsch, Schweizer Rechtschreibung (ss statt ß), ein",
     "zusammenhängender Absatz. Ende mit einer kurzen, weissagenden Wendung.",
+  ].join(" "),
+  interesse: [
+    "Du bist das Orakel eines Lernmoduls über KI und Philosophie an einer",
+    "Berufsfachschule. Gib eine KNAPPE, analytische Rückmeldung zum INTERESSE",
+    "der Person — in leicht orakelhaftem, aber klarem Ton. Sprich sie mit «du»",
+    "an. Stütze dich NUR auf die übergebenen Zahlen und die «Ausgewählten",
+    "Inhalte»: Benenne, welche Themen sie vor allem gewählt hat (zwei bis drei",
+    "namentlich) und was das über ihre Neugier verrät. Hat sie vor allem",
+    "Flächen geknüpft und wenig Inhalte gewählt, benenne das freundlich als",
+    "spielerisches Erkunden der Muster. Erfinde nichts. 50–80 Wörter, Deutsch,",
+    "Schweizer Rechtschreibung (ss statt ß), ein zusammenhängender Absatz.",
   ].join(" "),
 };
 
@@ -153,7 +164,7 @@ async function deute(stil: Stil, zusammenfassung: string): Promise<string | null
   }
 }
 
-const STILE: Stil[] = ["wissenschaftlich", "literarisch", "fantastisch"];
+const STILE: Stil[] = ["wissenschaftlich", "literarisch", "fantastisch", "interesse"];
 
 export async function POST(req: NextRequest) {
   try {
@@ -168,7 +179,8 @@ export async function POST(req: NextRequest) {
     if (!stil || !a || typeof a !== "object") {
       return NextResponse.json({ error: "Ungültige Anfrage." }, { status: 400 });
     }
-    if ((a.knotenDu ?? 0) < 1) {
+    // Auch reines Muster-Bespielen (Flächen ohne Inhalts-Knoten) zählt.
+    if ((a.knotenDu ?? 0) < 1 && (a.flaechenGefuellt ?? 0) < 1) {
       return NextResponse.json({ grund: "zu-wenig" }, { status: 200 });
     }
     const text = await deute(stil, baueZusammenfassung(a));

@@ -137,6 +137,8 @@ export default function OrakelDashboard() {
     literarisch: LEER,
     fantastisch: LEER,
   });
+  /* Interessens-Orakel (die erste der zwei Orakel-Stimmen) */
+  const [intOrakel, setIntOrakel] = useState<OrakelZustand>(LEER);
   /* Ausdruck */
   const [name, setName] = useState("");
   const [mounted, setMounted] = useState(false);
@@ -319,6 +321,32 @@ export default function OrakelDashboard() {
     setOrakel((prev) => ({ ...prev, [welcher]: { ...prev[welcher], zufrieden: wert } }));
   }
 
+  /* Interessens-Orakel: analytische Antwort auf die Interessens-Auswertung. */
+  const interesseBefragen = useCallback(async () => {
+    setIntOrakel({ text: null, status: "laedt", zufrieden: null });
+    try {
+      const res = await fetch("/api/orakel/deutung", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ stil: "interesse", aktivitaet: baueAktivitaet() }),
+      });
+      const data = (await res.json().catch(() => null)) as
+        | { text?: string; grund?: string }
+        | null;
+      if (data?.text) {
+        setIntOrakel({ text: data.text, status: "ok", zufrieden: null });
+      } else if (data?.grund === "zu-wenig") {
+        setIntOrakel({ text: null, status: "zu-wenig", zufrieden: null });
+      } else if (data?.grund === "kein-schluessel") {
+        setIntOrakel({ text: null, status: "kein-schluessel", zufrieden: null });
+      } else {
+        throw new Error("leer");
+      }
+    } catch {
+      setIntOrakel({ text: null, status: "fehler", zufrieden: null });
+    }
+  }, [baueAktivitaet]);
+
   const aktuell = orakel[stil];
 
   /* ── Perspektiven-Kacheln ─────────────────────────────────────────────── */
@@ -423,7 +451,7 @@ export default function OrakelDashboard() {
         className="mt-xl mb-lg"
         schwebend
         titel="Dein Aktivitätsnetz"
-        unterzeile="Was du bisher im Modul getan hast — angeklickte Knoten, eingeloggte Kombinationen und angeschaute Bilder, zusammen als ein Netz."
+        unterzeile="Was du bisher im Modul getan hast — angeklickte Knoten, geknüpfte Flächen und angeschaute Bilder, zusammen als ein Netz."
       />
 
       {/* 1 — Perspektiven auf deine Aktivität */}
@@ -458,16 +486,25 @@ export default function OrakelDashboard() {
       </section>
 
       {/* 1b — Was dich besonders interessiert hat (analytisch, aus den
-          tatsächlich gewählten Inhalten) */}
-      {auswertung.some((a) => a.labels.length > 0) && (
+          tatsächlich gewählten Inhalten — oder dem reinen Muster-Bespielen) */}
+      {auswertung.some((a) => a.labels.length > 0 || a.flaechenGefuellt > 0) && (
         <section className="mt-xl" aria-label="Was dich besonders interessiert hat">
           <h2 className="text-headline-md text-on-surface">
             Was dich besonders interessiert hat
           </h2>
           <p className="mt-xs text-body-sm text-on-surface-variant">
             Die Inhalte, die du ausgewählt hast — die Grundlage, aus der das
-            Orakel weiter unten dein Interesse deutet.
+            Orakel dein Interesse deutet.
           </p>
+          {!auswertung.some((a) => a.labels.length > 0) && (
+            <p className="mt-md rounded-xl border border-outline-variant bg-surface-bright p-md text-body-sm text-on-surface-variant">
+              Bisher hast du vor allem die <strong className="text-on-surface">Muster
+              bespielt</strong> — {flaechenGefuellt}{" "}
+              {flaechenGefuellt === 1 ? "Fläche" : "Flächen"} geknüpft, ohne
+              Inhalte zu öffnen. Auch das ist eine Spur, die das Orakel deuten
+              kann.
+            </p>
+          )}
           <div className="mt-md flex flex-col gap-md">
             {auswertung
               .filter((a) => a.labels.length > 0)
@@ -495,6 +532,73 @@ export default function OrakelDashboard() {
                   </div>
                 </div>
               ))}
+          </div>
+
+          {/* Das Orakel antwortet direkt auf die Interessens-Auswertung —
+              die erste seiner zwei Stimmen (die zweite: die Stil-Deutung
+              weiter unten). */}
+          <div className="mt-md rounded-xl border border-tertiary/40 bg-tertiary-container/20 p-md">
+            {intOrakel.status === "idle" && (
+              <div className="flex flex-wrap items-center justify-between gap-sm">
+                <p className="flex items-center gap-sm text-body-sm text-on-surface-variant">
+                  <span className="material-symbols-outlined text-[20px] text-tertiary">
+                    insights
+                  </span>
+                  Das Orakel kann dir dein Interesse kurz deuten.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => void interesseBefragen()}
+                  className="inline-flex items-center gap-xs rounded-lg bg-tertiary px-md py-xs text-label-md text-on-tertiary shadow-sm transition hover:bg-on-tertiary-container"
+                >
+                  <span className="material-symbols-outlined text-[16px]">forum</span>
+                  Antwort des Orakels
+                </button>
+              </div>
+            )}
+            {intOrakel.status === "laedt" && (
+              <p className="flex items-center gap-sm text-body-sm text-on-surface-variant">
+                <span className="material-symbols-outlined animate-spin text-[18px] text-tertiary">
+                  progress_activity
+                </span>
+                Das Orakel liest dein Interesse …
+              </p>
+            )}
+            {intOrakel.status === "zu-wenig" && (
+              <p className="text-body-sm text-on-surface-variant">
+                Noch zu wenige Spuren — erkunde erst ein paar Inhalte oder Muster.
+              </p>
+            )}
+            {intOrakel.status === "kein-schluessel" && (
+              <p className="text-body-sm text-on-surface-variant">
+                Das Orakel schweigt: Auf dem Server ist gerade kein KI-Schlüssel
+                hinterlegt.
+              </p>
+            )}
+            {intOrakel.status === "fehler" && (
+              <p className="text-body-sm text-error">
+                Das Orakel ist gerade nicht erreichbar — versuch es gleich nochmals.
+              </p>
+            )}
+            {intOrakel.status === "ok" && intOrakel.text && (
+              <>
+                <p className="flex items-center gap-sm text-label-md text-tertiary">
+                  <span className="material-symbols-outlined text-[18px]">insights</span>
+                  Das Orakel zu deinem Interesse
+                </p>
+                <p className="mt-xs whitespace-pre-line text-body-md text-on-surface">
+                  {intOrakel.text}
+                </p>
+                <button
+                  type="button"
+                  onClick={() => void interesseBefragen()}
+                  className="mt-sm inline-flex items-center gap-xs rounded-lg px-sm py-xs text-label-md text-on-surface-variant transition-colors hover:text-tertiary"
+                >
+                  <span className="material-symbols-outlined text-[16px]">refresh</span>
+                  Neu deuten
+                </button>
+              </>
+            )}
           </div>
         </section>
       )}

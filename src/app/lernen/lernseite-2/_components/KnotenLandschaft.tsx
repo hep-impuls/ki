@@ -13,7 +13,7 @@ import KartenAktion from "./KartenAktion";
 import GewichtungWahl from "./GewichtungWahl";
 import { GEWICHT_EVENT, gewichtungsStaerke } from "../_lib/gewichtung";
 import { melde } from "../_lib/auswertung";
-import { maschen as berechneMaschen, zaehleGefuellt } from "../_lib/flaechen";
+import { sparsameMaschen, zaehleGefuellt, zufallsLayout } from "../_lib/flaechen";
 
 /** Leuchtende Web-Palette (wie die Perlen der KI-Story) — dokumentierte
  *  Ausnahme von der reinen Token-Palette, nur für die gefüllten Maschen. */
@@ -283,12 +283,21 @@ export default function KnotenLandschaft({
 
   const anordnung = anordnungen[Math.min(modus, anordnungen.length - 1)];
 
-  // Delaunay-Web: Maschen (Dreiecke) + einmalige Netz-Kanten über die Punkte.
-  const autoMaschen = useMemo(
-    () =>
-      weben ? berechneMaschen(anordnung.pos.map(([x, y]) => ({ x, y }))) : [],
-    [weben, anordnung],
-  );
+  // Web-Layout: zufällig, gut verteilt — im Browser erzeugt (SSR rendert die
+  // deterministische Ausgangslage) und beim Zurücksetzen neu gewürfelt.
+  const [webPos, setWebPos] = useState<[number, number][] | null>(null);
+  useEffect(() => {
+    if (weben) setWebPos(zufallsLayout(n, VB_W, hoehe, 48));
+  }, [weben, n, hoehe]);
+  const posVon = (i: number): [number, number] =>
+    (weben && webPos ? webPos[i] : anordnung.pos[i]) ?? [0, 0];
+
+  // Delaunay-Web: sparsame Maschen (pro Punkt gedeckelt) + Netz-Kanten.
+  const autoMaschen = useMemo(() => {
+    if (!weben) return [];
+    const quelle = webPos ?? anordnung.pos;
+    return sparsameMaschen(quelle.map(([x, y]) => ({ x, y })), 300, 4);
+  }, [weben, webPos, anordnung]);
   const webKanten = useMemo(() => {
     const seen = new Set<string>();
     const out: [number, number][] = [];
@@ -396,6 +405,8 @@ export default function KnotenLandschaft({
     setVisited(new Set());
     setGesammelt([]);
     setKantenAktiv(new Set());
+    // Web-Modus: die Punkte würfeln sich neu — ein frisches Gewebe.
+    if (weben) setWebPos(zufallsLayout(n, VB_W, hoehe, 48));
   }
 
   const done = visited.size === n;
@@ -546,9 +557,8 @@ export default function KnotenLandschaft({
           {weben && (
             <>
               {webKanten.map(([p, q], i) => {
-                const a = anordnung.pos[p];
-                const b = anordnung.pos[q];
-                if (!a || !b) return null;
+                const a = posVon(p);
+                const b = posVon(q);
                 const beide = visited.has(p) && visited.has(q);
                 return (
                   <line
@@ -558,7 +568,10 @@ export default function KnotenLandschaft({
                     x2={b[0]}
                     y2={b[1]}
                     strokeWidth={beide ? 1.1 : 0.8}
-                    className={beide ? "stroke-tertiary" : "stroke-outline-variant"}
+                    className={
+                      (beide ? "stroke-tertiary" : "stroke-outline-variant") +
+                      " transition-all duration-500"
+                    }
                     opacity={beide ? 0.5 : 0.18}
                   />
                 );
@@ -568,7 +581,7 @@ export default function KnotenLandschaft({
                 const farbe = WEB_FARBEN[i % WEB_FARBEN.length];
                 const pts = t
                   .map((v) => {
-                    const p = anordnung.pos[v];
+                    const p = posVon(v);
                     return `${p[0]},${p[1]}`;
                   })
                   .join(" ");
@@ -674,7 +687,7 @@ export default function KnotenLandschaft({
 
           {/* Punkte — gleiten beim Umschalten an ihre neue Position */}
           {knoten.map((k, i) => {
-            const [x, y] = anordnung.pos[i] ?? [0, 0];
+            const [x, y] = posVon(i);
             const reached = visited.has(i);
             const name = k.kurz ?? k.titel;
             // Beschriftung unterm Punkt: horizontal so eingemittet, dass sie
@@ -706,12 +719,14 @@ export default function KnotenLandschaft({
                 className="group cursor-pointer outline-none"
               >
                 <circle cx="0" cy="0" r="22" fill="transparent" />
-                {!started && i === 0 && (
+                {/* Einladung: im Web-Modus blinken ALLE unbesuchten Punkte,
+                    sonst der erste bis zum Start. */}
+                {(weben ? !reached : !started && i === 0) && (
                   <circle
                     cx="0"
                     cy="0"
-                    r="11"
-                    className="fill-tertiary opacity-30 animate-ping origin-center [transform-box:fill-box] motion-reduce:hidden"
+                    r={weben ? 9 : 11}
+                    className="fill-tertiary opacity-25 animate-ping origin-center [transform-box:fill-box] motion-reduce:hidden"
                   />
                 )}
                 {reached && (

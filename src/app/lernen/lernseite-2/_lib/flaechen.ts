@@ -87,3 +87,68 @@ export function zaehleGefuellt(
 ): number {
   return tris.filter((t) => t.every((v) => besucht.has(v))).length;
 }
+
+/**
+ * Zufälliges, gut verteiltes Layout für n Punkte in einer Box (Best-Candidate-
+ * Sampling mit Mindestabstand). Nur im Browser aufrufen (Math.random) — der
+ * Server rendert die deterministische Ausgangslage.
+ */
+export function zufallsLayout(
+  n: number,
+  w: number,
+  h: number,
+  marge = 44,
+): [number, number][] {
+  const bw = Math.max(1, w - 2 * marge);
+  const bh = Math.max(1, h - 2 * marge);
+  const dist = Math.sqrt((bw * bh) / Math.max(1, n)) * 0.78;
+  const pts: XY[] = [];
+  for (let i = 0; i < n; i++) {
+    let best: XY = { x: marge + Math.random() * bw, y: marge + Math.random() * bh };
+    let bestD = -1;
+    for (let t = 0; t < 60; t++) {
+      const p = { x: marge + Math.random() * bw, y: marge + Math.random() * bh };
+      const d = pts.length
+        ? Math.min(...pts.map((q) => Math.hypot(p.x - q.x, p.y - q.y)))
+        : Infinity;
+      if (d >= dist) {
+        best = p;
+        break;
+      }
+      if (d > bestD) {
+        bestD = d;
+        best = p;
+      }
+    }
+    pts.push(best);
+  }
+  return pts.map((p) => [Math.round(p.x), Math.round(p.y)]);
+}
+
+/**
+ * Sparsame Maschen: wie `maschen`, aber pro Punkt höchstens `maxProPunkt`
+ * Dreiecke — die grössten Maschen überlasteter Punkte fliegen zuerst raus.
+ * So erzeugt das Markieren EINES Punktes nie zu viele Flächen auf einmal.
+ */
+export function sparsameMaschen(
+  coords: XY[],
+  maxKante = 260,
+  maxProPunkt = 4,
+): [number, number, number][] {
+  const tris = maschen(coords, maxKante);
+  const e = (p: XY, q: XY) => Math.hypot(p.x - q.x, p.y - q.y);
+  const groesse = (t: [number, number, number]) => {
+    const [a, b, c] = t.map((i) => coords[i]);
+    return Math.max(e(a, b), e(b, c), e(c, a));
+  };
+  const count = new Array(coords.length).fill(0) as number[];
+  tris.forEach((t) => t.forEach((v) => count[v]++));
+  const raus = new Set<[number, number, number]>();
+  for (const t of [...tris].sort((a, b) => groesse(b) - groesse(a))) {
+    if (t.some((v) => count[v] > maxProPunkt)) {
+      raus.add(t);
+      t.forEach((v) => count[v]--);
+    }
+  }
+  return tris.filter((t) => !raus.has(t));
+}

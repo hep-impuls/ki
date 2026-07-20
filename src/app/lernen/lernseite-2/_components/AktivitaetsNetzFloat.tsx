@@ -5,9 +5,12 @@ import {
   SPUR_EVENT,
   zaehleAktivitaet,
   zieheSpurenAusCloud,
-  type AktivitaetsZahlen,
 } from "../_lib/spuren";
+import { AUSWERTUNG_EVENT, zaehleFlaechen } from "../_lib/auswertung";
 import AktivitaetsNetz from "./AktivitaetsNetz";
+
+/** Die vier angezeigten Kennzahlen (wie im grossen Netz). */
+type NetzWerte = { knoten: number; flaechen: number; bilder: number; videos: number };
 
 /**
  * AktivitaetsNetzFloat — das Aktivitätsnetz als mitwanderndes Symbol.
@@ -20,11 +23,11 @@ import AktivitaetsNetz from "./AktivitaetsNetz";
  */
 
 /** Mini-Netz fürs Symbol: Kern + vier farbige Punkte, die pulsieren. */
-function MiniNetz({ zahlen }: { zahlen: AktivitaetsZahlen }) {
+function MiniNetz({ zahlen }: { zahlen: NetzWerte }) {
   const punkte = [
     { x: 20, y: 6, cls: "fill-tertiary", aktiv: zahlen.knoten > 0 },
     { x: 34, y: 19, cls: "fill-secondary", aktiv: zahlen.bilder > 0 },
-    { x: 6, y: 19, cls: "fill-primary", aktiv: zahlen.kombinationen > 0 },
+    { x: 6, y: 19, cls: "fill-primary", aktiv: zahlen.flaechen > 0 },
     { x: 20, y: 33, cls: "fill-on-surface", aktiv: zahlen.videos > 0 },
   ];
   return (
@@ -60,20 +63,31 @@ function MiniNetz({ zahlen }: { zahlen: AktivitaetsZahlen }) {
 
 export default function AktivitaetsNetzFloat() {
   const [offen, setOffen] = useState(false);
-  const [z, setZ] = useState<AktivitaetsZahlen>({
+  const [z, setZ] = useState<NetzWerte>({
     knoten: 0,
-    kombinationen: 0,
+    flaechen: 0,
     bilder: 0,
     videos: 0,
-    wuensche: 0,
   });
 
   useEffect(() => {
-    const lesen = () => setZ(zaehleAktivitaet());
+    const lesen = () => {
+      const a = zaehleAktivitaet();
+      setZ({
+        knoten: a.knoten,
+        flaechen: zaehleFlaechen().gefuellt,
+        bilder: a.bilder,
+        videos: a.videos,
+      });
+    };
     lesen();
     void zieheSpurenAusCloud();
     window.addEventListener(SPUR_EVENT, lesen);
-    return () => window.removeEventListener(SPUR_EVENT, lesen);
+    window.addEventListener(AUSWERTUNG_EVENT, lesen);
+    return () => {
+      window.removeEventListener(SPUR_EVENT, lesen);
+      window.removeEventListener(AUSWERTUNG_EVENT, lesen);
+    };
   }, []);
 
   useEffect(() => {
@@ -85,7 +99,7 @@ export default function AktivitaetsNetzFloat() {
     return () => window.removeEventListener("keydown", onKey);
   }, [offen]);
 
-  const gesamt = z.knoten + z.kombinationen + z.bilder + z.videos;
+  const gesamt = z.knoten + z.flaechen + z.bilder + z.videos;
 
   return (
     <>
@@ -103,7 +117,7 @@ export default function AktivitaetsNetzFloat() {
               <AktivitaetsNetz
                 schwebend
                 titel="Dein Aktivitätsnetz"
-                unterzeile="Angeklickte Knoten, eingeloggte Kombinationen und angeschaute Bilder — zusammen als ein Netz."
+                unterzeile="Angeklickte Knoten, geknüpfte Flächen und angeschaute Bilder — zusammen als ein Netz."
               />
               <button
                 type="button"

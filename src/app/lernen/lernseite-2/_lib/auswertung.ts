@@ -75,3 +75,14 @@ export function melde(key: string, eintrag: AuswertungEintrag): void {
 export function leseAuswertung(): AuswertungEintrag[] {
   return Object.values(lesen());
 }
+
+/** Geknüpfte Flächen über alle Bereiche — fürs Aktivitätsnetz/Orakel. */
+export function zaehleFlaechen(): { gefuellt: number; total: number } {
+  return leseAuswertung().reduce(
+    (acc, a) => ({
+      gefuellt: acc.gefuellt + a.flaechenGefuellt,
+      total: acc.total + a.flaechenTotal,
+    }),
+    { gefuellt: 0, total: 0 },
+  );
+}

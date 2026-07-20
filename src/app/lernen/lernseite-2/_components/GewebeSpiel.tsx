@@ -8,7 +8,7 @@ import {
   SPUR_EVENT,
   zieheSpurenAusCloud,
 } from "../_lib/spuren";
-import { maschen as berechneMaschen, zaehleGefuellt } from "../_lib/flaechen";
+import { sparsameMaschen, zaehleGefuellt, zufallsLayout } from "../_lib/flaechen";
 import { melde } from "../_lib/auswertung";
 
 /** Leuchtende Web-Palette (wie die Perlen der KI-Story) — dokumentierte
@@ -109,10 +109,18 @@ export default function GewebeSpiel({
     felder ?? Array.from({ length: n - 2 }, (_, i) => [i, i + 1, i + 2]);
 
   const musterId = useId().replace(/[^a-zA-Z0-9]/g, "");
-  // Delaunay-Web (wie Teppich/KI-Story/Merkmale): Maschen + Netzkanten.
+  // Web-Layout: zufällig, gut verteilt — im Browser gewürfelt (SSR rendert
+  // die deterministische Ausgangslage).
+  const [posZufall, setPosZufall] = useState<[number, number][] | null>(null);
+  useEffect(() => {
+    if (weben) setPosZufall(zufallsLayout(n, VB_W, hoehe, Math.min(44, hoehe / 4)));
+  }, [weben, n, hoehe]);
+  const P = weben && posZufall ? posZufall : PUNKTE;
+
+  // Delaunay-Web (wie Teppich/KI-Story/Merkmale): sparsame Maschen + Netz.
   const autoMaschen = useMemo(
-    () => (weben ? berechneMaschen(PUNKTE.map(([x, y]) => ({ x, y })), 340) : []),
-    [weben, PUNKTE],
+    () => (weben ? sparsameMaschen(P.map(([x, y]) => ({ x, y })), 320, 4) : []),
+    [weben, P],
   );
   const webKanten = useMemo(() => {
     const seen = new Set<string>();
@@ -203,8 +211,8 @@ export default function GewebeSpiel({
               </pattern>
             </defs>
             {webKanten.map(([p, q], i) => {
-              const a = PUNKTE[p];
-              const b = PUNKTE[q];
+              const a = P[p];
+              const b = P[q];
               const beide = aktiv.has(p) && aktiv.has(q);
               return (
                 <line
@@ -214,14 +222,17 @@ export default function GewebeSpiel({
                   x2={b[0]}
                   y2={b[1]}
                   strokeWidth={beide ? 1.1 : 0.8}
-                  className={beide ? "stroke-tertiary" : "stroke-outline-variant"}
+                  className={
+                    (beide ? "stroke-tertiary" : "stroke-outline-variant") +
+                    " transition-all duration-500"
+                  }
                   opacity={beide ? 0.5 : 0.18}
                 />
               );
             })}
             {autoMaschen.map((t, i) => {
               if (!t.every((v) => aktiv.has(v))) return null;
-              const pts = t.map((v) => `${PUNKTE[v][0]},${PUNKTE[v][1]}`).join(" ");
+              const pts = t.map((v) => `${P[v][0]},${P[v][1]}`).join(" ");
               const stil = i % 3; // 0 = farbig, 1 = schraffur, 2 = punkte
               if (stil === 0) {
                 const farbe = WEB_FARBEN[i % WEB_FARBEN.length];
@@ -297,7 +308,7 @@ export default function GewebeSpiel({
         ))}
 
         {/* Punkte — antippen togglet */}
-        {PUNKTE.map(([x, y], i) => {
+        {P.map(([x, y], i) => {
           const an = aktiv.has(i);
           const istAkzent = i === akzent;
           return (
@@ -317,12 +328,13 @@ export default function GewebeSpiel({
               className="group cursor-pointer outline-none"
             >
               <circle cx={x} cy={y} r="16" fill="transparent" />
-              {!started && i === (akzent ?? 0) && (
+              {/* Einladung: im Web-Modus blinken ALLE inaktiven Punkte. */}
+              {(weben ? !an : !started && i === (akzent ?? 0)) && (
                 <circle
                   cx={x}
                   cy={y}
-                  r="11"
-                  className="fill-tertiary opacity-30 animate-ping origin-center [transform-box:fill-box] motion-reduce:hidden"
+                  r={weben ? 9 : 11}
+                  className="fill-tertiary opacity-25 animate-ping origin-center [transform-box:fill-box] motion-reduce:hidden"
                 />
               )}
               {(an || istAkzent) && (
