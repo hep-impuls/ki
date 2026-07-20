@@ -61,7 +61,11 @@ export default function Lernseite2Hub() {
             wird auch diese davon geprägt, wie wir sie gestalten.
           </p>
         </div>
-        <GewebeSpiel className="mt-lg" />
+        <GewebeSpiel
+          className="mt-lg"
+          weben
+          bereichLabel="Einstiegsmuster (Hub)"
+        />
       </header>
 
       {/* Video-Impuls zum Einstieg */}

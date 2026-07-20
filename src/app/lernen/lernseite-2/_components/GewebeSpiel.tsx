@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useId, useMemo, useState } from "react";
 import {
   leseSpurenIndices,
   loescheSpuren,
@@ -8,6 +8,15 @@ import {
   SPUR_EVENT,
   zieheSpurenAusCloud,
 } from "../_lib/spuren";
+import { maschen as berechneMaschen, zaehleGefuellt } from "../_lib/flaechen";
+import { melde } from "../_lib/auswertung";
+
+/** Leuchtende Web-Palette (wie die Perlen der KI-Story) — dokumentierte
+ *  Ausnahme von der reinen Token-Palette, nur für die gefüllten Maschen. */
+const WEB_FARBEN = [
+  "#f94144", "#f3722c", "#f8961e", "#f9c74f", "#90be6d", "#43aa8b",
+  "#4d908e", "#577590", "#277da1", "#5e60ce", "#9d4edd", "#d81159",
+] as const;
 
 /**
  * GewebeSpiel — das Kopf-Muster einer Seite als kleines interaktives Spiel.
@@ -60,10 +69,18 @@ export default function GewebeSpiel({
   felder,
   akzent,
   hoehe = 132,
+  weben = false,
+  bereichLabel,
 }: {
   className?: string;
   /** Spur-Präfix fürs Merken des Musters. */
   spurKey?: string;
+  /** true → Delaunay-Web (wie Teppich/KI-Story/Merkmale): zwischen aktiven
+   *  Punkten entstehen Maschen (teils farbig, teils gemustert), statt der
+   *  festen `felder`/`kanten`. */
+  weben?: boolean;
+  /** Wenn gesetzt: Flächen-Bilanz ans Orakel melden (zählt als Aktivität). */
+  bereichLabel?: string;
   /** Punkte des Musters. */
   punkte?: [number, number][];
   /** Kanten als Index-Paare. Default: Zickzack-Streifen (i,i+1) + (i,i+2). */
@@ -91,6 +108,33 @@ export default function GewebeSpiel({
   const FELDER: number[][] =
     felder ?? Array.from({ length: n - 2 }, (_, i) => [i, i + 1, i + 2]);
 
+  const musterId = useId().replace(/[^a-zA-Z0-9]/g, "");
+  // Delaunay-Web (wie Teppich/KI-Story/Merkmale): Maschen + Netzkanten.
+  const autoMaschen = useMemo(
+    () => (weben ? berechneMaschen(PUNKTE.map(([x, y]) => ({ x, y })), 340) : []),
+    [weben, PUNKTE],
+  );
+  const webKanten = useMemo(() => {
+    const seen = new Set<string>();
+    const out: [number, number][] = [];
+    for (const [a, b, c] of autoMaschen) {
+      for (const [p, q] of [
+        [a, b],
+        [b, c],
+        [c, a],
+      ]) {
+        const lo = Math.min(p, q);
+        const hi = Math.max(p, q);
+        const k = `${lo}-${hi}`;
+        if (!seen.has(k)) {
+          seen.add(k);
+          out.push([lo, hi]);
+        }
+      }
+    }
+    return out;
+  }, [autoMaschen]);
+
   const [aktiv, setAktiv] = useState<Set<number>>(new Set());
 
   // Wiederherstellen: das Muster exakt aus dem Spuren-Bestand übernehmen
@@ -106,6 +150,17 @@ export default function GewebeSpiel({
     window.addEventListener(SPUR_EVENT, restore);
     return () => window.removeEventListener(SPUR_EVENT, restore);
   }, [spurKey, n]);
+
+  // Erzeugte Flächen ans Orakel melden (zählt als Aktivität, ohne Inhalt).
+  useEffect(() => {
+    if (!bereichLabel) return;
+    melde(spurKey, {
+      bereich: bereichLabel,
+      flaechenGefuellt: weben ? zaehleGefuellt(autoMaschen, aktiv) : 0,
+      flaechenTotal: weben ? autoMaschen.length : 0,
+      labels: [],
+    });
+  }, [aktiv, weben, autoMaschen, bereichLabel, spurKey]);
 
   function toggle(i: number) {
     setAktiv((prev) => {
@@ -129,35 +184,106 @@ export default function GewebeSpiel({
         role="group"
         aria-label="Gewebe-Spiel: Punkte antippen — zwischen aktiven Punkten färben sich die Felder."
       >
-        {/* Felder — färben sich, wenn alle Ecken aktiv sind */}
-        {FELDER.map((feld, i) => {
-          const gefuellt = feld.every((k) => aktiv.has(k));
-          return (
-            <polygon
-              key={`f${i}`}
-              points={feld.map((k) => `${PUNKTE[k][0]},${PUNKTE[k][1]}`).join(" ")}
-              className={
-                "pointer-events-none transition-opacity duration-500 " +
-                FARBEN[i % FARBEN.length]
+        {/* Delaunay-Web: feines Netz + gefüllte Maschen (teils farbig, teils
+            gemustert) zwischen aktiven Punkten */}
+        {weben && (
+          <>
+            <defs>
+              <pattern
+                id={`${musterId}-s`}
+                width="9"
+                height="9"
+                patternUnits="userSpaceOnUse"
+                patternTransform="rotate(45)"
+              >
+                <line x1="0" y1="0" x2="0" y2="9" strokeWidth="1.4" className="stroke-tertiary" opacity="0.35" />
+              </pattern>
+              <pattern id={`${musterId}-p`} width="11" height="11" patternUnits="userSpaceOnUse">
+                <circle cx="3" cy="3" r="1.5" className="fill-tertiary" opacity="0.4" />
+              </pattern>
+            </defs>
+            {webKanten.map(([p, q], i) => {
+              const a = PUNKTE[p];
+              const b = PUNKTE[q];
+              const beide = aktiv.has(p) && aktiv.has(q);
+              return (
+                <line
+                  key={`wk${i}`}
+                  x1={a[0]}
+                  y1={a[1]}
+                  x2={b[0]}
+                  y2={b[1]}
+                  strokeWidth={beide ? 1.1 : 0.8}
+                  className={beide ? "stroke-tertiary" : "stroke-outline-variant"}
+                  opacity={beide ? 0.5 : 0.18}
+                />
+              );
+            })}
+            {autoMaschen.map((t, i) => {
+              if (!t.every((v) => aktiv.has(v))) return null;
+              const pts = t.map((v) => `${PUNKTE[v][0]},${PUNKTE[v][1]}`).join(" ");
+              const stil = i % 3; // 0 = farbig, 1 = schraffur, 2 = punkte
+              if (stil === 0) {
+                const farbe = WEB_FARBEN[i % WEB_FARBEN.length];
+                return (
+                  <polygon
+                    key={`wm${i}`}
+                    points={pts}
+                    fill={farbe}
+                    fillOpacity={0.18}
+                    stroke={farbe}
+                    strokeOpacity={0.34}
+                    strokeWidth={0.6}
+                    className="pointer-events-none transition-opacity duration-500"
+                  />
+                );
               }
-              opacity={gefuellt ? 0.16 : 0}
-            />
-          );
-        })}
+              return (
+                <polygon
+                  key={`wm${i}`}
+                  points={pts}
+                  fill={`url(#${musterId}-${stil === 1 ? "s" : "p"})`}
+                  className="pointer-events-none stroke-tertiary transition-opacity duration-500"
+                  strokeWidth={0.5}
+                  strokeOpacity={0.3}
+                />
+              );
+            })}
+          </>
+        )}
 
-        {/* Fäden */}
-        {KANTEN.map(([a, b], i) => (
-          <line
-            key={`k${i}`}
-            x1={PUNKTE[a][0]}
-            y1={PUNKTE[a][1]}
-            x2={PUNKTE[b][0]}
-            y2={PUNKTE[b][1]}
-            strokeWidth="1"
-            className="stroke-outline-variant"
-          />
-        ))}
-        {FEIN.map(([a, b], i) => (
+        {/* Feste Felder — nur ohne `weben` */}
+        {!weben &&
+          FELDER.map((feld, i) => {
+            const gefuellt = feld.every((k) => aktiv.has(k));
+            return (
+              <polygon
+                key={`f${i}`}
+                points={feld.map((k) => `${PUNKTE[k][0]},${PUNKTE[k][1]}`).join(" ")}
+                className={
+                  "pointer-events-none transition-opacity duration-500 " +
+                  FARBEN[i % FARBEN.length]
+                }
+                opacity={gefuellt ? 0.16 : 0}
+              />
+            );
+          })}
+
+        {/* Feste Fäden — nur ohne `weben` (dann übernimmt das Netz) */}
+        {!weben &&
+          KANTEN.map(([a, b], i) => (
+            <line
+              key={`k${i}`}
+              x1={PUNKTE[a][0]}
+              y1={PUNKTE[a][1]}
+              x2={PUNKTE[b][0]}
+              y2={PUNKTE[b][1]}
+              strokeWidth="1"
+              className="stroke-outline-variant"
+            />
+          ))}
+        {!weben &&
+          FEIN.map(([a, b], i) => (
           <line
             key={`fk${i}`}
             x1={PUNKTE[a][0]}
@@ -225,7 +351,9 @@ export default function GewebeSpiel({
         })}
       </svg>
       <p className="mt-xs text-label-sm text-on-surface-variant">
-        Tippe die Punkte an — zwischen aktiven Punkten färben sich die Felder.
+        {weben
+          ? "Tippe die Punkte an — zwischen ihnen entstehen Flächen, jede zählt als Aktivität."
+          : "Tippe die Punkte an — zwischen aktiven Punkten färben sich die Felder."}
       </p>
     </div>
   );

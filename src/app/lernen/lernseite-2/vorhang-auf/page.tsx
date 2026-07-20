@@ -26,26 +26,6 @@ const AUFTRITT_PUNKTE: [number, number][] = [
   [405, 261],
   [180, 215],
 ];
-const AUFTRITT_KANTEN: [number, number][] = [
-  [0, 1],
-  [0, 2],
-  [0, 3],
-  [0, 4],
-  [0, 5],
-  [0, 6],
-];
-const AUFTRITT_FEIN: [number, number][] = [
-  [1, 2],
-  [3, 4],
-];
-const AUFTRITT_FELDER: number[][] = [
-  [0, 1, 2],
-  [0, 2, 3],
-  [0, 3, 4],
-  [0, 4, 5],
-  [0, 5, 6],
-  [0, 6, 1],
-];
 
 /**
  * Thema 01 — «Vorhang auf: eine neue Akteurin».
@@ -473,10 +453,8 @@ export default function Lernseite2VorhangAuf() {
         className="mt-xl max-w-5xl"
         spurKey="vorhang-auf:gewebe"
         punkte={AUFTRITT_PUNKTE}
-        kanten={AUFTRITT_KANTEN}
-        kantenFein={AUFTRITT_FEIN}
-        felder={AUFTRITT_FELDER}
-        akzent={0}
+        weben
+        bereichLabel="Einstiegsmuster (Auftakt)"
         hoehe={285}
       />
 
