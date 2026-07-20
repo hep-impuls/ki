@@ -850,6 +850,7 @@ export default function Lernseite2VorhangAuf() {
           svgKlasse="aspect-[720/350] sm:aspect-[720/260]"
           spurKey="vorhang-auf:weisheit"
           kantenInteraktiv={false}
+          weben
           bereichLabel="Die Merkmale der neuen Akteurin"
           gewichtung={{
             prefix: "vorhang-auf:gestalt",

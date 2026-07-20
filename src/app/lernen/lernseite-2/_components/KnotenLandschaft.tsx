@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 import {
   leseSpuren,
   leseSpurenIndices,
@@ -13,6 +13,14 @@ import KartenAktion from "./KartenAktion";
 import GewichtungWahl from "./GewichtungWahl";
 import { GEWICHT_EVENT, gewichtungsStaerke } from "../_lib/gewichtung";
 import { melde } from "../_lib/auswertung";
+import { maschen as berechneMaschen, zaehleGefuellt } from "../_lib/flaechen";
+
+/** Leuchtende Web-Palette (wie die Perlen der KI-Story) — dokumentierte
+ *  Ausnahme von der reinen Token-Palette, nur für die gefüllten Maschen. */
+const WEB_FARBEN = [
+  "#f94144", "#f3722c", "#f8961e", "#f9c74f", "#90be6d", "#43aa8b",
+  "#4d908e", "#577590", "#277da1", "#5e60ce", "#9d4edd", "#d81159",
+] as const;
 
 /**
  * KnotenLandschaft — die einheitliche Interaktion der Auftakt-Seite:
@@ -209,6 +217,7 @@ export default function KnotenLandschaft({
   gewichtung,
   kantenInteraktiv = true,
   bereichLabel,
+  weben = false,
 }: {
   knoten: LandKnoten[];
   /** Eine oder mehrere Anordnungen; bei mehreren erscheint ein Umschalter. */
@@ -245,6 +254,11 @@ export default function KnotenLandschaft({
   kantenInteraktiv?: boolean;
   /** Wenn gesetzt: Flächen-Bilanz + gewählte Titel ans Orakel melden. */
   bereichLabel?: string;
+  /** true → statt handgesetzter `flaechen`/Kanten ein Delaunay-Web (wie
+   *  «Teppich des Wandels» / KI-Story): feines Netz über die Punkte, in dem
+   *  sich zwischen besuchten Punkten farbige Maschen füllen. Nur bei genau
+   *  einer Anordnung sinnvoll (feste Positionen). */
+  weben?: boolean;
 }) {
   const n = knoten.length;
   // Aggregierte Kontur-Stärke (0..1) aus den Gewichtungen — live.
@@ -268,6 +282,33 @@ export default function KnotenLandschaft({
   const [kantenAktiv, setKantenAktiv] = useState<Set<string>>(new Set());
 
   const anordnung = anordnungen[Math.min(modus, anordnungen.length - 1)];
+
+  // Delaunay-Web: Maschen (Dreiecke) + einmalige Netz-Kanten über die Punkte.
+  const autoMaschen = useMemo(
+    () =>
+      weben ? berechneMaschen(anordnung.pos.map(([x, y]) => ({ x, y }))) : [],
+    [weben, anordnung],
+  );
+  const webKanten = useMemo(() => {
+    const seen = new Set<string>();
+    const out: [number, number][] = [];
+    for (const [a, b, c] of autoMaschen) {
+      for (const [p, q] of [
+        [a, b],
+        [b, c],
+        [c, a],
+      ]) {
+        const lo = Math.min(p, q);
+        const hi = Math.max(p, q);
+        const k = `${lo}-${hi}`;
+        if (!seen.has(k)) {
+          seen.add(k);
+          out.push([lo, hi]);
+        }
+      }
+    }
+    return out;
+  }, [autoMaschen]);
 
   function reveal(i: number) {
     if (i < 0 || i >= n) return;
@@ -365,19 +406,22 @@ export default function KnotenLandschaft({
   // Flächen-Bilanz + gewählte Titel ans Orakel melden (falls bereichLabel).
   useEffect(() => {
     if (!bereichLabel) return;
-    const gefuellt = flaechen.filter((f) => f.knoten.every((k) => visited.has(k))).length;
+    const gefuellt = weben
+      ? zaehleGefuellt(autoMaschen, visited)
+      : flaechen.filter((f) => f.knoten.every((k) => visited.has(k))).length;
+    const total = weben ? autoMaschen.length : flaechen.length;
     const labels = gesammelt
       .map((i) => knoten[i]?.kurz ?? knoten[i]?.titel)
       .filter((s): s is string => Boolean(s));
     melde(spurKey ?? bereichLabel, {
       bereich: bereichLabel,
       flaechenGefuellt: gefuellt,
-      flaechenTotal: flaechen.length,
+      flaechenTotal: total,
       labels,
     });
     // knoten/flaechen sind stabile Props → nicht in die Deps.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [visited, gesammelt, bereichLabel, spurKey]);
+  }, [visited, gesammelt, bereichLabel, spurKey, weben, autoMaschen]);
 
   return (
     <section aria-label={ariaLabel} className={className}>
@@ -497,8 +541,56 @@ export default function KnotenLandschaft({
             </pattern>
           </defs>
 
+          {/* Delaunay-Web: feines Netz + gefüllte Maschen zwischen besuchten
+              Punkten (wie Teppich/KI-Story) */}
+          {weben && (
+            <>
+              {webKanten.map(([p, q], i) => {
+                const a = anordnung.pos[p];
+                const b = anordnung.pos[q];
+                if (!a || !b) return null;
+                const beide = visited.has(p) && visited.has(q);
+                return (
+                  <line
+                    key={`wk${i}`}
+                    x1={a[0]}
+                    y1={a[1]}
+                    x2={b[0]}
+                    y2={b[1]}
+                    strokeWidth={beide ? 1.1 : 0.8}
+                    className={beide ? "stroke-tertiary" : "stroke-outline-variant"}
+                    opacity={beide ? 0.5 : 0.18}
+                  />
+                );
+              })}
+              {autoMaschen.map((t, i) => {
+                if (!t.every((v) => visited.has(v))) return null;
+                const farbe = WEB_FARBEN[i % WEB_FARBEN.length];
+                const pts = t
+                  .map((v) => {
+                    const p = anordnung.pos[v];
+                    return `${p[0]},${p[1]}`;
+                  })
+                  .join(" ");
+                return (
+                  <polygon
+                    key={`wm${i}`}
+                    points={pts}
+                    fill={farbe}
+                    fillOpacity={0.17}
+                    stroke={farbe}
+                    strokeOpacity={0.33}
+                    strokeWidth={0.6}
+                    className="pointer-events-none transition-opacity duration-500"
+                  />
+                );
+              })}
+            </>
+          )}
+
           {/* Flächen — füllen sich, sobald ihre Knoten besucht sind */}
-          {!mehrereAnordnungen &&
+          {!weben &&
+            !mehrereAnordnungen &&
             flaechen.map((f, i) => {
               const aktiv = f.knoten.every((k) => visited.has(k));
               const art = f.muster ?? (["voll", "schraffur", "punkte"] as const)[i % 3];
@@ -545,8 +637,10 @@ export default function KnotenLandschaft({
           ))}
 
           {/* Verbindungen — interaktiv: anklicken loggt sie ein und öffnet
-              beide Enden. Nicht-interaktiv: nur sichtbare Fäden im Geflecht. */}
-          {anordnung.kanten.map((ka, ki) => {
+              beide Enden. Nicht-interaktiv: nur sichtbare Fäden im Geflecht.
+              Bei `weben` übernimmt das Delaunay-Netz die Fäden. */}
+          {!weben &&
+            anordnung.kanten.map((ka, ki) => {
             const a = anordnung.pos[ka.von];
             const b = anordnung.pos[ka.zu];
             if (!a || !b) return null;
