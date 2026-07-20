@@ -10,6 +10,17 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-20 — VideoImpuls: direkt sichtbar + «geschaut» erst bei Durchsicht
+
+**Auftrag Christof:** Das Video soll schon **sichtbar/abspielbar** sein, bevor man
+klickt, und **erst dann als «geschaut»** vermerkt werden, wenn es wirklich zu Ende
+gesehen wurde. Umsetzung: `VideoImpuls` bettet das Video jetzt direkt über die
+**YouTube-IFrame-Player-API** ein (Host `youtube-nocookie.com`). Die Spur
+`video:…` wird nicht mehr beim Start gesetzt, sondern erst bei Zustand `ENDED`
+oder ≥ 92 % Laufzeit. **Datenschutz-Änderung:** Damit fällt die frühere
+«Zwei-Klick-Lösung» (nichts von YouTube bis zum Klick) weg — YouTube (nocookie)
+wird jetzt beim Laden der Seite eingebunden.
+
 ## 2026-07-19 — Orakel-Umbau: deutet die EIGENE Aktivität (3 Stile) + Findmind
 
 **Auftrag Christof:** Das Orakel (Thema 03) wurde stark umgebaut. Es beginnt mit

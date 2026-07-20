@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   leseSpuren,
   merkeSpur,
@@ -11,17 +11,59 @@ import {
 /**
  * VideoImpuls — ein kurzes Erklär-Video als Einstieg/Impuls einer Seite.
  *
- * Datenschutzfreundliche Zwei-Klick-Lösung (Schulkontext): Beim Laden der
- * Seite wird NICHTS von YouTube geladen — nur eine eigene Vorschau-Fläche
- * mit Play-Knopf (Theme-Tokens). Erst der Klick lädt das Video als iframe
- * von youtube-nocookie.com und markiert es als «geschaut» (Spur `video:…`,
- * dreifach registriert wie alles: lokal, anonymer Zähler, Cloud-Spiegel).
- * Das Schauen zählt als eigene Kategorie im Aktivitätsnetz und erscheint
- * im Orakel-Dashboard.
+ * Das Video ist direkt sichtbar und abspielbar (eingebettet über die
+ * YouTube-IFrame-Player-API, Host `youtube-nocookie.com`). Als «geschaut»
+ * wird es NICHT schon beim Start markiert, sondern erst, wenn es wirklich zu
+ * Ende gesehen wurde — technisch: Zustand ENDED oder ≥ 92 % der Laufzeit. Erst
+ * dann wird die Spur `video:…` gesetzt (dreifach registriert wie alles: lokal,
+ * anonymer Zähler, Cloud-Spiegel) und zählt im Aktivitätsnetz/Orakel.
  *
  * Ohne `videoId` zeigt die Komponente einen deutlichen Platzhalter
  * («Video folgt») — die YouTube-ID wird später einfach als Prop ergänzt.
  */
+
+/** Anteil der Laufzeit, ab dem das Video als «durchgesehen» gilt. */
+const SCHWELLE = 0.92;
+
+interface YTPlayer {
+  getCurrentTime(): number;
+  getDuration(): number;
+  destroy(): void;
+}
+interface YTNamespace {
+  Player: new (
+    el: HTMLElement,
+    opts: Record<string, unknown>,
+  ) => YTPlayer;
+  PlayerState: { ENDED: number; PLAYING: number };
+}
+function ytGlobal(): YTNamespace | null {
+  const w = window as unknown as { YT?: YTNamespace };
+  return w.YT && w.YT.Player ? w.YT : null;
+}
+
+/** IFrame-API einmalig laden; Promise löst auf, sobald `window.YT` bereit ist. */
+let ytBereit: Promise<void> | null = null;
+function ladeYT(): Promise<void> {
+  if (typeof window === "undefined") return Promise.resolve();
+  if (ytGlobal()) return Promise.resolve();
+  if (ytBereit) return ytBereit;
+  ytBereit = new Promise<void>((resolve) => {
+    const w = window as unknown as { onYouTubeIframeAPIReady?: () => void };
+    const vorher = w.onYouTubeIframeAPIReady;
+    w.onYouTubeIframeAPIReady = () => {
+      vorher?.();
+      resolve();
+    };
+    if (!document.getElementById("yt-iframe-api")) {
+      const s = document.createElement("script");
+      s.id = "yt-iframe-api";
+      s.src = "https://www.youtube.com/iframe_api";
+      document.head.appendChild(s);
+    }
+  });
+  return ytBereit;
+}
 
 export default function VideoImpuls({
   titel,
@@ -38,12 +80,18 @@ export default function VideoImpuls({
   spurId: string;
   className?: string;
 }) {
-  const [laeuft, setLaeuft] = useState(false);
   const [geschaut, setGeschaut] = useState(false);
+  const holderRef = useRef<HTMLDivElement>(null);
+  const playerRef = useRef<YTPlayer | null>(null);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const geschautRef = useRef(false);
 
   useEffect(() => {
     function restore() {
-      if (leseSpuren().some((s) => s.id === spurId)) setGeschaut(true);
+      if (leseSpuren().some((s) => s.id === spurId)) {
+        geschautRef.current = true;
+        setGeschaut(true);
+      }
     }
     restore();
     void zieheSpurenAusCloud();
@@ -51,14 +99,68 @@ export default function VideoImpuls({
     return () => window.removeEventListener(SPUR_EVENT, restore);
   }, [spurId]);
 
-  function abspielen() {
-    if (!videoId) return;
-    setLaeuft(true);
-    if (!geschaut) {
+  useEffect(() => {
+    if (!videoId || !holderRef.current) return;
+    let abgebrochen = false;
+
+    function markiereGeschaut() {
+      if (geschautRef.current) return;
+      geschautRef.current = true;
       setGeschaut(true);
       merkeSpur(spurId);
     }
-  }
+
+    function stopTimer() {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+        timerRef.current = null;
+      }
+    }
+
+    void ladeYT().then(() => {
+      const YT = ytGlobal();
+      if (abgebrochen || !YT || !holderRef.current) return;
+      playerRef.current = new YT.Player(holderRef.current, {
+        videoId,
+        host: "https://www.youtube-nocookie.com",
+        playerVars: { rel: 0, modestbranding: 1 },
+        events: {
+          onStateChange: (e: { data: number }) => {
+            const p = playerRef.current;
+            if (e.data === YT.PlayerState.ENDED) {
+              markiereGeschaut();
+              stopTimer();
+            } else if (e.data === YT.PlayerState.PLAYING) {
+              stopTimer();
+              // Während des Abspielens prüfen, ob ≥ 92 % erreicht sind
+              // (falls die letzten Sekunden nicht ganz zu Ende laufen).
+              timerRef.current = setInterval(() => {
+                if (!p) return;
+                const dauer = p.getDuration();
+                if (dauer > 0 && p.getCurrentTime() / dauer >= SCHWELLE) {
+                  markiereGeschaut();
+                  stopTimer();
+                }
+              }, 2000);
+            } else {
+              stopTimer();
+            }
+          },
+        },
+      });
+    });
+
+    return () => {
+      abgebrochen = true;
+      stopTimer();
+      try {
+        playerRef.current?.destroy();
+      } catch {
+        /* Player evtl. schon weg */
+      }
+      playerRef.current = null;
+    };
+  }, [videoId, spurId]);
 
   return (
     <section aria-label={`Video: ${titel}`} className={className}>
@@ -79,73 +181,30 @@ export default function VideoImpuls({
 
       <div className="max-w-3xl overflow-hidden rounded-xl border border-outline-variant bg-surface-bright shadow-sm">
         <div className="relative aspect-video bg-surface-container-low">
-          {laeuft && videoId ? (
-            <iframe
-              src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`}
-              title={titel}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              className="absolute inset-0 h-full w-full"
-            />
+          {videoId ? (
+            /* YT.Player ersetzt dieses Element durch das iframe. */
+            <div ref={holderRef} className="absolute inset-0 h-full w-full" />
           ) : (
-            <button
-              type="button"
-              onClick={abspielen}
-              disabled={!videoId}
-              aria-label={
-                videoId
-                  ? `Video «${titel}» abspielen (lädt YouTube)`
-                  : "Video folgt — noch kein Video hinterlegt"
-              }
-              className={
-                "group absolute inset-0 flex flex-col items-center justify-center gap-sm " +
-                (videoId ? "cursor-pointer" : "cursor-default")
-              }
-            >
-              {/* dezentes Gewebe im Hintergrund der Vorschau */}
-              <svg
-                viewBox="0 0 320 180"
-                aria-hidden
-                className="pointer-events-none absolute inset-0 h-full w-full opacity-40"
-                preserveAspectRatio="none"
-              >
-                <path
-                  d="M0 130 L60 40 L130 140 L200 30 L265 135 L320 55"
-                  fill="none"
-                  strokeWidth="1"
-                  className="stroke-outline-variant"
-                />
-                <circle cx="60" cy="40" r="3" className="fill-outline" opacity="0.5" />
-                <circle cx="200" cy="30" r="3" className="fill-outline" opacity="0.5" />
-                <circle cx="265" cy="135" r="3" className="fill-outline" opacity="0.5" />
-              </svg>
-              <span
-                className={
-                  "relative flex h-16 w-16 items-center justify-center rounded-full shadow-md transition-transform " +
-                  (videoId
-                    ? "bg-tertiary text-on-tertiary group-hover:scale-110 group-focus-visible:scale-110"
-                    : "bg-surface-container-high text-on-surface-variant")
-                }
-              >
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-sm">
+              <span className="flex h-16 w-16 items-center justify-center rounded-full bg-surface-container-high text-on-surface-variant">
                 <span className="material-symbols-outlined text-[36px]">play_arrow</span>
               </span>
-              {!videoId && (
-                <span className="relative rounded-full border border-dashed border-outline-variant bg-surface-bright/85 px-md py-xs text-label-md text-on-surface-variant">
-                  Platzhalter — Video folgt
-                </span>
-              )}
-              {videoId && (
-                <span className="relative text-label-md text-on-surface-variant">
-                  Abspielen lädt das Video von YouTube
-                </span>
-              )}
-            </button>
+              <span className="rounded-full border border-dashed border-outline-variant bg-surface-bright/85 px-md py-xs text-label-md text-on-surface-variant">
+                Platzhalter — Video folgt
+              </span>
+            </div>
           )}
         </div>
         <div className="border-t border-outline-variant p-md">
           <p className="text-body-md font-medium text-on-surface">{titel}</p>
           {beschreibung && (
             <p className="mt-xs text-body-sm text-on-surface-variant">{beschreibung}</p>
+          )}
+          {videoId && !geschaut && (
+            <p className="mt-sm flex items-center gap-xs text-label-sm text-on-surface-variant">
+              <span className="material-symbols-outlined text-[16px]">visibility</span>
+              Wird als «geschaut» vermerkt, sobald du es zu Ende angeschaut hast.
+            </p>
           )}
         </div>
       </div>
