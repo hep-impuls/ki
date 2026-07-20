@@ -68,7 +68,7 @@ export default function Lernseite2Hub() {
       <VideoImpuls
         className="mt-xl"
         spurId="video:hub"
-        videoId="68gqPEFTskA"
+        videoId="WdIQsR6AH-4"
         titel="Eine ganz neue Partnerschaft — worum es geht"
         beschreibung="Ein kurzer Einstieg ins Modul: Was ist da aufgetreten, und warum lohnt es sich, genauer hinzuschauen?"
       />
