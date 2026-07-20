@@ -38,8 +38,8 @@ import {
 /* ── Findmind-Umfragen ─────────────────────────────────────────────────────
  * Sobald die Umfragen in findmind.ch angelegt sind, hier die jeweilige
  * Einbettungs-/Teilen-URL eintragen. Leer = Platzhalter-Hinweis. */
-const FINDMIND_FEEDBACK_URL = "";
-const FINDMIND_GEFALLEN_URL = "";
+const FINDMIND_FEEDBACK_URL = "https://findmind.ch/c/GsVM-ueKo";
+const FINDMIND_GEFALLEN_URL = "https://findmind.ch/c/3R8p-jfCD";
 
 /* ── Bereiche der eigenen Spur (Totale = Anzahl Knoten je Interaktion) ──── */
 
@@ -922,7 +922,7 @@ export default function OrakelDashboard() {
           Zwei kurze Umfragen helfen uns, das Lernset zu verbessern. Beide sind
           anonym und dauern nur wenige Minuten.
         </p>
-        <div className="mt-md grid grid-cols-1 gap-md md:grid-cols-2">
+        <div className="mt-md flex flex-col gap-lg">
           <UmfrageKarte
             icon="rate_review"
             titel="Rückmeldung & Fehler melden"
@@ -1041,21 +1041,34 @@ function UmfrageKarte({
 }) {
   return (
     <div className="flex flex-col rounded-xl border border-outline-variant bg-surface-bright p-md">
-      <div className="flex items-center gap-sm">
-        <span className="material-symbols-outlined text-[22px] text-tertiary">{icon}</span>
-        <h3 className="text-body-lg font-semibold text-on-surface">{titel}</h3>
+      <div className="flex flex-wrap items-center justify-between gap-sm">
+        <div className="flex items-center gap-sm">
+          <span className="material-symbols-outlined text-[22px] text-tertiary">{icon}</span>
+          <h3 className="text-body-lg font-semibold text-on-surface">{titel}</h3>
+        </div>
+        {url && (
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-xs rounded-lg border border-outline-variant px-sm py-xs text-label-md text-on-surface-variant transition-colors hover:border-tertiary hover:text-tertiary"
+          >
+            <span className="material-symbols-outlined text-[16px]">open_in_new</span>
+            In neuem Tab
+          </a>
+        )}
       </div>
-      <p className="mt-sm flex-1 text-body-sm text-on-surface-variant">{text}</p>
+      <p className="mt-sm text-body-sm text-on-surface-variant">{text}</p>
       {url ? (
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-md inline-flex items-center gap-sm self-start rounded-xl bg-tertiary px-lg py-sm text-label-md text-on-tertiary shadow-sm transition hover:bg-on-tertiary-container"
-        >
-          <span className="material-symbols-outlined text-[18px]">open_in_new</span>
-          Umfrage öffnen
-        </a>
+        <div className="mt-md overflow-hidden rounded-lg border border-outline-variant bg-surface">
+          <iframe
+            src={url}
+            title={titel}
+            loading="lazy"
+            className="block w-full"
+            style={{ height: 640, border: 0 }}
+          />
+        </div>
       ) : (
         <p className="mt-md rounded-lg border border-dashed border-outline-variant px-sm py-xs text-label-sm text-on-surface-variant">
           Umfrage-Link folgt (Findmind).
