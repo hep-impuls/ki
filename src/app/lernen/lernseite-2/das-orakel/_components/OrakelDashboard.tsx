@@ -12,6 +12,7 @@ import {
 import { FadenDivider } from "../../_components/Gewebe";
 import AktivitaetsNetz from "../../_components/AktivitaetsNetz";
 import FortschrittsCode from "../../_components/FortschrittsCode";
+import Inhaltsverzeichnis from "../../_components/Inhaltsverzeichnis";
 import {
   leseSpuren,
   SPUR_EVENT,
@@ -488,6 +489,19 @@ export default function OrakelDashboard() {
       {/* Fortschritts-Code — geräteübergreifend weitermachen */}
       <FortschrittsCode className="mt-lg" />
 
+      {/* Inhaltsverzeichnis (Navigation) + Klammersymbol oben rechts */}
+      <Inhaltsverzeichnis
+        className="mt-lg"
+        ohneFortschritt
+        eintraege={[
+          { id: "perspektiven", label: "Perspektiven auf deine Aktivität" },
+          { id: "deine-spur", label: "Deine Spur durchs Gewebe" },
+          { id: "blick", label: "Wie blickst du heute auf KI?" },
+          { id: "orakel-spricht", label: "Das Orakel spricht" },
+          { id: "rueckmeldung", label: "Deine Rückmeldung" },
+        ]}
+      />
+
       {/* Aktivitätsnetz — dein Weg als Konstellation */}
       <AktivitaetsNetz
         className="mt-xl mb-lg"
@@ -497,7 +511,7 @@ export default function OrakelDashboard() {
       />
 
       {/* 1 — Perspektiven auf deine Aktivität */}
-      <section className="mt-xl" aria-label="Perspektiven auf deine Aktivität">
+      <section id="perspektiven" className="mt-xl scroll-mt-24" aria-label="Perspektiven auf deine Aktivität">
         <h2 className="text-headline-md text-on-surface">
           Perspektiven auf deine Aktivität
         </h2>
@@ -646,7 +660,7 @@ export default function OrakelDashboard() {
       )}
 
       {/* 2 — Angeklickte Punkte im Detail (du vs alle) */}
-      <section className="mt-xl" aria-label="Angeklickte Punkte im Detail">
+      <section id="deine-spur" className="mt-xl scroll-mt-24" aria-label="Angeklickte Punkte im Detail">
         <h2 className="text-headline-md text-on-surface">
           Deine Spur durchs Gewebe
         </h2>
@@ -692,7 +706,7 @@ export default function OrakelDashboard() {
       <FadenDivider className="mt-xl" />
 
       {/* 3 — Blick-Umfrage: du vs. alle */}
-      <section className="mt-xl" aria-label="Blick auf KI">
+      <section id="blick" className="mt-xl scroll-mt-24" aria-label="Blick auf KI">
         <h2 className="text-headline-md text-on-surface">
           Wie blickst du heute auf KI?
         </h2>
@@ -754,7 +768,7 @@ export default function OrakelDashboard() {
       <FadenDivider className="mt-xl" />
 
       {/* 4 — Das Orakel: KI deutet deine Aktivität */}
-      <section className="mt-xl" aria-label="Das Orakel spricht">
+      <section id="orakel-spricht" className="mt-xl scroll-mt-24" aria-label="Das Orakel spricht">
         <h2 className="text-headline-md text-on-surface">Das Orakel spricht</h2>
         <p className="mt-xs text-body-sm text-on-surface-variant">
           Das Orakel deutet deine eigene Aktivität in wenigen Sätzen. Wähle eine
@@ -965,7 +979,7 @@ export default function OrakelDashboard() {
       <FadenDivider className="mt-xl" />
 
       {/* 5 — Rückmeldung: zwei Findmind-Umfragen */}
-      <section className="mt-xl" aria-label="Deine Rückmeldung">
+      <section id="rueckmeldung" className="mt-xl scroll-mt-24" aria-label="Deine Rückmeldung">
         <h2 className="text-headline-md text-on-surface">Deine Rückmeldung</h2>
         <p className="mt-xs text-body-sm text-on-surface-variant">
           Zwei kurze Umfragen helfen uns, das Lernset zu verbessern. Beide sind

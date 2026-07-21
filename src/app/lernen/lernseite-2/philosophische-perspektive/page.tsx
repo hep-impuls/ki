@@ -8,6 +8,8 @@ import HistorienTeppich from "../_components/HistorienTeppich";
 import VerunsicherungsEpochen from "../_components/VerunsicherungsEpochen";
 import SeitenNavigation from "../_components/SeitenNavigation";
 import AktivitaetsNetzFloat from "../_components/AktivitaetsNetzFloat";
+import Inhaltsverzeichnis from "../_components/Inhaltsverzeichnis";
+import Aufgabe from "../_components/Aufgabe";
 
 /**
  * Thema 02 — «Philosophische Perspektive».
@@ -75,6 +77,16 @@ export default function Lernseite2PhilosophischePerspektive() {
         </blockquote>
       </header>
 
+      {/* Inhaltsverzeichnis + Klammersymbol (oben rechts) */}
+      <Inhaltsverzeichnis
+        className="mt-xl max-w-3xl"
+        eintraege={[
+          { id: "was-philosophie", label: "Was ist Philosophie?", prefixe: ["philosophische-perspektive:einstieg"] },
+          { id: "teppich", label: "Der Teppich des Wandels", prefixe: ["philosophische-perspektive:teppich"] },
+          { id: "epochen", label: "Philosophie in Zeiten der Verunsicherung", prefixe: ["philosophische-perspektive:epochen"] },
+        ]}
+      />
+
       {/* Video-Impuls zum Auftakt — vor «Was ist Philosophie» (YouTube-ID folgt) */}
       <VideoImpuls
         className="mt-xl"
@@ -84,7 +96,7 @@ export default function Lernseite2PhilosophischePerspektive() {
       />
 
       {/* 0 — Einstieg: Was ist Philosophie? (erster Aktivitätsposten) */}
-      <section className="mt-xl max-w-4xl" aria-label="Was ist Philosophie?">
+      <section id="was-philosophie" className="mt-xl max-w-4xl scroll-mt-24" aria-label="Was ist Philosophie?">
         <h2 className="text-headline-lg text-on-surface">
           Was ist Philosophie — und warum jetzt?
         </h2>
@@ -97,10 +109,9 @@ export default function Lernseite2PhilosophischePerspektive() {
           heute, wo Maschinen sprechen, entscheiden und gestalten, brechen diese
           Fragen neu auf: Was ist der Mensch, wenn eine Maschine vieles ebenso
           gut kann? Philosophie hilft, im Umbruch Orientierung zu finden, statt
-          der Technik nur hinterherzulaufen.{" "}
-          <strong>Deine Aufgabe:</strong> Klappe die Punkte auf, die dich
-          neugierig machen.
+          der Technik nur hinterherzulaufen.
         </p>
+        <Aufgabe className="mt-md">Klappe die Punkte auf, die dich neugierig machen.</Aufgabe>
         <AkkordeonPosten
           className="mt-lg"
           spurKey="philosophische-perspektive:einstieg"
@@ -130,7 +141,7 @@ export default function Lernseite2PhilosophischePerspektive() {
       {/* Interaktives Muster der Seite: der Teppich des Wandels — vier Fäden
           (Technologie, Entdeckungen, gesellschaftliche Ereignisse, kulturelle
           Praxen), die sich erst durchs Anklicken der Punkte einweben */}
-      <section className="mt-xl max-w-5xl" aria-label="Teppich des Wandels">
+      <section id="teppich" className="mt-xl max-w-5xl scroll-mt-24" aria-label="Teppich des Wandels">
         <h2 className="text-headline-lg text-on-surface">
           Der Teppich des Wandels
         </h2>
@@ -147,12 +158,14 @@ export default function Lernseite2PhilosophischePerspektive() {
           die Fäden, manchmal laufen sie allein; an einigen Punkten wartet ein{" "}
           <strong>Verunsicherungs-Stopp</strong>, der zur passenden Epoche im
           Abschnitt «Philosophie in Zeiten der Verunsicherung» weiter unten
-          führt. <strong>Deine Aufgabe:</strong> Tippe
-          die Punkte an — jeder erzählt seine Geschichte, und Stück für Stück
-          webt sich der Teppich. Bewerte in jeder Karte, ob dir der Punkt
+          führt.
+        </p>
+        <Aufgabe className="mt-md max-w-4xl">
+          Tippe die Punkte an — jeder erzählt seine Geschichte, und Stück für
+          Stück webt sich der Teppich. Bewerte in jeder Karte, ob dir der Punkt
           bekannt war und wie relevant er für dein Leben ist. Erneutes Antippen
           wählt ab; die Legende schaltet ganze Fäden an und aus.
-        </p>
+        </Aufgabe>
         <HistorienTeppich
           className="mt-lg"
           spurKey="philosophische-perspektive:teppich"
@@ -537,7 +550,7 @@ export default function Lernseite2PhilosophischePerspektive() {
 
       {/* Philosophie in Zeiten der Verunsicherung — acht Epochen, je 2 Bilder
           und 3 bewertbare Bausteine (Technologie, Verunsicherung, Philosophie) */}
-      <section className="mt-xl max-w-5xl" aria-label="Philosophie in Zeiten der Verunsicherung">
+      <section id="epochen" className="mt-xl max-w-5xl scroll-mt-24" aria-label="Philosophie in Zeiten der Verunsicherung">
         <h2 className="text-headline-lg text-on-surface">
           Philosophie in Zeiten der Verunsicherung
         </h2>
@@ -562,11 +575,13 @@ export default function Lernseite2PhilosophischePerspektive() {
           <strong>Naturzerstörung</strong>, dazu die verschobene{" "}
           <strong>Deutungsmacht</strong> durch neue Medien und die{" "}
           <strong>Entwertung von Wissen und Können</strong>. Je nach Epoche
-          trifft es andere Menschen besonders hart.{" "}
-          <strong>Deine Aufgabe:</strong> Klappe in jeder Epoche die drei
-          Bausteine auf — Technologie, Verunsicherung, Philosophie —, lies sie
-          einfach erklärt, und bewerte, was dich noch heute betrifft.
+          trifft es andere Menschen besonders hart.
         </p>
+        <Aufgabe className="mt-md max-w-4xl">
+          Klappe in jeder Epoche die drei Bausteine auf — Technologie,
+          Verunsicherung, Philosophie —, lies sie einfach erklärt, und bewerte,
+          was dich noch heute betrifft.
+        </Aufgabe>
         <VerunsicherungsEpochen className="mt-lg" />
       </section>
 

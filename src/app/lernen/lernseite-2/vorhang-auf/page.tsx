@@ -10,6 +10,8 @@ import AktivitaetsNetzFloat from "../_components/AktivitaetsNetzFloat";
 import GewebeSpiel from "../_components/GewebeSpiel";
 import VideoImpuls from "../_components/VideoImpuls";
 import InfoPunkt from "../_components/InfoPunkt";
+import Inhaltsverzeichnis from "../_components/Inhaltsverzeichnis";
+import Aufgabe from "../_components/Aufgabe";
 
 /**
  * Das Muster dieser Seite: die Auftritts-Signatur (oben rechts im Kopf),
@@ -447,16 +449,30 @@ export default function Lernseite2VorhangAuf() {
         </div>
       </header>
 
+      {/* Inhaltsverzeichnis + Klammersymbol (oben rechts) */}
+      <Inhaltsverzeichnis
+        className="mt-xl max-w-3xl"
+        eintraege={[
+          { id: "einstiegsmuster", label: "Einstiegsmuster", prefixe: ["vorhang-auf:gewebe"] },
+          { id: "ki-story", label: "Die KI-Story", prefixe: ["vorhang-auf:story"] },
+          { id: "bilder", label: "Bilder zur KI-Geschichte", prefixe: ["vorhang-auf:bild"] },
+          { id: "merkmale", label: "Die Merkmale der neuen Akteurin", prefixe: ["vorhang-auf:weisheit"] },
+          { id: "ki-kontext", label: "Die KI im Kontext", prefixe: ["vorhang-auf:kontext"] },
+        ]}
+      />
+
       {/* Das Muster der Seite — die Auftritts-Signatur gross und interaktiv,
           wie das Gewebe-Spiel der Startseite */}
-      <GewebeSpiel
-        className="mt-xl max-w-5xl"
-        spurKey="vorhang-auf:gewebe"
-        punkte={AUFTRITT_PUNKTE}
-        weben
-        bereichLabel="Einstiegsmuster (Auftakt)"
-        hoehe={285}
-      />
+      <div id="einstiegsmuster" className="scroll-mt-24">
+        <GewebeSpiel
+          className="mt-xl max-w-5xl"
+          spurKey="vorhang-auf:gewebe"
+          punkte={AUFTRITT_PUNKTE}
+          weben
+          bereichLabel="Einstiegsmuster (Auftakt)"
+          hoehe={285}
+        />
+      </div>
 
       {/* Aktivitätsnetz als mitwanderndes Symbol (schwebt unten rechts, geht
           beim Klick zum vollen Netz auf) */}
@@ -471,20 +487,23 @@ export default function Lernseite2VorhangAuf() {
       />
 
       {/* 1 — Die KI-Story als lineare Knotenlandschaft mit Einfluss-Bögen */}
-      <section className="mt-xl max-w-5xl" aria-label="Die KI-Story">
+      <section id="ki-story" className="mt-xl max-w-5xl scroll-mt-24" aria-label="Die KI-Story">
         <h2 className="text-headline-lg text-on-surface">Die KI-Story</h2>
         <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
           Vom antiken Traum, Dingen Leben einzuhauchen, über die Geschichte des
           Algorithmus bis zu den heutigen Sprachmodellen: zweiundzwanzig
           Stationen, deren Vorstellungen einander quer durch die Zeit
-          beeinflussen. <strong>Deine Aufgabe:</strong> Das ganze Gewebe ist
-          sichtbar — über die Stichworte oben hebst du einzelne Punkte fett
-          hervor, und ihre Verbindungen färben sich ein. Tippe einen Punkt an,
-          um seine Geschichte zu lesen; unter jeder Karte kannst du «Mehr lesen»
-          aufklappen und mit «Das verfolge ich weiter» ein Merkzeichen setzen.
-          Im Gewebe lassen sich die Punkte verschieben, «Zeitlich» reiht die
-          hervorgehobenen als Perlenschnur von früher nach heute.
+          beeinflussen.
         </p>
+        <Aufgabe className="mt-md max-w-4xl">
+          Das ganze Gewebe ist sichtbar — über die Stichworte oben hebst du
+          einzelne Punkte fett hervor, und ihre Verbindungen färben sich ein.
+          Tippe einen Punkt an, um seine Geschichte zu lesen; unter jeder Karte
+          kannst du «Mehr lesen» aufklappen und mit «Das verfolge ich weiter»
+          ein Merkzeichen setzen. Im Gewebe lassen sich die Punkte verschieben,
+          «Zeitlich» reiht die hervorgehobenen als Perlenschnur von früher nach
+          heute.
+        </Aufgabe>
         <InfoPunkt className="mt-md" label="Muss ich allen 22 nachgehen?">
           Nein — du musst nicht jede Station öffnen. Geh dem nach, was dich
           neugierig macht. Die Aktivitätsmessung registriert aber, was du
@@ -786,18 +805,19 @@ export default function Lernseite2VorhangAuf() {
       <FadenDivider className="mt-xl" />
 
       {/* Bilderstrecke zwischen den Aktivitäten — Anschauungsmodus mit Hotspots */}
-      <section className="mt-xl max-w-5xl" aria-label="Bilderstrecke: Bilder zur KI-Geschichte">
+      <section id="bilder" className="mt-xl max-w-5xl scroll-mt-24" aria-label="Bilderstrecke: Bilder zur KI-Geschichte">
         <h2 className="text-headline-lg text-on-surface">Bilder zur KI-Geschichte</h2>
         <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
           Elf Bilder spannen den Bogen: vom Auslagern des Denkens in
           Knotenschnüre über Turings Code-Knacker und den ersten Chatbot ELIZA
-          bis zu DALL·E und ChatGPT.{" "}
-          <strong>Deine Aufgabe:</strong> Klicke ein Bild an — es öffnet sich
-          gross im Anschauungsmodus. Tippe dort die leuchtenden, nummerierten
-          Punkte an: Jeder erzählt ein Detail. Mit den Pfeilen (oder den
-          Pfeiltasten) blätterst du weiter. Ziel: alle elf Bilder samt ihren
-          Punkten.
+          bis zu DALL·E und ChatGPT.
         </p>
+        <Aufgabe className="mt-md max-w-4xl">
+          Klicke ein Bild an — es öffnet sich gross im Anschauungsmodus. Tippe
+          dort die leuchtenden, nummerierten Punkte an: Jeder erzählt ein
+          Detail. Mit den Pfeilen (oder den Pfeiltasten) blätterst du weiter.
+          Ziel: alle elf Bilder samt ihren Punkten.
+        </Aufgabe>
         <BilderAnschauung
           className="mt-lg"
           bilder={BILDER_STORY}
@@ -808,19 +828,21 @@ export default function Lernseite2VorhangAuf() {
       <FadenDivider className="mt-xl" />
 
       {/* 2 — Die Merkmale als loses Geflecht (ohne Zitate, ohne Zentrum) */}
-      <section className="mt-xl max-w-5xl" aria-label="Die Merkmale der neuen Akteurin">
+      <section id="merkmale" className="mt-xl max-w-5xl scroll-mt-24" aria-label="Die Merkmale der neuen Akteurin">
         <h2 className="text-headline-lg text-on-surface">
           Die Merkmale der neuen Akteurin
         </h2>
         <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
           Was ist da eigentlich aufgetreten? Zwölf Eigenschaften — nicht eine
-          allein, ihre Bündelung macht das Neue aus.{" "}
-          <strong>Deine Aufgabe:</strong> Tippe die zwölf Punkte im Geflecht
-          an — jeder wird beschriftet und zeigt unten seine Definition.
-          Zwischen besuchten Punkten füllen sich Flächen; je mehr Punkte du
-          besuchst, desto dichter wird das Gewebe. Ziel: alle zwölf Merkmale
-          offen — dann erscheint unter dem Muster das Fazit.
+          allein, ihre Bündelung macht das Neue aus.
         </p>
+        <Aufgabe className="mt-md max-w-4xl">
+          Tippe die zwölf Punkte im Geflecht an — jeder wird beschriftet und
+          zeigt unten seine Definition. Zwischen besuchten Punkten füllen sich
+          Flächen; je mehr Punkte du besuchst, desto dichter wird das Gewebe.
+          Ziel: alle zwölf Merkmale offen — dann erscheint unter dem Muster das
+          Fazit.
+        </Aufgabe>
         <KnotenLandschaft
           className="mt-lg"
           ariaLabel="Knotenlandschaft: Die Merkmale"
@@ -967,17 +989,20 @@ export default function Lernseite2VorhangAuf() {
       <FadenDivider className="mt-xl" />
 
       {/* 3 — Die KI im Kontext: vier Kontexte mit aufklappbaren Aspekten */}
-      <section className="mt-xl max-w-5xl" aria-label="Die KI im Kontext">
+      <section id="ki-kontext" className="mt-xl max-w-5xl scroll-mt-24" aria-label="Die KI im Kontext">
         <h2 className="text-headline-lg text-on-surface">Die KI im Kontext</h2>
         <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
           Um das Phänomen KI besser zu verstehen, stellt man es in seine
           Kontexte. Vier Blickwinkel — technologisch, wirtschaftlich,
           rechtlich-politisch und kulturell — zeigen, worin die neue Akteurin
-          eingebettet ist. <strong>Deine Aufgabe:</strong> Klappe die Aspekte
-          auf, die dich interessieren; jeder erklärt einen Faden des Geflechts.
-          Gewichte dabei, wie viel Achtsamkeit ein Aspekt verdient — das
-          Achtsamkeits-Muster oben wird dadurch farbiger und rötlicher.
+          eingebettet ist.
         </p>
+        <Aufgabe className="mt-md max-w-4xl">
+          Klappe die Aspekte auf, die dich interessieren; jeder erklärt einen
+          Faden des Geflechts. Gewichte dabei, wie viel Achtsamkeit ein Aspekt
+          verdient — das Achtsamkeits-Muster oben wird dadurch farbiger und
+          rötlicher.
+        </Aufgabe>
         <KontextAkkordeon
           className="mt-lg"
           spurKey="vorhang-auf:kontext"
