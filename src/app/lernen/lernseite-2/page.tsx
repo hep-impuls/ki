@@ -12,6 +12,7 @@ import GewebeSpiel from "./_components/GewebeSpiel";
 import VideoImpuls from "./_components/VideoImpuls";
 import AktivitaetsNetzFloat from "./_components/AktivitaetsNetzFloat";
 import FortschrittsCode from "./_components/FortschrittsCode";
+import Ausklapptext from "./_components/Ausklapptext";
 
 /**
  * Hub von Lernseite 2 («Eine ganz neue Partnerschaft»).
@@ -69,16 +70,19 @@ export default function Lernseite2Hub() {
             braucht. In diesem Lernset geht es darum immer auch um den Kontext
             der KI.
           </p>
-          <p>
-            Genau hier setzt später die philosophische Perspektive an: Je nach
-            Blickwinkel lässt sich dieser Kontext besser oder schlechter fassen.
-            Besonders Denkweisen, die auf Netzwerke zeigen und auf das eigentlich
-            Menschliche — dass der Mensch nicht bloss rechnendes Wissens- und
-            Textwesen ist, sondern, mit Hannah Arendt, ein Anfangen-Können; mit
-            Martin Heidegger ein Wesen der Sorge; mit der Systemtheorie ein
-            Reduzieren von Komplexität, indem es Muster erfasst und Abläufe
-            koordiniert — machen sichtbar, worin die KI eingebettet ist.
-          </p>
+          <Ausklapptext titel="Mehr dazu: Wie die Philosophie das weiterdenkt">
+            <p>
+              Genau hier setzt später die philosophische Perspektive an: Je nach
+              Blickwinkel lässt sich dieser Kontext besser oder schlechter
+              fassen. Besonders Denkweisen, die auf Netzwerke zeigen und auf das
+              eigentlich Menschliche — dass der Mensch nicht bloss rechnendes
+              Wissens- und Textwesen ist, sondern, mit Hannah Arendt, ein
+              Anfangen-Können; mit Martin Heidegger ein Wesen der Sorge; mit der
+              Systemtheorie ein Reduzieren von Komplexität, indem sie Muster
+              erfasst und Abläufe koordiniert — machen sichtbar, worin die KI
+              eingebettet ist.
+            </p>
+          </Ausklapptext>
         </div>
         <GewebeSpiel
           className="mt-lg"

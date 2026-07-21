@@ -10,6 +10,7 @@ import SeitenNavigation from "../_components/SeitenNavigation";
 import AktivitaetsNetzFloat from "../_components/AktivitaetsNetzFloat";
 import Inhaltsverzeichnis from "../_components/Inhaltsverzeichnis";
 import Aufgabe from "../_components/Aufgabe";
+import Ausklapptext from "../_components/Ausklapptext";
 
 /**
  * Thema 02 — «Philosophische Perspektive».
@@ -565,18 +566,27 @@ export default function Lernseite2PhilosophischePerspektive() {
           grundlegender Lebenselemente</strong> mehr Klarheit als jede neue
           Technik.
         </p>
-        <p className="mt-md max-w-4xl text-body-lg text-on-surface-variant">
-          Auffällig: In der westlichen Geschichte kehren dieselben Züge der
-          Verunsicherung immer wieder, nur anders gewichtet —{" "}
-          <strong>Beschleunigung</strong> durch Technik,{" "}
-          <strong>Verstädterung</strong>, <strong>Automatisierung</strong> der
-          Arbeit, <strong>Kapitalisierung</strong> des Lebens (was bezahlbar
-          ist, wird aneigenbar), <strong>Individualisierung</strong>,{" "}
-          <strong>Naturzerstörung</strong>, dazu die verschobene{" "}
-          <strong>Deutungsmacht</strong> durch neue Medien und die{" "}
-          <strong>Entwertung von Wissen und Können</strong>. Je nach Epoche
-          trifft es andere Menschen besonders hart.
-        </p>
+        <Ausklapptext
+          className="mt-md max-w-4xl"
+          titel="Mehr dazu: die wiederkehrenden Züge der Verunsicherung"
+        >
+          <p>
+            Auffällig: In der westlichen Geschichte kehren dieselben Züge der
+            Verunsicherung immer wieder, nur anders gewichtet —{" "}
+            <strong className="text-on-surface">Beschleunigung</strong> durch
+            Technik, <strong className="text-on-surface">Verstädterung</strong>,{" "}
+            <strong className="text-on-surface">Automatisierung</strong> der
+            Arbeit, <strong className="text-on-surface">Kapitalisierung</strong>{" "}
+            des Lebens (was bezahlbar ist, wird aneigenbar),{" "}
+            <strong className="text-on-surface">Individualisierung</strong>,{" "}
+            <strong className="text-on-surface">Naturzerstörung</strong>, dazu die
+            verschobene <strong className="text-on-surface">Deutungsmacht</strong>{" "}
+            durch neue Medien und die{" "}
+            <strong className="text-on-surface">Entwertung von Wissen und
+            Können</strong>. Je nach Epoche trifft es andere Menschen besonders
+            hart.
+          </p>
+        </Ausklapptext>
         <Aufgabe className="mt-md max-w-4xl">
           Klappe in jeder Epoche die drei Bausteine auf — Technologie,
           Verunsicherung, Philosophie —, lies sie einfach erklärt, und bewerte,

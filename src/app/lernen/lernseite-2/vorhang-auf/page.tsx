@@ -12,6 +12,7 @@ import VideoImpuls from "../_components/VideoImpuls";
 import InfoPunkt from "../_components/InfoPunkt";
 import Inhaltsverzeichnis from "../_components/Inhaltsverzeichnis";
 import Aufgabe from "../_components/Aufgabe";
+import Ausklapptext from "../_components/Ausklapptext";
 
 /**
  * Das Muster dieser Seite: die Auftritts-Signatur (oben rechts im Kopf),
@@ -432,17 +433,19 @@ export default function Lernseite2VorhangAuf() {
                 immer wieder in Kunstprodukten sichtbar gemacht hat, vom Golem
                 über den Homunkulus bis zu Frankensteins Geschöpf.
               </p>
-              <p>
-                Daneben läuft eine zweite, technische Spur: Seit Jahrhunderten
-                lagert der Mensch kognitive Leistungen in Dinge aus — das
-                Rechnen in Maschinen wie Leibniz&apos; Rechenrad, das Zählen
-                und Erinnern in die Knotenschnüre (Quipus) der Andenkulturen.
-                In der heutigen KI laufen beide Spuren zusammen: die erzählte
-                Phantasie vom belebten Ding und die reale Auslagerung des
-                Denkens. Die Landschaften und Bilderstrecken dieser Seite
-                folgen dieser doppelten Spur — bis zum Netz, in dem die neue
-                Akteurin hängt.
-              </p>
+              <Ausklapptext titel="Mehr dazu: die zweite, technische Spur">
+                <p>
+                  Daneben läuft eine zweite, technische Spur: Seit Jahrhunderten
+                  lagert der Mensch kognitive Leistungen in Dinge aus — das
+                  Rechnen in Maschinen wie Leibniz&apos; Rechenrad, das Zählen
+                  und Erinnern in die Knotenschnüre (Quipus) der Andenkulturen.
+                  In der heutigen KI laufen beide Spuren zusammen: die erzählte
+                  Phantasie vom belebten Ding und die reale Auslagerung des
+                  Denkens. Die Landschaften und Bilderstrecken dieser Seite
+                  folgen dieser doppelten Spur — bis zum Netz, in dem die neue
+                  Akteurin hängt.
+                </p>
+              </Ausklapptext>
             </div>
           </div>
           <Signatur variante="auftritt" className="hidden flex-shrink-0 sm:block" />

@@ -8,7 +8,7 @@ import {
   SPUR_EVENT,
   zieheSpurenAusCloud,
 } from "../_lib/spuren";
-import { sparsameMaschen, zaehleGefuellt, zufallsLayout } from "../_lib/flaechen";
+import { sparsameMaschen, zufallsLayout } from "../_lib/flaechen";
 import { melde } from "../_lib/auswertung";
 
 /** Leuchtende Web-Palette (wie die Perlen der KI-Story) — dokumentierte
@@ -159,16 +159,20 @@ export default function GewebeSpiel({
     return () => window.removeEventListener(SPUR_EVENT, restore);
   }, [spurKey, n]);
 
-  // Erzeugte Flächen ans Orakel melden (zählt als Aktivität, ohne Inhalt).
+  // Inhaltsloses Muster: Als Aktivität zählt es ERST, wenn das ganze Muster
+  // aufgedeckt ist (alle Punkte aktiv). Vorher 0 — die Flächen entstehen zwar
+  // sichtbar, werden aber noch nicht als Aktivität gutgeschrieben.
+  const komplett = weben && aktiv.size === n;
   useEffect(() => {
     if (!bereichLabel) return;
+    const fertig = weben && aktiv.size === n;
     melde(spurKey, {
       bereich: bereichLabel,
-      flaechenGefuellt: weben ? zaehleGefuellt(autoMaschen, aktiv) : 0,
+      flaechenGefuellt: fertig ? autoMaschen.length : 0,
       flaechenTotal: weben ? autoMaschen.length : 0,
       labels: [],
     });
-  }, [aktiv, weben, autoMaschen, bereichLabel, spurKey]);
+  }, [aktiv, weben, n, autoMaschen, bereichLabel, spurKey]);
 
   function toggle(i: number) {
     setAktiv((prev) => {
@@ -362,11 +366,36 @@ export default function GewebeSpiel({
           );
         })}
       </svg>
-      <p className="mt-xs text-label-sm text-on-surface-variant">
-        {weben
-          ? "Tippe die Punkte an — zwischen ihnen entstehen Flächen, jede zählt als Aktivität."
-          : "Tippe die Punkte an — zwischen aktiven Punkten färben sich die Felder."}
-      </p>
+      {weben ? (
+        <div className="mt-sm rounded-lg border border-outline-variant bg-surface-container-low p-sm">
+          <p className="flex items-start gap-xs text-label-sm text-on-surface-variant">
+            <span className="material-symbols-outlined mt-[1px] flex-shrink-0 text-[16px] text-tertiary">
+              {komplett ? "check_circle" : "info"}
+            </span>
+            <span>
+              Dieses Muster hat <strong className="text-on-surface">keinen Inhalt</strong> —
+              es steht nur für die Idee, dass KI immer in einem Netz aus Bezügen
+              steckt. Tippe die Punkte an: Zwischen ihnen entstehen Flächen.{" "}
+              {komplett ? (
+                <strong className="text-tertiary">
+                  Muster vollständig aufgedeckt — als Aktivität erfasst.
+                </strong>
+              ) : (
+                <>
+                  Als <strong className="text-on-surface">Aktivität</strong> zählt
+                  es aber erst, wenn du das{" "}
+                  <strong className="text-on-surface">ganze Muster</strong>{" "}
+                  aufgedeckt hast ({aktiv.size}/{n}).
+                </>
+              )}
+            </span>
+          </p>
+        </div>
+      ) : (
+        <p className="mt-xs text-label-sm text-on-surface-variant">
+          Tippe die Punkte an — zwischen aktiven Punkten färben sich die Felder.
+        </p>
+      )}
     </div>
   );
 }
