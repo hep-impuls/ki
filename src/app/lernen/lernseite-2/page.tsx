@@ -44,23 +44,40 @@ export default function Lernseite2Hub() {
         <h1 className="mt-sm text-headline-xl text-on-surface">{mod.title}</h1>
         <div className="mt-sm max-w-3xl space-y-sm text-body-lg text-on-surface-variant">
           <p>
-            Die Welt ist in Transformation: Arbeit, Wissen, Kommunikation —
-            vieles ordnet sich gleichzeitig neu, und die Zusammenhänge werden
-            komplexer, als eine Einzelne sie überblicken kann. Mitten in diesem
-            Umbruch tritt eine Technologie auf, die anders ist als alles, was
-            wir bisher kannten: Sie spricht unsere Sprache, sie antwortet, sie
-            schlägt vor, sie handelt. Werkzeuge haben wir benutzt und wieder
-            weggelegt — dieses Gegenüber aber begleitet uns: im Beruf, wo es
-            mitschreibt, mitrechnet und mitentwirft, und im Privaten, wo es
-            erklärt, übersetzt und zuhört. Damit beginnt etwas, das man eine
-            ganz neue Partnerschaft nennen kann.
+            Kaum ein Thema ist so präsent wie die Künstliche Intelligenz — und
+            kaum eines so schwer zu fassen. Es wird viel über sie gesagt, doch
+            vieles bleibt schemenhaft, ein Reden über etwas, das man selten
+            wirklich vor Augen hat. Dieses Lernset will die KI{" "}
+            <strong className="text-on-surface">sichtbarer und verständlicher</strong>{" "}
+            machen, indem es ihr eine <strong className="text-on-surface">Gestalt</strong>{" "}
+            gibt.
           </p>
           <p>
-            Eine Partnerschaft ist kein blindes Vertrauen: Sie verlangt, das
-            Gegenüber zu kennen — seine Stärken, seine Grenzen und das Netz,
-            an dem es hängt. Genau dazu lädt dieses Modul ein: hinschauen,
-            einordnen, den eigenen Umgang finden. Denn wie jede Partnerschaft
-            wird auch diese davon geprägt, wie wir sie gestalten.
+            Diese Gestalt zeigt sich nicht, wenn man die KI isoliert betrachtet.
+            KI steht nie für sich: Sie baut auf kulturellen, technischen und
+            wirtschaftlichen Überlegungen auf — und erst wenn man dieses Netz
+            mitzeichnet, wird erkennbar, was da eigentlich auftritt. Darum folgt
+            das Design dieses Lernsets einer Idee: Um das Phänomen zu verstehen,
+            muss man das <strong className="text-on-surface">Netzwerk abbilden</strong>,
+            in dem es steckt.
+          </p>
+          <p>
+            Deshalb beginnst du gleich mit einem Muster, dessen Knoten du
+            verbinden kannst — noch <strong className="text-on-surface">ohne
+            konkreten Inhalt</strong>. Es deutet nur auf den Gedanken, dass KI
+            als Phänomen zu erfassen viel <strong className="text-on-surface">Kontextarbeit</strong>{" "}
+            braucht. In diesem Lernset geht es darum immer auch um den Kontext
+            der KI.
+          </p>
+          <p>
+            Genau hier setzt später die philosophische Perspektive an: Je nach
+            Blickwinkel lässt sich dieser Kontext besser oder schlechter fassen.
+            Besonders Denkweisen, die auf Netzwerke zeigen und auf das eigentlich
+            Menschliche — dass der Mensch nicht bloss rechnendes Wissens- und
+            Textwesen ist, sondern, mit Hannah Arendt, ein Anfangen-Können; mit
+            Martin Heidegger ein Wesen der Sorge; mit der Systemtheorie ein
+            Reduzieren von Komplexität, indem es Muster erfasst und Abläufe
+            koordiniert — machen sichtbar, worin die KI eingebettet ist.
           </p>
         </div>
         <GewebeSpiel
