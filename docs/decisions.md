@@ -10,6 +10,28 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-21 — Volle geräteübergreifende Persistenz (Bewertungen gespiegelt)
+
+**Auftrag Christof (mit Pietro abgesprochen):** Die Daten sollen geräte- und
+browserübergreifend persistent sein, nicht nur lokal. **Kein grundsätzlicher
+Umbau** — die Spuren wurden schon pro Code gespiegelt; es fehlte nur:
+
+- **`gewichtung.ts` bekommt denselben Cloud-Spiegel wie `spuren.ts`**
+  (`students/{code}/progress/lernseite-2-gewichtung`, `{werte, updatedAt}`).
+  `setzeGewichtung` spiegelt (debounced), `zieheGewichtungAusCloud()` holt +
+  merged (lokale Werte gewinnen bei Konflikt). Pull wird beim Laden von
+  KnotenLandschaft, KontextAkkordeon, HistorienTeppich, VerunsicherungsEpochen
+  und im Orakel-Dashboard ausgelöst.
+- **Neue Komponente `FortschrittsCode.tsx`** (auf Hub + Orakel): zeigt den
+  Animal-Code zum Notieren und erlaubt, auf einem anderen Gerät denselben Code
+  einzugeben → Seite lädt neu, Fortschritt kommt aus der Cloud. Reuse von
+  Pietros `session.ts`/`paths.ts` (unverändert).
+
+**Modell-Klarstellung:** «geräteunabhängig» = der **Code IST die Identität**
+(kein Passwort). Wer seinen Code kennt und eingibt, bekommt Spuren + Bewertungen
+zurück. Nicht gespiegelt bleiben nur Kleinigkeiten (Orakel-Name für den
+Ausdruck, Blick-Poll-Wahl). Round-Trip verifiziert (2026-07-21).
+
 ## 2026-07-20 — VideoImpuls: direkt sichtbar + «geschaut» erst bei Durchsicht
 
 **Auftrag Christof:** Das Video soll schon **sichtbar/abspielbar** sein, bevor man

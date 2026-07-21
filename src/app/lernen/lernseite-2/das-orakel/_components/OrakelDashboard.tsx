@@ -11,8 +11,18 @@ import {
 } from "@/lib/polls";
 import { FadenDivider } from "../../_components/Gewebe";
 import AktivitaetsNetz from "../../_components/AktivitaetsNetz";
-import { leseSpuren, SPUR_EVENT, SPUREN_POLL_ID } from "../../_lib/spuren";
-import { GEWICHT_EVENT, leseGewichtungen } from "../../_lib/gewichtung";
+import FortschrittsCode from "../../_components/FortschrittsCode";
+import {
+  leseSpuren,
+  SPUR_EVENT,
+  SPUREN_POLL_ID,
+  zieheSpurenAusCloud,
+} from "../../_lib/spuren";
+import {
+  GEWICHT_EVENT,
+  leseGewichtungen,
+  zieheGewichtungAusCloud,
+} from "../../_lib/gewichtung";
 import {
   AUSWERTUNG_EVENT,
   leseAuswertung,
@@ -206,12 +216,16 @@ export default function OrakelDashboard() {
     }
   }
 
-  /* anonyme Zähler abonnieren (alle) */
+  /* anonyme Zähler abonnieren (alle) + eigene Cloud-Daten geräteübergreifend
+   * zurückholen (Spuren + Bewertungen), damit das Orakel auf jedem Gerät mit
+   * demselben Code vollständig ist. */
   useEffect(() => {
     const ab1 = subscribePollCounts(SPUREN_POLL_ID, setAlleSpuren);
     const ab2 = subscribePollCounts(BLICK_POLL_ID, setBlickCounts);
     void loadPollCounts(SPUREN_POLL_ID).then(setAlleSpuren);
     void loadPollCounts(BLICK_POLL_ID).then(setBlickCounts);
+    void zieheSpurenAusCloud();
+    void zieheGewichtungAusCloud();
     return () => {
       ab1();
       ab2();
@@ -470,6 +484,9 @@ export default function OrakelDashboard() {
           Teilnehmenden.
         </span>
       </div>
+
+      {/* Fortschritts-Code — geräteübergreifend weitermachen */}
+      <FortschrittsCode className="mt-lg" />
 
       {/* Aktivitätsnetz — dein Weg als Konstellation */}
       <AktivitaetsNetz

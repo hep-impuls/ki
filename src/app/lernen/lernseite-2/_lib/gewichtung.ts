@@ -1,5 +1,10 @@
 "use client";
 
+import { doc, getDoc, serverTimestamp, setDoc } from "firebase/firestore";
+import { getFirebase } from "@/lib/firebase";
+import { seg } from "@/lib/paths";
+import { generateCode, getSession, saveSession } from "@/lib/session";
+
 /**
  * Gewichtung — mutierbare Bewertungen pro Punkt (anders als die append-only
  * Spuren). Die Lernenden gewichten einzelne Beschreibungen:
@@ -11,12 +16,17 @@
  *   Achtsamkeit verdient dieser Aspekt? 0 = wenig, 1 = mittel, 2 = viel.
  *   Mehr Achtsamkeit → das Kontext-Muster wird farbiger, rötlicher.
  *
- * Lokal (localStorage), sofort und offline. Eigenes Event, damit die Muster
- * live reagieren. Bewusst getrennt von `spuren.ts`, weil Werte änderbar sind.
+ * Persistenz (wie `spuren.ts`): lokal (localStorage, sofort/offline) UND als
+ * Pro-Nutzer-Cloud-Spiegel unter
+ * `abstimmungen/ki26/students/{code}/progress/lernseite-2-gewichtung`. Wer
+ * denselben Animal-Code eingibt, bekommt seine Bewertungen geräte- und
+ * browserübergreifend zurück. Eigenes Event, damit die Muster live reagieren.
  */
 
 const KEY = "ki26-gewichtung-lernseite-2";
 export const GEWICHT_EVENT = "ki26-gewichtung";
+/** Modul-Kennung des Pro-Nutzer-Fortschritts-Docs. */
+const GEWICHT_MODUL = "lernseite-2-gewichtung";
 
 function lesen(): Record<string, number> {
   if (typeof window === "undefined") return {};
@@ -35,6 +45,73 @@ function schreiben(o: Record<string, number>): void {
     window.localStorage.setItem(KEY, JSON.stringify(o));
   } catch {
     /* localStorage gesperrt (Privatmodus) → bewusst still */
+  }
+}
+
+/* ── Cloud-Spiegel (analog spuren.ts) ─────────────────────────────────────── */
+
+/** Nutzer-Code sicherstellen (Pietros Session). Legt bei Bedarf im Hintergrund
+ *  einen an, ohne bestehende Sessions zu überschreiben. */
+function ensureCode(): string | null {
+  if (typeof window === "undefined") return null;
+  const vorhanden = getSession();
+  if (vorhanden?.studentCode) return vorhanden.studentCode;
+  const studentCode = generateCode();
+  saveSession({ studentCode, teacherCode: vorhanden?.teacherCode ?? null });
+  return studentCode;
+}
+
+function gewichtDocRef(code: string) {
+  const { db } = getFirebase();
+  if (!db) return null;
+  const s = seg.progressDoc(code, GEWICHT_MODUL);
+  return doc(db, s[0], ...s.slice(1));
+}
+
+/** Debounce fürs Cloud-Spiegeln (nicht bei jedem Klick einzeln schreiben). */
+let mirrorTimer: ReturnType<typeof setTimeout> | null = null;
+function scheduleMirror(): void {
+  if (mirrorTimer) clearTimeout(mirrorTimer);
+  mirrorTimer = setTimeout(() => {
+    mirrorTimer = null;
+    const code = getSession()?.studentCode;
+    if (!code) return;
+    const ref = gewichtDocRef(code);
+    if (!ref) return;
+    void setDoc(ref, { werte: lesen(), updatedAt: serverTimestamp() }, { merge: true }).catch(
+      (err) => console.warn("[gewichtung] mirror failed", err),
+    );
+  }, 1500);
+}
+
+/**
+ * Cloud → lokal: die Pro-Nutzer-Bewertungen aus Firestore holen und mit dem
+ * lokalen Bestand vereinen (lokale Werte gewinnen bei Konflikt — sie sind die
+ * zuletzt auf diesem Gerät gesetzten). Feuert GEWICHT_EVENT, damit offene
+ * Ansichten sich neu aufbauen. No-op ohne Code/Config. Idempotent.
+ */
+export async function zieheGewichtungAusCloud(): Promise<void> {
+  if (typeof window === "undefined") return;
+  const code = getSession()?.studentCode;
+  if (!code) return;
+  const ref = gewichtDocRef(code);
+  if (!ref) return;
+  try {
+    const snap = await getDoc(ref);
+    if (!snap.exists()) return;
+    const remote = snap.data()?.werte;
+    if (!remote || typeof remote !== "object" || Array.isArray(remote)) return;
+    const lokal = lesen();
+    const zusammen: Record<string, number> = { ...(remote as Record<string, number>), ...lokal };
+    // Nur schreiben/feuern, wenn sich wirklich etwas ergänzt hat.
+    if (JSON.stringify(zusammen) !== JSON.stringify(lokal)) {
+      schreiben(zusammen);
+      window.dispatchEvent(
+        new CustomEvent(GEWICHT_EVENT, { detail: { cloud: true } }),
+      );
+    }
+  } catch (err) {
+    console.warn("[gewichtung] cloud pull failed", err);
   }
 }
 
@@ -63,6 +140,9 @@ export function setzeGewichtung(prefix: string, index: number, stufe: number | n
   window.dispatchEvent(
     new CustomEvent(GEWICHT_EVENT, { detail: { prefix, index, stufe } }),
   );
+  // Pro-Nutzer-Spiegel (erzeugt bei Bedarf einen Hintergrund-Code).
+  ensureCode();
+  scheduleMirror();
 }
 
 /**

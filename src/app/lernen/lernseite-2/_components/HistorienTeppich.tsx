@@ -13,6 +13,7 @@ import GewichtungWahl from "./GewichtungWahl";
 import { GlossarText } from "./Glossar";
 import { maschen as berechneMaschen, zaehleGefuellt } from "../_lib/flaechen";
 import { melde } from "../_lib/auswertung";
+import { zieheGewichtungAusCloud } from "../_lib/gewichtung";
 
 /**
  * HistorienTeppich («Teppich des Wandels») — vier Fäden durch die Geschichte:
@@ -172,6 +173,7 @@ export default function HistorienTeppich({
     }
     restore();
     void zieheSpurenAusCloud();
+    void zieheGewichtungAusCloud();
     window.addEventListener(SPUR_EVENT, restore);
     return () => window.removeEventListener(SPUR_EVENT, restore);
   }, [spurKey, n]);

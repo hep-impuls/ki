@@ -7,7 +7,7 @@ import {
   SPUR_EVENT,
   zieheSpurenAusCloud,
 } from "../_lib/spuren";
-import { GEWICHT_EVENT, leseGewichtungen } from "../_lib/gewichtung";
+import { GEWICHT_EVENT, leseGewichtungen, zieheGewichtungAusCloud } from "../_lib/gewichtung";
 import GewichtungWahl from "./GewichtungWahl";
 
 /** Warme Skala für das Achtsamkeits-Muster: mehr Achtsamkeit → farbiger,
@@ -85,6 +85,7 @@ export default function KontextAkkordeon({
     }
     restore();
     void zieheSpurenAusCloud();
+    void zieheGewichtungAusCloud();
     window.addEventListener(SPUR_EVENT, restore);
     return () => window.removeEventListener(SPUR_EVENT, restore);
   }, [spurKey, gesamt]);

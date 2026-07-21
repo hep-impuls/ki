@@ -12,6 +12,7 @@ import GewichtungWahl from "./GewichtungWahl";
 import InfoPunkt from "./InfoPunkt";
 import { GlossarText } from "./Glossar";
 import { melde } from "../_lib/auswertung";
+import { zieheGewichtungAusCloud } from "../_lib/gewichtung";
 import BildZoom, { type TourStop } from "../philosophische-perspektive/_components/BildZoom";
 
 /**
@@ -978,6 +979,7 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
     }
     restore();
     void zieheSpurenAusCloud();
+    void zieheGewichtungAusCloud();
     window.addEventListener(SPUR_EVENT, restore);
     return () => window.removeEventListener(SPUR_EVENT, restore);
   }, [gesamt]);

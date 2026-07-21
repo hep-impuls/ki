@@ -11,7 +11,7 @@ import {
 } from "../_lib/spuren";
 import KartenAktion from "./KartenAktion";
 import GewichtungWahl from "./GewichtungWahl";
-import { GEWICHT_EVENT, gewichtungsStaerke } from "../_lib/gewichtung";
+import { GEWICHT_EVENT, gewichtungsStaerke, zieheGewichtungAusCloud } from "../_lib/gewichtung";
 import { melde } from "../_lib/auswertung";
 import { sparsameMaschen, zaehleGefuellt, zufallsLayout } from "../_lib/flaechen";
 
@@ -390,6 +390,7 @@ export default function KnotenLandschaft({
     }
     restore();
     void zieheSpurenAusCloud();
+    void zieheGewichtungAusCloud();
     window.addEventListener(SPUR_EVENT, restore);
     return () => window.removeEventListener(SPUR_EVENT, restore);
   }, [spurKey, kantenSpurKey, n]);

@@ -11,6 +11,7 @@ import {
 import GewebeSpiel from "./_components/GewebeSpiel";
 import VideoImpuls from "./_components/VideoImpuls";
 import AktivitaetsNetzFloat from "./_components/AktivitaetsNetzFloat";
+import FortschrittsCode from "./_components/FortschrittsCode";
 
 /**
  * Hub von Lernseite 2 («Eine ganz neue Partnerschaft»).
@@ -71,6 +72,9 @@ export default function Lernseite2Hub() {
 
       {/* Mitfahrendes Aktivitätsnetz — wie auf der Auftakt-Seite */}
       <AktivitaetsNetzFloat />
+
+      {/* Fortschritts-Code — geräteübergreifend weitermachen */}
+      <FortschrittsCode className="mt-xl" />
 
       {/* Video-Impuls zum Einstieg */}
       <VideoImpuls
