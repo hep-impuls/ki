@@ -1028,14 +1028,34 @@ export default function OrakelDashboard() {
               {new Date().toLocaleDateString("de-CH")}
             </p>
 
-            <h2 style={{ fontSize: "1.1rem", margin: "1.5rem 0 0.4rem" }}>Meine Aktivität in Zahlen</h2>
-            <ul style={{ margin: 0, paddingLeft: "1.1rem", fontSize: "1rem", lineHeight: 1.7 }}>
+            {/* Aktivitätsnetz als Grafik */}
+            <div style={{ margin: "1.25rem 0 0", maxWidth: "26rem" }}>
+              <AktivitaetsNetz titel="Dein Aktivitätsnetz" />
+            </div>
+
+            {/* Aktivitäts-Boxen */}
+            <h2 style={{ fontSize: "1.1rem", margin: "1.5rem 0 0.5rem" }}>Meine Aktivität in Zahlen</h2>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr 1fr",
+                gap: "0.5rem",
+              }}
+            >
               {perspektiven.map((p) => (
-                <li key={p.titel}>
-                  <strong>{p.titel}:</strong> {p.wert}
-                </li>
+                <div
+                  key={p.titel}
+                  style={{
+                    border: "1px solid #ccc",
+                    borderRadius: "0.5rem",
+                    padding: "0.55rem 0.65rem",
+                  }}
+                >
+                  <div style={{ fontSize: "0.72rem", color: "#555" }}>{p.titel}</div>
+                  <div style={{ fontSize: "1.15rem", fontWeight: 700, marginTop: "0.15rem" }}>{p.wert}</div>
+                </div>
               ))}
-            </ul>
+            </div>
 
             {intOrakel.status === "ok" && intOrakel.text && (
               <>
