@@ -102,6 +102,27 @@ export function melde(key: string, eintrag: AuswertungEintrag): void {
   window.dispatchEvent(new CustomEvent(AUSWERTUNG_EVENT, { detail: { key } }));
 }
 
+/**
+ * Auswertungs-Bilanzen löschen, deren Schlüssel (Spur-Präfix) einen der
+ * Teil-Strings enthält («Seite von vorne beginnen»). Rein lokal (kein
+ * Cloud-Spiegel). Der anonyme Flächen-Zähler und sein Register bleiben
+ * unberührt, damit erneutes Weben die Kollektiv-Werte nicht aufbläht.
+ */
+export function loescheAuswertungEnthaltend(teile: string[]): void {
+  if (typeof window === "undefined" || teile.length === 0) return;
+  const o = lesen();
+  let geaendert = false;
+  for (const k of Object.keys(o)) {
+    if (teile.some((t) => k.includes(t))) {
+      delete o[k];
+      geaendert = true;
+    }
+  }
+  if (!geaendert) return;
+  schreiben(o);
+  window.dispatchEvent(new CustomEvent(AUSWERTUNG_EVENT, { detail: { neustart: true } }));
+}
+
 /** Alle gemeldeten Bereiche lesen. */
 export function leseAuswertung(): AuswertungEintrag[] {
   return Object.values(lesen());

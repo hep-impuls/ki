@@ -13,6 +13,7 @@ import InfoPunkt from "../_components/InfoPunkt";
 import Inhaltsverzeichnis from "../_components/Inhaltsverzeichnis";
 import Aufgabe from "../_components/Aufgabe";
 import ModulMiniNav from "../_components/ModulMiniNav";
+import NeustartButton from "../_components/NeustartButton";
 import AbschnittKopf from "../_components/AbschnittKopf";
 import Ausklapptext from "../_components/Ausklapptext";
 import { GlossarText } from "../_components/Glossar";
@@ -1174,6 +1175,12 @@ export default function Lernseite2VorhangAuf() {
           </Link>
         </div>
       </section>
+
+      <NeustartButton
+        className="mt-xl max-w-3xl"
+        teile={["vorhang-auf"]}
+        seitenName="Vorhang auf"
+      />
     </AppLayout>
   );
 }

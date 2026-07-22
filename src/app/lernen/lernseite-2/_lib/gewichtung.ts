@@ -134,6 +134,36 @@ export function leseGewichtungen(prefix: string): Record<number, number> {
   return out;
 }
 
+/**
+ * Alle Gewichtungen löschen, deren Schlüssel einen der Teil-Strings enthält
+ * («Seite von vorne beginnen»). Lokal entfernen, das Cloud-Doc mit dem VOLLEN
+ * Rest überschreiben (bewusst OHNE merge, sonst blieben gelöschte Schlüssel im
+ * Doc stehen) und GEWICHT_EVENT feuern. Promise fürs Warten vor einem Reload.
+ */
+export async function loescheGewichtungenEnthaltend(teile: string[]): Promise<void> {
+  if (typeof window === "undefined" || teile.length === 0) return;
+  const o = lesen();
+  let geaendert = false;
+  for (const k of Object.keys(o)) {
+    if (teile.some((t) => k.includes(t))) {
+      delete o[k];
+      geaendert = true;
+    }
+  }
+  if (!geaendert) return;
+  schreiben(o);
+  window.dispatchEvent(new CustomEvent(GEWICHT_EVENT, { detail: { neustart: true } }));
+  const code = getSession()?.studentCode;
+  if (!code) return;
+  const ref = gewichtDocRef(code);
+  if (!ref) return;
+  try {
+    await setDoc(ref, { werte: o, updatedAt: serverTimestamp() });
+  } catch (err) {
+    console.warn("[gewichtung] neustart mirror failed", err);
+  }
+}
+
 /** Eine Gewichtung setzen (oder mit stufe=null löschen). Feuert GEWICHT_EVENT. */
 export function setzeGewichtung(prefix: string, index: number, stufe: number | null): void {
   if (typeof window === "undefined") return;

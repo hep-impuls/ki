@@ -12,6 +12,7 @@ import Inhaltsverzeichnis from "../_components/Inhaltsverzeichnis";
 import Aufgabe from "../_components/Aufgabe";
 import Ausklapptext from "../_components/Ausklapptext";
 import ModulMiniNav from "../_components/ModulMiniNav";
+import NeustartButton from "../_components/NeustartButton";
 
 /**
  * Thema 02 — «Philosophische Perspektive».
@@ -663,6 +664,12 @@ export default function Lernseite2PhilosophischePerspektive() {
           href: "/lernen/lernseite-2/das-orakel",
           label: "Das Orakel",
         }}
+      />
+
+      <NeustartButton
+        className="mt-xl max-w-3xl"
+        teile={["philosophische-perspektive", "video:philosophie"]}
+        seitenName="Philosophische Perspektive"
       />
     </AppLayout>
   );

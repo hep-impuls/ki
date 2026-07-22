@@ -203,6 +203,35 @@ export function loescheSpuren(prefix: string): void {
   ).catch((err) => console.warn("[spuren] reset mirror failed", err));
 }
 
+/**
+ * Alle Spuren löschen, deren ID einen der Teil-Strings enthält («Seite von
+ * vorne beginnen»): lokal entfernen, den Cloud-Spiegel mit dem VOLLEN Rest
+ * überschreiben (der `ids`-Array wird bei merge ersetzt) und SPUR_EVENT feuern.
+ * Das anonyme Zähl-Register (`KEY_GEZAEHLT`) bleibt bewusst bestehen, damit
+ * erneutes Durchgehen die Kollektiv-Zähler nicht aufbläht. Gibt das
+ * Cloud-Schreiben als Promise zurück, damit der Aufrufer vor einem Reload
+ * warten kann.
+ */
+export async function loescheSpurenEnthaltend(teile: string[]): Promise<void> {
+  if (typeof window === "undefined" || teile.length === 0) return;
+  const rest = lesen().filter((s) => !teile.some((t) => s.id.includes(t)));
+  schreiben(rest);
+  window.dispatchEvent(new CustomEvent(SPUR_EVENT, { detail: { neustart: true } }));
+  const code = getSession()?.studentCode;
+  if (!code) return;
+  const ref = spurenDocRef(code);
+  if (!ref) return;
+  try {
+    await setDoc(
+      ref,
+      { ids: rest.map((s) => s.id), updatedAt: serverTimestamp() },
+      { merge: true },
+    );
+  } catch (err) {
+    console.warn("[spuren] neustart mirror failed", err);
+  }
+}
+
 /** Alle Spuren lesen (nur lokal). */
 export function leseSpuren(): Spur[] {
   return lesen();
