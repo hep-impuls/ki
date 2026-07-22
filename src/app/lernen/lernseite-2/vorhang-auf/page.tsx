@@ -61,19 +61,19 @@ const BILDER_STORY: AnschauBild[] = [
   {
     src: "/art/quipu-pd.jpg",
     alt: "Historisches Foto einer Anden-Knotenschnur (Quipu): eine Hauptschnur im Bogen mit vielen herabhängenden, geknoteten Nebenschnüren.",
-    titel: "Quipu — Knoten der Anden",
+    titel: "Quipu: Knoten der Anden",
     jahr: "Anden, ~1400",
     kurz: "Historische Aufnahme · Rechnen und Erinnern in Knoten",
     quelle:
       "Foto «The Ancient Quipu Plate XXII» · Wikimedia Commons · gemeinfrei (Public Domain)",
     geschichte:
-      "Quipus waren das Buchhaltungs- und Erinnerungssystem der Inka und älterer Andenkulturen. Statt Zahlen zu schreiben, knüpfte man sie: An einer Hauptschnur hängen Nebenschnüre, deren Knotenart, -zahl und -höhe Werte im Zehnersystem festhalten; Farbe, Drehrichtung und Anordnung trugen zusätzliche Bedeutung. Eigene Spezialisten — die «Quipucamayocs» — legten sie an und lasen sie vor. Rechnen und Erinnern wurden hier nicht ins Rad, sondern in den Faden ausgelagert: eine Datenbank aus Textil, Jahrhunderte vor dem Computer. Diese Aufnahme zeigt ein erhaltenes Quipu.",
+      "Quipus waren das Buchhaltungs- und Erinnerungssystem der Inka und älterer Andenkulturen. Statt Zahlen zu schreiben, knüpfte man sie. An einer Hauptschnur hängen Nebenschnüre, deren Knotenart, Knotenzahl und Knotenhöhe Werte im Zehnersystem festhalten. Auch Farbe, Drehrichtung und Anordnung trugen Bedeutung. Eigene Spezialisten, die «Quipucamayocs», legten sie an und lasen sie vor. Rechnen und Erinnern wurden hier nicht ins Rad ausgelagert, sondern in den Faden. So entstand eine Datenbank aus Textil, Jahrhunderte vor dem Computer. Diese Aufnahme zeigt ein erhaltenes Quipu.",
     hotspots: [
       {
         x: 50,
         y: 16,
         titel: "Die Hauptschnur",
-        text: "An der waagrechten Trägerschnur oben hängen alle Nebenschnüre. Das Quipu ist ein Speicher aus Fäden — Buchhaltung und Chronik der Inka.",
+        text: "An der waagrechten Trägerschnur oben hängen alle Nebenschnüre. Das Quipu ist ein Speicher aus Fäden, eine Buchhaltung und Chronik der Inka.",
       },
       {
         x: 42,
@@ -85,7 +85,7 @@ const BILDER_STORY: AnschauBild[] = [
         x: 60,
         y: 70,
         titel: "Ein Gewebe aus Daten",
-        text: "Dutzende herabhängende Schnüre, teils weiter verzweigt — eine ganze Datenbank aus Textil. Auch Farbe und Drehrichtung der Fäden trugen Bedeutung, lange vor dem Computer.",
+        text: "Dutzende herabhängende Schnüre, teils weiter verzweigt, ergeben eine ganze Datenbank aus Textil. Auch Farbe und Drehrichtung der Fäden trugen Bedeutung, lange vor dem Computer.",
       },
     ],
   },
@@ -98,19 +98,19 @@ const BILDER_STORY: AnschauBild[] = [
     quelle:
       "Kupferstich, Joseph Friedrich zu Racknitz, 1789 · Wikimedia Commons · gemeinfrei",
     geschichte:
-      "Der «Schachtürke» war ein Schach spielender Automat, den Wolfgang von Kempelen 1770 am Wiener Hof vorführte: eine lebensgrosse, als Türke kostümierte Figur an einer Truhe voller Zahnräder. Er schlug jahrzehntelang prominente Gegner — der Legende nach auch Napoleon und Benjamin Franklin — und liess ganz Europa rätseln, ob eine Maschine denken könne. In Wahrheit sass im Innern ein versteckter Schachmeister, der die Figur über Hebel und Magnete steuerte; beim Öffnen zeigte man geschickt immer nur einen Teil des Kastens. Nach Kempelens Tod tourte Johann Nepomuk Mälzel den Automaten um die Welt, bis er 1854 bei einem Brand zerstört wurde. Dieses Bild ist ein Kupferstich von Joseph Friedrich zu Racknitz (1789), der den vermuteten Mechanismus samt verborgenem Bediener zu erklären versuchte. Der Schachtürke ist bis heute das Sinnbild dafür, wie bereitwillig wir Maschinen Intelligenz zuschreiben — und wie oft «automatische» Leistung in Wahrheit versteckte menschliche Arbeit ist. Nicht zufällig heisst Amazons Klickarbeiter-Plattform «Mechanical Turk».",
+      "Der «Schachtürke» war ein Schach spielender Automat, den Wolfgang von Kempelen 1770 am Wiener Hof vorführte. Es war eine lebensgrosse, als Türke kostümierte Figur an einer Truhe voller Zahnräder. Jahrzehntelang schlug er prominente Gegner, der Legende nach auch Napoleon und Benjamin Franklin, und liess ganz Europa rätseln, ob eine Maschine denken könne. In Wahrheit sass im Innern ein versteckter Schachmeister, der die Figur über Hebel und Magnete steuerte. Beim Öffnen zeigte man geschickt immer nur einen Teil des Kastens. Nach Kempelens Tod tourte Johann Nepomuk Mälzel den Automaten um die Welt, bis er 1854 bei einem Brand zerstört wurde. Dieses Bild ist ein Kupferstich von Joseph Friedrich zu Racknitz von 1789, der den vermuteten Mechanismus samt verborgenem Bediener zu erklären versuchte. Der Schachtürke ist bis heute das Sinnbild dafür, wie bereitwillig wir Maschinen Intelligenz zuschreiben und wie oft «automatische» Leistung in Wahrheit versteckte menschliche Arbeit ist. Nicht zufällig heisst Amazons Klickarbeiter-Plattform «Mechanical Turk».",
     hotspots: [
       {
         x: 44,
         y: 18,
         titel: "Der Schein",
-        text: "Der «Türke» scheint selbständig Schach zu denken — ein Wunderautomat des 18. Jahrhunderts.",
+        text: "Der «Türke» scheint selbständig Schach zu denken, ein Wunderautomat des 18. Jahrhunderts.",
       },
       {
         x: 57,
         y: 57,
         titel: "Der versteckte Mensch",
-        text: "Im Innern kauert ein Mensch und zieht die Fäden. Die «Intelligenz» der Maschine war menschlich — auch heute steckt oft mehr Handarbeit drin, als man sieht.",
+        text: "Im Innern kauert ein Mensch und zieht die Fäden. Die «Intelligenz» der Maschine war menschlich. Auch heute steckt oft mehr Handarbeit drin, als man sieht.",
       },
       {
         x: 20,
@@ -129,13 +129,13 @@ const BILDER_STORY: AnschauBild[] = [
     quelle:
       "Frontispiz der Frankenstein-Ausgabe, Theodor von Holst, 1831 · Wikimedia Commons · gemeinfrei",
     geschichte:
-      "Mary Shelley schrieb «Frankenstein oder der moderne Prometheus» mit achtzehn Jahren; der Roman erschien 1818. Victor Frankenstein erschafft aus toter Materie ein lebendes Wesen — und flieht im Augenblick des Gelingens entsetzt vor seinem Werk. Die Kreatur ist nicht böse geboren; erst Zurückweisung und Einsamkeit machen sie zum Rächer. Der eigentliche Fehler ist also nicht die Schöpfung, sondern die verweigerte Verantwortung. Dieses Bild ist das Frontispiz der Ausgabe von 1831 (Stich nach Theodor von Holst) und zeigt den Moment der Flucht. Bis heute steht «Frankenstein» für die Angst vor Technik, die sich der Kontrolle entzieht — und für die Frage, wer für das Gemachte einsteht.",
+      "Mary Shelley schrieb «Frankenstein oder der moderne Prometheus» mit achtzehn Jahren, und der Roman erschien 1818. Victor Frankenstein erschafft aus toter Materie ein lebendes Wesen und flieht im Augenblick des Gelingens entsetzt vor seinem Werk. Die Kreatur ist nicht böse geboren, denn erst Zurückweisung und Einsamkeit machen sie zum Rächer. Der eigentliche Fehler ist also nicht die Schöpfung, sondern die verweigerte Verantwortung. Dieses Bild ist das Frontispiz der Ausgabe von 1831, ein Stich nach Theodor von Holst, und zeigt den Moment der Flucht. Bis heute steht «Frankenstein» für die Angst vor Technik, die sich der Kontrolle entzieht, und für die Frage, wer für das Gemachte einsteht.",
     hotspots: [
       {
         x: 32,
         y: 62,
         titel: "Das erschaffene Wesen",
-        text: "Eben belebt, betrachtet die Kreatur sich selbst. Ein neues Wesen ist in der Welt — und niemand hat es gefragt.",
+        text: "Eben belebt, betrachtet die Kreatur sich selbst. Ein neues Wesen ist in der Welt, und niemand hat es gefragt.",
       },
       {
         x: 72,
@@ -147,7 +147,7 @@ const BILDER_STORY: AnschauBild[] = [
         x: 24,
         y: 90,
         titel: "Wissen und sein Preis",
-        text: "Zu Füssen liegen Buch und Schädel: das Wissen, das belebt — und der Tod, der ihm folgt.",
+        text: "Zu Füssen liegen Buch und Schädel. Sie stehen für das Wissen, das belebt, und für den Tod, der ihm folgt.",
       },
     ],
   },
@@ -160,19 +160,19 @@ const BILDER_STORY: AnschauBild[] = [
     quelle:
       "Holzstich der Differenzmaschine von Charles Babbage, 1853 · Wikimedia Commons · gemeinfrei",
     geschichte:
-      "Der Traum vom mechanischen Rechnen reicht von Leibniz' Rechenrad (um 1673) bis zu Charles Babbage. Ab 1837 entwarf Babbage die «Analytical Engine» — eine universelle, programmierbare Maschine, die zu seinen Lebzeiten nie fertig gebaut wurde. Ada Lovelace erkannte 1843, dass eine solche Maschine nicht nur Zahlen, sondern beliebige Symbole verarbeiten könnte, und schrieb das, was oft als erstes Computerprogramm gilt — hielt aber zugleich fest, die Maschine bringe nichts «von sich aus» hervor. Der Holzstich (1853) zeigt einen Teil von Babbages Differenzmaschine: den mechanischen Urahn des Prozessors, angetrieben von Hand.",
+      "Der Traum vom mechanischen Rechnen reicht von Leibniz' Rechenrad um 1673 bis zu Charles Babbage. Ab 1837 entwarf Babbage die «Analytical Engine», eine universelle, programmierbare Maschine, die zu seinen Lebzeiten nie fertig gebaut wurde. Ada Lovelace erkannte 1843, dass eine solche Maschine nicht nur Zahlen, sondern beliebige Zeichen verarbeiten könnte, und schrieb das, was oft als erstes Computerprogramm gilt. Zugleich hielt sie fest, dass die Maschine nichts von sich aus hervorbringt. Der Holzstich von 1853 zeigt einen Teil von Babbages Differenzmaschine, den mechanischen Urahn des Prozessors, angetrieben von Hand.",
     hotspots: [
       {
         x: 13,
         y: 9,
         titel: "Von Hand angetrieben",
-        text: "Eine Kurbel treibt das Werk — noch ohne Strom, aber die Rechenlogik ist schon da.",
+        text: "Eine Kurbel treibt das Werk an, noch ganz ohne Strom, aber die Rechenlogik ist schon da.",
       },
       {
         x: 45,
         y: 45,
         titel: "Rechnen in Rädern",
-        text: "Zahlen werden in Ziffernrädern gespeichert und verrechnet — der mechanische Urahn des Prozessors.",
+        text: "Zahlen werden in Ziffernrädern gespeichert und verrechnet. Das ist der mechanische Urahn des Prozessors.",
       },
       {
         x: 52,
@@ -191,7 +191,7 @@ const BILDER_STORY: AnschauBild[] = [
     quelle:
       "Foto der «Bombe», US National Security Agency · Wikimedia Commons · gemeinfrei (US-Regierung)",
     geschichte:
-      "Im Zweiten Weltkrieg verschlüsselte die deutsche Wehrmacht ihren Funk mit der Enigma. In Bletchley Park (England) entwarf Alan Turing die «Bombe» — eine elektromechanische Maschine, die Tausende möglicher Walzenstellungen systematisch durchprobierte und die unmöglichen ausschied. Das Knacken der Enigma verkürzte den Krieg erheblich. Turing hatte 1936 die theoretische Grundlage jedes Computers gelegt und fragte 1950, ob Maschinen denken können. Das Foto zeigt eine US-Version der Bombe mit einer Bedienerin: Die Maschinen liefen rund um die Uhr, bedient meist von Frauen. Aus Turings Idee der universellen Rechenmaschine wurde hier ein reales, kriegsentscheidendes Werkzeug — eine Geburtsstunde des Computers.",
+      "Im Zweiten Weltkrieg verschlüsselte die deutsche Wehrmacht ihren Funk mit der Enigma. In Bletchley Park in England entwarf Alan Turing die «Bombe», eine elektromechanische Maschine, die Tausende möglicher Walzenstellungen systematisch durchprobierte und die unmöglichen ausschied. Das Knacken der Enigma verkürzte den Krieg erheblich. Turing hatte 1936 die theoretische Grundlage jedes Computers gelegt und fragte 1950, ob Maschinen denken können. Das Foto zeigt eine US-Version der Bombe mit einer Bedienerin, denn die Maschinen liefen rund um die Uhr und wurden meist von Frauen bedient. Aus Turings Idee der universellen Rechenmaschine wurde hier ein reales, kriegsentscheidendes Werkzeug und eine Geburtsstunde des Computers.",
     hotspots: [
       {
         x: 55,
@@ -203,38 +203,38 @@ const BILDER_STORY: AnschauBild[] = [
         x: 40,
         y: 29,
         titel: "Systematisch durchprobieren",
-        text: "An den oberen Rädchen wird die Maschine eingestellt. Die «Bombe» testet mechanisch Tausende Walzenstellungen und scheidet die unmöglichen aus — Rechnen wird zur Suche.",
+        text: "An den oberen Rädchen wird die Maschine eingestellt. Die «Bombe» testet mechanisch Tausende Walzenstellungen und scheidet die unmöglichen aus. Rechnen wird hier zur Suche.",
       },
       {
         x: 27,
         y: 52,
         titel: "Menschen an der Maschine",
-        text: "Bedienerinnen richteten die Bombe ein und lasen sie ab, rund um die Uhr. Aus Turings Idee der universellen Rechenmaschine wird ein reales, kriegsentscheidendes Werkzeug — eine Geburtsstunde des Computers.",
+        text: "Bedienerinnen richteten die Bombe ein und lasen sie ab, rund um die Uhr. Aus Turings Idee der universellen Rechenmaschine wird ein reales, kriegsentscheidendes Werkzeug und eine Geburtsstunde des Computers.",
       },
     ],
   },
   {
     src: "/art/eliza.svg",
     alt: "Illustration des Chatbots ELIZA (1966): ein Fernschreiber-Ausdruck mit einem Wechselgespräch zwischen Mensch und Programm.",
-    titel: "ELIZA — der erste Chatbot",
+    titel: "ELIZA: der erste Chatbot",
     jahr: "1966",
     kurz: "Weizenbaums sprechendes Programm",
     quelle: "Schematische Illustration, mit KI erstellt für dieses Lehrmittel · kein Foto",
     geschichte:
-      "ELIZA schrieb Joseph Weizenbaum 1966 am MIT — eines der ersten «sprechenden» Programme. Sein bekanntestes Skript, «DOCTOR», imitierte eine Psychotherapeutin und spiegelte die Eingaben als Fragen zurück («In welcher Weise?»). ELIZA verstand nichts — sie folgte einfachen Mustern —, wirkte aber verblüffend menschlich. Weizenbaum erschrak, wie sehr sich Menschen dem Programm anvertrauten, und wurde später zu einem frühen Kritiker der KI. Der «ELIZA-Effekt» beschreibt bis heute unsere Neigung, hinter flüssiger Sprache echtes Verstehen zu vermuten. (KI-erstellte Illustration eines Fernschreiber-Dialogs.)",
+      "ELIZA schrieb Joseph Weizenbaum 1966 am MIT. Es war eines der ersten «sprechenden» Programme. Sein bekanntestes Skript hiess «DOCTOR», imitierte eine Psychotherapeutin und spiegelte die Eingaben als Fragen zurück, etwa «In welcher Weise?». ELIZA verstand nichts und folgte nur einfachen Mustern, wirkte aber verblüffend menschlich. Weizenbaum erschrak, wie sehr sich Menschen dem Programm anvertrauten, und wurde später zu einem frühen Kritiker der KI. Der «ELIZA-Effekt» beschreibt bis heute unsere Neigung, hinter flüssiger Sprache echtes Verstehen zu vermuten. Diese Illustration eines Fernschreiber-Dialogs ist mit KI erstellt.",
     ki: true,
     hotspots: [
       {
         x: 38,
         y: 37,
         titel: "Die Therapeutin (DOCTOR)",
-        text: "Das bekannteste Skript imitierte eine Psychotherapeutin: Es gab Aussagen als Fragen zurück — «In welcher Weise?», «Erzähl mir mehr».",
+        text: "Das bekannteste Skript imitierte eine Psychotherapeutin. Es gab Aussagen als Fragen zurück, etwa «In welcher Weise?» oder «Erzähl mir mehr».",
       },
       {
         x: 62,
         y: 62,
         titel: "Ein Skript, kein Verstehen",
-        text: "ELIZA folgte einfachen Mustern und spiegelte Sätze zurück. Sie verstand nichts — und wirkte doch verblüffend menschlich.",
+        text: "ELIZA folgte einfachen Mustern und spiegelte Sätze zurück. Sie verstand nichts und wirkte doch verblüffend menschlich.",
       },
       {
         x: 30,
@@ -252,14 +252,14 @@ const BILDER_STORY: AnschauBild[] = [
     kurz: "Daten als Punkte im mehrdimensionalen Raum",
     quelle: "Schematische Illustration, mit KI erstellt für dieses Lehrmittel · kein Foto",
     geschichte:
-      "Ab den 1990er-Jahren verschob sich die KI vom Regeln-Schreiben zum Lernen aus Beispielen. Ein Modell fasst jedes Beispiel als Punkt in einem Raum mit vielen Merkmalen auf — oft Hunderte oder Tausende Dimensionen; Ähnliches liegt nah beieinander. «Lernen» heisst dann, eine Grenze zu finden, die Gruppen trennt: Danach kann das Modell Neues einordnen. Es «versteht» dabei keine Bedeutung, sondern rechnet mit Lage und Abstand. Diese Denkweise ist die Grundlage fast aller heutigen KI. (KI-erstellte, schematische Illustration.)",
+      "Ab den 1990er-Jahren verschob sich die KI vom Regeln-Schreiben zum Lernen aus Beispielen. Ein Modell fasst jedes Beispiel als Punkt in einem Raum mit vielen Merkmalen auf, oft mit Hunderten oder Tausenden Dimensionen, und Ähnliches liegt nah beieinander. «Lernen» heisst dann, eine Grenze zu finden, die Gruppen trennt. Danach kann das Modell Neues einordnen. Es versteht dabei keine Bedeutung, sondern rechnet mit Lage und Abstand. Diese Denkweise ist die Grundlage fast aller heutigen KI. Diese schematische Illustration ist mit KI erstellt.",
     ki: true,
     hotspots: [
       {
         x: 19,
         y: 78,
         titel: "Achsen sind Merkmale",
-        text: "Jede Achse steht für ein Merkmal der Daten — oft sind es Hunderte oder Tausende, hier nur drei angedeutet.",
+        text: "Jede Achse steht für ein Merkmal der Daten. Oft sind es Hunderte oder Tausende, hier nur drei angedeutet.",
       },
       {
         x: 33,
@@ -271,37 +271,37 @@ const BILDER_STORY: AnschauBild[] = [
         x: 55,
         y: 48,
         titel: "Die gelernte Grenze",
-        text: "Das Modell sucht eine Fläche, die die Gruppen trennt. «Lernen» heisst: diese Grenze aus Beispielen immer besser ziehen — dann kann es Neues einordnen.",
+        text: "Das Modell sucht eine Fläche, die die Gruppen trennt. «Lernen» heisst, diese Grenze aus Beispielen immer besser zu ziehen. Dann kann es Neues einordnen.",
       },
     ],
   },
   {
     src: "/art/tamagotchi-foto.jpg",
     alt: "Foto eines gelben Tamagotchi (1996): ein eiförmiges Taschengerät mit kleinem Bildschirm, drei Knöpfen und einer Kugelkette.",
-    titel: "Tamagotchi — das virtuelle Haustier",
+    titel: "Tamagotchi: das virtuelle Haustier",
     jahr: "1996",
     kurz: "Bindung an ein digitales Wesen",
     quelle: "Foto: Museum Rotterdam · Wikimedia Commons · CC BY-SA 3.0",
     geschichte:
-      "Das Tamagotchi kam 1996 in Japan (Bandai) auf den Markt: ein eiförmiges Taschengerät mit einem digitalen Wesen, das gefüttert, gepflegt und beschäftigt werden wollte — sonst «starb» es. Millionen banden sich emotional an ein paar Bildpunkte; an Schulen wurden die piepsenden Geräte zeitweise verboten. Tamagotchis zeigen, wie leicht wir Maschinen wie Lebewesen behandeln — ein früher Vorläufer der virtuellen Haustiere und der heutigen KI-Begleiter. Dieses Foto zeigt ein erhaltenes Gerät aus einer Museumssammlung.",
+      "Das Tamagotchi kam 1996 in Japan von der Firma Bandai auf den Markt. Es war ein eiförmiges Taschengerät mit einem digitalen Wesen, das gefüttert, gepflegt und beschäftigt werden wollte, sonst «starb» es. Millionen banden sich emotional an ein paar Bildpunkte, und an Schulen wurden die piepsenden Geräte zeitweise verboten. Tamagotchis zeigen, wie leicht wir Maschinen wie Lebewesen behandeln. Sie sind ein früher Vorläufer der virtuellen Haustiere und der heutigen KI-Begleiter. Dieses Foto zeigt ein erhaltenes Gerät aus einer Museumssammlung.",
     hotspots: [
       {
         x: 53,
         y: 42,
         titel: "Gefühle für Pixel",
-        text: "Auf dem kleinen Schirm lebte ein paar Bildpunkte grosses Wesen. Millionen banden sich emotional daran — wir behandeln Maschinen erstaunlich leicht wie Lebewesen.",
+        text: "Auf dem kleinen Schirm lebte ein wenige Bildpunkte grosses Wesen. Millionen banden sich emotional daran, denn wir behandeln Maschinen erstaunlich leicht wie Lebewesen.",
       },
       {
         x: 70,
         y: 67,
         titel: "Ein Wesen zum Umsorgen",
-        text: "Mit drei Knöpfen wurde gefüttert, gespielt, sauber gemacht — Pflege rund um die Uhr, sonst «starb» das Wesen.",
+        text: "Mit drei Knöpfen wurde gefüttert, gespielt und sauber gemacht. Es war Pflege rund um die Uhr, sonst «starb» das Wesen.",
       },
       {
         x: 22,
         y: 50,
         titel: "Wegbereiter",
-        text: "An der Kette hing es immer am Körper. Tamagotchis ebneten den Weg für virtuelle Haustiere und Gefährten — heute für sprechende KI-Begleiter.",
+        text: "An der Kette hing es immer am Körper. Tamagotchis ebneten den Weg für virtuelle Haustiere und Gefährten, heute für sprechende KI-Begleiter.",
       },
     ],
   },
@@ -313,89 +313,89 @@ const BILDER_STORY: AnschauBild[] = [
     kurz: "Deep Q-Network lernt Arcade-Spiele selbst",
     quelle: "Schematische Illustration, mit KI erstellt für dieses Lehrmittel · kein Foto",
     geschichte:
-      "2013–2015 zeigte «Deep Q-Network» (DeepMind), dass eine KI klassische Arcade-Spiele allein durch Ausprobieren lernen kann — sie sah nur die Bildpunkte des Schirms und den Punktestand, keine Regeln. Über viele Partien hinweg richtete sie ihr Verhalten auf die Belohnung (Punkte) aus und übertraf bei manchen Spielen den Menschen. Dieses «verstärkende Lernen» wurde später zur Grundlage von Systemen wie AlphaGo, das 2016 den weltbesten Go-Spieler schlug. (KI-erstellte, schematische Illustration; kein Originalspiel.)",
+      "Zwischen 2013 und 2015 zeigte «Deep Q-Network» von DeepMind, dass eine KI klassische Arcade-Spiele allein durch Ausprobieren lernen kann. Sie sah nur die Bildpunkte des Schirms und den Punktestand, aber keine Regeln. Über viele Partien hinweg richtete sie ihr Verhalten auf die Belohnung durch Punkte aus und übertraf bei manchen Spielen den Menschen. Dieses «verstärkende Lernen» wurde später zur Grundlage von Systemen wie AlphaGo, das 2016 den weltbesten Go-Spieler schlug. Diese schematische Illustration ist mit KI erstellt und zeigt kein Originalspiel.",
     ki: true,
     hotspots: [
       {
         x: 32,
         y: 24,
         titel: "Die Umgebung",
-        text: "Das Spiel ist die Umgebung — die KI sieht nur die Bildpunkte des Schirms und den Punktestand, keine Regeln.",
+        text: "Das Spiel ist die Umgebung. Die KI sieht nur die Bildpunkte des Schirms und den Punktestand, aber keine Regeln.",
       },
       {
         x: 89,
         y: 50,
         titel: "Belohnung steigt",
-        text: "Punkte sind Belohnung. Über viele Spiele hinweg versucht die KI, sie zu maximieren — die Kurve klettert.",
+        text: "Punkte sind die Belohnung. Über viele Spiele hinweg versucht die KI, sie zu maximieren, und die Kurve klettert.",
       },
       {
         x: 37,
         y: 80,
         titel: "Versuch und Irrtum",
-        text: "Ohne Anleitung lernt sie erstaunliche Strategien — 2013–2015 zeigte «Deep Q-Network», dass Maschinen im Spiel stärker werden als Menschen.",
+        text: "Ohne Anleitung lernt sie erstaunliche Strategien. Zwischen 2013 und 2015 zeigte «Deep Q-Network», dass Maschinen im Spiel stärker werden können als Menschen.",
       },
     ],
   },
   {
     src: "/art/dalle2.jpg",
     alt: "Von DALL·E 2 erzeugtes Bild: ein metallener Roboterarm hält einen Stift und zeichnet die Skizze einer Hand auf Papier.",
-    titel: "DALL·E — Bilder aus Worten",
+    titel: "DALL·E: Bilder aus Worten",
     jahr: "April 2022",
-    kurz: "Text wird zum Bild — und das vor ChatGPT",
+    kurz: "Text wird zum Bild, schon vor ChatGPT",
     quelle:
       "Von DALL·E 2 erzeugtes Bild (2022) · Wikimedia Commons · KI-generiert, urheberrechtlich nicht geschützt",
     geschichte:
-      "DALL·E (OpenAI) erzeugt Bilder aus Textbeschreibungen. DALL·E 1 kam im Januar 2021, das deutlich stärkere DALL·E 2 im April 2022 — rund ein halbes Jahr vor ChatGPT. Man gibt einen Satz ein, und das Modell «malt» ein Bild, das so nie fotografiert wurde; es setzt es Punkt für Punkt neu aus Gelerntem zusammen. Damit wurde generative KI erstmals einem breiten Publikum sichtbar. Dieses Bild ist selbst ein DALL·E-2-Ergebnis (eine zeichnende Roboterhand) und als KI-erzeugtes Werk urheberrechtlich nicht geschützt.",
+      "DALL·E von OpenAI erzeugt Bilder aus Textbeschreibungen. DALL·E 1 kam im Januar 2021, das deutlich stärkere DALL·E 2 im April 2022, also rund ein halbes Jahr vor ChatGPT. Man gibt einen Satz ein, und das Modell «malt» ein Bild, das so nie fotografiert wurde. Es setzt das Bild Punkt für Punkt neu aus Gelerntem zusammen. Damit wurde generative KI erstmals einem breiten Publikum sichtbar. Dieses Bild ist selbst ein Ergebnis von DALL·E 2, eine zeichnende Roboterhand, und als KI-erzeugtes Werk urheberrechtlich nicht geschützt.",
     ki: true,
     hotspots: [
       {
         x: 55,
         y: 20,
         titel: "Sprache als Pinsel",
-        text: "Ein Satz genügt als Auftrag — und die Maschine «zeichnet». Mit DALL·E 2 (April 2022) entstand zu jeder Beschreibung ein neues Bild.",
+        text: "Ein Satz genügt als Auftrag, und die Maschine «zeichnet». Mit DALL·E 2 im April 2022 entstand zu jeder Beschreibung ein neues Bild.",
       },
       {
         x: 24,
         y: 58,
         titel: "Erfunden, nicht gefunden",
-        text: "Das Bild existiert nirgends; das Modell setzt es Punkt für Punkt neu zusammen — dieses hier hat DALL·E 2 erzeugt, das übrigens urheberrechtlich nicht geschützt ist.",
+        text: "Das Bild existiert nirgends, das Modell setzt es Punkt für Punkt neu zusammen. Dieses hier hat DALL·E 2 erzeugt, und es ist urheberrechtlich nicht geschützt.",
       },
       {
         x: 45,
         y: 82,
         titel: "Früher als ChatGPT",
-        text: "Das vergisst man leicht: Die Bild-KI war zuerst da — DALL·E 2 im April 2022, ein halbes Jahr bevor ChatGPT im November 2022 alle erreichte.",
+        text: "Das vergisst man leicht. Die Bild-KI war zuerst da, nämlich DALL·E 2 im April 2022, ein halbes Jahr bevor ChatGPT im November 2022 alle erreichte.",
       },
     ],
   },
   {
     src: "/art/chatgpt.svg",
     alt: "Illustration von ChatGPT (2022): ein Chatfenster mit einer Frage in Alltagssprache und einer flüssig getippten KI-Antwort.",
-    titel: "ChatGPT — KI für alle",
+    titel: "ChatGPT: KI für alle",
     jahr: "November 2022",
     kurz: "der Chatbot, der KI in den Alltag brachte",
     quelle: "Schematische Illustration, mit KI erstellt für dieses Lehrmittel · kein Foto",
     geschichte:
-      "ChatGPT (OpenAI) erschien im November 2022 und machte KI für alle bedienbar: ein Chatfenster, normale Sprache, sofort nutzbar. Innert weniger Wochen nutzten es Millionen — der Moment, in dem KI im Alltag ankam. Das Modell setzt Wort für Wort den wahrscheinlich nächsten Textbaustein; das gelingt verblüffend gut, kann aber auch überzeugend falsch sein. Zusätzlich wurde es mit menschlichem Feedback trainiert, um hilfreicher und harmloser zu antworten. (KI-erstellte Illustration eines Chatfensters.)",
+      "ChatGPT von OpenAI erschien im November 2022 und machte KI für alle bedienbar. Es war ein Chatfenster mit normaler Sprache, sofort nutzbar. Innert weniger Wochen nutzten es Millionen. Das war der Moment, in dem KI im Alltag ankam. Das Modell setzt Wort für Wort den wahrscheinlich nächsten Textbaustein. Das gelingt verblüffend gut, kann aber auch überzeugend falsch sein. Zusätzlich wurde es mit menschlichem Feedback trainiert, um hilfreicher und harmloser zu antworten. Diese Illustration eines Chatfensters ist mit KI erstellt.",
     ki: true,
     hotspots: [
       {
         x: 61,
         y: 29,
         titel: "Einfach reden",
-        text: "Man tippt eine Frage in ganz normaler Sprache — die KI antwortet flüssig. Keine Fachkenntnis, kein Befehl nötig.",
+        text: "Man tippt eine Frage in ganz normaler Sprache, und die KI antwortet flüssig. Es braucht keine Fachkenntnis und keinen Befehl.",
       },
       {
         x: 40,
         y: 60,
         titel: "Wort für Wort",
-        text: "Das Modell setzt immer den wahrscheinlich nächsten Textbaustein — verblüffend gut, aber ohne echtes Wissen. Es kann auch überzeugend irren.",
+        text: "Das Modell setzt immer den wahrscheinlich nächsten Textbaustein. Das ist verblüffend gut, aber ohne echtes Wissen. Es kann auch überzeugend irren.",
       },
       {
         x: 50,
         y: 88,
         titel: "Der Durchbruch",
-        text: "Innert Wochen nutzten Millionen ChatGPT — der Moment, in dem KI im Alltag vieler Menschen ankam.",
+        text: "Innert Wochen nutzten Millionen ChatGPT. Es war der Moment, in dem KI im Alltag vieler Menschen ankam.",
       },
     ],
   },
@@ -425,7 +425,7 @@ export default function Lernseite2VorhangAuf() {
           Thema 01 · Auftakt
         </p>
         <h1 className="mt-sm text-headline-xl text-on-surface">
-          Vorhang auf — eine neue Akteurin
+          Vorhang auf: eine neue Akteurin
         </h1>
         <p className="mt-md max-w-3xl text-body-lg text-on-surface-variant">
           <GlossarText text="Kaum ein Thema ist so präsent wie die Künstliche Intelligenz. Und kaum eines ist so schwer zu fassen. Diese Seite gibt der KI einen Ort, an dem wir ihrer Gestalt nachgehen, statt nur über sie zu reden." />
@@ -470,8 +470,8 @@ export default function Lernseite2VorhangAuf() {
       <VideoImpuls
         className="mt-xl"
         spurId="video:vorhang-auf"
-        titel="Vorhang auf — die neue Akteurin"
-        beschreibung="Ein kurzer Input zum Auftakt: Was ist da auf die Bühne getreten — und warum passt es in keine unserer alten Schubladen?"
+        titel="Vorhang auf: die neue Akteurin"
+        beschreibung="Ein kurzer Input zum Auftakt. Was ist da auf die Bühne getreten, und warum passt es in keine unserer alten Schubladen?"
       />
 
       {/* 1 — Die KI-Story als lineare Knotenlandschaft mit Einfluss-Bögen */}
