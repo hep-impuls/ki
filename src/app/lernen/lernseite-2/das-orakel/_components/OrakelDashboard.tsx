@@ -378,17 +378,22 @@ export default function OrakelDashboard() {
   const aktuell = orakel[stil];
 
   /* ── Perspektiven-Kacheln ─────────────────────────────────────────────── */
+  /* `alle`: die anonyme Aktivität aller (aus den Zählern). `nurDu`: Kennzahl
+   *  liegt nur lokal vor (Bewertungen/Flächen) — kein anonymer Vergleich. */
   const perspektiven: {
     icon: string;
     titel: string;
     wert: string;
     text: string;
+    alle?: string;
+    nurDu?: boolean;
   }[] = [
     {
       icon: "ads_click",
       titel: "Angeklickte Punkte",
       wert: `${meineGesamt} / ${GESAMT_TOTAL}`,
-      text: `Knoten hast du auf diesem Gerät geöffnet. Alle zusammen waren ${alleGesamt}× unterwegs.`,
+      text: "Knoten hast du auf diesem Gerät geöffnet.",
+      alle: `${alleGesamt}× von allen besucht`,
     },
     {
       icon: "dashboard",
@@ -396,20 +401,23 @@ export default function OrakelDashboard() {
       wert: `${flaechenGefuellt} / ${flaechenTotal || "–"}`,
       text:
         flaechenTotal === 0
-          ? "Noch keine Fläche geknüpft — besuche im Teppich und in der KI-Story benachbarte Punkte, dann füllen sich Maschen."
-          : `Maschen, die du in den Geweben (Teppich, KI-Story, Merkmale, Muster) vollständig geknüpft hast — je mehr benachbarte Punkte du besuchst, desto mehr Flächen entstehen.`,
+          ? "Noch keine Fläche geknüpft — besuche benachbarte Punkte, dann füllen sich Maschen."
+          : "Maschen, die du in den Geweben (Teppich, KI-Story, Merkmale, Muster) vollständig geknüpft hast.",
+      nurDu: true,
     },
     {
       icon: "imagesmode",
       titel: "Bilder angeschaut",
       wert: `${meineBilder} / ${BILDER_TOTAL}`,
-      text: "Bilder der Strecke «Bilder zur KI-Geschichte», die du im Anschauungsmodus geöffnet hast.",
+      text: "Bilder der Strecke «Bilder zur KI-Geschichte», die du geöffnet hast.",
+      alle: `${summeMitPrefix(alleSpuren, "vorhang-auf:bild")}× von allen geöffnet`,
     },
     {
       icon: "smart_display",
       titel: "Videos geschaut",
       wert: `${meineVideos} / ${VIDEO_TOTAL}`,
       text: "Video-Impulse, die du bis zu Ende angeschaut hast.",
+      alle: `${summeMitPrefix(alleSpuren, "video:")}× von allen geschaut`,
     },
     {
       icon: "bookmark_added",
@@ -418,7 +426,8 @@ export default function OrakelDashboard() {
       text:
         meineWuensche === 0
           ? "Noch kein «das verfolge ich weiter» gesetzt."
-          : `Merkzeichen gesetzt. Klassenweit: ${summeMitPrefix(alleSpuren, "wunsch:")}×.`,
+          : "Merkzeichen gesetzt.",
+      alle: `${summeMitPrefix(alleSpuren, "wunsch:")}× von allen gesetzt`,
     },
     {
       icon: "menu_book",
@@ -426,26 +435,30 @@ export default function OrakelDashboard() {
       wert: `${meineMehr}`,
       text:
         meineMehr === 0
-          ? "Noch keine Vertiefung geöffnet — hinter «Mehr lesen» steckt zu vielen Punkten ein längerer Text."
-          : `Mal hast du «Mehr lesen» geöffnet und in die Tiefe gelesen. Klassenweit: ${summeMitPrefix(alleSpuren, "mehr:")}×.`,
+          ? "Noch keine Vertiefung («Mehr lesen») geöffnet."
+          : "Mal hast du «Mehr lesen» geöffnet und in die Tiefe gelesen.",
+      alle: `${summeMitPrefix(alleSpuren, "mehr:")}× von allen geöffnet`,
     },
     {
       icon: "favorite",
       titel: "Für dich relevant",
       wert: `${bew.relevanzStark + bew.philoHilft + bew.technikFroh}`,
       text: `Punkte, die dein Leben prägen (${bew.relevanzStark}), Sichtweisen, die dir heute helfen (${bew.philoHilft}), und Technik, über die du froh bist (${bew.technikFroh}).`,
+      nurDu: true,
     },
     {
       icon: "do_not_disturb_on",
       titel: "Ohne Bedeutung",
       wert: `${bew.relevanzKaum + bew.philoKeinSinn + bew.technikAbschaffen}`,
       text: `Was du als kaum relevant (${bew.relevanzKaum}), sinnlos (${bew.philoKeinSinn}) oder überflüssig (${bew.technikAbschaffen}) markiert hast.`,
+      nurDu: true,
     },
     {
       icon: "sentiment_stressed",
       titel: "Verunsichert dich noch",
       wert: `${bew.verunsichertNochHeute}`,
       text: `Verunsicherungen aus den Epochen, die dich bis heute betreffen. KI-Merkmale, die dir «deutlich» wurden: ${bew.gestaltDeutlich}.`,
+      nurDu: true,
     },
   ];
 
@@ -560,6 +573,20 @@ export default function OrakelDashboard() {
               </div>
               <p className="mt-sm text-headline-sm text-on-surface">{p.wert}</p>
               <p className="mt-xs text-body-sm text-on-surface-variant">{p.text}</p>
+              {p.alle && (
+                <p className="mt-sm flex items-center gap-xs border-t border-outline-variant/60 pt-sm text-label-sm text-on-surface-variant">
+                  <span className="material-symbols-outlined text-[16px] text-tertiary">groups</span>
+                  {p.alle}
+                </p>
+              )}
+              {p.nurDu && (
+                <p className="mt-sm flex items-center gap-xs border-t border-outline-variant/60 pt-sm text-label-sm text-on-surface-variant">
+                  <span className="material-symbols-outlined text-[16px] text-on-surface-variant/60">
+                    lock
+                  </span>
+                  Nur bei dir — kein anonymer Vergleich mit allen.
+                </p>
+              )}
             </div>
           ))}
         </div>
