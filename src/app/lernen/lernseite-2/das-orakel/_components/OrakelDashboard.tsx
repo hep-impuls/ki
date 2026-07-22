@@ -12,6 +12,7 @@ import {
 import { FadenDivider } from "../../_components/Gewebe";
 import AktivitaetsNetz from "../../_components/AktivitaetsNetz";
 import Knotenkarte from "../../_components/Knotenkarte";
+import Ausklapptext from "../../_components/Ausklapptext";
 import Inhaltsverzeichnis from "../../_components/Inhaltsverzeichnis";
 import {
   leseSpuren,
@@ -1092,99 +1093,60 @@ export default function OrakelDashboard() {
 
       <FadenDivider className="mt-xl" />
 
-      {/* Datenschutz-Erklärung — ausführlich */}
+      {/* Datenschutz — das Wesentliche, Details im Accordion */}
       <section
         aria-label="Datenschutz"
         className="mt-xl rounded-xl border border-outline-variant bg-surface-container-low p-md sm:p-lg"
       >
         <p className="flex items-center gap-sm text-label-md uppercase tracking-wider text-tertiary">
           <span className="material-symbols-outlined text-[20px]">lock</span>
-          So gehen wir mit deinen Daten um
+          Datenschutz — kurz
         </p>
         <p className="mt-sm text-body-sm text-on-surface-variant">
-          Dieses Lernset kommt <strong className="text-on-surface">ohne Login,
-          ohne Namen und ohne Passwort</strong> aus. Trotzdem entstehen Daten —
-          und es lohnt sich zu wissen, welche wohin gehen. Es sind vier Ebenen:
+          Du meldest dich nur mit einem <strong className="text-on-surface">Code</strong>{" "}
+          an (z.B. «QWEN-34R») — <strong className="text-on-surface">kein Name,
+          keine E-Mail, kein Passwort</strong>. Der Code ist ein Pseudonym: Wer
+          ihn hat, sieht deinen Fortschritt — bewahre ihn also für dich auf.
+          Namen werden nirgends erhoben.
         </p>
 
-        <div className="mt-md space-y-sm">
-          <div className="rounded-lg border border-outline-variant bg-surface-bright p-md">
-            <p className="flex items-center gap-xs text-body-sm font-semibold text-on-surface">
-              <span className="material-symbols-outlined text-[18px] text-tertiary">groups</span>
-              1 · Anonyme Zähler (der Überblick über alle)
-            </p>
-            <p className="mt-xs text-body-sm text-on-surface-variant">
-              Bei jedem besuchten Knoten, jeder geknüpften Fläche und jeder
-              Umfrage-Stimme zählt ein Zähler <strong className="text-on-surface">+1</strong>{" "}
-              — <strong className="text-on-surface">ohne Namen, ohne Code, nicht
-              rückverfolgbar</strong>. Aus diesen Summen entstehen der Überblick
-              «alle Teilnehmenden» und die «du ↔ alle»-Vergleiche. Deine Klicks
-              fliessen dort mit ein, aber nur als anonyme Gesamtzahl — niemand
-              kann sie dir zuordnen, auch wir nicht.
-            </p>
-          </div>
-
-          <div className="rounded-lg border border-outline-variant bg-surface-bright p-md">
-            <p className="flex items-center gap-xs text-body-sm font-semibold text-on-surface">
-              <span className="material-symbols-outlined text-[18px] text-tertiary">badge</span>
-              2 · Dein Fortschritt (pseudonym, unter deinem Code)
-            </p>
-            <p className="mt-xs text-body-sm text-on-surface-variant">
-              Damit du auf einem anderen Gerät weitermachen kannst, werden{" "}
-              <strong className="text-on-surface">welche Punkte du besucht und wie
-              du sie bewertet hast</strong> zusätzlich unter deinem Modell-Code (z.B.
-              «QWEN-34R») in einer Datenbank (Google Firebase/Firestore)
-              gespeichert. Das ist <strong className="text-on-surface">pseudonym</strong>:
-              kein Name, keine E-Mail, kein Passwort — der{" "}
-              <strong className="text-on-surface">Code ist der Schlüssel</strong>.
-              Wer denselben Code eingibt, sieht diesen Fortschritt. Bewahre den
-              Code also so auf, dass nur du ihn hast. Reflexionssätze oder
-              Einzeltexte werden dabei nicht gespeichert — nur der knappe
-              Fortschritt (angetippte Punkte, Bewertungs-Stufen).
-            </p>
-          </div>
-
-          <div className="rounded-lg border border-outline-variant bg-surface-bright p-md">
-            <p className="flex items-center gap-xs text-body-sm font-semibold text-on-surface">
-              <span className="material-symbols-outlined text-[18px] text-tertiary">insights</span>
-              3 · Was die KI (das Orakel) sieht
-            </p>
-            <p className="mt-xs text-body-sm text-on-surface-variant">
-              Nur wenn du das Orakel <strong className="text-on-surface">ausdrücklich
-              befragst</strong>, schickt dein Browser der KI eine{" "}
-              <strong className="text-on-surface">anonyme Zusammenfassung in Zahlen</strong>{" "}
-              (Zähler, Bewertungs-Summen, die Titel der von dir gewählten Themen) —
-              <strong className="text-on-surface"> keinen Namen, keinen Code, keine
-              Einzeltexte</strong>. Die KI erhält keinen Zugriff auf die Datenbank
-              und speichert nichts; ihre Deutung entsteht im Moment der Anfrage.
-            </p>
-          </div>
-
-          <div className="rounded-lg border border-outline-variant bg-surface-bright p-md">
-            <p className="flex items-center gap-xs text-body-sm font-semibold text-on-surface">
-              <span className="material-symbols-outlined text-[18px] text-tertiary">open_in_new</span>
-              4 · Die Rückmeldungs-Umfragen (Findmind)
-            </p>
-            <p className="mt-xs text-body-sm text-on-surface-variant">
-              Die beiden Umfragen laufen über den externen Dienst{" "}
-              <strong className="text-on-surface">findmind.ch</strong> und sind
-              anonym. Sobald du dort etwas eingibst, gelten die
-              Datenschutzbestimmungen von Findmind.
-            </p>
-          </div>
-        </div>
-
-        <p className="mt-md text-body-sm text-on-surface-variant">
-          <strong className="text-on-surface">Verlust &amp; Kontrolle:</strong> Die
-          lokale Kopie auf diesem Gerät geht verloren, wenn du die Website-Daten
-          bzw. den Verlauf löschst, im privaten Modus surfst oder Gerät/Browser
-          wechselst. Deine Cloud-Kopie unter deinem Code bleibt aber erhalten und
-          kehrt zurück, sobald du den Code wieder eingibst. Notierst du den Code
-          nie, lässt sich der Fortschritt niemandem — auch dir nicht — erneut
-          zuordnen. Willst du deine Deutung dauerhaft behalten, drucke sie aus
-          (PDF). Es werden keine Personendaten erhoben; einzig dein selbst
-          eingegebener Name für den Ausdruck bleibt lokal auf diesem Gerät.
-        </p>
+        <Ausklapptext className="mt-sm" titel="Datenschutz im Detail">
+          <ul className="ml-md list-disc space-y-xs text-body-sm text-on-surface-variant">
+            <li>
+              <strong className="text-on-surface">Anonyme Zähler:</strong> Jeder
+              Klick zählt <strong className="text-on-surface">+1</strong> auf einen
+              Zähler ohne Code — daraus entstehen «alle», Knotenkarte und Rhizom.
+              Nicht rückverfolgbar.
+            </li>
+            <li>
+              <strong className="text-on-surface">Dein Fortschritt:</strong> welche
+              Punkte du besucht und wie du bewertet hast, liegt zusätzlich unter
+              deinem Code in der Cloud (Google Firebase) — damit du
+              geräteübergreifend weitermachen kannst. Keine Reflexionstexte, keine
+              Einzelantworten.
+            </li>
+            <li>
+              <strong className="text-on-surface">Klassencode (optional):</strong>{" "}
+              Gibst du den Klassencode deiner Lehrperson ein, wird dein Code der
+              Klasse zugeordnet — weiterhin ohne deinen Namen.
+            </li>
+            <li>
+              <strong className="text-on-surface">Das Orakel:</strong> bekommt nur
+              auf Knopfdruck eine anonyme Zusammenfassung in Zahlen — keinen Namen,
+              keinen Code, keine Einzeltexte. Es speichert nichts.
+            </li>
+            <li>
+              <strong className="text-on-surface">Findmind-Umfragen:</strong> laufen
+              extern über findmind.ch und sind anonym.
+            </li>
+            <li>
+              <strong className="text-on-surface">Verlust &amp; Kontrolle:</strong>{" "}
+              Die lokale Kopie geht bei gelöschtem Verlauf, Privatmodus oder
+              Gerätewechsel verloren; die Cloud-Kopie kehrt mit deinem Code zurück.
+              Willst du deine Deutung behalten, drucke sie als PDF aus.
+            </li>
+          </ul>
+        </Ausklapptext>
       </section>
 
       {/* Druck-Stil: beim Drucken nur die Druckansicht zeigen */}
