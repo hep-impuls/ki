@@ -141,3 +141,14 @@ bereitgestellt von Christof Glaus) und liegen rein dekorativ als leicht
 transparente Titel-Umgebung hinter den Abschnitts-Überschriften. Es sind
 Kopien aus dem bestehenden Aquarell-Pool (`orakel-umgebung-*`), unter
 sprechenden Namen für diese Seite abgelegt.
+
+## KI-erstellt (Titel-Umgebungsbild Das Orakel)
+
+| Datei | Abschnitt | Bildmotiv |
+|---|---|---|
+| `orakel-kopf.webp` | Seitenkopf «Das Orakel — erkenne dich selbst» | Figuren im Nebel |
+
+**KI-erstellt** (2026, für dieses Lernset generiert, bereitgestellt von
+Christof Glaus), rein dekorativ als leicht transparente Titel-Umgebung hinter
+der Seiten-Überschrift. Kopie aus dem bestehenden Aquarell-Pool
+(`orakel-umgebung-1`), unter sprechendem Namen abgelegt.

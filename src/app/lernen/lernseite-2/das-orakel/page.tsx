@@ -1,10 +1,10 @@
 import Link from "next/link";
 import ActivityTracker from "@/components/ActivityTracker";
 import AppLayout from "@/components/layout/AppLayout";
-import { Signatur } from "../_components/Gewebe";
 import OrakelDashboard from "./_components/OrakelDashboard";
 import SeitenNavigation from "../_components/SeitenNavigation";
 import ModulMiniNav from "../_components/ModulMiniNav";
+import AbschnittKopf from "../_components/AbschnittKopf";
 
 /**
  * Thema 03 — «Das Orakel — erkenne dich selbst».
@@ -34,25 +34,19 @@ export default function Lernseite2DasOrakel() {
         Zurück zu Lernseite 2
       </Link>
 
-      <header className="mt-lg border-b border-outline-variant pb-lg">
-        <div className="flex items-end justify-between gap-md">
-          <div className="min-w-0">
-            <p className="text-label-md uppercase tracking-wider text-tertiary">
-              Thema 03 · Rückblick &amp; Vergleich
-            </p>
-            <h1 className="mt-sm text-headline-xl text-on-surface">
-              Das Orakel — erkenne dich selbst
-            </h1>
-            <p className="mt-sm max-w-3xl text-body-lg text-on-surface-variant">
-              «Erkenne dich selbst» stand über dem Orakel von Delphi. Hier
-              laufen die Fäden zusammen: deine Wege durchs Modul, deine Antwort
-              auf die offene Frage — und daneben der anonyme Querschnitt aller,
-              gedeutet vom Orakel.
-            </p>
-          </div>
-          <Signatur variante="orakel" className="hidden flex-shrink-0 sm:block" />
-        </div>
-      </header>
+      <AbschnittKopf bild="/art/orakel-kopf.webp" gross className="mt-lg">
+        <p className="text-label-md uppercase tracking-wider text-tertiary">
+          Thema 03 · Rückblick &amp; Vergleich
+        </p>
+        <h1 className="mt-sm text-headline-xl text-on-surface">
+          Das Orakel — erkenne dich selbst
+        </h1>
+        <p className="mt-md max-w-3xl text-body-lg text-on-surface-variant">
+          «Erkenne dich selbst» stand über dem Orakel von Delphi. Hier laufen
+          die Fäden zusammen: deine Wege durchs Modul und dein Interesse an den
+          Inhalten — daneben der anonyme Querschnitt aller, gedeutet vom Orakel.
+        </p>
+      </AbschnittKopf>
 
       <section className="mt-xl">
         <OrakelDashboard />
