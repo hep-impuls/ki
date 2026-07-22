@@ -10,6 +10,35 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-22 — Aktivitätsnetz zweischichtig + Sternenkarte (Christof)
+
+**Auftrag Christof:** Kollektiv sichtbar machen. Drei Grafiken im Orakel.
+
+- **Aktivitätsnetz (zwei Schichten):** Hintergrund = Aktivität *aller* (kühler
+  Grundton, aus anonymen Poll-Zählern), Vordergrund = *du* (Akzenttöne). Nur noch
+  vier Kennzahlen: **Punkte, Flächen, Bildpunkte, Videos** (keine
+  Kategorien-Mischung mehr). «Bildpunkte» = durchgegangene Bild-Hotspots, neu als
+  Spur `…:hs<n>` erfasst.
+- **Anonymer Flächen-Zähler:** Flächen sind berechnete Geometrie (kein Spur) →
+  zentral in `auswertung.ts` (`melde`) wird der Zuwachs einmal pro Browser auf den
+  Poll `flaechen-lernseite-2` gezählt. So haben auch Flächen ein «alle».
+- **Titel-Registry (`_lib/inhalte.ts`):** Spuren/Poll kennen nur IDs; die
+  Klartext-Titel werden von den Inhalts-Komponenten via `KartenAktion` (neuer
+  Prop `titel`) registriert — Single Source, keine Zweit-Tabelle.
+- **Sternenkarte (`_components/Sternenkarte.tsx`):** stärkste Inhalte als
+  Punktwolke (grösser = stärker), drei Ansichten (Weiterverfolgt / Vertieft /
+  Bekanntheit). **du · Klasse · alle** als Struktur angelegt: «du» lokal, «alle»
+  Poll (live, überall), «Klasse» vorbereiteter Platzhalter für Pietros
+  Aggregations-Route.
+- **`gewichtung.ts`:** `ensureCode()` legt jetzt (wie `spuren.ts`) via
+  `ensureStudent` ein reales `students/{code}`-Doc an — damit auch «nur
+  gewichtet» klassen-zuordenbar ist. Der Gewichtungs-Spiegel nach
+  `students/{code}/progress/lernseite-2-gewichtung` steht → Pietros Route ist
+  unblocked.
+
+Offen (verzahnt mit Pietro): Klassencode-Feld im Orakel (§3b-A) + «Klasse»-Werte,
+sobald die Aggregations-Route steht. Farbkreis Kontext (Wunsch 3) folgt.
+
 ## 2026-07-22 — Login als erster Schritt (Gate über /lernen), Code-Kasten verschoben
 
 **Auftrag Pietro:** Der Fortschritts-Code soll — wie in 10mio — **beim Betreten

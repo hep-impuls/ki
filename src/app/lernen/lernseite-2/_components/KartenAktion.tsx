@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { leseSpuren, loescheSpuren, merkeSpur, SPUR_EVENT } from "../_lib/spuren";
+import { merkeInhalt } from "../_lib/inhalte";
 
 /**
  * KartenAktion — die zwei wiederkehrenden Aktionen unter einer Inhalts-Karte
@@ -18,21 +19,32 @@ import { leseSpuren, loescheSpuren, merkeSpur, SPUR_EVENT } from "../_lib/spuren
 export default function KartenAktion({
   mehr,
   wunschId,
+  titel,
 }: {
   /** Optionaler Vertiefungstext hinter «Mehr lesen» (Text oder bereits mit
    *  Glossar-Begriffen angereicherter Knoten). */
   mehr?: React.ReactNode;
   /** Spur-ID des Merkzeichens, z.B. "wunsch:vorhang-auf:story:3". */
   wunschId: string;
+  /** Klartext-Titel des Inhalts — für lesbare Labels in der Sternenkarte. */
+  titel?: string;
 }) {
   const [offen, setOffen] = useState(false);
   const [wunsch, setWunsch] = useState(false);
 
-  /** Spur-ID fürs «Mehr gelesen» — aus der wunschId abgeleitet
-   *  ("wunsch:…" → "mehr:…"), damit das Vertiefen als Aktivität zählt. */
-  const mehrId = wunschId.startsWith("wunsch:")
-    ? `mehr:${wunschId.slice("wunsch:".length)}`
-    : `mehr:${wunschId}`;
+  /** Basis-ID (ohne `wunsch:`-Präfix) — Schlüssel der Titel-Registry. */
+  const basisId = wunschId.startsWith("wunsch:")
+    ? wunschId.slice("wunsch:".length)
+    : wunschId;
+  /** Spur-ID fürs «Mehr gelesen» — aus der Basis-ID abgeleitet, damit das
+   *  Vertiefen als Aktivität zählt. */
+  const mehrId = `mehr:${basisId}`;
+
+  // Titel registrieren, sobald die Karte rendert (Single Source: hier steht
+  // der Inhalt, hier wird der Titel bekannt gemacht).
+  useEffect(() => {
+    if (titel) merkeInhalt(basisId, titel);
+  }, [basisId, titel]);
 
   useEffect(() => {
     function restore() {

@@ -871,6 +871,7 @@ export default function KnotenLandschaft({
                       <KartenAktion
                         mehr={k.mehr}
                         wunschId={`wunsch:${wunschKey ?? spurKey ?? "knoten"}:${idx}`}
+                        titel={k.titel}
                       />
                       {gewichtung && (
                         <GewichtungWahl

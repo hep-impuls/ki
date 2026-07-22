@@ -1033,6 +1033,7 @@ export default function StoryGewebe({
                       <KartenAktion
                         mehr={st.mehr}
                         wunschId={`wunsch:${wunschKey ?? spurKey ?? "story"}:${idx}`}
+                        titel={st.titel}
                       />
                     </div>
                   </div>

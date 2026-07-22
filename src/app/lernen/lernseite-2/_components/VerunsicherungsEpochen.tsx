@@ -1171,6 +1171,7 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
                             </span>
                           }
                           wunschId={`wunsch:${SPUR}:${gi}`}
+                          titel={`${e.epoche} — ${bs.label}`}
                         />
                       </div>
                     )}

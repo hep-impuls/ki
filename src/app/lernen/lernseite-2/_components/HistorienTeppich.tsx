@@ -525,6 +525,7 @@ export default function HistorienTeppich({
                       <KartenAktion
                         mehr={p.mehr ? <GlossarText text={p.mehr} /> : undefined}
                         wunschId={`wunsch:${wunschKey ?? spurKey}:${idx}`}
+                        titel={p.titel}
                       />
                       {bewertungen.length > 0 && (
                         <div className="mt-sm space-y-xs border-t border-outline-variant pt-sm">
