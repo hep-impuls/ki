@@ -880,75 +880,75 @@ export default function Lernseite2VorhangAuf() {
           knoten={[
             {
               titel: "algorithmisch",
-              text: "Im Kern arbeitet sie ein Rechenverfahren ab, Schritt für Schritt und ohne Willkür. Jede Antwort ist das Ergebnis von Berechnungen, nicht von Einsicht. Was wie Spontaneität wirkt, ist ein ausgeführter Algorithmus.",
+              text: "Stell dir ein sehr genaues Kochrezept vor. Jeder Schritt ist eindeutig, und wer sich daran hält, kommt zum selben Ergebnis. Genau so arbeitet die KI in ihrem Innersten. Sie führt ein Rechenverfahren aus, Schritt für Schritt, ohne Laune und ohne Bauchgefühl. Wenn eine Antwort spontan wirkt, ist sie trotzdem nur das Ergebnis von Berechnungen.",
               mehr:
-                "Ein Algorithmus ist eine eindeutige Schritt-für-Schritt-Anleitung, und das Wort geht auf den Bagdader Gelehrten al-Chwarizmi zurück. Auch das Lernen der KI ist ein Algorithmus. Er verstellt Milliarden Zahlenwerte so lange, bis die Ausgaben passen. Das erdet jede Rede vom Denken der Maschine.",
+                "Das Wort Algorithmus geht auf den Gelehrten al-Chwarizmi zurück, der vor rund 1200 Jahren in Bagdad Rechenwege aufschrieb. Ein Algorithmus ist nichts Geheimnisvolles, sondern eine klare Anleitung, wie aus einer Eingabe eine Ausgabe wird. Auch das Lernen der KI ist so eine Anleitung. Beim Training verstellt sie viele Milliarden winziger Zahlenwerte immer wieder ein kleines bisschen, bis ihre Antworten besser passen. Man kann sich das wie das Drehen an Millionen kleiner Regler vorstellen. Das klingt weniger nach Denken und mehr nach Rechnen, und genau das ist es auch.",
             },
             {
               titel: "datenbasiert",
-              text: "Ihre Fähigkeiten wachsen aus riesigen Datenmengen, nicht aus einprogrammierten Regeln. Ohne Daten bleibt der beste Algorithmus leer. Darum ist entscheidend, wessen Daten sie gelernt hat und welche Einseitigkeiten darin stecken.",
+              text: "Eine KI lernt ähnlich wie ein Kind, das tausende Hunde sieht und irgendwann jeden Hund erkennt. Ihre Fähigkeiten wachsen aus riesigen Mengen an Beispielen, nicht aus fest eingebauten Regeln. Hat sie nie ein Gedicht gelesen, kann sie auch keines schreiben. Deshalb kommt es vor allem darauf an, womit sie gefüttert wurde. Und es kommt darauf an, wessen Sichtweise in diesen Daten steckt und wessen darin fehlt.",
               mehr:
-                "«Die Lernalgorithmen sind die Samen, die Daten der Boden», schreibt der Forscher Pedro Domingos. Ohne riesige Datenmengen bleibt die klügste Methode unfruchtbar. Deshalb dreht sich in der KI alles um Daten. Und es dreht sich um die Frage, wessen Daten das sind und welche Verzerrungen in ihnen stecken.",
+                "«Die Lernalgorithmen sind die Samen, die Daten der Boden», sagt der Forscher Pedro Domingos. Ohne guten Boden wächst auch aus dem besten Samen nichts. Ein Beispiel: Wurde eine KI fast nur mit englischen Texten trainiert, antwortet sie auf Deutsch oft schwächer. Zeigten die Bilddaten kaum Menschen mit dunkler Haut, erkennt sie diese schlechter. So werden Lücken und Einseitigkeiten der Daten zu Lücken und Einseitigkeiten der KI. Darum ist die Frage, woher die Daten stammen, keine Nebensache, sondern der Kern.",
             },
             {
               titel: "mustererkennend",
-              text: "Sie liest statistische Muster aus Unmengen von Beispielen und wendet sie verlässlich an. Was oft zusammen vorkommt, hält sie für zusammengehörig. Warum etwas passt, versteht sie dabei nicht. Sie erkennt, ohne zu begreifen.",
+              text: "Tippst du auf dem Handy «Salz und», schlägt die Tastatur «Pfeffer» vor. Die KI macht im Grossen dasselbe. Sie hat in Unmengen von Texten gesehen, was häufig zusammen vorkommt, und hält es darum für zusammengehörig. Warum Salz und Pfeffer zusammenpassen, weiss sie nicht. Sie erkennt das Muster verlässlich, ohne es zu verstehen.",
               mehr:
-                "Mustererkennung wird gern als reine Wahrscheinlichkeitsrechnung abgetan. Die Informatikerin Katharina Zweig schärft das Bild. Das System leitet aus Daten statistische Muster ab und hat bestimmte Wörter schlicht oft in bestimmten Zusammenhängen gelesen. Es erkennt also verlässlich, versteht aber nicht, warum. Ihr nüchternes Fazit lautet, dass diese Systeme noch gar nicht intelligent sind.",
+                "Die Informatikerin Katharina Zweig bringt es nüchtern auf den Punkt. Das System hat bestimmte Wörter einfach oft in bestimmten Zusammenhängen gelesen und leitet daraus statistische Muster ab. Ein Beispiel: Es weiss, dass nach «Es war einmal» meist ein Märchen folgt, weil das millionenfach so dastand. Ein echtes Verständnis von Märchen hat es deswegen nicht. Zweigs Fazit ist deutlich, dass solche Systeme noch gar nicht wirklich intelligent sind. Sie erkennen sehr gut, aber sie begreifen nichts.",
             },
             {
               titel: "wahrscheinlichkeitsbasiert",
-              text: "Sie rechnet nicht mit Gewissheiten, sondern mit Wahrscheinlichkeiten. Welches Wort folgt am ehesten? Ihre Antworten sind Wetten mit sehr guten Quoten, aber eben Wetten. Darum kann sie überzeugend klingen und trotzdem falschliegen.",
+              text: "Eine Wetter-App sagt nicht «es regnet», sondern «80 Prozent Regen». Ähnlich arbeitet die KI. Sie fragt bei jedem nächsten Wort, welches am ehesten passt, und wählt daraus aus. Ihre Antworten sind also gut begründete Wetten, aber eben Wetten. Deshalb kann sie sehr überzeugend klingen und trotzdem danebenliegen.",
               mehr:
-                "Für jede Fortsetzung berechnet das Modell eine Wahrscheinlichkeit für alle möglichen nächsten Wortbausteine und wählt daraus aus. Eine Prise eingebauter Zufall, die sogenannte «Temperatur», macht die Antworten lebendig. Das erklärt auch, warum dieselbe Frage zweimal verschieden beantwortet werden kann.",
+                "Für jedes nächste Wort berechnet das Modell, wie wahrscheinlich alle möglichen Fortsetzungen sind. Meist nimmt es eine der wahrscheinlichsten, aber nicht immer die allerwahrscheinlichste. Ein eingebauter Zufall, die sogenannte Temperatur, sorgt für Abwechslung. Dreht man die Temperatur hoch, wird die KI kreativer und zugleich unberechenbarer. Dreht man sie herunter, wird sie vorhersehbarer und braver. Das erklärt, warum dieselbe Frage zweimal ganz verschieden beantwortet werden kann.",
             },
             {
               titel: "generalisierend",
-              text: "Sie überträgt Gelerntes auf Neues: Auch Sätze, die nie geschrieben wurden, kann sie sinnvoll fortsetzen. Aus Beispielen wird ein allgemeines Muster. Genau das unterscheidet Lernen vom blossen Auswendigwissen.",
+              text: "Hat eine KI tausende Katzenfotos gesehen, erkennt sie auch eine Katze auf einem Bild, das ihr völlig neu ist. Sie überträgt Gelerntes auf Neues. Aus vielen einzelnen Beispielen zieht sie eine allgemeine Regel. So kann sie sogar Sätze sinnvoll fortsetzen, die noch nie jemand geschrieben hat. Genau das unterscheidet echtes Lernen vom reinen Auswendiglernen.",
               mehr:
-                "Generalisierung ist das Herz des maschinellen Lernens. Das Modell soll nicht die Trainingsdaten nachplappern, was man Überanpassung nennt, sondern die Regel dahinter erfassen. Wo Generalisierung gelingt, wirkt die KI klug. Wo sie übergeneralisiert, entstehen Klischees und Verzerrungen.",
+                "Dieses Verallgemeinern ist das Herzstück des maschinellen Lernens. Eine KI, die nur ihre Trainingsbeispiele nachplappert, wäre nutzlos, denn im Alltag begegnet ihr ständig Neues. Lernt sie die Beispiele zu genau auswendig, spricht man von Überanpassung, und bei einer neuen Aufgabe versagt sie dann. Gelingt das Verallgemeinern gut, wirkt die KI klug und beweglich. Übertreibt sie es, entstehen plumpe Klischees. Ein Beispiel: Hat sie fast nur männliche Chefs in den Daten gesehen, hält sie das Chefsein fälschlich für eine Männersache.",
             },
             {
               titel: "kontextsensitiv",
-              text: "Dieselbe Frage kann je nach Zusammenhang eine andere Antwort ergeben. Sie bezieht ein, was vorher gesagt wurde, welche Rolle sie spielen soll und welche Unterlagen vorliegen. Der Zusammenhang ist ihr Arbeitsmaterial.",
+              text: "Das Wort «Bank» kann eine Sitzbank oder eine Geldbank sein. Was gemeint ist, verrät erst der Zusammenhang. Die KI achtet genau darauf. Sie bezieht ein, was vorher gesagt wurde, welche Rolle sie übernehmen soll und welche Unterlagen du ihr mitgibst. Dieselbe Frage kann darum je nach Umfeld eine andere Antwort ergeben.",
               mehr:
-                "Fachleute sprechen vom Kontextfenster. Damit ist alles gemeint, was das Modell in einem Gespräch vor sich hat, also Anweisungen, bisheriger Dialog und mitgegebene Texte. Die Transformer-Architektur gewichtet laufend, welche Teile davon füreinander wichtig sind, was man «Attention» nennt. Wer den Kontext gestaltet, steuert die Antwort, und deshalb ist gutes Fragen eine kleine Kunst.",
+                "Fachleute nennen das, was die KI gerade vor sich hat, das Kontextfenster. Dazu gehören deine Anweisung, das bisherige Gespräch und alle Texte, die du mitgeschickt hast. Ein Beispiel: Sagst du am Anfang «Erkläre es wie für ein Kind», bleibt dieser Auftrag im Fenster und färbt alle weiteren Antworten. Die zugrunde liegende Technik, der Transformer, gewichtet dabei laufend, welche Wörter füreinander wichtig sind. Diesen Kniff nennt man Attention, auf Deutsch Aufmerksamkeit. Wer den Kontext geschickt setzt, steuert die Antwort, und deshalb ist gutes Fragen eine kleine Kunst.",
             },
             {
               titel: "adaptiv",
-              text: "Sie passt sich an, an deinen Ton, deine Beispiele und deine Korrekturen. Aus den Rückmeldungen der Nutzenden wird sie laufend nachjustiert. Was du ihr heute zeigst, prägt womöglich ihr Morgen.",
+              text: "Schreibst du locker und mit Emojis, antwortet die KI oft ebenso locker. Sie passt sich an, an deinen Ton, deine Beispiele und deine Korrekturen. Sagst du «bitte kürzer», wird die nächste Antwort kürzer. Auch über viele Nutzende hinweg wird sie nach und nach nachjustiert. Was du ihr heute zeigst, kann ihr Verhalten von morgen mitprägen.",
               mehr:
-                "Anpassung geschieht auf mehreren Ebenen. Im Gespräch greift sie deinen Stil auf, im Feintuning lernt sie aus menschlichem Feedback, und in neue Modellversionen können Nutzungsdaten einfliessen. Diese Anpassungsfähigkeit macht sie hilfreich. Zugleich wirft sie die Frage auf, wer da eigentlich wen erzieht.",
+                "Anpassung geschieht auf mehreren Ebenen. Im laufenden Gespräch greift die KI deinen Stil auf und merkt sich, was du willst. Beim sogenannten Feintuning wird sie schon vor der Nutzung mit menschlichen Rückmeldungen erzogen, damit sie hilfreicher und höflicher antwortet. Und in neue Versionen können Erfahrungen aus der Nutzung einfliessen. Diese Anpassungsfähigkeit macht sie angenehm und nützlich. Zugleich stellt sich die Frage, wer hier eigentlich wen erzieht, der Mensch die Maschine oder die Maschine den Menschen.",
             },
             {
               titel: "dialoghaft",
-              text: "Man steuert sie mit Alltagssprache, und sie antwortet in Sprache. Das Gespräch selbst ist die Bedienoberfläche. Man fragt, präzisiert und widerspricht wie bei einem Gegenüber. Es gibt keine Menüs und keine Knöpfe, nur Worte.",
+              text: "Du bedienst die KI nicht mit Knöpfen und Menüs, sondern mit Worten. Das Gespräch selbst ist die Oberfläche. Du fragst, präzisierst und widersprichst, ganz wie bei einem Gegenüber im Chat. Verstehst du eine Antwort nicht, hakst du einfach nach. Das fühlt sich weniger nach Computer an und mehr nach Unterhaltung.",
               mehr:
-                "Bis vor kurzem musste man Computer in Programmiersprachen anweisen. Sprachmodelle kehren das um, denn die Anweisung ist nun normaler Text. «Die heisseste neue Programmiersprache ist Englisch», sagt der KI-Forscher Andrej Karpathy. Das macht die Technik für alle bedienbar, verwischt aber auch die Grenze zwischen Befehl und Gespräch.",
+                "Früher musste man einem Computer in einer eigenen Programmiersprache genau sagen, was er tun soll. Sprachmodelle drehen das um, denn die Anweisung ist jetzt einfach normaler Text. «Die heisseste neue Programmiersprache ist Englisch», sagt der KI-Forscher Andrej Karpathy und meint genau das. Ein Beispiel: Statt Programmcode zu schreiben, bittest du einfach «Fasse diesen Text in drei Sätzen zusammen». Das macht die Technik für alle bedienbar, auch ohne Vorwissen. Zugleich verwischt es die Grenze zwischen einem Befehl an eine Maschine und einem Gespräch mit einem Gegenüber.",
             },
             {
               titel: "interaktiv",
-              text: "Sie wartet nicht auf ein fertiges Werkstück, sondern arbeitet im Wechselspiel: Vorschlag, Rückmeldung, neuer Vorschlag. Man formt das Ergebnis gemeinsam, in Runden. Aus Bedienen wird Zusammenarbeiten.",
+              text: "Ein Getränkeautomat gibt dir genau das, was du drückst, und damit ist Schluss. Die KI arbeitet anders, nämlich in Runden. Sie macht einen Vorschlag, du gibst Rückmeldung, und sie macht einen besseren. So formt ihr das Ergebnis gemeinsam, Schritt für Schritt. Aus dem Bedienen wird ein Zusammenarbeiten.",
               mehr:
-                "Interaktivität unterscheidet die KI vom klassischen Programm. Statt einer Eingabe und einer Ausgabe entsteht eine Schleife aus Versuchen und Verfeinern. Das verändert die Rolle des Menschen. Aus dem Ausführenden wird jemand, der anleitet, prüft und für das Ergebnis verantwortet.",
+                "Genau diese Schleife unterscheidet die KI vom klassischen Programm. Dort gibt es eine Eingabe und eine Ausgabe, dann ist alles vorbei. Bei der KI entsteht ein Hin und Her aus Versuchen und Verfeinern. Ein Beispiel: Du lässt dir einen Brief schreiben, findest ihn zu förmlich, bittest um mehr Wärme, und der nächste Versuch trifft es besser. Damit verändert sich auch die Rolle des Menschen. Aus dem, der nur ausführt, wird jemand, der anleitet, prüft und am Ende für das Ergebnis geradesteht.",
             },
             {
               titel: "generativ",
-              text: "Sie erzeugt laufend Neues, also Text, Bild oder Code, statt Fertiges nur abzurufen. Jedes Wort ist die wahrscheinlichste Fortsetzung des vorherigen. So entsteht Verblüffendes ebenso wie frei Erfundenes. Erzeugen und Erfinden liegen dicht beieinander.",
+              text: "Eine Suchmaschine findet Vorhandenes, und eine Bibliothek reicht dir ein fertiges Buch. Die KI dagegen schreibt selbst, Wort für Wort. Sie erzeugt Neues, also Text, Bild oder Programmcode, statt es nur abzurufen. Bittest du um ein Bild einer Katze im Raumanzug, malt sie eines, das es so noch nie gab. Dasselbe Können bringt aber auch frei Erfundenes hervor.",
               mehr:
-                "«Generativ» heisst, dass sie Neues herstellt, statt nur Vorhandenes abzurufen, und zwar Wort für Wort als wahrscheinlichste Fortsetzung. Dieselbe Fähigkeit bringt Brillantes wie Erfundenes hervor. Die Informatikerin Katharina Zweig schlägt statt «Halluzination» das Wort «Konfabulation» vor. Gemeint ist flüssiges Reden ohne Wissen dahinter.",
+                "Generativ heisst herstellend, denn die KI stellt Neues her, statt Fertiges nachzuschlagen. Sie setzt immer das nächste wahrscheinliche Wort, und so wächst Satz um Satz etwas Neues. Dieselbe Fähigkeit, die Brillantes schafft, erzeugt auch überzeugend klingenden Unsinn. Fragst du nach einer Buchquelle, erfindet sie notfalls einen Titel, der täuschend echt aussieht. Die Informatikerin Katharina Zweig schlägt dafür statt «Halluzination» das Wort «Konfabulation» vor. Gemeint ist flüssiges Reden ohne echtes Wissen dahinter.",
             },
             {
               titel: "multimodal",
-              text: "Text, Bild und Ton laufen in einem einzigen Modell zusammen. Sie liest, sieht und hört und antwortet wahlweise in Wort, Bild oder Stimme. Man kann ihr ein Foto zeigen, eine Skizze oder einen gesprochenen Satz. Sie nimmt die Welt in mehreren Kanälen zugleich auf.",
+              text: "Du kannst der KI ein Foto deines Kühlschranks zeigen und nach einem Rezept fragen. Text, Bild und Ton laufen bei ihr in einem einzigen Modell zusammen. Sie liest, sieht und hört und antwortet wahlweise in Wort, Bild oder Stimme. Auch eine Skizze oder ein gesprochener Satz sind für sie eine Eingabe. So nimmt sie die Welt über mehrere Kanäle zugleich auf.",
               mehr:
-                "Frühe Modelle konnten entweder Text oder Bild oder Ton verarbeiten. Multimodale Modelle verbinden diese Kanäle in einem Netz. Damit rücken sie näher an die menschliche Wahrnehmung, die auch nicht in getrennten Sinnen denkt. Ein Foto, eine Skizze oder ein gesprochener Satz, alles kann Eingabe sein.",
+                "Frühe Programme konnten nur eines, entweder Text oder Bild oder Ton. Multimodale Modelle verbinden diese Kanäle in einem einzigen Netz. Damit rücken sie näher an uns Menschen heran, denn auch wir denken nicht in getrennten Sinnen. Ein Beispiel: Du fotografierst eine Mathe-Aufgabe, und die KI liest sie, rechnet und erklärt den Lösungsweg. Oder du zeigst ihr ein Diagramm, und sie fasst es in Worten zusammen. So wird die Grenze zwischen Lesen, Sehen und Hören für die Maschine durchlässig.",
             },
             {
               titel: "agentenfähig",
-              text: "Sie bleibt nicht beim Antworten stehen. Sie zerlegt ein Ziel in Schritte und greift selbständig zu Werkzeugen wie Websuche, Programmen und Code. Aus dem Antwortgeber wird ein Akteur, der Dinge erledigt. Genau hier verschwimmt die Grenze zwischen Werkzeug und Gegenüber.",
+              text: "Frag einen Menschen nach dem Weg, und er beschreibt ihn dir. Bitte ihn, dich hinzubringen, und er handelt. Moderne KI kann beides. Sie bleibt nicht beim Antworten stehen, sondern zerlegt ein Ziel in Schritte und nutzt selbständig Werkzeuge wie Websuche, Programme und Code. Aus dem Antwortgeber wird so ein Akteur, der Dinge wirklich erledigt.",
               mehr:
-                "Ein «Agent» ist mehr als ein Antwortgeber. Es ist ein Sprachmodell mit Gedächtnis, mit der Fähigkeit, ein Ziel in Schritte zu zerlegen, und mit Zugriff auf Werkzeuge wie Websuche, Code und andere Programme. Damit handelt die KI eigenständig in der Welt. Genau hier verschwimmt die alte Grenze zwischen Werkzeug und Gegenüber.",
+                "Fachleute nennen so ein System einen Agenten. Ein Agent ist mehr als ein Antwortgeber, denn er hat ein Gedächtnis, kann ein Ziel in Teilschritte zerlegen und auf Werkzeuge zugreifen. Ein Beispiel: Statt nur zu erklären, wie man eine Tabelle auswertet, öffnet er die Datei, rechnet und schickt dir das fertige Ergebnis. Damit handelt die KI eigenständig in der Welt und nicht mehr nur im Chatfenster. Das ist mächtig und hilfreich, wenn es gelingt. Und es ist heikel, weil hier die alte Grenze zwischen Werkzeug und Gegenüber endgültig verschwimmt.",
             },
           ]}
           anordnungen={[
