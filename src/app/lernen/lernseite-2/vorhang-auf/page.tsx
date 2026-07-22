@@ -12,8 +12,8 @@ import VideoImpuls from "../_components/VideoImpuls";
 import InfoPunkt from "../_components/InfoPunkt";
 import Inhaltsverzeichnis from "../_components/Inhaltsverzeichnis";
 import Aufgabe from "../_components/Aufgabe";
-import Ausklapptext from "../_components/Ausklapptext";
 import ModulMiniNav from "../_components/ModulMiniNav";
+import AbschnittKopf from "../_components/AbschnittKopf";
 
 /**
  * Das Muster dieser Seite: die Auftritts-Signatur (oben rechts im Kopf),
@@ -418,42 +418,43 @@ export default function Lernseite2VorhangAuf() {
         Zurück zu Lernseite 2
       </Link>
 
-      <header className="mt-lg border-b border-outline-variant pb-lg">
-        <div className="flex items-end justify-between gap-md">
-          <div className="min-w-0">
-            <p className="text-label-md uppercase tracking-wider text-tertiary">
-              Thema 01 · Auftakt
-            </p>
-            <h1 className="mt-sm text-headline-xl text-on-surface">
-              Vorhang auf — eine neue Akteurin
-            </h1>
-            <div className="mt-sm max-w-3xl space-y-sm text-body-lg text-on-surface-variant">
-              <p>
-                Auf dieser Seite veranschaulichen wir die KI und ihre
-                Geschichte. Denn die Vorstellung, Dingen Denken oder Leben
-                einzuhauchen, ist viel älter als jeder Computer: Sie ist eine
-                alte Phantasie des Menschen, die ihn umtreibt — und die er
-                immer wieder in Kunstprodukten sichtbar gemacht hat, vom Golem
-                über den Homunkulus bis zu Frankensteins Geschöpf.
-              </p>
-              <Ausklapptext titel="Mehr dazu: die zweite, technische Spur">
-                <p>
-                  Daneben läuft eine zweite, technische Spur: Seit Jahrhunderten
-                  lagert der Mensch kognitive Leistungen in Dinge aus — das
-                  Rechnen in Maschinen wie Leibniz&apos; Rechenrad, das Zählen
-                  und Erinnern in die Knotenschnüre (Quipus) der Andenkulturen.
-                  In der heutigen KI laufen beide Spuren zusammen: die erzählte
-                  Phantasie vom belebten Ding und die reale Auslagerung des
-                  Denkens. Die Landschaften und Bilderstrecken dieser Seite
-                  folgen dieser doppelten Spur — bis zum Netz, in dem die neue
-                  Akteurin hängt.
-                </p>
-              </Ausklapptext>
-            </div>
-          </div>
-          <Signatur variante="auftritt" className="hidden flex-shrink-0 sm:block" />
+      <AbschnittKopf bild="/art/vorhang-kopf.webp" gross className="mt-lg">
+        <p className="text-label-md uppercase tracking-wider text-tertiary">
+          Thema 01 · Auftakt
+        </p>
+        <h1 className="mt-sm text-headline-xl text-on-surface">
+          Vorhang auf — eine neue Akteurin
+        </h1>
+        <div className="mt-md max-w-3xl space-y-sm text-body-lg text-on-surface-variant">
+          <p>
+            Was ist diese Künstliche Intelligenz eigentlich? Hier bekommt sie
+            einen Ort — einen <strong className="text-on-surface">Raum der
+            Vorstellung</strong>, in dem wir ihrer Gestalt nachgehen, statt nur
+            über sie zu reden. Wir nähern uns ihr aus mehreren Richtungen; aus
+            einer allein wird sie nicht fassbar.
+          </p>
+          <p>
+            Zuerst die Herkunft: Wie ist das Phänomen einer denkenden Maschine{" "}
+            <strong className="text-on-surface">kulturell und technisch</strong>{" "}
+            überhaupt entstanden, welche Begriffe und Vorstellungen wirken im
+            Hintergrund — und wie lassen sie sich zeitlich ordnen? Das erzählt
+            die <strong className="text-on-surface">KI-Story</strong>. Einzelne
+            ihrer Stationen werden danach in <strong className="text-on-surface">Bildern</strong>{" "}
+            greifbar: Sie tragen begehbare Punkte, an denen sich abstrakte Ideen
+            in konkrete Geschichten auflösen. Dann treten die{" "}
+            <strong className="text-on-surface">Merkmale</strong> hervor — jene
+            Eigenschaften, die wir seit November 2022 mit den grossen
+            Sprachmodellen tagtäglich erleben. Und schliesslich die{" "}
+            <strong className="text-on-surface">Kontexte</strong>, in denen die
+            neue Akteurin heute steckt.
+          </p>
+          <p>
+            Das Fazit vorweg: KI ist weit mehr als das Chatfenster, in das wir
+            so selbstverständlich unsere Fragen tippen, um Antworten zu
+            bekommen.
+          </p>
         </div>
-      </header>
+      </AbschnittKopf>
 
       {/* Inhaltsverzeichnis + Klammersymbol (oben rechts) */}
       <Inhaltsverzeichnis
@@ -494,13 +495,16 @@ export default function Lernseite2VorhangAuf() {
 
       {/* 1 — Die KI-Story als lineare Knotenlandschaft mit Einfluss-Bögen */}
       <section id="ki-story" className="mt-xl max-w-5xl scroll-mt-24" aria-label="Die KI-Story">
-        <h2 className="text-headline-lg text-on-surface">Die KI-Story</h2>
-        <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
-          Vom antiken Traum, Dingen Leben einzuhauchen, über die Geschichte des
-          Algorithmus bis zu den heutigen Sprachmodellen: zweiundzwanzig
-          Stationen, deren Vorstellungen einander quer durch die Zeit
-          beeinflussen.
-        </p>
+        <AbschnittKopf bild="/art/vorhang-story.webp">
+          <h2 className="text-headline-lg text-on-surface">Die KI-Story</h2>
+          <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
+            Vom antiken Traum, Dingen Leben einzuhauchen, über die Geschichte
+            des Algorithmus bis zu den heutigen Sprachmodellen: zweiundzwanzig
+            Stationen, deren Vorstellungen einander quer durch die Zeit
+            beeinflussen — kulturelle und technische Herkunft, zeitlich
+            geordnet.
+          </p>
+        </AbschnittKopf>
         <Aufgabe className="mt-md max-w-4xl">
           Das ganze Gewebe ist sichtbar — über die Stichworte oben hebst du
           einzelne Punkte fett hervor, und ihre Verbindungen färben sich ein.
@@ -812,12 +816,15 @@ export default function Lernseite2VorhangAuf() {
 
       {/* Bilderstrecke zwischen den Aktivitäten — Anschauungsmodus mit Hotspots */}
       <section id="bilder" className="mt-xl max-w-5xl scroll-mt-24" aria-label="Bilderstrecke: Bilder zur KI-Geschichte">
-        <h2 className="text-headline-lg text-on-surface">Bilder zur KI-Geschichte</h2>
-        <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
-          Elf Bilder spannen den Bogen: vom Auslagern des Denkens in
-          Knotenschnüre über Turings Code-Knacker und den ersten Chatbot ELIZA
-          bis zu DALL·E und ChatGPT.
-        </p>
+        <AbschnittKopf bild="/art/vorhang-bilder.webp">
+          <h2 className="text-headline-lg text-on-surface">Bilder zur KI-Geschichte</h2>
+          <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
+            Elf Bilder spannen den Bogen: vom Auslagern des Denkens in
+            Knotenschnüre über Turings Code-Knacker und den ersten Chatbot
+            ELIZA bis zu DALL·E und ChatGPT. Begehbare Punkte machen aus
+            abstrakten Ideen konkrete Geschichten.
+          </p>
+        </AbschnittKopf>
         <Aufgabe className="mt-md max-w-4xl">
           Klicke ein Bild an — es öffnet sich gross im Anschauungsmodus. Tippe
           dort die leuchtenden, nummerierten Punkte an: Jeder erzählt ein
@@ -835,13 +842,16 @@ export default function Lernseite2VorhangAuf() {
 
       {/* 2 — Die Merkmale als loses Geflecht (ohne Zitate, ohne Zentrum) */}
       <section id="merkmale" className="mt-xl max-w-5xl scroll-mt-24" aria-label="Die Merkmale der neuen Akteurin">
-        <h2 className="text-headline-lg text-on-surface">
-          Die Merkmale der neuen Akteurin
-        </h2>
-        <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
-          Was ist da eigentlich aufgetreten? Zwölf Eigenschaften — nicht eine
-          allein, ihre Bündelung macht das Neue aus.
-        </p>
+        <AbschnittKopf bild="/art/vorhang-merkmale.webp">
+          <h2 className="text-headline-lg text-on-surface">
+            Die Merkmale der neuen Akteurin
+          </h2>
+          <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
+            Was ist da eigentlich aufgetreten? Zwölf Eigenschaften, wie wir sie
+            seit November 2022 mit den grossen Sprachmodellen tagtäglich
+            erleben — nicht eine allein, ihre Bündelung macht das Neue aus.
+          </p>
+        </AbschnittKopf>
         <Aufgabe className="mt-md max-w-4xl">
           Tippe die zwölf Punkte im Geflecht an — jeder wird beschriftet und
           zeigt unten seine Definition. Zwischen besuchten Punkten füllen sich
@@ -996,13 +1006,15 @@ export default function Lernseite2VorhangAuf() {
 
       {/* 3 — Die KI im Kontext: vier Kontexte mit aufklappbaren Aspekten */}
       <section id="ki-kontext" className="mt-xl max-w-5xl scroll-mt-24" aria-label="Die KI im Kontext">
-        <h2 className="text-headline-lg text-on-surface">Die KI im Kontext</h2>
-        <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
-          Um das Phänomen KI besser zu verstehen, stellt man es in seine
-          Kontexte. Vier Blickwinkel — technologisch, wirtschaftlich,
-          rechtlich-politisch und kulturell — zeigen, worin die neue Akteurin
-          eingebettet ist.
-        </p>
+        <AbschnittKopf bild="/art/vorhang-kontext.webp">
+          <h2 className="text-headline-lg text-on-surface">Die KI im Kontext</h2>
+          <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
+            Um das Phänomen KI besser zu verstehen, stellt man es in seine
+            Kontexte. Vier Blickwinkel — technologisch, wirtschaftlich,
+            rechtlich-politisch und kulturell — zeigen, worin die neue Akteurin
+            eingebettet ist. KI ist mehr als ein Chatfenster.
+          </p>
+        </AbschnittKopf>
         <Aufgabe className="mt-md max-w-4xl">
           Klappe die Aspekte auf, die dich interessieren; jeder erklärt einen
           Faden des Geflechts. Gewichte dabei, wie viel Achtsamkeit ein Aspekt

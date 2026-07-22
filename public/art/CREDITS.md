@@ -112,3 +112,17 @@ Alle vier Bilder sind **KI-erstellt** (2026, für dieses Lernset generiert,
 bereitgestellt von Christof Glaus) und dienen rein dekorativ als Hintergrund-
 Umgebung der Orakel-Abschnitte. In der UI als Hintergrund ohne Bildaussage
 eingesetzt; Kennzeichnung erfolgt hier zentral.
+
+## KI-erstellt (Titel-Umgebungsbilder Vorhang auf)
+
+| Datei | Abschnitt |
+|---|---|
+| `vorhang-kopf.webp` | Seitenkopf «Vorhang auf» — warmes Aquarell mit feinem Netz |
+| `vorhang-story.webp` | Die KI-Story — Cluster-Reihe (Zeitachse) |
+| `vorhang-bilder.webp` | Bilder zur KI-Geschichte — Figuren im Nebel |
+| `vorhang-merkmale.webp` | Die Merkmale — dichter radialer Kern |
+| `vorhang-kontext.webp` | Die KI im Kontext — verzweigte Fäden |
+
+Alle fünf Bilder sind **KI-erstellt** (2026, für dieses Lernset generiert,
+bereitgestellt von Christof Glaus) und liegen rein dekorativ als leicht
+transparente Titel-Umgebung hinter den Abschnitts-Überschriften.
