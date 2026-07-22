@@ -196,6 +196,12 @@ export const GLOSSAR: Record<string, string> = {
     "Aufteilung der Staatsmacht in Gesetzgebung, Regierung und Gerichte — zum Schutz vor Machtmissbrauch.",
   Anthropozän:
     "Vorgeschlagenes Erdzeitalter, in dem der Mensch die Erde (Klima, Arten, Gestein) prägend verändert.",
+  Sprachmodelle:
+    "Programme, die aus riesigen Textmengen gelernt haben, das nächste Wort vorherzusagen, und so selbst Texte schreiben.",
+  Sprachmodellen:
+    "Programme, die aus riesigen Textmengen gelernt haben, das nächste Wort vorherzusagen, und so selbst Texte schreiben.",
+  "Turing-Test":
+    "Ein von Alan Turing 1950 vorgeschlagenes Gespräch, das prüft, ob man eine Maschine für einen Menschen hält.",
 };
 
 function escapeRegExp(s: string): string {

@@ -14,6 +14,8 @@ import Inhaltsverzeichnis from "../_components/Inhaltsverzeichnis";
 import Aufgabe from "../_components/Aufgabe";
 import ModulMiniNav from "../_components/ModulMiniNav";
 import AbschnittKopf from "../_components/AbschnittKopf";
+import Ausklapptext from "../_components/Ausklapptext";
+import { GlossarText } from "../_components/Glossar";
 
 /**
  * Das Muster dieser Seite: die Auftritts-Signatur (oben rechts im Kopf),
@@ -498,28 +500,29 @@ export default function Lernseite2VorhangAuf() {
         <AbschnittKopf bild="/art/vorhang-story.webp">
           <h2 className="text-headline-lg text-on-surface">Die KI-Story</h2>
           <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
-            Vom antiken Traum, Dingen Leben einzuhauchen, über die Geschichte
-            des Algorithmus bis zu den heutigen Sprachmodellen: zweiundzwanzig
-            Stationen, deren Vorstellungen einander quer durch die Zeit
-            beeinflussen — kulturelle und technische Herkunft, zeitlich
-            geordnet.
+            <GlossarText text="Die KI hat eine lange Vorgeschichte. Schon lange vor dem Computer träumten Menschen davon, künstliche Wesen zu erschaffen. Diese KI-Story führt in zweiundzwanzig Stationen von den antiken Mythen bis zu den heutigen Sprachmodellen." />
           </p>
         </AbschnittKopf>
+        <Ausklapptext className="mt-md max-w-4xl" titel="Mehr dazu: die beiden Fäden der Geschichte">
+          <p>
+            <GlossarText text="Durch die Geschichte laufen zwei Fäden nebeneinander. Der eine Faden ist die Erzählung vom belebten Ding, zum Beispiel beim Golem oder bei Frankensteins Geschöpf. Der andere Faden ist die Technik, die das Rechnen und Denken Schritt für Schritt an Maschinen abgibt. Ein wichtiger Baustein auf diesem Weg ist der Algorithmus. Im Jahr 1950 fragte der Mathematiker Alan Turing, ob Maschinen denken können, und schlug dafür den Turing-Test vor. Im Jahr 1956 gab die Dartmouth-Konferenz dem jungen Forschungsfeld seinen Namen, nämlich künstliche Intelligenz. In den heutigen Sprachmodellen treffen beide Fäden zusammen, die alte Vorstellung vom künstlichen Wesen und die reale Auslagerung des Rechnens." />
+          </p>
+        </Ausklapptext>
         <Aufgabe className="mt-md max-w-4xl">
-          Das ganze Gewebe ist sichtbar — über die Stichworte oben hebst du
-          einzelne Punkte fett hervor, und ihre Verbindungen färben sich ein.
-          Tippe einen Punkt an, um seine Geschichte zu lesen; unter jeder Karte
-          kannst du «Mehr lesen» aufklappen und mit «Das verfolge ich weiter»
-          ein Merkzeichen setzen. Im Gewebe lassen sich die Punkte verschieben,
-          «Zeitlich» reiht die hervorgehobenen als Perlenschnur von früher nach
-          heute.
+          Das ganze Gewebe ist sichtbar. Über die Stichworte oben hebst du
+          einzelne Punkte hervor, und ihre Verbindungen färben sich ein. Tippe
+          einen Punkt an, um seine Geschichte zu lesen. Unter jeder Karte kannst
+          du «Mehr lesen» aufklappen und mit «Das verfolge ich weiter» ein
+          Merkzeichen setzen. Im Gewebe lassen sich die Punkte verschieben. Die
+          Ansicht «Zeitlich» reiht die hervorgehobenen Punkte als Perlenschnur
+          von früher nach heute.
         </Aufgabe>
         <InfoPunkt className="mt-md" label="Muss ich allen 22 nachgehen?">
-          Nein — du musst nicht jede Station öffnen. Geh dem nach, was dich
+          Nein, du musst nicht jede Station öffnen. Geh dem nach, was dich
           neugierig macht. Die Aktivitätsmessung registriert aber, was du
-          anschaust, verschiebst und weiterverfolgst — nicht als Note, sondern
-          um dir am Ende im Orakel eine persönliche Rückmeldung zu deinem Weg
-          durchs Modul zu geben.
+          anschaust, verschiebst und weiterverfolgst. Das ist keine Note. Es
+          dient nur dazu, dir am Ende im Orakel eine persönliche Rückmeldung zu
+          deinem Weg durch das Modul zu geben.
         </InfoPunkt>
         <StoryGewebe
           className="mt-lg"
