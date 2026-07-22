@@ -4,6 +4,7 @@ import { doc, getDoc, serverTimestamp, setDoc } from "firebase/firestore";
 import { getFirebase } from "@/lib/firebase";
 import { seg } from "@/lib/paths";
 import { castVote } from "@/lib/polls";
+import { ensureStudent } from "@/lib/db";
 import { generateCode, getSession, saveSession } from "@/lib/session";
 
 /**
@@ -73,6 +74,11 @@ function ensureCode(): string | null {
   if (vorhanden?.studentCode) return vorhanden.studentCode;
   const studentCode = generateCode();
   saveSession({ studentCode, teacherCode: vorhanden?.teacherCode ?? null });
+  // Reales students/{code}-Doc anlegen (nicht nur die Progress-Subcollection),
+  // damit der Code klassen-zuordenbar wird (Klassen-Query fragt teacherCode).
+  // Fire-and-forget; ensureStudent fängt eigene Fehler ab. Läuft nur beim
+  // erstmaligen Erzeugen eines Codes (danach greift der Early-Return oben).
+  void ensureStudent(studentCode, vorhanden?.teacherCode ?? null);
   return studentCode;
 }
 

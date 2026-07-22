@@ -163,12 +163,16 @@ Christof. Vor dem Merge kurz synchronisieren.
 ## 7. Reihenfolge der Umsetzung
 
 1. ✅ `session.ts` Format + `/start`-Platzhalter (§2) — umgesetzt & im Browser
-   verifiziert (`HAIKU-65h`, `PHI-91j`).
-2. ⏳ `spuren.ts::ensureStudent` (§3a) — **Christofs Datei**, offen/absprechen.
+   verifiziert. Endbuchstabe ist GROSS (`QWEN-34R`), wegen `toUpperCase()`.
+2. ✅ `spuren.ts::ensureStudent` (§3a) — umgesetzt (mit Pietros Go, Christof
+   informiert via Handoff); verifiziert: Klick erzeugt Code `MINIMAX-69J` +
+   Spur, `ensureStudent`-Pfad läuft fehlerfrei. Firestore-Doc-Check: Konsole.
 3. ✅ `/start ?class=`-Param (§3b-B) — umgesetzt & verifiziert (Prefill +
    rückwirkendes `linkTeacherCode` für bestehende Sessions).
-4. ⏳ Orakel-Klassencode-Feld (§3b-A) — **Christof**, offen.
+4. ⏳ Orakel-Klassencode-Feld (§3b-A) — **Christof** (an Handoff übergeben).
 5. ~~Lehrer-Code-Vorschlag (§4)~~ — verworfen.
+
+Handoff für Christofs Session: [handoff-christof-login-codes.md](handoff-christof-login-codes.md).
 
 Nach jedem Schritt: `npm run dev`, Test-Interaktion, in Firestore-Konsole
 `abstimmungen/ki26/students/{code}` prüfen.

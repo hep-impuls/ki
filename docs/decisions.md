@@ -10,6 +10,39 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-22 — Fortschritts-Codes: LLM-Namen + Endbuchstabe; Login-Wiring
+
+**Auftrag Pietro (geteilte Infra, Christof informiert):** Die Fortschritts-Codes
+wechseln von Tiernamen auf **LLM-Namen mit angehängtem Buchstaben** — «etwas
+krypto-artiger», z.B. `QWEN-34R`, `MINIMAX-69J`, `SONNET-56I`. Parallel wird der
+schon vorhandene (aber ungenutzte) Login enger an den Schüler-Fluss gebunden.
+
+- **Format `MODELL-NNX`** (`session.ts`): `MODELS`-Pool (18 LLM-Namen) statt
+  `ANIMALS`; 2 Ziffern (10–99) + ein Buchstabe. **Der Buchstabe ist GROSS** —
+  bewusst, weil Codes überall mit `toUpperCase()` normalisiert werden und
+  Firestore-Doc-IDs case-sensitiv sind; ein Kleinbuchstabe (Pietros erster
+  Wunsch) würde beim Wieder-Eingeben zerstört (→ Fortschrittsverlust). Buchstaben
+  ohne `I`/`O` (Verwechslung mit 1/0). **Abwärtskompatibel:** alte `BÄR-…`-Codes
+  bleiben gültig, keine Migration.
+- **Lehrer-Backend war bereits da** (volle 10mio-Parität in `teacherStore.ts`):
+  Klassencode mit Passwort erzeugen geht seit R0–R5 über `/lehrperson`. **Kein
+  Cloud-Function-Port, kein Rules-Deploy nötig.** Auto-Generieren des
+  Lehrer-Codes wurde verworfen — bleibt frei tippbar (sprechende Codes).
+- **`/start`**: `?class=CODE` befüllt/verknüpft den Klassencode vor
+  (Lehrpersonen-Link); rückwirkendes `linkTeacherCode` für bestehende
+  Hintergrund-Codes.
+- **`spuren.ts::ensureCode()`** legt jetzt zusätzlich via `ensureStudent()` ein
+  **reales** `students/{code}`-Doc an — Voraussetzung, dass ein Code einer Klasse
+  zugeordnet werden kann (Klassen-Query findet keine Phantom-Parents).
+- **Begleit-Änderungen an Christofs Dateien** (nötig, sonst bricht der
+  Geräte-Transfer): `FortschrittsCode.tsx` Regex `…[A-Z]?$` + Texte;
+  `OrakelDashboard.tsx` Beispiel-Code kosmetisch.
+
+Plan + 10mio-Analyse: [PLAN_login-llm-codes.md](PLAN_login-llm-codes.md).
+Handoff an Christof: [handoff-christof-login-codes.md](handoff-christof-login-codes.md).
+**Offen (Christof):** Klassencode-Feld + Vergleich «du ↔ Klasse ↔ alle» im
+Orakel; **offen (Pietro):** Aggregations-Route (Admin SDK, k ≥ 5).
+
 ## 2026-07-21 — Volle geräteübergreifende Persistenz (Bewertungen gespiegelt)
 
 **Auftrag Christof (mit Pietro abgesprochen):** Die Daten sollen geräte- und

@@ -193,9 +193,9 @@ Two handoff docs in [design/](design/) define the **target architecture** this r
 ## Architecture (current state)
 
 - `src/app/` — Next.js App Router pages. `layout.tsx` setzt `lang="de"` und globale Metadaten. `page.tsx` ist die Titelseite. Lernmodule unter `lernen/lernseite-{1,2}/`.
-- `src/lib/` — geteilte Infrastruktur: `firebase.ts` (Client-Singleton), `session.ts` (Animal-Code + localStorage), `paths.ts` (Firestore-Pfade), `types.ts`, `db.ts` (Client-SDK-Ops), `api.ts` (Route-Handler-Wrapper), `progressMirror.ts`, `polls.ts` (Aggregat-Zähler). Server-only: `firebaseAdmin.ts`, `server/teacherStore.ts`, `server/apiResponse.ts`.
+- `src/lib/` — geteilte Infrastruktur: `firebase.ts` (Client-Singleton), `session.ts` (Fortschritts-Code `MODELL-NNX`, z.B. `QWEN-34R` — LLM-Name + 2 Ziffern + Grossbuchstabe; früher Tier-Codes, alte gelten weiter — + localStorage), `paths.ts` (Firestore-Pfade), `types.ts`, `db.ts` (Client-SDK-Ops), `api.ts` (Route-Handler-Wrapper), `progressMirror.ts`, `polls.ts` (Aggregat-Zähler). Server-only: `firebaseAdmin.ts`, `server/teacherStore.ts`, `server/apiResponse.ts`.
 - `src/app/api/` — 6 Route Handlers (teacher/setup, teacher/prefs, teacher/report, student/class-exists, student/class-prefs, student/class-report). Alle `POST`, alle `runtime="nodejs"` (Admin SDK).
-- `src/app/start/` — Schüler-Onboarding (Animal-Code generieren, Klassencode optional).
+- `src/app/start/` — Schüler-Onboarding (Fortschritts-Code generieren, Klassencode optional; `?class=CODE` befüllt/verknüpft einen Klassencode vorab, für Lehrpersonen-Links).
 - `src/app/lehrperson/` — Lehrer-UI: Klasse anlegen, Pflichtmodule, Report.
 - `src/components/ActivityTracker.tsx` — bleibt vorerst unverändert (R6 verschoben).
 - `src/components/SessionGate.tsx` — opt-in Gate: ohne Session → Redirect `/start`.
@@ -226,10 +226,11 @@ Stellen) ergänzen — jüngste oben.
 ## Registrierung, Klassencode & Lehrer-Report (Stand 2026-06-26)
 
 Umsetzung von `docs/PLAN_registrierung-klassencode.md` (R0–R5). **Volle
-10mio-Parität**: Animal-Code-Registrierung, secret-geschützte Klassencodes
-(single-owner), Pro-Schüler-Fortschritts-Docs, Lehrer-Report. Vollständige
-Anleitung (inkl. „wie binde ich Inhalte an Firebase an" für Christof):
-[docs/handoff-firebase-ki26.md](docs/handoff-firebase-ki26.md).
+10mio-Parität**: Fortschritts-Code-Registrierung (Format `MODELL-NNX`, seit
+2026-07-22 LLM-Namen statt Tiere — siehe `docs/PLAN_login-llm-codes.md`),
+secret-geschützte Klassencodes (single-owner), Pro-Schüler-Fortschritts-Docs,
+Lehrer-Report. Vollständige Anleitung (inkl. „wie binde ich Inhalte an Firebase
+an" für Christof): [docs/handoff-firebase-ki26.md](docs/handoff-firebase-ki26.md).
 
 **Neue Infrastruktur (geteilt, `src/lib/`):**
 
