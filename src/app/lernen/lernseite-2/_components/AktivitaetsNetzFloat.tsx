@@ -116,8 +116,8 @@ export default function AktivitaetsNetzFloat() {
             <div className="relative max-h-[76vh] overflow-y-auto rounded-2xl">
               <AktivitaetsNetz
                 schwebend
-                titel="Aktivitätsnetz"
-                unterzeile="Hintergrund: alle Nutzenden. Vordergrund: du. Punkte, Flächen, Bildpunkte und Videos verflechten sich zu einem Muster."
+                titel="Aktivitäts-Rhizom"
+                unterzeile="Aus einer Wurzel wächst dein Tun: vier Triebe (Punkte, Flächen, Bildpunkte, Videos). Hintergrund: alle. Vordergrund: du."
               />
               <button
                 type="button"

@@ -535,12 +535,12 @@ export default function OrakelDashboard() {
         ]}
       />
 
-      {/* Aktivitätsnetz — dein Weg als Konstellation */}
+      {/* Aktivitätsnetz — dein Weg als wachsendes Rhizom */}
       <AktivitaetsNetz
         className="mt-xl mb-lg"
         schwebend
-        titel="Dein Aktivitätsnetz"
-        unterzeile="Was du bisher im Modul getan hast — angeklickte Knoten, geknüpfte Flächen und angeschaute Bilder, zusammen als ein Netz."
+        titel="Dein Aktivitäts-Rhizom"
+        unterzeile="Aus einer Wurzel wächst dein Tun: vier Triebe (Punkte, Flächen, Bildpunkte, Videos) verzweigen sich — im Hintergrund das Rhizom aller, im Vordergrund deins."
       />
 
       {/* 1 — Perspektiven auf deine Aktivität */}
