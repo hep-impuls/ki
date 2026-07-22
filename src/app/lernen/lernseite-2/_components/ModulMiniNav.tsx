@@ -1,11 +1,15 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 /**
  * ModulMiniNav — kleine, mitschwebende Navigation (oben rechts) auf die drei
- * Seiten des Moduls. Gedacht für den Hub «Eine ganz neue Partnerschaft»;
- * auf den Unterseiten übernimmt das Inhaltsverzeichnis-Klammersymbol.
+ * Seiten des Moduls. Liegt auf jeder Modul-Seite; die aktuelle Seite ist
+ * hervorgehoben. Direkt darunter sitzt (auf den Unterseiten) die Klammer,
+ * die Navigation *innerhalb* der Seite (siehe Inhaltsverzeichnis.tsx).
  * Nur Theme-Tokens; auf schmalen Screens ausgeblendet (dort trägt die
- * Themen-Liste der Seite selbst).
+ * Themen-/Abschnittsliste der Seite selbst).
  */
 const SEITEN = [
   { nr: "01", label: "Vorhang auf", href: "/lernen/lernseite-2/vorhang-auf" },
@@ -14,6 +18,8 @@ const SEITEN = [
 ];
 
 export default function ModulMiniNav() {
+  const pathname = usePathname();
+
   return (
     <nav
       aria-label="Die drei Seiten des Moduls"
@@ -22,24 +28,39 @@ export default function ModulMiniNav() {
       <p className="px-sm pb-xs text-label-sm uppercase tracking-wider text-tertiary">
         Der Faden
       </p>
-      {SEITEN.map((s) => (
-        <Link
-          key={s.href}
-          href={s.href}
-          className="group flex items-center gap-sm rounded-lg px-sm py-xs text-label-md text-on-surface-variant transition-colors hover:bg-surface-container hover:text-on-surface"
-        >
-          <span
-            className="text-label-sm text-tertiary"
-            style={{ fontFamily: "ui-monospace, monospace" }}
+      {SEITEN.map((s) => {
+        const aktiv = pathname === s.href;
+        return (
+          <Link
+            key={s.href}
+            href={s.href}
+            aria-current={aktiv ? "page" : undefined}
+            className={
+              "group flex items-center gap-sm rounded-lg px-sm py-xs text-label-md transition-colors " +
+              (aktiv
+                ? "bg-tertiary-container/50 text-on-surface"
+                : "text-on-surface-variant hover:bg-surface-container hover:text-on-surface")
+            }
           >
-            {s.nr}
-          </span>
-          {s.label}
-          <span className="material-symbols-outlined ml-auto text-[16px] text-on-surface-variant/50 transition-transform group-hover:translate-x-0.5 group-hover:text-tertiary">
-            arrow_forward
-          </span>
-        </Link>
-      ))}
+            <span
+              className={aktiv ? "text-label-sm text-tertiary" : "text-label-sm text-tertiary/70"}
+              style={{ fontFamily: "ui-monospace, monospace" }}
+            >
+              {s.nr}
+            </span>
+            {s.label}
+            {aktiv ? (
+              <span className="material-symbols-outlined ml-auto text-[16px] text-tertiary">
+                my_location
+              </span>
+            ) : (
+              <span className="material-symbols-outlined ml-auto text-[16px] text-on-surface-variant/50 transition-transform group-hover:translate-x-0.5 group-hover:text-tertiary">
+                arrow_forward
+              </span>
+            )}
+          </Link>
+        );
+      })}
     </nav>
   );
 }

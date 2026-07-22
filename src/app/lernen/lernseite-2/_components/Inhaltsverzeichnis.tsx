@@ -121,8 +121,10 @@ export default function Inhaltsverzeichnis({
         </div>
       </nav>
 
-      {/* Oben rechts: Klammersymbol mit Fortschritt */}
-      <div className="fixed right-4 top-20 z-40 md:right-6">
+      {/* Oben rechts: Klammersymbol mit Fortschritt — auf grossen Screens
+          direkt unter der ModulMiniNav («Der Faden»), auf kleineren (dort ist
+          die Mini-Nav ausgeblendet) oben bei top-20. */}
+      <div className="fixed right-4 top-20 z-40 md:right-6 lg:top-56">
         {offen && (
           <>
             <div

@@ -13,6 +13,7 @@ import InfoPunkt from "../_components/InfoPunkt";
 import Inhaltsverzeichnis from "../_components/Inhaltsverzeichnis";
 import Aufgabe from "../_components/Aufgabe";
 import Ausklapptext from "../_components/Ausklapptext";
+import ModulMiniNav from "../_components/ModulMiniNav";
 
 /**
  * Das Muster dieser Seite: die Auftritts-Signatur (oben rechts im Kopf),
@@ -406,6 +407,8 @@ export default function Lernseite2VorhangAuf() {
         page="lernseite-2/vorhang-auf"
         lessonId="lernseite-2-vorhang-auf"
       />
+
+      <ModulMiniNav />
 
       <Link
         href="/lernen/lernseite-2"

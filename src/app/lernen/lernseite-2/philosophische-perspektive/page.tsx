@@ -11,6 +11,7 @@ import AktivitaetsNetzFloat from "../_components/AktivitaetsNetzFloat";
 import Inhaltsverzeichnis from "../_components/Inhaltsverzeichnis";
 import Aufgabe from "../_components/Aufgabe";
 import Ausklapptext from "../_components/Ausklapptext";
+import ModulMiniNav from "../_components/ModulMiniNav";
 
 /**
  * Thema 02 — «Philosophische Perspektive».
@@ -32,6 +33,8 @@ export default function Lernseite2PhilosophischePerspektive() {
 
       {/* Mitfahrendes Aktivitätsnetz — wie auf Hub & Auftakt */}
       <AktivitaetsNetzFloat />
+
+      <ModulMiniNav />
 
       <Link
         href="/lernen/lernseite-2"

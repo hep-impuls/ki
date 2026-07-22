@@ -4,6 +4,7 @@ import AppLayout from "@/components/layout/AppLayout";
 import { Signatur } from "../_components/Gewebe";
 import OrakelDashboard from "./_components/OrakelDashboard";
 import SeitenNavigation from "../_components/SeitenNavigation";
+import ModulMiniNav from "../_components/ModulMiniNav";
 
 /**
  * Thema 03 — «Das Orakel — erkenne dich selbst».
@@ -22,6 +23,8 @@ export default function Lernseite2DasOrakel() {
         page="lernseite-2/das-orakel"
         lessonId="lernseite-2-das-orakel"
       />
+
+      <ModulMiniNav />
 
       <Link
         href="/lernen/lernseite-2"
