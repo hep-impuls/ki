@@ -11,6 +11,7 @@ import {
 } from "@/lib/polls";
 import { FadenDivider } from "../../_components/Gewebe";
 import AktivitaetsNetz from "../../_components/AktivitaetsNetz";
+import Knotenkarte from "../../_components/Knotenkarte";
 import Inhaltsverzeichnis from "../../_components/Inhaltsverzeichnis";
 import {
   leseSpuren,
@@ -530,6 +531,7 @@ export default function OrakelDashboard() {
         eintraege={[
           { id: "perspektiven", label: "Perspektiven auf deine Aktivität" },
           { id: "deine-spur", label: "Deine Spur durchs Gewebe" },
+          { id: "knotenkarte", label: "Knotenkarte der Inhalte" },
           { id: "orakel-spricht", label: "Das Orakel spricht" },
           { id: "blick", label: "Wie blickst du heute auf KI?" },
           { id: "rueckmeldung", label: "Deine Rückmeldung" },
@@ -761,6 +763,19 @@ export default function OrakelDashboard() {
             );
           })}
         </div>
+      </section>
+
+      <FadenDivider className="mt-xl" />
+
+      {/* 3b — Knotenkarte: die 20 stärksten Inhalte je Register, Bereiche
+          farblich getrennt (wie die Triebe des Rhizoms) */}
+      <section id="knotenkarte" className="mt-xl scroll-mt-24" aria-label="Knotenkarte der Inhalte">
+        <h2 className="text-headline-md text-on-surface">Knotenkarte der Inhalte</h2>
+        <p className="mt-xs max-w-3xl text-body-sm text-on-surface-variant">
+          Die stärksten Knoten im Gewebe: je grösser der Punkt, desto häufiger —
+          pro Register die 20 vordersten, jeder Bereich in seiner Farbe.
+        </p>
+        <Knotenkarte className="mt-md" />
       </section>
 
       <FadenDivider className="mt-xl" />

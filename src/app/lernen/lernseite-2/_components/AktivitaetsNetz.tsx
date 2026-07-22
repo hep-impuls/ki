@@ -2,7 +2,6 @@
 
 import { useEffect, useMemo, useState } from "react";
 import {
-  meistBesuchteAusPoll,
   SPUR_EVENT,
   SPUREN_POLL_ID,
   zaehleAktivitaet,
@@ -10,7 +9,6 @@ import {
   zieheSpurenAusCloud,
 } from "../_lib/spuren";
 import { AUSWERTUNG_EVENT, FLAECHEN_POLL_ID, zaehleFlaechen } from "../_lib/auswertung";
-import { leseInhalte } from "../_lib/inhalte";
 import {
   loadPollCounts,
   subscribePollCounts,
@@ -142,8 +140,6 @@ export default function AktivitaetsNetz({
 }) {
   const [z, setZ] = useState<NetzWerte>({ punkte: 0, flaechen: 0, bildpunkte: 0, videos: 0 });
   const [alle, setAlle] = useState<NetzWerte>({ punkte: 0, flaechen: 0, bildpunkte: 0, videos: 0 });
-  /** Die meistbesuchten Inhalte aller — als beschriftete «Blüten» im Rhizom. */
-  const [top, setTop] = useState<{ id: string; alle: number }[]>([]);
 
   useEffect(() => {
     const lesen = () => {
@@ -166,10 +162,8 @@ export default function AktivitaetsNetz({
   }, []);
 
   useEffect(() => {
-    const setzeSpuren = (counts: PollCounts) => {
+    const setzeSpuren = (counts: PollCounts) =>
       setAlle((v) => ({ ...v, ...zaehleAlleAusPoll(counts) }));
-      setTop(meistBesuchteAusPoll(counts, 5));
-    };
     const setzeFlaechen = (counts: PollCounts) =>
       setAlle((v) => ({ ...v, flaechen: totalVotes(counts) }));
     void loadPollCounts(SPUREN_POLL_ID).then(setzeSpuren);
@@ -184,26 +178,6 @@ export default function AktivitaetsNetz({
 
   const gesamt = z.punkte + z.flaechen + z.bildpunkte + z.videos;
   const gesamtAlle = alle.punkte + alle.flaechen + alle.bildpunkte + alle.videos;
-
-  // Blüten: Top-Inhalte mit Titel (aus der lokalen Titel-Registry) an festen,
-  // gut lesbaren Plätzen im oberen Bereich des Rhizoms.
-  const BLUETEN_PLAETZE = [
-    { x: 74, y: 46 },
-    { x: 186, y: 24 },
-    { x: 296, y: 46 },
-    { x: 52, y: 112 },
-    { x: 318, y: 112 },
-  ];
-  const blueten = useMemo(() => {
-    const inhalte = leseInhalte();
-    const maxA = Math.max(1, ...top.map((t) => t.alle));
-    return top.slice(0, BLUETEN_PLAETZE.length).map((t, i) => {
-      const roh = inhalte[t.id] ?? t.id.split(":").slice(-2).join(" ");
-      const titel = roh.length > 22 ? `${roh.slice(0, 21)}…` : roh;
-      return { ...t, titel, r: 4 + 4 * Math.sqrt(t.alle / maxA), ...BLUETEN_PLAETZE[i] };
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [top]);
 
   // Rhizom-Geometrie deterministisch aus den Kennzahlen ableiten (memoisiert).
   const { bg, fg } = useMemo(() => {
@@ -311,38 +285,6 @@ export default function AktivitaetsNetz({
               {blaetter.map((b, i) => (
                 <circle key={`l${i}`} cx={b.x} cy={b.y} r={b.r} className={trieb.fill} opacity="0.95" />
               ))}
-            </g>
-          ))}
-
-          {/* Blüten — die meistbesuchten Inhalte aller, beschriftet */}
-          {blueten.map((b) => (
-            <g key={b.id}>
-              <path
-                d={`M${WURZEL.x} ${WURZEL.y} Q${(WURZEL.x + b.x) / 2} ${(WURZEL.y + b.y) / 2 - 24} ${b.x} ${b.y}`}
-                fill="none"
-                strokeWidth="0.8"
-                strokeDasharray="2 3"
-                className="stroke-outline"
-                opacity="0.35"
-              />
-              <circle cx={b.x} cy={b.y} r={b.r + 2.5} className="fill-tertiary" opacity="0.18" />
-              <circle cx={b.x} cy={b.y} r={b.r} className="fill-tertiary" opacity="0.9" />
-              <text
-                x={b.x}
-                y={b.y + b.r + 9}
-                textAnchor="middle"
-                fontSize="8.5"
-                className="fill-on-surface"
-                style={{
-                  paintOrder: "stroke",
-                  stroke: "rgb(var(--color-surface-bright))",
-                  strokeWidth: 3,
-                  fontFamily: "inherit",
-                }}
-              >
-                {b.titel}
-              </text>
-              <title>{`${b.titel} — ${b.alle}× besucht (alle)`}</title>
             </g>
           ))}
 

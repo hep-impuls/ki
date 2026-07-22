@@ -11,10 +11,13 @@ import {
 } from "@/lib/polls";
 
 /**
- * Sternenkarte — die stärksten Inhalte als Punktwolke. Je stärker ein Inhalt,
- * desto grösser sein Punkt (Phyllotaxis-Spirale: das Stärkste in der Mitte).
+ * Knotenkarte — die 20 stärksten Inhalte je Register als Punktwolke.
+ * Je stärker ein Inhalt, desto grösser sein Punkt (Phyllotaxis-Spirale: das
+ * Stärkste in der Mitte). Jeder Bereich hat seine eigene Farbe (KI-Story,
+ * Merkmale, Bilder, Teppich, Epochen …) — wie die Triebe des Rhizoms.
  *
- * Drei Ansichten:
+ * Vier Register:
+ *  · Angeklickt — die am häufigsten angeklickten Punkte (alle Nutzenden).
  *  · Weiterverfolgt — welche Inhalte am meisten «Das verfolge ich weiter»
  *    bekommen (anonym, alle Nutzenden).
  *  · Vertieft — wo am häufigsten «Mehr lesen» geöffnet wurde (alle).
@@ -25,6 +28,9 @@ import {
  * als vorbereiteter Platzhalter, damit Pietros Route nur eingehängt wird.
  */
 
+/** Wie viele Punkte je Register gezeigt werden (Wolke und Rangliste). */
+const TOP_N = 20;
+
 type Ansicht = "geklickt" | "weiter" | "vertieft" | "bekannt";
 
 const ANSICHTEN: { id: Ansicht; label: string; icon: string; hinweis: string }[] = [
@@ -32,7 +38,7 @@ const ANSICHTEN: { id: Ansicht; label: string; icon: string; hinweis: string }[]
     id: "geklickt",
     label: "Angeklickt",
     icon: "ads_click",
-    hinweis: "Die am häufigsten angeklickten Punkte: KI-Story, Bilder (gezählt pro Punkt im Bild), Merkmale, Teppich und Epochen.",
+    hinweis: "Die 20 am häufigsten angeklickten Punkte: KI-Story, Bilder (gezählt pro Punkt im Bild), Merkmale, Teppich und Epochen.",
   },
   {
     id: "weiter",
@@ -54,16 +60,17 @@ const ANSICHTEN: { id: Ansicht; label: string; icon: string; hinweis: string }[]
   },
 ];
 
-/** Bereich (Farbe + Name) aus der Basis-ID ableiten. */
+/** Bereich (Farbe + Name) aus der Basis-ID ableiten — jeder Bereich hat seine
+ *  EIGENE Farbe (wie die Triebe des Rhizoms), damit die Wolke lesbar bleibt. */
 const AREAS: { prefix: string; name: string; fill: string; text: string }[] = [
   { prefix: "vorhang-auf:story", name: "KI-Story", fill: "fill-tertiary", text: "text-tertiary" },
   { prefix: "vorhang-auf:weisheit", name: "Merkmale", fill: "fill-secondary", text: "text-secondary" },
-  { prefix: "vorhang-auf:bild", name: "Bilder", fill: "fill-secondary", text: "text-secondary" },
-  { prefix: "vorhang-auf:kontext", name: "Kontext", fill: "fill-primary", text: "text-primary" },
+  { prefix: "vorhang-auf:bild", name: "Bilder", fill: "fill-error", text: "text-error" },
+  { prefix: "vorhang-auf:kontext", name: "Kontext", fill: "fill-surface-tint", text: "text-surface-tint" },
   { prefix: "philosophische-perspektive:teppich", name: "Teppich", fill: "fill-primary", text: "text-primary" },
   { prefix: "philosophische-perspektive:epochen", name: "Epochen", fill: "fill-on-surface", text: "text-on-surface" },
-  { prefix: "philosophische-perspektive:einstieg", name: "Philosophie", fill: "fill-on-surface", text: "text-on-surface" },
-  { prefix: "video:", name: "Videos", fill: "fill-tertiary", text: "text-tertiary" },
+  { prefix: "philosophische-perspektive:einstieg", name: "Philosophie", fill: "fill-outline", text: "text-on-surface-variant" },
+  { prefix: "video:", name: "Videos", fill: "fill-inverse-surface", text: "text-inverse-surface" },
 ];
 function areaVon(id: string) {
   return (
@@ -90,7 +97,7 @@ const VB_H = 260;
 const CENTER = { x: 180, y: 128 };
 const GOLDWINKEL = 2.399963229728653; // 137.5° in rad
 
-export default function Sternenkarte({ className = "" }: { className?: string }) {
+export default function Knotenkarte({ className = "" }: { className?: string }) {
   const [ansicht, setAnsicht] = useState<Ansicht>("geklickt");
   const [counts, setCounts] = useState<PollCounts>({});
   const [lokal, setLokal] = useState<{ spurIds: Set<string>; bekannt: Record<number, number> }>({
@@ -221,16 +228,18 @@ export default function Sternenkarte({ className = "" }: { className?: string })
   }, [ansicht, counts, lokal, inhalte]);
 
   const maxStaerke = Math.max(1, ...punkte.map((p) => p.staerke));
-  const sichtbar = punkte.slice(0, 28); // SVG-Wolke
-  const top = punkte.slice(0, 10); // Rangliste
+  const sichtbar = punkte.slice(0, TOP_N); // SVG-Wolke
+  const top = punkte.slice(0, TOP_N); // Rangliste
   const aktInfo = ANSICHTEN.find((a) => a.id === ansicht)!;
+  /** Bereiche, die in der aktuellen Ansicht vorkommen — für die Farb-Legende. */
+  const legendeAreas = AREAS.filter((a) => sichtbar.some((p) => p.area.prefix === a.prefix));
 
   return (
     <section className={"rounded-2xl border border-outline-variant bg-surface-bright p-md sm:p-lg " + className}>
       <div className="flex flex-wrap items-baseline justify-between gap-x-md gap-y-xs">
         <p className="flex items-center gap-xs text-label-md uppercase tracking-wider text-tertiary">
           <span className="material-symbols-outlined text-[18px]">scatter_plot</span>
-          Sternenkarte der Inhalte
+          Knotenkarte der Inhalte
         </p>
       </div>
 
@@ -274,6 +283,18 @@ export default function Sternenkarte({ className = "" }: { className?: string })
           alle
         </span>
       </div>
+
+      {/* Bereichs-Farben (wie die Triebe des Rhizoms: jeder Bereich ein Ton) */}
+      {legendeAreas.length > 0 && (
+        <div className="mt-xs flex flex-wrap items-center gap-x-md gap-y-xs text-label-sm text-on-surface-variant">
+          {legendeAreas.map((a) => (
+            <span key={a.prefix} className="flex items-center gap-xs">
+              <span className={"inline-block h-2.5 w-2.5 rounded-full " + a.fill.replace("fill-", "bg-")} />
+              {a.name}
+            </span>
+          ))}
+        </div>
+      )}
 
       {punkte.length === 0 ? (
         <p className="mt-md rounded-xl border border-dashed border-outline-variant bg-surface-container-low p-md text-body-sm text-on-surface-variant">
