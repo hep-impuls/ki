@@ -51,20 +51,31 @@ export default function Lernseite2PhilosophischePerspektive() {
         <h1 className="mt-sm text-headline-xl text-on-surface">
           Philosophische Perspektive
         </h1>
-        <p className="mt-md max-w-3xl text-body-lg text-on-surface-variant">
-          Technische Umbrüche verunsichern — das ist nicht neu. Diese Seite
-          geht dem in drei Schritten nach: Zuerst klärst du kurz, was{" "}
-          <strong className="text-on-surface">Philosophie</strong> überhaupt ist
-          und warum gerade jetzt. Dann webst du den{" "}
-          <strong className="text-on-surface">«Teppich des Wandels»</strong> —
-          ein Gewebe aus Technologien, Entdeckungen, Ereignissen und kulturellen
-          Praxen, das zeigt: Wandel hat nie nur eine Ursache. Und schliesslich
-          gehst du durch <strong className="text-on-surface">acht Epochen</strong>,
-          von der Antike bis zu Umwelt und KI heute — jede mit einer Technologie,
-          der Verunsicherung, die sie auslöste, und der Philosophie, die Halt
-          gab, als aufklappbare, bewertbare Bausteine. Öffne, was dich
-          interessiert. Und heute, mit KI?
-        </p>
+        <div className="mt-md max-w-3xl space-y-sm text-body-lg text-on-surface-variant">
+          <p>
+            Seit Jahrzehnten verändert die Digitalisierung, wie wir leben und
+            arbeiten — mit der KI zieht dieser Wandel noch einmal an. Was sich
+            lange bewährt hat, wird plötzlich hinterfragt:{" "}
+            <strong className="text-on-surface">neue Berufe entstehen, andere
+            verschwinden</strong>, Abläufe werden umgestellt. Auch soziale
+            Strukturen und Rollenbilder verschieben sich.
+          </p>
+          <p>
+            Diese Seite will dem Verlorenen nicht nachtrauern. Sie stellt eine
+            andere Frage: <strong className="text-on-surface">Was ist eigentlich
+            neu — und was hat sich verändert?</strong> Immer mit einem Blick
+            zurück und einem auf heute. Besonders eine Frage bricht mit der KI
+            neu auf: die nach dem Menschen selbst.
+          </p>
+          <p>
+            Der Weg dahin: Du webst den{" "}
+            <strong className="text-on-surface">«Teppich des Wandels»</strong>{" "}
+            und gehst durch <strong className="text-on-surface">acht Epochen</strong>{" "}
+            — jede mit einer neuen Technik, einer Verunsicherung und der
+            Philosophie, die Halt gab. Öffne, was dich interessiert. Und heute,
+            mit KI?
+          </p>
+        </div>
         <blockquote className="mt-md max-w-3xl border-l-4 border-tertiary pl-md">
           <p className="text-body-md italic text-on-surface-variant">
             «Die Eule der Minerva beginnt erst mit der einbrechenden Dämmerung
@@ -101,18 +112,47 @@ export default function Lernseite2PhilosophischePerspektive() {
           <h2 className="text-headline-lg text-on-surface">
             Was ist Philosophie — und warum jetzt?
           </h2>
-          <p className="mt-sm text-body-lg text-on-surface-variant">
-            Bevor wir in die Geschichte eintauchen: Was ist Philosophie
-            überhaupt? Wörtlich heisst sie «Liebe zur Weisheit». Sie gibt keine
-            fertigen Antworten wie eine Einzelwissenschaft, sondern stellt die
-            grundlegenden Fragen — nach Wissen, Wahrheit, Recht, dem guten Leben
-            und dem Menschen selbst — und prüft, wie wir sie begründen. Gerade
-            heute, wo Maschinen sprechen, entscheiden und gestalten, brechen
-            diese Fragen neu auf: Was ist der Mensch, wenn eine Maschine vieles
-            ebenso gut kann? Philosophie hilft, im Umbruch Orientierung zu
-            finden, statt der Technik nur hinterherzulaufen.
-          </p>
+          <div className="mt-sm space-y-sm text-body-lg text-on-surface-variant">
+            <p>
+              Was ist Philosophie überhaupt? Wörtlich heisst sie «Liebe zur
+              Weisheit». Sie ist <strong className="text-on-surface">keine
+              strenge Wissenschaft</strong>, die mit Messdaten beweist, wie etwas
+              zusammenhängt — das tun Physik oder Statistik. Philosophie arbeitet
+              mit <strong className="text-on-surface">Ideen und Denkbildern</strong>:
+              Sie hilft uns, das neu zu ordnen und zu verstehen, was der Wandel
+              durcheinanderbringt.
+            </p>
+            <p>
+              Darum geht es in diesem Modul vor allem um eine Frage, die mit der
+              KI neu aufbricht: <strong className="text-on-surface">Was ist der
+              Mensch?</strong> Lange galt er als der, der Wissen schafft,
+              weitergibt und Neues erdenkt. Wenn eine Maschine schreibt, erklärt
+              und gestaltet, gerät genau das ins Wanken — unser Denken und unsere
+              Kreativität. Neu ist die Frage nicht: Spätestens Immanuel Kant hat
+              gefragt, was den Menschen eigentlich ausmacht.
+            </p>
+          </div>
         </AbschnittKopf>
+        <Ausklapptext
+          className="mt-md max-w-4xl"
+          titel="Mehr dazu: Wie wir mit KI zusammenarbeiten"
+        >
+          <p>
+            Die alte Aufteilung «hier der Mensch als{" "}
+            <strong className="text-on-surface">Subjekt</strong>, dort die
+            Maschine als <strong className="text-on-surface">Objekt</strong>»
+            hilft hier nur bedingt. Denn wir stellen den Menschen nicht nur der
+            KI gegenüber — wir fragen auch, wie wir mit ihr{" "}
+            <strong className="text-on-surface">zusammenarbeiten</strong> sollen.{" "}
+            <strong className="text-on-surface">Netzwerk- und Systemtheorien</strong>{" "}
+            setzen genau dort an: Sie schauen nicht auf einzelne «Täter» und
+            blosse «Werkzeuge», sondern darauf, wie Menschen, Maschinen, Daten
+            und Regeln in einer gemeinsamen Praxis zusammenwirken. Ein Beispiel:
+            Wer einen Text mit KI schreibt, ist weder allein Autorin noch bloss
+            Nutzer — Mensch, Modell, Trainingsdaten und die eigene Eingabe
+            bilden zusammen ein Netz, in dem der Text entsteht.
+          </p>
+        </Ausklapptext>
         <Aufgabe className="mt-md">Klappe die Punkte auf, die dich neugierig machen.</Aufgabe>
         <AkkordeonPosten
           className="mt-lg"
