@@ -782,14 +782,14 @@ export default function Lernseite2VorhangAuf() {
                 "Neu war weniger das Modell selbst als seine Zugänglichkeit, denn ein Chatfenster mit normaler Sprache war sofort nutzbar. Zusätzlich wurde es mit menschlichem Feedback trainiert, damit es hilfreicher und harmloser antwortet. Aus einer Forschungstechnik wurde so ein Alltagswerkzeug. Und die Debatte über Verlässlichkeit, Schule und Arbeit begann in aller Breite.",
             },
             {
-              titel: "Wettbewerb der Modellfamilien",
-              kurz: "Modellfamilien",
+              titel: "Wettbewerb der KI-Modelle",
+              kurz: "Modell-Wettlauf",
               kat: "daten",
               mmf: "maschine",
               jahr: "ab 2023",
               text: "Nach ChatGPT begann ein weltweiter Wettlauf um die besten Modelle. Neben den US-Modellen wie GPT, Claude, Gemini und Llama traten Modelle aus China, Europa und sogar der Schweiz an. Wer eigene Modelle baut, macht sich unabhängiger von anderen. So bekam die KI auch eine politische und eine sprachliche Bedeutung.",
               geschichte:
-                "Ab 2023 rangen viele Familien um die besten Modelle. Aus den USA kommen GPT von OpenAI, Claude von Anthropic, Gemini von Google und das offene Llama von Meta. Anfang 2025 sorgte das chinesische DeepSeek für Aufsehen, weil es mit wenig Aufwand mithielt, und auch Alibabas Qwen zählt dazu. Aus Europa stammt Mistral aus Frankreich, und aus der Schweiz das vollständig offene Modell «Apertus» von ETH Zürich, EPFL und dem Rechenzentrum CSCS.",
+                "Ab 2023 rangen viele Anbieter um die besten Modelle. Aus den USA kommen GPT von OpenAI, Claude von Anthropic, Gemini von Google und das offene Llama von Meta. Anfang 2025 sorgte das chinesische DeepSeek für Aufsehen, weil es mit wenig Aufwand mithielt, und auch Alibabas Qwen zählt dazu. Aus Europa stammt Mistral aus Frankreich, und aus der Schweiz das vollständig offene Modell «Apertus» von ETH Zürich, EPFL und dem Rechenzentrum CSCS.",
               mehr:
                 "Der Wettbewerb hat auch eine politische und eine sprachliche Seite, denn eigene Modelle bedeuten mehr Unabhängigkeit. Ein wichtiger Unterschied ist offen gegen geschlossen. Llama, DeepSeek und Apertus veröffentlichen ihre inneren Werte, während GPT, Claude und Gemini nur als Dienst laufen. Apertus legt sogar die Trainingsdaten und die Methoden offen und deckt über 1000 Sprachen ab, darunter Schweizerdeutsch und Rätoromanisch. Es ist ein Beispiel für eine öffentlich getragene KI neben den grossen kommerziellen Anbietern.",
             },
