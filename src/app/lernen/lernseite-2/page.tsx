@@ -11,7 +11,6 @@ import {
 import GewebeSpiel from "./_components/GewebeSpiel";
 import VideoImpuls from "./_components/VideoImpuls";
 import AktivitaetsNetzFloat from "./_components/AktivitaetsNetzFloat";
-import FortschrittsCode from "./_components/FortschrittsCode";
 import Ausklapptext from "./_components/Ausklapptext";
 import ModulMiniNav from "./_components/ModulMiniNav";
 
@@ -97,9 +96,6 @@ export default function Lernseite2Hub() {
 
       {/* Mitschwebende Mini-Navigation auf die drei Seiten */}
       <ModulMiniNav />
-
-      {/* Fortschritts-Code — geräteübergreifend weitermachen */}
-      <FortschrittsCode className="mt-xl" />
 
       {/* Video-Impuls zum Einstieg */}
       <VideoImpuls

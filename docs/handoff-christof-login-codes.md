@@ -45,6 +45,15 @@ bevor du an lernseite-2 weiterarbeitest.**
 5. **`OrakelDashboard.tsx`** (deine Datei) — nur kosmetisch: Beispiel-Code im
    Datenschutz-Erklärtext «BÄR-334» → «QWEN-34R».
 
+6. **Login als erster Schritt** (neu, 2026-07-22) — `src/app/lernen/layout.tsx`
+   gatet jetzt ganz `/lernen/**` via `SessionGate`: ohne Session → `/start`
+   (Onboarding). Der `FortschrittsCode`-Kasten wurde von der Lernseite-2-
+   Startseite (`page.tsx`) **entfernt** — seine Funktion lebt jetzt im
+   `/start`-Onboarding. **`_components/FortschrittsCode.tsx` ist damit ungenutzt**
+   — du kannst sie löschen oder für einen kleinen Code-Anzeiger umbauen, wenn du
+   den Code auch während des Lernens sichtbar haben willst. Sag Bescheid, falls
+   du das im Orakel möchtest.
+
 Details + Analyse: [docs/PLAN_login-llm-codes.md](PLAN_login-llm-codes.md).
 
 ---

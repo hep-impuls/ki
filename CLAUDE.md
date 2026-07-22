@@ -198,7 +198,7 @@ Two handoff docs in [design/](design/) define the **target architecture** this r
 - `src/app/start/` — Schüler-Onboarding (Fortschritts-Code generieren, Klassencode optional; `?class=CODE` befüllt/verknüpft einen Klassencode vorab, für Lehrpersonen-Links).
 - `src/app/lehrperson/` — Lehrer-UI: Klasse anlegen, Pflichtmodule, Report.
 - `src/components/ActivityTracker.tsx` — bleibt vorerst unverändert (R6 verschoben).
-- `src/components/SessionGate.tsx` — opt-in Gate: ohne Session → Redirect `/start`.
+- `src/components/SessionGate.tsx` — Gate: ohne Session → Redirect `/start`. Aktiv über `src/app/lernen/layout.tsx` für **alle** `/lernen/**`-Routen (Lernseite 1 + 2). Der Fortschritts-Code wird damit im ersten Schritt (`/start`) erzeugt/eingegeben; ein Code fürs ganze Set.
 - **KI-Einheit (Lernseite 1, Pietro)** — vollständige Umsetzung unter `src/app/lernen/lernseite-1/`: Auftakt, 5 Stationen, Abschluss, Landkarte, Zertifikat. Fortschritt wird via `ProgressMirror.tsx` nach Firestore gespiegelt.
 
 **Path alias:** `@/*` resolves to `./src/*` (configured in `tsconfig.json`).
@@ -221,7 +221,7 @@ Stellen) ergänzen — jüngste oben.
 ## Open questions
 
 - **R6 — Engagement-Tracker-Umbau** (`ActivityTracker.tsx` → Session-basiert): verschoben, geteilte Datei → mit Christof koordinieren.
-- **SessionGate auf lernseite-1**: aktuell nicht aktiv (Lernseite frei zugänglich). Mit Pietro entscheiden ob/wann gaten.
+- ~~**SessionGate auf lernseite-1**~~: **erledigt 2026-07-22** — Gate über `src/app/lernen/layout.tsx` für ganz `/lernen/**` aktiv (Login als erster Schritt, ein Code für Lernseite 1 + 2).
 
 ## Registrierung, Klassencode & Lehrer-Report (Stand 2026-06-26)
 

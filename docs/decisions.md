@@ -10,6 +10,29 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-22 — Login als erster Schritt (Gate über /lernen), Code-Kasten verschoben
+
+**Auftrag Pietro:** Der Fortschritts-Code soll — wie in 10mio — **beim Betreten
+der Lernumgebung im ersten Schritt** erzeugt/eingegeben werden, nicht als Kasten
+mitten auf der Seite. Ein Code gilt für **das ganze Lernset (Lernseite 1 + 2)**.
+
+- **Neuer Gate `src/app/lernen/layout.tsx`**: wrappt alle `/lernen/**`-Routen
+  (beide Lernseiten + alle Submodule) in `SessionGate`. Ohne Session →
+  Redirect `/start?next=…` (Onboarding: Code erhalten/eingeben, Klassencode
+  optional) — analog 10mios `index.astro`. Ein `ki26-session`-Key, geteilt über
+  beide Lernseiten → ein Code fürs ganze Set. Verifiziert: ohne Session leiten
+  `/lernen/lernseite-1` und `-2` auf `/start` um; mit Session rendern beide.
+- **`FortschrittsCode`-Kasten** von der Lernseite-2-Startseite **entfernt**
+  (`page.tsx`) — seine Funktion (Code notieren, auf anderem Gerät via Code
+  weitermachen) lebt jetzt im `/start`-Onboarding bzw. der «Ich habe schon einen
+  Code»-Flow. Die Komponente `_components/FortschrittsCode.tsx` bleibt liegen
+  (ungenutzt) — Christof kann sie löschen/umbauen.
+- **Nebeneffekt (positiv):** Lernseite 1 erzeugte bisher **keinen** eigenen Code
+  (nur `progressMirror`, no-op ohne Session); durch den Gate bekommen auch
+  Lernseite-1-Nutzer einen Code → Fortschritt wird gespiegelt.
+- **Tradeoff:** Wie 10mio wird der Code nach dem Onboarding nicht mehr dauerhaft
+  angezeigt. Falls gewünscht, später ein kleiner Code-Anzeiger im `AppLayout`.
+
 ## 2026-07-22 — Fortschritts-Codes: LLM-Namen + Endbuchstabe; Login-Wiring
 
 **Auftrag Pietro (geteilte Infra, Christof informiert):** Die Fortschritts-Codes
