@@ -12,6 +12,7 @@ import KartenAktion from "./KartenAktion";
 import { maschen as berechneMaschen, zaehleGefuellt } from "../_lib/flaechen";
 import { melde } from "../_lib/auswertung";
 import { merkeInhalt } from "../_lib/inhalte";
+import SammelAccordion from "./SammelAccordion";
 
 /**
  * StoryGewebe — die KI-Story als flexibles Teil-Gewebe (Vorbild: das
@@ -429,6 +430,11 @@ export default function StoryGewebe({
   const gewaehltSortiert = useMemo(() => alle.filter((i) => gewaehlt.has(i)), [alle, gewaehlt]);
   // Hervorgehoben = geöffnet: jede gewählte Station zeigt ihre Karte unten.
   const gesammelt = gewaehltSortiert;
+  /** Welche Detail-Karte ist aufgeklappt (Accordion; null = keine). */
+  const [offeneKarte, setOffeneKarte] = useState<number | null>(null);
+  useEffect(() => {
+    setOffeneKarte(gesammelt.length ? gesammelt[gesammelt.length - 1] : null);
+  }, [gesammelt]);
 
   /** Das GANZE Gewebe (immer sichtbar): Erzähl-Faden über ALLE Stationen der
    *  Reihe nach + feine Einfluss-Bögen. `aktiv` = beide Enden sind gewählt →
@@ -1015,40 +1021,25 @@ export default function StoryGewebe({
               const st = stationen[idx];
               const neuste = pos === gesammelt.length - 1;
               return (
-                <li
+                <SammelAccordion
                   key={idx}
-                  className={
-                    "rounded-xl border p-md sm:p-lg " +
-                    (neuste
-                      ? "animate-frame-in border-tertiary/50 bg-tertiary-container/25"
-                      : pos % 2 === 0
-                        ? "border-outline-variant bg-surface-bright"
-                        : "border-outline-variant bg-surface-container-low")
-                  }
+                  nr={pos + 1}
+                  titel={st.titel}
+                  jahr={st.jahr}
+                  neuste={neuste}
+                  offen={offeneKarte === idx}
+                  onToggle={() => setOffeneKarte((o) => (o === idx ? null : idx))}
                 >
-                  <div className="flex items-start gap-md">
-                    <span className="mt-xs flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-tertiary-container text-label-md text-on-tertiary-container">
-                      {pos + 1}
-                    </span>
-                    <div className="min-w-0">
-                      <p className="text-body-lg font-medium text-on-surface">
-                        {st.titel}
-                        <span className="ml-sm text-label-md font-normal text-tertiary">
-                          {st.jahr}
-                        </span>
-                      </p>
-                      <p className="mt-xs text-body-md text-on-surface">{st.text}</p>
-                      {st.geschichte && (
-                        <p className="mt-sm text-body-md text-on-surface-variant">{st.geschichte}</p>
-                      )}
-                      <KartenAktion
-                        mehr={st.mehr}
-                        wunschId={`wunsch:${wunschKey ?? spurKey ?? "story"}:${idx}`}
-                        titel={st.titel}
-                      />
-                    </div>
-                  </div>
-                </li>
+                  <p className="text-body-md text-on-surface">{st.text}</p>
+                  {st.geschichte && (
+                    <p className="mt-sm text-body-md text-on-surface-variant">{st.geschichte}</p>
+                  )}
+                  <KartenAktion
+                    mehr={st.mehr}
+                    wunschId={`wunsch:${wunschKey ?? spurKey ?? "story"}:${idx}`}
+                    titel={st.titel}
+                  />
+                </SammelAccordion>
               );
             })}
           </ol>

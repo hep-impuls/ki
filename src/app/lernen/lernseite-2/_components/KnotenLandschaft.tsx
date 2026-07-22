@@ -14,6 +14,7 @@ import GewichtungWahl from "./GewichtungWahl";
 import { GEWICHT_EVENT, gewichtungsStaerke, zieheGewichtungAusCloud } from "../_lib/gewichtung";
 import { melde } from "../_lib/auswertung";
 import { merkeInhalt } from "../_lib/inhalte";
+import SammelAccordion from "./SammelAccordion";
 import { sparsameMaschen, zaehleGefuellt, zufallsLayout } from "../_lib/flaechen";
 
 /** Leuchtende Web-Palette (wie die Perlen der KI-Story) — dokumentierte
@@ -279,8 +280,15 @@ export default function KnotenLandschaft({
   const [visited, setVisited] = useState<Set<number>>(new Set());
   /** Einsammel-Reihenfolge — die Karten bleiben in dieser Ordnung stehen. */
   const [gesammelt, setGesammelt] = useState<number[]>([]);
+  /** Welche Detail-Karte ist aufgeklappt (Accordion; null = keine). */
+  const [offeneKarte, setOffeneKarte] = useState<number | null>(null);
   /** Eingeloggte Verbindungen, Schlüssel `${anordnungsIndex}:${kantenIndex}`. */
   const [kantenAktiv, setKantenAktiv] = useState<Set<string>>(new Set());
+
+  // Immer die zuletzt eingesammelte Karte offen zeigen (Rest zugeklappt).
+  useEffect(() => {
+    setOffeneKarte(gesammelt.length ? gesammelt[gesammelt.length - 1] : null);
+  }, [gesammelt]);
 
   const anordnung = anordnungen[Math.min(modus, anordnungen.length - 1)];
 
@@ -835,21 +843,16 @@ export default function KnotenLandschaft({
               const k = knoten[idx];
               const neuste = pos === gesammelt.length - 1;
               return (
-                <li
+                <SammelAccordion
                   key={idx}
-                  className={
-                    "rounded-xl border p-md sm:p-lg " +
-                    (neuste
-                      ? "animate-frame-in border-tertiary/50 bg-tertiary-container/25"
-                      : pos % 2 === 0
-                      ? "border-outline-variant bg-surface-bright"
-                      : "border-outline-variant bg-surface-container-low")
-                  }
+                  nr={pos + 1}
+                  titel={k.titel}
+                  jahr={k.jahr}
+                  neuste={neuste}
+                  offen={offeneKarte === idx}
+                  onToggle={() => setOffeneKarte((o) => (o === idx ? null : idx))}
                 >
                   <div className="flex items-start gap-md">
-                    <span className="mt-xs flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-tertiary-container text-label-md text-on-tertiary-container">
-                      {pos + 1}
-                    </span>
                     {k.bild && (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img
@@ -860,17 +863,7 @@ export default function KnotenLandschaft({
                       />
                     )}
                     <div className="min-w-0">
-                      <p className="text-body-lg font-medium text-on-surface">
-                        {k.titel}
-                        {k.jahr && (
-                          <span className="ml-sm text-label-md font-normal text-tertiary">
-                            {k.jahr}
-                          </span>
-                        )}
-                      </p>
-                      <p className="mt-xs text-body-md text-on-surface-variant">
-                        {k.text}
-                      </p>
+                      <p className="text-body-md text-on-surface-variant">{k.text}</p>
                       {k.bild && (
                         <p className="mt-xs text-label-sm text-on-surface-variant opacity-70">
                           {k.bild.credit}
@@ -892,7 +885,7 @@ export default function KnotenLandschaft({
                       )}
                     </div>
                   </div>
-                </li>
+                </SammelAccordion>
               );
             })}
           </ol>

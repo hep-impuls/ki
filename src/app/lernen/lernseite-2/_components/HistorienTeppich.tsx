@@ -14,6 +14,7 @@ import { GlossarText } from "./Glossar";
 import { maschen as berechneMaschen, zaehleGefuellt } from "../_lib/flaechen";
 import { melde } from "../_lib/auswertung";
 import { merkeInhalt } from "../_lib/inhalte";
+import SammelAccordion from "./SammelAccordion";
 import { zieheGewichtungAusCloud } from "../_lib/gewichtung";
 
 /**
@@ -152,6 +153,11 @@ export default function HistorienTeppich({
   );
   const [besucht, setBesucht] = useState<Set<number>>(new Set());
   const [reihenfolge, setReihenfolge] = useState<number[]>([]);
+  /** Welche Detail-Karte ist aufgeklappt (Accordion; null = keine). */
+  const [offeneKarte, setOffeneKarte] = useState<number | null>(null);
+  useEffect(() => {
+    setOffeneKarte(reihenfolge.length ? reihenfolge[reihenfolge.length - 1] : null);
+  }, [reihenfolge]);
   /** Bewusst wieder weggeklickte Punkte — bleiben beim Spur-Restore draussen,
    *  damit die Leiste unten nicht überquillt (die Aktivität bleibt gezählt). */
   const abgewaehlt = useRef<Set<number>>(new Set());
@@ -490,29 +496,19 @@ export default function HistorienTeppich({
               const meta = FADEN_META[p.faden];
               const neuste = pos === reihenfolge.length - 1;
               return (
-                <li
+                <SammelAccordion
                   key={idx}
-                  className={
-                    "rounded-xl border p-md sm:p-lg " +
-                    (neuste
-                      ? "animate-frame-in border-tertiary/50 bg-tertiary-container/25"
-                      : pos % 2 === 0
-                        ? "border-outline-variant bg-surface-bright"
-                        : "border-outline-variant bg-surface-container-low")
-                  }
+                  nr={pos + 1}
+                  titel={p.titel}
+                  jahr={p.jahr}
+                  neuste={neuste}
+                  offen={offeneKarte === idx}
+                  onToggle={() => setOffeneKarte((o) => (o === idx ? null : idx))}
                 >
-                  <div className="flex items-start gap-md">
-                    <span className="mt-xs flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-tertiary-container text-label-md text-on-tertiary-container">
-                      {pos + 1}
-                    </span>
                     <div className="min-w-0">
-                      <p className="flex flex-wrap items-baseline gap-x-sm text-body-lg font-medium text-on-surface">
-                        {p.titel}
-                        <span className="text-label-md font-normal text-tertiary">{p.jahr}</span>
-                        <span className="flex items-center gap-xs text-label-sm font-normal text-on-surface-variant">
-                          <span className={`inline-block h-2.5 w-2.5 rounded-full ${meta.chip}`} />
-                          {meta.label}
-                        </span>
+                      <p className="flex items-center gap-xs text-label-sm text-on-surface-variant">
+                        <span className={`inline-block h-2.5 w-2.5 rounded-full ${meta.chip}`} />
+                        {meta.label}
                       </p>
                       <p className="mt-xs text-body-md text-on-surface">
                         <GlossarText text={p.text} />
@@ -549,8 +545,7 @@ export default function HistorienTeppich({
                         </div>
                       )}
                     </div>
-                  </div>
-                </li>
+                </SammelAccordion>
               );
             })}
           </ol>
