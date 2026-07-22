@@ -331,17 +331,30 @@ export default function Sternenkarte({ className = "" }: { className?: string })
                   {i + 1}
                 </span>
                 <span className={"h-2.5 w-2.5 flex-shrink-0 rounded-full " + p.area.fill.replace("fill-", "bg-")} />
-                <span className="min-w-0 flex-1 truncate text-body-sm text-on-surface" title={p.titel}>
-                  {p.titel}
-                </span>
-                {p.du && (
-                  <span className="flex flex-shrink-0 items-center gap-0.5 rounded-full bg-tertiary-container px-xs text-label-sm text-on-tertiary-container">
-                    <span className="material-symbols-outlined text-[13px]">check</span>
-                    angeklickt
+                {/* Titel + kleines «du»-Häkchen direkt daneben (nicht in der Zahlenspalte) */}
+                <span className="flex min-w-0 flex-1 items-center gap-xs">
+                  <span
+                    className={
+                      "truncate text-body-sm " +
+                      (p.du ? "font-medium text-on-surface" : "text-on-surface")
+                    }
+                    title={p.titel}
+                  >
+                    {p.titel}
                   </span>
-                )}
+                  {p.du && (
+                    <span
+                      className="material-symbols-outlined flex-shrink-0 text-[15px] text-tertiary"
+                      title="von dir angeklickt"
+                      aria-label="von dir angeklickt"
+                    >
+                      check_circle
+                    </span>
+                  )}
+                </span>
+                {/* Zahlenspalte: fixe Breite, rechtsbündig */}
                 <span
-                  className="flex-shrink-0 text-label-sm text-on-surface-variant"
+                  className="w-16 flex-shrink-0 text-right text-label-sm text-on-surface-variant"
                   style={{ fontFamily: "ui-monospace, monospace" }}
                 >
                   {ansicht === "bekannt"
