@@ -188,26 +188,34 @@ export default function Lernseite2PhilosophischePerspektive() {
           <h2 className="text-headline-lg text-on-surface">
             Der Teppich des Wandels
           </h2>
-          <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
-            Geschichte verläuft nicht als eine Linie von Epoche zu Epoche. Vier
-            Fäden laufen nebeneinander durch die Zeit:{" "}
-            <strong className="text-on-surface">Technologien</strong>, die
-            eingeführt werden,{" "}
-            <strong className="text-on-surface">Entdeckungen</strong>, die das
-            Weltbild verschieben,{" "}
-            <strong className="text-on-surface">gesellschaftliche Ereignisse</strong>,
-            die alles umwälzen — und{" "}
-            <strong className="text-on-surface">kulturelle Praxen</strong> wie
-            Ackerbau, Gewürzhandel oder Kaffeehaus-Gespräch, in denen Menschen
-            ihr Zusammenleben ordnen. Der Teppich beginnt bei Pflug, Rad und
-            Schrift, spannt sich über die ganze Welt — Mesopotamien, Ägypten,
-            Indien, China, Bagdad, Europa — und reicht bis zur KI. Manchmal
-            kreuzen sich die Fäden, manchmal laufen sie allein; an einigen
-            Punkten wartet ein{" "}
-            <strong className="text-on-surface">Verunsicherungs-Stopp</strong>,
-            der zur passenden Epoche im Abschnitt «Philosophie in Zeiten der
-            Verunsicherung» weiter unten führt.
-          </p>
+          <div className="mt-sm max-w-4xl space-y-sm text-body-lg text-on-surface-variant">
+            <p>
+              Der Teppich zeigt Ereignisse, die{" "}
+              <strong className="text-on-surface">technologisch</strong>,{" "}
+              <strong className="text-on-surface">gesellschaftlich</strong>,{" "}
+              <strong className="text-on-surface">kulturell</strong> oder{" "}
+              <strong className="text-on-surface">erfinderisch-entdeckerisch</strong>{" "}
+              sind — als vier Fäden, die nebeneinander durch die Zeit laufen,
+              von Pflug, Rad und Schrift bis zur KI. Das Entscheidende: Sie
+              stehen in <strong className="text-on-surface">Wechselwirkung</strong>,
+              sie hängen voneinander ab. Eisenbahn und Schifffahrt etwa hätten
+              sich nie so verbreitet, wenn nicht auch kulturell das Interesse
+              bestanden hätte, zu reisen, Handel zu treiben und neue Länder zu
+              besitzen.
+            </p>
+            <p>
+              Wozu das Ganze? Die Beschäftigung mit dem Teppich bereitet darauf
+              vor, <strong className="text-on-surface">technologische
+              Errungenschaften, Verunsicherungsphänomene der Gesellschaft und
+              philosophische Orientierungsleistungen miteinander zu
+              verknüpfen</strong> — an einigen Punkten wartet dafür ein{" "}
+              <strong className="text-on-surface">Verunsicherungs-Stopp</strong>,
+              der zur passenden Epoche weiter unten führt. Diese Verknüpfung
+              leisten auch die <strong className="text-on-surface">Bilder</strong>:
+              Bildende Kunst hilft neben der Philosophie, komplexe Zusammenhänge
+              und Zeitphänomene in visueller Vereinfachung auszudrücken.
+            </p>
+          </div>
         </AbschnittKopf>
         <Aufgabe className="mt-md max-w-4xl">
           Tippe die Punkte an — jeder erzählt seine Geschichte, und Stück für
