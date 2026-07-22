@@ -488,13 +488,28 @@ export default function Lernseite2VorhangAuf() {
           </p>
         </Ausklapptext>
         <Aufgabe className="mt-md max-w-4xl">
-          Das ganze Gewebe ist sichtbar. Über die Stichworte oben hebst du
-          einzelne Punkte hervor, und ihre Verbindungen färben sich ein. Tippe
-          einen Punkt an, um seine Geschichte zu lesen. Unter jeder Karte kannst
-          du «Mehr lesen» aufklappen und mit «Das verfolge ich weiter» ein
-          Merkzeichen setzen. Im Gewebe lassen sich die Punkte verschieben. Die
-          Ansicht «Zeitlich» reiht die hervorgehobenen Punkte als Perlenschnur
-          von früher nach heute.
+          <p>
+            <strong className="text-on-surface">Worum es hier geht:</strong> Die
+            KI ist nicht aus dem Nichts entstanden. Zwei alte Linien laufen auf
+            sie zu. Die eine ist der Traum vom künstlichen Wesen, die andere ist
+            die Technik des Rechnens. In diesem Gewebe suchst du die Spuren
+            beider Linien.
+          </p>
+          <p className="mt-sm">
+            <strong className="text-on-surface">So gehst du vor:</strong> Das
+            ganze Gewebe ist sichtbar. Tippe einen Punkt an, dann erscheint
+            seine Geschichte. Unter jeder Karte kannst du mit «Mehr lesen» den
+            Hintergrund vertiefen und mit «Das verfolge ich weiter» festhalten,
+            was dich besonders interessiert. Über die Stichworte oben hebst du
+            einzelne Punkte hervor. Mit der Ansicht «Zeitlich» ordnest du sie von
+            früher nach heute.
+          </p>
+          <p className="mt-sm">
+            <strong className="text-on-surface">Dein Ziel:</strong> Du musst
+            nicht alle zweiundzwanzig Stationen öffnen. Geh dem nach, was dich
+            neugierig macht, und achte darauf, wie die erzählten Träume und die
+            reale Technik am Ende in der heutigen KI zusammenlaufen.
+          </p>
         </Aufgabe>
         <InfoPunkt className="mt-md" label="Muss ich allen 22 nachgehen?">
           Nein, du musst nicht jede Station öffnen. Geh dem nach, was dich
@@ -568,11 +583,11 @@ export default function Lernseite2VorhangAuf() {
               kat: "erzaehlung",
               mmf: "fiktion",
               jahr: "16. Jh.",
-              text: "Leben aus der Retorte, im Labor erschaffen. Der Traum, Schöpfung technisch herzustellen.",
+              text: "Menschen träumten davon, im Labor selbst Leben zu erschaffen. Ein Homunkulus (lateinisch für «kleiner Mensch») ist so ein künstliches Wesen, das in einem Glaskolben heranwachsen sollte.",
               geschichte:
-                "Der Arzt und Alchemist Paracelsus beschrieb im 16. Jahrhundert ein Rezept, um in der Retorte ein winziges künstliches Menschlein zu «zeugen». In Goethes «Faust II» (1832) leuchtet der Homunkulus als kluges Wesen in der gläsernen Phiole.",
+                "Die Idee stammt aus der Alchemie. Das war eine frühe Form der Naturforschung und die Vorläuferin der heutigen Chemie. Um das Jahr 1520 beschrieb der Arzt Paracelsus ein Rezept, um in einem Glaskolben (der «Retorte») ein winziges künstliches Menschlein zu erzeugen. Der Philosoph Ernst Bloch nannte solche Eingriffe später die «älteste gewollte Form von Technik».",
               mehr:
-                "Im Homunkulus verschiebt sich der Traum: Nicht mehr ein Gott oder ein Rabbi belebt Totes, sondern der Mensch als Wissenschaftler und Konstrukteur. Damit rückt die Schöpfung ins Labor — und die Frage, wer für das Gemachte Verantwortung trägt, wird zu einer menschlichen.",
+                "Berühmt wurde der Homunkulus durch Johann Wolfgang von Goethe, den bekanntesten deutschen Dichter. In seinem Bühnenstück «Faust», dem grossen deutschen Drama über einen Gelehrten, der nach allem Wissen strebt, tritt im zweiten Teil (1832) ein Homunkulus auf. Dieses künstliche Wesen leuchtet in einer gläsernen Flasche und kann sogar mitdenken und sprechen. Für die Geschichte der KI ist der Homunkulus wichtig, weil sich hier der Traum verschiebt. Nicht mehr ein Gott oder ein Zauberer belebt Totes, sondern der Mensch selbst will als Forscher Leben herstellen. Damit rückt die Schöpfung ins Labor. Und es entsteht eine Frage, die uns bei der KI wieder begegnet: Wer trägt die Verantwortung für das, was der Mensch macht?",
             },
             {
               titel: "Frühe Automaten",
