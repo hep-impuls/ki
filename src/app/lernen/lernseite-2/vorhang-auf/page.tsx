@@ -547,11 +547,11 @@ export default function Lernseite2VorhangAuf() {
               kat: "erzaehlung",
               mmf: "fiktion",
               jahr: "~8. Jh. v. Chr.",
-              text: "Schon in der griechischen Antike träumte man von künstlichen Wesen aus Metall. Der Schmiedegott Hephaistos schuf sich denkende Helferinnen aus Gold.",
+              text: "Am Anfang steht ein Traum, so alt wie die ältesten Erzählungen des Abendlandes. Schon in der griechischen Antike stellte man sich künstliche Wesen aus Metall vor, die denken und dienen. Der Schmiedegott Hephaistos schuf sich goldene Helferinnen, und der bronzene Riese Talos bewachte eine ganze Insel. Der Wunsch, Verstand in totes Material zu giessen, ist also uralt.",
               geschichte:
-                "In Homers «Ilias» (um das 8. Jahrhundert v. Chr.) dienen dem Schmiedegott goldene Mägde, die Verstand, Stimme und Kraft besitzen, sowie selbstfahrende Dreifüsse. Und Talos, der bronzene Riese, umkreiste als Wächter die Insel Kreta — ein Automat, lange bevor es das Wort dafür gab.",
+                "In Homers «Ilias», dem rund 2800 Jahre alten Heldengedicht, dienen dem Schmiedegott goldene Mägde. Sie besitzen Verstand, Stimme und Kraft, dazu kommen selbstfahrende Dreifüsse, eine Art antiker Roboter. Talos, der bronzene Riese, umkreiste als Wächter die Insel Kreta. Er war ein Automat, lange bevor es das Wort dafür überhaupt gab.",
               mehr:
-                "Diese Mythen zeigen: Die Idee gebauter, quasi-lebendiger Diener und Wächter ist rund 3000 Jahre alt. Schon damals verband sich damit beides — die Faszination der nützlichen Kraft und die Angst vor dem Wächter, der ausser Kontrolle gerät und Fremde mit glühendem Körper erschlägt.",
+                "Diese Mythen zeigen, wie alt die Idee gebauter, fast lebendiger Diener und Wächter ist. Sie reicht rund 3000 Jahre zurück. Schon damals verband sich damit ein Doppelgefühl. Auf der einen Seite steht die Faszination der nützlichen Kraft. Auf der anderen Seite steht die Angst vor dem Wächter, der ausser Kontrolle gerät und Fremde mit glühendem Körper erschlägt. Genau dieses Doppelgefühl aus Staunen und Furcht begleitet die KI bis heute.",
             },
             {
               titel: "Yan Shi's Automat",
@@ -559,11 +559,11 @@ export default function Lernseite2VorhangAuf() {
               kat: "erzaehlung",
               mmf: "fiktion",
               jahr: "~4. Jh. n. Chr.",
-              text: "Auch in China erzählt man früh von einem künstlichen Menschen. Ein Handwerker führt dem König eine täuschend lebendige Figur vor.",
+              text: "Der Traum vom künstlichen Menschen ist nicht nur europäisch, sondern kehrt in vielen Kulturen wieder. Auch in China erzählte man früh von einer täuschend lebendigen Figur. Ein Handwerker führt sie dem König vor, und niemand erkennt zuerst, dass sie gebaut ist. Schon hier klingt die Frage an, wo die Grenze zwischen echtem und nachgeahmtem Leben verläuft.",
               geschichte:
-                "Im daoistischen «Liezi» (Text um das 4. Jahrhundert n. Chr., die Erzählung spielt weit früher) präsentiert der Mechaniker Yan Shi dem König Mu von Zhou einen künstlichen Menschen, der geht, singt und den Hofdamen zuzwinkert. Als der König Betrug vermutet, zerlegt Yan Shi ihn — er besteht aus Leder, Holz, Leim und Lack.",
+                "Die Geschichte steht im daoistischen Text «Liezi», der um das 4. Jahrhundert entstand, während die Erzählung selbst viel früher spielt. Der Mechaniker Yan Shi präsentiert dem König Mu von Zhou einen künstlichen Menschen. Die Figur geht, singt und zwinkert den Hofdamen zu. Als der König einen Betrug vermutet, zerlegt Yan Shi sie und zeigt, dass sie nur aus Leder, Holz, Leim und Lack besteht.",
               mehr:
-                "Es ist eine der frühesten Automaten-Erzählungen überhaupt — und erstaunlich modern: Sie handelt vom Verdacht, ob hinter der Maschine nicht doch ein Mensch stecke, und von der Grenze zwischen echtem und nachgeahmtem Leben. Dieselbe Frage kehrt beim Schachtürken und bei heutiger KI wieder.",
+                "Es ist eine der frühesten Automaten-Erzählungen überhaupt und wirkt erstaunlich modern. Sie handelt vom Verdacht, ob hinter der Maschine nicht doch heimlich ein Mensch steckt. Und sie handelt von der Grenze zwischen echtem und nachgeahmtem Leben. Dieselbe Frage kehrt später beim Schachtürken wieder und stellt sich heute bei der KI erneut.",
             },
             {
               titel: "Der Golem",
@@ -571,11 +571,11 @@ export default function Lernseite2VorhangAuf() {
               kat: "erzaehlung",
               mmf: "fiktion",
               jahr: "Prag, 16. Jh.",
-              text: "Aus Lehm geformt, durch ein Schriftzeichen belebt: der Golem. Die Ursage vom Menschen, der einem Ding Leben einhaucht.",
+              text: "Aus Lehm geformt und durch ein Schriftzeichen zum Leben erweckt, ist der Golem eine der eindrücklichsten Sagen vom künstlichen Wesen. Sie stammt aus der jüdischen Überlieferung und wurde vor allem in Prag berühmt. Der Golem ist ein stummer Diener, der gehorcht, aber nicht selbst urteilt. Er ist ein frühes Sinnbild für etwas, das der Mensch in Gang setzt und dann kaum noch bändigen kann.",
               geschichte:
-                "Die Prager Sage schreibt Rabbi Löw (dem Maharal, ~1520–1609) einen Golem zu, den er aus Lehm formt und durch das Wort «emet» (Wahrheit) auf der Stirn erweckt — löscht man einen Buchstaben, erlischt er. Als die Gestalt ihm entgleitet, muss er sie stilllegen.",
+                "Die Prager Sage schreibt Rabbi Löw, genannt der Maharal, einen Golem zu. Er formt ihn aus Lehm und erweckt ihn durch das Wort «emet», das Wahrheit bedeutet, auf der Stirn. Löscht man einen Buchstaben, so erlischt die Figur wieder. Als der Golem ihm entgleitet, muss der Rabbi ihn stilllegen.",
               mehr:
-                "Die Idee ist älter als Prag: Schon der Talmud (Spätantike) erzählt, der Gelehrte Rava habe einen künstlichen Menschen erschaffen. Der Golem gilt oft als Urbild der KI — belebt durch ein Zeichen wie ein Programm, fleissig, aber ohne eigenes Urteil; das Gleichnis warnt vor dem, was man in Gang setzt, ohne es hüten zu können.",
+                "Die Idee ist älter als Prag. Schon der Talmud aus der Spätantike erzählt, der Gelehrte Rava habe einen künstlichen Menschen erschaffen. Der Golem gilt oft als Urbild der KI, denn er wird durch ein Zeichen belebt, ähnlich wie ein Programm durch seinen Code. Er ist fleissig, aber ohne eigenes Urteil. Das Gleichnis warnt vor dem, was man in Gang setzt, ohne es hüten zu können.",
             },
             {
               titel: "Der Homunkulus",
@@ -595,11 +595,11 @@ export default function Lernseite2VorhangAuf() {
               kat: "mechanik",
               mmf: "maschine",
               jahr: "1770",
-              text: "Der «Schachtürke» scheint zu denken — und täuscht ganz Europa. Mechanik weckt erstmals den Verdacht, Maschinen könnten klug sein.",
+              text: "Im 18. Jahrhundert staunte Europa über kunstvolle Maschinen, die Menschen und Tiere nachahmten. Der berühmte «Schachtürke» schien sogar zu denken und schlug reihenweise seine Gegner. In Wahrheit sass ein Mensch versteckt im Inneren des Kastens. Zum ersten Mal entstand breit der Verdacht, eine Maschine könnte klug sein, und man sieht daran, wie leicht wir das glauben.",
               geschichte:
-                "Wolfgang von Kempelens Schach spielender «Türke» schlug ab 1770 Fürsten und Kaiser — im Innern sass ein verborgener Mensch. Europa stritt jahrzehntelang darüber, ob eine Maschine denken könne; die Täuschung bewies vor allem eines: wie bereitwillig wir es glauben.",
+                "Wolfgang von Kempelens Schach spielender «Türke» schlug ab 1770 Fürsten und Kaiser. Im Innern des Kastens sass jedoch ein verborgener Mensch und lenkte die Figur. Europa stritt trotzdem jahrzehntelang darüber, ob eine Maschine denken könne. Die Täuschung bewies vor allem, wie bereitwillig wir Maschinen einen Verstand zutrauen.",
               mehr:
-                "Das 18. Jahrhundert war das Zeitalter der Automaten: Vaucansons «Ente» verdaute scheinbar, Jaquet-Droz baute schreibende Puppen. Der Schachtürke trieb es auf die Spitze — und wurde erst nach Jahrzehnten als Trick entlarvt. Die Lehre: Wir schreiben Maschinen sehr schnell echtes Denken zu, auch wo keines ist.",
+                "Das 18. Jahrhundert war das Zeitalter der Automaten. Vaucansons mechanische «Ente» tat so, als würde sie fressen und verdauen, und Jaquet-Droz baute schreibende Puppen. Der Schachtürke trieb dieses Spiel auf die Spitze und wurde erst nach Jahrzehnten als Trick entlarvt. Die Lehre daraus gilt bis heute. Wir schreiben Maschinen sehr schnell echtes Denken zu, auch dort, wo gar keines ist.",
             },
             {
               titel: "Frankenstein",
@@ -607,11 +607,11 @@ export default function Lernseite2VorhangAuf() {
               kat: "erzaehlung",
               mmf: "fiktion",
               jahr: "1818",
-              text: "Das erschaffene Wesen entgleitet seinem Schöpfer. Die Literatur stellt die Verantwortungsfrage — lange vor der Technik.",
+              text: "Mary Shelley schrieb mit «Frankenstein» einen der ersten grossen Science-Fiction-Romane und stellte darin eine bis heute gültige Frage. Ein Forscher erschafft ein lebendiges Wesen und stösst es im Moment des Gelingens entsetzt von sich. Nicht die Kreatur ist das eigentliche Ungeheuer, sondern die verweigerte Verantwortung. Damit stellt die Literatur die Verantwortungsfrage lange bevor die Technik sie stellte.",
               geschichte:
-                "Mary Shelleys Roman von 1818 lässt Victor Frankenstein ein Wesen erschaffen, das er im Augenblick des Gelingens verstösst. Das eigentliche Ungeheuer der Geschichte ist nicht die Kreatur, sondern die verweigerte Verantwortung — eine Frage, die seither jede Schöpfungstechnik begleitet.",
+                "Mary Shelleys Roman von 1818 lässt Victor Frankenstein ein Wesen aus toter Materie erschaffen. Kaum lebt es, verstösst er es aus Ekel und Angst. Das Wesen wird erst durch diese Zurückweisung und die Einsamkeit zum Rächer. Die Geschichte fragt also nicht, ob man Leben schaffen darf, sondern wer für das Geschaffene einsteht.",
               mehr:
-                "Mary Shelley schrieb den Roman mit achtzehn Jahren; der Untertitel «Der moderne Prometheus» verweist auf den Titanen, der den Menschen das Feuer brachte und dafür büsste. Frankenstein verschiebt die Warnung von der Schöpfung zur Fürsorge: Das Unglück kommt nicht daher, dass das Wesen erschaffen, sondern dass es verstossen und allein gelassen wird.",
+                "Mary Shelley schrieb den Roman mit erst achtzehn Jahren. Der Untertitel «Der moderne Prometheus» verweist auf den Titanen der griechischen Sage, der den Menschen das Feuer brachte und dafür schwer büssen musste. Frankenstein verschiebt die Warnung von der Schöpfung zur Fürsorge. Das Unglück entsteht nicht dadurch, dass das Wesen erschaffen wird, sondern dadurch, dass es verstossen und allein gelassen wird.",
             },
             {
               titel: "Rechenmaschinen",
@@ -619,11 +619,11 @@ export default function Lernseite2VorhangAuf() {
               kat: "mechanik",
               mmf: "maschine",
               jahr: "1673–1843",
-              text: "Von Leibniz' Rechenrad zu Babbage und Lovelace: Die programmierbare Maschine wird gedacht. Denken als Rechnen wird vorstellbar.",
+              text: "Neben dem Traum vom künstlichen Wesen läuft eine zweite Linie, die des Rechnens. Im 17. und 19. Jahrhundert bauten Gelehrte Maschinen, die selbständig rechnen sollten. Von Leibniz' Rechenrad bis zu Babbages programmierbarem Entwurf wird die Idee greifbar, dass sich Denken in klare Schritte zerlegen lässt. Damit wird zum ersten Mal vorstellbar, dass eine Maschine Aufgaben des Geistes übernimmt.",
               geschichte:
-                "Leibniz baute um 1673 eine Maschine für alle vier Grundrechenarten und träumte davon, Streitfragen durchs Rechnen zu entscheiden. Babbage entwarf die programmierbare Analytical Engine; Ada Lovelace schrieb 1843 dazu das erste Programm — und hielt zugleich fest, die Maschine könne nur, was man ihr aufzutragen weiss.",
+                "Der Gelehrte Gottfried Wilhelm Leibniz baute um 1673 eine Maschine für alle vier Grundrechenarten. Er träumte davon, Streitfragen künftig durch Rechnen zu entscheiden. Charles Babbage entwarf im 19. Jahrhundert die «Analytical Engine», eine frei programmierbare Rechenmaschine. Ada Lovelace schrieb 1843 das erste Programm dafür und hielt zugleich fest, dass die Maschine nur ausführen kann, was man ihr aufträgt.",
               mehr:
-                "Leibniz träumte von einer «characteristica universalis», mit der sich jeder Streit durchs Rechnen klären liesse — «Lasst uns rechnen!». Babbages «Analytical Engine» (ab 1837) war als universelle, programmierbare Maschine gedacht; Ada Lovelace erkannte, dass sie nicht nur Zahlen, sondern beliebige Symbole verarbeiten könnte — und dass sie doch nichts «von sich aus» hervorbringe.",
+                "Leibniz träumte von einer allgemeinen Zeichensprache, mit der sich jeder Streit durch Rechnen klären liesse, nach dem Leitwort «Lasst uns rechnen». Babbages «Analytical Engine» war ab 1837 als universelle, programmierbare Maschine gedacht, wurde zu seinen Lebzeiten aber nie fertig gebaut. Ada Lovelace erkannte, dass eine solche Maschine nicht nur Zahlen, sondern beliebige Zeichen verarbeiten könnte. Zugleich betonte sie, dass die Maschine nichts von sich aus hervorbringt.",
             },
             {
               titel: "Der Algorithmus wird ausführbar",
@@ -631,11 +631,11 @@ export default function Lernseite2VorhangAuf() {
               kat: "regeln",
               mmf: "maschine",
               jahr: "1936–1950er",
-              text: "Ein Algorithmus ist eine Schritt-für-Schritt-Anleitung zum Rechnen. Mit den ersten Computern wird er ausführbar — die Maschine arbeitet das Verfahren selbsttätig ab.",
+              text: "Ein Algorithmus ist nichts anderes als eine genaue Schritt-für-Schritt-Anleitung, um eine Aufgabe zu lösen. Solche Anleitungen kennt die Menschheit seit der Antike. Mit den ersten Computern aber wird der Algorithmus ausführbar, denn nun arbeitet eine Maschine das Verfahren selbsttätig ab. Damit wird aus einer Idee auf Papier eine Kraft, die selbständig handelt.",
               geschichte:
-                "Das Wort geht auf den Gelehrten al-Chwarizmi (~820) zurück, Verfahren wie Euklids Algorithmus sind noch älter. Doch erst Alan Turings gedankliche «Maschine» (1936) und die ersten elektronischen Rechner der 1940er-Jahre machten Algorithmen zu etwas, das eine Maschine Schritt für Schritt selbst ausführt — nicht mehr ein Mensch mit Papier und Bleistift.",
+                "Das Wort «Algorithmus» geht auf den Gelehrten al-Chwarizmi zurück, der um 820 in Bagdad wirkte, und die Verfahren selbst sind noch viel älter. Erst Alan Turings gedankliche «Maschine» von 1936 und die ersten elektronischen Rechner der 1940er-Jahre veränderten alles. Von da an führte nicht mehr ein Mensch mit Papier und Bleistift die Schritte aus, sondern die Maschine selbst. Der Algorithmus wurde damit vom blossen Rezept zum Motor der Rechenmaschine.",
               mehr:
-                "Turing zeigte 1936, dass eine einzige, universelle Maschine jedes berechenbare Verfahren ausführen kann — die theoretische Grundlage jedes Computers. 1950 fragte er in «Computing Machinery and Intelligence», ob Maschinen denken können, und schlug das «Imitationsspiel» (den Turing-Test) vor. Damit wird der Algorithmus vom Rechenrezept zum Motor der KI: Alles, was Computer und später KI tun, ist im Kern das Abarbeiten von Algorithmen.",
+                "Turing zeigte 1936, dass eine einzige, universelle Maschine jedes berechenbare Verfahren ausführen kann. Das ist die theoretische Grundlage jedes Computers. 1950 fragte er in seinem Aufsatz «Computing Machinery and Intelligence», ob Maschinen denken können, und schlug dafür ein Nachahmungsspiel vor, den heutigen Turing-Test. So wurde der Algorithmus zum Kern der KI. Denn alles, was Computer und später KI tun, ist im Grunde das Abarbeiten von Algorithmen.",
             },
             {
               titel: "Geburt der KI",
@@ -643,11 +643,11 @@ export default function Lernseite2VorhangAuf() {
               kat: "regeln",
               mmf: "mensch",
               jahr: "1956",
-              text: "In Dartmouth wird der Begriff «Künstliche Intelligenz» geprägt. Aus alten Träumen wird ein Forschungsprogramm.",
+              text: "1956 bekommt der alte Traum endlich einen Namen. An einem Sommertreffen am Dartmouth College in den USA prägen Forscher den Begriff «Künstliche Intelligenz». Aus verstreuten Ideen und Erzählungen wird ein eigenes Forschungsprogramm mit grossen Zielen. Die Fachleute rechneten damals mit Durchbrüchen innert weniger Jahre.",
               geschichte:
-                "Im Sommer 1956 trafen sich am Dartmouth College Forscher um John McCarthy und Marvin Minsky mit dem Anspruch, jede Facette der Intelligenz maschinell nachzubilden. Der alte Traum bekam einen Namen und ein Budget — und man rechnete mit Durchbrüchen binnen weniger Jahre.",
+                "Im Sommer 1956 trafen sich am Dartmouth College Forscher um John McCarthy und Marvin Minsky. Ihr Anspruch war es, jede Facette der Intelligenz durch Maschinen nachzubilden. Der alte Traum bekam damit einen Namen und Geld für die Forschung. Man erwartete rasche Erfolge.",
               mehr:
-                "Der Förderantrag von 1955 behauptete kühn, jeder Aspekt des Lernens lasse sich so präzise beschreiben, dass eine Maschine ihn nachahmen könne. Aus der Konferenz stammt der Name «Artificial Intelligence» — und ein Optimismus, der schon bald mit der Wirklichkeit kollidierte.",
+                "Der Förderantrag von 1955 behauptete kühn, jeder Aspekt des Lernens lasse sich so genau beschreiben, dass eine Maschine ihn nachahmen könne. Aus dieser Konferenz stammt der englische Name «Artificial Intelligence». Mit ihm entstand auch ein grosser Optimismus. Dieser stiess allerdings schon bald mit der Wirklichkeit zusammen.",
             },
             {
               titel: "Symbolische KI",
@@ -655,11 +655,11 @@ export default function Lernseite2VorhangAuf() {
               kat: "regeln",
               mmf: "maschine",
               jahr: "1956–1970er",
-              text: "Intelligenz als Regelwerk: WENN–DANN-Systeme dominieren. Logik gilt als Königsweg.",
+              text: "Die erste grosse KI-Richtung verstand Denken als das Anwenden klarer Regeln. Wissen wurde in Wenn-dann-Sätze gefasst, und Schliessen bedeutete, aus Regeln neue Sätze abzuleiten. In eng begrenzten Welten wie dem Schach funktionierte das erstaunlich gut. An der offenen, mehrdeutigen Alltagswelt aber scheiterte dieser Weg.",
               geschichte:
-                "Die frühe KI baute Intelligenz aus Symbolen und Logik: Wissen wurde in Regeln gefasst, Schliessen als Ableiten verstanden. In engen Welten — Schach, Logikbeweise, Klötzchenwelten — glänzte der Ansatz; an der offenen, mehrdeutigen Alltagswelt biss er sich fest.",
+                "Die frühe KI baute Intelligenz aus Symbolen und Logik auf. Wissen wurde in Regeln gefasst, und Denken wurde als folgerichtiges Ableiten verstanden. In engen Welten wie Schach, Logikbeweisen oder einfachen Klötzchen-Aufgaben glänzte der Ansatz. An der offenen, mehrdeutigen Alltagswelt aber biss er sich fest.",
               mehr:
-                "Programme wie der «Logic Theorist» oder der «General Problem Solver» bewiesen Sätze und lösten Rätsel durch Regelanwendung. Der Ansatz — später «Good Old-Fashioned AI» genannt — setzt darauf, dass Intelligenz aus manipulierbaren Symbolen besteht. Er scheiterte an allem, was Kontext, Mehrdeutigkeit und Alltagswissen verlangt.",
+                "Programme wie der «Logic Theorist» oder der «General Problem Solver» bewiesen mathematische Sätze und lösten Rätsel durch reine Regelanwendung. Später nannte man diesen Ansatz «Good Old-Fashioned AI», also die gute alte KI. Er setzt darauf, dass Intelligenz aus Zeichen besteht, die man nach festen Regeln umformt. Er scheiterte an allem, was Zusammenhang, Mehrdeutigkeit und Alltagswissen verlangt.",
             },
             {
               titel: "Expertensysteme",
@@ -667,11 +667,11 @@ export default function Lernseite2VorhangAuf() {
               kat: "regeln",
               mmf: "maschine",
               jahr: "1970er–80er",
-              text: "Fachwissen wird in Regeln gegossen und löst Spezialaufgaben. Die erhoffte breite Intelligenz bleibt aus.",
+              text: "In den 1970er- und 1980er-Jahren setzte man grosse Hoffnungen auf sogenannte Expertensysteme. Fachwissen von Ärztinnen oder Ingenieuren wurde in tausende Regeln gegossen, damit der Computer Spezialaufgaben löst. In ihrer Nische waren diese Systeme durchaus stark. Die erhoffte breite, allgemeine Intelligenz aber blieb aus.",
               geschichte:
-                "Systeme wie MYCIN gossen in den 1970er- und 80er-Jahren das Wissen von Fachleuten in Tausende Regeln — etwa für die Diagnose von Infektionen. In ihrer Nische stark, blieben sie teuer im Unterhalt und starr gegenüber allem, was in keiner Regel stand.",
+                "Systeme wie MYCIN gossen das Wissen von Fachleuten in tausende Wenn-dann-Regeln, etwa für die Diagnose von Infektionen. In ihrem engen Gebiet waren sie nützlich. Doch sie blieben teuer im Unterhalt. Und sie waren starr gegenüber allem, was in keiner Regel stand.",
               mehr:
-                "In der Blüte der 1980er investierten Firmen und Staaten Milliarden — Japans «Fifth Generation Project» war das bekannteste. Doch Wissen liess sich nur mühsam von Hand in Regeln fassen, und die Systeme konnten nicht dazulernen. Als der Aufwand den Nutzen überstieg, brach der Markt ein.",
+                "In der Blüte der 1980er-Jahre investierten Firmen und Staaten Milliarden, am bekanntesten war Japans «Fifth Generation Project». Das Wissen liess sich jedoch nur mühsam von Hand in Regeln fassen. Und die Systeme konnten nicht aus Erfahrung dazulernen. Als der Aufwand den Nutzen überstieg, brach der Markt zusammen.",
             },
             {
               titel: "KI-Winter",
@@ -679,11 +679,11 @@ export default function Lernseite2VorhangAuf() {
               kat: "regeln",
               mmf: "mensch",
               jahr: "1974–1993",
-              text: "Enttäuschte Erwartungen: Geld und Glaube frieren ein. Die grossen Versprechen überwintern.",
+              text: "Zweimal in ihrer Geschichte galt die KI schon als gescheitert. Wenn die grossen Versprechen ausblieben, zogen sich Geldgeber und Öffentlichkeit enttäuscht zurück. Man nennt diese kalten Phasen «KI-Winter», weil Forschungsgelder und Vertrauen gleichsam einfroren. Beide Male überwinterten die Ideen und kehrten später mit einem neuen Ansatz zurück.",
               geschichte:
-                "Als die grossen Versprechen ausblieben, froren Forschungsgelder ein: Kritische Berichte und gescheiterte Projekte liessen den Glauben an die KI abkühlen. Der Begriff war zeitweise so belastet, dass Forschende ihre Arbeit lieber anders nannten.",
+                "Als die versprochenen Durchbrüche ausblieben, froren die Forschungsgelder ein. Kritische Berichte und gescheiterte Projekte liessen den Glauben an die KI abkühlen. Der Begriff war zeitweise so belastet, dass Forschende ihre Arbeit lieber anders nannten. Aus «Künstlicher Intelligenz» wurde dann zum Beispiel schlicht «Datenanalyse».",
               mehr:
-                "«KI-Winter» heissen die Phasen, in denen Förderung und Erwartungen einbrachen — ausgelöst unter anderem durch den kritischen Lighthill-Report (1973) und später den Zusammenbruch des Expertensystem-Marktes. Zweimal galt die KI als gescheitert — und kehrte doch zurück, jedes Mal mit einem neuen Ansatz.",
+                "«KI-Winter» heissen die Phasen, in denen Förderung und Erwartungen zugleich einbrachen. Ausgelöst wurden sie unter anderem durch den kritischen Lighthill-Report von 1973 und später durch den Zusammenbruch des Marktes für Expertensysteme. Zweimal schien die KI am Ende. Und zweimal kehrte sie zurück, jedes Mal mit einer neuen Grundidee.",
             },
             {
               titel: "Statistische KI",
@@ -691,11 +691,11 @@ export default function Lernseite2VorhangAuf() {
               kat: "daten",
               mmf: "mensch",
               jahr: "1990er",
-              text: "Die Wende: Maschinen lernen aus Beispielen statt aus Regeln. Daten werden wichtiger als Logik.",
+              text: "In den 1990er-Jahren kam die grosse Wende. Statt Regeln von Hand zu schreiben, liess man Maschinen aus vielen Beispielen selbst lernen. Damit wurden die Daten wichtiger als die aufgeschriebene Logik. Die KI begann, Muster zu erraten, statt starre Vorschriften zu befolgen.",
               geschichte:
-                "Statt Regeln von Hand zu schreiben, liess man Maschinen ab den 1990er-Jahren Muster aus Beispielen lernen — Spam erkennen, Handschrift lesen, Sprache erraten. Die Wende: Nicht mehr das aufgeschriebene Wissen der Fachleute zählte, sondern die Menge und Qualität der Daten.",
+                "Ab den 1990er-Jahren lernten Maschinen Muster aus Beispielen, etwa um Spam zu erkennen, Handschrift zu lesen oder Sprache zu erraten. Nicht mehr das aufgeschriebene Wissen der Fachleute war entscheidend, sondern die Menge und die Qualität der Daten. Das war ein tiefer Bruch mit der regelbasierten KI. Der Erfolg gab dem neuen Weg recht.",
               mehr:
-                "Statistische Verfahren lernen Wahrscheinlichkeiten aus Beispielen, statt Regeln vorgegeben zu bekommen. Mit wachsender Rechenkraft wurde das überlegen — sichtbar 1997, als IBMs «Deep Blue» den Schachweltmeister Kasparow schlug: nicht durch Verstehen, sondern durch Rechnen und Erfahrung.",
+                "Statistische Verfahren lernen Wahrscheinlichkeiten aus Beispielen, statt feste Regeln vorgesetzt zu bekommen. Mit wachsender Rechenkraft wurde dieser Weg überlegen. Sichtbar wurde das 1997, als IBMs Schachcomputer «Deep Blue» den Weltmeister Kasparow schlug. Die Maschine gewann nicht durch Verstehen, sondern durch enormes Rechnen und viel Erfahrung.",
             },
             {
               titel: "Algorithmen filtern das Internet",
@@ -703,11 +703,11 @@ export default function Lernseite2VorhangAuf() {
               kat: "daten",
               mmf: "maschine",
               jahr: "1994–1998",
-              text: "Als das Web wächst, sortieren Algorithmen die Flut. Empfehlungs- und Rangfolge-Verfahren entscheiden, was wir zuerst sehen.",
+              text: "Mit dem wachsenden Internet wurde die schiere Menge zum Problem. Algorithmen begannen, die Flut zu sortieren und zu ordnen. Empfehlungs- und Rangfolge-Verfahren entschieden fortan, was wir zuerst sehen. Zum ersten Mal bestimmte nicht ein Mensch, sondern eine Rechenvorschrift über Sichtbarkeit im grossen Massstab.",
               geschichte:
-                "1994 schlug das Projekt GroupLens vor, Beiträge automatisch nach dem Geschmack ähnlicher Nutzer zu empfehlen — die Geburt des «kollaborativen Filterns». 1998 ordnete Googles PageRank Webseiten danach, wie viele andere Seiten auf sie verweisen. Zum ersten Mal entschied nicht ein Mensch, sondern ein Algorithmus im grossen Massstab über Reihenfolge und Sichtbarkeit.",
+                "1994 schlug das Projekt GroupLens vor, Beiträge automatisch nach dem Geschmack ähnlicher Nutzer zu empfehlen. So entstand das «kollaborative Filtern». 1998 ordnete Googles PageRank Webseiten danach, wie viele andere Seiten auf sie verweisen. Damit entschied erstmals ein Algorithmus im grossen Massstab über Reihenfolge und Sichtbarkeit.",
               mehr:
-                "GroupLens begann mit Empfehlungen für Usenet-Diskussionen; dasselbe Prinzip steckt heute in Produkt- und Film-Empfehlungen. PageRank machte Google gross, weil es Relevanz aus der Verlinkungsstruktur des Webs errechnete. Beide markieren den Wendepunkt: Der Algorithmus wird vom Werkzeug im Hintergrund zum Türsteher der Aufmerksamkeit — er bestimmt mit, was Millionen Menschen finden und was unsichtbar bleibt.",
+                "GroupLens begann mit Empfehlungen für Diskussionsforen, und dasselbe Prinzip steckt heute in Produkt- und Filmempfehlungen. PageRank machte Google gross, weil es die Wichtigkeit einer Seite aus der Verlinkung des ganzen Webs errechnete. Beide markieren einen Wendepunkt. Der Algorithmus wird vom Werkzeug im Hintergrund zum Türsteher der Aufmerksamkeit und bestimmt mit, was Millionen Menschen finden und was unsichtbar bleibt.",
             },
             {
               titel: "Algorithmen kuratieren Social Media",
@@ -715,11 +715,11 @@ export default function Lernseite2VorhangAuf() {
               kat: "daten",
               mmf: "maschine",
               jahr: "ab 2006",
-              text: "Statt einfach chronologisch zeigt der Feed, was ein Algorithmus für relevant hält. Lernende Ranking-Systeme entscheiden pro Person, welche Beiträge oben stehen.",
+              text: "Wenig später zogen die sozialen Netzwerke nach. Statt Beiträge einfach der Reihe nach zu zeigen, ordnet ein Algorithmus sie nach vermuteter Wichtigkeit. Lernende Systeme entscheiden für jede Person einzeln, was zuoberst steht. Damit formt die Rechenvorschrift mit, worüber eine ganze Gesellschaft spricht.",
               geschichte:
-                "2006 führte Facebook den «News Feed» ein — Beiträge wurden gebündelt und gewichtet statt bloss der Reihe nach angezeigt. Später bestimmten lernende Ranking-Systeme anhand jeder Reaktion, jedes Klicks und jeder Verweildauer, was einzelne Nutzer zu sehen bekamen. Aus einer Liste wurde eine für jede Person anders zusammengestellte Bühne.",
+                "2006 führte Facebook den «News Feed» ein. Beiträge wurden nun gebündelt und gewichtet statt bloss chronologisch angezeigt. Später bestimmten lernende Systeme anhand jeder Reaktion, jedes Klicks und jeder Verweildauer, was einzelne Nutzer sahen. Aus einer einfachen Liste wurde eine für jede Person anders zusammengestellte Bühne.",
               mehr:
-                "Ranking-Algorithmen optimieren auf Kennzahlen wie Interaktion und Verweildauer — mit Nebenwirkungen: Was Aufmerksamkeit bindet, wird verstärkt, Polarisierendes oft besonders. Damit ist der Algorithmus nicht mehr nur Filter, sondern Mit-Gestalter des öffentlichen Gesprächs. Genau hier wird die «neue Akteurin» gesellschaftlich wirksam: Sie sieht nichts und versteht nichts — und prägt doch, worüber wir streiten.",
+                "Solche Ranking-Systeme optimieren auf Kennzahlen wie Interaktion und Verweildauer, und das hat Nebenwirkungen. Was Aufmerksamkeit bindet, wird verstärkt, und Aufregendes oder Spaltendes besonders. Damit ist der Algorithmus nicht mehr nur ein Filter, sondern ein Mitgestalter des öffentlichen Gesprächs. Genau hier wird die neue Akteurin gesellschaftlich wirksam, denn sie versteht nichts und prägt doch, worüber wir streiten.",
             },
             {
               titel: "Deep Learning",
@@ -727,11 +727,11 @@ export default function Lernseite2VorhangAuf() {
               kat: "daten",
               mmf: "maschine",
               jahr: "ab 2012",
-              text: "Neuronale Netze mit vielen Schichten erkennen Bilder und Sprache. Der Durchbruch kommt über die Tiefe.",
+              text: "Ab 2012 gelang der Durchbruch mit künstlichen neuronalen Netzen, die dem Gehirn grob nachempfunden sind. Solche Netze mit vielen Schichten lernen, Bilder und Sprache zu erkennen. Der Erfolg kommt gerade aus dieser Tiefe, also aus der grossen Zahl der Schichten. Daher der Name Deep Learning, was tiefes Lernen bedeutet.",
               geschichte:
-                "2012 gewann ein tiefes neuronales Netz den ImageNet-Bildwettbewerb mit grossem Vorsprung — trainiert auf Grafikkarten, gefüttert mit Millionen Bildern. Schicht für Schicht lernen solche Netze eigene Merkmale, statt sie vorgesagt zu bekommen; seither dominiert das Prinzip die Bild-, Sprach- und Texterkennung.",
+                "2012 gewann ein tiefes neuronales Netz den grossen ImageNet-Bildwettbewerb mit deutlichem Vorsprung. Trainiert wurde es auf Grafikkarten und mit Millionen von Bildern. Solche Netze lernen Schicht für Schicht ihre eigenen Merkmale, statt sie vorgesagt zu bekommen. Seither bestimmt dieses Prinzip die Bild-, Sprach- und Texterkennung.",
               mehr:
-                "Künstliche neuronale Netze gab es seit den 1950er-Jahren; erst Grafikkarten und riesige Datensätze machten «tiefe» Netze praktikabel. 2017 kam die «Transformer»-Architektur dazu — die Grundlage heutiger Sprachmodelle: Sie gewichtet Zusammenhänge über lange Textpassagen hinweg.",
+                "Künstliche neuronale Netze gibt es seit den 1950er-Jahren. Doch erst schnelle Grafikkarten und riesige Datensätze machten tiefe Netze praktisch nutzbar. 2017 kam dann die «Transformer»-Architektur dazu. Sie ist die Grundlage der heutigen Sprachmodelle, weil sie Zusammenhänge über lange Textpassagen hinweg gewichten kann.",
             },
             {
               titel: "Der Transformer",
@@ -739,11 +739,11 @@ export default function Lernseite2VorhangAuf() {
               kat: "daten",
               mmf: "maschine",
               jahr: "2017",
-              text: "2017 stellen Google-Forscher die «Transformer»-Architektur vor. Sie lernt, welche Wörter im Satz aufeinander achten müssen — die Grundlage aller heutigen Sprachmodelle.",
+              text: "2017 stellten Forschende bei Google eine neue Bauweise für KI vor, den Transformer. Sein Trick ist die Aufmerksamkeit, denn das Modell lernt, welche Wörter im Satz aufeinander achten müssen. Damit lassen sich sehr grosse Textmengen verarbeiten. Der Transformer ist die gemeinsame Grundlage fast aller heutigen Sprachmodelle.",
               geschichte:
-                "Der Aufsatz «Attention Is All You Need» (2017) führte den Aufmerksamkeits-Mechanismus ein: Das Modell gewichtet, welche Teile eines Textes für welche anderen wichtig sind — über lange Passagen hinweg und hochgradig parallel berechenbar. Damit liessen sich Modelle erstmals auf riesige Textmengen skalieren.",
+                "Der Aufsatz «Attention Is All You Need» von 2017 führte den Aufmerksamkeits-Mechanismus ein. Das Modell gewichtet, welche Teile eines Textes für welche anderen wichtig sind, und das über lange Passagen hinweg. Diese Berechnung lässt sich stark parallel ausführen. Dadurch liessen sich Modelle erstmals auf riesige Textmengen vergrössern.",
               mehr:
-                "«GPT» steht für Generative Pretrained Transformer — der Name trägt die Architektur schon in sich. Der Transformer löste ältere Ansätze ab, weil er Zusammenhänge nicht Wort für Wort, sondern im Ganzen erfasst und sich effizient auf viele Chips verteilen lässt. Fast alle grossen Text-, Bild- und Sprachmodelle der Folgejahre bauen darauf auf.",
+                "Die Abkürzung «GPT» steht für Generative Pretrained Transformer und trägt die Bauweise schon im Namen. Der Transformer löste ältere Ansätze ab, weil er Zusammenhänge nicht Wort für Wort, sondern im Ganzen erfasst und sich gut auf viele Chips verteilen lässt. Fast alle grossen Text-, Bild- und Sprachmodelle der folgenden Jahre bauen darauf auf.",
             },
             {
               titel: "Die GPT-Welle",
@@ -751,11 +751,11 @@ export default function Lernseite2VorhangAuf() {
               kat: "daten",
               mmf: "maschine",
               jahr: "2018–2020",
-              text: "Sprachmodelle werden grösser und grösser. Mit jeder Stufe — GPT-1, GPT-2, GPT-3 — wächst, was sie ohne eigenes Training für eine Aufgabe können.",
+              text: "Zwischen 2018 und 2020 wurden die Sprachmodelle Stufe um Stufe grösser. Mit GPT-1, GPT-2 und GPT-3 wuchs erstaunlicherweise auch das, was sie ganz ohne eigenes Training konnten. Allein aus dem Vorhersagen des nächsten Wortes entstanden neue Fähigkeiten. Grösse allein brachte hier einen Sprung in der Leistung.",
               geschichte:
-                "Ab 2018 zeigten OpenAIs GPT-Modelle, dass reines «Vorhersagen des nächsten Wortes» auf riesigen Textmengen erstaunlich weit trägt. GPT-3 (2020) mit 175 Milliarden Parametern konnte Texte schreiben, übersetzen und Fragen beantworten, ohne für jede Aufgabe eigens trainiert zu werden.",
+                "Ab 2018 zeigten die GPT-Modelle der Firma OpenAI, dass das blosse Vorhersagen des nächsten Wortes auf riesigen Textmengen erstaunlich weit trägt. GPT-3 aus dem Jahr 2020 hatte 175 Milliarden einstellbare Werte, sogenannte Parameter. Es konnte Texte schreiben, übersetzen und Fragen beantworten, ohne für jede Aufgabe eigens trainiert zu werden.",
               mehr:
-                "Der Sprung kam vor allem durch Grösse — mehr Daten, mehr Parameter, mehr Rechenzeit («Scaling»). Damit tauchten Fähigkeiten auf, die niemand einzeln einprogrammiert hatte. Zugleich zeigten sich die Kehrseiten: Die Modelle geben falsche Auskünfte selbstsicher wieder und übernehmen Verzerrungen aus ihren Trainingsdaten.",
+                "Der Sprung kam vor allem durch Grösse, also durch mehr Daten, mehr Parameter und mehr Rechenzeit. Dieses Prinzip nennt man «Scaling», was skalieren bedeutet. Dabei tauchten Fähigkeiten auf, die niemand einzeln einprogrammiert hatte. Zugleich zeigten sich die Kehrseiten, denn die Modelle geben Falsches oft selbstsicher wieder und übernehmen Verzerrungen aus ihren Trainingsdaten.",
             },
             {
               titel: "Big Data & Gegenwart",
@@ -763,23 +763,23 @@ export default function Lernseite2VorhangAuf() {
               kat: "daten",
               mmf: "maschine",
               jahr: "ab 2020",
-              text: "Riesige Datenmengen und Rechenzentren machen die neue Akteurin möglich. KI durchdringt den Alltag.",
+              text: "Möglich wurde die heutige KI erst durch zwei Dinge im Übermass, riesige Datenmengen und gewaltige Rechenzentren. Auf dieser Grundlage entstand die neue Akteurin dieses Moduls. Sie kann im Gespräch antworten und selbst Inhalte erzeugen. Und sie durchdringt inzwischen den Alltag von der Suche bis zum Schreiben.",
               geschichte:
-                "Heutige Modelle trainieren auf riesigen Text- und Bildmengen, in Rechenzentren mit Zehntausenden von Chips. So entstand die neue Akteurin dieses Moduls: dialogfähig, generativ — und Alltag von der Suchmaschine bis zum Schreibassistenten.",
+                "Heutige Modelle trainieren auf riesigen Text- und Bildmengen, in Rechenzentren mit zehntausenden von Chips. So entstand die neue Akteurin dieses Moduls. Sie ist dialogfähig und kann selbst Texte und Bilder erzeugen. Und sie ist Alltag geworden, von der Suchmaschine bis zum Schreibassistenten.",
               mehr:
-                "Riesige Text- und Bildmengen, trainiert in Rechenzentren mit Zehntausenden Chips, wurden zur Voraussetzung der neuen Akteurin. Was danach kam — dialogfähige Chatbots, konkurrierende Modellfamilien, sehende und hörende KI — baut alles auf dieser Infrastruktur auf.",
+                "Riesige Text- und Bildmengen wurden zur Voraussetzung der neuen Akteurin, trainiert in Rechenzentren mit zehntausenden von Chips. Was danach kam, baut alles auf dieser Grundlage auf. Dazu gehören dialogfähige Chatbots und konkurrierende Modellfamilien. Und dazu gehört eine KI, die auch sehen und hören kann.",
             },
             {
-              titel: "ChatGPT — der Massenmoment",
+              titel: "ChatGPT: der Massenmoment",
               kurz: "ChatGPT",
               kat: "daten",
               mmf: "mensch",
               jahr: "November 2022",
-              text: "ChatGPT macht Sprach-KI dialogfähig und für alle bedienbar. Innert Wochen nutzen Millionen den Chatbot — KI kommt im Alltag an.",
+              text: "Im November 2022 wurde die KI mit einem Schlag für alle greifbar. ChatGPT verpackte ein starkes Sprachmodell in ein einfaches Chatfenster, in dem man ganz normal fragen kann. Innert Wochen nutzten Millionen von Menschen den Chatbot. Von diesem Moment an war die KI im Alltag angekommen.",
               geschichte:
-                "Im November 2022 veröffentlichte OpenAI ChatGPT: ein auf Gespräch getrimmtes Sprachmodell, das auf einfache Fragen flüssig antwortet. Es erreichte in Rekordzeit hunderte Millionen Nutzer und löste einen weltweiten KI-Wettlauf aus.",
+                "Im November 2022 veröffentlichte die Firma OpenAI ChatGPT, ein auf Gespräch getrimmtes Sprachmodell. Es antwortet auf einfache Fragen flüssig und zusammenhängend. In Rekordzeit erreichte es hunderte Millionen Nutzer. Damit löste es einen weltweiten Wettlauf um die beste KI aus.",
               mehr:
-                "Neu war weniger das Modell als die Zugänglichkeit: ein Chatfenster, normale Sprache, sofort nutzbar. Trainiert wurde es zusätzlich mit menschlichem Feedback (RLHF), um hilfreicher und harmloser zu antworten. Aus einer Forschungstechnik wurde ein Alltagswerkzeug — und die Debatte über Verlässlichkeit, Schule und Arbeit begann breit.",
+                "Neu war weniger das Modell selbst als seine Zugänglichkeit, denn ein Chatfenster mit normaler Sprache war sofort nutzbar. Zusätzlich wurde es mit menschlichem Feedback trainiert, damit es hilfreicher und harmloser antwortet. Aus einer Forschungstechnik wurde so ein Alltagswerkzeug. Und die Debatte über Verlässlichkeit, Schule und Arbeit begann in aller Breite.",
             },
             {
               titel: "Wettbewerb der Modellfamilien",
@@ -787,11 +787,11 @@ export default function Lernseite2VorhangAuf() {
               kat: "daten",
               mmf: "maschine",
               jahr: "ab 2023",
-              text: "Nach ChatGPT entstand ein weltweiter Wettbewerb: Neben den US-Modellen GPT, Claude, Gemini und Llama traten chinesische, europäische und sogar schweizerische Modelle an.",
+              text: "Nach ChatGPT begann ein weltweiter Wettlauf um die besten Modelle. Neben den US-Modellen wie GPT, Claude, Gemini und Llama traten Modelle aus China, Europa und sogar der Schweiz an. Wer eigene Modelle baut, macht sich unabhängiger von anderen. So bekam die KI auch eine politische und eine sprachliche Bedeutung.",
               geschichte:
-                "Ab 2023 rangen viele Familien um die besten Modelle: aus den USA GPT (OpenAI), Claude (Anthropic), Gemini (Google) und das offene Llama (Meta). Anfang 2025 sorgte das chinesische DeepSeek für Aufsehen, weil es mit vergleichsweise wenig Aufwand mithielt; auch Alibabas Qwen zählt dazu. Aus Europa kommt Mistral (Frankreich), und aus der Schweiz das vollständig offene «Apertus» (ETH Zürich, EPFL und das Supercomputer-Zentrum CSCS, 2025).",
+                "Ab 2023 rangen viele Familien um die besten Modelle. Aus den USA kommen GPT von OpenAI, Claude von Anthropic, Gemini von Google und das offene Llama von Meta. Anfang 2025 sorgte das chinesische DeepSeek für Aufsehen, weil es mit wenig Aufwand mithielt, und auch Alibabas Qwen zählt dazu. Aus Europa stammt Mistral aus Frankreich, und aus der Schweiz das vollständig offene Modell «Apertus» von ETH Zürich, EPFL und dem Rechenzentrum CSCS.",
               mehr:
-                "Der Wettbewerb hat auch eine geopolitische und sprachliche Seite: Wer eigene Modelle baut, macht sich unabhängiger. Ein wichtiger Unterschied ist offen gegen geschlossen — Llama, DeepSeek und Apertus veröffentlichen ihre Gewichte, GPT, Claude und Gemini laufen als Dienste. Apertus legt sogar Trainingsdaten und Methoden offen und deckt über 1000 Sprachen ab, darunter Schweizerdeutsch und Rätoromanisch — ein Beispiel für «souveräne», öffentlich getragene KI neben den grossen kommerziellen Anbietern.",
+                "Der Wettbewerb hat auch eine politische und eine sprachliche Seite, denn eigene Modelle bedeuten mehr Unabhängigkeit. Ein wichtiger Unterschied ist offen gegen geschlossen. Llama, DeepSeek und Apertus veröffentlichen ihre inneren Werte, während GPT, Claude und Gemini nur als Dienst laufen. Apertus legt sogar die Trainingsdaten und die Methoden offen und deckt über 1000 Sprachen ab, darunter Schweizerdeutsch und Rätoromanisch. Es ist ein Beispiel für eine öffentlich getragene KI neben den grossen kommerziellen Anbietern.",
             },
             {
               titel: "Multimodalität: KI sieht und hört",
@@ -799,11 +799,11 @@ export default function Lernseite2VorhangAuf() {
               kat: "daten",
               mmf: "maschine",
               jahr: "2023–2024",
-              text: "Die Modelle bleiben nicht beim Text: Sie verarbeiten auch Bilder, Sprache und teils Video. KI beginnt zu sehen und zu hören.",
+              text: "Zuletzt lernte die KI, mehrere Sinne zu verbinden. Die Modelle bleiben nicht mehr beim Text, sondern verarbeiten auch Bilder, Sprache und teils Video. Damit beginnt die KI gleichsam zu sehen und zu hören. Aus dem reinen Textautomaten wird ein Gegenüber, das verschiedene Eindrücke zusammenführt.",
               geschichte:
-                "Ab 2023/24 wurden führende Systeme multimodal. Claude 3 (2024) konnte Bilder verstehen und beschreiben; GPT-4o (2024) nahm Text, Bild und Ton in einem Modell entgegen und antwortete in Echtzeit gesprochen. Aus dem Textautomaten wird ein Gegenüber, das mehrere Sinne verbindet.",
+                "Ab 2023 und 2024 wurden führende Systeme multimodal, verstanden also mehrere Arten von Eingaben. Claude 3 aus dem Jahr 2024 konnte Bilder verstehen und beschreiben. GPT-4o aus demselben Jahr nahm Text, Bild und Ton in einem Modell entgegen und antwortete in Echtzeit gesprochen. So wird aus dem Textautomaten ein Gegenüber, das mehrere Sinne verbindet.",
               mehr:
-                "Multimodal heisst: dieselbe Architektur verarbeitet verschiedene «Modalitäten» — geschriebenen Text, Fotos, Diagramme, Sprache, teils bewegte Bilder. Damit kann man ein Foto zeigen und darüber sprechen, statt alles zu tippen. Genau diese Bündelung — sprechen, sehen, hören, erzeugen — macht die «neue Akteurin» aus, um die es in diesem Modul geht.",
+                "Multimodal bedeutet, dass dieselbe Bauweise verschiedene Eingaben verarbeitet, also geschriebenen Text, Fotos, Diagramme, Sprache und teils bewegte Bilder. Damit kann man ein Foto zeigen und darüber sprechen, statt alles zu tippen. Genau diese Bündelung aus Sprechen, Sehen, Hören und Erzeugen macht die neue Akteurin aus, um die es in diesem Modul geht.",
             },
           ]}
         />
