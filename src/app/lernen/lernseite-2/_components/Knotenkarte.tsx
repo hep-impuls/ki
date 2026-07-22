@@ -68,9 +68,11 @@ const ANSICHTEN: { id: Ansicht; label: string; icon: string; hinweis: string }[]
 const AREAS: { prefix: string; name: string; fill: string; text: string }[] = [
   { prefix: "vorhang-auf:story", name: "KI-Story", fill: "fill-tertiary", text: "text-tertiary" },
   { prefix: "vorhang-auf:weisheit", name: "Merkmale", fill: "fill-secondary", text: "text-secondary" },
-  { prefix: "vorhang-auf:bild", name: "Bilder", fill: "fill-error", text: "text-error" },
+  { prefix: "vorhang-auf:bild", name: "Bilder KI-Story", fill: "fill-error", text: "text-error" },
   { prefix: "vorhang-auf:kontext", name: "Kontext", fill: "fill-surface-tint", text: "text-surface-tint" },
   { prefix: "philosophische-perspektive:teppich", name: "Teppich", fill: "fill-primary", text: "text-primary" },
+  // spezifischer als «…:epochen» → MUSS davor stehen (erster Treffer gewinnt)
+  { prefix: "philosophische-perspektive:epochen-bild", name: "Bilder Verunsicherung", fill: "fill-on-error-container", text: "text-on-error-container" },
   { prefix: "philosophische-perspektive:epochen", name: "Epochen", fill: "fill-on-surface", text: "text-on-surface" },
   { prefix: "philosophische-perspektive:einstieg", name: "Philosophie", fill: "fill-outline", text: "text-on-surface-variant" },
   { prefix: "video:", name: "Videos", fill: "fill-inverse-surface", text: "text-inverse-surface" },
