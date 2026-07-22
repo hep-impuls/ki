@@ -126,3 +126,18 @@ eingesetzt; Kennzeichnung erfolgt hier zentral.
 Alle fünf Bilder sind **KI-erstellt** (2026, für dieses Lernset generiert,
 bereitgestellt von Christof Glaus) und liegen rein dekorativ als leicht
 transparente Titel-Umgebung hinter den Abschnitts-Überschriften.
+
+## KI-erstellt (Titel-Umgebungsbilder Philosophische Perspektive)
+
+| Datei | Abschnitt | Bildmotiv |
+|---|---|---|
+| `philosophie-kopf.webp` | Seitenkopf | Netz-Landschaft (Berge) |
+| `philosophie-einstieg.webp` | Was ist Philosophie? | Figuren im Nebel |
+| `philosophie-teppich.webp` | Der Teppich des Wandels | verzweigte Fäden (Gewebe) |
+| `philosophie-epochen.webp` | Philosophie in Zeiten der Verunsicherung | Figur im Wirbel |
+
+Alle vier sind **KI-erstellt** (2026, für dieses Lernset generiert,
+bereitgestellt von Christof Glaus) und liegen rein dekorativ als leicht
+transparente Titel-Umgebung hinter den Abschnitts-Überschriften. Es sind
+Kopien aus dem bestehenden Aquarell-Pool (`orakel-umgebung-*`), unter
+sprechenden Namen für diese Seite abgelegt.

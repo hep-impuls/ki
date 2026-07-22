@@ -1,7 +1,7 @@
 import Link from "next/link";
 import ActivityTracker from "@/components/ActivityTracker";
 import AppLayout from "@/components/layout/AppLayout";
-import { Signatur } from "../_components/Gewebe";
+import AbschnittKopf from "../_components/AbschnittKopf";
 import VideoImpuls from "../_components/VideoImpuls";
 import AkkordeonPosten from "../_components/AkkordeonPosten";
 import HistorienTeppich from "../_components/HistorienTeppich";
@@ -44,31 +44,27 @@ export default function Lernseite2PhilosophischePerspektive() {
         Zurück zu Lernseite 2
       </Link>
 
-      <header className="mt-lg border-b border-outline-variant pb-lg">
-        <div className="flex items-end justify-between gap-md">
-          <div className="min-w-0">
-            <p className="text-label-md uppercase tracking-wider text-tertiary">
-              Thema 02 · Orientierung
-            </p>
-            <h1 className="mt-sm text-headline-xl text-on-surface">
-              Philosophische Perspektive
-            </h1>
-            <p className="mt-sm max-w-3xl text-body-lg text-on-surface-variant">
-              Technische Umbrüche verunsichern — das ist nicht neu. Diese Seite
-              geht dem in drei Schritten nach: Zuerst klärst du kurz, was{" "}
-              <strong>Philosophie</strong> überhaupt ist und warum gerade jetzt.
-              Dann webst du den <strong>«Teppich des Wandels»</strong> — ein
-              Gewebe aus Technologien, Entdeckungen, Ereignissen und kulturellen
-              Praxen, das zeigt: Wandel hat nie nur eine Ursache. Und schliesslich
-              gehst du durch <strong>acht Epochen</strong>, von der Antike bis zu
-              Umwelt und KI heute — jede mit einer Technologie, der Verunsicherung,
-              die sie auslöste, und der Philosophie, die Halt gab, als
-              aufklappbare, bewertbare Bausteine. Öffne, was dich interessiert.
-              Und heute, mit KI?
-            </p>
-          </div>
-          <Signatur variante="epochen" className="hidden flex-shrink-0 sm:block" />
-        </div>
+      <AbschnittKopf bild="/art/philosophie-kopf.webp" gross className="mt-lg">
+        <p className="text-label-md uppercase tracking-wider text-tertiary">
+          Thema 02 · Orientierung
+        </p>
+        <h1 className="mt-sm text-headline-xl text-on-surface">
+          Philosophische Perspektive
+        </h1>
+        <p className="mt-md max-w-3xl text-body-lg text-on-surface-variant">
+          Technische Umbrüche verunsichern — das ist nicht neu. Diese Seite
+          geht dem in drei Schritten nach: Zuerst klärst du kurz, was{" "}
+          <strong className="text-on-surface">Philosophie</strong> überhaupt ist
+          und warum gerade jetzt. Dann webst du den{" "}
+          <strong className="text-on-surface">«Teppich des Wandels»</strong> —
+          ein Gewebe aus Technologien, Entdeckungen, Ereignissen und kulturellen
+          Praxen, das zeigt: Wandel hat nie nur eine Ursache. Und schliesslich
+          gehst du durch <strong className="text-on-surface">acht Epochen</strong>,
+          von der Antike bis zu Umwelt und KI heute — jede mit einer Technologie,
+          der Verunsicherung, die sie auslöste, und der Philosophie, die Halt
+          gab, als aufklappbare, bewertbare Bausteine. Öffne, was dich
+          interessiert. Und heute, mit KI?
+        </p>
         <blockquote className="mt-md max-w-3xl border-l-4 border-tertiary pl-md">
           <p className="text-body-md italic text-on-surface-variant">
             «Die Eule der Minerva beginnt erst mit der einbrechenden Dämmerung
@@ -79,7 +75,7 @@ export default function Lernseite2PhilosophischePerspektive() {
             was war, und gewinnt daraus Antworten für die Gegenwart.
           </footer>
         </blockquote>
-      </header>
+      </AbschnittKopf>
 
       {/* Inhaltsverzeichnis + Klammersymbol (oben rechts) */}
       <Inhaltsverzeichnis
@@ -101,20 +97,22 @@ export default function Lernseite2PhilosophischePerspektive() {
 
       {/* 0 — Einstieg: Was ist Philosophie? (erster Aktivitätsposten) */}
       <section id="was-philosophie" className="mt-xl max-w-4xl scroll-mt-24" aria-label="Was ist Philosophie?">
-        <h2 className="text-headline-lg text-on-surface">
-          Was ist Philosophie — und warum jetzt?
-        </h2>
-        <p className="mt-sm text-body-lg text-on-surface-variant">
-          Bevor wir in die Geschichte eintauchen: Was ist Philosophie überhaupt?
-          Wörtlich heisst sie «Liebe zur Weisheit». Sie gibt keine fertigen
-          Antworten wie eine Einzelwissenschaft, sondern stellt die
-          grundlegenden Fragen — nach Wissen, Wahrheit, Recht, dem guten Leben
-          und dem Menschen selbst — und prüft, wie wir sie begründen. Gerade
-          heute, wo Maschinen sprechen, entscheiden und gestalten, brechen diese
-          Fragen neu auf: Was ist der Mensch, wenn eine Maschine vieles ebenso
-          gut kann? Philosophie hilft, im Umbruch Orientierung zu finden, statt
-          der Technik nur hinterherzulaufen.
-        </p>
+        <AbschnittKopf bild="/art/philosophie-einstieg.webp">
+          <h2 className="text-headline-lg text-on-surface">
+            Was ist Philosophie — und warum jetzt?
+          </h2>
+          <p className="mt-sm text-body-lg text-on-surface-variant">
+            Bevor wir in die Geschichte eintauchen: Was ist Philosophie
+            überhaupt? Wörtlich heisst sie «Liebe zur Weisheit». Sie gibt keine
+            fertigen Antworten wie eine Einzelwissenschaft, sondern stellt die
+            grundlegenden Fragen — nach Wissen, Wahrheit, Recht, dem guten Leben
+            und dem Menschen selbst — und prüft, wie wir sie begründen. Gerade
+            heute, wo Maschinen sprechen, entscheiden und gestalten, brechen
+            diese Fragen neu auf: Was ist der Mensch, wenn eine Maschine vieles
+            ebenso gut kann? Philosophie hilft, im Umbruch Orientierung zu
+            finden, statt der Technik nur hinterherzulaufen.
+          </p>
+        </AbschnittKopf>
         <Aufgabe className="mt-md">Klappe die Punkte auf, die dich neugierig machen.</Aufgabe>
         <AkkordeonPosten
           className="mt-lg"
@@ -146,24 +144,31 @@ export default function Lernseite2PhilosophischePerspektive() {
           (Technologie, Entdeckungen, gesellschaftliche Ereignisse, kulturelle
           Praxen), die sich erst durchs Anklicken der Punkte einweben */}
       <section id="teppich" className="mt-xl max-w-5xl scroll-mt-24" aria-label="Teppich des Wandels">
-        <h2 className="text-headline-lg text-on-surface">
-          Der Teppich des Wandels
-        </h2>
-        <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
-          Geschichte verläuft nicht als eine Linie von Epoche zu Epoche. Vier
-          Fäden laufen nebeneinander durch die Zeit: <strong>Technologien</strong>,
-          die eingeführt werden, <strong>Entdeckungen</strong>, die das Weltbild
-          verschieben, <strong>gesellschaftliche Ereignisse</strong>, die alles
-          umwälzen — und <strong>kulturelle Praxen</strong> wie Ackerbau,
-          Gewürzhandel oder Kaffeehaus-Gespräch, in denen Menschen ihr
-          Zusammenleben ordnen. Der Teppich beginnt bei Pflug, Rad und Schrift,
-          spannt sich über die ganze Welt — Mesopotamien, Ägypten, Indien,
-          China, Bagdad, Europa — und reicht bis zur KI. Manchmal kreuzen sich
-          die Fäden, manchmal laufen sie allein; an einigen Punkten wartet ein{" "}
-          <strong>Verunsicherungs-Stopp</strong>, der zur passenden Epoche im
-          Abschnitt «Philosophie in Zeiten der Verunsicherung» weiter unten
-          führt.
-        </p>
+        <AbschnittKopf bild="/art/philosophie-teppich.webp">
+          <h2 className="text-headline-lg text-on-surface">
+            Der Teppich des Wandels
+          </h2>
+          <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
+            Geschichte verläuft nicht als eine Linie von Epoche zu Epoche. Vier
+            Fäden laufen nebeneinander durch die Zeit:{" "}
+            <strong className="text-on-surface">Technologien</strong>, die
+            eingeführt werden,{" "}
+            <strong className="text-on-surface">Entdeckungen</strong>, die das
+            Weltbild verschieben,{" "}
+            <strong className="text-on-surface">gesellschaftliche Ereignisse</strong>,
+            die alles umwälzen — und{" "}
+            <strong className="text-on-surface">kulturelle Praxen</strong> wie
+            Ackerbau, Gewürzhandel oder Kaffeehaus-Gespräch, in denen Menschen
+            ihr Zusammenleben ordnen. Der Teppich beginnt bei Pflug, Rad und
+            Schrift, spannt sich über die ganze Welt — Mesopotamien, Ägypten,
+            Indien, China, Bagdad, Europa — und reicht bis zur KI. Manchmal
+            kreuzen sich die Fäden, manchmal laufen sie allein; an einigen
+            Punkten wartet ein{" "}
+            <strong className="text-on-surface">Verunsicherungs-Stopp</strong>,
+            der zur passenden Epoche im Abschnitt «Philosophie in Zeiten der
+            Verunsicherung» weiter unten führt.
+          </p>
+        </AbschnittKopf>
         <Aufgabe className="mt-md max-w-4xl">
           Tippe die Punkte an — jeder erzählt seine Geschichte, und Stück für
           Stück webt sich der Teppich. Bewerte in jeder Karte, ob dir der Punkt
@@ -555,20 +560,23 @@ export default function Lernseite2PhilosophischePerspektive() {
       {/* Philosophie in Zeiten der Verunsicherung — acht Epochen, je 2 Bilder
           und 3 bewertbare Bausteine (Technologie, Verunsicherung, Philosophie) */}
       <section id="epochen" className="mt-xl max-w-5xl scroll-mt-24" aria-label="Philosophie in Zeiten der Verunsicherung">
-        <h2 className="text-headline-lg text-on-surface">
-          Philosophie in Zeiten der Verunsicherung
-        </h2>
-        <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
-          Der Teppich des Wandels hat die Verunsicherungs-Stopps markiert — hier
-          folgt, wie die Philosophie jeweils geantwortet hat. Denn gerade in
-          Zeiten der Verunsicherung braucht es neue Deutungen und
-          Orientierungsmuster — und die liefert, oder erdenkt zumindest, die
-          Philosophie. Sie arbeitet langsam und <strong>reflexiv</strong>, an
-          Grundlagen, die sich nicht ständig ändern. Genau das macht sie
-          wertvoll: Manchmal bringt schon eine <strong>neue Gewichtung
-          grundlegender Lebenselemente</strong> mehr Klarheit als jede neue
-          Technik.
-        </p>
+        <AbschnittKopf bild="/art/philosophie-epochen.webp">
+          <h2 className="text-headline-lg text-on-surface">
+            Philosophie in Zeiten der Verunsicherung
+          </h2>
+          <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
+            Der Teppich des Wandels hat die Verunsicherungs-Stopps markiert —
+            hier folgt, wie die Philosophie jeweils geantwortet hat. Denn gerade
+            in Zeiten der Verunsicherung braucht es neue Deutungen und
+            Orientierungsmuster — und die liefert, oder erdenkt zumindest, die
+            Philosophie. Sie arbeitet langsam und{" "}
+            <strong className="text-on-surface">reflexiv</strong>, an
+            Grundlagen, die sich nicht ständig ändern. Genau das macht sie
+            wertvoll: Manchmal bringt schon eine{" "}
+            <strong className="text-on-surface">neue Gewichtung grundlegender
+            Lebenselemente</strong> mehr Klarheit als jede neue Technik.
+          </p>
+        </AbschnittKopf>
         <Ausklapptext
           className="mt-md max-w-4xl"
           titel="Mehr dazu: die wiederkehrenden Züge der Verunsicherung"
