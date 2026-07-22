@@ -15,6 +15,7 @@
  */
 
 import { castVote } from "@/lib/polls";
+import { zaehltAnonym } from "./spuren";
 
 const KEY = "ki26-auswertung-lernseite-2";
 export const AUSWERTUNG_EVENT = "ki26-auswertung";
@@ -30,7 +31,7 @@ const KEY_FLAECHEN_GEZAEHLT = "ki26-flaechen-gezaehlt";
  * über den bisher je gezählten Höchststand hinaus (idempotent pro Browser).
  */
 function zaehleFlaechenAnonym(key: string, gefuellt: number): void {
-  if (typeof window === "undefined") return;
+  if (typeof window === "undefined" || !zaehltAnonym()) return;
   try {
     const raw = window.localStorage.getItem(KEY_FLAECHEN_GEZAEHLT);
     const reg = raw ? (JSON.parse(raw) as Record<string, number>) : {};

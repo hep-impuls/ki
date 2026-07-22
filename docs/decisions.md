@@ -10,6 +10,23 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-22 — Dev-Guard für anonyme Zähler + Zähler-Reset (Christof)
+
+**Problem:** Dev-Server (localhost) und Produktion teilen sich dieselben
+Firestore-Poll-Docs (`abstimmungen/ki26/polls/…`). Tage von Entwicklungs- und
+Verifikations-Klicks haben die Kollektiv-Zähler verfälscht («alle 12» bei erst
+zwei echten Personen).
+
+- **Dev-Guard `zaehltAnonym()`** (in `_lib/spuren.ts`, genutzt auch von
+  `auswertung.ts` und dem Blick-Poll): auf `localhost`/`127.0.0.1` wird **nie**
+  anonym gezählt. Lokale Spuren («du») funktionieren unverändert — nur der
+  `castVote`-Beitrag zum «alle» entfällt in der Entwicklung.
+- **Zähler-Reset (mit Christof abgestimmt):** `spuren-lernseite-2`,
+  `flaechen-lernseite-2` und `orakel-blick` am 2026-07-22 auf null gesetzt —
+  sauberer Start; ab jetzt zählt nur echte Nutzung auf der Vercel-Seite.
+  (Hinweis: Bereits gezählte Browser zählen ihre alten Punkte nicht nochmals —
+  das lokale Zähl-Register bleibt; neue Klicks zählen normal.)
+
 ## 2026-07-22 — Aktivitätsnetz zweischichtig + Sternenkarte (Christof)
 
 **Auftrag Christof:** Kollektiv sichtbar machen. Drei Grafiken im Orakel.

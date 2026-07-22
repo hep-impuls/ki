@@ -106,6 +106,18 @@ function scheduleMirror(): void {
   }, 1500);
 }
 
+/**
+ * Anonym zählen nur ausserhalb der Entwicklung: localhost-Klicks (Tests,
+ * Verifikation) würden die echten Kollektiv-Zähler verfälschen — Dev-Server
+ * und Produktion teilen sich dasselbe Firestore-Poll-Doc. Lokale Spuren («du»)
+ * bleiben davon unberührt.
+ */
+export function zaehltAnonym(): boolean {
+  if (typeof window === "undefined") return false;
+  const h = window.location.hostname;
+  return h !== "localhost" && h !== "127.0.0.1";
+}
+
 /** Wurde die ID schon einmal anonym gezählt? Falls nein: jetzt registrieren. */
 function schonGezaehlt(id: string): boolean {
   try {
@@ -132,8 +144,8 @@ export function merkeSpur(id: string): void {
   schreiben(spuren);
   window.dispatchEvent(new CustomEvent(SPUR_EVENT, { detail: { id } }));
   // Anonymer Aggregat-Zähler fürs «alle» — nur beim allerersten Mal (das
-  // Register übersteht ein «Muster zurücksetzen»).
-  if (!schonGezaehlt(id)) void castVote(SPUREN_POLL_ID, id);
+  // Register übersteht ein «Muster zurücksetzen») und nie aus der Entwicklung.
+  if (zaehltAnonym() && !schonGezaehlt(id)) void castVote(SPUREN_POLL_ID, id);
   // Pro-Nutzer-Spiegel (erzeugt bei Bedarf einen Hintergrund-Code).
   ensureCode();
   scheduleMirror();

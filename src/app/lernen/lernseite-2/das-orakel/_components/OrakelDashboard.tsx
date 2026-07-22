@@ -17,6 +17,7 @@ import {
   leseSpuren,
   SPUR_EVENT,
   SPUREN_POLL_ID,
+  zaehltAnonym,
   zieheSpurenAusCloud,
 } from "../../_lib/spuren";
 import {
@@ -314,7 +315,9 @@ export default function OrakelDashboard() {
     } catch {
       /* Privatmodus */
     }
-    void castVote(BLICK_POLL_ID, id);
+    // Nie aus der Entwicklung zählen (localhost teilt sich die Zähler mit
+    // der Produktion).
+    if (zaehltAnonym()) void castVote(BLICK_POLL_ID, id);
   }
 
   /* Aktionen — Orakel befragen */
