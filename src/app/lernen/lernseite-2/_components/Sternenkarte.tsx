@@ -32,7 +32,7 @@ const ANSICHTEN: { id: Ansicht; label: string; icon: string; hinweis: string }[]
     id: "geklickt",
     label: "Angeklickt",
     icon: "ads_click",
-    hinweis: "Die am häufigsten angeklickten Punkte — über alle Bereiche: Story, Bilder, Merkmale, Kontexte, Philosophie.",
+    hinweis: "Die am häufigsten angeklickten Punkte: KI-Story, Bilder (gezählt pro Punkt im Bild), Merkmale, Teppich und Epochen.",
   },
   {
     id: "weiter",
@@ -125,40 +125,48 @@ export default function Sternenkarte({ className = "" }: { className?: string })
 
   const punkte = useMemo<Punkt[]>(() => {
     if (ansicht === "geklickt") {
-      // Alle angeklickten Inhalts-Punkte (Story, Bilder inkl. Hotspots,
-      // Merkmale, Kontexte, Philosophie, Videos) — inhaltslose Muster
-      // (`…:gewebe…`) und Kanten bleiben draussen.
-      const passt = (id: string) => {
-        if (id.includes(":gewebe")) return false;
+      // Die angeklickten Inhalts-Punkte: KI-Story-Stationen, Merkmale,
+      // Teppich-Punkte, Epochen-Aspekte, Videos — und BILDER als je EIN
+      // Eintrag (Bezeichnung des Bildes), gezählt pro angeklicktem Punkt
+      // (Hotspot) im Bild. Draussen bleiben: inhaltslose Einstiegsmuster
+      // (`…:gewebe…`), «Die KI im Kontext» (hat keine Punkte), Kanten und
+      // das blosse Öffnen eines Bildes.
+      const zielBasis = (id: string): string | null => {
+        if (id.includes(":gewebe")) return null;
+        if (id.startsWith("vorhang-auf:kontext")) return null;
         const art = spurArt(id);
-        return art === "punkt" || art === "bild" || art === "bildpunkt" || art === "video";
+        if (art === "bildpunkt") return id.replace(/:hs\d+$/, ""); // → aufs Bild
+        if (art === "bild") return null;
+        if (art === "punkt" || art === "video") return id;
+        return null;
       };
-      const map = new Map<string, Punkt>();
+      const acc = new Map<string, { alle: number; du: boolean }>();
       for (const key in counts) {
-        if (!passt(key)) continue;
-        const alle = Number(counts[key]) || 0;
-        if (alle <= 0) continue;
-        map.set(key, {
-          id: key,
-          titel: titelVon(key),
-          area: areaVon(key),
-          staerke: alle,
-          du: lokal.spurIds.has(key),
-          alle,
-        });
+        const base = zielBasis(key);
+        if (!base) continue;
+        const n = Number(counts[key]) || 0;
+        if (n <= 0) continue;
+        const e = acc.get(base) ?? { alle: 0, du: false };
+        e.alle += n;
+        acc.set(base, e);
       }
       for (const s of lokal.spurIds) {
-        if (!passt(s) || map.has(s)) continue;
-        map.set(s, {
-          id: s,
-          titel: titelVon(s),
-          area: areaVon(s),
-          staerke: 1,
-          du: true,
-          alle: 0,
-        });
+        const base = zielBasis(s);
+        if (!base) continue;
+        const e = acc.get(base) ?? { alle: 0, du: false };
+        e.du = true;
+        acc.set(base, e);
       }
-      return [...map.values()].sort((a, b) => b.staerke - a.staerke);
+      return [...acc.entries()]
+        .map(([id, e]) => ({
+          id,
+          titel: titelVon(id),
+          area: areaVon(id),
+          staerke: Math.max(e.alle, e.du ? 1 : 0),
+          du: e.du,
+          alle: e.alle,
+        }))
+        .sort((a, b) => b.staerke - a.staerke);
     }
     if (ansicht === "bekannt") {
       // Eigene Bekanntheit (Teppich-Bewertung «Das war mir bekannt»): Stufe

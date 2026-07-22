@@ -470,9 +470,10 @@ export default function StoryGewebe({
 
   // Alle Titel registrieren (nicht nur gesammelte) — damit die Sternenkarte
   // im Orakel auch Inhalte konkret benennen kann, die man selbst nie öffnete.
+  // Bezeichnung wie im Muster selbst (Kurzform der Stichwort-Chips).
   useEffect(() => {
     stationen.forEach((st, i) =>
-      merkeInhalt(`${wunschKey ?? spurKey ?? "story"}:${i}`, st.titel),
+      merkeInhalt(`${wunschKey ?? spurKey ?? "story"}:${i}`, st.kurz ?? st.titel),
     );
   }, [stationen, spurKey, wunschKey]);
 
@@ -1042,7 +1043,7 @@ export default function StoryGewebe({
                       <KartenAktion
                         mehr={st.mehr}
                         wunschId={`wunsch:${wunschKey ?? spurKey ?? "story"}:${idx}`}
-                        titel={st.titel}
+                        titel={st.kurz ?? st.titel}
                       />
                     </div>
                   </div>
