@@ -202,6 +202,10 @@ export const GLOSSAR: Record<string, string> = {
     "Programme, die aus riesigen Textmengen gelernt haben, das nächste Wort vorherzusagen, und so selbst Texte schreiben.",
   "Turing-Test":
     "Ein von Alan Turing 1950 vorgeschlagenes Gespräch, das prüft, ob man eine Maschine für einen Menschen hält.",
+  Temperatur:
+    "Eine Einstellung der KI. Sie steuert, wie viel Zufall in der Wortwahl steckt. Ein hoher Wert macht die Antworten kreativer und unberechenbarer, ein niedriger vorhersehbarer.",
+  Vektor:
+    "Ein langer Zahlencode. Die KI stellt damit jedes Wort in einem Raum dar, sodass Bedeutung und Nähe zu anderen Wörtern messbar werden.",
 };
 
 function escapeRegExp(s: string): string {

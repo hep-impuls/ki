@@ -11,6 +11,7 @@ import {
 } from "../_lib/spuren";
 import KartenAktion from "./KartenAktion";
 import GewichtungWahl from "./GewichtungWahl";
+import { GlossarText } from "./Glossar";
 import { GEWICHT_EVENT, gewichtungsStaerke, zieheGewichtungAusCloud } from "../_lib/gewichtung";
 import { melde } from "../_lib/auswertung";
 import { merkeInhalt } from "../_lib/inhalte";
@@ -220,6 +221,7 @@ export default function KnotenLandschaft({
   kantenInteraktiv = true,
   bereichLabel,
   weben = false,
+  glossar = false,
 }: {
   knoten: LandKnoten[];
   /** Eine oder mehrere Anordnungen; bei mehreren erscheint ein Umschalter. */
@@ -261,6 +263,9 @@ export default function KnotenLandschaft({
    *  sich zwischen besuchten Punkten farbige Maschen füllen. Nur bei genau
    *  einer Anordnung sinnvoll (feste Positionen). */
   weben?: boolean;
+  /** true → Karten-Text und «Mehr lesen» laufen durch GlossarText, sodass
+   *  bekannte Fachbegriffe eine Hover-Erklärung bekommen (z.B. Temperatur). */
+  glossar?: boolean;
 }) {
   const n = knoten.length;
   // Aggregierte Kontur-Stärke (0..1) aus den Gewichtungen — live.
@@ -866,14 +871,16 @@ export default function KnotenLandschaft({
                       />
                     )}
                     <div className="min-w-0">
-                      <p className="text-body-md text-on-surface-variant">{k.text}</p>
+                      <p className="text-body-md text-on-surface-variant">
+                        {glossar ? <GlossarText text={k.text} /> : k.text}
+                      </p>
                       {k.bild && (
                         <p className="mt-xs text-label-sm text-on-surface-variant opacity-70">
                           {k.bild.credit}
                         </p>
                       )}
                       <KartenAktion
-                        mehr={k.mehr}
+                        mehr={glossar && k.mehr ? <GlossarText text={k.mehr} /> : k.mehr}
                         wunschId={`wunsch:${wunschKey ?? spurKey ?? "knoten"}:${idx}`}
                         titel={k.titel}
                       />

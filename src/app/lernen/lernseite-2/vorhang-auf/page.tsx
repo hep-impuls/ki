@@ -869,6 +869,7 @@ export default function Lernseite2VorhangAuf() {
           spurKey="vorhang-auf:weisheit"
           kantenInteraktiv={false}
           weben
+          glossar
           bereichLabel="Die Merkmale der neuen Akteurin"
           gewichtung={{
             prefix: "vorhang-auf:gestalt",
@@ -898,9 +899,9 @@ export default function Lernseite2VorhangAuf() {
             },
             {
               titel: "wahrscheinlichkeitsbasiert",
-              text: "Eine Wetter-App sagt nicht «es regnet», sondern «80 Prozent Regen». Ähnlich arbeitet die KI. Sie fragt bei jedem nächsten Wort, welches am ehesten passt, und wählt daraus aus. Ihre Antworten sind also gut begründete Wetten, aber eben Wetten. Deshalb kann sie sehr überzeugend klingen und trotzdem danebenliegen.",
+              text: "Eine Wetter-App sagt nicht «es regnet», sondern «80 Prozent Regen». Auch die KI rechnet in Wahrscheinlichkeiten, doch sie sucht nicht einfach das nächstbeste Wort. Jedes Wort wird für sie zu einer langen Zahlenreihe, einem sogenannten Vektor, der Bedeutung und Bezüge zu anderen Wörtern festhält. In diesem Raum liegen «Hund» und «Katze» nahe beieinander, «Hund» und «Schraube» weit auseinander. Aus dem Zusammenspiel vieler solcher Bedeutungsebenen berechnet sie, welche Fortsetzung am besten passt. Ihre Antwort ist darum eine Wette mit sehr guten Quoten, aber eben eine Wette.",
               mehr:
-                "Für jedes nächste Wort berechnet das Modell, wie wahrscheinlich alle möglichen Fortsetzungen sind. Meist nimmt es eine der wahrscheinlichsten, aber nicht immer die allerwahrscheinlichste. Ein eingebauter Zufall, die sogenannte Temperatur, sorgt für Abwechslung. Dreht man die Temperatur hoch, wird die KI kreativer und zugleich unberechenbarer. Dreht man sie herunter, wird sie vorhersehbarer und braver. Das erklärt, warum dieselbe Frage zweimal ganz verschieden beantwortet werden kann.",
+                "Fachleute nennen diese Zahlencodes Vektoren, und sie haben nicht zwei oder drei Dimensionen, sondern sehr viele. Die Informatikerin Katharina Zweig spricht von rund 13'000 Richtungen, in denen ein Wort seinen Platz bekommt. Jede Richtung steht für einen winzigen Bedeutungsanteil, und erst alle zusammen ergeben den Sinn eines Wortes im jeweiligen Satz. Der Philosoph Markus Gabriel nennt diesen Vorgang Vektorisierung und betont, dass die KI dabei nur mit Mustern und Wahrscheinlichkeiten rechnet, ohne wirklich zu verstehen. Wie mutig die KI beim Auswählen dann würfelt, regelt eine Einstellung namens Temperatur. Ein hoher Wert macht die Antworten kreativer und unberechenbarer, ein niedriger vorhersehbarer. Das erklärt auch, warum dieselbe Frage zweimal ganz verschieden beantwortet werden kann.",
             },
             {
               titel: "generalisierend",
@@ -930,7 +931,7 @@ export default function Lernseite2VorhangAuf() {
               titel: "interaktiv",
               text: "Ein Getränkeautomat gibt dir genau das, was du drückst, und damit ist Schluss. Die KI arbeitet anders, nämlich in Runden. Sie macht einen Vorschlag, du gibst Rückmeldung, und sie macht einen besseren. So formt ihr das Ergebnis gemeinsam, Schritt für Schritt. Aus dem Bedienen wird ein Zusammenarbeiten.",
               mehr:
-                "Genau diese Schleife unterscheidet die KI vom klassischen Programm. Dort gibt es eine Eingabe und eine Ausgabe, dann ist alles vorbei. Bei der KI entsteht ein Hin und Her aus Versuchen und Verfeinern. Ein Beispiel: Du lässt dir einen Brief schreiben, findest ihn zu förmlich, bittest um mehr Wärme, und der nächste Versuch trifft es besser. Damit verändert sich auch die Rolle des Menschen. Aus dem, der nur ausführt, wird jemand, der anleitet, prüft und am Ende für das Ergebnis geradesteht.",
+                "Genau diese Schleife unterscheidet die KI vom klassischen Programm. Dort gibt es eine Eingabe und eine Ausgabe, dann ist alles vorbei. Bei der KI entsteht ein Hin und Her aus Versuchen und Verfeinern. Ein Beispiel: Du lässt dir einen Brief schreiben, findest ihn zu förmlich, bittest um einen wärmeren Ton, und der nächste Versuch trifft es besser. Damit verändert sich auch die Rolle des Menschen. Aus dem, der nur ausführt, wird jemand, der anleitet, prüft und am Ende für das Ergebnis geradesteht.",
             },
             {
               titel: "generativ",
@@ -1043,14 +1044,20 @@ export default function Lernseite2VorhangAuf() {
                 {
                   titel: "Rechen- und Speicherkapazität",
                   text: "Leistungsfähige KI braucht sehr viele spezielle Computerchips, Server und Speicher. Diese Anlagen sind teuer und stehen nur wenigen grossen Unternehmen und Staaten zur Verfügung. Wer diese Rechenkraft besitzt, hat einen grossen Vorsprung. So entsteht eine Abhängigkeit von einigen wenigen Anbietern.",
+                  beispiel:
+                    "Die meisten KI-Chips kommen von einer einzigen Firma, dem US-Konzern Nvidia. Weil alle diese Chips wollen, stieg Nvidia 2024 zeitweise zum wertvollsten Unternehmen der Welt auf. Wer keine solchen Chips bekommt, kann bei den grossen Modellen kaum mithalten.",
                 },
                 {
                   titel: "Energie und Ressourcen",
                   text: "Eine KI zu trainieren und zu betreiben verbraucht viel Strom und Kühlwasser. Dazu kommen seltene Rohstoffe für die Chips. Zwar werden die Geräte immer sparsamer, doch die Nutzung wächst noch schneller. Deshalb steigt der Gesamtverbrauch weiter an.",
+                  beispiel:
+                    "Google meldete in seinem Umweltbericht 2024, dass seine Treibhausgas-Emissionen seit 2019 um rund 48 Prozent gestiegen sind. Als Hauptgrund nennt der Konzern den wachsenden Stromhunger seiner Rechenzentren für KI. Ein Wert, der eigentlich sinken sollte, zeigt also nach oben.",
                 },
                 {
                   titel: "Rechenzentren",
                   text: "Für KI entstehen überall neue Rechenzentren, also grosse Hallen voller Computer. Sie schaffen digitale Kapazität für ein ganzes Land. Vor Ort brauchen sie aber viel Energie, Wasser, Fläche und einen starken Stromanschluss. Damit konkurrieren sie mit anderen Bedürfnissen einer Region.",
+                  beispiel:
+                    "In Irland verbrauchten die Rechenzentren 2023 bereits 21 Prozent des gesamten Stroms im Land, mehr als alle städtischen Haushalte zusammen. Das meldet das irische Statistikamt. Manche Regionen bremsen deshalb den Bau neuer Zentren.",
                 },
               ],
             },
@@ -1063,18 +1070,26 @@ export default function Lernseite2VorhangAuf() {
                 {
                   titel: "Technologisch-kapitalistische Organisation",
                   text: "Die stärkste KI wird fast nur von grossen privaten Technologiekonzernen entwickelt. Bei ihnen sammeln sich Geld, Daten, Rechenzentren und Patente. Dadurch liegt viel Macht bei wenigen Firmen. Deren Geschäftsinteressen bestimmen mit, in welche Richtung sich die Technik entwickelt.",
+                  beispiel:
+                    "Der Software-Riese Microsoft hat rund 13 Milliarden Dollar in die Firma OpenAI gesteckt, die hinter ChatGPT steht. Damit hängt eine der wichtigsten KI-Firmen eng an einem einzelnen Grosskonzern. So bündelt sich viel Macht bei wenigen Unternehmen.",
                 },
                 {
                   titel: "Zugang",
                   text: "Nicht alle können KI gleichermassen nutzen. Kosten, technische Ausstattung, Sprache und digitale Erfahrung entscheiden mit. Wer gut ausgestattet ist, profitiert stärker. So kann KI bestehende Ungleichheiten sogar vergrössern.",
+                  beispiel:
+                    "Bei ChatGPT gibt es das stärkere Modell vor allem im Bezahl-Abo für rund 20 Dollar im Monat, während die Gratis-Version schwächer ist. Wer zahlen kann, arbeitet also mit der besseren KI. Schon beim Zugang entsteht so ein Unterschied zwischen Menschen.",
                 },
                 {
                   titel: "Arbeitsmarkt",
                   text: "KI verändert die Arbeitswelt spürbar. Sie übernimmt vor allem einzelne Aufgaben, selten gleich einen ganzen Beruf. Manche Tätigkeiten fallen weg, andere verändern sich, und neue kommen dazu. Für viele Berufe bedeutet das neue Anforderungen und neues Lernen.",
+                  beispiel:
+                    "Die Bezahlfirma Klarna meldete 2024, ihr KI-Assistent erledige die Arbeit von rund 700 Kundendienst-Mitarbeitenden. Kurz darauf stellte sie aber wieder Menschen ein, weil die Qualität nicht überall reichte. Das zeigt, wie schnell und zugleich unsicher dieser Wandel verläuft.",
                 },
                 {
                   titel: "Rollenverschiebung",
                   text: "Die Rolle des Menschen verschiebt sich. Statt eine Arbeit selbst auszuführen, leitet man die KI an und prüft ihr Ergebnis. Am Ende trägt der Mensch die Verantwortung für das, was er übernimmt. Aus dem Ausführenden wird also eher ein Anleiter und Kontrolleur.",
+                  beispiel:
+                    "Wer heute programmiert, lässt sich von einem Werkzeug wie GitHub Copilot ganze Code-Abschnitte vorschlagen. Die eigentliche Arbeit ist dann, diese Vorschläge zu lesen, zu prüfen und zu verbessern. Aus dem Selberschreiben wird ein Anleiten und Kontrollieren.",
                 },
               ],
             },
@@ -1087,10 +1102,14 @@ export default function Lernseite2VorhangAuf() {
                 {
                   titel: "Regulierung",
                   text: "Der Staat versucht, KI mit Gesetzen zu lenken. Solche Regeln sollen Grundrechte, Sicherheit, Datenschutz und Urheberrecht schützen. Zugleich sollen sie Forschung und Innovation nicht unnötig behindern. Diese Balance ist schwierig, und die Regeln entstehen erst nach und nach.",
+                  beispiel:
+                    "Die Europäische Union hat 2024 den AI Act beschlossen, das weltweit erste umfassende KI-Gesetz. Es teilt KI-Anwendungen nach ihrem Risiko in Stufen ein, von frei erlaubt bis ganz verboten. Gefährliche Einsätze sollen so gestoppt und riskante streng geprüft werden.",
                 },
                 {
                   titel: "Geopolitik",
                   text: "Um KI ist ein weltweiter Wettbewerb entbrannt. Staaten und Unternehmen ringen um Chips, Daten, Fachkräfte und Energie. Auch technische Standards und Unabhängigkeit stehen auf dem Spiel. Wer hier vorne liegt, gewinnt wirtschaftliche und politische Macht.",
+                  beispiel:
+                    "Seit 2022 verbieten die USA den Export ihrer stärksten KI-Chips nach China. Der Hersteller Nvidia baute daraufhin absichtlich langsamere Chips, nur um weiter liefern zu dürfen. An diesem Streit sieht man, dass KI längst ein Machtthema zwischen Staaten ist.",
                 },
               ],
             },
@@ -1103,14 +1122,20 @@ export default function Lernseite2VorhangAuf() {
                 {
                   titel: "Kultureller Bias und Technikverständnis",
                   text: "KI lernt aus Texten, die oft aus dem englischsprachigen und westlichen Raum stammen. Darum gibt sie häufig westliche Sprachen, Werte und Sichtweisen wieder. Andere Kulturen verstehen Technik, Gemeinschaft und Privatsphäre aber teils ganz anders. «West» und «Ost» sind dabei keine festen Blöcke, sondern grobe Vereinfachungen.",
+                  beispiel:
+                    "Eine UNESCO-Studie von 2024 prüfte bekannte Sprachmodelle und fand klare Klischees. Frauen wurden viel häufiger mit «Familie» und «Haushalt» verbunden, Männer mit «Karriere» und «Gehalt». Die KI gibt also die Vorurteile ihrer Trainingstexte wieder.",
                 },
                 {
                   titel: "Text- und Archivkompetenz",
                   text: "KI hilft, grosse Textmengen zu durchsuchen und zusammenzufassen. Sie ersetzt aber nicht das kritische Prüfen von Quellen. Wichtig bleiben die Herkunft, der Zusammenhang und der Blick ins Original. Ohne dieses Prüfen sitzt man leicht Fehlern und Erfindungen auf.",
+                  beispiel:
+                    "2023 reichte ein New Yorker Anwalt einen Schriftsatz ein, für den er ChatGPT genutzt hatte. Die KI hatte sechs Gerichtsurteile frei erfunden, die es nie gab, und der Anwalt bekam eine Geldstrafe. Ohne Prüfen an der Quelle wird aus flüssigem Text schnell ein teurer Fehler.",
                 },
                 {
                   titel: "Wissensmacht",
                   text: "Sichtbar wird vor allem, was digital vorliegt und in den Trainingsdaten steckt. Was fehlt oder nie digitalisiert wurde, gerät leichter in Vergessenheit. So entscheidet die Auswahl der Daten mit, welches Wissen zählt. Das ist eine Form von Macht über das Wissen.",
+                  beispiel:
+                    "Die Trainingsdaten der grossen Modelle bestehen zu einem sehr grossen Teil aus englischen Texten. Wissen aus kleineren Sprachen, etwa vielen afrikanischen, ist kaum vertreten, und dort antwortet die KI schwächer oder erfindet mehr. So entscheidet die Datenmenge mit, wessen Wissen sichtbar bleibt.",
                 },
               ],
             },

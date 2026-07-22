@@ -28,6 +28,9 @@ const ACHTSAMKEIT_FARBEN = ["#ded9cc", "#e7c489", "#e58a3c", "#d13417"] as const
 export interface KontextPunkt {
   titel: string;
   text: string;
+  /** Optionales konkretes, recherchiertes Fallbeispiel (als Kasten unter dem
+   *  Text). */
+  beispiel?: string;
 }
 
 export interface KontextKapitel {
@@ -256,6 +259,17 @@ export default function KontextAkkordeon({
                         <p className="text-body-md leading-relaxed text-on-surface-variant">
                           {p.text}
                         </p>
+                        {p.beispiel && (
+                          <div className="mt-sm rounded-xl border border-outline-variant bg-surface-container-low p-sm sm:p-md">
+                            <p className="flex items-center gap-xs text-label-sm uppercase tracking-wider text-tertiary">
+                              <span className="material-symbols-outlined text-[16px]">lightbulb</span>
+                              Fallbeispiel
+                            </p>
+                            <p className="mt-xs text-body-md leading-relaxed text-on-surface-variant">
+                              {p.beispiel}
+                            </p>
+                          </div>
+                        )}
                         {gewichtung && (
                           <GewichtungWahl
                             className="mt-sm"
