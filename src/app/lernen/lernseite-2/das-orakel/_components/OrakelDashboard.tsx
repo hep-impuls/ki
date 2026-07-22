@@ -257,19 +257,6 @@ export default function OrakelDashboard() {
   );
   /* Gesamtnutzung aller: Summe sämtlicher anonymer Zähler (Knoten, Kanten,
    * Bilder, Videos, Merkzeichen) — so viele Interaktionen aller zusammen. */
-  const gesamtNutzung = useMemo(
-    () => Object.values(alleSpuren).reduce((s, n) => s + (Number(n) || 0), 0),
-    [alleSpuren],
-  );
-  /* Wo alle Teilnehmenden am aktivsten waren — Bereiche nach anonymer Summe. */
-  const alleTopBereiche = useMemo(
-    () =>
-      BEREICHE.map((b) => ({ label: b.label, n: summeMitPrefix(alleSpuren, b.prefix) }))
-        .filter((x) => x.n > 0)
-        .sort((a, b) => b.n - a.n)
-        .slice(0, 3),
-    [alleSpuren],
-  );
   const blickTotal = totalVotes(blickCounts);
   /* Geknüpfte Flächen (Maschen) über alle Weben-Bereiche (Teppich + KI-Story). */
   const flaechenGefuellt = useMemo(
@@ -528,37 +515,8 @@ export default function OrakelDashboard() {
             </span>
           </div>
         )}
-        <div className="mt-sm flex flex-wrap items-baseline gap-x-lg gap-y-sm">
-          <span className="flex items-baseline gap-xs">
-            <strong className="text-headline-sm text-on-surface">
-              {gesamtNutzung.toLocaleString("de-CH")}
-            </strong>
-            <span className="text-body-sm text-on-surface-variant">Interaktionen insgesamt</span>
-          </span>
-          <span className="flex items-baseline gap-xs">
-            <strong className="text-headline-sm text-on-surface">
-              {blickTotal.toLocaleString("de-CH")}
-            </strong>
-            <span className="text-body-sm text-on-surface-variant">
-              haben eine Grundhaltung geteilt
-            </span>
-          </span>
-        </div>
-        {alleTopBereiche.length > 0 && (
-          <p className="mt-sm text-body-sm text-on-surface-variant">
-            Am aktivsten waren alle bei:{" "}
-            {alleTopBereiche.map((b, i) => (
-              <span key={b.label}>
-                {i > 0 ? " · " : ""}
-                <strong className="text-on-surface">{b.label}</strong> ({b.n}×)
-              </span>
-            ))}
-            .
-          </p>
-        )}
         <p className="mt-sm text-label-sm text-on-surface-variant">
-          Alles anonym gezählt, ohne Namen — die Summe aller Klicks aller
-          Teilnehmenden. Einzelne lassen sich hier nicht erkennen.
+          Anonym gezählt, ohne Namen — Einzelne lassen sich hier nicht erkennen.
         </p>
       </section>
 
@@ -569,8 +527,8 @@ export default function OrakelDashboard() {
         eintraege={[
           { id: "perspektiven", label: "Perspektiven auf deine Aktivität" },
           { id: "deine-spur", label: "Deine Spur durchs Gewebe" },
-          { id: "blick", label: "Wie blickst du heute auf KI?" },
           { id: "orakel-spricht", label: "Das Orakel spricht" },
+          { id: "blick", label: "Wie blickst du heute auf KI?" },
           { id: "rueckmeldung", label: "Deine Rückmeldung" },
         ]}
       />
@@ -792,68 +750,6 @@ export default function OrakelDashboard() {
 
       <FadenDivider className="mt-xl" />
 
-      {/* 3 — Blick-Umfrage: du vs. alle */}
-      <section id="blick" className="mt-xl scroll-mt-24" aria-label="Blick auf KI">
-        <h2 className="text-headline-md text-on-surface">
-          Wie blickst du heute auf KI?
-        </h2>
-        <p className="mt-xs text-body-sm text-on-surface-variant">
-          {blickWahl
-            ? `${blickTotal} ${blickTotal === 1 ? "Stimme" : "Stimmen"} insgesamt — deine ist markiert.`
-            : "Wähle eine Haltung — danach siehst du, wie alle geantwortet haben."}
-        </p>
-        <div className="mt-md flex flex-col gap-sm">
-          {BLICK_OPTIONEN.map((o) => {
-            const n = Number(blickCounts[o.id] ?? 0);
-            const anteil = blickTotal > 0 ? n / blickTotal : 0;
-            const meineWahl = blickWahl === o.id;
-            return (
-              <button
-                key={o.id}
-                type="button"
-                onClick={() => blickWaehlen(o.id)}
-                disabled={Boolean(blickWahl)}
-                className={
-                  "relative overflow-hidden rounded-xl border p-md text-left transition " +
-                  (meineWahl
-                    ? "border-tertiary bg-tertiary-container/40"
-                    : "border-outline-variant bg-surface-bright") +
-                  (blickWahl ? "" : " hover:-translate-y-0.5 hover:shadow-sm")
-                }
-              >
-                {blickWahl && (
-                  <div
-                    aria-hidden
-                    className="absolute inset-y-0 left-0 bg-tertiary/10 transition-[width] duration-700"
-                    style={{ width: `${anteil * 100}%` }}
-                  />
-                )}
-                <div className="relative flex items-center justify-between gap-md">
-                  <span className="inline-flex items-center gap-sm text-body-md text-on-surface">
-                    <span className="material-symbols-outlined text-[20px] text-tertiary">
-                      {o.icon}
-                    </span>
-                    {o.label}
-                    {meineWahl && (
-                      <span className="rounded-lg bg-tertiary px-sm py-xs text-label-sm text-on-tertiary">
-                        du
-                      </span>
-                    )}
-                  </span>
-                  {blickWahl && (
-                    <span className="text-label-sm text-on-surface-variant">
-                      {Math.round(anteil * 100)} % ({n})
-                    </span>
-                  )}
-                </div>
-              </button>
-            );
-          })}
-        </div>
-      </section>
-
-      <FadenDivider className="mt-xl" />
-
       {/* 4 — Das Orakel: KI deutet deine Aktivität */}
       <section id="orakel-spricht" className="mt-xl scroll-mt-24" aria-label="Das Orakel spricht">
         <h2 className="text-headline-md text-on-surface">Das Orakel spricht</h2>
@@ -1060,6 +956,68 @@ export default function OrakelDashboard() {
               Ausdruck.
             </p>
           )}
+        </div>
+      </section>
+
+      <FadenDivider className="mt-xl" />
+
+      {/* Blick-Umfrage — direkt vor den Findmind-Umfragen */}
+      <section id="blick" className="mt-xl scroll-mt-24" aria-label="Blick auf KI">
+        <h2 className="text-headline-md text-on-surface">
+          Wie blickst du heute auf KI?
+        </h2>
+        <p className="mt-xs text-body-sm text-on-surface-variant">
+          {blickWahl
+            ? `${blickTotal} ${blickTotal === 1 ? "Stimme" : "Stimmen"} insgesamt — deine ist markiert.`
+            : "Wähle eine Haltung — danach siehst du, wie alle geantwortet haben."}
+        </p>
+        <div className="mt-md flex flex-col gap-sm">
+          {BLICK_OPTIONEN.map((o) => {
+            const n = Number(blickCounts[o.id] ?? 0);
+            const anteil = blickTotal > 0 ? n / blickTotal : 0;
+            const meineWahl = blickWahl === o.id;
+            return (
+              <button
+                key={o.id}
+                type="button"
+                onClick={() => blickWaehlen(o.id)}
+                disabled={Boolean(blickWahl)}
+                className={
+                  "relative overflow-hidden rounded-xl border p-md text-left transition " +
+                  (meineWahl
+                    ? "border-tertiary bg-tertiary-container/40"
+                    : "border-outline-variant bg-surface-bright") +
+                  (blickWahl ? "" : " hover:-translate-y-0.5 hover:shadow-sm")
+                }
+              >
+                {blickWahl && (
+                  <div
+                    aria-hidden
+                    className="absolute inset-y-0 left-0 bg-tertiary/10 transition-[width] duration-700"
+                    style={{ width: `${anteil * 100}%` }}
+                  />
+                )}
+                <div className="relative flex items-center justify-between gap-md">
+                  <span className="inline-flex items-center gap-sm text-body-md text-on-surface">
+                    <span className="material-symbols-outlined text-[20px] text-tertiary">
+                      {o.icon}
+                    </span>
+                    {o.label}
+                    {meineWahl && (
+                      <span className="rounded-lg bg-tertiary px-sm py-xs text-label-sm text-on-tertiary">
+                        du
+                      </span>
+                    )}
+                  </span>
+                  {blickWahl && (
+                    <span className="text-label-sm text-on-surface-variant">
+                      {Math.round(anteil * 100)} % ({n})
+                    </span>
+                  )}
+                </div>
+              </button>
+            );
+          })}
         </div>
       </section>
 
