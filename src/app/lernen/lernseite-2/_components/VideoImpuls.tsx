@@ -7,6 +7,7 @@ import {
   SPUR_EVENT,
   zieheSpurenAusCloud,
 } from "../_lib/spuren";
+import { merkeInhalt } from "../_lib/inhalte";
 
 /**
  * VideoImpuls — ein kurzes Erklär-Video als Einstieg/Impuls einer Seite.
@@ -98,6 +99,11 @@ export default function VideoImpuls({
     window.addEventListener(SPUR_EVENT, restore);
     return () => window.removeEventListener(SPUR_EVENT, restore);
   }, [spurId]);
+
+  // Titel registrieren — für die Sternenkarte im Orakel.
+  useEffect(() => {
+    merkeInhalt(spurId, titel);
+  }, [spurId, titel]);
 
   useEffect(() => {
     if (!videoId || !holderRef.current) return;

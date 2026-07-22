@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { SPUR_EVENT, SPUREN_POLL_ID, leseSpuren } from "../_lib/spuren";
+import { SPUR_EVENT, SPUREN_POLL_ID, leseSpuren, spurArt } from "../_lib/spuren";
 import { GEWICHT_EVENT, leseGewichtungen } from "../_lib/gewichtung";
 import { leseInhalte } from "../_lib/inhalte";
 import {
@@ -25,9 +25,15 @@ import {
  * als vorbereiteter Platzhalter, damit Pietros Route nur eingehängt wird.
  */
 
-type Ansicht = "weiter" | "vertieft" | "bekannt";
+type Ansicht = "geklickt" | "weiter" | "vertieft" | "bekannt";
 
 const ANSICHTEN: { id: Ansicht; label: string; icon: string; hinweis: string }[] = [
+  {
+    id: "geklickt",
+    label: "Angeklickt",
+    icon: "ads_click",
+    hinweis: "Die am häufigsten angeklickten Punkte — über alle Bereiche: Story, Bilder, Merkmale, Kontexte, Philosophie.",
+  },
   {
     id: "weiter",
     label: "Weiterverfolgt",
@@ -52,8 +58,12 @@ const ANSICHTEN: { id: Ansicht; label: string; icon: string; hinweis: string }[]
 const AREAS: { prefix: string; name: string; fill: string; text: string }[] = [
   { prefix: "vorhang-auf:story", name: "KI-Story", fill: "fill-tertiary", text: "text-tertiary" },
   { prefix: "vorhang-auf:weisheit", name: "Merkmale", fill: "fill-secondary", text: "text-secondary" },
+  { prefix: "vorhang-auf:bild", name: "Bilder", fill: "fill-secondary", text: "text-secondary" },
+  { prefix: "vorhang-auf:kontext", name: "Kontext", fill: "fill-primary", text: "text-primary" },
   { prefix: "philosophische-perspektive:teppich", name: "Teppich", fill: "fill-primary", text: "text-primary" },
   { prefix: "philosophische-perspektive:epochen", name: "Epochen", fill: "fill-on-surface", text: "text-on-surface" },
+  { prefix: "philosophische-perspektive:einstieg", name: "Philosophie", fill: "fill-on-surface", text: "text-on-surface" },
+  { prefix: "video:", name: "Videos", fill: "fill-tertiary", text: "text-tertiary" },
 ];
 function areaVon(id: string) {
   return (
@@ -81,7 +91,7 @@ const CENTER = { x: 180, y: 128 };
 const GOLDWINKEL = 2.399963229728653; // 137.5° in rad
 
 export default function Sternenkarte({ className = "" }: { className?: string }) {
-  const [ansicht, setAnsicht] = useState<Ansicht>("weiter");
+  const [ansicht, setAnsicht] = useState<Ansicht>("geklickt");
   const [counts, setCounts] = useState<PollCounts>({});
   const [lokal, setLokal] = useState<{ spurIds: Set<string>; bekannt: Record<number, number> }>({
     spurIds: new Set(),
@@ -114,6 +124,42 @@ export default function Sternenkarte({ className = "" }: { className?: string })
   const titelVon = (id: string) => inhalte[id] ?? id.split(":").slice(-2).join(" ");
 
   const punkte = useMemo<Punkt[]>(() => {
+    if (ansicht === "geklickt") {
+      // Alle angeklickten Inhalts-Punkte (Story, Bilder inkl. Hotspots,
+      // Merkmale, Kontexte, Philosophie, Videos) — inhaltslose Muster
+      // (`…:gewebe…`) und Kanten bleiben draussen.
+      const passt = (id: string) => {
+        if (id.includes(":gewebe")) return false;
+        const art = spurArt(id);
+        return art === "punkt" || art === "bild" || art === "bildpunkt" || art === "video";
+      };
+      const map = new Map<string, Punkt>();
+      for (const key in counts) {
+        if (!passt(key)) continue;
+        const alle = Number(counts[key]) || 0;
+        if (alle <= 0) continue;
+        map.set(key, {
+          id: key,
+          titel: titelVon(key),
+          area: areaVon(key),
+          staerke: alle,
+          du: lokal.spurIds.has(key),
+          alle,
+        });
+      }
+      for (const s of lokal.spurIds) {
+        if (!passt(s) || map.has(s)) continue;
+        map.set(s, {
+          id: s,
+          titel: titelVon(s),
+          area: areaVon(s),
+          staerke: 1,
+          du: true,
+          alle: 0,
+        });
+      }
+      return [...map.values()].sort((a, b) => b.staerke - a.staerke);
+    }
     if (ansicht === "bekannt") {
       // Eigene Bekanntheit (Teppich-Bewertung «Das war mir bekannt»): Stufe
       // 0..2 → Stärke. Nur bewertete Punkte.
@@ -225,7 +271,9 @@ export default function Sternenkarte({ className = "" }: { className?: string })
         <p className="mt-md rounded-xl border border-dashed border-outline-variant bg-surface-container-low p-md text-body-sm text-on-surface-variant">
           {ansicht === "bekannt"
             ? "Noch keine Bekanntheits-Bewertungen — bewerte im «Teppich des Wandels», was dir bekannt war."
-            : "Noch keine Daten — sobald Inhalte weiterverfolgt oder vertieft werden, erscheinen hier die stärksten."}
+            : ansicht === "geklickt"
+              ? "Noch keine Klicks gezählt — sobald Punkte angeklickt werden, erscheinen hier die stärksten."
+              : "Noch keine Daten — sobald Inhalte weiterverfolgt oder vertieft werden, erscheinen hier die stärksten."}
         </p>
       ) : (
         <div className="mt-md grid items-center gap-lg lg:grid-cols-[minmax(0,1fr)_20rem]">

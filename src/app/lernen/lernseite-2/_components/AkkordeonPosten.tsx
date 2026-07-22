@@ -7,6 +7,7 @@ import {
   SPUR_EVENT,
   zieheSpurenAusCloud,
 } from "../_lib/spuren";
+import { merkeInhalt } from "../_lib/inhalte";
 
 /**
  * AkkordeonPosten — ein einfacher Aktivitätsposten: eine Liste von Punkten,
@@ -55,6 +56,11 @@ export default function AkkordeonPosten({
     window.addEventListener(SPUR_EVENT, restore);
     return () => window.removeEventListener(SPUR_EVENT, restore);
   }, [spurKey, gesamt]);
+
+  // Alle Titel registrieren (auch ungeöffnete) — für die Sternenkarte im Orakel.
+  useEffect(() => {
+    punkte.forEach((p, i) => merkeInhalt(`${spurKey}:${i}`, p.titel));
+  }, [punkte, spurKey]);
 
   function toggle(i: number) {
     setOffen((prev) => {

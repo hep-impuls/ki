@@ -7,6 +7,7 @@ import {
   SPUR_EVENT,
   zieheSpurenAusCloud,
 } from "../_lib/spuren";
+import { merkeInhalt } from "../_lib/inhalte";
 
 /**
  * BilderAnschauung — eine Bilderstrecke, die sich in einen Anschauungsmodus
@@ -70,6 +71,17 @@ export default function BilderAnschauung({
     window.addEventListener(SPUR_EVENT, restore);
     return () => window.removeEventListener(SPUR_EVENT, restore);
   }, [spurKey, bilder.length]);
+
+  // Alle Titel registrieren (Bilder + Hotspots, auch unbesuchte) — für die
+  // Sternenkarte im Orakel.
+  useEffect(() => {
+    bilder.forEach((b, i) => {
+      merkeInhalt(`${spurKey}:${i}`, b.titel);
+      b.hotspots.forEach((h, hi) =>
+        merkeInhalt(`${spurKey}:${i}:hs${hi}`, `${b.titel} — ${h.titel}`),
+      );
+    });
+  }, [bilder, spurKey]);
 
   function oeffnen(i: number) {
     setOffen(i);

@@ -8,6 +8,7 @@ import {
   zieheSpurenAusCloud,
 } from "../_lib/spuren";
 import { GEWICHT_EVENT, leseGewichtungen, zieheGewichtungAusCloud } from "../_lib/gewichtung";
+import { merkeInhalt } from "../_lib/inhalte";
 import GewichtungWahl from "./GewichtungWahl";
 
 /** Warme Skala für das Achtsamkeits-Muster: mehr Achtsamkeit → farbiger,
@@ -72,6 +73,16 @@ export default function KontextAkkordeon({
     window.addEventListener(GEWICHT_EVENT, lade);
     return () => window.removeEventListener(GEWICHT_EVENT, lade);
   }, [gewichtung]);
+
+  // Alle Titel registrieren (auch ungeöffnete) — für die Sternenkarte im Orakel.
+  useEffect(() => {
+    flach.forEach((f, gi) =>
+      merkeInhalt(
+        `${spurKey}:${gi}`,
+        `${kapitel[f.ki].titel} — ${kapitel[f.ki].punkte[f.pi].titel}`,
+      ),
+    );
+  }, [flach, kapitel, spurKey]);
 
   useEffect(() => {
     function restore() {
