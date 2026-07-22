@@ -98,3 +98,17 @@ Werke einer US-Bundesbehörde gemeinfrei.
 
 Austauschbar: andere Bilder können hier abgelegt und in der Datenstruktur der
 Komponente referenziert werden.
+
+## KI-erstellt (Umgebungsbilder Orakel)
+
+| Datei | Beschreibung |
+|---|---|
+| `orakel-umgebung-1.webp` | Aquarell: Punktfiguren im Nebel auf einem Netz |
+| `orakel-umgebung-2.webp` | Aquarell: verzweigtes Fadennetz, blau-grün |
+| `orakel-umgebung-3.webp` | Aquarell: Netzlandschaft mit aufsteigenden Figuren |
+| `orakel-umgebung-4.webp` | Aquarell: einzelne Punktfigur in Netzlandschaft |
+
+Alle vier Bilder sind **KI-erstellt** (2026, für dieses Lernset generiert,
+bereitgestellt von Christof Glaus) und dienen rein dekorativ als Hintergrund-
+Umgebung der Orakel-Abschnitte. In der UI als Hintergrund ohne Bildaussage
+eingesetzt; Kennzeichnung erfolgt hier zentral.

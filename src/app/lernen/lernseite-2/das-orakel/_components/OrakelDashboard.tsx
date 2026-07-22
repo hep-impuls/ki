@@ -54,12 +54,12 @@ const FINDMIND_GEFALLEN_URL = "https://findmind.ch/c/3R8p-jfCD";
 /* ── Bereiche der eigenen Spur (Totale = Anzahl Knoten je Interaktion) ──── */
 
 const BEREICHE: { prefix: string; label: string; total: number; href: string }[] = [
-  { prefix: "vorhang-auf:story", label: "Die KI-Story", total: 22, href: "/lernen/lernseite-2/vorhang-auf" },
-  { prefix: "vorhang-auf:weisheit", label: "Merkmale der neuen Akteurin", total: 12, href: "/lernen/lernseite-2/vorhang-auf" },
-  { prefix: "vorhang-auf:kontext", label: "Die KI im Kontext", total: 12, href: "/lernen/lernseite-2/vorhang-auf" },
-  { prefix: "philosophische-perspektive:einstieg", label: "Was ist Philosophie?", total: 4, href: "/lernen/lernseite-2/philosophische-perspektive" },
-  { prefix: "philosophische-perspektive:teppich", label: "Der Teppich des Wandels", total: 33, href: "/lernen/lernseite-2/philosophische-perspektive" },
-  { prefix: "philosophische-perspektive:epochen", label: "Philosophie in Zeiten der Verunsicherung", total: 24, href: "/lernen/lernseite-2/philosophische-perspektive" },
+  { prefix: "vorhang-auf:story", label: "Die KI-Story", total: 22, href: "/lernen/lernseite-2/vorhang-auf#ki-story" },
+  { prefix: "vorhang-auf:weisheit", label: "Merkmale der neuen Akteurin", total: 12, href: "/lernen/lernseite-2/vorhang-auf#merkmale" },
+  { prefix: "vorhang-auf:kontext", label: "Die KI im Kontext", total: 12, href: "/lernen/lernseite-2/vorhang-auf#ki-kontext" },
+  { prefix: "philosophische-perspektive:einstieg", label: "Was ist Philosophie?", total: 4, href: "/lernen/lernseite-2/philosophische-perspektive#was-philosophie" },
+  { prefix: "philosophische-perspektive:teppich", label: "Der Teppich des Wandels", total: 33, href: "/lernen/lernseite-2/philosophische-perspektive#teppich" },
+  { prefix: "philosophische-perspektive:epochen", label: "Philosophie in Zeiten der Verunsicherung", total: 24, href: "/lernen/lernseite-2/philosophische-perspektive#epochen" },
   { prefix: "video:", label: "Video-Impulse", total: 3, href: "/lernen/lernseite-2" },
 ];
 
@@ -637,8 +637,22 @@ export default function OrakelDashboard() {
 
           {/* Das Orakel antwortet direkt auf die Interessens-Auswertung —
               die erste seiner zwei Stimmen (die zweite: die Stil-Deutung
-              weiter unten). */}
-          <div className="mt-md rounded-xl border border-tertiary/40 bg-tertiary-container/20 p-md">
+              weiter unten). Ambient: KI-Aquarell als stille Umgebung. */}
+          <div className="relative mt-md overflow-hidden rounded-xl border border-tertiary/40 bg-surface-bright">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/art/orakel-umgebung-2.webp"
+              alt=""
+              aria-hidden
+              loading="lazy"
+              className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-35"
+            />
+            <div className="relative p-md">
+            <p className="flex items-center gap-sm text-label-md uppercase tracking-wider text-tertiary">
+              <span className="material-symbols-outlined text-[18px]">auto_awesome</span>
+              Das Orakel spricht — erste Stimme: dein Interesse
+            </p>
+            <div className="mt-sm">
             {intOrakel.status === "idle" && (
               <div className="flex flex-wrap items-center justify-between gap-sm">
                 <p className="flex items-center gap-sm text-body-sm text-on-surface-variant">
@@ -683,11 +697,7 @@ export default function OrakelDashboard() {
             )}
             {intOrakel.status === "ok" && intOrakel.text && (
               <>
-                <p className="flex items-center gap-sm text-label-md text-tertiary">
-                  <span className="material-symbols-outlined text-[18px]">insights</span>
-                  Das Orakel zu deinem Interesse
-                </p>
-                <p className="mt-xs whitespace-pre-line text-body-md text-on-surface">
+                <p className="whitespace-pre-line text-body-lg text-on-surface">
                   {intOrakel.text}
                 </p>
                 <button
@@ -700,6 +710,8 @@ export default function OrakelDashboard() {
                 </button>
               </>
             )}
+            </div>
+            </div>
           </div>
         </section>
       )}
@@ -753,6 +765,9 @@ export default function OrakelDashboard() {
       {/* 4 — Das Orakel: KI deutet deine Aktivität */}
       <section id="orakel-spricht" className="mt-xl scroll-mt-24" aria-label="Das Orakel spricht">
         <h2 className="text-headline-md text-on-surface">Das Orakel spricht</h2>
+        <p className="mt-xs text-label-md uppercase tracking-wider text-tertiary">
+          Zweite Stimme: dein Weg durchs Lernset
+        </p>
         <p className="mt-xs text-body-sm text-on-surface-variant">
           Das Orakel deutet deine eigene Aktivität in wenigen Sätzen. Wähle eine
           Form — und wenn sie dir nicht zusagt, befrage es in einer anderen. Dazu
@@ -791,8 +806,17 @@ export default function OrakelDashboard() {
           })}
         </div>
 
-        {/* Befragen / Ergebnis */}
-        <div className="mt-md rounded-xl border border-tertiary/40 bg-tertiary-container/30 p-lg">
+        {/* Befragen / Ergebnis — Ambient: KI-Aquarell als stille Umgebung */}
+        <div className="relative mt-md overflow-hidden rounded-xl border border-tertiary/40 bg-surface-bright">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/art/orakel-umgebung-4.webp"
+            alt=""
+            aria-hidden
+            loading="lazy"
+            className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-40"
+          />
+          <div className="relative p-lg">
           {aktuell.status === "idle" && (
             <div className="flex flex-col items-start gap-sm">
               <p className="text-body-md text-on-surface-variant">
@@ -914,6 +938,7 @@ export default function OrakelDashboard() {
               </div>
             </>
           )}
+          </div>
         </div>
 
         {/* Ausdruck / PDF — reduzierte Zusammenfassung: Name, Aktivität in
