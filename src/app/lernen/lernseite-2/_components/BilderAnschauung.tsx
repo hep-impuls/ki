@@ -89,6 +89,14 @@ export default function BilderAnschauung({
       merkeSpur(`${spurKey}:${next}`);
     }
   }
+  /** Einen Hotspot öffnen/schliessen. Beim erstmaligen Öffnen als «Bildpunkt»
+   *  in die Spuren aufnehmen (id endet auf `:hs<n>` — zählt fürs Aktivitätsnetz
+   *  als durchgegangener Hotspot). */
+  function hotspotTippen(hi: number) {
+    const jetztAktiv = hot === hi;
+    setHot(jetztAktiv ? null : hi);
+    if (!jetztAktiv && offen !== null) merkeSpur(`${spurKey}:${offen}:hs${hi}`);
+  }
 
   // Escape schliesst, Pfeiltasten blättern.
   useEffect(() => {
@@ -267,7 +275,7 @@ export default function BilderAnschauung({
                   <button
                     key={hi}
                     type="button"
-                    onClick={() => setHot(aktiv ? null : hi)}
+                    onClick={() => hotspotTippen(hi)}
                     aria-label={`Hotspot: ${h.titel}`}
                     aria-pressed={aktiv}
                     className="absolute -translate-x-1/2 -translate-y-1/2 outline-none"

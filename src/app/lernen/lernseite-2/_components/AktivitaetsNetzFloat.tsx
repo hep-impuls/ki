@@ -10,7 +10,7 @@ import { AUSWERTUNG_EVENT, zaehleFlaechen } from "../_lib/auswertung";
 import AktivitaetsNetz from "./AktivitaetsNetz";
 
 /** Die vier angezeigten Kennzahlen (wie im grossen Netz). */
-type NetzWerte = { knoten: number; flaechen: number; bilder: number; videos: number };
+type NetzWerte = { punkte: number; flaechen: number; bildpunkte: number; videos: number };
 
 /**
  * AktivitaetsNetzFloat — das Aktivitätsnetz als mitwanderndes Symbol.
@@ -25,8 +25,8 @@ type NetzWerte = { knoten: number; flaechen: number; bilder: number; videos: num
 /** Mini-Netz fürs Symbol: Kern + vier farbige Punkte, die pulsieren. */
 function MiniNetz({ zahlen }: { zahlen: NetzWerte }) {
   const punkte = [
-    { x: 20, y: 6, cls: "fill-tertiary", aktiv: zahlen.knoten > 0 },
-    { x: 34, y: 19, cls: "fill-secondary", aktiv: zahlen.bilder > 0 },
+    { x: 20, y: 6, cls: "fill-tertiary", aktiv: zahlen.punkte > 0 },
+    { x: 34, y: 19, cls: "fill-secondary", aktiv: zahlen.bildpunkte > 0 },
     { x: 6, y: 19, cls: "fill-primary", aktiv: zahlen.flaechen > 0 },
     { x: 20, y: 33, cls: "fill-on-surface", aktiv: zahlen.videos > 0 },
   ];
@@ -64,9 +64,9 @@ function MiniNetz({ zahlen }: { zahlen: NetzWerte }) {
 export default function AktivitaetsNetzFloat() {
   const [offen, setOffen] = useState(false);
   const [z, setZ] = useState<NetzWerte>({
-    knoten: 0,
+    punkte: 0,
     flaechen: 0,
-    bilder: 0,
+    bildpunkte: 0,
     videos: 0,
   });
 
@@ -74,9 +74,9 @@ export default function AktivitaetsNetzFloat() {
     const lesen = () => {
       const a = zaehleAktivitaet();
       setZ({
-        knoten: a.knoten,
+        punkte: a.knoten,
         flaechen: zaehleFlaechen().gefuellt,
-        bilder: a.bilder,
+        bildpunkte: a.bildpunkte,
         videos: a.videos,
       });
     };
@@ -99,7 +99,7 @@ export default function AktivitaetsNetzFloat() {
     return () => window.removeEventListener("keydown", onKey);
   }, [offen]);
 
-  const gesamt = z.knoten + z.flaechen + z.bilder + z.videos;
+  const gesamt = z.punkte + z.flaechen + z.bildpunkte + z.videos;
 
   return (
     <>
@@ -116,8 +116,8 @@ export default function AktivitaetsNetzFloat() {
             <div className="relative max-h-[76vh] overflow-y-auto rounded-2xl">
               <AktivitaetsNetz
                 schwebend
-                titel="Dein Aktivitätsnetz"
-                unterzeile="Angeklickte Knoten, geknüpfte Flächen und angeschaute Bilder — zusammen als ein Netz."
+                titel="Aktivitätsnetz"
+                unterzeile="Hintergrund: alle Nutzenden. Vordergrund: du. Punkte, Flächen, Bildpunkte und Videos verflechten sich zu einem Muster."
               />
               <button
                 type="button"

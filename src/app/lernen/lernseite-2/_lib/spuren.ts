@@ -3,7 +3,7 @@
 import { doc, getDoc, serverTimestamp, setDoc } from "firebase/firestore";
 import { getFirebase } from "@/lib/firebase";
 import { seg } from "@/lib/paths";
-import { castVote } from "@/lib/polls";
+import { castVote, type PollCounts } from "@/lib/polls";
 import { ensureStudent } from "@/lib/db";
 import { generateCode, getSession, saveSession } from "@/lib/session";
 
@@ -237,8 +237,10 @@ export interface AktivitaetsZahlen {
   knoten: number;
   /** Eingeloggte Verbindungen (Kombinationen aus zwei Knoten). */
   kombinationen: number;
-  /** Angeschaute Bilder der Bilderstrecken. */
+  /** Angeschaute Bilder der Bilderstrecken (geöffnete Bilder). */
   bilder: number;
+  /** Durchgegangene Bild-Hotspots (Bildpunkte). */
+  bildpunkte: number;
   /** Geschaute Video-Impulse. */
   videos: number;
   /** «Mehr dazu wissen»-Merkzeichen (Wünsche nach Vertiefung). */
@@ -247,26 +249,83 @@ export interface AktivitaetsZahlen {
   mehr: number;
 }
 
+/** Art einer Spur — zentrale Klassifikation (lokal wie anonym gleich genutzt). */
+export type SpurArt =
+  | "wunsch"
+  | "mehr"
+  | "video"
+  | "bildpunkt"
+  | "kante"
+  | "bild"
+  | "punkt";
+
+/**
+ * Eine Spur-ID einer Art zuordnen. Reihenfolge ist wichtig: Hotspots
+ * (`…:hs<n>`) enthalten auch `:bild`, müssen also VOR `:bild` geprüft werden.
+ */
+export function spurArt(id: string): SpurArt {
+  if (id.startsWith("wunsch:")) return "wunsch";
+  if (id.startsWith("mehr:")) return "mehr";
+  if (id.startsWith("video:")) return "video";
+  if (id.includes(":hs")) return "bildpunkt";
+  if (id.includes(":kanten-")) return "kante";
+  if (id.includes(":bild")) return "bild";
+  return "punkt";
+}
+
 /**
  * Aktivitäts-Kennzahlen aus dem lokalen Spuren-Bestand — fürs Aktivitätsnetz.
- * Kanten-Spuren (`…:kanten-…`) zählen als Kombinationen, Bild-Spuren
- * (`…:bild…`) als angeschaute Bilder, Video-Spuren (`video:…`) als
- * geschaute Videos, alles Übrige als Knoten.
+ * Hotspot-Spuren (`…:hs…`) zählen als Bildpunkte, Bild-Spuren (`…:bild…`) als
+ * geöffnete Bilder, Kanten (`…:kanten-…`) als Kombinationen, Video-Spuren
+ * (`video:…`) als geschaute Videos, alles Übrige als Knoten.
  */
 export function zaehleAktivitaet(): AktivitaetsZahlen {
   let knoten = 0;
   let kombinationen = 0;
   let bilder = 0;
+  let bildpunkte = 0;
   let videos = 0;
   let wuensche = 0;
   let mehr = 0;
   for (const s of lesen()) {
-    if (s.id.startsWith("wunsch:")) wuensche++;
-    else if (s.id.startsWith("mehr:")) mehr++;
-    else if (s.id.startsWith("video:")) videos++;
-    else if (s.id.includes(":kanten-")) kombinationen++;
-    else if (s.id.includes(":bild")) bilder++;
-    else knoten++;
+    switch (spurArt(s.id)) {
+      case "wunsch": wuensche++; break;
+      case "mehr": mehr++; break;
+      case "video": videos++; break;
+      case "bildpunkt": bildpunkte++; break;
+      case "kante": kombinationen++; break;
+      case "bild": bilder++; break;
+      default: knoten++;
+    }
   }
-  return { knoten, kombinationen, bilder, videos, wuensche, mehr };
+  return { knoten, kombinationen, bilder, bildpunkte, videos, wuensche, mehr };
+}
+
+/**
+ * Aus den anonymen Poll-Zählern (`spuren-lernseite-2`, counts[id] += 1 pro
+ * Browser) die Kollektiv-Kennzahlen für das Aktivitätsnetz herausrechnen —
+ * dieselbe Klassifikation wie lokal. Flächen liegen NICHT hier (berechnete
+ * Geometrie) → eigener Zähler in `auswertung.ts`.
+ */
+export function zaehleAlleAusPoll(counts: PollCounts): {
+  punkte: number;
+  bildpunkte: number;
+  videos: number;
+} {
+  let punkte = 0;
+  let bildpunkte = 0;
+  let videos = 0;
+  for (const id in counts) {
+    const n = Number(counts[id]) || 0;
+    if (n <= 0) continue;
+    switch (spurArt(id)) {
+      case "video": videos += n; break;
+      case "bildpunkt": bildpunkte += n; break;
+      case "punkt": punkte += n; break;
+      // bild (geöffnete Bilder), kante, wunsch, mehr → nicht unter den vier
+      // Netz-Kennzahlen.
+      default: break;
+    }
+  }
+  return { punkte, bildpunkte, videos };
 }

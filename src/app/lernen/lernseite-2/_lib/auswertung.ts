@@ -14,8 +14,36 @@
  * (localStorage), wie `spuren`/`gewichtung`. Kein Cloud-Spiegel.
  */
 
+import { castVote } from "@/lib/polls";
+
 const KEY = "ki26-auswertung-lernseite-2";
 export const AUSWERTUNG_EVENT = "ki26-auswertung";
+/** Anonymer Aggregat-Zähler: wie viele Flächen (Maschen) alle zusammen je
+ *  geknüpft haben — pro Bereich als Option. Fürs «alle» im Aktivitätsnetz. */
+export const FLAECHEN_POLL_ID = "flaechen-lernseite-2";
+/** Register (max je Bereich je gezählt), damit ein «Muster zurücksetzen» und
+ *  erneutes Weben den anonymen Zähler nicht aufbläht. */
+const KEY_FLAECHEN_GEZAEHLT = "ki26-flaechen-gezaehlt";
+
+/**
+ * Neu hinzugekommene Flächen eines Bereichs anonym zählen: nur den Zuwachs
+ * über den bisher je gezählten Höchststand hinaus (idempotent pro Browser).
+ */
+function zaehleFlaechenAnonym(key: string, gefuellt: number): void {
+  if (typeof window === "undefined") return;
+  try {
+    const raw = window.localStorage.getItem(KEY_FLAECHEN_GEZAEHLT);
+    const reg = raw ? (JSON.parse(raw) as Record<string, number>) : {};
+    const prev = typeof reg[key] === "number" ? reg[key] : 0;
+    if (gefuellt <= prev) return;
+    const zuwachs = gefuellt - prev;
+    for (let k = 0; k < zuwachs; k++) void castVote(FLAECHEN_POLL_ID, key);
+    reg[key] = gefuellt;
+    window.localStorage.setItem(KEY_FLAECHEN_GEZAEHLT, JSON.stringify(reg));
+  } catch {
+    /* Privatmodus → still */
+  }
+}
 
 export interface AuswertungEintrag {
   /** Anzeigename des Bereichs, z.B. "Die KI-Story". */
@@ -68,6 +96,8 @@ export function melde(key: string, eintrag: AuswertungEintrag): void {
   }
   o[key] = eintrag;
   schreiben(o);
+  // Zuwachs an Flächen anonym mitzählen (fürs «alle» im Aktivitätsnetz).
+  zaehleFlaechenAnonym(key, eintrag.flaechenGefuellt);
   window.dispatchEvent(new CustomEvent(AUSWERTUNG_EVENT, { detail: { key } }));
 }
 
