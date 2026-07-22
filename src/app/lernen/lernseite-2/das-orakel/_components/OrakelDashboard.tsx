@@ -11,7 +11,6 @@ import {
 } from "@/lib/polls";
 import { FadenDivider } from "../../_components/Gewebe";
 import AktivitaetsNetz from "../../_components/AktivitaetsNetz";
-import FortschrittsCode from "../../_components/FortschrittsCode";
 import Inhaltsverzeichnis from "../../_components/Inhaltsverzeichnis";
 import {
   leseSpuren,
@@ -144,6 +143,12 @@ export default function OrakelDashboard() {
   /* Blick-Poll */
   const [blickWahl, setBlickWahl] = useState<string | null>(null);
   const [blickCounts, setBlickCounts] = useState<PollCounts>({});
+  /* Teilnehmer-Zahlen (serverseitig gezählt; null = noch nicht/nicht verfügbar) */
+  const [teilnehmer, setTeilnehmer] = useState<{
+    eingeloggt: number;
+    aktivVorhang: number;
+    aktivPhilosophie: number;
+  } | null>(null);
   /* Orakel */
   const [stil, setStil] = useState<Stil>("wissenschaftlich");
   const [orakel, setOrakel] = useState<Record<Stil, OrakelZustand>>({
@@ -227,6 +232,14 @@ export default function OrakelDashboard() {
     void loadPollCounts(BLICK_POLL_ID).then(setBlickCounts);
     void zieheSpurenAusCloud();
     void zieheGewichtungAusCloud();
+    // Teilnehmer-Zahlen serverseitig holen (schlägt lokal ohne Service-Account
+    // fehl → bleibt null, der Überblick zeigt dann nur die anonymen Summen).
+    void fetch("/api/orakel/teilnehmer")
+      .then((r) => r.json())
+      .then((d) => {
+        if (d && typeof d.eingeloggt === "number") setTeilnehmer(d);
+      })
+      .catch(() => {});
     return () => {
       ab1();
       ab2();
@@ -489,6 +502,32 @@ export default function OrakelDashboard() {
           <span className="material-symbols-outlined text-[20px]">groups</span>
           Überblick: alle Teilnehmenden
         </p>
+        {teilnehmer && (
+          <div className="mt-sm flex flex-wrap items-baseline gap-x-lg gap-y-sm">
+            <span className="flex items-baseline gap-xs">
+              <strong className="text-headline-sm text-on-surface">
+                {teilnehmer.eingeloggt.toLocaleString("de-CH")}
+              </strong>
+              <span className="text-body-sm text-on-surface-variant">
+                Teilnehmende insgesamt
+              </span>
+            </span>
+            <span className="flex items-baseline gap-xs">
+              <strong className="text-headline-sm text-on-surface">
+                {teilnehmer.aktivVorhang.toLocaleString("de-CH")}
+              </strong>
+              <span className="text-body-sm text-on-surface-variant">auf «Vorhang auf» aktiv</span>
+            </span>
+            <span className="flex items-baseline gap-xs">
+              <strong className="text-headline-sm text-on-surface">
+                {teilnehmer.aktivPhilosophie.toLocaleString("de-CH")}
+              </strong>
+              <span className="text-body-sm text-on-surface-variant">
+                auf der Philosophie-Seite aktiv
+              </span>
+            </span>
+          </div>
+        )}
         <div className="mt-sm flex flex-wrap items-baseline gap-x-lg gap-y-sm">
           <span className="flex items-baseline gap-xs">
             <strong className="text-headline-sm text-on-surface">
@@ -522,9 +561,6 @@ export default function OrakelDashboard() {
           Teilnehmenden. Einzelne lassen sich hier nicht erkennen.
         </p>
       </section>
-
-      {/* Fortschritts-Code — geräteübergreifend weitermachen */}
-      <FortschrittsCode className="mt-lg" />
 
       {/* Inhaltsverzeichnis (Navigation) + Klammersymbol oben rechts */}
       <Inhaltsverzeichnis
