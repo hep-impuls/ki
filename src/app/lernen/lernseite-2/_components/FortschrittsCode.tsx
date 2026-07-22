@@ -45,8 +45,10 @@ export default function FortschrittsCode({ className = "" }: { className?: strin
 
   function laden() {
     const neu = eingabe.trim().toUpperCase();
-    if (!/^[A-ZÄÖÜ]+-\d{2,4}$/.test(neu)) {
-      setFehler("Bitte einen Code im Format TIER-000 eingeben, z.B. BÄR-334.");
+    // Akzeptiert alt (BÄR-334) UND neu (QWEN-34R) — der optionale End-Buchstabe
+    // gehört zum neuen Modell-Code-Format aus session.ts.
+    if (!/^[A-ZÄÖÜ]+-\d{2,4}[A-Z]?$/.test(neu)) {
+      setFehler("Bitte einen gültigen Code eingeben, z.B. QWEN-34R.");
       return;
     }
     const vorhanden = getSession();
@@ -115,7 +117,7 @@ export default function FortschrittsCode({ className = "" }: { className?: strin
                 setEingabe(e.target.value);
                 setFehler(null);
               }}
-              placeholder="z.B. BÄR-334"
+              placeholder="z.B. QWEN-34R"
               className="w-40 rounded-lg border border-outline-variant bg-surface-bright px-md py-sm text-body-md text-on-surface uppercase placeholder:text-on-surface-variant/60 placeholder:normal-case focus:border-tertiary focus:outline-none"
               style={{ fontFamily: "ui-monospace, monospace" }}
             />

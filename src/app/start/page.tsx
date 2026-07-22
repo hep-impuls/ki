@@ -3,7 +3,7 @@
 import { Suspense, useCallback, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { generateCode, getSession, saveSession } from "@/lib/session";
-import { ensureStudent, loadStudent } from "@/lib/db";
+import { ensureStudent, loadStudent, linkTeacherCode } from "@/lib/db";
 import { classExists } from "@/lib/api";
 
 /**
@@ -25,19 +25,39 @@ function StartFlow() {
   const router = useRouter();
   const search = useSearchParams();
   const next = search.get("next") || "/lernen/lernseite-1";
+  // Vorbefuellter Klassencode aus einem Lehrpersonen-Link (?class=CODE).
+  const classParam = (search.get("class") ?? "").trim().toUpperCase();
 
   const [step, setStep] = useState<Step>("intro");
   const [code, setCode] = useState<string>("");
   const [copied, setCopied] = useState(false);
-  const [classInput, setClassInput] = useState("");
+  const [classInput, setClassInput] = useState(classParam);
   const [returnInput, setReturnInput] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Schon eingeloggt? → direkt weiter.
+  // Schon eingeloggt? → direkt weiter. Kommt die Person über einen
+  // vorbefüllten Klassen-Link und hat noch keine Klasse, wird diese
+  // rückwirkend verknüpft (der Hintergrund-Code sammelt Spuren schon).
   useEffect(() => {
-    if (getSession()) router.replace(next);
-  }, [router, next]);
+    const s = getSession();
+    if (!s) return;
+    if (classParam && !s.teacherCode) {
+      void (async () => {
+        try {
+          if (await classExists(classParam)) {
+            await linkTeacherCode(s.studentCode, classParam);
+            saveSession({ studentCode: s.studentCode, teacherCode: classParam });
+          }
+        } catch {
+          /* Verknüpfen fehlgeschlagen → trotzdem weiter, Code bleibt gültig */
+        }
+        router.replace(next);
+      })();
+      return;
+    }
+    router.replace(next);
+  }, [router, next, classParam]);
 
   const startNew = useCallback(() => {
     setError(null);
@@ -226,7 +246,7 @@ function StartFlow() {
               <input
                 value={returnInput}
                 onChange={(e) => setReturnInput(e.target.value)}
-                placeholder="z.B. BÄR-334"
+                placeholder="z.B. QWEN-34r"
                 className="mt-lg w-full rounded-xl border border-outline-variant bg-surface px-lg py-sm text-body-md text-on-surface outline-none focus:border-primary"
               />
               {error && <p className="mt-sm text-body-sm text-error">{error}</p>}

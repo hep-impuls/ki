@@ -13,11 +13,19 @@
 const UNIT_ID = process.env.NEXT_PUBLIC_UNIT_ID ?? "ki26";
 const KEY = `${UNIT_ID}-session`;
 
-/** Tier-Pool fuer die Code-Generierung (echte Umlaute, Swiss German). */
-export const ANIMALS = [
-  "BÄR", "WOLF", "FUCHS", "LUCHS", "GAMS", "RABE", "HASE", "ELCH", "DACHS",
-  "IGEL", "OTTER", "ADLER", "GEIER", "STORCH", "UHU", "BIBER", "HIRSCH", "FALKE",
+/** Modell-Pool fuer die Code-Generierung (ASCII-Identifier — bewusst ohne
+ *  Umlaute, da Teil einer Doc-ID). LLM-Namen statt Tiere. */
+export const MODELS = [
+  "CLAUDE", "SONNET", "OPUS", "HAIKU", "GPT", "GEMINI", "GEMMA", "LLAMA",
+  "MISTRAL", "QWEN", "DEEPSEEK", "GROK", "PHI", "FALCON", "COMMAND", "MINIMAX",
+  "KIMI", "NOVA",
 ] as const;
+
+/** Buchstaben-Pool fuer das Code-Suffix — GROSSbuchstaben ohne `I`/`O`
+ *  (Verwechslung mit 1/0). Gross, damit das ueberall genutzte `toUpperCase()`
+ *  beim Wieder-Eingeben den Code nicht veraendert (Firestore-Doc-IDs sind
+ *  case-sensitiv). */
+const LETTERS = "ABCDEFGHJKLMNPQRSTUVWXYZ";
 
 export interface Session {
   studentCode: string;
@@ -25,14 +33,15 @@ export interface Session {
 }
 
 /**
- * Memorierbaren Code erzeugen: `ANIMAL-NNN` (NNN = 100..999).
- * Kein Kollisions-Check (Raum ~ 18 x 900 = 16 200 — fuer Klassengroessen
- * ausreichend; bei Bedarf Tier-Pool erweitern).
+ * Memorierbaren Code erzeugen: `MODELL-NNX` — 2 Ziffern (10..99) + Grossbuchstabe,
+ * z.B. `QWEN-34R`. Kein Kollisions-Check (Raum ~ 18 x 90 x 24 = 38 880 — fuer
+ * Klassengroessen ausreichend; bei Bedarf Modell-Pool erweitern).
  */
 export function generateCode(): string {
-  const animal = ANIMALS[Math.floor(Math.random() * ANIMALS.length)];
-  const num = String(Math.floor(Math.random() * 900) + 100);
-  return `${animal}-${num}`;
+  const model = MODELS[Math.floor(Math.random() * MODELS.length)];
+  const num = String(Math.floor(Math.random() * 90) + 10);
+  const letter = LETTERS[Math.floor(Math.random() * LETTERS.length)];
+  return `${model}-${num}${letter}`;
 }
 
 export function getSession(): Session | null {

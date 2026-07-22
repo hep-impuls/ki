@@ -1113,8 +1113,8 @@ export default function OrakelDashboard() {
             <p className="mt-xs text-body-sm text-on-surface-variant">
               Damit du auf einem anderen Gerät weitermachen kannst, werden{" "}
               <strong className="text-on-surface">welche Punkte du besucht und wie
-              du sie bewertet hast</strong> zusätzlich unter deinem Tier-Code (z.B.
-              «BÄR-334») in einer Datenbank (Google Firebase/Firestore)
+              du sie bewertet hast</strong> zusätzlich unter deinem Modell-Code (z.B.
+              «QWEN-34R») in einer Datenbank (Google Firebase/Firestore)
               gespeichert. Das ist <strong className="text-on-surface">pseudonym</strong>:
               kein Name, keine E-Mail, kein Passwort — der{" "}
               <strong className="text-on-surface">Code ist der Schlüssel</strong>.
