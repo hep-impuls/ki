@@ -118,6 +118,32 @@ export function zaehltAnonym(): boolean {
   return h !== "localhost" && h !== "127.0.0.1";
 }
 
+/**
+ * Einmalige Nachzählung nach dem Zähler-Reset vom 2026-07-22: Die anonymen
+ * Poll-Zähler wurden genullt, aber die lokalen Zähl-Register der Browser
+ * blockierten das erneute Zählen des Bestands — angeklickte Punkte fehlten
+ * dauerhaft im «alle». Diese Migration leert die Register EINMAL pro Browser
+ * und zählt den aktuellen lokalen Bestand frisch ein (danach greift wieder
+ * die normale Einmal-Zählung). Läuft nur in der Produktion (Dev-Guard).
+ */
+const KEY_NACHZAEHLUNG = "ki26-nachzaehlung-2026-07-22";
+function nachzaehlenNachReset(): void {
+  if (typeof window === "undefined" || !zaehltAnonym()) return;
+  try {
+    if (window.localStorage.getItem(KEY_NACHZAEHLUNG)) return;
+    window.localStorage.setItem(KEY_NACHZAEHLUNG, "1");
+    window.localStorage.removeItem(KEY_GEZAEHLT);
+    // Flächen-Register (auswertung.ts) ebenfalls leeren — die nächste
+    // melde()-Runde zählt die aktuell geknüpften Flächen dann frisch ein.
+    window.localStorage.removeItem("ki26-flaechen-gezaehlt");
+    for (const s of lesen()) {
+      if (!schonGezaehlt(s.id)) void castVote(SPUREN_POLL_ID, s.id);
+    }
+  } catch {
+    /* Privatmodus → still */
+  }
+}
+
 /** Wurde die ID schon einmal anonym gezählt? Falls nein: jetzt registrieren. */
 function schonGezaehlt(id: string): boolean {
   try {
@@ -211,6 +237,9 @@ export function leseSpurenIndices(spurKey: string): number[] {
  */
 export async function zieheSpurenAusCloud(): Promise<void> {
   if (typeof window === "undefined") return;
+  // Einmalige Bestands-Nachzählung (Reset 2026-07-22) — hier, weil jede
+  // relevante Ansicht diese Funktion beim Laden aufruft.
+  nachzaehlenNachReset();
   const code = getSession()?.studentCode;
   if (!code) return; // kein Code → nichts wiederherzustellen
   const ref = spurenDocRef(code);

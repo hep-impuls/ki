@@ -767,13 +767,14 @@ export default function OrakelDashboard() {
 
       <FadenDivider className="mt-xl" />
 
-      {/* 3b — Knotenkarte: die 20 stärksten Inhalte je Register, Bereiche
-          farblich getrennt (wie die Triebe des Rhizoms) */}
+      {/* 3b — Knotenkarte: die stärksten Inhalte je Register (max. 5, mehr nur
+          ab >40 Klicks), Bereiche farblich getrennt (wie die Rhizom-Triebe) */}
       <section id="knotenkarte" className="mt-xl scroll-mt-24" aria-label="Knotenkarte der Inhalte">
         <h2 className="text-headline-md text-on-surface">Knotenkarte der Inhalte</h2>
         <p className="mt-xs max-w-3xl text-body-sm text-on-surface-variant">
           Die stärksten Knoten im Gewebe: je grösser der Punkt, desto häufiger —
-          pro Register die 20 vordersten, jeder Bereich in seiner Farbe.
+          höchstens fünf pro Register, darüber hinaus nur, was über 40-mal
+          angeklickt wurde. Jeder Bereich in seiner Farbe.
         </p>
         <Knotenkarte className="mt-md" />
       </section>

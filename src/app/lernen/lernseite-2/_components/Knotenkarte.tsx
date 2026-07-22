@@ -11,7 +11,8 @@ import {
 } from "@/lib/polls";
 
 /**
- * Knotenkarte — die 20 stärksten Inhalte je Register als Punktwolke.
+ * Knotenkarte — die stärksten Inhalte je Register als Punktwolke: höchstens
+ * fünf von Anfang an, darüber hinaus nur Punkte mit über 40 Klicks.
  * Je stärker ein Inhalt, desto grösser sein Punkt (Phyllotaxis-Spirale: das
  * Stärkste in der Mitte). Jeder Bereich hat seine eigene Farbe (KI-Story,
  * Merkmale, Bilder, Teppich, Epochen …) — wie die Triebe des Rhizoms.
@@ -28,8 +29,10 @@ import {
  * als vorbereiteter Platzhalter, damit Pietros Route nur eingehängt wird.
  */
 
-/** Wie viele Punkte je Register gezeigt werden (Wolke und Rangliste). */
-const TOP_N = 20;
+/** Anzeige-Regel je Register: höchstens BASIS_N Punkte von Anfang an —
+ *  darüber hinaus nur, was öfter als SCHWELLE angeklickt wurde. */
+const BASIS_N = 5;
+const SCHWELLE = 40;
 
 type Ansicht = "geklickt" | "weiter" | "vertieft" | "bekannt";
 
@@ -38,7 +41,7 @@ const ANSICHTEN: { id: Ansicht; label: string; icon: string; hinweis: string }[]
     id: "geklickt",
     label: "Angeklickt",
     icon: "ads_click",
-    hinweis: "Die 20 am häufigsten angeklickten Punkte: KI-Story, Bilder (gezählt pro Punkt im Bild), Merkmale, Teppich und Epochen.",
+    hinweis: "Die fünf stärksten Punkte — und alles, was über 40-mal angeklickt wurde: KI-Story, Bilder (gezählt pro Punkt im Bild), Merkmale, Teppich und Epochen.",
   },
   {
     id: "weiter",
@@ -228,8 +231,11 @@ export default function Knotenkarte({ className = "" }: { className?: string }) 
   }, [ansicht, counts, lokal, inhalte]);
 
   const maxStaerke = Math.max(1, ...punkte.map((p) => p.staerke));
-  const sichtbar = punkte.slice(0, TOP_N); // SVG-Wolke
-  const top = punkte.slice(0, TOP_N); // Rangliste
+  // Höchstens BASIS_N Punkte von Anfang an; darüber hinaus nur, was öfter als
+  // SCHWELLE angeklickt wurde (Liste ist nach Stärke sortiert).
+  const gezeigt = punkte.filter((p, i) => i < BASIS_N || p.alle > SCHWELLE);
+  const sichtbar = gezeigt; // SVG-Wolke
+  const top = gezeigt; // Rangliste
   const aktInfo = ANSICHTEN.find((a) => a.id === ansicht)!;
   /** Bereiche, die in der aktuellen Ansicht vorkommen — für die Farb-Legende. */
   const legendeAreas = AREAS.filter((a) => sichtbar.some((p) => p.area.prefix === a.prefix));
