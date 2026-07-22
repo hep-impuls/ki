@@ -248,6 +248,15 @@ export default function OrakelDashboard() {
     () => Object.values(alleSpuren).reduce((s, n) => s + (Number(n) || 0), 0),
     [alleSpuren],
   );
+  /* Wo alle Teilnehmenden am aktivsten waren — Bereiche nach anonymer Summe. */
+  const alleTopBereiche = useMemo(
+    () =>
+      BEREICHE.map((b) => ({ label: b.label, n: summeMitPrefix(alleSpuren, b.prefix) }))
+        .filter((x) => x.n > 0)
+        .sort((a, b) => b.n - a.n)
+        .slice(0, 3),
+    [alleSpuren],
+  );
   const blickTotal = totalVotes(blickCounts);
   /* Geknüpfte Flächen (Maschen) über alle Weben-Bereiche (Teppich + KI-Story). */
   const flaechenGefuellt = useMemo(
@@ -458,33 +467,48 @@ export default function OrakelDashboard() {
         </p>
       </section>
 
-      {/* Gesamtnutzung aller — direkt nach der Einleitung */}
-      <div className="mt-lg flex flex-wrap items-center gap-x-lg gap-y-sm rounded-xl border border-outline-variant bg-surface-container-low px-md py-md">
-        <span className="flex items-center gap-sm">
-          <span className="material-symbols-outlined text-[24px] text-tertiary">groups</span>
-          <span className="text-label-md text-on-surface-variant">
-            So oft wurde das Lernset schon genutzt
+      {/* Überblick: alle Teilnehmenden — direkt nach der Einleitung */}
+      <section
+        aria-label="Überblick über alle Teilnehmenden"
+        className="mt-lg rounded-xl border border-outline-variant bg-surface-container-low p-md"
+      >
+        <p className="flex items-center gap-sm text-label-md uppercase tracking-wider text-tertiary">
+          <span className="material-symbols-outlined text-[20px]">groups</span>
+          Überblick: alle Teilnehmenden
+        </p>
+        <div className="mt-sm flex flex-wrap items-baseline gap-x-lg gap-y-sm">
+          <span className="flex items-baseline gap-xs">
+            <strong className="text-headline-sm text-on-surface">
+              {gesamtNutzung.toLocaleString("de-CH")}
+            </strong>
+            <span className="text-body-sm text-on-surface-variant">Interaktionen insgesamt</span>
           </span>
-        </span>
-        <span className="flex items-baseline gap-xs">
-          <strong className="text-headline-sm text-on-surface">
-            {gesamtNutzung.toLocaleString("de-CH")}
-          </strong>
-          <span className="text-body-sm text-on-surface-variant">Interaktionen</span>
-        </span>
-        <span className="flex items-baseline gap-xs">
-          <strong className="text-headline-sm text-on-surface">
-            {blickTotal.toLocaleString("de-CH")}
-          </strong>
-          <span className="text-body-sm text-on-surface-variant">
-            Teilnehmende mit Grundhaltung
+          <span className="flex items-baseline gap-xs">
+            <strong className="text-headline-sm text-on-surface">
+              {blickTotal.toLocaleString("de-CH")}
+            </strong>
+            <span className="text-body-sm text-on-surface-variant">
+              haben eine Grundhaltung geteilt
+            </span>
           </span>
-        </span>
-        <span className="w-full text-label-sm text-on-surface-variant">
-          Anonym gezählt, ohne Namen — die Summe aller Klicks aller
-          Teilnehmenden.
-        </span>
-      </div>
+        </div>
+        {alleTopBereiche.length > 0 && (
+          <p className="mt-sm text-body-sm text-on-surface-variant">
+            Am aktivsten waren alle bei:{" "}
+            {alleTopBereiche.map((b, i) => (
+              <span key={b.label}>
+                {i > 0 ? " · " : ""}
+                <strong className="text-on-surface">{b.label}</strong> ({b.n}×)
+              </span>
+            ))}
+            .
+          </p>
+        )}
+        <p className="mt-sm text-label-sm text-on-surface-variant">
+          Alles anonym gezählt, ohne Namen — die Summe aller Klicks aller
+          Teilnehmenden. Einzelne lassen sich hier nicht erkennen.
+        </p>
+      </section>
 
       {/* Fortschritts-Code — geräteübergreifend weitermachen */}
       <FortschrittsCode className="mt-lg" />
@@ -1003,32 +1027,100 @@ export default function OrakelDashboard() {
 
       <FadenDivider className="mt-xl" />
 
-      {/* Datenschutz-Erklärung */}
-      <div className="mt-xl flex items-start gap-sm rounded-xl border border-outline-variant bg-surface-container-low p-md">
-        <span className="material-symbols-outlined mt-xs text-[20px] text-tertiary">
-          lock
-        </span>
-        <p className="text-body-sm text-on-surface-variant">
-          <strong className="text-on-surface">So funktioniert das Orakel:</strong>{" "}
-          Es werden zwei Dinge unterschieden.{" "}
-          <strong className="text-on-surface">Ein anonymer Zähler</strong> zählt
-          bei jedem besuchten Knoten eine 1 dazu — ohne Namen, ohne Code, nicht
-          rückverfolgbar. Diese Zähler ergeben die «Gesamtnutzung aller» und die
-          «alle»-Vergleiche; deine Klicks fliessen dort also mit ein, aber nur als
-          anonyme Summe.{" "}
-          <strong className="text-on-surface">Die Detaildaten</strong> — welche
-          Punkte genau du besucht und wie du sie bewertet hast — bleiben allein in
-          diesem Browser (localStorage) und werden nirgends personenbezogen
-          gespeichert. Fragst du das Orakel, schickt dein Browser der KI
-          ausschliesslich diese anonymen Kennzahlen (Zähler, Bewertungs-Summen) —
-          keinen Namen, keinen Code, keine Einzeltexte.{" "}
-          <strong className="text-on-surface">Achtung:</strong> Weil diese
-          Detaildaten nur in diesem Browser liegen, gehen sie verloren, wenn du
-          den Browserverlauf bzw. die Website-Daten löschst, im privaten Modus
-          surfst oder das Gerät bzw. den Browser wechselst. Willst du deine
-          Deutung behalten, drucke sie aus.
+      {/* Datenschutz-Erklärung — ausführlich */}
+      <section
+        aria-label="Datenschutz"
+        className="mt-xl rounded-xl border border-outline-variant bg-surface-container-low p-md sm:p-lg"
+      >
+        <p className="flex items-center gap-sm text-label-md uppercase tracking-wider text-tertiary">
+          <span className="material-symbols-outlined text-[20px]">lock</span>
+          So gehen wir mit deinen Daten um
         </p>
-      </div>
+        <p className="mt-sm text-body-sm text-on-surface-variant">
+          Dieses Lernset kommt <strong className="text-on-surface">ohne Login,
+          ohne Namen und ohne Passwort</strong> aus. Trotzdem entstehen Daten —
+          und es lohnt sich zu wissen, welche wohin gehen. Es sind vier Ebenen:
+        </p>
+
+        <div className="mt-md space-y-sm">
+          <div className="rounded-lg border border-outline-variant bg-surface-bright p-md">
+            <p className="flex items-center gap-xs text-body-sm font-semibold text-on-surface">
+              <span className="material-symbols-outlined text-[18px] text-tertiary">groups</span>
+              1 · Anonyme Zähler (der Überblick über alle)
+            </p>
+            <p className="mt-xs text-body-sm text-on-surface-variant">
+              Bei jedem besuchten Knoten, jeder geknüpften Fläche und jeder
+              Umfrage-Stimme zählt ein Zähler <strong className="text-on-surface">+1</strong>{" "}
+              — <strong className="text-on-surface">ohne Namen, ohne Code, nicht
+              rückverfolgbar</strong>. Aus diesen Summen entstehen der Überblick
+              «alle Teilnehmenden» und die «du ↔ alle»-Vergleiche. Deine Klicks
+              fliessen dort mit ein, aber nur als anonyme Gesamtzahl — niemand
+              kann sie dir zuordnen, auch wir nicht.
+            </p>
+          </div>
+
+          <div className="rounded-lg border border-outline-variant bg-surface-bright p-md">
+            <p className="flex items-center gap-xs text-body-sm font-semibold text-on-surface">
+              <span className="material-symbols-outlined text-[18px] text-tertiary">badge</span>
+              2 · Dein Fortschritt (pseudonym, unter deinem Code)
+            </p>
+            <p className="mt-xs text-body-sm text-on-surface-variant">
+              Damit du auf einem anderen Gerät weitermachen kannst, werden{" "}
+              <strong className="text-on-surface">welche Punkte du besucht und wie
+              du sie bewertet hast</strong> zusätzlich unter deinem Tier-Code (z.B.
+              «BÄR-334») in einer Datenbank (Google Firebase/Firestore)
+              gespeichert. Das ist <strong className="text-on-surface">pseudonym</strong>:
+              kein Name, keine E-Mail, kein Passwort — der{" "}
+              <strong className="text-on-surface">Code ist der Schlüssel</strong>.
+              Wer denselben Code eingibt, sieht diesen Fortschritt. Bewahre den
+              Code also so auf, dass nur du ihn hast. Reflexionssätze oder
+              Einzeltexte werden dabei nicht gespeichert — nur der knappe
+              Fortschritt (angetippte Punkte, Bewertungs-Stufen).
+            </p>
+          </div>
+
+          <div className="rounded-lg border border-outline-variant bg-surface-bright p-md">
+            <p className="flex items-center gap-xs text-body-sm font-semibold text-on-surface">
+              <span className="material-symbols-outlined text-[18px] text-tertiary">insights</span>
+              3 · Was die KI (das Orakel) sieht
+            </p>
+            <p className="mt-xs text-body-sm text-on-surface-variant">
+              Nur wenn du das Orakel <strong className="text-on-surface">ausdrücklich
+              befragst</strong>, schickt dein Browser der KI eine{" "}
+              <strong className="text-on-surface">anonyme Zusammenfassung in Zahlen</strong>{" "}
+              (Zähler, Bewertungs-Summen, die Titel der von dir gewählten Themen) —
+              <strong className="text-on-surface"> keinen Namen, keinen Code, keine
+              Einzeltexte</strong>. Die KI erhält keinen Zugriff auf die Datenbank
+              und speichert nichts; ihre Deutung entsteht im Moment der Anfrage.
+            </p>
+          </div>
+
+          <div className="rounded-lg border border-outline-variant bg-surface-bright p-md">
+            <p className="flex items-center gap-xs text-body-sm font-semibold text-on-surface">
+              <span className="material-symbols-outlined text-[18px] text-tertiary">open_in_new</span>
+              4 · Die Rückmeldungs-Umfragen (Findmind)
+            </p>
+            <p className="mt-xs text-body-sm text-on-surface-variant">
+              Die beiden Umfragen laufen über den externen Dienst{" "}
+              <strong className="text-on-surface">findmind.ch</strong> und sind
+              anonym. Sobald du dort etwas eingibst, gelten die
+              Datenschutzbestimmungen von Findmind.
+            </p>
+          </div>
+        </div>
+
+        <p className="mt-md text-body-sm text-on-surface-variant">
+          <strong className="text-on-surface">Verlust &amp; Kontrolle:</strong> Die
+          lokale Kopie auf diesem Gerät geht verloren, wenn du die Website-Daten
+          bzw. den Verlauf löschst, im privaten Modus surfst oder Gerät/Browser
+          wechselst. Deine Cloud-Kopie unter deinem Code bleibt aber erhalten und
+          kehrt zurück, sobald du den Code wieder eingibst. Notierst du den Code
+          nie, lässt sich der Fortschritt niemandem — auch dir nicht — erneut
+          zuordnen. Willst du deine Deutung dauerhaft behalten, drucke sie aus
+          (PDF). Es werden keine Personendaten erhoben; einzig dein selbst
+          eingegebener Name für den Ausdruck bleibt lokal auf diesem Gerät.
+        </p>
+      </section>
 
       {/* Druck-Stil: beim Drucken nur die Druckansicht zeigen */}
       <style>{`
