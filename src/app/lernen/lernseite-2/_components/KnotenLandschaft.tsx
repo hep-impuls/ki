@@ -13,6 +13,7 @@ import KartenAktion from "./KartenAktion";
 import GewichtungWahl from "./GewichtungWahl";
 import { GEWICHT_EVENT, gewichtungsStaerke, zieheGewichtungAusCloud } from "../_lib/gewichtung";
 import { melde } from "../_lib/auswertung";
+import { merkeInhalt } from "../_lib/inhalte";
 import { sparsameMaschen, zaehleGefuellt, zufallsLayout } from "../_lib/flaechen";
 
 /** Leuchtende Web-Palette (wie die Perlen der KI-Story) — dokumentierte
@@ -434,6 +435,13 @@ export default function KnotenLandschaft({
     // knoten/flaechen sind stabile Props → nicht in die Deps.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [visited, gesammelt, bereichLabel, spurKey, weben, autoMaschen]);
+
+  // Alle Titel registrieren (auch unbesuchte) — für die Sternenkarte im Orakel.
+  useEffect(() => {
+    knoten.forEach((k, i) =>
+      merkeInhalt(`${wunschKey ?? spurKey ?? "knoten"}:${i}`, k.titel),
+    );
+  }, [knoten, spurKey, wunschKey]);
 
   return (
     <section aria-label={ariaLabel} className={className}>

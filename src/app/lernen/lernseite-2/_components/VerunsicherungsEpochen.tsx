@@ -12,6 +12,7 @@ import GewichtungWahl from "./GewichtungWahl";
 import InfoPunkt from "./InfoPunkt";
 import { GlossarText } from "./Glossar";
 import { melde } from "../_lib/auswertung";
+import { merkeInhalt } from "../_lib/inhalte";
 import { zieheGewichtungAusCloud } from "../_lib/gewichtung";
 import BildZoom, { type TourStop } from "../philosophische-perspektive/_components/BildZoom";
 
@@ -1000,6 +1001,15 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
       labels,
     });
   }, [gelesen]);
+
+  // Alle Bausteine-Titel registrieren — für die Sternenkarte im Orakel.
+  useEffect(() => {
+    EPOCHEN.forEach((e, ei) =>
+      BAUSTEINE.forEach((bs, ti) =>
+        merkeInhalt(`${SPUR}:${ei * BAUSTEINE.length + ti}`, `${e.epoche} — ${bs.label}`),
+      ),
+    );
+  }, []);
 
   function toggle(gi: number) {
     setOffen((prev) => {

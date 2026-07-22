@@ -13,6 +13,7 @@ import GewichtungWahl from "./GewichtungWahl";
 import { GlossarText } from "./Glossar";
 import { maschen as berechneMaschen, zaehleGefuellt } from "../_lib/flaechen";
 import { melde } from "../_lib/auswertung";
+import { merkeInhalt } from "../_lib/inhalte";
 import { zieheGewichtungAusCloud } from "../_lib/gewichtung";
 
 /**
@@ -252,6 +253,13 @@ export default function HistorienTeppich({
       labels,
     });
   }, [besucht, reihenfolge, maschen, spurKey, punkte]);
+
+  // Alle Titel registrieren (auch unbesuchte) — für die Sternenkarte im Orakel.
+  useEffect(() => {
+    punkte.forEach((p, i) =>
+      merkeInhalt(`${wunschKey ?? spurKey}:${i}`, p.titel),
+    );
+  }, [punkte, spurKey, wunschKey]);
 
   const alleBesucht = besucht.size === n;
 

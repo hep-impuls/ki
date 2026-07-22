@@ -209,7 +209,7 @@ export default function Sternenkarte({ className = "" }: { className?: string })
       <div className="mt-sm flex flex-wrap items-center gap-x-md gap-y-xs text-label-sm text-on-surface-variant">
         <span className="flex items-center gap-xs">
           <span className="inline-block h-2.5 w-2.5 rounded-full border-2 border-tertiary" />
-          du
+          von dir angeklickt
         </span>
         <span className="flex items-center gap-xs opacity-70">
           <span className="material-symbols-outlined text-[16px]">group</span>
@@ -279,8 +279,9 @@ export default function Sternenkarte({ className = "" }: { className?: string })
                   {p.titel}
                 </span>
                 {p.du && (
-                  <span className="material-symbols-outlined flex-shrink-0 text-[15px] text-tertiary" title="von dir">
-                    person
+                  <span className="flex flex-shrink-0 items-center gap-0.5 rounded-full bg-tertiary-container px-xs text-label-sm text-on-tertiary-container">
+                    <span className="material-symbols-outlined text-[13px]">check</span>
+                    angeklickt
                   </span>
                 )}
                 <span

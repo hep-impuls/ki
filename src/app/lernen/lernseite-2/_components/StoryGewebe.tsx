@@ -11,6 +11,7 @@ import {
 import KartenAktion from "./KartenAktion";
 import { maschen as berechneMaschen, zaehleGefuellt } from "../_lib/flaechen";
 import { melde } from "../_lib/auswertung";
+import { merkeInhalt } from "../_lib/inhalte";
 
 /**
  * StoryGewebe — die KI-Story als flexibles Teil-Gewebe (Vorbild: das
@@ -466,6 +467,14 @@ export default function StoryGewebe({
       labels,
     });
   }, [gewaehlt, gewaehltSortiert, storyMaschen, spurKey, stationen]);
+
+  // Alle Titel registrieren (nicht nur gesammelte) — damit die Sternenkarte
+  // im Orakel auch Inhalte konkret benennen kann, die man selbst nie öffnete.
+  useEffect(() => {
+    stationen.forEach((st, i) =>
+      merkeInhalt(`${wunschKey ?? spurKey ?? "story"}:${i}`, st.titel),
+    );
+  }, [stationen, spurKey, wunschKey]);
 
   function punktVon(i: number): SimPunkt {
     let p = simRef.current.get(i);
