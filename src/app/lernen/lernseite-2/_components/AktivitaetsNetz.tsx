@@ -32,7 +32,7 @@ import {
 
 const VB_W = 360;
 const VB_H = 300;
-const WURZEL = { x: 182, y: 238 }; // Punkt, aus dem alle Triebe sprossen
+const WURZEL = { x: 182, y: 256 }; // Punkt, aus dem alle Triebe sprossen (tief, damit sie hoch wachsen)
 const RAD = Math.PI / 180;
 
 type NetzWerte = { punkte: number; flaechen: number; bildpunkte: number; videos: number };
@@ -83,7 +83,7 @@ function baueTrieb(
   const rng = prng(seed);
   const segs: Seg[] = [];
   const blaetter: Blatt[] = [];
-  let budget = 64; // Sicherheitskappe gegen Verzweigungs-Explosion
+  let budget = 88; // Sicherheitskappe gegen Verzweigungs-Explosion
 
   function wachse(x: number, y: number, winkel: number, len: number, w: number, t: number) {
     if (budget <= 0) return;
@@ -102,16 +102,16 @@ function baueTrieb(
       d: `M${x.toFixed(1)} ${y.toFixed(1)} Q${mx.toFixed(1)} ${my.toFixed(1)} ${ex.toFixed(1)} ${ey.toFixed(1)}`,
       w,
     });
-    // Hauptrichtung weiter
-    wachse(ex, ey, winkel + (rng() - 0.5) * 26, len * 0.78, Math.max(0.6, w * 0.72), t - 1);
+    // Hauptrichtung weiter — langsamer Längen-Abbau → lange Verästelungen
+    wachse(ex, ey, winkel + (rng() - 0.5) * 26, len * 0.9, Math.max(0.6, w * 0.76), t - 1);
     // Seitentriebe
     if (t >= 2 && rng() < 0.9) {
       const s = rng() < 0.5 ? -1 : 1;
-      wachse(ex, ey, winkel + s * (26 + rng() * 22), len * 0.72, Math.max(0.6, w * 0.6), t - 2);
+      wachse(ex, ey, winkel + s * (24 + rng() * 22), len * 0.82, Math.max(0.6, w * 0.62), t - 2);
     }
     if (t >= 3 && rng() < 0.55) {
       const s = rng() < 0.5 ? -1 : 1;
-      wachse(ex, ey, winkel - s * (28 + rng() * 20), len * 0.64, Math.max(0.6, w * 0.55), t - 3);
+      wachse(ex, ey, winkel - s * (26 + rng() * 20), len * 0.74, Math.max(0.6, w * 0.56), t - 3);
     }
     // gelegentlich ein Blatt am Verzweigungspunkt
     if (rng() < 0.22) blaetter.push({ x: ex, y: ey, r: blattR * 0.8 });
@@ -185,11 +185,11 @@ export default function AktivitaetsNetz({
     const maxBg = Math.max(alle.punkte, alle.flaechen, alle.bildpunkte, alle.videos, 1);
     const bgTriebe = TRIEBE.map((t, i) => ({
       trieb: t,
-      ...baueTrieb(1009 + i * 53, tiefeVon(alle[t.key], maxBg, 3, 3.6, 7), 26, 4.4, t.winkel, 2.2),
+      ...baueTrieb(1009 + i * 53, tiefeVon(alle[t.key], maxBg, 3, 3.6, 8), 40, 5, t.winkel, 2.2),
     }));
     const fgTriebe = TRIEBE.map((t, i) => ({
       trieb: t,
-      ...baueTrieb(4201 + i * 71, tiefeVon(z[t.key], maxFg, 2, 3.4, 6), 22, 3.1, t.winkel, 2.6),
+      ...baueTrieb(4201 + i * 71, tiefeVon(z[t.key], maxFg, 2, 3.6, 7), 34, 3.6, t.winkel, 2.6),
     }));
     return { bg: bgTriebe, fg: fgTriebe };
   }, [z, alle]);
