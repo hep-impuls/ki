@@ -1042,15 +1042,15 @@ export default function Lernseite2VorhangAuf() {
               punkte: [
                 {
                   titel: "Rechen- und Speicherkapazität",
-                  text: "Leistungsfähige KI benötigt grosse Mengen an Chips, Servern und Speicher, die nur wenigen Unternehmen und Staaten zur Verfügung stehen.",
+                  text: "Leistungsfähige KI braucht sehr viele spezielle Computerchips, Server und Speicher. Diese Anlagen sind teuer und stehen nur wenigen grossen Unternehmen und Staaten zur Verfügung. Wer diese Rechenkraft besitzt, hat einen grossen Vorsprung. So entsteht eine Abhängigkeit von einigen wenigen Anbietern.",
                 },
                 {
                   titel: "Energie und Ressourcen",
-                  text: "Training und Betrieb verbrauchen Strom, Kühlwasser und Rohstoffe. Effizienzgewinne stehen dabei einer stark wachsenden Nutzung gegenüber.",
+                  text: "Eine KI zu trainieren und zu betreiben verbraucht viel Strom und Kühlwasser. Dazu kommen seltene Rohstoffe für die Chips. Zwar werden die Geräte immer sparsamer, doch die Nutzung wächst noch schneller. Deshalb steigt der Gesamtverbrauch weiter an.",
                 },
                 {
                   titel: "Rechenzentren",
-                  text: "Neue Anlagen schaffen digitale Kapazitäten, konkurrieren lokal aber um Energie, Wasser, Fläche und Netzanschlüsse.",
+                  text: "Für KI entstehen überall neue Rechenzentren, also grosse Hallen voller Computer. Sie schaffen digitale Kapazität für ein ganzes Land. Vor Ort brauchen sie aber viel Energie, Wasser, Fläche und einen starken Stromanschluss. Damit konkurrieren sie mit anderen Bedürfnissen einer Region.",
                 },
               ],
             },
@@ -1062,19 +1062,19 @@ export default function Lernseite2VorhangAuf() {
               punkte: [
                 {
                   titel: "Technologisch-kapitalistische Organisation",
-                  text: "Die Entwicklung leistungsfähiger KI ist überwiegend in privatwirtschaftlichen Plattformunternehmen organisiert. Kapital, Daten, Rechenzentren und Patente konzentrieren sich dadurch bei wenigen Akteuren, deren wirtschaftliche Interessen die technische Entwicklung mitbestimmen.",
+                  text: "Die stärkste KI wird fast nur von grossen privaten Technologiekonzernen entwickelt. Bei ihnen sammeln sich Geld, Daten, Rechenzentren und Patente. Dadurch liegt viel Macht bei wenigen Firmen. Deren Geschäftsinteressen bestimmen mit, in welche Richtung sich die Technik entwickelt.",
                 },
                 {
                   titel: "Zugang",
-                  text: "Kosten, Infrastruktur, Sprache und digitale Kompetenzen entscheiden darüber, wer KI nutzen und mitgestalten kann.",
+                  text: "Nicht alle können KI gleichermassen nutzen. Kosten, technische Ausstattung, Sprache und digitale Erfahrung entscheiden mit. Wer gut ausgestattet ist, profitiert stärker. So kann KI bestehende Ungleichheiten sogar vergrössern.",
                 },
                 {
                   titel: "Arbeitsmarkt",
-                  text: "KI ersetzt vor allem einzelne Tätigkeiten, verändert Berufsbilder und erzeugt zugleich neue Aufgaben und Qualifikationsanforderungen.",
+                  text: "KI verändert die Arbeitswelt spürbar. Sie übernimmt vor allem einzelne Aufgaben, selten gleich einen ganzen Beruf. Manche Tätigkeiten fallen weg, andere verändern sich, und neue kommen dazu. Für viele Berufe bedeutet das neue Anforderungen und neues Lernen.",
                 },
                 {
                   titel: "Rollenverschiebung",
-                  text: "Menschen wechseln teilweise vom Ausführen zum Anleiten, Überprüfen und Verantworten maschinell erzeugter Ergebnisse.",
+                  text: "Die Rolle des Menschen verschiebt sich. Statt eine Arbeit selbst auszuführen, leitet man die KI an und prüft ihr Ergebnis. Am Ende trägt der Mensch die Verantwortung für das, was er übernimmt. Aus dem Ausführenden wird also eher ein Anleiter und Kontrolleur.",
                 },
               ],
             },
@@ -1086,11 +1086,11 @@ export default function Lernseite2VorhangAuf() {
               punkte: [
                 {
                   titel: "Regulierung",
-                  text: "Gesetze sollen Grundrechte, Sicherheit, Datenschutz und Urheberrecht schützen, ohne Forschung und Innovation unverhältnismässig einzuschränken.",
+                  text: "Der Staat versucht, KI mit Gesetzen zu lenken. Solche Regeln sollen Grundrechte, Sicherheit, Datenschutz und Urheberrecht schützen. Zugleich sollen sie Forschung und Innovation nicht unnötig behindern. Diese Balance ist schwierig, und die Regeln entstehen erst nach und nach.",
                 },
                 {
                   titel: "Geopolitik",
-                  text: "Staaten und Unternehmen konkurrieren um Chips, Daten, Fachkräfte, Energie, Standards und technologische Unabhängigkeit.",
+                  text: "Um KI ist ein weltweiter Wettbewerb entbrannt. Staaten und Unternehmen ringen um Chips, Daten, Fachkräfte und Energie. Auch technische Standards und Unabhängigkeit stehen auf dem Spiel. Wer hier vorne liegt, gewinnt wirtschaftliche und politische Macht.",
                 },
               ],
             },
@@ -1102,15 +1102,15 @@ export default function Lernseite2VorhangAuf() {
               punkte: [
                 {
                   titel: "Kultureller Bias und Technikverständnis",
-                  text: "KI-Systeme spiegeln häufig dominante westliche Sprachen, Werte und Wissensordnungen. Gleichzeitig unterscheiden sich kulturelle Vorstellungen von Individualität, Datenschutz, Technik, Staat und Gemeinschaft. Dabei sind «West» und «Ost» keine einheitlichen Blöcke.",
+                  text: "KI lernt aus Texten, die oft aus dem englischsprachigen und westlichen Raum stammen. Darum gibt sie häufig westliche Sprachen, Werte und Sichtweisen wieder. Andere Kulturen verstehen Technik, Gemeinschaft und Privatsphäre aber teils ganz anders. «West» und «Ost» sind dabei keine festen Blöcke, sondern grobe Vereinfachungen.",
                 },
                 {
                   titel: "Text- und Archivkompetenz",
-                  text: "KI erleichtert Suche und Auswertung, ersetzt aber nicht Quellenkritik, Kontextwissen, Herkunftsnachweise und die Kontrolle am Original.",
+                  text: "KI hilft, grosse Textmengen zu durchsuchen und zusammenzufassen. Sie ersetzt aber nicht das kritische Prüfen von Quellen. Wichtig bleiben die Herkunft, der Zusammenhang und der Blick ins Original. Ohne dieses Prüfen sitzt man leicht Fehlern und Erfindungen auf.",
                 },
                 {
                   titel: "Wissensmacht",
-                  text: "Was digitalisiert, zugänglich und in Trainingsdaten enthalten ist, wird sichtbarer; fehlende oder ausgeschlossene Überlieferungen können weiter an Bedeutung verlieren.",
+                  text: "Sichtbar wird vor allem, was digital vorliegt und in den Trainingsdaten steckt. Was fehlt oder nie digitalisiert wurde, gerät leichter in Vergessenheit. So entscheidet die Auswahl der Daten mit, welches Wissen zählt. Das ist eine Form von Macht über das Wissen.",
                 },
               ],
             },
