@@ -1205,6 +1205,7 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
           }))}
           startIdx={zoom.bild}
           epoch={EPOCHEN[zoom.ep].epoche}
+          spurKey={`philosophische-perspektive:epochen-bild:${zoom.ep}`}
           onClose={() => setZoom(null)}
         />
       )}

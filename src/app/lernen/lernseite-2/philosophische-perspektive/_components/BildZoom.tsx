@@ -1,6 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { merkeSpur } from "../../_lib/spuren";
+import { merkeInhalt } from "../../_lib/inhalte";
 
 /**
  * BildZoom — Vollbild-Viewer im Stil von Google Arts & Culture für die
@@ -38,6 +40,9 @@ interface Props {
   startIdx: number;
   epoch: string;
   onClose: () => void;
+  /** Spur-Präfix dieser Galerie, z.B. "philosophische-perspektive:epochen-bild:2".
+   *  Jeder besuchte Führungs-Stopp zählt als Bildpunkt (`…:<bildIdx>:hs<stop>`). */
+  spurKey?: string;
 }
 
 interface View {
@@ -49,7 +54,7 @@ interface View {
 const MIN_Z = 1;
 const MAX_Z = 4;
 
-export default function BildZoom({ images, startIdx, epoch, onClose }: Props) {
+export default function BildZoom({ images, startIdx, epoch, onClose, spurKey }: Props) {
   const [idx, setIdx] = useState(startIdx);
   const img = images[idx];
   // Effektive Führung: an eine kuratierte Tour wird — wenn vorhanden — ein
@@ -239,6 +244,19 @@ export default function BildZoom({ images, startIdx, epoch, onClose }: Props) {
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
   }, [onClose, tourIdx, stepTour, gotoImage, idx]);
+
+  // Jeder besuchte Führungs-Stopp zählt als Bildpunkt (wie die Hotspots der
+  // KI-Geschichte). Basis-ID pro Bild wird mit dem Bildtitel registriert, damit
+  // die Knotenkarte den Punkt konkret benennen kann.
+  useEffect(() => {
+    if (!spurKey || tourIdx === null) return;
+    const base = `${spurKey}:${idx}`;
+    merkeInhalt(base, `${epoch} — ${img.alt}`);
+    merkeSpur(`${base}:hs${tourIdx}`);
+    // img.alt (primitiv) statt img (bei jedem Render neue Referenz) → der
+    // Effekt läuft nur bei echtem Bild-/Stopp-Wechsel, nicht beim Zoomen.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [spurKey, idx, tourIdx, epoch, img.alt]);
 
   // Body-Scroll sperren, solange offen — und die Scrollposition merken/
   // wiederherstellen, damit man beim Schliessen NICHT an den Seitenanfang
