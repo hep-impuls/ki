@@ -11,7 +11,6 @@ import {
 } from "@/lib/polls";
 import { FadenDivider } from "../../_components/Gewebe";
 import AktivitaetsNetz from "../../_components/AktivitaetsNetz";
-import Sternenkarte from "../../_components/Sternenkarte";
 import Inhaltsverzeichnis from "../../_components/Inhaltsverzeichnis";
 import {
   leseSpuren,
@@ -531,7 +530,6 @@ export default function OrakelDashboard() {
         eintraege={[
           { id: "perspektiven", label: "Perspektiven auf deine Aktivität" },
           { id: "deine-spur", label: "Deine Spur durchs Gewebe" },
-          { id: "sternenkarte", label: "Sternenkarte der Inhalte" },
           { id: "orakel-spricht", label: "Das Orakel spricht" },
           { id: "blick", label: "Wie blickst du heute auf KI?" },
           { id: "rueckmeldung", label: "Deine Rückmeldung" },
@@ -763,20 +761,6 @@ export default function OrakelDashboard() {
             );
           })}
         </div>
-      </section>
-
-      <FadenDivider className="mt-xl" />
-
-      {/* 3b — Sternenkarte: stärkste Inhalte (weiterverfolgt / vertieft /
-          bekannt), du · Klasse · alle */}
-      <section id="sternenkarte" className="mt-xl scroll-mt-24" aria-label="Sternenkarte der Inhalte">
-        <h2 className="text-headline-md text-on-surface">Sternenkarte der Inhalte</h2>
-        <p className="mt-xs max-w-3xl text-body-sm text-on-surface-variant">
-          Welche Inhalte tragen am stärksten? Je grösser der Punkt, desto stärker
-          — wohin die meisten weitergehen, wo am tiefsten gegraben wird, und was
-          du selbst schon kanntest.
-        </p>
-        <Sternenkarte className="mt-md" />
       </section>
 
       <FadenDivider className="mt-xl" />

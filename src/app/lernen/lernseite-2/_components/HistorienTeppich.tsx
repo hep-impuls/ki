@@ -195,11 +195,14 @@ export default function HistorienTeppich({
         return nx;
       });
       setReihenfolge((prev) => prev.filter((x) => x !== i));
+      setOffeneKarte((o) => (o === i ? null : o));
       return;
     }
     abgewaehlt.current.delete(i);
     setBesucht((prev) => new Set(prev).add(i));
     setReihenfolge((prev) => (prev.includes(i) ? prev : [...prev, i]));
+    // Zuletzt angeklickter Punkt → sein Accordion ist offen.
+    setOffeneKarte(i);
     merkeSpur(`${spurKey}:${i}`);
   }
 

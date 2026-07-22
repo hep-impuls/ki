@@ -332,6 +332,9 @@ export default function KnotenLandschaft({
     if (i < 0 || i >= n) return;
     setVisited((prev) => (prev.has(i) ? prev : new Set(prev).add(i)));
     setGesammelt((g) => (g.includes(i) ? g : [...g, i]));
+    // Zuletzt angeklickter Punkt → sein Accordion ist offen (auch wenn er
+    // schon eingesammelt war).
+    setOffeneKarte(i);
     if (spurKey) merkeSpur(`${spurKey}:${i}`);
   }
 

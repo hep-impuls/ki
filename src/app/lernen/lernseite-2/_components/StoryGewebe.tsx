@@ -414,7 +414,12 @@ export default function StoryGewebe({
       const j = Math.floor(Math.random() * (i + 1));
       [ids[i], ids[j]] = [ids[j], ids[i]];
     }
-    setGewaehlt(new Set(ids.slice(0, Math.min(3, ids.length))));
+    const start = ids.slice(0, Math.min(3, ids.length));
+    setGewaehlt(new Set(start));
+    setOffeneKarte(start[start.length - 1] ?? null);
+    // Auch automatisch eingeblendete Stationen zählen als Aktivität — ihre
+    // Karten stehen ja sichtbar da (Spur → Zähler/Orakel/Rhizom).
+    if (spurKey) start.forEach((i) => merkeSpur(`${spurKey}:${i}`));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -430,11 +435,10 @@ export default function StoryGewebe({
   const gewaehltSortiert = useMemo(() => alle.filter((i) => gewaehlt.has(i)), [alle, gewaehlt]);
   // Hervorgehoben = geöffnet: jede gewählte Station zeigt ihre Karte unten.
   const gesammelt = gewaehltSortiert;
-  /** Welche Detail-Karte ist aufgeklappt (Accordion; null = keine). */
+  /** Welche Detail-Karte ist aufgeklappt (Accordion; null = keine) — immer
+   *  der zuletzt ANGEKLICKTE Punkt (nicht der letzte in Stations-Reihenfolge);
+   *  gesetzt in aktiviere/punktTippen/toggleWahl/zufall. */
   const [offeneKarte, setOffeneKarte] = useState<number | null>(null);
-  useEffect(() => {
-    setOffeneKarte(gesammelt.length ? gesammelt[gesammelt.length - 1] : null);
-  }, [gesammelt]);
 
   /** Das GANZE Gewebe (immer sichtbar): Erzähl-Faden über ALLE Stationen der
    *  Reihe nach + feine Einfluss-Bögen. `aktiv` = beide Enden sind gewählt →
@@ -665,11 +669,12 @@ export default function StoryGewebe({
 
   function aktiviere(i: number) {
     // Antippen öffnet die Station: hebt sie hervor (fett + eingefärbte Kanten)
-    // UND zeigt ihre Karte unten.
+    // UND zeigt ihre Karte unten — als zuletzt angeklickte offen.
     if (!gewaehlt.has(i)) {
       setGewaehlt((prev) => new Set(prev).add(i));
       if (spurKey) merkeSpur(`${spurKey}:${i}`);
     }
+    setOffeneKarte(i);
   }
   /** Antippen eines Punkts IM GEWEBE togglet: schaltet ihn frei bzw. wieder ab.
    *  Abwählen löscht auch die Spur, damit der Punkt beim Wiederkommen offen
@@ -682,6 +687,7 @@ export default function StoryGewebe({
       else nx.add(i);
       return nx;
     });
+    setOffeneKarte((o) => (drin ? (o === i ? null : o) : i));
     if (spurKey) {
       if (drin) loescheSpuren(`${spurKey}:${i}`);
       else merkeSpur(`${spurKey}:${i}`);
@@ -695,6 +701,7 @@ export default function StoryGewebe({
       else nx.add(i);
       return nx;
     });
+    setOffeneKarte((o) => (neu ? i : o === i ? null : o));
     // Auswahl eines Stichworts zählt als Öffnen → Karte + Aktivität; Abwählen
     // löscht die Spur wieder (bleibt dann auch nach Neuladen abgewählt).
     if (spurKey) {
@@ -708,7 +715,11 @@ export default function StoryGewebe({
       const j = Math.floor(Math.random() * (i + 1));
       [ids[i], ids[j]] = [ids[j], ids[i]];
     }
-    setGewaehlt(new Set(ids.slice(0, Math.min(k, n))));
+    const wahl = ids.slice(0, Math.min(k, n));
+    setGewaehlt(new Set(wahl));
+    setOffeneKarte(wahl[wahl.length - 1] ?? null);
+    // Automatisch gezogene Stationen zählen ebenfalls (Karten sind sichtbar).
+    if (spurKey) wahl.forEach((i) => merkeSpur(`${spurKey}:${i}`));
   }
 
   useEffect(() => {

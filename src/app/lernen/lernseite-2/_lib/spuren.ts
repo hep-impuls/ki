@@ -319,6 +319,34 @@ export function zaehleAktivitaet(): AktivitaetsZahlen {
  * dieselbe Klassifikation wie lokal. Flächen liegen NICHT hier (berechnete
  * Geometrie) → eigener Zähler in `auswertung.ts`.
  */
+/**
+ * Die meistbesuchten Inhalts-Punkte aus den anonymen Poll-Zählern — gleiche
+ * Regeln wie die Orakel-Auswertung: inhaltslose Muster (`…:gewebe…`) und
+ * «Die KI im Kontext» bleiben draussen, Bild-Hotspots werden aufs Bild
+ * aggregiert. Fürs Rhizom (beschriftete «Blüten») und Vergleiche.
+ */
+export function meistBesuchteAusPoll(
+  counts: PollCounts,
+  limit = 5,
+): { id: string; alle: number }[] {
+  const acc = new Map<string, number>();
+  for (const key in counts) {
+    if (key.includes(":gewebe")) continue;
+    if (key.startsWith("vorhang-auf:kontext")) continue;
+    const art = spurArt(key);
+    let base: string | null = null;
+    if (art === "bildpunkt") base = key.replace(/:hs\d+$/, "");
+    else if (art === "punkt" || art === "video") base = key;
+    if (!base) continue;
+    const n = Number(counts[key]) || 0;
+    if (n > 0) acc.set(base, (acc.get(base) ?? 0) + n);
+  }
+  return [...acc.entries()]
+    .map(([id, alle]) => ({ id, alle }))
+    .sort((a, b) => b.alle - a.alle)
+    .slice(0, limit);
+}
+
 export function zaehleAlleAusPoll(counts: PollCounts): {
   punkte: number;
   bildpunkte: number;
