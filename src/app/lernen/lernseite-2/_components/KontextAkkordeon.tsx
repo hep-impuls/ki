@@ -74,15 +74,16 @@ export default function KontextAkkordeon({
     return () => window.removeEventListener(GEWICHT_EVENT, lade);
   }, [gewichtung]);
 
-  // Alle Titel registrieren (auch ungeöffnete) — für die Sternenkarte im Orakel.
+  // Alle Titel registrieren (auch ungeöffnete), damit das Orakel die Punkte
+  // konkret benennen kann. Sowohl unter dem Spur-Präfix als auch, falls
+  // vorhanden, unter dem Gewichtungs-Präfix (für die Achtsamkeits-Darstellung).
   useEffect(() => {
-    flach.forEach((f, gi) =>
-      merkeInhalt(
-        `${spurKey}:${gi}`,
-        `${kapitel[f.ki].titel} — ${kapitel[f.ki].punkte[f.pi].titel}`,
-      ),
-    );
-  }, [flach, kapitel, spurKey]);
+    flach.forEach((f, gi) => {
+      const label = `${kapitel[f.ki].titel}: ${kapitel[f.ki].punkte[f.pi].titel}`;
+      merkeInhalt(`${spurKey}:${gi}`, label);
+      if (gewichtung) merkeInhalt(`${gewichtung.prefix}:${gi}`, label);
+    });
+  }, [flach, kapitel, spurKey, gewichtung]);
 
   useEffect(() => {
     function restore() {

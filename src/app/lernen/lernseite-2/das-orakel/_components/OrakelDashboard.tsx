@@ -12,6 +12,7 @@ import {
 import { FadenDivider } from "../../_components/Gewebe";
 import AktivitaetsNetz from "../../_components/AktivitaetsNetz";
 import Knotenkarte from "../../_components/Knotenkarte";
+import KontextGewichtung from "../../_components/KontextGewichtung";
 import Ausklapptext from "../../_components/Ausklapptext";
 import Inhaltsverzeichnis from "../../_components/Inhaltsverzeichnis";
 import {
@@ -533,6 +534,7 @@ export default function OrakelDashboard() {
           { id: "perspektiven", label: "Perspektiven auf deine Aktivität" },
           { id: "deine-spur", label: "Deine Spur durchs Gewebe" },
           { id: "knotenkarte", label: "Knotenkarte der Inhalte" },
+          { id: "achtsamkeit", label: "Achtsamkeit auf die Kontexte" },
           { id: "orakel-spricht", label: "Das Orakel spricht" },
           { id: "blick", label: "Wie blickst du heute auf KI?" },
           { id: "rueckmeldung", label: "Deine Rückmeldung" },
@@ -778,6 +780,19 @@ export default function OrakelDashboard() {
           angeklickt wurde. Jeder Bereich in seiner Farbe.
         </p>
         <Knotenkarte className="mt-md" />
+      </section>
+
+      <FadenDivider className="mt-xl" />
+
+      {/* 3c — Achtsamkeit auf die Kontexte: deine Gewichtung neben der aller */}
+      <section id="achtsamkeit" className="mt-xl scroll-mt-24" aria-label="Achtsamkeit auf die Kontexte">
+        <h2 className="text-headline-md text-on-surface">Achtsamkeit auf die Kontexte</h2>
+        <p className="mt-xs max-w-3xl text-body-sm text-on-surface-variant">
+          Bei «Die KI im Kontext» hast du für jeden Aspekt gewählt, wie viel
+          Achtsamkeit er verdient. Hier steht deine Wahl neben der Verteilung
+          aller Nutzenden.
+        </p>
+        <KontextGewichtung className="mt-md" />
       </section>
 
       <FadenDivider className="mt-xl" />
