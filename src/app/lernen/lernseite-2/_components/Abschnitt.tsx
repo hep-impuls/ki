@@ -3,6 +3,7 @@
 import { type ReactNode } from "react";
 import AbschnittKopf from "./AbschnittKopf";
 import { useAkkordeon } from "./AkkordeonGruppe";
+import AktivitaetsKopf from "./AktivitaetsKopf";
 
 /**
  * Abschnitt — ein einklappbarer Themenabschnitt für Lernseite 2.
@@ -22,6 +23,7 @@ export default function Abschnitt({
   vorschau,
   children,
   className = "",
+  prefixe,
 }: {
   /** Anker-Id (für Inhaltsverzeichnis-Links; öffnet das Akkordeon). */
   id: string;
@@ -33,6 +35,8 @@ export default function Abschnitt({
   /** Einklappbare Interaktion. */
   children: ReactNode;
   className?: string;
+  /** Spur-Präfixe dieses Abschnitts → Rhizom-Badge mit dessen Aktivität. */
+  prefixe?: string[];
 }) {
   const ak = useAkkordeon();
   const offen = ak ? ak.offen === id : true;
@@ -49,7 +53,10 @@ export default function Abschnitt({
           aria-controls={bodyId}
           className="group/ab flex w-full items-center justify-between gap-md text-left outline-none"
         >
-          <h2 className="text-headline-lg text-on-surface">{titel}</h2>
+          <span className="flex min-w-0 flex-wrap items-center gap-sm">
+            <h2 className="text-headline-lg text-on-surface">{titel}</h2>
+            {prefixe?.length ? <AktivitaetsKopf prefixe={prefixe} /> : null}
+          </span>
           <span
             className={
               "material-symbols-outlined flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-outline-variant bg-surface-bright text-on-surface-variant transition-transform group-hover/ab:text-tertiary " +

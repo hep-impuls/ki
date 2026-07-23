@@ -209,6 +209,7 @@ export default function Lernseite2PhilosophischePerspektive() {
         className="mt-xl max-w-5xl"
         bild="/art/philosophie-teppich.webp"
         titel="Der Teppich des Wandels"
+        prefixe={["philosophische-perspektive:teppich"]}
         vorschau={
           <div className="mt-sm max-w-4xl space-y-sm text-body-lg text-on-surface-variant">
             <p>
@@ -635,6 +636,7 @@ export default function Lernseite2PhilosophischePerspektive() {
         className="mt-xl max-w-5xl"
         bild="/art/philosophie-epochen.webp"
         titel="Philosophie in Zeiten der Verunsicherung"
+        prefixe={["philosophische-perspektive:epochen"]}
         vorschau={
           <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
             Der Teppich des Wandels hat die Verunsicherungs-Stopps markiert.
@@ -687,6 +689,7 @@ export default function Lernseite2PhilosophischePerspektive() {
         className="mt-xl max-w-4xl"
         bild="/art/philosophie-denkwege.webp"
         titel="Wege der Orientierung"
+        prefixe={["philosophische-perspektive:denkwege"]}
         vorschau={
           <p className="mt-sm max-w-3xl text-body-lg text-on-surface-variant">
             Die Epochen haben gezeigt, dass die Philosophie in unsicheren Zeiten

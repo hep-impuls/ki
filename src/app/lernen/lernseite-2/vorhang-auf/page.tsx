@@ -488,6 +488,7 @@ export default function Lernseite2VorhangAuf() {
         className="mt-xl max-w-5xl"
         bild="/art/vorhang-story.webp"
         titel="Die KI-Story"
+        prefixe={["vorhang-auf:story"]}
         vorschau={
           <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
             <GlossarText text="Die KI hat eine lange Vorgeschichte. Schon lange vor dem Computer träumten Menschen davon, künstliche Wesen zu erschaffen. Diese KI-Story führt in zweiundzwanzig Stationen von den antiken Mythen bis zu den heutigen Sprachmodellen." />
@@ -829,6 +830,7 @@ export default function Lernseite2VorhangAuf() {
         className="mt-xl max-w-5xl"
         bild="/art/vorhang-bilder.webp"
         titel="Bilder zur KI-Geschichte"
+        prefixe={["vorhang-auf:bild"]}
         vorschau={
           <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
             <GlossarText text="Bilder machen abstrakte Ideen anschaulich. Elf Werke spannen den Bogen von den frühen Rechenhilfen bis zu ChatGPT und den heutigen Bildgeneratoren. In jedem Bild kannst du begehbare Punkte antippen und so ein Detail nach dem anderen entdecken." />
@@ -861,6 +863,7 @@ export default function Lernseite2VorhangAuf() {
         className="mt-xl max-w-5xl"
         bild="/art/vorhang-merkmale.webp"
         titel="Die Merkmale der neuen Akteurin"
+        prefixe={["vorhang-auf:weisheit"]}
         vorschau={
           <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
             <GlossarText text="Seit November 2022 nutzen wir grosse Sprachmodelle fast täglich. Aber was genau ist da als neue Akteurin aufgetreten? Zwölf Eigenschaften zusammen machen das Neue aus, nicht eine davon allein." />
@@ -1031,6 +1034,7 @@ export default function Lernseite2VorhangAuf() {
         className="mt-xl max-w-5xl"
         bild="/art/vorhang-kontext.webp"
         titel="Die KI im Kontext"
+        prefixe={["vorhang-auf:kontext"]}
         vorschau={
           <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
             <GlossarText text="KI ist mehr als ein Chatfenster. Um das Phänomen zu verstehen, stellt man es in seine Zusammenhänge. Vier Blickwinkel zeigen, worin die neue Akteurin eingebettet ist." />
