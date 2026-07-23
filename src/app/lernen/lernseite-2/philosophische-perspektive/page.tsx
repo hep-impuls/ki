@@ -134,8 +134,9 @@ export default function Lernseite2PhilosophischePerspektive() {
               Lange galt er als der, der Wissen schafft, weitergibt und Neues
               erdenkt. Wenn nun eine Maschine schreibt, erklärt und gestaltet,
               gerät genau das ins Wanken, unser Denken und unsere Kreativität.
-              Neu ist die Frage aber nicht. Schon Immanuel Kant hat gefragt, was
-              den Menschen eigentlich ausmacht.
+              Neu ist die Frage aber nicht. Sie wird in der Philosophie seit jeher
+              gestellt. Immanuel Kant hat das prominent ausgesprochen und sie ins
+              Zentrum gerückt.
             </p>
           </div>
         </AbschnittKopf>
