@@ -669,22 +669,24 @@ export default function Lernseite2PhilosophischePerspektive() {
         <div className="mt-sm space-y-sm text-body-lg text-on-surface-variant">
           <p>
             Die Epochen haben gezeigt, dass die Philosophie in unsicheren Zeiten
-            Orientierung gab. Zum Schluss kommen wir in die Gegenwart. Fünf
+            Orientierung gab. Zum Schluss kommen wir in die Gegenwart. Acht
             Denkerinnen und Denker helfen, mit der Verunsicherung durch die KI
             umzugehen.
           </p>
           <p>
-            Zwei Fragen leiten sie. Hannah Arendt und Martin Heidegger fragen,{" "}
+            Zwei Fragen leiten sie. Hannah Arendt, Martin Heidegger, Peter
+            Sloterdijk und Siri Hustvedt fragen,{" "}
             <strong className="text-on-surface">was den Menschen ausmacht</strong>.
-            Bruno Latour, Armin Nassehi und Markus Gabriel fragen,{" "}
+            Bruno Latour, Armin Nassehi, Markus Gabriel und Donna Haraway fragen,{" "}
             <strong className="text-on-surface">wie wir mit der KI umgehen</strong>{" "}
             sollen.
           </p>
         </div>
         <Aufgabe className="mt-md">
-          Geh die fünf Denkwege der Reihe nach durch. Zu jedem findest du die
-          Grundidee einfach erklärt und ein Fallbeispiel. Überlege bei jedem, ob
-          dir dieser Zugang einleuchtet.
+          Geh die acht Denkwege der Reihe nach durch. Zu jedem findest du die
+          Grundidee, einen Teil «Wie das Orientierung stärkt» und ein
+          Fallbeispiel. Bewerte bei jedem, wie sehr dir der Zugang hilft, dich zu
+          orientieren.
         </Aufgabe>
         <Denkwege className="mt-lg" spurKey="philosophische-perspektive:denkwege" />
         <p className="mt-lg max-w-3xl text-body-md text-on-surface-variant">
