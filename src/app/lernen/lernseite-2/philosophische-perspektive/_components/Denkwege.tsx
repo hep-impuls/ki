@@ -39,6 +39,8 @@ interface Denkweg {
   leben: string;
   these: string;
   icon: string;
+  /** Kurzbiografie für den Hover: Leben, Werk und Bedeutung. */
+  bio: string;
   /** Fliesstext: Grundidee, wogegen, neue Begriffe («…») und Orientierung. */
   absaetze: string[];
   /** Die eine Box: was der Ansatz für den Umgang mit KI heute bedeutet. */
@@ -54,6 +56,7 @@ const DENKWEGE: Denkweg[] = [
     leben: "1906 bis 1975",
     these: "Neu anfangen und selbst urteilen",
     icon: "psychology",
+    bio: "Deutsch-amerikanische politische Philosophin. Floh als Jüdin vor den Nazis und lebte ab 1941 in New York. Ihr Hauptwerk ist «Vita activa»; sie prägte die «Banalität des Bösen» und gilt als grosse Denkerin von Handeln und Urteilen.",
     absaetze: [
       "Für Hannah Arendt ist die entscheidende Frage nicht, was die Maschine dem Menschen abnimmt, sondern was den Menschen im Kern ausmacht und was die Maschine im Kern ist. Ihre Antwort hat zwei Seiten. Der Mensch kann anfangen. Mit jedem Menschen kommt etwas Neues in die Welt, das aus dem Bisherigen nicht ableitbar ist. Diese Fähigkeit nennt Arendt die «Natalität». Und der Mensch urteilt. Er hält inne, prüft und entscheidet, was richtig ist, auch aus der Sicht anderer, was Arendt die «erweiterte Denkungsart» nennt.",
       "Eine KI kann beides nicht. Sie erkennt Muster in Daten, ob riesig oder klein, und schreibt das Wahrscheinliche fort. Sie fängt nichts an und sie urteilt nicht, sie rechnet. Genau davor warnt Arendt mit dem Wort «Gedankenlosigkeit», dem Leben in fertigen Floskeln, ohne selbst zu prüfen. Am Prozess gegen Eichmann zeigte sie, wie gefährlich es wird, wenn Menschen aufhören, selbst zu denken.",
@@ -69,6 +72,7 @@ const DENKWEGE: Denkweg[] = [
     leben: "1889 bis 1976",
     these: "Sich sorgen, verwoben mit der Technik",
     icon: "favorite",
+    bio: "Deutscher Philosoph, einer der einflussreichsten des 20. Jahrhunderts. Sein Hauptwerk «Sein und Zeit» fragt neu nach dem Sinn von Sein. Wegen seiner Nähe zum Nationalsozialismus bleibt er umstritten; hier zählt sein Denken über die Technik.",
     absaetze: [
       "Martin Heidegger fragt, was das menschliche Dasein ausmacht, und nennt es die «Sorge». Gemeint ist nicht die alltägliche Sorge, sondern dass dem Menschen sein eigenes Leben nicht gleichgültig ist. Wir kümmern uns, fragen nach Sinn und wissen um unsere Endlichkeit. Eine Maschine rechnet und erkennt Muster, aber ihr ist nichts wichtig, ihr geht es um nichts.",
       "Zugleich zeigt Heidegger mit dem Begriff «Gestell», wie eng der Mensch mit der Technik verwoben ist. Das Gestell ist die moderne Grundhaltung, alles als verfügbaren Vorrat zu sehen. Entscheidend ist, wie Heidegger das meint. Es ist kein Aufruf, sich von der Technik zu lösen, denn der Mensch kann längst nicht mehr ohne sie. Es ist die Einsicht, dass wir von Technik abhängig und mit ihr verbunden sind. Wer das sieht, kann bewusst mit ihr umgehen, statt sich blind von ihr treiben zu lassen.",
@@ -84,6 +88,7 @@ const DENKWEGE: Denkweg[] = [
     leben: "geboren 1947",
     these: "Der Mensch bildet sich durch Übung",
     icon: "self_improvement",
+    bio: "Deutscher Philosoph und Publizist, einer der bekanntesten der Gegenwart. Bekannt durch die «Sphären»-Trilogie und «Du musst dein Leben ändern». Er beschreibt den Menschen als übendes Wesen und mischt sich oft in öffentliche Debatten ein.",
     absaetze: [
       "Peter Sloterdijk beschreibt den Menschen als übendes Wesen. Wir werden, wer wir sind, durch Übung, Wiederholung und Selbstformung. Er nennt den Menschen das Lebewesen, das aus der Wiederholung entsteht. Für die Verfahren, mit denen wir an uns arbeiten, prägt er den Begriff «Anthropotechnik». Und «Du musst dein Leben ändern» ist bei ihm kein Befehl, sondern der Grundton, sich immer wieder in Form zu bringen.",
       "Menschen leben nach Sloterdijk nie ganz allein, sondern in gemeinsamen, schützenden Räumen, die er «Sphären» nennt, eine Art geteiltes Immunsystem. Sein Einwand richtet sich gegen die Bequemlichkeit, Fähigkeiten ganz an die Technik abzugeben. Wer nicht mehr übt, verlernt und wird unselbständig. Der heutige, wie er sagt, konfuse Mensch muss sich neu orientieren.",
@@ -99,6 +104,7 @@ const DENKWEGE: Denkweg[] = [
     leben: "geboren 1955",
     these: "Der Geist ist kein Computer",
     icon: "accessibility_new",
+    bio: "US-amerikanische Schriftstellerin und Essayistin. Sie verbindet Literatur mit der Erforschung von Geist und Gehirn. In «Die Illusion der Gewissheit» zeigt sie, dass der menschliche Geist kein Computer ist.",
     absaetze: [
       "Siri Hustvedt zeigt, dass sich der menschliche Geist nicht auf einen Computer im Kopf reduzieren lässt. Denken und Fühlen hängen am lebendigen Körper und an gelebter Erfahrung, sie spricht darum vom «verkörperten Geist». Eine KI kann Sprache und Gefühle täuschend echt nachahmen, aber sie erlebt nichts, denn wie Hustvedt sagt, Maschinen machen keine Erfahrungen.",
       "Ihr Einwand richtet sich gegen den verbreiteten Vergleich, das Gehirn sei ein Computer, und gegen die falsche Gewissheit, wir wüssten genau, wie der Geist arbeitet. Dagegen setzt sie den «produktiven Zweifel», also gutes Fragen und mehrere Sichtweisen statt schneller Sicherheit.",
@@ -114,6 +120,7 @@ const DENKWEGE: Denkweg[] = [
     leben: "1947 bis 2022",
     these: "Nicht alles ist auf dieselbe Art wahr",
     icon: "category",
+    bio: "Französischer Soziologe und Philosoph, weltweit einflussreich. Mitbegründer der Akteur-Netzwerk-Theorie, wonach Wirkung im Netz aus Menschen und Dingen entsteht. Er untersuchte, wie Wissenschaft Wahrheit herstellt, und schrieb «Existenzweisen».",
     absaetze: [
       "Bruno Latour sagt, es gibt nicht nur eine Art, wahr zu sein. Wissenschaft, Technik, Recht und Erzählung haben je eigene Regeln dafür, was als gelungen gilt. Er nennt sie «Existenzweisen». Viele Verunsicherungen entstehen, wenn man das eine mit den Massstäben des anderen misst, ein «Kategorienfehler».",
       "Besonders wehrt sich Latour gegen den «Doppelklick», die Illusion, Information komme ganz ohne Verarbeitung als fertige Wahrheit zu uns, so wie ein Klick sofort ein Ergebnis liefert. In Wahrheit hat jede Aussage einen Weg hinter sich, den man kennen sollte.",
@@ -129,6 +136,7 @@ const DENKWEGE: Denkweg[] = [
     leben: "geboren 1960",
     these: "Die KI nüchtern einordnen",
     icon: "pattern",
+    bio: "Deutscher Soziologe, lehrt in München. Er deutet die Gesellschaft als System von Mustern. In «Muster» fragt er nüchtern, für welches Problem die Digitalisierung eine Lösung ist, und gilt als wichtige Stimme der Gegenwartsdebatte.",
     absaetze: [
       "Armin Nassehi dreht die Frage um. Er fragt nicht, was die Digitalisierung mit uns macht, sondern für welches Problem sie eine Lösung ist. Seine Antwort: Unsere Gesellschaft ist seit langem in «Mustern» gebaut, in Statistiken, Zählungen und Datenspuren. Die KI erkennt diese Muster hervorragend, versteht aber keinen Sinn.",
       "Sein nüchterner Blick richtet sich gegen zwei Übertreibungen zugleich, die Dämonisierung der KI als übermächtige Über-Vernunft und ihre Verharmlosung als blosse Spielerei. Beides verstellt die Sicht. Wichtig ist ihm die Rollenteilung. Das Gerät schlägt vor, der Mensch entscheidet und verantwortet.",
@@ -144,6 +152,7 @@ const DENKWEGE: Denkweg[] = [
     leben: "geboren 1980",
     these: "Die KI ist ein Spiegel, entscheiden musst du",
     icon: "balance",
+    bio: "Deutscher Philosoph, sehr jung Professor in Bonn geworden. Bekannt für den «Neuen Realismus» und Bestseller wie «Warum es die Welt nicht gibt». In «Ethische Intelligenz» vertritt er eine ethische, zuversichtliche Sicht auf die KI.",
     absaetze: [
       "Markus Gabriel nennt die KI einen «magischen Spiegel». Sie erkennt in unseren Daten Muster, auch unsere Werte und Gewohnheiten, manchmal genauer, als wir uns selbst kennen. Für ihn ist die eigentliche Revolution darum nicht technisch, sondern ethisch. Die KI zeigt, wer wir sind, aber was wir daraus machen, bleibt unsere Entscheidung.",
       "Gabriel wendet sich gegen die zwei Sackgassen der Debatte, alles aus Angst zu verbieten oder alles zu erlauben. Er schlägt einen «dritten Weg» vor, das Mitgestalten. Sein Begriff dafür ist «ethische Intelligenz», also klug mit der KI zu leben und dabei selbst moralisch besser zu werden.",
@@ -159,6 +168,7 @@ const DENKWEGE: Denkweg[] = [
     leben: "geboren 1944",
     these: "Wir sind längst verwoben",
     icon: "hub",
+    bio: "US-amerikanische Wissenschaftshistorikerin und feministische Denkerin. Ihr «Manifest für Cyborgs» von 1985 wurde weltberühmt. Sie denkt Mensch, Tier und Maschine als verwoben und fragt, wie wir verantwortlich mit Technik leben. Steht Bruno Latour nahe.",
     absaetze: [
       "Donna Haraway sagt, Mensch und Maschine, Natur und Kultur sind nicht sauber getrennt. Wir sind längst miteinander verwoben, in gewissem Sinn schon «Cyborgs», also Mischwesen aus Mensch und Maschine. Statt der Technik als fremder Macht gegenüberzustehen, sollen wir lernen, verantwortlich mit ihr zu leben.",
       "Ihre Begriffe zielen alle auf dieses Miteinander. «Sympoiesis» heisst Mit-Machen, nichts entsteht allein, alles entsteht gemeinsam. «Mit dem Schlamassel bleiben» heisst, die Probleme auszuhalten und zu antworten, statt zu flüchten. Damit steht Haraway nahe bei Bruno Latour, den sie zu ihren Denkgefährten zählt. Sie teilt seine Absage an die strikte Trennung von Natur und Kultur, ergänzt sie aber um Fürsorge und Verantwortung.",
@@ -172,6 +182,31 @@ const DENKWEGE: Denkweg[] = [
 
 const GEW_PREFIX = "philosophische-perspektive:orientierung-hilft";
 const GEW_STUFEN: [string, string, string] = ["kaum", "etwas", "stark"];
+
+/**
+ * DenkerHover — der Name der Denkerin oder des Denkers als Hover mit einer
+ * Kurzbiografie (Leben, Werk, Bedeutung). Reagiert auf Hover, Fokus und Tap.
+ * Gleiches Muster wie das Glossar, nur etwas breiter für die Biografie.
+ */
+function DenkerHover({ name, bio }: { name: string; bio: string }) {
+  return (
+    <span className="group/dh relative inline-block">
+      <button
+        type="button"
+        aria-label={`${name}: ${bio}`}
+        className="cursor-help border-b border-dotted border-tertiary font-medium text-inherit outline-none focus-visible:rounded-sm focus-visible:ring-2 focus-visible:ring-tertiary"
+      >
+        {name}
+      </button>
+      <span
+        role="tooltip"
+        className="pointer-events-none invisible absolute left-0 top-full z-30 mt-1 w-72 max-w-[70vw] rounded-lg border border-outline-variant bg-surface-bright px-sm py-xs text-left text-label-sm font-normal leading-snug text-on-surface opacity-0 shadow-lg transition-opacity duration-150 group-hover/dh:visible group-hover/dh:opacity-100 group-focus-within/dh:visible group-focus-within/dh:opacity-100"
+      >
+        {bio}
+      </span>
+    </span>
+  );
+}
 
 export default function Denkwege({
   spurKey,
@@ -248,7 +283,7 @@ export default function Denkwege({
           </span>
           <div className="min-w-0">
             <p className="text-label-sm text-on-surface-variant">
-              {d.denker} · {d.leben}
+              <DenkerHover name={d.denker} bio={d.bio} /> · {d.leben}
             </p>
             <h3 className="text-headline-sm text-on-surface">{d.these}</h3>
           </div>
