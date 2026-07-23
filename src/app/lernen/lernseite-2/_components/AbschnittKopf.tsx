@@ -2,9 +2,10 @@ import type { ReactNode } from "react";
 
 /**
  * AbschnittKopf — hinterlegt einen Titel (Kopf / Abschnitts-Überschrift) mit
- * einem leicht transparenten Aquarell, analog zu den Orakel-Blöcken. Der Text
- * links bleibt über einen Verlauf (Hintergrundfarbe → transparent) lesbar,
- * während das Bild rechts durchscheint. Nur Theme-Tokens.
+ * einem Aquarell. Das Bild scheint kräftig durch (rechts fast voll), links
+ * schützt ein Verlauf (Hintergrundfarbe → transparent) den Text, sodass er
+ * lesbar bleibt und zugleich die Farbe des Titelhintergrunds zur Geltung kommt.
+ * Nur Theme-Tokens.
  */
 export default function AbschnittKopf({
   bild,
@@ -31,12 +32,12 @@ export default function AbschnittKopf({
         alt=""
         aria-hidden
         loading="lazy"
-        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-40"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-70"
       />
-      {/* Lesbarkeits-Verlauf: links deckt die Hintergrundfarbe, rechts scheint
-          das Bild durch. */}
+      {/* Lesbarkeits-Verlauf: links deckt die Hintergrundfarbe den Text, rechts
+          läuft er auf durchsichtig aus, damit die Bildfarbe voll durchkommt. */}
       <div
-        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/30"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent"
         aria-hidden
       />
       <div className={"relative " + (gross ? "p-lg sm:p-xl" : "p-lg")}>{children}</div>

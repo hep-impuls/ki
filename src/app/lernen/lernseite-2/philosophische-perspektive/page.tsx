@@ -678,27 +678,34 @@ export default function Lernseite2PhilosophischePerspektive() {
           </p>
           <p>
             Zum Schluss kommen wir in die Gegenwart. Acht Denkerinnen und Denker
-            helfen, mit der Verunsicherung durch die KI umzugehen. Zwei Fragen
-            leiten sie. Hannah Arendt, Martin Heidegger, Peter Sloterdijk und Siri
-            Hustvedt fragen,{" "}
+            helfen, mit der Verunsicherung durch die KI umzugehen. Die Philosophie
+            klärt dabei zwei Dinge. Sie fragt, was der Mensch grundsätzlich ist,
+            und sie fragt, wie der Mensch mit der Maschine verbunden ist. Wichtig
+            ist der Blick auf das Wesentliche. Es geht nicht darum, was die Maschine
+            dem Menschen abnimmt, sondern was Mensch und was Maschine im Kern
+            ausmacht. Der Mensch kann anfangen und er urteilt. Die Maschine kann das
+            nicht, dafür erkennt sie Muster in Daten, ob riesig oder klein.
+          </p>
+          <p>
+            Zwei Fragen leiten die Denkwege. Hannah Arendt, Martin Heidegger, Peter
+            Sloterdijk und Siri Hustvedt fragen,{" "}
             <strong className="text-on-surface">was den Menschen ausmacht</strong>.
             Bruno Latour, Armin Nassehi, Markus Gabriel und Donna Haraway fragen,{" "}
             <strong className="text-on-surface">wie wir mit der KI umgehen</strong>{" "}
             sollen.
           </p>
           <p>
-            Jeder Denkweg zeigt dir, wogegen sich der Ansatz richtet, was seine
-            Grundidee ist, welche neuen Begriffe er vorschlägt und wie er dir
-            Orientierung gibt. Dazu kommt je ein Fallbeispiel aus dem Alltag. Du
-            musst nicht allen zustimmen. Geh sie durch, vergleiche und bewerte,
-            welcher Zugang dir hilft.
+            Jeder Denkweg ist ein kurzer Text, der mit einem Gegenwartsbezug
+            schliesst und ihn mit dem Umgang mit KI verbindet. Du musst nicht allen
+            zustimmen. Geh sie durch, vergleiche und bewerte, welcher Zugang dir
+            hilft.
           </p>
         </div>
         <Aufgabe className="mt-md">
-          Geh die acht Denkwege der Reihe nach durch. Zu jedem siehst du, wogegen
-          er sich richtet, seine Grundidee, seine neuen Begriffe und wie er
-          Orientierung gibt, dazu ein Fallbeispiel. Bewerte bei jedem, wie sehr
-          dir der Zugang hilft, dich zu orientieren.
+          Geh die acht Denkwege der Reihe nach durch. Jeder erklärt eine Sicht auf
+          den Menschen oder auf den Umgang mit der KI und schliesst mit einem
+          Gegenwartsbezug. Bewerte bei jedem, wie sehr dir der Zugang hilft, dich zu
+          orientieren.
         </Aufgabe>
         <Denkwege className="mt-lg" spurKey="philosophische-perspektive:denkwege" />
         <p className="mt-lg max-w-3xl text-body-md text-on-surface-variant">

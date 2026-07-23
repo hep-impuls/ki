@@ -14,9 +14,13 @@ import GewichtungWahl from "../../_components/GewichtungWahl";
  * Denkwege — «Wege der Orientierung»: acht philosophische Ansätze zur
  * Verunsicherung durch KI, als durchklickbare Slides. Zwei Fragen gliedern sie:
  * «Was ist der Mensch?» (Arendt, Heidegger, Sloterdijk, Hustvedt) und «Wie
- * umgehen mit der KI?» (Latour, Nassehi, Gabriel, Haraway). Jeder Slide zeigt
- * Grundidee, wogegen sich der Ansatz richtet, welche neuen Begriffe er vorschlägt,
- * wie er Orientierung stärkt, ein Fallbeispiel, die Quelle und eine Bewertung.
+ * umgehen mit der KI?» (Latour, Nassehi, Gabriel, Haraway).
+ *
+ * Leitgedanke: Es geht nicht darum, was die Maschine dem Menschen abnimmt,
+ * sondern was wesentlich Mensch und was wesentlich Maschine ist. Der Mensch kann
+ * anfangen und er urteilt; die Maschine erkennt Muster in Daten. Jeder Slide ist
+ * ein Fliesstext (mit den vorgeschlagenen Begriffen in «Anführungszeichen») und
+ * schliesst mit einer Box «Gegenwartsbezug» plus einer Bewertung.
  *
  * Inhaltlich fundiert auf den bereitgestellten Werken (Gabriel «Ethische
  * Intelligenz», Latour «Existenzweisen», Nassehi «Muster», Hustvedt «Die
@@ -29,24 +33,16 @@ import GewichtungWahl from "../../_components/GewichtungWahl";
  * Nur Theme-Tokens, Material Symbols.
  */
 
-interface Begriff {
-  wort: string;
-  kurz: string;
-}
 interface Denkweg {
   gruppe: string;
   denker: string;
   leben: string;
   these: string;
   icon: string;
-  kern: string;
-  /** Wogegen sich der Ansatz richtet, welches Problem er angeht. */
-  problem: string;
-  /** Neue Begriffe, die der Ansatz vorschlägt. */
-  begriffe: Begriff[];
-  /** Wie dieser Ansatz Orientierung stärkt. */
-  orientierung: string;
-  beispiel: string;
+  /** Fliesstext: Grundidee, wogegen, neue Begriffe («…») und Orientierung. */
+  absaetze: string[];
+  /** Die eine Box: was der Ansatz für den Umgang mit KI heute bedeutet. */
+  gegenwart: string;
   /** Quellenzeile (Werk, Jahr). */
   werk: string;
 }
@@ -58,33 +54,29 @@ const DENKWEGE: Denkweg[] = [
     leben: "1906 bis 1975",
     these: "Neu anfangen und selbst urteilen",
     icon: "psychology",
-    kern: "Hannah Arendt gibt zwei Antworten darauf, was den Menschen ausmacht. Erstens ist der Mensch ein Anfang. Mit jeder Geburt kommt jemand Neues in die Welt, der etwas beginnen kann, das nicht aus dem Bisherigen folgt. Zweitens machen den Menschen das Denken und Urteilen aus, der stille Dialog mit sich selbst und der Blick aus der Sicht anderer.",
-    problem: "Gegen die Gedankenlosigkeit, also das Leben in fertigen Floskeln, ohne selbst zu prüfen. Am Fall Eichmann zeigt Arendt, wie gefährlich es wird, wenn Menschen nicht mehr selbst denken.",
-    begriffe: [
-      { wort: "Natalität", kurz: "die Fähigkeit, mit der Geburt Neues anzufangen (Arendts späterer Begriff, mit Wurzeln in ihrer Arbeit über Augustinus)" },
-      { wort: "Gedankenlosigkeit", kurz: "in fertigen Klischees leben, ohne zu prüfen" },
-      { wort: "erweiterte Denkungsart", kurz: "urteilen, indem man eine Sache aus der Sicht anderer betrachtet" },
+    absaetze: [
+      "Für Hannah Arendt ist die entscheidende Frage nicht, was die Maschine dem Menschen abnimmt, sondern was den Menschen im Kern ausmacht und was die Maschine im Kern ist. Ihre Antwort hat zwei Seiten. Der Mensch kann anfangen. Mit jedem Menschen kommt etwas Neues in die Welt, das aus dem Bisherigen nicht ableitbar ist. Diese Fähigkeit nennt Arendt die «Natalität». Und der Mensch urteilt. Er hält inne, prüft und entscheidet, was richtig ist, auch aus der Sicht anderer, was Arendt die «erweiterte Denkungsart» nennt.",
+      "Eine KI kann beides nicht. Sie erkennt Muster in Daten, ob riesig oder klein, und schreibt das Wahrscheinliche fort. Sie fängt nichts an und sie urteilt nicht, sie rechnet. Genau davor warnt Arendt mit dem Wort «Gedankenlosigkeit», dem Leben in fertigen Floskeln, ohne selbst zu prüfen. Am Prozess gegen Eichmann zeigte sie, wie gefährlich es wird, wenn Menschen aufhören, selbst zu denken.",
+      "Daraus folgt eine klare Orientierung. Die flüssigen, gut klingenden Sätze einer KI sind oft genau jene Floskeln, vor denen Arendt warnt. Menschlich bleibt, wer innehält, prüft, selbst urteilt und etwas beginnt, das aus den Daten nicht folgt. So gibt man das Anfangen und das Urteilen nicht aus der Hand.",
     ],
-    orientierung: "Beides darf man nicht an die Maschine abgeben. Eine KI rechnet aus Vergangenem fort und liefert flüssige Floskeln, also genau das, was Arendt Gedankenlosigkeit nannte. Menschlich bleibt, wer innehält, prüft, selbst urteilt und Neues beginnt, das aus den Daten nicht folgt.",
-    beispiel: "Lass die KI eine heikle Kundenmail schreiben. Markiere zuerst die Floskeln, die gut klingen, aber nichts sagen. Beurteile den Text dann aus Sicht der Kundin neu und frag dich, ob du wirklich dahinterstehst.",
-    werk: "nach Eva von Redecker, «Gravitation zum Guten» (2013); Wurzeln in Arendt, «Der Liebesbegriff bei Augustin» (1929)",
+    gegenwart:
+      "Lass die KI eine heikle Kundenmail schreiben. Markiere zuerst die Sätze, die gut klingen, aber nichts sagen. Beurteile den Text dann neu aus Sicht der Kundin und entscheide selbst, ob du wirklich dahinterstehst. Das Formulieren kann die Maschine, das Anfangen und das Urteilen bleibt bei dir.",
+    werk: "nach Eva von Redecker, «Gravitation zum Guten» (2013); Arendt, «Eichmann in Jerusalem» (1963); Wurzeln in «Der Liebesbegriff bei Augustin» (1929)",
   },
   {
     gruppe: "Was ist der Mensch?",
     denker: "Martin Heidegger",
     leben: "1889 bis 1976",
-    these: "Dem Menschen geht es um etwas: die Sorge",
+    these: "Sich sorgen, verwoben mit der Technik",
     icon: "favorite",
-    kern: "Martin Heidegger fragt, was das menschliche Dasein ausmacht, und nennt es die Sorge. Gemeint ist nicht die Alltagssorge, sondern dass dem Menschen sein eigenes Leben nicht gleichgültig ist. Wir kümmern uns, fragen nach Sinn und wissen um unsere Endlichkeit. Eine Maschine rechnet, aber ihr ist nichts wichtig.",
-    problem: "Gegen die Gefahr, dass die Technik uns dazu verleitet, alles und jeden nur noch als nutzbaren Vorrat und als blosse Daten zu sehen.",
-    begriffe: [
-      { wort: "Sorge", kurz: "das Grundmerkmal des Menschen, dass ihm sein Dasein nicht gleichgültig ist" },
-      { wort: "Gestell", kurz: "die Denkweise, die alles nur noch als nutzbaren Vorrat betrachtet" },
-      { wort: "Gelassenheit", kurz: "eine freie Beziehung zur Technik, sie nutzen, ohne ihr hörig zu sein" },
+    absaetze: [
+      "Martin Heidegger fragt, was das menschliche Dasein ausmacht, und nennt es die «Sorge». Gemeint ist nicht die alltägliche Sorge, sondern dass dem Menschen sein eigenes Leben nicht gleichgültig ist. Wir kümmern uns, fragen nach Sinn und wissen um unsere Endlichkeit. Eine Maschine rechnet und erkennt Muster, aber ihr ist nichts wichtig, ihr geht es um nichts.",
+      "Zugleich zeigt Heidegger mit dem Begriff «Gestell», wie eng der Mensch mit der Technik verwoben ist. Das Gestell ist die moderne Grundhaltung, alles als verfügbaren Vorrat zu sehen. Entscheidend ist, wie Heidegger das meint. Es ist kein Aufruf, sich von der Technik zu lösen, denn der Mensch kann längst nicht mehr ohne sie. Es ist die Einsicht, dass wir von Technik abhängig und mit ihr verbunden sind. Wer das sieht, kann bewusst mit ihr umgehen, statt sich blind von ihr treiben zu lassen.",
+      "Heidegger nennt diese Haltung «Gelassenheit». Sie bedeutet nicht Rückzug aus der Technik, sondern einen klaren, ruhigen Umgang mit ihr, im Wissen, dass wir Teil desselben Gefüges sind. Orientierung entsteht, wenn wir die Technik nutzen und uns weiter sorgen, denn das Sich-Sorgen kann uns keine Maschine abnehmen.",
     ],
-    orientierung: "Heideggers Rat ist eine freie Beziehung zur Technik. Wir sollen sie nutzen, ohne uns von ihr bestimmen zu lassen, gelassen und fragend statt ängstlich oder hörig. Und wir sollen das Sich-Sorgen nicht verlernen, denn das kann keine Maschine für uns übernehmen.",
-    beispiel: "Ein Pflegeteam lässt die KI den Dienstplan berechnen, das spart Zeit. Die Sorge um die Patientinnen und Patienten bleibt aber beim Menschen. Frei mit der Technik umgehen heisst hier, das Werkzeug zu nutzen, ohne den Menschen zum blossen Datenpunkt zu machen.",
-    werk: "Martin Heidegger, «Sein und Zeit» (1927) und «Die Frage nach der Technik» (1954)",
+    gegenwart:
+      "Ein Pflegeteam lässt die KI den Dienstplan berechnen. Ohne solche Werkzeuge läuft der Betrieb längst nicht mehr, die Abhängigkeit ist real. Genau deshalb bleibt die Sorge um die Patientinnen und Patienten beim Menschen. Die Technik nutzen und sich zugleich sorgen, das ist kein Widerspruch, sondern Heideggers Punkt.",
+    werk: "Martin Heidegger, «Sein und Zeit» (1927), «Die Frage nach der Technik» (1954) und «Gelassenheit» (1959)",
   },
   {
     gruppe: "Was ist der Mensch?",
@@ -92,15 +84,13 @@ const DENKWEGE: Denkweg[] = [
     leben: "geboren 1947",
     these: "Der Mensch bildet sich durch Übung",
     icon: "self_improvement",
-    kern: "Peter Sloterdijk beschreibt den Menschen als übendes Wesen. Wir werden, wer wir sind, durch Übung, Wiederholung und Selbstformung. Er nennt den Menschen das Lebewesen, das aus der Wiederholung entsteht. «Du musst dein Leben ändern» ist für ihn der Grundton, sich immer wieder in Form zu bringen.",
-    problem: "Gegen die Bequemlichkeit, Fähigkeiten ganz an die Technik abzugeben. Wer nicht mehr übt, verlernt und wird unselbständig.",
-    begriffe: [
-      { wort: "Anthropotechnik", kurz: "die Übungen und Verfahren, mit denen Menschen an sich selbst arbeiten" },
-      { wort: "übendes Leben", kurz: "der Mensch entsteht aus Wiederholung und Übung" },
-      { wort: "Immunsystem und Sphäre", kurz: "wir bauen gemeinsame schützende Räume, in denen wir leben (aus seiner Sphären-Idee)" },
+    absaetze: [
+      "Peter Sloterdijk beschreibt den Menschen als übendes Wesen. Wir werden, wer wir sind, durch Übung, Wiederholung und Selbstformung. Er nennt den Menschen das Lebewesen, das aus der Wiederholung entsteht. Für die Verfahren, mit denen wir an uns arbeiten, prägt er den Begriff «Anthropotechnik». Und «Du musst dein Leben ändern» ist bei ihm kein Befehl, sondern der Grundton, sich immer wieder in Form zu bringen.",
+      "Menschen leben nach Sloterdijk nie ganz allein, sondern in gemeinsamen, schützenden Räumen, die er «Sphären» nennt, eine Art geteiltes Immunsystem. Sein Einwand richtet sich gegen die Bequemlichkeit, Fähigkeiten ganz an die Technik abzugeben. Wer nicht mehr übt, verlernt und wird unselbständig. Der heutige, wie er sagt, konfuse Mensch muss sich neu orientieren.",
+      "Gegenüber der KI liegt die menschliche Aufgabe darum im Üben. Eine Maschine kann eine Aufgabe für uns erledigen, aber nicht für uns üben. Wer weiter übt, versteht, was die KI tut, bleibt fähig und kann ihr Ergebnis prüfen. Orientierung entsteht nicht durch Abgeben, sondern durch beständige Übung.",
     ],
-    orientierung: "Gegenüber der KI liegt die menschliche Aufgabe im Üben und Sich-Bilden. Eine Maschine kann eine Aufgabe für uns erledigen, aber nicht für uns üben. Wer weiter übt, versteht, was die KI tut, bleibt fähig und kann sie prüfen. Der heutige, wie Sloterdijk sagt, konfuse Mensch muss sich neu orientieren, und das gelingt durch Übung.",
-    beispiel: "Die KI löst eine Rechnung oder übersetzt einen Text in Sekunden. Übe die Grundfertigkeit trotzdem selbst. Nur so merkst du, wenn die KI danebenliegt, und bleibst Herr über das Ergebnis.",
+    gegenwart:
+      "Die KI löst eine Rechnung oder übersetzt einen Text in Sekunden. Übe die Grundfertigkeit trotzdem selbst. Nur so merkst du, wenn die KI danebenliegt, und bleibst Herr über das Ergebnis, statt ihm ausgeliefert zu sein.",
     werk: "Peter Sloterdijk, «Du musst dein Leben ändern» (2009) und «Philosophische Temperamente» (2009)",
   },
   {
@@ -109,15 +99,13 @@ const DENKWEGE: Denkweg[] = [
     leben: "geboren 1955",
     these: "Der Geist ist kein Computer",
     icon: "accessibility_new",
-    kern: "Siri Hustvedt zeigt, dass sich der menschliche Geist nicht auf einen Computer im Gehirn reduzieren lässt. Denken und Fühlen hängen am lebendigen Körper und an gelebter Erfahrung. Eine KI kann Sprache und Gefühle täuschend echt nachahmen. Aber sie erlebt nichts, denn wie Hustvedt sagt, Maschinen machen keine Erfahrungen.",
-    problem: "Gegen den verbreiteten Vergleich, das Gehirn sei ein Computer, und gegen die falsche Gewissheit, wir wüssten genau, wie der Geist funktioniert.",
-    begriffe: [
-      { wort: "verkörperter Geist", kurz: "Denken und Fühlen hängen am lebendigen Körper, nicht nur am Rechnen" },
-      { wort: "simulieren statt erleben", kurz: "die KI tut nur so als ob, sie erfährt nichts" },
-      { wort: "produktiver Zweifel", kurz: "gut fragen und mehrere Sichtweisen einnehmen, statt falscher Gewissheit" },
+    absaetze: [
+      "Siri Hustvedt zeigt, dass sich der menschliche Geist nicht auf einen Computer im Kopf reduzieren lässt. Denken und Fühlen hängen am lebendigen Körper und an gelebter Erfahrung, sie spricht darum vom «verkörperten Geist». Eine KI kann Sprache und Gefühle täuschend echt nachahmen, aber sie erlebt nichts, denn wie Hustvedt sagt, Maschinen machen keine Erfahrungen.",
+      "Ihr Einwand richtet sich gegen den verbreiteten Vergleich, das Gehirn sei ein Computer, und gegen die falsche Gewissheit, wir wüssten genau, wie der Geist arbeitet. Dagegen setzt sie den «produktiven Zweifel», also gutes Fragen und mehrere Sichtweisen statt schneller Sicherheit.",
+      "Das ergibt ein einfaches Unterscheidungswerkzeug. Die KI simuliert, sie tut nur so als ob, sie erfährt nicht. Wer das im Blick behält, verwechselt das flüssige Modell nicht mit der Wirklichkeit und fällt weder in Begeisterung noch in Panik.",
     ],
-    orientierung: "Das gibt ein einfaches Unterscheidungswerkzeug. Die KI simuliert, sie tut nur so als ob, sie erfährt nicht. Und Hustvedt setzt auf den Zweifel. Statt in Hype oder Panik zu verfallen, soll man gut fragen und mehrere Sichtweisen einnehmen, damit man das Modell nicht mit der Wirklichkeit verwechselt.",
-    beispiel: "Lass die KI einen tröstenden Text an eine Kollegin schreiben, die eine Prüfung nicht bestanden hat. Vergleiche ihn mit einem selbst geschriebenen. Der KI-Text klingt oft passend, aber die KI war nie nervös und hat nie versagt.",
+    gegenwart:
+      "Lass die KI einen tröstenden Text an eine Kollegin schreiben, die eine Prüfung nicht bestanden hat. Vergleiche ihn mit einem selbst geschriebenen. Der KI-Text klingt oft passend, aber die KI war nie nervös und hat nie versagt. Sie kennt das Gefühl nur als Muster, nicht als Erfahrung.",
     werk: "Siri Hustvedt, «Die Illusion der Gewissheit» (2018)",
   },
   {
@@ -126,15 +114,13 @@ const DENKWEGE: Denkweg[] = [
     leben: "1947 bis 2022",
     these: "Nicht alles ist auf dieselbe Art wahr",
     icon: "category",
-    kern: "Bruno Latour sagt, es gibt nicht nur eine Art, wahr zu sein. Wissenschaft, Technik, Recht und Erzählung haben je eigene Regeln dafür, was als gelungen gilt. Viele Verunsicherungen entstehen, wenn man das eine mit den Massstäben des anderen misst.",
-    problem: "Gegen den Doppelklick, die Illusion, Information komme ohne Verarbeitung als fertige Wahrheit. Und gegen die Verwechslung, alles am selben Massstab zu messen.",
-    begriffe: [
-      { wort: "Existenzweisen", kurz: "verschiedene Arten, wahr zu sein, je mit eigenen Regeln" },
-      { wort: "Kategorienfehler", kurz: "etwas nach den Regeln der falschen Art beurteilen" },
-      { wort: "Doppelklick", kurz: "die Illusion, Information komme ohne Verarbeitung als fertige Wahrheit" },
+    absaetze: [
+      "Bruno Latour sagt, es gibt nicht nur eine Art, wahr zu sein. Wissenschaft, Technik, Recht und Erzählung haben je eigene Regeln dafür, was als gelungen gilt. Er nennt sie «Existenzweisen». Viele Verunsicherungen entstehen, wenn man das eine mit den Massstäben des anderen misst, ein «Kategorienfehler».",
+      "Besonders wehrt sich Latour gegen den «Doppelklick», die Illusion, Information komme ganz ohne Verarbeitung als fertige Wahrheit zu uns, so wie ein Klick sofort ein Ergebnis liefert. In Wahrheit hat jede Aussage einen Weg hinter sich, den man kennen sollte.",
+      "Bei jeder KI-Ausgabe hilft darum die Frage, um welche Art von Aussage es sich handelt. Die sogenannte Halluzination der KI ist im Grunde ein Kategorienfehler. Ein Text, der wie eine Erzählung gebaut ist, wird für geprüftes Wissen gehalten. Wer sortiert und prüft, statt dem flüssigen Ton blind zu vertrauen, orientiert sich sicherer.",
     ],
-    orientierung: "Bei jeder KI-Ausgabe hilft die Frage, um welche Art von Aussage es sich handelt. Die sogenannte Halluzination der KI ist im Grunde eine Verwechslung, denn ein Text, der wie eine Erzählung gebaut ist, wird für geprüftes Wissen gehalten. Wer sortiert und prüft, statt dem flüssigen Ton blind zu vertrauen, orientiert sich sicherer.",
-    beispiel: "Prüfe eine flüssige KI-Antwort mit drei Brillen. Gibt es überprüfbare Belege? Ist der Vorschlag praktisch brauchbar? Oder klingt er einfach nur gut? So ersetzt du Blindvertrauen durch gezieltes Prüfen.",
+    gegenwart:
+      "Prüfe eine flüssige KI-Antwort mit drei Fragen. Gibt es überprüfbare Belege? Ist der Vorschlag praktisch brauchbar? Oder klingt er einfach nur gut? So ersetzt du Blindvertrauen durch gezieltes Sortieren und merkst, welche Art von Aussage vor dir liegt.",
     werk: "Bruno Latour, «Existenzweisen» (2012), und die Akteur-Netzwerk-Theorie",
   },
   {
@@ -143,15 +129,13 @@ const DENKWEGE: Denkweg[] = [
     leben: "geboren 1960",
     these: "Die KI nüchtern einordnen",
     icon: "pattern",
-    kern: "Armin Nassehi dreht die Frage um. Er fragt nicht, was die Digitalisierung mit uns macht, sondern für welches Problem sie eine Lösung ist. Seine Antwort: Unsere Gesellschaft ist seit langem in Mustern gebaut, in Statistiken, Zählungen und Datenspuren. Die KI erkennt diese Muster, versteht aber keinen Sinn.",
-    problem: "Gegen die Dämonisierung der KI als übermächtige Über-Vernunft, aber auch gegen ihre Verharmlosung. Beides verstellt den nüchternen Blick.",
-    begriffe: [
-      { wort: "Muster", kurz: "Regelmässigkeiten in Daten, die die KI erkennt, ohne ihren Sinn zu verstehen" },
-      { wort: "doppelte Kontingenz", kurz: "das Gerät schlägt vor, der Mensch entscheidet und verantwortet" },
-      { wort: "situierte Urteilskraft", kurz: "menschliches Urteilen ist an Körper, Lage und Erfahrung gebunden" },
+    absaetze: [
+      "Armin Nassehi dreht die Frage um. Er fragt nicht, was die Digitalisierung mit uns macht, sondern für welches Problem sie eine Lösung ist. Seine Antwort: Unsere Gesellschaft ist seit langem in «Mustern» gebaut, in Statistiken, Zählungen und Datenspuren. Die KI erkennt diese Muster hervorragend, versteht aber keinen Sinn.",
+      "Sein nüchterner Blick richtet sich gegen zwei Übertreibungen zugleich, die Dämonisierung der KI als übermächtige Über-Vernunft und ihre Verharmlosung als blosse Spielerei. Beides verstellt die Sicht. Wichtig ist ihm die Rollenteilung. Das Gerät schlägt vor, der Mensch entscheidet und verantwortet.",
+      "Das nimmt der KI das Bedrohliche. Sie ist keine überlegene Über-Vernunft, sondern eine Maschine, die Muster rechnet. Wer versteht, wie sie arbeitet, verliert die Angst vor dem Mythos und gewinnt Urteilskraft zurück. Oft schätzt man danach das Menschliche neu.",
     ],
-    orientierung: "Das nimmt der KI das Bedrohliche. Sie ist keine überlegene Über-Vernunft, sondern eine Maschine, die rechnet. Wer versteht, wie sie funktioniert, verliert die Angst vor dem Mythos und gewinnt Urteilskraft. Oft schätzt man danach das Menschliche neu.",
-    beispiel: "Ein Diagnosecomputer meldet einen Fehler am Fahrzeug. Die Fachperson entscheidet, ob sie dem Gerät folgt oder es überstimmt. Das Gerät schlägt vor, der Mensch verantwortet.",
+    gegenwart:
+      "Ein Diagnosecomputer meldet einen Fehler am Fahrzeug. Die Fachperson entscheidet, ob sie dem Gerät folgt oder es überstimmt. Das Gerät erkennt das Muster, die Verantwortung für die Entscheidung bleibt beim Menschen.",
     werk: "Armin Nassehi, «Muster. Theorie der digitalen Gesellschaft» (2019)",
   },
   {
@@ -160,15 +144,13 @@ const DENKWEGE: Denkweg[] = [
     leben: "geboren 1980",
     these: "Die KI ist ein Spiegel, entscheiden musst du",
     icon: "balance",
-    kern: "Markus Gabriel nennt die KI einen magischen Spiegel. Sie erkennt in unseren Daten Muster, auch unsere Werte und Gewohnheiten, manchmal genauer, als wir uns selbst kennen. Für ihn ist die eigentliche Revolution darum nicht technisch, sondern ethisch. Die KI zeigt, wer wir sind, aber was wir daraus machen, bleibt unsere Entscheidung.",
-    problem: "Gegen die zwei Sackgassen der KI-Debatte, alles aus Angst zu verbieten oder alles zu erlauben. Und gegen das Gefühl, der Entwicklung ohnmächtig ausgeliefert zu sein.",
-    begriffe: [
-      { wort: "magischer Spiegel", kurz: "die KI spiegelt uns unsere Werte und blinden Flecken zurück" },
-      { wort: "Ethische Intelligenz", kurz: "klug mit der KI leben und dabei selbst moralisch besser werden" },
-      { wort: "dritter Weg", kurz: "weder alles verbieten noch alles erlauben, sondern mitgestalten" },
+    absaetze: [
+      "Markus Gabriel nennt die KI einen «magischen Spiegel». Sie erkennt in unseren Daten Muster, auch unsere Werte und Gewohnheiten, manchmal genauer, als wir uns selbst kennen. Für ihn ist die eigentliche Revolution darum nicht technisch, sondern ethisch. Die KI zeigt, wer wir sind, aber was wir daraus machen, bleibt unsere Entscheidung.",
+      "Gabriel wendet sich gegen die zwei Sackgassen der Debatte, alles aus Angst zu verbieten oder alles zu erlauben. Er schlägt einen «dritten Weg» vor, das Mitgestalten. Sein Begriff dafür ist «ethische Intelligenz», also klug mit der KI zu leben und dabei selbst moralisch besser zu werden.",
+      "Damit dreht Gabriel die Angst um. Nicht die Maschine steht auf dem Prüfstand, sondern wir. Die KI beschreibt nur Muster, das Urteil über gut und gerecht fällen wir. So wird aus Ohnmacht eine handlungsfähige Haltung, denn wie er sagt, nicht die Maschine muss sich bewähren, sondern wir.",
     ],
-    orientierung: "Gabriel dreht die Angst um. Nicht die Maschine steht auf dem Prüfstand, sondern wir. Die KI beschreibt nur Muster, das Urteil über gut und gerecht fällen wir. So wird aus Ohnmacht eine handlungsfähige Haltung, denn wie er sagt, nicht die Maschine muss sich bewähren, sondern wir.",
-    beispiel: "Lass ein Sprachmodell einen kurzen eigenen Text auswerten, etwa einen Bewerbungssatz, mit der Frage, was das über dich verrät. Prüfe, ob das Spiegelbild stimmt. Und halte fest, dass die KI nur beschreibt, wer du sein willst, entscheidest du.",
+    gegenwart:
+      "Lass ein Sprachmodell einen kurzen eigenen Text auswerten, etwa einen Bewerbungssatz, mit der Frage, was er über dich verrät. Prüfe, ob das Spiegelbild stimmt. Und halte fest, dass die KI nur beschreibt, wer du sein willst, entscheidest du.",
     werk: "Markus Gabriel, «Ethische Intelligenz» (2026)",
   },
   {
@@ -177,16 +159,13 @@ const DENKWEGE: Denkweg[] = [
     leben: "geboren 1944",
     these: "Wir sind längst verwoben",
     icon: "hub",
-    kern: "Donna Haraway sagt, Mensch und Maschine, Natur und Kultur sind nicht sauber getrennt. Wir sind längst miteinander verwoben, in gewissem Sinn schon Cyborgs, also Mischwesen aus Mensch und Maschine. Statt der Technik als fremder Macht gegenüberzustehen, sollen wir lernen, verantwortlich mit ihr zu leben.",
-    problem: "Gegen die strikte Trennung von Mensch und Maschine und gegen zwei bequeme Fluchtreaktionen zugleich, den Glauben, die Technik richte es schon, und die Haltung, es sei ohnehin zu spät.",
-    begriffe: [
-      { wort: "Cyborg", kurz: "Mischwesen aus Mensch und Maschine, die Grenze ist längst durchlässig" },
-      { wort: "Gefährten", kurz: "wir existieren nur in Beziehungen, auch technische Gegenüber sind Partner" },
-      { wort: "Sympoiesis", kurz: "Mit-Machen, nichts macht sich selbst, alles entsteht gemeinsam" },
-      { wort: "mit dem Schlamassel bleiben", kurz: "die Probleme aushalten und antworten, statt zu flüchten" },
+    absaetze: [
+      "Donna Haraway sagt, Mensch und Maschine, Natur und Kultur sind nicht sauber getrennt. Wir sind längst miteinander verwoben, in gewissem Sinn schon «Cyborgs», also Mischwesen aus Mensch und Maschine. Statt der Technik als fremder Macht gegenüberzustehen, sollen wir lernen, verantwortlich mit ihr zu leben.",
+      "Ihre Begriffe zielen alle auf dieses Miteinander. «Sympoiesis» heisst Mit-Machen, nichts entsteht allein, alles entsteht gemeinsam. «Mit dem Schlamassel bleiben» heisst, die Probleme auszuhalten und zu antworten, statt zu flüchten. Damit steht Haraway nahe bei Bruno Latour, den sie zu ihren Denkgefährten zählt. Sie teilt seine Absage an die strikte Trennung von Natur und Kultur, ergänzt sie aber um Fürsorge und Verantwortung.",
+      "So nimmt Haraway zwei bequemen Fluchtreaktionen die Kraft, dem Glauben, die Technik richte es schon, und der Haltung, es sei ohnehin zu spät. Statt zu fragen, ob Mensch oder Maschine, fragt man, in welche Netze man mit dieser KI schon verwoben ist und wie man sie gut mitgestaltet.",
     ],
-    orientierung: "Das nimmt den zwei lähmenden Extremen die Kraft, dem Hype «die KI löst alles» wie der Panik «die KI ist das Ende». Statt zu fragen, ob Mensch oder Maschine, fragt man, in welche Netze man mit dieser KI schon verwoben ist und wie man das gut mitgestaltet. Damit steht Haraway nahe bei Bruno Latour, den sie zu ihren Gefährten im Denken zählt, ergänzt ihn aber um Fürsorge und Verantwortung.",
-    beispiel: "Du nutzt ein KI-Tool im Beruf. Statt zu denken, die Maschine macht es für mich, oder KI ist Betrug, mach mit und bleib verantwortlich. Sieh, dass hinter der Antwort viele Menschen, Daten und Rechenzentren stecken, prüfe das Ergebnis und frag, wen dein Umgang betrifft.",
+    gegenwart:
+      "Du nutzt ein KI-Tool im Beruf. Statt zu denken, die Maschine macht das für mich, oder KI ist ohnehin Betrug, mach mit und bleib verantwortlich. Sieh, dass hinter der Antwort viele Menschen, Daten und Rechenzentren stecken, prüfe das Ergebnis und frag, wen dein Umgang damit betrifft.",
     werk: "Donna Haraway, «Unruhig bleiben» (2016) und «Ein Manifest für Cyborgs» (1985)",
   },
 ];
@@ -275,57 +254,20 @@ export default function Denkwege({
           </div>
         </div>
 
-        {/* Grundidee */}
-        <p className="mt-md flex items-center gap-xs text-label-sm uppercase tracking-wider text-on-surface-variant">
-          <span className="material-symbols-outlined text-[16px]">key</span>
-          Grundidee
-        </p>
-        <p className="mt-xs text-body-md leading-relaxed text-on-surface-variant">{d.kern}</p>
-
-        {/* Wogegen es sich richtet */}
-        <div className="mt-md rounded-xl border border-outline-variant bg-surface-container-low p-sm sm:p-md">
-          <p className="flex items-center gap-xs text-label-sm uppercase tracking-wider text-on-surface-variant">
-            <span className="material-symbols-outlined text-[16px]">block</span>
-            Wogegen es sich richtet
-          </p>
-          <p className="mt-xs text-body-md leading-relaxed text-on-surface-variant">{d.problem}</p>
+        {/* Fliesstext: Grundidee, wogegen, neue Begriffe («…»), Orientierung */}
+        <div className="mt-md space-y-sm text-body-md leading-relaxed text-on-surface-variant">
+          {d.absaetze.map((absatz, i) => (
+            <p key={i}>{absatz}</p>
+          ))}
         </div>
 
-        {/* Neue Begriffe */}
-        <div className="mt-md">
-          <p className="flex items-center gap-xs text-label-sm uppercase tracking-wider text-tertiary">
-            <span className="material-symbols-outlined text-[16px]">sell</span>
-            Neue Begriffe
+        {/* Die eine Box: Gegenwartsbezug */}
+        <div className="mt-lg rounded-xl bg-tertiary-container/40 p-md sm:p-lg">
+          <p className="flex items-center gap-xs text-label-sm uppercase tracking-wider text-on-tertiary-container">
+            <span className="material-symbols-outlined text-[18px]">smart_toy</span>
+            Gegenwartsbezug
           </p>
-          <ul className="mt-xs space-y-xs">
-            {d.begriffe.map((b) => (
-              <li key={b.wort} className="text-body-md leading-relaxed text-on-surface-variant">
-                <span className="font-medium text-on-surface">{b.wort}</span>: {b.kurz}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Wie das Orientierung stärkt */}
-        <div className="mt-md rounded-xl border-l-4 border-tertiary bg-surface-container-low p-sm sm:p-md">
-          <p className="flex items-center gap-xs text-label-sm uppercase tracking-wider text-tertiary">
-            <span className="material-symbols-outlined text-[16px]">explore</span>
-            Wie das Orientierung stärkt
-          </p>
-          <p className="mt-xs text-body-md leading-relaxed text-on-surface-variant">
-            {d.orientierung}
-          </p>
-        </div>
-
-        {/* Fallbeispiel */}
-        <div className="mt-md rounded-xl border border-outline-variant bg-surface-container-low p-sm sm:p-md">
-          <p className="flex items-center gap-xs text-label-sm uppercase tracking-wider text-tertiary">
-            <span className="material-symbols-outlined text-[16px]">lightbulb</span>
-            Fallbeispiel
-          </p>
-          <p className="mt-xs text-body-md leading-relaxed text-on-surface-variant">
-            {d.beispiel}
-          </p>
+          <p className="mt-xs text-body-md leading-relaxed text-on-surface">{d.gegenwart}</p>
         </div>
 
         {/* Bewertung */}
