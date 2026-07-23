@@ -15,6 +15,9 @@ import ModulMiniNav from "../_components/ModulMiniNav";
 import NeustartButton from "../_components/NeustartButton";
 import Denkwege from "./_components/Denkwege";
 import DenkerHover from "../_components/DenkerHover";
+import Abschnitt from "../_components/Abschnitt";
+import AkkordeonGruppe from "../_components/AkkordeonGruppe";
+import AktivitaetsKopf from "../_components/AktivitaetsKopf";
 
 /**
  * Thema 02 — «Philosophische Perspektive».
@@ -51,9 +54,12 @@ export default function Lernseite2PhilosophischePerspektive() {
         <p className="text-label-md uppercase tracking-wider text-tertiary">
           Thema 02 · Orientierung
         </p>
-        <h1 className="mt-sm text-headline-xl text-on-surface">
-          Philosophische Perspektive
-        </h1>
+        <div className="mt-sm flex flex-wrap items-center gap-md">
+          <h1 className="text-headline-xl text-on-surface">
+            Philosophische Perspektive
+          </h1>
+          <AktivitaetsKopf />
+        </div>
         <div className="mt-md max-w-3xl space-y-sm text-body-lg text-on-surface-variant">
           <p>
             Seit Jahrzehnten verändert die Digitalisierung, wie wir leben und
@@ -197,11 +203,13 @@ export default function Lernseite2PhilosophischePerspektive() {
       {/* Interaktives Muster der Seite: der Teppich des Wandels — vier Fäden
           (Technologie, Entdeckungen, gesellschaftliche Ereignisse, kulturelle
           Praxen), die sich erst durchs Anklicken der Punkte einweben */}
-      <section id="teppich" className="mt-xl max-w-5xl scroll-mt-24" aria-label="Teppich des Wandels">
-        <AbschnittKopf bild="/art/philosophie-teppich.webp">
-          <h2 className="text-headline-lg text-on-surface">
-            Der Teppich des Wandels
-          </h2>
+      <AkkordeonGruppe>
+      <Abschnitt
+        id="teppich"
+        className="mt-xl max-w-5xl"
+        bild="/art/philosophie-teppich.webp"
+        titel="Der Teppich des Wandels"
+        vorschau={
           <div className="mt-sm max-w-4xl space-y-sm text-body-lg text-on-surface-variant">
             <p>
               Der Teppich zeigt Ereignisse, die{" "}
@@ -230,7 +238,8 @@ export default function Lernseite2PhilosophischePerspektive() {
               und Zeitphänomene in vereinfachter Form auszudrücken.
             </p>
           </div>
-        </AbschnittKopf>
+        }
+      >
         <Aufgabe className="mt-md max-w-4xl">
           Tippe die Punkte an. Jeder erzählt seine Geschichte, und Stück für
           Stück webt sich der Teppich. Bewerte in jeder Karte, ob dir der Punkt
@@ -617,15 +626,16 @@ export default function Lernseite2PhilosophischePerspektive() {
             },
           ]}
         />
-      </section>
+      </Abschnitt>
 
       {/* Philosophie in Zeiten der Verunsicherung — acht Epochen, je 2 Bilder
           und 3 bewertbare Bausteine (Technologie, Verunsicherung, Philosophie) */}
-      <section id="epochen" className="mt-xl max-w-5xl scroll-mt-24" aria-label="Philosophie in Zeiten der Verunsicherung">
-        <AbschnittKopf bild="/art/philosophie-epochen.webp">
-          <h2 className="text-headline-lg text-on-surface">
-            Philosophie in Zeiten der Verunsicherung
-          </h2>
+      <Abschnitt
+        id="epochen"
+        className="mt-xl max-w-5xl"
+        bild="/art/philosophie-epochen.webp"
+        titel="Philosophie in Zeiten der Verunsicherung"
+        vorschau={
           <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
             Der Teppich des Wandels hat die Verunsicherungs-Stopps markiert.
             Hier folgt, wie die Philosophie jeweils geantwortet hat. Denn gerade
@@ -638,7 +648,8 @@ export default function Lernseite2PhilosophischePerspektive() {
             <strong className="text-on-surface">neue Gewichtung grundlegender
             Lebenselemente</strong> mehr Klarheit als jede neue Technik.
           </p>
-        </AbschnittKopf>
+        }
+      >
         <Ausklapptext
           className="mt-md max-w-4xl"
           titel="Mehr dazu: die wiederkehrenden Züge der Verunsicherung"
@@ -667,13 +678,16 @@ export default function Lernseite2PhilosophischePerspektive() {
           und bewerte, was dich noch heute betrifft.
         </Aufgabe>
         <VerunsicherungsEpochen className="mt-lg" />
-      </section>
+      </Abschnitt>
 
       {/* Wege der Orientierung — fünf heutige Denkansätze zur KI-Verunsicherung,
           als durchklickbare Slides (nach den Epochen mit ihren Bildern) */}
-      <section id="denkwege" className="mt-xl max-w-4xl scroll-mt-24" aria-label="Wege der Orientierung">
-        <AbschnittKopf bild="/art/philosophie-denkwege.webp">
-          <h2 className="text-headline-lg text-on-surface">Wege der Orientierung</h2>
+      <Abschnitt
+        id="denkwege"
+        className="mt-xl max-w-4xl"
+        bild="/art/philosophie-denkwege.webp"
+        titel="Wege der Orientierung"
+        vorschau={
           <p className="mt-sm max-w-3xl text-body-lg text-on-surface-variant">
             Die Epochen haben gezeigt, dass die Philosophie in unsicheren Zeiten
             Orientierung gab. Sie liefert keine schnellen, bunten Antworten,
@@ -683,7 +697,8 @@ export default function Lernseite2PhilosophischePerspektive() {
             abwägenden Denkens. Genau das brauchen wir bei der KI, also Reflexion
             statt Aufregung und Zwischentöne statt Schwarz-Weiss.
           </p>
-        </AbschnittKopf>
+        }
+      >
         <div className="mt-md space-y-sm text-body-lg text-on-surface-variant">
           <p>
             Zum Schluss kommen wir in die Gegenwart. Acht Denkerinnen und Denker
@@ -722,7 +737,8 @@ export default function Lernseite2PhilosophischePerspektive() {
           begründeten Weg, sich neu zu orientieren. Genau dazu lädt dieses Lernset
           ein, sich wieder mehr mit Philosophie zu beschäftigen.
         </p>
-      </section>
+      </Abschnitt>
+      </AkkordeonGruppe>
 
       <SeitenNavigation
         zurueck={{
