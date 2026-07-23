@@ -718,7 +718,7 @@ export default function OrakelDashboard() {
                 <button
                   type="button"
                   onClick={() => void interesseBefragen()}
-                  className="inline-flex items-center gap-xs rounded-lg bg-tertiary px-md py-xs text-label-md text-on-tertiary shadow-sm transition hover:bg-on-tertiary-container"
+                  className="orakel-glitzer relative inline-flex items-center gap-xs overflow-hidden rounded-lg bg-tertiary px-md py-xs text-label-md text-on-tertiary shadow-sm transition hover:bg-on-tertiary-container"
                 >
                   <span className="material-symbols-outlined text-[16px]">forum</span>
                   Antwort des Orakels
@@ -907,7 +907,7 @@ export default function OrakelDashboard() {
               <button
                 type="button"
                 onClick={() => void orakelBefragen(stil)}
-                className="inline-flex items-center gap-sm rounded-xl bg-tertiary px-lg py-sm text-label-md text-on-tertiary shadow-sm transition hover:bg-on-tertiary-container"
+                className="orakel-glitzer relative inline-flex items-center gap-sm overflow-hidden rounded-xl bg-tertiary px-lg py-sm text-label-md text-on-tertiary shadow-sm transition hover:bg-on-tertiary-container"
               >
                 <span className="material-symbols-outlined text-[18px]">insights</span>
                 Das Orakel befragen
@@ -1209,6 +1209,35 @@ export default function OrakelDashboard() {
           </ul>
         </Ausklapptext>
       </section>
+
+      {/* Glitzern der beiden Orakel-Buttons: ein heller Schimmer wandert durch,
+          dazu ein sanftes Pulsieren im Tertiär-Ton — damit sie nicht übersehen
+          werden. Bei «reduzierter Bewegung» statisch (nur ein leichtes Leuchten). */}
+      <style>{`
+        @keyframes orakelSchimmer {
+          0%   { transform: translateX(-160%) skewX(-18deg); }
+          100% { transform: translateX(320%) skewX(-18deg); }
+        }
+        @keyframes orakelGlow {
+          0%, 100% { box-shadow: 0 1px 3px rgb(0 0 0 / 0.14); }
+          50%      { box-shadow: 0 0 18px rgb(var(--color-tertiary) / 0.6); }
+        }
+        .orakel-glitzer { animation: orakelGlow 2.6s ease-in-out infinite; }
+        .orakel-glitzer::before {
+          content: "";
+          position: absolute;
+          top: 0; bottom: 0; left: 0;
+          width: 45%;
+          background: linear-gradient(100deg, transparent 0%, rgb(255 255 255 / 0.65) 50%, transparent 100%);
+          filter: blur(1px);
+          animation: orakelSchimmer 2.6s ease-in-out infinite;
+          pointer-events: none;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .orakel-glitzer { animation: none; box-shadow: 0 0 12px rgb(var(--color-tertiary) / 0.5); }
+          .orakel-glitzer::before { display: none; }
+        }
+      `}</style>
 
       {/* Druck-Stil: beim Drucken nur die Druckansicht zeigen */}
       <style>{`
