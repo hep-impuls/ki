@@ -669,26 +669,36 @@ export default function Lernseite2PhilosophischePerspektive() {
         <div className="mt-sm space-y-sm text-body-lg text-on-surface-variant">
           <p>
             Die Epochen haben gezeigt, dass die Philosophie in unsicheren Zeiten
-            Orientierung gab. Der Philosoph Peter Sloterdijk nennt sie darum eine
+            Orientierung gab. Sie liefert keine schnellen, bunten Antworten,
+            sondern eine nüchterne Klärung. Peter Sloterdijk nennt sie eine
             Orientierungsdisziplin, die Verwirrung auf sichere Grundlagen
-            zurückführt. Zum Schluss kommen wir in die Gegenwart. Acht
-            Denkerinnen und Denker helfen, mit der Verunsicherung durch die KI
-            umzugehen.
+            zurückführt, und er spricht von der Farbe Grau, der Farbe des ruhigen,
+            abwägenden Denkens. Genau das brauchen wir bei der KI, also Reflexion
+            statt Aufregung und Zwischentöne statt Schwarz-Weiss.
           </p>
           <p>
-            Zwei Fragen leiten sie. Hannah Arendt, Martin Heidegger, Peter
-            Sloterdijk und Siri Hustvedt fragen,{" "}
+            Zum Schluss kommen wir in die Gegenwart. Acht Denkerinnen und Denker
+            helfen, mit der Verunsicherung durch die KI umzugehen. Zwei Fragen
+            leiten sie. Hannah Arendt, Martin Heidegger, Peter Sloterdijk und Siri
+            Hustvedt fragen,{" "}
             <strong className="text-on-surface">was den Menschen ausmacht</strong>.
             Bruno Latour, Armin Nassehi, Markus Gabriel und Donna Haraway fragen,{" "}
             <strong className="text-on-surface">wie wir mit der KI umgehen</strong>{" "}
             sollen.
           </p>
+          <p>
+            Jeder Denkweg zeigt dir, wogegen sich der Ansatz richtet, was seine
+            Grundidee ist, welche neuen Begriffe er vorschlägt und wie er dir
+            Orientierung gibt. Dazu kommt je ein Fallbeispiel aus dem Alltag. Du
+            musst nicht allen zustimmen. Geh sie durch, vergleiche und bewerte,
+            welcher Zugang dir hilft.
+          </p>
         </div>
         <Aufgabe className="mt-md">
-          Geh die acht Denkwege der Reihe nach durch. Zu jedem findest du die
-          Grundidee, einen Teil «Wie das Orientierung stärkt» und ein
-          Fallbeispiel. Bewerte bei jedem, wie sehr dir der Zugang hilft, dich zu
-          orientieren.
+          Geh die acht Denkwege der Reihe nach durch. Zu jedem siehst du, wogegen
+          er sich richtet, seine Grundidee, seine neuen Begriffe und wie er
+          Orientierung gibt, dazu ein Fallbeispiel. Bewerte bei jedem, wie sehr
+          dir der Zugang hilft, dich zu orientieren.
         </Aufgabe>
         <Denkwege className="mt-lg" spurKey="philosophische-perspektive:denkwege" />
         <p className="mt-lg max-w-3xl text-body-md text-on-surface-variant">
