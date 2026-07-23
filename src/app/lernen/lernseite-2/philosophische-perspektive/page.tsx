@@ -669,7 +669,9 @@ export default function Lernseite2PhilosophischePerspektive() {
         <div className="mt-sm space-y-sm text-body-lg text-on-surface-variant">
           <p>
             Die Epochen haben gezeigt, dass die Philosophie in unsicheren Zeiten
-            Orientierung gab. Zum Schluss kommen wir in die Gegenwart. Acht
+            Orientierung gab. Der Philosoph Peter Sloterdijk nennt sie darum eine
+            Orientierungsdisziplin, die Verwirrung auf sichere Grundlagen
+            zurückführt. Zum Schluss kommen wir in die Gegenwart. Acht
             Denkerinnen und Denker helfen, mit der Verunsicherung durch die KI
             umzugehen.
           </p>
