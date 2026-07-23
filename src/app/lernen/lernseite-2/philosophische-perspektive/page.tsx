@@ -14,6 +14,7 @@ import Ausklapptext from "../_components/Ausklapptext";
 import ModulMiniNav from "../_components/ModulMiniNav";
 import NeustartButton from "../_components/NeustartButton";
 import Denkwege from "./_components/Denkwege";
+import DenkerHover from "../_components/DenkerHover";
 
 /**
  * Thema 02 — «Philosophische Perspektive».
@@ -135,8 +136,13 @@ export default function Lernseite2PhilosophischePerspektive() {
               erdenkt. Wenn nun eine Maschine schreibt, erklärt und gestaltet,
               gerät genau das ins Wanken, unser Denken und unsere Kreativität.
               Neu ist die Frage aber nicht. Sie wird in der Philosophie seit jeher
-              gestellt. Immanuel Kant hat das prominent ausgesprochen und sie ins
-              Zentrum gerückt.
+              gestellt.{" "}
+              <DenkerHover
+                name="Immanuel Kant"
+                richtung="oben"
+                bio="Immanuel Kant (1724 bis 1804), zentraler Denker der Aufklärung in Königsberg. Hauptwerk «Kritik der reinen Vernunft». Er ordnete die Philosophie um die Frage «Was ist der Mensch?»."
+              />{" "}
+              hat das prominent ausgesprochen und sie ins Zentrum gerückt.
             </p>
           </div>
         </AbschnittKopf>
