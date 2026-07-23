@@ -522,7 +522,8 @@ export default function OrakelDashboard() {
           </div>
         )}
         <p className="mt-sm text-label-sm text-on-surface-variant">
-          Anonym gezählt, ohne Namen — Einzelne lassen sich hier nicht erkennen.
+          Gezählt wird pro Fortschritts-Code, also pro Login, nicht pro Klick. So
+          zählt jede Person einmal, ganz ohne Namen.
         </p>
       </section>
 
