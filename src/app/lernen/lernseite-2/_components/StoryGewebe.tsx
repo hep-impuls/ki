@@ -335,7 +335,7 @@ function StoryPerlschnur({
             key={idx}
             role="button"
             tabIndex={0}
-            aria-label={`${st.titel} (${st.jahr}) — antippen zum Lesen, ziehen zum Schwingen`}
+            aria-label={`${st.titel} (${st.jahr}). Antippen zum Lesen, ziehen zum Schwingen`}
             aria-pressed={gelesen}
             onPointerDown={(e) => onDown(e, i + 1)}
             onKeyDown={(e) => {
@@ -864,7 +864,7 @@ export default function StoryGewebe({
             onPointerLeave={onUp}
             className="block w-full select-none aspect-[720/400] sm:aspect-[720/300]"
             role="img"
-            aria-label="Teil-Gewebe der gewählten KI-Stationen — Punkte lassen sich ziehen und antippen; zwischen hervorgehobenen Punkten entstehen gefüllte Flächen."
+            aria-label="Teil-Gewebe der gewählten KI-Stationen. Punkte lassen sich ziehen und antippen, und zwischen hervorgehobenen Punkten entstehen gefüllte Flächen."
           >
             {/* Gefüllte Flächen (Maschen): erscheinen, sobald alle drei Ecken
                 hervorgehoben sind — leuchtend wie die Perlen der Story */}
@@ -942,7 +942,7 @@ export default function StoryGewebe({
                   key={i}
                   role="button"
                   tabIndex={0}
-                  aria-label={`${st.titel} (${st.jahr}) — antippen zum Öffnen/Schliessen, ziehen zum Verschieben`}
+                  aria-label={`${st.titel} (${st.jahr}). Antippen zum Öffnen/Schliessen, ziehen zum Verschieben`}
                   aria-pressed={gelesen}
                   onPointerDown={(e) => onDown(e, i)}
                   onKeyDown={(e) => {

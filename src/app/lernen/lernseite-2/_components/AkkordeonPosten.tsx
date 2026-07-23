@@ -8,6 +8,7 @@ import {
   zieheSpurenAusCloud,
 } from "../_lib/spuren";
 import { merkeInhalt } from "../_lib/inhalte";
+import { GlossarText } from "./Glossar";
 
 /**
  * AkkordeonPosten — ein einfacher Aktivitätsposten: eine Liste von Punkten,
@@ -28,6 +29,7 @@ export default function AkkordeonPosten({
   begriff = "Punkte",
   ariaLabel = "Aufklappbare Punkte",
   className = "",
+  glossar = false,
 }: {
   punkte: AkkordeonPunkt[];
   /** Spur-Präfix, z.B. "philosophische-perspektive:einstieg". */
@@ -36,6 +38,9 @@ export default function AkkordeonPosten({
   begriff?: string;
   ariaLabel?: string;
   className?: string;
+  /** true → Punkt-Text läuft durch GlossarText (Hover-Erklärungen für
+   *  bekannte Fachbegriffe). */
+  glossar?: boolean;
 }) {
   const [offen, setOffen] = useState<Set<number>>(new Set());
   const [gelesen, setGelesen] = useState<Set<number>>(new Set());
@@ -82,7 +87,7 @@ export default function AkkordeonPosten({
           {gelesen.size === gesamt ? "done_all" : "unfold_more"}
         </span>
         {gelesen.size === 0
-          ? `${gesamt} ${begriff} — tippe sie auf`
+          ? `${gesamt} ${begriff}, tippe sie auf`
           : `${gelesen.size} von ${gesamt} ${begriff} geöffnet`}
       </div>
 
@@ -125,7 +130,7 @@ export default function AkkordeonPosten({
               {auf && (
                 <div className="animate-frame-in px-md pb-md pl-[3rem] sm:px-lg sm:pl-[3.5rem]">
                   <p className="text-body-md leading-relaxed text-on-surface-variant">
-                    {p.text}
+                    {glossar ? <GlossarText text={p.text} /> : p.text}
                   </p>
                 </div>
               )}

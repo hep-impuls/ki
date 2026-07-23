@@ -729,7 +729,7 @@ export default function KnotenLandschaft({
                 key={i}
                 role="button"
                 tabIndex={0}
-                aria-label={`${k.titel} — Punkt ${i + 1} von ${n}`}
+                aria-label={`${k.titel}, Punkt ${i + 1} von ${n}`}
                 onClick={() => reveal(i)}
                 onKeyDown={(e) => {
                   if (e.key === "Enter" || e.key === " ") {

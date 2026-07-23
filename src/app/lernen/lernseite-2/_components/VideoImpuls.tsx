@@ -196,7 +196,7 @@ export default function VideoImpuls({
                 <span className="material-symbols-outlined text-[36px]">play_arrow</span>
               </span>
               <span className="rounded-full border border-dashed border-outline-variant bg-surface-bright/85 px-md py-xs text-label-md text-on-surface-variant">
-                Platzhalter — Video folgt
+                Platzhalter, Video folgt
               </span>
             </div>
           )}

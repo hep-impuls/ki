@@ -55,26 +55,27 @@ export default function Lernseite2PhilosophischePerspektive() {
         <div className="mt-md max-w-3xl space-y-sm text-body-lg text-on-surface-variant">
           <p>
             Seit Jahrzehnten verändert die Digitalisierung, wie wir leben und
-            arbeiten — mit der KI zieht dieser Wandel noch einmal an. Was sich
-            lange bewährt hat, wird plötzlich hinterfragt:{" "}
-            <strong className="text-on-surface">neue Berufe entstehen, andere
-            verschwinden</strong>, Abläufe werden umgestellt. Auch soziale
-            Strukturen und Rollenbilder verschieben sich.
+            arbeiten. Mit der KI zieht dieser Wandel noch einmal an. Was sich
+            lange bewährt hat, wird plötzlich hinterfragt.{" "}
+            <strong className="text-on-surface">Neue Berufe entstehen, andere
+            verschwinden</strong>, und vertraute Abläufe werden umgestellt. Auch
+            soziale Strukturen und Rollenbilder verschieben sich.
           </p>
           <p>
             Diese Seite will dem Verlorenen nicht nachtrauern. Sie stellt eine
-            andere Frage: <strong className="text-on-surface">Was ist eigentlich
-            neu — und was hat sich verändert?</strong> Immer mit einem Blick
-            zurück und einem auf heute. Besonders eine Frage bricht mit der KI
-            neu auf: die nach dem Menschen selbst.
+            andere Frage.{" "}
+            <strong className="text-on-surface">Was ist eigentlich neu, und was
+            hat sich verändert?</strong> Sie schaut dabei immer zugleich zurück
+            und auf heute. Besonders eine Frage bricht mit der KI neu auf, die
+            Frage nach dem Menschen selbst.
           </p>
           <p>
-            Der Weg dahin: Du webst den{" "}
+            Der Weg dahin ist ein doppelter. Du webst den{" "}
             <strong className="text-on-surface">«Teppich des Wandels»</strong>{" "}
-            und gehst durch <strong className="text-on-surface">acht Epochen</strong>{" "}
-            — jede mit einer neuen Technik, einer Verunsicherung und der
-            Philosophie, die Halt gab. Öffne, was dich interessiert. Und heute,
-            mit KI?
+            und gehst durch <strong className="text-on-surface">acht Epochen</strong>.
+            Jede Epoche hat eine neue Technik, eine Verunsicherung und die
+            Philosophie, die Halt gab. Öffne, was dich interessiert. Und wie ist
+            es heute, mit KI?
           </p>
         </div>
         <blockquote className="mt-md max-w-3xl border-l-4 border-tertiary pl-md">
@@ -83,7 +84,7 @@ export default function Lernseite2PhilosophischePerspektive() {
             ihren Flug.»
           </p>
           <footer className="mt-xs text-label-sm text-on-surface-variant">
-            G. W. F. Hegel — die Philosophie sieht nicht voraus: Sie begreift,
+            G. W. F. Hegel. Die Philosophie sieht nicht voraus. Sie begreift,
             was war, und gewinnt daraus Antworten für die Gegenwart.
           </footer>
         </blockquote>
@@ -111,26 +112,28 @@ export default function Lernseite2PhilosophischePerspektive() {
       <section id="was-philosophie" className="mt-xl max-w-4xl scroll-mt-24" aria-label="Was ist Philosophie?">
         <AbschnittKopf bild="/art/philosophie-einstieg.webp">
           <h2 className="text-headline-lg text-on-surface">
-            Was ist Philosophie — und warum jetzt?
+            Was ist Philosophie, und warum jetzt?
           </h2>
           <div className="mt-sm space-y-sm text-body-lg text-on-surface-variant">
             <p>
               Was ist Philosophie überhaupt? Wörtlich heisst sie «Liebe zur
               Weisheit». Sie ist <strong className="text-on-surface">keine
               strenge Wissenschaft</strong>, die mit Messdaten beweist, wie etwas
-              zusammenhängt — das tun Physik oder Statistik. Philosophie arbeitet
-              mit <strong className="text-on-surface">Ideen und Denkbildern</strong>:
-              Sie hilft uns, das neu zu ordnen und zu verstehen, was der Wandel
+              zusammenhängt. Das tun Physik oder Statistik. Philosophie arbeitet
+              stattdessen mit{" "}
+              <strong className="text-on-surface">Ideen und Denkbildern</strong>.
+              Sie hilft uns, neu zu ordnen und zu verstehen, was der Wandel
               durcheinanderbringt.
             </p>
             <p>
               Darum geht es in diesem Modul vor allem um eine Frage, die mit der
-              KI neu aufbricht: <strong className="text-on-surface">Was ist der
-              Mensch?</strong> Lange galt er als der, der Wissen schafft,
-              weitergibt und Neues erdenkt. Wenn eine Maschine schreibt, erklärt
-              und gestaltet, gerät genau das ins Wanken — unser Denken und unsere
-              Kreativität. Neu ist die Frage nicht: Spätestens Immanuel Kant hat
-              gefragt, was den Menschen eigentlich ausmacht.
+              KI neu aufbricht.{" "}
+              <strong className="text-on-surface">Was ist der Mensch?</strong>{" "}
+              Lange galt er als der, der Wissen schafft, weitergibt und Neues
+              erdenkt. Wenn nun eine Maschine schreibt, erklärt und gestaltet,
+              gerät genau das ins Wanken, unser Denken und unsere Kreativität.
+              Neu ist die Frage aber nicht. Schon Immanuel Kant hat gefragt, was
+              den Menschen eigentlich ausmacht.
             </p>
           </div>
         </AbschnittKopf>
@@ -143,15 +146,15 @@ export default function Lernseite2PhilosophischePerspektive() {
             <strong className="text-on-surface">Subjekt</strong>, dort die
             Maschine als <strong className="text-on-surface">Objekt</strong>»
             hilft hier nur bedingt. Denn wir stellen den Menschen nicht nur der
-            KI gegenüber — wir fragen auch, wie wir mit ihr{" "}
+            KI gegenüber. Wir fragen auch, wie wir mit ihr{" "}
             <strong className="text-on-surface">zusammenarbeiten</strong> sollen.{" "}
             <strong className="text-on-surface">Netzwerk- und Systemtheorien</strong>{" "}
-            setzen genau dort an: Sie schauen nicht auf einzelne «Täter» und
+            setzen genau dort an. Sie schauen nicht auf einzelne «Täter» und
             blosse «Werkzeuge», sondern darauf, wie Menschen, Maschinen, Daten
-            und Regeln in einer gemeinsamen Praxis zusammenwirken. Ein Beispiel:
-            Wer einen Text mit KI schreibt, ist weder allein Autorin noch bloss
-            Nutzer — Mensch, Modell, Trainingsdaten und die eigene Eingabe
-            bilden zusammen ein Netz, in dem der Text entsteht.
+            und Regeln in einer gemeinsamen Praxis zusammenwirken. Ein Beispiel
+            macht das deutlich. Wer einen Text mit KI schreibt, ist weder allein
+            Autorin noch bloss Nutzer. Mensch, Modell, Trainingsdaten und die
+            eigene Eingabe bilden zusammen ein Netz, in dem der Text entsteht.
           </p>
         </Ausklapptext>
         <Aufgabe className="mt-md">Klappe die Punkte auf, die dich neugierig machen.</Aufgabe>
@@ -159,23 +162,24 @@ export default function Lernseite2PhilosophischePerspektive() {
           className="mt-lg"
           spurKey="philosophische-perspektive:einstieg"
           begriff="Fragen"
-          ariaLabel="Was ist Philosophie? — aufklappbare Punkte"
+          ariaLabel="Was ist Philosophie? Aufklappbare Punkte"
+          glossar
           punkte={[
             {
               titel: "Sie beginnt mit Staunen und Zweifeln",
-              text: "Schon Platon und Aristoteles sagten: Am Anfang der Philosophie steht das Staunen — das Innehalten vor dem, was selbstverständlich schien. Dazu kommt der Zweifel: Descartes' «Ich denke, also bin ich» beginnt damit, alles anzuzweifeln, bis ein sicherer Punkt bleibt. Staunen öffnet die Frage, Zweifel prüft die Antwort.",
+              text: "Schon Platon und Aristoteles sagten es: Am Anfang der Philosophie steht das Staunen. Gemeint ist das Innehalten vor dem, was eben noch selbstverständlich schien. Dazu kommt der Zweifel. Descartes' Satz «Ich denke, also bin ich» beginnt damit, alles anzuzweifeln, bis ein sicherer Punkt übrig bleibt. Das Staunen öffnet die Frage, der Zweifel prüft die Antwort.",
             },
             {
               titel: "Ihre Hauptfrage: Was ist der Mensch?",
-              text: "Immanuel Kant bündelte die Philosophie in vier Fragen: Was kann ich wissen? Was soll ich tun? Was darf ich hoffen? — und, so Kant, alle laufen zusammen in der einen: Was ist der Mensch? Was uns auszeichnet — Vernunft, Sprache, Bewusstsein, Freiheit — stand immer im Zentrum.",
+              text: "Immanuel Kant bündelte die Philosophie in vier Fragen. Was kann ich wissen? Was soll ich tun? Was darf ich hoffen? Alle drei laufen laut Kant in einer vierten zusammen. Was ist der Mensch? Was uns auszeichnet, also Vernunft, Sprache, Bewusstsein und Freiheit, stand dabei immer im Zentrum.",
             },
             {
-              titel: "Die KI stellt diese Frage neu — und dringlich",
-              text: "Nicht wörtlich: «Was ist der Mensch?» wird laut Google Trends kaum häufiger gesucht als früher. Aber in unzähligen Reden und Texten über KI kehrt die Frage in konkreter Form wieder — müssen wir überhaupt noch selbst denken und schreiben? Wie verändert uns die tägliche Nutzung? Und welche Rolle bekommen wir neben der Maschine: eher anleitend, prüfend und verantwortend statt ausführend? So taucht die alte philosophische Frage nach dem Menschen neu auf, mitten im Alltag.",
+              titel: "Die KI stellt diese Frage neu und dringlich",
+              text: "Wörtlich wird «Was ist der Mensch?» laut Google Trends kaum häufiger gesucht als früher. Aber in unzähligen Reden und Texten über KI kehrt die Frage in konkreter Form wieder. Müssen wir überhaupt noch selbst denken und schreiben? Wie verändert uns die tägliche Nutzung? Und welche Rolle bekommen wir neben der Maschine, eher anleitend, prüfend und verantwortend statt ausführend? So taucht die alte philosophische Frage nach dem Menschen mitten im Alltag neu auf.",
             },
             {
               titel: "Sie gibt keine Rezepte, sondern Orientierung",
-              text: "Philosophie liefert keine Bedienungsanleitung und keine Prognose. Sie ordnet Begriffe, deckt verborgene Annahmen auf und wägt Gründe ab — sie hilft zu klären, worüber wir eigentlich streiten. Hegels Bild der «Eule der Minerva» (oben) sagt: Verstehen kommt oft erst im Rückblick — aber genau dieses Begreifen brauchen wir, um die Gegenwart zu gestalten.",
+              text: "Philosophie liefert keine Bedienungsanleitung und keine Prognose. Sie ordnet Begriffe, deckt verborgene Annahmen auf und wägt Gründe ab. So hilft sie zu klären, worüber wir eigentlich streiten. Hegels Bild der «Eule der Minerva» oben sagt, dass Verstehen oft erst im Rückblick kommt. Genau dieses Begreifen brauchen wir aber, um die Gegenwart zu gestalten.",
             },
           ]}
         />
@@ -195,10 +199,10 @@ export default function Lernseite2PhilosophischePerspektive() {
               <strong className="text-on-surface">technologisch</strong>,{" "}
               <strong className="text-on-surface">gesellschaftlich</strong>,{" "}
               <strong className="text-on-surface">kulturell</strong> oder{" "}
-              <strong className="text-on-surface">erfinderisch-entdeckerisch</strong>{" "}
-              sind — als vier Fäden, die nebeneinander durch die Zeit laufen,
-              von Pflug, Rad und Schrift bis zur KI. Das Entscheidende: Sie
-              stehen in <strong className="text-on-surface">Wechselwirkung</strong>,
+              <strong className="text-on-surface">erfinderisch</strong> sind.
+              Sie bilden vier Fäden, die nebeneinander durch die Zeit laufen,
+              von Pflug, Rad und Schrift bis zur KI. Das Entscheidende ist ihre{" "}
+              <strong className="text-on-surface">Wechselwirkung</strong>, denn
               sie hängen voneinander ab. Eisenbahn und Schifffahrt etwa hätten
               sich nie so verbreitet, wenn nicht auch kulturell das Interesse
               bestanden hätte, zu reisen, Handel zu treiben und neue Länder zu
@@ -207,22 +211,22 @@ export default function Lernseite2PhilosophischePerspektive() {
             <p>
               Wozu das Ganze? Die Beschäftigung mit dem Teppich bereitet darauf
               vor, <strong className="text-on-surface">technologische
-              Errungenschaften, Verunsicherungsphänomene der Gesellschaft und
+              Errungenschaften, Verunsicherungen der Gesellschaft und
               philosophische Orientierungsleistungen miteinander zu
-              verknüpfen</strong> — an einigen Punkten wartet dafür ein{" "}
+              verknüpfen</strong>. An einigen Punkten wartet dafür ein{" "}
               <strong className="text-on-surface">Verunsicherungs-Stopp</strong>,
               der zur passenden Epoche weiter unten führt. Diese Verknüpfung
-              leisten auch die <strong className="text-on-surface">Bilder</strong>:
+              leisten auch die <strong className="text-on-surface">Bilder</strong>.
               Bildende Kunst hilft neben der Philosophie, komplexe Zusammenhänge
-              und Zeitphänomene in visueller Vereinfachung auszudrücken.
+              und Zeitphänomene in vereinfachter Form auszudrücken.
             </p>
           </div>
         </AbschnittKopf>
         <Aufgabe className="mt-md max-w-4xl">
-          Tippe die Punkte an — jeder erzählt seine Geschichte, und Stück für
+          Tippe die Punkte an. Jeder erzählt seine Geschichte, und Stück für
           Stück webt sich der Teppich. Bewerte in jeder Karte, ob dir der Punkt
           bekannt war und wie relevant er für dein Leben ist. Erneutes Antippen
-          wählt ab; die Legende schaltet ganze Fäden an und aus.
+          wählt ihn wieder ab. Die Legende schaltet ganze Fäden an und aus.
         </Aufgabe>
         <HistorienTeppich
           className="mt-lg"
@@ -248,10 +252,10 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "Der Prozess des Sokrates",
               kurz: "Sokrates-Prozess",
               jahr: "399 v. Chr.",
-              text: "Athen verurteilt seinen unbequemsten Frager zum Tod. Der Prozess zeigt eine Stadt in der Krise — zwischen alter Ordnung und neuem Denken.",
-              mehr: "Sokrates hatte nichts geschrieben, nur gefragt — und damit Gewissheiten zersetzt. Sein Todesurteil machte ihn zur Gründungsfigur der Philosophie: Platon, sein Schüler, baute auf diesem Schock sein Werk auf.",
+              text: "Athen verurteilt seinen unbequemsten Frager zum Tod. Der Prozess zeigt eine Stadt in der Krise, hin- und hergerissen zwischen alter Ordnung und neuem Denken.",
+              mehr: "Sokrates hatte nichts geschrieben, nur gefragt. Damit hat er Gewissheiten zersetzt. Sein Todesurteil machte ihn zur Gründungsfigur der Philosophie: Platon, sein Schüler, baute auf diesem Schock sein Werk auf.",
               verunsicherung:
-                "Die alte, mythische Ordnung trägt nicht mehr, die Sophisten machen jede Wahrheit verhandelbar — die Antike ist zutiefst verunsichert. In den Epochen unten zeigt die Antike, wie Aristoteles darauf antwortet: beobachten, ordnen, begründen.",
+                "Die alte, mythische Ordnung trägt nicht mehr, die Sophisten machen jede Wahrheit verhandelbar. Die Antike ist zutiefst verunsichert. In den Epochen unten zeigt die Antike, wie Aristoteles darauf antwortet: beobachten, ordnen, begründen.",
             },
             {
               faden: "ereignisse",
@@ -275,7 +279,7 @@ export default function Lernseite2PhilosophischePerspektive() {
               kurz: "Kolonialisierung",
               jahr: "ab 1492",
               text: "Mit den neuen Schiffen greifen europäische Mächte über die Ozeane aus: Eroberung, Handel, Sklaverei. Der Reichtum Europas und das Leid ganzer Kontinente hängen am selben Faden.",
-              mehr: "Die Kolonialisierung verband Technologie (Schiffe, Waffen, Kompass), Entdeckung (neue Kontinente aus europäischer Sicht) und Gewaltgeschichte — sie ist die gewaltsame Seite der frühen Globalisierung. Ihre Folgen — globale Handelswege, Ausbeutung, kulturelle Dominanz — wirken bis in heutige Debatten über Wissensmacht und kulturellen Bias der KI nach.",
+              mehr: "Die Kolonialisierung verband Technologie (Schiffe, Waffen, Kompass), Entdeckung (neue Kontinente aus europäischer Sicht) und Gewaltgeschichte. Sie ist die gewaltsame Seite der frühen Globalisierung. Ihre Folgen sind globale Handelswege, Ausbeutung und kulturelle Dominanz. Sie wirken bis in heutige Debatten über Wissensmacht und kulturellen Bias der KI nach.",
             },
             {
               faden: "ereignisse",
@@ -284,8 +288,8 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "Reformation",
               kurz: "Reformation",
               jahr: "1517",
-              text: "Luthers Thesen spalten die Kirche — verbreitet in Windeseile durch den Buchdruck. Eine neue Technologie und ein gesellschaftlicher Umbruch greifen ineinander.",
-              mehr: "Ohne Buchdruck keine Reformation in dieser Wucht: Flugschriften machten aus einer Gelehrtendebatte eine Massenbewegung. Ein frühes Beispiel dafür, wie ein neues Medium bestimmt, welche Ideen sich durchsetzen — eine Frage, die sich bei Social-Media-Algorithmen und KI neu stellt.",
+              text: "Luthers Thesen spalten die Kirche. Der Buchdruck verbreitet sie in Windeseile. Eine neue Technologie und ein gesellschaftlicher Umbruch greifen ineinander.",
+              mehr: "Ohne Buchdruck keine Reformation in dieser Wucht: Flugschriften machten aus einer Gelehrtendebatte eine Massenbewegung. Ein frühes Beispiel dafür, wie ein neues Medium bestimmt, welche Ideen sich durchsetzen. Das ist eine Frage, die sich bei Social-Media-Algorithmen und KI neu stellt.",
             },
             {
               faden: "ereignisse",
@@ -295,9 +299,9 @@ export default function Lernseite2PhilosophischePerspektive() {
               kurz: "Lissabon",
               jahr: "1755",
               text: "Am Allerheiligentag zerstören Beben, Feuer und Flutwelle die fromme Stadt. Ganz Europa fragt: Wie kann ein gütiger Gott das zulassen?",
-              mehr: "Das Beben wurde zum Medienereignis der Aufklärung: Voltaire spottete über den «besten aller Welten»-Optimismus, Kant schrieb drei Abhandlungen über die Ursachen — ein früher Schritt zur wissenschaftlichen Erdbebenkunde.",
+              mehr: "Das Beben wurde zum Medienereignis der Aufklärung: Voltaire spottete über den «besten aller Welten»-Optimismus, Kant schrieb drei Abhandlungen über die Ursachen. Das war ein früher Schritt zur wissenschaftlichen Erdbebenkunde.",
               verunsicherung:
-                "Mit der Stadt zerbricht der Glaube an einen gütigen Weltplan. In den Epochen unten zeigt die Aufklärung, wie daraus Kants Zumutung wird: Verlass dich nicht auf Autoritäten — denke selbst.",
+                "Mit der Stadt zerbricht der Glaube an einen gütigen Weltplan. In den Epochen unten zeigt die Aufklärung, wie daraus Kants Zumutung wird: Verlass dich nicht auf Autoritäten, sondern denke selbst.",
             },
             {
               faden: "ereignisse",
@@ -307,8 +311,8 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "Französische Revolution",
               kurz: "Revolution",
               jahr: "1789",
-              text: "Das Volk stürzt die alte Ordnung: Freiheit, Gleichheit, Brüderlichkeit. Die Ideen der Aufklärung werden politisch — mit Hoffnung und Terror zugleich.",
-              mehr: "Die Revolution zeigt, wie Denken die Welt verändert: Kants «Habe Mut, dich deines eigenen Verstandes zu bedienen» wird zur politischen Sprengkraft. Zugleich mahnt ihr Umschlag in den Terror, dass Umbrüche Orientierung brauchen — genau das Thema dieser Seite.",
+              text: "Das Volk stürzt die alte Ordnung: Freiheit, Gleichheit, Brüderlichkeit. Die Ideen der Aufklärung werden politisch, mit Hoffnung und Terror zugleich.",
+              mehr: "Die Revolution zeigt, wie Denken die Welt verändert: Kants «Habe Mut, dich deines eigenen Verstandes zu bedienen» wird zur politischen Sprengkraft. Zugleich mahnt ihr Umschlag in den Terror, dass Umbrüche Orientierung brauchen. Das ist genau das Thema dieser Seite.",
             },
             {
               faden: "ereignisse",
@@ -318,8 +322,8 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "Zweiter Weltkrieg",
               kurz: "Weltkrieg",
               jahr: "1939–45",
-              text: "Der industrialisierte Krieg und die Schoah erschüttern den Glauben an den Fortschritt im Kern. Zugleich treibt der Krieg Technologien voran — Radar, Rakete, Computer.",
-              mehr: "Turings Bombe entschlüsselt Enigma, in Deutschland rechnet Zuses Z3, in den USA entsteht ENIAC: Der Computer wird im Krieg geboren. Nach 1945 fragt die Philosophie neu, wie Zivilisation und Barbarei zusammengehen konnten — und was Technik ohne Verantwortung anrichtet.",
+              text: "Der industrialisierte Krieg und die Schoah erschüttern den Glauben an den Fortschritt im Kern. Zugleich treibt der Krieg Technologien voran, etwa Radar, Rakete und Computer.",
+              mehr: "Turings Bombe entschlüsselt Enigma, in Deutschland rechnet Zuses Z3, in den USA entsteht ENIAC: Der Computer wird im Krieg geboren. Nach 1945 fragt die Philosophie neu, wie Zivilisation und Barbarei zusammengehen konnten. Und sie fragt, was Technik ohne Verantwortung anrichtet.",
             },
             {
               faden: "ereignisse",
@@ -329,8 +333,8 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "Mondfahrt im Kalten Krieg",
               kurz: "Mondfahrt",
               jahr: "1969",
-              text: "Im Wettlauf der Supermächte betreten Menschen den Mond. Die Mondfahrt ist Triumph der Technik — und zugleich Machtdemonstration im Kalten Krieg.",
-              mehr: "Sputnik (1957) löste den «Sputnik-Schock» aus, die Mondlandung (1969) antwortete darauf. Nebenprodukte des Wettlaufs — Miniaturisierung, Satelliten, das ARPANET als militärisches Forschungsnetz — wurden zu Grundlagen unserer digitalen Welt. Und das Foto der Erde aus dem All veränderte den Blick auf den Planeten.",
+              text: "Im Wettlauf der Supermächte betreten Menschen den Mond. Die Mondfahrt ist Triumph der Technik und zugleich Machtdemonstration im Kalten Krieg.",
+              mehr: "Sputnik (1957) löste den «Sputnik-Schock» aus, die Mondlandung (1969) antwortete darauf. Nebenprodukte des Wettlaufs wurden zu Grundlagen unserer digitalen Welt, etwa die Miniaturisierung, die Satelliten und das ARPANET als militärisches Forschungsnetz. Und das Foto der Erde aus dem All veränderte den Blick auf den Planeten.",
             },
             {
               faden: "ereignisse",
@@ -339,8 +343,8 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "Zusammenbruch der Sowjetunion",
               kurz: "Ende der UdSSR",
               jahr: "1991",
-              text: "Der Ostblock zerfällt, der Kalte Krieg endet. Im selben Jahr wird das World Wide Web freigegeben — die vernetzte, globalisierte Welt beginnt.",
-              mehr: "1989 fällt die Mauer, 1991 löst sich die Sowjetunion auf. Manche riefen das «Ende der Geschichte» aus — die endgültige Weltordnung. Rückblickend begann stattdessen ein neuer Umbruch: Globalisierung und Digitalisierung, deren Verunsicherungen wir heute mit der KI erleben.",
+              text: "Der Ostblock zerfällt, der Kalte Krieg endet. Im selben Jahr wird das World Wide Web freigegeben. Die vernetzte, globalisierte Welt beginnt.",
+              mehr: "1989 fällt die Mauer, 1991 löst sich die Sowjetunion auf. Manche riefen das «Ende der Geschichte» aus und meinten damit die endgültige Weltordnung. Rückblickend begann stattdessen ein neuer Umbruch: Globalisierung und Digitalisierung, deren Verunsicherungen wir heute mit der KI erleben.",
             },
             /* ── Faden: Technologie ── */
             {
@@ -351,8 +355,8 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "Der Pflug",
               kurz: "Pflug",
               jahr: "Jungsteinzeit",
-              text: "Der Pflug vervielfacht, was ein Feld hergibt. Mit ihm werden Überschüsse möglich — und damit Städte, Arbeitsteilung und Herrschaft.",
-              mehr: "Vom Grabstock zum Hakenpflug zum Räderpflug — entwickelt in Mesopotamien, Ägypten, Indien und China unabhängig voneinander. Der Pflug ist das Urbild der Technologie: ein Werkzeug, das nicht nur Arbeit erleichtert, sondern die Gesellschaft umbaut, die es benutzt.",
+              text: "Der Pflug vervielfacht, was ein Feld hergibt. Mit ihm werden Überschüsse möglich und damit auch Städte, Arbeitsteilung und Herrschaft.",
+              mehr: "Er entwickelte sich vom Grabstock zum Hakenpflug zum Räderpflug, unabhängig voneinander in Mesopotamien, Ägypten, Indien und China. Der Pflug ist das Urbild der Technologie: ein Werkzeug, das nicht nur Arbeit erleichtert, sondern die Gesellschaft umbaut, die es benutzt.",
             },
             {
               faden: "technologie",
@@ -361,8 +365,8 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "Das Rad",
               kurz: "Rad",
               jahr: "~3500 v. Chr.",
-              text: "Töpferscheibe und Wagenrad entstehen in Mesopotamien und dem Schwarzmeerraum. Das Rad macht Lasten beweglich — Transport, Handel und Krieg verändern sich.",
-              mehr: "Das Rad ist keine europäische Erfindung — die ältesten Belege stammen aus Mesopotamien und dem Kaukasus. Bemerkenswert: Die Hochkulturen Amerikas kannten das Rad (an Spielzeugfiguren), nutzten es aber nicht für Transport, unter anderem mangels Zugtieren. Technik setzt sich nur durch, wo sie in Umwelt und Praxis passt.",
+              text: "Töpferscheibe und Wagenrad entstehen in Mesopotamien und dem Schwarzmeerraum. Das Rad macht Lasten beweglich. Transport, Handel und Krieg verändern sich.",
+              mehr: "Das Rad ist keine europäische Erfindung. Die ältesten Belege stammen aus Mesopotamien und dem Kaukasus. Bemerkenswert: Die Hochkulturen Amerikas kannten das Rad (an Spielzeugfiguren), nutzten es aber nicht für Transport, unter anderem mangels Zugtieren. Technik setzt sich nur durch, wo sie in Umwelt und Praxis passt.",
             },
             {
               faden: "technologie",
@@ -372,8 +376,8 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "Die Schrift",
               kurz: "Schrift",
               jahr: "~3300 v. Chr.",
-              text: "In Mesopotamien entsteht die Schrift — zuerst für Buchhaltung und Vorräte. Denken und Erinnern werden erstmals ausserhalb des Kopfes gespeichert.",
-              mehr: "Die frühesten Keilschrifttafeln sind Verwaltungslisten: Getreide, Vieh, Schulden. Schrift entstand mehrfach unabhängig — in Mesopotamien, China und Mittelamerika; die Anden-Kulturen speicherten stattdessen in Knotenschnüren (Quipus). Die Schrift eröffnet die Medienlinie dieses Teppichs — Buchdruck, Internet und KI setzen sie fort: Immer mehr Denken wandert in Dinge aus.",
+              text: "In Mesopotamien entsteht die Schrift, zuerst für Buchhaltung und Vorräte. Denken und Erinnern werden erstmals ausserhalb des Kopfes gespeichert.",
+              mehr: "Die frühesten Keilschrifttafeln sind Verwaltungslisten: Getreide, Vieh, Schulden. Schrift entstand mehrfach unabhängig, in Mesopotamien, China und Mittelamerika. Die Anden-Kulturen speicherten stattdessen in Knotenschnüren (Quipus). Die Schrift eröffnet die Medienlinie dieses Teppichs. Buchdruck, Internet und KI setzen sie fort: Immer mehr Denken wandert in Dinge aus.",
             },
             {
               faden: "technologie",
@@ -384,7 +388,7 @@ export default function Lernseite2PhilosophischePerspektive() {
               kurz: "Papyrus & Papier",
               jahr: "Ägypten · China",
               text: "In Ägypten wird aus Schilf Papyrus (~3000 v. Chr.), in China erfindet Cai Lun das Papier (105 n. Chr.): leichte, billige Schreibflächen. Wissen wird tragbar.",
-              mehr: "Das Papier wanderte über die islamische Welt nach Europa — Papiermühlen in Samarkand und Bagdad ab dem 8. Jahrhundert. Erst mit billigem Papier lohnte sich später der Buchdruck. Die Medienlinie dieses Teppichs ist eine Weltreise: Ägypten, China, Bagdad, Mainz.",
+              mehr: "Das Papier wanderte über die islamische Welt nach Europa. Papiermühlen gab es in Samarkand und Bagdad ab dem 8. Jahrhundert. Erst mit billigem Papier lohnte sich später der Buchdruck. Die Medienlinie dieses Teppichs ist eine Weltreise: Ägypten, China, Bagdad, Mainz.",
             },
             {
               faden: "technologie",
@@ -393,8 +397,8 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "Kompass und Schiesspulver",
               kurz: "Kompass",
               jahr: "China, ~1000",
-              text: "Chinesische Seefahrer navigieren mit der Magnetnadel; über arabische und indische Händler erreicht sie Europa. Ohne Kompass keine Ozeanfahrt.",
-              mehr: "Auch Schiesspulver und der Druck mit beweglichen Lettern (Bi Sheng, ~1040) stammen aus China; Koreas «Jikji» (1377) ist das älteste erhaltene Buch aus Metalllettern. Viele «europäische Erfindungen» stehen auf den Schultern anderer Weltgegenden — Technikgeschichte ist Weltgeschichte.",
+              text: "Chinesische Seefahrer navigieren mit der Magnetnadel. Über arabische und indische Händler erreicht sie Europa. Ohne Kompass keine Ozeanfahrt.",
+              mehr: "Auch Schiesspulver und der Druck mit beweglichen Lettern (Bi Sheng, ~1040) stammen aus China. Koreas «Jikji» (1377) ist das älteste erhaltene Buch aus Metalllettern. Viele «europäische Erfindungen» stehen auf den Schultern anderer Weltgegenden. Technikgeschichte ist Weltgeschichte.",
             },
             {
               faden: "technologie",
@@ -404,8 +408,8 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "Der Buchdruck",
               kurz: "Buchdruck",
               jahr: "um 1450",
-              text: "Gutenbergs bewegliche Lettern machen Wissen massenhaft kopierbar. Was bisher Klöstern und Höfen gehörte, kann sich nun verbreiten — Kontrolle über Wissen geht verloren und wird neu verteilt.",
-              mehr: "Der Buchdruck gilt als Medienrevolution schlechthin: Er ermöglichte Reformation, Wissenschaft und Aufklärung. Jede spätere Medientechnik — Zeitung, Radio, Internet, KI — wiederholt seine Grundfrage: Wer darf sprechen, wer wird gehört, wer prüft die Wahrheit?",
+              text: "Gutenbergs bewegliche Lettern machen Wissen massenhaft kopierbar. Was bisher Klöstern und Höfen gehörte, kann sich nun verbreiten. Die Kontrolle über Wissen geht verloren und wird neu verteilt.",
+              mehr: "Der Buchdruck gilt als Medienrevolution schlechthin: Er ermöglichte Reformation, Wissenschaft und Aufklärung. Jede spätere Medientechnik wie Zeitung, Radio, Internet und KI wiederholt seine Grundfrage: Wer darf sprechen, wer wird gehört, wer prüft die Wahrheit?",
             },
             {
               faden: "technologie",
@@ -414,8 +418,8 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "Ozeantaugliche Schiffe",
               kurz: "Seefahrt",
               jahr: "15. Jh.",
-              text: "Karavelle, Kompass und Kanonen machen die Ozeane befahrbar. Der Beginn der europäischen Schifffahrt öffnet die Welt — und ebnet der Kolonialisierung den Weg.",
-              mehr: "Ozeanfahrt war keine europäische Premiere: Schon 1405–1433 segelten Zheng Hes riesige chinesische Flotten bis Ostafrika, polynesische Seefahrer querten den Pazifik Jahrhunderte früher. Und Technik ist nie neutral: Dieselben Schiffe, die Entdeckungen ermöglichten, transportierten Eroberer und versklavte Menschen — die Verflechtung von Können und Machtinteresse ist bei Rechenzentren und KI-Chips heute nicht anders.",
+              text: "Karavelle, Kompass und Kanonen machen die Ozeane befahrbar. Der Beginn der europäischen Schifffahrt öffnet die Welt und ebnet der Kolonialisierung den Weg.",
+              mehr: "Ozeanfahrt war keine europäische Premiere: Schon 1405–1433 segelten Zheng Hes riesige chinesische Flotten bis Ostafrika, polynesische Seefahrer querten den Pazifik Jahrhunderte früher. Und Technik ist nie neutral: Dieselben Schiffe, die Entdeckungen ermöglichten, transportierten Eroberer und versklavte Menschen. Die Verflechtung von Können und Machtinteresse ist bei Rechenzentren und KI-Chips heute nicht anders.",
             },
             {
               faden: "technologie",
@@ -425,10 +429,10 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "Die Dampfmaschine",
               kurz: "Dampfmaschine",
               jahr: "1769",
-              text: "Watts Dampfmaschine setzt erstmals Kraft frei, die nicht von Muskel, Wind oder Wasser stammt. Fabriken, Eisenbahnen und Städte wachsen — die Industrialisierung pflügt die Gesellschaft um.",
-              mehr: "Mit der Dampfmaschine beginnt die Automatisierung: Maschinen übernehmen körperliche Arbeit, Menschen wandern in neue Rollen. Die KI setzt diese Linie bei der Kopf- und Sprachaufgabe fort — deshalb lohnt der Vergleich mit den Umbrüchen und Ängsten von damals.",
+              text: "Watts Dampfmaschine setzt erstmals Kraft frei, die nicht von Muskel, Wind oder Wasser stammt. Fabriken, Eisenbahnen und Städte wachsen. Die Industrialisierung pflügt die Gesellschaft um.",
+              mehr: "Mit der Dampfmaschine beginnt die Automatisierung: Maschinen übernehmen körperliche Arbeit, Menschen wandern in neue Rollen. Die KI setzt diese Linie bei der Kopf- und Sprachaufgabe fort. Deshalb lohnt der Vergleich mit den Umbrüchen und Ängsten von damals.",
               verunsicherung:
-                "Die Industrialisierung reisst die alte Gesellschaft auseinander: Landflucht, Kinderarbeit, Elendsquartiere im Schatten der Fabriken — 1848 entlädt sich die Spannung in Revolutionen quer durch Europa. In den Epochen unten zeigt die Industriemoderne, wie Marx den Umbruch begreift.",
+                "Die Industrialisierung reisst die alte Gesellschaft auseinander: Landflucht, Kinderarbeit, Elendsquartiere im Schatten der Fabriken. 1848 entlädt sich die Spannung in Revolutionen quer durch Europa. In den Epochen unten zeigt die Industriemoderne, wie Marx den Umbruch begreift.",
             },
             {
               faden: "technologie",
@@ -437,8 +441,8 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "Der Computer",
               kurz: "Computer",
               jahr: "1941–45",
-              text: "Im Schatten des Kriegs entstehen die ersten programmierbaren Rechner — Zuses Z3, Colossus, ENIAC. Turings Idee der universellen Maschine wird Wirklichkeit.",
-              mehr: "Der Computer kreuzt hier den Ereignis-Faden: Er wird für Ballistik und Code-Knacken gebaut, nicht für den Alltag. Erst Jahrzehnte später wandert er auf Schreibtische und in Hosentaschen — und wird zur Grundlage von Internet und KI.",
+              text: "Im Schatten des Kriegs entstehen die ersten programmierbaren Rechner, etwa Zuses Z3, Colossus und ENIAC. Turings Idee der universellen Maschine wird Wirklichkeit.",
+              mehr: "Der Computer kreuzt hier den Ereignis-Faden: Er wird für Ballistik und Code-Knacken gebaut, nicht für den Alltag. Erst Jahrzehnte später wandert er auf Schreibtische und in Hosentaschen. So wird er zur Grundlage von Internet und KI.",
             },
             {
               faden: "technologie",
@@ -449,7 +453,7 @@ export default function Lernseite2PhilosophischePerspektive() {
               kurz: "Rakete",
               jahr: "1942–57",
               text: "Von der V2 des Kriegs zur Sputnik-Rakete des Kalten Kriegs: Dieselbe Technik trägt Sprengköpfe oder Satelliten. Die Rakete macht den Weltraum erreichbar.",
-              mehr: "Kaum eine Technologie zeigt die Doppelgesichtigkeit deutlicher: Wernher von Brauns V2 tötete in London, seine Saturn V brachte Menschen zum Mond. Ob eine Technik Fluch oder Segen ist, entscheidet nicht die Technik — sondern der gesellschaftliche Faden, mit dem sie verwoben ist.",
+              mehr: "Kaum eine Technologie zeigt die Doppelgesichtigkeit deutlicher: Wernher von Brauns V2 tötete in London, seine Saturn V brachte Menschen zum Mond. Ob eine Technik Fluch oder Segen ist, entscheidet nicht die Technik, sondern der gesellschaftliche Faden, mit dem sie verwoben ist.",
             },
             {
               faden: "technologie",
@@ -458,8 +462,8 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "Internet & World Wide Web",
               kurz: "Internet",
               jahr: "1969–91",
-              text: "Aus dem militärischen ARPANET (1969) wird das offene World Wide Web (1991). Information fliesst plötzlich weltweit, sofort und für alle — das grösste Medienereignis seit dem Buchdruck.",
-              mehr: "Das Netz begann im Kalten Krieg und wurde durch Tim Berners-Lees WWW zur Alltagstechnik. Es lieferte die Daten, auf denen heutige KI trainiert — ohne Internet keine Sprachmodelle. Zugleich begann hier die algorithmische Sortierung der Aufmerksamkeit.",
+              text: "Aus dem militärischen ARPANET (1969) wird das offene World Wide Web (1991). Information fliesst plötzlich weltweit, sofort und für alle. Das ist das grösste Medienereignis seit dem Buchdruck.",
+              mehr: "Das Netz begann im Kalten Krieg und wurde durch Tim Berners-Lees WWW zur Alltagstechnik. Es lieferte die Daten, auf denen heutige KI trainiert. Ohne Internet keine Sprachmodelle. Zugleich begann hier die algorithmische Sortierung der Aufmerksamkeit.",
             },
             {
               faden: "technologie",
@@ -469,10 +473,10 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "KI wird öffentlich",
               kurz: "KI",
               jahr: "1956 → 2022",
-              text: "Erfunden wurde die KI nicht 2022: Benannt und erforscht wird sie seit 1956 (Dartmouth-Konferenz). Mit GPT und ChatGPT tritt sie 2022 an die Öffentlichkeit — und wird alltäglich.",
-              mehr: "Dazwischen liegen Jahrzehnte von Aufbrüchen und «KI-Wintern»: symbolische KI, Expertensysteme, statistisches Lernen, Deep Learning. 2022 änderte sich nicht die Erfindung, sondern der Zugang — ein Chatfenster machte KI für alle bedienbar. Alle Fäden laufen hier zusammen: die Technologielinie der Automatisierung, die Entdeckungslinie des Weltverstehens, die gesellschaftliche Frage, wer wir neben der Maschine sind — und die Praxen, in denen wir täglich mit ihr umgehen.",
+              text: "Erfunden wurde die KI nicht 2022: Benannt und erforscht wird sie seit 1956 (Dartmouth-Konferenz). Mit GPT und ChatGPT tritt sie 2022 an die Öffentlichkeit und wird alltäglich.",
+              mehr: "Dazwischen liegen Jahrzehnte von Aufbrüchen und «KI-Wintern»: symbolische KI, Expertensysteme, statistisches Lernen, Deep Learning. 2022 änderte sich nicht die Erfindung, sondern der Zugang. Ein Chatfenster machte KI für alle bedienbar. Alle Fäden laufen hier zusammen: die Technologielinie der Automatisierung, die Entdeckungslinie des Weltverstehens, die gesellschaftliche Frage, wer wir neben der Maschine sind, und die Praxen, in denen wir täglich mit ihr umgehen.",
               verunsicherung:
-                "Bilder, Stimmen und Texte lassen sich täuschend echt erzeugen: Was ist noch echt, welche Fähigkeiten lohnen sich noch — und wer hat etwas gemacht: ich, die Maschine, beide? In den Epochen unten sucht «Jetzt: Umwelt & KI» nach der Schablone unserer Zeit.",
+                "Bilder, Stimmen und Texte lassen sich täuschend echt erzeugen: Was ist noch echt, welche Fähigkeiten lohnen sich noch, und wer hat etwas gemacht: ich, die Maschine, beide? In den Epochen unten sucht «Jetzt: Umwelt & KI» nach der Schablone unserer Zeit.",
             },
             /* ── Faden: Entdeckungen ── */
             {
@@ -483,8 +487,8 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "Die Erde wird vermessen",
               kurz: "Erdumfang",
               jahr: "~240 v. Chr.",
-              text: "Eratosthenes berechnet den Erdumfang — mit Schatten, Brunnen und Geometrie, erstaunlich genau. Die Welt wird messbar.",
-              mehr: "Zwei Städte, ein Sonnenstand, ein Winkel: Aus einfachsten Beobachtungen erschliesst Eratosthenes die Grösse des Planeten. Die antike Entdeckung zeigt, was die neue Denk-Schablone — beobachten, ordnen, begründen — leisten kann.",
+              text: "Eratosthenes berechnet den Erdumfang mit Schatten, Brunnen und Geometrie, erstaunlich genau. Die Welt wird messbar.",
+              mehr: "Zwei Städte, ein Sonnenstand, ein Winkel: Aus einfachsten Beobachtungen erschliesst Eratosthenes die Grösse des Planeten. Die antike Entdeckung zeigt, was die neue Denk-Schablone leisten kann, nämlich beobachten, ordnen und begründen.",
             },
             {
               faden: "entdeckungen",
@@ -493,18 +497,18 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "Die Null und das Stellenwertsystem",
               kurz: "Die Null",
               jahr: "Indien, ~500–700",
-              text: "Indische Gelehrte machen die Null zur Zahl und schaffen das Stellenwertsystem — unsere heutigen Ziffern. Rechnen wird einfach genug für alle.",
-              mehr: "Über arabische Gelehrte kam das System nach Europa — deshalb «arabische Ziffern». Al-Chwarizmi beschrieb es um 820 in Bagdad; aus seinem Namen wurde das Wort «Algorithmus». Ohne die indische Null keine Informatik: Auch der Computer rechnet mit Stellenwerten aus 0 und 1.",
+              text: "Indische Gelehrte machen die Null zur Zahl und schaffen das Stellenwertsystem, unsere heutigen Ziffern. Rechnen wird einfach genug für alle.",
+              mehr: "Über arabische Gelehrte kam das System nach Europa. Daher stammt der Name «arabische Ziffern». Al-Chwarizmi beschrieb es um 820 in Bagdad. Aus seinem Namen wurde das Wort «Algorithmus». Ohne die indische Null keine Informatik: Auch der Computer rechnet mit Stellenwerten aus 0 und 1.",
             },
             {
               faden: "entdeckungen",
               x: 315,
               y: 255,
-              titel: "Amerika — die Welt wird grösser",
+              titel: "Amerika, die Welt wird grösser",
               kurz: "Amerika",
               jahr: "1492",
-              text: "Kolumbus erreicht Amerika — für Europa die Entdeckung einer neuen Welt, für deren Bewohner der Beginn der Eroberung. Das europäische Weltbild dehnt sich schlagartig.",
-              mehr: "«Entdeckung» ist eine Perspektive: Aus Sicht der Anden- und Mittelamerika-Kulturen war es eine Invasion. Der Punkt liegt bewusst an der Kreuzung von Seefahrt (Technologie) und Kolonialisierung (Ereignis) — Entdeckungen kommen selten allein.",
+              text: "Kolumbus erreicht Amerika. Für Europa ist es die Entdeckung einer neuen Welt, für deren Bewohner der Beginn der Eroberung. Das europäische Weltbild dehnt sich schlagartig.",
+              mehr: "«Entdeckung» ist eine Perspektive: Aus Sicht der Anden- und Mittelamerika-Kulturen war es eine Invasion. Der Punkt liegt bewusst an der Kreuzung von Seefahrt (Technologie) und Kolonialisierung (Ereignis). Entdeckungen kommen selten allein.",
             },
             {
               faden: "entdeckungen",
@@ -513,7 +517,7 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "Die Erde verliert die Mitte",
               kurz: "Heliozentrik",
               jahr: "1543",
-              text: "Kopernikus setzt die Sonne ins Zentrum — die Erde ist nur noch ein Planet unter Planeten. Eine Kränkung des menschlichen Selbstbilds, die tief sitzt.",
+              text: "Kopernikus setzt die Sonne ins Zentrum. Die Erde ist nur noch ein Planet unter Planeten. Eine Kränkung des menschlichen Selbstbilds, die tief sitzt.",
               mehr: "Freud sprach später von drei Kränkungen des Menschen: Kopernikus (nicht Mittelpunkt des Alls), Darwin (nicht Krone der Schöpfung), Psychoanalyse (nicht Herr im eigenen Haus). Manche sehen in der KI eine vierte: nicht mehr allein im Denken.",
             },
             {
@@ -524,7 +528,7 @@ export default function Lernseite2PhilosophischePerspektive() {
               kurz: "Evolution",
               jahr: "1859",
               text: "Darwins «Entstehung der Arten» reiht den Menschen in die Naturgeschichte ein. Nicht Krone der Schöpfung, sondern Ergebnis von Variation und Auslese.",
-              mehr: "Die Evolutionstheorie verschob die Frage «Was ist der Mensch?» fundamental — mitten in die Industriemoderne hinein. Sie zeigt, wie eine wissenschaftliche Entdeckung gesellschaftliche und religiöse Gewissheiten erschüttern kann, lange bevor Technik daraus wird.",
+              mehr: "Die Evolutionstheorie verschob die Frage «Was ist der Mensch?» fundamental, und zwar mitten in die Industriemoderne hinein. Sie zeigt, wie eine wissenschaftliche Entdeckung gesellschaftliche und religiöse Gewissheiten erschüttern kann, lange bevor Technik daraus wird.",
             },
             {
               faden: "entdeckungen",
@@ -534,8 +538,8 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "Die Kernspaltung",
               kurz: "Kernspaltung",
               jahr: "1938",
-              text: "Hahn, Strassmann und Meitner spalten den Atomkern. Wenige Jahre später wird aus der Entdeckung die Bombe — Wissenschaft und Weltpolitik sind untrennbar verknotet.",
-              mehr: "Kaum eine Entdeckung kreuzte den Ereignis-Faden so schnell und so folgenreich: 1938 Laborbefund, 1945 Hiroshima. Seither diskutiert die Wissenschaft ihre Verantwortung für das, was aus Erkenntnis gemacht wird — eine Debatte, die bei der KI in neuer Form geführt wird.",
+              text: "Hahn, Strassmann und Meitner spalten den Atomkern. Wenige Jahre später wird aus der Entdeckung die Bombe. Wissenschaft und Weltpolitik sind untrennbar verknotet.",
+              mehr: "Kaum eine Entdeckung kreuzte den Ereignis-Faden so schnell und so folgenreich: 1938 Laborbefund, 1945 Hiroshima. Seither diskutiert die Wissenschaft ihre Verantwortung für das, was aus Erkenntnis gemacht wird. Das ist eine Debatte, die bei der KI in neuer Form geführt wird.",
             },
             /* ── Faden: kulturelle Praxen ── */
             {
@@ -545,7 +549,7 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "Ackerbau & Sesshaftigkeit",
               kurz: "Ackerbau",
               jahr: "Jungsteinzeit",
-              text: "Menschen werden sesshaft, säen, ernten, lagern. Mit dem Ackerbau entstehen Dorf, Eigentum und Vorratshaltung — die Praxis, von der alle weiteren Fäden ausgehen.",
+              text: "Menschen werden sesshaft, säen, ernten, lagern. Mit dem Ackerbau entstehen Dorf, Eigentum und Vorratshaltung. Das ist die Praxis, von der alle weiteren Fäden ausgehen.",
               mehr: "Die «neolithische Revolution» veränderte den Alltag tiefer als jede spätere Technik: Wer Vorräte hat, braucht Verwaltung, Schutz und Regeln. Aus der Praxis des Ackerbaus wachsen der Pflug (Technologie), die Schrift (Verwaltung!) und schliesslich Städte und Herrschaft.",
             },
             {
@@ -555,8 +559,8 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "Gewürz- und Seidenhandel",
               kurz: "Gewürzhandel",
               jahr: "ab ~100 v. Chr.",
-              text: "Karawanen und Schiffe verbinden China, Indien, Arabien und Europa: Seide, Pfeffer, Zimt — und mit den Waren reisen Ideen, Techniken und Krankheiten.",
-              mehr: "Handel ist eine kulturelle Praxis, die Welten verknüpft — eine frühe Form der Globalisierung: Papier, Schiesspulver und unsere Ziffern kamen über diese Routen nach Europa. Der Gewürzhandel wurde später zum Hauptmotiv der europäischen Seefahrt — hier kreuzen sich Praxis, Technologie und Ereignis.",
+              text: "Karawanen und Schiffe verbinden China, Indien, Arabien und Europa: Seide, Pfeffer, Zimt. Und mit den Waren reisen Ideen, Techniken und Krankheiten.",
+              mehr: "Handel ist eine kulturelle Praxis, die Welten verknüpft. Er ist eine frühe Form der Globalisierung. Papier, Schiesspulver und unsere Ziffern kamen über diese Routen nach Europa. Der Gewürzhandel wurde später zum Hauptmotiv der europäischen Seefahrt. Hier kreuzen sich Praxis, Technologie und Ereignis.",
             },
             {
               faden: "praxen",
@@ -566,8 +570,8 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "Das Haus der Weisheit",
               kurz: "Haus der Weisheit",
               jahr: "Bagdad, ~820",
-              text: "Im Bagdader «Haus der Weisheit» übersetzen, sammeln und erweitern Gelehrte das Wissen Griechenlands, Persiens und Indiens. Wissenschaft als organisierte Praxis — Jahrhunderte vor Europas Universitäten.",
-              mehr: "Hier wirkte al-Chwarizmi, dessen Rechenverfahren dem «Algorithmus» den Namen gaben. Die islamische Blütezeit bewahrte und verband das Wissen der Welt; über Übersetzerschulen wie Toledo floss es später nach Europa. Wissensgeschichte ist Weltgeschichte — und was in Archiven oder Trainingsdaten fehlt, verschwindet auch heute aus dem Blick.",
+              text: "Im Bagdader «Haus der Weisheit» übersetzen, sammeln und erweitern Gelehrte das Wissen Griechenlands, Persiens und Indiens. Das ist Wissenschaft als organisierte Praxis, Jahrhunderte vor Europas Universitäten.",
+              mehr: "Hier wirkte al-Chwarizmi, dessen Rechenverfahren dem «Algorithmus» den Namen gaben. Die islamische Blütezeit bewahrte und verband das Wissen der Welt. Über Übersetzerschulen wie Toledo floss es später nach Europa. Wissensgeschichte ist Weltgeschichte. Und was in Archiven oder Trainingsdaten fehlt, verschwindet auch heute aus dem Blick.",
             },
             {
               faden: "praxen",
@@ -577,8 +581,8 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "Die Universität",
               kurz: "Universitäten",
               jahr: "um 1200",
-              text: "In Bologna, Paris und Oxford entsteht eine neue Praxis: gemeinsames, geregeltes Lernen und Streiten. Wissen bekommt einen eigenen Ort — und eigene Regeln.",
-              mehr: "Die Universität institutionalisiert das Weiterreichen von Wissen über Generationen: Disputation, Prüfung, akademischer Grad. Praktiken, die bis heute prägen, wie Wissen anerkannt wird — eine Frage, die KI-generierte Texte gerade neu aufwerfen.",
+              text: "In Bologna, Paris und Oxford entsteht eine neue Praxis: gemeinsames, geregeltes Lernen und Streiten. Wissen bekommt einen eigenen Ort und eigene Regeln.",
+              mehr: "Die Universität institutionalisiert das Weiterreichen von Wissen über Generationen: Disputation, Prüfung, akademischer Grad. Praktiken, die bis heute prägen, wie Wissen anerkannt wird. Das ist eine Frage, die KI-generierte Texte gerade neu aufwerfen.",
             },
             {
               faden: "praxen",
@@ -589,7 +593,7 @@ export default function Lernseite2PhilosophischePerspektive() {
               kurz: "Kaffeehäuser",
               jahr: "um 1700",
               text: "In den Kaffeehäusern von London und Paris diskutieren Bürger über Zeitungen, Politik und Wissenschaft. Es entsteht eine Öffentlichkeit ausserhalb von Hof und Kirche.",
-              mehr: "Für den Preis einer Tasse Kaffee konnte man mitreden: Die Praxis des öffentlichen Räsonierens trug die Aufklärung. Heute übernehmen Plattformen und ihre Algorithmen diese Rolle der Öffentlichkeit — mit ganz eigenen Regeln, wer gehört wird.",
+              mehr: "Für den Preis einer Tasse Kaffee konnte man mitreden: Die Praxis des öffentlichen Räsonierens trug die Aufklärung. Heute übernehmen Plattformen und ihre Algorithmen diese Rolle der Öffentlichkeit, mit ganz eigenen Regeln, wer gehört wird.",
             },
             {
               faden: "praxen",
@@ -600,7 +604,7 @@ export default function Lernseite2PhilosophischePerspektive() {
               kurz: "Welthandel",
               jahr: "ab 1990",
               text: "Container, Freihandelsabkommen und das Internet verflechten die Weltwirtschaft fast grenzenlos: Waren, Kapital und Daten zirkulieren rund um den Planeten. Es ist die jüngste und dichteste Form der Globalisierung.",
-              mehr: "«Globalisierung» zieht sich als roter Faden durch den ganzen Teppich — Gewürzhandel, Kolonialisierung und Weltmission waren frühere Formen davon. Nach dem Ende des Kalten Kriegs erreichte sie eine neue Stufe: weltweite Lieferketten nahezu in Echtzeit. Auch die KI ist ihr Kind — global gesammelte Daten, Chips aus Taiwan, Rechenzentren überall und weltweit geteilte Antworten.",
+              mehr: "«Globalisierung» zieht sich als roter Faden durch den ganzen Teppich. Gewürzhandel, Kolonialisierung und Weltmission waren frühere Formen davon. Nach dem Ende des Kalten Kriegs erreichte sie eine neue Stufe: weltweite Lieferketten nahezu in Echtzeit. Auch die KI ist ihr Kind, mit global gesammelten Daten, Chips aus Taiwan, Rechenzentren überall und weltweit geteilten Antworten.",
             },
           ]}
         />
@@ -614,14 +618,14 @@ export default function Lernseite2PhilosophischePerspektive() {
             Philosophie in Zeiten der Verunsicherung
           </h2>
           <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
-            Der Teppich des Wandels hat die Verunsicherungs-Stopps markiert —
-            hier folgt, wie die Philosophie jeweils geantwortet hat. Denn gerade
+            Der Teppich des Wandels hat die Verunsicherungs-Stopps markiert.
+            Hier folgt, wie die Philosophie jeweils geantwortet hat. Denn gerade
             in Zeiten der Verunsicherung braucht es neue Deutungen und
-            Orientierungsmuster — und die liefert, oder erdenkt zumindest, die
-            Philosophie. Sie arbeitet langsam und{" "}
+            Orientierungsmuster. Und genau die liefert, oder erdenkt zumindest,
+            die Philosophie. Sie arbeitet langsam und{" "}
             <strong className="text-on-surface">reflexiv</strong>, an
             Grundlagen, die sich nicht ständig ändern. Genau das macht sie
-            wertvoll: Manchmal bringt schon eine{" "}
+            wertvoll. Manchmal bringt schon eine{" "}
             <strong className="text-on-surface">neue Gewichtung grundlegender
             Lebenselemente</strong> mehr Klarheit als jede neue Technik.
           </p>
@@ -631,15 +635,16 @@ export default function Lernseite2PhilosophischePerspektive() {
           titel="Mehr dazu: die wiederkehrenden Züge der Verunsicherung"
         >
           <p>
-            Auffällig: In der westlichen Geschichte kehren dieselben Züge der
-            Verunsicherung immer wieder, nur anders gewichtet —{" "}
-            <strong className="text-on-surface">Beschleunigung</strong> durch
-            Technik, <strong className="text-on-surface">Verstädterung</strong>,{" "}
-            <strong className="text-on-surface">Automatisierung</strong> der
-            Arbeit, <strong className="text-on-surface">Kapitalisierung</strong>{" "}
-            des Lebens (was bezahlbar ist, wird aneigenbar),{" "}
-            <strong className="text-on-surface">Individualisierung</strong>,{" "}
-            <strong className="text-on-surface">Naturzerstörung</strong>, dazu die
+            Auffällig ist, dass in der westlichen Geschichte dieselben Züge der
+            Verunsicherung immer wiederkehren, nur anders gewichtet. Dazu gehören
+            die <strong className="text-on-surface">Beschleunigung</strong> durch
+            Technik, die <strong className="text-on-surface">Verstädterung</strong>,
+            die <strong className="text-on-surface">Automatisierung</strong> der
+            Arbeit und die{" "}
+            <strong className="text-on-surface">Kapitalisierung</strong> des
+            Lebens (was bezahlbar ist, wird aneigenbar). Dazu kommen die{" "}
+            <strong className="text-on-surface">Individualisierung</strong>, die{" "}
+            <strong className="text-on-surface">Naturzerstörung</strong>, die
             verschobene <strong className="text-on-surface">Deutungsmacht</strong>{" "}
             durch neue Medien und die{" "}
             <strong className="text-on-surface">Entwertung von Wissen und
@@ -648,9 +653,9 @@ export default function Lernseite2PhilosophischePerspektive() {
           </p>
         </Ausklapptext>
         <Aufgabe className="mt-md max-w-4xl">
-          Klappe in jeder Epoche die drei Bausteine auf — Technologie,
-          Verunsicherung, Philosophie —, lies sie einfach erklärt, und bewerte,
-          was dich noch heute betrifft.
+          Klappe in jeder Epoche die drei Bausteine auf, also Technologie,
+          Verunsicherung und Philosophie. Lies sie in der einfachen Erklärung,
+          und bewerte, was dich noch heute betrifft.
         </Aufgabe>
         <VerunsicherungsEpochen className="mt-lg" />
       </section>

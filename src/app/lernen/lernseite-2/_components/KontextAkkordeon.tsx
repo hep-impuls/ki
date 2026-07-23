@@ -125,7 +125,7 @@ export default function KontextAkkordeon({
           {gelesen.size === gesamt ? "done_all" : "unfold_more"}
         </span>
         {gelesen.size === 0
-          ? `${gesamt} Aspekte in vier Kontexten — tippe sie auf`
+          ? `${gesamt} Aspekte in vier Kontexten, tippe sie auf`
           : `${gelesen.size} von ${gesamt} Aspekten geöffnet`}
       </div>
 

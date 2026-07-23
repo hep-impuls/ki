@@ -410,7 +410,7 @@ export default function HistorienTeppich({
                 key={i}
                 role="button"
                 tabIndex={0}
-                aria-label={`${p.titel} (${p.jahr}) — antippen zum Lesen, erneut antippen zum Abwählen`}
+                aria-label={`${p.titel} (${p.jahr}). Antippen zum Lesen, erneut antippen zum Abwählen`}
                 aria-pressed={da}
                 onClick={() => besuche(i)}
                 onKeyDown={(e) => {
@@ -470,9 +470,9 @@ export default function HistorienTeppich({
         </svg>
       </div>
       <p className="mt-xs text-label-sm text-on-surface-variant">
-        Punkt antippen liest die Geschichte und webt den Faden ein — sichtbar
+        Punkt antippen liest die Geschichte und webt den Faden ein. Sichtbar
         wird ein Fadenstück, sobald seine beiden Enden besucht sind. Erneutes
-        Antippen wählt einen Punkt wieder ab; die Legende oben schaltet ganze
+        Antippen wählt einen Punkt wieder ab. Die Legende oben schaltet ganze
         Fäden an und aus.
       </p>
 
