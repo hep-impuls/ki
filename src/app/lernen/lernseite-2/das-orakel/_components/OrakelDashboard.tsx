@@ -149,7 +149,7 @@ export default function OrakelDashboard() {
   const [blickCounts, setBlickCounts] = useState<PollCounts>({});
   /* Teilnehmer-Zahlen (serverseitig gezählt; null = noch nicht/nicht verfügbar) */
   const [teilnehmer, setTeilnehmer] = useState<{
-    eingeloggt: number;
+    teilgenommen: number;
     aktivVorhang: number;
     aktivPhilosophie: number;
   } | null>(null);
@@ -241,7 +241,7 @@ export default function OrakelDashboard() {
     void fetch("/api/orakel/teilnehmer")
       .then((r) => r.json())
       .then((d) => {
-        if (d && typeof d.eingeloggt === "number") setTeilnehmer(d);
+        if (d && typeof d.teilgenommen === "number") setTeilnehmer(d);
       })
       .catch(() => {});
     return () => {
@@ -499,10 +499,10 @@ export default function OrakelDashboard() {
           <div className="mt-sm flex flex-wrap items-baseline gap-x-lg gap-y-sm">
             <span className="flex items-baseline gap-xs">
               <strong className="text-headline-sm text-on-surface">
-                {teilnehmer.eingeloggt.toLocaleString("de-CH")}
+                {teilnehmer.teilgenommen.toLocaleString("de-CH")}
               </strong>
               <span className="text-body-sm text-on-surface-variant">
-                Teilnehmende insgesamt
+                in diesem Lernset aktiv
               </span>
             </span>
             <span className="flex items-baseline gap-xs">
@@ -522,8 +522,9 @@ export default function OrakelDashboard() {
           </div>
         )}
         <p className="mt-sm text-label-sm text-on-surface-variant">
-          Gezählt wird pro Fortschritts-Code, also pro Login, nicht pro Klick. So
-          zählt jede Person einmal, ganz ohne Namen.
+          Gezählt wird pro Fortschritts-Code, der hier mindestens eine Aktivität
+          gemacht hat. Wer sich nur eingeloggt, aber nichts geöffnet hat, zählt
+          nicht mit. Jede Person zählt so einmal, ganz ohne Namen.
         </p>
       </section>
 

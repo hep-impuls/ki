@@ -4,10 +4,13 @@ import { getAdminDb } from "@/lib/firebaseAdmin";
 export const runtime = "nodejs";
 
 /**
- * GET → { eingeloggt, aktivVorhang, aktivPhilosophie } | { grund }
+ * GET → { teilgenommen, aktivVorhang, aktivPhilosophie } | { grund }
  *
- * Teilnehmer-Zahlen (Personen, nicht Aktionen) für den Orakel-Überblick:
- *  - eingeloggt        = Anzahl Teilnehmer-Codes (students-Docs) im Namespace
+ * Teilnehmer-Zahlen (Personen, nicht Aktionen) für den Orakel-Überblick.
+ * Gezählt werden NUR Codes, die in diesem Lernset («Eine ganz neue
+ * Partnerschaft») mindestens eine Aktivität gemacht haben, nicht alle je
+ * erzeugten Codes:
+ *  - teilgenommen      = Codes mit mindestens einer Spur in diesem Lernset
  *  - aktivVorhang      = davon mit mindestens einer Spur auf «Vorhang auf»
  *  - aktivPhilosophie  = davon mit mindestens einer Spur auf der Philosophie-Seite
  *
@@ -31,7 +34,7 @@ export async function GET() {
       .collection("students")
       .get();
 
-    const eingeloggt = studentsSnap.size;
+    let teilgenommen = 0;
     let aktivVorhang = 0;
     let aktivPhilosophie = 0;
 
@@ -41,13 +44,18 @@ export async function GET() {
         const ids = spur.data()?.ids;
         if (!Array.isArray(ids)) return;
         const strings = ids.filter((x): x is string => typeof x === "string");
-        if (strings.some((x) => x.startsWith("vorhang-auf:"))) aktivVorhang++;
-        if (strings.some((x) => x.startsWith("philosophische-perspektive:")))
-          aktivPhilosophie++;
+        // Mindestens eine Aktivität in diesem Lernset (irgendeine Spur im
+        // lernseite-2-Spuren-Doc). Codes ohne Aktivität zählen nicht mit.
+        if (strings.length === 0) return;
+        teilgenommen++;
+        if (strings.some((x) => x.includes("vorhang-auf"))) aktivVorhang++;
+        // «philosoph» erfasst sowohl «philosophische-perspektive:…» als auch
+        // die Video-Spur «video:philosophie».
+        if (strings.some((x) => x.includes("philosoph"))) aktivPhilosophie++;
       }),
     );
 
-    return NextResponse.json({ eingeloggt, aktivVorhang, aktivPhilosophie });
+    return NextResponse.json({ teilgenommen, aktivVorhang, aktivPhilosophie });
   } catch (err) {
     console.error("[api/orakel/teilnehmer] unerwarteter Fehler", err);
     return NextResponse.json({ error: "Interner Fehler." }, { status: 500 });
