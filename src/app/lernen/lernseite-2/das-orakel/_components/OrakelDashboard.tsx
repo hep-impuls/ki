@@ -32,6 +32,7 @@ import {
   leseAuswertung,
   type AuswertungEintrag,
 } from "../../_lib/auswertung";
+import { leseInhalte } from "../../_lib/inhalte";
 
 /**
  * Orakel-Dashboard (Thema 03) — «erkenne dich selbst».
@@ -130,6 +131,8 @@ export default function OrakelDashboard() {
   const [meineKombis, setMeineKombis] = useState(0);
   const [meineBilder, setMeineBilder] = useState(0);
   const [meineVideos, setMeineVideos] = useState(0);
+  /* Punkte, die noch vertieft werden möchten («das verfolge ich weiter»). */
+  const [vertiefteTitel, setVertiefteTitel] = useState<string[]>([]);
   /* deine Bewertungen (lokal) */
   const [bew, setBew] = useState({
     relevanzStark: 0,
@@ -191,6 +194,16 @@ export default function OrakelDashboard() {
       philoKeinSinn: zaehleStufe(P_PHILO, 2),
       gestaltDeutlich: zaehleStufe(P_GESTALT, 2),
     });
+    const reg = leseInhalte();
+    const wunschTitel = Array.from(
+      new Set(
+        spuren
+          .filter((s) => s.id.startsWith("wunsch:"))
+          .map((s) => reg[s.id.slice(7)])
+          .filter((t): t is string => Boolean(t)),
+      ),
+    );
+    setVertiefteTitel(wunschTitel);
     setAuswertung(leseAuswertung());
   }, []);
 
@@ -471,8 +484,38 @@ export default function OrakelDashboard() {
 
   return (
     <div className="max-w-3xl">
+      {/* Warum «Orakel»? — die Metapher erklärt: Antike (Umgang mit Komplexität
+          vor der Wissenschaft) und der Grund für den Namen hier (Muster statt
+          Allwissen). */}
+      <section
+        aria-label="Warum Orakel"
+        className="rounded-xl border border-outline-variant bg-surface-container-low p-md"
+      >
+        <p className="flex items-center gap-sm text-label-md uppercase tracking-wider text-tertiary">
+          <span className="material-symbols-outlined text-[20px]">account_balance</span>
+          Warum «Orakel»?
+        </p>
+        <div className="mt-sm space-y-sm text-body-md text-on-surface-variant">
+          <p>
+            In der Antike war ein Orakel, etwa das berühmte von Delphi, ein Ort,
+            an dem Menschen Rat suchten, wenn eine Lage unübersichtlich wurde.
+            Lange bevor es Wissenschaft gab, war es eine Form, Komplexität und
+            Unsicherheit zu deuten. Man las Zeichen und suchte Orientierung für
+            schwere Entscheidungen, dort, wo klares Wissen fehlte.
+          </p>
+          <p>
+            Wir nennen diesen Rückblick trotzdem «Orakel», aber aus einem anderen
+            Grund. Seine Deutungen kommen nicht aus dem allwissenden Blick der
+            Götter. Sie sind musterhaft, genau wie die KI arbeitet. Die KI
+            erkennt Muster in den gesammelten Spuren und spiegelt sie dir zurück.
+            Kein höheres Wissen, sondern erkannte Regelmässigkeit. Was du daraus
+            machst, entscheidest du selbst.
+          </p>
+        </div>
+      </section>
+
       {/* 0 — Was passiert hier? */}
-      <section aria-label="Worum es hier geht">
+      <section aria-label="Worum es hier geht" className="mt-lg">
         <p className="text-body-lg text-on-surface-variant">
           Hier laufen deine Spuren zusammen. Das Orakel zeigt, was du in diesem
           Lernset getan hast — <strong className="text-on-surface">wo du
@@ -1201,6 +1244,11 @@ export default function OrakelDashboard() {
               <AktivitaetsNetz titel="Dein Aktivitätsnetz" />
             </div>
 
+            {/* Kontextkreise (du / alle) als Grafik */}
+            <div style={{ margin: "1.5rem 0 0" }}>
+              <KontextGewichtung />
+            </div>
+
             {/* Aktivitäts-Boxen */}
             <h2 style={{ fontSize: "1.1rem", margin: "1.5rem 0 0.5rem" }}>Meine Aktivität in Zahlen</h2>
             <div
@@ -1250,6 +1298,22 @@ export default function OrakelDashboard() {
             {intOrakel.status !== "ok" && aktuell.status !== "ok" && (
               <p style={{ marginTop: "1.5rem", fontSize: "1rem", color: "#444" }}>
                 (Befrage das Orakel oben, damit seine Deutungen hier erscheinen.)
+              </p>
+            )}
+
+            {/* Punkte, die noch vertieft werden möchten */}
+            <h2 style={{ fontSize: "1.1rem", margin: "1.75rem 0 0.4rem" }}>
+              Diese Punkte möchte ich noch vertiefen
+            </h2>
+            {vertiefteTitel.length > 0 ? (
+              <ul style={{ margin: 0, paddingLeft: "1.2rem", fontSize: "1rem", lineHeight: 1.6 }}>
+                {vertiefteTitel.map((t, i) => (
+                  <li key={i}>{t}</li>
+                ))}
+              </ul>
+            ) : (
+              <p style={{ margin: 0, fontSize: "1rem", color: "#444" }}>
+                Nichts wurde gewählt.
               </p>
             )}
 
