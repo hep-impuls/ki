@@ -13,6 +13,7 @@ import Aufgabe from "../_components/Aufgabe";
 import Ausklapptext from "../_components/Ausklapptext";
 import ModulMiniNav from "../_components/ModulMiniNav";
 import NeustartButton from "../_components/NeustartButton";
+import Denkwege from "./_components/Denkwege";
 
 /**
  * Thema 02 — «Philosophische Perspektive».
@@ -97,6 +98,7 @@ export default function Lernseite2PhilosophischePerspektive() {
           { id: "was-philosophie", label: "Was ist Philosophie?", prefixe: ["philosophische-perspektive:einstieg"] },
           { id: "teppich", label: "Der Teppich des Wandels", prefixe: ["philosophische-perspektive:teppich"] },
           { id: "epochen", label: "Philosophie in Zeiten der Verunsicherung", prefixe: ["philosophische-perspektive:epochen"] },
+          { id: "denkwege", label: "Wege der Orientierung", prefixe: ["philosophische-perspektive:denkwege"] },
         ]}
       />
 
@@ -658,6 +660,38 @@ export default function Lernseite2PhilosophischePerspektive() {
           und bewerte, was dich noch heute betrifft.
         </Aufgabe>
         <VerunsicherungsEpochen className="mt-lg" />
+      </section>
+
+      {/* Wege der Orientierung — fünf heutige Denkansätze zur KI-Verunsicherung,
+          als durchklickbare Slides (nach den Epochen mit ihren Bildern) */}
+      <section id="denkwege" className="mt-xl max-w-4xl scroll-mt-24" aria-label="Wege der Orientierung">
+        <h2 className="text-headline-lg text-on-surface">Wege der Orientierung</h2>
+        <div className="mt-sm space-y-sm text-body-lg text-on-surface-variant">
+          <p>
+            Die Epochen haben gezeigt, dass die Philosophie in unsicheren Zeiten
+            Orientierung gab. Zum Schluss kommen wir in die Gegenwart. Fünf
+            Denkerinnen und Denker helfen, mit der Verunsicherung durch die KI
+            umzugehen.
+          </p>
+          <p>
+            Zwei Fragen leiten sie. Hannah Arendt und Martin Heidegger fragen,{" "}
+            <strong className="text-on-surface">was den Menschen ausmacht</strong>.
+            Bruno Latour, Armin Nassehi und Markus Gabriel fragen,{" "}
+            <strong className="text-on-surface">wie wir mit der KI umgehen</strong>{" "}
+            sollen.
+          </p>
+        </div>
+        <Aufgabe className="mt-md">
+          Geh die fünf Denkwege der Reihe nach durch. Zu jedem findest du die
+          Grundidee einfach erklärt und ein Fallbeispiel. Überlege bei jedem, ob
+          dir dieser Zugang einleuchtet.
+        </Aufgabe>
+        <Denkwege className="mt-lg" spurKey="philosophische-perspektive:denkwege" />
+        <p className="mt-lg max-w-3xl text-body-md text-on-surface-variant">
+          Keine dieser Sichtweisen gibt ein fertiges Rezept. Aber jede öffnet einen
+          begründeten Weg, sich neu zu orientieren. Genau dazu lädt dieses Lernset
+          ein, sich wieder mehr mit Philosophie zu beschäftigen.
+        </p>
       </section>
 
       <SeitenNavigation
