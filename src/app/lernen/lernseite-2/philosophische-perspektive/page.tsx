@@ -665,9 +665,9 @@ export default function Lernseite2PhilosophischePerspektive() {
       {/* Wege der Orientierung — fünf heutige Denkansätze zur KI-Verunsicherung,
           als durchklickbare Slides (nach den Epochen mit ihren Bildern) */}
       <section id="denkwege" className="mt-xl max-w-4xl scroll-mt-24" aria-label="Wege der Orientierung">
-        <h2 className="text-headline-lg text-on-surface">Wege der Orientierung</h2>
-        <div className="mt-sm space-y-sm text-body-lg text-on-surface-variant">
-          <p>
+        <AbschnittKopf bild="/art/philosophie-denkwege.webp">
+          <h2 className="text-headline-lg text-on-surface">Wege der Orientierung</h2>
+          <p className="mt-sm max-w-3xl text-body-lg text-on-surface-variant">
             Die Epochen haben gezeigt, dass die Philosophie in unsicheren Zeiten
             Orientierung gab. Sie liefert keine schnellen, bunten Antworten,
             sondern eine nüchterne Klärung. Peter Sloterdijk nennt sie eine
@@ -676,6 +676,8 @@ export default function Lernseite2PhilosophischePerspektive() {
             abwägenden Denkens. Genau das brauchen wir bei der KI, also Reflexion
             statt Aufregung und Zwischentöne statt Schwarz-Weiss.
           </p>
+        </AbschnittKopf>
+        <div className="mt-md space-y-sm text-body-lg text-on-surface-variant">
           <p>
             Zum Schluss kommen wir in die Gegenwart. Acht Denkerinnen und Denker
             helfen, mit der Verunsicherung durch die KI umzugehen. Die Philosophie
