@@ -117,7 +117,7 @@ const EPOCHEN: Epoche[] = [
         caption: "Die Denker der Antike, versammelt im Gespräch",
         credit: "Raffael, «Die Schule von Athen», 1509–1511 · gemeinfrei",
         hintergrund:
-          "Raffael malte das Fresko 1509–1511 für die Bibliothek des Papstes im Vatikan. Es zeigt keine reale Szene: Die Renaissance versammelt hier ihre antiken Vorbilder in einer idealen Halle mit über fünfzig Denkern. Am rechten Rand blickt Raffael selbst aus dem Bild.",
+          "Raffael (1483–1520) gehört zu den bedeutendsten Malern der italienischen Hochrenaissance und schuf dieses Fresko zwischen 1509 und 1511 für die Bibliothek von Papst Julius II. im Vatikan. Es zeigt keine reale Szene, sondern versammelt in einer idealen Halle über fünfzig Denker der Antike. Im Zentrum stehen Platon und Aristoteles, umgeben von Figuren, die traditionell als Sokrates, Pythagoras, Euklid, Ptolemäus und Diogenes gedeutet werden. Viele weitere Zuordnungen sind in der Forschung allerdings unsicher oder umstritten. Am rechten Rand hat sich Raffael selbst ins Bild gemalt.",
         contextNote:
           "Raffaels Halle der Denker ist ein Rückblick der Renaissance auf die Antike und ein Bild ihrer Antwort auf eine tiefe Verunsicherung. Als in Athen der Mythos seine bindende Kraft verlor und die Sophisten lehrten, dass sich jede Behauptung gegen Bezahlung überzeugend vertreten lässt, drohte Wahrheit zur blossen Rhetorik zu werden. Aristoteles bündelte die Gegenkraft zu einer Methode: beobachten, ordnen, begründen. Genau diese Schablone feiert Raffael, indem er die Denker aller Zeiten in einer Halle versammelt.",
         tour: [
@@ -157,7 +157,7 @@ const EPOCHEN: Epoche[] = [
         caption: "Sokrates, zum Tod verurteilt, bleibt seiner Überzeugung treu",
         credit: "Jacques-Louis David, «Der Tod des Sokrates», 1787 · gemeinfrei",
         hintergrund:
-          "Jacques-Louis David malte das Bild 1787 in Paris, zwei Jahre vor der Französischen Revolution. Der Klassizist nutzt die antike Szene als Lehrstück über Standhaftigkeit gegenüber ungerechter Macht. Sein Publikum verstand den aktuellen Bezug sehr wohl.",
+          "Jacques-Louis David (1748–1825) war der führende Maler des französischen Klassizismus und malte dieses Werk 1787 in Paris, zwei Jahre vor der Französischen Revolution. Der klare und strenge Aufbau ist typisch für den Klassizismus, der sich die Antike zum Vorbild nahm. Dargestellt ist die letzte Stunde des griechischen Philosophen Sokrates im Jahr 399 v. Chr., als er in Athen zum Tod durch den Schierlingsbecher verurteilt ist. Aufrecht und gefasst greift er nach dem Becher und belehrt zugleich seine erschütterten Schüler. Am Fussende des Bettes sitzt der greise Platon, der das Gespräch später überlieferte. David nutzt die Szene als Lehrstück über Standhaftigkeit gegenüber ungerechter Macht.",
         contextNote:
           "Der Tod des Sokrates zeigt die Verunsicherung der Antike in einem einzigen Bild: eine Stadt, die ihren klügsten und unbequemsten Frager zum Tode verurteilt, weil der alte Mythos nicht mehr trägt und jede Gewissheit wankt. Die Antwort der Epoche war nicht, das Fragen zu verbieten, sondern es zu ordnen: Aus der sokratischen Methode und der Systematik des Aristoteles entstand das Fundament der Wissenschaft.",
         tour: [
@@ -230,7 +230,7 @@ const EPOCHEN: Epoche[] = [
         caption: "410: Rom wird geplündert und für viele bricht die Welt zusammen",
         credit: "Joseph-Noël Sylvestre, «Die Plünderung Roms», 1890 · gemeinfrei",
         hintergrund:
-          "Joseph-Noël Sylvestre malte die Plünderung 1890, fast 1500 Jahre nach dem Ereignis. Das Historiengemälde sagt darum mehr über das 19. Jahrhundert als über 410: Es malt die Angst der eigenen Epoche vor dem Untergang einer Zivilisation.",
+          "Joseph-Noël Sylvestre (1847–1926) war ein französischer Maler des akademischen Historismus, der sich auf grosse Szenen aus der Antike spezialisierte. Er malte dieses Historiengemälde 1890, also fast 1500 Jahre nach dem dargestellten Ereignis. Zu sehen ist die Plünderung Roms im Jahr 410, als die Westgoten die Stadt eroberten. Im Zentrum reisst ein Krieger die Marmorstatue eines römischen Kaisers vom Sockel, ein Sinnbild für den Sturz der alten Ordnung. Weil das Werk so spät entstand, sagt es mehr über die Untergangsängste des 19. Jahrhunderts aus als über das Jahr 410.",
         contextNote:
           "Der Fall Roms ist die Verunsicherung dieser Epoche in Reinform: Als die Westgoten 410 die «ewige Stadt» plünderten, brach für die Zeitgenossen nicht nur eine Hauptstadt, sondern eine ganze Weltordnung zusammen. Man rang um Schuld und Sinn, Heiden wie Christen. Augustinus gab darauf mit dem «Gottesstaat» die Orientierung: Nicht das irdische Reich trägt, sondern eine unsichtbare, geistige Ordnung.",
         tour: [
@@ -263,7 +263,7 @@ const EPOCHEN: Epoche[] = [
         caption: "Augustinus verlegt den Halt vom äusseren Reich nach innen",
         credit: "Philippe de Champaigne, «Der heilige Augustinus», um 1645 · gemeinfrei",
         hintergrund:
-          "Philippe de Champaigne malte den Kirchenvater um 1645 im barocken Frankreich. Buch, flammendes Herz und Lichtstrahl sind Augustinus' klassische Attribute. Das Bild ist ein Programm: Wahrheit kommt von innen und von oben, nicht aus der äusseren Welt.",
+          "Philippe de Champaigne (1602–1674) war ein aus Brüssel stammender Maler, der zu den wichtigsten Vertretern des französischen Barock zählte. Er malte den heiligen Augustinus um 1645. Dargestellt ist der Kirchenvater Augustinus von Hippo (354–430), einer der einflussreichsten Denker des frühen Christentums, hier am Schreibpult in bischöflicher Kleidung. Seine klassischen Attribute sind das Buch, das flammende Herz und der Lichtstrahl von oben. Das ganze Bild ist auf eine Aussage hin gebaut, nämlich dass die Wahrheit von innen und von oben kommt und nicht aus der äusseren Welt.",
         contextNote:
           "Champaignes Augustinus verkörpert die Antwort auf einen epochalen Schock. Als Rom 410 fiel und mit dem Reich für viele die Weltordnung selbst zusammenbrach, verlegte Augustinus den Halt vom äusseren Reich ins Innere des Menschen und in den Glauben: Wahrheit und Orientierung findet man nicht mehr in der vergänglichen Macht, sondern in Gewissen, Erinnerung und Zuwendung zu Gott. Diese nach innen gewandte Ordnung prägte das Abendland ein Jahrtausend lang.",
         tour: [
@@ -329,7 +329,7 @@ const EPOCHEN: Epoche[] = [
         caption: "Der Turmbau zu Babel: menschlicher Ehrgeiz, der ins Wanken gerät",
         credit: "Pieter Bruegel d. Ä., «Der Turmbau zu Babel», 1563 · gemeinfrei",
         hintergrund:
-          "Pieter Bruegel d. Ä. malte den Turm 1563 in Antwerpen, damals eine der reichsten Handelsstädte Europas. Die biblische Geschichte vom vermessenen Turmbau wird bei ihm zum Panorama der eigenen Gegenwart: Baustelle, Hafen und Stadt sind flämisch, nicht babylonisch.",
+          "Pieter Bruegel der Ältere war einer der bedeutendsten niederländischen Maler des 16. Jahrhunderts und schuf dieses Bild 1563, zur Zeit der niederländischen Renaissance. Er malte die biblische Geschichte vom Turmbau als Panorama seiner eigenen Gegenwart, denn Baustelle, Hafen und Stadt sind flämisch und nicht babylonisch gestaltet. Der gewaltige Turm erinnert mit seinen Rundbögen an das römische Kolosseum und steht bereits sichtbar schief. Vorne links besucht eine königliche Gruppe die Baustelle, vor der die Steinmetze niederknien. Diese Figur wird meist als der biblische König Nimrod gedeutet. Das Original hängt heute im Kunsthistorischen Museum in Wien.",
         contextNote:
           "Der Turmbau zu Babel ist das Bild der Renaissance-Verunsicherung: Eine Epoche, die mit Buchdruck, Seefahrt und Kapital alles zu können scheint und ahnt, dass der Ehrgeiz das Fundament überfordern könnte. Die biblische Strafe für den Turm war die Sprachverwirrung. Bruegels Zeit erlebte ihre eigene: die Glaubensspaltung, die Europa in Lager teilte.",
         tour: [
@@ -369,7 +369,7 @@ const EPOCHEN: Epoche[] = [
         caption: "Reichtum und Wissenschaft, dazu ein verzerrter Totenkopf als Riss im Bild",
         credit: "Hans Holbein d. J., «Die Gesandten», 1533 · gemeinfrei",
         hintergrund:
-          "Hans Holbein d. J. malte das Doppelporträt 1533 in London: den französischen Gesandten Jean de Dinteville und Bischof Georges de Selve. Die Gegenstände zwischen ihnen sind ein Inventar des neuen Wissens. Und die Risse darin (gerissene Lautensaite, Totenschädel) sind ein Kommentar zur Glaubensspaltung ihrer Zeit.",
+          "Hans Holbein der Jüngere (um 1497 bis 1543) war ein deutscher Maler der Renaissance, der lange am englischen Königshof wirkte. Er malte dieses Doppelporträt 1533 in London. Dargestellt sind zwei junge Männer auf der Höhe ihrer Macht, links der französische Gesandte Jean de Dinteville und rechts sein Freund Georges de Selve, Bischof von Lavaur. Zwischen ihnen steht ein Regal mit Instrumenten und Büchern, ein Inventar des neuen Wissens ihrer Zeit. Quer im Vordergrund liegt ein stark verzerrter Totenschädel, der erst aus einem schrägen Blickwinkel erkennbar wird und an die Vergänglichkeit mahnt. Heute hängt das Werk in der National Gallery in London.",
         contextNote:
           "Die «Gesandten» bündeln die Renaissance in einem Bild: das neue Wissen (Instrumente), der neue Reichtum (Pelz, Teppich) und die Verunsicherung als Riss im Bild: gerissene Saite, Luther-Gesangbuch, verzerrter Schädel. Fortschritt und doppelter Boden gehören in dieser Epoche zusammen.",
         tour: [
@@ -442,7 +442,7 @@ const EPOCHEN: Epoche[] = [
         caption: "Wissenschaft als Schauspiel: das Weltall im Modell erklärt",
         credit: "Joseph Wright of Derby, «A Philosopher Lecturing on the Orrery», um 1766 · gemeinfrei",
         hintergrund:
-          "Joseph Wright of Derby malte die Szene um 1766 im England der frühen Industrialisierung. Er war der Maler der wissenschaftlichen Abende: Bürgerliche Gesellschaften trafen sich damals, um Experimente vorzuführen. Das war Wissenschaft als öffentliches Ereignis.",
+          "Joseph Wright of Derby (1734–1797) war ein englischer Maler der Aufklärung, der für seine dramatische Verwendung von Licht und Schatten bekannt wurde. Er malte diese Szene um 1766 im England der frühen Industrialisierung. Dargestellt ist ein Vortragender, der einer Gruppe von Zuhörern ein Orrery erklärt, ein mechanisches Tischmodell des Sonnensystems. Eine Lampe in der Mitte stellt die Sonne dar und beleuchtet die staunenden Gesichter ringsum. Wright gibt der Wissenschaft damit eine Feierlichkeit, wie man sie sonst nur aus religiösen Bildern kennt. Das Gemälde hängt heute im Museum von Derby in England.",
         contextNote:
           "Das Orrery zeigt die technisch-wissenschaftliche Seite des Umbruchs: In einem mechanischen Modell lässt sich der ganze Kosmos vorführen und erklären. Doch derselbe Fortschritt hatte eine erschütternde Kehrseite. Mit Kopernikus und dem Teleskop verlor die Erde (und mit ihr der Mensch) den angestammten Platz im Zentrum. Kant machte aus dem Verlust ein Programm: Wenn der Mensch nicht mehr Mittelpunkt eines gottgegebenen Kosmos ist, muss er den Mut haben, mit dem eigenen Verstand Orientierung zu schaffen.",
         tour: [
@@ -475,7 +475,7 @@ const EPOCHEN: Epoche[] = [
         caption: "Das Erdbeben von Lissabon erschüttert den Glauben an einen guten Weltplan",
         credit: "«Zerstörung von Lissabon», Kupferstich, 1755 · gemeinfrei",
         hintergrund:
-          "Der Kupferstich entstand noch 1755 als Flugblatt. Die Katastrophe war eines der ersten europaweiten Medienereignisse. Solche Stiche verbreiteten Bild und Schrecken innert Wochen über den Kontinent. Fakten und Übertreibung mischten sich dabei.",
+          "Dieses Blatt ist kein Gemälde, sondern ein Kupferstich, der noch im Katastrophenjahr 1755 als Flugblatt entstand. Ein einzelner Urheber ist nicht überliefert, denn solche Stiche wurden rasch und in grosser Zahl gedruckt. Dargestellt ist das Erdbeben von Lissabon vom 1. November 1755 mit seinen drei Verheerungen, dem bebenden Boden, der brennenden Stadt und der Flutwelle im Hafen. Im Vordergrund kentern Schiffe in der heranrollenden Welle, im Hintergrund stehen Kirchen und Paläste in Flammen. Als eines der ersten europaweiten Medienereignisse verbreiteten solche Stiche Bild und Schrecken innert Wochen über den ganzen Kontinent.",
         contextNote:
           "Lissabon 1755 ist die Verunsicherung dieser Epoche schlechthin: An Allerheiligen zerstörten Erdbeben, Feuer und Flutwelle innerhalb von Stunden eine der reichsten Städte Europas. Viele starben beim Gottesdienst. Der Glaube an einen gütigen, vernünftigen Weltplan zerbrach. Ganz Europa stritt (Voltaire gegen Rousseau), wie ein guter Gott so etwas zulassen könne. Kants Ausweg war keine neue Beruhigung, sondern eine Zumutung: der Mut zum eigenen Verstand.",
         tour: [
@@ -541,7 +541,7 @@ const EPOCHEN: Epoche[] = [
         caption: "Die neue Arbeitswelt der Fabrik: Hitze, Lärm, Schichtbetrieb",
         credit: "Adolph Menzel, «Das Eisenwalzwerk», 1872–75 · gemeinfrei",
         hintergrund:
-          "Adolph Menzel studierte für das Gemälde 1872 wochenlang eine echte Fabrik in Königshütte (Oberschlesien) und füllte Skizzenbücher mit Details. Das Resultat gilt als erstes bedeutendes Industriegemälde der deutschen Kunst.",
+          "Adolph Menzel (1815–1905) war ein deutscher Maler des Realismus, der genaue Beobachtung mit gesellschaftlichem Blick verband. Für dieses Werk studierte er 1872 wochenlang eine echte Fabrik in Königshütte in Oberschlesien und füllte Skizzenbücher mit Details. Das Bild entstand zwischen 1872 und 1875 und zeigt das Innere einer Eisenfabrik mit über vierzig Arbeitern. Im Zentrum wird ein glühender Eisenblock unter die Walzen geschoben, während rechts eine Schicht hastig isst und links Männer sich waschen. Es gilt als erstes bedeutendes Industriegemälde der deutschen Kunst und hängt heute in der Alten Nationalgalerie in Berlin.",
         contextNote:
           "Menzels Fabrik zeigt beide Seiten des Umbruchs in einem Bild: die technische Wucht der Dampfmaschine, die glühendes Eisen und Menschenkraft zu einem einzigen Getriebe verbindet, und die soziale Verunsicherung einer Arbeit, die im Schichtbetrieb niemals stillsteht. Genau diesen Umbruch versuchte Marx zu begreifen: Die Verhältnisse, in denen diese Menschen arbeiten, sind kein Naturgesetz, sondern gemacht und darum veränderbar.",
         tour: [
@@ -581,7 +581,7 @@ const EPOCHEN: Epoche[] = [
         caption: "Die Kehrseite: Elendsquartiere im Schatten der Viadukte",
         credit: "Gustave Doré, «Over London – by Rail», 1872 · gemeinfrei",
         hintergrund:
-          "Der Stich stammt aus «London: A Pilgrimage» (1872), einem Bildband, für den Gustave Doré vier Jahre lang die Metropole durchstreifte, von den Docks bis zu den Salons. Seine Blätter prägen das Bild des viktorianischen London bis heute.",
+          "Gustave Doré (1832–1883) war ein französischer Illustrator und Grafiker, der für seine kontrastreichen Bilder aus Licht und Schatten berühmt war. Dieses Blatt ist kein Gemälde, sondern ein Holzstich aus dem Bildband «London: A Pilgrimage» von 1872. Für das Buch durchstreifte Doré vier Jahre lang die Metropole, von den Docks bis zu den Salons. Der Stich blickt über die dicht gedrängten Hinterhöfe der Arbeiterviertel, die vom Bogen eines Eisenbahnviadukts gerahmt werden. Oben rauscht ein Zug vorbei, während unten die engen, russgeschwärzten Häuser der armen Familien stehen. So hielt Doré das Elend und die Wucht des viktorianischen London eindringlicher fest als jede Statistik.",
         contextNote:
           "Dorés Blick über die Londoner Hinterhöfe zeigt die Verunsicherung der Industriemoderne von unten: entwurzelte Massen, zusammengepfercht im Schatten der Eisenbahn. Die Technik trieb den Wandel mit ungeheurer Wucht voran, doch der Fortschritt fuhr im Wortsinn über die Köpfe der Ärmsten hinweg. Marx lieferte die Deutung: Dieses Elend ist kein Naturzustand, sondern Ergebnis gesellschaftlicher Verhältnisse und damit gestaltbar.",
         tour: [
@@ -647,7 +647,7 @@ const EPOCHEN: Epoche[] = [
         caption: "Der Künstler als Soldat, mit abgeschnittener Hand, seelisch versehrt",
         credit: "Ernst Ludwig Kirchner, «Selbstbildnis als Soldat», 1915 · gemeinfrei",
         hintergrund:
-          "Ernst Ludwig Kirchner, Mitgründer der Künstlergruppe «Brücke», meldete sich 1914 freiwillig und zerbrach am Militärdienst. 1915 malte er sich als Soldat mit abgeschnittener Hand. Real war die Hand unversehrt: Das Bild zeigt eine innere, keine körperliche Wunde. Die Nazis diffamierten seine Kunst 1937 als «entartet». 1938 nahm er sich das Leben.",
+          "Ernst Ludwig Kirchner (1880–1938) war ein führender Vertreter des deutschen Expressionismus und Mitgründer der Künstlergruppe «Brücke». Der Expressionismus malt nicht, wie die Welt aussieht, sondern wie sie sich anfühlt, mit grellen Farben und kantigen Formen. Kirchner meldete sich 1914 freiwillig zum Kriegsdienst und zerbrach innert Monaten am Militär. 1915 malte er sich in Uniform mit abgeschnittener rechter Malhand, obwohl die Hand in Wirklichkeit unversehrt war, denn das Bild zeigt eine innere und keine körperliche Wunde. Hinter ihm steht ein Aktmodell als Zeichen der verlorenen Welt der Kunst. Die Nationalsozialisten diffamierten sein Werk 1937 als «entartet», und 1938 nahm er sich das Leben.",
         contextNote:
           "Kirchners Selbstbildnis zeigt die Verunsicherung des Katastrophenzeitalters von innen: Der industrialisierte Krieg beschädigt Menschen auch dort, wo keine Granate sie trifft. Auf diesen Verlust aller Geländer antwortet später der Existenzialismus, mit der Zumutung, trotzdem zu wählen und zu verantworten.",
         tour: [
@@ -687,7 +687,7 @@ const EPOCHEN: Epoche[] = [
         caption: "Nussbaum zeigt seinen Judenpass, kurz darauf in Auschwitz ermordet",
         credit: "Felix Nussbaum, «Selbstbildnis mit Judenpass», um 1943 · gemeinfrei",
         hintergrund:
-          "Felix Nussbaum, Maler aus Osnabrück, lebte ab 1942 im Brüsseler Versteck. Um 1943 malte er sich dort mit hochgeschlagenem Kragen, Judenstern und dem Ausweis mit dem roten Stempel «JUIF-JOOD». 1944 wurde er denunziert, deportiert und in Auschwitz ermordet. Seine Bilder überlebten im Versteck. Heute sind sie im Felix-Nussbaum-Haus in Osnabrück.",
+          "Felix Nussbaum (1904–1944) war ein jüdischer Maler aus Osnabrück, dessen Werk der Neuen Sachlichkeit zugerechnet wird. Ab 1942 lebte er im Brüsseler Versteck, wo dieses Bild um 1943 entstand. Er malt sich mit hochgeschlagenem Kragen, dem gelben Judenstern und dem Ausweis mit dem roten Stempel «JUIF-JOOD», also Jude. Das Werk hält den Moment fest, in dem einem Menschen durch einen amtlichen Stempel das Menschsein aberkannt wird. 1944 wurde Nussbaum denunziert, deportiert und in Auschwitz ermordet, während seine Bilder im Versteck überdauerten. Heute sind sie im Felix-Nussbaum-Haus in Osnabrück zu sehen.",
         contextNote:
           "Das Selbstbildnis mit Judenpass ist das Dokument einer Verunsicherung, die keinen Vergleich hat: Einem Menschen wird per Stempel das Menschsein aberkannt. Hannah Arendts spätere Mahnung, selbst zu urteilen statt mitzulaufen, antwortet genau auf diese Erfahrung. Verwaltung und Gehorsam können zum Werkzeug des Verbrechens werden.",
         tour: [
@@ -760,7 +760,7 @@ const EPOCHEN: Epoche[] = [
         caption: "Mauerfall 1989: der Osten öffnet sich, ein System verschwindet über Nacht",
         credit: "Grenzöffnung am Brandenburger Tor, 22.12.1989 · Bundesarchiv Bild 183-1989-1222-016 · CC BY-SA 3.0 de",
         hintergrund:
-          "Die Aufnahme stammt vom 22. Dezember 1989 (Fotograf des DDR-Nachrichtendienstes ADN, heute Bundesarchiv): Am Brandenburger Tor hebt ein Kran ein Mauersegment heraus, um den neuen Grenzübergang zu öffnen, sechs Wochen nach der Maueröffnung vom 9. November.",
+          "Dieses Bild ist kein Gemälde, sondern eine Pressefotografie vom 22. Dezember 1989. Aufgenommen hat sie ein Fotograf des DDR-Nachrichtendienstes ADN, heute liegt sie im Bundesarchiv. Zu sehen ist der Moment, in dem am Brandenburger Tor ein Kran ein Mauersegment heraushebt, um den neuen Grenzübergang zu öffnen. Es geschah sechs Wochen nach der Maueröffnung vom 9. November 1989. Unter dem schwebenden Betonstück stehen Grenzsoldaten, Arbeiter und Schaulustige dicht beieinander. Das nächtliche Foto wurde zu einem Sinnbild für das friedliche Ende der deutschen Teilung.",
         contextNote:
           "Das Foto zeigt den Kipp-Punkt der Epoche «Ende der Geschichte»: Ein ganzes System verschwindet friedlich, fast über Nacht. Was als Triumph der Freiheit gefeiert wurde, war für viele Biografien im Osten zugleich ein Boden-Verlust. Beides gehört zur Verunsicherung dieser Jahre.",
         tour: [
@@ -800,7 +800,7 @@ const EPOCHEN: Epoche[] = [
         caption: "Eine vernetzte, elektrifizierte Welt, scheinbar grenzenlos",
         credit: "«Earth at Night» · NASA/NOAA, 2012 · gemeinfrei",
         hintergrund:
-          "Das Bild ist eine Montage aus Hunderten Aufnahmen des NASA/NOAA-Satelliten Suomi NPP (2012). So hat die Erde nie ausgesehen, denn es ist nie überall gleichzeitig Nacht. Gerade als Konstruktion zeigt es, wie die vernetzte Welt sich selbst sichtbar macht.",
+          "Dieses Bild ist keine gemalte Kunst, sondern eine wissenschaftliche Aufnahme der Weltraumbehörden NASA und NOAA aus dem Jahr 2012. Es ist eine Montage aus Hunderten Aufnahmen des Satelliten Suomi NPP, denn es ist nie überall auf der Erde gleichzeitig Nacht. So hat der Planet in Wirklichkeit nie ausgesehen. Zu sehen ist die nächtliche Erde, auf der jedes Lichtpünktchen für menschliche Besiedlung und für Strom steht. Grell leuchten Europa, Ostasien und die US-Küsten, während weite Teile Afrikas, Südamerikas und Zentralasiens fast dunkel bleiben. Gerade als Konstruktion führt das Bild vor Augen, wie ungleich die vernetzte Welt verteilt ist.",
         contextNote:
           "Die nächtliche Erde macht die technische Seite der Epoche in einem Bild sichtbar: eine elektrifizierte, vernetzte Welt, deren Städte und Datenströme den Planeten in Lichtadern überziehen. Zugleich zeigt sie die Kehrseite. Die grellen Lichtbänder und die weiten dunklen Flächen führen die tiefe Ungleichheit dieser Vernetzung vor Augen.",
         tour: [
@@ -866,7 +866,7 @@ const EPOCHEN: Epoche[] = [
         caption: "Der eine Planet: verletzlich, geteilt, ohne Ersatz",
         credit: "«Blue Marble» · NASA (Apollo 17), 1972 · gemeinfrei",
         hintergrund:
-          "Das Foto entstand am 7. Dezember 1972 aus rund 29 000 km Entfernung, aufgenommen von der Crew von Apollo 17, der bislang letzten bemannten Mondmission. «Blue Marble» wurde zu einem der meistreproduzierten Fotos der Geschichte und zur Ikone der Umweltbewegung.",
+          "Dieses Bild ist kein Gemälde, sondern eine Fotografie, die am 7. Dezember 1972 aus rund 29 000 km Entfernung entstand. Aufgenommen hat sie die Besatzung von Apollo 17, der bislang letzten bemannten Mondmission. Zu sehen ist die Erde als ganze, runde Kugel, mit Wolkenwirbeln, Ozeanen und Kontinenten in einem einzigen Blick. Von hier oben sind keine Nationen und keine Grenzen erkennbar, nur ein einziger, verletzlicher Planet im schwarzen All. «Blue Marble» wurde zu einem der meistreproduzierten Fotos der Geschichte und zur Ikone der Umweltbewegung.",
         contextNote:
           "Der «Blue Marble» ist das Bild vom einen, gemeinsamen «Wir»: die Erde als ein einziger, grenzenloser Planet. Genau dieses «Wir» steht heute unter doppeltem Druck: Klimakrise und eine Technik, die Wirklichkeit täuschend echt erzeugen kann. Wie sich aus lauter vernetzten Einzelnen wieder ein tragfähiges Wir bildet, ist die offene Frage, an der die Philosophie der Gegenwart arbeitet.",
         tour: [
@@ -899,7 +899,7 @@ const EPOCHEN: Epoche[] = [
         caption: "Ein Geflecht aus Akteuren, menschlich und nicht-menschlich",
         credit: "«Suche nach Bildern» · Klaus Christ, 2024 · mit Genehmigung",
         hintergrund:
-          "Die Installation «Suche nach Bildern» schuf Klaus Christ 2024: Dutzende Figuren und Objekte hängen an Fäden, die in einem alten Computer zusammenlaufen. Das Werk macht sichtbar, was an einer simplen Bildersuche alles beteiligt ist. Es wird hier mit Genehmigung des Künstlers gezeigt.",
+          "Dieses Werk ist kein Gemälde, sondern eine Installation der Gegenwartskunst, die der Künstler Klaus Christ 2024 schuf und die hier mit seiner Genehmigung gezeigt wird. Der Titel lautet «Suche nach Bildern». Dutzende Figuren und Objekte hängen an Fäden, die in einem alten Röhrencomputer in der Mitte zusammenlaufen. So macht das Werk sichtbar, was an einer scheinbar einfachen Bildersuche im Internet alles beteiligt ist. Auf der einen Seite hängen Rohstoffe, Bergbau und Elektronikmüll, auf der anderen die vielen Menschen vom Programmierer bis zur Nutzerin. Das Netz aus Fäden steht für ein «Wir», das keine einzelne Person ist, sondern ein Geflecht aus vielen Beteiligten.",
         contextNote:
           "Das Netz-Werk führt die Fäden der Gegenwart zusammen: Rechner, Kabel, Datencentren und KI, die eine simple Bildersuche möglich machen, und die Verunsicherung, dass in diesem Geflecht kaum noch zu sagen ist, wer eigentlich handelt. Anders als in früheren Epochen gibt es noch keine fertige philosophische Antwort: Die Schablone wird gerade gesucht, bei Latour, Haraway, Rosa und anderen.",
         tour: [
@@ -1200,6 +1200,7 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
             alt: b.alt,
             caption: b.caption,
             credit: b.credit,
+            einordnung: b.hintergrund,
             tour: b.tour,
             contextNote: b.contextNote,
           }))}

@@ -30,6 +30,9 @@ export interface ZoomImg {
   alt: string;
   credit: string;
   caption: string;
+  /** Einordnung des Bildes (Maler, Epoche und Kunststil, Inhalt und Figuren).
+   *  Erscheint unter der Bildunterschrift, solange keine Führung läuft. */
+  einordnung?: string;
   tour?: TourStop[];
   /** Abschluss-Text: verknüpft das Bild mit Technik & Verunsicherung der Epoche. */
   contextNote?: string;
@@ -251,7 +254,7 @@ export default function BildZoom({ images, startIdx, epoch, onClose, spurKey }: 
   useEffect(() => {
     if (!spurKey || tourIdx === null) return;
     const base = `${spurKey}:${idx}`;
-    merkeInhalt(base, `${epoch} — ${img.alt}`);
+    merkeInhalt(base, `${epoch} · ${img.alt}`);
     merkeSpur(`${base}:hs${tourIdx}`);
     // img.alt (primitiv) statt img (bei jedem Render neue Referenz) → der
     // Effekt läuft nur bei echtem Bild-/Stopp-Wechsel, nicht beim Zoomen.
@@ -350,7 +353,7 @@ export default function BildZoom({ images, startIdx, epoch, onClose, spurKey }: 
       ref={rootRef}
       role="dialog"
       aria-modal="true"
-      aria-label={`${img.alt} — Vollbild`}
+      aria-label={`${img.alt}, Vollbild`}
       className="fixed inset-0 z-[100] flex flex-col bg-inverse-surface"
     >
       {/* Kopfzeile */}
@@ -588,11 +591,22 @@ export default function BildZoom({ images, startIdx, epoch, onClose, spurKey }: 
             </div>
           </div>
         ) : (
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-body-sm text-inverse-on-surface">{img.caption}</p>
-            <p className="mt-xs text-label-sm text-inverse-on-surface/80">
+          <div className="mx-auto max-w-3xl">
+            <p className="text-center text-body-sm text-inverse-on-surface">{img.caption}</p>
+            <p className="mt-xs text-center text-label-sm text-inverse-on-surface/80">
               {img.credit}
             </p>
+            {img.einordnung && (
+              <div className="mt-sm max-h-[26vh] overflow-y-auto rounded-xl bg-inverse-on-surface/10 px-md py-sm">
+                <p className="flex items-center gap-xs text-label-sm uppercase tracking-wider text-inverse-on-surface/70">
+                  <span className="material-symbols-outlined text-[16px]">history_edu</span>
+                  Kontext &amp; Einordnung
+                </p>
+                <p className="mt-xs text-body-sm leading-relaxed text-inverse-on-surface/90">
+                  {img.einordnung}
+                </p>
+              </div>
+            )}
           </div>
         )}
       </div>
