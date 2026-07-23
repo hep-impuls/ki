@@ -15,6 +15,9 @@ import Aufgabe from "../_components/Aufgabe";
 import ModulMiniNav from "../_components/ModulMiniNav";
 import NeustartButton from "../_components/NeustartButton";
 import AbschnittKopf from "../_components/AbschnittKopf";
+import Abschnitt from "../_components/Abschnitt";
+import AkkordeonGruppe from "../_components/AkkordeonGruppe";
+import AktivitaetsKopf from "../_components/AktivitaetsKopf";
 import Ausklapptext from "../_components/Ausklapptext";
 import { GlossarText } from "../_components/Glossar";
 
@@ -425,9 +428,12 @@ export default function Lernseite2VorhangAuf() {
         <p className="text-label-md uppercase tracking-wider text-tertiary">
           Thema 01 · Auftakt
         </p>
-        <h1 className="mt-sm text-headline-xl text-on-surface">
-          Vorhang auf: eine neue Akteurin
-        </h1>
+        <div className="mt-sm flex flex-wrap items-center gap-md">
+          <h1 className="text-headline-xl text-on-surface">
+            Vorhang auf: eine neue Akteurin
+          </h1>
+          <AktivitaetsKopf />
+        </div>
         <p className="mt-md max-w-3xl text-body-lg text-on-surface-variant">
           <GlossarText text="Kaum ein Thema ist so präsent wie die Künstliche Intelligenz. Und kaum eines ist so schwer zu fassen. Diese Seite gibt der KI einen Ort, an dem wir ihrer Gestalt nachgehen, statt nur über sie zu reden." />
         </p>
@@ -476,13 +482,18 @@ export default function Lernseite2VorhangAuf() {
       />
 
       {/* 1 — Die KI-Story als lineare Knotenlandschaft mit Einfluss-Bögen */}
-      <section id="ki-story" className="mt-xl max-w-5xl scroll-mt-24" aria-label="Die KI-Story">
-        <AbschnittKopf bild="/art/vorhang-story.webp">
-          <h2 className="text-headline-lg text-on-surface">Die KI-Story</h2>
+      <AkkordeonGruppe>
+      <Abschnitt
+        id="ki-story"
+        className="mt-xl max-w-5xl"
+        bild="/art/vorhang-story.webp"
+        titel="Die KI-Story"
+        vorschau={
           <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
             <GlossarText text="Die KI hat eine lange Vorgeschichte. Schon lange vor dem Computer träumten Menschen davon, künstliche Wesen zu erschaffen. Diese KI-Story führt in zweiundzwanzig Stationen von den antiken Mythen bis zu den heutigen Sprachmodellen." />
           </p>
-        </AbschnittKopf>
+        }
+      >
         <Ausklapptext className="mt-md max-w-4xl" titel="Mehr dazu: die beiden Fäden der Geschichte">
           <p>
             <GlossarText text="Durch die Geschichte laufen zwei Fäden nebeneinander. Der eine Faden ist die Erzählung vom belebten Ding, zum Beispiel beim Golem oder bei Frankensteins Geschöpf. Der andere Faden ist die Technik, die das Rechnen und Denken Schritt für Schritt an Maschinen abgibt. Ein wichtiger Baustein auf diesem Weg ist der Algorithmus. Im Jahr 1950 fragte der Mathematiker Alan Turing, ob Maschinen denken können, und schlug dafür den Turing-Test vor. Im Jahr 1956 gab die Dartmouth-Konferenz dem jungen Forschungsfeld seinen Namen, nämlich künstliche Intelligenz. In den heutigen Sprachmodellen treffen beide Fäden zusammen, die alte Vorstellung vom künstlichen Wesen und die reale Auslagerung des Rechnens." />
@@ -808,18 +819,22 @@ export default function Lernseite2VorhangAuf() {
             },
           ]}
         />
-      </section>
+      </Abschnitt>
 
       <FadenDivider className="mt-xl" />
 
       {/* Bilderstrecke zwischen den Aktivitäten — Anschauungsmodus mit Hotspots */}
-      <section id="bilder" className="mt-xl max-w-5xl scroll-mt-24" aria-label="Bilderstrecke: Bilder zur KI-Geschichte">
-        <AbschnittKopf bild="/art/vorhang-bilder.webp">
-          <h2 className="text-headline-lg text-on-surface">Bilder zur KI-Geschichte</h2>
+      <Abschnitt
+        id="bilder"
+        className="mt-xl max-w-5xl"
+        bild="/art/vorhang-bilder.webp"
+        titel="Bilder zur KI-Geschichte"
+        vorschau={
           <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
             <GlossarText text="Bilder machen abstrakte Ideen anschaulich. Elf Werke spannen den Bogen von den frühen Rechenhilfen bis zu ChatGPT und den heutigen Bildgeneratoren. In jedem Bild kannst du begehbare Punkte antippen und so ein Detail nach dem anderen entdecken." />
           </p>
-        </AbschnittKopf>
+        }
+      >
         <Ausklapptext className="mt-md max-w-4xl" titel="Mehr dazu: was die Bilderstrecke zeigt">
           <p>
             <GlossarText text="Die Strecke beginnt beim Auslagern des Denkens in Knotenschnüre, den Quipus der Anden. Sie führt weiter über Turings Code-Knacker aus dem Zweiten Weltkrieg. Ein weiteres Bild zeigt ELIZA, den ersten Chatbot aus den 1960er-Jahren. Später kommen Bildgeneratoren wie DALL·E und schliesslich ChatGPT dazu. Jedes Bild trägt nummerierte Punkte mit einer kurzen Erklärung. So wird aus einer abstrakten Idee eine konkrete Geschichte. Bildende Kunst hilft dabei, komplexe Zusammenhänge in einer einfachen Ansicht zu zeigen." />
@@ -836,20 +851,22 @@ export default function Lernseite2VorhangAuf() {
           bilder={BILDER_STORY}
           spurKey="vorhang-auf:bild"
         />
-      </section>
+      </Abschnitt>
 
       <FadenDivider className="mt-xl" />
 
       {/* 2 — Die Merkmale als loses Geflecht (ohne Zitate, ohne Zentrum) */}
-      <section id="merkmale" className="mt-xl max-w-5xl scroll-mt-24" aria-label="Die Merkmale der neuen Akteurin">
-        <AbschnittKopf bild="/art/vorhang-merkmale.webp">
-          <h2 className="text-headline-lg text-on-surface">
-            Die Merkmale der neuen Akteurin
-          </h2>
+      <Abschnitt
+        id="merkmale"
+        className="mt-xl max-w-5xl"
+        bild="/art/vorhang-merkmale.webp"
+        titel="Die Merkmale der neuen Akteurin"
+        vorschau={
           <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
             <GlossarText text="Seit November 2022 nutzen wir grosse Sprachmodelle fast täglich. Aber was genau ist da als neue Akteurin aufgetreten? Zwölf Eigenschaften zusammen machen das Neue aus, nicht eine davon allein." />
           </p>
-        </AbschnittKopf>
+        }
+      >
         <Ausklapptext className="mt-md max-w-4xl" titel="Mehr dazu: warum die Bündelung zählt">
           <p>
             <GlossarText text="Jede einzelne dieser Eigenschaften gab es in Ansätzen schon früher. Neu ist, dass sie nun gebündelt in einem System zusammenkommen. Die KI erkennt Muster in riesigen Datenmengen und arbeitet mit Wahrscheinlichkeiten statt mit festen Regeln. Sie reagiert auf den Zusammenhang und passt ihre Antworten daran an. Sie wirkt allgemein einsetzbar, weil sie nicht für eine einzige Aufgabe gebaut ist. Genau diese Kombination macht sie zu einem Werkzeug, das sich wie ein Gegenüber anfühlt. Im Muster unten kannst du die zwölf Merkmale einzeln öffnen und nachlesen." />
@@ -1004,18 +1021,22 @@ export default function Lernseite2VorhangAuf() {
             { punkte: [[252, 122], [420, 120], [336, 182]], knoten: [9, 10, 11] },
           ]}
         />
-      </section>
+      </Abschnitt>
 
       <FadenDivider className="mt-xl" />
 
       {/* 3 — Die KI im Kontext: vier Kontexte mit aufklappbaren Aspekten */}
-      <section id="ki-kontext" className="mt-xl max-w-5xl scroll-mt-24" aria-label="Die KI im Kontext">
-        <AbschnittKopf bild="/art/vorhang-kontext.webp">
-          <h2 className="text-headline-lg text-on-surface">Die KI im Kontext</h2>
+      <Abschnitt
+        id="ki-kontext"
+        className="mt-xl max-w-5xl"
+        bild="/art/vorhang-kontext.webp"
+        titel="Die KI im Kontext"
+        vorschau={
           <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
             <GlossarText text="KI ist mehr als ein Chatfenster. Um das Phänomen zu verstehen, stellt man es in seine Zusammenhänge. Vier Blickwinkel zeigen, worin die neue Akteurin eingebettet ist." />
           </p>
-        </AbschnittKopf>
+        }
+      >
         <Ausklapptext className="mt-md max-w-4xl" titel="Mehr dazu: die vier Blickwinkel">
           <p>
             <GlossarText text="Der erste Blickwinkel ist der technologische, also Rechenkraft, Daten und die Modelle selbst. Der zweite ist der wirtschaftliche, denn Entwicklung und Betrieb kosten viel Geld und schaffen neue Märkte. Der dritte ist der rechtlich-politische, etwa Fragen nach Regeln, Haftung und Macht. Der vierte ist der kulturelle, also wie wir mit KI leben, arbeiten und über sie sprechen. Diese vier Blickwinkel wirken zusammen und lassen sich nicht sauber trennen. Erst gemeinsam ergeben sie ein Bild davon, was KI heute ist." />
@@ -1142,7 +1163,8 @@ export default function Lernseite2VorhangAuf() {
             },
           ]}
         />
-      </section>
+      </Abschnitt>
+      </AkkordeonGruppe>
 
       <FadenDivider className="mt-xl" />
 
