@@ -686,7 +686,7 @@ export default function Lernseite2PhilosophischePerspektive() {
           als durchklickbare Slides (nach den Epochen mit ihren Bildern) */}
       <Abschnitt
         id="denkwege"
-        className="mt-xl max-w-4xl"
+        className="mt-xl max-w-5xl"
         bild="/art/philosophie-denkwege.webp"
         titel="Wege der Orientierung"
         prefixe={["philosophische-perspektive:denkwege"]}
