@@ -682,7 +682,7 @@ export default function Lernseite2PhilosophischePerspektive() {
         <VerunsicherungsEpochen className="mt-lg" />
       </Abschnitt>
 
-      {/* Wege der Orientierung — drei Bereiche der philosophischen Orientierung
+      {/* Wege der Orientierung — vier Bereiche der philosophischen Orientierung
           zur KI-Verunsicherung, als durchklickbare Slides (nach den Epochen) */}
       <Abschnitt
         id="denkwege"
@@ -706,20 +706,21 @@ export default function Lernseite2PhilosophischePerspektive() {
           <p>
             Zum Schluss kommen wir in die Gegenwart. Die Philosophie hilft hier
             nicht mit fertigen Rezepten, sondern mit Einordnung. Wir bündeln sie
-            in <strong className="text-on-surface">drei Bereiche</strong>, und bei
+            in <strong className="text-on-surface">vier Bereiche</strong>, und bei
             jedem steht am Ende dieselbe Frage: Was hilft mir diese Einordnung
             jetzt?
           </p>
           <p>
             Der erste Bereich fragt, was den Menschen im Kern ausmacht, unabhängig
-            davon, ob eine KI es auch könnte, mit Aristoteles, Hannah Arendt,
-            Martin Heidegger und Immanuel Kant. Der zweite erklärt, wie wir in
+            davon, ob eine KI es auch könnte, mit Aristoteles, Kant, Hegel, Arendt,
+            Heidegger, Sloterdijk und Hustvedt. Der zweite erklärt, wie wir in
             komplexen Gesellschaften Orientierung finden, obwohl niemand mehr das
-            Ganze überblickt, mit Bruno Latour und Armin Nassehi. Der dritte zeigt,
-            dass sich Mensch und Maschine nicht sauber trennen lassen, und fragt
-            nach Wegen der Zusammenarbeit oder der bewussten Abgrenzung, mit
-            Latour, Donna Haraway, Yuval Noah Harari, Markus Gabriel und Hartmut
-            Rosa.
+            Ganze überblickt, mit Latour und Nassehi. Der dritte zeigt, dass sich
+            Mensch und Maschine nicht trennen lassen, und fragt nach Wegen der
+            Zusammenarbeit oder der bewussten Abgrenzung, mit Latour, Haraway,
+            Harari, Gabriel und dem japanischen «We-Turn» von Yasuo Deguchi. Der
+            vierte stellt den Menschen wieder in die Mitte, an seinen eigenen Ort,
+            mit Hartmut Rosas «Resonanz» und Byung-Chul Han.
           </p>
           <p>
             Wichtig bleibt der Blick auf das Wesentliche. Es geht nicht darum, was
@@ -731,7 +732,7 @@ export default function Lernseite2PhilosophischePerspektive() {
           </p>
         </div>
         <Aufgabe className="mt-md">
-          Geh die drei Bereiche der Reihe nach durch. Jeder fasst mehrere
+          Geh die vier Bereiche der Reihe nach durch. Jeder fasst mehrere
           Denkerinnen und Denker zusammen und schliesst mit der Frage, was dir
           diese Einordnung jetzt hilft. Bewerte bei jedem, wie sehr dir der Zugang
           hilft, dich zu orientieren.

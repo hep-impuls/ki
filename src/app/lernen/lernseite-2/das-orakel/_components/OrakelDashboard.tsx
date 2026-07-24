@@ -66,7 +66,7 @@ const BEREICHE: { prefix: string; label: string; total: number; href: string }[]
   { prefix: "philosophische-perspektive:einstieg", label: "Was ist Philosophie?", total: 4, href: "/lernen/lernseite-2/philosophische-perspektive#was-philosophie" },
   { prefix: "philosophische-perspektive:teppich", label: "Der Teppich des Wandels", total: 33, href: "/lernen/lernseite-2/philosophische-perspektive#teppich" },
   { prefix: "philosophische-perspektive:epochen", label: "Philosophie in Zeiten der Verunsicherung", total: 24, href: "/lernen/lernseite-2/philosophische-perspektive#epochen" },
-  { prefix: "philosophische-perspektive:denkwege", label: "Wege der Orientierung", total: 3, href: "/lernen/lernseite-2/philosophische-perspektive#denkwege" },
+  { prefix: "philosophische-perspektive:denkwege", label: "Wege der Orientierung", total: 4, href: "/lernen/lernseite-2/philosophische-perspektive#denkwege" },
   { prefix: "video:", label: "Video-Impulse", total: 3, href: "/lernen/lernseite-2" },
 ];
 

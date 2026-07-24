@@ -12,21 +12,26 @@ import GewichtungWahl from "../../_components/GewichtungWahl";
 import DenkerHover from "../../_components/DenkerHover";
 
 /**
- * Denkwege — «Wege der Orientierung»: drei Bereiche, in denen die Philosophie
+ * Denkwege — «Wege der Orientierung»: vier Bereiche, in denen die Philosophie
  * beim Umgang mit der KI hilft, als durchklickbare Slides. Jeder Bereich fasst
  * mehrere Denker:innen zusammen und fragt am Ende: Was hilft mir diese
  * Einordnung jetzt?
  *
- *  1. «Was ist der Mensch?» (Aristoteles, Arendt, Heidegger, Kant) — was uns im
- *     Kern ausmacht, unabhängig davon, ob eine KI es auch könnte. Vertrauen,
- *     dass diese Wesenszüge nicht verschwinden.
- *  2. «Netzwerke und Systeme» (Latour, Nassehi) — wie wir in komplexen
+ *  1. «Was ist der Mensch?» (Aristoteles, Kant, Hegel, Arendt, Heidegger,
+ *     Sloterdijk, Hustvedt) — was uns im Kern ausmacht, unabhängig davon, ob
+ *     eine KI es auch könnte. Vertrauen, dass diese Wesenszüge nicht
+ *     verschwinden.
+ *  2. «Netzwerke und Systeme» (Nassehi, Latour) — wie wir in komplexen
  *     Gesellschaften Orientierung gewinnen und verstehen, wieso vieles trotzdem
  *     funktioniert, obwohl niemand mehr das Ganze überblickt.
- *  3. «Transformation von Mensch und Maschine» (Latour, Haraway, Harari,
- *     Gabriel, Rosa) — dass sich Mensch und Maschine nicht sauber trennen
- *     lassen; Wege der Zusammenarbeit oder der bewussten Abgrenzung, mit
- *     Transhumanismus (religiöse und endzeitliche Muster als Gegenschablone).
+ *  3. «Transformation von Mensch und Maschine» (Latour, Deguchi, Haraway,
+ *     Harari, Gabriel) — dass sich Mensch und Maschine nicht trennen lassen;
+ *     Deguchis japanischer «We-Turn» (Selbst als Wir, ostasiatisch verwurzelt);
+ *     Wege der Zusammenarbeit oder der bewussten Abgrenzung durch Regulation
+ *     und Ethik, mit Transhumanismus (religiöse und endzeitliche Muster als
+ *     Gegenschablone).
+ *  4. «Der Mensch an seinem eigenen Ort» (Rosa, Han) — den Menschen wieder in
+ *     die Mitte stellen: Resonanz statt Kontrolle, Innehalten statt Dauertempo.
  *
  * Jeder Bereich ist ein Fliesstext (mit den Begriffen in «Anführungszeichen»),
  * die Denker:innen als Hover mit Kurzbiografie, dazu eine Box «Was dir das jetzt
@@ -35,8 +40,10 @@ import DenkerHover from "../../_components/DenkerHover";
  *
  * Inhaltlich fundiert auf den bereitgestellten Werken (Gabriel «Ethische
  * Intelligenz», Latour «Existenzweisen», Nassehi «Muster», Haraway «Unruhig
- * bleiben», Arendt «Vita activa») und guten öffentlichen Quellen (Aristoteles,
- * Kant, Heidegger, Harari, Rosa). Belege getrennt gepflegt.
+ * bleiben», Arendt «Vita activa», Hustvedt «Die Illusion der Gewissheit»,
+ * Sloterdijk «Du musst dein Leben ändern») und guten öffentlichen Quellen
+ * (Aristoteles, Kant, Hegel, Heidegger, Harari, Rosa, Han, Deguchis
+ * We-Turn-Philosophie). Belege getrennt gepflegt.
  */
 
 interface Denker {
@@ -66,12 +73,22 @@ const BEREICHE: Bereich[] = [
   {
     titel: "Was ist der Mensch?",
     leitfrage: "Was uns im Kern ausmacht, ganz unabhängig von der Maschine.",
-    icon: "self_improvement",
+    icon: "psychology",
     denker: [
       {
         name: "Aristoteles",
         leben: "384 bis 322 v. Chr.",
         bio: "Griechischer Philosoph, Schüler Platons. Er ordnete fast das ganze Wissen seiner Zeit und prägte das Denken über Natur, Ethik und Politik bis heute. Von ihm stammt der Satz, alle Menschen streben von Natur aus nach Wissen.",
+      },
+      {
+        name: "Immanuel Kant",
+        leben: "1724 bis 1804",
+        bio: "Deutscher Philosoph aus Königsberg, einer der wirkmächtigsten überhaupt. Er stellte die Frage «Was ist der Mensch?» ins Zentrum und begründete die Freiheit und Würde des Menschen: Wer aus Vernunft handeln kann, trägt Verantwortung.",
+      },
+      {
+        name: "Georg Wilhelm Friedrich Hegel",
+        leben: "1770 bis 1831",
+        bio: "Deutscher Philosoph, einer der grossen Systemdenker. Für ihn entfaltet sich der «Geist» durch Unterscheiden und Gegensätze. Denken heisst bei Hegel, Unterschiede zu machen, sie auszuhalten und in Bewegung zu bringen.",
       },
       {
         name: "Hannah Arendt",
@@ -84,19 +101,25 @@ const BEREICHE: Bereich[] = [
         bio: "Deutscher Philosoph, Hauptwerk «Sein und Zeit». Wegen seiner Nähe zum Nationalsozialismus umstritten; hier zählt sein Gedanke der «Sorge»: dass dem Menschen sein eigenes Leben nicht gleichgültig ist.",
       },
       {
-        name: "Immanuel Kant",
-        leben: "1724 bis 1804",
-        bio: "Deutscher Philosoph aus Königsberg, einer der wirkmächtigsten überhaupt. Er stellte die Frage «Was ist der Mensch?» ins Zentrum und begründete die Freiheit und Würde des Menschen: Wer aus Vernunft handeln kann, trägt Verantwortung.",
+        name: "Peter Sloterdijk",
+        leben: "geboren 1947",
+        bio: "Deutscher Philosoph und Publizist, einer der bekanntesten der Gegenwart. In «Du musst dein Leben ändern» beschreibt er den Menschen als übendes Wesen: Wir werden, wer wir sind, durch Übung, Wiederholung und Selbstformung.",
+      },
+      {
+        name: "Siri Hustvedt",
+        leben: "geboren 1955",
+        bio: "US-amerikanische Schriftstellerin und Essayistin. In «Die Illusion der Gewissheit» zeigt sie, dass der Geist kein Computer ist: Denken und Fühlen hängen am lebendigen Körper und an gelebter Erfahrung.",
       },
     ],
     absaetze: [
-      "«Was ist der Mensch?» Diese Frage ist so alt wie die Philosophie selbst. Schon Aristoteles sah den Menschen als Wesen, das von Natur aus nach Wissen strebt, neugierig, fragend, nie ganz fertig. Immanuel Kant machte sie später zur Kernfrage überhaupt und gab eine Richtung vor: Der Mensch ist frei, er kann aus eigener Einsicht handeln, und darum trägt er Verantwortung. Es geht hier nicht darum, ob eine KI dasselbe auch könnte. Es geht darum, was uns in unserem Wesen ausmacht.",
-      "Hannah Arendt nennt einen dieser Wesenszüge das Anfangen. Mit jedem Menschen kommt etwas Neues in die Welt, das aus dem Bisherigen nicht ableitbar ist. Und der Mensch urteilt, er hält inne und entscheidet selbst. Martin Heidegger fügt die «Sorge» hinzu: Dem Menschen ist sein eigenes Leben nicht gleichgültig, er kümmert sich, fragt nach Sinn, weiss um seine Endlichkeit. Anfangen, urteilen, sich sorgen, neugierig sein, Verantwortung übernehmen, das sind keine Aufgaben, die man abgibt. So sind wir.",
-      "Was hilft dir diese Einordnung? Sie nimmt der Angst den Boden, die KI könnte das Menschliche verdrängen. Denn diese Züge sind nicht etwas, das wir bloss tun, sondern etwas, das wir sind. Wir können gar nicht anders, als anzufangen, zu urteilen und uns zu sorgen. Dafür braucht es am Ende ein Grundvertrauen: dass diese Wesenszüge nicht einfach verschwinden, nur weil eine Maschine gute Sätze schreibt. Sie bleiben, auch wenn sich vieles um uns verändert.",
+      "«Was ist der Mensch?» Diese Frage ist so alt wie die Philosophie selbst. Schon Aristoteles sah den Menschen als Wesen, das von Natur aus nach Wissen strebt, neugierig, fragend, nie ganz fertig. Immanuel Kant machte die Frage zur Kernfrage überhaupt und gab eine Richtung vor: Der Mensch ist frei, er kann aus eigener Einsicht handeln, und darum trägt er Verantwortung. Georg Wilhelm Friedrich Hegel fügt hinzu, dass der Mensch ein Wesen ist, das unterscheidet. Erst indem wir Gegensätze auseinanderhalten, was ist und was sein soll, können wir urteilen und uns frei entscheiden. So bekommt gerade das Unterscheiden und Entscheiden eine zutiefst menschliche Seite.",
+      "Hannah Arendt nennt einen weiteren Wesenszug das Anfangen. Mit jedem Menschen kommt etwas Neues in die Welt, das aus dem Bisherigen nicht ableitbar ist. Und der Mensch urteilt, er hält inne und entscheidet selbst. Martin Heidegger fügt die «Sorge» hinzu: Dem Menschen ist sein eigenes Leben nicht gleichgültig, er kümmert sich, fragt nach Sinn, weiss um seine Endlichkeit.",
+      "Peter Sloterdijk beschreibt den Menschen als übendes Wesen. Wir werden, wer wir sind, durch Übung und Wiederholung, und niemand kann für uns üben. Siri Hustvedt erinnert daran, dass der Geist kein Computer ist. Denken und Fühlen hängen am lebendigen Körper und an gelebter Erfahrung. Eine Maschine kann Sprache und Gefühle täuschend echt nachahmen, aber sie erlebt nichts.",
+      "Worauf das alles zielt, ist nicht der Vergleich mit der Maschine. Es geht nicht darum, ob eine KI auch anfangen, urteilen oder unterscheiden könnte. Es geht darum, was uns in unserem Wesen ausmacht. Und diese Züge sind nicht etwas, das wir bloss tun, sondern etwas, das wir sind. Wir können gar nicht anders, als neugierig zu sein, anzufangen, zu unterscheiden und uns zu sorgen.",
     ],
     hilft:
-      "Wenn dich die schnelle, kluge KI verunsichert, kehr zur Frage zurück, was dich als Mensch ausmacht. Anfangen, urteilen, sich sorgen, das bleibt deins, ganz gleich, wie gut die Maschine formuliert. Dieses Vertrauen in die eigenen Wesenszüge trägt durch den Wandel.",
-    werk: "Aristoteles, «Metaphysik»; Immanuel Kant, «Logik» (1800); Hannah Arendt, «Vita activa»; Martin Heidegger, «Sein und Zeit» (1927)",
+      "Wenn dich die schnelle, kluge KI verunsichert, kehr zur Frage zurück, was dich als Mensch ausmacht. Neugier, Anfangen, Urteilen, Sorge, das bleibt deins, ganz gleich, wie gut die Maschine formuliert. Dafür braucht es am Ende ein Grundvertrauen: dass diese Wesenszüge nicht einfach verschwinden, nur weil eine Maschine gute Sätze schreibt.",
+    werk: "Aristoteles, «Metaphysik»; Immanuel Kant, «Logik» (1800); G. W. F. Hegel, «Phänomenologie des Geistes» (1807); Hannah Arendt, «Vita activa»; Martin Heidegger, «Sein und Zeit» (1927); Peter Sloterdijk, «Du musst dein Leben ändern» (2009); Siri Hustvedt, «Die Illusion der Gewissheit» (2018)",
   },
   {
     titel: "Netzwerke und Systeme",
@@ -134,6 +157,11 @@ const BEREICHE: Bereich[] = [
         bio: "Französischer Soziologe und Philosoph. Mit der Akteur-Netzwerk-Theorie zeigte er, dass niemand allein handelt: Wir stecken immer in Abhängigkeiten von Menschen und Dingen. Das ganz freie, unabhängige Individuum ist eine Illusion.",
       },
       {
+        name: "Yasuo Deguchi",
+        leben: "zeitgenössisch",
+        bio: "Japanischer Philosoph an der Universität Kyoto. Er verbindet westliches und ostasiatisches Denken. Mit seiner «We-Turn»-Philosophie verlegt er das Handeln vom einzelnen «Ich» auf ein «Wir», das auch Dinge und Maschinen einschliesst.",
+      },
+      {
         name: "Donna Haraway",
         leben: "geboren 1944",
         bio: "US-amerikanische Wissenschaftshistorikerin und feministische Denkerin. Ihr «Manifest für Cyborgs» (1985) denkt Mensch, Tier und Maschine als verwoben. Sie fragt, wie wir verantwortlich mit Technik leben.",
@@ -148,20 +176,41 @@ const BEREICHE: Bereich[] = [
         leben: "geboren 1980",
         bio: "Deutscher Philosoph, sehr jung Professor in Bonn. Bekannt für den «Neuen Realismus». In «Ethische Intelligenz» plädiert er dafür, die KI ethisch mitzugestalten, statt sie nur zu verbieten oder alles zu erlauben.",
       },
-      {
-        name: "Hartmut Rosa",
-        leben: "geboren 1965",
-        bio: "Deutscher Soziologe. Bekannt für seine Zeitdiagnose der «Beschleunigung» und den Begriff «Resonanz»: ein lebendiges Antwortverhältnis zur Welt, das mehr zählt als immer schnellere Kontrolle und Optimierung.",
-      },
     ],
     absaetze: [
-      "Mensch und Maschine lassen sich nicht mehr sauber auseinanderdividieren. Wir tippen, suchen, planen und entscheiden längst mit Geräten zusammen. Schon Bruno Latour zeigt, warum das kein neuer Sonderfall ist: Das ganz freie Individuum, das egoistisch nur tut, was es will, hat es nie gegeben. Wir stecken immer in Abhängigkeiten, von Menschen, Werkzeugen, Institutionen. Je klarer man sich diese Abhängigkeiten bewusst macht, desto verständlicher wird das eigene Tun und desto souveräner der Umgang damit.",
-      "Was folgt daraus? Donna Haraway sagt, wir sind längst «verwoben», in gewissem Sinn schon Mischwesen aus Mensch und Maschine, und sollten das verantwortlich gestalten statt es zu leugnen. Yuval Noah Harari mahnt, dass diese Verschmelzung gewaltige Macht freisetzt und darum Regeln braucht. Markus Gabriel setzt auf «ethische Intelligenz», das kluge, moralische Mitgestalten. Und Hartmut Rosa erinnert daran, dass es nicht um immer mehr Kontrolle und Tempo geht, sondern um «Resonanz», ein lebendiges Verhältnis zur Welt. Zwei Wege zeichnen sich ab: sich auf die Zusammenarbeit einlassen oder den eigenen, menschlichen Weg umso deutlicher markieren, auch durch Regulation und Ethik.",
+      "Mensch und Maschine lassen sich nicht mehr sauber auseinanderdividieren. Wir tippen, suchen, planen und entscheiden längst mit Geräten zusammen. Schon Bruno Latour zeigt, warum das kein neuer Sonderfall ist: Das ganz freie Individuum, das egoistisch nur tut, was es will, hat es nie gegeben. Wir stecken immer in Abhängigkeiten, von Menschen, Werkzeugen, Institutionen. Je klarer man sich diese Abhängigkeiten bewusst macht, desto verständlicher wird das eigene Tun.",
+      "Der japanische Philosoph Yasuo Deguchi treibt diesen Gedanken weiter. Seine «We-Turn»-Philosophie verlegt das Handeln vom einzelnen «Ich» auf ein «Wir». Niemand kann etwas ganz allein, jede Handlung wird von vielen anderen getragen, von Menschen, Dingen und heute auch von Maschinen. Der eigentliche Handelnde ist deshalb kein einsames Ich, sondern ein «Wir», zu dem die KI dazugehört. Diese Sicht wurzelt im ostasiatischen Denken, in der buddhistischen Einsicht, dass nichts für sich allein besteht, sondern alles miteinander verbunden entsteht.",
+      "Was folgt daraus? Donna Haraway sagt, wir sind längst «verwoben», in gewissem Sinn schon Mischwesen aus Mensch und Maschine, und sollten das verantwortlich gestalten. Yuval Noah Harari mahnt, dass diese Verschmelzung gewaltige Macht freisetzt und darum klare Regeln braucht. Markus Gabriel setzt auf «ethische Intelligenz», das kluge, moralische Mitgestalten. Zwei Wege zeichnen sich ab: sich auf die Zusammenarbeit einlassen oder den eigenen Weg umso deutlicher markieren, beides gestützt durch Regulation und Ethik.",
       "Am äussersten Rand steht der «Transhumanismus», die Idee, den Menschen durch Technik grenzenlos zu steigern, vielleicht sogar den Tod zu überwinden. Zum Einordnen helfen zwei ältere Muster als Gegenschablone. Zum einen die religiösen Heilsversprechen, denen der Transhumanismus verblüffend ähnelt, nur dass hier die Technik die Erlösung bringen soll. Zum anderen die endzeitlichen Untergangserzählungen, in denen die KI alles auslöscht. Beides, Erlösung wie Weltuntergang, sind grosse, alte Geschichten. Wer sie erkennt, fällt weder auf den Hype noch auf die Panik herein.",
     ],
     hilft:
-      "Du musst dich nicht zwischen Verschmelzung und Verweigerung entscheiden. Es hilft schon, die eigenen Abhängigkeiten zu kennen und bewusst zu wählen, wo du mitmachst und wo du deinen eigenen Weg markierst. Zwischen dem Heilsversprechen «Technik rettet uns» und dem Untergang «KI zerstört uns» liegt der nüchterne Alltag, den Regeln und Ethik gestaltbar machen.",
-    werk: "Donna Haraway, «Unruhig bleiben» (2016); Yuval Noah Harari, «Homo Deus»; Markus Gabriel, «Ethische Intelligenz»; Hartmut Rosa, «Resonanz» (2016); mit Bruno Latour, Akteur-Netzwerk-Theorie",
+      "Du musst dich nicht zwischen Verschmelzung und Verweigerung entscheiden. Es hilft schon, die eigenen Abhängigkeiten zu kennen und zu sehen, dass du immer in einem «Wir» handelst. Zwischen dem Heilsversprechen «Technik rettet uns» und dem Untergang «KI zerstört uns» liegt der nüchterne Alltag, den Regeln und Ethik gestaltbar machen.",
+    werk: "Yasuo Deguchi, «We-Turn»-Philosophie (Selbst als Wir); Donna Haraway, «Unruhig bleiben» (2016); Yuval Noah Harari, «Homo Deus»; Markus Gabriel, «Ethische Intelligenz»; mit Bruno Latour, Akteur-Netzwerk-Theorie",
+  },
+  {
+    titel: "Der Mensch an seinem eigenen Ort",
+    leitfrage: "Wie der Mensch in der Mitte bleibt, statt in Tempo und Technik zu verschwinden.",
+    icon: "self_improvement",
+    denker: [
+      {
+        name: "Hartmut Rosa",
+        leben: "geboren 1965",
+        bio: "Deutscher Soziologe. Bekannt für die Zeitdiagnose der «Beschleunigung» und den Begriff «Resonanz»: ein lebendiges Antwortverhältnis zur Welt, das mehr zählt als immer schnellere Kontrolle und Optimierung.",
+      },
+      {
+        name: "Byung-Chul Han",
+        leben: "geboren 1959",
+        bio: "Koreanisch-deutscher Philosoph, kam zum Studium nach Deutschland. Bekannt für scharfe Zeitkritik («Müdigkeitsgesellschaft», «Vita contemplativa»). Er plädiert für Entschleunigung, Ruhe und Betrachtung statt Dauerleistung.",
+      },
+    ],
+    absaetze: [
+      "In Netzwerken, Systemen und im Zusammenspiel mit Maschinen droht der Mensch aus dem Blick zu geraten: verrechnet, beschleunigt, ständig verfügbar. Dieser Bereich stellt ihn wieder in die Mitte und fragt nach seinem eigenen Ort. Nicht gegen die Technik, sondern als Gegengewicht: Wo findet der Mensch Halt und ein gutes Verhältnis zu sich und zur Welt?",
+      "Hartmut Rosa nennt dieses gute Verhältnis «Resonanz». Ein gelingendes Leben entsteht für ihn nicht durch mehr Kontrolle, mehr Tempo und mehr Verfügbarkeit, sondern durch ein lebendiges Antworten zwischen Mensch und Welt, ein wechselseitiges Berührtwerden. Vieles, was zählt, lässt sich gerade nicht auf Knopfdruck herstellen, es muss einem begegnen. Gegen die Logik der immer schnelleren Optimierung setzt Rosa die Erfahrung, berührt und bewegt zu werden.",
+      "Der koreanisch-deutsche Philosoph Byung-Chul Han schaut auf die Kehrseite der Beschleunigung. Er beschreibt eine «Müdigkeitsgesellschaft», die sich im Dauerleistungsmodus selbst erschöpft, und ruft die «Vita contemplativa» in Erinnerung, das Verweilen, die Ruhe, die Betrachtung. Erst wer innehält, kommt wieder an seinen eigenen Ort. Beide, Rosa und Han, wollen den Menschen nicht aus der Welt herausnehmen, sondern ihn in ihr wieder zentrieren.",
+    ],
+    hilft:
+      "Gegen Tempo und ständige Erreichbarkeit hilft es, bewusst innezuhalten und Resonanz zu suchen: Dinge, Menschen und Tätigkeiten, die dich wirklich berühren, statt nur zu funktionieren. Die KI kann vieles beschleunigen, aber deinen eigenen Ort, dein Verhältnis zu dir und zur Welt, musst und darfst du selbst finden.",
+    werk: "Hartmut Rosa, «Resonanz» (2016) und «Unverfügbarkeit» (2018); Byung-Chul Han, «Müdigkeitsgesellschaft» (2010) und «Vita contemplativa» (2022)",
   },
 ];
 
