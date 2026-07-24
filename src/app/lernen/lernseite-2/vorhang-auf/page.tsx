@@ -509,19 +509,24 @@ export default function Lernseite2VorhangAuf() {
             beider Linien.
           </p>
           <p className="mt-sm">
-            <strong className="text-on-surface">So gehst du vor:</strong> Das
-            ganze Gewebe ist sichtbar. Tippe einen Punkt an, dann erscheint
-            seine Geschichte. Unter jeder Karte kannst du mit «Mehr lesen» den
-            Hintergrund vertiefen und mit «Das verfolge ich weiter» festhalten,
-            was dich besonders interessiert. Über die Stichworte oben hebst du
-            einzelne Punkte hervor. Mit der Ansicht «Zeitlich» ordnest du sie von
-            früher nach heute.
+            <strong className="text-on-surface">So gehst du vor:</strong> Oben
+            stehen Begriffe, jeder steht für eine Station im Netz. Zu Beginn sind
+            zufällig drei Punkte hervorgehoben. Tippst du einen Begriff oder Punkt
+            an, öffnet sich seine Geschichte als Karte. Je mehr du öffnest, desto
+            mehr farbige Flächen entstehen zwischen den Punkten, das Netz wird
+            gewebeartig. So knüpfst du dein eigenes Netz. Mit der Ansicht
+            «Zeitlich» ordnest du die Stationen von früher nach heute.
           </p>
           <p className="mt-sm">
-            <strong className="text-on-surface">Dein Ziel:</strong> Du musst
-            nicht alle zweiundzwanzig Stationen öffnen. Geh dem nach, was dich
-            neugierig macht, und achte darauf, wie die erzählten Träume und die
-            reale Technik am Ende in der heutigen KI zusammenlaufen.
+            <strong className="text-on-surface">Dein Ziel:</strong> Das Netz
+            selbst ist nicht das Ziel. Wichtig ist, dass du den Punkten, die du
+            öffnest, auch nachgehst. Lies die Geschichte, vertiefe sie bei «Mehr
+            lesen» und halte mit «Das verfolge ich weiter» fest, was dich
+            interessiert. Alles, was du anschaust, vertiefst oder weiterverfolgst,
+            fliesst in deine Gesamtaktivität ein, die du im Rhizom-Symbol unten
+            rechts und im Orakel wiederfindest. Du musst nicht alle zweiundzwanzig
+            Stationen öffnen, geh dem nach, was dich neugierig macht, und achte
+            darauf, wie Traum und Technik in der heutigen KI zusammenlaufen.
           </p>
         </Aufgabe>
         <InfoPunkt className="mt-md" label="Muss ich allen 22 nachgehen?">
