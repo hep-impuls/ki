@@ -155,9 +155,41 @@ export default function HistorienTeppich({
   const [reihenfolge, setReihenfolge] = useState<number[]>([]);
   /** Welche Detail-Karte ist aufgeklappt (Accordion; null = keine). */
   const [offeneKarte, setOffeneKarte] = useState<number | null>(null);
+  // Zuletzt geöffnete Karte über Navigation/Neuladen/Zuklappen hinweg merken.
+  const offenKey = spurKey ? `ki26-teppich-offen:${spurKey}` : null;
+  const gespeichertOffen = useRef<number | null>(
+    (() => {
+      if (!offenKey || typeof window === "undefined") return null;
+      const v = window.localStorage.getItem(offenKey);
+      const num = v === null || v === "" ? NaN : Number(v);
+      return Number.isInteger(num) ? num : null;
+    })(),
+  );
+  const ersterSave = useRef(true);
   useEffect(() => {
-    setOffeneKarte(reihenfolge.length ? reihenfolge[reihenfolge.length - 1] : null);
+    // Bereits offene, noch gültige Karte behalten (z.B. nach Cloud-Nachzug);
+    // sonst die zuletzt geöffnete (gespeicherte); sonst die neueste.
+    setOffeneKarte((cur) => {
+      if (!reihenfolge.length) return null;
+      if (cur !== null && reihenfolge.includes(cur)) return cur;
+      const g = gespeichertOffen.current;
+      if (g !== null && reihenfolge.includes(g)) return g;
+      return reihenfolge[reihenfolge.length - 1];
+    });
   }, [reihenfolge]);
+  useEffect(() => {
+    // Offene Karte sichern, aber nicht schon beim initialen null-Wert.
+    if (ersterSave.current) {
+      ersterSave.current = false;
+      return;
+    }
+    if (!offenKey || typeof window === "undefined") return;
+    try {
+      window.localStorage.setItem(offenKey, offeneKarte === null ? "" : String(offeneKarte));
+    } catch {
+      /* Privatmodus */
+    }
+  }, [offeneKarte]);
   /** Bewusst wieder weggeklickte Punkte — bleiben beim Spur-Restore draussen,
    *  damit die Leiste unten nicht überquillt (die Aktivität bleibt gezählt). */
   const abgewaehlt = useRef<Set<number>>(new Set());
@@ -234,9 +266,18 @@ export default function HistorienTeppich({
 
   function zuruecksetzen() {
     loescheSpuren(spurKey);
+    if (offenKey) {
+      try {
+        window.localStorage.removeItem(offenKey);
+      } catch {
+        /* Privatmodus */
+      }
+    }
+    gespeichertOffen.current = null;
     abgewaehlt.current = new Set();
     setBesucht(new Set());
     setReihenfolge([]);
+    setOffeneKarte(null);
   }
 
   // Fäden: Indizes je Fadenart, nach x sortiert (chronologisch).
