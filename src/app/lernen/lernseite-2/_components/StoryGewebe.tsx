@@ -588,13 +588,9 @@ export default function StoryGewebe({
 
   useEffect(() => {
     if (ansichtId === "gewebe") {
-      // Ganzes Netz einmal einschwingen; Auswahl ändert nur die Hervorhebung,
+      // Netz einmal einschwingen. Angeheftete (gezogene) Punkte bleiben, wo sie
+      // sind, nur die übrigen ordnen sich. Auswahl ändert nur die Hervorhebung,
       // nicht das Layout (kein Zappeln bei jedem Stichwort-Klick).
-      alle.forEach((i) => {
-        const p = punktVon(i);
-        p.fx = null;
-        p.fy = null;
-      });
       einschwingen();
       force((c) => c + 1);
     } else if (rafRef.current !== null) {
@@ -654,8 +650,9 @@ export default function StoryGewebe({
       punktTippen(d.id);
       return;
     }
-    p.fx = null;
-    p.fy = null;
+    // Gezogen: Position ANGEHEFTET lassen (fx/fy bleiben gesetzt), damit die
+    // selbst gebrachte Form hält und nicht in die alte zurückschwingt. Nur die
+    // übrigen, nicht angehefteten Punkte ordnen sich kurz nach.
     alphaRef.current = Math.max(alphaRef.current, 0.3);
     for (let t = 0; t < 36; t++) {
       simSchritt();
