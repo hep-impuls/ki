@@ -719,8 +719,9 @@ export default function Lernseite2PhilosophischePerspektive() {
             Mensch und Maschine nicht trennen lassen, und fragt nach Wegen der
             Zusammenarbeit oder der bewussten Abgrenzung, mit Latour, Haraway,
             Harari, Gabriel und dem japanischen «We-Turn» von Yasuo Deguchi. Der
-            vierte stellt den Menschen wieder in die Mitte, an seinen eigenen Ort,
-            mit Hartmut Rosas «Resonanz» und Byung-Chul Han.
+            vierte fragt nach der Lebenskunst, wie man sein Leben tatsächlich
+            ändern kann, mit den Stoikern, Foucault, Wilhelm Schmid, Nussbaum,
+            Merleau-Ponty und Rosa.
           </p>
           <p>
             Wichtig bleibt der Blick auf das Wesentliche. Es geht nicht darum, was

@@ -9,48 +9,42 @@ import {
 } from "../../_lib/spuren";
 import { merkeInhalt } from "../../_lib/inhalte";
 import GewichtungWahl from "../../_components/GewichtungWahl";
-import DenkerHover from "../../_components/DenkerHover";
 
 /**
  * Denkwege — «Wege der Orientierung»: vier Bereiche, in denen die Philosophie
  * beim Umgang mit der KI hilft, als durchklickbare Slides. Jeder Bereich fasst
- * mehrere Denker:innen zusammen und fragt am Ende: Was hilft mir diese
- * Einordnung jetzt?
+ * mehrere Denker:innen zusammen, fragt am Ende «Was hilft mir das jetzt?» und
+ * bietet pro Person eine aufklappbare Box mit konkreten Infos zur Philosophie.
  *
  *  1. «Was ist der Mensch?» (Aristoteles, Kant, Hegel, Arendt, Heidegger,
  *     Sloterdijk, Hustvedt) — was uns im Kern ausmacht, unabhängig davon, ob
- *     eine KI es auch könnte. Vertrauen, dass diese Wesenszüge nicht
- *     verschwinden.
- *  2. «Netzwerke und Systeme» (Nassehi, Latour) — wie wir in komplexen
- *     Gesellschaften Orientierung gewinnen und verstehen, wieso vieles trotzdem
- *     funktioniert, obwohl niemand mehr das Ganze überblickt.
+ *     eine KI es auch könnte. Vertrauen, dass diese Wesenszüge bleiben.
+ *  2. «Netzwerke und Systeme» (Nassehi, Latour) — Orientierung in komplexen
+ *     Gesellschaften, in denen vieles funktioniert, obwohl niemand das Ganze
+ *     überblickt.
  *  3. «Transformation von Mensch und Maschine» (Latour, Deguchi, Haraway,
- *     Harari, Gabriel) — dass sich Mensch und Maschine nicht trennen lassen;
- *     Deguchis japanischer «We-Turn» (Selbst als Wir, ostasiatisch verwurzelt);
- *     Wege der Zusammenarbeit oder der bewussten Abgrenzung durch Regulation
- *     und Ethik, mit Transhumanismus (religiöse und endzeitliche Muster als
- *     Gegenschablone).
- *  4. «Der Mensch an seinem eigenen Ort» (Rosa, Han) — den Menschen wieder in
- *     die Mitte stellen: Resonanz statt Kontrolle, Innehalten statt Dauertempo.
+ *     Harari, Gabriel) — Mensch und Maschine sind nicht trennbar; Deguchis
+ *     japanischer «We-Turn» (Selbst als Wir, ostasiatisch verwurzelt);
+ *     Zusammenarbeit oder bewusste Abgrenzung durch Regulation und Ethik;
+ *     Transhumanismus mit religiösen und endzeitlichen Mustern als Gegenschablone.
+ *  4. «Lebenskunst» (Stoiker, Foucault, Schmid, Nussbaum, Merleau-Ponty, Rosa) —
+ *     das Leben ändern, ja, aber wie? Übung («Askesis»), kleine Schritte,
+ *     Ästhetik und Resonanz statt Zwang.
  *
- * Jeder Bereich ist ein Fliesstext (mit den Begriffen in «Anführungszeichen»),
- * die Denker:innen als Hover mit Kurzbiografie, dazu eine Box «Was dir das jetzt
- * hilft» und eine Bewertung. Ein Bereich zählt als Aktivität, sobald man aktiv
- * navigiert (nicht beim Laden). Nur Theme-Tokens, Material Symbols.
- *
- * Inhaltlich fundiert auf den bereitgestellten Werken (Gabriel «Ethische
- * Intelligenz», Latour «Existenzweisen», Nassehi «Muster», Haraway «Unruhig
- * bleiben», Arendt «Vita activa», Hustvedt «Die Illusion der Gewissheit»,
- * Sloterdijk «Du musst dein Leben ändern») und guten öffentlichen Quellen
- * (Aristoteles, Kant, Hegel, Heidegger, Harari, Rosa, Han, Deguchis
- * We-Turn-Philosophie). Belege getrennt gepflegt.
+ * Ein Bereich zählt als Aktivität, sobald man aktiv navigiert (nicht beim
+ * Laden). Die Info-Boxen sind reine Erklärhilfen (kein Tracking). Inhaltlich
+ * fundiert auf den bereitgestellten Werken und guten öffentlichen Quellen; für
+ * die Lebenskunst u.a. Wilhelm Schmid. Belege getrennt gepflegt. Nur
+ * Theme-Tokens, Material Symbols.
  */
 
 interface Denker {
   name: string;
   leben: string;
-  /** Kurzbiografie für den Hover: Zeit, Leben, Werk und Bedeutung. */
-  bio: string;
+  /** Eine Zeile, immer sichtbar (neben den Lebensdaten). */
+  these: string;
+  /** Konkrete Infos zur Philosophie, aufklappbar. */
+  info: string;
 }
 
 interface Bereich {
@@ -59,7 +53,7 @@ interface Bereich {
   /** Eine Zeile: worum es in diesem Bereich geht. */
   leitfrage: string;
   icon: string;
-  /** Die Denker:innen dieses Bereichs (Reihe mit Hover-Biografie). */
+  /** Die Denker:innen dieses Bereichs (je eine aufklappbare Info-Box). */
   denker: Denker[];
   /** Fliesstext: Grundidee, die Stimmen, neue Begriffe («…»). */
   absaetze: string[];
@@ -78,37 +72,44 @@ const BEREICHE: Bereich[] = [
       {
         name: "Aristoteles",
         leben: "384 bis 322 v. Chr.",
-        bio: "Griechischer Philosoph, Schüler Platons. Er ordnete fast das ganze Wissen seiner Zeit und prägte das Denken über Natur, Ethik und Politik bis heute. Von ihm stammt der Satz, alle Menschen streben von Natur aus nach Wissen.",
+        these: "Der Mensch strebt von Natur aus nach Wissen.",
+        info: "In seiner «Metaphysik» beginnt Aristoteles mit dem Satz, alle Menschen strebten von Natur aus nach Wissen. Neugier ist für ihn kein Zufall, sondern Wesenszug: Der Mensch will verstehen und fragt nach dem Warum, nicht nur nach dem Was.",
       },
       {
         name: "Immanuel Kant",
         leben: "1724 bis 1804",
-        bio: "Deutscher Philosoph aus Königsberg, einer der wirkmächtigsten überhaupt. Er stellte die Frage «Was ist der Mensch?» ins Zentrum und begründete die Freiheit und Würde des Menschen: Wer aus Vernunft handeln kann, trägt Verantwortung.",
+        these: "Frei und darum verantwortlich.",
+        info: "Kant bündelte die Philosophie in vier Fragen; die letzte lautet «Was ist der Mensch?». Seine Antwort: Der Mensch kann aus Vernunft handeln, nicht bloss Trieben folgen. Diese Freiheit macht ihn verantwortlich. Eine Maschine folgt Regeln, sie verantwortet nichts.",
       },
       {
         name: "Georg Wilhelm Friedrich Hegel",
         leben: "1770 bis 1831",
-        bio: "Deutscher Philosoph, einer der grossen Systemdenker. Für ihn entfaltet sich der «Geist» durch Unterscheiden und Gegensätze. Denken heisst bei Hegel, Unterschiede zu machen, sie auszuhalten und in Bewegung zu bringen.",
+        these: "Denken heisst unterscheiden.",
+        info: "Für Hegel entfaltet sich der «Geist» durch Unterscheiden: Wir halten Gegensätze auseinander, was ist und was sein soll, und bringen sie in Bewegung. Erst dadurch können wir urteilen und uns entscheiden. So bekommt gerade das Unterscheiden und Entscheiden eine zutiefst menschliche Seite. (Hauptwerk: «Phänomenologie des Geistes», 1807.)",
       },
       {
         name: "Hannah Arendt",
         leben: "1906 bis 1975",
-        bio: "Deutsch-amerikanische politische Philosophin. Floh als Jüdin vor den Nazis. Sie dachte über Handeln, Urteilen und Freiheit nach und prägte den Begriff der «Natalität»: Mit jedem Menschen kommt ein neuer Anfang in die Welt.",
+        these: "Der Mensch kann neu anfangen.",
+        info: "Arendt prägte den Begriff «Natalität»: Mit jedem Menschen kommt ein neuer Anfang in die Welt, der aus dem Bisherigen nicht ableitbar ist. Dazu das Urteilen, das Innehalten und selbst Entscheiden. Eine KI schreibt das Wahrscheinliche fort, anfangen und urteilen kann sie nicht. (Werk: «Vita activa».)",
       },
       {
         name: "Martin Heidegger",
         leben: "1889 bis 1976",
-        bio: "Deutscher Philosoph, Hauptwerk «Sein und Zeit». Wegen seiner Nähe zum Nationalsozialismus umstritten; hier zählt sein Gedanke der «Sorge»: dass dem Menschen sein eigenes Leben nicht gleichgültig ist.",
+        these: "Dem Menschen ist sein Leben nicht gleichgültig.",
+        info: "Heidegger nennt den Grundzug des Menschen «Sorge»: Uns geht es um unser Leben, wir fragen nach Sinn und wissen um unsere Endlichkeit. Einer Maschine ist nichts wichtig, ihr geht es um nichts. (Hauptwerk: «Sein und Zeit», 1927.)",
       },
       {
         name: "Peter Sloterdijk",
         leben: "geboren 1947",
-        bio: "Deutscher Philosoph und Publizist, einer der bekanntesten der Gegenwart. In «Du musst dein Leben ändern» beschreibt er den Menschen als übendes Wesen: Wir werden, wer wir sind, durch Übung, Wiederholung und Selbstformung.",
+        these: "Der Mensch ist ein übendes Wesen.",
+        info: "Sloterdijk beschreibt den Menschen als Wesen, das sich durch Übung und Wiederholung selbst formt («Anthropotechnik»). «Du musst dein Leben ändern» ist bei ihm kein Befehl, sondern der Grundton ständiger Selbstformung. Niemand kann für uns üben, auch keine Maschine. (Werk: «Du musst dein Leben ändern», 2009.)",
       },
       {
         name: "Siri Hustvedt",
         leben: "geboren 1955",
-        bio: "US-amerikanische Schriftstellerin und Essayistin. In «Die Illusion der Gewissheit» zeigt sie, dass der Geist kein Computer ist: Denken und Fühlen hängen am lebendigen Körper und an gelebter Erfahrung.",
+        these: "Der Geist ist kein Computer.",
+        info: "Hustvedt zeigt, dass Denken und Fühlen am lebendigen Körper und an gelebter Erfahrung hängen, sie spricht vom «verkörperten Geist». Eine KI kann Gefühle täuschend echt nachahmen, aber sie erlebt nichts, sie macht keine Erfahrungen. (Werk: «Die Illusion der Gewissheit», 2018.)",
       },
     ],
     absaetze: [
@@ -129,12 +130,14 @@ const BEREICHE: Bereich[] = [
       {
         name: "Armin Nassehi",
         leben: "geboren 1960",
-        bio: "Deutscher Soziologe, lehrt in München. Er deutet die moderne Gesellschaft als System von «Mustern» und fragt nüchtern, für welches Problem eine neue Technik eine Lösung ist. Wichtige Stimme der Gegenwartsdebatte.",
+        these: "Die Gesellschaft ist in Mustern gebaut.",
+        info: "Nassehi fragt nicht, was die Digitalisierung mit uns macht, sondern für welches Problem sie eine Lösung ist. Seine Antwort: Unsere Gesellschaft läuft längst über «Muster», über Zahlen und Abläufe, die auch ohne Gesamtüberblick funktionieren. Die KI erkennt solche Muster hervorragend, ohne ihren Sinn zu verstehen. (Werk: «Muster», 2019.)",
       },
       {
         name: "Bruno Latour",
         leben: "1947 bis 2022",
-        bio: "Französischer Soziologe und Philosoph, weltweit einflussreich. Mitbegründer der Akteur-Netzwerk-Theorie: Wirkung entsteht nie allein, sondern im Netz aus Menschen und Dingen. Er untersuchte, wie Gesellschaft ihre Wahrheiten herstellt.",
+        these: "Nichts wirkt allein.",
+        info: "Mit der Akteur-Netzwerk-Theorie zeigt Latour, dass jede Wirkung im Netz aus Menschen und Dingen entsteht. Orientierung heisst darum nicht, alles zu überblicken, sondern das eigene Netz zu kennen: Wovon hänge ich ab, was wirkt mit mir zusammen? (Werk: «Existenzweisen», 2012.)",
       },
     ],
     absaetze: [
@@ -154,27 +157,32 @@ const BEREICHE: Bereich[] = [
       {
         name: "Bruno Latour",
         leben: "1947 bis 2022",
-        bio: "Französischer Soziologe und Philosoph. Mit der Akteur-Netzwerk-Theorie zeigte er, dass niemand allein handelt: Wir stecken immer in Abhängigkeiten von Menschen und Dingen. Das ganz freie, unabhängige Individuum ist eine Illusion.",
+        these: "Das freie Individuum ist eine Illusion.",
+        info: "Latour zeigt, dass es das ganz freie, unabhängige Individuum nie gab. Wir stecken immer in Abhängigkeiten, von Menschen, Werkzeugen, Institutionen. Je bewusster man sich diese macht, desto klarer und souveräner wird das eigene Tun.",
       },
       {
         name: "Yasuo Deguchi",
         leben: "zeitgenössisch",
-        bio: "Japanischer Philosoph an der Universität Kyoto. Er verbindet westliches und ostasiatisches Denken. Mit seiner «We-Turn»-Philosophie verlegt er das Handeln vom einzelnen «Ich» auf ein «Wir», das auch Dinge und Maschinen einschliesst.",
+        these: "Nicht «ich» handelt, sondern «wir».",
+        info: "Der Kyoto-Philosoph Deguchi verlegt das Handeln mit seiner «We-Turn»-Philosophie vom «Ich» auf ein «Wir». Niemand kann etwas ganz allein, jede Handlung wird von vielen getragen, von Menschen, Dingen und heute Maschinen. Die KI gehört zu diesem «Wir». Die Idee wurzelt im ostasiatischen, buddhistischen Denken, dass nichts für sich allein besteht.",
       },
       {
         name: "Donna Haraway",
         leben: "geboren 1944",
-        bio: "US-amerikanische Wissenschaftshistorikerin und feministische Denkerin. Ihr «Manifest für Cyborgs» (1985) denkt Mensch, Tier und Maschine als verwoben. Sie fragt, wie wir verantwortlich mit Technik leben.",
+        these: "Wir sind längst verwoben.",
+        info: "Haraway denkt Mensch, Tier und Maschine als verwoben, wir sind in gewissem Sinn schon «Cyborgs». Statt der Technik als fremder Macht gegenüberzustehen, sollen wir lernen, verantwortlich mit ihr zu leben. (Werke: «Ein Manifest für Cyborgs», 1985; «Unruhig bleiben», 2016.)",
       },
       {
         name: "Yuval Noah Harari",
         leben: "geboren 1976",
-        bio: "Israelischer Historiker, mit «Eine kurze Geschichte der Menschheit» und «Homo Deus» weltbekannt. Er beschreibt, wie Menschheit und Technik sich gemeinsam verändern, und warnt zugleich vor blindem Fortschrittsglauben.",
+        these: "Grosse Macht braucht Regeln.",
+        info: "Harari beschreibt, wie Menschheit und Technik sich gemeinsam verändern. Die Verschmelzung von Mensch und Maschine setzt gewaltige Macht frei, darum braucht sie klare Regeln und Wachsamkeit gegen blinden Fortschrittsglauben. (Werk: «Homo Deus».)",
       },
       {
         name: "Markus Gabriel",
         leben: "geboren 1980",
-        bio: "Deutscher Philosoph, sehr jung Professor in Bonn. Bekannt für den «Neuen Realismus». In «Ethische Intelligenz» plädiert er dafür, die KI ethisch mitzugestalten, statt sie nur zu verbieten oder alles zu erlauben.",
+        these: "Die KI ist ein Spiegel, entscheiden musst du.",
+        info: "Gabriel nennt die KI einen «magischen Spiegel», sie zeigt uns unsere Muster und Werte. Die eigentliche Revolution ist für ihn nicht technisch, sondern ethisch: «ethische Intelligenz» heisst, die KI klug und moralisch mitzugestalten, statt sie nur zu verbieten oder alles zu erlauben. (Werk: «Ethische Intelligenz».)",
       },
     ],
     absaetze: [
@@ -188,29 +196,56 @@ const BEREICHE: Bereich[] = [
     werk: "Yasuo Deguchi, «We-Turn»-Philosophie (Selbst als Wir); Donna Haraway, «Unruhig bleiben» (2016); Yuval Noah Harari, «Homo Deus»; Markus Gabriel, «Ethische Intelligenz»; mit Bruno Latour, Akteur-Netzwerk-Theorie",
   },
   {
-    titel: "Der Mensch an seinem eigenen Ort",
-    leitfrage: "Wie der Mensch in der Mitte bleibt, statt in Tempo und Technik zu verschwinden.",
+    titel: "Lebenskunst",
+    leitfrage: "Das Leben ändern, ja, aber wie?",
     icon: "self_improvement",
     denker: [
       {
-        name: "Hartmut Rosa",
-        leben: "geboren 1965",
-        bio: "Deutscher Soziologe. Bekannt für die Zeitdiagnose der «Beschleunigung» und den Begriff «Resonanz»: ein lebendiges Antwortverhältnis zur Welt, das mehr zählt als immer schnellere Kontrolle und Optimierung.",
+        name: "Die Stoiker",
+        leben: "Antike",
+        these: "Übe, was in deiner Macht steht.",
+        info: "Für die Stoiker (Epiktet, Seneca, Mark Aurel) ist Philosophie kein blosses Wissen, sondern tägliche Übung. Sie unterscheiden, was in unserer Macht steht und was nicht, und üben Gelassenheit gegenüber dem, was wir nicht ändern können. Ein gutes Leben entsteht durch beständige kleine Übung, nicht durch einmalige Einsicht.",
       },
       {
-        name: "Byung-Chul Han",
-        leben: "geboren 1959",
-        bio: "Koreanisch-deutscher Philosoph, kam zum Studium nach Deutschland. Bekannt für scharfe Zeitkritik («Müdigkeitsgesellschaft», «Vita contemplativa»). Er plädiert für Entschleunigung, Ruhe und Betrachtung statt Dauerleistung.",
+        name: "Michel Foucault",
+        leben: "1926 bis 1984",
+        these: "Sich selbst formen wie ein Kunstwerk.",
+        info: "Der französische Philosoph entdeckte in der Antike die «Sorge um sich selbst» wieder: das Leben bewusst gestalten, sich selbst formen wie ein Kunstwerk («Ästhetik der Existenz»). Nicht einfach fremden Normen folgen, sondern die eigene Lebensform aktiv wählen und einüben. (Werk: «Die Sorge um sich», 1984.)",
+      },
+      {
+        name: "Wilhelm Schmid",
+        leben: "geboren 1953",
+        these: "Das Leben ändern, aber wie? In kleinen Schritten.",
+        info: "Der Philosoph der Lebenskunst zeigt, warum aus guten Vorsätzen selten Taten werden, und was hilft: kleinste Schritte, täglich, fast beiläufig, aber regelmässig. Nicht das ganze Buch auf einmal, sondern jeden Tag eine Seite. So wird aus einem Vorsatz eine neue Gewohnheit. Und weil Freude stärker wirkt als Zwang, soll man sich am Schönen orientieren, zu dem man Ja sagen kann.",
+      },
+      {
+        name: "Martha Nussbaum",
+        leben: "geboren 1947",
+        these: "Gefühle gehören zum guten Leben.",
+        info: "Die US-amerikanische Philosophin zeigt, dass Gefühle keine Störung der Vernunft sind, sondern zu einem guten Urteil und einem gelingenden Leben dazugehören. Mit ihrem «Fähigkeiten-Ansatz» fragt sie, was Menschen wirklich brauchen, um gut zu leben. (Werk: «Fähigkeiten schaffen», 2011.)",
+      },
+      {
+        name: "Maurice Merleau-Ponty",
+        leben: "1908 bis 1961",
+        these: "Wir verstehen die Welt mit dem Leib.",
+        info: "Der französische Philosoph betont den Leib: Wir erfahren die Welt nicht nur mit dem Kopf, sondern leiblich, durch Wahrnehmung, Bewegung und Gefühl. Verstehen und gutes Leben sind verkörpert. Genau das kann eine körperlose KI nicht, sie rechnet, aber sie spürt nicht. (Werk: «Phänomenologie der Wahrnehmung», 1945.)",
+      },
+      {
+        name: "Hartmut Rosa",
+        leben: "geboren 1965",
+        these: "Resonanz statt Kontrolle.",
+        info: "Rosa nennt ein gelingendes Verhältnis zur Welt «Resonanz»: ein lebendiges, wechselseitiges Berührtwerden, das sich nicht auf Knopfdruck herstellen lässt. Gegen die Logik von immer mehr Tempo und Verfügbarkeit setzt er das Sich-berühren-Lassen. (Werke: «Resonanz», 2016; «Unverfügbarkeit», 2018.)",
       },
     ],
     absaetze: [
-      "In Netzwerken, Systemen und im Zusammenspiel mit Maschinen droht der Mensch aus dem Blick zu geraten: verrechnet, beschleunigt, ständig verfügbar. Dieser Bereich stellt ihn wieder in die Mitte und fragt nach seinem eigenen Ort. Nicht gegen die Technik, sondern als Gegengewicht: Wo findet der Mensch Halt und ein gutes Verhältnis zu sich und zur Welt?",
-      "Hartmut Rosa nennt dieses gute Verhältnis «Resonanz». Ein gelingendes Leben entsteht für ihn nicht durch mehr Kontrolle, mehr Tempo und mehr Verfügbarkeit, sondern durch ein lebendiges Antworten zwischen Mensch und Welt, ein wechselseitiges Berührtwerden. Vieles, was zählt, lässt sich gerade nicht auf Knopfdruck herstellen, es muss einem begegnen. Gegen die Logik der immer schnelleren Optimierung setzt Rosa die Erfahrung, berührt und bewegt zu werden.",
-      "Der koreanisch-deutsche Philosoph Byung-Chul Han schaut auf die Kehrseite der Beschleunigung. Er beschreibt eine «Müdigkeitsgesellschaft», die sich im Dauerleistungsmodus selbst erschöpft, und ruft die «Vita contemplativa» in Erinnerung, das Verweilen, die Ruhe, die Betrachtung. Erst wer innehält, kommt wieder an seinen eigenen Ort. Beide, Rosa und Han, wollen den Menschen nicht aus der Welt herausnehmen, sondern ihn in ihr wieder zentrieren.",
+      "«Du musst dein Leben ändern», heisst es in einem berühmten Gedicht von Rainer Maria Rilke. Ja, aber wie? Das ist die Grundfrage der Lebenskunst. Denn aus einer Einsicht folgt noch lange keine Tat, jeder kennt das von den guten Vorsätzen an Silvester, die am Neujahrsmorgen schon wieder verblasst sind. Dieser Bereich fragt nicht, was der Mensch ist, sondern wie er sein Leben tatsächlich gestalten und ändern kann.",
+      "Schon die Stoiker wussten: Philosophie ist tägliche Übung, nicht blosses Wissen. Das griechische Wort dafür ist «Askesis», Übung, nicht Verzicht. Michel Foucault nannte das die «Sorge um sich selbst», das Leben bewusst formen wie ein Kunstwerk. Und der Lebenskunst-Philosoph Wilhelm Schmid zeigt konkret, wie: in kleinsten Schritten, täglich, fast beiläufig, aber regelmässig. Nicht das ganze Buch auf einmal, sondern jeden Tag eine Seite. So wird aus einem Vorsatz allmählich eine neue Gewohnheit.",
+      "Dabei zählt nicht nur der Kopf. Martha Nussbaum erinnert daran, dass Gefühle zum guten Leben gehören, und Maurice Merleau-Ponty, dass wir die Welt leiblich verstehen, durch Körper und Wahrnehmung. Genau darum wirkt Schönes stärker als Zwang: Wer sich an etwas orientiert, zu dem er Ja sagen kann, verändert sich lieber. Hartmut Rosa nennt dieses lebendige Verhältnis zur Welt «Resonanz».",
+      "Und die KI? Sie kann bei der Umsetzung helfen, etwa eine App, die an die kleinen Übungen erinnert und Fortschritte zeigt. Aber gehen muss man den Weg selbst. Eine Spritze oder ein Klick nimmt die Anstrengung ab, doch das eingeübte, selbst gestaltete Leben ersetzt sie nicht. Lebenskunst bleibt Menschensache.",
     ],
     hilft:
-      "Gegen Tempo und ständige Erreichbarkeit hilft es, bewusst innezuhalten und Resonanz zu suchen: Dinge, Menschen und Tätigkeiten, die dich wirklich berühren, statt nur zu funktionieren. Die KI kann vieles beschleunigen, aber deinen eigenen Ort, dein Verhältnis zu dir und zur Welt, musst und darfst du selbst finden.",
-    werk: "Hartmut Rosa, «Resonanz» (2016) und «Unverfügbarkeit» (2018); Byung-Chul Han, «Müdigkeitsgesellschaft» (2010) und «Vita contemplativa» (2022)",
+      "Wenn du etwas ändern willst, warte nicht auf den grossen Ruck. Nimm dir den kleinstmöglichen Schritt vor, jeden Tag einen, und knüpfe ihn an etwas Schönes, zu dem du Ja sagst. Die KI darf dich erinnern und begleiten, aber die Übung, und damit dein Leben, gestaltest du selbst.",
+    werk: "Wilhelm Schmid, «Philosophie der Lebenskunst» (1998); Michel Foucault, «Die Sorge um sich» (1984); Martha Nussbaum, «Fähigkeiten schaffen» (2011); Maurice Merleau-Ponty, «Phänomenologie der Wahrnehmung» (1945); Hartmut Rosa, «Resonanz» (2016); dazu die Stoiker (Epiktet, Seneca, Mark Aurel)",
   },
 ];
 
@@ -228,6 +263,8 @@ export default function Denkwege({
   const gesamt = BEREICHE.length;
   const [idx, setIdx] = useState(0);
   const [gesehen, setGesehen] = useState<Set<number>>(new Set());
+  /* Aufgeklappte Info-Boxen, Schlüssel «bereichIdx-denkerIdx». */
+  const [offeneBox, setOffeneBox] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     function restore() {
@@ -263,6 +300,15 @@ export default function Denkwege({
     setIdx(i);
   }
 
+  function boxUmschalten(key: string) {
+    setOffeneBox((prev) => {
+      const nx = new Set(prev);
+      if (nx.has(key)) nx.delete(key);
+      else nx.add(key);
+      return nx;
+    });
+  }
+
   const b = BEREICHE[idx];
 
   return (
@@ -296,24 +342,62 @@ export default function Denkwege({
           </div>
         </div>
 
-        {/* Die Denker:innen dieses Bereichs — Name mit Hover-Kurzbiografie */}
-        <div className="mt-md flex flex-wrap items-center gap-x-md gap-y-xs border-y border-outline-variant/60 py-sm">
-          <span className="text-label-sm uppercase tracking-wider text-tertiary">
-            Stimmen
-          </span>
-          {b.denker.map((p) => (
-            <span key={p.name} className="text-label-sm text-on-surface-variant">
-              <DenkerHover name={p.name} bio={p.bio} />
-              <span className="opacity-70"> · {p.leben}</span>
-            </span>
-          ))}
-        </div>
-
         {/* Fliesstext: Grundidee, die Stimmen, neue Begriffe («…») */}
         <div className="mt-md space-y-sm text-body-md leading-relaxed text-on-surface-variant">
           {b.absaetze.map((absatz, i) => (
             <p key={i}>{absatz}</p>
           ))}
+        </div>
+
+        {/* Pro Person eine aufklappbare Box mit konkreten Infos zur Philosophie */}
+        <div className="mt-lg">
+          <p className="mb-sm flex items-center gap-xs text-label-sm uppercase tracking-wider text-tertiary">
+            <span className="material-symbols-outlined text-[16px]">groups</span>
+            Die Stimmen, zum Nachgehen
+          </p>
+          <div className="overflow-hidden rounded-xl border border-outline-variant">
+            {b.denker.map((p, i) => {
+              const key = `${idx}-${i}`;
+              const auf = offeneBox.has(key);
+              return (
+                <div key={p.name} className={i > 0 ? "border-t border-outline-variant" : ""}>
+                  <button
+                    type="button"
+                    onClick={() => boxUmschalten(key)}
+                    aria-expanded={auf}
+                    className="flex w-full items-center gap-sm px-sm py-sm text-left outline-none transition-colors hover:bg-surface-container focus-visible:bg-surface-container"
+                  >
+                    <span className="material-symbols-outlined text-[20px] text-tertiary">
+                      record_voice_over
+                    </span>
+                    <span className="min-w-0 flex-1">
+                      <span className="block text-body-md font-medium text-on-surface">
+                        {p.name}
+                      </span>
+                      <span className="block text-label-sm text-on-surface-variant">
+                        {p.leben} · {p.these}
+                      </span>
+                    </span>
+                    <span
+                      className={
+                        "material-symbols-outlined flex-shrink-0 text-[22px] text-on-surface-variant transition-transform duration-300 " +
+                        (auf ? "rotate-180" : "")
+                      }
+                    >
+                      expand_more
+                    </span>
+                  </button>
+                  {auf && (
+                    <div className="animate-frame-in px-sm pb-sm pl-[2.75rem]">
+                      <p className="text-body-sm leading-relaxed text-on-surface-variant">
+                        {p.info}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
 
         {/* Die eine Box: Was hilft mir diese Einordnung jetzt? */}
