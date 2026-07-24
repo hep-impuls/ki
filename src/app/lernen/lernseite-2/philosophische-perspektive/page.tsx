@@ -682,8 +682,8 @@ export default function Lernseite2PhilosophischePerspektive() {
         <VerunsicherungsEpochen className="mt-lg" />
       </Abschnitt>
 
-      {/* Wege der Orientierung — fünf heutige Denkansätze zur KI-Verunsicherung,
-          als durchklickbare Slides (nach den Epochen mit ihren Bildern) */}
+      {/* Wege der Orientierung — drei Bereiche der philosophischen Orientierung
+          zur KI-Verunsicherung, als durchklickbare Slides (nach den Epochen) */}
       <Abschnitt
         id="denkwege"
         className="mt-xl max-w-5xl"
@@ -704,35 +704,37 @@ export default function Lernseite2PhilosophischePerspektive() {
       >
         <div className="mt-md space-y-sm text-body-lg text-on-surface-variant">
           <p>
-            Zum Schluss kommen wir in die Gegenwart. Acht Denkerinnen und Denker
-            helfen, mit der Verunsicherung durch die KI umzugehen. Die Philosophie
-            klärt dabei zwei Dinge. Sie fragt, was der Mensch grundsätzlich ist,
-            und sie fragt, wie der Mensch mit der Maschine verbunden ist. Wichtig
-            ist der Blick auf das Wesentliche. Es geht nicht darum, was die Maschine
-            dem Menschen abnimmt, sondern was Mensch und was Maschine im Kern
-            ausmacht. Der Mensch kann anfangen und er urteilt. Die Maschine kann das
-            nicht, dafür erkennt sie Muster in Daten, ob riesig oder klein.
+            Zum Schluss kommen wir in die Gegenwart. Die Philosophie hilft hier
+            nicht mit fertigen Rezepten, sondern mit Einordnung. Wir bündeln sie
+            in <strong className="text-on-surface">drei Bereiche</strong>, und bei
+            jedem steht am Ende dieselbe Frage: Was hilft mir diese Einordnung
+            jetzt?
           </p>
           <p>
-            Zwei Fragen leiten die Denkwege. Hannah Arendt, Martin Heidegger, Peter
-            Sloterdijk und Siri Hustvedt fragen,{" "}
-            <strong className="text-on-surface">was den Menschen ausmacht</strong>.
-            Bruno Latour, Armin Nassehi, Markus Gabriel und Donna Haraway fragen,{" "}
-            <strong className="text-on-surface">wie wir mit der KI umgehen</strong>{" "}
-            sollen.
+            Der erste Bereich fragt, was den Menschen im Kern ausmacht, unabhängig
+            davon, ob eine KI es auch könnte, mit Aristoteles, Hannah Arendt,
+            Martin Heidegger und Immanuel Kant. Der zweite erklärt, wie wir in
+            komplexen Gesellschaften Orientierung finden, obwohl niemand mehr das
+            Ganze überblickt, mit Bruno Latour und Armin Nassehi. Der dritte zeigt,
+            dass sich Mensch und Maschine nicht sauber trennen lassen, und fragt
+            nach Wegen der Zusammenarbeit oder der bewussten Abgrenzung, mit
+            Latour, Donna Haraway, Yuval Noah Harari, Markus Gabriel und Hartmut
+            Rosa.
           </p>
           <p>
-            Jeder Denkweg ist ein kurzer Text, der mit einem Gegenwartsbezug
-            schliesst und ihn mit dem Umgang mit KI verbindet. Du musst nicht allen
-            zustimmen. Geh sie durch, vergleiche und bewerte, welcher Zugang dir
-            hilft.
+            Wichtig bleibt der Blick auf das Wesentliche. Es geht nicht darum, was
+            die Maschine dem Menschen abnimmt, sondern was Mensch und was Maschine
+            im Kern ausmacht. Der Mensch kann anfangen und er urteilt. Die Maschine
+            kann das nicht, dafür erkennt sie Muster in Daten, ob riesig oder
+            klein. Du musst nicht jedem Bereich zustimmen. Geh sie durch,
+            vergleiche und bewerte, welcher Zugang dir hilft.
           </p>
         </div>
         <Aufgabe className="mt-md">
-          Geh die acht Denkwege der Reihe nach durch. Jeder erklärt eine Sicht auf
-          den Menschen oder auf den Umgang mit der KI und schliesst mit einem
-          Gegenwartsbezug. Bewerte bei jedem, wie sehr dir der Zugang hilft, dich zu
-          orientieren.
+          Geh die drei Bereiche der Reihe nach durch. Jeder fasst mehrere
+          Denkerinnen und Denker zusammen und schliesst mit der Frage, was dir
+          diese Einordnung jetzt hilft. Bewerte bei jedem, wie sehr dir der Zugang
+          hilft, dich zu orientieren.
         </Aufgabe>
         <Denkwege className="mt-lg" spurKey="philosophische-perspektive:denkwege" />
         <p className="mt-lg max-w-3xl text-body-md text-on-surface-variant">

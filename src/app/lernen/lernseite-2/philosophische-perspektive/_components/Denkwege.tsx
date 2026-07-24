@@ -12,172 +12,156 @@ import GewichtungWahl from "../../_components/GewichtungWahl";
 import DenkerHover from "../../_components/DenkerHover";
 
 /**
- * Denkwege — «Wege der Orientierung»: acht philosophische Ansätze zur
- * Verunsicherung durch KI, als durchklickbare Slides. Zwei Fragen gliedern sie:
- * «Was ist der Mensch?» (Arendt, Heidegger, Sloterdijk, Hustvedt) und «Wie
- * umgehen mit der KI?» (Latour, Nassehi, Gabriel, Haraway).
+ * Denkwege — «Wege der Orientierung»: drei Bereiche, in denen die Philosophie
+ * beim Umgang mit der KI hilft, als durchklickbare Slides. Jeder Bereich fasst
+ * mehrere Denker:innen zusammen und fragt am Ende: Was hilft mir diese
+ * Einordnung jetzt?
  *
- * Leitgedanke: Es geht nicht darum, was die Maschine dem Menschen abnimmt,
- * sondern was wesentlich Mensch und was wesentlich Maschine ist. Der Mensch kann
- * anfangen und er urteilt; die Maschine erkennt Muster in Daten. Jeder Slide ist
- * ein Fliesstext (mit den vorgeschlagenen Begriffen in «Anführungszeichen») und
- * schliesst mit einer Box «Gegenwartsbezug» plus einer Bewertung.
+ *  1. «Was ist der Mensch?» (Aristoteles, Arendt, Heidegger, Kant) — was uns im
+ *     Kern ausmacht, unabhängig davon, ob eine KI es auch könnte. Vertrauen,
+ *     dass diese Wesenszüge nicht verschwinden.
+ *  2. «Netzwerke und Systeme» (Latour, Nassehi) — wie wir in komplexen
+ *     Gesellschaften Orientierung gewinnen und verstehen, wieso vieles trotzdem
+ *     funktioniert, obwohl niemand mehr das Ganze überblickt.
+ *  3. «Transformation von Mensch und Maschine» (Latour, Haraway, Harari,
+ *     Gabriel, Rosa) — dass sich Mensch und Maschine nicht sauber trennen
+ *     lassen; Wege der Zusammenarbeit oder der bewussten Abgrenzung, mit
+ *     Transhumanismus (religiöse und endzeitliche Muster als Gegenschablone).
+ *
+ * Jeder Bereich ist ein Fliesstext (mit den Begriffen in «Anführungszeichen»),
+ * die Denker:innen als Hover mit Kurzbiografie, dazu eine Box «Was dir das jetzt
+ * hilft» und eine Bewertung. Ein Bereich zählt als Aktivität, sobald man aktiv
+ * navigiert (nicht beim Laden). Nur Theme-Tokens, Material Symbols.
  *
  * Inhaltlich fundiert auf den bereitgestellten Werken (Gabriel «Ethische
- * Intelligenz», Latour «Existenzweisen», Nassehi «Muster», Hustvedt «Die
- * Illusion der Gewissheit», Sloterdijk «Du musst dein Leben ändern» und
- * «Philosophische Temperamente», Arendt via von Redecker «Gravitation zum Guten»
- * und Arendt «Der Liebesbegriff bei Augustin», Haraway «Unruhig bleiben») sowie
- * guten öffentlichen Quellen (Heidegger). Belege getrennt gepflegt.
- *
- * Ein Slide zählt als Aktivität, sobald man aktiv navigiert (nicht beim Laden).
- * Nur Theme-Tokens, Material Symbols.
+ * Intelligenz», Latour «Existenzweisen», Nassehi «Muster», Haraway «Unruhig
+ * bleiben», Arendt «Vita activa») und guten öffentlichen Quellen (Aristoteles,
+ * Kant, Heidegger, Harari, Rosa). Belege getrennt gepflegt.
  */
 
-interface Denkweg {
-  gruppe: string;
-  denker: string;
+interface Denker {
+  name: string;
   leben: string;
-  these: string;
-  icon: string;
-  /** Kurzbiografie für den Hover: Leben, Werk und Bedeutung. */
+  /** Kurzbiografie für den Hover: Zeit, Leben, Werk und Bedeutung. */
   bio: string;
-  /** Fliesstext: Grundidee, wogegen, neue Begriffe («…») und Orientierung. */
+}
+
+interface Bereich {
+  /** Leitfrage als Titel. */
+  titel: string;
+  /** Eine Zeile: worum es in diesem Bereich geht. */
+  leitfrage: string;
+  icon: string;
+  /** Die Denker:innen dieses Bereichs (Reihe mit Hover-Biografie). */
+  denker: Denker[];
+  /** Fliesstext: Grundidee, die Stimmen, neue Begriffe («…»). */
   absaetze: string[];
-  /** Die eine Box: was der Ansatz für den Umgang mit KI heute bedeutet. */
-  gegenwart: string;
-  /** Quellenzeile (Werk, Jahr). */
+  /** Die eine Box: Was hilft mir diese Einordnung jetzt? */
+  hilft: string;
+  /** Quellenzeile (Werke). */
   werk: string;
 }
 
-const DENKWEGE: Denkweg[] = [
+const BEREICHE: Bereich[] = [
   {
-    gruppe: "Was ist der Mensch?",
-    denker: "Hannah Arendt",
-    leben: "1906 bis 1975",
-    these: "Neu anfangen und selbst urteilen",
-    icon: "psychology",
-    bio: "Deutsch-amerikanische politische Philosophin. Floh als Jüdin vor den Nazis und lebte ab 1941 in New York. Ihr Hauptwerk ist «Vita activa»; sie prägte die «Banalität des Bösen» und gilt als grosse Denkerin von Handeln und Urteilen.",
-    absaetze: [
-      "Für Hannah Arendt ist die entscheidende Frage nicht, was die Maschine dem Menschen abnimmt, sondern was den Menschen im Kern ausmacht und was die Maschine im Kern ist. Ihre Antwort hat zwei Seiten. Der Mensch kann anfangen. Mit jedem Menschen kommt etwas Neues in die Welt, das aus dem Bisherigen nicht ableitbar ist. Diese Fähigkeit nennt Arendt die «Natalität». Und der Mensch urteilt. Er hält inne, prüft und entscheidet, was richtig ist, auch aus der Sicht anderer, was Arendt die «erweiterte Denkungsart» nennt.",
-      "Eine KI kann beides nicht. Sie erkennt Muster in Daten, ob riesig oder klein, und schreibt das Wahrscheinliche fort. Sie fängt nichts an und sie urteilt nicht, sie rechnet. Genau davor warnt Arendt mit dem Wort «Gedankenlosigkeit», dem Leben in fertigen Floskeln, ohne selbst zu prüfen. Am Prozess gegen Eichmann zeigte sie, wie gefährlich es wird, wenn Menschen aufhören, selbst zu denken.",
-      "Daraus folgt eine klare Orientierung. Die flüssigen, gut klingenden Sätze einer KI sind oft genau jene Floskeln, vor denen Arendt warnt. Menschlich bleibt, wer innehält, prüft, selbst urteilt und etwas beginnt, das aus den Daten nicht folgt. So gibt man das Anfangen und das Urteilen nicht aus der Hand.",
-    ],
-    gegenwart:
-      "Lass die KI eine heikle Kundenmail schreiben. Markiere zuerst die Sätze, die gut klingen, aber nichts sagen. Beurteile den Text dann neu aus Sicht der Kundin und entscheide selbst, ob du wirklich dahinterstehst. Das Formulieren kann die Maschine, das Anfangen und das Urteilen bleibt bei dir.",
-    werk: "nach Eva von Redecker, «Gravitation zum Guten» (2013); Arendt, «Eichmann in Jerusalem» (1963); Wurzeln in «Der Liebesbegriff bei Augustin» (1929)",
-  },
-  {
-    gruppe: "Was ist der Mensch?",
-    denker: "Martin Heidegger",
-    leben: "1889 bis 1976",
-    these: "Sich sorgen, verwoben mit der Technik",
-    icon: "favorite",
-    bio: "Deutscher Philosoph, einer der einflussreichsten des 20. Jahrhunderts. Sein Hauptwerk «Sein und Zeit» fragt neu nach dem Sinn von Sein. Wegen seiner Nähe zum Nationalsozialismus bleibt er umstritten; hier zählt sein Denken über die Technik.",
-    absaetze: [
-      "Martin Heidegger fragt, was das menschliche Dasein ausmacht, und nennt es die «Sorge». Gemeint ist nicht die alltägliche Sorge, sondern dass dem Menschen sein eigenes Leben nicht gleichgültig ist. Wir kümmern uns, fragen nach Sinn und wissen um unsere Endlichkeit. Eine Maschine rechnet und erkennt Muster, aber ihr ist nichts wichtig, ihr geht es um nichts.",
-      "Zugleich zeigt Heidegger mit dem Begriff «Gestell», wie eng der Mensch mit der Technik verwoben ist. Das Gestell ist die moderne Grundhaltung, alles als verfügbaren Vorrat zu sehen. Entscheidend ist, wie Heidegger das meint. Es ist kein Aufruf, sich von der Technik zu lösen, denn der Mensch kann längst nicht mehr ohne sie. Es ist die Einsicht, dass wir von Technik abhängig und mit ihr verbunden sind. Wer das sieht, kann bewusst mit ihr umgehen, statt sich blind von ihr treiben zu lassen.",
-      "Heidegger nennt diese Haltung «Gelassenheit». Sie bedeutet nicht Rückzug aus der Technik, sondern einen klaren, ruhigen Umgang mit ihr, im Wissen, dass wir Teil desselben Gefüges sind. Orientierung entsteht, wenn wir die Technik nutzen und uns weiter sorgen, denn das Sich-Sorgen kann uns keine Maschine abnehmen.",
-    ],
-    gegenwart:
-      "Ein Pflegeteam lässt die KI den Dienstplan berechnen. Ohne solche Werkzeuge läuft der Betrieb längst nicht mehr, die Abhängigkeit ist real. Genau deshalb bleibt die Sorge um die Patientinnen und Patienten beim Menschen. Die Technik nutzen und sich zugleich sorgen, das ist kein Widerspruch, sondern Heideggers Punkt.",
-    werk: "Martin Heidegger, «Sein und Zeit» (1927), «Die Frage nach der Technik» (1954) und «Gelassenheit» (1959)",
-  },
-  {
-    gruppe: "Was ist der Mensch?",
-    denker: "Peter Sloterdijk",
-    leben: "geboren 1947",
-    these: "Der Mensch bildet sich durch Übung",
+    titel: "Was ist der Mensch?",
+    leitfrage: "Was uns im Kern ausmacht, ganz unabhängig von der Maschine.",
     icon: "self_improvement",
-    bio: "Deutscher Philosoph und Publizist, einer der bekanntesten der Gegenwart. Bekannt durch die «Sphären»-Trilogie und «Du musst dein Leben ändern». Er beschreibt den Menschen als übendes Wesen und mischt sich oft in öffentliche Debatten ein.",
-    absaetze: [
-      "Peter Sloterdijk beschreibt den Menschen als übendes Wesen. Wir werden, wer wir sind, durch Übung, Wiederholung und Selbstformung. Er nennt den Menschen das Lebewesen, das aus der Wiederholung entsteht. Für die Verfahren, mit denen wir an uns arbeiten, prägt er den Begriff «Anthropotechnik». Und «Du musst dein Leben ändern» ist bei ihm kein Befehl, sondern der Grundton, sich immer wieder in Form zu bringen.",
-      "Menschen leben nach Sloterdijk nie ganz allein, sondern in gemeinsamen, schützenden Räumen, die er «Sphären» nennt, eine Art geteiltes Immunsystem. Sein Einwand richtet sich gegen die Bequemlichkeit, Fähigkeiten ganz an die Technik abzugeben. Wer nicht mehr übt, verlernt und wird unselbständig. Der heutige, wie er sagt, konfuse Mensch muss sich neu orientieren.",
-      "Gegenüber der KI liegt die menschliche Aufgabe darum im Üben. Eine Maschine kann eine Aufgabe für uns erledigen, aber nicht für uns üben. Wer weiter übt, versteht, was die KI tut, bleibt fähig und kann ihr Ergebnis prüfen. Orientierung entsteht nicht durch Abgeben, sondern durch beständige Übung.",
+    denker: [
+      {
+        name: "Aristoteles",
+        leben: "384 bis 322 v. Chr.",
+        bio: "Griechischer Philosoph, Schüler Platons. Er ordnete fast das ganze Wissen seiner Zeit und prägte das Denken über Natur, Ethik und Politik bis heute. Von ihm stammt der Satz, alle Menschen streben von Natur aus nach Wissen.",
+      },
+      {
+        name: "Hannah Arendt",
+        leben: "1906 bis 1975",
+        bio: "Deutsch-amerikanische politische Philosophin. Floh als Jüdin vor den Nazis. Sie dachte über Handeln, Urteilen und Freiheit nach und prägte den Begriff der «Natalität»: Mit jedem Menschen kommt ein neuer Anfang in die Welt.",
+      },
+      {
+        name: "Martin Heidegger",
+        leben: "1889 bis 1976",
+        bio: "Deutscher Philosoph, Hauptwerk «Sein und Zeit». Wegen seiner Nähe zum Nationalsozialismus umstritten; hier zählt sein Gedanke der «Sorge»: dass dem Menschen sein eigenes Leben nicht gleichgültig ist.",
+      },
+      {
+        name: "Immanuel Kant",
+        leben: "1724 bis 1804",
+        bio: "Deutscher Philosoph aus Königsberg, einer der wirkmächtigsten überhaupt. Er stellte die Frage «Was ist der Mensch?» ins Zentrum und begründete die Freiheit und Würde des Menschen: Wer aus Vernunft handeln kann, trägt Verantwortung.",
+      },
     ],
-    gegenwart:
-      "Die KI löst eine Rechnung oder übersetzt einen Text in Sekunden. Übe die Grundfertigkeit trotzdem selbst. Nur so merkst du, wenn die KI danebenliegt, und bleibst Herr über das Ergebnis, statt ihm ausgeliefert zu sein.",
-    werk: "Peter Sloterdijk, «Du musst dein Leben ändern» (2009) und «Philosophische Temperamente» (2009)",
+    absaetze: [
+      "«Was ist der Mensch?» Diese Frage ist so alt wie die Philosophie selbst. Schon Aristoteles sah den Menschen als Wesen, das von Natur aus nach Wissen strebt, neugierig, fragend, nie ganz fertig. Immanuel Kant machte sie später zur Kernfrage überhaupt und gab eine Richtung vor: Der Mensch ist frei, er kann aus eigener Einsicht handeln, und darum trägt er Verantwortung. Es geht hier nicht darum, ob eine KI dasselbe auch könnte. Es geht darum, was uns in unserem Wesen ausmacht.",
+      "Hannah Arendt nennt einen dieser Wesenszüge das Anfangen. Mit jedem Menschen kommt etwas Neues in die Welt, das aus dem Bisherigen nicht ableitbar ist. Und der Mensch urteilt, er hält inne und entscheidet selbst. Martin Heidegger fügt die «Sorge» hinzu: Dem Menschen ist sein eigenes Leben nicht gleichgültig, er kümmert sich, fragt nach Sinn, weiss um seine Endlichkeit. Anfangen, urteilen, sich sorgen, neugierig sein, Verantwortung übernehmen, das sind keine Aufgaben, die man abgibt. So sind wir.",
+      "Was hilft dir diese Einordnung? Sie nimmt der Angst den Boden, die KI könnte das Menschliche verdrängen. Denn diese Züge sind nicht etwas, das wir bloss tun, sondern etwas, das wir sind. Wir können gar nicht anders, als anzufangen, zu urteilen und uns zu sorgen. Dafür braucht es am Ende ein Grundvertrauen: dass diese Wesenszüge nicht einfach verschwinden, nur weil eine Maschine gute Sätze schreibt. Sie bleiben, auch wenn sich vieles um uns verändert.",
+    ],
+    hilft:
+      "Wenn dich die schnelle, kluge KI verunsichert, kehr zur Frage zurück, was dich als Mensch ausmacht. Anfangen, urteilen, sich sorgen, das bleibt deins, ganz gleich, wie gut die Maschine formuliert. Dieses Vertrauen in die eigenen Wesenszüge trägt durch den Wandel.",
+    werk: "Aristoteles, «Metaphysik»; Immanuel Kant, «Logik» (1800); Hannah Arendt, «Vita activa»; Martin Heidegger, «Sein und Zeit» (1927)",
   },
   {
-    gruppe: "Was ist der Mensch?",
-    denker: "Siri Hustvedt",
-    leben: "geboren 1955",
-    these: "Der Geist ist kein Computer",
-    icon: "accessibility_new",
-    bio: "US-amerikanische Schriftstellerin und Essayistin. Sie verbindet Literatur mit der Erforschung von Geist und Gehirn. In «Die Illusion der Gewissheit» zeigt sie, dass der menschliche Geist kein Computer ist.",
-    absaetze: [
-      "Siri Hustvedt zeigt, dass sich der menschliche Geist nicht auf einen Computer im Kopf reduzieren lässt. Denken und Fühlen hängen am lebendigen Körper und an gelebter Erfahrung, sie spricht darum vom «verkörperten Geist». Eine KI kann Sprache und Gefühle täuschend echt nachahmen, aber sie erlebt nichts, denn wie Hustvedt sagt, Maschinen machen keine Erfahrungen.",
-      "Ihr Einwand richtet sich gegen den verbreiteten Vergleich, das Gehirn sei ein Computer, und gegen die falsche Gewissheit, wir wüssten genau, wie der Geist arbeitet. Dagegen setzt sie den «produktiven Zweifel», also gutes Fragen und mehrere Sichtweisen statt schneller Sicherheit.",
-      "Das ergibt ein einfaches Unterscheidungswerkzeug. Die KI simuliert, sie tut nur so als ob, sie erfährt nicht. Wer das im Blick behält, verwechselt das flüssige Modell nicht mit der Wirklichkeit und fällt weder in Begeisterung noch in Panik.",
-    ],
-    gegenwart:
-      "Lass die KI einen tröstenden Text an eine Kollegin schreiben, die eine Prüfung nicht bestanden hat. Vergleiche ihn mit einem selbst geschriebenen. Der KI-Text klingt oft passend, aber die KI war nie nervös und hat nie versagt. Sie kennt das Gefühl nur als Muster, nicht als Erfahrung.",
-    werk: "Siri Hustvedt, «Die Illusion der Gewissheit» (2018)",
-  },
-  {
-    gruppe: "Wie umgehen mit der KI?",
-    denker: "Bruno Latour",
-    leben: "1947 bis 2022",
-    these: "Nicht alles ist auf dieselbe Art wahr",
-    icon: "category",
-    bio: "Französischer Soziologe und Philosoph, weltweit einflussreich. Mitbegründer der Akteur-Netzwerk-Theorie, wonach Wirkung im Netz aus Menschen und Dingen entsteht. Er untersuchte, wie Wissenschaft Wahrheit herstellt, und schrieb «Existenzweisen».",
-    absaetze: [
-      "Bruno Latour sagt, es gibt nicht nur eine Art, wahr zu sein. Wissenschaft, Technik, Recht und Erzählung haben je eigene Regeln dafür, was als gelungen gilt. Er nennt sie «Existenzweisen». Viele Verunsicherungen entstehen, wenn man das eine mit den Massstäben des anderen misst, ein «Kategorienfehler».",
-      "Besonders wehrt sich Latour gegen den «Doppelklick», die Illusion, Information komme ganz ohne Verarbeitung als fertige Wahrheit zu uns, so wie ein Klick sofort ein Ergebnis liefert. In Wahrheit hat jede Aussage einen Weg hinter sich, den man kennen sollte.",
-      "Bei jeder KI-Ausgabe hilft darum die Frage, um welche Art von Aussage es sich handelt. Die sogenannte Halluzination der KI ist im Grunde ein Kategorienfehler. Ein Text, der wie eine Erzählung gebaut ist, wird für geprüftes Wissen gehalten. Wer sortiert und prüft, statt dem flüssigen Ton blind zu vertrauen, orientiert sich sicherer.",
-    ],
-    gegenwart:
-      "Prüfe eine flüssige KI-Antwort mit drei Fragen. Gibt es überprüfbare Belege? Ist der Vorschlag praktisch brauchbar? Oder klingt er einfach nur gut? So ersetzt du Blindvertrauen durch gezieltes Sortieren und merkst, welche Art von Aussage vor dir liegt.",
-    werk: "Bruno Latour, «Existenzweisen» (2012), und die Akteur-Netzwerk-Theorie",
-  },
-  {
-    gruppe: "Wie umgehen mit der KI?",
-    denker: "Armin Nassehi",
-    leben: "geboren 1960",
-    these: "Die KI nüchtern einordnen",
-    icon: "pattern",
-    bio: "Deutscher Soziologe, lehrt in München. Er deutet die Gesellschaft als System von Mustern. In «Muster» fragt er nüchtern, für welches Problem die Digitalisierung eine Lösung ist, und gilt als wichtige Stimme der Gegenwartsdebatte.",
-    absaetze: [
-      "Armin Nassehi dreht die Frage um. Er fragt nicht, was die Digitalisierung mit uns macht, sondern für welches Problem sie eine Lösung ist. Seine Antwort: Unsere Gesellschaft ist seit langem in «Mustern» gebaut, in Statistiken, Zählungen und Datenspuren. Die KI erkennt diese Muster hervorragend, versteht aber keinen Sinn.",
-      "Sein nüchterner Blick richtet sich gegen zwei Übertreibungen zugleich, die Dämonisierung der KI als übermächtige Über-Vernunft und ihre Verharmlosung als blosse Spielerei. Beides verstellt die Sicht. Wichtig ist ihm die Rollenteilung. Das Gerät schlägt vor, der Mensch entscheidet und verantwortet.",
-      "Das nimmt der KI das Bedrohliche. Sie ist keine überlegene Über-Vernunft, sondern eine Maschine, die Muster rechnet. Wer versteht, wie sie arbeitet, verliert die Angst vor dem Mythos und gewinnt Urteilskraft zurück. Oft schätzt man danach das Menschliche neu.",
-    ],
-    gegenwart:
-      "Ein Diagnosecomputer meldet einen Fehler am Fahrzeug. Die Fachperson entscheidet, ob sie dem Gerät folgt oder es überstimmt. Das Gerät erkennt das Muster, die Verantwortung für die Entscheidung bleibt beim Menschen.",
-    werk: "Armin Nassehi, «Muster. Theorie der digitalen Gesellschaft» (2019)",
-  },
-  {
-    gruppe: "Wie umgehen mit der KI?",
-    denker: "Markus Gabriel",
-    leben: "geboren 1980",
-    these: "Die KI ist ein Spiegel, entscheiden musst du",
-    icon: "balance",
-    bio: "Deutscher Philosoph, sehr jung Professor in Bonn geworden. Bekannt für den «Neuen Realismus» und Bestseller wie «Warum es die Welt nicht gibt». In «Ethische Intelligenz» vertritt er eine ethische, zuversichtliche Sicht auf die KI.",
-    absaetze: [
-      "Markus Gabriel nennt die KI einen «magischen Spiegel». Sie erkennt in unseren Daten Muster, auch unsere Werte und Gewohnheiten, manchmal genauer, als wir uns selbst kennen. Für ihn ist die eigentliche Revolution darum nicht technisch, sondern ethisch. Die KI zeigt, wer wir sind, aber was wir daraus machen, bleibt unsere Entscheidung.",
-      "Gabriel wendet sich gegen die zwei Sackgassen der Debatte, alles aus Angst zu verbieten oder alles zu erlauben. Er schlägt einen «dritten Weg» vor, das Mitgestalten. Sein Begriff dafür ist «ethische Intelligenz», also klug mit der KI zu leben und dabei selbst moralisch besser zu werden.",
-      "Damit dreht Gabriel die Angst um. Nicht die Maschine steht auf dem Prüfstand, sondern wir. Die KI beschreibt nur Muster, das Urteil über gut und gerecht fällen wir. So wird aus Ohnmacht eine handlungsfähige Haltung, denn wie er sagt, nicht die Maschine muss sich bewähren, sondern wir.",
-    ],
-    gegenwart:
-      "Lass ein Sprachmodell einen kurzen eigenen Text auswerten, etwa einen Bewerbungssatz, mit der Frage, was er über dich verrät. Prüfe, ob das Spiegelbild stimmt. Und halte fest, dass die KI nur beschreibt, wer du sein willst, entscheidest du.",
-    werk: "Markus Gabriel, «Ethische Intelligenz» (2026)",
-  },
-  {
-    gruppe: "Wie umgehen mit der KI?",
-    denker: "Donna Haraway",
-    leben: "geboren 1944",
-    these: "Wir sind längst verwoben",
+    titel: "Netzwerke und Systeme",
+    leitfrage: "Wie wir Orientierung finden, wo niemand mehr das Ganze überblickt.",
     icon: "hub",
-    bio: "US-amerikanische Wissenschaftshistorikerin und feministische Denkerin. Ihr «Manifest für Cyborgs» von 1985 wurde weltberühmt. Sie denkt Mensch, Tier und Maschine als verwoben und fragt, wie wir verantwortlich mit Technik leben. Steht Bruno Latour nahe.",
-    absaetze: [
-      "Donna Haraway sagt, Mensch und Maschine, Natur und Kultur sind nicht sauber getrennt. Wir sind längst miteinander verwoben, in gewissem Sinn schon «Cyborgs», also Mischwesen aus Mensch und Maschine. Statt der Technik als fremder Macht gegenüberzustehen, sollen wir lernen, verantwortlich mit ihr zu leben.",
-      "Ihre Begriffe zielen alle auf dieses Miteinander. «Sympoiesis» heisst Mit-Machen, nichts entsteht allein, alles entsteht gemeinsam. «Mit dem Schlamassel bleiben» heisst, die Probleme auszuhalten und zu antworten, statt zu flüchten. Damit steht Haraway nahe bei Bruno Latour, den sie zu ihren Denkgefährten zählt. Sie teilt seine Absage an die strikte Trennung von Natur und Kultur, ergänzt sie aber um Fürsorge und Verantwortung.",
-      "So nimmt Haraway zwei bequemen Fluchtreaktionen die Kraft, dem Glauben, die Technik richte es schon, und der Haltung, es sei ohnehin zu spät. Statt zu fragen, ob Mensch oder Maschine, fragt man, in welche Netze man mit dieser KI schon verwoben ist und wie man sie gut mitgestaltet.",
+    denker: [
+      {
+        name: "Armin Nassehi",
+        leben: "geboren 1960",
+        bio: "Deutscher Soziologe, lehrt in München. Er deutet die moderne Gesellschaft als System von «Mustern» und fragt nüchtern, für welches Problem eine neue Technik eine Lösung ist. Wichtige Stimme der Gegenwartsdebatte.",
+      },
+      {
+        name: "Bruno Latour",
+        leben: "1947 bis 2022",
+        bio: "Französischer Soziologe und Philosoph, weltweit einflussreich. Mitbegründer der Akteur-Netzwerk-Theorie: Wirkung entsteht nie allein, sondern im Netz aus Menschen und Dingen. Er untersuchte, wie Gesellschaft ihre Wahrheiten herstellt.",
+      },
     ],
-    gegenwart:
-      "Du nutzt ein KI-Tool im Beruf. Statt zu denken, die Maschine macht das für mich, oder KI ist ohnehin Betrug, mach mit und bleib verantwortlich. Sieh, dass hinter der Antwort viele Menschen, Daten und Rechenzentren stecken, prüfe das Ergebnis und frag, wen dein Umgang damit betrifft.",
-    werk: "Donna Haraway, «Unruhig bleiben» (2016) und «Ein Manifest für Cyborgs» (1985)",
+    absaetze: [
+      "Moderne Gesellschaften sind unübersichtlich geworden. Niemand überblickt mehr das Ganze, nicht die Wirtschaft, nicht die Verwaltung, nicht die Technik. Aus dem Gefühl, den Überblick verloren zu haben, entsteht schnell Überforderung. Und doch funktioniert erstaunlich vieles: Der Zug fährt, der Lohn kommt, das Spital behandelt. Wie geht das zusammen? Hier helfen zwei Denker, die die Gesellschaft nicht bewerten, sondern erklären.",
+      "Armin Nassehi sagt: Unsere Gesellschaft ist längst in «Mustern» gebaut, in Zahlen, Statistiken und Abläufen, die auch ohne einen einzelnen Überblick funktionieren. Kein Mensch muss das Ganze verstehen, damit es läuft, das System trägt sich über seine Muster. Die KI passt genau in diese Welt, denn sie erkennt Muster hervorragend, ohne ihren Sinn zu verstehen. Wer das begreift, sieht die KI nüchterner und weniger bedrohlich.",
+      "Bruno Latour ergänzt: Nichts wirkt allein. Jede Handlung hängt an einem Netz aus Menschen, Geräten, Regeln und Gewohnheiten, er nennt es ein Netzwerk von «Akteuren», zu denen auch die Dinge gehören. Orientierung gewinnt man darum nicht, indem man alles überblickt, sondern indem man das eigene Netz kennt: Wovon hänge ich ab, wer und was wirkt hier mit mir zusammen?",
+    ],
+    hilft:
+      "Wenn dich die Komplexität überfordert, musst du nicht das Ganze verstehen. Es reicht, dein Stück des Netzes zu kennen und zu sehen, welche Muster gerade wirken. Das gibt Boden unter den Füssen, auch wenn niemand mehr alles überblickt. Die Gesellschaft funktioniert nicht trotz, sondern wegen dieser verteilten Muster.",
+    werk: "Armin Nassehi, «Muster. Theorie der digitalen Gesellschaft» (2019); Bruno Latour, «Existenzweisen» (2012) und die Akteur-Netzwerk-Theorie",
+  },
+  {
+    titel: "Transformation von Mensch und Maschine",
+    leitfrage: "Warum sich Mensch und Maschine nicht sauber trennen lassen.",
+    icon: "handshake",
+    denker: [
+      {
+        name: "Bruno Latour",
+        leben: "1947 bis 2022",
+        bio: "Französischer Soziologe und Philosoph. Mit der Akteur-Netzwerk-Theorie zeigte er, dass niemand allein handelt: Wir stecken immer in Abhängigkeiten von Menschen und Dingen. Das ganz freie, unabhängige Individuum ist eine Illusion.",
+      },
+      {
+        name: "Donna Haraway",
+        leben: "geboren 1944",
+        bio: "US-amerikanische Wissenschaftshistorikerin und feministische Denkerin. Ihr «Manifest für Cyborgs» (1985) denkt Mensch, Tier und Maschine als verwoben. Sie fragt, wie wir verantwortlich mit Technik leben.",
+      },
+      {
+        name: "Yuval Noah Harari",
+        leben: "geboren 1976",
+        bio: "Israelischer Historiker, mit «Eine kurze Geschichte der Menschheit» und «Homo Deus» weltbekannt. Er beschreibt, wie Menschheit und Technik sich gemeinsam verändern, und warnt zugleich vor blindem Fortschrittsglauben.",
+      },
+      {
+        name: "Markus Gabriel",
+        leben: "geboren 1980",
+        bio: "Deutscher Philosoph, sehr jung Professor in Bonn. Bekannt für den «Neuen Realismus». In «Ethische Intelligenz» plädiert er dafür, die KI ethisch mitzugestalten, statt sie nur zu verbieten oder alles zu erlauben.",
+      },
+      {
+        name: "Hartmut Rosa",
+        leben: "geboren 1965",
+        bio: "Deutscher Soziologe. Bekannt für seine Zeitdiagnose der «Beschleunigung» und den Begriff «Resonanz»: ein lebendiges Antwortverhältnis zur Welt, das mehr zählt als immer schnellere Kontrolle und Optimierung.",
+      },
+    ],
+    absaetze: [
+      "Mensch und Maschine lassen sich nicht mehr sauber auseinanderdividieren. Wir tippen, suchen, planen und entscheiden längst mit Geräten zusammen. Schon Bruno Latour zeigt, warum das kein neuer Sonderfall ist: Das ganz freie Individuum, das egoistisch nur tut, was es will, hat es nie gegeben. Wir stecken immer in Abhängigkeiten, von Menschen, Werkzeugen, Institutionen. Je klarer man sich diese Abhängigkeiten bewusst macht, desto verständlicher wird das eigene Tun und desto souveräner der Umgang damit.",
+      "Was folgt daraus? Donna Haraway sagt, wir sind längst «verwoben», in gewissem Sinn schon Mischwesen aus Mensch und Maschine, und sollten das verantwortlich gestalten statt es zu leugnen. Yuval Noah Harari mahnt, dass diese Verschmelzung gewaltige Macht freisetzt und darum Regeln braucht. Markus Gabriel setzt auf «ethische Intelligenz», das kluge, moralische Mitgestalten. Und Hartmut Rosa erinnert daran, dass es nicht um immer mehr Kontrolle und Tempo geht, sondern um «Resonanz», ein lebendiges Verhältnis zur Welt. Zwei Wege zeichnen sich ab: sich auf die Zusammenarbeit einlassen oder den eigenen, menschlichen Weg umso deutlicher markieren, auch durch Regulation und Ethik.",
+      "Am äussersten Rand steht der «Transhumanismus», die Idee, den Menschen durch Technik grenzenlos zu steigern, vielleicht sogar den Tod zu überwinden. Zum Einordnen helfen zwei ältere Muster als Gegenschablone. Zum einen die religiösen Heilsversprechen, denen der Transhumanismus verblüffend ähnelt, nur dass hier die Technik die Erlösung bringen soll. Zum anderen die endzeitlichen Untergangserzählungen, in denen die KI alles auslöscht. Beides, Erlösung wie Weltuntergang, sind grosse, alte Geschichten. Wer sie erkennt, fällt weder auf den Hype noch auf die Panik herein.",
+    ],
+    hilft:
+      "Du musst dich nicht zwischen Verschmelzung und Verweigerung entscheiden. Es hilft schon, die eigenen Abhängigkeiten zu kennen und bewusst zu wählen, wo du mitmachst und wo du deinen eigenen Weg markierst. Zwischen dem Heilsversprechen «Technik rettet uns» und dem Untergang «KI zerstört uns» liegt der nüchterne Alltag, den Regeln und Ethik gestaltbar machen.",
+    werk: "Donna Haraway, «Unruhig bleiben» (2016); Yuval Noah Harari, «Homo Deus»; Markus Gabriel, «Ethische Intelligenz»; Hartmut Rosa, «Resonanz» (2016); mit Bruno Latour, Akteur-Netzwerk-Theorie",
   },
 ];
 
@@ -192,7 +176,7 @@ export default function Denkwege({
   spurKey: string;
   className?: string;
 }) {
-  const gesamt = DENKWEGE.length;
+  const gesamt = BEREICHE.length;
   const [idx, setIdx] = useState(0);
   const [gesehen, setGesehen] = useState<Set<number>>(new Set());
 
@@ -213,7 +197,7 @@ export default function Denkwege({
   }, [spurKey, gesamt]);
 
   useEffect(() => {
-    DENKWEGE.forEach((d, i) => merkeInhalt(`${spurKey}:${i}`, `${d.denker}: ${d.these}`));
+    BEREICHE.forEach((b, i) => merkeInhalt(`${spurKey}:${i}`, b.titel));
   }, [spurKey]);
 
   function geheZu(ziel: number) {
@@ -230,55 +214,66 @@ export default function Denkwege({
     setIdx(i);
   }
 
-  const d = DENKWEGE[idx];
+  const b = BEREICHE[idx];
 
   return (
     <section aria-label="Wege der Orientierung" className={className}>
       <div className="mb-md flex items-center gap-xs text-label-md uppercase tracking-wider text-on-surface-variant">
         <span className="material-symbols-outlined text-[18px] text-tertiary">
-          {gesehen.size === gesamt ? "done_all" : "menu_book"}
+          {gesehen.size === gesamt ? "done_all" : "explore"}
         </span>
         {gesehen.size === 0
-          ? `${gesamt} Denkwege, klick dich durch`
-          : `${gesehen.size} von ${gesamt} Denkwegen angeschaut`}
+          ? `${gesamt} Bereiche, klick dich durch`
+          : `${gesehen.size} von ${gesamt} Bereichen angeschaut`}
       </div>
 
       <div className="rounded-2xl border border-outline-variant bg-surface-bright p-md sm:p-lg">
         <div className="flex flex-wrap items-center justify-between gap-sm">
           <span className="inline-flex items-center gap-xs rounded-full bg-tertiary-container/50 px-sm py-xs text-label-sm text-on-tertiary-container">
-            {d.gruppe}
+            Orientierung
           </span>
           <span className="text-label-sm text-on-surface-variant">
-            Denkweg {idx + 1} von {gesamt}
+            Bereich {idx + 1} von {gesamt}
           </span>
         </div>
 
         <div className="mt-md flex items-start gap-md">
           <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-tertiary-container text-on-tertiary-container">
-            <span className="material-symbols-outlined text-[24px]">{d.icon}</span>
+            <span className="material-symbols-outlined text-[24px]">{b.icon}</span>
           </span>
           <div className="min-w-0">
-            <p className="text-label-sm text-on-surface-variant">
-              <DenkerHover name={d.denker} bio={d.bio} /> · {d.leben}
-            </p>
-            <h3 className="text-headline-sm text-on-surface">{d.these}</h3>
+            <h3 className="text-headline-sm text-on-surface">{b.titel}</h3>
+            <p className="mt-xs text-body-sm text-on-surface-variant">{b.leitfrage}</p>
           </div>
         </div>
 
-        {/* Fliesstext: Grundidee, wogegen, neue Begriffe («…»), Orientierung */}
+        {/* Die Denker:innen dieses Bereichs — Name mit Hover-Kurzbiografie */}
+        <div className="mt-md flex flex-wrap items-center gap-x-md gap-y-xs border-y border-outline-variant/60 py-sm">
+          <span className="text-label-sm uppercase tracking-wider text-tertiary">
+            Stimmen
+          </span>
+          {b.denker.map((p) => (
+            <span key={p.name} className="text-label-sm text-on-surface-variant">
+              <DenkerHover name={p.name} bio={p.bio} />
+              <span className="opacity-70"> · {p.leben}</span>
+            </span>
+          ))}
+        </div>
+
+        {/* Fliesstext: Grundidee, die Stimmen, neue Begriffe («…») */}
         <div className="mt-md space-y-sm text-body-md leading-relaxed text-on-surface-variant">
-          {d.absaetze.map((absatz, i) => (
+          {b.absaetze.map((absatz, i) => (
             <p key={i}>{absatz}</p>
           ))}
         </div>
 
-        {/* Die eine Box: Gegenwartsbezug */}
+        {/* Die eine Box: Was hilft mir diese Einordnung jetzt? */}
         <div className="mt-lg rounded-xl bg-tertiary-container/40 p-md sm:p-lg">
           <p className="flex items-center gap-xs text-label-sm uppercase tracking-wider text-on-tertiary-container">
-            <span className="material-symbols-outlined text-[18px]">smart_toy</span>
-            Gegenwartsbezug
+            <span className="material-symbols-outlined text-[18px]">explore</span>
+            Was dir das jetzt hilft
           </p>
-          <p className="mt-xs text-body-md leading-relaxed text-on-surface">{d.gegenwart}</p>
+          <p className="mt-xs text-body-md leading-relaxed text-on-surface">{b.hilft}</p>
         </div>
 
         {/* Bewertung */}
@@ -293,7 +288,7 @@ export default function Denkwege({
         {/* Quelle */}
         <p className="mt-md flex items-start gap-xs text-label-sm text-on-surface-variant opacity-80">
           <span className="material-symbols-outlined text-[15px]">menu_book</span>
-          <span className="min-w-0">{d.werk}</span>
+          <span className="min-w-0">{b.werk}</span>
         </p>
 
         {/* Navigation */}
@@ -308,12 +303,12 @@ export default function Denkwege({
             Zurück
           </button>
           <div className="flex flex-wrap items-center justify-center gap-xs">
-            {DENKWEGE.map((_, i) => (
+            {BEREICHE.map((_, i) => (
               <button
                 key={i}
                 type="button"
                 onClick={() => geheZu(i)}
-                aria-label={`Denkweg ${i + 1}`}
+                aria-label={`Bereich ${i + 1}`}
                 className={
                   "h-2.5 rounded-full transition-all " +
                   (i === idx
