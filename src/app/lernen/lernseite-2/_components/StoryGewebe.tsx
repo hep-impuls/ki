@@ -498,6 +498,54 @@ export default function StoryGewebe({
     return p;
   }
 
+  // Selbst gebrachte Form des Gewebes über Navigation/Neuladen hinweg merken.
+  const posKey = spurKey ? `ki26-gewebe:${spurKey}` : null;
+
+  /** Gespeicherte Positionen in simRef laden. true, wenn welche vorlagen. */
+  function ladePositionen(): boolean {
+    if (!posKey || typeof window === "undefined") return false;
+    try {
+      const raw = window.localStorage.getItem(posKey);
+      if (!raw) return false;
+      const o = JSON.parse(raw) as Record<string, { x: number; y: number; fx?: number; fy?: number }>;
+      if (!o || typeof o !== "object") return false;
+      let vorhanden = false;
+      for (const k of Object.keys(o)) {
+        const i = Number(k);
+        const p = o[k];
+        if (Number.isInteger(i) && i >= 0 && i < n && p && typeof p.x === "number" && typeof p.y === "number") {
+          simRef.current.set(i, {
+            x: p.x,
+            y: p.y,
+            vx: 0,
+            vy: 0,
+            fx: typeof p.fx === "number" ? p.fx : null,
+            fy: typeof p.fy === "number" ? p.fy : null,
+          });
+          vorhanden = true;
+        }
+      }
+      return vorhanden;
+    } catch {
+      return false;
+    }
+  }
+
+  /** Aktuelle Positionen (inklusive angehefteter) sichern. */
+  function speicherePositionen(): void {
+    if (!posKey || typeof window === "undefined") return;
+    try {
+      const o: Record<number, { x: number; y: number; fx: number | null; fy: number | null }> = {};
+      alle.forEach((i) => {
+        const p = simRef.current.get(i);
+        if (p) o[i] = { x: p.x, y: p.y, fx: p.fx, fy: p.fy };
+      });
+      window.localStorage.setItem(posKey, JSON.stringify(o));
+    } catch {
+      /* Privatmodus */
+    }
+  }
+
   function simSchritt() {
     const alpha = alphaRef.current;
     const pts = alle.map((i) => ({ i, p: punktVon(i) }));
@@ -575,6 +623,7 @@ export default function StoryGewebe({
       } else {
         rafRef.current = null;
         setLive(false);
+        speicherePositionen();
       }
     };
     rafRef.current = requestAnimationFrame(step);
@@ -588,10 +637,13 @@ export default function StoryGewebe({
 
   useEffect(() => {
     if (ansichtId === "gewebe") {
-      // Netz einmal einschwingen. Angeheftete (gezogene) Punkte bleiben, wo sie
-      // sind, nur die übrigen ordnen sich. Auswahl ändert nur die Hervorhebung,
-      // nicht das Layout (kein Zappeln bei jedem Stichwort-Klick).
-      einschwingen();
+      // Selbst gebrachte Form aus dem Speicher laden; sonst einmal einschwingen
+      // und sichern. Angeheftete (gezogene) Punkte bleiben, wo sie sind. Auswahl
+      // ändert nur die Hervorhebung, nicht das Layout.
+      if (!ladePositionen()) {
+        einschwingen();
+        speicherePositionen();
+      }
       force((c) => c + 1);
     } else if (rafRef.current !== null) {
       cancelAnimationFrame(rafRef.current);
@@ -660,6 +712,7 @@ export default function StoryGewebe({
     }
     force((c) => c + 1);
     loopStart();
+    speicherePositionen();
   }
 
   /* ── Lesen, Auswahl, Zufall, Reset ────────────────────────────────────── */
@@ -738,9 +791,19 @@ export default function StoryGewebe({
 
   function zuruecksetzen() {
     if (spurKey) loescheSpuren(spurKey);
+    if (posKey) {
+      try {
+        window.localStorage.removeItem(posKey);
+      } catch {
+        /* Privatmodus */
+      }
+    }
+    simRef.current.clear();
     zufall(3);
     setAnsicht(0);
-    simRef.current.clear();
+    einschwingen();
+    speicherePositionen();
+    force((c) => c + 1);
   }
 
   const started = gesammelt.length > 0;

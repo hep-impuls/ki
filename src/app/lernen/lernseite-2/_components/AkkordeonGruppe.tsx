@@ -39,9 +39,10 @@ export default function AkkordeonGruppe({ children }: { children: ReactNode }) {
   useEffect(() => {
     const key = speicherKey();
     const hash = window.location.hash.replace(/^#/, "");
+    let zuOeffnen: string | null = null;
     if (hash) {
       // Deep-Link / Inhaltsverzeichnis gewinnt und wird gemerkt.
-      setOffen(hash);
+      zuOeffnen = hash;
       try {
         localStorage.setItem(key, hash);
       } catch {
@@ -51,10 +52,17 @@ export default function AkkordeonGruppe({ children }: { children: ReactNode }) {
       // Sonst den zuletzt geöffneten Abschnitt dieser Seite wiederherstellen.
       try {
         const gespeichert = localStorage.getItem(key);
-        if (gespeichert) setOffen(gespeichert);
+        if (gespeichert) zuOeffnen = gespeichert;
       } catch {
         /* Privatmodus */
       }
+    }
+    if (zuOeffnen) {
+      setOffen(zuOeffnen);
+      // Beim Wiederkommen an die zuletzt offene Stelle scrollen, damit man
+      // wieder bei seiner Aufgabe landet (block:start berücksichtigt scroll-mt).
+      const ziel = zuOeffnen;
+      setTimeout(() => document.getElementById(ziel)?.scrollIntoView({ block: "start" }), 250);
     }
     const ausHash = () => {
       const id = window.location.hash.replace(/^#/, "");
