@@ -1,6 +1,6 @@
 "use client";
 
-import { type ReactNode } from "react";
+import { useRef, type ReactNode } from "react";
 import AbschnittKopf from "./AbschnittKopf";
 import { useAkkordeon } from "./AkkordeonGruppe";
 import AktivitaetsKopf from "./AktivitaetsKopf";
@@ -40,15 +40,32 @@ export default function Abschnitt({
 }) {
   const ak = useAkkordeon();
   const offen = ak ? ak.offen === id : true;
-  const umschalten = ak ? () => ak.umschalten(id) : undefined;
   const bodyId = `${id}-inhalt`;
+  const sektionRef = useRef<HTMLElement>(null);
+
+  function beiKlick() {
+    if (!ak) return;
+    const wirdGeoeffnet = !offen;
+    ak.umschalten(id);
+    // Beim Öffnen an den Anfang dieses Abschnitts scrollen, damit man ihn von
+    // oben durchgehen kann. Sonst verschiebt das gleichzeitige Zuklappen des
+    // vorher offenen Abschnitts (weiter oben) die Sicht nach unten.
+    if (wirdGeoeffnet) {
+      // Nach dem Commit scrollen (setTimeout statt requestAnimationFrame, weil
+      // rAF in Hintergrund-Tabs pausiert). block:start berücksichtigt scroll-mt.
+      setTimeout(
+        () => sektionRef.current?.scrollIntoView({ behavior: "auto", block: "start" }),
+        0,
+      );
+    }
+  }
 
   return (
-    <section id={id} aria-label={titel} className={"scroll-mt-24 " + className}>
+    <section ref={sektionRef} id={id} aria-label={titel} className={"scroll-mt-24 " + className}>
       <AbschnittKopf bild={bild}>
         <button
           type="button"
-          onClick={umschalten}
+          onClick={beiKlick}
           aria-expanded={offen}
           aria-controls={bodyId}
           className="group/ab flex w-full items-center justify-between gap-md text-left outline-none"
