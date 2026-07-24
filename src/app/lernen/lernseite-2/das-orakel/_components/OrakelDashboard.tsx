@@ -15,6 +15,7 @@ import Knotenkarte from "../../_components/Knotenkarte";
 import KontextGewichtung from "../../_components/KontextGewichtung";
 import Ausklapptext from "../../_components/Ausklapptext";
 import Inhaltsverzeichnis from "../../_components/Inhaltsverzeichnis";
+import DenkerHover from "../../_components/DenkerHover";
 import {
   leseSpuren,
   SPUR_EVENT,
@@ -498,24 +499,47 @@ export default function OrakelDashboard() {
         <div className="mt-sm space-y-sm text-body-md text-on-surface-variant">
           <p>
             Vor über zweieinhalbtausend Jahren stiegen Menschen aus der ganzen
-            griechischen Welt nach Delphi hinauf, um das berühmteste Orakel der
-            Antike zu befragen. Dort sass die Priesterin Pythia auf einem
-            Dreifuss über einer Erdspalte und gab, oft in dunklen, deutbaren
-            Worten, Antwort. Ganze Städte fragten sie, bevor sie in den Krieg
-            zogen oder eine Kolonie gründeten. Dem lydischen König Krösus soll
-            sie gesagt haben, wenn er über den Grenzfluss ziehe, werde er ein
-            grosses Reich zerstören. Er zog los, verlor und zerstörte sein
+            griechischen Welt nach{" "}
+            <DenkerHover
+              name="Delphi"
+              bio="Heiligtum des Gottes Apollon in Mittelgriechenland, am Hang des Bergs Parnass. Über Jahrhunderte die wichtigste Orakelstätte der griechischen Welt."
+            />{" "}
+            hinauf, um das berühmteste Orakel der Antike zu befragen. Dort sass
+            die Priesterin{" "}
+            <DenkerHover
+              name="Pythia"
+              bio="Titel der Priesterin, die in Delphi für den Gott Apollon sprach. Sie galt als Vermittlerin zwischen Göttern und Menschen; ihre Sprüche waren oft mehrdeutig."
+            />{" "}
+            auf einem{" "}
+            <DenkerHover
+              name="Dreifuss"
+              bio="Dreibeiniger Kultsitz über der Erdspalte, auf dem die Pythia ihre Sprüche gab. In der Antike ein Sinnbild des Heiligtums von Delphi."
+            />{" "}
+            über einer Erdspalte und gab, oft in dunklen, deutbaren Worten,
+            Antwort. Ganze Städte fragten sie, bevor sie in den Krieg zogen oder
+            eine Kolonie gründeten. Dem lydischen König{" "}
+            <DenkerHover
+              name="Krösus"
+              bio="Letzter König von Lydien (heute Westtürkei), rund 595 bis 546 v. Chr. Galt als sagenhaft reich, «reich wie Krösus». Sein Feldzug gegen das Perserreich endete mit dem Verlust des eigenen Reichs."
+            />{" "}
+            soll sie gesagt haben, wenn er über den Grenzfluss ziehe, werde er
+            ein grosses Reich zerstören. Er zog los, verlor und zerstörte sein
             eigenes. Das Orakel war ein Ort, an dem eine unübersichtliche Welt
             gedeutet wurde, lange bevor es Wissenschaft gab.
           </p>
           <p>
             Über dem Tempeleingang stand «Erkenne dich selbst». Für den
-            Philosophen Sokrates wurde dieser Satz zur Lebensaufgabe. Als das
-            Orakel ihn den weisesten Menschen nannte, verstand er das so, dass
-            echte Weisheit darin liegt, die eigenen Grenzen zu kennen. Aus der
-            Götterbefragung wurde damit eine Aufforderung, sich selbst zu prüfen.
-            Genau darum geht es auch hier: nicht um eine höhere Wahrheit, sondern
-            um einen ehrlichen Blick auf den eigenen Weg.
+            Philosophen{" "}
+            <DenkerHover
+              name="Sokrates"
+              bio="Griechischer Philosoph in Athen, rund 469 bis 399 v. Chr. Bekannt für hartnäckiges Nachfragen und den Satz «Ich weiss, dass ich nichts weiss». Überliefert ist er vor allem durch seinen Schüler Platon."
+            />{" "}
+            wurde dieser Satz zur Lebensaufgabe. Als das Orakel ihn den weisesten
+            Menschen nannte, verstand er das so, dass echte Weisheit darin liegt,
+            die eigenen Grenzen zu kennen. Aus der Götterbefragung wurde damit
+            eine Aufforderung, sich selbst zu prüfen. Genau darum geht es auch
+            hier: nicht um eine höhere Wahrheit, sondern um einen ehrlichen Blick
+            auf den eigenen Weg.
           </p>
           <p>
             Wir nennen diesen Rückblick trotzdem «Orakel», aber aus einem anderen
@@ -1293,13 +1317,25 @@ export default function OrakelDashboard() {
               <KontextGewichtung />
             </div>
 
-            {/* Aktivitäts-Boxen */}
-            <h2 style={{ fontSize: "1.1rem", margin: "1.5rem 0 0.5rem" }}>Meine Aktivität in Zahlen</h2>
+            {/* Aktivitäts-Boxen — Teil 2 des Ausdrucks beginnt auf einer neuen
+                Seite (Aktivität in Zahlen, Deutungen, Vertiefungen). */}
+            <h2
+              style={{
+                fontSize: "1.1rem",
+                margin: "0 0 0.5rem",
+                breakBefore: "page",
+                pageBreakBefore: "always",
+              }}
+            >
+              Meine Aktivität in Zahlen
+            </h2>
             <div
               style={{
                 display: "grid",
                 gridTemplateColumns: "1fr 1fr 1fr",
                 gap: "0.5rem",
+                breakInside: "avoid",
+                pageBreakInside: "avoid",
               }}
             >
               {perspektiven.map((p) => (
