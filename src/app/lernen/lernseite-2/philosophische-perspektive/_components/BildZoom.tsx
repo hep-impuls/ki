@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { merkeSpur } from "../../_lib/spuren";
 import { merkeInhalt } from "../../_lib/inhalte";
 
@@ -261,15 +262,21 @@ export default function BildZoom({ images, startIdx, epoch, onClose, spurKey }: 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [spurKey, idx, tourIdx, epoch, img.alt]);
 
-  // Body-Scroll sperren, solange offen — und die Scrollposition merken/
+  // Seiten-Scroll sperren, solange offen — und die Scrollposition merken/
   // wiederherstellen, damit man beim Schliessen NICHT an den Seitenanfang
-  // zurückfällt, sondern bei der Epoche bleibt. Nur einmal (Mount/Unmount).
+  // zurückfällt, sondern bei der Epoche bleibt. Der Scroller ist das
+  // <html>-Element (documentElement), darum dort sperren, nicht nur am Body,
+  // sonst scrollt der Hintergrund hinter dem Overlay durch. Nur einmal.
   useEffect(() => {
     const y = window.scrollY;
-    const prev = document.body.style.overflow;
+    const root = document.documentElement;
+    const prevRoot = root.style.overflow;
+    const prevBody = document.body.style.overflow;
+    root.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
     return () => {
-      document.body.style.overflow = prev;
+      root.style.overflow = prevRoot;
+      document.body.style.overflow = prevBody;
       window.scrollTo(0, y);
     };
   }, []);
@@ -348,7 +355,7 @@ export default function BildZoom({ images, startIdx, epoch, onClose, spurKey }: 
 
   const stop = tour && tourIdx !== null ? tour[tourIdx] : null;
 
-  return (
+  return createPortal(
     <div
       ref={rootRef}
       role="dialog"
@@ -610,6 +617,7 @@ export default function BildZoom({ images, startIdx, epoch, onClose, spurKey }: 
           </div>
         )}
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }
