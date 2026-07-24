@@ -408,7 +408,33 @@ export default function StoryGewebe({
   const [gewaehlt, setGewaehlt] = useState<Set<number>>(() => new Set());
   const [ansicht, setAnsicht] = useState(0);
 
+  // Zuletzt geöffnete Karte über Navigation/Neuladen/Zuklappen hinweg merken.
+  const offenKey = spurKey ? `ki26-story-offen:${spurKey}` : null;
+  const gespeichertOffen = useRef<number | null>(
+    (() => {
+      if (!offenKey || typeof window === "undefined") return null;
+      const v = window.localStorage.getItem(offenKey);
+      const num = v === null || v === "" ? NaN : Number(v);
+      return Number.isInteger(num) ? num : null;
+    })(),
+  );
+
   useEffect(() => {
+    const bereits = spurKey
+      ? leseSpurenIndices(spurKey).filter((i) => i >= 0 && i < n)
+      : [];
+    if (bereits.length > 0) {
+      // Rückkehrer: NICHTS zufällig einblenden. Der Restore-Effect stellt die
+      // gewählten Punkte wieder her; hier nur die zuletzt offene Karte laden.
+      const g = gespeichertOffen.current;
+      setOffeneKarte(
+        g !== null && bereits.includes(g) ? g : bereits[bereits.length - 1] ?? null,
+      );
+      return;
+    }
+    // Nur beim allerersten Start: drei Stationen per Zufall einblenden. Sie
+    // zählen als Aktivität (Spur → Zähler/Orakel/Rhizom) und werden dadurch
+    // ab dann als «bereits vorhanden» behandelt.
     const ids = stationen.map((_, i) => i);
     for (let i = ids.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -417,8 +443,6 @@ export default function StoryGewebe({
     const start = ids.slice(0, Math.min(3, ids.length));
     setGewaehlt(new Set(start));
     setOffeneKarte(start[start.length - 1] ?? null);
-    // Auch automatisch eingeblendete Stationen zählen als Aktivität — ihre
-    // Karten stehen ja sichtbar da (Spur → Zähler/Orakel/Rhizom).
     if (spurKey) start.forEach((i) => merkeSpur(`${spurKey}:${i}`));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -439,6 +463,20 @@ export default function StoryGewebe({
    *  der zuletzt ANGEKLICKTE Punkt (nicht der letzte in Stations-Reihenfolge);
    *  gesetzt in aktiviere/punktTippen/toggleWahl/zufall. */
   const [offeneKarte, setOffeneKarte] = useState<number | null>(null);
+  const ersterSaveOffen = useRef(true);
+  useEffect(() => {
+    // Offene Karte sichern, aber nicht schon beim initialen null-Wert.
+    if (ersterSaveOffen.current) {
+      ersterSaveOffen.current = false;
+      return;
+    }
+    if (!offenKey || typeof window === "undefined") return;
+    try {
+      window.localStorage.setItem(offenKey, offeneKarte === null ? "" : String(offeneKarte));
+    } catch {
+      /* Privatmodus */
+    }
+  }, [offeneKarte]);
 
   /** Das GANZE Gewebe (immer sichtbar): Erzähl-Faden über ALLE Stationen der
    *  Reihe nach + feine Einfluss-Bögen. `aktiv` = beide Enden sind gewählt →
