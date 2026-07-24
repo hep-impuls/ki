@@ -497,19 +497,34 @@ export default function OrakelDashboard() {
         </p>
         <div className="mt-sm space-y-sm text-body-md text-on-surface-variant">
           <p>
-            In der Antike war ein Orakel, etwa das berühmte von Delphi, ein Ort,
-            an dem Menschen Rat suchten, wenn eine Lage unübersichtlich wurde.
-            Lange bevor es Wissenschaft gab, war es eine Form, Komplexität und
-            Unsicherheit zu deuten. Man las Zeichen und suchte Orientierung für
-            schwere Entscheidungen, dort, wo klares Wissen fehlte.
+            Vor über zweieinhalbtausend Jahren stiegen Menschen aus der ganzen
+            griechischen Welt nach Delphi hinauf, um das berühmteste Orakel der
+            Antike zu befragen. Dort sass die Priesterin Pythia auf einem
+            Dreifuss über einer Erdspalte und gab, oft in dunklen, deutbaren
+            Worten, Antwort. Ganze Städte fragten sie, bevor sie in den Krieg
+            zogen oder eine Kolonie gründeten. Dem lydischen König Krösus soll
+            sie gesagt haben, wenn er über den Grenzfluss ziehe, werde er ein
+            grosses Reich zerstören. Er zog los, verlor und zerstörte sein
+            eigenes. Das Orakel war ein Ort, an dem eine unübersichtliche Welt
+            gedeutet wurde, lange bevor es Wissenschaft gab.
+          </p>
+          <p>
+            Über dem Tempeleingang stand «Erkenne dich selbst». Für den
+            Philosophen Sokrates wurde dieser Satz zur Lebensaufgabe. Als das
+            Orakel ihn den weisesten Menschen nannte, verstand er das so, dass
+            echte Weisheit darin liegt, die eigenen Grenzen zu kennen. Aus der
+            Götterbefragung wurde damit eine Aufforderung, sich selbst zu prüfen.
+            Genau darum geht es auch hier: nicht um eine höhere Wahrheit, sondern
+            um einen ehrlichen Blick auf den eigenen Weg.
           </p>
           <p>
             Wir nennen diesen Rückblick trotzdem «Orakel», aber aus einem anderen
             Grund. Seine Deutungen kommen nicht aus dem allwissenden Blick der
-            Götter. Sie sind musterhaft, genau wie die KI arbeitet. Die KI
-            erkennt Muster in den gesammelten Spuren und spiegelt sie dir zurück.
-            Kein höheres Wissen, sondern erkannte Regelmässigkeit. Was du daraus
-            machst, entscheidest du selbst.
+            Götter. Sie sind musterhaft, genau wie die KI arbeitet. Wo die Pythia
+            Zeichen deutete, erkennt die KI Muster in den gesammelten Spuren und
+            spiegelt sie dir zurück. Kein höheres Wissen, sondern erkannte
+            Regelmässigkeit. Und wie schon in Delphi gilt: entscheiden musst am
+            Ende du selbst.
           </p>
         </div>
       </section>
