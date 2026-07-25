@@ -10,6 +10,24 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-25 — Inhalte von Lernseite 2 als Lesefassung exportierbar (Christof)
+
+**Entscheidung:** Die Inhalte von Lernseite 2 gibt es zusätzlich als
+Markdown-Lesefassung, [docs/inhalte-lernseite-2.md](inhalte-lernseite-2.md),
+erzeugt von [docs/inhalte-export.js](inhalte-export.js) (`node
+docs/inhalte-export.js`).
+
+Zweck: Korrekturlesen, didaktische Absprachen und Überblick, ohne durch die
+TSX-Dateien zu steigen. Die **Quelle bleibt der Code**, die Datei wird nie von
+Hand bearbeitet, sondern neu erzeugt. Sie ist damit bewusst redundant und kann
+veralten; nach grösseren Inhaltsänderungen einmal neu generieren.
+
+Der Exporter liest positionsgeordnet die JSX-Überschriften und Fliesstexte
+sowie die Inhaltsfelder der Daten-Arrays (`text`, `mehr`, `verunsicherung`,
+`hintergrund`, `einordnung`, Epochen-Bausteine, Denkwege-Absätze) und gibt das
+Glossar als Tabelle aus. Reine Geometrie- und Technikfelder (`x`, `y`, `zoom`,
+`src`, `icon`, `slug`) bleiben draussen.
+
 ## 2026-07-22 — Dev-Guard für anonyme Zähler + Zähler-Reset (Christof)
 
 **Problem:** Dev-Server (localhost) und Produktion teilen sich dieselben
