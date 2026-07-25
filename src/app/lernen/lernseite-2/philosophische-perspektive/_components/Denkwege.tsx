@@ -430,8 +430,8 @@ export default function Denkwege({
   const gesamt = BEREICHE.length;
   const [idx, setIdx] = useState(0);
   const [gesehen, setGesehen] = useState<Set<number>>(new Set());
-  /* Aufgeklappte Info-Boxen, Schlüssel «bereichIdx-denkerIdx». */
-  const [offeneBox, setOffeneBox] = useState<Set<string>>(new Set());
+  /* Aufgeklappte Info-Box (nur eine offen), Schlüssel «bereichIdx-denkerIdx». */
+  const [offeneBox, setOffeneBox] = useState<string | null>(null);
 
   useEffect(() => {
     function restore() {
@@ -468,12 +468,9 @@ export default function Denkwege({
   }
 
   function boxUmschalten(key: string) {
-    setOffeneBox((prev) => {
-      const nx = new Set(prev);
-      if (nx.has(key)) nx.delete(key);
-      else nx.add(key);
-      return nx;
-    });
+    // Single-open: dieselbe Box schliesst, eine andere öffnet (schliesst die
+    // vorherige).
+    setOffeneBox((prev) => (prev === key ? null : key));
   }
 
   const b = BEREICHE[idx];
@@ -528,7 +525,7 @@ export default function Denkwege({
           <div className="overflow-hidden rounded-xl border border-outline-variant">
             {b.denker.map((p, i) => {
               const key = `${idx}-${i}`;
-              const auf = offeneBox.has(key);
+              const auf = offeneBox === key;
               return (
                 <div key={p.slug} className={i > 0 ? "border-t border-outline-variant" : ""}>
                   <button

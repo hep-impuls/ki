@@ -75,6 +75,10 @@ const AREAS: { prefix: string; name: string; fill: string; text: string }[] = [
   { prefix: "philosophische-perspektive:epochen-bild", name: "Bilder Verunsicherung", fill: "fill-on-error-container", text: "text-on-error-container" },
   { prefix: "philosophische-perspektive:epochen", name: "Epochen", fill: "fill-on-surface", text: "text-on-surface" },
   { prefix: "philosophische-perspektive:einstieg", name: "Philosophie", fill: "fill-outline", text: "text-on-surface-variant" },
+  // Orientierung: die Denkwege-Bereiche und die einzelnen Philosoph:innen
+  // (weiterverfolgte «Stimmen»). Vor «…:einstieg»? Nein — kein Präfix-Konflikt.
+  { prefix: "philosophische-perspektive:denker", name: "Orientierung", fill: "fill-surface-tint", text: "text-surface-tint" },
+  { prefix: "philosophische-perspektive:denkwege", name: "Orientierung", fill: "fill-surface-tint", text: "text-surface-tint" },
   { prefix: "video:", name: "Videos", fill: "fill-inverse-surface", text: "text-inverse-surface" },
 ];
 function areaVon(id: string) {

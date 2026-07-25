@@ -20,6 +20,8 @@ import {
   leseSpuren,
   SPUR_EVENT,
   SPUREN_POLL_ID,
+  zaehleAktivitaet,
+  zaehleAlleAusPoll,
   zaehltAnonym,
   zieheSpurenAusCloud,
 } from "../../_lib/spuren";
@@ -30,6 +32,7 @@ import {
 } from "../../_lib/gewichtung";
 import {
   AUSWERTUNG_EVENT,
+  FLAECHEN_POLL_ID,
   leseAuswertung,
   type AuswertungEintrag,
 } from "../../_lib/auswertung";
@@ -73,6 +76,26 @@ const BEREICHE: { prefix: string; label: string; total: number; href: string }[]
 const GESAMT_TOTAL = BEREICHE.reduce((s, b) => s + b.total, 0);
 const BILDER_TOTAL = 11; // Bilderstrecke «Bilder zur KI-Geschichte»
 const VIDEO_TOTAL = 3;
+
+/* ── Abschnitt einer Spur-Basis-ID (für die PDF-Vertiefen-Liste) ──────────────
+ * Ordnet eine Basis-ID (ohne «wunsch:»-Präfix) dem Titel des Abschnitts zu, aus
+ * dem sie stammt. Spezifische Präfixe zuerst (erster Treffer gewinnt). */
+const ABSCHNITT_PREFIXE: { prefix: string; titel: string }[] = [
+  { prefix: "vorhang-auf:story", titel: "Die KI-Story" },
+  { prefix: "vorhang-auf:weisheit", titel: "Merkmale der neuen Akteurin" },
+  { prefix: "vorhang-auf:bild", titel: "Bilder zur KI-Geschichte" },
+  { prefix: "vorhang-auf:kontext", titel: "Die KI im Kontext" },
+  { prefix: "philosophische-perspektive:teppich", titel: "Der Teppich des Wandels" },
+  { prefix: "philosophische-perspektive:epochen-bild", titel: "Bilder der Verunsicherung" },
+  { prefix: "philosophische-perspektive:epochen", titel: "Philosophie in Zeiten der Verunsicherung" },
+  { prefix: "philosophische-perspektive:denker", titel: "Wege der Orientierung" },
+  { prefix: "philosophische-perspektive:denkwege", titel: "Wege der Orientierung" },
+  { prefix: "philosophische-perspektive:einstieg", titel: "Was ist Philosophie?" },
+  { prefix: "video:", titel: "Video-Impulse" },
+];
+function abschnittFuer(basisId: string): string {
+  return ABSCHNITT_PREFIXE.find((a) => basisId.startsWith(a.prefix))?.titel ?? "Weiteres";
+}
 
 /* ── Bewertungs-Präfixe (lokal, aus gewichtung.ts) ────────────────────────── */
 
@@ -132,8 +155,14 @@ export default function OrakelDashboard() {
   const [meineKombis, setMeineKombis] = useState(0);
   const [meineBilder, setMeineBilder] = useState(0);
   const [meineVideos, setMeineVideos] = useState(0);
-  /* Punkte, die noch vertieft werden möchten («das verfolge ich weiter»). */
-  const [vertiefteTitel, setVertiefteTitel] = useState<string[]>([]);
+  /* Angeklickte Punkte (Knoten) nach Spur-Art — gleiche Quelle wie das Rhizom,
+   * damit beide Anzeigen dieselbe Zahl zeigen. */
+  const [meineKnoten, setMeineKnoten] = useState(0);
+  /* Punkte, die noch vertieft werden möchten («das verfolge ich weiter»),
+   * je mit Titel und Abschnitt (für die PDF-Liste). */
+  const [vertiefteTitel, setVertiefteTitel] = useState<
+    { titel: string; abschnitt: string }[]
+  >([]);
   /* deine Bewertungen (lokal) */
   const [bew, setBew] = useState({
     relevanzStark: 0,
@@ -149,6 +178,8 @@ export default function OrakelDashboard() {
   const [auswertung, setAuswertung] = useState<AuswertungEintrag[]>([]);
   /* alle (anonymer Zähler) */
   const [alleSpuren, setAlleSpuren] = useState<PollCounts>({});
+  /* alle geknüpften Flächen (anonymer Zähler) — für den Vergleich in der Karte */
+  const [alleFlaechen, setAlleFlaechen] = useState<PollCounts>({});
   /* Blick-Poll */
   const [blickWahl, setBlickWahl] = useState<string | null>(null);
   const [blickCounts, setBlickCounts] = useState<PollCounts>({});
@@ -185,6 +216,7 @@ export default function OrakelDashboard() {
     setMeineKombis(spuren.filter((s) => s.id.includes(":kanten-")).length);
     setMeineBilder(spuren.filter((s) => s.id.includes(":bild")).length);
     setMeineVideos(spuren.filter((s) => s.id.startsWith("video:")).length);
+    setMeineKnoten(zaehleAktivitaet().knoten);
     setBew({
       relevanzStark: zaehleStufe(P_RELEVANZ, 2),
       relevanzKaum: zaehleStufe(P_RELEVANZ, 0),
@@ -196,15 +228,15 @@ export default function OrakelDashboard() {
       gestaltDeutlich: zaehleStufe(P_GESTALT, 2),
     });
     const reg = leseInhalte();
-    const wunschTitel = Array.from(
-      new Set(
-        spuren
-          .filter((s) => s.id.startsWith("wunsch:"))
-          .map((s) => reg[s.id.slice(7)])
-          .filter((t): t is string => Boolean(t)),
-      ),
-    );
-    setVertiefteTitel(wunschTitel);
+    const wunschEintraege = spuren
+      .filter((s) => s.id.startsWith("wunsch:"))
+      .map((s) => {
+        const base = s.id.slice(7);
+        const titel = reg[base];
+        return titel ? { titel, abschnitt: abschnittFuer(base) } : null;
+      })
+      .filter((e): e is { titel: string; abschnitt: string } => Boolean(e));
+    setVertiefteTitel(wunschEintraege);
     setAuswertung(leseAuswertung());
   }, []);
 
@@ -247,8 +279,10 @@ export default function OrakelDashboard() {
   useEffect(() => {
     const ab1 = subscribePollCounts(SPUREN_POLL_ID, setAlleSpuren);
     const ab2 = subscribePollCounts(BLICK_POLL_ID, setBlickCounts);
+    const ab3 = subscribePollCounts(FLAECHEN_POLL_ID, setAlleFlaechen);
     void loadPollCounts(SPUREN_POLL_ID).then(setAlleSpuren);
     void loadPollCounts(BLICK_POLL_ID).then(setBlickCounts);
+    void loadPollCounts(FLAECHEN_POLL_ID).then(setAlleFlaechen);
     void zieheSpurenAusCloud();
     void zieheGewichtungAusCloud();
     // Teilnehmer-Zahlen serverseitig holen (schlägt lokal ohne Service-Account
@@ -262,6 +296,7 @@ export default function OrakelDashboard() {
     return () => {
       ab1();
       ab2();
+      ab3();
     };
   }, []);
 
@@ -270,12 +305,6 @@ export default function OrakelDashboard() {
     () => Object.values(meine).reduce((s, n) => s + n, 0),
     [meine],
   );
-  const alleGesamt = useMemo(
-    () => BEREICHE.reduce((s, b) => s + summeMitPrefix(alleSpuren, b.prefix), 0),
-    [alleSpuren],
-  );
-  /* Gesamtnutzung aller: Summe sämtlicher anonymer Zähler (Knoten, Kanten,
-   * Bilder, Videos, Merkzeichen) — so viele Interaktionen aller zusammen. */
   const blickTotal = totalVotes(blickCounts);
   /* Geknüpfte Flächen (Maschen) über alle Weben-Bereiche (Teppich + KI-Story). */
   const flaechenGefuellt = useMemo(
@@ -286,6 +315,20 @@ export default function OrakelDashboard() {
     () => auswertung.reduce((s, a) => s + a.flaechenTotal, 0),
     [auswertung],
   );
+  /* Alle-Vergleich in derselben Zählweise wie das Rhizom: angeklickte Punkte
+   * (Knoten) aus dem Spuren-Poll, Flächen aus dem Flächen-Poll. */
+  const allePunkte = useMemo(() => zaehleAlleAusPoll(alleSpuren).punkte, [alleSpuren]);
+  const flaechenAlle = useMemo(() => totalVotes(alleFlaechen), [alleFlaechen]);
+  /* Vertiefen-Wünsche nach Abschnitt gruppiert (für den PDF-Ausdruck). */
+  const vertiefteGruppen = useMemo(() => {
+    const m = new Map<string, string[]>();
+    for (const e of vertiefteTitel) {
+      const arr = m.get(e.abschnitt) ?? [];
+      if (!arr.includes(e.titel)) arr.push(e.titel);
+      m.set(e.abschnitt, arr);
+    }
+    return [...m.entries()].map(([abschnitt, titel]) => ({ abschnitt, titel }));
+  }, [vertiefteTitel]);
 
   /* Aktivitäts-Snapshot fürs Orakel bauen */
   const baueAktivitaet = useCallback(() => {
@@ -412,9 +455,9 @@ export default function OrakelDashboard() {
     {
       icon: "ads_click",
       titel: "Angeklickte Punkte",
-      wert: `${meineGesamt} / ${GESAMT_TOTAL}`,
+      wert: `${meineKnoten} / ${GESAMT_TOTAL}`,
       text: "Knoten hast du auf diesem Gerät geöffnet.",
-      alle: `${alleGesamt}× von allen besucht`,
+      alle: `${allePunkte}× von allen besucht`,
     },
     {
       icon: "dashboard",
@@ -424,7 +467,7 @@ export default function OrakelDashboard() {
         flaechenTotal === 0
           ? "Noch keine Fläche geknüpft — besuche benachbarte Punkte, dann füllen sich Maschen."
           : "Maschen, die du in den Geweben (Teppich, KI-Story, Merkmale, Muster) vollständig geknüpft hast.",
-      nurDu: true,
+      alle: `${flaechenAlle}× von allen geknüpft`,
     },
     {
       icon: "imagesmode",
@@ -1385,12 +1428,19 @@ export default function OrakelDashboard() {
             <h2 style={{ fontSize: "1.1rem", margin: "1.75rem 0 0.4rem" }}>
               Diese Punkte möchte ich noch vertiefen
             </h2>
-            {vertiefteTitel.length > 0 ? (
-              <ul style={{ margin: 0, paddingLeft: "1.2rem", fontSize: "1rem", lineHeight: 1.6 }}>
-                {vertiefteTitel.map((t, i) => (
-                  <li key={i}>{t}</li>
-                ))}
-              </ul>
+            {vertiefteGruppen.length > 0 ? (
+              vertiefteGruppen.map((g) => (
+                <div key={g.abschnitt} style={{ marginTop: "0.5rem" }}>
+                  <p style={{ margin: "0 0 0.15rem", fontSize: "0.85rem", fontWeight: 700, color: "#333" }}>
+                    {g.abschnitt}
+                  </p>
+                  <ul style={{ margin: 0, paddingLeft: "1.2rem", fontSize: "1rem", lineHeight: 1.6 }}>
+                    {g.titel.map((t, i) => (
+                      <li key={i}>{t}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))
             ) : (
               <p style={{ margin: 0, fontSize: "1rem", color: "#444" }}>
                 Nichts wurde gewählt.
