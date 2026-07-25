@@ -85,3 +85,28 @@ export interface StudentClassReport {
   /** sortierte pct-Verteilung (ohne Codes) fuer das Histogramm. */
   distribution: number[];
 }
+
+/* ── Klassen-Orakel (ki26 Lernseite 2: Spuren pro Abschnitt) ─────────────────── */
+
+/** Aktivitaet einer Klasse in einem Abschnitt (aus den Spuren aggregiert). */
+export interface TeacherOrakelBereich {
+  bereich: string;
+  /** Angeschaute Punkte/Inhalte (Summe ueber alle Schueler:innen). */
+  angeschaut: number;
+  /** «Mehr lesen»-Vertiefungen. */
+  vertieft: number;
+  /** «Das verfolge ich weiter»-Merkzeichen. */
+  weiterverfolgen: number;
+  /** Wie viele Schueler:innen in diesem Abschnitt aktiv waren. */
+  aktiveSchueler: number;
+}
+
+/** Klassen-Orakel: wo die Klasse in Lernseite 2 unterwegs ist. */
+export interface TeacherOrakel {
+  classCode: string;
+  /** Schueler:innen in der Klasse. */
+  n: number;
+  /** davon mit mindestens einer Spur. */
+  aktiv: number;
+  bereiche: TeacherOrakelBereich[];
+}

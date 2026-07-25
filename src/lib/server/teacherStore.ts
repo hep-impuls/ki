@@ -13,6 +13,8 @@ import type {
   TeacherReport,
   TeacherReportStudent,
   StudentClassReport,
+  TeacherOrakel,
+  TeacherOrakelBereich,
 } from "../types";
 
 /**
@@ -263,4 +265,99 @@ export async function studentClassReport(studentCode: string): Promise<StudentCl
     classAvg,
     distribution: overallPct.sort((a, b) => a - b),
   };
+}
+
+/* ── Klassen-Orakel (Lernseite 2: Spuren pro Abschnitt) ─────────────────────── */
+
+/** Präfix → Abschnittstitel (spezifische Präfixe zuerst; erster Treffer gewinnt). */
+const BEREICH_PREFIXE: { prefix: string; bereich: string }[] = [
+  { prefix: "vorhang-auf:story", bereich: "Die KI-Story" },
+  { prefix: "vorhang-auf:weisheit", bereich: "Merkmale der neuen Akteurin" },
+  { prefix: "vorhang-auf:bild", bereich: "Bilder zur KI-Geschichte" },
+  { prefix: "vorhang-auf:kontext", bereich: "Die KI im Kontext" },
+  { prefix: "philosophische-perspektive:teppich", bereich: "Der Teppich des Wandels" },
+  { prefix: "philosophische-perspektive:epochen-bild", bereich: "Bilder der Verunsicherung" },
+  { prefix: "philosophische-perspektive:epochen", bereich: "Philosophie in Zeiten der Verunsicherung" },
+  { prefix: "philosophische-perspektive:denker", bereich: "Wege der Orientierung" },
+  { prefix: "philosophische-perspektive:denkwege", bereich: "Wege der Orientierung" },
+  { prefix: "philosophische-perspektive:einstieg", bereich: "Was ist Philosophie?" },
+  { prefix: "video:", bereich: "Video-Impulse" },
+];
+
+function bereichFuer(base: string): string {
+  return BEREICH_PREFIXE.find((b) => base.startsWith(b.prefix))?.bereich ?? "Weiteres";
+}
+
+/**
+ * Klassen-Orakel: aggregiert die Spuren aller Klassen-Schueler:innen aus dem
+ * Modul-Doc `lernseite-2-spuren` ({ ids }) pro Abschnitt — wie viel angeschaut,
+ * vertieft («mehr:») und weiterverfolgt («wunsch:») wurde. Secret-gated.
+ */
+export async function teacherOrakel(
+  classCodeRaw: string,
+  secret: string,
+): Promise<TeacherOrakel> {
+  const classCode = canonicalClassCode(classCodeRaw);
+  await assertSecret(classCode, secret); // wirft bei falschem Secret
+  const students = await loadClassStudents(classCode);
+
+  interface Agg {
+    angeschaut: number;
+    vertieft: number;
+    weiterverfolgen: number;
+    schueler: Set<string>;
+  }
+  const perBereich = new Map<string, Agg>();
+  const ensure = (b: string): Agg => {
+    let a = perBereich.get(b);
+    if (!a) {
+      a = { angeschaut: 0, vertieft: 0, weiterverfolgen: 0, schueler: new Set() };
+      perBereich.set(b, a);
+    }
+    return a;
+  };
+
+  let aktiv = 0;
+  for (const s of students) {
+    const doc = s.progressByModule["lernseite-2-spuren"] as unknown as
+      | { ids?: unknown }
+      | undefined;
+    const ids = Array.isArray(doc?.ids)
+      ? (doc!.ids as unknown[]).filter((x): x is string => typeof x === "string")
+      : [];
+    if (ids.length === 0) continue;
+    aktiv += 1;
+    for (const id of ids) {
+      let art: "angeschaut" | "vertieft" | "weiterverfolgen";
+      let base = id;
+      if (id.startsWith("wunsch:")) {
+        art = "weiterverfolgen";
+        base = id.slice("wunsch:".length);
+      } else if (id.startsWith("mehr:")) {
+        art = "vertieft";
+        base = id.slice("mehr:".length);
+      } else if (id.includes(":kanten-")) {
+        continue; // Kombinationen (Gewebe-Kanten) zaehlen nicht als «angeschaut»
+      } else {
+        art = "angeschaut";
+      }
+      const agg = ensure(bereichFuer(base));
+      agg[art] += 1;
+      agg.schueler.add(s.code);
+    }
+  }
+
+  // Reihenfolge wie im Lernset; «Weiteres» ans Ende.
+  const order = [...new Set(BEREICH_PREFIXE.map((b) => b.bereich)), "Weiteres"];
+  const bereiche: TeacherOrakelBereich[] = [...perBereich.entries()]
+    .map(([bereich, a]) => ({
+      bereich,
+      angeschaut: a.angeschaut,
+      vertieft: a.vertieft,
+      weiterverfolgen: a.weiterverfolgen,
+      aktiveSchueler: a.schueler.size,
+    }))
+    .sort((x, y) => order.indexOf(x.bereich) - order.indexOf(y.bereich));
+
+  return { classCode, n: students.length, aktiv, bereiche };
 }

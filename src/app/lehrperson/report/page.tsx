@@ -2,9 +2,9 @@
 
 import { Suspense, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { loadTeacherReportSecure } from "@/lib/api";
+import { loadTeacherOrakelSecure, loadTeacherReportSecure } from "@/lib/api";
 import { describePoll } from "@/lib/pollLabels";
-import type { PollAggregate, TeacherReport } from "@/lib/types";
+import type { PollAggregate, TeacherOrakel, TeacherReport } from "@/lib/types";
 
 /**
  * Lehrer-Report (Vorbild: 10mio `teacher.astro`-Report + `klassenreport`).
@@ -130,6 +130,7 @@ function ReportFlow() {
   const secret = search.get("secret") ?? "";
 
   const [report, setReport] = useState<TeacherReport | null>(null);
+  const [orakel, setOrakel] = useState<TeacherOrakel | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -143,6 +144,10 @@ function ReportFlow() {
       .then(setReport)
       .catch((err) => setError(err instanceof Error ? err.message : "Laden fehlgeschlagen."))
       .finally(() => setLoading(false));
+    // Klassen-Orakel separat laden (Fehler blockiert den Report nicht).
+    loadTeacherOrakelSecure(code, secret)
+      .then(setOrakel)
+      .catch(() => {});
   }, [code, secret]);
 
   const moduleIds = useMemo(() => {
@@ -175,6 +180,49 @@ function ReportFlow() {
 
       {loading && <p className="mt-xl text-body-md text-on-surface-variant">Lädt …</p>}
       {error && <p className="mt-xl text-body-md text-error">{error}</p>}
+
+      {orakel && !loading && (
+        <section className="mt-xl">
+          <h2 className="text-headline-sm text-on-surface">
+            Klassen-Orakel — wo die Klasse unterwegs ist
+          </h2>
+          <p className="mt-xs max-w-3xl text-body-sm text-on-surface-variant">
+            {orakel.aktiv} von {orakel.n} Schüler:innen mit Aktivität. Pro Abschnitt:
+            angeschaute Punkte, Vertiefungen («Mehr lesen») und Merkzeichen
+            («Das verfolge ich weiter»). Anonym aggregiert, keine Einzelzuordnung.
+          </p>
+          {orakel.bereiche.length === 0 ? (
+            <p className="mt-sm text-body-md text-on-surface-variant">
+              Noch keine Aktivität in dieser Klasse.
+            </p>
+          ) : (
+            <div className="mt-md overflow-x-auto rounded-xl border border-outline-variant">
+              <table className="w-full border-collapse text-body-sm">
+                <thead>
+                  <tr className="bg-surface-dim text-left text-label-sm text-on-surface-variant">
+                    <th className="px-md py-sm">Abschnitt</th>
+                    <th className="px-md py-sm">Angeschaut</th>
+                    <th className="px-md py-sm">Vertieft</th>
+                    <th className="px-md py-sm">Weiterverfolgen</th>
+                    <th className="px-md py-sm">Aktive</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {orakel.bereiche.map((b) => (
+                    <tr key={b.bereich} className="border-t border-outline-variant">
+                      <td className="px-md py-sm font-medium text-on-surface">{b.bereich}</td>
+                      <td className="px-md py-sm text-on-surface-variant">{b.angeschaut}</td>
+                      <td className="px-md py-sm text-on-surface-variant">{b.vertieft}</td>
+                      <td className="px-md py-sm text-on-surface-variant">{b.weiterverfolgen}</td>
+                      <td className="px-md py-sm text-on-surface-variant">{b.aktiveSchueler}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </section>
+      )}
 
       {report && !loading && (
         <>

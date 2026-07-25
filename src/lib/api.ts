@@ -11,7 +11,7 @@
  * Browser darf `teachers/*` nicht direkt lesen/schreiben — Admin SDK only).
  */
 
-import type { StudentClassReport, TeacherReport } from "./types";
+import type { StudentClassReport, TeacherReport, TeacherOrakel } from "./types";
 
 async function postApi<T>(path: string, payload: Record<string, unknown>): Promise<T> {
   const res = await fetch(`/api/${path}`, {
@@ -87,4 +87,11 @@ export async function loadTeacherReportSecure(
   secret: string,
 ): Promise<TeacherReport> {
   return postApi<TeacherReport>("teacher/report", { classCode, secret });
+}
+
+export async function loadTeacherOrakelSecure(
+  classCode: string,
+  secret: string,
+): Promise<TeacherOrakel> {
+  return postApi<TeacherOrakel>("teacher/orakel", { classCode, secret });
 }

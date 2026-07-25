@@ -108,6 +108,8 @@ const GOLDWINKEL = 2.399963229728653; // 137.5° in rad
 
 export default function Knotenkarte({ className = "" }: { className?: string }) {
   const [ansicht, setAnsicht] = useState<Ansicht>("geklickt");
+  /* Ebene: «alle» = Kollektiv (anonyme Zähler), «du» = nur die eigenen Punkte. */
+  const [ebene, setEbene] = useState<"alle" | "du">("alle");
   const [counts, setCounts] = useState<PollCounts>({});
   const [lokal, setLokal] = useState<{ spurIds: Set<string>; bekannt: Record<number, number> }>({
     spurIds: new Set(),
@@ -236,10 +238,15 @@ export default function Knotenkarte({ className = "" }: { className?: string }) 
     return [...map.values()].sort((a, b) => b.staerke - a.staerke);
   }, [ansicht, counts, lokal, inhalte]);
 
-  const maxStaerke = Math.max(1, ...punkte.map((p) => p.staerke));
-  // Höchstens BASIS_N Punkte von Anfang an; darüber hinaus nur, was öfter als
-  // SCHWELLE angeklickt wurde (Liste ist nach Stärke sortiert).
-  const gezeigt = punkte.filter((p, i) => i < BASIS_N || p.alle > SCHWELLE);
+  // Ebene «du» blendet auf die eigenen Punkte, «alle» zeigt das Kollektiv.
+  const gefiltert = ebene === "du" ? punkte.filter((p) => p.du) : punkte;
+  const maxStaerke = Math.max(1, ...gefiltert.map((p) => p.staerke));
+  // «alle»: höchstens BASIS_N Punkte von Anfang an, darüber hinaus nur, was
+  // öfter als SCHWELLE angeklickt wurde. «du»: alle eigenen zeigen.
+  const gezeigt =
+    ebene === "du"
+      ? gefiltert
+      : gefiltert.filter((p, i) => i < BASIS_N || p.alle > SCHWELLE);
   const sichtbar = gezeigt; // SVG-Wolke
   const top = gezeigt; // Rangliste
   const aktInfo = ANSICHTEN.find((a) => a.id === ansicht)!;
@@ -253,6 +260,25 @@ export default function Knotenkarte({ className = "" }: { className?: string }) 
           <span className="material-symbols-outlined text-[18px]">scatter_plot</span>
           Knotenkarte der Inhalte
         </p>
+        {/* Ebene: nur die eigenen Punkte oder alle einblenden */}
+        <div className="inline-flex overflow-hidden rounded-full border border-outline-variant">
+          {([["alle", "Alle"], ["du", "Nur ich"]] as const).map(([e, label]) => (
+            <button
+              key={e}
+              type="button"
+              onClick={() => setEbene(e)}
+              aria-pressed={ebene === e}
+              className={
+                "px-md py-xs text-label-sm transition-colors " +
+                (ebene === e
+                  ? "bg-tertiary-container text-on-tertiary-container"
+                  : "bg-surface-bright text-on-surface-variant hover:text-tertiary")
+              }
+            >
+              {label}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Ansichts-Umschalter */}
@@ -308,13 +334,15 @@ export default function Knotenkarte({ className = "" }: { className?: string }) 
         </div>
       )}
 
-      {punkte.length === 0 ? (
+      {gefiltert.length === 0 ? (
         <p className="mt-md rounded-xl border border-dashed border-outline-variant bg-surface-container-low p-md text-body-sm text-on-surface-variant">
-          {ansicht === "bekannt"
-            ? "Noch keine Bekanntheits-Bewertungen — bewerte im «Teppich des Wandels», was dir bekannt war."
-            : ansicht === "geklickt"
-              ? "Noch keine Klicks gezählt — sobald Punkte angeklickt werden, erscheinen hier die stärksten."
-              : "Noch keine Daten — sobald Inhalte weiterverfolgt oder vertieft werden, erscheinen hier die stärksten."}
+          {ebene === "du"
+            ? "Hier hast du noch nichts markiert — sobald du Punkte anklickst, weiterverfolgst oder vertiefst, erscheinen sie hier. Wechsle auf «Alle», um das Kollektiv zu sehen."
+            : ansicht === "bekannt"
+              ? "Noch keine Bekanntheits-Bewertungen — bewerte im «Teppich des Wandels», was dir bekannt war."
+              : ansicht === "geklickt"
+                ? "Noch keine Klicks gezählt — sobald Punkte angeklickt werden, erscheinen hier die stärksten."
+                : "Noch keine Daten — sobald Inhalte weiterverfolgt oder vertieft werden, erscheinen hier die stärksten."}
         </p>
       ) : (
         <div className="mt-md grid items-center gap-lg lg:grid-cols-[minmax(0,1fr)_20rem]">
@@ -323,7 +351,7 @@ export default function Knotenkarte({ className = "" }: { className?: string }) 
             viewBox={`0 0 ${VB_W} ${VB_H}`}
             className="block w-full"
             role="img"
-            aria-label={`Punktwolke: ${punkte.length} Inhalte, Grösse nach Stärke (${aktInfo.label}).`}
+            aria-label={`Punktwolke: ${gefiltert.length} Inhalte, Grösse nach Stärke (${aktInfo.label}, ${ebene === "du" ? "nur ich" : "alle"}).`}
           >
             {sichtbar.map((p, i) => {
               const r = 3 + 13 * Math.sqrt(p.staerke / maxStaerke);
