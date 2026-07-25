@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { merkeSpur } from "../../_lib/spuren";
 import { merkeInhalt } from "../../_lib/inhalte";
+import { GlossarText } from "../../_components/Glossar";
 
 /**
  * BildZoom — Vollbild-Viewer im Stil von Google Arts & Culture für die
@@ -560,7 +561,7 @@ export default function BildZoom({ images, startIdx, epoch, onClose, spurKey }: 
               {stop.title}
             </h4>
             <p className="mt-xs text-body-md text-on-surface-variant">
-              {stop.text}
+              <GlossarText text={stop.text} />
             </p>
             <div className="mt-md flex items-center justify-between">
               <button
@@ -610,7 +611,7 @@ export default function BildZoom({ images, startIdx, epoch, onClose, spurKey }: 
                   Kontext &amp; Einordnung
                 </p>
                 <p className="mt-xs text-body-sm leading-relaxed text-inverse-on-surface/90">
-                  {img.einordnung}
+                  <GlossarText text={img.einordnung} />
                 </p>
               </div>
             )}

@@ -20,6 +20,8 @@ import {
   leseSpuren,
   SPUR_EVENT,
   SPUREN_POLL_ID,
+  spurArt,
+  type SpurArt,
   zaehleAktivitaet,
   zaehleAlleAusPoll,
   zaehltAnonym,
@@ -140,6 +142,24 @@ function summeMitPrefix(counts: PollCounts, prefix: string): number {
   );
 }
 
+/** Nur inhaltliche Punkte zählen (Knoten/Videos): ohne Bildpunkte (`:hs`),
+ *  Kanten, geöffnete Bilder und Einstiegsmuster (`:gewebe`). Damit zählt
+ *  z.B. «Epochen» nicht die Bild-Hotspots von «epochen-bild» mit und die
+ *  Bereichszahlen passen zur Zählweise des Rhizoms. */
+function istInhaltsPunkt(id: string): boolean {
+  if (id.includes(":gewebe")) return false;
+  const art = spurArt(id);
+  return art === "punkt" || art === "video";
+}
+
+/** Anonyme Zähler mit Präfix, gefiltert nach Spur-Art. */
+function summeMitArt(counts: PollCounts, prefix: string, arten: SpurArt[]): number {
+  return Object.entries(counts).reduce((s, [id, n]) => {
+    if (!id.startsWith(prefix) || id.includes(":gewebe")) return s;
+    return arten.includes(spurArt(id)) ? s + (Number(n) || 0) : s;
+  }, 0);
+}
+
 interface OrakelZustand {
   text: string | null;
   status: "idle" | "laedt" | "ok" | "fehler" | "kein-schluessel" | "zu-wenig";
@@ -208,13 +228,15 @@ export default function OrakelDashboard() {
     const spuren = leseSpuren();
     const proBereich: Record<string, number> = {};
     for (const b of BEREICHE) {
-      proBereich[b.prefix] = spuren.filter((s) => s.id.startsWith(b.prefix)).length;
+      proBereich[b.prefix] = spuren.filter(
+        (s) => istInhaltsPunkt(s.id) && s.id.startsWith(b.prefix),
+      ).length;
     }
     setMeine(proBereich);
     setMeineWuensche(spuren.filter((s) => s.id.startsWith("wunsch:")).length);
     setMeineMehr(spuren.filter((s) => s.id.startsWith("mehr:")).length);
     setMeineKombis(spuren.filter((s) => s.id.includes(":kanten-")).length);
-    setMeineBilder(spuren.filter((s) => s.id.includes(":bild")).length);
+    setMeineBilder(spuren.filter((s) => spurArt(s.id) === "bild").length);
     setMeineVideos(spuren.filter((s) => s.id.startsWith("video:")).length);
     setMeineKnoten(zaehleAktivitaet().knoten);
     setBew({
@@ -474,7 +496,7 @@ export default function OrakelDashboard() {
       titel: "Bilder angeschaut",
       wert: `${meineBilder} / ${BILDER_TOTAL}`,
       text: "Bilder der Strecke «Bilder zur KI-Geschichte», die du geöffnet hast.",
-      alle: `${summeMitPrefix(alleSpuren, "vorhang-auf:bild")}× von allen geöffnet`,
+      alle: `${summeMitArt(alleSpuren, "vorhang-auf:bild", ["bild"])}× von allen geöffnet`,
     },
     {
       icon: "smart_display",
@@ -865,7 +887,7 @@ export default function OrakelDashboard() {
         <div className="mt-md overflow-hidden rounded-xl border border-outline-variant bg-surface-bright">
           {BEREICHE.map((b, i) => {
             const mein = meine[b.prefix] ?? 0;
-            const alle = summeMitPrefix(alleSpuren, b.prefix);
+            const alle = summeMitArt(alleSpuren, b.prefix, ["punkt", "video"]);
             const anteil = Math.min(1, mein / b.total);
             return (
               <a

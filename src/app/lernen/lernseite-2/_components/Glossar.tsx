@@ -206,6 +206,98 @@ export const GLOSSAR: Record<string, string> = {
     "Eine Einstellung der KI. Sie steuert, wie viel Zufall in der Wortwahl steckt. Ein hoher Wert macht die Antworten kreativer und unberechenbarer, ein niedriger vorhersehbarer.",
   Vektor:
     "Ein langer Zahlencode. Die KI stellt damit jedes Wort in einem Raum dar, sodass Bedeutung und Nähe zu anderen Wörtern messbar werden.",
+  Gutenberg:
+    "Johannes Gutenberg (um 1400 bis 1468), Erfinder des Buchdrucks mit beweglichen Lettern in Mainz.",
+  Gutenbergs:
+    "Johannes Gutenberg (um 1400 bis 1468), Erfinder des Buchdrucks mit beweglichen Lettern in Mainz.",
+  Sokrates:
+    "Athener Philosoph (469 bis 399 v. Chr.); fragte hartnäckig nach, «Ich weiss, dass ich nichts weiss».",
+  Antike:
+    "Zeit der Griechen und Römer (rund 800 v. Chr. bis 500 n. Chr.), Wiege von Philosophie, Demokratie und Wissenschaft.",
+  Renaissance:
+    "«Wiedergeburt» der Antike im 15./16. Jahrhundert, Aufbruch in Kunst, Wissenschaft und Menschenbild.",
+  Spätantike:
+    "Übergangszeit vom Römischen Reich zum Mittelalter (etwa 300 bis 600).",
+  "Mary Shelley":
+    "Britische Schriftstellerin (1797 bis 1851); schrieb mit 18 Jahren den Roman «Frankenstein» (1818).",
+  "Ada Lovelace":
+    "Britische Mathematikerin (1815 bis 1852); schrieb für Babbages Rechenmaschine das erste Programm der Geschichte.",
+  Babbage:
+    "Charles Babbage (1791 bis 1871), englischer Mathematiker; entwarf die erste programmierbare Rechenmaschine.",
+  Babbages:
+    "Charles Babbage (1791 bis 1871), englischer Mathematiker; entwarf die erste programmierbare Rechenmaschine.",
+  Turing:
+    "Alan Turing (1912 bis 1954), britischer Mathematiker; half die Enigma zu knacken und begründete die Informatik.",
+  Turings:
+    "Alan Turing (1912 bis 1954), britischer Mathematiker; half die Enigma zu knacken und begründete die Informatik.",
+  Weizenbaum:
+    "Joseph Weizenbaum (1923 bis 2008), Informatiker am MIT; baute ELIZA und wurde zum Kritiker blinder Computergläubigkeit.",
+  ELIZA:
+    "Frühes Chatprogramm (1966) von Joseph Weizenbaum; ahmte eine Gesprächstherapeutin nach und verblüffte die Nutzenden.",
+  Hinton:
+    "Geoffrey Hinton (geboren 1947), Pionier der künstlichen neuronalen Netze; gilt als «Pate» des Deep Learning.",
+  "Lee Sedol":
+    "Südkoreanischer Go-Meister; verlor 2016 gegen die KI AlphaGo, ein Wendepunkt der KI-Geschichte.",
+  AlphaGo:
+    "KI der Firma DeepMind; schlug 2016 den Go-Meister Lee Sedol.",
+  DeepMind:
+    "Londoner KI-Firma (heute Teil von Google); baute AlphaGo.",
+  McCarthy:
+    "John McCarthy (1927 bis 2011), US-Informatiker; prägte 1956 den Begriff «künstliche Intelligenz».",
+  Kempelen:
+    "Wolfgang von Kempelen (1734 bis 1804); baute den «Schachtürken», einen scheinbar denkenden Automaten mit verstecktem Spieler.",
+  "Jaquet-Droz":
+    "Schweizer Uhrmacherfamilie aus La Chaux-de-Fonds; ihre Automaten (um 1770) konnten schreiben und Musik spielen.",
+  Golem:
+    "Prager Sagengestalt: eine aus Lehm geformte Figur, die dienen soll, und ausser Kontrolle gerät.",
+  Talos:
+    "Bronzeriese der griechischen Sage, der Kreta bewachte; ein antiker Traum von der künstlichen Kreatur.",
+  Descartes:
+    "René Descartes (1596 bis 1650), französischer Philosoph, «Ich denke, also bin ich».",
+  Hegel:
+    "G. W. F. Hegel (1770 bis 1831), deutscher Philosoph; dachte Denken als Unterscheiden und Zusammenführen von Gegensätzen.",
+  Hegels:
+    "G. W. F. Hegel (1770 bis 1831), deutscher Philosoph; dachte Denken als Unterscheiden und Zusammenführen von Gegensätzen.",
+  Luther:
+    "Martin Luther (1483 bis 1546); seine 95 Thesen (1517) lösten die Reformation aus.",
+  Luthers:
+    "Martin Luther (1483 bis 1546); seine 95 Thesen (1517) lösten die Reformation aus.",
+  "James Watt":
+    "Schottischer Ingenieur (1736 bis 1819); seine verbesserte Dampfmaschine trieb die Industrialisierung an.",
+  Watts:
+    "James Watt (1736 bis 1819), schottischer Ingenieur; seine verbesserte Dampfmaschine trieb die Industrialisierung an.",
+  Darwin:
+    "Charles Darwin (1809 bis 1882), britischer Naturforscher; erklärte die Entstehung der Arten durch Evolution.",
+  Darwins:
+    "Charles Darwin (1809 bis 1882), britischer Naturforscher; erklärte die Entstehung der Arten durch Evolution.",
+  Freud:
+    "Sigmund Freud (1856 bis 1939), Wiener Arzt; begründete die Psychoanalyse.",
+  Newton:
+    "Isaac Newton (1643 bis 1727), englischer Physiker; beschrieb Gravitation und Bewegungsgesetze.",
+  Newtons:
+    "Isaac Newton (1643 bis 1727), englischer Physiker; beschrieb Gravitation und Bewegungsgesetze.",
+  Galilei:
+    "Galileo Galilei (1564 bis 1642), italienischer Astronom; stützte das heliozentrische Weltbild und geriet in Konflikt mit der Kirche.",
+  Diderot:
+    "Denis Diderot (1713 bis 1784), französischer Aufklärer; Herausgeber der grossen Enzyklopädie.",
+  Nussbaum:
+    "Felix Nussbaum (1904 bis 1944), deutsch-jüdischer Maler; malte seine Verfolgung und wurde in Auschwitz ermordet.",
+  Menzel:
+    "Adolph Menzel (1815 bis 1905), deutscher Maler; sein «Eisenwalzwerk» zeigt als erstes grosses Gemälde die Fabrikarbeit.",
+  Menzels:
+    "Adolph Menzel (1815 bis 1905), deutscher Maler; sein «Eisenwalzwerk» zeigt als erstes grosses Gemälde die Fabrikarbeit.",
+  "Kalter Krieg":
+    "Machtkampf zwischen USA und Sowjetunion (1947 bis 1991), ausgetragen ohne direkten Krieg, mit Wettrüsten und Stellvertreterkriegen.",
+  "Kalten Krieg":
+    "Machtkampf zwischen USA und Sowjetunion (1947 bis 1991), ausgetragen ohne direkten Krieg, mit Wettrüsten und Stellvertreterkriegen.",
+  "Kalten Kriegs":
+    "Machtkampf zwischen USA und Sowjetunion (1947 bis 1991), ausgetragen ohne direkten Krieg, mit Wettrüsten und Stellvertreterkriegen.",
+  "Blue Marble":
+    "Berühmtes Foto der ganzen Erde, aufgenommen von Apollo 17 (1972); machte die Verletzlichkeit des Planeten sichtbar.",
+  Perceptron:
+    "Frühes lernendes Kunstneuron (1958, Frank Rosenblatt); Urahn der heutigen neuronalen Netze.",
+  Perceptrons:
+    "Frühes lernendes Kunstneuron (1958, Frank Rosenblatt); Urahn der heutigen neuronalen Netze.",
 };
 
 function escapeRegExp(s: string): string {

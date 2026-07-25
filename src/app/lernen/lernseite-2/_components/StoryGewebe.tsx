@@ -9,6 +9,7 @@ import {
   zieheSpurenAusCloud,
 } from "../_lib/spuren";
 import KartenAktion from "./KartenAktion";
+import { GlossarText } from "./Glossar";
 import { maschen as berechneMaschen, zaehleGefuellt } from "../_lib/flaechen";
 import { melde } from "../_lib/auswertung";
 import { merkeInhalt } from "../_lib/inhalte";
@@ -1139,12 +1140,14 @@ export default function StoryGewebe({
                   offen={offeneKarte === idx}
                   onToggle={() => setOffeneKarte((o) => (o === idx ? null : idx))}
                 >
-                  <p className="text-body-md text-on-surface">{st.text}</p>
+                  <p className="text-body-md text-on-surface">
+                    <GlossarText text={st.text} />
+                  </p>
                   {st.geschichte && (
                     <p className="mt-sm text-body-md text-on-surface-variant">{st.geschichte}</p>
                   )}
                   <KartenAktion
-                    mehr={st.mehr}
+                    mehr={st.mehr ? <GlossarText text={st.mehr} /> : undefined}
                     wunschId={`wunsch:${wunschKey ?? spurKey ?? "story"}:${idx}`}
                     titel={st.titel}
                   />
