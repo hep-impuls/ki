@@ -15,6 +15,7 @@ import type {
   StudentClassReport,
   TeacherOrakel,
   TeacherOrakelBereich,
+  TeacherOrakelThema,
 } from "../types";
 
 /**
@@ -269,6 +270,9 @@ export async function studentClassReport(studentCode: string): Promise<StudentCl
 
 /* ── Klassen-Orakel (Lernseite 2: Spuren pro Abschnitt) ─────────────────────── */
 
+/** Modul-Doc mit der gespiegelten ID→Titel-Registry (aus inhalte.ts). */
+const INHALTE_MODUL = "lernseite-2-inhalte";
+
 /** Präfix → Abschnittstitel (spezifische Präfixe zuerst; erster Treffer gewinnt). */
 const BEREICH_PREFIXE: { prefix: string; bereich: string }[] = [
   { prefix: "vorhang-auf:story", bereich: "Die KI-Story" },
@@ -301,6 +305,15 @@ export async function teacherOrakel(
   await assertSecret(classCode, secret); // wirft bei falschem Secret
   const students = await loadClassStudents(classCode);
 
+  // Titel-Registry der Klasse zusammenführen (für alle gleich → einfach mergen).
+  const titelMap: Record<string, string> = {};
+  for (const s of students) {
+    const inh = s.progressByModule[INHALTE_MODUL] as unknown as
+      | { titel?: Record<string, string> }
+      | undefined;
+    if (inh?.titel && typeof inh.titel === "object") Object.assign(titelMap, inh.titel);
+  }
+
   interface Agg {
     angeschaut: number;
     vertieft: number;
@@ -316,6 +329,13 @@ export async function teacherOrakel(
     }
     return a;
   };
+  // Konkrete Themen (art + Basis-ID) für die Top-Listen mit Titel.
+  interface Item {
+    art: "angeschaut" | "vertieft" | "weiterverfolgen";
+    base: string;
+    anzahl: number;
+  }
+  const perItem = new Map<string, Item>();
 
   let aktiv = 0;
   for (const s of students) {
@@ -336,14 +356,19 @@ export async function teacherOrakel(
       } else if (id.startsWith("mehr:")) {
         art = "vertieft";
         base = id.slice("mehr:".length);
-      } else if (id.includes(":kanten-")) {
-        continue; // Kombinationen (Gewebe-Kanten) zaehlen nicht als «angeschaut»
+      } else if (id.includes(":kanten-") || id.includes(":gewebe")) {
+        continue; // Kanten/Muster sind kein angeschauter Inhalt
       } else {
         art = "angeschaut";
+        base = id.replace(/:hs\d+$/, ""); // Bild-Hotspots aufs Bild aggregieren
       }
       const agg = ensure(bereichFuer(base));
       agg[art] += 1;
       agg.schueler.add(s.code);
+      const key = `${art} ${base}`;
+      const vorhanden = perItem.get(key);
+      if (vorhanden) vorhanden.anzahl += 1;
+      else perItem.set(key, { art, base, anzahl: 1 });
     }
   }
 
@@ -359,5 +384,28 @@ export async function teacherOrakel(
     }))
     .sort((x, y) => order.indexOf(x.bereich) - order.indexOf(y.bereich));
 
-  return { classCode, n: students.length, aktiv, bereiche };
+  // Konkrete Themen mit Titel (aus der gespiegelten Registry), je Signal die
+  // häufigsten. Fallback auf die letzten ID-Segmente, falls (noch) kein Titel.
+  const titelFuer = (base: string): string =>
+    titelMap[base] ?? base.split(":").slice(-2).join(":");
+  const themen = (art: Item["art"], limit = 12): TeacherOrakelThema[] =>
+    [...perItem.values()]
+      .filter((it) => it.art === art)
+      .sort((a, b) => b.anzahl - a.anzahl)
+      .slice(0, limit)
+      .map((it) => ({
+        titel: titelFuer(it.base),
+        bereich: bereichFuer(it.base),
+        anzahl: it.anzahl,
+      }));
+
+  return {
+    classCode,
+    n: students.length,
+    aktiv,
+    bereiche,
+    topAngeschaut: themen("angeschaut"),
+    topVertieft: themen("vertieft"),
+    topWeiterverfolgen: themen("weiterverfolgen"),
+  };
 }

@@ -4,7 +4,12 @@ import { Suspense, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { loadTeacherOrakelSecure, loadTeacherReportSecure } from "@/lib/api";
 import { describePoll } from "@/lib/pollLabels";
-import type { PollAggregate, TeacherOrakel, TeacherReport } from "@/lib/types";
+import type {
+  PollAggregate,
+  TeacherOrakel,
+  TeacherOrakelThema,
+  TeacherReport,
+} from "@/lib/types";
 
 /**
  * Lehrer-Report (Vorbild: 10mio `teacher.astro`-Report + `klassenreport`).
@@ -124,6 +129,41 @@ function PollCard({ agg }: { agg: PollAggregate }) {
   );
 }
 
+/** Liste der häufigsten konkreten Themen (mit Titel + Abschnitt + Anzahl). */
+function ThemenListe({
+  titel,
+  items,
+}: {
+  titel: string;
+  items: TeacherOrakelThema[];
+}) {
+  return (
+    <div className="rounded-xl border border-outline-variant bg-surface-bright p-md">
+      <p className="text-label-sm uppercase tracking-wider text-tertiary">{titel}</p>
+      {items.length === 0 ? (
+        <p className="mt-sm text-body-sm text-on-surface-variant">Noch nichts.</p>
+      ) : (
+        <ol className="mt-sm flex flex-col gap-sm">
+          {items.map((t, i) => (
+            <li key={i} className="flex items-baseline justify-between gap-sm">
+              <span className="min-w-0">
+                <span className="block text-body-sm text-on-surface">{t.titel}</span>
+                <span className="block text-label-sm text-on-surface-variant">{t.bereich}</span>
+              </span>
+              <span
+                className="shrink-0 text-label-sm text-on-surface-variant"
+                style={{ fontFamily: "ui-monospace, monospace" }}
+              >
+                {t.anzahl}
+              </span>
+            </li>
+          ))}
+        </ol>
+      )}
+    </div>
+  );
+}
+
 function ReportFlow() {
   const search = useSearchParams();
   const code = (search.get("code") ?? "").toUpperCase();
@@ -221,6 +261,11 @@ function ReportFlow() {
               </table>
             </div>
           )}
+          <div className="mt-lg grid gap-md sm:grid-cols-3">
+            <ThemenListe titel="Am meisten weiterverfolgt" items={orakel.topWeiterverfolgen} />
+            <ThemenListe titel="Am meisten vertieft" items={orakel.topVertieft} />
+            <ThemenListe titel="Am meisten angeschaut" items={orakel.topAngeschaut} />
+          </div>
         </section>
       )}
 

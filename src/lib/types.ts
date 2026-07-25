@@ -101,6 +101,16 @@ export interface TeacherOrakelBereich {
   aktiveSchueler: number;
 }
 
+/** Ein konkretes Thema (mit Klartext-Titel) im Klassen-Orakel. */
+export interface TeacherOrakelThema {
+  /** Klartext-Titel (aus der gespiegelten Registry) oder Fallback. */
+  titel: string;
+  /** Abschnitt, zu dem das Thema gehört. */
+  bereich: string;
+  /** Wie oft in der Klasse (Summe über alle Schueler:innen). */
+  anzahl: number;
+}
+
 /** Klassen-Orakel: wo die Klasse in Lernseite 2 unterwegs ist. */
 export interface TeacherOrakel {
   classCode: string;
@@ -109,4 +119,8 @@ export interface TeacherOrakel {
   /** davon mit mindestens einer Spur. */
   aktiv: number;
   bereiche: TeacherOrakelBereich[];
+  /** Konkrete Themen (Titel), nach Häufigkeit — je Signal die stärksten. */
+  topAngeschaut: TeacherOrakelThema[];
+  topVertieft: TeacherOrakelThema[];
+  topWeiterverfolgen: TeacherOrakelThema[];
 }
