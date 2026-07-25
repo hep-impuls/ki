@@ -62,6 +62,9 @@ interface Bereich {
   denker: Denker[];
   /** Fliesstext: Grundidee, die Stimmen, neue Begriffe («…»). */
   absaetze: string[];
+  /** Namen/Begriffe im Fliesstext mit Hover-Kurzerklärung (erstes Vorkommen
+   *  je Absatz). */
+  absatzBegriffe?: Begriffserklaerung[];
   /** Die eine Box: Was hilft mir diese Einordnung jetzt? */
   hilft: string;
   /** Quellenzeile (Werke). */
@@ -73,6 +76,15 @@ const BEREICHE: Bereich[] = [
     titel: "Was ist der Mensch?",
     leitfrage: "Was uns im Kern ausmacht, ganz unabhängig von der Maschine.",
     icon: "psychology",
+    absatzBegriffe: [
+      { wort: "Aristoteles", erklaerung: "Griechischer Philosoph, 384 bis 322 v. Chr.; Begründer von Logik und beobachtender Wissenschaft." },
+      { wort: "Immanuel Kant", erklaerung: "Deutscher Philosoph, 1724 bis 1804; einer der wirkmächtigsten überhaupt." },
+      { wort: "Georg Wilhelm Friedrich Hegel", erklaerung: "Deutscher Philosoph, 1770 bis 1831; Hauptvertreter des deutschen Idealismus." },
+      { wort: "Hannah Arendt", erklaerung: "Deutsch-amerikanische politische Philosophin, 1906 bis 1975." },
+      { wort: "Martin Heidegger", erklaerung: "Deutscher Philosoph, 1889 bis 1976; Hauptwerk «Sein und Zeit»." },
+      { wort: "Peter Sloterdijk", erklaerung: "Deutscher Gegenwartsphilosoph, geboren 1947." },
+      { wort: "Siri Hustvedt", erklaerung: "US-amerikanische Schriftstellerin und Essayistin, geboren 1955." },
+    ],
     denker: [
       {
         slug: "aristoteles",
@@ -163,6 +175,10 @@ const BEREICHE: Bereich[] = [
     titel: "Netzwerke und Systeme",
     leitfrage: "Wie wir Orientierung finden, wo niemand mehr das Ganze überblickt.",
     icon: "hub",
+    absatzBegriffe: [
+      { wort: "Armin Nassehi", erklaerung: "Deutscher Soziologe, geboren 1960; deutet die Gesellschaft mit der Systemtheorie." },
+      { wort: "Bruno Latour", erklaerung: "Französischer Soziologe und Philosoph, 1947 bis 2022; Akteur-Netzwerk-Theorie." },
+    ],
     denker: [
       {
         slug: "nassehi",
@@ -198,6 +214,13 @@ const BEREICHE: Bereich[] = [
     titel: "Transformation von Mensch und Maschine",
     leitfrage: "Warum sich Mensch und Maschine nicht sauber trennen lassen.",
     icon: "handshake",
+    absatzBegriffe: [
+      { wort: "Bruno Latour", erklaerung: "Französischer Soziologe und Philosoph, 1947 bis 2022; Akteur-Netzwerk-Theorie." },
+      { wort: "Yasuo Deguchi", erklaerung: "Japanischer Philosoph an der Universität Kyoto; «We-Turn»-Philosophie (Selbst als Wir)." },
+      { wort: "Donna Haraway", erklaerung: "US-amerikanische Wissenschaftshistorikerin und feministische Denkerin, geboren 1944." },
+      { wort: "Yuval Noah Harari", erklaerung: "Israelischer Historiker, geboren 1976; «Homo Deus»." },
+      { wort: "Markus Gabriel", erklaerung: "Deutscher Philosoph, geboren 1980; «Neuer Realismus», «Ethische Intelligenz»." },
+    ],
     denker: [
       {
         slug: "latour",
@@ -266,6 +289,15 @@ const BEREICHE: Bereich[] = [
     titel: "Lebenskunst",
     leitfrage: "Das Leben ändern, ja, aber wie?",
     icon: "self_improvement",
+    absatzBegriffe: [
+      { wort: "Rainer Maria Rilke", erklaerung: "Deutschsprachiger Dichter, 1875 bis 1926; von ihm stammt die Zeile «Du musst dein Leben ändern»." },
+      { wort: "Stoiker", erklaerung: "Antike Philosophenschule (Epiktet, Seneca, Mark Aurel); Philosophie als tägliche Übung." },
+      { wort: "Michel Foucault", erklaerung: "Französischer Philosoph, 1926 bis 1984; «Sorge um sich selbst»." },
+      { wort: "Wilhelm Schmid", erklaerung: "Freier Philosoph in Berlin, geboren 1953; «Philosophie der Lebenskunst»." },
+      { wort: "Martha Nussbaum", erklaerung: "US-amerikanische Philosophin, geboren 1947; «Fähigkeiten-Ansatz»." },
+      { wort: "Maurice Merleau-Ponty", erklaerung: "Französischer Philosoph, 1908 bis 1961; Philosophie des Leibes." },
+      { wort: "Hartmut Rosa", erklaerung: "Deutscher Soziologe, geboren 1965; Begriff «Resonanz»." },
+    ],
     denker: [
       {
         slug: "stoiker",
@@ -480,7 +512,9 @@ export default function Denkwege({
         {/* Fliesstext: Grundidee, die Stimmen, neue Begriffe («…») */}
         <div className="mt-md space-y-sm text-body-md leading-relaxed text-on-surface-variant">
           {b.absaetze.map((absatz, i) => (
-            <p key={i}>{absatz}</p>
+            <p key={i}>
+              <InfoText text={absatz} begriffe={b.absatzBegriffe} />
+            </p>
           ))}
         </div>
 
