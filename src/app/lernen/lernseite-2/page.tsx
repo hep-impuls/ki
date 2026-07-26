@@ -72,15 +72,22 @@ export default function Lernseite2Hub() {
           </p>
           <Ausklapptext titel="Mehr dazu: Wie die Philosophie das weiterdenkt">
             <p>
-              Genau hier setzt später die philosophische Perspektive an: Je nach
-              Blickwinkel lässt sich dieser Kontext besser oder schlechter
-              fassen. Besonders Denkweisen, die auf Netzwerke zeigen und auf das
-              eigentlich Menschliche — dass der Mensch nicht bloss rechnendes
-              Wissens- und Textwesen ist, sondern, mit Hannah Arendt, ein
-              Anfangen-Können; mit Martin Heidegger ein Wesen der Sorge; mit der
-              Systemtheorie ein Reduzieren von Komplexität, indem sie Muster
-              erfasst und Abläufe koordiniert — machen sichtbar, worin die KI
-              eingebettet ist.
+              Genau hier setzt später die philosophische Perspektive an:
+              Philosophie ist kein Werkzeug für schnelle oder endgültige
+              Antworten. Sie hilft vielmehr, die Phänomene einer Zeit besser zu
+              verstehen: Sie hält inne, ordnet komplexe Entwicklungen und fragt
+              nach ihren Zusammenhängen und Folgen. Dabei geht es nicht darum,
+              die Welt auf einfache Erklärungen zu reduzieren, sondern neue
+              Perspektiven zu öffnen.
+            </p>
+            <p>
+              In diesem Lernset tritt die Philosophie deshalb in den
+              Vordergrund. Wir werden sehen, dass Menschen seit Menschengedenken
+              von ihren eigenen Entwicklungen fasziniert, aber auch besorgt und
+              verunsichert waren. Die Fragen der Philosophie lösen diese
+              Unsicherheit nicht einfach auf. Sie können jedoch Orientierung
+              geben und helfen, den Geschehnissen der eigenen Zeit klarer und
+              gelassener zu begegnen.
             </p>
           </Ausklapptext>
         </div>

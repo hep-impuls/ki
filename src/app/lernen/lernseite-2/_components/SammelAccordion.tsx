@@ -1,6 +1,6 @@
 "use client";
 
-import type { ReactNode } from "react";
+import { useRef, type ReactNode } from "react";
 
 /**
  * SammelAccordion — eine eingesammelte Station/Punkt unter einem Muster, als
@@ -8,6 +8,11 @@ import type { ReactNode } from "react";
  * Inhalt klappt auf/zu. Gedacht für die «gesammelt»-Listen von KI-Story,
  * Merkmalen und Teppich — der Elternteil steuert, welche Karte offen ist
  * (üblich: die neueste). Nur Theme-Tokens.
+ *
+ * Beim Öffnen wird die Karte an den oberen Rand gescrollt. Ohne das landet man
+ * unterhalb des neuen Textes und muss zurückscrollen, weil gleichzeitig die
+ * vorher offene Karte weiter oben zuklappt und alles nach oben rutscht.
+ * `scroll-mt-24` hält Abstand zur klebenden Kopfzeile.
  */
 export default function SammelAccordion({
   nr,
@@ -28,10 +33,27 @@ export default function SammelAccordion({
   neuste?: boolean;
   children: ReactNode;
 }) {
+  const liRef = useRef<HTMLLIElement>(null);
+
+  function beiKlick() {
+    const wirdGeoeffnet = !offen;
+    onToggle();
+    if (!wirdGeoeffnet) return;
+    // Nach dem Commit scrollen (setTimeout statt requestAnimationFrame, weil
+    // rAF in Hintergrund-Tabs pausiert). `auto` statt `smooth`: sanftes
+    // Scrollen ist in manchen Umgebungen wirkungslos, und `Abschnitt.tsx`
+    // macht es genauso.
+    setTimeout(
+      () => liRef.current?.scrollIntoView({ behavior: "auto", block: "start" }),
+      0,
+    );
+  }
+
   return (
     <li
+      ref={liRef}
       className={
-        "overflow-hidden rounded-xl border transition-colors " +
+        "scroll-mt-24 overflow-hidden rounded-xl border transition-colors " +
         (neuste
           ? "border-tertiary/50 bg-tertiary-container/25"
           : "border-outline-variant bg-surface-bright")
@@ -39,7 +61,7 @@ export default function SammelAccordion({
     >
       <button
         type="button"
-        onClick={onToggle}
+        onClick={beiKlick}
         aria-expanded={offen}
         className="flex w-full items-center gap-sm p-md text-left outline-none transition-colors hover:bg-surface-container focus-visible:bg-surface-container sm:px-lg"
       >

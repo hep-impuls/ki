@@ -10,6 +10,63 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-26 — Quellenauftrag-Werkzeug, Portal-Tooltips, Kontrolle Runde 2 (Christof)
+
+**1. Neu: Werkzeug für externe Quellenrecherche.** Die Texte bleiben stellenweise
+zu allgemein. Statt selbst zu recherchieren, geht die Lesefassung an ein
+Recherche-Modell (Gemini), das Quellen nachträgt. Damit die Antwort maschinell
+zurückfliessen kann, gibt es zwei neue Skripte:
+
+- [docs/quellenauftrag.js](quellenauftrag.js) erzeugt
+  `quellenauftrag-lernseite-2.md` mit allen 461 belegfähigen Textblöcken, jeder
+  mit einer **inhaltsadressierten Kennung** (`VA-a1b2c3` = Präfix der Datei plus
+  sechs Zeichen SHA-1 des Textes). Sie ist keine Position, bleibt darum stabil,
+  wenn woanders etwas eingefügt wird, und wechselt genau dann, wenn der Text
+  sich ändert. Ein Beleg zu einem geänderten Text gilt damit automatisch als
+  veraltet. Parallel entsteht `quellenauftrag-index.json` (Kennung → Datei,
+  Abschnitt, Feld, Text). Nur belegfähige Felder kommen hinein; Bildnachweise,
+  Kurzlabels und Aufgaben behaupten nichts.
+- [docs/quellen-pruefen.js](quellen-pruefen.js) liest die Antworttabelle und
+  prüft **jede** gemeldete Quelle: Ist die Kennung echt? Antwortet die URL?
+  Kommen Stichwörter der behaupteten Aussage auf der Seite vor? Ergebnis ist
+  `quellenbericht.md`, sortiert nach Verdacht.
+
+**Warum die Prüfung nicht optional ist:** Beim Bauen des Quellenverzeichnisses
+hat sich eine plausibel aussehende bpb-URL als 404 erwiesen. Recherche-Modelle
+erfinden Belege, die stimmig klingen. Kein gemeldeter Link darf ungeprüft in
+ein Lehrmittel.
+
+**2. Tooltips liegen jetzt in einem Portal.** Christof: «Hier verschwindet der
+Hoover-Text hinter dem Kartenrahmen.» Ursache: Die Karten haben
+`overflow-hidden` für ihre runden Ecken, und das schneidet jeden `absolute`
+positionierten Tooltip ab. Neu gibt es [HoverTipp.tsx](../src/app/lernen/lernseite-2/_components/HoverTipp.tsx),
+das den Tooltip `fixed` an `document.body` hängt und beim Öffnen an der Position
+des Wortes ausmisst (waagrecht zentriert und im Fenster gehalten, senkrecht
+dorthin gekippt, wo mehr Platz ist; Nachmessen bei Scroll und Resize).
+`Begriff` (Glossar) und `DenkerHover` sind nur noch dünne Hüllen darum.
+Gleiches Muster wie beim BildZoom-Fix vom 2026-07-24, jetzt drittes Vorkommen
+derselben Ursache; bei künftigen Overlays innerhalb von Karten gleich zum
+Portal greifen.
+
+**3. Aufklappen scrollt an den Rand.** Christof: «dann kann ich es nicht direkt
+lesen, da ich leicht nach unten fallen und dann wieder nach oben scrollen muss.»
+`SammelAccordion` (KI-Story, Merkmale, Teppich) und die Epochen-Bausteine holen
+die geöffnete Karte jetzt mit `scrollIntoView({block:"start"})` plus
+`scroll-mt-24` an den oberen Rand, wie es `Abschnitt.tsx` schon tat.
+**`behavior:"smooth"` wurde verworfen:** im Prüf-Browser ist sanftes Scrollen
+wirkungslos, der Aufruf kommt an und bewegt nichts. `"auto"` ist verifizierbar
+und im Projekt schon üblich.
+
+**4. Fünf Punkte aus der Kontrolle** (`KontrolleKIAlsPartnerin.docx`): Hub-Text
+zur Philosophie durch Christofs Fassung ersetzt (Philosophie als Innehalten und
+Ordnen statt als Netzwerk-Aufzählung); Schlusssatz «Und wie ist es heute, mit
+KI?» im Philosophie-Einstieg gestrichen; Glossar um Byzanz, Samarkand,
+Mongolen, Kalifen und Tigris ergänzt (die grün markierten Begriffe im
+Bagdad-Text plus die zwei gleich unklaren daneben).
+
+Die drei mitgelieferten Quellen (Gewürz- und Seidenhandel, Pfeffergeschichte,
+SRF zur Pest) sind noch **nicht** eingearbeitet, wie abgesprochen.
+
 ## 2026-07-26 — Rhizom mit sechs Trieben, Orientierungsblock, keine Vorbehalte (Christof)
 
 **1. Sprachregelung: keine Vorbehalte, nur belegte Fehler.** Beim Einarbeiten

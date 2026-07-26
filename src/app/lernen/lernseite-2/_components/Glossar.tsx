@@ -1,6 +1,7 @@
 "use client";
 
 import { Fragment } from "react";
+import HoverTipp from "./HoverTipp";
 
 /**
  * Glossar — Fachbegriffe mit Kurzerklärung beim Hovern (Desktop) bzw. Antippen
@@ -294,6 +295,16 @@ export const GLOSSAR: Record<string, string> = {
     "Machtkampf zwischen USA und Sowjetunion (1947 bis 1991), ausgetragen ohne direkten Krieg, mit Wettrüsten und Stellvertreterkriegen.",
   "Blue Marble":
     "Berühmtes Foto der ganzen Erde, aufgenommen von Apollo 17 (1972); machte die Verletzlichkeit des Planeten sichtbar.",
+  Byzanz:
+    "Das oströmische Reich mit Hauptstadt Konstantinopel (heute Istanbul); bewahrte antikes griechisches Wissen über tausend Jahre.",
+  Samarkand:
+    "Handelsstadt an der Seidenstrasse (heute Usbekistan); über sie kam die Papierherstellung aus China nach Westen.",
+  Mongolen:
+    "Reitervolk aus Zentralasien; eroberte im 13. Jahrhundert das grösste Landreich der Geschichte, 1258 auch Bagdad.",
+  Kalifen:
+    "Herrscher der islamischen Welt, die sich als Nachfolger Mohammeds verstanden.",
+  Tigris:
+    "Grosser Fluss im heutigen Irak; Bagdad wurde an seinem Ufer gebaut.",
   Perceptron:
     "Frühes lernendes Kunstneuron (1958, Frank Rosenblatt); Urahn der heutigen neuronalen Netze.",
   Perceptrons:
@@ -304,25 +315,10 @@ function escapeRegExp(s: string): string {
   return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
-/** Ein einzelner Begriff mit Tooltip (Hover, Fokus/Tap). */
+/** Ein einzelner Begriff mit Tooltip (Hover, Fokus/Tap). Der Tooltip liegt in
+ *  einem Portal, sonst schneiden ihn die Karten mit `overflow-hidden` ab. */
 export function Begriff({ wort, erklaerung }: { wort: string; erklaerung: string }) {
-  return (
-    <span className="group/gl relative inline-block">
-      <button
-        type="button"
-        aria-label={`${wort}: ${erklaerung}`}
-        className="cursor-help border-b border-dotted border-tertiary font-medium text-inherit outline-none focus-visible:rounded-sm focus-visible:ring-2 focus-visible:ring-tertiary"
-      >
-        {wort}
-      </button>
-      <span
-        role="tooltip"
-        className="pointer-events-none invisible absolute bottom-full left-1/2 z-30 mb-1 w-56 -translate-x-1/2 rounded-lg border border-outline-variant bg-surface-bright px-sm py-xs text-left text-label-sm font-normal leading-snug text-on-surface opacity-0 shadow-lg transition-opacity duration-150 group-hover/gl:visible group-hover/gl:opacity-100 group-focus-within/gl:visible group-focus-within/gl:opacity-100"
-      >
-        {erklaerung}
-      </span>
-    </span>
-  );
+  return <HoverTipp wort={wort} inhalt={erklaerung} breite={224} />;
 }
 
 const TERME = Object.keys(GLOSSAR).sort((a, b) => b.length - a.length);

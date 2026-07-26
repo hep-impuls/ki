@@ -82,8 +82,7 @@ export default function Lernseite2PhilosophischePerspektive() {
             <strong className="text-on-surface">«Teppich des Wandels»</strong>{" "}
             und gehst durch <strong className="text-on-surface">acht Epochen</strong>.
             Jede Epoche hat eine neue Technik, eine Verunsicherung und die
-            Philosophie, die Halt gab. Öffne, was dich interessiert. Und wie ist
-            es heute, mit KI?
+            Philosophie, die Halt gab. Öffne, was dich interessiert.
           </p>
         </div>
         <blockquote className="mt-md max-w-3xl border-l-4 border-tertiary pl-md">

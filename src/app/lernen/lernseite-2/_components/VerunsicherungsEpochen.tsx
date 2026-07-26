@@ -1011,7 +1011,8 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
     );
   }, []);
 
-  function toggle(gi: number) {
+  function toggle(gi: number, el?: HTMLElement | null) {
+    const wirdGeoeffnet = !offen.has(gi);
     setOffen((prev) => {
       const nx = new Set(prev);
       if (nx.has(gi)) nx.delete(gi);
@@ -1022,6 +1023,10 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
       setGelesen((prev) => new Set(prev).add(gi));
       merkeSpur(`${SPUR}:${gi}`);
     }
+    // Beim Öffnen den Baustein an den oberen Rand holen, sonst steht der neue
+    // Text unterhalb des Blickfelds und man muss zurückscrollen.
+    if (!wirdGeoeffnet || !el) return;
+    setTimeout(() => el.scrollIntoView({ behavior: "auto", block: "start" }), 0);
   }
 
   return (
@@ -1114,10 +1119,10 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
                 const schon = gelesen.has(gi);
                 const inhalt = e[bs.key];
                 return (
-                  <li key={ti}>
+                  <li key={ti} className="scroll-mt-24">
                     <button
                       type="button"
-                      onClick={() => toggle(gi)}
+                      onClick={(ev) => toggle(gi, ev.currentTarget.parentElement)}
                       aria-expanded={auf}
                       className="flex w-full items-center gap-sm px-md py-sm text-left outline-none transition-colors hover:bg-surface-container focus-visible:bg-surface-container sm:px-lg"
                     >
