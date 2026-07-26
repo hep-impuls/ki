@@ -475,10 +475,11 @@ export default function Lernseite2VorhangAuf() {
           beim Klick zum vollen Netz auf) */}
       <AktivitaetsNetzFloat />
 
-      {/* Video-Impuls zum Einstieg — YouTube-ID folgt (Prop videoId) */}
+      {/* Video-Impuls zum Einstieg */}
       <VideoImpuls
         className="mt-xl"
         spurId="video:vorhang-auf"
+        videoId="u0JT_e_potk"
         titel="Vorhang auf: die neue Akteurin"
         beschreibung="Ein kurzer Input zum Auftakt. Was ist da auf die Bühne getreten, und warum passt es in keine unserer alten Schubladen?"
       />
