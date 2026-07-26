@@ -52,6 +52,33 @@ const FELDER = {
 /** Kürzer als das lohnt keine Quellensuche. */
 const MIN_LAENGE = 90;
 
+/**
+ * Braucht dieser Block überhaupt einen Beleg?
+ *
+ * Rund die Hälfte der Texte ist didaktische Deutung («Wissenszentren sind
+ * kostbar und verletzlich zugleich»). Dort gibt es nichts zu belegen, und wer
+ * ein Modell trotzdem darum bittet, bekommt genau die flachen, hingebogenen
+ * Quellen, die man nicht brauchen kann. Darum werden nur Blöcke mit einer
+ * **prüfbaren Behauptung** in die Pakete gegeben.
+ */
+const PRUEFBAR = [
+  /\b(1[0-9]{3}|20[0-9]{2})\b/,                                   // Jahreszahl
+  /\d+\s?(Prozent|%|Millionen|Milliarden|Tonnen|km|Stellen|Jahre)/, // Menge mit Einheit
+  /\bsoll(en|te)?\b|gilt als|gelten als|schätzt|angeblich|Chronisten/, // zugeschriebene Aussage
+  /\berste[nrs]?\b|grösste[nrs]?|wichtigste[nrs]?|einzige[nrs]?|berühmteste/, // Superlativ
+];
+const VAGE = /\bviele[nrs]?\b|manche[nrs]?|\boft\b|häufig|\brund\b|\betwa\b|zahlreiche/;
+
+/** «hoch» = prüfbare Behauptung, «mittel» = vage Mengenangabe, «tief» = Deutung. */
+function dringlichkeit(text) {
+  if (PRUEFBAR.some((re) => re.test(text))) return "hoch";
+  if (VAGE.test(text)) return "mittel";
+  return "tief";
+}
+
+/** So viele Blöcke pro Paket. Klein genug, dass ein Modell jeden einzeln ansieht. */
+const PAKETGROESSE = 35;
+
 /* ── Hilfsfunktionen ──────────────────────────────────────────────────────── */
 function entstringe(lit) {
   try {
@@ -217,6 +244,7 @@ und die Quelle ihn nur bestätigt.
 let md = ANLEITUNG;
 const index = {};
 const statistik = [];
+const arbeit = []; // nur die Blöcke mit prüfbarer Behauptung, für die Pakete
 let gesamt = 0;
 
 for (const d of DATEIEN) {
@@ -234,7 +262,9 @@ for (const d of DATEIEN) {
       letzterOrt = b.ort;
     }
     md += `\n**[${b.id}]** *(${b.feld})*\n${b.text}\n`;
-    index[b.id] = { datei: d.pfad, ort: b.ort, feld: b.feld, text: b.text };
+    const stufe = dringlichkeit(b.text);
+    index[b.id] = { datei: d.pfad, ort: b.ort, feld: b.feld, stufe, text: b.text };
+    if (stufe !== "tief") arbeit.push({ ...b, thema: d.thema, stufe });
   }
   statistik.push(`${d.pfad}: ${bloecke.length} Blöcke`);
   gesamt += bloecke.length;
@@ -251,9 +281,56 @@ console.log("Dokument:", ZIEL_MD);
 console.log("Index:   ", ZIEL_IX);
 console.log(`Zeichen: ${md.length} (~${Math.round(md.length / 4000) / 1} k Tokens grob)`);
 
+/* ── Arbeitspakete ────────────────────────────────────────────────────────────
+ * Das Gesamtdokument ist zum Nachschlagen. Für die Recherche wird portioniert:
+ * Ein Modell, das 460 Blöcke auf einmal sieht, arbeitet jeden oberflächlich ab.
+ * Ein Paket mit 35 Blöcken, die alle wirklich eine prüfbare Behauptung
+ * enthalten, ergibt brauchbare Treffer. Deutungstexte bleiben ganz draussen.
+ * Reihenfolge: erst «hoch» (Zahl, Datum, Superlativ, zugeschriebene Aussage),
+ * dann «mittel» (vage Mengenangaben). */
+const PAKET_DIR = path.join(__dirname, "quellenauftrag");
+fs.mkdirSync(PAKET_DIR, { recursive: true });
+for (const alt of fs.readdirSync(PAKET_DIR)) {
+  if (/^paket-\d+\.md$/.test(alt)) fs.unlinkSync(path.join(PAKET_DIR, alt));
+}
+
+const sortiert = [
+  ...arbeit.filter((b) => b.stufe === "hoch"),
+  ...arbeit.filter((b) => b.stufe === "mittel"),
+];
+const anzahlPakete = Math.ceil(sortiert.length / PAKETGROESSE);
+
+for (let p = 0; p < anzahlPakete; p++) {
+  const teil = sortiert.slice(p * PAKETGROESSE, (p + 1) * PAKETGROESSE);
+  const nr = String(p + 1).padStart(2, "0");
+  let t = ANLEITUNG.replace(
+    "Dieses Dokument enthält alle belegfähigen Textblöcke",
+    `**Paket ${nr} von ${anzahlPakete}.** Dieses Dokument enthält ${teil.length} Textblöcke`,
+  );
+  t += `\n## Paket ${nr} von ${anzahlPakete}\n\nJeder Block hier enthält eine prüfbare Behauptung (Zahl, Datum,\nSuperlativ oder eine Aussage, die jemandem zugeschrieben wird). Deutende\nPassagen sind bewusst nicht dabei. Geh die ${teil.length} Blöcke einzeln durch.\n`;
+  let letztesThema = null;
+  for (const b of teil) {
+    if (b.thema !== letztesThema) {
+      t += `\n### ${b.thema}\n`;
+      letztesThema = b.thema;
+    }
+    t += `\n**[${b.id}]** *(${b.feld} · ${b.ort})*\n${b.text}\n`;
+  }
+  fs.writeFileSync(path.join(PAKET_DIR, `paket-${nr}.md`), t, "utf8");
+}
+
+const nachStufe = (s) => Object.values(index).filter((b) => b.stufe === s).length;
+console.log(
+  `\nDringlichkeit: ${nachStufe("hoch")} hoch · ${nachStufe("mittel")} mittel · ` +
+    `${nachStufe("tief")} tief (Deutung, kein Beleg nötig)`,
+);
+console.log(`Arbeitspakete: ${anzahlPakete} à max. ${PAKETGROESSE} Blöcke in ${PAKET_DIR}`);
+
 /* Selbstprüfung: doppelte Kennungen über Dateien hinweg wären fatal. */
 const ids = Object.keys(index);
 const doppelt = ids.length !== new Set(ids).size;
 console.log("Kennungen eindeutig:", doppelt ? "NEIN" : "ja");
 const leer = ids.filter((k) => !index[k].text || index[k].text.length < MIN_LAENGE);
 if (leer.length) console.log("Zu kurze Blöcke durchgerutscht:", leer.length);
+const vergessen = sortiert.filter((b) => !index[b.id]);
+if (vergessen.length) console.log("Paket-Blöcke ohne Index-Eintrag:", vergessen.length);
