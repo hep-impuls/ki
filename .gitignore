@@ -36,3 +36,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Erzeugte Pakete und ZIP fuer die Quellensuche (jederzeit neu baubar)
+docs/quellensuche-lernseite-2.zip
