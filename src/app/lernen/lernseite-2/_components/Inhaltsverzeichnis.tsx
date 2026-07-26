@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { leseSpuren, SPUR_EVENT } from "../_lib/spuren";
+import { leseSpuren, spurBasis, SPUR_EVENT } from "../_lib/spuren";
 import { GEWICHT_EVENT } from "../_lib/gewichtung";
 
 /**
@@ -29,7 +29,9 @@ export interface TocEintrag {
 
 function istAktiv(ids: string[], eintrag: TocEintrag): boolean {
   if (!eintrag.prefixe?.length) return false;
-  return ids.some((id) => eintrag.prefixe!.some((p) => id.startsWith(p)));
+  // Über `spurBasis`, damit Vertiefungen (`mehr:…`) und Merkzeichen
+  // (`wunsch:…`) mitzählen: bei ihnen steht die Art vor dem Abschnitt.
+  return ids.some((id) => eintrag.prefixe!.some((p) => spurBasis(id).startsWith(p)));
 }
 
 export default function Inhaltsverzeichnis({

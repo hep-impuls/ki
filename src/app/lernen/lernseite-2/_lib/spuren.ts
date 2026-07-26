@@ -344,6 +344,24 @@ export function spurArt(id: string): SpurArt {
 }
 
 /**
+ * Die Spur-ID ohne führende Art-Kennung.
+ *
+ * `mehr:` und `wunsch:` stehen VORNE in der ID, der Abschnitt dahinter:
+ * `mehr:philosophische-perspektive:epochen:2`. Ein `startsWith`-Vergleich mit
+ * dem Abschnitts-Präfix `philosophische-perspektive:epochen` schlägt darum fehl,
+ * und Vertiefungen sowie Merkzeichen fielen aus den Abschnitts-Zählern heraus.
+ * Wer eine Spur einem Abschnitt zuordnet, vergleicht mit `spurBasis(id)`.
+ *
+ * `video:` bleibt stehen: Video-Spuren haben keinen Abschnitts-Teil, und die
+ * Knotenkarte führt «Videos» als eigenen Bereich über genau dieses Präfix.
+ */
+export function spurBasis(id: string): string {
+  if (id.startsWith("wunsch:")) return id.slice("wunsch:".length);
+  if (id.startsWith("mehr:")) return id.slice("mehr:".length);
+  return id;
+}
+
+/**
  * Aktivitäts-Kennzahlen aus dem lokalen Spuren-Bestand — fürs Aktivitätsnetz.
  * Hotspot-Spuren (`…:hs…`) zählen als Bildpunkte, Bild-Spuren (`…:bild…`) als
  * geöffnete Bilder, Kanten (`…:kanten-…`) als Kombinationen, Video-Spuren

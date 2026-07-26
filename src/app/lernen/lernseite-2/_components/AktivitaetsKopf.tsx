@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import {
   SPUR_EVENT,
   leseSpuren,
+  spurBasis,
   zaehleAktivitaet,
   zieheSpurenAusCloud,
 } from "../_lib/spuren";
@@ -72,7 +73,11 @@ export default function AktivitaetsKopf({
     const lesen = () => {
       if (proAbschnitt) {
         const ids = leseSpuren().map((s) => s.id);
-        const n = ids.filter((id) => prefixe!.some((p) => id.startsWith(p))).length;
+        // Über `spurBasis`, damit Vertiefungen (`mehr:…`) und Merkzeichen
+        // (`wunsch:…`) mitzählen: bei ihnen steht die Art vor dem Abschnitt.
+        const n = ids.filter((id) =>
+          prefixe!.some((p) => spurBasis(id).startsWith(p)),
+        ).length;
         setZahl(n);
         setAktiv([n >= 1, n >= 2, n >= 3, n >= 4]);
       } else {
