@@ -2524,221 +2524,37 @@ Erstellt im Lernset «Eine ganz neue Partnerschaft». Die Deutungen beruhen auf 
 
 ---
 
-## Quellenverzeichnis (geprüfte Belege)
+## Quellen (einfache Erklärungen zum Weiterlesen)
 
 *Quelle: `_components/Quellenverzeichnis.tsx`*
 
-#### Übergreifend: Recht und Datenschutz
+#### Künstliche Intelligenz
 
-#### KI und Urheberrecht (Schweiz)
+**Beschreibung:** Der Überblicksartikel: was mit KI gemeint ist, welche Teilgebiete es gibt und wo die Debatten verlaufen.
 
-**Stützt die Aussage:** Ob ein KI-Ergebnis geschützt ist, hängt vom menschlichen Gestaltungsbeitrag ab.
+- *Quelle:* Wikipedia
 
-#### Training und Einsatz von KI
+#### Grosse Sprachmodelle
 
-**Stützt die Aussage:** Aktualisierte rechtliche Einordnung zu Training und Nutzung.
+**Beschreibung:** Wie ChatGPT und ähnliche Modelle Wort für Wort einen Text bauen, und was die Transformer-Architektur damit zu tun hat.
 
-#### Anonymisierung
+#### Geschichte der künstlichen Intelligenz
 
-**Stützt die Aussage:** Anonym heisst: eine Rückverfolgung ist praktisch ausgeschlossen. Sonst ist es pseudonym.
+**Beschreibung:** Von der Dartmouth-Konferenz 1956 über die KI-Winter bis zu den heutigen Modellen, als durchgehende Erzählung.
 
-#### Pseudonymisierung
+#### Können KI-Tools das Urheberrecht verletzen?
 
-**Stützt die Aussage:** Ein Code, der den Namen ersetzt, ist ein Pseudonym. Genau so arbeitet der Fortschritts-Code hier.
+**Beschreibung:** Die Schweizer Rechtslage in Alltagssprache: Wem gehört ein KI-Bild, und wann wird die Nutzung heikel?
 
-#### Thema 01 · Vorhang auf: KI-Geschichte und Technik
+- *Quelle:* Eidgenössisches Institut für Geistiges Eigentum
 
-#### Enigma und die «Bombe»
+#### Philosophie
 
-**Stützt die Aussage:** Die britische Bombe geht auf Alan Turing und Gordon Welchman zurück, mit polnischen Vorarbeiten.
+**Beschreibung:** Was das Fach überhaupt ist, welche Grundfragen es stellt und wie seine Epochen zusammenhängen.
 
-#### Transformer
+Wenn dir ein Begriff aus diesem Lernset unklar geblieben ist: Hier sind […] Seiten, die das Wichtigste verständlich erklären. Bewusst wenige und bewusst einfache, keine Fachaufsätze. Die Liste wächst mit der Zeit.
 
-**Stützt die Aussage:** Neu war 2017 die Architektur, nicht der Attention-Mechanismus. Den gab es schon vorher.
-
-- *Beleg:* [Vaswani et al.: Attention Is All You Need](https://arxiv.org/abs/1706.03762)
-
-#### Verstärkendes Lernen (DQN)
-
-**Stützt die Aussage:** Das System lernte Atari-Spiele aus Bilddaten und Belohnung und erreichte bei mehreren menschliches Niveau.
-
-#### Skalierung
-
-**Stützt die Aussage:** Modellgrösse, Datenmenge und Rechenaufwand wirken zusammen, nicht die Grösse allein.
-
-- *Beleg:* [Kaplan et al.: Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361)
-
-#### «Emergente» Fähigkeiten
-
-**Stützt die Aussage:** Ob Fähigkeiten wirklich sprunghaft auftauchen, ist methodisch umstritten.
-
-- *Beleg:* [Schaeffer et al.: Are Emergent Abilities a Mirage?](https://arxiv.org/abs/2304.15004)
-
-#### Vektoren und Embeddings
-
-**Stützt die Aussage:** Die Zahl der Dimensionen hängt vom Modell ab; einzelne Dimensionen sind nicht als Bedeutungsanteil lesbar.
-
-- *Beleg:* [OpenAI: New embedding models](https://openai.com/index/new-embedding-models-and-api-updates/)
-
-#### Llama-Lizenz
-
-**Stützt die Aussage:** Zugängliche Gewichte sind nicht dasselbe wie Open Source.
-
-#### Apertus
-
-**Stützt die Aussage:** Das Schweizer Modell wird als vollständig offen und transparent veröffentlicht.
-
-#### Eingaben und Training
-
-**Stützt die Aussage:** Ob deine Eingaben ins Training einfliessen, hängt von Anbieter, Produkt und Einstellungen ab.
-
-- *Beleg:* [OpenAI: Data Controls FAQ](https://help.openai.com/en/articles/7730893-data-controls-faq)
-
-#### Frühe ChatGPT-Nutzung
-
-**Stützt die Aussage:** Eine Million Nutzende nach fünf Tagen, rund hundert Millionen nach zwei Monaten: Schätzungen, keine amtliche Statistik.
-
-#### Thema 01 · Vorhang auf: Umwelt, Wirtschaft, Recht
-
-#### Googles Emissionen
-
-**Stützt die Aussage:** Plus 48 Prozent gegenüber 2019 (Bezugsjahr 2023); Ursachen sind Rechenzentren und Lieferkette.
-
-- *Beleg:* [Google: 2024 Environmental Report](https://sustainability.google/reports/google-2024-environmental-report/)
-
-#### Rechenzentren in Irland
-
-**Stützt die Aussage:** 21 Prozent des gemessenen Stroms 2023, 22 Prozent 2024.
-
-#### Verzerrungen (Bias)
-
-**Stützt die Aussage:** Regressive Geschlechterstereotype in untersuchten Sprachmodellen.
-
-#### EU AI Act
-
-**Stützt die Aussage:** Risikobasierter Rechtsrahmen mit eigenen Regeln für Allzweckmodelle.
-
-#### Geltung des AI Act
-
-**Stützt die Aussage:** In Kraft seit 1. August 2024, die Pflichten greifen gestaffelt.
-
-#### Chip-Exportkontrollen ab 2022
-
-**Stützt die Aussage:** Verschärfte Ausfuhrregeln für fortgeschrittene Rechenchips.
-
-#### Rechtsstand 2026
-
-**Stützt die Aussage:** Bestimmte Ausfuhren nach China werden seit Januar 2026 fallweise geprüft.
-
-#### Zugang und Preise
-
-**Stützt die Aussage:** Was die Gratisstufe kann und was ein Abo ändert; die Stufen ändern laufend.
-
-- *Beleg:* [OpenAI: ChatGPT Pricing](https://openai.com/chatgpt/pricing/)
-
-#### Klarna
-
-**Stützt die Aussage:** 700 Vollzeitäquivalente als Unternehmensangabe, dazu die spätere Kurskorrektur im Kundendienst.
-
-#### Thema 02 · Philosophie in Zeiten der Verunsicherung
-
-#### Eroberung Mexikos
-
-**Stützt die Aussage:** Indigene Verbündete, Vermittlung durch La Malinche und die Pocken waren entscheidend.
-
-- *Beleg:* [Smithsonian Institution: Mexican America](https://www.si.edu/spotlight/mexican-america/history)
-
-#### Ablass
-
-**Stützt die Aussage:** Erlass zeitlicher Strafe für bereits vergebene Schuld, nicht Kauf der Vergebung.
-
-#### Olympe de Gouges
-
-**Stützt die Aussage:** Forderte 1791 gleiche Rechte für Frauen, 1793 hingerichtet wegen ihrer politischen Schriften.
-
-#### Kernspaltung
-
-**Stützt die Aussage:** Hahn und Strassmann fanden den Befund, Meitner und Frisch erklärten und benannten die Spaltung.
-
-- *Beleg:* [Nobel Prize: Otto Hahn, Facts](https://www.nobelprize.org/prizes/chemistry/1944/hahn/facts/)
-
-#### Augustinus
-
-**Stützt die Aussage:** «Civitas Dei» und «civitas terrena» und ihr Verhältnis zu Kirche und Staat; der Gottesstaat ist nicht der vergängliche.
-
-- *Beleg:* [Stanford Encyclopedia of Philosophy: Augustine](https://plato.stanford.edu/entries/augustine/)
-
-#### Kant und Lissabon
-
-**Stützt die Aussage:** Kants Erdbebenschriften von 1756; der Aufruf zum Selbstdenken kam 1784.
-
-#### World Wide Web
-
-**Stützt die Aussage:** Erfindung 1989, erste Umsetzung 1990/91, Freigabe durch das CERN 1993.
-
-- *Beleg:* [CERN: The birth of the Web](https://home.cern/science/computing/the-birth-of-the-web/)
-
-#### Personal Computer
-
-**Stützt die Aussage:** Persönliche Mikrocomputer ab Mitte der 1970er; der IBM PC von 1981 standardisierte den Markt.
-
-- *Beleg:* [Computer History Museum: 1975](https://www.computerhistory.org/timeline/1975/)
-
-- *Beleg:* [Computer History Museum: The IBM PC](https://www.computerhistory.org/revolution/personal-computers/17/301)
-
-#### Die Erde bei Nacht
-
-**Stützt die Aussage:** Die Bilder zeigen Licht, Besiedlung und Elektrifizierung, nicht direkt die Dichte digitaler Netze.
-
-- *Beleg:* [NASA: Earth at Night](https://svs.gsfc.nasa.gov/30028/)
-
-- *Beleg:* [NASA: Night Lights](https://svs.gsfc.nasa.gov/11146/)
-
-#### Clara Immerwahr
-
-**Stützt die Aussage:** Die Deutung ihres Suizids als Protest gegen den Gaskrieg ist umstritten.
-
-#### «Ende der Geschichte»
-
-**Stützt die Aussage:** Fukuyamas These meinte den möglichen Endpunkt der ideologischen Entwicklung, nicht das Ende der Ereignisse.
-
-- *Beleg:* [Stanford Encyclopedia of Philosophy: Progress](https://plato.stanford.edu/archives/sum2022/entries/progress/)
-
-#### Thema 02 · Wege der Orientierung
-
-#### Hegels Dialektik
-
-**Stützt die Aussage:** Die Formel «These, Antithese, Synthese» bildet sein Verfahren nicht durchgehend ab.
-
-#### Heidegger und der Nationalsozialismus
-
-**Stützt die Aussage:** NSDAP-Eintritt 1933, Rektorat und Gleichschaltung, Mitgliedschaft bis 1945, dokumentierter Antisemitismus.
-
-#### Wie lange eine Gewohnheit braucht
-
-**Stützt die Aussage:** Mittelwert 66 Tage, mit sehr grosser Spannweite; aus der Psychologie, nicht der Philosophie.
-
-- *Beleg:* [University College London: How long does it take to form a habit?](https://www.ucl.ac.uk/news/2009/aug/how-long-does-it-take-form-habit)
-
-- *Beleg:* [Lally et al., European Journal of Social Psychology](https://onlinelibrary.wiley.com/doi/abs/10.1002/ejsp.674)
-
-#### Yasuo Deguchi und der «We-Turn»
-
-**Stützt die Aussage:** Mensch-KI-Systeme und verteilte Verantwortung; individuelle Verantwortung entfällt nicht.
-
-- *Beleg:* [Universität Kyoto: Profil](https://www.philosophy.bun.kyoto-u.ac.jp/staff/deguchi/)
-
-#### Sophisten
-
-**Stützt die Aussage:** Eine heterogene Gruppe; der Relativismus lässt sich nicht allen zuschreiben, das ist weitgehend Platons Sicht.
-
-- *Beleg:* [Stanford Encyclopedia of Philosophy: The Sophists](https://plato.stanford.edu/entries/sophists/)
-
-Die Inhalte dieses Lernsets wurden extern geprüft. Hier stehen die […] Belege, die dabei einzeln kontrolliert wurden, mit dem Hinweis, welche Aussage sie stützen. Das ist keine vollständige Bibliografie, sondern eine Möglichkeit, nachzusehen, worauf sich eine Angabe stützt. Abrufdatum aller Weblinks: […].
-
-### Quellenverzeichnis öffnen
-
-### […]
+### Quellen öffnen
 
 ---
 

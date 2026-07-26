@@ -29,12 +29,24 @@ beim Laden, Findmind extern, Löschweg über den Neustart-Knopf.
 Betroffen: `OrakelDashboard.tsx` (Kurz- und Detailtext, PDF-Fussnote),
 `api/orakel/deutung/route.ts`, `start/page.tsx`, `app/page.tsx`.
 
-**2. Neu: Quellenverzeichnis im Orakel**, direkt vor dem Datenschutz-Abschnitt,
-als Akkordeon wie dieser. `_components/Quellenverzeichnis.tsx` führt die 39
-geprüften Belege mit Q-Nummer, Thema, gestützter Aussage und Link, gegliedert
-nach Themen, mit Abrufdatum. Bewusst **keine Vollbibliografie**, sondern die
-Liste dessen, was einzeln kontrolliert wurde. Die Q-Nummern folgen dem
-Prüfbericht, damit beides zusammen lesbar bleibt.
+**2. Neu: Quellen im Orakel**, direkt vor dem Datenschutz-Abschnitt, als
+Akkordeon wie dieser (`_components/Quellenverzeichnis.tsx`).
+
+Erster Versuch war ein vollständiges Belegverzeichnis mit den 39 Q-Nummern des
+Prüfberichts. **Verworfen (Christof):** Belege sind Prüfmaterial, keine
+Lernhilfe. Wer im Lernset auf einen unklaren Begriff stösst, ist mit einem
+arXiv-Aufsatz oder einer Stanford-Encyclopedia-Seite nicht bedient.
+
+**Auswahlregel neu:** Aufgenommen wird nur, was jemand **ohne Vorwissen** lesen
+kann, auf Deutsch, ohne Bezahlschranke. Keine Fachaufsätze, keine PDFs, keine
+englische Primärliteratur, auch wenn sie eine Aussage besser belegen würde. Die
+Liste startet bewusst mit **fünf** Einträgen und wächst nur, wenn ein Link
+wirklich etwas erklärt. Die Q-Belege des Prüfberichts bleiben dort, wo sie
+hingehören: im Prüfbericht selbst.
+
+Jede URL wird vor dem Aufnehmen abgerufen und geprüft. (Beim Bauen erwies sich
+eine plausibel aussehende bpb-Seite als 404 — ungeprüfte Links gehören nicht
+in ein Lehrmittel.)
 
 **3. Sachkorrekturen** (Auswahl): Bombe von Turing *und* Welchman, mit
 polnischer Vorarbeit; Attention gab es vor 2017, neu war die Transformer-

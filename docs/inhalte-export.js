@@ -19,19 +19,19 @@ const DATEIEN = [
   { pfad: "philosophische-perspektive/_components/Denkwege.tsx", thema: "Thema 02 · Bausteine: Wege der Orientierung (4 Bereiche)" },
   { pfad: "das-orakel/page.tsx", thema: "Thema 03 · Das Orakel" },
   { pfad: "das-orakel/_components/OrakelDashboard.tsx", thema: "Thema 03 · Bausteine: Orakel-Dashboard" },
-  { pfad: "_components/Quellenverzeichnis.tsx", thema: "Quellenverzeichnis (geprüfte Belege)" },
+  { pfad: "_components/Quellenverzeichnis.tsx", thema: "Quellen (einfache Erklärungen zum Weiterlesen)" },
   { pfad: "_components/Glossar.tsx", thema: "Glossar (Hover-Erklärungen)", modus: "glossar" },
   { pfad: "../../../config/unit.ts", thema: "Modul-Konfiguration (Titel, Untertitel, Beschreibungen)" },
 ];
 
 /* ── Feld-Klassifikation ──────────────────────────────────────────────────── */
-const H_EINTRAG = new Set(["titel", "title", "epoche", "name", "thema"]); // → #### Eintrag
+const H_EINTRAG = new Set(["titel", "title", "epoche", "name"]); // → #### Eintrag
 const META = ["jahr", "span", "leben", "kurz", "these", "leitfrage", "credit", "quelle", "alt", "werk", "slug"];
 const TEXTE = [
   "lead", "leadMehr", "intro", "text", "mehr", "geschichte", "beispiel", "ki",
   "verunsicherung", "hintergrund", "einordnung", "caption", "contextNote",
   "info", "hilft", "erklaerung", "frage", "wort", "subtitle", "description",
-  "beschreibung", "unterzeile", "stuetzt",
+  "beschreibung", "unterzeile",
 ];
 const LABELS = {
   leadMehr: "Mehr wissen", mehr: "Mehr lesen", ki: "KI-Bezug",
@@ -44,7 +44,6 @@ const LABELS = {
   intro: "Einleitung", frage: "Bewertungsfrage", text: "Text",
   subtitle: "Untertitel", description: "Beschreibung", beschreibung: "Beschreibung",
   unterzeile: "Unterzeile", kurz: "Kurzlabel im Gewebe", jahr: "Jahr",
-  stuetzt: "Stützt die Aussage",
   span: "Zeitraum", leben: "Lebensdaten", slug: "Kennung", title: "Bildstelle",
 };
 const NUR_KEYS = new Set([...H_EINTRAG, ...META, ...TEXTE]);
