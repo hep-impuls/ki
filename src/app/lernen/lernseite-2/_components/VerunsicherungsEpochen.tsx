@@ -277,8 +277,10 @@ const EPOCHEN: Epoche[] = [
             text: "Der barocke Maler zeigt Augustinus als Bischof am Schreibpult, umgeben von seinen Sinnbildern: dem Buch, dem brennenden Herzen und einem Lichtstrahl von oben. Das ganze Bild ist um eine Frage gebaut: Woher kommt die Wahrheit?",
           },
           {
-            x: 60,
-            y: 52,
+            // Flamme, Herz und Hand liegen rechts oben; am Bild ausgemessen
+            // (Herzmitte 90/30, das ganze Motiv zentriert 86/30).
+            x: 86,
+            y: 30,
             zoom: 2.4,
             title: "Das brennende Herz",
             text: "In seiner Hand hält Augustinus ein flammendes Herz, sein bekanntestes Attribut. Es steht für eine leidenschaftliche Suche nach Wahrheit, die nicht im kühlen Verstand, sondern im Innersten des Menschen brennt. Die Wahrheit kommt für ihn nicht von aussen, sondern von innen.",
@@ -661,8 +663,10 @@ const EPOCHEN: Epoche[] = [
             text: "Der Maler zeigt sich in der Uniform seines Artillerie-Regiments, Zigarette im Mund, im Atelier. Die Farben schreien, die Formen splittern. Der Expressionismus malt nicht, wie es aussieht, sondern wie es sich anfühlt.",
           },
           {
-            x: 78,
-            y: 55,
+            // Der Stumpf liegt unten in der Bildmitte, nicht rechts beim Akt;
+            // am Bild (778×884) ausgemessen: Mitte des Stumpfs bei 47/82.
+            x: 47,
+            y: 82,
             zoom: 2.2,
             title: "Der Armstumpf",
             text: "Die rechte Hand (die Malhand) ist abgeschnitten, der Stumpf ragt ins Bild. In Wirklichkeit war Kirchners Hand unversehrt: Der Verlust ist innerlich. Der Krieg, so das Bild, amputiert das Schöpferische am Menschen.",

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import {
   leseSpurenIndices,
   merkeSpur,
@@ -214,8 +215,15 @@ export default function BilderAnschauung({
         Bild anklicken öffnet den Anschauungsmodus · darin die leuchtenden Punkte antippen
       </p>
 
-      {/* ── Anschauungsmodus (Lightbox mit Hotspots) ──────────────────────── */}
-      {bild && (
+      {/* ── Anschauungsmodus (Lightbox mit Hotspots) ────────────────────────
+          Muss in ein Portal: Der aufgeklappte Abschnitt trägt
+          `animate-frame-in`, und diese Animation arbeitet mit `transform`.
+          Ein Vorfahre mit Transform wird zum Bezugsrahmen für
+          `position: fixed`, dann füllt `inset-0` nicht mehr das Fenster,
+          sondern den Abschnitt: verzogen, nicht mittig, Navigation weg.
+          Gleiche Ursache wie bei BildZoom und den Hover-Tooltips. */}
+      {bild &&
+        createPortal(
         <div
           className="fixed inset-0 z-[60] flex flex-col bg-inverse-surface/95"
           role="dialog"
@@ -365,7 +373,8 @@ export default function BilderAnschauung({
               </p>
             )}
           </div>
-        </div>
+        </div>,
+        document.body,
       )}
     </section>
   );

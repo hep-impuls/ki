@@ -10,6 +10,42 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-26 — Nebenwirkung im State-Updater, Herz-Koordinaten (Christof)
+
+**1. «Mehr lesen» wurde geschrieben, aber nicht angezeigt.** Christof meldete
+zweimal, die Vertiefung werde nicht vermerkt. Mein erster Test prüfte nur den
+`localStorage` und war grün, die Anzeige blieb aber stehen. Ursache: In
+`KartenAktion` stand `merkeSpur` **innerhalb** des `setOffen`-Updaters.
+
+```js
+setOffen((o) => { if (!o) merkeSpur(mehrId); return !o; });   // falsch
+```
+
+Ein Updater läuft in der **Render-Phase**. `merkeSpur` feuert dort `SPUR_EVENT`,
+das Aktivitätsnetz ruft daraufhin `setState` — und React verwirft ein
+`setState`, das während des Renderns einer anderen Komponente eintrifft. Die
+Spur landete im Speicher, der Zähler bewegte sich erst beim Neuaufbau des
+Panels. Genau darum sah der Speicher-Test richtig aus.
+
+Neu wird erst registriert, dann der State gesetzt. Ein Scan über alle
+`set…(x => {…})`-Blöcke in `lernseite-2` bestätigt: Es war die einzige solche
+Stelle. **Regel:** Nebenwirkungen (`merkeSpur`, `merkeInhalt`, `melde`,
+`dispatchEvent`) gehören nie in einen State-Updater, immer davor.
+
+**Lehre für die Prüfung:** Ein Test, der nur den Speicher liest, beweist
+nichts über die Anzeige. Bei Zählern muss der sichtbare Wert **ohne
+Neuaufbau** geprüft werden; verifiziert mit 06 → 07 bei offenem Panel.
+
+**2. Der Rahmen zeigte nicht auf das brennende Herz.** In der Augustinus-Führung
+stand der Stopp «Das brennende Herz» auf `x: 60, y: 52`, also mitten im Ornat.
+Am Bild (1280×1633) ausgemessen: Herzmitte bei 90/30, das ganze Motiv aus
+Flamme, Herz und Hand zentriert bei **86/30**. Nachgeprüft mit einem Ausschnitt
+der vermuteten Region, nicht geschätzt.
+
+Ein Koordinatenpaar genügt, weil `BildZoom` daraus **beides** ableitet: den
+Zoom-Mittelpunkt (Zeile 181) und die Position des Markierungsrahmens
+(Zeile 491). Wer künftig eine Bildstelle korrigiert, ändert nur `x`/`y`.
+
 ## 2026-07-26 — Quellenauftrag-Werkzeug, Portal-Tooltips, Kontrolle Runde 2 (Christof)
 
 **1. Neu: Werkzeug für externe Quellenrecherche.** Die Texte bleiben stellenweise

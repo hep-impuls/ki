@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { leseSpuren, loescheSpuren, merkeSpur, SPUR_EVENT } from "../_lib/spuren";
 import { merkeInhalt } from "../_lib/inhalte";
+import { merkeVertiefung } from "../_lib/vertiefung";
 
 /**
  * KartenAktion — die zwei wiederkehrenden Aktionen unter einer Inhalts-Karte
@@ -56,12 +57,14 @@ export default function KartenAktion({
   }, [wunschId]);
 
   function toggleMehr() {
-    setOffen((o) => {
-      // Beim ersten Aufklappen als Aktivität registrieren (merkeSpur ist
-      // idempotent — mehrfaches Auf/Zu zählt nur einmal).
-      if (!o) merkeSpur(mehrId);
-      return !o;
-    });
+    // WICHTIG: erst registrieren, dann den State setzen. Vorher stand
+    // `merkeSpur` IM Updater — der läuft in der Render-Phase, und das dort
+    // ausgelöste SPUR_EVENT erreichte das Aktivitätsnetz nicht mehr (React
+    // verwirft ein setState, das während des Renderns einer anderen Komponente
+    // kommt). Die Spur landete im Speicher, die Anzeige blieb stehen.
+    // `merkeVertiefung` ist idempotent, mehrfaches Auf/Zu zählt einmal.
+    if (!offen) merkeVertiefung(mehrId, titel);
+    setOffen((o) => !o);
   }
 
   function toggleWunsch() {
