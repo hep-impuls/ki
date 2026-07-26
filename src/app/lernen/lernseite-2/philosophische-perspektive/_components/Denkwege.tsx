@@ -77,11 +77,11 @@ const BEREICHE: Bereich[] = [
     leitfrage: "Was uns im Kern ausmacht, ganz unabhängig von der Maschine.",
     icon: "psychology",
     absatzBegriffe: [
-      { wort: "Aristoteles", erklaerung: "Griechischer Philosoph, 384 bis 322 v. Chr.; Begründer von Logik und beobachtender Wissenschaft." },
+      { wort: "Aristoteles", erklaerung: "Griechischer Philosoph, 384 bis 322 v. Chr.; prägte die formale Logik und die Beobachtung als Methode." },
       { wort: "Immanuel Kant", erklaerung: "Deutscher Philosoph, 1724 bis 1804; einer der wirkmächtigsten überhaupt." },
       { wort: "Georg Wilhelm Friedrich Hegel", erklaerung: "Deutscher Philosoph, 1770 bis 1831; Hauptvertreter des deutschen Idealismus." },
       { wort: "Hannah Arendt", erklaerung: "Deutsch-amerikanische politische Philosophin, 1906 bis 1975." },
-      { wort: "Martin Heidegger", erklaerung: "Deutscher Philosoph, 1889 bis 1976; Hauptwerk «Sein und Zeit»." },
+      { wort: "Martin Heidegger", erklaerung: "Deutscher Philosoph, 1889 bis 1976; Hauptwerk «Sein und Zeit». NSDAP-Mitglied von 1933 bis 1945, sein Werk wird darum kontrovers diskutiert." },
       { wort: "Peter Sloterdijk", erklaerung: "Deutscher Gegenwartsphilosoph, geboren 1947." },
       { wort: "Siri Hustvedt", erklaerung: "US-amerikanische Schriftstellerin und Essayistin, geboren 1955." },
     ],
@@ -103,7 +103,7 @@ const BEREICHE: Bereich[] = [
         name: "Immanuel Kant",
         leben: "1724 bis 1804",
         these: "Frei und darum verantwortlich.",
-        info: "Immanuel Kant lebte sein ganzes Leben in Königsberg und löste mit der «Kritik der reinen Vernunft» eine Wende in der Philosophie aus. Er bündelte sie in vier Fragen, deren letzte, «Was ist der Mensch?», alle anderen zusammenfasst. Seine Antwort: Der Mensch ist vernunftbegabt und frei, er kann aus eigener Einsicht handeln, nicht bloss Trieben oder Befehlen folgen. Aus dieser Freiheit folgen Verantwortung und Würde, für sein Tun kann der Mensch einstehen. Eine Maschine führt Regeln aus, aber sie ist nicht frei und verantwortet nichts, das bleibt beim Menschen.",
+        info: "Immanuel Kant lebte sein ganzes Leben in Königsberg und löste mit der «Kritik der reinen Vernunft» eine Wende in der Philosophie aus. Er bündelte sie in vier Fragen, deren letzte, «Was ist der Mensch?», alle anderen zusammenfasst. Seine Antwort: Der Mensch ist vernunftbegabt und frei, er kann aus eigener Einsicht handeln, nicht bloss Trieben oder Befehlen folgen. Aus dieser Freiheit folgen Verantwortung und Würde, für sein Tun kann der Mensch einstehen. Nach Kant führt eine Maschine Regeln aus, ist aber nicht frei und verantwortet nichts; das bleibt beim Menschen.",
         begriffe: [
           { wort: "Königsberg", erklaerung: "Damals ostpreussische Stadt (heute Kaliningrad, Russland); Kant verliess sie zeitlebens fast nie." },
           { wort: "Kritik der reinen Vernunft", erklaerung: "Kants Hauptwerk (1781): Es untersucht, was der Mensch überhaupt erkennen kann und wo die Grenzen des Wissens liegen." },
@@ -114,9 +114,10 @@ const BEREICHE: Bereich[] = [
         name: "Georg Wilhelm Friedrich Hegel",
         leben: "1770 bis 1831",
         these: "Denken heisst unterscheiden.",
-        info: "Hegel war der Hauptvertreter des deutschen Idealismus und dachte die Wirklichkeit als Entfaltung des «Geistes». Ihr Motor ist das Unterscheiden: Der Geist setzt Gegensätze, hält sie aus und führt sie auf einer höheren Stufe zusammen (verkürzt «These, Antithese, Synthese»). Erst indem der Mensch unterscheidet, was ist und was sein soll, kann er urteilen und sich frei entscheiden. So bekommt gerade das Unterscheiden und Entscheiden eine zutiefst menschliche Seite: Es ist nicht Rechnen, sondern ein bewusster, freier Akt. Hauptwerk: «Phänomenologie des Geistes» (1807).",
+        info: "Hegel war der Hauptvertreter des deutschen Idealismus und dachte die Wirklichkeit als Entfaltung des «Geistes». Stark verkürzt lässt sich seine Dialektik als Bewegung beschreiben, in der ein Begriff an seinen eigenen inneren Spannungen weiterbestimmt wird. Die berühmte Formel «These, Antithese, Synthese» stammt übrigens nicht von Hegel und trifft sein Verfahren nicht durchgehend, als erste Merkhilfe taugt sie aber. Für unsere Frage lesen wir ihn auf das Unterscheiden hin: Erst indem der Mensch auseinanderhält, was ist und was sein soll, kann er urteilen und sich entscheiden. Diese Zuspitzung ist unsere, nicht Hegels, und sie zeigt, warum Unterscheiden mehr sein kann als Rechnen, nämlich ein bewusster, freier Akt. Hauptwerk: «Phänomenologie des Geistes» (1807).",
         begriffe: [
           { wort: "deutschen Idealismus", erklaerung: "Philosophische Strömung um 1800 (Kant, Fichte, Schelling, Hegel), die Denken und Geist ins Zentrum stellt." },
+          { wort: "Dialektik", erklaerung: "Denken in Gegensätzen: Ein Gedanke treibt sich durch seine eigenen Widersprüche weiter, statt einfach zu behaupten." },
         ],
       },
       {
@@ -124,7 +125,7 @@ const BEREICHE: Bereich[] = [
         name: "Hannah Arendt",
         leben: "1906 bis 1975",
         these: "Der Mensch kann neu anfangen.",
-        info: "Hannah Arendt, jüdische politische Denkerin, floh vor den Nazis über Frankreich in die USA. Aus der Erfahrung des Totalitarismus fragte sie, was Handeln und Freiheit ausmacht. Ihr Schlüsselbegriff ist die «Natalität»: Weil jeder Mensch geboren wird, kann er etwas Neues anfangen, das aus dem Bisherigen nicht ableitbar ist. Dazu kommt das Urteilen, das eigenständige Prüfen, auch aus der Sicht anderer. Eine KI setzt Wahrscheinliches fort und wiederholt Muster; anfangen und urteilen im menschlichen Sinn kann sie nicht. Werk: «Vita activa».",
+        info: "Hannah Arendt, jüdische politische Denkerin, floh vor den Nazis über Frankreich in die USA. Aus der Erfahrung des Totalitarismus fragte sie, was Handeln und Freiheit ausmacht. Ihr Schlüsselbegriff ist die «Natalität»: Weil jeder Mensch geboren wird, kann er etwas Neues anfangen, das aus dem Bisherigen nicht ableitbar ist. Dazu kommt das Urteilen, das eigenständige Prüfen, auch aus der Sicht anderer. Von Arendt her gelesen setzt eine KI Wahrscheinliches fort und wiederholt Muster; anfangen und urteilen in ihrem Sinn kann sie nicht. Werk: «Vita activa».",
         begriffe: [
           { wort: "Totalitarismus", erklaerung: "Herrschaftsform, die das ganze Leben kontrollieren will und keine Freiheit zulässt, etwa NS-Diktatur und Stalinismus." },
           { wort: "«Natalität»", erklaerung: "Arendts Begriff für die Gebürtlichkeit: Weil jeder Mensch neu geboren wird, kann er Neues in die Welt bringen." },
@@ -135,8 +136,10 @@ const BEREICHE: Bereich[] = [
         name: "Martin Heidegger",
         leben: "1889 bis 1976",
         these: "Dem Menschen ist sein Leben nicht gleichgültig.",
-        info: "Martin Heidegger, einflussreich und zugleich umstritten wegen seiner Nähe zum Nationalsozialismus, fragte in «Sein und Zeit» neu nach dem Sinn von Sein. Den Menschen nennt er «Dasein», seinen Grundzug die «Sorge»: Uns geht es um unser eigenes Leben, wir kümmern uns, fragen nach Sinn und wissen um unsere Endlichkeit. Einer Maschine ist nichts wichtig, ihr geht es um nichts, sie sorgt sich nicht. Menschlich bleibt dieses Betroffensein vom eigenen Leben, das keine Maschine übernimmt. Hauptwerk: «Sein und Zeit» (1927).",
+        info: "Martin Heidegger gehört zu den einflussreichsten Philosophen des 20. Jahrhunderts und ist zugleich schwer belastet. Er trat am 1. Mai 1933 in die NSDAP ein, war als Rektor an der Gleichschaltung der Universität Freiburg beteiligt und blieb bis 1945 Parteimitglied; in seinen «Schwarzen Heften» stehen antisemitische Äusserungen. Umstritten ist nicht, ob das geschah, sondern wie stark es sein Werk prägt. In «Sein und Zeit» fragte er neu nach dem Sinn von Sein. Den Menschen nennt er «Dasein», seinen Grundzug die «Sorge»: Uns geht es um unser eigenes Leben, wir kümmern uns, fragen nach Sinn und wissen um unsere Endlichkeit. Von hier aus argumentieren viele, einer Maschine sei nichts wichtig, ihr gehe es um nichts, sie sorge sich nicht. Menschlich bleibe dieses Betroffensein vom eigenen Leben. Hauptwerk: «Sein und Zeit» (1927).",
         begriffe: [
+          { wort: "Gleichschaltung", erklaerung: "Die erzwungene Ausrichtung von Ämtern, Schulen und Vereinen auf die NS-Herrschaft ab 1933; Andersdenkende wurden entfernt." },
+          { wort: "«Schwarzen Heften»", erklaerung: "Heideggers private Notizhefte, erst ab 2014 veröffentlicht; sie enthalten antisemitische Passagen und lösten eine neue Debatte über sein Werk aus." },
           { wort: "«Dasein»", erklaerung: "Heideggers Wort für den Menschen: das Wesen, dem es um sein eigenes Sein überhaupt geht." },
         ],
       },
@@ -155,7 +158,7 @@ const BEREICHE: Bereich[] = [
         name: "Siri Hustvedt",
         leben: "geboren 1955",
         these: "Der Geist ist kein Computer.",
-        info: "Siri Hustvedt ist US-amerikanische Schriftstellerin und Essayistin, die Literatur mit Hirnforschung und Philosophie verbindet. In «Die Illusion der Gewissheit» wendet sie sich gegen das Bild, das Gehirn sei ein Computer. Denken und Fühlen hängen für sie am lebendigen Körper und an gelebter Erfahrung, sie spricht vom «verkörperten Geist». Eine KI kann Sprache und Gefühle täuschend echt nachahmen, aber sie erlebt nichts, sie macht keine Erfahrung. Ihr «produktiver Zweifel» hilft, das flüssige Modell nicht mit der Wirklichkeit zu verwechseln. Werk: «Die Illusion der Gewissheit» (2018).",
+        info: "Siri Hustvedt ist US-amerikanische Schriftstellerin und Essayistin, die Literatur mit Hirnforschung und Philosophie verbindet. In «Die Illusion der Gewissheit» wendet sie sich gegen das Bild, das Gehirn sei ein Computer. Denken und Fühlen hängen für sie am lebendigen Körper und an gelebter Erfahrung, sie spricht vom «verkörperten Geist». Ihr Argument: Eine KI kann Sprache und Gefühle täuschend echt nachahmen, aber sie erlebt nichts und macht keine Erfahrung. Ihr «produktiver Zweifel» hilft, das flüssige Modell nicht mit der Wirklichkeit zu verwechseln. Werk: «Die Illusion der Gewissheit» (2018).",
         begriffe: [
           { wort: "«verkörperten Geist»", erklaerung: "Die Idee, dass Denken und Fühlen untrennbar an den lebendigen Körper gebunden sind, nicht bloss ein Rechnen im Kopf." },
         ],
@@ -164,8 +167,8 @@ const BEREICHE: Bereich[] = [
     absaetze: [
       "«Was ist der Mensch?» Diese Frage ist so alt wie die Philosophie selbst. Schon Aristoteles sah den Menschen als Wesen, das von Natur aus nach Wissen strebt, neugierig, fragend, nie ganz fertig. Immanuel Kant machte die Frage zur Kernfrage überhaupt und gab eine Richtung vor: Der Mensch ist frei, er kann aus eigener Einsicht handeln, und darum trägt er Verantwortung. Georg Wilhelm Friedrich Hegel fügt hinzu, dass der Mensch ein Wesen ist, das unterscheidet. Erst indem wir Gegensätze auseinanderhalten, was ist und was sein soll, können wir urteilen und uns frei entscheiden. So bekommt gerade das Unterscheiden und Entscheiden eine zutiefst menschliche Seite.",
       "Hannah Arendt nennt einen weiteren Wesenszug das Anfangen. Mit jedem Menschen kommt etwas Neues in die Welt, das aus dem Bisherigen nicht ableitbar ist. Und der Mensch urteilt, er hält inne und entscheidet selbst. Martin Heidegger fügt die «Sorge» hinzu: Dem Menschen ist sein eigenes Leben nicht gleichgültig, er kümmert sich, fragt nach Sinn, weiss um seine Endlichkeit.",
-      "Peter Sloterdijk beschreibt den Menschen als übendes Wesen. Wir werden, wer wir sind, durch Übung und Wiederholung, und niemand kann für uns üben. Siri Hustvedt erinnert daran, dass der Geist kein Computer ist. Denken und Fühlen hängen am lebendigen Körper und an gelebter Erfahrung. Eine Maschine kann Sprache und Gefühle täuschend echt nachahmen, aber sie erlebt nichts.",
-      "Worauf das alles zielt, ist nicht der Vergleich mit der Maschine. Es geht nicht darum, ob eine KI auch anfangen, urteilen oder unterscheiden könnte. Es geht darum, was uns in unserem Wesen ausmacht. Und diese Züge sind nicht etwas, das wir bloss tun, sondern etwas, das wir sind. Wir können gar nicht anders, als neugierig zu sein, anzufangen, zu unterscheiden und uns zu sorgen.",
+      "Peter Sloterdijk beschreibt den Menschen als übendes Wesen. Wir werden, wer wir sind, durch Übung und Wiederholung, und niemand kann für uns üben. Siri Hustvedt hält dagegen, der Geist sei kein Computer: Denken und Fühlen hängen für sie am lebendigen Körper und an gelebter Erfahrung. Eine Maschine könne Sprache und Gefühle täuschend echt nachahmen, erlebe dabei aber nichts.",
+      "Worauf das alles zielt, ist nicht der Vergleich mit der Maschine. Es geht nicht darum, ob eine KI auch anfangen, urteilen oder unterscheiden könnte. Es geht darum, was uns in unserem Wesen ausmacht. Und diese Züge sind nach diesen Denkerinnen und Denkern nicht etwas, das wir bloss tun, sondern etwas, das wir sind. Ob einer Maschine so etwas grundsätzlich verschlossen bleibt, ist damit übrigens nicht bewiesen, sondern behauptet und begründet. Genau darüber wird gestritten, und du darfst mitstreiten.",
     ],
     hilft:
       "Wenn dich die schnelle, kluge KI verunsichert, kehr zur Frage zurück, was dich als Mensch ausmacht. Neugier, Anfangen, Urteilen, Sorge, das bleibt deins, ganz gleich, wie gut die Maschine formuliert. Dafür braucht es am Ende ein Grundvertrauen: dass diese Wesenszüge nicht einfach verschwinden, nur weil eine Maschine gute Sätze schreibt.",
@@ -227,7 +230,7 @@ const BEREICHE: Bereich[] = [
         name: "Bruno Latour",
         leben: "1947 bis 2022",
         these: "Das freie Individuum ist eine Illusion.",
-        info: "Latour zeigt mit der Akteur-Netzwerk-Theorie auch, dass das ganz freie, unabhängige Individuum eine Illusion ist. Wir handeln nie aus dem Nichts, sondern immer eingebettet in Beziehungen zu Menschen, Werkzeugen, Institutionen und Techniken. Das ist keine Einschränkung, sondern die normale Bedingung des Handelns. Je bewusster man sich die eigenen Abhängigkeiten macht, desto klarer und souveräner wird das eigene Tun, gerade auch im Umgang mit KI.",
+        info: "Mit der Akteur-Netzwerk-Theorie lässt sich auch das Bild vom ganz freien, unabhängigen Individuum in Frage stellen. Latour untersucht, wie sich Handlungsmacht auf viele verteilt; dass es individuelle Freiheit nicht gäbe, beweist er damit nicht. Wir handeln jedenfalls nie aus dem Nichts, sondern immer eingebettet in Beziehungen zu Menschen, Werkzeugen, Institutionen und Techniken. Das ist keine Einschränkung, sondern die normale Bedingung des Handelns. Je bewusster man sich die eigenen Abhängigkeiten macht, desto klarer und souveräner wird das eigene Tun, gerade auch im Umgang mit KI.",
         begriffe: [
           { wort: "Akteur-Netzwerk-Theorie", erklaerung: "Latours Ansatz: Wirkung entsteht im Netz aus Menschen und Dingen, nichts handelt für sich allein." },
         ],
@@ -237,7 +240,7 @@ const BEREICHE: Bereich[] = [
         name: "Yasuo Deguchi",
         leben: "zeitgenössisch",
         these: "Nicht «ich» handelt, sondern «wir».",
-        info: "Yasuo Deguchi ist Philosophieprofessor an der Universität Kyoto und verbindet westliches mit ostasiatischem Denken. Mit seiner «We-Turn»-Philosophie verlegt er das Handeln vom einzelnen «Ich» auf ein «Wir»: Niemand kann etwas ganz allein, jede Handlung wird von vielen getragen, von Menschen, Dingen und heute auch von Maschinen. Der eigentliche Handelnde ist deshalb kein einsames Ich, sondern ein «Selbst als Wir», zu dem die KI dazugehört. Diese Sicht wurzelt im ostasiatischen, buddhistischen Denken, dass nichts für sich allein besteht, sondern alles wechselseitig entsteht. Das entlastet auch: Können und Verantwortung liegen beim «Wir», nicht allein auf den Schultern eines einzelnen Ich.",
+        info: "Yasuo Deguchi ist Philosophieprofessor an der Universität Kyoto und verbindet westliches mit ostasiatischem Denken. Mit seiner «We-Turn»-Philosophie verlegt er das Handeln vom einzelnen «Ich» auf ein «Wir»: Niemand kann etwas ganz allein, jede Handlung wird von vielen getragen, von Menschen, Dingen und heute auch von Maschinen. Der eigentliche Handelnde ist deshalb kein einsames Ich, sondern ein «Selbst als Wir», zu dem die KI dazugehört. Er stützt sich dabei auf einen alten buddhistischen Gedanken, das «abhängige Entstehen»: Nichts besteht für sich allein, alles entsteht wechselseitig. Das entlastet, hebt aber die Verantwortung nicht auf. Sie verteilt sich auf ein «Wir» mit verschiedenen Rollen, statt ganz auf den Schultern eines einzelnen Ich zu liegen.",
         begriffe: [
           { wort: "Kyoto", erklaerung: "Alte Kaiserstadt in Japan, bekannt für ihre Universität und eine eigene philosophische Schule." },
           { wort: "«We-Turn»", erklaerung: "Deguchis Wendung vom «Ich» zum «Wir»: Der eigentliche Handelnde ist ein Wir aus Menschen und Dingen, nicht das einzelne Ich." },
@@ -276,8 +279,8 @@ const BEREICHE: Bereich[] = [
       },
     ],
     absaetze: [
-      "Mensch und Maschine lassen sich nicht mehr sauber auseinanderdividieren. Wir tippen, suchen, planen und entscheiden längst mit Geräten zusammen. Schon Bruno Latour zeigt, warum das kein neuer Sonderfall ist: Das ganz freie Individuum, das egoistisch nur tut, was es will, hat es nie gegeben. Wir stecken immer in Abhängigkeiten, von Menschen, Werkzeugen, Institutionen. Je klarer man sich diese Abhängigkeiten bewusst macht, desto verständlicher wird das eigene Tun.",
-      "Der japanische Philosoph Yasuo Deguchi treibt diesen Gedanken weiter. Seine «We-Turn»-Philosophie verlegt das Handeln vom einzelnen «Ich» auf ein «Wir». Niemand kann etwas ganz allein, jede Handlung wird von vielen anderen getragen, von Menschen, Dingen und heute auch von Maschinen. Der eigentliche Handelnde ist deshalb kein einsames Ich, sondern ein «Wir», zu dem die KI dazugehört. Diese Sicht wurzelt im ostasiatischen Denken, in der buddhistischen Einsicht, dass nichts für sich allein besteht, sondern alles miteinander verbunden entsteht.",
+      "Mensch und Maschine lassen sich nicht mehr sauber auseinanderdividieren. Wir tippen, suchen, planen und entscheiden längst mit Geräten zusammen. Schon Bruno Latour zeigt, warum das kein neuer Sonderfall ist. Nach seiner Lesart hat es das ganz freie Individuum, das egoistisch nur tut, was es will, nie gegeben: Wir stecken immer in Abhängigkeiten, von Menschen, Werkzeugen, Institutionen. Je klarer man sich diese Abhängigkeiten bewusst macht, desto verständlicher wird das eigene Tun.",
+      "Der japanische Philosoph Yasuo Deguchi treibt diesen Gedanken weiter. Seine «We-Turn»-Philosophie verlegt das Handeln vom einzelnen «Ich» auf ein «Wir». Niemand kann etwas ganz allein, jede Handlung wird von vielen anderen getragen, von Menschen, Dingen und heute auch von Maschinen. Der eigentliche Handelnde ist deshalb kein einsames Ich, sondern ein «Wir», zu dem die KI dazugehört. Er stützt sich dabei auf den buddhistischen Gedanken des «abhängigen Entstehens», dass nichts für sich allein besteht, sondern alles miteinander verbunden entsteht. Wichtig ist: Verantwortung verschwindet damit nicht, sie verteilt sich auf ein «Wir» mit verschiedenen Rollen.",
       "Was folgt daraus? Donna Haraway sagt, wir sind längst «verwoben», in gewissem Sinn schon Mischwesen aus Mensch und Maschine, und sollten das verantwortlich gestalten. Yuval Noah Harari mahnt, dass diese Verschmelzung gewaltige Macht freisetzt und darum klare Regeln braucht. Markus Gabriel setzt auf «ethische Intelligenz», das kluge, moralische Mitgestalten. Zwei Wege zeichnen sich ab: sich auf die Zusammenarbeit einlassen oder den eigenen Weg umso deutlicher markieren, beides gestützt durch Regulation und Ethik.",
       "Am äussersten Rand steht der «Transhumanismus», die Idee, den Menschen durch Technik grenzenlos zu steigern, vielleicht sogar den Tod zu überwinden. Zum Einordnen helfen zwei ältere Muster als Gegenschablone. Zum einen die religiösen Heilsversprechen, denen der Transhumanismus verblüffend ähnelt, nur dass hier die Technik die Erlösung bringen soll. Zum anderen die endzeitlichen Untergangserzählungen, in denen die KI alles auslöscht. Beides, Erlösung wie Weltuntergang, sind grosse, alte Geschichten. Wer sie erkennt, fällt weder auf den Hype noch auf die Panik herein.",
     ],
@@ -328,7 +331,7 @@ const BEREICHE: Bereich[] = [
         name: "Wilhelm Schmid",
         leben: "geboren 1953",
         these: "Das Leben ändern, aber wie? In kleinen Schritten.",
-        info: "Wilhelm Schmid ist ein freier Philosoph in Berlin und hat die «Philosophie der Lebenskunst» im deutschsprachigen Raum bekannt gemacht. Sein Thema: Aus einer Einsicht folgt noch keine Tat, das kennt jeder von den guten Vorsätzen. Was hilft, ist Übung in kleinsten Schritten, täglich, fast beiläufig, aber regelmässig, nicht das ganze Buch auf einmal, sondern jeden Tag eine Seite. Weil Freude stärker wirkt als Zwang, soll man sich am Schönen orientieren, zu dem man Ja sagen kann. So werden neue Gewohnheiten gebildet, im Schnitt in rund zwei Monaten. Werk: «Philosophie der Lebenskunst» (1998).",
+        info: "Wilhelm Schmid ist ein freier Philosoph in Berlin und hat die «Philosophie der Lebenskunst» im deutschsprachigen Raum bekannt gemacht. Sein Thema: Aus einer Einsicht folgt noch keine Tat, das kennt jeder von den guten Vorsätzen. Was hilft, ist Übung in kleinsten Schritten, täglich, fast beiläufig, aber regelmässig, nicht das ganze Buch auf einmal, sondern jeden Tag eine Seite. Weil Freude stärker wirkt als Zwang, soll man sich am Schönen orientieren, zu dem man Ja sagen kann. So werden neue Gewohnheiten gebildet. Wie lange das dauert, hat die Psychologie untersucht, nicht die Philosophie: Eine oft zitierte Studie fand einen Mittelwert von 66 Tagen, mit sehr grossen Unterschieden je nach Person und Gewohnheit. Werk: «Philosophie der Lebenskunst» (1998).",
       },
       {
         slug: "nussbaum",
@@ -366,7 +369,7 @@ const BEREICHE: Bereich[] = [
       "«Du musst dein Leben ändern», heisst es in einem berühmten Gedicht von Rainer Maria Rilke. Ja, aber wie? Das ist die Grundfrage der Lebenskunst. Denn aus einer Einsicht folgt noch lange keine Tat, jeder kennt das von den guten Vorsätzen an Silvester, die am Neujahrsmorgen schon wieder verblasst sind. Dieser Bereich fragt nicht, was der Mensch ist, sondern wie er sein Leben tatsächlich gestalten und ändern kann.",
       "Schon die Stoiker wussten: Philosophie ist tägliche Übung, nicht blosses Wissen. Das griechische Wort dafür ist «Askesis», Übung, nicht Verzicht. Michel Foucault nannte das die «Sorge um sich selbst», das Leben bewusst formen wie ein Kunstwerk. Und der Lebenskunst-Philosoph Wilhelm Schmid zeigt konkret, wie: in kleinsten Schritten, täglich, fast beiläufig, aber regelmässig. Nicht das ganze Buch auf einmal, sondern jeden Tag eine Seite. So wird aus einem Vorsatz allmählich eine neue Gewohnheit.",
       "Dabei zählt nicht nur der Kopf. Martha Nussbaum erinnert daran, dass Gefühle zum guten Leben gehören, und Maurice Merleau-Ponty, dass wir die Welt leiblich verstehen, durch Körper und Wahrnehmung. Genau darum wirkt Schönes stärker als Zwang: Wer sich an etwas orientiert, zu dem er Ja sagen kann, verändert sich lieber. Hartmut Rosa nennt dieses lebendige Verhältnis zur Welt «Resonanz».",
-      "Und die KI? Sie kann bei der Umsetzung helfen, etwa eine App, die an die kleinen Übungen erinnert und Fortschritte zeigt. Aber gehen muss man den Weg selbst. Eine Spritze oder ein Klick nimmt die Anstrengung ab, doch das eingeübte, selbst gestaltete Leben ersetzt sie nicht. Lebenskunst bleibt Menschensache.",
+      "Und die KI? Sie kann bei der Umsetzung helfen, etwa eine App, die an die kleinen Übungen erinnert und Fortschritte zeigt. Aber gehen muss man den Weg selbst. Kein Werkzeug übt für dich, und ein eingeübtes, selbst gestaltetes Leben lässt sich nicht abkürzen. Lebenskunst bleibt Menschensache.",
     ],
     hilft:
       "Wenn du etwas ändern willst, warte nicht auf den grossen Ruck. Nimm dir den kleinstmöglichen Schritt vor, jeden Tag einen, und knüpfe ihn an etwas Schönes, zu dem du Ja sagst. Die KI darf dich erinnern und begleiten, aber die Übung, und damit dein Leben, gestaltest du selbst.",

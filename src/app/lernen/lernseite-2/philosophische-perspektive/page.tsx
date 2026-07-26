@@ -126,13 +126,13 @@ export default function Lernseite2PhilosophischePerspektive() {
           <div className="mt-sm space-y-sm text-body-lg text-on-surface-variant">
             <p>
               Was ist Philosophie überhaupt? Wörtlich heisst sie «Liebe zur
-              Weisheit». Sie ist <strong className="text-on-surface">keine
-              strenge Wissenschaft</strong>, die mit Messdaten beweist, wie etwas
-              zusammenhängt. Das tun Physik oder Statistik. Philosophie arbeitet
-              stattdessen mit{" "}
-              <strong className="text-on-surface">Ideen und Denkbildern</strong>.
-              Sie hilft uns, neu zu ordnen und zu verstehen, was der Wandel
-              durcheinanderbringt.
+              Weisheit». Sie ist ein eigenes wissenschaftliches Fach, aber{" "}
+              <strong className="text-on-surface">keine erfahrungswissenschaftliche
+              Disziplin</strong> wie Physik oder Statistik, die mit Messdaten
+              beweisen, wie etwas zusammenhängt. Philosophie prüft{" "}
+              <strong className="text-on-surface">Grundbegriffe und Argumente</strong>{" "}
+              und arbeitet dabei überwiegend nicht experimentell. Sie hilft uns,
+              neu zu ordnen und zu verstehen, was der Wandel durcheinanderbringt.
             </p>
             <p>
               Darum geht es in diesem Modul vor allem um eine Frage, die mit der
@@ -298,7 +298,7 @@ export default function Lernseite2PhilosophischePerspektive() {
               kurz: "Kolonialisierung",
               jahr: "ab 1492",
               text: "Mit den neuen Schiffen greifen europäische Mächte über die Ozeane aus: Eroberung, Handel, Sklaverei. Der Reichtum Europas und das Leid ganzer Kontinente hängen am selben Faden.",
-              mehr: "Schon 1494 zogen Spanien und Portugal im Vertrag von Tordesillas eine Linie über den Atlantik und teilten die aussereuropäische Welt unter sich auf, gefragt wurde dort niemand. Eroberer wie Cortés und Pizarro stürzten mit wenigen hundert Soldaten die Reiche der Azteken und Inka, wobei eingeschleppte Krankheiten wie die Pocken mehr Menschen töteten als jede Waffe. Auf den Plantagen der Kolonien arbeiteten bald Millionen verschleppte Afrikanerinnen und Afrikaner, der transatlantische Sklavenhandel wurde zu einem Fundament des europäischen Reichtums. Es gab auch Widerspruch, der Mönch Bartolomé de Las Casas beschrieb die Gräuel und stritt vor dem spanischen Hof für die Rechte der Ureinwohner, durchgesetzt hat er sich nicht. So entstand eine Weltordnung, in der Europa jahrhundertelang bestimmte, wessen Sprache, Religion und Wissen zählt. Viele Länder tragen bis heute Grenzen, Sprachen und Ungleichheiten aus dieser Zeit.",
+              mehr: "Schon 1494 zogen Spanien und Portugal im Vertrag von Tordesillas eine Linie über den Atlantik und teilten die aussereuropäische Welt unter sich auf, gefragt wurde dort niemand. Eroberer wie Cortés und Pizarro stürzten die Reiche der Azteken und Inka, und das gelang nicht mit wenigen hundert Soldaten allein: Entscheidend waren zehntausende indigene Verbündete, die mit den Herrschern ihre eigenen Rechnungen offen hatten, Vermittlerinnen wie La Malinche, innere Machtkämpfe und die eingeschleppten Pocken, die mehr Menschen töteten als jede Waffe. Auf den Plantagen der Kolonien arbeiteten bald Millionen verschleppte Afrikanerinnen und Afrikaner, der transatlantische Sklavenhandel wurde zu einem Fundament des europäischen Reichtums. Es gab auch Widerspruch, der Mönch Bartolomé de Las Casas beschrieb die Gräuel und stritt vor dem spanischen Hof für die Rechte der Ureinwohner, durchgesetzt hat er sich nicht. So entstand eine Weltordnung, in der Europa jahrhundertelang bestimmte, wessen Sprache, Religion und Wissen zählt. Viele Länder tragen bis heute Grenzen, Sprachen und Ungleichheiten aus dieser Zeit.",
             },
             {
               faden: "ereignisse",
@@ -308,7 +308,7 @@ export default function Lernseite2PhilosophischePerspektive() {
               kurz: "Reformation",
               jahr: "1517",
               text: "Luthers Thesen spalten die Kirche. Der Buchdruck verbreitet sie in Windeseile. Eine neue Technologie und ein gesellschaftlicher Umbruch greifen ineinander.",
-              mehr: "Auslöser war ein Geschäftsmodell, die Kirche verkaufte Ablassbriefe, die angeblich Sündenstrafen verkürzten, und finanzierte damit unter anderem den Petersdom in Rom. Der Mönch und Professor Martin Luther wollte 1517 mit seinen 95 Thesen zunächst eine Gelehrtendebatte anstossen, doch Drucker vervielfältigten sie ohne sein Zutun, und innert Wochen kannte man sie im ganzen Reich. Als er 1521 vor Kaiser und Reichstag den Widerruf verweigerte, war aus dem Streit eine Bewegung geworden, die Fürsten, Städte und Bauern erfasste. In Zürich predigte fast gleichzeitig Huldrych Zwingli gegen die alten Bräuche, die Schweiz wurde zu einem Zentrum der Reformation und zugleich konfessionell gespalten. Aus der Frage, wer die Heilige Schrift auslegen darf, wurden Kriege, aber auch Schulen, Bibelübersetzungen und das Lesen in der Volkssprache. Wer heute fragt, wem man beim Deuten der Welt trauen soll, steht in einer sehr alten Debatte.",
+              mehr: "Auslöser war ein Geschäftsmodell, die Kirche verkaufte Ablassbriefe und finanzierte damit unter anderem den Petersdom in Rom. Nach kirchlicher Lehre erliessen sie nicht die Schuld, dafür blieb die Beichte zuständig, sondern die zeitliche Strafe für bereits vergebene Sünden. In der Verkaufspraxis verschwamm dieser Unterschied, und viele verstanden es schlicht als gekaufte Vergebung. Der Mönch und Professor Martin Luther wollte 1517 mit seinen 95 Thesen zunächst eine Gelehrtendebatte anstossen, doch Drucker vervielfältigten sie ohne sein Zutun, und innert Wochen kannte man sie im ganzen Reich. Als er 1521 vor Kaiser und Reichstag den Widerruf verweigerte, war aus dem Streit eine Bewegung geworden, die Fürsten, Städte und Bauern erfasste. In Zürich predigte fast gleichzeitig Huldrych Zwingli gegen die alten Bräuche, die Schweiz wurde zu einem Zentrum der Reformation und zugleich konfessionell gespalten. Aus der Frage, wer die Heilige Schrift auslegen darf, wurden Kriege, aber auch Schulen, Bibelübersetzungen und das Lesen in der Volkssprache. Wer heute fragt, wem man beim Deuten der Welt trauen soll, steht in einer sehr alten Debatte.",
             },
             {
               faden: "ereignisse",
@@ -331,7 +331,7 @@ export default function Lernseite2PhilosophischePerspektive() {
               kurz: "Revolution",
               jahr: "1789",
               text: "Das Volk stürzt die alte Ordnung: Freiheit, Gleichheit, Brüderlichkeit. Die Ideen der Aufklärung werden politisch, mit Hoffnung und Terror zugleich.",
-              mehr: "Der Staat war bankrott, das Brot teuer, und als König Ludwig XVI. 1789 erstmals seit 175 Jahren die Stände einberief, erklärten sich die Vertreter des dritten Standes kurzerhand zur Nationalversammlung. Der Sturm auf die Bastille am 14. Juli befreite zwar nur sieben Gefangene, wurde aber zum Zeichen, dass die alte Macht fallen kann. Wenige Wochen später verkündete die Versammlung die Menschen- und Bürgerrechte, Adelsprivilegien fielen, Frankreich probte eine Ordnung, in der Gesetze für alle gelten. Die Schriftstellerin Olympe de Gouges forderte 1791 dieselben Rechte auch für Frauen und endete dafür 1793 unter der Guillotine, wie der König und wie später Robespierre, der den Terror organisiert hatte. Die Revolution frass ihre eigenen Kinder und mündete in Napoleons Kaiserreich, doch ihre Ideen liessen sich nicht mehr einfangen. Fast jede heutige Verfassung, auch die schweizerische, trägt Spuren dieses Umbruchs.",
+              mehr: "Der Staat war bankrott, das Brot teuer, und als König Ludwig XVI. 1789 erstmals seit 175 Jahren die Stände einberief, erklärten sich die Vertreter des dritten Standes kurzerhand zur Nationalversammlung. Der Sturm auf die Bastille am 14. Juli befreite zwar nur sieben Gefangene, wurde aber zum Zeichen, dass die alte Macht fallen kann. Wenige Wochen später verkündete die Versammlung die Menschen- und Bürgerrechte, Adelsprivilegien fielen, Frankreich probte eine Ordnung, in der Gesetze für alle gelten. Die Schriftstellerin Olympe de Gouges forderte 1791 dieselben Rechte auch für Frauen; 1793 wurde sie während des Terrors wegen ihrer politischen Schriften guillotiniert, wie der König und wie später Robespierre, der den Terror organisiert hatte. Die Revolution frass ihre eigenen Kinder und mündete in Napoleons Kaiserreich, doch ihre Ideen liessen sich nicht mehr einfangen. Fast jede heutige Verfassung, auch die schweizerische, trägt Spuren dieses Umbruchs.",
             },
             {
               faden: "ereignisse",
@@ -362,7 +362,7 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "Zusammenbruch der Sowjetunion",
               kurz: "Ende der UdSSR",
               jahr: "1991",
-              text: "Der Ostblock zerfällt, der Kalte Krieg endet. Im selben Jahr wird das World Wide Web freigegeben. Die vernetzte, globalisierte Welt beginnt.",
+              text: "Der Ostblock zerfällt, der Kalte Krieg endet. Im selben Jahr geht die erste Website der Welt online. Die vernetzte, globalisierte Welt beginnt.",
               mehr: "Jahrzehntelang war die Welt in zwei bewaffnete Lager geteilt, mit Zehntausenden Atomsprengköpfen, geteilten Städten und Stellvertreterkriegen. Dann reformierte Michail Gorbatschow die Sowjetunion mit «Glasnost» und «Perestroika», also Offenheit und Umbau, und löste damit mehr aus, als er wollte. Im November 1989 genügte eine missverständliche Pressekonferenz in Ost-Berlin, und noch in derselben Nacht tanzten Menschen auf der Mauer, die 28 Jahre lang tödliche Grenze gewesen war. Zwei Jahre später scheiterte in Moskau ein Putsch der alten Garde, die Teilrepubliken erklärten sich unabhängig, und am 25. Dezember 1991 wurde die rote Fahne über dem Kreml eingeholt. Eine Supermacht verschwand ohne Krieg, einfach durch Auflösung, das hatte kaum jemand für möglich gehalten. Wer damals jung war, erlebte, wie schnell eine scheinbar ewige Weltordnung enden kann.",
             },
             /* ── Faden: Technologie ── */
@@ -480,8 +480,8 @@ export default function Lernseite2PhilosophischePerspektive() {
               y: 200,
               titel: "Internet & World Wide Web",
               kurz: "Internet",
-              jahr: "1969–91",
-              text: "Aus dem militärischen ARPANET (1969) wird das offene World Wide Web (1991). Information fliesst plötzlich weltweit, sofort und für alle. Das ist das grösste Medienereignis seit dem Buchdruck.",
+              jahr: "1969–93",
+              text: "Aus dem militärischen ARPANET (1969) wird das World Wide Web: 1989 als Vorschlag, 1991 als erste Website, 1993 vom CERN zur freien Nutzung freigegeben. Information fliesst plötzlich weltweit, sofort und für alle. Das ist das grösste Medienereignis seit dem Buchdruck.",
               mehr: "Die erste Nachricht im ARPANET wurde am 29. Oktober 1969 von Los Angeles nach Stanford geschickt, geplant war das Wort «LOGIN», nach zwei Buchstaben stürzte die Verbindung ab, übertragen war nur «LO». Aus dem Forschungsnetz weniger Universitäten wuchs über zwei Jahrzehnte ein weltweiter Verbund, doch er blieb ein Werkzeug für Fachleute. Den entscheidenden Schritt machte Tim Berners-Lee am CERN, sein Vorschlag von 1989 für ein Netz aus verknüpften Seiten trug den Vermerk seines Vorgesetzten, das sei vage, aber aufregend. So lief die erste Website der Welt auf einem Rechner bei Genf. Entscheidend war schliesslich, dass das CERN 1993 den Web-Standard zur freien Nutzung freigab, niemand musste Lizenzgebühren zahlen, und genau deshalb konnte das Netz explodieren. Offenheit war hier keine Nebensache, sondern der Bauplan des Erfolgs.",
             },
             {
@@ -557,7 +557,7 @@ export default function Lernseite2PhilosophischePerspektive() {
               titel: "Die Kernspaltung",
               kurz: "Kernspaltung",
               jahr: "1938",
-              text: "Hahn, Strassmann und Meitner spalten den Atomkern. Wenige Jahre später wird aus der Entdeckung die Bombe. Wissenschaft und Weltpolitik sind untrennbar verknotet.",
+              text: "Otto Hahn und Fritz Strassmann finden im bestrahlten Uran ein Element, das dort nicht sein dürfte. Lise Meitner und Otto Frisch erklären den Befund: Der Atomkern ist gespalten. Wenige Jahre später wird daraus die Bombe. Wissenschaft und Weltpolitik sind untrennbar verknotet.",
               mehr: "Lise Meitner hatte drei Jahrzehnte in Berlin geforscht, als sie 1938 als Jüdin aus Deutschland fliehen musste, ihre Arbeit lief brieflich weiter. Im Dezember fand ihr Kollege Otto Hahn im bestrahlten Uran zu seiner Ratlosigkeit das viel leichtere Element Barium und schrieb ihr, vielleicht wisse sie eine Erklärung. Auf einem Winterspaziergang im schwedischen Exil rechnete Meitner mit ihrem Neffen Otto Frisch nach, der Kern war tatsächlich zerplatzt, und die frei werdende Energie passte genau zu Einsteins Formel. Den Nobelpreis dafür erhielt 1944 Hahn allein. Als man Meitner später für den Bau der Bombe gewinnen wollte, lehnte sie ab, sie wolle mit einer Bombe nichts zu tun haben. In ihrer Geschichte steckt beides, der Ruhm der Erkenntnis und die Frage, wem er zugerechnet wird und was daraus gemacht werden darf.",
             },
             /* ── Faden: kulturelle Praxen ── */
@@ -638,6 +638,7 @@ export default function Lernseite2PhilosophischePerspektive() {
         titel="Philosophie in Zeiten der Verunsicherung"
         prefixe={["philosophische-perspektive:epochen"]}
         vorschau={
+          <>
           <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
             Der Teppich des Wandels hat die Verunsicherungs-Stopps markiert.
             Hier folgt, wie die Philosophie jeweils geantwortet hat. Denn gerade
@@ -650,6 +651,16 @@ export default function Lernseite2PhilosophischePerspektive() {
             <strong className="text-on-surface">neue Gewichtung grundlegender
             Lebenselemente</strong> mehr Klarheit als jede neue Technik.
           </p>
+          <p className="mt-sm max-w-4xl text-body-sm text-on-surface-variant">
+            Eines vorweg: Dass auf jede neue Technik eine Verunsicherung folgt
+            und die Philosophie darauf antwortet, ist{" "}
+            <strong className="text-on-surface">kein Gesetz der Geschichte</strong>.
+            Es ist die Brille, durch die wir hier schauen, weil sie die acht
+            Epochen vergleichbar macht. Andere Blickwinkel würden andere
+            Zusammenhänge zeigen, und manche Antwort der Philosophie kam lange
+            vor der Technik, der wir sie hier zuordnen.
+          </p>
+          </>
         }
       >
         <Ausklapptext

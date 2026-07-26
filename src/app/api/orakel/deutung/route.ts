@@ -9,10 +9,13 @@ export const runtime = "nodejs";
  * der lernenden Person in diesem Modul — in einem von drei Stilen
  * (wissenschaftlich, literarisch, fantastisch).
  *
- * Datenschutz: Der Browser schickt ausschliesslich anonyme Kennzahlen (Zähler,
- * Bewertungs-Verteilungen) — keinen Namen, keinen Code, keine Einzeltexte. Die
- * Deutung wird auf ausdrückliche Anfrage erzeugt (Knopfdruck), nicht gecacht,
- * und kein Wert wird serverseitig gespeichert. Modell: claude-haiku-4-5
+ * Datenschutz: Der Browser schickt eine Zusammenfassung der Aktivität (Zähler,
+ * Bewertungs-Verteilungen, Blickwahl, Titel der gewählten Inhalte) — keinen
+ * Namen, keinen Code, keine Einzeltexte. Weil die Zusammenfassung zu EINER
+ * Person gehört, ist sie pseudonym und nicht anonym; das UI benennt sie so
+ * (siehe OrakelDashboard, Abschnitt «Datenschutz»). Die Deutung wird auf
+ * ausdrückliche Anfrage erzeugt (Knopfdruck), nicht gecacht, und kein Wert wird
+ * serverseitig gespeichert. Modell: claude-haiku-4-5
  * (günstigstes geeignetes Modell, Projektvorgabe); Aufruf per fetch, weil
  * package.json geteilt ist (kein neues Paket ohne Absprache).
  */
@@ -46,7 +49,7 @@ interface Aktivitaet {
 const STIL_SYSTEM: Record<Stil, string> = {
   wissenschaftlich: [
     "Du bist das Orakel eines Lernmoduls über KI und Philosophie an einer",
-    "Berufsfachschule. Deute die dir übergebene, anonyme Lern-Aktivität EINER",
+    "Berufsfachschule. Deute die dir übergebene Lern-Aktivität EINER",
     "Person nüchtern und analytisch — wie eine knappe, sachliche",
     "Lernstandsbeschreibung. Sprich die Person mit «du» an. Benenne, worauf sie",
     "sich konzentriert hat, wo sie in die Tiefe ging, was sie hoch oder tief",
@@ -56,7 +59,7 @@ const STIL_SYSTEM: Record<Stil, string> = {
   ].join(" "),
   literarisch: [
     "Du bist das Orakel eines Lernmoduls über KI und Philosophie. Deute die dir",
-    "übergebene, anonyme Lern-Aktivität EINER Person literarisch — als kleinen,",
+    "übergebene Lern-Aktivität EINER Person literarisch — als kleinen,",
     "bildhaften Prosatext über ihren Weg durch das Gewebe des Moduls. Sprich sie",
     "mit «du» an, nutze Metaphern (Fäden, Wege, Licht, Muster), bleibe aber an",
     "den tatsächlichen Zahlen. Keine erfundenen Fakten. 60–90 Wörter, Deutsch,",
@@ -65,7 +68,7 @@ const STIL_SYSTEM: Record<Stil, string> = {
   ].join(" "),
   fantastisch: [
     "Du bist ein altes, sehendes Orakel — mythisch, geheimnisvoll, feierlich.",
-    "Deute die dir übergebene, anonyme Lern-Aktivität EINER Person, die vor dich",
+    "Deute die dir übergebene Lern-Aktivität EINER Person, die vor dich",
     "getreten ist, wie eine Seherin eine Reise deutet. Sprich sie mit «du» an,",
     "in orakelhaftem, fantastischem Ton (Sterne, Schwellen, verborgene Pfade,",
     "Weissagung), aber bleibe an den tatsächlichen Zahlen und erfinde keine",
@@ -140,7 +143,7 @@ async function deute(stil: Stil, zusammenfassung: string): Promise<string | null
         messages: [
           {
             role: "user",
-            content: `Hier die anonyme Lern-Aktivität der Person:\n\n${zusammenfassung}`,
+            content: `Hier die Lern-Aktivität der Person:\n\n${zusammenfassung}`,
           },
         ],
       }),

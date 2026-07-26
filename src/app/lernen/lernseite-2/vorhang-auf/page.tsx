@@ -195,7 +195,7 @@ const BILDER_STORY: AnschauBild[] = [
     quelle:
       "Foto der «Bombe», US National Security Agency · Wikimedia Commons · gemeinfrei (US-Regierung)",
     geschichte:
-      "Im Zweiten Weltkrieg verschlüsselte die deutsche Wehrmacht ihren Funk mit der Enigma. In Bletchley Park in England entwarf Alan Turing die «Bombe», eine elektromechanische Maschine, die Tausende möglicher Walzenstellungen systematisch durchprobierte und die unmöglichen ausschied. Das Knacken der Enigma verkürzte den Krieg erheblich. Turing hatte 1936 die theoretische Grundlage jedes Computers gelegt und fragte 1950, ob Maschinen denken können. Das Foto zeigt eine US-Version der Bombe mit einer Bedienerin, denn die Maschinen liefen rund um die Uhr und wurden meist von Frauen bedient. Aus Turings Idee der universellen Rechenmaschine wurde hier ein reales, kriegsentscheidendes Werkzeug und eine Geburtsstunde des Computers.",
+      "Im Zweiten Weltkrieg verschlüsselte die deutsche Wehrmacht ihren Funk mit der Enigma. Vorgearbeitet hatten polnische Mathematiker, die die Enigma schon in den 1930er-Jahren analysierten und mit der «bomba» eine erste Prüfmaschine bauten. In Bletchley Park in England entwarfen darauf Alan Turing und Gordon Welchman die «Bombe», eine elektromechanische Maschine, die Tausende möglicher Walzenstellungen systematisch durchprobierte und die unmöglichen ausschied. Das Knacken der Enigma verkürzte den Krieg erheblich. Turing hatte 1936 mit der Turingmaschine ein Modell beschrieben, das zur theoretischen Grundlage der Informatik wurde, und fragte 1950, ob Maschinen denken können. Das Foto zeigt eine US-Version der Bombe mit einer Bedienerin, denn die Maschinen liefen rund um die Uhr und wurden meist von Frauen bedient. Aus Turings Idee der universellen Rechenmaschine wurde hier ein reales, kriegsentscheidendes Werkzeug und eine Geburtsstunde des Computers.",
     hotspots: [
       {
         x: 55,
@@ -256,7 +256,7 @@ const BILDER_STORY: AnschauBild[] = [
     kurz: "Daten als Punkte im mehrdimensionalen Raum",
     quelle: "Schematische Illustration, mit KI erstellt für dieses Lehrmittel · kein Foto",
     geschichte:
-      "Ab den 1990er-Jahren verschob sich die KI vom Regeln-Schreiben zum Lernen aus Beispielen. Ein Modell fasst jedes Beispiel als Punkt in einem Raum mit vielen Merkmalen auf, oft mit Hunderten oder Tausenden Dimensionen, und Ähnliches liegt nah beieinander. «Lernen» heisst dann, eine Grenze zu finden, die Gruppen trennt. Danach kann das Modell Neues einordnen. Es versteht dabei keine Bedeutung, sondern rechnet mit Lage und Abstand. Diese Denkweise ist die Grundlage fast aller heutigen KI. Diese schematische Illustration ist mit KI erstellt.",
+      "Ab den 1990er-Jahren verschob sich die KI vom Regeln-Schreiben zum Lernen aus Beispielen. Ein Modell fasst jedes Beispiel als Punkt in einem Raum mit vielen Merkmalen auf, oft mit Hunderten oder Tausenden Dimensionen, und Ähnliches liegt nah beieinander. «Lernen» heisst dann, eine Grenze zu finden, die Gruppen trennt. Danach kann das Modell Neues einordnen. Es versteht dabei keine Bedeutung, sondern rechnet mit Lage und Abstand. Diese Denkweise ist ein Grundmodell des überwachten Lernens, also des Lernens an vorsortierten Beispielen, und steckt bis heute in vielen Anwendungen. Diese schematische Illustration ist mit KI erstellt.",
     ki: true,
     hotspots: [
       {
@@ -317,7 +317,7 @@ const BILDER_STORY: AnschauBild[] = [
     kurz: "Deep Q-Network lernt Arcade-Spiele selbst",
     quelle: "Schematische Illustration, mit KI erstellt für dieses Lehrmittel · kein Foto",
     geschichte:
-      "Zwischen 2013 und 2015 zeigte «Deep Q-Network» von DeepMind, dass eine KI klassische Arcade-Spiele allein durch Ausprobieren lernen kann. Sie sah nur die Bildpunkte des Schirms und den Punktestand, aber keine Regeln. Über viele Partien hinweg richtete sie ihr Verhalten auf die Belohnung durch Punkte aus und übertraf bei manchen Spielen den Menschen. Dieses «verstärkende Lernen» wurde später zur Grundlage von Systemen wie AlphaGo, das 2016 den weltbesten Go-Spieler schlug. Diese schematische Illustration ist mit KI erstellt und zeigt kein Originalspiel.",
+      "Zwischen 2013 und 2015 zeigte «Deep Q-Network» von DeepMind, dass eine KI klassische Arcade-Spiele allein durch Ausprobieren lernen kann. Sie sah nur die Bildpunkte des Schirms und den Punktestand, aber keine Regeln. Über viele Partien hinweg richtete sie ihr Verhalten auf die Belohnung durch Punkte aus und übertraf bei manchen Spielen den Menschen. Dieses «verstärkende Lernen» wurde später zur Grundlage von Systemen wie AlphaGo, das 2016 Lee Sedol schlug, einen der stärksten Go-Spieler der Welt. Diese schematische Illustration ist mit KI erstellt und zeigt kein Originalspiel.",
     ki: true,
     hotspots: [
       {
@@ -347,9 +347,9 @@ const BILDER_STORY: AnschauBild[] = [
     jahr: "April 2022",
     kurz: "Text wird zum Bild, schon vor ChatGPT",
     quelle:
-      "Von DALL·E 2 erzeugtes Bild (2022) · Wikimedia Commons · KI-generiert, urheberrechtlich nicht geschützt",
+      "Von DALL·E 2 erzeugtes Bild (2022) · Wikimedia Commons · KI-generiert; ob urheberrechtlicher Schutz besteht, hängt vom menschlichen Gestaltungsbeitrag und vom anwendbaren Recht ab",
     geschichte:
-      "DALL·E von OpenAI erzeugt Bilder aus Textbeschreibungen. DALL·E 1 kam im Januar 2021, das deutlich stärkere DALL·E 2 im April 2022, also rund ein halbes Jahr vor ChatGPT. Man gibt einen Satz ein, und das Modell «malt» ein Bild, das so nie fotografiert wurde. Es setzt das Bild Punkt für Punkt neu aus Gelerntem zusammen. Damit wurde generative KI erstmals einem breiten Publikum sichtbar. Dieses Bild ist selbst ein Ergebnis von DALL·E 2, eine zeichnende Roboterhand, und als KI-erzeugtes Werk urheberrechtlich nicht geschützt.",
+      "DALL·E von OpenAI erzeugt Bilder aus Textbeschreibungen. DALL·E 1 kam im Januar 2021, das deutlich stärkere DALL·E 2 im April 2022, also rund ein halbes Jahr vor ChatGPT. Man gibt einen Satz ein, und das Modell «malt» ein Bild, das so nie fotografiert wurde. Es setzt das Bild Punkt für Punkt neu aus Gelerntem zusammen. Damit wurde generative KI erstmals einem breiten Publikum sichtbar. Dieses Bild ist selbst ein Ergebnis von DALL·E 2, eine zeichnende Roboterhand. Wem es rechtlich gehört, ist heikler, als es klingt: Nach schweizerischem Verständnis schützt das Urheberrecht geistige Schöpfungen von Menschen, weshalb rein maschinell Erzeugtem der Schutz grundsätzlich fehlt. Steckt im Ergebnis aber ein hinreichend eigener menschlicher Gestaltungsbeitrag, kann Schutz bestehen. Das ist eine Frage des Einzelfalls, und Urheberrecht am Bild, Nutzungsbedingungen des Dienstes und Rechte am Ausgangsmaterial sind noch einmal drei verschiedene Dinge.",
     ki: true,
     hotspots: [
       {
@@ -362,7 +362,7 @@ const BILDER_STORY: AnschauBild[] = [
         x: 24,
         y: 58,
         titel: "Erfunden, nicht gefunden",
-        text: "Das Bild existiert nirgends, das Modell setzt es Punkt für Punkt neu zusammen. Dieses hier hat DALL·E 2 erzeugt, und es ist urheberrechtlich nicht geschützt.",
+        text: "Das Bild existiert nirgends, das Modell setzt es Punkt für Punkt neu zusammen. Dieses hier hat DALL·E 2 erzeugt. Ob so etwas urheberrechtlich geschützt ist, hängt davon ab, wie viel ein Mensch daran gestaltet hat.",
       },
       {
         x: 45,
@@ -745,7 +745,7 @@ export default function Lernseite2VorhangAuf() {
               kat: "daten",
               mmf: "maschine",
               jahr: "ab 2012",
-              text: "Ab 2012 gelang der Durchbruch mit künstlichen neuronalen Netzen, die dem Gehirn grob nachempfunden sind. Solche Netze mit vielen Schichten lernen, Bilder und Sprache zu erkennen. Der Erfolg kommt gerade aus dieser Tiefe, also aus der grossen Zahl der Schichten. Daher der Name Deep Learning, was tiefes Lernen bedeutet.",
+              text: "Ab 2012 gelang der Durchbruch mit künstlichen neuronalen Netzen, die dem Gehirn grob nachempfunden sind. Solche Netze mit vielen Schichten lernen, Bilder und Sprache zu erkennen. Von dieser Tiefe kommt der Name Deep Learning, also tiefes Lernen. Dass es ab 2012 plötzlich funktionierte, lag aber nicht an den Schichten allein: Erst zusammen mit riesigen Bildsammlungen, schnellen Grafikchips und besseren Trainingsverfahren kam der Durchbruch.",
               geschichte:
                 "2012 gewann ein tiefes neuronales Netz den grossen ImageNet-Bildwettbewerb mit deutlichem Vorsprung. Trainiert wurde es auf Grafikkarten und mit Millionen von Bildern. Solche Netze lernen Schicht für Schicht ihre eigenen Merkmale, statt sie vorgesagt zu bekommen. Seither bestimmt dieses Prinzip die Bild-, Sprach- und Texterkennung.",
               mehr:
@@ -759,7 +759,7 @@ export default function Lernseite2VorhangAuf() {
               jahr: "2017",
               text: "2017 stellten Forschende bei Google eine neue Bauweise für KI vor, den Transformer. Sein Trick ist die Aufmerksamkeit, denn das Modell lernt, welche Wörter im Satz aufeinander achten müssen. Damit lassen sich sehr grosse Textmengen verarbeiten. Der Transformer ist die gemeinsame Grundlage fast aller heutigen Sprachmodelle.",
               geschichte:
-                "Der Aufsatz «Attention Is All You Need» von 2017 führte den Aufmerksamkeits-Mechanismus ein. Das Modell gewichtet, welche Teile eines Textes für welche anderen wichtig sind, und das über lange Passagen hinweg. Diese Berechnung lässt sich stark parallel ausführen. Dadurch liessen sich Modelle erstmals auf riesige Textmengen vergrössern.",
+                "Der Aufmerksamkeits-Mechanismus war schon vorher bekannt. Neu war, dass der Aufsatz «Attention Is All You Need» von 2017 eine Architektur vorstellte, die ganz auf ihn setzte und die älteren, Schritt für Schritt lesenden Bauteile wegliess: den Transformer. Das Modell gewichtet, welche Teile eines Textes für welche anderen wichtig sind, und das über lange Passagen hinweg. Diese Berechnung lässt sich stark parallel ausführen. Dadurch liessen sich Modelle erstmals auf riesige Textmengen vergrössern.",
               mehr:
                 "Vor dem Transformer verarbeiteten Sprachmodelle einen Satz Wort für Wort und mussten warten, bis ein Wort fertig war, bevor das nächste an die Reihe kam. Bei langen Sätzen ging der Anfang dabei oft verloren. Der Transformer betrachtet dagegen alle Wörter zugleich und berechnet für jedes, wie stark es auf jedes andere achten soll. So erkennt das Modell im Satz «das Tier überquerte die Strasse nicht, weil es müde war», dass sich «es» auf das Tier bezieht und nicht auf die Strasse. Der Aufsatz stammte von einem achtköpfigen Team bei Google und wurde zu einer der meistzitierten Arbeiten der ganzen KI-Forschung. Schon 2018 stellte Google mit BERT einen solchen Transformer vor und baute ihn kurz darauf in seine Suche ein. Von da an wurde die Bauweise zum Standard für fast jedes grosse Sprachmodell.",
             },
@@ -769,7 +769,7 @@ export default function Lernseite2VorhangAuf() {
               kat: "daten",
               mmf: "maschine",
               jahr: "2018–2020",
-              text: "Zwischen 2018 und 2020 wurden die Sprachmodelle Stufe um Stufe grösser. Mit GPT-1, GPT-2 und GPT-3 wuchs erstaunlicherweise auch das, was sie ganz ohne eigenes Training konnten. Allein aus dem Vorhersagen des nächsten Wortes entstanden neue Fähigkeiten. Grösse allein brachte hier einen Sprung in der Leistung.",
+              text: "Zwischen 2018 und 2020 wurden die Sprachmodelle Stufe um Stufe grösser. Mit GPT-1, GPT-2 und GPT-3 wuchs erstaunlicherweise auch das, was sie ganz ohne eigenes Training konnten. Allein aus dem Vorhersagen des nächsten Wortes entstanden neue Fähigkeiten. Wachsen musste dafür alles zugleich, Modellgrösse, Datenmenge und Rechenzeit. Ob dabei Fähigkeiten wirklich sprunghaft auftauchen oder ob das an der Art des Messens liegt, ist in der Forschung umstritten.",
               geschichte:
                 "Ab 2018 zeigten die GPT-Modelle der Firma OpenAI, dass das blosse Vorhersagen des nächsten Wortes auf riesigen Textmengen erstaunlich weit trägt. GPT-3 aus dem Jahr 2020 hatte 175 Milliarden einstellbare Werte, sogenannte Parameter. Es konnte Texte schreiben, übersetzen und Fragen beantworten, ohne für jede Aufgabe eigens trainiert zu werden.",
               mehr:
@@ -807,7 +807,7 @@ export default function Lernseite2VorhangAuf() {
               jahr: "ab 2023",
               text: "Nach ChatGPT begann ein weltweiter Wettlauf um die besten Modelle. Neben den US-Modellen wie GPT, Claude, Gemini und Llama traten Modelle aus China, Europa und sogar der Schweiz an. Wer eigene Modelle baut, macht sich unabhängiger von anderen. So bekam die KI auch eine politische und eine sprachliche Bedeutung.",
               geschichte:
-                "Ab 2023 rangen viele Anbieter um die besten Modelle. Aus den USA kommen GPT von OpenAI, Claude von Anthropic, Gemini von Google und das offene Llama von Meta. Anfang 2025 sorgte das chinesische DeepSeek für Aufsehen, weil es mit wenig Aufwand mithielt, und auch Alibabas Qwen zählt dazu. Aus Europa stammt Mistral aus Frankreich, und aus der Schweiz das vollständig offene Modell «Apertus» von ETH Zürich, EPFL und dem Rechenzentrum CSCS.",
+                "Ab 2023 rangen viele Anbieter um die besten Modelle. Aus den USA kommen GPT von OpenAI, Claude von Anthropic, Gemini von Google und Llama von Meta, dessen Gewichte man herunterladen kann, allerdings unter Metas eigener Lizenz und nicht als Open Source. Anfang 2025 sorgte das chinesische DeepSeek für Aufsehen, weil es mit wenig Aufwand mithielt, und auch Alibabas Qwen zählt dazu. Aus Europa stammt Mistral aus Frankreich, und aus der Schweiz das vollständig offene Modell «Apertus» von ETH Zürich, EPFL und dem Rechenzentrum CSCS.",
               mehr:
                 "Wie umkämpft das Feld ist, zeigte sich Anfang 2025, als das chinesische Modell DeepSeek für Aufsehen sorgte, weil es mit deutlich geringerem Aufwand trainiert worden sein soll als die US-Konkurrenz. Die Nachricht liess kurzzeitig sogar die Börsenkurse grosser Chiphersteller einbrechen, weil Anleger an den bisherigen Milliardenkosten zu zweifeln begannen. Der praktische Reiz offener Modelle liegt darin, dass man sie auf eigenen Rechnern betreiben kann, ohne Daten an einen fremden Anbieter zu schicken. Für Behörden, Spitäler oder Schulen bedeutet das einen Gewinn an Datenschutz und Unabhängigkeit. Ein Schweizer Modell wie «Apertus» ist gerade deshalb bedeutsam, weil sich damit Anwendungen bauen lassen, die nicht von einzelnen US-Konzernen abhängen. Verglichen werden die vielen Modelle auf öffentlichen Ranglisten, auf denen Menschen die Antworten bewerten. So ist ein rascher Wettlauf entstanden, in dem sich die Rangfolge fast monatlich verschiebt.",
             },
@@ -907,13 +907,13 @@ export default function Lernseite2VorhangAuf() {
           knoten={[
             {
               titel: "algorithmisch",
-              text: "Stell dir ein sehr genaues Kochrezept vor. Jeder Schritt ist eindeutig, und wer sich daran hält, kommt zum selben Ergebnis. Genau so arbeitet die KI in ihrem Innersten. Sie führt ein Rechenverfahren aus, Schritt für Schritt, ohne Laune und ohne Bauchgefühl. Wenn eine Antwort spontan wirkt, ist sie trotzdem nur das Ergebnis von Berechnungen.",
+              text: "Stell dir ein sehr genaues Kochrezept vor. Jeder Schritt ist festgelegt, nichts bleibt dem Gefühl überlassen. Genau so arbeitet die KI in ihrem Innersten, sie führt ein Rechenverfahren aus, Schritt für Schritt, ohne Laune und ohne Bauchgefühl. Dass dieselbe Frage zweimal verschieden beantwortet wird, widerspricht dem nicht: Beim Auswählen des nächsten Wortes ist Zufall eingebaut. Wenn eine Antwort spontan wirkt, ist sie trotzdem nur das Ergebnis von Berechnungen.",
               mehr:
                 "Das Wort Algorithmus geht auf den Gelehrten al-Chwarizmi zurück, der vor rund 1200 Jahren in Bagdad Rechenwege aufschrieb. Ein Algorithmus ist nichts Geheimnisvolles, sondern eine klare Anleitung, wie aus einer Eingabe eine Ausgabe wird. Auch das Lernen der KI ist so eine Anleitung. Beim Training verstellt sie viele Milliarden winziger Zahlenwerte immer wieder ein kleines bisschen, bis ihre Antworten besser passen. Man kann sich das wie das Drehen an Millionen kleiner Regler vorstellen. Das klingt weniger nach Denken und mehr nach Rechnen, und genau das ist es auch.",
             },
             {
               titel: "datenbasiert",
-              text: "Eine KI lernt ähnlich wie ein Kind, das tausende Hunde sieht und irgendwann jeden Hund erkennt. Ihre Fähigkeiten wachsen aus riesigen Mengen an Beispielen, nicht aus fest eingebauten Regeln. Hat sie nie ein Gedicht gelesen, kann sie auch keines schreiben. Deshalb kommt es vor allem darauf an, womit sie gefüttert wurde. Und es kommt darauf an, wessen Sichtweise in diesen Daten steckt und wessen darin fehlt.",
+              text: "Ein Kind, das tausende Hunde sieht, erkennt irgendwann jeden Hund. Von aussen sieht es bei der KI ähnlich aus, im Inneren geschieht aber etwas anderes: Ihre Fähigkeiten wachsen aus riesigen Mengen an Beispielen, nicht aus fest eingebauten Regeln. Was in den Daten gar nicht vorkommt, kann sie höchstens aus Ähnlichem zusammensetzen. Deshalb kommt es vor allem darauf an, womit sie gefüttert wurde. Und es kommt darauf an, wessen Sichtweise in diesen Daten steckt und wessen darin fehlt.",
               mehr:
                 "«Die Lernalgorithmen sind die Samen, die Daten der Boden», sagt der Forscher Pedro Domingos. Ohne guten Boden wächst auch aus dem besten Samen nichts. Ein Beispiel: Wurde eine KI fast nur mit englischen Texten trainiert, antwortet sie auf Deutsch oft schwächer. Zeigten die Bilddaten kaum Menschen mit dunkler Haut, erkennt sie diese schlechter. So werden Lücken und Einseitigkeiten der Daten zu Lücken und Einseitigkeiten der KI. Darum ist die Frage, woher die Daten stammen, keine Nebensache, sondern der Kern.",
             },
@@ -925,9 +925,9 @@ export default function Lernseite2VorhangAuf() {
             },
             {
               titel: "wahrscheinlichkeitsbasiert",
-              text: "Eine Wetter-App sagt nicht «es regnet», sondern «80 Prozent Regen». Auch die KI rechnet in Wahrscheinlichkeiten, doch sie sucht nicht einfach das nächstbeste Wort. Jedes Wort wird für sie zu einer langen Zahlenreihe, einem sogenannten Vektor, der Bedeutung und Bezüge zu anderen Wörtern festhält. In diesem Raum liegen «Hund» und «Katze» nahe beieinander, «Hund» und «Schraube» weit auseinander. Aus dem Zusammenspiel vieler solcher Bedeutungsebenen berechnet sie, welche Fortsetzung am besten passt. Ihre Antwort ist darum eine Wette mit sehr guten Quoten, aber eben eine Wette.",
+              text: "Eine Wetter-App sagt nicht «es regnet», sondern «80 Prozent Regen». Auch die KI rechnet in Wahrscheinlichkeiten, doch sie sucht nicht einfach das nächstbeste Wort. Jedes Wort, genauer jeder Wortteil, wird für sie zu einer langen Zahlenreihe, einem sogenannten Vektor, der Bezüge zu anderen Wortteilen festhält. In diesem Raum liegen «Hund» und «Katze» nahe beieinander, «Hund» und «Schraube» weit auseinander. Aus dem Zusammenspiel vieler solcher Bedeutungsebenen berechnet sie, welche Fortsetzung am besten passt. Ihre Antwort ist darum eine Wette mit sehr guten Quoten, aber eben eine Wette.",
               mehr:
-                "Fachleute nennen diese Zahlencodes Vektoren, und sie haben nicht zwei oder drei Dimensionen, sondern sehr viele. Die Informatikerin Katharina Zweig spricht von rund 13'000 Richtungen, in denen ein Wort seinen Platz bekommt. Jede Richtung steht für einen winzigen Bedeutungsanteil, und erst alle zusammen ergeben den Sinn eines Wortes im jeweiligen Satz. Der Philosoph Markus Gabriel nennt diesen Vorgang Vektorisierung und betont, dass die KI dabei nur mit Mustern und Wahrscheinlichkeiten rechnet, ohne wirklich zu verstehen. Wie mutig die KI beim Auswählen dann würfelt, regelt eine Einstellung namens Temperatur. Ein hoher Wert macht die Antworten kreativer und unberechenbarer, ein niedriger vorhersehbarer. Das erklärt auch, warum dieselbe Frage zweimal ganz verschieden beantwortet werden kann.",
+                "Fachleute nennen diese Zahlencodes Vektoren, und sie haben nicht zwei oder drei Dimensionen, sondern sehr viele. Wie viele es sind, hängt vom Modell ab, oft einige hundert bis einige tausend; die Informatikerin Katharina Zweig nennt als Grössenordnung rund 13'000 Richtungen. Einzelne Richtungen lassen sich dabei nicht als je ein ablesbarer Bedeutungsanteil verstehen, erst ihr Zusammenspiel ergibt die Lage eines Wortteils im jeweiligen Satz. Der Philosoph Markus Gabriel nennt diesen Vorgang Vektorisierung und betont, dass die KI dabei nur mit Mustern und Wahrscheinlichkeiten rechnet, ohne wirklich zu verstehen. Wie mutig die KI beim Auswählen dann würfelt, regelt eine Einstellung namens Temperatur. Ein hoher Wert macht die Antworten kreativer und unberechenbarer, ein niedriger vorhersehbarer. Das erklärt auch, warum dieselbe Frage zweimal ganz verschieden beantwortet werden kann.",
             },
             {
               titel: "generalisierend",
@@ -943,7 +943,7 @@ export default function Lernseite2VorhangAuf() {
             },
             {
               titel: "adaptiv",
-              text: "Schreibst du locker und mit Emojis, antwortet die KI oft ebenso locker. Sie passt sich an, an deinen Ton, deine Beispiele und deine Korrekturen. Sagst du «bitte kürzer», wird die nächste Antwort kürzer. Auch über viele Nutzende hinweg wird sie nach und nach nachjustiert. Was du ihr heute zeigst, kann ihr Verhalten von morgen mitprägen.",
+              text: "Schreibst du locker und mit Emojis, antwortet die KI oft ebenso locker. Sie passt sich an, an deinen Ton, deine Beispiele und deine Korrekturen. Sagst du «bitte kürzer», wird die nächste Antwort kürzer. Wichtig ist dabei ein Unterschied: Im laufenden Gespräch stellt sie sich auf dich ein, dazulernen tut sie dabei nicht. Ob deine Eingaben später ins Training einfliessen, hängt vom Anbieter, vom Produkt und von deinen Einstellungen ab.",
               mehr:
                 "Anpassung geschieht auf mehreren Ebenen. Im laufenden Gespräch greift die KI deinen Stil auf und merkt sich, was du willst. Beim sogenannten Feintuning wird sie schon vor der Nutzung mit menschlichen Rückmeldungen erzogen, damit sie hilfreicher und höflicher antwortet. Und in neue Versionen können Erfahrungen aus der Nutzung einfliessen. Diese Anpassungsfähigkeit macht sie angenehm und nützlich. Zugleich stellt sich die Frage, wer hier eigentlich wen erzieht, der Mensch die Maschine oder die Maschine den Menschen.",
             },
@@ -967,7 +967,7 @@ export default function Lernseite2VorhangAuf() {
             },
             {
               titel: "multimodal",
-              text: "Du kannst der KI ein Foto deines Kühlschranks zeigen und nach einem Rezept fragen. Text, Bild und Ton laufen bei ihr in einem einzigen Modell zusammen. Sie liest, sieht und hört und antwortet wahlweise in Wort, Bild oder Stimme. Auch eine Skizze oder ein gesprochener Satz sind für sie eine Eingabe. So nimmt sie die Welt über mehrere Kanäle zugleich auf.",
+              text: "Du kannst der KI ein Foto deines Kühlschranks zeigen und nach einem Rezept fragen. Bei manchen Systemen laufen Text, Bild und Ton in einem einzigen Modell zusammen, bei anderen arbeiten dafür mehrere Bausteine zusammen. Sie liest, sieht und hört und antwortet wahlweise in Wort, Bild oder Stimme. Auch eine Skizze oder ein gesprochener Satz sind für sie eine Eingabe. So nimmt sie die Welt über mehrere Kanäle zugleich auf.",
               mehr:
                 "Frühe Programme konnten nur eines, entweder Text oder Bild oder Ton. Multimodale Modelle verbinden diese Kanäle in einem einzigen Netz. Damit rücken sie näher an uns Menschen heran, denn auch wir denken nicht in getrennten Sinnen. Ein Beispiel: Du fotografierst eine Mathe-Aufgabe, und die KI liest sie, rechnet und erklärt den Lösungsweg. Oder du zeigst ihr ein Diagramm, und sie fasst es in Worten zusammen. So wird die Grenze zwischen Lesen, Sehen und Hören für die Maschine durchlässig.",
             },
@@ -1082,13 +1082,13 @@ export default function Lernseite2VorhangAuf() {
                   titel: "Energie und Ressourcen",
                   text: "Eine KI zu trainieren und zu betreiben verbraucht viel Strom und Kühlwasser. Dazu kommen seltene Rohstoffe für die Chips. Zwar werden die Geräte immer sparsamer, doch die Nutzung wächst noch schneller. Deshalb steigt der Gesamtverbrauch weiter an.",
                   beispiel:
-                    "Google meldete in seinem Umweltbericht 2024, dass seine Treibhausgas-Emissionen seit 2019 um rund 48 Prozent gestiegen sind. Als Hauptgrund nennt der Konzern den wachsenden Stromhunger seiner Rechenzentren für KI. Ein Wert, der eigentlich sinken sollte, zeigt also nach oben.",
+                    "Google meldete in seinem Umweltbericht 2024, dass seine Treibhausgas-Emissionen seit 2019 um rund 48 Prozent gestiegen sind (Bezugsjahr 2023). Als Gründe nennt der Konzern den wachsenden Energiebedarf seiner Rechenzentren und die Emissionen seiner Lieferkette; die KI ist also ein Treiber davon, nicht die einzige Ursache. Ein Wert, der eigentlich sinken sollte, zeigt jedenfalls nach oben.",
                 },
                 {
                   titel: "Rechenzentren",
                   text: "Für KI entstehen überall neue Rechenzentren, also grosse Hallen voller Computer. Sie schaffen digitale Kapazität für ein ganzes Land. Vor Ort brauchen sie aber viel Energie, Wasser, Fläche und einen starken Stromanschluss. Damit konkurrieren sie mit anderen Bedürfnissen einer Region.",
                   beispiel:
-                    "In Irland verbrauchten die Rechenzentren 2023 bereits 21 Prozent des gesamten Stroms im Land, mehr als alle städtischen Haushalte zusammen. Das meldet das irische Statistikamt. Manche Regionen bremsen deshalb den Bau neuer Zentren.",
+                    "In Irland verbrauchten die Rechenzentren 2023 bereits 21 Prozent des gemessenen Stroms im Land, mehr als alle städtischen Haushalte zusammen; für 2024 meldete das irische Statistikamt 22 Prozent. Manche Regionen bremsen deshalb den Bau neuer Zentren.",
                 },
               ],
             },
@@ -1108,13 +1108,13 @@ export default function Lernseite2VorhangAuf() {
                   titel: "Zugang",
                   text: "Nicht alle können KI gleichermassen nutzen. Kosten, technische Ausstattung, Sprache und digitale Erfahrung entscheiden mit. Wer gut ausgestattet ist, profitiert stärker. So kann KI bestehende Ungleichheiten sogar vergrössern.",
                   beispiel:
-                    "Bei ChatGPT gibt es das stärkere Modell vor allem im Bezahl-Abo für rund 20 Dollar im Monat, während die Gratis-Version schwächer ist. Wer zahlen kann, arbeitet also mit der besseren KI. Schon beim Zugang entsteht so ein Unterschied zwischen Menschen.",
+                    "Bei den grossen Chatbots ist die Gratisstufe begrenzt: weniger Anfragen, eingeschränkter Zugriff auf die neuesten Modelle und Werkzeuge. Ein Abo für rund 20 Dollar im Monat hebt vor allem diese Grenzen an. Wer zahlen kann, arbeitet also flüssiger und mit mehr Möglichkeiten. Schon beim Zugang entsteht so ein Unterschied zwischen Menschen. Die genauen Stufen ändern sich laufend, dieser Stand ist von 2026.",
                 },
                 {
                   titel: "Arbeitsmarkt",
                   text: "KI verändert die Arbeitswelt spürbar. Sie übernimmt vor allem einzelne Aufgaben, selten gleich einen ganzen Beruf. Manche Tätigkeiten fallen weg, andere verändern sich, und neue kommen dazu. Für viele Berufe bedeutet das neue Anforderungen und neues Lernen.",
                   beispiel:
-                    "Die Bezahlfirma Klarna meldete 2024, ihr KI-Assistent erledige die Arbeit von rund 700 Kundendienst-Mitarbeitenden. Kurz darauf stellte sie aber wieder Menschen ein, weil die Qualität nicht überall reichte. Das zeigt, wie schnell und zugleich unsicher dieser Wandel verläuft.",
+                    "Die Bezahlfirma Klarna gab 2024 selbst bekannt, ihr KI-Assistent leiste die Arbeit von rund 700 Vollzeitstellen im Kundendienst. Unabhängig nachgemessen hat das niemand. Kurz darauf investierte die Firma wieder stärker in menschlichen Service, weil die Qualität nicht überall reichte. Beides sind Aussagen des Unternehmens, und gerade in ihrer Abfolge zeigen sie, wie schnell und zugleich unsicher dieser Wandel verläuft.",
                 },
                 {
                   titel: "Rollenverschiebung",
@@ -1134,13 +1134,13 @@ export default function Lernseite2VorhangAuf() {
                   titel: "Regulierung",
                   text: "Der Staat versucht, KI mit Gesetzen zu lenken. Solche Regeln sollen Grundrechte, Sicherheit, Datenschutz und Urheberrecht schützen. Zugleich sollen sie Forschung und Innovation nicht unnötig behindern. Diese Balance ist schwierig, und die Regeln entstehen erst nach und nach.",
                   beispiel:
-                    "Die Europäische Union hat 2024 den AI Act beschlossen, das weltweit erste umfassende KI-Gesetz. Es teilt KI-Anwendungen nach ihrem Risiko in Stufen ein, von frei erlaubt bis ganz verboten. Gefährliche Einsätze sollen so gestoppt und riskante streng geprüft werden.",
+                    "Die Europäische Union hat 2024 den AI Act beschlossen, das weltweit erste umfassende KI-Gesetz; in Kraft ist er seit dem 1. August 2024, seine Pflichten greifen aber gestaffelt über mehrere Jahre. Er teilt Anwendungen nach ihrem Risiko in Stufen ein, von frei erlaubt bis ganz verboten. Dazu kommen eigene Regeln für grosse Allzweckmodelle wie GPT oder Claude sowie Transparenzpflichten, etwa die Kennzeichnung von KI-Inhalten.",
                 },
                 {
                   titel: "Geopolitik",
                   text: "Um KI ist ein weltweiter Wettbewerb entbrannt. Staaten und Unternehmen ringen um Chips, Daten, Fachkräfte und Energie. Auch technische Standards und Unabhängigkeit stehen auf dem Spiel. Wer hier vorne liegt, gewinnt wirtschaftliche und politische Macht.",
                   beispiel:
-                    "Seit 2022 verbieten die USA den Export ihrer stärksten KI-Chips nach China. Der Hersteller Nvidia baute daraufhin absichtlich langsamere Chips, nur um weiter liefern zu dürfen. An diesem Streit sieht man, dass KI längst ein Machtthema zwischen Staaten ist.",
+                    "Ab 2022 verschärften die USA die Ausfuhrregeln für ihre stärksten KI-Chips nach China. Der Hersteller Nvidia baute daraufhin absichtlich langsamere Chips, nur um weiter liefern zu dürfen. Seit Januar 2026 werden bestimmte Ausfuhren wieder von Fall zu Fall geprüft und unter Bedingungen erlaubt. Die Regeln kippen also mit der Politik, und genau daran sieht man, dass KI längst ein Machtthema zwischen Staaten ist.",
                 },
               ],
             },

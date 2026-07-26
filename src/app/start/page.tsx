@@ -274,7 +274,8 @@ function StartFlow() {
         </div>
 
         <p className="mt-md text-center text-label-sm text-on-surface-variant">
-          Dein Fortschritt wird unter deinem Code anonym gespeichert.
+          Dein Fortschritt wird unter deinem Code gespeichert, ohne Namen. Wer
+          den Code kennt, sieht ihn: bewahre ihn für dich auf.
         </p>
       </section>
     </main>

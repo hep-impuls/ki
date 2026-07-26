@@ -14,6 +14,7 @@ import AktivitaetsNetz from "../../_components/AktivitaetsNetz";
 import Knotenkarte from "../../_components/Knotenkarte";
 import KontextGewichtung from "../../_components/KontextGewichtung";
 import Ausklapptext from "../../_components/Ausklapptext";
+import Quellenverzeichnis from "../../_components/Quellenverzeichnis";
 import Inhaltsverzeichnis from "../../_components/Inhaltsverzeichnis";
 import DenkerHover from "../../_components/DenkerHover";
 import {
@@ -49,11 +50,14 @@ import { leseInhalte } from "../../_lib/inhalte";
  * Sätzen, wahlweise wissenschaftlich, literarisch oder fantastisch.
  *
  * Datenschutz:
- *  - DEINS (Wege, Bewertungen, Satz) bleibt im Browser.
+ *  - DEINS (Wege, Bewertungen, Satz) liegt im Browser und wird zusätzlich unter
+ *    dem Fortschritts-Code nach Firestore gespiegelt (pseudonym, nicht anonym).
  *  - ALLE ist die anonyme Firebase-Sammlung (Aggregat-Zähler + ausdrücklich
  *    geteilte Sätze) — ohne Namen, ohne Code.
- *  - Fürs Orakel schickt der Browser auf Knopfdruck NUR anonyme Kennzahlen
- *    (Zähler, Bewertungs-Verteilungen) an die KI — keinen Namen, keinen Code.
+ *  - Fürs Orakel schickt der Browser auf Knopfdruck eine Zusammenfassung der
+ *    eigenen Aktivität (Zähler, Bewertungs-Verteilungen, Titel der gewählten
+ *    Inhalte) an die KI — ohne Namen, ohne Code. Weil sie zu einer einzelnen
+ *    Person gehört, ist sie pseudonym, nicht anonym; im UI so benannt.
  */
 
 /* ── Findmind-Umfragen ─────────────────────────────────────────────────────
@@ -955,9 +959,10 @@ export default function OrakelDashboard() {
         </p>
         <p className="mt-xs text-body-sm text-on-surface-variant">
           Das Orakel deutet deine eigene Aktivität in wenigen Sätzen. Wähle eine
-          Form — und wenn sie dir nicht zusagt, befrage es in einer anderen. Dazu
-          schickt dein Browser nur anonyme Kennzahlen (Zähler, Bewertungen), nie
-          deinen Namen.
+          Form, und wenn sie dir nicht zusagt, befrage es in einer anderen. Dazu
+          schickt dein Browser eine Zusammenfassung deiner Aktivität: Zähler,
+          Bewertungen und die Titel der Punkte, die du gewählt hast. Ohne Namen
+          und ohne deinen Fortschritts-Code.
         </p>
 
         {/* Stil-Wahl */}
@@ -1258,6 +1263,9 @@ export default function OrakelDashboard() {
 
       <FadenDivider className="mt-xl" />
 
+      {/* Quellenverzeichnis — die geprüften Belege, Details im Accordion */}
+      <Quellenverzeichnis className="mt-xl" />
+
       {/* Datenschutz — das Wesentliche, Details im Accordion */}
       <section
         aria-label="Datenschutz"
@@ -1269,10 +1277,14 @@ export default function OrakelDashboard() {
         </p>
         <p className="mt-sm text-body-sm text-on-surface-variant">
           Du meldest dich nur mit einem <strong className="text-on-surface">Code</strong>{" "}
-          an (z.B. «QWEN-34R») — <strong className="text-on-surface">kein Name,
-          keine E-Mail, kein Passwort</strong>. Der Code ist ein Pseudonym: Wer
-          ihn hat, sieht deinen Fortschritt — bewahre ihn also für dich auf.
-          Namen werden nirgends erhoben.
+          an (z.B. «QWEN-34R»): <strong className="text-on-surface">kein Name,
+          keine E-Mail, kein Passwort</strong>. Namen werden nirgends erhoben.
+          Anonym ist das aber nicht, sondern{" "}
+          <strong className="text-on-surface">pseudonym</strong>: Unter deinem
+          Code werden dein Fortschritt, deine Spuren und deine Bewertungen
+          gespeichert, damit sie auf einem anderen Gerät wieder verfügbar sind.
+          Wer deinen Code kennt, sieht diesen Fortschritt. Bewahre ihn also für
+          dich auf.
         </p>
 
         <Ausklapptext className="mt-sm" titel="Datenschutz im Detail">
@@ -1297,18 +1309,32 @@ export default function OrakelDashboard() {
             </li>
             <li>
               <strong className="text-on-surface">Das Orakel:</strong> bekommt nur
-              auf Knopfdruck eine anonyme Zusammenfassung in Zahlen — keinen Namen,
-              keinen Code, keine Einzeltexte. Es speichert nichts.
+              auf Knopfdruck eine Zusammenfassung deiner Aktivität, nämlich Zähler,
+              Bewertungen und die Titel der Punkte, die du gewählt hast. Ohne
+              Namen und ohne deinen Code. Verarbeitet wird sie vom KI-Dienst
+              Anthropic (Modell Claude Haiku), einzig um den Deutungstext zu
+              erzeugen. Wir speichern die Anfrage nicht, und es entsteht kein
+              Profil daraus. Weil die Zusammenfassung zu einer einzelnen Person
+              gehört, nennen wir sie <em>pseudonym</em>, nicht anonym.
+            </li>
+            <li>
+              <strong className="text-on-surface">Video-Impulse:</strong> laufen über
+              YouTube im Modus «nocookie». Der Player wird schon beim Laden der
+              Seite eingebunden, deshalb erfährt YouTube davon, auch wenn du nicht
+              abspielst. Cookies setzt er in diesem Modus keine.
             </li>
             <li>
               <strong className="text-on-surface">Findmind-Umfragen:</strong> laufen
-              extern über findmind.ch und sind anonym.
+              extern über findmind.ch und ohne deinen Code. Für sie gilt die
+              Datenschutzerklärung von Findmind.
             </li>
             <li>
-              <strong className="text-on-surface">Verlust &amp; Kontrolle:</strong>{" "}
-              Die lokale Kopie geht bei gelöschtem Verlauf, Privatmodus oder
-              Gerätewechsel verloren; die Cloud-Kopie kehrt mit deinem Code zurück.
-              Willst du deine Deutung behalten, drucke sie als PDF aus.
+              <strong className="text-on-surface">Löschen &amp; Kontrolle:</strong>{" "}
+              Am Ende jeder Seite kannst du deine Aktivitäten zurücksetzen, lokal
+              und im Cloud-Spiegel. Die lokale Kopie geht ausserdem bei gelöschtem
+              Verlauf, Privatmodus oder Gerätewechsel verloren; die Cloud-Kopie
+              kehrt mit deinem Code zurück. Willst du deine Deutung behalten,
+              drucke sie als PDF aus.
             </li>
           </ul>
         </Ausklapptext>
@@ -1471,8 +1497,10 @@ export default function OrakelDashboard() {
 
             <p style={{ marginTop: "2rem", fontSize: "0.8rem", color: "#666" }}>
               Erstellt im Lernset «Eine ganz neue Partnerschaft». Die Deutungen
-              beruhen auf anonymen Kennzahlen der eigenen Aktivität; die
-              Detaildaten bleiben auf dem Gerät.
+              beruhen auf einer Zusammenfassung der eigenen Aktivität, die ohne
+              Namen und ohne Fortschritts-Code an den KI-Dienst übermittelt
+              wurde. Der Fortschritt selbst liegt unter dem Fortschritts-Code
+              gespeichert, damit er auf einem anderen Gerät wieder verfügbar ist.
             </p>
           </div>,
           document.body,

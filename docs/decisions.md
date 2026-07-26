@@ -10,6 +10,65 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-26 — Externer Prüfbericht eingearbeitet, Quellenverzeichnis sichtbar (Christof)
+
+**Auslöser:** Ein externer Prüfbericht (`pruefbericht-lernseite-2.md`, 26.07.2026)
+hat die Lesefassung fachlich durchgesehen und Priorität A und B vergeben. Die
+belegten Punkte sind im Quellcode korrigiert, die Lesefassung neu erzeugt.
+
+**1. Datenschutz: «anonym» wird zu «pseudonym».** Die frühere Formel
+«Detaildaten bleiben auf dem Gerät» war seit der geräteübergreifenden
+Persistenz (Eintrag 2026-07-21) schlicht falsch. Neu heisst es überall:
+Der Fortschritts-Code ist ein **Pseudonym**, unter dem Fortschritt, Spuren und
+Bewertungen gespeichert werden. Auch die Orakel-Nutzlast wird nicht mehr
+«anonyme Kennzahlen» genannt, sondern eine *Zusammenfassung ohne Namen und ohne
+Code*: Sie gehört zu einer einzelnen Person und ist damit pseudonym, nicht
+anonym (EDÖB-Abgrenzung). Nur die Aggregat-Zähler («alle») bleiben anonym.
+Neu ausgewiesen: Empfänger (Anthropic, Claude Haiku), YouTube-Einbindung schon
+beim Laden, Findmind extern, Löschweg über den Neustart-Knopf.
+Betroffen: `OrakelDashboard.tsx` (Kurz- und Detailtext, PDF-Fussnote),
+`api/orakel/deutung/route.ts`, `start/page.tsx`, `app/page.tsx`.
+
+**2. Neu: Quellenverzeichnis im Orakel**, direkt vor dem Datenschutz-Abschnitt,
+als Akkordeon wie dieser. `_components/Quellenverzeichnis.tsx` führt die 39
+geprüften Belege mit Q-Nummer, Thema, gestützter Aussage und Link, gegliedert
+nach Themen, mit Abrufdatum. Bewusst **keine Vollbibliografie**, sondern die
+Liste dessen, was einzeln kontrolliert wurde. Die Q-Nummern folgen dem
+Prüfbericht, damit beides zusammen lesbar bleibt.
+
+**3. Sachkorrekturen** (Auswahl): Bombe von Turing *und* Welchman, mit
+polnischer Vorarbeit; Attention gab es vor 2017, neu war die Transformer-
+Architektur; Kernspaltung Hahn/Strassmann (Befund) und Meitner/Frisch
+(Erklärung); der Gottesstaat ist der *bleibende*, nicht der vergängliche; WWW
+1989 vorgeschlagen, 1991 erste Website, 1993 vom CERN freigegeben; PC ab Mitte
+der 1970er, IBM PC 1981 als Standard; Urheberrecht an KI-Bildern ist
+einzelfallabhängig statt pauschal «nicht geschützt».
+
+**4. Zuspitzungen als Zuspitzungen kennzeichnen.** Das Schema «neue Technik →
+Verunsicherung → Philosophie gibt Halt» wird im Epochen-Abschnitt ausdrücklich
+als *unsere Brille* ausgewiesen, nicht als Gesetz der Geschichte. Sätze wie
+«eine Maschine urteilt nicht» sind der jeweiligen Position zugeschrieben
+(«Von Arendt her gelesen …», «Ihr Argument: …»). Hegels Dialektik wird nicht
+mehr mit «These, Antithese, Synthese» gleichgesetzt; Heideggers NS-Rolle steht
+konkret (NSDAP 1933–1945, Rektorat, «Schwarze Hefte») statt als «Nähe zum
+Nationalsozialismus». Zeitabhängige Angaben (Preisstufen, Exportkontrollen,
+AI-Act-Fristen) tragen ein Standdatum.
+
+**5. Exporter ehrlicher gemacht.** `jsxText()` löschte JSX-Ausdrücke still, was
+Satzlücken erzeugte, die wie Inhaltsfehler aussahen. Neu werden textführende
+Komponenten (`DenkerHover`, `Begriff`, `GlossarText`) über ihre Props aufgelöst,
+verbleibende Ausdrücke als sichtbares **«[…]»** markiert statt verschluckt, und
+Treffer aus Template-Literalen per `istCode()` verworfen. Der Lauf endet mit
+einer **Selbstprüfung**, die verdächtige Zeilen und markierte Lücken zählt
+(aktuell: 0 verdächtige Zeilen, 11 Lücken). Zusätzlich werden `label`/`url`-
+Belege als Quellenzeilen exportiert. Das bleibt eine Regex-Näherung und ersetzt
+keinen Parser, sagt aber jetzt selbst, wo man ihr nicht trauen darf.
+
+**Nicht übernommen:** Der Bericht nennt den Kyoto-Philosophen «Teruaki
+Deguchi»; richtig ist **Yasuo Deguchi**, wie im Code. Seine eigene Quelle (Q37)
+belegt das. Der ebenfalls kritisierte `SchablonenZeitstrahl.tsx` ist toter Code
+(nirgends importiert) und wurde nicht angefasst.
+
 ## 2026-07-25 — Inhalte von Lernseite 2 als Lesefassung exportierbar (Christof)
 
 **Entscheidung:** Die Inhalte von Lernseite 2 gibt es zusätzlich als

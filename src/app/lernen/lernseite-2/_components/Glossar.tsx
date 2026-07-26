@@ -13,7 +13,7 @@ export const GLOSSAR: Record<string, string> = {
   Sesshaftigkeit:
     "Der Übergang vom umherziehenden Jagen und Sammeln zum festen Wohnen mit Ackerbau.",
   Sophisten:
-    "Bezahlte Wanderlehrer im antiken Griechenland; für sie war Wahrheit verhandelbar.",
+    "Bezahlte Wanderlehrer im antiken Griechenland; Platon warf ihnen vor, Wahrheit sei bei ihnen verhandelbar.",
   Keilschrift:
     "Eine der ältesten Schriften — keilförmige Zeichen, in feuchten Ton gedrückt.",
   Quipu:
@@ -25,7 +25,7 @@ export const GLOSSAR: Record<string, string> = {
   Stellenwertsystem:
     "Zahlenschreibweise, bei der die Position einer Ziffer ihren Wert bestimmt (Einer, Zehner, Hunderter).",
   Algorithmus:
-    "Eine eindeutige Schritt-für-Schritt-Anleitung zum Lösen einer Aufgabe.",
+    "Eine endliche, klar festgelegte Folge von Schritten zum Lösen einer Aufgabe.",
   Heliozentrik:
     "Das Weltbild, in dem die Sonne im Zentrum steht — nicht die Erde.",
   Karavelle:
@@ -35,7 +35,7 @@ export const GLOSSAR: Record<string, string> = {
   Aufklärung:
     "Geistige Bewegung des 18. Jahrhunderts: Vernunft, Selbstdenken, Kritik an Autoritäten.",
   Kolonialisierung:
-    "Eroberung, Beherrschung und Ausbeutung fremder Länder durch europäische Mächte.",
+    "Eroberung, Beherrschung und Ausbeutung fremder Länder; hier gemeint ist die europäische Expansion ab 1492.",
   Industrialisierung:
     "Der Übergang zur maschinellen Fabrikproduktion ab dem späten 18. Jahrhundert.",
   Schoah:
@@ -59,7 +59,7 @@ export const GLOSSAR: Record<string, string> = {
   Platon:
     "Athener Philosoph (Schüler des Sokrates); seine Dialoge begründen die abendländische Philosophie.",
   Aristoteles:
-    "Griechischer Philosoph (Schüler Platons); Begründer von Logik und beobachtender Wissenschaft.",
+    "Griechischer Philosoph (Schüler Platons); prägte die formale Logik und zahlreiche empirisch orientierte Untersuchungen.",
   Philosophie:
     "Wörtlich «Liebe zur Weisheit» — das begründende Nachdenken über die Grundfragen.",
   Völkerwanderung:
@@ -72,7 +72,7 @@ export const GLOSSAR: Record<string, string> = {
   Flugschriften:
     "Billige Druckblätter — das schnelle Massenmedium der Reformationszeit.",
   Algorithmen:
-    "Eindeutige Schritt-für-Schritt-Anleitungen, nach denen Computer arbeiten.",
+    "Klar festgelegte Folgen von Schritten, nach denen Computer arbeiten; manche ziehen dabei auch den Zufall hinzu.",
   Voltaire:
     "Französischer Aufklärer (1694–1778), scharfzüngiger Kritiker von Kirche und Autoritäten.",
   Terror:
@@ -90,7 +90,7 @@ export const GLOSSAR: Record<string, string> = {
   Digitalisierung:
     "Die Verlagerung von Information und Abläufen in Computer und Netze.",
   "World Wide Web":
-    "Das 1991 freigegebene, verlinkte Seitensystem, das das Internet alltagstauglich machte.",
+    "Das verlinkte Seitensystem von Tim Berners-Lee: Vorschlag 1989, erste Website 1991, 1993 vom CERN zur freien Nutzung freigegeben.",
   Arbeitsteilung:
     "Aufteilung der Arbeit in spezialisierte Tätigkeiten — Grundlage von Städten und Handel.",
   Mesopotamien:
@@ -100,7 +100,7 @@ export const GLOSSAR: Record<string, string> = {
   Keilschrifttafeln:
     "Tontafeln mit eingedrückten keilförmigen Zeichen — die ältesten Schriftdokumente.",
   Buchdruck:
-    "Gutenbergs Verfahren (um 1450), Texte mit beweglichen Lettern massenhaft zu vervielfältigen.",
+    "Das Verfahren, Texte mit beweglichen Metalllettern massenhaft zu vervielfältigen; in Europa ab etwa 1450 durch Gutenberg.",
   Jikji: "Koreanische Schrift von 1377 — das älteste erhaltene Buch aus beweglichen Metalllettern.",
   Schiesspulver:
     "In China entwickelte Explosivmischung — veränderte Krieg und Machtverhältnisse weltweit.",
@@ -187,7 +187,7 @@ export const GLOSSAR: Record<string, string> = {
   "Manhattan-Projekt":
     "Das geheime US-Grossprojekt (1942–45), das die erste Atombombe baute.",
   Transformer:
-    "Die KI-Architektur von 2017 («Attention»), Grundlage heutiger Sprachmodelle wie ChatGPT.",
+    "Die KI-Architektur von 2017; sie setzt ganz auf den schon vorher bekannten Attention-Mechanismus und ist die Grundlage heutiger Sprachmodelle wie ChatGPT.",
   "Newcomen-Maschine":
     "Frühe Dampfmaschine (1712) zum Abpumpen von Grubenwasser — Vorläuferin von Watts Maschine.",
   Humanismus:
@@ -205,13 +205,13 @@ export const GLOSSAR: Record<string, string> = {
   Temperatur:
     "Eine Einstellung der KI. Sie steuert, wie viel Zufall in der Wortwahl steckt. Ein hoher Wert macht die Antworten kreativer und unberechenbarer, ein niedriger vorhersehbarer.",
   Vektor:
-    "Ein langer Zahlencode. Die KI stellt damit jedes Wort in einem Raum dar, sodass Bedeutung und Nähe zu anderen Wörtern messbar werden.",
+    "Ein langer Zahlencode. Modelle stellen damit Wortteile und andere Daten so dar, dass Nähe und Ähnlichkeit messbar werden. Wie viele Zahlen dazugehören, hängt vom Modell ab.",
   Gutenberg:
-    "Johannes Gutenberg (um 1400 bis 1468), Erfinder des Buchdrucks mit beweglichen Lettern in Mainz.",
+    "Johannes Gutenberg (um 1400 bis 1468); entwickelte in Mainz das erste wirtschaftlich erfolgreiche Verfahren des Buchdrucks mit gegossenen Metalllettern.",
   Gutenbergs:
-    "Johannes Gutenberg (um 1400 bis 1468), Erfinder des Buchdrucks mit beweglichen Lettern in Mainz.",
+    "Johannes Gutenberg (um 1400 bis 1468); entwickelte in Mainz das erste wirtschaftlich erfolgreiche Verfahren des Buchdrucks mit gegossenen Metalllettern.",
   Sokrates:
-    "Athener Philosoph (469 bis 399 v. Chr.); fragte hartnäckig nach, «Ich weiss, dass ich nichts weiss».",
+    "Athener Philosoph (469 bis 399 v. Chr.); fragte hartnäckig nach. Das berühmte «Ich weiss, dass ich nichts weiss» ist eine spätere Kurzformel.",
   Antike:
     "Zeit der Griechen und Römer (rund 800 v. Chr. bis 500 n. Chr.), Wiege von Philosophie, Demokratie und Wissenschaft.",
   Renaissance:
@@ -219,17 +219,17 @@ export const GLOSSAR: Record<string, string> = {
   Spätantike:
     "Übergangszeit vom Römischen Reich zum Mittelalter (etwa 300 bis 600).",
   "Mary Shelley":
-    "Britische Schriftstellerin (1797 bis 1851); schrieb mit 18 Jahren den Roman «Frankenstein» (1818).",
+    "Britische Schriftstellerin (1797 bis 1851); begann «Frankenstein» mit 18 Jahren, erschienen ist der Roman 1818.",
   "Ada Lovelace":
-    "Britische Mathematikerin (1815 bis 1852); schrieb für Babbages Rechenmaschine das erste Programm der Geschichte.",
+    "Britische Mathematikerin (1815 bis 1852); ihre Notizen zu Babbages Rechenmaschine gelten oft als erstes Computerprogramm.",
   Babbage:
     "Charles Babbage (1791 bis 1871), englischer Mathematiker; entwarf die erste programmierbare Rechenmaschine.",
   Babbages:
     "Charles Babbage (1791 bis 1871), englischer Mathematiker; entwarf die erste programmierbare Rechenmaschine.",
   Turing:
-    "Alan Turing (1912 bis 1954), britischer Mathematiker; half die Enigma zu knacken und begründete die Informatik.",
+    "Alan Turing (1912 bis 1954), britischer Mathematiker; half die Enigma zu knacken und legte mit der Turingmaschine eine Grundlage der theoretischen Informatik.",
   Turings:
-    "Alan Turing (1912 bis 1954), britischer Mathematiker; half die Enigma zu knacken und begründete die Informatik.",
+    "Alan Turing (1912 bis 1954), britischer Mathematiker; half die Enigma zu knacken und legte mit der Turingmaschine eine Grundlage der theoretischen Informatik.",
   Weizenbaum:
     "Joseph Weizenbaum (1923 bis 2008), Informatiker am MIT; baute ELIZA und wurde zum Kritiker blinder Computergläubigkeit.",
   ELIZA:

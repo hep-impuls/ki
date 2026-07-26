@@ -16,6 +16,8 @@ Vertiefung dahinter.
 
 *Quelle: `page.tsx`*
 
+### […]
+
 Kaum ein Thema ist so präsent wie die Künstliche Intelligenz — und kaum eines so schwer zu fassen. Es wird viel über sie gesagt, doch vieles bleibt schemenhaft, ein Reden über etwas, das man selten wirklich vor Augen hat. Dieses Lernset will die KI sichtbarer und verständlicher machen, indem es ihr eine Gestalt gibt.
 
 Diese Gestalt zeigt sich nicht, wenn man die KI isoliert betrachtet. KI steht nie für sich: Sie baut auf kulturellen, technischen und wirtschaftlichen Überlegungen auf — und erst wenn man dieses Netz mitzeichnet, wird erkennbar, was da eigentlich auftritt. Darum folgt das Design dieses Lernsets einer Idee: Um das Phänomen zu verstehen, muss man das Netzwerk abbilden, in dem es steckt.
@@ -32,7 +34,7 @@ Genau hier setzt später die philosophische Perspektive an: Je nach Blickwinkel 
 
 Ein Zusammenhang: Zuerst tritt die neue Akteurin auf, dann ordnet die philosophische Perspektive ein — und am Ende spiegelt das Orakel deinen eigenen Weg durchs Modul.
 
-Thema {s.subtitle ? ` · $` : ""}
+### […]
 
 ---
 
@@ -148,7 +150,7 @@ Thema {s.subtitle ? ` · $` : ""}
 
 - *Quelle:* Foto der «Bombe», US National Security Agency · Wikimedia Commons · gemeinfrei (US-Regierung)
 
-**Geschichte:** Im Zweiten Weltkrieg verschlüsselte die deutsche Wehrmacht ihren Funk mit der Enigma. In Bletchley Park in England entwarf Alan Turing die «Bombe», eine elektromechanische Maschine, die Tausende möglicher Walzenstellungen systematisch durchprobierte und die unmöglichen ausschied. Das Knacken der Enigma verkürzte den Krieg erheblich. Turing hatte 1936 die theoretische Grundlage jedes Computers gelegt und fragte 1950, ob Maschinen denken können. Das Foto zeigt eine US-Version der Bombe mit einer Bedienerin, denn die Maschinen liefen rund um die Uhr und wurden meist von Frauen bedient. Aus Turings Idee der universellen Rechenmaschine wurde hier ein reales, kriegsentscheidendes Werkzeug und eine Geburtsstunde des Computers.
+**Geschichte:** Im Zweiten Weltkrieg verschlüsselte die deutsche Wehrmacht ihren Funk mit der Enigma. Vorgearbeitet hatten polnische Mathematiker, die die Enigma schon in den 1930er-Jahren analysierten und mit der «bomba» eine erste Prüfmaschine bauten. In Bletchley Park in England entwarfen darauf Alan Turing und Gordon Welchman die «Bombe», eine elektromechanische Maschine, die Tausende möglicher Walzenstellungen systematisch durchprobierte und die unmöglichen ausschied. Das Knacken der Enigma verkürzte den Krieg erheblich. Turing hatte 1936 mit der Turingmaschine ein Modell beschrieben, das zur theoretischen Grundlage der Informatik wurde, und fragte 1950, ob Maschinen denken können. Das Foto zeigt eine US-Version der Bombe mit einer Bedienerin, denn die Maschinen liefen rund um die Uhr und wurden meist von Frauen bedient. Aus Turings Idee der universellen Rechenmaschine wurde hier ein reales, kriegsentscheidendes Werkzeug und eine Geburtsstunde des Computers.
 
 #### Die Trommeln
 
@@ -194,7 +196,7 @@ Thema {s.subtitle ? ` · $` : ""}
 
 - *Kurzlabel im Gewebe:* Daten als Punkte im mehrdimensionalen Raum
 
-**Geschichte:** Ab den 1990er-Jahren verschob sich die KI vom Regeln-Schreiben zum Lernen aus Beispielen. Ein Modell fasst jedes Beispiel als Punkt in einem Raum mit vielen Merkmalen auf, oft mit Hunderten oder Tausenden Dimensionen, und Ähnliches liegt nah beieinander. «Lernen» heisst dann, eine Grenze zu finden, die Gruppen trennt. Danach kann das Modell Neues einordnen. Es versteht dabei keine Bedeutung, sondern rechnet mit Lage und Abstand. Diese Denkweise ist die Grundlage fast aller heutigen KI. Diese schematische Illustration ist mit KI erstellt.
+**Geschichte:** Ab den 1990er-Jahren verschob sich die KI vom Regeln-Schreiben zum Lernen aus Beispielen. Ein Modell fasst jedes Beispiel als Punkt in einem Raum mit vielen Merkmalen auf, oft mit Hunderten oder Tausenden Dimensionen, und Ähnliches liegt nah beieinander. «Lernen» heisst dann, eine Grenze zu finden, die Gruppen trennt. Danach kann das Modell Neues einordnen. Es versteht dabei keine Bedeutung, sondern rechnet mit Lage und Abstand. Diese Denkweise ist ein Grundmodell des überwachten Lernens, also des Lernens an vorsortierten Beispielen, und steckt bis heute in vielen Anwendungen. Diese schematische Illustration ist mit KI erstellt.
 
 #### Achsen sind Merkmale
 
@@ -240,7 +242,7 @@ Thema {s.subtitle ? ` · $` : ""}
 
 - *Kurzlabel im Gewebe:* Deep Q-Network lernt Arcade-Spiele selbst
 
-**Geschichte:** Zwischen 2013 und 2015 zeigte «Deep Q-Network» von DeepMind, dass eine KI klassische Arcade-Spiele allein durch Ausprobieren lernen kann. Sie sah nur die Bildpunkte des Schirms und den Punktestand, aber keine Regeln. Über viele Partien hinweg richtete sie ihr Verhalten auf die Belohnung durch Punkte aus und übertraf bei manchen Spielen den Menschen. Dieses «verstärkende Lernen» wurde später zur Grundlage von Systemen wie AlphaGo, das 2016 den weltbesten Go-Spieler schlug. Diese schematische Illustration ist mit KI erstellt und zeigt kein Originalspiel.
+**Geschichte:** Zwischen 2013 und 2015 zeigte «Deep Q-Network» von DeepMind, dass eine KI klassische Arcade-Spiele allein durch Ausprobieren lernen kann. Sie sah nur die Bildpunkte des Schirms und den Punktestand, aber keine Regeln. Über viele Partien hinweg richtete sie ihr Verhalten auf die Belohnung durch Punkte aus und übertraf bei manchen Spielen den Menschen. Dieses «verstärkende Lernen» wurde später zur Grundlage von Systemen wie AlphaGo, das 2016 Lee Sedol schlug, einen der stärksten Go-Spieler der Welt. Diese schematische Illustration ist mit KI erstellt und zeigt kein Originalspiel.
 
 #### Die Umgebung
 
@@ -262,9 +264,9 @@ Thema {s.subtitle ? ` · $` : ""}
 
 - *Kurzlabel im Gewebe:* Text wird zum Bild, schon vor ChatGPT
 
-- *Quelle:* Von DALL·E 2 erzeugtes Bild (2022) · Wikimedia Commons · KI-generiert, urheberrechtlich nicht geschützt
+- *Quelle:* Von DALL·E 2 erzeugtes Bild (2022) · Wikimedia Commons · KI-generiert; ob urheberrechtlicher Schutz besteht, hängt vom menschlichen Gestaltungsbeitrag und vom anwendbaren Recht ab
 
-**Geschichte:** DALL·E von OpenAI erzeugt Bilder aus Textbeschreibungen. DALL·E 1 kam im Januar 2021, das deutlich stärkere DALL·E 2 im April 2022, also rund ein halbes Jahr vor ChatGPT. Man gibt einen Satz ein, und das Modell «malt» ein Bild, das so nie fotografiert wurde. Es setzt das Bild Punkt für Punkt neu aus Gelerntem zusammen. Damit wurde generative KI erstmals einem breiten Publikum sichtbar. Dieses Bild ist selbst ein Ergebnis von DALL·E 2, eine zeichnende Roboterhand, und als KI-erzeugtes Werk urheberrechtlich nicht geschützt.
+**Geschichte:** DALL·E von OpenAI erzeugt Bilder aus Textbeschreibungen. DALL·E 1 kam im Januar 2021, das deutlich stärkere DALL·E 2 im April 2022, also rund ein halbes Jahr vor ChatGPT. Man gibt einen Satz ein, und das Modell «malt» ein Bild, das so nie fotografiert wurde. Es setzt das Bild Punkt für Punkt neu aus Gelerntem zusammen. Damit wurde generative KI erstmals einem breiten Publikum sichtbar. Dieses Bild ist selbst ein Ergebnis von DALL·E 2, eine zeichnende Roboterhand. Wem es rechtlich gehört, ist heikler, als es klingt: Nach schweizerischem Verständnis schützt das Urheberrecht geistige Schöpfungen von Menschen, weshalb rein maschinell Erzeugtem der Schutz grundsätzlich fehlt. Steckt im Ergebnis aber ein hinreichend eigener menschlicher Gestaltungsbeitrag, kann Schutz bestehen. Das ist eine Frage des Einzelfalls, und Urheberrecht am Bild, Nutzungsbedingungen des Dienstes und Rechte am Ausgangsmaterial sind noch einmal drei verschiedene Dinge.
 
 #### Sprache als Pinsel
 
@@ -272,7 +274,7 @@ Thema {s.subtitle ? ` · $` : ""}
 
 #### Erfunden, nicht gefunden
 
-**Text:** Das Bild existiert nirgends, das Modell setzt es Punkt für Punkt neu zusammen. Dieses hier hat DALL·E 2 erzeugt, und es ist urheberrechtlich nicht geschützt.
+**Text:** Das Bild existiert nirgends, das Modell setzt es Punkt für Punkt neu zusammen. Dieses hier hat DALL·E 2 erzeugt. Ob so etwas urheberrechtlich geschützt ist, hängt davon ab, wie viel ein Mensch daran gestaltet hat.
 
 #### Früher als ChatGPT
 
@@ -302,13 +304,21 @@ Thema {s.subtitle ? ` · $` : ""}
 
 ### Vorhang auf: eine neue Akteurin
 
+Kaum ein Thema ist so präsent wie die Künstliche Intelligenz. Und kaum eines ist so schwer zu fassen. Diese Seite gibt der KI einen Ort, an dem wir ihrer Gestalt nachgehen, statt nur über sie zu reden.
+
 #### Mehr dazu: der Weg durch diese Seite
+
+Um die KI zu verstehen, nähern wir uns ihr aus mehreren Richtungen. Zuerst fragen wir nach der Herkunft, also wie das Phänomen einer denkenden Maschine kulturell und technisch entstanden ist. Das erzählt die KI-Story. Einzelne Stationen werden danach in Bildern greifbar, die begehbare Punkte tragen. Dann treten die Merkmale hervor, jene Eigenschaften, die wir seit November 2022 mit den grossen Sprachmodellen täglich erleben. Zum Schluss geht es um die Kontexte, in denen die neue Akteurin heute steckt. Das Fazit vorweg lautet, dass KI weit mehr ist als das Chatfenster, in das wir unsere Fragen tippen.
 
 ### Vorhang auf: die neue Akteurin
 
 ### Die KI-Story
 
+Die KI hat eine lange Vorgeschichte. Schon lange vor dem Computer träumten Menschen davon, künstliche Wesen zu erschaffen. Diese KI-Story führt in zweiundzwanzig Stationen von den antiken Mythen bis zu den heutigen Sprachmodellen.
+
 #### Mehr dazu: die beiden Fäden der Geschichte
+
+Durch die Geschichte laufen zwei Fäden nebeneinander. Der eine Faden ist die Erzählung vom belebten Ding, zum Beispiel beim Golem oder bei Frankensteins Geschöpf. Der andere Faden ist die Technik, die das Rechnen und Denken Schritt für Schritt an Maschinen abgibt. Ein wichtiger Baustein auf diesem Weg ist der Algorithmus. Im Jahr 1950 fragte der Mathematiker Alan Turing, ob Maschinen denken können, und schlug dafür den Turing-Test vor. Im Jahr 1956 gab die Dartmouth-Konferenz dem jungen Forschungsfeld seinen Namen, nämlich künstliche Intelligenz. In den heutigen Sprachmodellen treffen beide Fäden zusammen, die alte Vorstellung vom künstlichen Wesen und die reale Auslagerung des Rechnens.
 
 > **Aufgabe:** Worum es hier geht: Die KI ist nicht aus dem Nichts entstanden. Zwei alte Linien laufen auf sie zu. Die eine ist der Traum vom künstlichen Wesen, die andere ist die Technik des Rechnens. In diesem Gewebe suchst du die Spuren beider Linien. So gehst du vor: Oben stehen Begriffe, jeder steht für eine Station im Netz. Zu Beginn sind zufällig drei Punkte hervorgehoben. Tippst du einen Begriff oder Punkt an, öffnet sich seine Geschichte als Karte. Je mehr du öffnest, desto mehr farbige Flächen entstehen zwischen den Punkten, das Netz wird gewebeartig. So knüpfst du dein eigenes Netz. Mit der Ansicht «Zeitlich» ordnest du die Stationen von früher nach heute. Dein Ziel: Das Netz selbst ist nicht das Ziel. Wichtig ist, dass du den Punkten, die du öffnest, auch nachgehst. Lies die Geschichte, vertiefe sie bei «Mehr lesen» und halte mit «Das verfolge ich weiter» fest, was dich interessiert. Alles, was du anschaust, vertiefst oder weiterverfolgst, fliesst in deine Gesamtaktivität ein, die du im Rhizom-Symbol unten rechts und im Orakel wiederfindest. Du musst nicht alle zweiundzwanzig Stationen öffnen, geh dem nach, was dich neugierig macht, und achte darauf, wie Traum und Technik in der heutigen KI zusammenlaufen.
 
@@ -496,7 +506,7 @@ Dein Ziel: Das Netz selbst ist nicht das Ziel. Wichtig ist, dass du den Punkten,
 
 - *Jahr:* ab 2012
 
-**Text:** Ab 2012 gelang der Durchbruch mit künstlichen neuronalen Netzen, die dem Gehirn grob nachempfunden sind. Solche Netze mit vielen Schichten lernen, Bilder und Sprache zu erkennen. Der Erfolg kommt gerade aus dieser Tiefe, also aus der grossen Zahl der Schichten. Daher der Name Deep Learning, was tiefes Lernen bedeutet.
+**Text:** Ab 2012 gelang der Durchbruch mit künstlichen neuronalen Netzen, die dem Gehirn grob nachempfunden sind. Solche Netze mit vielen Schichten lernen, Bilder und Sprache zu erkennen. Von dieser Tiefe kommt der Name Deep Learning, also tiefes Lernen. Dass es ab 2012 plötzlich funktionierte, lag aber nicht an den Schichten allein: Erst zusammen mit riesigen Bildsammlungen, schnellen Grafikchips und besseren Trainingsverfahren kam der Durchbruch.
 
 **Geschichte:** 2012 gewann ein tiefes neuronales Netz den grossen ImageNet-Bildwettbewerb mit deutlichem Vorsprung. Trainiert wurde es auf Grafikkarten und mit Millionen von Bildern. Solche Netze lernen Schicht für Schicht ihre eigenen Merkmale, statt sie vorgesagt zu bekommen. Seither bestimmt dieses Prinzip die Bild-, Sprach- und Texterkennung.
 
@@ -510,7 +520,7 @@ Dein Ziel: Das Netz selbst ist nicht das Ziel. Wichtig ist, dass du den Punkten,
 
 **Text:** 2017 stellten Forschende bei Google eine neue Bauweise für KI vor, den Transformer. Sein Trick ist die Aufmerksamkeit, denn das Modell lernt, welche Wörter im Satz aufeinander achten müssen. Damit lassen sich sehr grosse Textmengen verarbeiten. Der Transformer ist die gemeinsame Grundlage fast aller heutigen Sprachmodelle.
 
-**Geschichte:** Der Aufsatz «Attention Is All You Need» von 2017 führte den Aufmerksamkeits-Mechanismus ein. Das Modell gewichtet, welche Teile eines Textes für welche anderen wichtig sind, und das über lange Passagen hinweg. Diese Berechnung lässt sich stark parallel ausführen. Dadurch liessen sich Modelle erstmals auf riesige Textmengen vergrössern.
+**Geschichte:** Der Aufmerksamkeits-Mechanismus war schon vorher bekannt. Neu war, dass der Aufsatz «Attention Is All You Need» von 2017 eine Architektur vorstellte, die ganz auf ihn setzte und die älteren, Schritt für Schritt lesenden Bauteile wegliess: den Transformer. Das Modell gewichtet, welche Teile eines Textes für welche anderen wichtig sind, und das über lange Passagen hinweg. Diese Berechnung lässt sich stark parallel ausführen. Dadurch liessen sich Modelle erstmals auf riesige Textmengen vergrössern.
 
 **Mehr lesen:** Vor dem Transformer verarbeiteten Sprachmodelle einen Satz Wort für Wort und mussten warten, bis ein Wort fertig war, bevor das nächste an die Reihe kam. Bei langen Sätzen ging der Anfang dabei oft verloren. Der Transformer betrachtet dagegen alle Wörter zugleich und berechnet für jedes, wie stark es auf jedes andere achten soll. So erkennt das Modell im Satz «das Tier überquerte die Strasse nicht, weil es müde war», dass sich «es» auf das Tier bezieht und nicht auf die Strasse. Der Aufsatz stammte von einem achtköpfigen Team bei Google und wurde zu einer der meistzitierten Arbeiten der ganzen KI-Forschung. Schon 2018 stellte Google mit BERT einen solchen Transformer vor und baute ihn kurz darauf in seine Suche ein. Von da an wurde die Bauweise zum Standard für fast jedes grosse Sprachmodell.
 
@@ -520,7 +530,7 @@ Dein Ziel: Das Netz selbst ist nicht das Ziel. Wichtig ist, dass du den Punkten,
 
 - *Jahr:* 2018–2020
 
-**Text:** Zwischen 2018 und 2020 wurden die Sprachmodelle Stufe um Stufe grösser. Mit GPT-1, GPT-2 und GPT-3 wuchs erstaunlicherweise auch das, was sie ganz ohne eigenes Training konnten. Allein aus dem Vorhersagen des nächsten Wortes entstanden neue Fähigkeiten. Grösse allein brachte hier einen Sprung in der Leistung.
+**Text:** Zwischen 2018 und 2020 wurden die Sprachmodelle Stufe um Stufe grösser. Mit GPT-1, GPT-2 und GPT-3 wuchs erstaunlicherweise auch das, was sie ganz ohne eigenes Training konnten. Allein aus dem Vorhersagen des nächsten Wortes entstanden neue Fähigkeiten. Wachsen musste dafür alles zugleich, Modellgrösse, Datenmenge und Rechenzeit. Ob dabei Fähigkeiten wirklich sprunghaft auftauchen oder ob das an der Art des Messens liegt, ist in der Forschung umstritten.
 
 **Geschichte:** Ab 2018 zeigten die GPT-Modelle der Firma OpenAI, dass das blosse Vorhersagen des nächsten Wortes auf riesigen Textmengen erstaunlich weit trägt. GPT-3 aus dem Jahr 2020 hatte 175 Milliarden einstellbare Werte, sogenannte Parameter. Es konnte Texte schreiben, übersetzen und Fragen beantworten, ohne für jede Aufgabe eigens trainiert zu werden.
 
@@ -556,7 +566,7 @@ Dein Ziel: Das Netz selbst ist nicht das Ziel. Wichtig ist, dass du den Punkten,
 
 **Text:** Nach ChatGPT begann ein weltweiter Wettlauf um die besten Modelle. Neben den US-Modellen wie GPT, Claude, Gemini und Llama traten Modelle aus China, Europa und sogar der Schweiz an. Wer eigene Modelle baut, macht sich unabhängiger von anderen. So bekam die KI auch eine politische und eine sprachliche Bedeutung.
 
-**Geschichte:** Ab 2023 rangen viele Anbieter um die besten Modelle. Aus den USA kommen GPT von OpenAI, Claude von Anthropic, Gemini von Google und das offene Llama von Meta. Anfang 2025 sorgte das chinesische DeepSeek für Aufsehen, weil es mit wenig Aufwand mithielt, und auch Alibabas Qwen zählt dazu. Aus Europa stammt Mistral aus Frankreich, und aus der Schweiz das vollständig offene Modell «Apertus» von ETH Zürich, EPFL und dem Rechenzentrum CSCS.
+**Geschichte:** Ab 2023 rangen viele Anbieter um die besten Modelle. Aus den USA kommen GPT von OpenAI, Claude von Anthropic, Gemini von Google und Llama von Meta, dessen Gewichte man herunterladen kann, allerdings unter Metas eigener Lizenz und nicht als Open Source. Anfang 2025 sorgte das chinesische DeepSeek für Aufsehen, weil es mit wenig Aufwand mithielt, und auch Alibabas Qwen zählt dazu. Aus Europa stammt Mistral aus Frankreich, und aus der Schweiz das vollständig offene Modell «Apertus» von ETH Zürich, EPFL und dem Rechenzentrum CSCS.
 
 **Mehr lesen:** Wie umkämpft das Feld ist, zeigte sich Anfang 2025, als das chinesische Modell DeepSeek für Aufsehen sorgte, weil es mit deutlich geringerem Aufwand trainiert worden sein soll als die US-Konkurrenz. Die Nachricht liess kurzzeitig sogar die Börsenkurse grosser Chiphersteller einbrechen, weil Anleger an den bisherigen Milliardenkosten zu zweifeln begannen. Der praktische Reiz offener Modelle liegt darin, dass man sie auf eigenen Rechnern betreiben kann, ohne Daten an einen fremden Anbieter zu schicken. Für Behörden, Spitäler oder Schulen bedeutet das einen Gewinn an Datenschutz und Unabhängigkeit. Ein Schweizer Modell wie «Apertus» ist gerade deshalb bedeutsam, weil sich damit Anwendungen bauen lassen, die nicht von einzelnen US-Konzernen abhängen. Verglichen werden die vielen Modelle auf öffentlichen Ranglisten, auf denen Menschen die Antworten bewerten. So ist ein rascher Wettlauf entstanden, in dem sich die Rangfolge fast monatlich verschiebt.
 
@@ -574,13 +584,21 @@ Dein Ziel: Das Netz selbst ist nicht das Ziel. Wichtig ist, dass du den Punkten,
 
 ### Bilder zur KI-Geschichte
 
+Bilder machen abstrakte Ideen anschaulich. Elf Werke spannen den Bogen von den frühen Rechenhilfen bis zu ChatGPT und den heutigen Bildgeneratoren. In jedem Bild kannst du begehbare Punkte antippen und so ein Detail nach dem anderen entdecken.
+
 #### Mehr dazu: was die Bilderstrecke zeigt
+
+Die Strecke beginnt beim Auslagern des Denkens in Knotenschnüre, den Quipus der Anden. Sie führt weiter über Turings Code-Knacker aus dem Zweiten Weltkrieg. Ein weiteres Bild zeigt ELIZA, den ersten Chatbot aus den 1960er-Jahren. Später kommen Bildgeneratoren wie DALL·E und schliesslich ChatGPT dazu. Jedes Bild trägt nummerierte Punkte mit einer kurzen Erklärung. So wird aus einer abstrakten Idee eine konkrete Geschichte. Bildende Kunst hilft dabei, komplexe Zusammenhänge in einer einfachen Ansicht zu zeigen.
 
 > **Aufgabe:** Klicke ein Bild an, dann öffnet es sich gross im Anschauungsmodus. Tippe dort die leuchtenden, nummerierten Punkte an, denn jeder erzählt ein Detail. Mit den Pfeilen oder den Pfeiltasten blätterst du weiter. Ziel sind alle elf Bilder samt ihren Punkten.
 
 ### Die Merkmale der neuen Akteurin
 
+Seit November 2022 nutzen wir grosse Sprachmodelle fast täglich. Aber was genau ist da als neue Akteurin aufgetreten? Zwölf Eigenschaften zusammen machen das Neue aus, nicht eine davon allein.
+
 #### Mehr dazu: warum die Bündelung zählt
+
+Jede einzelne dieser Eigenschaften gab es in Ansätzen schon früher. Neu ist, dass sie nun gebündelt in einem System zusammenkommen. Die KI erkennt Muster in riesigen Datenmengen und arbeitet mit Wahrscheinlichkeiten statt mit festen Regeln. Sie reagiert auf den Zusammenhang und passt ihre Antworten daran an. Sie wirkt allgemein einsetzbar, weil sie nicht für eine einzige Aufgabe gebaut ist. Genau diese Kombination macht sie zu einem Werkzeug, das sich wie ein Gegenüber anfühlt. Im Muster unten kannst du die zwölf Merkmale einzeln öffnen und nachlesen.
 
 > **Aufgabe:** Tippe die zwölf Punkte im Geflecht an. Jeder wird beschriftet und zeigt unten seine Definition. Zwischen besuchten Punkten füllen sich Flächen, und je mehr Punkte du besuchst, desto dichter wird das Gewebe. Ziel ist, alle zwölf Merkmale zu öffnen. Dann erscheint unter dem Muster das Fazit.
 
@@ -588,13 +606,13 @@ Dein Ziel: Das Netz selbst ist nicht das Ziel. Wichtig ist, dass du den Punkten,
 
 #### algorithmisch
 
-**Text:** Stell dir ein sehr genaues Kochrezept vor. Jeder Schritt ist eindeutig, und wer sich daran hält, kommt zum selben Ergebnis. Genau so arbeitet die KI in ihrem Innersten. Sie führt ein Rechenverfahren aus, Schritt für Schritt, ohne Laune und ohne Bauchgefühl. Wenn eine Antwort spontan wirkt, ist sie trotzdem nur das Ergebnis von Berechnungen.
+**Text:** Stell dir ein sehr genaues Kochrezept vor. Jeder Schritt ist festgelegt, nichts bleibt dem Gefühl überlassen. Genau so arbeitet die KI in ihrem Innersten, sie führt ein Rechenverfahren aus, Schritt für Schritt, ohne Laune und ohne Bauchgefühl. Dass dieselbe Frage zweimal verschieden beantwortet wird, widerspricht dem nicht: Beim Auswählen des nächsten Wortes ist Zufall eingebaut. Wenn eine Antwort spontan wirkt, ist sie trotzdem nur das Ergebnis von Berechnungen.
 
 **Mehr lesen:** Das Wort Algorithmus geht auf den Gelehrten al-Chwarizmi zurück, der vor rund 1200 Jahren in Bagdad Rechenwege aufschrieb. Ein Algorithmus ist nichts Geheimnisvolles, sondern eine klare Anleitung, wie aus einer Eingabe eine Ausgabe wird. Auch das Lernen der KI ist so eine Anleitung. Beim Training verstellt sie viele Milliarden winziger Zahlenwerte immer wieder ein kleines bisschen, bis ihre Antworten besser passen. Man kann sich das wie das Drehen an Millionen kleiner Regler vorstellen. Das klingt weniger nach Denken und mehr nach Rechnen, und genau das ist es auch.
 
 #### datenbasiert
 
-**Text:** Eine KI lernt ähnlich wie ein Kind, das tausende Hunde sieht und irgendwann jeden Hund erkennt. Ihre Fähigkeiten wachsen aus riesigen Mengen an Beispielen, nicht aus fest eingebauten Regeln. Hat sie nie ein Gedicht gelesen, kann sie auch keines schreiben. Deshalb kommt es vor allem darauf an, womit sie gefüttert wurde. Und es kommt darauf an, wessen Sichtweise in diesen Daten steckt und wessen darin fehlt.
+**Text:** Ein Kind, das tausende Hunde sieht, erkennt irgendwann jeden Hund. Von aussen sieht es bei der KI ähnlich aus, im Inneren geschieht aber etwas anderes: Ihre Fähigkeiten wachsen aus riesigen Mengen an Beispielen, nicht aus fest eingebauten Regeln. Was in den Daten gar nicht vorkommt, kann sie höchstens aus Ähnlichem zusammensetzen. Deshalb kommt es vor allem darauf an, womit sie gefüttert wurde. Und es kommt darauf an, wessen Sichtweise in diesen Daten steckt und wessen darin fehlt.
 
 **Mehr lesen:** «Die Lernalgorithmen sind die Samen, die Daten der Boden», sagt der Forscher Pedro Domingos. Ohne guten Boden wächst auch aus dem besten Samen nichts. Ein Beispiel: Wurde eine KI fast nur mit englischen Texten trainiert, antwortet sie auf Deutsch oft schwächer. Zeigten die Bilddaten kaum Menschen mit dunkler Haut, erkennt sie diese schlechter. So werden Lücken und Einseitigkeiten der Daten zu Lücken und Einseitigkeiten der KI. Darum ist die Frage, woher die Daten stammen, keine Nebensache, sondern der Kern.
 
@@ -606,9 +624,9 @@ Dein Ziel: Das Netz selbst ist nicht das Ziel. Wichtig ist, dass du den Punkten,
 
 #### wahrscheinlichkeitsbasiert
 
-**Text:** Eine Wetter-App sagt nicht «es regnet», sondern «80 Prozent Regen». Auch die KI rechnet in Wahrscheinlichkeiten, doch sie sucht nicht einfach das nächstbeste Wort. Jedes Wort wird für sie zu einer langen Zahlenreihe, einem sogenannten Vektor, der Bedeutung und Bezüge zu anderen Wörtern festhält. In diesem Raum liegen «Hund» und «Katze» nahe beieinander, «Hund» und «Schraube» weit auseinander. Aus dem Zusammenspiel vieler solcher Bedeutungsebenen berechnet sie, welche Fortsetzung am besten passt. Ihre Antwort ist darum eine Wette mit sehr guten Quoten, aber eben eine Wette.
+**Text:** Eine Wetter-App sagt nicht «es regnet», sondern «80 Prozent Regen». Auch die KI rechnet in Wahrscheinlichkeiten, doch sie sucht nicht einfach das nächstbeste Wort. Jedes Wort, genauer jeder Wortteil, wird für sie zu einer langen Zahlenreihe, einem sogenannten Vektor, der Bezüge zu anderen Wortteilen festhält. In diesem Raum liegen «Hund» und «Katze» nahe beieinander, «Hund» und «Schraube» weit auseinander. Aus dem Zusammenspiel vieler solcher Bedeutungsebenen berechnet sie, welche Fortsetzung am besten passt. Ihre Antwort ist darum eine Wette mit sehr guten Quoten, aber eben eine Wette.
 
-**Mehr lesen:** Fachleute nennen diese Zahlencodes Vektoren, und sie haben nicht zwei oder drei Dimensionen, sondern sehr viele. Die Informatikerin Katharina Zweig spricht von rund 13'000 Richtungen, in denen ein Wort seinen Platz bekommt. Jede Richtung steht für einen winzigen Bedeutungsanteil, und erst alle zusammen ergeben den Sinn eines Wortes im jeweiligen Satz. Der Philosoph Markus Gabriel nennt diesen Vorgang Vektorisierung und betont, dass die KI dabei nur mit Mustern und Wahrscheinlichkeiten rechnet, ohne wirklich zu verstehen. Wie mutig die KI beim Auswählen dann würfelt, regelt eine Einstellung namens Temperatur. Ein hoher Wert macht die Antworten kreativer und unberechenbarer, ein niedriger vorhersehbarer. Das erklärt auch, warum dieselbe Frage zweimal ganz verschieden beantwortet werden kann.
+**Mehr lesen:** Fachleute nennen diese Zahlencodes Vektoren, und sie haben nicht zwei oder drei Dimensionen, sondern sehr viele. Wie viele es sind, hängt vom Modell ab, oft einige hundert bis einige tausend; die Informatikerin Katharina Zweig nennt als Grössenordnung rund 13'000 Richtungen. Einzelne Richtungen lassen sich dabei nicht als je ein ablesbarer Bedeutungsanteil verstehen, erst ihr Zusammenspiel ergibt die Lage eines Wortteils im jeweiligen Satz. Der Philosoph Markus Gabriel nennt diesen Vorgang Vektorisierung und betont, dass die KI dabei nur mit Mustern und Wahrscheinlichkeiten rechnet, ohne wirklich zu verstehen. Wie mutig die KI beim Auswählen dann würfelt, regelt eine Einstellung namens Temperatur. Ein hoher Wert macht die Antworten kreativer und unberechenbarer, ein niedriger vorhersehbarer. Das erklärt auch, warum dieselbe Frage zweimal ganz verschieden beantwortet werden kann.
 
 #### generalisierend
 
@@ -624,7 +642,7 @@ Dein Ziel: Das Netz selbst ist nicht das Ziel. Wichtig ist, dass du den Punkten,
 
 #### adaptiv
 
-**Text:** Schreibst du locker und mit Emojis, antwortet die KI oft ebenso locker. Sie passt sich an, an deinen Ton, deine Beispiele und deine Korrekturen. Sagst du «bitte kürzer», wird die nächste Antwort kürzer. Auch über viele Nutzende hinweg wird sie nach und nach nachjustiert. Was du ihr heute zeigst, kann ihr Verhalten von morgen mitprägen.
+**Text:** Schreibst du locker und mit Emojis, antwortet die KI oft ebenso locker. Sie passt sich an, an deinen Ton, deine Beispiele und deine Korrekturen. Sagst du «bitte kürzer», wird die nächste Antwort kürzer. Wichtig ist dabei ein Unterschied: Im laufenden Gespräch stellt sie sich auf dich ein, dazulernen tut sie dabei nicht. Ob deine Eingaben später ins Training einfliessen, hängt vom Anbieter, vom Produkt und von deinen Einstellungen ab.
 
 **Mehr lesen:** Anpassung geschieht auf mehreren Ebenen. Im laufenden Gespräch greift die KI deinen Stil auf und merkt sich, was du willst. Beim sogenannten Feintuning wird sie schon vor der Nutzung mit menschlichen Rückmeldungen erzogen, damit sie hilfreicher und höflicher antwortet. Und in neue Versionen können Erfahrungen aus der Nutzung einfliessen. Diese Anpassungsfähigkeit macht sie angenehm und nützlich. Zugleich stellt sich die Frage, wer hier eigentlich wen erzieht, der Mensch die Maschine oder die Maschine den Menschen.
 
@@ -648,7 +666,7 @@ Dein Ziel: Das Netz selbst ist nicht das Ziel. Wichtig ist, dass du den Punkten,
 
 #### multimodal
 
-**Text:** Du kannst der KI ein Foto deines Kühlschranks zeigen und nach einem Rezept fragen. Text, Bild und Ton laufen bei ihr in einem einzigen Modell zusammen. Sie liest, sieht und hört und antwortet wahlweise in Wort, Bild oder Stimme. Auch eine Skizze oder ein gesprochener Satz sind für sie eine Eingabe. So nimmt sie die Welt über mehrere Kanäle zugleich auf.
+**Text:** Du kannst der KI ein Foto deines Kühlschranks zeigen und nach einem Rezept fragen. Bei manchen Systemen laufen Text, Bild und Ton in einem einzigen Modell zusammen, bei anderen arbeiten dafür mehrere Bausteine zusammen. Sie liest, sieht und hört und antwortet wahlweise in Wort, Bild oder Stimme. Auch eine Skizze oder ein gesprochener Satz sind für sie eine Eingabe. So nimmt sie die Welt über mehrere Kanäle zugleich auf.
 
 **Mehr lesen:** Frühe Programme konnten nur eines, entweder Text oder Bild oder Ton. Multimodale Modelle verbinden diese Kanäle in einem einzigen Netz. Damit rücken sie näher an uns Menschen heran, denn auch wir denken nicht in getrennten Sinnen. Ein Beispiel: Du fotografierst eine Mathe-Aufgabe, und die KI liest sie, rechnet und erklärt den Lösungsweg. Oder du zeigst ihr ein Diagramm, und sie fasst es in Worten zusammen. So wird die Grenze zwischen Lesen, Sehen und Hören für die Maschine durchlässig.
 
@@ -660,7 +678,11 @@ Dein Ziel: Das Netz selbst ist nicht das Ziel. Wichtig ist, dass du den Punkten,
 
 ### Die KI im Kontext
 
+KI ist mehr als ein Chatfenster. Um das Phänomen zu verstehen, stellt man es in seine Zusammenhänge. Vier Blickwinkel zeigen, worin die neue Akteurin eingebettet ist.
+
 #### Mehr dazu: die vier Blickwinkel
+
+Der erste Blickwinkel ist der technologische, also Rechenkraft, Daten und die Modelle selbst. Der zweite ist der wirtschaftliche, denn Entwicklung und Betrieb kosten viel Geld und schaffen neue Märkte. Der dritte ist der rechtlich-politische, etwa Fragen nach Regeln, Haftung und Macht. Der vierte ist der kulturelle, also wie wir mit KI leben, arbeiten und über sie sprechen. Diese vier Blickwinkel wirken zusammen und lassen sich nicht sauber trennen. Erst gemeinsam ergeben sie ein Bild davon, was KI heute ist.
 
 > **Aufgabe:** Klappe die Aspekte auf, die dich interessieren, denn jeder erklärt einen Faden des Geflechts. Gewichte dabei, wie viel Achtsamkeit ein Aspekt verdient. Das Achtsamkeits-Muster oben wird dadurch farbiger und rötlicher.
 
@@ -680,13 +702,13 @@ Dein Ziel: Das Netz selbst ist nicht das Ziel. Wichtig ist, dass du den Punkten,
 
 **Text:** Eine KI zu trainieren und zu betreiben verbraucht viel Strom und Kühlwasser. Dazu kommen seltene Rohstoffe für die Chips. Zwar werden die Geräte immer sparsamer, doch die Nutzung wächst noch schneller. Deshalb steigt der Gesamtverbrauch weiter an.
 
-**Beispiel:** Google meldete in seinem Umweltbericht 2024, dass seine Treibhausgas-Emissionen seit 2019 um rund 48 Prozent gestiegen sind. Als Hauptgrund nennt der Konzern den wachsenden Stromhunger seiner Rechenzentren für KI. Ein Wert, der eigentlich sinken sollte, zeigt also nach oben.
+**Beispiel:** Google meldete in seinem Umweltbericht 2024, dass seine Treibhausgas-Emissionen seit 2019 um rund 48 Prozent gestiegen sind (Bezugsjahr 2023). Als Gründe nennt der Konzern den wachsenden Energiebedarf seiner Rechenzentren und die Emissionen seiner Lieferkette; die KI ist also ein Treiber davon, nicht die einzige Ursache. Ein Wert, der eigentlich sinken sollte, zeigt jedenfalls nach oben.
 
 #### Rechenzentren
 
 **Text:** Für KI entstehen überall neue Rechenzentren, also grosse Hallen voller Computer. Sie schaffen digitale Kapazität für ein ganzes Land. Vor Ort brauchen sie aber viel Energie, Wasser, Fläche und einen starken Stromanschluss. Damit konkurrieren sie mit anderen Bedürfnissen einer Region.
 
-**Beispiel:** In Irland verbrauchten die Rechenzentren 2023 bereits 21 Prozent des gesamten Stroms im Land, mehr als alle städtischen Haushalte zusammen. Das meldet das irische Statistikamt. Manche Regionen bremsen deshalb den Bau neuer Zentren.
+**Beispiel:** In Irland verbrauchten die Rechenzentren 2023 bereits 21 Prozent des gemessenen Stroms im Land, mehr als alle städtischen Haushalte zusammen; für 2024 meldete das irische Statistikamt 22 Prozent. Manche Regionen bremsen deshalb den Bau neuer Zentren.
 
 #### Wirtschaftlicher Kontext
 
@@ -702,13 +724,13 @@ Dein Ziel: Das Netz selbst ist nicht das Ziel. Wichtig ist, dass du den Punkten,
 
 **Text:** Nicht alle können KI gleichermassen nutzen. Kosten, technische Ausstattung, Sprache und digitale Erfahrung entscheiden mit. Wer gut ausgestattet ist, profitiert stärker. So kann KI bestehende Ungleichheiten sogar vergrössern.
 
-**Beispiel:** Bei ChatGPT gibt es das stärkere Modell vor allem im Bezahl-Abo für rund 20 Dollar im Monat, während die Gratis-Version schwächer ist. Wer zahlen kann, arbeitet also mit der besseren KI. Schon beim Zugang entsteht so ein Unterschied zwischen Menschen.
+**Beispiel:** Bei den grossen Chatbots ist die Gratisstufe begrenzt: weniger Anfragen, eingeschränkter Zugriff auf die neuesten Modelle und Werkzeuge. Ein Abo für rund 20 Dollar im Monat hebt vor allem diese Grenzen an. Wer zahlen kann, arbeitet also flüssiger und mit mehr Möglichkeiten. Schon beim Zugang entsteht so ein Unterschied zwischen Menschen. Die genauen Stufen ändern sich laufend, dieser Stand ist von 2026.
 
 #### Arbeitsmarkt
 
 **Text:** KI verändert die Arbeitswelt spürbar. Sie übernimmt vor allem einzelne Aufgaben, selten gleich einen ganzen Beruf. Manche Tätigkeiten fallen weg, andere verändern sich, und neue kommen dazu. Für viele Berufe bedeutet das neue Anforderungen und neues Lernen.
 
-**Beispiel:** Die Bezahlfirma Klarna meldete 2024, ihr KI-Assistent erledige die Arbeit von rund 700 Kundendienst-Mitarbeitenden. Kurz darauf stellte sie aber wieder Menschen ein, weil die Qualität nicht überall reichte. Das zeigt, wie schnell und zugleich unsicher dieser Wandel verläuft.
+**Beispiel:** Die Bezahlfirma Klarna gab 2024 selbst bekannt, ihr KI-Assistent leiste die Arbeit von rund 700 Vollzeitstellen im Kundendienst. Unabhängig nachgemessen hat das niemand. Kurz darauf investierte die Firma wieder stärker in menschlichen Service, weil die Qualität nicht überall reichte. Beides sind Aussagen des Unternehmens, und gerade in ihrer Abfolge zeigen sie, wie schnell und zugleich unsicher dieser Wandel verläuft.
 
 #### Rollenverschiebung
 
@@ -724,13 +746,13 @@ Dein Ziel: Das Netz selbst ist nicht das Ziel. Wichtig ist, dass du den Punkten,
 
 **Text:** Der Staat versucht, KI mit Gesetzen zu lenken. Solche Regeln sollen Grundrechte, Sicherheit, Datenschutz und Urheberrecht schützen. Zugleich sollen sie Forschung und Innovation nicht unnötig behindern. Diese Balance ist schwierig, und die Regeln entstehen erst nach und nach.
 
-**Beispiel:** Die Europäische Union hat 2024 den AI Act beschlossen, das weltweit erste umfassende KI-Gesetz. Es teilt KI-Anwendungen nach ihrem Risiko in Stufen ein, von frei erlaubt bis ganz verboten. Gefährliche Einsätze sollen so gestoppt und riskante streng geprüft werden.
+**Beispiel:** Die Europäische Union hat 2024 den AI Act beschlossen, das weltweit erste umfassende KI-Gesetz; in Kraft ist er seit dem 1. August 2024, seine Pflichten greifen aber gestaffelt über mehrere Jahre. Er teilt Anwendungen nach ihrem Risiko in Stufen ein, von frei erlaubt bis ganz verboten. Dazu kommen eigene Regeln für grosse Allzweckmodelle wie GPT oder Claude sowie Transparenzpflichten, etwa die Kennzeichnung von KI-Inhalten.
 
 #### Geopolitik
 
 **Text:** Um KI ist ein weltweiter Wettbewerb entbrannt. Staaten und Unternehmen ringen um Chips, Daten, Fachkräfte und Energie. Auch technische Standards und Unabhängigkeit stehen auf dem Spiel. Wer hier vorne liegt, gewinnt wirtschaftliche und politische Macht.
 
-**Beispiel:** Seit 2022 verbieten die USA den Export ihrer stärksten KI-Chips nach China. Der Hersteller Nvidia baute daraufhin absichtlich langsamere Chips, nur um weiter liefern zu dürfen. An diesem Streit sieht man, dass KI längst ein Machtthema zwischen Staaten ist.
+**Beispiel:** Ab 2022 verschärften die USA die Ausfuhrregeln für ihre stärksten KI-Chips nach China. Der Hersteller Nvidia baute daraufhin absichtlich langsamere Chips, nur um weiter liefern zu dürfen. Seit Januar 2026 werden bestimmte Ausfuhren wieder von Fall zu Fall geprüft und unter Bedingungen erlaubt. Die Regeln kippen also mit der Politik, und genau daran sieht man, dass KI längst ein Machtthema zwischen Staaten ist.
 
 #### Kultureller Kontext
 
@@ -780,9 +802,9 @@ Der Weg dahin ist ein doppelter. Du webst den «Teppich des Wandels» und gehst 
 
 ### Was ist Philosophie, und warum jetzt?
 
-Was ist Philosophie überhaupt? Wörtlich heisst sie «Liebe zur Weisheit». Sie ist keine strenge Wissenschaft, die mit Messdaten beweist, wie etwas zusammenhängt. Das tun Physik oder Statistik. Philosophie arbeitet stattdessen mit Ideen und Denkbildern. Sie hilft uns, neu zu ordnen und zu verstehen, was der Wandel durcheinanderbringt.
+Was ist Philosophie überhaupt? Wörtlich heisst sie «Liebe zur Weisheit». Sie ist ein eigenes wissenschaftliches Fach, aber keine erfahrungswissenschaftliche Disziplin wie Physik oder Statistik, die mit Messdaten beweisen, wie etwas zusammenhängt. Philosophie prüft Grundbegriffe und Argumente und arbeitet dabei überwiegend nicht experimentell. Sie hilft uns, neu zu ordnen und zu verstehen, was der Wandel durcheinanderbringt.
 
-Darum geht es in diesem Modul vor allem um eine Frage, die mit der KI neu aufbricht. Was ist der Mensch? Lange galt er als der, der Wissen schafft, weitergibt und Neues erdenkt. Wenn nun eine Maschine schreibt, erklärt und gestaltet, gerät genau das ins Wanken, unser Denken und unsere Kreativität. Neu ist die Frage aber nicht. Sie wird in der Philosophie seit jeher gestellt. hat das prominent ausgesprochen und sie ins Zentrum gerückt.
+Darum geht es in diesem Modul vor allem um eine Frage, die mit der KI neu aufbricht. Was ist der Mensch? Lange galt er als der, der Wissen schafft, weitergibt und Neues erdenkt. Wenn nun eine Maschine schreibt, erklärt und gestaltet, gerät genau das ins Wanken, unser Denken und unsere Kreativität. Neu ist die Frage aber nicht. Sie wird in der Philosophie seit jeher gestellt. Immanuel Kant hat das prominent ausgesprochen und sie ins Zentrum gerückt.
 
 #### Mehr dazu: Wie wir mit KI zusammenarbeiten
 
@@ -850,7 +872,7 @@ Wozu das Ganze? Die Beschäftigung mit dem Teppich bereitet darauf vor, technolo
 
 **Text:** Mit den neuen Schiffen greifen europäische Mächte über die Ozeane aus: Eroberung, Handel, Sklaverei. Der Reichtum Europas und das Leid ganzer Kontinente hängen am selben Faden.
 
-**Mehr lesen:** Schon 1494 zogen Spanien und Portugal im Vertrag von Tordesillas eine Linie über den Atlantik und teilten die aussereuropäische Welt unter sich auf, gefragt wurde dort niemand. Eroberer wie Cortés und Pizarro stürzten mit wenigen hundert Soldaten die Reiche der Azteken und Inka, wobei eingeschleppte Krankheiten wie die Pocken mehr Menschen töteten als jede Waffe. Auf den Plantagen der Kolonien arbeiteten bald Millionen verschleppte Afrikanerinnen und Afrikaner, der transatlantische Sklavenhandel wurde zu einem Fundament des europäischen Reichtums. Es gab auch Widerspruch, der Mönch Bartolomé de Las Casas beschrieb die Gräuel und stritt vor dem spanischen Hof für die Rechte der Ureinwohner, durchgesetzt hat er sich nicht. So entstand eine Weltordnung, in der Europa jahrhundertelang bestimmte, wessen Sprache, Religion und Wissen zählt. Viele Länder tragen bis heute Grenzen, Sprachen und Ungleichheiten aus dieser Zeit.
+**Mehr lesen:** Schon 1494 zogen Spanien und Portugal im Vertrag von Tordesillas eine Linie über den Atlantik und teilten die aussereuropäische Welt unter sich auf, gefragt wurde dort niemand. Eroberer wie Cortés und Pizarro stürzten die Reiche der Azteken und Inka, und das gelang nicht mit wenigen hundert Soldaten allein: Entscheidend waren zehntausende indigene Verbündete, die mit den Herrschern ihre eigenen Rechnungen offen hatten, Vermittlerinnen wie La Malinche, innere Machtkämpfe und die eingeschleppten Pocken, die mehr Menschen töteten als jede Waffe. Auf den Plantagen der Kolonien arbeiteten bald Millionen verschleppte Afrikanerinnen und Afrikaner, der transatlantische Sklavenhandel wurde zu einem Fundament des europäischen Reichtums. Es gab auch Widerspruch, der Mönch Bartolomé de Las Casas beschrieb die Gräuel und stritt vor dem spanischen Hof für die Rechte der Ureinwohner, durchgesetzt hat er sich nicht. So entstand eine Weltordnung, in der Europa jahrhundertelang bestimmte, wessen Sprache, Religion und Wissen zählt. Viele Länder tragen bis heute Grenzen, Sprachen und Ungleichheiten aus dieser Zeit.
 
 #### Reformation
 
@@ -860,7 +882,7 @@ Wozu das Ganze? Die Beschäftigung mit dem Teppich bereitet darauf vor, technolo
 
 **Text:** Luthers Thesen spalten die Kirche. Der Buchdruck verbreitet sie in Windeseile. Eine neue Technologie und ein gesellschaftlicher Umbruch greifen ineinander.
 
-**Mehr lesen:** Auslöser war ein Geschäftsmodell, die Kirche verkaufte Ablassbriefe, die angeblich Sündenstrafen verkürzten, und finanzierte damit unter anderem den Petersdom in Rom. Der Mönch und Professor Martin Luther wollte 1517 mit seinen 95 Thesen zunächst eine Gelehrtendebatte anstossen, doch Drucker vervielfältigten sie ohne sein Zutun, und innert Wochen kannte man sie im ganzen Reich. Als er 1521 vor Kaiser und Reichstag den Widerruf verweigerte, war aus dem Streit eine Bewegung geworden, die Fürsten, Städte und Bauern erfasste. In Zürich predigte fast gleichzeitig Huldrych Zwingli gegen die alten Bräuche, die Schweiz wurde zu einem Zentrum der Reformation und zugleich konfessionell gespalten. Aus der Frage, wer die Heilige Schrift auslegen darf, wurden Kriege, aber auch Schulen, Bibelübersetzungen und das Lesen in der Volkssprache. Wer heute fragt, wem man beim Deuten der Welt trauen soll, steht in einer sehr alten Debatte.
+**Mehr lesen:** Auslöser war ein Geschäftsmodell, die Kirche verkaufte Ablassbriefe und finanzierte damit unter anderem den Petersdom in Rom. Nach kirchlicher Lehre erliessen sie nicht die Schuld, dafür blieb die Beichte zuständig, sondern die zeitliche Strafe für bereits vergebene Sünden. In der Verkaufspraxis verschwamm dieser Unterschied, und viele verstanden es schlicht als gekaufte Vergebung. Der Mönch und Professor Martin Luther wollte 1517 mit seinen 95 Thesen zunächst eine Gelehrtendebatte anstossen, doch Drucker vervielfältigten sie ohne sein Zutun, und innert Wochen kannte man sie im ganzen Reich. Als er 1521 vor Kaiser und Reichstag den Widerruf verweigerte, war aus dem Streit eine Bewegung geworden, die Fürsten, Städte und Bauern erfasste. In Zürich predigte fast gleichzeitig Huldrych Zwingli gegen die alten Bräuche, die Schweiz wurde zu einem Zentrum der Reformation und zugleich konfessionell gespalten. Aus der Frage, wer die Heilige Schrift auslegen darf, wurden Kriege, aber auch Schulen, Bibelübersetzungen und das Lesen in der Volkssprache. Wer heute fragt, wem man beim Deuten der Welt trauen soll, steht in einer sehr alten Debatte.
 
 #### Das Erdbeben von Lissabon
 
@@ -882,7 +904,7 @@ Wozu das Ganze? Die Beschäftigung mit dem Teppich bereitet darauf vor, technolo
 
 **Text:** Das Volk stürzt die alte Ordnung: Freiheit, Gleichheit, Brüderlichkeit. Die Ideen der Aufklärung werden politisch, mit Hoffnung und Terror zugleich.
 
-**Mehr lesen:** Der Staat war bankrott, das Brot teuer, und als König Ludwig XVI. 1789 erstmals seit 175 Jahren die Stände einberief, erklärten sich die Vertreter des dritten Standes kurzerhand zur Nationalversammlung. Der Sturm auf die Bastille am 14. Juli befreite zwar nur sieben Gefangene, wurde aber zum Zeichen, dass die alte Macht fallen kann. Wenige Wochen später verkündete die Versammlung die Menschen- und Bürgerrechte, Adelsprivilegien fielen, Frankreich probte eine Ordnung, in der Gesetze für alle gelten. Die Schriftstellerin Olympe de Gouges forderte 1791 dieselben Rechte auch für Frauen und endete dafür 1793 unter der Guillotine, wie der König und wie später Robespierre, der den Terror organisiert hatte. Die Revolution frass ihre eigenen Kinder und mündete in Napoleons Kaiserreich, doch ihre Ideen liessen sich nicht mehr einfangen. Fast jede heutige Verfassung, auch die schweizerische, trägt Spuren dieses Umbruchs.
+**Mehr lesen:** Der Staat war bankrott, das Brot teuer, und als König Ludwig XVI. 1789 erstmals seit 175 Jahren die Stände einberief, erklärten sich die Vertreter des dritten Standes kurzerhand zur Nationalversammlung. Der Sturm auf die Bastille am 14. Juli befreite zwar nur sieben Gefangene, wurde aber zum Zeichen, dass die alte Macht fallen kann. Wenige Wochen später verkündete die Versammlung die Menschen- und Bürgerrechte, Adelsprivilegien fielen, Frankreich probte eine Ordnung, in der Gesetze für alle gelten. Die Schriftstellerin Olympe de Gouges forderte 1791 dieselben Rechte auch für Frauen; 1793 wurde sie während des Terrors wegen ihrer politischen Schriften guillotiniert, wie der König und wie später Robespierre, der den Terror organisiert hatte. Die Revolution frass ihre eigenen Kinder und mündete in Napoleons Kaiserreich, doch ihre Ideen liessen sich nicht mehr einfangen. Fast jede heutige Verfassung, auch die schweizerische, trägt Spuren dieses Umbruchs.
 
 #### Zweiter Weltkrieg
 
@@ -910,7 +932,7 @@ Wozu das Ganze? Die Beschäftigung mit dem Teppich bereitet darauf vor, technolo
 
 - *Jahr:* 1991
 
-**Text:** Der Ostblock zerfällt, der Kalte Krieg endet. Im selben Jahr wird das World Wide Web freigegeben. Die vernetzte, globalisierte Welt beginnt.
+**Text:** Der Ostblock zerfällt, der Kalte Krieg endet. Im selben Jahr geht die erste Website der Welt online. Die vernetzte, globalisierte Welt beginnt.
 
 **Mehr lesen:** Jahrzehntelang war die Welt in zwei bewaffnete Lager geteilt, mit Zehntausenden Atomsprengköpfen, geteilten Städten und Stellvertreterkriegen. Dann reformierte Michail Gorbatschow die Sowjetunion mit «Glasnost» und «Perestroika», also Offenheit und Umbau, und löste damit mehr aus, als er wollte. Im November 1989 genügte eine missverständliche Pressekonferenz in Ost-Berlin, und noch in derselben Nacht tanzten Menschen auf der Mauer, die 28 Jahre lang tödliche Grenze gewesen war. Zwei Jahre später scheiterte in Moskau ein Putsch der alten Garde, die Teilrepubliken erklärten sich unabhängig, und am 25. Dezember 1991 wurde die rote Fahne über dem Kreml eingeholt. Eine Supermacht verschwand ohne Krieg, einfach durch Auflösung, das hatte kaum jemand für möglich gehalten. Wer damals jung war, erlebte, wie schnell eine scheinbar ewige Weltordnung enden kann.
 
@@ -1020,9 +1042,9 @@ Wozu das Ganze? Die Beschäftigung mit dem Teppich bereitet darauf vor, technolo
 
 - *Kurzlabel im Gewebe:* Internet
 
-- *Jahr:* 1969–91
+- *Jahr:* 1969–93
 
-**Text:** Aus dem militärischen ARPANET (1969) wird das offene World Wide Web (1991). Information fliesst plötzlich weltweit, sofort und für alle. Das ist das grösste Medienereignis seit dem Buchdruck.
+**Text:** Aus dem militärischen ARPANET (1969) wird das World Wide Web: 1989 als Vorschlag, 1991 als erste Website, 1993 vom CERN zur freien Nutzung freigegeben. Information fliesst plötzlich weltweit, sofort und für alle. Das ist das grösste Medienereignis seit dem Buchdruck.
 
 **Mehr lesen:** Die erste Nachricht im ARPANET wurde am 29. Oktober 1969 von Los Angeles nach Stanford geschickt, geplant war das Wort «LOGIN», nach zwei Buchstaben stürzte die Verbindung ab, übertragen war nur «LO». Aus dem Forschungsnetz weniger Universitäten wuchs über zwei Jahrzehnte ein weltweiter Verbund, doch er blieb ein Werkzeug für Fachleute. Den entscheidenden Schritt machte Tim Berners-Lee am CERN, sein Vorschlag von 1989 für ein Netz aus verknüpften Seiten trug den Vermerk seines Vorgesetzten, das sei vage, aber aufregend. So lief die erste Website der Welt auf einem Rechner bei Genf. Entscheidend war schliesslich, dass das CERN 1993 den Web-Standard zur freien Nutzung freigab, niemand musste Lizenzgebühren zahlen, und genau deshalb konnte das Netz explodieren. Offenheit war hier keine Nebensache, sondern der Bauplan des Erfolgs.
 
@@ -1094,7 +1116,7 @@ Wozu das Ganze? Die Beschäftigung mit dem Teppich bereitet darauf vor, technolo
 
 - *Jahr:* 1938
 
-**Text:** Hahn, Strassmann und Meitner spalten den Atomkern. Wenige Jahre später wird aus der Entdeckung die Bombe. Wissenschaft und Weltpolitik sind untrennbar verknotet.
+**Text:** Otto Hahn und Fritz Strassmann finden im bestrahlten Uran ein Element, das dort nicht sein dürfte. Lise Meitner und Otto Frisch erklären den Befund: Der Atomkern ist gespalten. Wenige Jahre später wird daraus die Bombe. Wissenschaft und Weltpolitik sind untrennbar verknotet.
 
 **Mehr lesen:** Lise Meitner hatte drei Jahrzehnte in Berlin geforscht, als sie 1938 als Jüdin aus Deutschland fliehen musste, ihre Arbeit lief brieflich weiter. Im Dezember fand ihr Kollege Otto Hahn im bestrahlten Uran zu seiner Ratlosigkeit das viel leichtere Element Barium und schrieb ihr, vielleicht wisse sie eine Erklärung. Auf einem Winterspaziergang im schwedischen Exil rechnete Meitner mit ihrem Neffen Otto Frisch nach, der Kern war tatsächlich zerplatzt, und die frei werdende Energie passte genau zu Einsteins Formel. Den Nobelpreis dafür erhielt 1944 Hahn allein. Als man Meitner später für den Bau der Bombe gewinnen wollte, lehnte sie ab, sie wolle mit einer Bombe nichts zu tun haben. In ihrer Geschichte steckt beides, der Ruhm der Erkenntnis und die Frage, wem er zugerechnet wird und was daraus gemacht werden darf.
 
@@ -1159,6 +1181,8 @@ Wozu das Ganze? Die Beschäftigung mit dem Teppich bereitet darauf vor, technolo
 ### Philosophie in Zeiten der Verunsicherung
 
 Der Teppich des Wandels hat die Verunsicherungs-Stopps markiert. Hier folgt, wie die Philosophie jeweils geantwortet hat. Denn gerade in Zeiten der Verunsicherung braucht es neue Deutungen und Orientierungsmuster. Und genau die liefert, oder erdenkt zumindest, die Philosophie. Sie arbeitet langsam und reflexiv, an Grundlagen, die sich nicht ständig ändern. Genau das macht sie wertvoll. Manchmal bringt schon eine neue Gewichtung grundlegender Lebenselemente mehr Klarheit als jede neue Technik.
+
+Eines vorweg: Dass auf jede neue Technik eine Verunsicherung folgt und die Philosophie darauf antwortet, ist kein Gesetz der Geschichte. Es ist die Brille, durch die wir hier schauen, weil sie die acht Epochen vergleichbar macht. Andere Blickwinkel würden andere Zusammenhänge zeigen, und manche Antwort der Philosophie kam lange vor der Technik, der wir sie hier zuordnen.
 
 #### Mehr dazu: die wiederkehrenden Züge der Verunsicherung
 
@@ -1254,17 +1278,29 @@ Keine dieser Sichtweisen gibt ein fertiges Rezept. Aber jede öffnet einen begr�
 
 **Mehr lesen:** Wie das im Alltag aussah, zeigt Athen: Auf der Agora standen hölzerne Tafeln, auf denen die Gesetze Solons für alle lesbar angeschlagen waren, und wer lesen konnte, musste dem Vorleser nicht mehr einfach glauben. Im Hafen Piräus prüften Händler Verträge und zahlten mit den silbernen «Eulen», den Münzen Athens, deren Metall aus den Bergwerken von Laurion stammte. Als dort um 483 v. Chr. eine reiche Silberader entdeckt wurde, überzeugte Themistokles die Bürger, mit dem Geld eine Kriegsflotte zu bauen, und diese Schiffe retteten Athen später gegen die Perser. Wer schreiben und rechnen konnte, kam nun voran, auch ohne adlige Ahnen. So verschob sich das Gewicht von der Herkunft zur Fähigkeit, leise, aber unumkehrbar.
 
+- *Beleg:* [Griechisches Alphabet (Wikipedia)](https://de.wikipedia.org/wiki/Griechisches_Alphabet)
+
+- *Beleg:* [Geschichte des Geldes (Wikipedia)](https://de.wikipedia.org/wiki/Geschichte_des_Geldes)
+
 **Verunsicherung der Gesellschaft**
 
 **Text:** Besonders der alte Geburtsadel verliert den Boden: In der attischen Demokratie (ab ~500 v. Chr.) und der römischen Republik zählen Abstimmung, Amt und öffentliche Rede, nicht mehr allein die Abstammung. Zugleich lehren die Sophisten gegen Bezahlung Redekunst und vertreten, man könne zu jeder Sache das Gegenteil ebenso gut begründen. Der Prozess gegen Sokrates (399 v. Chr.), der mit dem Todesurteil endet, zeigt, wie nervös eine verunsicherte Stadt reagiert.
 
 **Mehr lesen:** Der Redelehrer Protagoras brachte die neue Lage auf den Satz, der Mensch sei «das Mass aller Dinge», und verdiente mit seinem Unterricht ein Vermögen. Für viele Athener klang das nach Befreiung, für andere nach Boden, der unter den Füssen nachgibt. Wie gereizt die Stimmung war, zeigt der Prozess von 399 v. Chr.: Vor rund 500 ausgelosten Bürgern verteidigte sich der siebzigjährige Sokrates und schlug, als er nach dem Schuldspruch eine Strafe nennen sollte, allen Ernstes eine Ehrung vor, die Speisung auf Staatskosten. Das Gericht entschied auf den Giftbecher. Athen hatte kurz zuvor Krieg, Niederlage und die Schreckensherrschaft der Dreissig Tyrannen erlebt, und eine erschöpfte Stadt erträgt Spott über ihre Gewissheiten schlecht. Die Angst, dass am Ende gar nichts mehr gilt, ist seither die Begleiterin jeder grossen Umbruchszeit.
 
+- *Beleg:* [Sophisten (Wikipedia)](https://de.wikipedia.org/wiki/Sophisten)
+
+- *Beleg:* [Prozess des Sokrates (Wikipedia)](https://de.wikipedia.org/wiki/Prozess_des_Sokrates)
+
 **Antwort der Philosophie**
 
 **Text:** Aristoteles (384–322 v. Chr.) setzt dem eine Methode entgegen: beobachten, unterscheiden, in Begriffe ordnen und aus Voraussetzungen schlüssig folgern (Logik). Nicht wer am besten redet, soll recht behalten, sondern was sich am besten begründen lässt. Im Alltag lebt das als Selbstverständlichkeit fort, dass man Behauptungen belegt («beweis es») und Widersprüche als Fehler gelten.
 
 **Mehr lesen:** Aristoteles war zuerst Sammler und dann Systematiker: In der Lagune von Pyrrha auf Lesbos untersuchte er Fische, Kraken und Seeigel, und seine Schule trug die Verfassungen von über 150 griechischen Städten zusammen. In Athen lehrte er im Lykeion, der Überlieferung nach oft im Umhergehen, weshalb man seine Schüler «Peripatetiker» nannte, die Umherwandelnden. Aus dem vielen Material destillierte er Regeln des Schliessens: Wenn alle Menschen sterblich sind und Sokrates ein Mensch ist, dann ist Sokrates sterblich, und das gilt unabhängig davon, wer es ausspricht. Genau darin lag die Spitze gegen die Redekünstler, denn ein Schluss stimmt oder stimmt nicht, Charme ändert daran nichts. Diese Haltung wanderte über arabische Gelehrte und mittelalterliche Klosterschulen bis in unsere Schulzimmer, und noch jede Prüfung, die eine Begründung verlangt, steht in ihrer Tradition.
+
+- *Beleg:* [Aristoteles (Wikipedia)](https://de.wikipedia.org/wiki/Aristoteles)
+
+- *Beleg:* [Logik (Wikipedia)](https://de.wikipedia.org/wiki/Logik)
 
 ### Zerbrechen der Ordnung
 
@@ -1322,13 +1358,25 @@ Keine dieser Sichtweisen gibt ein fertiges Rezept. Aber jede öffnet einen begr�
 
 **Mehr lesen:** Rom selbst zeigt den Absturz in Zahlen: Die Stadt, die auf ihrem Höhepunkt gegen eine Million Einwohner zählte, schrumpfte nach Kriegen und Plünderungen auf wenige Zehntausend. Als belagernde Goten im Jahr 537 die grossen Wasserleitungen kappten, versiegten Brunnen und Thermen, und auf Dauer zog sich das Leben der geschrumpften Stadt ans Ufer des Tibers zurück. Die gewaltige Betonkuppel des Pantheons blieb über tausend Jahre unübertroffen, niemand hätte sie mehr bauen können. Zur gleichen Zeit begann die Rettung im Kleinen: Der Gelehrte Cassiodorus gründete um 550 in Süditalien das Kloster Vivarium, in dem Mönche antike Handschriften abschrieben, und bald gehörte das Kopieren in vielen Klöstern zum Tagewerk. Was wir heute von Cicero oder Vergil lesen, ist fast ausnahmslos durch solche Schreibstuben gegangen. Eine Zivilisation kann eben nicht nur Neues erfinden, sie kann Können auch wieder verlieren.
 
+- *Beleg:* [Untergang des Weströmischen Reiches (Wikipedia)](https://de.wikipedia.org/wiki/Untergang_des_Weströmischen_Reiches)
+
+- *Beleg:* [Skriptorium (Wikipedia)](https://de.wikipedia.org/wiki/Skriptorium)
+
 **Text:** Betroffen sind alle, besonders die städtischen Eliten: Wer sich auf Rom und seine Ordnung verlassen hatte, steht plötzlich ohne Schutz da. Nach der Plünderung Roms 410 durch die Westgoten geben viele den Christen die Schuld. Sie hätten mit dem Abfall von den alten Göttern das Unglück heraufbeschworen.
 
 **Mehr lesen:** Wie tief der Schock sass, zeigt der Gelehrte Hieronymus, der fern in Bethlehem an seiner Bibelübersetzung arbeitete: Als ihn die Nachricht erreichte, schrieb er, mit dieser einen Stadt sei der ganze Erdkreis untergegangen, und er fand tagelang nicht zur Arbeit zurück. Übers Meer flohen ausgeplünderte Senatorenfamilien nach Nordafrika, wo manche als Bittsteller in Hippo ankamen, der Bischofsstadt des Augustinus. Dort hörte er beide Vorwürfe: Die Anhänger der alten Götter gaben dem Christengott die Schuld, und die Christen fragten, warum er sie nicht geschützt hatte. Augustinus antwortete nicht mit einer schnellen Streitschrift, sondern arbeitete von 413 bis 426 an den zweiundzwanzig Büchern seines «Gottesstaats». Dass eine Katastrophe sofort einen Schuldigen braucht, hat sich seither kaum geändert, es wechseln nur die Adressaten.
 
-**Text:** Augustinus (354–430) verlegt den Halt vom äusseren Reich nach innen: Nicht Mauern und Macht tragen, sondern Glaube, Gewissen und Erinnerung. Er unterscheidet den vergänglichen «Gottesstaat» vom irdischen Staat und deutet die Geschichte als Heilsweg. Alltagssprachlich lebt das fort in «hör auf dein Gewissen» und «geh in dich».
+- *Beleg:* [Plünderung Roms (410) (Wikipedia)](https://de.wikipedia.org/wiki/Plünderung_Roms_(410))
+
+- *Beleg:* [De civitate Dei (Wikipedia)](https://de.wikipedia.org/wiki/De_civitate_Dei)
+
+**Text:** Augustinus (354–430) verlegt den Halt vom äusseren Reich nach innen: Nicht Mauern und Macht tragen, sondern Glaube, Gewissen und Erinnerung. Er unterscheidet den vergänglichen irdischen Staat vom bleibenden «Gottesstaat» und deutet die Geschichte als Heilsweg. Die zwei Staaten sind für ihn nicht einfach Kirche und Politik, sondern zwei Gemeinschaften, die sich danach scheiden, woran ihr Herz hängt. Alltagssprachlich lebt das fort in «hör auf dein Gewissen» und «geh in dich».
 
 **Mehr lesen:** Augustinus wusste, wovon er sprach, denn sein eigenes Leben war ein einziger Umweg: aufgewachsen in einer nordafrikanischen Kleinstadt, ehrgeiziger Rhetorikprofessor in Mailand, dazu lange Anhänger der Lehre der Manichäer und Vater eines unehelichen Sohnes. In seinen «Confessiones» erzählt er, wie er im Jahr 386 in einem Mailänder Garten eine Kinderstimme «nimm und lies» rufen hörte, die Bibel aufschlug und sein Leben wendete. Neu daran war der Blick nach innen: Er untersuchte Erinnerung, Zeit und Gewissen so genau, wie andere Länder vermessen. Halt, so seine Erfahrung, findet man nicht in Ämtern und Mauern, sondern in dem, was einen im Innersten trägt. Er starb 430 in Hippo, während die Vandalen die Stadt belagerten, das äussere Reich zerfiel also bis zuletzt. Sein innerer Kompass aber wurde zum Erbstück Europas, bis hin zur modernen Überzeugung, dass jeder Mensch ein Gewissen hat, dem er folgen darf.
+
+- *Beleg:* [Augustinus von Hippo (Wikipedia)](https://de.wikipedia.org/wiki/Augustinus_von_Hippo)
+
+- *Beleg:* [Confessiones (Wikipedia)](https://de.wikipedia.org/wiki/Confessiones)
 
 ### Renaissance & Aufbruch
 
@@ -1394,13 +1442,25 @@ Keine dieser Sichtweisen gibt ein fertiges Rezept. Aber jede öffnet einen begr�
 
 **Mehr lesen:** In Gutenbergs Mainzer Werkstatt entstanden um 1454 rund 180 Bibeln auf einmal, eine Menge, für die ein einzelner Abschreiber länger als ein Menschenleben gebraucht hätte. Was das bedeutete, zeigte sich zwei Generationen später: Luthers Thesen von 1517 waren binnen Wochen im ganzen Reich verbreitet, die Obrigkeit kam mit dem Verbieten nicht mehr nach. In Venedig wiederum beschrieb der Franziskanermönch Luca Pacioli 1494 die Rechenkunst der Kaufleute, jedes Geschäft zweimal notiert, einmal im Soll und einmal im Haben. Handelshäuser wie die Fugger in Augsburg führten ihre Bücher nach dieser Art und wurden reicher als Fürsten, Jakob Fugger finanzierte 1519 sogar die Wahl Karls V. zum Kaiser. Wissen, Glaube und Geld bewegten sich plötzlich schneller, als Herrscher reagieren konnten. Diese Erfahrung, dass die Technik den Regeln davonläuft, ist heute wieder sehr gegenwärtig.
 
+- *Beleg:* [Buchdruck (Wikipedia)](https://de.wikipedia.org/wiki/Buchdruck)
+
+- *Beleg:* [Doppelte Buchführung (Wikipedia)](https://de.wikipedia.org/wiki/Doppelte_Buchführung)
+
 **Text:** Getroffen werden mehrere Gruppen zugleich. Die Deutungshüter (Klerus und Handschriften-Kopisten) verlieren ihr Wissensmonopol. Die Bauern erheben sich im Deutschen Bauernkrieg (1525). Und die Völker Amerikas werden nach 1492 erobert und dezimiert. Zugleich nimmt Kopernikus (1543) der Erde die Mitte des Kosmos.
 
 **Mehr lesen:** Im Frühjahr 1525 druckten aufständische Bauern in Memmingen zwölf Artikel und beriefen sich darin auf das Evangelium, das nun jeder gedruckt lesen konnte: Wenn Christus alle Menschen erlöst habe, warum seien sie dann Leibeigene? Die Fürsten antworteten mit Heeren, Zehntausende Bauern starben, der Prediger Thomas Müntzer wurde nach der Schlacht bei Frankenhausen hingerichtet. Jenseits des Atlantiks war vier Jahre zuvor Tenochtitlan gefallen, eine Stadt, grösser als die meisten Städte Europas, und eingeschleppte Seuchen töteten dort mehr Menschen als alle Waffen. 1543 schliesslich soll der sterbende Kopernikus das erste gedruckte Exemplar seines Buches noch in Händen gehalten haben, des Buches, das die Erde zu einem Planeten unter Planeten machte. Aufstieg für die einen bedeutete Enteignung, Eroberung oder Kränkung für die anderen. Verunsicherung ist selten gerecht verteilt, damals so wenig wie heute.
 
+- *Beleg:* [Deutscher Bauernkrieg (Wikipedia)](https://de.wikipedia.org/wiki/Deutscher_Bauernkrieg)
+
+- *Beleg:* [Die Gesandten / Anamorphose (Wikipedia)](https://de.wikipedia.org/wiki/Die_Gesandten_(Holbein))
+
 **Text:** Pico della Mirandola (1463–1494) formuliert in seiner «Rede über die Würde des Menschen», der Mensch sei nicht auf eine feste Natur festgelegt, sondern forme sich selbst. Montaigne (1533–1592) setzt die skeptische Frage dagegen: «Que sais-je?» («Was weiss ich schon?»). Alltagssprachlich lebt beides fort in «jeder ist seines Glückes Schmied» und im Bekenntnis, etwas zu hinterfragen.
 
 **Mehr lesen:** Pico war dreiundzwanzig, als er 1486 die Gelehrten Europas nach Rom einlud, um mit ihm über 900 Thesen zu streiten, und die «Rede über die Würde des Menschen» sollte die Eröffnung dieses Wettstreits werden. Der Papst verbot die Veranstaltung, ein Teil der Thesen galt als ketzerisch, doch der Text überlebte und wurde zum Manifest des neuen Selbstbewusstseins. Ein Menschenalter später zog sich Montaigne, Richter in Bordeaux, auf den Turm seines Schlosses zurück, während draussen Katholiken und Protestanten einander in Glaubenskriegen abschlachteten. In die Deckenbalken seiner Bibliothek liess er Sprüche antiker Skeptiker schnitzen und erfand beim Schreiben nebenbei eine neue Gattung: den «Essai», wörtlich den Versuch, das Ausprobieren eines Gedankens. Grösse und Zweifel gehören seither zusammen, und wer heute angesichts der KI fragt, was der Mensch eigentlich ist, führt genau dieses Gespräch weiter.
+
+- *Beleg:* [Über die Würde des Menschen (Wikipedia)](https://de.wikipedia.org/wiki/Über_die_Würde_des_Menschen)
+
+- *Beleg:* [Michel de Montaigne (Wikipedia)](https://de.wikipedia.org/wiki/Michel_de_Montaigne)
 
 ### Aufklärung
 
@@ -1440,7 +1500,7 @@ Keine dieser Sichtweisen gibt ein fertiges Rezept. Aber jede öffnet einen begr�
 
 **Hintergrund zum Bild:** Dieses Blatt ist kein Gemälde, sondern ein Kupferstich, der noch im Katastrophenjahr 1755 als Flugblatt entstand. Ein einzelner Urheber ist nicht überliefert, denn solche Stiche wurden rasch und in grosser Zahl gedruckt. Dargestellt ist das Erdbeben von Lissabon vom 1. November 1755 mit seinen drei Verheerungen, dem bebenden Boden, der brennenden Stadt und der Flutwelle im Hafen. Im Vordergrund kentern Schiffe in der heranrollenden Welle, im Hintergrund stehen Kirchen und Paläste in Flammen. Als eines der ersten europaweiten Medienereignisse verbreiteten solche Stiche Bild und Schrecken innert Wochen über den ganzen Kontinent.
 
-**Im Kontext der Zeit:** Lissabon 1755 ist die Verunsicherung dieser Epoche schlechthin: An Allerheiligen zerstörten Erdbeben, Feuer und Flutwelle innerhalb von Stunden eine der reichsten Städte Europas. Viele starben beim Gottesdienst. Der Glaube an einen gütigen, vernünftigen Weltplan zerbrach. Ganz Europa stritt (Voltaire gegen Rousseau), wie ein guter Gott so etwas zulassen könne. Kants Ausweg war keine neue Beruhigung, sondern eine Zumutung: der Mut zum eigenen Verstand.
+**Im Kontext der Zeit:** Lissabon 1755 ist die Verunsicherung dieser Epoche schlechthin: An Allerheiligen zerstörten Erdbeben, Feuer und Flutwelle innerhalb von Stunden eine der reichsten Städte Europas. Viele starben beim Gottesdienst. Der Glaube an einen gütigen, vernünftigen Weltplan zerbrach. Ganz Europa stritt, wie ein guter Gott so etwas zulassen könne, am schärfsten Voltaire gegen Rousseau. Der junge Kant schrieb 1756 drei nüchterne Abhandlungen über die Ursachen von Erdbeben und suchte die Erklärung damit in der Natur statt im Ratschluss Gottes. Sein berühmter Aufruf, sich des eigenen Verstandes zu bedienen, kam erst 1784 und galt der ganzen Epoche, nicht diesem einen Beben. Beides weist in dieselbe Richtung: keine neue Beruhigung, sondern eine Zumutung.
 
 #### Kupferstich, 1755
 
@@ -1458,13 +1518,25 @@ Keine dieser Sichtweisen gibt ein fertiges Rezept. Aber jede öffnet einen begr�
 
 **Mehr lesen:** Als Galilei im Winter 1610 sein Fernrohr auf Jupiter richtete, sah er vier Lichtpunkte, die den Planeten umkreisten: Monde, die in keinem alten Weltbild vorgesehen waren. In Delft entdeckte der Tuchhändler Antoni van Leeuwenhoek mit selbstgeschliffenen Linsen in einem Wassertropfen wimmelnde «Tierchen», die erste Ahnung von der unsichtbaren Welt der Mikroben. Newtons Rechnungen bestanden schliesslich die härteste aller Proben: Sein Freund Edmond Halley sagte mit ihnen voraus, der Komet von 1682 werde um 1758 wiederkehren, und der Himmelskörper erschien pünktlich, sechzehn Jahre nach Halleys Tod. Ein Komet war damit kein Schreckenszeichen mehr, sondern ein Termin im Kalender. Wo der Himmel berechenbar wird, verliert das Schicksal seine Zuständigkeit, und dieses Versprechen der Berechenbarkeit kehrt heute in den Modellen und Prognosen der KI wieder.
 
+- *Beleg:* [Philosophiae Naturalis Principia Mathematica (Wikipedia)](https://de.wikipedia.org/wiki/Philosophiae_Naturalis_Principia_Mathematica)
+
+- *Beleg:* [Encyclopédie (Wikipedia)](https://de.wikipedia.org/wiki/Encyclopédie)
+
 **Text:** Die Autoritäten wanken: Kirche und Adel verlieren ihr Monopol auf Wahrheit und Ordnung. Besonders trifft es die fromme Bevölkerung, als am 1. November 1755 ein Erdbeben mit Feuer und Flutwelle Lissabon zerstört, mitten im Gottesdienst, am Allerheiligentag. Wie passt solches Leid zu einem gütigen Gott?
 
 **Mehr lesen:** Lissabon zählte damals zu den grössten und reichsten Städten Europas, genährt vom Gold Brasiliens, und binnen Stunden lagen Zehntausende unter den Trümmern. Der Minister Pombal, selbst knapp davongekommen, soll die Losung ausgegeben haben, man müsse jetzt die Toten begraben und für die Lebenden sorgen, und er liess die Stadt nach neuen, erdbebensicheren Plänen wieder aufbauen. Zugleich stritten die berühmtesten Köpfe des Kontinents öffentlich über den Sinn des Unglücks: Voltaire klagte in einem Gedicht den frommen Optimismus an, Rousseau hielt ihm entgegen, nicht Gott habe die engen, hohen Häuser in die Stadt gestellt, sondern der Mensch. Aus der Frage nach der Schuld des Himmels wurde so die Frage nach der Verantwortung der Menschen, nach Bauweise, Stadtplanung und Vorsorge. Es ist der Moment, in dem die Katastrophe aufhört, blosse Strafe zu sein, und anfängt, eine Aufgabe zu werden.
 
+- *Beleg:* [Erdbeben von Lissabon 1755 (Wikipedia)](https://de.wikipedia.org/wiki/Erdbeben_von_Lissabon_1755)
+
+- *Beleg:* [Candide (Wikipedia)](https://de.wikipedia.org/wiki/Candide)
+
 **Text:** Kant (1724–1804) fasst die Aufklärung in einem Satz: «Habe Mut, dich deines eigenen Verstandes zu bedienen.» Aufklärung sei der «Ausgang des Menschen aus seiner selbstverschuldeten Unmündigkeit». Verlass dich nicht auf Autoritäten, urteile selbst und trage die Verantwortung. Alltagssprachlich: «das musst du selbst entscheiden», «sei mündig».
 
 **Mehr lesen:** Kant verbrachte sein ganzes Leben in Königsberg, und der Anekdote nach stellten die Nachbarn ihre Uhren nach seinem täglichen Spaziergang: Ausgerechnet dieser unauffälligste aller Professoren schrieb die Sätze, die Europas Autoritäten herausforderten. Sein berühmter Aufsatz von 1784 antwortete auf die Frage eines Berliner Geistlichen in einer Zeitschrift, was denn diese Aufklärung eigentlich sei, das Denken fand öffentlich statt, in Journalen und Lesegesellschaften. Selbstverschuldet nannte Kant die Unmündigkeit, wenn ihr Grund nicht fehlender Verstand ist, sondern fehlender Mut, Faulheit und Feigheit. Den Gegenwind bekam er selbst zu spüren: 1794 untersagte ihm der preussische König weitere Schriften zur Religion, und Kant fügte sich, solange dieser König lebte, danach schrieb er weiter. Mündigkeit heisst seither nicht, alles besser zu wissen, sondern für das eigene Urteil einzustehen, eine Zumutung, die im Zeitalter der Suchmaschinen und Sprachmodelle nichts von ihrer Schärfe verloren hat.
+
+- *Beleg:* [Beantwortung der Frage: Was ist Aufklärung? (Wikipedia)](https://de.wikipedia.org/wiki/Beantwortung_der_Frage:_Was_ist_Aufklärung%3F)
+
+- *Beleg:* [Immanuel Kant (Wikipedia)](https://de.wikipedia.org/wiki/Immanuel_Kant)
 
 ### Industriemoderne
 
@@ -1526,13 +1598,25 @@ Keine dieser Sichtweisen gibt ein fertiges Rezept. Aber jede öffnet einen begr�
 
 **Mehr lesen:** Bei der Eröffnung der Eisenbahn zwischen Liverpool und Manchester 1830 geriet der Parlamentsabgeordnete William Huskisson vor eine heranfahrende Lokomotive und starb noch am selben Abend: Das neue Tempo forderte sein Opfer schon am ersten Tag. Die Faszination war trotzdem gewaltig, denn erstmals reisten Menschen schneller, als je ein Pferd gelaufen war. Damals hatte noch jede Stadt ihre eigene Sonnenzeit, in Bremen gingen die Uhren gut eine Viertelstunde hinter Berlin nach, und erst der Fahrplan erzwang die gemeinsame Stunde, in Deutschland gesetzlich ab 1893. Der Telegraf trennte unterdessen die Nachricht vom Boten: 1858 tauschten die britische Königin und der amerikanische Präsident Grussbotschaften durch ein Kabel am Grund des Atlantiks. Raum und Zeit, bis dahin Grössen der Natur, wurden zu Grössen der Technik. Wer heute über das Tempo der KI staunt oder erschrickt, wiederholt eine sehr alte Erfahrung.
 
+- *Beleg:* [Industrielle Revolution (Wikipedia)](https://de.wikipedia.org/wiki/Industrielle_Revolution)
+
+- *Beleg:* [Dampfmaschine (Wikipedia)](https://de.wikipedia.org/wiki/Dampfmaschine)
+
 **Text:** Besonders getroffen werden Handwerker und Weber, deren Können die Maschine entwertet, und die Landbevölkerung, die in Elendsquartieren der Städte landet. Kinder arbeiten in Fabriken und Bergwerken. In England zerschlagen Weber ab 1811 die Maschinen, die sie arbeitslos machen (die «Ludditen»). 1848 entlädt sich die Spannung in einer Revolutionswelle quer durch Europa.
 
 **Mehr lesen:** Die nächtlichen Maschinenstürmer beriefen sich auf einen «General Ludd», den es nie gab, eine erfundene Führerfigur, die den Behörden das Zugreifen erschwerte. Das Parlament in London stellte das Zerstören von Maschinen 1812 unter die Todesstrafe, und zeitweise standen in den englischen Fabrikbezirken mehr Soldaten gegen die eigenen Weber im Einsatz als auf der iberischen Halbinsel gegen Napoleon. Dabei waren es keine Feinde der Technik, die da zuschlugen, sondern Familienväter, deren Können über Nacht wertlos geworden war. Wählen durften sie nicht, Zusammenschlüsse von Arbeitern waren verboten, also sprachen die Hämmer. Erst Jahrzehnte später eröffneten Gewerkschaften, Streikrecht und Sozialgesetze andere Wege, den Wandel zu verhandeln. Die Frage der Maschinenstürmer aber ist geblieben: Wer fängt jene auf, deren Fähigkeiten eine neue Technik entwertet?
 
+- *Beleg:* [Maschinenstürmer / Ludditen (Wikipedia)](https://de.wikipedia.org/wiki/Maschinenstürmer)
+
+- *Beleg:* [Weberaufstand 1844 (Wikipedia)](https://de.wikipedia.org/wiki/Weberaufstand)
+
 **Text:** Karl Marx (1818–1883) deutet den Umbruch, während er geschieht: Die gesellschaftlichen Verhältnisse seien nicht Natur oder Schicksal, sondern von Menschen gemacht und damit veränderbar. Wirtschaft und Klassen bestimmten das Bewusstsein mit. Alltagssprachlich lebt das fort in «das ist doch menschengemacht» und im Ruf nach «gerechten Verhältnissen».
 
 **Mehr lesen:** Marx schrieb sein Hauptwerk nicht als Professor, sondern als Staatenloser im Londoner Exil, nachdem ihn Preussen, Frankreich und Belgien ausgewiesen hatten. Tag für Tag sass er im Lesesaal des Britischen Museums und arbeitete sich durch Fabrikberichte und Statistiken, während zu Hause das Geld fehlte und mehrere seiner Kinder früh starben. Ausgerechnet Friedrich Engels, Sohn eines Fabrikanten und selbst an einer Baumwollspinnerei in Manchester beteiligt, hielt ihn mit Geld über Wasser und lieferte den Blick in die Fabrikhallen. Das «Manifest der Kommunistischen Partei» erschien im Februar 1848, fast zeitgleich mit dem Ausbruch der Revolutionen in halb Europa, was der kleinen Schrift im Rückblick prophetische Wirkung gab. Man kann Marx' Antworten teilen oder ablehnen, seine Art zu fragen aber, wem eine Technik nützt und wem sie schadet, ist geblieben. Jede heutige Debatte darüber, wem die KI gehört und wer von ihr profitiert, fragt im Grunde weiter so.
+
+- *Beleg:* [Karl Marx (Wikipedia)](https://de.wikipedia.org/wiki/Karl_Marx)
+
+- *Beleg:* [Soziale Frage (Wikipedia)](https://de.wikipedia.org/wiki/Soziale_Frage)
 
 ### Zeitalter der Katastrophen
 
@@ -1596,15 +1680,27 @@ Keine dieser Sichtweisen gibt ein fertiges Rezept. Aber jede öffnet einen begr�
 
 **Text:** Technik automatisiert das Töten. Im Ersten Weltkrieg schaffen Maschinengewehr, Artillerie und Giftgas die anonyme Materialschlacht mit Millionen Toten. Der Rundfunk (ab den 1920ern) wird zum Massenmedium und zum Propaganda-Werkzeug der Diktaturen. 1945 zeigt die Atombombe, dass Menschen die Welt vernichten können. Möglich wurde diese Zerstörungskraft durch die industrielle Massenfertigung und die organisierte Wissenschaft: Der Staat der «totalen Kriege» lenkte Forschung, Fabriken und Rohstoffe auf ein einziges Ziel. Die Atombombe entstand im gigantischen «Manhattan-Projekt».
 
-**Mehr lesen:** Kaum eine Figur verkörpert das Doppelgesicht dieser Epoche so wie der Chemiker Fritz Haber: Seine Ammoniaksynthese machte künstlichen Dünger möglich und hilft bis heute, Milliarden zu ernähren, und derselbe Mann überwachte 1915 bei Ypern persönlich den ersten grossen Giftgasangriff der Geschichte. Seine Frau Clara Immerwahr, selbst promovierte Chemikerin, nahm sich wenige Tage danach das Leben. Dreissig Jahre später, am 16. Juli 1945, erhellte in der Wüste von New Mexico der erste Atomtest den Nachthimmel, und Robert Oppenheimer, der wissenschaftliche Leiter, erinnerte sich später an einen Vers aus einer indischen Schrift über den «Zerstörer der Welten». Zwischen diesen beiden Daten liegt die bittere Einsicht, dass Wissen nicht danach fragt, wozu man es braucht. Seither gehört zu jeder mächtigen Technik die Frage, die damals zu spät kam: nicht nur, ob man etwas bauen kann, sondern ob man es bauen soll.
+**Mehr lesen:** Kaum eine Figur verkörpert das Doppelgesicht dieser Epoche so wie der Chemiker Fritz Haber: Seine Ammoniaksynthese machte künstlichen Dünger möglich und hilft bis heute, Milliarden zu ernähren, und derselbe Mann überwachte 1915 bei Ypern persönlich den ersten grossen Giftgasangriff der Geschichte. Seine Frau Clara Immerwahr, selbst promovierte Chemikerin, nahm sich wenige Tage danach das Leben. Ob das ein Protest gegen den Gaskrieg war, ist bis heute umstritten; belegt ist die zeitliche Nähe, nicht das Motiv. Dreissig Jahre später, am 16. Juli 1945, erhellte in der Wüste von New Mexico der erste Atomtest den Nachthimmel, und Robert Oppenheimer, der wissenschaftliche Leiter, erinnerte sich später an einen Vers aus einer indischen Schrift über den «Zerstörer der Welten». Zwischen diesen beiden Daten liegt die bittere Einsicht, dass Wissen nicht danach fragt, wozu man es braucht. Seither gehört zu jeder mächtigen Technik die Frage, die damals zu spät kam: nicht nur, ob man etwas bauen kann, sondern ob man es bauen soll.
+
+- *Beleg:* [Materialschlacht (Wikipedia)](https://de.wikipedia.org/wiki/Materialschlacht)
+
+- *Beleg:* [Kernwaffe / Atombombe (Wikipedia)](https://de.wikipedia.org/wiki/Kernwaffe)
 
 **Text:** Betroffen sind zuerst die Soldaten der Materialschlachten und die von den Nationalsozialisten Verfolgten und Ermordeten. Das geschah im Völkermord an den europäischen Juden (Schoah) und weiteren Gruppen. Mit der Atombombe wird die Bedrohung schliesslich universell: Erstmals kann die Menschheit sich selbst auslöschen.
 
 **Mehr lesen:** Vor Verdun standen sich 1916 zwei Armeen fast ein Jahr lang gegenüber, Hunderttausende starben um wenige Kilometer Boden, und viele Überlebende brachten ein Leiden mit nach Hause, für das die Medizin erst Worte suchen musste: das unkontrollierbare Zittern der sogenannten «Kriegszitterer». Eine Generation später organisierten Ministerien, Ämter und Bahnverwaltungen den Massenmord an den europäischen Juden mit Fahrplänen und Formularen, das Verbrechen trug Aktenzeichen. Am 6. August 1945 zerstörte eine einzige Bombe Hiroshima, und bis zum Jahresende zählte man in dieser einen Stadt gegen 140 000 Tote. Danach übten Schulkinder in Ost und West, sich bei Atomalarm unter die Pulte zu ducken, die Angst vor dem Ende war Teil des Alltags geworden. Wer nach 1945 vom Fortschritt sprach, sprach mit Vorbehalt. Diese geerbte Skepsis meldet sich bis heute, sobald eine neue, mächtige Technik auftritt.
 
+- *Beleg:* [Holocaust (Wikipedia)](https://de.wikipedia.org/wiki/Holocaust)
+
+- *Beleg:* [Ernst Ludwig Kirchner (Wikipedia)](https://de.wikipedia.org/wiki/Ernst_Ludwig_Kirchner)
+
 **Text:** Der Existenzialismus antwortet auf den Zusammenbruch aller Geländer. Jean-Paul Sartre (1905–1980): Der Mensch sei «zur Freiheit verurteilt». Es gibt keine vorgegebene Natur und keine letzte Autorität mehr, also trägt er die volle Verantwortung für das, was er aus sich macht. Alltagssprachlich: «du hast immer eine Wahl und musst dazu stehen».
 
 **Mehr lesen:** Der Existenzialismus hat einen Geburtsort: die Cafés von Paris, wo Sartre und Simone de Beauvoir während der Besatzungsjahre am Marmortisch des «Café de Flore» schrieben, auch weil es dort wärmer war als in ihren Zimmern. Sartre erzählte später oft von einem Studenten, der ihn im Krieg um Rat fragte: zur Widerstandsbewegung nach England gehen oder bei der Mutter bleiben, die nur noch ihn hatte? Keine Moral und kein Buch könne ihm die Entscheidung abnehmen, antwortete Sartre, er sei frei und müsse wählen. Als er im Oktober 1945 in Paris seinen Vortrag über den Existenzialismus hielt, drängten sich die Leute bis auf die Strasse, Philosophie war für einen Moment so gefragt wie ein Konzert. Sie traf den Nerv einer Generation, der Führer, Fahnen und fraglose Gewissheiten als Ausreden abhandengekommen waren. Freiheit als Last und Chance zugleich, das ist das Erbe dieser dunkelsten Jahre.
+
+- *Beleg:* [Existentialismus (Wikipedia)](https://de.wikipedia.org/wiki/Existentialismus)
+
+- *Beleg:* [Hannah Arendt (Wikipedia)](https://de.wikipedia.org/wiki/Hannah_Arendt)
 
 ### «Ende der Geschichte»
 
@@ -1612,7 +1708,7 @@ Keine dieser Sichtweisen gibt ein fertiges Rezept. Aber jede öffnet einen begr�
 
 **Einleitung:** Der Kalte Krieg endet, der Markt scheint zu siegen, und im Überfluss der Möglichkeiten geht die Orientierung gerade dann verloren. Mit dem Fall der Mauer glauben viele, die grossen Konflikte seien vorbei und die liberale Demokratie habe endgültig gewonnen. Doch statt Ruhe kommen Beschleunigung, Vereinzelung und das Gefühl, in lauter Möglichkeiten den Halt zu verlieren.
 
-**Mehr wissen:** Der Ausdruck «Ende der Geschichte» stammt von Francis Fukuyama (1992): Nach dem Zusammenbruch des Ostblocks schien die liberale Marktdemokratie alternativlos. Es folgten Globalisierung, Internet und ein Boom des Individualismus. «Selbstverwirklichung» wurde zum Leitwert. Rückblickend war es keine Ruhephase, sondern die Startrampe der digitalen Umwälzung. Und die These vom Ende der Geschichte gilt spätestens seit den Krisen der 2010er-Jahre (Finanzkrise, Klima, neue Autoritarismen) als widerlegt.
+**Mehr wissen:** Der Ausdruck «Ende der Geschichte» stammt von Francis Fukuyama (1992): Nach dem Zusammenbruch des Ostblocks schien die liberale Marktdemokratie alternativlos. Es folgten Globalisierung, Internet und ein Boom des Individualismus. «Selbstverwirklichung» wurde zum Leitwert. Rückblickend war es keine Ruhephase, sondern die Startrampe der digitalen Umwälzung. Fukuyama meinte damit nicht, es werde nichts mehr geschehen, sondern die liberale Demokratie könnte der Endpunkt der ideologischen Entwicklung sein. Spätestens seit den Krisen der 2010er-Jahre (Finanzkrise, Klima, neue Autoritarismen) ist diese These stark umstritten.
 
 - *Bildbeschreibung:* Grenzöffnung am Brandenburger Tor 1989
 
@@ -1648,7 +1744,7 @@ Keine dieser Sichtweisen gibt ein fertiges Rezept. Aber jede öffnet einen begr�
 
 **Hintergrund zum Bild:** Dieses Bild ist keine gemalte Kunst, sondern eine wissenschaftliche Aufnahme der Weltraumbehörden NASA und NOAA aus dem Jahr 2012. Es ist eine Montage aus Hunderten Aufnahmen des Satelliten Suomi NPP, denn es ist nie überall auf der Erde gleichzeitig Nacht. So hat der Planet in Wirklichkeit nie ausgesehen. Zu sehen ist die nächtliche Erde, auf der jedes Lichtpünktchen für menschliche Besiedlung und für Strom steht. Grell leuchten Europa, Ostasien und die US-Küsten, während weite Teile Afrikas, Südamerikas und Zentralasiens fast dunkel bleiben. Gerade als Konstruktion führt das Bild vor Augen, wie ungleich die vernetzte Welt verteilt ist.
 
-**Im Kontext der Zeit:** Die nächtliche Erde macht die technische Seite der Epoche in einem Bild sichtbar: eine elektrifizierte, vernetzte Welt, deren Städte und Datenströme den Planeten in Lichtadern überziehen. Zugleich zeigt sie die Kehrseite. Die grellen Lichtbänder und die weiten dunklen Flächen führen die tiefe Ungleichheit dieser Vernetzung vor Augen.
+**Im Kontext der Zeit:** Die nächtliche Erde macht die technische Seite der Epoche in einem Bild sichtbar: eine elektrifizierte, vernetzte Welt, deren Städte und Verkehrsachsen den Planeten in Lichtadern überziehen. Sichtbar ist dabei Licht, nicht das Netz selbst, und mancher helle Fleck stammt von Gasfackeln, Fischereiflotten oder Bränden. Zugleich zeigt sie die Kehrseite. Die grellen Lichtbänder und die weiten dunklen Flächen führen die tiefe Ungleichheit dieser Vernetzung vor Augen.
 
 #### Die Erde bei Nacht (NASA, 2012)
 
@@ -1662,17 +1758,29 @@ Keine dieser Sichtweisen gibt ein fertiges Rezept. Aber jede öffnet einen begr�
 
 **Text:** Weite Teile Afrikas, Südamerikas und Zentralasiens bleiben nahezu dunkel. Diese Schatten erzählen die andere Hälfte der Geschichte: Die Vernetzung ist höchst ungleich verteilt. Das globale «Wir» umfasst längst nicht alle in gleicher Weise.
 
-**Text:** Der Personal Computer (ab 1981) und das World Wide Web (freigegeben 1991) bringen Rechenkraft und Information in jeden Haushalt. Der genormte Container macht globalen Warentransport billig und schnell. Zusammen vernetzen und beschleunigen sie Wirtschaft und Alltag fast grenzenlos. Durchsetzen konnten sie sich, weil die Elektronik immer kleiner und billiger wurde (vom Transistor zum Mikrochip), weil militärische Forschung das Netz vorfinanzierte (ARPANET) und weil die Normung des Containers die Kosten des Welthandels einbrechen liess.
+**Text:** Der Personal Computer, den es seit Mitte der 1970er-Jahre gibt und den der IBM PC von 1981 zum Standard macht, und das World Wide Web, das Tim Berners-Lee ab 1989 entwickelt und das CERN 1993 zur freien Nutzung freigibt, bringen Rechenkraft und Information in jeden Haushalt. Der genormte Container macht globalen Warentransport billig und schnell. Zusammen vernetzen und beschleunigen sie Wirtschaft und Alltag fast grenzenlos. Durchsetzen konnten sie sich, weil die Elektronik immer kleiner und billiger wurde (vom Transistor zum Mikrochip), weil militärische Forschung das Netz vorfinanzierte (ARPANET) und weil die Normung des Containers die Kosten des Welthandels einbrechen liess.
 
 **Mehr lesen:** Der Container hat einen Erfinder mit Namen: Der amerikanische Spediteur Malcom McLean liess 1956 einen umgebauten Tanker mit 58 Stahlkisten von Newark nach Houston fahren, weil ihn das teure Umladen von Hand ärgerte, und die Kosten für das Verladen einer Tonne Fracht sanken dadurch auf einen Bruchteil. Drei Jahrzehnte später reichte der Physiker Tim Berners-Lee am Forschungszentrum CERN einen Vorschlag für ein Hypertext-System ein, sein Vorgesetzter notierte darauf «vage, aber aufregend». 1993 gab das CERN diese Technik zur freien Nutzung frei, ohne Patent und ohne Gebühren, einer der folgenreichsten Verzichte der Wirtschaftsgeschichte. So senkten eine Blechkiste und ein Stück verschenkter Software gemeinsam die Kosten der Distanz, für Waren die eine, für Information die andere. Fabriken konnten dorthin wandern, wo die Löhne am tiefsten waren, und Nachrichten überallhin, wo ein Bildschirm stand. Die Welt wurde kleiner, und was das für Arbeit und Zusammenhalt bedeutet, verhandeln wir bis heute.
+
+- *Beleg:* [World Wide Web (Wikipedia)](https://de.wikipedia.org/wiki/World_Wide_Web)
+
+- *Beleg:* [Das Ende der Geschichte (Wikipedia)](https://de.wikipedia.org/wiki/Das_Ende_der_Geschichte)
 
 **Text:** Besonders betroffen sind die Industriearbeiter des Westens, deren Fabriken in Billiglohnländer abwandern (Deindustrialisierung), und die Menschen des früheren Ostblocks, deren gesamtes politisches und wirtschaftliches System über Nacht verschwindet. Sicher geglaubte Biografien werden entwertet.
 
 **Mehr lesen:** In Detroit, einst die stolzeste Autostadt der Welt, halbierte sich die Einwohnerzahl innert weniger Jahrzehnte, ganze Strassenzüge standen leer. Im Ruhrgebiet schloss eine Zeche nach der anderen, 2018 fuhr auf Prosper-Haniel die letzte Schicht ein, und mit den Fördertürmen verschwand eine ganze Lebensform aus Werkssiedlungen, Schichtplänen und Vereinsleben. Im Osten Deutschlands wickelte nach 1990 die Treuhandanstalt Tausende von Staatsbetrieben ab, Millionen Stellen gingen verloren, und was gestern als Lebensleistung galt, zählte auf dem neuen Arbeitsmarkt oft wenig. Ingenieurinnen sattelten um, Facharbeiter pendelten westwärts oder blieben zurück. Der Umbruch kam als Freiheit und als Entwertung zugleich, je nachdem, wo man stand. Solche Erfahrungen wirken lange nach, in Familien, in Wahlergebnissen und im Misstrauen gegen jedes neue Versprechen von Fortschritt.
 
+- *Beleg:* [Deindustrialisierung (Wikipedia)](https://de.wikipedia.org/wiki/Deindustrialisierung)
+
+- *Beleg:* [Soziale Beschleunigung (Wikipedia)](https://de.wikipedia.org/wiki/Soziale_Beschleunigung)
+
 **Text:** Die Postmoderne beschreibt diese Lage. Jean-François Lyotard erklärt 1979 das «Ende der grossen Erzählungen»: Es gibt nicht mehr die eine verbindliche Geschichte von Fortschritt oder Heil, sondern viele kleine, nebeneinander. Michel Foucault fragt zugleich, wer die Macht hat zu bestimmen, was als «normal» und «wahr» gilt.
 
 **Mehr lesen:** Lyotards berühmte Diagnose entstand als Auftragsarbeit: Der Universitätsrat der kanadischen Provinz Québec bestellte 1979 einen Bericht über das Wissen im Computerzeitalter, und der Philosoph lieferte statt Verwaltungsprosa die These, die grossen Heilsgeschichten von Fortschritt und Befreiung hätten ihre Glaubwürdigkeit verbraucht. Foucault wiederum sass jahrelang in Archiven über Akten von Gefängnissen, Kliniken und Irrenhäusern. Er zeigte, wie unscheinbare Instrumente wie Register, Prüfungen und Statistiken festlegen, wer als krank, kriminell oder normal gilt: Macht verbietet nicht nur, sie vermisst, sortiert und benotet. Foucault starb 1984, lange bevor das Internet den Alltag erreichte, doch seine Fragen passen verblüffend gut auf Feeds, Rankings und Empfehlungsalgorithmen. Wer legt heute fest, was als normal angezeigt wird, und nach welchen Massstäben? Die Postmoderne hat vor allem diese Wachsamkeit hinterlassen, auch wenn ihr Name inzwischen historisch klingt.
+
+- *Beleg:* [Postmoderne (Wikipedia)](https://de.wikipedia.org/wiki/Postmoderne)
+
+- *Beleg:* [Michel Foucault (Wikipedia)](https://de.wikipedia.org/wiki/Michel_Foucault)
 
 ### Jetzt: Umwelt & KI
 
@@ -1734,13 +1842,27 @@ Keine dieser Sichtweisen gibt ein fertiges Rezept. Aber jede öffnet einen begr�
 
 **Mehr lesen:** Der Traum hinter dieser Technik ist uralt: Die griechische Sage erzählt vom Bronzeriesen Talos, der Kretas Küste bewachte, die Prager Legende vom Golem aus Lehm, und 1818 liess Mary Shelley ihren Doktor Frankenstein ein künstliches Wesen erschaffen, das seinem Schöpfer entglitt. Der Fachbegriff wurde 1956 geboren, als eine kleine Gruppe von Forschern am Dartmouth College zu einer Sommer-Werkstatt über «artificial intelligence» zusammenkam und in ihrem Antrag grosse Fortschritte binnen weniger Monate für möglich hielt. Stattdessen folgten Jahrzehnte, in denen die Erwartungen mehrfach zusammenbrachen, man spricht von «KI-Wintern». Umso abrupter kam der Durchbruch im Alltag: ChatGPT erreichte nach dem Start Ende 2022 innert rund zwei Monaten gegen hundert Millionen Nutzerinnen und Nutzer, schneller als jede Verbraucher-Anwendung zuvor. Hinter der mühelosen Oberfläche stehen allerdings sehr irdische Anlagen, Rechenzentren, deren Strom- und Wasserbedarf mit dem ganzer Städte verglichen wird. Dass diese Technik als körperloses Gegenüber erscheint, ist vielleicht ihre grösste Täuschung.
 
+- *Beleg:* [Künstliche Intelligenz (Wikipedia)](https://de.wikipedia.org/wiki/Künstliche_Intelligenz)
+
+- *Beleg:* [Anthropozän (Wikipedia)](https://de.wikipedia.org/wiki/Anthropozän)
+
 **Text:** Betroffen sind die junge Generation (ihre Klimazukunft), die Wissens- und Kreativberufe (durch KI) und der globale Süden, der die Folgen der Erwärmung am härtesten trägt. Und erstmals stehen ausdrücklich auch nicht-menschliche Akteure im Blick: Arten, Klima und Ökosysteme, die nicht mitreden können.
 
-**Mehr lesen:** Im August 2018 setzte sich eine Fünfzehnjährige mit einem handgemalten Schild vor das schwedische Parlament, ein Jahr später folgten Millionen Jugendliche weltweit ihrem Schulstreik fürs Klima: Die Betroffenen der Zukunft meldeten sich als politische Kraft. 2021 hielt der Aussenminister des Inselstaats Tuvalu seine Videobotschaft an die Weltklimakonferenz im Anzug am Rednerpult, das knietief im Meer stand, dort, wo früher Land war. Und 2023 streikten in Hollywood die Drehbuchautorinnen und Drehbuchautoren monatelang, erstmals war der Umgang mit KI ein zentraler Streitpunkt eines grossen Arbeitskampfs. Drei Szenen, ein Muster: Die Verunsicherung hat Gesichter, aber keinen einzelnen Verursacher, und sie verteilt sich ungleich über Generationen, Berufe und Weltgegenden. Wer sie aushalten will, ohne zu erstarren oder abzustumpfen, braucht mehr als private Zuversicht. Genau darum kreist die Suche nach einem neuen, tragfähigen Wir.
+**Mehr lesen:** Im August 2018 setzte sich eine Fünfzehnjährige mit einem handgemalten Schild vor das schwedische Parlament, ein Jahr später folgten Millionen Jugendliche weltweit ihrem Schulstreik fürs Klima: Die Betroffenen der Zukunft meldeten sich als politische Kraft. 2021 hielt der Aussenminister des Inselstaats Tuvalu seine Videobotschaft an die Weltklimakonferenz im Anzug am Rednerpult, das knietief im Meer stand, um zu zeigen, was der steigende Meeresspiegel für sein Land bedeutet. Und 2023 streikten in Hollywood die Drehbuchautorinnen und Drehbuchautoren monatelang, erstmals war der Umgang mit KI ein zentraler Streitpunkt eines grossen Arbeitskampfs. Drei Szenen, ein Muster: Die Verunsicherung hat Gesichter, aber keinen einzelnen Verursacher, und sie verteilt sich ungleich über Generationen, Berufe und Weltgegenden. Wer sie aushalten will, ohne zu erstarren oder abzustumpfen, braucht mehr als private Zuversicht. Genau darum kreist die Suche nach einem neuen, tragfähigen Wir.
+
+- *Beleg:* [Klimakrise / globale Erwärmung (Wikipedia)](https://de.wikipedia.org/wiki/Globale_Erwärmung)
+
+- *Beleg:* [Auswirkungen der KI auf die Arbeitswelt (Wikipedia)](https://de.wikipedia.org/wiki/Künstliche_Intelligenz)
 
 **Text:** Bruno Latour (1947–2022) liefert mit der Akteur-Netzwerk-Theorie eine neue Sichtweise: Kein Akteur handelt allein. Wirkung entsteht im Geflecht von Menschen UND Dingen. Um die Krisen zu verstehen, müsse man die Abhängigkeiten ernst nehmen, auch die von dem, was nicht Mensch ist: Klima, Viren, Technik, KI.
 
 **Mehr lesen:** Latour begann als eine Art Feldforscher unter Wissenschaftlern: In den 1970er-Jahren beobachtete er zwei Jahre lang ein kalifornisches Labor, so wie Ethnologen ein fremdes Dorf beobachten, und beschrieb, wie Fakten nicht einfach gefunden, sondern in einem Geflecht aus Menschen, Geräten und Texten hergestellt werden. Später schlug er ein «Parlament der Dinge» vor, eine Politik, in der auch Flüsse, Klima und Techniken vertreten wären, weil sie längst mithandeln. Was einst exzentrisch klang, liest sich heute fast wie eine Alltagsbeschreibung: Ein Virus legt den Planeten still, ein Algorithmus entscheidet über Kredite mit, ein Fluss erhält in Neuseeland eine Rechtspersönlichkeit. Latour starb im Oktober 2022, wenige Wochen bevor ChatGPT erschien, die Debatte darüber, wie viel «Akteur» in einer solchen Maschine steckt, erlebte er nicht mehr. Seine Denkfigur aber liegt bereit: Verantwortung verschwindet nicht, wenn viele mithandeln, sie muss neu verteilt und benannt werden. Vielleicht beginnt genau hier die Schablone, die dieser Epoche noch fehlt.
+
+- *Beleg:* [Akteur-Netzwerk-Theorie (Wikipedia)](https://de.wikipedia.org/wiki/Akteur-Netzwerk-Theorie)
+
+- *Beleg:* [Bruno Latour (Wikipedia)](https://de.wikipedia.org/wiki/Bruno_Latour)
+
+### […]
 
 ---
 
@@ -1756,7 +1878,7 @@ Keine dieser Sichtweisen gibt ein fertiges Rezept. Aber jede öffnet einen begr�
 
 **wort:** Aristoteles
 
-**Erklärung:** Griechischer Philosoph, 384 bis 322 v. Chr.; Begründer von Logik und beobachtender Wissenschaft.
+**Erklärung:** Griechischer Philosoph, 384 bis 322 v. Chr.; prägte die formale Logik und die Beobachtung als Methode.
 
 **wort:** Immanuel Kant
 
@@ -1772,7 +1894,7 @@ Keine dieser Sichtweisen gibt ein fertiges Rezept. Aber jede öffnet einen begr�
 
 **wort:** Martin Heidegger
 
-**Erklärung:** Deutscher Philosoph, 1889 bis 1976; Hauptwerk «Sein und Zeit».
+**Erklärung:** Deutscher Philosoph, 1889 bis 1976; Hauptwerk «Sein und Zeit». NSDAP-Mitglied von 1933 bis 1945, sein Werk wird darum kontrovers diskutiert.
 
 **wort:** Peter Sloterdijk
 
@@ -1812,7 +1934,7 @@ Keine dieser Sichtweisen gibt ein fertiges Rezept. Aber jede öffnet einen begr�
 
 - *These:* Frei und darum verantwortlich.
 
-**Zur Philosophie:** Immanuel Kant lebte sein ganzes Leben in Königsberg und löste mit der «Kritik der reinen Vernunft» eine Wende in der Philosophie aus. Er bündelte sie in vier Fragen, deren letzte, «Was ist der Mensch?», alle anderen zusammenfasst. Seine Antwort: Der Mensch ist vernunftbegabt und frei, er kann aus eigener Einsicht handeln, nicht bloss Trieben oder Befehlen folgen. Aus dieser Freiheit folgen Verantwortung und Würde, für sein Tun kann der Mensch einstehen. Eine Maschine führt Regeln aus, aber sie ist nicht frei und verantwortet nichts, das bleibt beim Menschen.
+**Zur Philosophie:** Immanuel Kant lebte sein ganzes Leben in Königsberg und löste mit der «Kritik der reinen Vernunft» eine Wende in der Philosophie aus. Er bündelte sie in vier Fragen, deren letzte, «Was ist der Mensch?», alle anderen zusammenfasst. Seine Antwort: Der Mensch ist vernunftbegabt und frei, er kann aus eigener Einsicht handeln, nicht bloss Trieben oder Befehlen folgen. Aus dieser Freiheit folgen Verantwortung und Würde, für sein Tun kann der Mensch einstehen. Nach Kant führt eine Maschine Regeln aus, ist aber nicht frei und verantwortet nichts; das bleibt beim Menschen.
 
 **wort:** Königsberg
 
@@ -1830,11 +1952,15 @@ Keine dieser Sichtweisen gibt ein fertiges Rezept. Aber jede öffnet einen begr�
 
 - *These:* Denken heisst unterscheiden.
 
-**Zur Philosophie:** Hegel war der Hauptvertreter des deutschen Idealismus und dachte die Wirklichkeit als Entfaltung des «Geistes». Ihr Motor ist das Unterscheiden: Der Geist setzt Gegensätze, hält sie aus und führt sie auf einer höheren Stufe zusammen (verkürzt «These, Antithese, Synthese»). Erst indem der Mensch unterscheidet, was ist und was sein soll, kann er urteilen und sich frei entscheiden. So bekommt gerade das Unterscheiden und Entscheiden eine zutiefst menschliche Seite: Es ist nicht Rechnen, sondern ein bewusster, freier Akt. Hauptwerk: «Phänomenologie des Geistes» (1807).
+**Zur Philosophie:** Hegel war der Hauptvertreter des deutschen Idealismus und dachte die Wirklichkeit als Entfaltung des «Geistes». Stark verkürzt lässt sich seine Dialektik als Bewegung beschreiben, in der ein Begriff an seinen eigenen inneren Spannungen weiterbestimmt wird. Die berühmte Formel «These, Antithese, Synthese» stammt übrigens nicht von Hegel und trifft sein Verfahren nicht durchgehend, als erste Merkhilfe taugt sie aber. Für unsere Frage lesen wir ihn auf das Unterscheiden hin: Erst indem der Mensch auseinanderhält, was ist und was sein soll, kann er urteilen und sich entscheiden. Diese Zuspitzung ist unsere, nicht Hegels, und sie zeigt, warum Unterscheiden mehr sein kann als Rechnen, nämlich ein bewusster, freier Akt. Hauptwerk: «Phänomenologie des Geistes» (1807).
 
 **wort:** deutschen Idealismus
 
 **Erklärung:** Philosophische Strömung um 1800 (Kant, Fichte, Schelling, Hegel), die Denken und Geist ins Zentrum stellt.
+
+**wort:** Dialektik
+
+**Erklärung:** Denken in Gegensätzen: Ein Gedanke treibt sich durch seine eigenen Widersprüche weiter, statt einfach zu behaupten.
 
 - *Kennung:* arendt
 
@@ -1844,7 +1970,7 @@ Keine dieser Sichtweisen gibt ein fertiges Rezept. Aber jede öffnet einen begr�
 
 - *These:* Der Mensch kann neu anfangen.
 
-**Zur Philosophie:** Hannah Arendt, jüdische politische Denkerin, floh vor den Nazis über Frankreich in die USA. Aus der Erfahrung des Totalitarismus fragte sie, was Handeln und Freiheit ausmacht. Ihr Schlüsselbegriff ist die «Natalität»: Weil jeder Mensch geboren wird, kann er etwas Neues anfangen, das aus dem Bisherigen nicht ableitbar ist. Dazu kommt das Urteilen, das eigenständige Prüfen, auch aus der Sicht anderer. Eine KI setzt Wahrscheinliches fort und wiederholt Muster; anfangen und urteilen im menschlichen Sinn kann sie nicht. Werk: «Vita activa».
+**Zur Philosophie:** Hannah Arendt, jüdische politische Denkerin, floh vor den Nazis über Frankreich in die USA. Aus der Erfahrung des Totalitarismus fragte sie, was Handeln und Freiheit ausmacht. Ihr Schlüsselbegriff ist die «Natalität»: Weil jeder Mensch geboren wird, kann er etwas Neues anfangen, das aus dem Bisherigen nicht ableitbar ist. Dazu kommt das Urteilen, das eigenständige Prüfen, auch aus der Sicht anderer. Von Arendt her gelesen setzt eine KI Wahrscheinliches fort und wiederholt Muster; anfangen und urteilen in ihrem Sinn kann sie nicht. Werk: «Vita activa».
 
 **wort:** Totalitarismus
 
@@ -1862,7 +1988,15 @@ Keine dieser Sichtweisen gibt ein fertiges Rezept. Aber jede öffnet einen begr�
 
 - *These:* Dem Menschen ist sein Leben nicht gleichgültig.
 
-**Zur Philosophie:** Martin Heidegger, einflussreich und zugleich umstritten wegen seiner Nähe zum Nationalsozialismus, fragte in «Sein und Zeit» neu nach dem Sinn von Sein. Den Menschen nennt er «Dasein», seinen Grundzug die «Sorge»: Uns geht es um unser eigenes Leben, wir kümmern uns, fragen nach Sinn und wissen um unsere Endlichkeit. Einer Maschine ist nichts wichtig, ihr geht es um nichts, sie sorgt sich nicht. Menschlich bleibt dieses Betroffensein vom eigenen Leben, das keine Maschine übernimmt. Hauptwerk: «Sein und Zeit» (1927).
+**Zur Philosophie:** Martin Heidegger gehört zu den einflussreichsten Philosophen des 20. Jahrhunderts und ist zugleich schwer belastet. Er trat am 1. Mai 1933 in die NSDAP ein, war als Rektor an der Gleichschaltung der Universität Freiburg beteiligt und blieb bis 1945 Parteimitglied; in seinen «Schwarzen Heften» stehen antisemitische Äusserungen. Umstritten ist nicht, ob das geschah, sondern wie stark es sein Werk prägt. In «Sein und Zeit» fragte er neu nach dem Sinn von Sein. Den Menschen nennt er «Dasein», seinen Grundzug die «Sorge»: Uns geht es um unser eigenes Leben, wir kümmern uns, fragen nach Sinn und wissen um unsere Endlichkeit. Von hier aus argumentieren viele, einer Maschine sei nichts wichtig, ihr gehe es um nichts, sie sorge sich nicht. Menschlich bleibe dieses Betroffensein vom eigenen Leben. Hauptwerk: «Sein und Zeit» (1927).
+
+**wort:** Gleichschaltung
+
+**Erklärung:** Die erzwungene Ausrichtung von Ämtern, Schulen und Vereinen auf die NS-Herrschaft ab 1933; Andersdenkende wurden entfernt.
+
+**wort:** «Schwarzen Heften»
+
+**Erklärung:** Heideggers private Notizhefte, erst ab 2014 veröffentlicht; sie enthalten antisemitische Passagen und lösten eine neue Debatte über sein Werk aus.
 
 **wort:** «Dasein»
 
@@ -1890,7 +2024,7 @@ Keine dieser Sichtweisen gibt ein fertiges Rezept. Aber jede öffnet einen begr�
 
 - *These:* Der Geist ist kein Computer.
 
-**Zur Philosophie:** Siri Hustvedt ist US-amerikanische Schriftstellerin und Essayistin, die Literatur mit Hirnforschung und Philosophie verbindet. In «Die Illusion der Gewissheit» wendet sie sich gegen das Bild, das Gehirn sei ein Computer. Denken und Fühlen hängen für sie am lebendigen Körper und an gelebter Erfahrung, sie spricht vom «verkörperten Geist». Eine KI kann Sprache und Gefühle täuschend echt nachahmen, aber sie erlebt nichts, sie macht keine Erfahrung. Ihr «produktiver Zweifel» hilft, das flüssige Modell nicht mit der Wirklichkeit zu verwechseln. Werk: «Die Illusion der Gewissheit» (2018).
+**Zur Philosophie:** Siri Hustvedt ist US-amerikanische Schriftstellerin und Essayistin, die Literatur mit Hirnforschung und Philosophie verbindet. In «Die Illusion der Gewissheit» wendet sie sich gegen das Bild, das Gehirn sei ein Computer. Denken und Fühlen hängen für sie am lebendigen Körper und an gelebter Erfahrung, sie spricht vom «verkörperten Geist». Ihr Argument: Eine KI kann Sprache und Gefühle täuschend echt nachahmen, aber sie erlebt nichts und macht keine Erfahrung. Ihr «produktiver Zweifel» hilft, das flüssige Modell nicht mit der Wirklichkeit zu verwechseln. Werk: «Die Illusion der Gewissheit» (2018).
 
 **wort:** «verkörperten Geist»
 
@@ -1900,9 +2034,9 @@ Keine dieser Sichtweisen gibt ein fertiges Rezept. Aber jede öffnet einen begr�
 
 Hannah Arendt nennt einen weiteren Wesenszug das Anfangen. Mit jedem Menschen kommt etwas Neues in die Welt, das aus dem Bisherigen nicht ableitbar ist. Und der Mensch urteilt, er hält inne und entscheidet selbst. Martin Heidegger fügt die «Sorge» hinzu: Dem Menschen ist sein eigenes Leben nicht gleichgültig, er kümmert sich, fragt nach Sinn, weiss um seine Endlichkeit.
 
-Peter Sloterdijk beschreibt den Menschen als übendes Wesen. Wir werden, wer wir sind, durch Übung und Wiederholung, und niemand kann für uns üben. Siri Hustvedt erinnert daran, dass der Geist kein Computer ist. Denken und Fühlen hängen am lebendigen Körper und an gelebter Erfahrung. Eine Maschine kann Sprache und Gefühle täuschend echt nachahmen, aber sie erlebt nichts.
+Peter Sloterdijk beschreibt den Menschen als übendes Wesen. Wir werden, wer wir sind, durch Übung und Wiederholung, und niemand kann für uns üben. Siri Hustvedt hält dagegen, der Geist sei kein Computer: Denken und Fühlen hängen für sie am lebendigen Körper und an gelebter Erfahrung. Eine Maschine könne Sprache und Gefühle täuschend echt nachahmen, erlebe dabei aber nichts.
 
-Worauf das alles zielt, ist nicht der Vergleich mit der Maschine. Es geht nicht darum, ob eine KI auch anfangen, urteilen oder unterscheiden könnte. Es geht darum, was uns in unserem Wesen ausmacht. Und diese Züge sind nicht etwas, das wir bloss tun, sondern etwas, das wir sind. Wir können gar nicht anders, als neugierig zu sein, anzufangen, zu unterscheiden und uns zu sorgen.
+Worauf das alles zielt, ist nicht der Vergleich mit der Maschine. Es geht nicht darum, ob eine KI auch anfangen, urteilen oder unterscheiden könnte. Es geht darum, was uns in unserem Wesen ausmacht. Und diese Züge sind nach diesen Denkerinnen und Denkern nicht etwas, das wir bloss tun, sondern etwas, das wir sind. Ob einer Maschine so etwas grundsätzlich verschlossen bleibt, ist damit übrigens nicht bewiesen, sondern behauptet und begründet. Genau darüber wird gestritten, und du darfst mitstreiten.
 
 **Was dir das jetzt hilft:** Wenn dich die schnelle, kluge KI verunsichert, kehr zur Frage zurück, was dich als Mensch ausmacht. Neugier, Anfangen, Urteilen, Sorge, das bleibt deins, ganz gleich, wie gut die Maschine formuliert. Dafür braucht es am Ende ein Grundvertrauen: dass diese Wesenszüge nicht einfach verschwinden, nur weil eine Maschine gute Sätze schreibt.
 
@@ -1980,7 +2114,7 @@ Bruno Latour ergänzt: Nichts wirkt allein. Jede Handlung hängt an einem Netz a
 
 - *These:* Das freie Individuum ist eine Illusion.
 
-**Zur Philosophie:** Latour zeigt mit der Akteur-Netzwerk-Theorie auch, dass das ganz freie, unabhängige Individuum eine Illusion ist. Wir handeln nie aus dem Nichts, sondern immer eingebettet in Beziehungen zu Menschen, Werkzeugen, Institutionen und Techniken. Das ist keine Einschränkung, sondern die normale Bedingung des Handelns. Je bewusster man sich die eigenen Abhängigkeiten macht, desto klarer und souveräner wird das eigene Tun, gerade auch im Umgang mit KI.
+**Zur Philosophie:** Mit der Akteur-Netzwerk-Theorie lässt sich auch das Bild vom ganz freien, unabhängigen Individuum in Frage stellen. Latour untersucht, wie sich Handlungsmacht auf viele verteilt; dass es individuelle Freiheit nicht gäbe, beweist er damit nicht. Wir handeln jedenfalls nie aus dem Nichts, sondern immer eingebettet in Beziehungen zu Menschen, Werkzeugen, Institutionen und Techniken. Das ist keine Einschränkung, sondern die normale Bedingung des Handelns. Je bewusster man sich die eigenen Abhängigkeiten macht, desto klarer und souveräner wird das eigene Tun, gerade auch im Umgang mit KI.
 
 - *Kennung:* deguchi
 
@@ -1990,7 +2124,7 @@ Bruno Latour ergänzt: Nichts wirkt allein. Jede Handlung hängt an einem Netz a
 
 - *These:* Nicht «ich» handelt, sondern «wir».
 
-**Zur Philosophie:** Yasuo Deguchi ist Philosophieprofessor an der Universität Kyoto und verbindet westliches mit ostasiatischem Denken. Mit seiner «We-Turn»-Philosophie verlegt er das Handeln vom einzelnen «Ich» auf ein «Wir»: Niemand kann etwas ganz allein, jede Handlung wird von vielen getragen, von Menschen, Dingen und heute auch von Maschinen. Der eigentliche Handelnde ist deshalb kein einsames Ich, sondern ein «Selbst als Wir», zu dem die KI dazugehört. Diese Sicht wurzelt im ostasiatischen, buddhistischen Denken, dass nichts für sich allein besteht, sondern alles wechselseitig entsteht. Das entlastet auch: Können und Verantwortung liegen beim «Wir», nicht allein auf den Schultern eines einzelnen Ich.
+**Zur Philosophie:** Yasuo Deguchi ist Philosophieprofessor an der Universität Kyoto und verbindet westliches mit ostasiatischem Denken. Mit seiner «We-Turn»-Philosophie verlegt er das Handeln vom einzelnen «Ich» auf ein «Wir»: Niemand kann etwas ganz allein, jede Handlung wird von vielen getragen, von Menschen, Dingen und heute auch von Maschinen. Der eigentliche Handelnde ist deshalb kein einsames Ich, sondern ein «Selbst als Wir», zu dem die KI dazugehört. Er stützt sich dabei auf einen alten buddhistischen Gedanken, das «abhängige Entstehen»: Nichts besteht für sich allein, alles entsteht wechselseitig. Das entlastet, hebt aber die Verantwortung nicht auf. Sie verteilt sich auf ein «Wir» mit verschiedenen Rollen, statt ganz auf den Schultern eines einzelnen Ich zu liegen.
 
 **wort:** Kyoto
 
@@ -2046,9 +2180,9 @@ Bruno Latour ergänzt: Nichts wirkt allein. Jede Handlung hängt an einem Netz a
 
 **Erklärung:** Von Markus Gabriel mitbegründete Richtung: Die Welt und auch Werte sind wirklich, nicht bloss Ansichtssache.
 
-Mensch und Maschine lassen sich nicht mehr sauber auseinanderdividieren. Wir tippen, suchen, planen und entscheiden längst mit Geräten zusammen. Schon Bruno Latour zeigt, warum das kein neuer Sonderfall ist: Das ganz freie Individuum, das egoistisch nur tut, was es will, hat es nie gegeben. Wir stecken immer in Abhängigkeiten, von Menschen, Werkzeugen, Institutionen. Je klarer man sich diese Abhängigkeiten bewusst macht, desto verständlicher wird das eigene Tun.
+Mensch und Maschine lassen sich nicht mehr sauber auseinanderdividieren. Wir tippen, suchen, planen und entscheiden längst mit Geräten zusammen. Schon Bruno Latour zeigt, warum das kein neuer Sonderfall ist. Nach seiner Lesart hat es das ganz freie Individuum, das egoistisch nur tut, was es will, nie gegeben: Wir stecken immer in Abhängigkeiten, von Menschen, Werkzeugen, Institutionen. Je klarer man sich diese Abhängigkeiten bewusst macht, desto verständlicher wird das eigene Tun.
 
-Der japanische Philosoph Yasuo Deguchi treibt diesen Gedanken weiter. Seine «We-Turn»-Philosophie verlegt das Handeln vom einzelnen «Ich» auf ein «Wir». Niemand kann etwas ganz allein, jede Handlung wird von vielen anderen getragen, von Menschen, Dingen und heute auch von Maschinen. Der eigentliche Handelnde ist deshalb kein einsames Ich, sondern ein «Wir», zu dem die KI dazugehört. Diese Sicht wurzelt im ostasiatischen Denken, in der buddhistischen Einsicht, dass nichts für sich allein besteht, sondern alles miteinander verbunden entsteht.
+Der japanische Philosoph Yasuo Deguchi treibt diesen Gedanken weiter. Seine «We-Turn»-Philosophie verlegt das Handeln vom einzelnen «Ich» auf ein «Wir». Niemand kann etwas ganz allein, jede Handlung wird von vielen anderen getragen, von Menschen, Dingen und heute auch von Maschinen. Der eigentliche Handelnde ist deshalb kein einsames Ich, sondern ein «Wir», zu dem die KI dazugehört. Er stützt sich dabei auf den buddhistischen Gedanken des «abhängigen Entstehens», dass nichts für sich allein besteht, sondern alles miteinander verbunden entsteht. Wichtig ist: Verantwortung verschwindet damit nicht, sie verteilt sich auf ein «Wir» mit verschiedenen Rollen.
 
 Was folgt daraus? Donna Haraway sagt, wir sind längst «verwoben», in gewissem Sinn schon Mischwesen aus Mensch und Maschine, und sollten das verantwortlich gestalten. Yuval Noah Harari mahnt, dass diese Verschmelzung gewaltige Macht freisetzt und darum klare Regeln braucht. Markus Gabriel setzt auf «ethische Intelligenz», das kluge, moralische Mitgestalten. Zwei Wege zeichnen sich ab: sich auf die Zusammenarbeit einlassen oder den eigenen Weg umso deutlicher markieren, beides gestützt durch Regulation und Ethik.
 
@@ -2142,7 +2276,7 @@ Am äussersten Rand steht der «Transhumanismus», die Idee, den Menschen durch 
 
 - *These:* Das Leben ändern, aber wie? In kleinen Schritten.
 
-**Zur Philosophie:** Wilhelm Schmid ist ein freier Philosoph in Berlin und hat die «Philosophie der Lebenskunst» im deutschsprachigen Raum bekannt gemacht. Sein Thema: Aus einer Einsicht folgt noch keine Tat, das kennt jeder von den guten Vorsätzen. Was hilft, ist Übung in kleinsten Schritten, täglich, fast beiläufig, aber regelmässig, nicht das ganze Buch auf einmal, sondern jeden Tag eine Seite. Weil Freude stärker wirkt als Zwang, soll man sich am Schönen orientieren, zu dem man Ja sagen kann. So werden neue Gewohnheiten gebildet, im Schnitt in rund zwei Monaten. Werk: «Philosophie der Lebenskunst» (1998).
+**Zur Philosophie:** Wilhelm Schmid ist ein freier Philosoph in Berlin und hat die «Philosophie der Lebenskunst» im deutschsprachigen Raum bekannt gemacht. Sein Thema: Aus einer Einsicht folgt noch keine Tat, das kennt jeder von den guten Vorsätzen. Was hilft, ist Übung in kleinsten Schritten, täglich, fast beiläufig, aber regelmässig, nicht das ganze Buch auf einmal, sondern jeden Tag eine Seite. Weil Freude stärker wirkt als Zwang, soll man sich am Schönen orientieren, zu dem man Ja sagen kann. So werden neue Gewohnheiten gebildet. Wie lange das dauert, hat die Psychologie untersucht, nicht die Philosophie: Eine oft zitierte Studie fand einen Mittelwert von 66 Tagen, mit sehr grossen Unterschieden je nach Person und Gewohnheit. Werk: «Philosophie der Lebenskunst» (1998).
 
 - *Kennung:* nussbaum
 
@@ -2194,11 +2328,13 @@ Schon die Stoiker wussten: Philosophie ist tägliche Übung, nicht blosses Wisse
 
 Dabei zählt nicht nur der Kopf. Martha Nussbaum erinnert daran, dass Gefühle zum guten Leben gehören, und Maurice Merleau-Ponty, dass wir die Welt leiblich verstehen, durch Körper und Wahrnehmung. Genau darum wirkt Schönes stärker als Zwang: Wer sich an etwas orientiert, zu dem er Ja sagen kann, verändert sich lieber. Hartmut Rosa nennt dieses lebendige Verhältnis zur Welt «Resonanz».
 
-Und die KI? Sie kann bei der Umsetzung helfen, etwa eine App, die an die kleinen Übungen erinnert und Fortschritte zeigt. Aber gehen muss man den Weg selbst. Eine Spritze oder ein Klick nimmt die Anstrengung ab, doch das eingeübte, selbst gestaltete Leben ersetzt sie nicht. Lebenskunst bleibt Menschensache.
+Und die KI? Sie kann bei der Umsetzung helfen, etwa eine App, die an die kleinen Übungen erinnert und Fortschritte zeigt. Aber gehen muss man den Weg selbst. Kein Werkzeug übt für dich, und ein eingeübtes, selbst gestaltetes Leben lässt sich nicht abkürzen. Lebenskunst bleibt Menschensache.
 
 **Was dir das jetzt hilft:** Wenn du etwas ändern willst, warte nicht auf den grossen Ruck. Nimm dir den kleinstmöglichen Schritt vor, jeden Tag einen, und knüpfe ihn an etwas Schönes, zu dem du Ja sagst. Die KI darf dich erinnern und begleiten, aber die Übung, und damit dein Leben, gestaltest du selbst.
 
 - *Werke:* Wilhelm Schmid, «Philosophie der Lebenskunst» (1998); Michel Foucault, «Die Sorge um sich» (1984); Martha Nussbaum, «Fähigkeiten schaffen» (2011); Maurice Merleau-Ponty, «Phänomenologie der Wahrnehmung» (1945); Hartmut Rosa, «Resonanz» (2016); dazu die Stoiker (Epiktet, Seneca, Mark Aurel)
+
+### […]
 
 groups Die Stimmen, zum Nachgehen
 
@@ -2250,9 +2386,6 @@ Thema 03 · Rückblick & Vergleich
 
 **Beschreibung:** mythisch, orakelhaft
 
-**Mehr lesen:** )).length);
-    setMeineKombis(spuren.filter((s) => s.id.includes(
-
 #### Angeklickte Punkte
 
 **Text:** Knoten hast du auf diesem Gerät geöffnet.
@@ -2271,11 +2404,6 @@ Thema 03 · Rückblick & Vergleich
 
 #### Mehr gelesen
 
-**Mehr lesen:** )}× von allen geöffnet`,
-    },
-    {
-      icon: 
-
 #### Für dich relevant
 
 #### Ohne Bedeutung
@@ -2284,9 +2412,9 @@ Thema 03 · Rückblick & Vergleich
 
 account_balance Warum «Orakel»?
 
-Vor über zweieinhalbtausend Jahren stiegen Menschen aus der ganzen griechischen Welt nach hinauf, um das berühmteste Orakel der Antike zu befragen. Dort sass die Priesterin auf einem über einer Erdspalte und gab, oft in dunklen, deutbaren Worten, Antwort. Ganze Städte fragten sie, bevor sie in den Krieg zogen oder eine Kolonie gründeten. Dem lydischen König soll sie gesagt haben, wenn er über den Grenzfluss ziehe, werde er ein grosses Reich zerstören. Er zog los, verlor und zerstörte sein eigenes. Das Orakel war ein Ort, an dem eine unübersichtliche Welt gedeutet wurde, lange bevor es Wissenschaft gab.
+Vor über zweieinhalbtausend Jahren stiegen Menschen aus der ganzen griechischen Welt nach Delphi hinauf, um das berühmteste Orakel der Antike zu befragen. Dort sass die Priesterin Pythia auf einem Dreifuss über einer Erdspalte und gab, oft in dunklen, deutbaren Worten, Antwort. Ganze Städte fragten sie, bevor sie in den Krieg zogen oder eine Kolonie gründeten. Dem lydischen König Krösus soll sie gesagt haben, wenn er über den Grenzfluss ziehe, werde er ein grosses Reich zerstören. Er zog los, verlor und zerstörte sein eigenes. Das Orakel war ein Ort, an dem eine unübersichtliche Welt gedeutet wurde, lange bevor es Wissenschaft gab.
 
-Über dem Tempeleingang stand «Erkenne dich selbst». Für den Philosophen wurde dieser Satz zur Lebensaufgabe. Als das Orakel ihn den weisesten Menschen nannte, verstand er das so, dass echte Weisheit darin liegt, die eigenen Grenzen zu kennen. Aus der Götterbefragung wurde damit eine Aufforderung, sich selbst zu prüfen. Genau darum geht es auch hier: nicht um eine höhere Wahrheit, sondern um einen ehrlichen Blick auf den eigenen Weg.
+Über dem Tempeleingang stand «Erkenne dich selbst». Für den Philosophen Sokrates wurde dieser Satz zur Lebensaufgabe. Als das Orakel ihn den weisesten Menschen nannte, verstand er das so, dass echte Weisheit darin liegt, die eigenen Grenzen zu kennen. Aus der Götterbefragung wurde damit eine Aufforderung, sich selbst zu prüfen. Genau darum geht es auch hier: nicht um eine höhere Wahrheit, sondern um einen ehrlichen Blick auf den eigenen Weg.
 
 Wir nennen diesen Rückblick trotzdem «Orakel», aber aus einem anderen Grund. Seine Deutungen kommen nicht aus dem allwissenden Blick der Götter. Sie sind musterhaft, genau wie die KI arbeitet. Wo die Pythia Zeichen deutete, erkennt die KI Muster in den gesammelten Spuren und spiegelt sie dir zurück. Kein höheres Wissen, sondern erkannte Regelmässigkeit. Und wie schon in Delphi gilt: entscheiden musst am Ende du selbst.
 
@@ -2308,7 +2436,7 @@ lock Nur bei dir — kein anonymer Vergleich mit allen.
 
 Die Inhalte, die du ausgewählt hast — die Grundlage, aus der das Orakel dein Interesse deutet.
 
-Bisher hast du vor allem die Muster bespielt — geknüpft, ohne Inhalte zu öffnen. Auch das ist eine Spur, die das Orakel deuten kann.
+Bisher hast du vor allem die Muster bespielt — […] geknüpft, ohne Inhalte zu öffnen. Auch das ist eine Spur, die das Orakel deuten kann.
 
 auto_awesome Das Orakel spricht — erste Stimme: dein Interesse
 
@@ -2324,7 +2452,7 @@ Das Orakel ist gerade nicht erreichbar — versuch es gleich nochmals.
 
 ### Deine Spur durchs Gewebe
 
-von Knoten hast du besucht — daneben, wie oft alle zusammen dort waren. Tippe einen Bereich an, um dorthin zurückzukehren.
+[…] von […] Knoten hast du besucht — daneben, wie oft alle zusammen dort waren. Tippe einen Bereich an, um dorthin zurückzukehren.
 
 ### Knotenkarte der Inhalte
 
@@ -2338,9 +2466,9 @@ Bei «Die KI im Kontext» hast du für jeden Aspekt gewählt, wie viel Achtsamke
 
 Zweite Stimme: dein Weg durchs Lernset
 
-Das Orakel deutet deine eigene Aktivität in wenigen Sätzen. Wähle eine Form — und wenn sie dir nicht zusagt, befrage es in einer anderen. Dazu schickt dein Browser nur anonyme Kennzahlen (Zähler, Bewertungen), nie deinen Namen.
+Das Orakel deutet deine eigene Aktivität in wenigen Sätzen. Wähle eine Form, und wenn sie dir nicht zusagt, befrage es in einer anderen. Dazu schickt dein Browser eine Zusammenfassung deiner Aktivität: Zähler, Bewertungen und die Titel der Punkte, die du gewählt hast. Ohne Namen und ohne deinen Fortschritts-Code.
 
-Bereit für die e Deutung deiner Aktivität?
+Bereit für die […] e Deutung deiner Aktivität?
 
 progress_activity Das Orakel deutet deine Spuren …
 
@@ -2362,8 +2490,6 @@ Tipp: Trage zuerst deinen Namen ein — er erscheint dann auf dem Ausdruck.
 
 ### Wie blickst du heute auf KI?
 
-{blickWahl ? `$ $ insgesamt — deine ist markiert.` : "Wähle eine Haltung — danach siehst du, wie alle geantwortet haben."}
-
 ### Deine Rückmeldung
 
 Zwei kurze Umfragen helfen uns, das Lernset zu verbessern. Beide sind anonym und dauern nur wenige Minuten.
@@ -2372,7 +2498,7 @@ Zwei kurze Umfragen helfen uns, das Lernset zu verbessern. Beide sind anonym und
 
 ### Rückmeldung & Fehler melden
 
-Du meldest dich nur mit einem Code an (z.B. «QWEN-34R») — kein Name, keine E-Mail, kein Passwort. Der Code ist ein Pseudonym: Wer ihn hat, sieht deinen Fortschritt — bewahre ihn also für dich auf. Namen werden nirgends erhoben.
+Du meldest dich nur mit einem Code an (z.B. «QWEN-34R»): kein Name, keine E-Mail, kein Passwort. Namen werden nirgends erhoben. Anonym ist das aber nicht, sondern pseudonym: Unter deinem Code werden dein Fortschritt, deine Spuren und deine Bewertungen gespeichert, damit sie auf einem anderen Gerät wieder verfügbar sind. Wer deinen Code kennt, sieht diesen Fortschritt. Bewahre ihn also für dich auf.
 
 ### Datenschutz im Detail
 
@@ -2386,11 +2512,233 @@ Lernumgebung zu KI · Eine ganz neue Partnerschaft · Das Orakel
 
 ### Das Orakel zu meinem Interesse
 
+### […] e Deutung
+
 (Befrage das Orakel oben, damit seine Deutungen hier erscheinen.)
 
 ### Diese Punkte möchte ich noch vertiefen
 
-Erstellt im Lernset «Eine ganz neue Partnerschaft». Die Deutungen beruhen auf anonymen Kennzahlen der eigenen Aktivität; die Detaildaten bleiben auf dem Gerät.
+Erstellt im Lernset «Eine ganz neue Partnerschaft». Die Deutungen beruhen auf einer Zusammenfassung der eigenen Aktivität, die ohne Namen und ohne Fortschritts-Code an den KI-Dienst übermittelt wurde. Der Fortschritt selbst liegt unter dem Fortschritts-Code gespeichert, damit er auf einem anderen Gerät wieder verfügbar ist.
+
+### […]
+
+---
+
+## Quellenverzeichnis (geprüfte Belege)
+
+*Quelle: `_components/Quellenverzeichnis.tsx`*
+
+#### Übergreifend: Recht und Datenschutz
+
+#### KI und Urheberrecht (Schweiz)
+
+**Stützt die Aussage:** Ob ein KI-Ergebnis geschützt ist, hängt vom menschlichen Gestaltungsbeitrag ab.
+
+#### Training und Einsatz von KI
+
+**Stützt die Aussage:** Aktualisierte rechtliche Einordnung zu Training und Nutzung.
+
+#### Anonymisierung
+
+**Stützt die Aussage:** Anonym heisst: eine Rückverfolgung ist praktisch ausgeschlossen. Sonst ist es pseudonym.
+
+#### Pseudonymisierung
+
+**Stützt die Aussage:** Ein Code, der den Namen ersetzt, ist ein Pseudonym. Genau so arbeitet der Fortschritts-Code hier.
+
+#### Thema 01 · Vorhang auf: KI-Geschichte und Technik
+
+#### Enigma und die «Bombe»
+
+**Stützt die Aussage:** Die britische Bombe geht auf Alan Turing und Gordon Welchman zurück, mit polnischen Vorarbeiten.
+
+#### Transformer
+
+**Stützt die Aussage:** Neu war 2017 die Architektur, nicht der Attention-Mechanismus. Den gab es schon vorher.
+
+- *Beleg:* [Vaswani et al.: Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+
+#### Verstärkendes Lernen (DQN)
+
+**Stützt die Aussage:** Das System lernte Atari-Spiele aus Bilddaten und Belohnung und erreichte bei mehreren menschliches Niveau.
+
+#### Skalierung
+
+**Stützt die Aussage:** Modellgrösse, Datenmenge und Rechenaufwand wirken zusammen, nicht die Grösse allein.
+
+- *Beleg:* [Kaplan et al.: Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361)
+
+#### «Emergente» Fähigkeiten
+
+**Stützt die Aussage:** Ob Fähigkeiten wirklich sprunghaft auftauchen, ist methodisch umstritten.
+
+- *Beleg:* [Schaeffer et al.: Are Emergent Abilities a Mirage?](https://arxiv.org/abs/2304.15004)
+
+#### Vektoren und Embeddings
+
+**Stützt die Aussage:** Die Zahl der Dimensionen hängt vom Modell ab; einzelne Dimensionen sind nicht als Bedeutungsanteil lesbar.
+
+- *Beleg:* [OpenAI: New embedding models](https://openai.com/index/new-embedding-models-and-api-updates/)
+
+#### Llama-Lizenz
+
+**Stützt die Aussage:** Zugängliche Gewichte sind nicht dasselbe wie Open Source.
+
+#### Apertus
+
+**Stützt die Aussage:** Das Schweizer Modell wird als vollständig offen und transparent veröffentlicht.
+
+#### Eingaben und Training
+
+**Stützt die Aussage:** Ob deine Eingaben ins Training einfliessen, hängt von Anbieter, Produkt und Einstellungen ab.
+
+- *Beleg:* [OpenAI: Data Controls FAQ](https://help.openai.com/en/articles/7730893-data-controls-faq)
+
+#### Frühe ChatGPT-Nutzung
+
+**Stützt die Aussage:** Eine Million Nutzende nach fünf Tagen, rund hundert Millionen nach zwei Monaten: Schätzungen, keine amtliche Statistik.
+
+#### Thema 01 · Vorhang auf: Umwelt, Wirtschaft, Recht
+
+#### Googles Emissionen
+
+**Stützt die Aussage:** Plus 48 Prozent gegenüber 2019 (Bezugsjahr 2023); Ursachen sind Rechenzentren und Lieferkette.
+
+- *Beleg:* [Google: 2024 Environmental Report](https://sustainability.google/reports/google-2024-environmental-report/)
+
+#### Rechenzentren in Irland
+
+**Stützt die Aussage:** 21 Prozent des gemessenen Stroms 2023, 22 Prozent 2024.
+
+#### Verzerrungen (Bias)
+
+**Stützt die Aussage:** Regressive Geschlechterstereotype in untersuchten Sprachmodellen.
+
+#### EU AI Act
+
+**Stützt die Aussage:** Risikobasierter Rechtsrahmen mit eigenen Regeln für Allzweckmodelle.
+
+#### Geltung des AI Act
+
+**Stützt die Aussage:** In Kraft seit 1. August 2024, die Pflichten greifen gestaffelt.
+
+#### Chip-Exportkontrollen ab 2022
+
+**Stützt die Aussage:** Verschärfte Ausfuhrregeln für fortgeschrittene Rechenchips.
+
+#### Rechtsstand 2026
+
+**Stützt die Aussage:** Bestimmte Ausfuhren nach China werden seit Januar 2026 fallweise geprüft.
+
+#### Zugang und Preise
+
+**Stützt die Aussage:** Was die Gratisstufe kann und was ein Abo ändert; die Stufen ändern laufend.
+
+- *Beleg:* [OpenAI: ChatGPT Pricing](https://openai.com/chatgpt/pricing/)
+
+#### Klarna
+
+**Stützt die Aussage:** 700 Vollzeitäquivalente als Unternehmensangabe, dazu die spätere Kurskorrektur im Kundendienst.
+
+#### Thema 02 · Philosophie in Zeiten der Verunsicherung
+
+#### Eroberung Mexikos
+
+**Stützt die Aussage:** Indigene Verbündete, Vermittlung durch La Malinche und die Pocken waren entscheidend.
+
+- *Beleg:* [Smithsonian Institution: Mexican America](https://www.si.edu/spotlight/mexican-america/history)
+
+#### Ablass
+
+**Stützt die Aussage:** Erlass zeitlicher Strafe für bereits vergebene Schuld, nicht Kauf der Vergebung.
+
+#### Olympe de Gouges
+
+**Stützt die Aussage:** Forderte 1791 gleiche Rechte für Frauen, 1793 hingerichtet wegen ihrer politischen Schriften.
+
+#### Kernspaltung
+
+**Stützt die Aussage:** Hahn und Strassmann fanden den Befund, Meitner und Frisch erklärten und benannten die Spaltung.
+
+- *Beleg:* [Nobel Prize: Otto Hahn, Facts](https://www.nobelprize.org/prizes/chemistry/1944/hahn/facts/)
+
+#### Augustinus
+
+**Stützt die Aussage:** «Civitas Dei» und «civitas terrena» und ihr Verhältnis zu Kirche und Staat; der Gottesstaat ist nicht der vergängliche.
+
+- *Beleg:* [Stanford Encyclopedia of Philosophy: Augustine](https://plato.stanford.edu/entries/augustine/)
+
+#### Kant und Lissabon
+
+**Stützt die Aussage:** Kants Erdbebenschriften von 1756; der Aufruf zum Selbstdenken kam 1784.
+
+#### World Wide Web
+
+**Stützt die Aussage:** Erfindung 1989, erste Umsetzung 1990/91, Freigabe durch das CERN 1993.
+
+- *Beleg:* [CERN: The birth of the Web](https://home.cern/science/computing/the-birth-of-the-web/)
+
+#### Personal Computer
+
+**Stützt die Aussage:** Persönliche Mikrocomputer ab Mitte der 1970er; der IBM PC von 1981 standardisierte den Markt.
+
+- *Beleg:* [Computer History Museum: 1975](https://www.computerhistory.org/timeline/1975/)
+
+- *Beleg:* [Computer History Museum: The IBM PC](https://www.computerhistory.org/revolution/personal-computers/17/301)
+
+#### Die Erde bei Nacht
+
+**Stützt die Aussage:** Die Bilder zeigen Licht, Besiedlung und Elektrifizierung, nicht direkt die Dichte digitaler Netze.
+
+- *Beleg:* [NASA: Earth at Night](https://svs.gsfc.nasa.gov/30028/)
+
+- *Beleg:* [NASA: Night Lights](https://svs.gsfc.nasa.gov/11146/)
+
+#### Clara Immerwahr
+
+**Stützt die Aussage:** Die Deutung ihres Suizids als Protest gegen den Gaskrieg ist umstritten.
+
+#### «Ende der Geschichte»
+
+**Stützt die Aussage:** Fukuyamas These meinte den möglichen Endpunkt der ideologischen Entwicklung, nicht das Ende der Ereignisse.
+
+- *Beleg:* [Stanford Encyclopedia of Philosophy: Progress](https://plato.stanford.edu/archives/sum2022/entries/progress/)
+
+#### Thema 02 · Wege der Orientierung
+
+#### Hegels Dialektik
+
+**Stützt die Aussage:** Die Formel «These, Antithese, Synthese» bildet sein Verfahren nicht durchgehend ab.
+
+#### Heidegger und der Nationalsozialismus
+
+**Stützt die Aussage:** NSDAP-Eintritt 1933, Rektorat und Gleichschaltung, Mitgliedschaft bis 1945, dokumentierter Antisemitismus.
+
+#### Wie lange eine Gewohnheit braucht
+
+**Stützt die Aussage:** Mittelwert 66 Tage, mit sehr grosser Spannweite; aus der Psychologie, nicht der Philosophie.
+
+- *Beleg:* [University College London: How long does it take to form a habit?](https://www.ucl.ac.uk/news/2009/aug/how-long-does-it-take-form-habit)
+
+- *Beleg:* [Lally et al., European Journal of Social Psychology](https://onlinelibrary.wiley.com/doi/abs/10.1002/ejsp.674)
+
+#### Yasuo Deguchi und der «We-Turn»
+
+**Stützt die Aussage:** Mensch-KI-Systeme und verteilte Verantwortung; individuelle Verantwortung entfällt nicht.
+
+- *Beleg:* [Universität Kyoto: Profil](https://www.philosophy.bun.kyoto-u.ac.jp/staff/deguchi/)
+
+#### Sophisten
+
+**Stützt die Aussage:** Eine heterogene Gruppe; der Relativismus lässt sich nicht allen zuschreiben, das ist weitgehend Platons Sicht.
+
+- *Beleg:* [Stanford Encyclopedia of Philosophy: The Sophists](https://plato.stanford.edu/entries/sophists/)
+
+Die Inhalte dieses Lernsets wurden extern geprüft. Hier stehen die […] Belege, die dabei einzeln kontrolliert wurden, mit dem Hinweis, welche Aussage sie stützen. Das ist keine vollständige Bibliografie, sondern eine Möglichkeit, nachzusehen, worauf sich eine Angabe stützt. Abrufdatum aller Weblinks: […].
+
+### Quellenverzeichnis öffnen
+
+### […]
 
 ---
 
@@ -2401,18 +2749,18 @@ Erstellt im Lernset «Eine ganz neue Partnerschaft». Die Deutungen beruhen auf 
 | Begriff | Erklärung |
 | --- | --- |
 | **Sesshaftigkeit** | Der Übergang vom umherziehenden Jagen und Sammeln zum festen Wohnen mit Ackerbau. |
-| **Sophisten** | Bezahlte Wanderlehrer im antiken Griechenland; für sie war Wahrheit verhandelbar. |
+| **Sophisten** | Bezahlte Wanderlehrer im antiken Griechenland; Platon warf ihnen vor, Wahrheit sei bei ihnen verhandelbar. |
 | **Keilschrift** | Eine der ältesten Schriften — keilförmige Zeichen, in feuchten Ton gedrückt. |
 | **Quipu** | Anden-Knotenschnur, die Zahlen und Daten in Knoten speichert — statt in Schrift. |
 | **Quipus** | Anden-Knotenschnüre, die Zahlen und Daten in Knoten speichern — statt in Schrift. |
 | **Papyrus** | Beschreibbares Material aus der Papyrusstaude, im alten Ägypten hergestellt. |
 | **Stellenwertsystem** | Zahlenschreibweise, bei der die Position einer Ziffer ihren Wert bestimmt (Einer, Zehner, Hunderter). |
-| **Algorithmus** | Eine eindeutige Schritt-für-Schritt-Anleitung zum Lösen einer Aufgabe. |
+| **Algorithmus** | Eine endliche, klar festgelegte Folge von Schritten zum Lösen einer Aufgabe. |
 | **Heliozentrik** | Das Weltbild, in dem die Sonne im Zentrum steht — nicht die Erde. |
 | **Karavelle** | Wendiges Segelschiff, das die europäischen Ozeanfahrten ab dem 15. Jahrhundert ermöglichte. |
 | **Reformation** | Kirchenspaltung ab 1517: Aus der Kritik Luthers u.a. entstand der Protestantismus. |
 | **Aufklärung** | Geistige Bewegung des 18. Jahrhunderts: Vernunft, Selbstdenken, Kritik an Autoritäten. |
-| **Kolonialisierung** | Eroberung, Beherrschung und Ausbeutung fremder Länder durch europäische Mächte. |
+| **Kolonialisierung** | Eroberung, Beherrschung und Ausbeutung fremder Länder; hier gemeint ist die europäische Expansion ab 1492. |
 | **Industrialisierung** | Der Übergang zur maschinellen Fabrikproduktion ab dem späten 18. Jahrhundert. |
 | **Schoah** | Der von Nazi-Deutschland begangene Völkermord an den europäischen Jüdinnen und Juden. |
 | **Globalisierung** | Die weltweite Verflechtung von Wirtschaft, Politik und Kultur. |
@@ -2424,14 +2772,14 @@ Erstellt im Lernset «Eine ganz neue Partnerschaft». Die Deutungen beruhen auf 
 | **Enigma** | Die Chiffriermaschine, mit der die deutsche Wehrmacht ihren Funk verschlüsselte. |
 | **Container** | Genormte Stahlboxen, die weltweiten Warentransport billig und schnell machten. |
 | **Platon** | Athener Philosoph (Schüler des Sokrates); seine Dialoge begründen die abendländische Philosophie. |
-| **Aristoteles** | Griechischer Philosoph (Schüler Platons); Begründer von Logik und beobachtender Wissenschaft. |
+| **Aristoteles** | Griechischer Philosoph (Schüler Platons); prägte die formale Logik und zahlreiche empirisch orientierte Untersuchungen. |
 | **Philosophie** | Wörtlich «Liebe zur Weisheit» — das begründende Nachdenken über die Grundfragen. |
 | **Völkerwanderung** | Umbruchszeit (4.–6. Jh.), in der germanische Verbände ins Römische Reich zogen. |
 | **Augustinus** | Kirchenvater (354–430); verlegte nach dem Fall Roms den Halt nach innen — Glaube und Gewissen. |
 | **Mittelalter** | Epoche zwischen Antike und Neuzeit (~500–1500), geprägt von Christentum und Feudalordnung. |
 | **Bias** | Systematische Verzerrung — etwa wenn Daten bestimmte Gruppen bevorzugen oder ausblenden. |
 | **Flugschriften** | Billige Druckblätter — das schnelle Massenmedium der Reformationszeit. |
-| **Algorithmen** | Eindeutige Schritt-für-Schritt-Anleitungen, nach denen Computer arbeiten. |
+| **Algorithmen** | Klar festgelegte Folgen von Schritten, nach denen Computer arbeiten; manche ziehen dabei auch den Zufall hinzu. |
 | **Voltaire** | Französischer Aufklärer (1694–1778), scharfzüngiger Kritiker von Kirche und Autoritäten. |
 | **Terror** | Die Schreckensherrschaft 1793/94: Die Revolution liess Tausende unter der Guillotine hinrichten. |
 | **Kant** | Immanuel Kant (1724–1804): «Habe Mut, dich deines eigenen Verstandes zu bedienen.» |
@@ -2441,12 +2789,12 @@ Erstellt im Lernset «Eine ganz neue Partnerschaft». Die Deutungen beruhen auf 
 | **Sputnik** | Der erste Satellit im All (Sowjetunion, 1957) — löste im Westen den «Sputnik-Schock» aus. |
 | **Ostblock** | Die sozialistischen Staaten unter sowjetischer Führung bis 1989/91. |
 | **Digitalisierung** | Die Verlagerung von Information und Abläufen in Computer und Netze. |
-| **World Wide Web** | Das 1991 freigegebene, verlinkte Seitensystem, das das Internet alltagstauglich machte. |
+| **World Wide Web** | Das verlinkte Seitensystem von Tim Berners-Lee: Vorschlag 1989, erste Website 1991, 1993 vom CERN zur freien Nutzung freigegeben. |
 | **Arbeitsteilung** | Aufteilung der Arbeit in spezialisierte Tätigkeiten — Grundlage von Städten und Handel. |
 | **Mesopotamien** | Das Zweistromland (im heutigen Irak) — früher Schauplatz von Schrift, Rad und Stadt. |
 | **Hochkulturen** | Frühe komplexe Gesellschaften mit Städten, Schrift und Verwaltung. |
 | **Keilschrifttafeln** | Tontafeln mit eingedrückten keilförmigen Zeichen — die ältesten Schriftdokumente. |
-| **Buchdruck** | Gutenbergs Verfahren (um 1450), Texte mit beweglichen Lettern massenhaft zu vervielfältigen. |
+| **Buchdruck** | Das Verfahren, Texte mit beweglichen Metalllettern massenhaft zu vervielfältigen; in Europa ab etwa 1450 durch Gutenberg. |
 | **Jikji** | Koreanische Schrift von 1377 — das älteste erhaltene Buch aus beweglichen Metalllettern. |
 | **Schiesspulver** | In China entwickelte Explosivmischung — veränderte Krieg und Machtverhältnisse weltweit. |
 | **Lettern** | Einzelne, bewegliche Druckbuchstaben aus Metall. |
@@ -2494,7 +2842,7 @@ Erstellt im Lernset «Eine ganz neue Partnerschaft». Die Deutungen beruhen auf 
 | **Resonanz** | Bei Hartmut Rosa: ein antwortendes, lebendiges Verhältnis zur Welt — Gegenbegriff zur blossen Beschleunigung. |
 | **Akteur-Netzwerk-Theorie** | Bruno Latours Ansatz: Wirkung entsteht im Netz aus Menschen UND Dingen — nichts handelt allein. |
 | **Manhattan-Projekt** | Das geheime US-Grossprojekt (1942–45), das die erste Atombombe baute. |
-| **Transformer** | Die KI-Architektur von 2017 («Attention»), Grundlage heutiger Sprachmodelle wie ChatGPT. |
+| **Transformer** | Die KI-Architektur von 2017; sie setzt ganz auf den schon vorher bekannten Attention-Mechanismus und ist die Grundlage heutiger Sprachmodelle wie ChatGPT. |
 | **Newcomen-Maschine** | Frühe Dampfmaschine (1712) zum Abpumpen von Grubenwasser — Vorläuferin von Watts Maschine. |
 | **Humanismus** | Bildungsbewegung der Renaissance: Der Mensch und seine Formung durch Bildung rücken ins Zentrum. |
 | **Gewaltenteilung** | Aufteilung der Staatsmacht in Gesetzgebung, Regierung und Gerichte — zum Schutz vor Machtmissbrauch. |
@@ -2503,19 +2851,19 @@ Erstellt im Lernset «Eine ganz neue Partnerschaft». Die Deutungen beruhen auf 
 | **Sprachmodellen** | Programme, die aus riesigen Textmengen gelernt haben, das nächste Wort vorherzusagen, und so selbst Texte schreiben. |
 | **Turing-Test** | Ein von Alan Turing 1950 vorgeschlagenes Gespräch, das prüft, ob man eine Maschine für einen Menschen hält. |
 | **Temperatur** | Eine Einstellung der KI. Sie steuert, wie viel Zufall in der Wortwahl steckt. Ein hoher Wert macht die Antworten kreativer und unberechenbarer, ein niedriger vorhersehbarer. |
-| **Vektor** | Ein langer Zahlencode. Die KI stellt damit jedes Wort in einem Raum dar, sodass Bedeutung und Nähe zu anderen Wörtern messbar werden. |
-| **Gutenberg** | Johannes Gutenberg (um 1400 bis 1468), Erfinder des Buchdrucks mit beweglichen Lettern in Mainz. |
-| **Gutenbergs** | Johannes Gutenberg (um 1400 bis 1468), Erfinder des Buchdrucks mit beweglichen Lettern in Mainz. |
-| **Sokrates** | Athener Philosoph (469 bis 399 v. Chr.); fragte hartnäckig nach, «Ich weiss, dass ich nichts weiss». |
+| **Vektor** | Ein langer Zahlencode. Modelle stellen damit Wortteile und andere Daten so dar, dass Nähe und Ähnlichkeit messbar werden. Wie viele Zahlen dazugehören, hängt vom Modell ab. |
+| **Gutenberg** | Johannes Gutenberg (um 1400 bis 1468); entwickelte in Mainz das erste wirtschaftlich erfolgreiche Verfahren des Buchdrucks mit gegossenen Metalllettern. |
+| **Gutenbergs** | Johannes Gutenberg (um 1400 bis 1468); entwickelte in Mainz das erste wirtschaftlich erfolgreiche Verfahren des Buchdrucks mit gegossenen Metalllettern. |
+| **Sokrates** | Athener Philosoph (469 bis 399 v. Chr.); fragte hartnäckig nach. Das berühmte «Ich weiss, dass ich nichts weiss» ist eine spätere Kurzformel. |
 | **Antike** | Zeit der Griechen und Römer (rund 800 v. Chr. bis 500 n. Chr.), Wiege von Philosophie, Demokratie und Wissenschaft. |
 | **Renaissance** | «Wiedergeburt» der Antike im 15./16. Jahrhundert, Aufbruch in Kunst, Wissenschaft und Menschenbild. |
 | **Spätantike** | Übergangszeit vom Römischen Reich zum Mittelalter (etwa 300 bis 600). |
-| **Mary Shelley** | Britische Schriftstellerin (1797 bis 1851); schrieb mit 18 Jahren den Roman «Frankenstein» (1818). |
-| **Ada Lovelace** | Britische Mathematikerin (1815 bis 1852); schrieb für Babbages Rechenmaschine das erste Programm der Geschichte. |
+| **Mary Shelley** | Britische Schriftstellerin (1797 bis 1851); begann «Frankenstein» mit 18 Jahren, erschienen ist der Roman 1818. |
+| **Ada Lovelace** | Britische Mathematikerin (1815 bis 1852); ihre Notizen zu Babbages Rechenmaschine gelten oft als erstes Computerprogramm. |
 | **Babbage** | Charles Babbage (1791 bis 1871), englischer Mathematiker; entwarf die erste programmierbare Rechenmaschine. |
 | **Babbages** | Charles Babbage (1791 bis 1871), englischer Mathematiker; entwarf die erste programmierbare Rechenmaschine. |
-| **Turing** | Alan Turing (1912 bis 1954), britischer Mathematiker; half die Enigma zu knacken und begründete die Informatik. |
-| **Turings** | Alan Turing (1912 bis 1954), britischer Mathematiker; half die Enigma zu knacken und begründete die Informatik. |
+| **Turing** | Alan Turing (1912 bis 1954), britischer Mathematiker; half die Enigma zu knacken und legte mit der Turingmaschine eine Grundlage der theoretischen Informatik. |
+| **Turings** | Alan Turing (1912 bis 1954), britischer Mathematiker; half die Enigma zu knacken und legte mit der Turingmaschine eine Grundlage der theoretischen Informatik. |
 | **Weizenbaum** | Joseph Weizenbaum (1923 bis 2008), Informatiker am MIT; baute ELIZA und wurde zum Kritiker blinder Computergläubigkeit. |
 | **ELIZA** | Frühes Chatprogramm (1966) von Joseph Weizenbaum; ahmte eine Gesprächstherapeutin nach und verblüffte die Nutzenden. |
 | **Hinton** | Geoffrey Hinton (geboren 1947), Pionier der künstlichen neuronalen Netze; gilt als «Pate» des Deep Learning. |

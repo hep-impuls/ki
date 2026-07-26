@@ -108,9 +108,11 @@ export default function Home() {
           <h2 className="text-headline-sm text-on-surface">Über die Lernumgebung</h2>
           <p className="mt-sm max-w-3xl text-body-sm text-on-surface-variant">
             Diese Plattform bündelt interaktive Module zum Thema Künstliche
-            Intelligenz. Lernfortschritt und Aktivitäten werden anonym in Firebase
-            gespeichert, sodass du jederzeit dort weitermachen kannst, wo du
-            aufgehört hast.
+            Intelligenz. Du meldest dich mit einem Code an, ohne Namen und ohne
+            E-Mail. Unter diesem Code werden Lernfortschritt und Aktivitäten in
+            Firebase gespeichert, sodass du jederzeit dort weitermachen kannst,
+            wo du aufgehört hast. Der Code ist ein Pseudonym: Wer ihn kennt,
+            sieht diesen Fortschritt.
           </p>
         </div>
       </section>
