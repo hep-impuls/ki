@@ -10,6 +10,43 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-26 — Rhizom mit sechs Trieben, Orientierungsblock, keine Vorbehalte (Christof)
+
+**1. Sprachregelung: keine Vorbehalte, nur belegte Fehler.** Beim Einarbeiten
+des Prüfberichts sind Sätze entstanden wie «das ist damit nicht bewiesen»,
+«kein Gesetz der Geschichte», «diese Zuspitzung ist unsere». **Verworfen.**
+Christofs Vorgabe: Modelle garnieren jeden geprüften Text mit
+Genauigkeits-Disclaimern, das verwässert ein Lehrmittel. Eine didaktische
+Zuspitzung ist gewollt und braucht keinen Kommentar; korrigiert wird nur, was
+ein **belegter Sachfehler** ist, und zwar **ohne den Text zu verlängern**.
+Rund 1200 Zeichen reiner Vorbehalt wieder entfernt (Denkwege, Epochen-Vorschau,
+Immerwahr, NASA-Nachtbild, Klarna, DALL·E). Die quellengestützten Korrekturen
+bleiben unangetastet. Ausnahme: ein knappes **Standdatum** bei zeitabhängigen
+Angaben ist eine Tatsache, kein Vorbehalt.
+
+**2. Aktivitäts-Rhizom: sechs Triebe statt vier.** Neu wachsen «Vertiefungen»
+(aufgeklappte «Mehr lesen»-Texte, `mehr:`) und «Weiterverfolgen» (Merkzeichen
+`wunsch:`) mit. Damit zeigt das Rhizom nicht mehr nur, *wo* jemand war, sondern
+auch, *wie tief* er ging. Farben: Vertiefungen in `on-tertiary-container`
+(dunkleres Grün, gleiche Familie wie die Punkte), Weiterverfolgen in `error`
+(die einzige klar eigene Farbe der Palette; mit Beschriftung liest sie als
+«markiert», nicht als Fehler). Winkel neu von -158° bis -23° gefächert.
+
+Kein zusätzlicher Firestore-Verkehr: `mehr:` und `wunsch:` liegen längst im
+selben Poll-Dokument wie die Punkte, `zaehleAlleAusPoll()` gibt sie jetzt bloss
+mit heraus statt sie zu verwerfen.
+
+Layout musste mit: Bei sechs Einträgen wurde die Legende höher (262 px) als die
+Zeichnung (159 px). Jetzt liegt das Rhizom oben in voller Breite (auf 210 px
+gedeckelt) und die Kennzahlen darunter in zwei Spalten. Panel damit 536 px, es
+passt auf 720p ohne Scrollen.
+
+**3. Orientierungsblock im Hub.** Neu erklärt der Einstieg von Lernseite 2 die
+drei Dinge, die auf jeder Seite mitlaufen: das Rhizom unten rechts, die
+Abschnittsliste samt Klammersymbol oben rechts (mit Häkchen, wo man tätig war)
+und «Der Faden» für den Wechsel zwischen den drei Themen. Ausdrücklich mit dem
+Zusatz, dass die Reihenfolge ein Vorschlag ist.
+
 ## 2026-07-26 — Externer Prüfbericht eingearbeitet, Quellenverzeichnis sichtbar (Christof)
 
 **Auslöser:** Ein externer Prüfbericht (`pruefbericht-lernseite-2.md`, 26.07.2026)

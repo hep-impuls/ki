@@ -28,6 +28,8 @@ Deshalb beginnst du gleich mit einem Muster, dessen Knoten du verbinden kannst �
 
 Genau hier setzt später die philosophische Perspektive an: Je nach Blickwinkel lässt sich dieser Kontext besser oder schlechter fassen. Besonders Denkweisen, die auf Netzwerke zeigen und auf das eigentlich Menschliche — dass der Mensch nicht bloss rechnendes Wissens- und Textwesen ist, sondern, mit Hannah Arendt, ein Anfangen-Können; mit Martin Heidegger ein Wesen der Sorge; mit der Systemtheorie ein Reduzieren von Komplexität, indem sie Muster erfasst und Abläufe koordiniert — machen sichtbar, worin die KI eingebettet ist.
 
+explore So findest du dich zurecht
+
 ### Eine ganz neue Partnerschaft — worum es geht
 
 ### Der Faden durch das Modul
@@ -266,7 +268,7 @@ Ein Zusammenhang: Zuerst tritt die neue Akteurin auf, dann ordnet die philosophi
 
 - *Quelle:* Von DALL·E 2 erzeugtes Bild (2022) · Wikimedia Commons · KI-generiert; ob urheberrechtlicher Schutz besteht, hängt vom menschlichen Gestaltungsbeitrag und vom anwendbaren Recht ab
 
-**Geschichte:** DALL·E von OpenAI erzeugt Bilder aus Textbeschreibungen. DALL·E 1 kam im Januar 2021, das deutlich stärkere DALL·E 2 im April 2022, also rund ein halbes Jahr vor ChatGPT. Man gibt einen Satz ein, und das Modell «malt» ein Bild, das so nie fotografiert wurde. Es setzt das Bild Punkt für Punkt neu aus Gelerntem zusammen. Damit wurde generative KI erstmals einem breiten Publikum sichtbar. Dieses Bild ist selbst ein Ergebnis von DALL·E 2, eine zeichnende Roboterhand. Wem es rechtlich gehört, ist heikler, als es klingt: Nach schweizerischem Verständnis schützt das Urheberrecht geistige Schöpfungen von Menschen, weshalb rein maschinell Erzeugtem der Schutz grundsätzlich fehlt. Steckt im Ergebnis aber ein hinreichend eigener menschlicher Gestaltungsbeitrag, kann Schutz bestehen. Das ist eine Frage des Einzelfalls, und Urheberrecht am Bild, Nutzungsbedingungen des Dienstes und Rechte am Ausgangsmaterial sind noch einmal drei verschiedene Dinge.
+**Geschichte:** DALL·E von OpenAI erzeugt Bilder aus Textbeschreibungen. DALL·E 1 kam im Januar 2021, das deutlich stärkere DALL·E 2 im April 2022, also rund ein halbes Jahr vor ChatGPT. Man gibt einen Satz ein, und das Modell «malt» ein Bild, das so nie fotografiert wurde. Es setzt das Bild Punkt für Punkt neu aus Gelerntem zusammen. Damit wurde generative KI erstmals einem breiten Publikum sichtbar. Dieses Bild ist selbst ein Ergebnis von DALL·E 2, eine zeichnende Roboterhand. Wem es rechtlich gehört, ist heikler, als es klingt: Das Schweizer Urheberrecht schützt geistige Schöpfungen von Menschen, rein maschinell Erzeugtem fehlt der Schutz darum grundsätzlich. Steckt im Ergebnis ein eigener menschlicher Gestaltungsbeitrag, kann Schutz bestehen. Es ist eine Frage des Einzelfalls.
 
 #### Sprache als Pinsel
 
@@ -730,7 +732,7 @@ Der erste Blickwinkel ist der technologische, also Rechenkraft, Daten und die Mo
 
 **Text:** KI verändert die Arbeitswelt spürbar. Sie übernimmt vor allem einzelne Aufgaben, selten gleich einen ganzen Beruf. Manche Tätigkeiten fallen weg, andere verändern sich, und neue kommen dazu. Für viele Berufe bedeutet das neue Anforderungen und neues Lernen.
 
-**Beispiel:** Die Bezahlfirma Klarna gab 2024 selbst bekannt, ihr KI-Assistent leiste die Arbeit von rund 700 Vollzeitstellen im Kundendienst. Unabhängig nachgemessen hat das niemand. Kurz darauf investierte die Firma wieder stärker in menschlichen Service, weil die Qualität nicht überall reichte. Beides sind Aussagen des Unternehmens, und gerade in ihrer Abfolge zeigen sie, wie schnell und zugleich unsicher dieser Wandel verläuft.
+**Beispiel:** Die Bezahlfirma Klarna gab 2024 selbst bekannt, ihr KI-Assistent leiste die Arbeit von rund 700 Vollzeitstellen im Kundendienst. Kurz darauf investierte sie wieder stärker in menschlichen Service, weil die Qualität nicht überall reichte. Diese Abfolge zeigt, wie schnell und zugleich unsicher dieser Wandel verläuft.
 
 #### Rollenverschiebung
 
@@ -1181,8 +1183,6 @@ Wozu das Ganze? Die Beschäftigung mit dem Teppich bereitet darauf vor, technolo
 ### Philosophie in Zeiten der Verunsicherung
 
 Der Teppich des Wandels hat die Verunsicherungs-Stopps markiert. Hier folgt, wie die Philosophie jeweils geantwortet hat. Denn gerade in Zeiten der Verunsicherung braucht es neue Deutungen und Orientierungsmuster. Und genau die liefert, oder erdenkt zumindest, die Philosophie. Sie arbeitet langsam und reflexiv, an Grundlagen, die sich nicht ständig ändern. Genau das macht sie wertvoll. Manchmal bringt schon eine neue Gewichtung grundlegender Lebenselemente mehr Klarheit als jede neue Technik.
-
-Eines vorweg: Dass auf jede neue Technik eine Verunsicherung folgt und die Philosophie darauf antwortet, ist kein Gesetz der Geschichte. Es ist die Brille, durch die wir hier schauen, weil sie die acht Epochen vergleichbar macht. Andere Blickwinkel würden andere Zusammenhänge zeigen, und manche Antwort der Philosophie kam lange vor der Technik, der wir sie hier zuordnen.
 
 #### Mehr dazu: die wiederkehrenden Züge der Verunsicherung
 
@@ -1680,7 +1680,7 @@ Keine dieser Sichtweisen gibt ein fertiges Rezept. Aber jede öffnet einen begr�
 
 **Text:** Technik automatisiert das Töten. Im Ersten Weltkrieg schaffen Maschinengewehr, Artillerie und Giftgas die anonyme Materialschlacht mit Millionen Toten. Der Rundfunk (ab den 1920ern) wird zum Massenmedium und zum Propaganda-Werkzeug der Diktaturen. 1945 zeigt die Atombombe, dass Menschen die Welt vernichten können. Möglich wurde diese Zerstörungskraft durch die industrielle Massenfertigung und die organisierte Wissenschaft: Der Staat der «totalen Kriege» lenkte Forschung, Fabriken und Rohstoffe auf ein einziges Ziel. Die Atombombe entstand im gigantischen «Manhattan-Projekt».
 
-**Mehr lesen:** Kaum eine Figur verkörpert das Doppelgesicht dieser Epoche so wie der Chemiker Fritz Haber: Seine Ammoniaksynthese machte künstlichen Dünger möglich und hilft bis heute, Milliarden zu ernähren, und derselbe Mann überwachte 1915 bei Ypern persönlich den ersten grossen Giftgasangriff der Geschichte. Seine Frau Clara Immerwahr, selbst promovierte Chemikerin, nahm sich wenige Tage danach das Leben. Ob das ein Protest gegen den Gaskrieg war, ist bis heute umstritten; belegt ist die zeitliche Nähe, nicht das Motiv. Dreissig Jahre später, am 16. Juli 1945, erhellte in der Wüste von New Mexico der erste Atomtest den Nachthimmel, und Robert Oppenheimer, der wissenschaftliche Leiter, erinnerte sich später an einen Vers aus einer indischen Schrift über den «Zerstörer der Welten». Zwischen diesen beiden Daten liegt die bittere Einsicht, dass Wissen nicht danach fragt, wozu man es braucht. Seither gehört zu jeder mächtigen Technik die Frage, die damals zu spät kam: nicht nur, ob man etwas bauen kann, sondern ob man es bauen soll.
+**Mehr lesen:** Kaum eine Figur verkörpert das Doppelgesicht dieser Epoche so wie der Chemiker Fritz Haber: Seine Ammoniaksynthese machte künstlichen Dünger möglich und hilft bis heute, Milliarden zu ernähren, und derselbe Mann überwachte 1915 bei Ypern persönlich den ersten grossen Giftgasangriff der Geschichte. Seine Frau Clara Immerwahr, selbst promovierte Chemikerin, nahm sich wenige Tage danach das Leben. Dreissig Jahre später, am 16. Juli 1945, erhellte in der Wüste von New Mexico der erste Atomtest den Nachthimmel, und Robert Oppenheimer, der wissenschaftliche Leiter, erinnerte sich später an einen Vers aus einer indischen Schrift über den «Zerstörer der Welten». Zwischen diesen beiden Daten liegt die bittere Einsicht, dass Wissen nicht danach fragt, wozu man es braucht. Seither gehört zu jeder mächtigen Technik die Frage, die damals zu spät kam: nicht nur, ob man etwas bauen kann, sondern ob man es bauen soll.
 
 - *Beleg:* [Materialschlacht (Wikipedia)](https://de.wikipedia.org/wiki/Materialschlacht)
 
@@ -1744,7 +1744,7 @@ Keine dieser Sichtweisen gibt ein fertiges Rezept. Aber jede öffnet einen begr�
 
 **Hintergrund zum Bild:** Dieses Bild ist keine gemalte Kunst, sondern eine wissenschaftliche Aufnahme der Weltraumbehörden NASA und NOAA aus dem Jahr 2012. Es ist eine Montage aus Hunderten Aufnahmen des Satelliten Suomi NPP, denn es ist nie überall auf der Erde gleichzeitig Nacht. So hat der Planet in Wirklichkeit nie ausgesehen. Zu sehen ist die nächtliche Erde, auf der jedes Lichtpünktchen für menschliche Besiedlung und für Strom steht. Grell leuchten Europa, Ostasien und die US-Küsten, während weite Teile Afrikas, Südamerikas und Zentralasiens fast dunkel bleiben. Gerade als Konstruktion führt das Bild vor Augen, wie ungleich die vernetzte Welt verteilt ist.
 
-**Im Kontext der Zeit:** Die nächtliche Erde macht die technische Seite der Epoche in einem Bild sichtbar: eine elektrifizierte, vernetzte Welt, deren Städte und Verkehrsachsen den Planeten in Lichtadern überziehen. Sichtbar ist dabei Licht, nicht das Netz selbst, und mancher helle Fleck stammt von Gasfackeln, Fischereiflotten oder Bränden. Zugleich zeigt sie die Kehrseite. Die grellen Lichtbänder und die weiten dunklen Flächen führen die tiefe Ungleichheit dieser Vernetzung vor Augen.
+**Im Kontext der Zeit:** Die nächtliche Erde macht die technische Seite der Epoche in einem Bild sichtbar: eine elektrifizierte, vernetzte Welt, deren Städte und Verkehrsachsen den Planeten in Lichtadern überziehen. Zugleich zeigt sie die Kehrseite. Die grellen Lichtbänder und die weiten dunklen Flächen führen die tiefe Ungleichheit dieser Vernetzung vor Augen.
 
 #### Die Erde bei Nacht (NASA, 2012)
 
@@ -1952,7 +1952,7 @@ Keine dieser Sichtweisen gibt ein fertiges Rezept. Aber jede öffnet einen begr�
 
 - *These:* Denken heisst unterscheiden.
 
-**Zur Philosophie:** Hegel war der Hauptvertreter des deutschen Idealismus und dachte die Wirklichkeit als Entfaltung des «Geistes». Stark verkürzt lässt sich seine Dialektik als Bewegung beschreiben, in der ein Begriff an seinen eigenen inneren Spannungen weiterbestimmt wird. Die berühmte Formel «These, Antithese, Synthese» stammt übrigens nicht von Hegel und trifft sein Verfahren nicht durchgehend, als erste Merkhilfe taugt sie aber. Für unsere Frage lesen wir ihn auf das Unterscheiden hin: Erst indem der Mensch auseinanderhält, was ist und was sein soll, kann er urteilen und sich entscheiden. Diese Zuspitzung ist unsere, nicht Hegels, und sie zeigt, warum Unterscheiden mehr sein kann als Rechnen, nämlich ein bewusster, freier Akt. Hauptwerk: «Phänomenologie des Geistes» (1807).
+**Zur Philosophie:** Hegel war der Hauptvertreter des deutschen Idealismus und dachte die Wirklichkeit als Entfaltung des «Geistes». Stark verkürzt lässt sich seine Dialektik als Bewegung beschreiben, in der ein Begriff an seinen eigenen inneren Spannungen weiterbestimmt wird. Die berühmte Formel «These, Antithese, Synthese» stammt übrigens nicht von Hegel und trifft sein Verfahren nicht durchgehend, als erste Merkhilfe taugt sie aber. Erst indem der Mensch auseinanderhält, was ist und was sein soll, kann er urteilen und sich entscheiden. So wird Unterscheiden mehr als Rechnen, nämlich ein bewusster, freier Akt. Hauptwerk: «Phänomenologie des Geistes» (1807).
 
 **wort:** deutschen Idealismus
 
@@ -2036,7 +2036,7 @@ Hannah Arendt nennt einen weiteren Wesenszug das Anfangen. Mit jedem Menschen ko
 
 Peter Sloterdijk beschreibt den Menschen als übendes Wesen. Wir werden, wer wir sind, durch Übung und Wiederholung, und niemand kann für uns üben. Siri Hustvedt hält dagegen, der Geist sei kein Computer: Denken und Fühlen hängen für sie am lebendigen Körper und an gelebter Erfahrung. Eine Maschine könne Sprache und Gefühle täuschend echt nachahmen, erlebe dabei aber nichts.
 
-Worauf das alles zielt, ist nicht der Vergleich mit der Maschine. Es geht nicht darum, ob eine KI auch anfangen, urteilen oder unterscheiden könnte. Es geht darum, was uns in unserem Wesen ausmacht. Und diese Züge sind nach diesen Denkerinnen und Denkern nicht etwas, das wir bloss tun, sondern etwas, das wir sind. Ob einer Maschine so etwas grundsätzlich verschlossen bleibt, ist damit übrigens nicht bewiesen, sondern behauptet und begründet. Genau darüber wird gestritten, und du darfst mitstreiten.
+Worauf das alles zielt, ist nicht der Vergleich mit der Maschine. Es geht nicht darum, ob eine KI auch anfangen, urteilen oder unterscheiden könnte. Es geht darum, was uns in unserem Wesen ausmacht. Und diese Züge sind nicht etwas, das wir bloss tun, sondern etwas, das wir sind.
 
 **Was dir das jetzt hilft:** Wenn dich die schnelle, kluge KI verunsichert, kehr zur Frage zurück, was dich als Mensch ausmacht. Neugier, Anfangen, Urteilen, Sorge, das bleibt deins, ganz gleich, wie gut die Maschine formuliert. Dafür braucht es am Ende ein Grundvertrauen: dass diese Wesenszüge nicht einfach verschwinden, nur weil eine Maschine gute Sätze schreibt.
 
@@ -2114,7 +2114,7 @@ Bruno Latour ergänzt: Nichts wirkt allein. Jede Handlung hängt an einem Netz a
 
 - *These:* Das freie Individuum ist eine Illusion.
 
-**Zur Philosophie:** Mit der Akteur-Netzwerk-Theorie lässt sich auch das Bild vom ganz freien, unabhängigen Individuum in Frage stellen. Latour untersucht, wie sich Handlungsmacht auf viele verteilt; dass es individuelle Freiheit nicht gäbe, beweist er damit nicht. Wir handeln jedenfalls nie aus dem Nichts, sondern immer eingebettet in Beziehungen zu Menschen, Werkzeugen, Institutionen und Techniken. Das ist keine Einschränkung, sondern die normale Bedingung des Handelns. Je bewusster man sich die eigenen Abhängigkeiten macht, desto klarer und souveräner wird das eigene Tun, gerade auch im Umgang mit KI.
+**Zur Philosophie:** Mit der Akteur-Netzwerk-Theorie stellt Latour auch das Bild vom ganz freien, unabhängigen Individuum in Frage. Wir handeln nie aus dem Nichts, sondern immer eingebettet in Beziehungen zu Menschen, Werkzeugen, Institutionen und Techniken. Das ist keine Einschränkung, sondern die normale Bedingung des Handelns. Je bewusster man sich die eigenen Abhängigkeiten macht, desto klarer und souveräner wird das eigene Tun, gerade auch im Umgang mit KI.
 
 - *Kennung:* deguchi
 
@@ -2124,7 +2124,7 @@ Bruno Latour ergänzt: Nichts wirkt allein. Jede Handlung hängt an einem Netz a
 
 - *These:* Nicht «ich» handelt, sondern «wir».
 
-**Zur Philosophie:** Yasuo Deguchi ist Philosophieprofessor an der Universität Kyoto und verbindet westliches mit ostasiatischem Denken. Mit seiner «We-Turn»-Philosophie verlegt er das Handeln vom einzelnen «Ich» auf ein «Wir»: Niemand kann etwas ganz allein, jede Handlung wird von vielen getragen, von Menschen, Dingen und heute auch von Maschinen. Der eigentliche Handelnde ist deshalb kein einsames Ich, sondern ein «Selbst als Wir», zu dem die KI dazugehört. Er stützt sich dabei auf einen alten buddhistischen Gedanken, das «abhängige Entstehen»: Nichts besteht für sich allein, alles entsteht wechselseitig. Das entlastet, hebt aber die Verantwortung nicht auf. Sie verteilt sich auf ein «Wir» mit verschiedenen Rollen, statt ganz auf den Schultern eines einzelnen Ich zu liegen.
+**Zur Philosophie:** Yasuo Deguchi ist Philosophieprofessor an der Universität Kyoto und verbindet westliches mit ostasiatischem Denken. Mit seiner «We-Turn»-Philosophie verlegt er das Handeln vom einzelnen «Ich» auf ein «Wir»: Niemand kann etwas ganz allein, jede Handlung wird von vielen getragen, von Menschen, Dingen und heute auch von Maschinen. Der eigentliche Handelnde ist deshalb kein einsames Ich, sondern ein «Selbst als Wir», zu dem die KI dazugehört. Er stützt sich dabei auf einen alten buddhistischen Gedanken, das «abhängige Entstehen»: Nichts besteht für sich allein, alles entsteht wechselseitig. Das entlastet: Verantwortung verteilt sich auf ein «Wir» mit verschiedenen Rollen, statt ganz auf den Schultern eines einzelnen Ich zu liegen.
 
 **wort:** Kyoto
 
@@ -2182,7 +2182,7 @@ Bruno Latour ergänzt: Nichts wirkt allein. Jede Handlung hängt an einem Netz a
 
 Mensch und Maschine lassen sich nicht mehr sauber auseinanderdividieren. Wir tippen, suchen, planen und entscheiden längst mit Geräten zusammen. Schon Bruno Latour zeigt, warum das kein neuer Sonderfall ist. Nach seiner Lesart hat es das ganz freie Individuum, das egoistisch nur tut, was es will, nie gegeben: Wir stecken immer in Abhängigkeiten, von Menschen, Werkzeugen, Institutionen. Je klarer man sich diese Abhängigkeiten bewusst macht, desto verständlicher wird das eigene Tun.
 
-Der japanische Philosoph Yasuo Deguchi treibt diesen Gedanken weiter. Seine «We-Turn»-Philosophie verlegt das Handeln vom einzelnen «Ich» auf ein «Wir». Niemand kann etwas ganz allein, jede Handlung wird von vielen anderen getragen, von Menschen, Dingen und heute auch von Maschinen. Der eigentliche Handelnde ist deshalb kein einsames Ich, sondern ein «Wir», zu dem die KI dazugehört. Er stützt sich dabei auf den buddhistischen Gedanken des «abhängigen Entstehens», dass nichts für sich allein besteht, sondern alles miteinander verbunden entsteht. Wichtig ist: Verantwortung verschwindet damit nicht, sie verteilt sich auf ein «Wir» mit verschiedenen Rollen.
+Der japanische Philosoph Yasuo Deguchi treibt diesen Gedanken weiter. Seine «We-Turn»-Philosophie verlegt das Handeln vom einzelnen «Ich» auf ein «Wir». Niemand kann etwas ganz allein, jede Handlung wird von vielen anderen getragen, von Menschen, Dingen und heute auch von Maschinen. Der eigentliche Handelnde ist deshalb kein einsames Ich, sondern ein «Wir», zu dem die KI dazugehört. Er stützt sich dabei auf den buddhistischen Gedanken des «abhängigen Entstehens», dass nichts für sich allein besteht, sondern alles miteinander verbunden entsteht.
 
 Was folgt daraus? Donna Haraway sagt, wir sind längst «verwoben», in gewissem Sinn schon Mischwesen aus Mensch und Maschine, und sollten das verantwortlich gestalten. Yuval Noah Harari mahnt, dass diese Verschmelzung gewaltige Macht freisetzt und darum klare Regeln braucht. Markus Gabriel setzt auf «ethische Intelligenz», das kluge, moralische Mitgestalten. Zwei Wege zeichnen sich ab: sich auf die Zusammenarbeit einlassen oder den eigenen Weg umso deutlicher markieren, beides gestützt durch Regulation und Ethik.
 

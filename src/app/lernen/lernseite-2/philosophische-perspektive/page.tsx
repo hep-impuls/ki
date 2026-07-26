@@ -638,7 +638,6 @@ export default function Lernseite2PhilosophischePerspektive() {
         titel="Philosophie in Zeiten der Verunsicherung"
         prefixe={["philosophische-perspektive:epochen"]}
         vorschau={
-          <>
           <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
             Der Teppich des Wandels hat die Verunsicherungs-Stopps markiert.
             Hier folgt, wie die Philosophie jeweils geantwortet hat. Denn gerade
@@ -651,16 +650,6 @@ export default function Lernseite2PhilosophischePerspektive() {
             <strong className="text-on-surface">neue Gewichtung grundlegender
             Lebenselemente</strong> mehr Klarheit als jede neue Technik.
           </p>
-          <p className="mt-sm max-w-4xl text-body-sm text-on-surface-variant">
-            Eines vorweg: Dass auf jede neue Technik eine Verunsicherung folgt
-            und die Philosophie darauf antwortet, ist{" "}
-            <strong className="text-on-surface">kein Gesetz der Geschichte</strong>.
-            Es ist die Brille, durch die wir hier schauen, weil sie die acht
-            Epochen vergleichbar macht. Andere Blickwinkel würden andere
-            Zusammenhänge zeigen, und manche Antwort der Philosophie kam lange
-            vor der Technik, der wir sie hier zuordnen.
-          </p>
-          </>
         }
       >
         <Ausklapptext

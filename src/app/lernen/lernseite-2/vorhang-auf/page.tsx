@@ -349,7 +349,7 @@ const BILDER_STORY: AnschauBild[] = [
     quelle:
       "Von DALL·E 2 erzeugtes Bild (2022) · Wikimedia Commons · KI-generiert; ob urheberrechtlicher Schutz besteht, hängt vom menschlichen Gestaltungsbeitrag und vom anwendbaren Recht ab",
     geschichte:
-      "DALL·E von OpenAI erzeugt Bilder aus Textbeschreibungen. DALL·E 1 kam im Januar 2021, das deutlich stärkere DALL·E 2 im April 2022, also rund ein halbes Jahr vor ChatGPT. Man gibt einen Satz ein, und das Modell «malt» ein Bild, das so nie fotografiert wurde. Es setzt das Bild Punkt für Punkt neu aus Gelerntem zusammen. Damit wurde generative KI erstmals einem breiten Publikum sichtbar. Dieses Bild ist selbst ein Ergebnis von DALL·E 2, eine zeichnende Roboterhand. Wem es rechtlich gehört, ist heikler, als es klingt: Nach schweizerischem Verständnis schützt das Urheberrecht geistige Schöpfungen von Menschen, weshalb rein maschinell Erzeugtem der Schutz grundsätzlich fehlt. Steckt im Ergebnis aber ein hinreichend eigener menschlicher Gestaltungsbeitrag, kann Schutz bestehen. Das ist eine Frage des Einzelfalls, und Urheberrecht am Bild, Nutzungsbedingungen des Dienstes und Rechte am Ausgangsmaterial sind noch einmal drei verschiedene Dinge.",
+      "DALL·E von OpenAI erzeugt Bilder aus Textbeschreibungen. DALL·E 1 kam im Januar 2021, das deutlich stärkere DALL·E 2 im April 2022, also rund ein halbes Jahr vor ChatGPT. Man gibt einen Satz ein, und das Modell «malt» ein Bild, das so nie fotografiert wurde. Es setzt das Bild Punkt für Punkt neu aus Gelerntem zusammen. Damit wurde generative KI erstmals einem breiten Publikum sichtbar. Dieses Bild ist selbst ein Ergebnis von DALL·E 2, eine zeichnende Roboterhand. Wem es rechtlich gehört, ist heikler, als es klingt: Das Schweizer Urheberrecht schützt geistige Schöpfungen von Menschen, rein maschinell Erzeugtem fehlt der Schutz darum grundsätzlich. Steckt im Ergebnis ein eigener menschlicher Gestaltungsbeitrag, kann Schutz bestehen. Es ist eine Frage des Einzelfalls.",
     ki: true,
     hotspots: [
       {
@@ -1114,7 +1114,7 @@ export default function Lernseite2VorhangAuf() {
                   titel: "Arbeitsmarkt",
                   text: "KI verändert die Arbeitswelt spürbar. Sie übernimmt vor allem einzelne Aufgaben, selten gleich einen ganzen Beruf. Manche Tätigkeiten fallen weg, andere verändern sich, und neue kommen dazu. Für viele Berufe bedeutet das neue Anforderungen und neues Lernen.",
                   beispiel:
-                    "Die Bezahlfirma Klarna gab 2024 selbst bekannt, ihr KI-Assistent leiste die Arbeit von rund 700 Vollzeitstellen im Kundendienst. Unabhängig nachgemessen hat das niemand. Kurz darauf investierte die Firma wieder stärker in menschlichen Service, weil die Qualität nicht überall reichte. Beides sind Aussagen des Unternehmens, und gerade in ihrer Abfolge zeigen sie, wie schnell und zugleich unsicher dieser Wandel verläuft.",
+                    "Die Bezahlfirma Klarna gab 2024 selbst bekannt, ihr KI-Assistent leiste die Arbeit von rund 700 Vollzeitstellen im Kundendienst. Kurz darauf investierte sie wieder stärker in menschlichen Service, weil die Qualität nicht überall reichte. Diese Abfolge zeigt, wie schnell und zugleich unsicher dieser Wandel verläuft.",
                 },
                 {
                   titel: "Rollenverschiebung",

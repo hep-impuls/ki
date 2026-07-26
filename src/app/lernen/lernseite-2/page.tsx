@@ -97,6 +97,56 @@ export default function Lernseite2Hub() {
       {/* Mitschwebende Mini-Navigation auf die drei Seiten */}
       <ModulMiniNav />
 
+      {/* Orientierung: die drei Dinge, die auf jeder Seite mitlaufen */}
+      <section
+        aria-label="So findest du dich zurecht"
+        className="mt-xl rounded-xl border border-outline-variant bg-surface-container-low p-md sm:p-lg"
+      >
+        <p className="flex items-center gap-sm text-label-md uppercase tracking-wider text-tertiary">
+          <span className="material-symbols-outlined text-[20px]">explore</span>
+          So findest du dich zurecht
+        </p>
+        <ul className="mt-sm space-y-sm text-body-sm text-on-surface-variant">
+          <li className="flex items-start gap-sm">
+            <span className="material-symbols-outlined mt-[2px] flex-shrink-0 text-[20px] text-tertiary">
+              forest
+            </span>
+            <span>
+              <strong className="text-on-surface">Das Aktivitäts-Rhizom</strong>{" "}
+              unten rechts läuft fortlaufend mit. Aus einer Wurzel wachsen sechs
+              Triebe: <em>wo</em> du warst (Flächen, Punkte, Bildpunkte, Videos)
+              und <em>wie tief</em> du gegangen bist (Vertiefungen hinter «Mehr
+              lesen», Merkzeichen «Das verfolge ich weiter»). Ein Klick öffnet
+              es ganz. Im Hintergrund wächst blass mit, was alle zusammen
+              angeschaut haben.
+            </span>
+          </li>
+          <li className="flex items-start gap-sm">
+            <span className="material-symbols-outlined mt-[2px] flex-shrink-0 text-[20px] text-tertiary">
+              data_object
+            </span>
+            <span>
+              <strong className="text-on-surface">Die Abschnitte einer Seite</strong>{" "}
+              musst du nicht scrollend suchen. Jede Seite hat oben eine Liste
+              ihrer Abschnitte, und das Klammersymbol oben rechts öffnet
+              dieselbe Liste jederzeit, mit einem Häkchen bei allem, wo du schon
+              tätig warst. Ein Klick springt hin.
+            </span>
+          </li>
+          <li className="flex items-start gap-sm">
+            <span className="material-symbols-outlined mt-[2px] flex-shrink-0 text-[20px] text-tertiary">
+              linear_scale
+            </span>
+            <span>
+              <strong className="text-on-surface">Zwischen den drei Themen</strong>{" "}
+              wechselst du über «Der Faden» oben rechts, wo die aktuelle Seite
+              markiert ist. Am Fuss jeder Seite geht es ausserdem direkt zur
+              nächsten. Die Reihenfolge ist ein Vorschlag, keine Vorschrift.
+            </span>
+          </li>
+        </ul>
+      </section>
+
       {/* Video-Impuls zum Einstieg */}
       <VideoImpuls
         className="mt-xl"

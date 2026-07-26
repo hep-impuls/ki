@@ -9,8 +9,15 @@ import {
 import { AUSWERTUNG_EVENT, zaehleFlaechen } from "../_lib/auswertung";
 import AktivitaetsNetz from "./AktivitaetsNetz";
 
-/** Die vier angezeigten Kennzahlen (wie im grossen Netz). */
-type NetzWerte = { punkte: number; flaechen: number; bildpunkte: number; videos: number };
+/** Die sechs angezeigten Kennzahlen (wie im grossen Netz). */
+type NetzWerte = {
+  punkte: number;
+  flaechen: number;
+  bildpunkte: number;
+  videos: number;
+  vertiefungen: number;
+  weiter: number;
+};
 
 /**
  * AktivitaetsNetzFloat — das Aktivitätsnetz als mitwanderndes Symbol.
@@ -22,13 +29,16 @@ type NetzWerte = { punkte: number; flaechen: number; bildpunkte: number; videos:
  * platziert (bottom-20), damit nichts überlappt.
  */
 
-/** Mini-Netz fürs Symbol: Kern + vier farbige Punkte, die pulsieren. */
+/** Mini-Netz fürs Symbol: Kern + sechs farbige Punkte, die pulsieren. */
 function MiniNetz({ zahlen }: { zahlen: NetzWerte }) {
+  // Sechs Punkte im Kreis um den Kern (20/19), Radius 14.
   const punkte = [
-    { x: 20, y: 6, cls: "fill-tertiary", aktiv: zahlen.punkte > 0 },
-    { x: 34, y: 19, cls: "fill-secondary", aktiv: zahlen.bildpunkte > 0 },
-    { x: 6, y: 19, cls: "fill-primary", aktiv: zahlen.flaechen > 0 },
-    { x: 20, y: 33, cls: "fill-on-surface", aktiv: zahlen.videos > 0 },
+    { x: 20, y: 5, cls: "fill-tertiary", aktiv: zahlen.punkte > 0 },
+    { x: 32, y: 12, cls: "fill-secondary", aktiv: zahlen.bildpunkte > 0 },
+    { x: 32, y: 26, cls: "fill-on-surface", aktiv: zahlen.videos > 0 },
+    { x: 20, y: 33, cls: "fill-error", aktiv: zahlen.weiter > 0 },
+    { x: 8, y: 26, cls: "fill-on-tertiary-container", aktiv: zahlen.vertiefungen > 0 },
+    { x: 8, y: 12, cls: "fill-primary", aktiv: zahlen.flaechen > 0 },
   ];
   return (
     <svg viewBox="0 0 40 40" className="h-7 w-7" aria-hidden>
@@ -68,6 +78,8 @@ export default function AktivitaetsNetzFloat() {
     flaechen: 0,
     bildpunkte: 0,
     videos: 0,
+    vertiefungen: 0,
+    weiter: 0,
   });
 
   useEffect(() => {
@@ -78,6 +90,8 @@ export default function AktivitaetsNetzFloat() {
         flaechen: zaehleFlaechen().gefuellt,
         bildpunkte: a.bildpunkte,
         videos: a.videos,
+        vertiefungen: a.mehr,
+        weiter: a.wuensche,
       });
     };
     lesen();
@@ -99,7 +113,8 @@ export default function AktivitaetsNetzFloat() {
     return () => window.removeEventListener("keydown", onKey);
   }, [offen]);
 
-  const gesamt = z.punkte + z.flaechen + z.bildpunkte + z.videos;
+  const gesamt =
+    z.punkte + z.flaechen + z.bildpunkte + z.videos + z.vertiefungen + z.weiter;
 
   return (
     <>
@@ -117,7 +132,7 @@ export default function AktivitaetsNetzFloat() {
               <AktivitaetsNetz
                 schwebend
                 titel="Aktivitäts-Rhizom"
-                unterzeile="Aus einer Wurzel wächst dein Tun: vier Triebe (Punkte, Flächen, Bildpunkte, Videos). Hintergrund: alle. Vordergrund: du."
+                unterzeile="Aus einer Wurzel wächst dein Tun: wo du warst (Flächen, Punkte, Bildpunkte, Videos) und wie tief du gingst (Vertiefungen, Weiterverfolgen). Hintergrund: alle. Vordergrund: du."
               />
               <button
                 type="button"

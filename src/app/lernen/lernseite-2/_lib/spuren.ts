@@ -409,10 +409,14 @@ export function zaehleAlleAusPoll(counts: PollCounts): {
   punkte: number;
   bildpunkte: number;
   videos: number;
+  mehr: number;
+  wuensche: number;
 } {
   let punkte = 0;
   let bildpunkte = 0;
   let videos = 0;
+  let mehr = 0;
+  let wuensche = 0;
   for (const id in counts) {
     const n = Number(counts[id]) || 0;
     if (n <= 0) continue;
@@ -420,10 +424,12 @@ export function zaehleAlleAusPoll(counts: PollCounts): {
       case "video": videos += n; break;
       case "bildpunkt": bildpunkte += n; break;
       case "punkt": punkte += n; break;
-      // bild (geöffnete Bilder), kante, wunsch, mehr → nicht unter den vier
+      case "mehr": mehr += n; break;
+      case "wunsch": wuensche += n; break;
+      // bild (geöffnete Bilder) und kante (Kombinationen) sind keine
       // Netz-Kennzahlen.
       default: break;
     }
   }
-  return { punkte, bildpunkte, videos };
+  return { punkte, bildpunkte, videos, mehr, wuensche };
 }

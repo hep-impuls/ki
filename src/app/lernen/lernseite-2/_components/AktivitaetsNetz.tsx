@@ -25,8 +25,10 @@ import {
  *     aus den Aggregat-Zählern (`spuren-lernseite-2` + `flaechen-lernseite-2`).
  *   · Vordergrund (Akzenttöne)       — DEINE Aktivität, darüber verflochten.
  *
- * Vier Triebe, je ein Farbton: Punkte, Flächen, Bildpunkte (durchgegangene
- * Hotspots), Videos. Wuchs ist deterministisch (Seed pro Trieb) — kein
+ * Sechs Triebe, je ein Farbton. Vier zeigen, WO man war (Flächen, Punkte,
+ * Bildpunkte, Videos), zwei zeigen, WIE TIEF man ging: «Vertiefungen» sind
+ * aufgeklappte «Mehr lesen»-Texte, «Weiterverfolgen» die Merkzeichen «Das
+ * verfolge ich weiter». Wuchs ist deterministisch (Seed pro Trieb) — kein
  * Zittern zwischen Renders. Nur Theme-Tokens.
  */
 
@@ -35,7 +37,23 @@ const VB_H = 300;
 const WURZEL = { x: 182, y: 256 }; // Punkt, aus dem alle Triebe sprossen (tief, damit sie hoch wachsen)
 const RAD = Math.PI / 180;
 
-type NetzWerte = { punkte: number; flaechen: number; bildpunkte: number; videos: number };
+type NetzWerte = {
+  punkte: number;
+  flaechen: number;
+  bildpunkte: number;
+  videos: number;
+  vertiefungen: number;
+  weiter: number;
+};
+
+const LEER: NetzWerte = {
+  punkte: 0,
+  flaechen: 0,
+  bildpunkte: 0,
+  videos: 0,
+  vertiefungen: 0,
+  weiter: 0,
+};
 
 type Trieb = {
   key: keyof NetzWerte;
@@ -48,10 +66,12 @@ type Trieb = {
 };
 
 const TRIEBE: Trieb[] = [
-  { key: "flaechen", label: "Flächen", winkel: -150, fill: "fill-primary", stroke: "stroke-primary", text: "text-primary" },
-  { key: "punkte", label: "Punkte", winkel: -108, fill: "fill-tertiary", stroke: "stroke-tertiary", text: "text-tertiary" },
-  { key: "bildpunkte", label: "Bildpunkte", winkel: -72, fill: "fill-secondary", stroke: "stroke-secondary", text: "text-secondary" },
-  { key: "videos", label: "Videos", winkel: -34, fill: "fill-on-surface", stroke: "stroke-on-surface", text: "text-on-surface" },
+  { key: "flaechen", label: "Flächen", winkel: -158, fill: "fill-primary", stroke: "stroke-primary", text: "text-primary" },
+  { key: "punkte", label: "Punkte", winkel: -131, fill: "fill-tertiary", stroke: "stroke-tertiary", text: "text-tertiary" },
+  { key: "bildpunkte", label: "Bildpunkte", winkel: -104, fill: "fill-secondary", stroke: "stroke-secondary", text: "text-secondary" },
+  { key: "videos", label: "Videos", winkel: -77, fill: "fill-on-surface", stroke: "stroke-on-surface", text: "text-on-surface" },
+  { key: "vertiefungen", label: "Vertiefungen", winkel: -50, fill: "fill-on-tertiary-container", stroke: "stroke-on-tertiary-container", text: "text-on-tertiary-container" },
+  { key: "weiter", label: "Weiterverfolgen", winkel: -23, fill: "fill-error", stroke: "stroke-error", text: "text-error" },
 ];
 
 /** Deterministischer PRNG (mulberry32). */
@@ -138,8 +158,8 @@ export default function AktivitaetsNetz({
   schwebend?: boolean;
   className?: string;
 }) {
-  const [z, setZ] = useState<NetzWerte>({ punkte: 0, flaechen: 0, bildpunkte: 0, videos: 0 });
-  const [alle, setAlle] = useState<NetzWerte>({ punkte: 0, flaechen: 0, bildpunkte: 0, videos: 0 });
+  const [z, setZ] = useState<NetzWerte>(LEER);
+  const [alle, setAlle] = useState<NetzWerte>(LEER);
 
   useEffect(() => {
     const lesen = () => {
@@ -149,6 +169,8 @@ export default function AktivitaetsNetz({
         flaechen: zaehleFlaechen().gefuellt,
         bildpunkte: a.bildpunkte,
         videos: a.videos,
+        vertiefungen: a.mehr,
+        weiter: a.wuensche,
       });
     };
     lesen();
@@ -162,8 +184,17 @@ export default function AktivitaetsNetz({
   }, []);
 
   useEffect(() => {
-    const setzeSpuren = (counts: PollCounts) =>
-      setAlle((v) => ({ ...v, ...zaehleAlleAusPoll(counts) }));
+    const setzeSpuren = (counts: PollCounts) => {
+      const { punkte, bildpunkte, videos, mehr, wuensche } = zaehleAlleAusPoll(counts);
+      setAlle((v) => ({
+        ...v,
+        punkte,
+        bildpunkte,
+        videos,
+        vertiefungen: mehr,
+        weiter: wuensche,
+      }));
+    };
     const setzeFlaechen = (counts: PollCounts) =>
       setAlle((v) => ({ ...v, flaechen: totalVotes(counts) }));
     void loadPollCounts(SPUREN_POLL_ID).then(setzeSpuren);
@@ -176,13 +207,14 @@ export default function AktivitaetsNetz({
     };
   }, []);
 
-  const gesamt = z.punkte + z.flaechen + z.bildpunkte + z.videos;
-  const gesamtAlle = alle.punkte + alle.flaechen + alle.bildpunkte + alle.videos;
+  const summe = (w: NetzWerte) => TRIEBE.reduce((n, t) => n + w[t.key], 0);
+  const gesamt = summe(z);
+  const gesamtAlle = summe(alle);
 
   // Rhizom-Geometrie deterministisch aus den Kennzahlen ableiten (memoisiert).
   const { bg, fg } = useMemo(() => {
-    const maxFg = Math.max(z.punkte, z.flaechen, z.bildpunkte, z.videos, 1);
-    const maxBg = Math.max(alle.punkte, alle.flaechen, alle.bildpunkte, alle.videos, 1);
+    const maxFg = Math.max(...TRIEBE.map((t) => z[t.key]), 1);
+    const maxBg = Math.max(...TRIEBE.map((t) => alle[t.key]), 1);
     const bgTriebe = TRIEBE.map((t, i) => ({
       trieb: t,
       ...baueTrieb(1009 + i * 53, tiefeVon(alle[t.key], maxBg, 3, 3.6, 8), 40, 5, t.winkel, 2.2),
@@ -228,15 +260,21 @@ export default function AktivitaetsNetz({
         <p className="mt-xs text-body-sm text-on-surface-variant">{unterzeile}</p>
       )}
 
-      <div className="mt-sm grid items-center gap-md sm:grid-cols-[minmax(0,1fr)_auto]">
+      {/* Zeichnung oben in voller Breite, Kennzahlen darunter im Raster: bei
+          sechs Trieben wird die Legende sonst höher als das Rhizom selbst. */}
+      <div className="mt-sm grid gap-md">
         <svg
           viewBox={`0 0 ${VB_W} ${VB_H}`}
-          className="block w-full"
+          /* Höhe gedeckelt, damit das Panel auf 720p-Bildschirmen ohne Scrollen
+             passt; das viewBox skaliert mit und bleibt zentriert. */
+          className="mx-auto block max-h-[210px] w-full"
           role="img"
           aria-label={
-            `Rhizom aus zwei Schichten. Du: ${z.punkte} Punkte, ${z.flaechen} Flächen, ` +
-            `${z.bildpunkte} Bildpunkte, ${z.videos} Videos. Alle zusammen: ` +
-            `${alle.punkte} Punkte, ${alle.flaechen} Flächen, ${alle.bildpunkte} Bildpunkte, ${alle.videos} Videos.`
+            "Rhizom aus zwei Schichten. Du: " +
+            TRIEBE.map((t) => `${z[t.key]} ${t.label}`).join(", ") +
+            ". Alle zusammen: " +
+            TRIEBE.map((t) => `${alle[t.key]} ${t.label}`).join(", ") +
+            "."
           }
         >
           {/* Wurzel-Stamm (gemeinsame Basis, aus der alles sprosst) */}
@@ -308,17 +346,17 @@ export default function AktivitaetsNetz({
         </svg>
 
         {/* Rechnerische Legende: du (Akzent) + alle (gedämpft) */}
-        <ul className="flex flex-wrap gap-md sm:flex-col sm:gap-sm">
+        <ul className="grid grid-cols-2 gap-x-md gap-y-sm">
           {TRIEBE.map((t) => (
-            <li key={t.key} className="flex items-baseline gap-sm">
+            <li key={t.key} className="flex min-w-0 items-baseline gap-xs">
               <span
-                className={"text-headline-md " + t.text}
+                className={"text-headline-sm " + t.text}
                 style={{ fontFamily: "ui-monospace, monospace" }}
               >
                 {String(z[t.key]).padStart(2, "0")}
               </span>
-              <span className="flex flex-col leading-tight">
-                <span className="text-label-sm uppercase tracking-wider text-on-surface-variant">
+              <span className="flex min-w-0 flex-col leading-tight">
+                <span className="truncate text-label-sm uppercase text-on-surface-variant">
                   {t.label}
                 </span>
                 <span
