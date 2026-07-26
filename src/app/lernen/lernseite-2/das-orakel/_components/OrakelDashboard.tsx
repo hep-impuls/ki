@@ -363,7 +363,9 @@ export default function OrakelDashboard() {
       knotenGesamt: GESAMT_TOTAL,
       bereiche: BEREICHE.map((b) => ({
         label: b.label,
-        du: meine[b.prefix] ?? 0,
+        // Gedeckelt: Spuren aus einer früheren Struktur können den Bereich
+        // sonst über 100 Prozent treiben, und die KI deutet dann «8 von 4».
+        du: Math.min(meine[b.prefix] ?? 0, b.total),
         total: b.total,
       })),
       wuensche: meineWuensche,
@@ -470,6 +472,21 @@ export default function OrakelDashboard() {
   /* ── Perspektiven-Kacheln ─────────────────────────────────────────────── */
   /* `alle`: die anonyme Aktivität aller (aus den Zählern). `nurDu`: Kennzahl
    *  liegt nur lokal vor (Bewertungen/Flächen) — kein anonymer Vergleich. */
+  /**
+   * Am stärksten und am schwächsten bearbeitete Abschnitte, nach Anteil des
+   * Bereichs (nicht nach absoluter Zahl, sonst gewinnt immer der grösste
+   * Abschnitt). Bereiche ohne jede Aktivität stehen bei den schwächsten oben:
+   * Gerade das «noch gar nicht» ist der nützliche Hinweis.
+   */
+  const bereichsAnteile = BEREICHE.map((b) => {
+    // Gegen Altbestand aus früheren Strukturen deckeln: mehr als 100 Prozent
+    // eines Bereichs kann niemand bearbeitet haben.
+    const du = Math.min(meine[b.prefix] ?? 0, b.total);
+    return { label: b.label, du, total: b.total, anteil: b.total ? du / b.total : 0 };
+  });
+  const staerkste = [...bereichsAnteile].sort((a, b) => b.anteil - a.anteil).slice(0, 2);
+  const schwaechste = [...bereichsAnteile].sort((a, b) => a.anteil - b.anteil).slice(0, 2);
+
   const perspektiven: {
     icon: string;
     titel: string;
@@ -890,7 +907,9 @@ export default function OrakelDashboard() {
         </p>
         <div className="mt-md overflow-hidden rounded-xl border border-outline-variant bg-surface-bright">
           {BEREICHE.map((b, i) => {
-            const mein = meine[b.prefix] ?? 0;
+            // Gedeckelt, damit kein Balken über die Marke hinausläuft und nicht
+            // «du 8/4» steht (Altbestand früherer Spur-Strukturen).
+            const mein = Math.min(meine[b.prefix] ?? 0, b.total);
             const alle = summeMitArt(alleSpuren, b.prefix, ["punkt", "video"]);
             const anteil = Math.min(1, mein / b.total);
             return (
@@ -1429,24 +1448,82 @@ export default function OrakelDashboard() {
                 pageBreakInside: "avoid",
               }}
             >
-              {perspektiven.map((p) => (
+              {perspektiven.map((p, i) => (
                 <div
                   key={p.titel}
                   style={{
                     border: "1px solid #ccc",
                     borderRadius: "0.5rem",
                     padding: "0.55rem 0.65rem",
+                    // Marmoriert wie die Orakel-Umgebung: das Aquarell liegt
+                    // blass hinter der Zahl, vier Motive im Wechsel. Beim
+                    // Drucken müssen Hintergrundbilder erlaubt sein
+                    // («Hintergrundgrafiken» im Druckdialog).
+                    backgroundImage: `url(/art/orakel-umgebung-${(i % 4) + 1}.webp)`,
+                    backgroundSize: "cover",
+                    backgroundPosition: `${(i * 37) % 100}% ${(i * 53) % 100}%`,
+                    printColorAdjust: "exact",
+                    WebkitPrintColorAdjust: "exact",
                   }}
                 >
-                  <div style={{ fontSize: "0.72rem", color: "#555" }}>{p.titel}</div>
-                  <div style={{ fontSize: "1.15rem", fontWeight: 700, marginTop: "0.15rem" }}>{p.wert}</div>
+                  <div
+                    style={{
+                      /* Weisser Schleier, damit die Zahl auf jedem Motiv lesbar
+                         bleibt; ohne ihn verschwindet sie in dunklen Partien. */
+                      background: "rgba(255,255,255,0.82)",
+                      borderRadius: "0.35rem",
+                      padding: "0.3rem 0.4rem",
+                    }}
+                  >
+                    <div style={{ fontSize: "0.72rem", color: "#555" }}>{p.titel}</div>
+                    <div style={{ fontSize: "1.15rem", fontWeight: 700, marginTop: "0.15rem" }}>{p.wert}</div>
+                  </div>
                 </div>
               ))}
             </div>
 
+            {/* Zweites Element auf Seite 2: wo am meisten und am wenigsten
+                gearbeitet wurde. Nach Anteil des Abschnitts, nicht nach
+                absoluter Zahl. */}
+            <div
+              style={{
+                marginTop: "0.9rem",
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                gap: "0.6rem",
+                breakInside: "avoid",
+                pageBreakInside: "avoid",
+              }}
+            >
+              {[
+                { titel: "Am meisten bearbeitet", eintraege: staerkste },
+                { titel: "Am wenigsten bearbeitet", eintraege: schwaechste },
+              ].map((sp) => (
+                <div
+                  key={sp.titel}
+                  style={{ border: "1px solid #ccc", borderRadius: "0.5rem", padding: "0.55rem 0.65rem" }}
+                >
+                  <div style={{ fontSize: "0.72rem", color: "#555" }}>{sp.titel}</div>
+                  <ul style={{ margin: "0.25rem 0 0", paddingLeft: "1.1rem", fontSize: "0.95rem", lineHeight: 1.5 }}>
+                    {sp.eintraege.map((e) => (
+                      <li key={e.label}>
+                        {e.label}{" "}
+                        <span style={{ color: "#555" }}>
+                          ({e.du} von {e.total})
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            {/* Seite 3: die Deutungen des Orakels. Der Umbruch sitzt auf dem
+                Behälter, damit er auch greift, wenn nur eine Deutung vorliegt. */}
+            <div style={{ breakBefore: "page", pageBreakBefore: "always" }}>
             {intOrakel.status === "ok" && intOrakel.text && (
               <>
-                <h2 style={{ fontSize: "1.1rem", margin: "1.75rem 0 0.4rem" }}>
+                <h2 style={{ fontSize: "1.1rem", margin: "0 0 0.4rem" }}>
                   Das Orakel zu meinem Interesse
                 </h2>
                 <p style={{ margin: 0, fontSize: "1.05rem", lineHeight: 1.6, whiteSpace: "pre-line" }}>
@@ -1467,13 +1544,21 @@ export default function OrakelDashboard() {
             )}
 
             {intOrakel.status !== "ok" && aktuell.status !== "ok" && (
-              <p style={{ marginTop: "1.5rem", fontSize: "1rem", color: "#444" }}>
+              <p style={{ margin: 0, fontSize: "1rem", color: "#444" }}>
                 (Befrage das Orakel oben, damit seine Deutungen hier erscheinen.)
               </p>
             )}
+            </div>
 
-            {/* Punkte, die noch vertieft werden möchten */}
-            <h2 style={{ fontSize: "1.1rem", margin: "1.75rem 0 0.4rem" }}>
+            {/* Seite 4: was weiterverfolgt werden möchte. */}
+            <h2
+              style={{
+                fontSize: "1.1rem",
+                margin: "0 0 0.4rem",
+                breakBefore: "page",
+                pageBreakBefore: "always",
+              }}
+            >
               Diese Punkte möchte ich noch vertiefen
             </h2>
             {vertiefteGruppen.length > 0 ? (

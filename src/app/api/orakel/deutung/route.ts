@@ -116,6 +116,23 @@ function baueZusammenfassung(a: Aktivitaet): string {
   return zeilen.filter(Boolean).join("\n");
 }
 
+/**
+ * Sprachregeln für alle Stile.
+ *
+ * Das Modell (Haiku, günstigste Stufe) bildet im **Präteritum** unzuverlässige
+ * Verbformen: «marktest» statt «markiert hast», «tastast» statt «tastest».
+ * Beobachtet in einer literarischen Deutung. Die Fehler sammeln sich genau dort,
+ * darum wird das Präteritum untersagt; Perfekt und Präsens sind ohnehin die
+ * natürlicheren Formen im gesprochenen Deutsch. Hilft das nicht, bleibt der
+ * Wechsel auf ein stärkeres Modell.
+ */
+const SPRACHE =
+  " Schreib in Präsens und Perfekt. **Vermeide das Präteritum**, also nicht " +
+  "«du markiertest» oder «du tastetest», sondern «du hast markiert», «du " +
+  "tastest». Bilde nur Verbformen, die du sicher beherrschst; im Zweifel " +
+  "umschreiben («du hast … gesetzt» statt einer seltenen Form). Keine " +
+  "erfundenen Wörter.";
+
 /** Für alle Stile: die tatsächlich gewählten Inhalte aufgreifen, nichts
  *  dazuerfinden. */
 const GEMEINSAM =
@@ -139,7 +156,7 @@ async function deute(stil: Stil, zusammenfassung: string): Promise<string | null
       body: JSON.stringify({
         model: MODELL,
         max_tokens: 350,
-        system: STIL_SYSTEM[stil] + GEMEINSAM,
+        system: STIL_SYSTEM[stil] + GEMEINSAM + SPRACHE,
         messages: [
           {
             role: "user",
