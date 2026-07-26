@@ -14,6 +14,8 @@ import { GlossarText } from "./Glossar";
 import { melde } from "../_lib/auswertung";
 import { merkeInhalt } from "../_lib/inhalte";
 import { zieheGewichtungAusCloud } from "../_lib/gewichtung";
+import { zeigeBeimOeffnen } from "../_lib/scrollen";
+import { merkeVertiefung } from "../_lib/vertiefung";
 import BildZoom, { type TourStop } from "../philosophische-perspektive/_components/BildZoom";
 
 /**
@@ -1023,10 +1025,9 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
       setGelesen((prev) => new Set(prev).add(gi));
       merkeSpur(`${SPUR}:${gi}`);
     }
-    // Beim Öffnen den Baustein an den oberen Rand holen, sonst steht der neue
-    // Text unterhalb des Blickfelds und man muss zurückscrollen.
-    if (!wirdGeoeffnet || !el) return;
-    setTimeout(() => el.scrollIntoView({ behavior: "auto", block: "start" }), 0);
+    // Beim Öffnen den Baustein an den oberen Rand holen, aber nur wenn er sonst
+    // nicht lesbar wäre. Immer zu scrollen ruckt ohne Not (siehe scrollen.ts).
+    if (wirdGeoeffnet) zeigeBeimOeffnen(el ?? null);
   }
 
   return (
@@ -1053,14 +1054,18 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
               <p className="mt-xs max-w-3xl text-body-md text-on-surface-variant">{e.lead}</p>
               <button
                 type="button"
-                onClick={() =>
+                onClick={() => {
+                  // «Mehr wissen» ordnet die Epoche ein: zählt als Vertiefung.
+                  if (!leadOffen.has(ei)) {
+                    merkeVertiefung(`${SPUR}:einordnung:${ei}`, `${e.epoche} · Einordnung`);
+                  }
                   setLeadOffen((prev) => {
                     const nx = new Set(prev);
                     if (nx.has(ei)) nx.delete(ei);
                     else nx.add(ei);
                     return nx;
-                  })
-                }
+                  });
+                }}
                 aria-expanded={leadOffen.has(ei)}
                 className="mt-sm inline-flex items-center gap-xs rounded-full border border-outline-variant bg-surface-bright px-sm py-xs text-label-md text-on-surface-variant transition-colors hover:border-tertiary hover:text-tertiary"
               >
@@ -1103,7 +1108,12 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
                     <span className="mt-0.5 block text-label-sm text-on-surface-variant opacity-80">
                       {b.credit}
                     </span>
-                    <InfoPunkt className="mt-xs" label="Hintergrund zum Bild">
+                    <InfoPunkt
+                      className="mt-xs"
+                      label="Hintergrund zum Bild"
+                      spurId={`${SPUR}:bildinfo:${ei}:${bi}`}
+                      spurTitel={`${e.epoche} · Hintergrund zu «${b.caption}»`}
+                    >
                       <GlossarText text={b.hintergrund} />
                     </InfoPunkt>
                   </figcaption>

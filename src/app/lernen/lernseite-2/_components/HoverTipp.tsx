@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 
 /**
@@ -24,13 +24,19 @@ const RAND = 8;
 export default function HoverTipp({
   wort,
   inhalt,
+  vorlesen,
+  href,
   breite = 224,
   className = "",
 }: {
   /** Das sichtbare, unterstrichene Wort. */
   wort: string;
-  /** Die Kurzerklärung im Tooltip. */
-  inhalt: string;
+  /** Der Inhalt des Tooltips. */
+  inhalt: ReactNode;
+  /** Reintext fürs `aria-label`, falls `inhalt` kein einfacher Text ist. */
+  vorlesen?: string;
+  /** Gesetzt = das Wort ist ein Link (Beleg) statt eines Knopfes (Erklärung). */
+  href?: string;
   /** Wunschbreite des Tooltips in px; wird auf die Fensterbreite begrenzt. */
   breite?: number;
   className?: string;
@@ -42,7 +48,7 @@ export default function HoverTipp({
     breite: number;
     nachOben: boolean;
   } | null>(null);
-  const ref = useRef<HTMLButtonElement>(null);
+  const ref = useRef<HTMLElement>(null);
 
   const messen = useCallback(() => {
     const el = ref.current;
@@ -77,25 +83,52 @@ export default function HoverTipp({
     };
   }, [offen, messen]);
 
+  const beschriftung = vorlesen ?? (typeof inhalt === "string" ? inhalt : "");
+  const gemeinsam = {
+    onMouseEnter: () => setOffen(true),
+    onMouseLeave: () => setOffen(false),
+    onFocus: () => setOffen(true),
+    onBlur: () => setOffen(false),
+  };
+
   return (
     <span className={"relative inline-block " + className}>
-      <button
-        ref={ref}
-        type="button"
-        aria-label={`${wort}: ${inhalt}`}
-        aria-expanded={offen}
-        onMouseEnter={() => setOffen(true)}
-        onMouseLeave={() => setOffen(false)}
-        onFocus={() => setOffen(true)}
-        onBlur={() => setOffen(false)}
-        onClick={(e) => {
-          e.preventDefault();
-          setOffen((o) => !o);
-        }}
-        className="cursor-help border-b border-dotted border-tertiary font-medium text-inherit outline-none focus-visible:rounded-sm focus-visible:ring-2 focus-visible:ring-tertiary"
-      >
-        {wort}
-      </button>
+      {href ? (
+        /* Beleg: durchgezogen unterstrichen, mit Quellen-Zeichen, öffnet die
+           Quelle in einem neuen Tab. Der Tooltip nennt vorher, was kommt. */
+        <a
+          ref={ref as React.RefObject<HTMLAnchorElement>}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${wort}. Quelle: ${beschriftung}`}
+          {...gemeinsam}
+          className="border-b border-tertiary font-medium text-inherit outline-none transition-colors hover:text-tertiary focus-visible:rounded-sm focus-visible:ring-2 focus-visible:ring-tertiary"
+        >
+          {wort}
+          <span
+            aria-hidden
+            className="material-symbols-outlined ml-[1px] align-super text-[13px] leading-none text-tertiary"
+          >
+            open_in_new
+          </span>
+        </a>
+      ) : (
+        <button
+          ref={ref as React.RefObject<HTMLButtonElement>}
+          type="button"
+          aria-label={`${wort}: ${beschriftung}`}
+          aria-expanded={offen}
+          {...gemeinsam}
+          onClick={(e) => {
+            e.preventDefault();
+            setOffen((o) => !o);
+          }}
+          className="cursor-help border-b border-dotted border-tertiary font-medium text-inherit outline-none focus-visible:rounded-sm focus-visible:ring-2 focus-visible:ring-tertiary"
+        >
+          {wort}
+        </button>
+      )}
 
       {offen &&
         rahmen &&

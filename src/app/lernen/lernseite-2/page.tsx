@@ -70,7 +70,10 @@ export default function Lernseite2Hub() {
             braucht. In diesem Lernset geht es darum immer auch um den Kontext
             der KI.
           </p>
-          <Ausklapptext titel="Mehr dazu: Wie die Philosophie das weiterdenkt">
+          <Ausklapptext
+            titel="Mehr dazu: Wie die Philosophie das weiterdenkt"
+            spurId="hub:vertiefung:philosophie"
+          >
             <p>
               Genau hier setzt später die philosophische Perspektive an:
               Philosophie ist kein Werkzeug für schnelle oder endgültige

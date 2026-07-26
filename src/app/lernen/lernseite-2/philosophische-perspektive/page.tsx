@@ -154,6 +154,7 @@ export default function Lernseite2PhilosophischePerspektive() {
         <Ausklapptext
           className="mt-md max-w-4xl"
           titel="Mehr dazu: Wie wir mit KI zusammenarbeiten"
+          spurId="philosophische-perspektive:vertiefung:zusammenarbeit"
         >
           <p>
             Die alte Aufteilung «hier der Mensch als{" "}
@@ -654,6 +655,7 @@ export default function Lernseite2PhilosophischePerspektive() {
         <Ausklapptext
           className="mt-md max-w-4xl"
           titel="Mehr dazu: die wiederkehrenden Züge der Verunsicherung"
+          spurId="philosophische-perspektive:vertiefung:zuege"
         >
           <p>
             Auffällig ist, dass in der westlichen Geschichte dieselben Züge der

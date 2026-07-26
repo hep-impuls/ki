@@ -117,6 +117,47 @@ function kennung(praefix, text) {
   return `${praefix}-${h.slice(0, 6)}`;
 }
 
+
+/* ── Bereits gesetzte Belege einlesen ─────────────────────────────────────────
+ * Aus _data/belege.ts, damit die Dokumente zeigen, was schon belegt ist. Ein
+ * Modell soll nicht doppelt suchen, und ein Mensch soll sehen, wo bewusst KEIN
+ * Link gesetzt wurde. Bewusst textuell gelesen: kein Build, keine Abhängigkeit. */
+const FELD_RE = /\b([a-zA-Z]+):\s*("(?:[^"\\]|\\.)*")/g;
+
+function leseBelege() {
+  const p = path.join(REPO, "src/app/lernen/lernseite-2/_data/belege.ts");
+  if (!fs.existsSync(p)) return { belege: [], ohne: [] };
+  const src = fs.readFileSync(p, "utf8");
+
+  /** Alle Schlüssel-Wert-Paare eines Objektblocks als Objekt. */
+  const felder = (block) => {
+    const o = {};
+    let m;
+    FELD_RE.lastIndex = 0;
+    while ((m = FELD_RE.exec(block))) o[m[1]] = entstringe(m[2]);
+    return o;
+  };
+  /** Die Objektblöcke eines exportierten Arrays. */
+  const teil = (name) => {
+    const i = src.indexOf("export const " + name);
+    if (i < 0) return [];
+    const ende = src.indexOf("\n];", i);
+    return src
+      .slice(i, ende < 0 ? undefined : ende)
+      .split("\n  {")
+      .slice(1)
+      .map(felder);
+  };
+
+  return {
+    belege: teil("BELEGE").filter((b) => b.id && b.url),
+    ohne: teil("OHNE_BELEG").filter((b) => b.id && b.grund),
+  };
+}
+const { belege: BELEGE, ohne: OHNE_BELEG } = leseBelege();
+const belegeVon = (id) => BELEGE.filter((b) => b.id === id);
+const ohneVon = (id) => OHNE_BELEG.filter((b) => b.id === id);
+
 /* ── Blöcke je Datei sammeln, mit Überschrift als Ortsangabe ─────────────── */
 function sammle(src, praefix) {
   const rohe = [];
@@ -195,6 +236,25 @@ function sammle(src, praefix) {
   return raus;
 }
 
+
+/** Bereits gesetzte Belege und begründete Nicht-Belege unter einem Block. */
+function belegZeilen(id) {
+  let t = "";
+  for (const b of belegeVon(id)) {
+    t += `
+> **Belegt** («${b.anker}»): [${b.titel}](${b.url})`;
+    if (b.stelle) t += ` — ${b.stelle}`;
+    t += ` *(geprüft ${b.geprueft})*
+`;
+  }
+  for (const o of ohneVon(id)) {
+    t += `
+> **Kein Beleg** (${o.betrifft}): ${o.grund} *(notiert ${o.notiert})*
+`;
+  }
+  return t;
+}
+
 /* ── Dokument bauen ───────────────────────────────────────────────────────── */
 const ANLEITUNG = `# Quellenauftrag · Lernseite 2 «Eine ganz neue Partnerschaft»
 
@@ -261,7 +321,7 @@ for (const d of DATEIEN) {
       md += `\n### ${b.ort}\n`;
       letzterOrt = b.ort;
     }
-    md += `\n**[${b.id}]** *(${b.feld})*\n${b.text}\n`;
+    md += `\n**[${b.id}]** *(${b.feld})*\n${b.text}\n` + belegZeilen(b.id);
     const stufe = dringlichkeit(b.text);
     index[b.id] = { datei: d.pfad, ort: b.ort, feld: b.feld, stufe, text: b.text };
     if (stufe !== "tief") arbeit.push({ ...b, thema: d.thema, stufe });
@@ -314,7 +374,7 @@ for (let p = 0; p < anzahlPakete; p++) {
       t += `\n### ${b.thema}\n`;
       letztesThema = b.thema;
     }
-    t += `\n**[${b.id}]** *(${b.feld} · ${b.ort})*\n${b.text}\n`;
+    t += `\n**[${b.id}]** *(${b.feld} · ${b.ort})*\n${b.text}\n` + belegZeilen(b.id);
   }
   fs.writeFileSync(path.join(PAKET_DIR, `paket-${nr}.md`), t, "utf8");
 }

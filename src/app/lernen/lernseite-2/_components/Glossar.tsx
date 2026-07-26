@@ -2,6 +2,7 @@
 
 import { Fragment } from "react";
 import HoverTipp from "./HoverTipp";
+import { BELEG_NACH_ANKER, type Beleg } from "../_data/belege";
 
 /**
  * Glossar — Fachbegriffe mit Kurzerklärung beim Hovern (Desktop) bzw. Antippen
@@ -324,26 +325,90 @@ export function Begriff({ wort, erklaerung }: { wort: string; erklaerung: string
 const TERME = Object.keys(GLOSSAR).sort((a, b) => b.length - a.length);
 const GLOSSAR_RE = new RegExp(`\\b(${TERME.map(escapeRegExp).join("|")})\\b`, "g");
 
+/** Ein Quellenlink an einer Textstelle. Öffnet die geprüfte Quelle. */
+function BelegStelle({ wort, beleg }: { wort: string; beleg: Beleg }) {
+  return (
+    <HoverTipp
+      wort={wort}
+      href={beleg.url}
+      breite={300}
+      vorlesen={`${beleg.titel}${beleg.stelle ? ". " + beleg.stelle : ""}`}
+      inhalt={
+        <>
+          <span className="block font-medium text-on-surface">Quelle: {beleg.titel}</span>
+          {beleg.stelle && (
+            <span className="mt-[2px] block text-on-surface-variant">{beleg.stelle}</span>
+          )}
+          <span className="mt-xs block text-on-surface-variant opacity-70">
+            Abgerufen und geprüft am {beleg.geprueft}. Klicken öffnet die Quelle.
+          </span>
+        </>
+      }
+    />
+  );
+}
+
+/** Eine gefundene Stelle im Text, die ausgezeichnet werden soll. */
+type Marke = {
+  von: number;
+  bis: number;
+  wort: string;
+  /** Beleg gesetzt = Quellenlink, sonst Glossar-Erklärung. */
+  beleg?: Beleg;
+  erklaerung?: string;
+};
+
 /**
- * Text mit Glossar-Begriffen anreichern: Das ERSTE Vorkommen jedes bekannten
- * Begriffs wird als `<Begriff>` mit Tooltip gerendert; alles andere bleibt
- * einfacher Text.
+ * Text auszeichnen: Das ERSTE Vorkommen jedes Glossar-Begriffs bekommt eine
+ * Hover-Erklärung, jeder Beleg-Anker einen Quellenlink. Beide werden in einem
+ * Durchgang gesucht, dann nach Position sortiert; überlappende Treffer werden
+ * verworfen, damit nichts doppelt ausgezeichnet wird. Belege haben Vorrang,
+ * weil sie die genauere Auszeichnung sind.
  */
 export function GlossarText({ text }: { text: string }) {
-  const teile: React.ReactNode[] = [];
+  const marken: Marke[] = [];
+
+  // 1) Belege: wörtliche Anker, längste zuerst (siehe BELEG_NACH_ANKER).
+  for (const [anker, beleg] of BELEG_NACH_ANKER) {
+    const i = text.indexOf(anker);
+    if (i >= 0) marken.push({ von: i, bis: i + anker.length, wort: anker, beleg });
+  }
+
+  // 2) Glossar-Begriffe, je erstes Vorkommen.
   const verwendet = new Set<string>();
-  let last = 0;
   let m: RegExpExecArray | null;
   GLOSSAR_RE.lastIndex = 0;
   while ((m = GLOSSAR_RE.exec(text)) !== null) {
     const wort = m[1];
     if (verwendet.has(wort) || !GLOSSAR[wort]) continue;
     verwendet.add(wort);
-    if (m.index > last) teile.push(text.slice(last, m.index));
-    teile.push(<Begriff key={m.index} wort={wort} erklaerung={GLOSSAR[wort]} />);
-    last = m.index + wort.length;
+    marken.push({ von: m.index, bis: m.index + wort.length, wort, erklaerung: GLOSSAR[wort] });
+  }
+
+  // Nach Position, bei gleichem Start zuerst der Beleg, dann der längere Treffer.
+  marken.sort(
+    (a, b) =>
+      a.von - b.von ||
+      Number(Boolean(b.beleg)) - Number(Boolean(a.beleg)) ||
+      b.bis - b.von - (a.bis - a.von),
+  );
+
+  const teile: React.ReactNode[] = [];
+  let last = 0;
+  for (const k of marken) {
+    if (k.von < last) continue; // überlappt einen schon gesetzten Treffer
+    if (k.von > last) teile.push(text.slice(last, k.von));
+    teile.push(
+      k.beleg ? (
+        <BelegStelle key={k.von} wort={k.wort} beleg={k.beleg} />
+      ) : (
+        <Begriff key={k.von} wort={k.wort} erklaerung={k.erklaerung!} />
+      ),
+    );
+    last = k.bis;
   }
   if (last < text.length) teile.push(text.slice(last));
+
   return (
     <>
       {teile.map((t, i) => (

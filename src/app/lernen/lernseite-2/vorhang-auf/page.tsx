@@ -438,7 +438,9 @@ export default function Lernseite2VorhangAuf() {
           <GlossarText text="Kaum ein Thema ist so präsent wie die Künstliche Intelligenz. Und kaum eines ist so schwer zu fassen. Diese Seite gibt der KI einen Ort, an dem wir ihrer Gestalt nachgehen, statt nur über sie zu reden." />
         </p>
       </AbschnittKopf>
-      <Ausklapptext className="mt-md max-w-3xl" titel="Mehr dazu: der Weg durch diese Seite">
+      <Ausklapptext className="mt-md max-w-3xl" titel="Mehr dazu: der Weg durch diese Seite"
+          spurId="vorhang-auf:vertiefung:weg"
+        >
         <p>
           <GlossarText text="Um die KI zu verstehen, nähern wir uns ihr aus mehreren Richtungen. Zuerst fragen wir nach der Herkunft, also wie das Phänomen einer denkenden Maschine kulturell und technisch entstanden ist. Das erzählt die KI-Story. Einzelne Stationen werden danach in Bildern greifbar, die begehbare Punkte tragen. Dann treten die Merkmale hervor, jene Eigenschaften, die wir seit November 2022 mit den grossen Sprachmodellen täglich erleben. Zum Schluss geht es um die Kontexte, in denen die neue Akteurin heute steckt. Das Fazit vorweg lautet, dass KI weit mehr ist als das Chatfenster, in das wir unsere Fragen tippen." />
         </p>
@@ -495,7 +497,9 @@ export default function Lernseite2VorhangAuf() {
           </p>
         }
       >
-        <Ausklapptext className="mt-md max-w-4xl" titel="Mehr dazu: die beiden Fäden der Geschichte">
+        <Ausklapptext className="mt-md max-w-4xl" titel="Mehr dazu: die beiden Fäden der Geschichte"
+          spurId="vorhang-auf:vertiefung:faeden"
+        >
           <p>
             <GlossarText text="Durch die Geschichte laufen zwei Fäden nebeneinander. Der eine Faden ist die Erzählung vom belebten Ding, zum Beispiel beim Golem oder bei Frankensteins Geschöpf. Der andere Faden ist die Technik, die das Rechnen und Denken Schritt für Schritt an Maschinen abgibt. Ein wichtiger Baustein auf diesem Weg ist der Algorithmus. Im Jahr 1950 fragte der Mathematiker Alan Turing, ob Maschinen denken können, und schlug dafür den Turing-Test vor. Im Jahr 1956 gab die Dartmouth-Konferenz dem jungen Forschungsfeld seinen Namen, nämlich künstliche Intelligenz. In den heutigen Sprachmodellen treffen beide Fäden zusammen, die alte Vorstellung vom künstlichen Wesen und die reale Auslagerung des Rechnens." />
           </p>
@@ -529,7 +533,11 @@ export default function Lernseite2VorhangAuf() {
             darauf, wie Traum und Technik in der heutigen KI zusammenlaufen.
           </p>
         </Aufgabe>
-        <InfoPunkt className="mt-md" label="Muss ich allen 22 nachgehen?">
+        <InfoPunkt
+          className="mt-md"
+          label="Muss ich allen 22 nachgehen?"
+          spurId="vorhang-auf:vertiefung:auswahl"
+        >
           Nein, du musst nicht jede Station öffnen. Geh dem nach, was dich
           neugierig macht. Die Aktivitätsmessung registriert aber, was du
           anschaust, verschiebst und weiterverfolgst. Das ist keine Note. Es
@@ -842,7 +850,9 @@ export default function Lernseite2VorhangAuf() {
           </p>
         }
       >
-        <Ausklapptext className="mt-md max-w-4xl" titel="Mehr dazu: was die Bilderstrecke zeigt">
+        <Ausklapptext className="mt-md max-w-4xl" titel="Mehr dazu: was die Bilderstrecke zeigt"
+          spurId="vorhang-auf:vertiefung:bilderstrecke"
+        >
           <p>
             <GlossarText text="Die Strecke beginnt beim Auslagern des Denkens in Knotenschnüre, den Quipus der Anden. Sie führt weiter über Turings Code-Knacker aus dem Zweiten Weltkrieg. Ein weiteres Bild zeigt ELIZA, den ersten Chatbot aus den 1960er-Jahren. Später kommen Bildgeneratoren wie DALL·E und schliesslich ChatGPT dazu. Jedes Bild trägt nummerierte Punkte mit einer kurzen Erklärung. So wird aus einer abstrakten Idee eine konkrete Geschichte. Bildende Kunst hilft dabei, komplexe Zusammenhänge in einer einfachen Ansicht zu zeigen." />
           </p>
@@ -875,7 +885,9 @@ export default function Lernseite2VorhangAuf() {
           </p>
         }
       >
-        <Ausklapptext className="mt-md max-w-4xl" titel="Mehr dazu: warum die Bündelung zählt">
+        <Ausklapptext className="mt-md max-w-4xl" titel="Mehr dazu: warum die Bündelung zählt"
+          spurId="vorhang-auf:vertiefung:buendelung"
+        >
           <p>
             <GlossarText text="Jede einzelne dieser Eigenschaften gab es in Ansätzen schon früher. Neu ist, dass sie nun gebündelt in einem System zusammenkommen. Die KI erkennt Muster in riesigen Datenmengen und arbeitet mit Wahrscheinlichkeiten statt mit festen Regeln. Sie reagiert auf den Zusammenhang und passt ihre Antworten daran an. Sie wirkt allgemein einsetzbar, weil sie nicht für eine einzige Aufgabe gebaut ist. Genau diese Kombination macht sie zu einem Werkzeug, das sich wie ein Gegenüber anfühlt. Im Muster unten kannst du die zwölf Merkmale einzeln öffnen und nachlesen." />
           </p>
@@ -1046,7 +1058,9 @@ export default function Lernseite2VorhangAuf() {
           </p>
         }
       >
-        <Ausklapptext className="mt-md max-w-4xl" titel="Mehr dazu: die vier Blickwinkel">
+        <Ausklapptext className="mt-md max-w-4xl" titel="Mehr dazu: die vier Blickwinkel"
+          spurId="vorhang-auf:vertiefung:blickwinkel"
+        >
           <p>
             <GlossarText text="Der erste Blickwinkel ist der technologische, also Rechenkraft, Daten und die Modelle selbst. Der zweite ist der wirtschaftliche, denn Entwicklung und Betrieb kosten viel Geld und schaffen neue Märkte. Der dritte ist der rechtlich-politische, etwa Fragen nach Regeln, Haftung und Macht. Der vierte ist der kulturelle, also wie wir mit KI leben, arbeiten und über sie sprechen. Diese vier Blickwinkel wirken zusammen und lassen sich nicht sauber trennen. Erst gemeinsam ergeben sie ein Bild davon, was KI heute ist." />
           </p>

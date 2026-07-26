@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, type ReactNode } from "react";
+import { zeigeBeimOeffnen } from "../_lib/scrollen";
 
 /**
  * SammelAccordion — eine eingesammelte Station/Punkt unter einem Muster, als
@@ -9,10 +10,11 @@ import { useRef, type ReactNode } from "react";
  * Merkmalen und Teppich — der Elternteil steuert, welche Karte offen ist
  * (üblich: die neueste). Nur Theme-Tokens.
  *
- * Beim Öffnen wird die Karte an den oberen Rand gescrollt. Ohne das landet man
- * unterhalb des neuen Textes und muss zurückscrollen, weil gleichzeitig die
- * vorher offene Karte weiter oben zuklappt und alles nach oben rutscht.
- * `scroll-mt-24` hält Abstand zur klebenden Kopfzeile.
+ * Beim Öffnen wird die Karte an den oberen Rand geholt, aber nur wenn sie sonst
+ * nicht lesbar wäre (siehe `_lib/scrollen.ts`). Ohne das landet man unterhalb
+ * des neuen Textes, weil gleichzeitig die vorher offene Karte weiter oben
+ * zuklappt und alles nach oben rutscht. `scroll-mt-24` hält Abstand zur
+ * klebenden Kopfzeile.
  */
 export default function SammelAccordion({
   nr,
@@ -38,15 +40,7 @@ export default function SammelAccordion({
   function beiKlick() {
     const wirdGeoeffnet = !offen;
     onToggle();
-    if (!wirdGeoeffnet) return;
-    // Nach dem Commit scrollen (setTimeout statt requestAnimationFrame, weil
-    // rAF in Hintergrund-Tabs pausiert). `auto` statt `smooth`: sanftes
-    // Scrollen ist in manchen Umgebungen wirkungslos, und `Abschnitt.tsx`
-    // macht es genauso.
-    setTimeout(
-      () => liRef.current?.scrollIntoView({ behavior: "auto", block: "start" }),
-      0,
-    );
+    if (wirdGeoeffnet) zeigeBeimOeffnen(liRef.current);
   }
 
   return (

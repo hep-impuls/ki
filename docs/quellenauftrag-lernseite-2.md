@@ -907,6 +907,14 @@ Chinesische Seefahrer navigieren mit der Magnetnadel. Über arabische und indisc
 **[PP-8fa9ca]** *(Vertiefung «Mehr lesen»)*
 Die Magnetnadel diente in China zuerst gar nicht der Seefahrt, mit magnetischen Löffeln richteten Wahrsager Häuser und Gräber günstig aus, bevor Kapitäne der Song-Zeit die Nadel mit aufs Meer nahmen. Auch das Schiesspulver entstand als Nebenprodukt, daoistische Alchemisten suchten ein Mittel für langes Leben und fanden ein Gemisch, das brannte und knallte, zuerst für Feuerwerk, bald für Waffen. Über Händler und die Feldzüge der Mongolen wanderten beide Erfindungen westwärts, wo Kanonen die Burgmauern der Ritter entwerteten und die Macht zu Königen mit grossen Heeren verschoben. Der englische Philosoph Francis Bacon schrieb um 1620, drei Erfindungen hätten das Gesicht der Welt verändert, Buchdruck, Schiesspulver und Kompass, und ahnte nicht, dass alle drei Wurzeln in China hatten. Was eine Erfindung bewirkt, entscheidet sich eben erst dort, wo sie ankommt und wozu man sie einsetzt.
 
+> **Belegt** («daoistische Alchemisten»): [Schwarzpulver (Wikipedia)](https://de.wikipedia.org/wiki/Schwarzpulver) — Abschnitt «Geschichte»: Chinesische Alchemisten fanden die explosive Mischung bei Versuchen zur Herstellung eines Lebenselixiers. *(geprüft 2026-07-26)*
+
+> **Belegt** («Francis Bacon»): [Bacon, «Novum Organum» (1620), Übersetzung Jonathan Bennett](https://www.earlymoderntexts.com/assets/pdfs/bacon1620.pdf) — Erstes Buch, Aphorismus 129, Seite 46: «printing, gunpowder, and the nautical compass. These three have changed the whole aspect and state of things throughout the world». *(geprüft 2026-07-26)*
+
+> **Kein Beleg** («mit magnetischen Löffeln richteten Wahrsager Häuser und Gräber günstig aus»): Die Wahrsage-Herkunft des Kompasses ist in der Fachliteratur (Needham) belegt, aber wir haben keine frei zugängliche deutschsprachige Seite gefunden, die genau den Löffel-Kompass der Wahrsager beschreibt. Der Wikipedia-Artikel «Kompass» erwähnt ihn nur beiläufig. Bis eine tragfähige Quelle da ist, bleibt die Stelle ohne Link. *(notiert 2026-07-26)*
+
+> **Kein Beleg** («der Legende nach auch Napoleon und Benjamin Franklin»): Steht so nicht in diesem Block, sondern beim Schachtürken; hier nur als Hinweis, dass Legenden-Zuschreibungen grundsätzlich keinen Beleg bekommen. Sie sind im Text bereits als Legende gekennzeichnet. *(notiert 2026-07-26)*
+
 ### Der Buchdruck
 
 **[PP-27f6e4]** *(Kartentext)*
