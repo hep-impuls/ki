@@ -10,6 +10,7 @@ import {
 import { GEWICHT_EVENT, leseGewichtungen, zieheGewichtungAusCloud } from "../_lib/gewichtung";
 import { merkeInhalt } from "../_lib/inhalte";
 import GewichtungWahl from "./GewichtungWahl";
+import { GlossarText } from "./Glossar";
 
 /** Warme Skala für das Achtsamkeits-Muster: mehr Achtsamkeit → farbiger,
  *  rötlicher. Bewusste Ausnahme von der reinen Token-Palette (wie die
@@ -257,7 +258,7 @@ export default function KontextAkkordeon({
                     {auf && (
                       <div className="animate-frame-in px-md pb-md pl-[3rem] sm:px-lg sm:pl-[3.5rem]">
                         <p className="text-body-md leading-relaxed text-on-surface-variant">
-                          {p.text}
+                          <GlossarText text={p.text} />
                         </p>
                         {p.beispiel && (
                           <div className="mt-sm rounded-xl border border-outline-variant bg-surface-container-low p-sm sm:p-md">
@@ -265,8 +266,11 @@ export default function KontextAkkordeon({
                               <span className="material-symbols-outlined text-[16px]">lightbulb</span>
                               Fallbeispiel
                             </p>
+                            {/* Über GlossarText, damit hier Fachbegriffe erklärt
+                                und gesetzte Quellen als Link erscheinen. Genau
+                                die Fallbeispiele tragen die harten Zahlen. */}
                             <p className="mt-xs text-body-md leading-relaxed text-on-surface-variant">
-                              {p.beispiel}
+                              <GlossarText text={p.beispiel} />
                             </p>
                           </div>
                         )}

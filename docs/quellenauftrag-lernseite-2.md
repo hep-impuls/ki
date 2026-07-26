@@ -677,60 +677,112 @@ Der erste Blickwinkel ist der technologische, also Rechenkraft, Daten und die Mo
 **[VA-02ccbc]** *(Kartentext)*
 Leistungsfähige KI braucht sehr viele spezielle Computerchips, Server und Speicher. Diese Anlagen sind teuer und stehen nur wenigen grossen Unternehmen und Staaten zur Verfügung. Wer diese Rechenkraft besitzt, hat einen grossen Vorsprung. So entsteht eine Abhängigkeit von einigen wenigen Anbietern.
 
+**[VA-e3c2cd]** *(Fallbeispiel)*
+Die meisten KI-Chips kommen von einer einzigen Firma, dem US-Konzern Nvidia. Weil alle diese Chips wollen, stieg Nvidia 2024 zeitweise zum wertvollsten Unternehmen der Welt auf. Wer keine solchen Chips bekommt, kann bei den grossen Modellen kaum mithalten.
+
+> **Belegt** («Nvidia»): [WirtschaftsWoche: Nvidia wertvollste Aktiengesellschaft der Welt](https://www.wiwo.de/unternehmen/it/us-boersen-nvidia-jetzt-wertvollste-aktiengesellschaft-der-welt/30072326.html) — 5. November 2024, Börsenwert 3,4 Billionen Dollar. Im Juni 2024 stand Nvidia schon einmal an der Spitze, konnte den Platz aber nur einen Tag halten. Darum «zeitweise». *(geprüft 2026-07-26)*
+
 ### Energie und Ressourcen
 
 **[VA-3d2f72]** *(Kartentext)*
 Eine KI zu trainieren und zu betreiben verbraucht viel Strom und Kühlwasser. Dazu kommen seltene Rohstoffe für die Chips. Zwar werden die Geräte immer sparsamer, doch die Nutzung wächst noch schneller. Deshalb steigt der Gesamtverbrauch weiter an.
+
+**[VA-0210fd]** *(Fallbeispiel)*
+Google meldete in seinem Umweltbericht 2024, dass seine Treibhausgas-Emissionen seit 2019 um rund 48 Prozent gestiegen sind (Bezugsjahr 2023). Als Gründe nennt der Konzern den wachsenden Energiebedarf seiner Rechenzentren und die Emissionen seiner Lieferkette; die KI ist also ein Treiber davon, nicht die einzige Ursache. Ein Wert, der eigentlich sinken sollte, zeigt jedenfalls nach oben.
+
+> **Belegt** («48 Prozent»): [ingenieur.de zum Google-Umweltbericht 2024](https://www.ingenieur.de/technik/fachbereiche/umwelt/energiehungrige-google-ki-treibt-emissionen-um-48-in-die-hoehe/) — «Treibhausgasemissionen in den letzten fünf Jahren um 48 % zugenommen haben, was hauptsächlich auf den hohen Stromverbrauch der Rechenzentren und der Lieferkette zurückzuführen ist.» *(geprüft 2026-07-26)*
 
 ### Rechenzentren
 
 **[VA-ff1f9b]** *(Kartentext)*
 Für KI entstehen überall neue Rechenzentren, also grosse Hallen voller Computer. Sie schaffen digitale Kapazität für ein ganzes Land. Vor Ort brauchen sie aber viel Energie, Wasser, Fläche und einen starken Stromanschluss. Damit konkurrieren sie mit anderen Bedürfnissen einer Region.
 
+**[VA-ed6696]** *(Fallbeispiel)*
+In Irland verbrauchten die Rechenzentren 2023 bereits 21 Prozent des gemessenen Stroms im Land, für 2024 meldete das irische Statistikamt 22 Prozent. Zum Vergleich, in beiden Jahren gleich: städtische Haushalte 18 Prozent, ländliche 10 Prozent. Die Rechenzentren brauchen also mehr als die Städte für sich, aber weniger als alle Haushalte zusammen. Manche Regionen bremsen deshalb den Bau neuer Zentren.
+
+> **Belegt** («irische Statistikamt»): [CSO Ireland: Rechenzentren und Stromverbrauch 2024](https://www.cso.ie/en/releasesandpublications/ep/p-dcmec/datacentresmeteredelectricityconsumption2024/keyfindings/) — «rose to 22% in 2024»; städtische Haushalte 18 Prozent, ländliche 10 Prozent. Für 2023 nennt der Vorjahresbericht 21 Prozent bei gleichen Haushaltswerten. *(geprüft 2026-07-26)*
+
 ### Technologisch-kapitalistische Organisation
 
 **[VA-9b9d38]** *(Kartentext)*
 Die stärkste KI wird fast nur von grossen privaten Technologiekonzernen entwickelt. Bei ihnen sammeln sich Geld, Daten, Rechenzentren und Patente. Dadurch liegt viel Macht bei wenigen Firmen. Deren Geschäftsinteressen bestimmen mit, in welche Richtung sich die Technik entwickelt.
+
+**[VA-9979f0]** *(Fallbeispiel)*
+Der Software-Riese Microsoft hat rund 13 Milliarden Dollar in die Firma OpenAI gesteckt, die hinter ChatGPT steht. Damit hängt eine der wichtigsten KI-Firmen eng an einem einzelnen Grosskonzern. So bündelt sich viel Macht bei wenigen Unternehmen.
 
 ### Zugang
 
 **[VA-e5b5c3]** *(Kartentext)*
 Nicht alle können KI gleichermassen nutzen. Kosten, technische Ausstattung, Sprache und digitale Erfahrung entscheiden mit. Wer gut ausgestattet ist, profitiert stärker. So kann KI bestehende Ungleichheiten sogar vergrössern.
 
+**[VA-2907aa]** *(Fallbeispiel)*
+Bei den grossen Chatbots ist die Gratisstufe begrenzt: weniger Anfragen, eingeschränkter Zugriff auf die neuesten Modelle und Werkzeuge. Ein Abo für rund 20 Dollar im Monat hebt vor allem diese Grenzen an. Wer zahlen kann, arbeitet also flüssiger und mit mehr Möglichkeiten. Schon beim Zugang entsteht so ein Unterschied zwischen Menschen. Die genauen Stufen ändern sich laufend, dieser Stand ist von 2026.
+
+> **Kein Beleg** (Zugang: Gratisstufe gegenüber Abo bei den grossen Chatbots): Die Preis- und Limitseiten der Anbieter ändern sich laufend, ein Beleg wäre in Monaten falsch. Der Text nennt darum kein einzelnes Produkt mehr und trägt das Standdatum 2026. Absichtlich ohne Link. *(notiert 2026-07-26)*
+
 ### Arbeitsmarkt
 
 **[VA-921987]** *(Kartentext)*
 KI verändert die Arbeitswelt spürbar. Sie übernimmt vor allem einzelne Aufgaben, selten gleich einen ganzen Beruf. Manche Tätigkeiten fallen weg, andere verändern sich, und neue kommen dazu. Für viele Berufe bedeutet das neue Anforderungen und neues Lernen.
+
+**[VA-aff821]** *(Fallbeispiel)*
+Die Bezahlfirma Klarna gab 2024 selbst bekannt, ihr KI-Assistent leiste die Arbeit von rund 700 Vollzeitstellen im Kundendienst. Kurz darauf investierte sie wieder stärker in menschlichen Service, weil die Qualität nicht überall reichte. Diese Abfolge zeigt, wie schnell und zugleich unsicher dieser Wandel verläuft.
+
+> **Belegt** («Klarna»): [Klarna, Medienmitteilung vom 27. Februar 2024](https://www.klarna.com/international/press/der-ki-kundenassistent-von-klarna-bearbeitet-im-ersten-monat-zwei-drittel-aller-kundendienst-anfragen/) — Klarnas eigene Angabe: Der KI-Assistent führte 2,3 Millionen Unterhaltungen, zwei Drittel aller Kundendienst-Chats, und leiste damit die Arbeit von 700 Vollzeitmitarbeitenden. Unabhängig nachgemessen wurde das nicht. *(geprüft 2026-07-26)*
 
 ### Rollenverschiebung
 
 **[VA-047958]** *(Kartentext)*
 Die Rolle des Menschen verschiebt sich. Statt eine Arbeit selbst auszuführen, leitet man die KI an und prüft ihr Ergebnis. Am Ende trägt der Mensch die Verantwortung für das, was er übernimmt. Aus dem Ausführenden wird also eher ein Anleiter und Kontrolleur.
 
+**[VA-ddeb05]** *(Fallbeispiel)*
+Wer heute programmiert, lässt sich von einem Werkzeug wie GitHub Copilot ganze Code-Abschnitte vorschlagen. Die eigentliche Arbeit ist dann, diese Vorschläge zu lesen, zu prüfen und zu verbessern. Aus dem Selberschreiben wird ein Anleiten und Kontrollieren.
+
 ### Regulierung
 
 **[VA-c7ea69]** *(Kartentext)*
 Der Staat versucht, KI mit Gesetzen zu lenken. Solche Regeln sollen Grundrechte, Sicherheit, Datenschutz und Urheberrecht schützen. Zugleich sollen sie Forschung und Innovation nicht unnötig behindern. Diese Balance ist schwierig, und die Regeln entstehen erst nach und nach.
+
+**[VA-eb3a6b]** *(Fallbeispiel)*
+Die Europäische Union hat 2024 den AI Act beschlossen, das weltweit erste umfassende KI-Gesetz; in Kraft ist er seit dem 1. August 2024, seine Pflichten greifen aber gestaffelt über mehrere Jahre. Er teilt Anwendungen nach ihrem Risiko in Stufen ein, von frei erlaubt bis ganz verboten. Dazu kommen eigene Regeln für grosse Allzweckmodelle wie GPT oder Claude sowie Transparenzpflichten, etwa die Kennzeichnung von KI-Inhalten.
+
+> **Belegt** («gestaffelt»): [EU AI Act Service Desk: Zeitplan der Anwendung](https://ai-act-service-desk.ec.europa.eu/en/ai-act/eu-ai-act-implementation-timeline) — In Kraft am 1. August 2024. Verbote ab 2. Februar 2025, Regeln für Allzweckmodelle ab 2. August 2025, Transparenzpflichten (Artikel 50) ab 2. August 2026, Hochrisiko-Systeme ab Dezember 2027 bzw. August 2028. *(geprüft 2026-07-26)*
 
 ### Geopolitik
 
 **[VA-7592fc]** *(Kartentext)*
 Um KI ist ein weltweiter Wettbewerb entbrannt. Staaten und Unternehmen ringen um Chips, Daten, Fachkräfte und Energie. Auch technische Standards und Unabhängigkeit stehen auf dem Spiel. Wer hier vorne liegt, gewinnt wirtschaftliche und politische Macht.
 
+**[VA-03d91c]** *(Fallbeispiel)*
+Ab 2022 verschärften die USA die Ausfuhrregeln für ihre stärksten KI-Chips nach China. Der Hersteller Nvidia baute daraufhin absichtlich langsamere Chips, nur um weiter liefern zu dürfen. Seit Januar 2026 werden bestimmte Ausfuhren wieder von Fall zu Fall geprüft und unter Bedingungen erlaubt. Die Regeln kippen also mit der Politik, und genau daran sieht man, dass KI längst ein Machtthema zwischen Staaten ist.
+
+> **Kein Beleg** (Geopolitik: «Seit Januar 2026 werden bestimmte Ausfuhren wieder fallweise geprüft»): Die US-Behörde BIS veröffentlicht solche Kurswechsel als Pressemitteilungen, deren Adressen sich ändern. Wir haben keine dauerhaft stabile, frei zugängliche Seite gefunden, die den Stand von Januar 2026 belegt. Statt einen Link zu setzen, der bald ins Leere führt, bleibt die Stelle unbelegt und trägt im Text ihr Standdatum. *(notiert 2026-07-26)*
+
 ### Kultureller Bias und Technikverständnis
 
 **[VA-225dcb]** *(Kartentext)*
 KI lernt aus Texten, die oft aus dem englischsprachigen und westlichen Raum stammen. Darum gibt sie häufig westliche Sprachen, Werte und Sichtweisen wieder. Andere Kulturen verstehen Technik, Gemeinschaft und Privatsphäre aber teils ganz anders. «West» und «Ost» sind dabei keine festen Blöcke, sondern grobe Vereinfachungen.
+
+**[VA-6068d8]** *(Fallbeispiel)*
+Eine UNESCO-Studie von 2024 prüfte bekannte Sprachmodelle und fand klare Klischees. Frauen wurden viel häufiger mit «Familie» und «Haushalt» verbunden, Männer mit «Karriere» und «Gehalt». Die KI gibt also die Vorurteile ihrer Trainingstexte wieder.
+
+> **Belegt** («UNESCO»): [UNESCO: Studie zu Geschlechterstereotypen in Sprachmodellen](https://www.unesco.org/en/articles/generative-ai-unesco-study-reveals-alarming-evidence-regressive-gender-stereotypes) — Untersucht wurden GPT-2, GPT-3.5 und Llama 2. Ein Modell beschrieb Frauen viermal häufiger in häuslichen Rollen als Männer; bei Llama 2 häuften sich in Männergeschichten Wörter wie «treasure» und «adventurous», in Frauengeschichten «garden» und «love». *(geprüft 2026-07-26)*
 
 ### Text- und Archivkompetenz
 
 **[VA-f77139]** *(Kartentext)*
 KI hilft, grosse Textmengen zu durchsuchen und zusammenzufassen. Sie ersetzt aber nicht das kritische Prüfen von Quellen. Wichtig bleiben die Herkunft, der Zusammenhang und der Blick ins Original. Ohne dieses Prüfen sitzt man leicht Fehlern und Erfindungen auf.
 
+**[VA-b3f295]** *(Fallbeispiel)*
+2023 reichte ein New Yorker Anwalt einen Schriftsatz ein, für den er ChatGPT genutzt hatte. Die KI hatte sechs Gerichtsurteile frei erfunden, die es nie gab, und der Anwalt bekam eine Geldstrafe. Ohne Prüfen an der Quelle wird aus flüssigem Text schnell ein teurer Fehler.
+
 ### Wissensmacht
 
 **[VA-b5b609]** *(Kartentext)*
 Sichtbar wird vor allem, was digital vorliegt und in den Trainingsdaten steckt. Was fehlt oder nie digitalisiert wurde, gerät leichter in Vergessenheit. So entscheidet die Auswahl der Daten mit, welches Wissen zählt. Das ist eine Form von Macht über das Wissen.
+
+**[VA-f6cfae]** *(Fallbeispiel)*
+Die Trainingsdaten der grossen Modelle bestehen zu einem sehr grossen Teil aus englischen Texten. Wissen aus kleineren Sprachen, etwa vielen afrikanischen, ist kaum vertreten, und dort antwortet die KI schwächer oder erfindet mehr. So entscheidet die Datenmenge mit, wessen Wissen sichtbar bleibt.
 
 ## Thema 02 · Philosophische Perspektive
 

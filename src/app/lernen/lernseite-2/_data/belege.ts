@@ -51,6 +51,66 @@ export const BELEGE: Beleg[] = [
       "Erstes Buch, Aphorismus 129, Seite 46: «printing, gunpowder, and the nautical compass. These three have changed the whole aspect and state of things throughout the world».",
     geprueft: "2026-07-26",
   },
+
+  /* ── Fallbeispiele der Kriterien («Die KI im Kontext») ────────────────────
+   * Alle URLs am 2026-07-26 abgerufen, die Zahlen in der Quelle nachgelesen. */
+  {
+    id: "VA-e3c2cd",
+    anker: "Nvidia",
+    url: "https://www.wiwo.de/unternehmen/it/us-boersen-nvidia-jetzt-wertvollste-aktiengesellschaft-der-welt/30072326.html",
+    titel: "WirtschaftsWoche: Nvidia wertvollste Aktiengesellschaft der Welt",
+    stelle:
+      "5. November 2024, Börsenwert 3,4 Billionen Dollar. Im Juni 2024 stand Nvidia schon einmal an der Spitze, konnte den Platz aber nur einen Tag halten. Darum «zeitweise».",
+    geprueft: "2026-07-26",
+  },
+  {
+    id: "VA-0210fd",
+    anker: "48 Prozent",
+    url: "https://www.ingenieur.de/technik/fachbereiche/umwelt/energiehungrige-google-ki-treibt-emissionen-um-48-in-die-hoehe/",
+    titel: "ingenieur.de zum Google-Umweltbericht 2024",
+    stelle:
+      "«Treibhausgasemissionen in den letzten fünf Jahren um 48 % zugenommen haben, was hauptsächlich auf den hohen Stromverbrauch der Rechenzentren und der Lieferkette zurückzuführen ist.»",
+    geprueft: "2026-07-26",
+  },
+  {
+    id: "VA-ed6696",
+    anker: "irische Statistikamt",
+    url: "https://www.cso.ie/en/releasesandpublications/ep/p-dcmec/datacentresmeteredelectricityconsumption2024/keyfindings/",
+    titel: "CSO Ireland: Rechenzentren und Stromverbrauch 2024",
+    stelle:
+      "«rose to 22% in 2024»; städtische Haushalte 18 Prozent, ländliche 10 Prozent. Für 2023 nennt der Vorjahresbericht 21 Prozent bei gleichen Haushaltswerten.",
+    geprueft: "2026-07-26",
+  },
+  {
+    id: "VA-aff821",
+    anker: "Klarna",
+    // Bewusst die Mitteilung des Unternehmens selbst: Der Text sagt ja gerade,
+    // dass die Zahl eine Selbstauskunft ist. Der Reuters-Bericht zur späteren
+    // Kurskorrektur lag hinter einer Bot-Sperre (403) und ist darum draussen.
+    url: "https://www.klarna.com/international/press/der-ki-kundenassistent-von-klarna-bearbeitet-im-ersten-monat-zwei-drittel-aller-kundendienst-anfragen/",
+    titel: "Klarna, Medienmitteilung vom 27. Februar 2024",
+    stelle:
+      "Klarnas eigene Angabe: Der KI-Assistent führte 2,3 Millionen Unterhaltungen, zwei Drittel aller Kundendienst-Chats, und leiste damit die Arbeit von 700 Vollzeitmitarbeitenden. Unabhängig nachgemessen wurde das nicht.",
+    geprueft: "2026-07-26",
+  },
+  {
+    id: "VA-eb3a6b",
+    anker: "gestaffelt",
+    url: "https://ai-act-service-desk.ec.europa.eu/en/ai-act/eu-ai-act-implementation-timeline",
+    titel: "EU AI Act Service Desk: Zeitplan der Anwendung",
+    stelle:
+      "In Kraft am 1. August 2024. Verbote ab 2. Februar 2025, Regeln für Allzweckmodelle ab 2. August 2025, Transparenzpflichten (Artikel 50) ab 2. August 2026, Hochrisiko-Systeme ab Dezember 2027 bzw. August 2028.",
+    geprueft: "2026-07-26",
+  },
+  {
+    id: "VA-6068d8",
+    anker: "UNESCO",
+    url: "https://www.unesco.org/en/articles/generative-ai-unesco-study-reveals-alarming-evidence-regressive-gender-stereotypes",
+    titel: "UNESCO: Studie zu Geschlechterstereotypen in Sprachmodellen",
+    stelle:
+      "Untersucht wurden GPT-2, GPT-3.5 und Llama 2. Ein Modell beschrieb Frauen viermal häufiger in häuslichen Rollen als Männer; bei Llama 2 häuften sich in Männergeschichten Wörter wie «treasure» und «adventurous», in Frauengeschichten «garden» und «love».",
+    geprueft: "2026-07-26",
+  },
 ];
 
 /**
@@ -81,6 +141,20 @@ export const OHNE_BELEG: KeinBeleg[] = [
     betrifft: "«der Legende nach auch Napoleon und Benjamin Franklin»",
     grund:
       "Steht so nicht in diesem Block, sondern beim Schachtürken; hier nur als Hinweis, dass Legenden-Zuschreibungen grundsätzlich keinen Beleg bekommen. Sie sind im Text bereits als Legende gekennzeichnet.",
+    notiert: "2026-07-26",
+  },
+  {
+    id: "VA-03d91c",
+    betrifft: "Geopolitik: «Seit Januar 2026 werden bestimmte Ausfuhren wieder fallweise geprüft»",
+    grund:
+      "Die US-Behörde BIS veröffentlicht solche Kurswechsel als Pressemitteilungen, deren Adressen sich ändern. Wir haben keine dauerhaft stabile, frei zugängliche Seite gefunden, die den Stand von Januar 2026 belegt. Statt einen Link zu setzen, der bald ins Leere führt, bleibt die Stelle unbelegt und trägt im Text ihr Standdatum.",
+    notiert: "2026-07-26",
+  },
+  {
+    id: "VA-2907aa",
+    betrifft: "Zugang: Gratisstufe gegenüber Abo bei den grossen Chatbots",
+    grund:
+      "Die Preis- und Limitseiten der Anbieter ändern sich laufend, ein Beleg wäre in Monaten falsch. Der Text nennt darum kein einzelnes Produkt mehr und trägt das Standdatum 2026. Absichtlich ohne Link.",
     notiert: "2026-07-26",
   },
 ];

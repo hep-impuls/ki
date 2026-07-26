@@ -38,6 +38,7 @@ const DATEIEN = [
 /* ── Belegfähige Felder. Alles andere behauptet nichts. ───────────────────── */
 const FELDER = {
   text: "Kartentext",
+  beispiel: "Fallbeispiel",
   mehr: "Vertiefung «Mehr lesen»",
   geschichte: "Bildgeschichte",
   info: "Zur Philosophie",

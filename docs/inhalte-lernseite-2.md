@@ -712,7 +712,7 @@ Der erste Blickwinkel ist der technologische, also Rechenkraft, Daten und die Mo
 
 **Text:** Für KI entstehen überall neue Rechenzentren, also grosse Hallen voller Computer. Sie schaffen digitale Kapazität für ein ganzes Land. Vor Ort brauchen sie aber viel Energie, Wasser, Fläche und einen starken Stromanschluss. Damit konkurrieren sie mit anderen Bedürfnissen einer Region.
 
-**Beispiel:** In Irland verbrauchten die Rechenzentren 2023 bereits 21 Prozent des gemessenen Stroms im Land, mehr als alle städtischen Haushalte zusammen; für 2024 meldete das irische Statistikamt 22 Prozent. Manche Regionen bremsen deshalb den Bau neuer Zentren.
+**Beispiel:** In Irland verbrauchten die Rechenzentren 2023 bereits 21 Prozent des gemessenen Stroms im Land, für 2024 meldete das irische Statistikamt 22 Prozent. Zum Vergleich, in beiden Jahren gleich: städtische Haushalte 18 Prozent, ländliche 10 Prozent. Die Rechenzentren brauchen also mehr als die Städte für sich, aber weniger als alle Haushalte zusammen. Manche Regionen bremsen deshalb den Bau neuer Zentren.
 
 #### Wirtschaftlicher Kontext
 

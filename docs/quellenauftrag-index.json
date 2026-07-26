@@ -1056,12 +1056,26 @@
   "stufe": "mittel",
   "text": "Leistungsfähige KI braucht sehr viele spezielle Computerchips, Server und Speicher. Diese Anlagen sind teuer und stehen nur wenigen grossen Unternehmen und Staaten zur Verfügung. Wer diese Rechenkraft besitzt, hat einen grossen Vorsprung. So entsteht eine Abhängigkeit von einigen wenigen Anbietern."
  },
+ "VA-e3c2cd": {
+  "datei": "vorhang-auf/page.tsx",
+  "ort": "Rechen- und Speicherkapazität",
+  "feld": "Fallbeispiel",
+  "stufe": "hoch",
+  "text": "Die meisten KI-Chips kommen von einer einzigen Firma, dem US-Konzern Nvidia. Weil alle diese Chips wollen, stieg Nvidia 2024 zeitweise zum wertvollsten Unternehmen der Welt auf. Wer keine solchen Chips bekommt, kann bei den grossen Modellen kaum mithalten."
+ },
  "VA-3d2f72": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Energie und Ressourcen",
   "feld": "Kartentext",
   "stufe": "tief",
   "text": "Eine KI zu trainieren und zu betreiben verbraucht viel Strom und Kühlwasser. Dazu kommen seltene Rohstoffe für die Chips. Zwar werden die Geräte immer sparsamer, doch die Nutzung wächst noch schneller. Deshalb steigt der Gesamtverbrauch weiter an."
+ },
+ "VA-0210fd": {
+  "datei": "vorhang-auf/page.tsx",
+  "ort": "Energie und Ressourcen",
+  "feld": "Fallbeispiel",
+  "stufe": "hoch",
+  "text": "Google meldete in seinem Umweltbericht 2024, dass seine Treibhausgas-Emissionen seit 2019 um rund 48 Prozent gestiegen sind (Bezugsjahr 2023). Als Gründe nennt der Konzern den wachsenden Energiebedarf seiner Rechenzentren und die Emissionen seiner Lieferkette; die KI ist also ein Treiber davon, nicht die einzige Ursache. Ein Wert, der eigentlich sinken sollte, zeigt jedenfalls nach oben."
  },
  "VA-ff1f9b": {
   "datei": "vorhang-auf/page.tsx",
@@ -1070,12 +1084,26 @@
   "stufe": "tief",
   "text": "Für KI entstehen überall neue Rechenzentren, also grosse Hallen voller Computer. Sie schaffen digitale Kapazität für ein ganzes Land. Vor Ort brauchen sie aber viel Energie, Wasser, Fläche und einen starken Stromanschluss. Damit konkurrieren sie mit anderen Bedürfnissen einer Region."
  },
+ "VA-ed6696": {
+  "datei": "vorhang-auf/page.tsx",
+  "ort": "Rechenzentren",
+  "feld": "Fallbeispiel",
+  "stufe": "hoch",
+  "text": "In Irland verbrauchten die Rechenzentren 2023 bereits 21 Prozent des gemessenen Stroms im Land, für 2024 meldete das irische Statistikamt 22 Prozent. Zum Vergleich, in beiden Jahren gleich: städtische Haushalte 18 Prozent, ländliche 10 Prozent. Die Rechenzentren brauchen also mehr als die Städte für sich, aber weniger als alle Haushalte zusammen. Manche Regionen bremsen deshalb den Bau neuer Zentren."
+ },
  "VA-9b9d38": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Technologisch-kapitalistische Organisation",
   "feld": "Kartentext",
   "stufe": "tief",
   "text": "Die stärkste KI wird fast nur von grossen privaten Technologiekonzernen entwickelt. Bei ihnen sammeln sich Geld, Daten, Rechenzentren und Patente. Dadurch liegt viel Macht bei wenigen Firmen. Deren Geschäftsinteressen bestimmen mit, in welche Richtung sich die Technik entwickelt."
+ },
+ "VA-9979f0": {
+  "datei": "vorhang-auf/page.tsx",
+  "ort": "Technologisch-kapitalistische Organisation",
+  "feld": "Fallbeispiel",
+  "stufe": "hoch",
+  "text": "Der Software-Riese Microsoft hat rund 13 Milliarden Dollar in die Firma OpenAI gesteckt, die hinter ChatGPT steht. Damit hängt eine der wichtigsten KI-Firmen eng an einem einzelnen Grosskonzern. So bündelt sich viel Macht bei wenigen Unternehmen."
  },
  "VA-e5b5c3": {
   "datei": "vorhang-auf/page.tsx",
@@ -1084,12 +1112,26 @@
   "stufe": "tief",
   "text": "Nicht alle können KI gleichermassen nutzen. Kosten, technische Ausstattung, Sprache und digitale Erfahrung entscheiden mit. Wer gut ausgestattet ist, profitiert stärker. So kann KI bestehende Ungleichheiten sogar vergrössern."
  },
+ "VA-2907aa": {
+  "datei": "vorhang-auf/page.tsx",
+  "ort": "Zugang",
+  "feld": "Fallbeispiel",
+  "stufe": "hoch",
+  "text": "Bei den grossen Chatbots ist die Gratisstufe begrenzt: weniger Anfragen, eingeschränkter Zugriff auf die neuesten Modelle und Werkzeuge. Ein Abo für rund 20 Dollar im Monat hebt vor allem diese Grenzen an. Wer zahlen kann, arbeitet also flüssiger und mit mehr Möglichkeiten. Schon beim Zugang entsteht so ein Unterschied zwischen Menschen. Die genauen Stufen ändern sich laufend, dieser Stand ist von 2026."
+ },
  "VA-921987": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Arbeitsmarkt",
   "feld": "Kartentext",
   "stufe": "mittel",
   "text": "KI verändert die Arbeitswelt spürbar. Sie übernimmt vor allem einzelne Aufgaben, selten gleich einen ganzen Beruf. Manche Tätigkeiten fallen weg, andere verändern sich, und neue kommen dazu. Für viele Berufe bedeutet das neue Anforderungen und neues Lernen."
+ },
+ "VA-aff821": {
+  "datei": "vorhang-auf/page.tsx",
+  "ort": "Arbeitsmarkt",
+  "feld": "Fallbeispiel",
+  "stufe": "hoch",
+  "text": "Die Bezahlfirma Klarna gab 2024 selbst bekannt, ihr KI-Assistent leiste die Arbeit von rund 700 Vollzeitstellen im Kundendienst. Kurz darauf investierte sie wieder stärker in menschlichen Service, weil die Qualität nicht überall reichte. Diese Abfolge zeigt, wie schnell und zugleich unsicher dieser Wandel verläuft."
  },
  "VA-047958": {
   "datei": "vorhang-auf/page.tsx",
@@ -1098,12 +1140,26 @@
   "stufe": "tief",
   "text": "Die Rolle des Menschen verschiebt sich. Statt eine Arbeit selbst auszuführen, leitet man die KI an und prüft ihr Ergebnis. Am Ende trägt der Mensch die Verantwortung für das, was er übernimmt. Aus dem Ausführenden wird also eher ein Anleiter und Kontrolleur."
  },
+ "VA-ddeb05": {
+  "datei": "vorhang-auf/page.tsx",
+  "ort": "Rollenverschiebung",
+  "feld": "Fallbeispiel",
+  "stufe": "tief",
+  "text": "Wer heute programmiert, lässt sich von einem Werkzeug wie GitHub Copilot ganze Code-Abschnitte vorschlagen. Die eigentliche Arbeit ist dann, diese Vorschläge zu lesen, zu prüfen und zu verbessern. Aus dem Selberschreiben wird ein Anleiten und Kontrollieren."
+ },
  "VA-c7ea69": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Regulierung",
   "feld": "Kartentext",
   "stufe": "hoch",
   "text": "Der Staat versucht, KI mit Gesetzen zu lenken. Solche Regeln sollen Grundrechte, Sicherheit, Datenschutz und Urheberrecht schützen. Zugleich sollen sie Forschung und Innovation nicht unnötig behindern. Diese Balance ist schwierig, und die Regeln entstehen erst nach und nach."
+ },
+ "VA-eb3a6b": {
+  "datei": "vorhang-auf/page.tsx",
+  "ort": "Regulierung",
+  "feld": "Fallbeispiel",
+  "stufe": "hoch",
+  "text": "Die Europäische Union hat 2024 den AI Act beschlossen, das weltweit erste umfassende KI-Gesetz; in Kraft ist er seit dem 1. August 2024, seine Pflichten greifen aber gestaffelt über mehrere Jahre. Er teilt Anwendungen nach ihrem Risiko in Stufen ein, von frei erlaubt bis ganz verboten. Dazu kommen eigene Regeln für grosse Allzweckmodelle wie GPT oder Claude sowie Transparenzpflichten, etwa die Kennzeichnung von KI-Inhalten."
  },
  "VA-7592fc": {
   "datei": "vorhang-auf/page.tsx",
@@ -1112,12 +1168,26 @@
   "stufe": "tief",
   "text": "Um KI ist ein weltweiter Wettbewerb entbrannt. Staaten und Unternehmen ringen um Chips, Daten, Fachkräfte und Energie. Auch technische Standards und Unabhängigkeit stehen auf dem Spiel. Wer hier vorne liegt, gewinnt wirtschaftliche und politische Macht."
  },
+ "VA-03d91c": {
+  "datei": "vorhang-auf/page.tsx",
+  "ort": "Geopolitik",
+  "feld": "Fallbeispiel",
+  "stufe": "hoch",
+  "text": "Ab 2022 verschärften die USA die Ausfuhrregeln für ihre stärksten KI-Chips nach China. Der Hersteller Nvidia baute daraufhin absichtlich langsamere Chips, nur um weiter liefern zu dürfen. Seit Januar 2026 werden bestimmte Ausfuhren wieder von Fall zu Fall geprüft und unter Bedingungen erlaubt. Die Regeln kippen also mit der Politik, und genau daran sieht man, dass KI längst ein Machtthema zwischen Staaten ist."
+ },
  "VA-225dcb": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Kultureller Bias und Technikverständnis",
   "feld": "Kartentext",
   "stufe": "mittel",
   "text": "KI lernt aus Texten, die oft aus dem englischsprachigen und westlichen Raum stammen. Darum gibt sie häufig westliche Sprachen, Werte und Sichtweisen wieder. Andere Kulturen verstehen Technik, Gemeinschaft und Privatsphäre aber teils ganz anders. «West» und «Ost» sind dabei keine festen Blöcke, sondern grobe Vereinfachungen."
+ },
+ "VA-6068d8": {
+  "datei": "vorhang-auf/page.tsx",
+  "ort": "Kultureller Bias und Technikverständnis",
+  "feld": "Fallbeispiel",
+  "stufe": "hoch",
+  "text": "Eine UNESCO-Studie von 2024 prüfte bekannte Sprachmodelle und fand klare Klischees. Frauen wurden viel häufiger mit «Familie» und «Haushalt» verbunden, Männer mit «Karriere» und «Gehalt». Die KI gibt also die Vorurteile ihrer Trainingstexte wieder."
  },
  "VA-f77139": {
   "datei": "vorhang-auf/page.tsx",
@@ -1126,12 +1196,26 @@
   "stufe": "tief",
   "text": "KI hilft, grosse Textmengen zu durchsuchen und zusammenzufassen. Sie ersetzt aber nicht das kritische Prüfen von Quellen. Wichtig bleiben die Herkunft, der Zusammenhang und der Blick ins Original. Ohne dieses Prüfen sitzt man leicht Fehlern und Erfindungen auf."
  },
+ "VA-b3f295": {
+  "datei": "vorhang-auf/page.tsx",
+  "ort": "Text- und Archivkompetenz",
+  "feld": "Fallbeispiel",
+  "stufe": "hoch",
+  "text": "2023 reichte ein New Yorker Anwalt einen Schriftsatz ein, für den er ChatGPT genutzt hatte. Die KI hatte sechs Gerichtsurteile frei erfunden, die es nie gab, und der Anwalt bekam eine Geldstrafe. Ohne Prüfen an der Quelle wird aus flüssigem Text schnell ein teurer Fehler."
+ },
  "VA-b5b609": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Wissensmacht",
   "feld": "Kartentext",
   "stufe": "tief",
   "text": "Sichtbar wird vor allem, was digital vorliegt und in den Trainingsdaten steckt. Was fehlt oder nie digitalisiert wurde, gerät leichter in Vergessenheit. So entscheidet die Auswahl der Daten mit, welches Wissen zählt. Das ist eine Form von Macht über das Wissen."
+ },
+ "VA-f6cfae": {
+  "datei": "vorhang-auf/page.tsx",
+  "ort": "Wissensmacht",
+  "feld": "Fallbeispiel",
+  "stufe": "mittel",
+  "text": "Die Trainingsdaten der grossen Modelle bestehen zu einem sehr grossen Teil aus englischen Texten. Wissen aus kleineren Sprachen, etwa vielen afrikanischen, ist kaum vertreten, und dort antwortet die KI schwächer oder erfindet mehr. So entscheidet die Datenmenge mit, wessen Wissen sichtbar bleibt."
  },
  "PP-e4244e": {
   "datei": "philosophische-perspektive/page.tsx",

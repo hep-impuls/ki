@@ -50,6 +50,36 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 01 · Vorhang auf
 
+**[VA-87049e]** *(Kartentext · Der versteckte Mensch)*
+Im Innern kauert ein Mensch und zieht die Fäden. Die «Intelligenz» der Maschine war menschlich. Auch heute steckt oft mehr Handarbeit drin, als man sieht.
+
+**[VA-749479]** *(Kartentext · Menschen an der Maschine)*
+Bedienerinnen richteten die Bombe ein und lasen sie ab, rund um die Uhr. Aus Turings Idee der universellen Rechenmaschine wird ein reales, kriegsentscheidendes Werkzeug und eine Geburtsstunde des Computers.
+
+**[VA-5635ae]** *(Kartentext · Die Therapeutin (DOCTOR))*
+Das bekannteste Skript imitierte eine Psychotherapeutin. Es gab Aussagen als Fragen zurück, etwa «In welcher Weise?» oder «Erzähl mir mehr».
+
+**[VA-1381cf]** *(Bildgeschichte · Maschinelles Lernen)*
+Ab den 1990er-Jahren verschob sich die KI vom Regeln-Schreiben zum Lernen aus Beispielen. Ein Modell fasst jedes Beispiel als Punkt in einem Raum mit vielen Merkmalen auf, oft mit Hunderten oder Tausenden Dimensionen, und Ähnliches liegt nah beieinander. «Lernen» heisst dann, eine Grenze zu finden, die Gruppen trennt. Danach kann das Modell Neues einordnen. Es versteht dabei keine Bedeutung, sondern rechnet mit Lage und Abstand. Diese Denkweise ist ein Grundmodell des überwachten Lernens, also des Lernens an vorsortierten Beispielen, und steckt bis heute in vielen Anwendungen. Diese schematische Illustration ist mit KI erstellt.
+
+**[VA-019688]** *(Kartentext · Ein Wesen zum Umsorgen)*
+Mit drei Knöpfen wurde gefüttert, gespielt und sauber gemacht. Es war Pflege rund um die Uhr, sonst «starb» das Wesen.
+
+**[VA-ab8ab0]** *(Kartentext · Belohnung steigt)*
+Punkte sind die Belohnung. Über viele Spiele hinweg versucht die KI, sie zu maximieren, und die Kurve klettert.
+
+**[VA-9e6dd4]** *(Kartentext · Der Durchbruch)*
+Innert Wochen nutzten Millionen ChatGPT. Es war der Moment, in dem KI im Alltag vieler Menschen ankam.
+
+**[VA-79e7f6]** *(Kartentext · Yan Shi's Automat)*
+Der Traum vom künstlichen Menschen ist nicht nur europäisch, sondern kehrt in vielen Kulturen wieder. Auch in China erzählte man früh von einer täuschend lebendigen Figur. Ein Handwerker führt sie dem König vor, und niemand erkennt zuerst, dass sie gebaut ist. Schon hier klingt die Frage an, wo die Grenze zwischen echtem und nachgeahmtem Leben verläuft.
+
+**[VA-fdc491]** *(Vertiefung «Mehr lesen» · Yan Shi's Automat)*
+Im «Liezi» wird die Figur bis ins Innere beschrieben, denn der Handwerker hatte ihr nachgebildete Organe wie Herz, Lunge, Leber, Nieren, Muskeln und Knochen gegeben. Erstaunlich ist, dass jedes Organ eine eigene Aufgabe trug. Entfernte man das künstliche Herz, verstummte die Figur, nahm man die Leber weg, konnte sie nicht mehr sehen, und ohne die Nieren versagten die Beine. Damit erzählt der Text nicht bloss von einer Puppe, sondern von einem durchdachten künstlichen Körper mit inneren Teilen. Die Episode steht im Kapitel «Tang Wen» und spielt am Hof von König Mu, der von weiten Reisen zurückkehrt. Am Ende zeigt sich der König überzeugt, dass menschliche Geschicklichkeit fast an die Werke der Natur heranreicht. So verhandelt die Erzählung schon vor vielen Jahrhunderten, ob ein Gemachtes dem Gewachsenen gleichkommen kann.
+
+**[VA-47b959]** *(Bildgeschichte · Expertensysteme)*
+Systeme wie MYCIN gossen das Wissen von Fachleuten in tausende Wenn-dann-Regeln, etwa für die Diagnose von Infektionen. In ihrem engen Gebiet waren sie nützlich. Doch sie blieben teuer im Unterhalt. Und sie waren starr gegenüber allem, was in keiner Regel stand.
+
 **[VA-744c71]** *(Kartentext · Statistische KI)*
 In den 1990er-Jahren kam die grosse Wende. Statt Regeln von Hand zu schreiben, liess man Maschinen aus vielen Beispielen selbst lernen. Damit wurden die Daten wichtiger als die aufgeschriebene Logik. Die KI begann, Muster zu erraten, statt starre Vorschriften zu befolgen.
 
@@ -85,6 +115,9 @@ KI verändert die Arbeitswelt spürbar. Sie übernimmt vor allem einzelne Aufgab
 
 **[VA-225dcb]** *(Kartentext · Kultureller Bias und Technikverständnis)*
 KI lernt aus Texten, die oft aus dem englischsprachigen und westlichen Raum stammen. Darum gibt sie häufig westliche Sprachen, Werte und Sichtweisen wieder. Andere Kulturen verstehen Technik, Gemeinschaft und Privatsphäre aber teils ganz anders. «West» und «Ost» sind dabei keine festen Blöcke, sondern grobe Vereinfachungen.
+
+**[VA-f6cfae]** *(Fallbeispiel · Wissensmacht)*
+Die Trainingsdaten der grossen Modelle bestehen zu einem sehr grossen Teil aus englischen Texten. Wissen aus kleineren Sprachen, etwa vielen afrikanischen, ist kaum vertreten, und dort antwortet die KI schwächer oder erfindet mehr. So entscheidet die Datenmenge mit, wessen Wissen sichtbar bleibt.
 
 ### Thema 02 · Philosophische Perspektive
 
@@ -125,38 +158,3 @@ Zwei Erfindungen tragen den Wandel. Die griechische Alphabetschrift (ab etwa 800
 
 **[EP-1de6e6]** *(Vertiefung «Mehr lesen» · Antike)*
 Aristoteles war zuerst Sammler und dann Systematiker: In der Lagune von Pyrrha auf Lesbos untersuchte er Fische, Kraken und Seeigel, und seine Schule trug die Verfassungen von über 150 griechischen Städten zusammen. In Athen lehrte er im Lykeion, der Überlieferung nach oft im Umhergehen, weshalb man seine Schüler «Peripatetiker» nannte, die Umherwandelnden. Aus dem vielen Material destillierte er Regeln des Schliessens: Wenn alle Menschen sterblich sind und Sokrates ein Mensch ist, dann ist Sokrates sterblich, und das gilt unabhängig davon, wer es ausspricht. Genau darin lag die Spitze gegen die Redekünstler, denn ein Schluss stimmt oder stimmt nicht, Charme ändert daran nichts. Diese Haltung wanderte über arabische Gelehrte und mittelalterliche Klosterschulen bis in unsere Schulzimmer, und noch jede Prüfung, die eine Begründung verlangt, steht in ihrer Tradition.
-
-**[EP-8cc8f0]** *(Kartentext · Zerbrechen der Ordnung)*
-Unten ziehen zahlreiche Krieger gemeinsam an einem Seil, um das Standbild zu Fall zu bringen. Die alte Weltordnung stürzt nicht von selbst. Sie wird von vielen Händen aktiv niedergerissen: Geschichte als Werk von Menschen, nicht von Schicksal.
-
-**[EP-cc795b]** *(Im Kontext der Zeit · Zerbrechen der Ordnung)*
-Champaignes Augustinus verkörpert die Antwort auf einen epochalen Schock. Als Rom 410 fiel und mit dem Reich für viele die Weltordnung selbst zusammenbrach, verlegte Augustinus den Halt vom äusseren Reich ins Innere des Menschen und in den Glauben: Wahrheit und Orientierung findet man nicht mehr in der vergänglichen Macht, sondern in Gewissen, Erinnerung und Zuwendung zu Gott. Diese nach innen gewandte Ordnung prägte das Abendland ein Jahrtausend lang.
-
-**[EP-770409]** *(Vertiefung «Mehr lesen» · Zerbrechen der Ordnung)*
-Rom selbst zeigt den Absturz in Zahlen: Die Stadt, die auf ihrem Höhepunkt gegen eine Million Einwohner zählte, schrumpfte nach Kriegen und Plünderungen auf wenige Zehntausend. Als belagernde Goten im Jahr 537 die grossen Wasserleitungen kappten, versiegten Brunnen und Thermen, und auf Dauer zog sich das Leben der geschrumpften Stadt ans Ufer des Tibers zurück. Die gewaltige Betonkuppel des Pantheons blieb über tausend Jahre unübertroffen, niemand hätte sie mehr bauen können. Zur gleichen Zeit begann die Rettung im Kleinen: Der Gelehrte Cassiodorus gründete um 550 in Süditalien das Kloster Vivarium, in dem Mönche antike Handschriften abschrieben, und bald gehörte das Kopieren in vielen Klöstern zum Tagewerk. Was wir heute von Cicero oder Vergil lesen, ist fast ausnahmslos durch solche Schreibstuben gegangen. Eine Zivilisation kann eben nicht nur Neues erfinden, sie kann Können auch wieder verlieren.
-
-**[EP-9d34d6]** *(Kartentext · Zerbrechen der Ordnung)*
-Betroffen sind alle, besonders die städtischen Eliten: Wer sich auf Rom und seine Ordnung verlassen hatte, steht plötzlich ohne Schutz da. Nach der Plünderung Roms 410 durch die Westgoten geben viele den Christen die Schuld. Sie hätten mit dem Abfall von den alten Göttern das Unglück heraufbeschworen.
-
-**[EP-517312]** *(Vertiefung «Mehr lesen» · Zerbrechen der Ordnung)*
-Wie tief der Schock sass, zeigt der Gelehrte Hieronymus, der fern in Bethlehem an seiner Bibelübersetzung arbeitete: Als ihn die Nachricht erreichte, schrieb er, mit dieser einen Stadt sei der ganze Erdkreis untergegangen, und er fand tagelang nicht zur Arbeit zurück. Übers Meer flohen ausgeplünderte Senatorenfamilien nach Nordafrika, wo manche als Bittsteller in Hippo ankamen, der Bischofsstadt des Augustinus. Dort hörte er beide Vorwürfe: Die Anhänger der alten Götter gaben dem Christengott die Schuld, und die Christen fragten, warum er sie nicht geschützt hatte. Augustinus antwortete nicht mit einer schnellen Streitschrift, sondern arbeitete von 413 bis 426 an den zweiundzwanzig Büchern seines «Gottesstaats». Dass eine Katastrophe sofort einen Schuldigen braucht, hat sich seither kaum geändert, es wechseln nur die Adressaten.
-
-**[EP-5455c7]** *(Kartentext · Aufklärung)*
-Im Vordergrund kentern Schiffe in der heranrollenden Welle. Wer dem Beben und dem Feuer entkam, den holte oft das Wasser. Das Bild bündelt die Erfahrung, dass keine menschliche Ordnung und kein Gebet vor der blinden Gewalt der Natur schützt.
-
-**[EP-269c62]** *(Einleitung · «Ende der Geschichte»)*
-Der Kalte Krieg endet, der Markt scheint zu siegen, und im Überfluss der Möglichkeiten geht die Orientierung gerade dann verloren. Mit dem Fall der Mauer glauben viele, die grossen Konflikte seien vorbei und die liberale Demokratie habe endgültig gewonnen. Doch statt Ruhe kommen Beschleunigung, Vereinzelung und das Gefühl, in lauter Möglichkeiten den Halt zu verlieren.
-
-**[EP-6db558]** *(Im Kontext der Zeit · «Ende der Geschichte»)*
-Das Foto zeigt den Kipp-Punkt der Epoche «Ende der Geschichte»: Ein ganzes System verschwindet friedlich, fast über Nacht. Was als Triumph der Freiheit gefeiert wurde, war für viele Biografien im Osten zugleich ein Boden-Verlust. Beides gehört zur Verunsicherung dieser Jahre.
-
-**[EP-ba374a]** *(Kartentext · Jetzt: Umwelt & KI)*
-Oben und an den Rändern hängen die Menschen: Programmiererinnen, Künstler, Kabelhersteller, Nutzerinnen. Viele Hände ziehen an denselben Fäden. Das «Wir» von heute ist keine Person, sondern ein Geflecht aus vielen, oft einander unbekannten Beteiligten.
-
-### Thema 02 · Wege der Orientierung
-
-**[DW-8c01fb]** *(Fliesstext · Netzwerke und Systeme)*
-Moderne Gesellschaften sind unübersichtlich geworden. Niemand überblickt mehr das Ganze, nicht die Wirtschaft, nicht die Verwaltung, nicht die Technik. Aus dem Gefühl, den Überblick verloren zu haben, entsteht schnell Überforderung. Und doch funktioniert erstaunlich vieles: Der Zug fährt, der Lohn kommt, das Spital behandelt. Wie geht das zusammen? Hier helfen zwei Denker, die die Gesellschaft nicht bewerten, sondern erklären.
-
-**[DW-3c0f3b]** *(Zur Philosophie · Transformation von Mensch und Maschine)*
-Yasuo Deguchi ist Philosophieprofessor an der Universität Kyoto und verbindet westliches mit ostasiatischem Denken. Mit seiner «We-Turn»-Philosophie verlegt er das Handeln vom einzelnen «Ich» auf ein «Wir»: Niemand kann etwas ganz allein, jede Handlung wird von vielen getragen, von Menschen, Dingen und heute auch von Maschinen. Der eigentliche Handelnde ist deshalb kein einsames Ich, sondern ein «Selbst als Wir», zu dem die KI dazugehört. Er stützt sich dabei auf einen alten buddhistischen Gedanken, das «abhängige Entstehen»: Nichts besteht für sich allein, alles entsteht wechselseitig. Das entlastet: Verantwortung verteilt sich auf ein «Wir» mit verschiedenen Rollen, statt ganz auf den Schultern eines einzelnen Ich zu liegen.

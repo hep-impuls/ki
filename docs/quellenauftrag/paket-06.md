@@ -50,6 +50,36 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 02 · Die acht Epochen
 
+**[EP-004fe5]** *(Hintergrund zum Bild · «Ende der Geschichte»)*
+Dieses Bild ist keine gemalte Kunst, sondern eine wissenschaftliche Aufnahme der Weltraumbehörden NASA und NOAA aus dem Jahr 2012. Es ist eine Montage aus Hunderten Aufnahmen des Satelliten Suomi NPP, denn es ist nie überall auf der Erde gleichzeitig Nacht. So hat der Planet in Wirklichkeit nie ausgesehen. Zu sehen ist die nächtliche Erde, auf der jedes Lichtpünktchen für menschliche Besiedlung und für Strom steht. Grell leuchten Europa, Ostasien und die US-Küsten, während weite Teile Afrikas, Südamerikas und Zentralasiens fast dunkel bleiben. Gerade als Konstruktion führt das Bild vor Augen, wie ungleich die vernetzte Welt verteilt ist.
+
+**[EP-a4a7da]** *(Kartentext · «Ende der Geschichte»)*
+Ein aus vielen Satellitenaufnahmen zusammengesetztes Bild der nächtlichen Erde. Jedes Lichtpünktchen steht für menschliche Besiedlung, für Strom und Energie, die Ausbreitung der Menschheit in einem einzigen Blick.
+
+**[EP-d2c8f3]** *(Kartentext · «Ende der Geschichte»)*
+Der Personal Computer, den es seit Mitte der 1970er-Jahre gibt und den der IBM PC von 1981 zum Standard macht, und das World Wide Web, das Tim Berners-Lee ab 1989 entwickelt und das CERN 1993 zur freien Nutzung freigibt, bringen Rechenkraft und Information in jeden Haushalt. Der genormte Container macht globalen Warentransport billig und schnell. Zusammen vernetzen und beschleunigen sie Wirtschaft und Alltag fast grenzenlos. Durchsetzen konnten sie sich, weil die Elektronik immer kleiner und billiger wurde (vom Transistor zum Mikrochip), weil militärische Forschung das Netz vorfinanzierte (ARPANET) und weil die Normung des Containers die Kosten des Welthandels einbrechen liess.
+
+**[EP-b08d96]** *(Vertiefung «Mehr lesen» · «Ende der Geschichte»)*
+Der Container hat einen Erfinder mit Namen: Der amerikanische Spediteur Malcom McLean liess 1956 einen umgebauten Tanker mit 58 Stahlkisten von Newark nach Houston fahren, weil ihn das teure Umladen von Hand ärgerte, und die Kosten für das Verladen einer Tonne Fracht sanken dadurch auf einen Bruchteil. Drei Jahrzehnte später reichte der Physiker Tim Berners-Lee am Forschungszentrum CERN einen Vorschlag für ein Hypertext-System ein, sein Vorgesetzter notierte darauf «vage, aber aufregend». 1993 gab das CERN diese Technik zur freien Nutzung frei, ohne Patent und ohne Gebühren, einer der folgenreichsten Verzichte der Wirtschaftsgeschichte. So senkten eine Blechkiste und ein Stück verschenkter Software gemeinsam die Kosten der Distanz, für Waren die eine, für Information die andere. Fabriken konnten dorthin wandern, wo die Löhne am tiefsten waren, und Nachrichten überallhin, wo ein Bildschirm stand. Die Welt wurde kleiner, und was das für Arbeit und Zusammenhalt bedeutet, verhandeln wir bis heute.
+
+**[EP-1ebb85]** *(Vertiefung «Mehr lesen» · «Ende der Geschichte»)*
+In Detroit, einst die stolzeste Autostadt der Welt, halbierte sich die Einwohnerzahl innert weniger Jahrzehnte, ganze Strassenzüge standen leer. Im Ruhrgebiet schloss eine Zeche nach der anderen, 2018 fuhr auf Prosper-Haniel die letzte Schicht ein, und mit den Fördertürmen verschwand eine ganze Lebensform aus Werkssiedlungen, Schichtplänen und Vereinsleben. Im Osten Deutschlands wickelte nach 1990 die Treuhandanstalt Tausende von Staatsbetrieben ab, Millionen Stellen gingen verloren, und was gestern als Lebensleistung galt, zählte auf dem neuen Arbeitsmarkt oft wenig. Ingenieurinnen sattelten um, Facharbeiter pendelten westwärts oder blieben zurück. Der Umbruch kam als Freiheit und als Entwertung zugleich, je nachdem, wo man stand. Solche Erfahrungen wirken lange nach, in Familien, in Wahlergebnissen und im Misstrauen gegen jedes neue Versprechen von Fortschritt.
+
+**[EP-5d7d80]** *(Kartentext · «Ende der Geschichte»)*
+Die Postmoderne beschreibt diese Lage. Jean-François Lyotard erklärt 1979 das «Ende der grossen Erzählungen»: Es gibt nicht mehr die eine verbindliche Geschichte von Fortschritt oder Heil, sondern viele kleine, nebeneinander. Michel Foucault fragt zugleich, wer die Macht hat zu bestimmen, was als «normal» und «wahr» gilt.
+
+**[EP-637f2f]** *(Vertiefung «Mehr lesen» · «Ende der Geschichte»)*
+Lyotards berühmte Diagnose entstand als Auftragsarbeit: Der Universitätsrat der kanadischen Provinz Québec bestellte 1979 einen Bericht über das Wissen im Computerzeitalter, und der Philosoph lieferte statt Verwaltungsprosa die These, die grossen Heilsgeschichten von Fortschritt und Befreiung hätten ihre Glaubwürdigkeit verbraucht. Foucault wiederum sass jahrelang in Archiven über Akten von Gefängnissen, Kliniken und Irrenhäusern. Er zeigte, wie unscheinbare Instrumente wie Register, Prüfungen und Statistiken festlegen, wer als krank, kriminell oder normal gilt: Macht verbietet nicht nur, sie vermisst, sortiert und benotet. Foucault starb 1984, lange bevor das Internet den Alltag erreichte, doch seine Fragen passen verblüffend gut auf Feeds, Rankings und Empfehlungsalgorithmen. Wer legt heute fest, was als normal angezeigt wird, und nach welchen Massstäben? Die Postmoderne hat vor allem diese Wachsamkeit hinterlassen, auch wenn ihr Name inzwischen historisch klingt.
+
+**[EP-3a8d9d]** *(Einleitung · Jetzt: Umwelt & KI)*
+Klimakrise und Künstliche Intelligenz zugleich: Der Individualismus allein trägt nicht mehr. Es braucht ein neues Wir. Zum ersten Mal sind die Folgen unseres Handelns global und langfristig: Was wir heute tun, entscheidet über das Klima kommender Generationen. Und mit der KI tritt ein Gegenüber auf, das spricht und gestaltet, ohne Mensch zu sein. Das zwingt zur Frage, wer eigentlich handelt und wer verantwortlich ist.
+
+**[EP-fc9656]** *(Hintergrund zum Bild · Jetzt: Umwelt & KI)*
+Dieses Bild ist kein Gemälde, sondern eine Fotografie, die am 7. Dezember 1972 aus rund 29 000 km Entfernung entstand. Aufgenommen hat sie die Besatzung von Apollo 17, der bislang letzten bemannten Mondmission. Zu sehen ist die Erde als ganze, runde Kugel, mit Wolkenwirbeln, Ozeanen und Kontinenten in einem einzigen Blick. Von hier oben sind keine Nationen und keine Grenzen erkennbar, nur ein einziger, verletzlicher Planet im schwarzen All. «Blue Marble» wurde zu einem der meistreproduzierten Fotos der Geschichte und zur Ikone der Umweltbewegung.
+
+**[EP-330711]** *(Im Kontext der Zeit · Jetzt: Umwelt & KI)*
+Der «Blue Marble» ist das Bild vom einen, gemeinsamen «Wir»: die Erde als ein einziger, grenzenloser Planet. Genau dieses «Wir» steht heute unter doppeltem Druck: Klimakrise und eine Technik, die Wirklichkeit täuschend echt erzeugen kann. Wie sich aus lauter vernetzten Einzelnen wieder ein tragfähiges Wir bildet, ist die offene Frage, an der die Philosophie der Gegenwart arbeitet.
+
 **[EP-ae1b7d]** *(Kartentext · Jetzt: Umwelt & KI)*
 Von hier oben sind keine Nationen, keine Grenzen, keine Konflikte zu sehen, nur ein einziger, verletzlicher Planet im schwarzen All. Genau dieser Anblick machte das Bild zur Ikone der Umwelt- und Friedensbewegung.
 
@@ -130,35 +160,3 @@ Vor über zweieinhalbtausend Jahren stiegen Menschen aus der ganzen griechischen
 
 **[HUB-f5abb9]** *(Fliesstext · (ohne Abschnitt))*
 Kaum ein Thema ist so präsent wie die Künstliche Intelligenz — und kaum eines so schwer zu fassen. Es wird viel über sie gesagt, doch vieles bleibt schemenhaft, ein Reden über etwas, das man selten wirklich vor Augen hat. Dieses Lernset will die KI sichtbarer und verständlicher machen, indem es ihr eine Gestalt gibt.
-
-### Thema 01 · Vorhang auf
-
-**[VA-87049e]** *(Kartentext · Der versteckte Mensch)*
-Im Innern kauert ein Mensch und zieht die Fäden. Die «Intelligenz» der Maschine war menschlich. Auch heute steckt oft mehr Handarbeit drin, als man sieht.
-
-**[VA-749479]** *(Kartentext · Menschen an der Maschine)*
-Bedienerinnen richteten die Bombe ein und lasen sie ab, rund um die Uhr. Aus Turings Idee der universellen Rechenmaschine wird ein reales, kriegsentscheidendes Werkzeug und eine Geburtsstunde des Computers.
-
-**[VA-5635ae]** *(Kartentext · Die Therapeutin (DOCTOR))*
-Das bekannteste Skript imitierte eine Psychotherapeutin. Es gab Aussagen als Fragen zurück, etwa «In welcher Weise?» oder «Erzähl mir mehr».
-
-**[VA-1381cf]** *(Bildgeschichte · Maschinelles Lernen)*
-Ab den 1990er-Jahren verschob sich die KI vom Regeln-Schreiben zum Lernen aus Beispielen. Ein Modell fasst jedes Beispiel als Punkt in einem Raum mit vielen Merkmalen auf, oft mit Hunderten oder Tausenden Dimensionen, und Ähnliches liegt nah beieinander. «Lernen» heisst dann, eine Grenze zu finden, die Gruppen trennt. Danach kann das Modell Neues einordnen. Es versteht dabei keine Bedeutung, sondern rechnet mit Lage und Abstand. Diese Denkweise ist ein Grundmodell des überwachten Lernens, also des Lernens an vorsortierten Beispielen, und steckt bis heute in vielen Anwendungen. Diese schematische Illustration ist mit KI erstellt.
-
-**[VA-019688]** *(Kartentext · Ein Wesen zum Umsorgen)*
-Mit drei Knöpfen wurde gefüttert, gespielt und sauber gemacht. Es war Pflege rund um die Uhr, sonst «starb» das Wesen.
-
-**[VA-ab8ab0]** *(Kartentext · Belohnung steigt)*
-Punkte sind die Belohnung. Über viele Spiele hinweg versucht die KI, sie zu maximieren, und die Kurve klettert.
-
-**[VA-9e6dd4]** *(Kartentext · Der Durchbruch)*
-Innert Wochen nutzten Millionen ChatGPT. Es war der Moment, in dem KI im Alltag vieler Menschen ankam.
-
-**[VA-79e7f6]** *(Kartentext · Yan Shi's Automat)*
-Der Traum vom künstlichen Menschen ist nicht nur europäisch, sondern kehrt in vielen Kulturen wieder. Auch in China erzählte man früh von einer täuschend lebendigen Figur. Ein Handwerker führt sie dem König vor, und niemand erkennt zuerst, dass sie gebaut ist. Schon hier klingt die Frage an, wo die Grenze zwischen echtem und nachgeahmtem Leben verläuft.
-
-**[VA-fdc491]** *(Vertiefung «Mehr lesen» · Yan Shi's Automat)*
-Im «Liezi» wird die Figur bis ins Innere beschrieben, denn der Handwerker hatte ihr nachgebildete Organe wie Herz, Lunge, Leber, Nieren, Muskeln und Knochen gegeben. Erstaunlich ist, dass jedes Organ eine eigene Aufgabe trug. Entfernte man das künstliche Herz, verstummte die Figur, nahm man die Leber weg, konnte sie nicht mehr sehen, und ohne die Nieren versagten die Beine. Damit erzählt der Text nicht bloss von einer Puppe, sondern von einem durchdachten künstlichen Körper mit inneren Teilen. Die Episode steht im Kapitel «Tang Wen» und spielt am Hof von König Mu, der von weiten Reisen zurückkehrt. Am Ende zeigt sich der König überzeugt, dass menschliche Geschicklichkeit fast an die Werke der Natur heranreicht. So verhandelt die Erzählung schon vor vielen Jahrhunderten, ob ein Gemachtes dem Gewachsenen gleichkommen kann.
-
-**[VA-47b959]** *(Bildgeschichte · Expertensysteme)*
-Systeme wie MYCIN gossen das Wissen von Fachleuten in tausende Wenn-dann-Regeln, etwa für die Diagnose von Infektionen. In ihrem engen Gebiet waren sie nützlich. Doch sie blieben teuer im Unterhalt. Und sie waren starr gegenüber allem, was in keiner Regel stand.
