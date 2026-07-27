@@ -63,7 +63,7 @@ export default function Home() {
           <div>
             <h2 className="text-headline-lg text-on-surface">Lernmodule</h2>
             <p className="mt-xs text-body-sm text-on-surface-variant">
-              {unit.modules.length} Platzhalter — Inhalte folgen.
+              Zwei Lernsets, unabhängig voneinander und in beliebiger Reihenfolge.
             </p>
           </div>
         </div>
