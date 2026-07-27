@@ -10,6 +10,45 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-27 — Korrektorat: in die Next.js-App integriert, nicht als zweites Hosting (Pietro)
+
+Das externe Korrektorat von `ki26` folgt dem Vorbild aus `10mio` (Passcode statt
+GitHub-Zugang, Commits auf einen Korrektorat-Branch, ein Pull Request pro Runde),
+läuft aber **in dieser App** unter `/korrektorat` statt als eigenes
+Cloudflare-Pages-Projekt. Grund: ki26 ist bereits eine Next.js-App auf Vercel;
+ein zweites Hosting brächte ein zweites Deployment, ein zweites Token und eine
+zweite Stelle, an der Umgebungsvariablen veralten.
+
+Die Technik-Entscheidung dahinter: ki26 hält seine Inhalte in **TSX/TS**, nicht in
+MDX. Rückschreiben mit regulären Ausdrücken ist dafür keine Option — der
+bestehende Leseexporter `docs/inhalte-export.js` sagt selbst, dass er eine
+Näherung ist und Lücken markiert. Weil die Route Handlers in der Node-Runtime
+laufen, kann der **echte TypeScript-Compiler** parsen (kein Bundle-Limit wie in
+einem Worker); `typescript` ist dafür von `devDependencies` nach `dependencies`
+gewandert.
+
+Zwei Festlegungen zum Umfang, die nicht aus dem Code hervorgehen:
+
+- **Nur die Lernseiten** (`src/app/lernen/**` plus `src/config/unit.ts`).
+  Titelseite, Onboarding und Lehrpersonen-UI sind aussen vor.
+- **Toter Code wird ausgeschlossen.** Der v2-Flow von Lernseite 1 (`KiEinheit`,
+  `Auftakt`, `Abschluss`, `Station`, `Maschinenraum`, `PollDeck`, `Skala`,
+  `WissenCheck`, `_data/stationen.ts`, `_data/maschinenraum.ts`,
+  `_data/wissenChecks.ts`) liegt noch im Repo, ist aber seit M7 nirgends
+  eingebunden — rund 400 Textstellen, die niemand liest. `npm run
+  korrektorat:inventar` baut den Import-Graphen ab den echten `page.tsx` neu auf
+  und meldet, wenn diese Liste veraltet.
+
+Umgekehrt bleiben drei nicht eingebundene Dateien **sichtbar**, mit Hinweis im
+Editor — allen voran `SchablonenZeitstrahl.tsx` (283 Textstellen, Lernseite 2):
+angefangener Inhalt, an dem noch gearbeitet wird, ist etwas anderes als
+abgelöster Code.
+
+- `src/lib/korrektorat/**`, `src/app/api/korrektorat/**`, `src/app/korrektorat/**`
+- `scripts/korrektorat/**`, `docs/KORREKTORAT.md`, `docs/anleitung-korrektor.md`
+
+---
+
 ## 2026-07-27 — Lehrpersonen-Anleitungen aus 10mio portiert, nicht kopiert (Pietro)
 
 `ki26` bekommt dieselben zwei Lehrpersonen-Dokumente wie das `10mio`-Repo, als

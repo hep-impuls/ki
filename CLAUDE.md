@@ -211,6 +211,26 @@ Two handoff docs in [design/](design/) define the **target architecture** this r
 - **Tailwind CSS 3** — current config uses a `brand` palette; the target is the MD3 token system in handoff-layout.md §3.
 - **Vercel** for deployment (`vercel.json` pins the Next.js framework preset). Note: handoff-layout.md §6 describes a Firebase Hosting + GitHub Actions deploy — Vercel is the current choice for this repo; the `/api/**` rewrite to the Cloud Function is the only Firebase-Hosting-specific piece to reconcile.
 
+## Korrektorat (`/korrektorat`, Stand 2026-07-27, Pietro)
+
+Externer Editor, mit dem eine Korrekturperson **alle Texte der Lernseiten**
+korrigiert, ohne Repo-Zugriff: Passcode-Anmeldung, ein Formular pro Textstelle
+(3106 Stellen über 59 Dateien), jede Speicherung wird ein Commit auf
+`KORREKTORAT_BRANCH`, daraus wächst ein Pull Request pro Runde. Vorbild ist das
+`10mio`-Korrektorat, aber **in diese App integriert** statt als eigenes Hosting.
+Vollständige Anleitung: [docs/KORREKTORAT.md](docs/KORREKTORAT.md).
+
+- **Für Christof relevant:** Korrekturen an Lernseite 2 kommen als PR, nicht als
+  direkte Commits — normal reviewen und mergen.
+- **Wenn du eine neue Komponente mit Text-Props baust:** Attributnamen in
+  `JSX_TEXT_ATTRS` bzw. technische Schlüssel in `SKIP_KEYS` ergänzen
+  ([src/lib/korrektorat/policy.mjs](src/lib/korrektorat/policy.mjs)) — sonst sieht
+  die Korrekturperson die neuen Texte nicht. Danach `npm run korrektorat:test`
+  (Rundlauf + Speicher-Schranken, muss grün sein) und bei Struktur-Umbauten
+  `npm run korrektorat:inventar` (meldet toten Code, der sichtbar wäre).
+- `typescript` liegt deshalb in `dependencies`, nicht `devDependencies`: der
+  Parser läuft zur Laufzeit in den Route Handlers.
+
 ## Decision log
 
 Sprach-, Naming-, Design- und Inhalts-Entscheidungen, die nicht direkt aus dem
