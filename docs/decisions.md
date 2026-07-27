@@ -10,6 +10,35 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-27 — Lehrpersonen-Anleitungen aus 10mio portiert, nicht kopiert (Pietro)
+
+`ki26` bekommt dieselben zwei Lehrpersonen-Dokumente wie das `10mio`-Repo, als
+eigene Seiten: `/lehrperson/anleitung` (Bedienung — Vorbild
+`anleitung-lehrperson.astro`) und `/lehrperson/leitfaden` (Didaktik — Vorbild
+`einheit-uebersicht-lehrperson.astro`). Beide sind von `/lehrperson` aus
+verlinkt; die Titelseite hat neu einen Einstieg «Für Lehrpersonen».
+
+**Bewusst nicht 1:1 übernommen**, weil sich ki26 an drei Stellen anders verhält:
+
+- **Kein Pflichtmodul-Schritt.** In 10mio ist das Schritt 3 der Anleitung und
+  ein echtes Gate. In ki26 wird die Auswahl schülerseitig nicht durchgesetzt
+  (siehe Eintrag «Klassenbeitritt jederzeit» unten) — dokumentiert wird sie
+  darum gar nicht. Aus 4 Schritten werden 3.
+- **Beitritts-Link statt Code abtippen.** `/start?class=CODE` gibt es in 10mio
+  nicht; in der ki26-Anleitung ist er der empfohlene Weg.
+- **Klassencode jederzeit nachtragbar** über das Account-Menü — in 10mio läuft
+  das übers Profilmenü und ist anders beschrieben.
+
+Die **Plenum-Anker** im Leitfaden (eine Diskussionsfrage je Station) sind die
+didaktische Zutat dieses Leitfadens, keine Ableitung aus dem Lernset. Fragen und
+Lernziele der Stationen stammen dagegen aus `lernseite-1/_data/stationenV3.ts` —
+wenn dort Stationen dazukommen, muss der Leitfaden mitziehen.
+
+- `src/app/lehrperson/{anleitung,leitfaden}/page.tsx`, `_components/DruckButton.tsx`
+- `src/app/lehrperson/page.tsx` (zwei Einstiegskarten), `src/app/page.tsx` (Titelseite)
+
+---
+
 ## 2026-07-27 — Klassenbeitritt jederzeit: Account-Menü statt `/start` (Pietro)
 
 Der Klassencode bleibt **optional und überspringbar** im Onboarding — aber ab

@@ -24,6 +24,9 @@ export default function Home() {
           <a className="hover:text-on-surface transition-colors" href="#about">
             Über
           </a>
+          <Link className="hover:text-on-surface transition-colors" href="/lehrperson">
+            Für Lehrpersonen
+          </Link>
         </nav>
       </header>
 
@@ -45,6 +48,17 @@ export default function Home() {
               >
                 Jetzt starten
                 <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+              </Link>
+              {/* Der Einstieg für Lehrpersonen: Klasse anlegen, Report öffnen,
+                  Anleitungen. Steht neben «Jetzt starten», damit er auch auf
+                  dem Handy sichtbar ist (die Kopfzeilen-Navigation ist dort
+                  ausgeblendet). */}
+              <Link
+                href="/lehrperson"
+                className="inline-flex items-center gap-sm rounded-xl border border-outline-variant bg-surface-bright px-lg py-sm text-label-md text-on-surface shadow-sm transition hover:border-primary hover:text-primary"
+              >
+                <span className="material-symbols-outlined text-[18px]">school</span>
+                Für Lehrpersonen
               </Link>
             </div>
           </div>

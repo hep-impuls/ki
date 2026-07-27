@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useMemo, useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { classExists, saveTeacherSetupSecure } from "@/lib/api";
 
@@ -102,6 +103,44 @@ export default function LehrpersonPage() {
           Klassencode plus Secret schützt deine Klassendaten.
         </p>
       </header>
+
+      {/* Die beiden Anleitungen stehen bewusst zuoberst und immer sichtbar:
+          Wer zum ersten Mal hier landet, soll nicht raten müssen, wie das
+          Ganze gedacht ist. */}
+      <div className="mt-lg grid gap-sm sm:grid-cols-2">
+        <Link
+          href="/lehrperson/anleitung"
+          className="group flex items-start gap-md rounded-xl border border-outline-variant bg-surface-container-low p-md transition hover:border-primary hover:bg-surface-bright"
+        >
+          <span className="material-symbols-outlined mt-0.5 text-[22px] text-primary">
+            menu_book
+          </span>
+          <span>
+            <span className="block text-label-md text-on-surface">
+              Anleitung: Klasse einrichten
+            </span>
+            <span className="mt-xs block text-body-sm text-on-surface-variant">
+              Registrieren, Code teilen, Report öffnen — in 3 Schritten.
+            </span>
+          </span>
+        </Link>
+        <Link
+          href="/lehrperson/leitfaden"
+          className="group flex items-start gap-md rounded-xl border border-outline-variant bg-surface-container-low p-md transition hover:border-tertiary hover:bg-surface-bright"
+        >
+          <span className="material-symbols-outlined mt-0.5 text-[22px] text-tertiary">
+            lightbulb
+          </span>
+          <span>
+            <span className="block text-label-md text-on-surface">
+              Inhaltlicher Leitfaden
+            </span>
+            <span className="mt-xs block text-body-sm text-on-surface-variant">
+              Der Bogen der Lernsets, Plenum-Anker, Unterrichts-Szenarien.
+            </span>
+          </span>
+        </Link>
+      </div>
 
       {mode === "choose" && !done && (
         <div className="mt-xl grid gap-md sm:grid-cols-2">
