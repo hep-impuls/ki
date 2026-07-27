@@ -196,7 +196,8 @@ Two handoff docs in [design/](design/) define the **target architecture** this r
 - `src/lib/` — geteilte Infrastruktur: `firebase.ts` (Client-Singleton), `session.ts` (Fortschritts-Code `MODELL-NNX`, z.B. `QWEN-34R` — LLM-Name + 2 Ziffern + Grossbuchstabe; früher Tier-Codes, alte gelten weiter — + localStorage), `paths.ts` (Firestore-Pfade), `types.ts`, `db.ts` (Client-SDK-Ops), `api.ts` (Route-Handler-Wrapper), `progressMirror.ts`, `polls.ts` (Aggregat-Zähler). Server-only: `firebaseAdmin.ts`, `server/teacherStore.ts`, `server/apiResponse.ts`.
 - `src/app/api/` — 6 Route Handlers (teacher/setup, teacher/prefs, teacher/report, student/class-exists, student/class-prefs, student/class-report). Alle `POST`, alle `runtime="nodejs"` (Admin SDK).
 - `src/app/start/` — Schüler-Onboarding (Fortschritts-Code generieren, Klassencode optional; `?class=CODE` befüllt/verknüpft einen Klassencode vorab, für Lehrpersonen-Links).
-- `src/app/lehrperson/` — Lehrer-UI: Klasse anlegen, Pflichtmodule, Report.
+- `src/app/lehrperson/` — Lehrer-UI: Klasse anlegen, Report, plus die beiden Anleitungen `anleitung/` (Bedienung) und `leitfaden/` (Didaktik). `setup/` (Pflichtmodule) existiert, wird aber schülerseitig **nicht durchgesetzt** — siehe [docs/handoff-lehrpersonen-und-klassenbeitritt.md](docs/handoff-lehrpersonen-und-klassenbeitritt.md) §4.
+- `src/components/layout/AccountMenu.tsx` — Account-Panel in der TopAppBar: Fortschritts-Code anzeigen und **jederzeit einer Klasse beitreten**. Wer einen Klassenbeitritt anbieten will, verlinkt **nicht** auf `/start`, sondern feuert `ACCOUNT_OPEN_EVENT` (`/start` leitet bei bestehender Session sofort weiter → Sackgasse). Details: [docs/handoff-lehrpersonen-und-klassenbeitritt.md](docs/handoff-lehrpersonen-und-klassenbeitritt.md) §2.
 - `src/components/ActivityTracker.tsx` — bleibt vorerst unverändert (R6 verschoben).
 - `src/components/SessionGate.tsx` — Gate: ohne Session → Redirect `/start`. Aktiv über `src/app/lernen/layout.tsx` für **alle** `/lernen/**`-Routen (Lernseite 1 + 2). Der Fortschritts-Code wird damit im ersten Schritt (`/start`) erzeugt/eingegeben; ein Code fürs ganze Set.
 - **KI-Einheit (Lernseite 1, Pietro)** — vollständige Umsetzung unter `src/app/lernen/lernseite-1/`: Auftakt, 5 Stationen, Abschluss, Landkarte, Zertifikat. Fortschritt wird via `ProgressMirror.tsx` nach Firestore gespiegelt.
@@ -221,6 +222,8 @@ Stellen) ergänzen — jüngste oben.
 ## Open questions
 
 - **R6 — Engagement-Tracker-Umbau** (`ActivityTracker.tsx` → Session-basiert): verschoben, geteilte Datei → mit Christof koordinieren.
+- **Pflichtmodule ohne Wirkung** — `/lehrperson/setup` schreibt `requiredModules`, schülerseitig wird nichts durchgesetzt (`loadStudentClassPrefs()` hat keinen Aufrufer). Entweder den Knopf «Pflichtmodule wählen» auf `/lehrperson` entfernen oder das Gate bauen. Entscheid 2026-07-27: kein Gate.
+- **`npm run lint` defekt** — `next lint` interpretiert «lint» als Projektverzeichnis (Next 16 hat den Befehl entfernt). Ersatz bis zur Migration auf die ESLint-CLI: `npx tsc --noEmit`.
 - ~~**SessionGate auf lernseite-1**~~: **erledigt 2026-07-22** — Gate über `src/app/lernen/layout.tsx` für ganz `/lernen/**` aktiv (Login als erster Schritt, ein Code für Lernseite 1 + 2).
 
 ## Registrierung, Klassencode & Lehrer-Report (Stand 2026-06-26)
