@@ -10,6 +10,36 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-27 — Klassenbeitritt jederzeit: Account-Menü statt `/start` (Pietro)
+
+Der Klassencode bleibt **optional und überspringbar** im Onboarding — aber ab
+jetzt jederzeit nachholbar. Bisher war er das nicht: Wer bei `/start` «Ohne
+Klasse weiter» wählte, hatte keinen Weg mehr in eine Klasse, weil `/start` bei
+bestehender Session sofort auf die Lernseite zurückleitet. Der SideNav-Eintrag
+«Klasse beitreten» und der CTA im Klassenreport zeigten beide dorthin und
+liefen damit ins Leere.
+
+Neue Stelle dafür ist ein **Account-Menü oben rechts in der TopAppBar**
+(`AccountMenu.tsx`, `account_circle`). Es bündelt, was zum Zugang gehört:
+Fortschritts-Code zum Notieren und Kopieren, und den Klassenbeitritt mit
+Existenz-Check. Bewusst ein Panel und keine eigene Seite — der Beitritt soll
+den Lernfluss nicht unterbrechen, und der Fortschritt bleibt unangetastet
+(nur `teacherCode` kommt dazu).
+
+Die beiden alten Einstiege verlinken nicht mehr auf `/start`, sondern öffnen
+das Panel über ein Custom-Event (`ki26-account-open`); nach dem Beitritt zieht
+der SideNav-Eintrag über `ki26-session-changed` live auf «Klassenreport» nach.
+
+**Kein Pflichtmodul-Gate.** Die Lehrperson kann unter `/lehrperson/setup`
+weiterhin Pflichtmodule wählen, sie werden aber schülerseitig bewusst nicht
+durchgesetzt — `loadStudentClassPrefs()` bleibt ungenutzt. Die Lernsets sind
+auf freie Wahl angelegt; ein Gate widerspräche dem.
+
+- `src/components/layout/AccountMenu.tsx` (neu), `TopAppBar.tsx`, `SideNav.tsx`
+- `src/app/klassenreport/page.tsx` (CTA öffnet das Panel)
+
+---
+
 ## 2026-07-27 — Lehrpersonen-Report: Module getrennt, Klassen-Rhizom, KI-Einschätzung (Christof)
 
 Der Report zu Lernset 2 unterscheidet neu die beiden Module. Bisher stand alles
