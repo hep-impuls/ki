@@ -108,10 +108,11 @@ export default function Lernseite2PhilosophischePerspektive() {
         ]}
       />
 
-      {/* Video-Impuls zum Auftakt — vor «Was ist Philosophie» (YouTube-ID folgt) */}
+      {/* Video-Impuls zum Auftakt — vor «Was ist Philosophie» */}
       <VideoImpuls
         className="mt-xl"
         spurId="video:philosophie"
+        videoId="OQ2CqYnE7bg"
         titel="Philosophie als Orientierung"
         beschreibung="Ein kurzer Input zum Auftakt: Wie hat Philosophie schon mehrfach Orientierung gestiftet, wenn Technik und Ereignisse die Welt verunsicherten?"
       />
