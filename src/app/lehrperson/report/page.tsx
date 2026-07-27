@@ -7,6 +7,7 @@ import { describePoll } from "@/lib/pollLabels";
 import type {
   PollAggregate,
   TeacherOrakel,
+  TeacherOrakelBereich,
   TeacherOrakelThema,
   TeacherReport,
 } from "@/lib/types";
@@ -23,6 +24,34 @@ import type {
 
 function pct(n: number): string {
   return `${Math.round(n)}%`;
+}
+
+/**
+ * Nicht jeder Eintrag in der `polls`-Sammlung ist eine Abstimmung. Lernseite 2
+ * legt dort auch reine **Aktivitätszähler** ab: jede angeklickte Spur, jede
+ * geknüpfte Fläche. Ungefiltert landeten die als «Unbekannte Quelle» mit
+ * technischen IDs (`lernseite-2:gewebe:0`) und sinnlosen Nullbalken im Report.
+ * Diese Zahlen gehören ins Klassen-Orakel, nicht in die Abstimmungen.
+ */
+function istZaehler(pollId: string): boolean {
+  return (
+    pollId.startsWith("spuren-") ||
+    pollId.startsWith("flaechen-") ||
+    pollId.includes("lernseite-2")
+  );
+}
+
+/** Eine Kennzahl der Klasse, im Zuschnitt des Lernenden-PDF. */
+function Kennzahl({ wert, titel, hinweis }: { wert: number | string; titel: string; hinweis?: string }) {
+  return (
+    <div className="rounded-xl border border-outline-variant bg-surface-bright p-md">
+      <p className="text-label-sm uppercase tracking-wider text-on-surface-variant">{titel}</p>
+      <p className="mt-xs text-headline-md text-on-surface" style={{ fontFamily: "ui-monospace, monospace" }}>
+        {wert}
+      </p>
+      {hinweis && <p className="mt-xs text-label-sm text-on-surface-variant">{hinweis}</p>}
+    </div>
+  );
 }
 
 const sumCounts = (rec: Record<string, number>) =>
@@ -199,10 +228,37 @@ function ReportFlow() {
 
   const polls = useMemo(() => {
     if (!report) return [];
-    return [...report.polls].sort((a, b) =>
-      describePoll(a.pollId).sortKey.localeCompare(describePoll(b.pollId).sortKey),
-    );
+    return [...report.polls]
+      .filter((p) => !istZaehler(p.pollId))
+      .sort((a, b) =>
+        describePoll(a.pollId).sortKey.localeCompare(describePoll(b.pollId).sortKey),
+      );
   }, [report]);
+
+  /**
+   * Klassen-Kennzahlen im Zuschnitt des Lernenden-PDF. Für «am meisten» und
+   * «am wenigsten bearbeitet» wird nach der Zahl der dort aktiven
+   * Schüler:innen sortiert, nicht nach Klicks: Ein grosser Abschnitt sammelt
+   * sonst allein durch seine Grösse die meisten Treffer.
+   */
+  const klassenbild = useMemo(() => {
+    if (!orakel || orakel.bereiche.length === 0) return null;
+    // Lokale Bindung: In der Typ-Annotation unten greift die Null-Prüfung von
+    // `orakel` nicht mehr, `bereiche` schon.
+    const bereiche = orakel.bereiche;
+    const summe = (f: (b: TeacherOrakelBereich) => number) =>
+      bereiche.reduce((s, b) => s + f(b), 0);
+    const nachAktiven = [...bereiche].sort(
+      (a, b) => b.aktiveSchueler - a.aktiveSchueler || b.angeschaut - a.angeschaut,
+    );
+    return {
+      angeschaut: summe((b) => b.angeschaut),
+      vertieft: summe((b) => b.vertieft),
+      weiterverfolgen: summe((b) => b.weiterverfolgen),
+      staerkste: nachAktiven.slice(0, 2),
+      schwaechste: nachAktiven.slice(-2).reverse(),
+    };
+  }, [orakel]);
 
   return (
     <main className="mx-auto max-w-5xl px-lg py-xl">
@@ -221,15 +277,139 @@ function ReportFlow() {
       {loading && <p className="mt-xl text-body-md text-on-surface-variant">Lädt …</p>}
       {error && <p className="mt-xl text-body-md text-error">{error}</p>}
 
-      {orakel && !loading && (
+      {report && !loading && (
         <section className="mt-xl">
-          <h2 className="text-headline-sm text-on-surface">
-            Klassen-Orakel — wo die Klasse unterwegs ist
+          <h2 className="text-headline-md text-on-surface">
+            Lernset 1 · Kann KI das? Eine Positionsreise
+          </h2>
+          <h3 className="mt-lg text-headline-sm text-on-surface">
+            Fortschritt pro Schüler:in
+          </h3>
+          {report.students.length === 0 ? (
+            <p className="mt-sm text-body-md text-on-surface-variant">
+              Noch keine Schüler:innen in dieser Klasse.
+            </p>
+          ) : (
+            <div className="mt-md overflow-x-auto rounded-xl border border-outline-variant">
+              <table className="w-full border-collapse text-body-sm">
+                <thead>
+                  <tr className="bg-surface-dim text-left text-label-sm text-on-surface-variant">
+                    <th className="px-md py-sm">Code</th>
+                    {moduleIds.map((m) => (
+                      <th key={m} className="px-md py-sm">{m}</th>
+                    ))}
+                    <th className="px-md py-sm">Quiz</th>
+                    <th className="px-md py-sm">Zuletzt aktiv</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {report.students.map((s, i) => (
+                    <tr key={s.code ?? i} className="border-t border-outline-variant">
+                      <td className="px-md py-sm font-medium text-on-surface">{s.code ?? "—"}</td>
+                      {moduleIds.map((m) => (
+                        <td key={m} className="px-md py-sm text-on-surface-variant">
+                          {s.modulePct[m] != null ? pct(s.modulePct[m]) : "–"}
+                        </td>
+                      ))}
+                      <td className="px-md py-sm text-on-surface-variant">
+                        {s.quizMax > 0 ? `${s.quizPunkte}/${s.quizMax}` : "–"}
+                      </td>
+                      <td className="px-md py-sm text-on-surface-variant">
+                        {s.lastActive ? s.lastActive.slice(0, 10) : "–"}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+
+          {polls.length > 0 && (
+            <>
+              <h3 className="mt-xl text-headline-sm text-on-surface">
+                Abstimmungen — Klasse gegen alle
+              </h3>
+              <p className="mt-xs text-body-sm text-on-surface-variant">
+                Blau = deine Klasse · Orange = alle Klassen zusammen.
+              </p>
+              <div className="mt-md grid gap-md sm:grid-cols-2">
+                {polls.map((agg) => (
+                  <PollCard key={agg.pollId} agg={agg} />
+                ))}
+              </div>
+            </>
+          )}
+        </section>
+      )}
+
+      {orakel && !loading && (
+        <section className="mt-xl border-t border-outline-variant pt-xl">
+          <h2 className="text-headline-md text-on-surface">
+            Lernset 2 · Eine ganz neue Partnerschaft
           </h2>
           <p className="mt-xs max-w-3xl text-body-sm text-on-surface-variant">
-            {orakel.aktiv} von {orakel.n} Schüler:innen mit Aktivität. Pro Abschnitt:
-            angeschaute Punkte, Vertiefungen («Mehr lesen») und Merkzeichen
-            («Das verfolge ich weiter»). Anonym aggregiert, keine Einzelzuordnung.
+            Dieselbe Auswertung, die Ihre Schüler:innen am Ende als PDF erhalten,
+            hier für die ganze Klasse. Anonym aggregiert, keine Einzelzuordnung.
+          </p>
+
+          <h3 className="mt-lg text-headline-sm text-on-surface">Die Klasse in Zahlen</h3>
+          {klassenbild ? (
+            <div className="mt-md grid gap-md sm:grid-cols-2 lg:grid-cols-4">
+              <Kennzahl
+                titel="Aktiv"
+                wert={`${orakel.aktiv} / ${orakel.n}`}
+                hinweis="Schüler:innen mit mindestens einer Spur"
+              />
+              <Kennzahl
+                titel="Angeschaut"
+                wert={klassenbild.angeschaut}
+                hinweis="geöffnete Punkte, gesamte Klasse"
+              />
+              <Kennzahl
+                titel="Vertieft"
+                wert={klassenbild.vertieft}
+                hinweis="aufgeklappte «Mehr lesen»-Texte"
+              />
+              <Kennzahl
+                titel="Weiterverfolgen"
+                wert={klassenbild.weiterverfolgen}
+                hinweis="Merkzeichen für die Zeit danach"
+              />
+            </div>
+          ) : null}
+
+          {klassenbild && (
+            <div className="mt-md grid gap-md sm:grid-cols-2">
+              {[
+                { titel: "Am meisten bearbeitet", eintraege: klassenbild.staerkste },
+                { titel: "Am wenigsten bearbeitet", eintraege: klassenbild.schwaechste },
+              ].map((sp) => (
+                <div
+                  key={sp.titel}
+                  className="rounded-xl border border-outline-variant bg-surface-bright p-md"
+                >
+                  <p className="text-label-sm uppercase tracking-wider text-on-surface-variant">
+                    {sp.titel}
+                  </p>
+                  <ul className="mt-sm space-y-xs text-body-sm text-on-surface">
+                    {sp.eintraege.map((b) => (
+                      <li key={b.bereich}>
+                        {b.bereich}{" "}
+                        <span className="text-on-surface-variant">
+                          ({b.aktiveSchueler} von {orakel.n} aktiv)
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          )}
+
+          <h3 className="mt-xl text-headline-sm text-on-surface">Pro Abschnitt</h3>
+          <p className="mt-xs max-w-3xl text-body-sm text-on-surface-variant">
+            Angeschaute Punkte, Vertiefungen («Mehr lesen») und Merkzeichen
+            («Das verfolge ich weiter»).
           </p>
           {orakel.bereiche.length === 0 ? (
             <p className="mt-sm text-body-md text-on-surface-variant">
@@ -261,76 +441,18 @@ function ReportFlow() {
               </table>
             </div>
           )}
-          <div className="mt-lg grid gap-md sm:grid-cols-3">
+          {/* Wie im Lernenden-PDF: die konkreten Titel, nicht nur Zahlen. Das
+              «weiterverfolgt» steht zuerst, denn dort hängen die
+              Anschlussaufgaben. */}
+          <h3 className="mt-xl text-headline-sm text-on-surface">
+            Konkrete Themen der Klasse
+          </h3>
+          <div className="mt-md grid gap-md sm:grid-cols-3">
             <ThemenListe titel="Am meisten weiterverfolgt" items={orakel.topWeiterverfolgen} />
             <ThemenListe titel="Am meisten vertieft" items={orakel.topVertieft} />
             <ThemenListe titel="Am meisten angeschaut" items={orakel.topAngeschaut} />
           </div>
         </section>
-      )}
-
-      {report && !loading && (
-        <>
-          <section className="mt-xl">
-            <h2 className="text-headline-sm text-on-surface">Fortschritt pro Schüler:in</h2>
-            {report.students.length === 0 ? (
-              <p className="mt-sm text-body-md text-on-surface-variant">
-                Noch keine Schüler:innen in dieser Klasse.
-              </p>
-            ) : (
-              <div className="mt-md overflow-x-auto rounded-xl border border-outline-variant">
-                <table className="w-full border-collapse text-body-sm">
-                  <thead>
-                    <tr className="bg-surface-dim text-left text-label-sm text-on-surface-variant">
-                      <th className="px-md py-sm">Code</th>
-                      {moduleIds.map((m) => (
-                        <th key={m} className="px-md py-sm">{m}</th>
-                      ))}
-                      <th className="px-md py-sm">Quiz</th>
-                      <th className="px-md py-sm">Zuletzt aktiv</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {report.students.map((s, i) => (
-                      <tr key={s.code ?? i} className="border-t border-outline-variant">
-                        <td className="px-md py-sm font-medium text-on-surface">
-                          {s.code ?? "—"}
-                        </td>
-                        {moduleIds.map((m) => (
-                          <td key={m} className="px-md py-sm text-on-surface-variant">
-                            {s.modulePct[m] != null ? pct(s.modulePct[m]) : "–"}
-                          </td>
-                        ))}
-                        <td className="px-md py-sm text-on-surface-variant">
-                          {s.quizMax > 0 ? `${s.quizPunkte}/${s.quizMax}` : "–"}
-                        </td>
-                        <td className="px-md py-sm text-on-surface-variant">
-                          {s.lastActive ? s.lastActive.slice(0, 10) : "–"}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            )}
-          </section>
-
-          {polls.length > 0 && (
-            <section className="mt-xl">
-              <h2 className="text-headline-sm text-on-surface">
-                Abstimmungen — Klasse vs. alle
-              </h2>
-              <p className="mt-xs text-body-sm text-on-surface-variant">
-                Blau = deine Klasse · Orange = alle Klassen zusammen.
-              </p>
-              <div className="mt-md grid gap-md sm:grid-cols-2">
-                {polls.map((agg) => (
-                  <PollCard key={agg.pollId} agg={agg} />
-                ))}
-              </div>
-            </section>
-          )}
-        </>
       )}
     </main>
   );
