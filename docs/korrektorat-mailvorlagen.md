@@ -33,6 +33,12 @@ So läuft es:
 3. Oben rechts auf «Speichern» klicken. Das kannst du so oft tun, wie du willst
    — auch mitten in einer Datei.
 
+Wenn dir ein Fehler auffällt und du nicht weisst, wo er steht: Ganz oben auf der
+Übersichtsseite gibt es **«Textstelle suchen»**. Du tippst das falsche Wort ein,
+und der Editor durchsucht alle Texte beider Lernseiten auf einmal. Ein Klick auf
+einen Treffer öffnet die Stelle direkt. Das ist meist der schnellste Weg,
+besonders wenn du denselben Fehler mehrfach vermutest.
+
 Was du tippst, aber noch nicht gespeichert hast, bleibt in deinem Browser
 erhalten. Verlassen kannst du dich aber nur auf Gespeichertes, darum am Ende
 einer Sitzung bitte speichern.

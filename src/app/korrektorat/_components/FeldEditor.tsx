@@ -99,7 +99,7 @@ export default function FeldEditor({
     knoten.scrollIntoView({ block: "center", behavior: "smooth" });
     knoten.querySelector<HTMLElement>("textarea, input")?.focus({ preventScroll: true });
     setHervorgehoben(zielFeld);
-    const timer = setTimeout(() => setHervorgehoben(null), 2500);
+    const timer = setTimeout(() => setHervorgehoben(null), 4000);
     return () => clearTimeout(timer);
   }, [daten, zielFeld]);
 

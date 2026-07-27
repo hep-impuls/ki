@@ -15,6 +15,29 @@ korrigieren, speichern. Deine Korrekturen kommen bei uns gesammelt an.
 2. Links einen Abschnitt anklicken, rechts die Texte korrigieren.
 3. Oben rechts auf **Speichern** klicken. Fertig.
 
+## Der schnellste Weg: Textstelle suchen
+
+Wenn dir beim Lesen ein Fehler auffällt, musst du nicht raten, in welcher Datei
+er steckt. Ganz oben auf der Übersichtsseite steht **«Textstelle suchen»**. Tipp
+das falsche Wort ein — gesucht wird in **allen** Texten beider Lernseiten
+gleichzeitig.
+
+Du siehst pro Treffer, in welcher Datei und in welchem Abschnitt er steht, dazu
+den Satz drumherum mit dem gesuchten Wort hervorgehoben. Ein Klick öffnet die
+Datei und springt direkt auf das Feld — es wird kurz umrandet und der Cursor
+steht schon drin.
+
+Zwei Hinweise:
+
+- Gross- und Kleinschreibung spielt keine Rolle. «künstliche» findet auch
+  «Künstliche».
+- **nur ganze Wörter** anhaken, wenn ein kurzes Wort sonst überall anschlägt:
+  ohne Haken findet «das» auch «Datensatz».
+
+Das lohnt sich besonders bei Fehlern, die du mehrfach vermutest — eine falsche
+Schreibweise, ein uneinheitlicher Begriff, ein «ss» das ein «ß» sein wollte.
+Suchen, Liste durchgehen, jede Stelle einzeln anspringen und korrigieren.
+
 ## Die Übersicht
 
 Nach dem Anmelden siehst du alle Dateien mit Text, gruppiert nach Lernseite und
@@ -66,8 +89,9 @@ enthält.
 
 Über der Abschnittsliste:
 
-- **Im Text suchen** — findet Stellen in der **ganzen Datei**, egal in welchem
-  Abschnitt. Nützlich, wenn dir eine Formulierung mehrfach auffällt.
+- **Im Text suchen** — findet Stellen in **dieser Datei**, egal in welchem
+  Abschnitt. (Die Suche über *alle* Dateien steht oben auf der
+  Übersichtsseite — siehe weiter oben.)
 - **nur Geänderte** — zeigt, was du bisher angefasst hast. Gute
   Schlusskontrolle vor dem Speichern.
 

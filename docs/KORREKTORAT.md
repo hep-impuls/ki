@@ -49,7 +49,8 @@ den Vercel-Umgebungsvariablen. Das Repo bleibt privat, sie wird nie Collaborator
    │                                                          │
    │  /api/korrektorat/*              Route Handlers (nodejs) │
    │    GITHUB-Token nur hier                                 │
-   │    me · auth · logout · dateien · datei · speichern      │
+   │    me · auth · logout · dateien · datei · suche ·        │
+   │    speichern                                             │
    │                                                          │
    │  src/lib/korrektorat/                                    │
    │    parser.mjs    extract() / apply() über TS-AST         │
@@ -77,7 +78,7 @@ den Vercel-Umgebungsvariablen. Das Repo bleibt privat, sie wird nie Collaborator
 | Serverklammer | [`src/lib/korrektorat/server.ts`](../src/lib/korrektorat/server.ts) | Konfiguration, Anmelde-Schranke, Aufbau der Übersicht (mit Cache) |
 | Anmeldung | [`src/lib/korrektorat/session.ts`](../src/lib/korrektorat/session.ts) | HMAC-signiertes Cookie, 7 Tage |
 | GitHub-Client | [`src/lib/korrektorat/github.ts`](../src/lib/korrektorat/github.ts) | Minimal-REST, kein Octokit |
-| Routen | [`src/app/api/korrektorat/`](../src/app/api/korrektorat/) | 6 Handler, alle `runtime = "nodejs"` |
+| Routen | [`src/app/api/korrektorat/`](../src/app/api/korrektorat/) | 7 Handler, alle `runtime = "nodejs"` |
 | Oberfläche | [`src/app/korrektorat/`](../src/app/korrektorat/) | eigenes Layout (kein `AppLayout`, kein `SessionGate`) |
 | Rundlauf-Prüfung | [`scripts/korrektorat/roundtrip-test.mjs`](../scripts/korrektorat/roundtrip-test.mjs) | Identität, Syntax nach Änderung, Wiederfinden — über alle Dateien |
 | Speicher-Prüfung | [`scripts/korrektorat/speichern-test.mjs`](../scripts/korrektorat/speichern-test.mjs) | die Schranken von `pruefeEdits()` |
@@ -183,7 +184,11 @@ nach inhaltlichen Änderungen zu sehen, was die Korrekturperson zu sehen bekommt
 - Pro Feld: Änderung verwerfen, und wo in dieser Runde schon geändert wurde,
   «Ursprung wiederherstellen» (Wortlaut auf `main`).
 - Entwürfe in `localStorage` je Datei — Tab schliessen kostet nichts.
-- Suche über alle Textstellen einer Datei, Filter «nur Geänderte».
+- **Volltextsuche über alle 3106 Textstellen** beider Lernseiten, mit
+  Direktsprung auf das gefundene Feld — der übliche Weg zur Fehlerstelle, wenn
+  die Korrekturperson im Lernset etwas sieht und nicht weiss, in welcher Datei
+  es steht. Optional nur ganze Wörter. Innerhalb einer Datei zusätzlich Suche
+  und Filter «nur Geänderte».
 - Positions-Prüfung: veraltete Änderungen werden abgelehnt, nicht falsch
   geschrieben.
 
@@ -262,12 +267,13 @@ Stelle geschrieben. Der Editor lädt nach dem Speichern automatisch neu; verlore
 sind nur die **noch nicht gespeicherten** Änderungen der betroffenen Felder.
 Vermeiden: während einer laufenden Runde nicht am Inhalt arbeiten.
 
-### Übersicht braucht lange
+### Übersicht oder Suche braucht lange
 
-Der erste Abruf nach jedem Repo-Stand holt alle 59 Dateien und parst sie
-(~3–5 s). Danach kommt sie aus dem Prozess-Cache, dessen Schlüssel aus allen
-Blob-SHAs gebildet ist — veraltete Zahlen sind damit ausgeschlossen. Nach einem
-Deployment oder einem Kaltstart ist der erste Abruf wieder langsam.
+Beide stützen sich auf denselben Index: Der erste Abruf nach jedem Repo-Stand
+holt alle 59 Dateien und parst sie (~3–5 s). Danach kommt alles aus dem
+Prozess-Cache, dessen Schlüssel aus allen Blob-SHAs gebildet ist — veraltete
+Zahlen und veraltete Treffer sind damit ausgeschlossen. Nach einem Deployment
+oder einem Kaltstart ist der erste Abruf wieder langsam, der zweite nicht mehr.
 
 ### 503 «Nicht konfiguriert»
 
