@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { api, type Uebersicht } from "../_lib/api";
 import { dateienMitEntwurf } from "../_lib/entwuerfe";
+import GesamtSuche from "./GesamtSuche";
 import Meldung from "./Meldung";
 
 /**
@@ -17,7 +18,7 @@ export default function DateiUebersicht({
   onOeffnen,
   onFehler,
 }: {
-  onOeffnen: (pfad: string) => void;
+  onOeffnen: (pfad: string, feldId?: string) => void;
   onFehler: (err: unknown) => boolean;
 }) {
   const [daten, setDaten] = useState<Uebersicht | null>(null);
@@ -67,7 +68,9 @@ export default function DateiUebersicht({
           sind lesbar, Speichern ist gesperrt.
         </Meldung>
       )}
-      <p className="text-body-md text-on-surface-variant">
+      <GesamtSuche onOeffnen={onOeffnen} />
+
+      <p className="mt-lg text-body-md text-on-surface-variant">
         {daten.felderTotal.toLocaleString("de-CH")} Textstellen in{" "}
         {daten.gruppen.reduce((a, g) => a + g.dateien.length, 0)} Dateien.
         {daten.bearbeiteteDateien > 0 && (

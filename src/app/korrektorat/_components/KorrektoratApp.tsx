@@ -15,7 +15,12 @@ import Meldung from "./Meldung";
  * «Branch» in der Oberfläche.
  */
 
-type Ansicht = { art: "laden" } | { art: "anmelden" } | { art: "uebersicht" } | { art: "datei"; pfad: string };
+type Ansicht =
+  | { art: "laden" }
+  | { art: "anmelden" }
+  | { art: "uebersicht" }
+  /** `zielFeld` kommt aus der Gesamtsuche: Datei öffnen und direkt hinspringen. */
+  | { art: "datei"; pfad: string; zielFeld?: string };
 
 export default function KorrektoratApp() {
   const [ansicht, setAnsicht] = useState<Ansicht>({ art: "laden" });
@@ -97,14 +102,17 @@ export default function KorrektoratApp() {
 
       {ansicht.art === "uebersicht" && (
         <DateiUebersicht
-          onOeffnen={(pfad) => setAnsicht({ art: "datei", pfad })}
+          onOeffnen={(pfad, zielFeld) => setAnsicht({ art: "datei", pfad, zielFeld })}
           onFehler={behandleFehler}
         />
       )}
 
       {ansicht.art === "datei" && (
         <FeldEditor
+          // Neu montieren, wenn aus der Suche ein anderes Ziel kommt.
+          key={`${ansicht.pfad}#${ansicht.zielFeld ?? ""}`}
           pfad={ansicht.pfad}
+          zielFeld={ansicht.zielFeld}
           onZurueck={() => setAnsicht({ art: "uebersicht" })}
           onFehler={behandleFehler}
         />

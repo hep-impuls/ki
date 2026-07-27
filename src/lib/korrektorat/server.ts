@@ -115,16 +115,37 @@ export interface Uebersicht {
   bearbeiteteDateien: number;
 }
 
-/**
- * Die Übersicht kostet ~60 Blob-Abrufe und einmal Parsen aller Inhaltsdateien.
- * Darum wird sie im Prozess gehalten, verschlüsselt durch die beiden Baum-SHAs:
- * ändert sich auf `main` oder auf dem Korrektorat-Branch etwas, ist der
- * Schlüssel neu und die Übersicht wird neu gebaut. Kein TTL nötig, keine
- * veralteten Zahlen möglich.
- */
-const uebersichtCache = new Map<string, Uebersicht>();
+/** Eine Datei im Index, mit ihren Texten in Dokumentreihenfolge. */
+interface IndexDatei {
+  pfad: string;
+  titel: string;
+  gruppe: string;
+  hinweis: string | null;
+  bearbeitet: boolean;
+  zeichen: number;
+  /** Nur was Übersicht und Suche brauchen — nicht die vollen Felder. */
+  felder: Array<{ id: string; section: string; label: string; value: string }>;
+}
 
-export async function uebersicht(k: Konfig): Promise<Uebersicht> {
+/**
+ * Index aller Inhaltsdateien: ~60 Blob-Abrufe und einmal Parsen. Er trägt
+ * sowohl die Übersicht als auch die Volltextsuche — beide sollen sich **einen**
+ * Durchgang teilen.
+ *
+ * Gehalten wird er im Prozess, verschlüsselt durch die Kennungen aller Dateien:
+ * ändert sich auf `main` oder auf dem Korrektorat-Branch irgendetwas, ist der
+ * Schlüssel neu und der Index wird gebaut. Kein TTL nötig, keine veralteten
+ * Zahlen und keine veralteten Treffer möglich.
+ */
+const indexCache = new Map<string, IndexDatei[]>();
+
+interface Index {
+  dateien: IndexDatei[];
+  branchVorhanden: boolean;
+  art: "github" | "lokal";
+}
+
+async function inhaltsIndex(k: Konfig): Promise<Index> {
   const q = quelleFuer(k);
   const pfade = inhaltsDateien(await q.pfade());
   const branchVorhanden = await q.branchVorhanden();
@@ -144,10 +165,10 @@ export async function uebersicht(k: Konfig): Promise<Uebersicht> {
     k.branch,
     ...gelesen.map((g) => `${g.basis?.kennung || ""}:${g.branch?.kennung || ""}`),
   ].join("|");
-  const gecacht = uebersichtCache.get(schluessel);
-  if (gecacht) return gecacht;
+  const gecacht = indexCache.get(schluessel);
+  if (gecacht) return { dateien: gecacht, branchVorhanden, art: q.art };
 
-  const dateien: UebersichtDatei[] = [];
+  const dateien: IndexDatei[] = [];
   for (const { pfad, basis, branch } of gelesen) {
     const stand = branch || basis;
     if (!stand) continue;
@@ -159,11 +180,29 @@ export async function uebersicht(k: Konfig): Promise<Uebersicht> {
       titel: info.titel,
       gruppe: info.gruppe,
       hinweis: info.hinweis,
-      felder: fields.length,
-      zeichen: fields.reduce((a, f) => a + f.value.length, 0),
       bearbeitet: Boolean(branch) && branch!.kennung !== basis?.kennung,
+      zeichen: fields.reduce((a, f) => a + f.value.length, 0),
+      felder: fields.map((f) => ({
+        id: f.id,
+        section: f.section,
+        label: f.label,
+        value: f.value,
+      })),
     });
   }
+
+  indexCache.set(schluessel, dateien);
+  // Der Cache wächst nur mit der Zahl der Repo-Zustände; ein paar Einträge
+  // reichen, alles Ältere ist ohnehin nie wieder gefragt.
+  if (indexCache.size > 4) {
+    indexCache.delete(indexCache.keys().next().value!);
+  }
+  return { dateien, branchVorhanden, art: q.art };
+}
+
+export async function uebersicht(k: Konfig): Promise<Uebersicht> {
+  const { dateien, branchVorhanden, art } = await inhaltsIndex(k);
+
   const gruppen: Uebersicht["gruppen"] = [];
   for (const d of dateien) {
     let g = gruppen.find((x) => x.titel === d.gruppe);
@@ -171,25 +210,136 @@ export async function uebersicht(k: Konfig): Promise<Uebersicht> {
       g = { titel: d.gruppe, dateien: [] };
       gruppen.push(g);
     }
-    g.dateien.push(d);
+    g.dateien.push({
+      pfad: d.pfad,
+      titel: d.titel,
+      gruppe: d.gruppe,
+      hinweis: d.hinweis,
+      felder: d.felder.length,
+      zeichen: d.zeichen,
+      bearbeitet: d.bearbeitet,
+    });
   }
 
-  const ergebnis: Uebersicht = {
+  return {
     runde: k.branch,
     basis: k.basis,
     branchVorhanden,
-    quelle: q.art,
+    quelle: art,
     gruppen,
-    felderTotal: dateien.reduce((a, d) => a + d.felder, 0),
+    felderTotal: dateien.reduce((a, d) => a + d.felder.length, 0),
     bearbeiteteDateien: dateien.filter((d) => d.bearbeitet).length,
   };
-  uebersichtCache.set(schluessel, ergebnis);
-  // Der Cache wächst nur mit der Zahl der Repo-Zustände; ein paar Einträge
-  // reichen, alles Ältere ist ohnehin nie wieder gefragt.
-  if (uebersichtCache.size > 8) {
-    uebersichtCache.delete(uebersichtCache.keys().next().value!);
+}
+
+/* ── Volltextsuche ─────────────────────────────────────────────────────────── */
+
+export interface Treffer {
+  pfad: string;
+  dateiTitel: string;
+  gruppe: string;
+  feldId: string;
+  section: string;
+  label: string;
+  /** Ausschnitt um den ersten Fund, mit «…» wo gekürzt wurde. */
+  auszug: string;
+  /** Lage des Funds im Auszug, zum Hervorheben. */
+  von: number;
+  bis: number;
+  /** Wie oft der Begriff in dieser Textstelle vorkommt. */
+  anzahl: number;
+}
+
+export interface SuchErgebnis {
+  begriff: string;
+  treffer: Treffer[];
+  /** Gefundene Textstellen insgesamt — kann grösser sein als `treffer.length`. */
+  gesamt: number;
+  /** Betroffene Dateien insgesamt. */
+  dateien: number;
+  /** Liste wurde gekürzt. */
+  gekuerzt: boolean;
+}
+
+const MAX_TREFFER = 200;
+const AUSZUG_RAND = 60;
+
+/**
+ * Sucht eine Zeichenfolge in **allen** Textstellen aller Inhaltsdateien.
+ *
+ * Der Zweck ist der Alltag der Korrekturperson: Sie sieht im Lernset einen
+ * Fehler und weiss nicht, in welcher der 59 Dateien er steht. Gesucht wird
+ * darum in dem, was sie sieht — im Text —, nicht in Dateinamen oder Kennungen.
+ *
+ * Ohne Beachtung der Gross-/Kleinschreibung; auf Wunsch nur ganze Wörter, damit
+ * «das» nicht in «Datensatz» anschlägt.
+ */
+export async function suchen(
+  k: Konfig,
+  begriff: string,
+  optionen: { ganzeWoerter?: boolean } = {},
+): Promise<SuchErgebnis> {
+  const gesucht = begriff.trim();
+  if (gesucht.length < 2) {
+    return { begriff: gesucht, treffer: [], gesamt: 0, dateien: 0, gekuerzt: false };
   }
-  return ergebnis;
+
+  const { dateien } = await inhaltsIndex(k);
+  const muster = new RegExp(
+    optionen.ganzeWoerter ? `(?<![\\p{L}\\p{N}])${maskieren(gesucht)}(?![\\p{L}\\p{N}])` : maskieren(gesucht),
+    "giu",
+  );
+
+  const treffer: Treffer[] = [];
+  let gesamt = 0;
+  let betroffeneDateien = 0;
+
+  for (const datei of dateien) {
+    let inDatei = 0;
+    for (const feld of datei.felder) {
+      muster.lastIndex = 0;
+      const funde = [...feld.value.matchAll(muster)];
+      if (funde.length === 0) continue;
+      gesamt++;
+      inDatei++;
+      if (treffer.length >= MAX_TREFFER) continue;
+
+      const erster = funde[0];
+      const start = erster.index ?? 0;
+      const ende = start + erster[0].length;
+      const vonAuszug = Math.max(0, start - AUSZUG_RAND);
+      const bisAuszug = Math.min(feld.value.length, ende + AUSZUG_RAND);
+      const vorne = vonAuszug > 0 ? "…" : "";
+      const hinten = bisAuszug < feld.value.length ? "…" : "";
+
+      treffer.push({
+        pfad: datei.pfad,
+        dateiTitel: datei.titel,
+        gruppe: datei.gruppe,
+        feldId: feld.id,
+        section: feld.section,
+        label: feld.label,
+        auszug: vorne + feld.value.slice(vonAuszug, bisAuszug) + hinten,
+        von: vorne.length + (start - vonAuszug),
+        bis: vorne.length + (ende - vonAuszug),
+        anzahl: funde.length,
+      });
+    }
+    if (inDatei > 0) betroffeneDateien++;
+  }
+
+  return {
+    begriff: gesucht,
+    treffer,
+    gesamt,
+    dateien: betroffeneDateien,
+    gekuerzt: gesamt > treffer.length,
+  };
+}
+
+/** Suchbegriffe sind Text, keine regulären Ausdrücke. */
+function maskieren(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 /** `extract()` braucht nur die Endung, um TSX von TS zu unterscheiden. */

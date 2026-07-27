@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { api, type DateiAntwort, type Feld, type SpeichernAntwort } from "../_lib/api";
 import { entwurfLesen, entwurfSchreiben, type Entwurf } from "../_lib/entwuerfe";
 import Meldung from "./Meldung";
@@ -17,10 +17,13 @@ import Meldung from "./Meldung";
 
 export default function FeldEditor({
   pfad,
+  zielFeld,
   onZurueck,
   onFehler,
 }: {
   pfad: string;
+  /** Feld-Kennung aus der Gesamtsuche — wird angesprungen und hervorgehoben. */
+  zielFeld?: string;
   onZurueck: () => void;
   onFehler: (err: unknown) => boolean;
 }) {
@@ -43,13 +46,16 @@ export default function FeldEditor({
         for (const f of antwort.felder) start[f.id] = entwurf[f.id] ?? f.value;
         setDaten(antwort);
         setWerte(start);
-        setAbschnitt(antwort.felder[0]?.section ?? null);
+        // Kommt die Datei aus der Gesamtsuche, wird der Abschnitt der gesuchten
+        // Stelle geöffnet statt der erste.
+        const ziel = zielFeld ? antwort.felder.find((f) => f.id === zielFeld) : undefined;
+        setAbschnitt(ziel?.section ?? antwort.felder[0]?.section ?? null);
       } catch (err) {
         if (onFehler(err)) return;
         setFehler(err instanceof Error ? err.message : String(err));
       }
     },
-    [pfad, onFehler],
+    [pfad, zielFeld, onFehler],
   );
 
   useEffect(() => {
@@ -78,6 +84,24 @@ export default function FeldEditor({
     window.addEventListener("beforeunload", warnen);
     return () => window.removeEventListener("beforeunload", warnen);
   }, [geaenderteIds.length]);
+
+  // Aus der Gesamtsuche kommend: an die gesuchte Stelle rollen und sie kurz
+  // hervorheben, damit sie zwischen Dutzenden Feldern sofort ins Auge fällt.
+  const [hervorgehoben, setHervorgehoben] = useState<string | null>(null);
+  const gesprungen = useRef(false);
+  useEffect(() => {
+    // Nur beim ersten Laden springen — nach einem Speichervorgang lädt die
+    // Datei neu, und dann soll der Blick bleiben, wo er ist.
+    if (!daten || !zielFeld || gesprungen.current) return;
+    gesprungen.current = true;
+    const knoten = document.getElementById(feldDomId(zielFeld));
+    if (!knoten) return;
+    knoten.scrollIntoView({ block: "center", behavior: "smooth" });
+    knoten.querySelector<HTMLElement>("textarea, input")?.focus({ preventScroll: true });
+    setHervorgehoben(zielFeld);
+    const timer = setTimeout(() => setHervorgehoben(null), 2500);
+    return () => clearTimeout(timer);
+  }, [daten, zielFeld]);
 
   const abschnitte = useMemo(() => {
     const map = new Map<string, { titel: string; anzahl: number; geaendert: number }>();
@@ -250,6 +274,7 @@ export default function FeldEditor({
                   feld={feld}
                   wert={werte[feld.id] ?? feld.value}
                   abschnittZeigen={suchend && sichtbar[i - 1]?.section !== feld.section}
+                  hervorgehoben={hervorgehoben === feld.id}
                   onAendern={(neu) => setWerte((v) => ({ ...v, [feld.id]: neu }))}
                 />
               ))}
@@ -267,27 +292,29 @@ function FeldZeile({
   feld,
   wert,
   abschnittZeigen,
+  hervorgehoben,
   onAendern,
 }: {
   feld: Feld;
   wert: string;
   abschnittZeigen: boolean;
+  hervorgehoben: boolean;
   onAendern: (neu: string) => void;
 }) {
   const geaendert = wert !== feld.original;
   const zeilen = Math.min(20, Math.max(2, Math.ceil(wert.length / 90) + 1));
 
   return (
-    <li>
+    <li id={feldDomId(feld.id)} className="scroll-mt-lg">
       {abschnittZeigen && (
         <p className="mb-xs mt-md text-label-sm uppercase tracking-wider text-tertiary">
           {feld.section}
         </p>
       )}
       <div
-        className={`rounded-lg border bg-surface-bright p-md ${
+        className={`rounded-lg border bg-surface-bright p-md transition-shadow ${
           geaendert ? "border-primary" : "border-outline-variant"
-        }`}
+        } ${hervorgehoben ? "ring-2 ring-tertiary" : ""}`}
       >
         <div className="flex flex-wrap items-baseline justify-between gap-sm">
           <span className="text-label-md text-on-surface">{feld.label}</span>
@@ -350,6 +377,16 @@ function FeldZeile({
 }
 
 /* ── Kleinteile ────────────────────────────────────────────────────────────── */
+
+/**
+ * Feld-Kennungen enthalten `/`, `[`, `@` und `<` — als DOM-Kennung zulässig,
+ * aber nicht als CSS-Selektor. Darum wird ausschliesslich über
+ * `getElementById` zugegriffen, und das Präfix hält sie von fremden Kennungen
+ * auf der Seite fern.
+ */
+function feldDomId(feldId: string): string {
+  return `korrektorat-feld:${feldId}`;
+}
 
 function ZurueckKnopf({ onZurueck }: { onZurueck: () => void }) {
   return (

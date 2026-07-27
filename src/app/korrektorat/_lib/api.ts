@@ -59,6 +59,29 @@ export interface SpeichernAntwort {
   hinweis?: string;
 }
 
+export interface Treffer {
+  pfad: string;
+  dateiTitel: string;
+  gruppe: string;
+  feldId: string;
+  section: string;
+  label: string;
+  /** Ausschnitt um den ersten Fund, mit «…» wo gekürzt wurde. */
+  auszug: string;
+  /** Lage des Funds im Auszug, zum Hervorheben. */
+  von: number;
+  bis: number;
+  anzahl: number;
+}
+
+export interface SuchErgebnis {
+  begriff: string;
+  treffer: Treffer[];
+  gesamt: number;
+  dateien: number;
+  gekuerzt: boolean;
+}
+
 export interface MeAntwort {
   angemeldet: boolean;
   konfiguriert: boolean;
@@ -110,6 +133,13 @@ export const api = {
   abmelden: () => ruf<{ ok: true }>("/api/korrektorat/logout", { method: "POST" }),
 
   dateien: () => ruf<Uebersicht>("/api/korrektorat/dateien"),
+
+  suchen: (begriff: string, ganzeWoerter: boolean, signal?: AbortSignal) =>
+    ruf<SuchErgebnis>("/api/korrektorat/suche", {
+      method: "POST",
+      body: JSON.stringify({ begriff, ganzeWoerter }),
+      signal,
+    }),
 
   datei: (pfad: string) =>
     ruf<DateiAntwort>("/api/korrektorat/datei", {
