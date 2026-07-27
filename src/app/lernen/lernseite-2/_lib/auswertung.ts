@@ -14,6 +14,10 @@
  * (localStorage), wie `spuren`/`gewichtung`. Kein Cloud-Spiegel.
  */
 
+import { doc, serverTimestamp, setDoc } from "firebase/firestore";
+import { getFirebase } from "@/lib/firebase";
+import { getSession } from "@/lib/session";
+import { seg } from "@/lib/paths";
 import { castVote } from "@/lib/polls";
 import { zaehltAnonym } from "./spuren";
 
@@ -25,6 +29,40 @@ export const FLAECHEN_POLL_ID = "flaechen-lernseite-2";
 /** Register (max je Bereich je gezählt), damit ein «Muster zurücksetzen» und
  *  erneutes Weben den anonymen Zähler nicht aufbläht. */
 const KEY_FLAECHEN_GEZAEHLT = "ki26-flaechen-gezaehlt";
+/** Modul-Doc für den Pro-Nutzer-Spiegel (wie `spuren`/`gewichtung`). */
+const AUSWERTUNG_MODUL = "lernseite-2-auswertung";
+
+function auswertungDocRef(code: string) {
+  const { db } = getFirebase();
+  if (!db) return null;
+  const s = seg.progressDoc(code, AUSWERTUNG_MODUL);
+  return doc(db, s[0], ...s.slice(1));
+}
+
+/**
+ * Debounce fürs Cloud-Spiegeln. Gespiegelt wird nur die **Bilanz** (wie viele
+ * Flächen von wie vielen), nicht die gewählten Titel: Die stehen schon in der
+ * Inhalts-Registry, und das Klassen-Rhizom braucht bloss die Zahl. Ohne diesen
+ * Spiegel fehlte der Lehrpersonen-Ansicht der Trieb «Flächen», den die
+ * Lernenden in ihrem eigenen Rhizom sehen.
+ */
+let mirrorTimer: ReturnType<typeof setTimeout> | null = null;
+function scheduleMirror(): void {
+  if (mirrorTimer) clearTimeout(mirrorTimer);
+  mirrorTimer = setTimeout(() => {
+    mirrorTimer = null;
+    const code = getSession()?.studentCode;
+    if (!code) return;
+    const ref = auswertungDocRef(code);
+    if (!ref) return;
+    const { gefuellt, total } = zaehleFlaechen();
+    void setDoc(
+      ref,
+      { flaechenGefuellt: gefuellt, flaechenTotal: total, updatedAt: serverTimestamp() },
+      { merge: true },
+    ).catch((err) => console.warn("[auswertung] mirror failed", err));
+  }, 1500);
+}
 
 /**
  * Neu hinzugekommene Flächen eines Bereichs anonym zählen: nur den Zuwachs
@@ -99,6 +137,7 @@ export function melde(key: string, eintrag: AuswertungEintrag): void {
   schreiben(o);
   // Zuwachs an Flächen anonym mitzählen (fürs «alle» im Aktivitätsnetz).
   zaehleFlaechenAnonym(key, eintrag.flaechenGefuellt);
+  scheduleMirror();
   window.dispatchEvent(new CustomEvent(AUSWERTUNG_EVENT, { detail: { key } }));
 }
 

@@ -147,21 +147,43 @@ function tiefeVon(wert: number, max: number, basis: number, spanne: number, deck
   return Math.min(deckel, basis + Math.round(spanne * Math.sqrt(wert / max)));
 }
 
+export type { NetzWerte };
+
 export default function AktivitaetsNetz({
   titel = "Dein Aktivitätsnetz",
   unterzeile,
   schwebend = false,
+  vorgabe,
+  legendeVorne = "du",
+  legendeHinten = "alle",
   className = "",
 }: {
   titel?: string;
   unterzeile?: string;
   schwebend?: boolean;
+  /**
+   * Fertige Zahlen statt eigener Messung. Der Lehrpersonen-Report zeigt damit
+   * dasselbe Rhizom mit den Werten der Klasse; ohne diese Vorgabe misst die
+   * Komponente wie bisher den eigenen Browser.
+   */
+  vorgabe?: { vorne: NetzWerte; hinten: NetzWerte };
+  /** Beschriftung der beiden Schichten (Vordergrund / Hintergrund). */
+  legendeVorne?: string;
+  legendeHinten?: string;
   className?: string;
 }) {
-  const [z, setZ] = useState<NetzWerte>(LEER);
-  const [alle, setAlle] = useState<NetzWerte>(LEER);
+  const [z, setZ] = useState<NetzWerte>(vorgabe?.vorne ?? LEER);
+  const [alle, setAlle] = useState<NetzWerte>(vorgabe?.hinten ?? LEER);
+  const fremdgesteuert = vorgabe != null;
 
   useEffect(() => {
+    if (!vorgabe) return;
+    setZ(vorgabe.vorne);
+    setAlle(vorgabe.hinten);
+  }, [vorgabe]);
+
+  useEffect(() => {
+    if (fremdgesteuert) return; // Zahlen kommen von aussen
     const lesen = () => {
       const a = zaehleAktivitaet();
       setZ({
@@ -181,9 +203,10 @@ export default function AktivitaetsNetz({
       window.removeEventListener(SPUR_EVENT, lesen);
       window.removeEventListener(AUSWERTUNG_EVENT, lesen);
     };
-  }, []);
+  }, [fremdgesteuert]);
 
   useEffect(() => {
+    if (fremdgesteuert) return; // Zahlen kommen von aussen
     const setzeSpuren = (counts: PollCounts) => {
       const { punkte, bildpunkte, videos, mehr, wuensche } = zaehleAlleAusPoll(counts);
       setAlle((v) => ({
@@ -205,7 +228,7 @@ export default function AktivitaetsNetz({
       ab1();
       ab2();
     };
-  }, []);
+  }, [fremdgesteuert]);
 
   const summe = (w: NetzWerte) => TRIEBE.reduce((n, t) => n + w[t.key], 0);
   const gesamt = summe(z);
@@ -253,7 +276,7 @@ export default function AktivitaetsNetz({
           className="text-label-sm text-on-surface-variant"
           style={{ fontFamily: "ui-monospace, monospace" }}
         >
-          {gesamt} du · {gesamtAlle} alle
+          {gesamt} {legendeVorne} · {gesamtAlle} {legendeHinten}
         </p>
       </div>
       {unterzeile && (
@@ -363,7 +386,7 @@ export default function AktivitaetsNetz({
                   className="text-label-sm text-on-surface-variant/70"
                   style={{ fontFamily: "ui-monospace, monospace" }}
                 >
-                  alle {alle[t.key]}
+                  {legendeHinten} {alle[t.key]}
                 </span>
               </span>
             </li>
@@ -375,11 +398,11 @@ export default function AktivitaetsNetz({
       <div className="mt-sm flex flex-wrap items-center gap-x-md gap-y-xs text-label-sm text-on-surface-variant">
         <span className="flex items-center gap-xs">
           <span className="inline-block h-2.5 w-2.5 rounded-full bg-outline opacity-60" />
-          Hintergrund: alle Nutzenden
+          Hintergrund: {legendeHinten}
         </span>
         <span className="flex items-center gap-xs">
           <span className="inline-block h-2.5 w-2.5 rounded-full bg-tertiary" />
-          Vordergrund: du
+          Vordergrund: {legendeVorne}
         </span>
       </div>
     </section>

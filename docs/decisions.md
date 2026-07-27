@@ -10,6 +10,60 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-27 — Lehrpersonen-Report: Module getrennt, Klassen-Rhizom, KI-Einschätzung (Christof)
+
+Der Report zu Lernset 2 unterscheidet neu die beiden Module. Bisher stand alles
+in einer Abschnittstabelle, in der «Die Epochen» (Vorhang auf) und «Die
+Kriterien» (Philosophische Perspektive) nebeneinander lagen, als wären sie vom
+gleichen Zuschnitt. Jeder `TeacherOrakelBereich` trägt darum jetzt ein Feld
+`modul` mit drei Werten: `Vorhang auf`, `Philosophische Perspektive`,
+`Übergreifend`. Die Zuordnung passiert serverseitig in `teacherStore.ts` über
+das Spur-Präfix, nicht im UI — so bleibt sie an derselben Stelle wie die
+Bereichs-Zuordnung selbst.
+
+**Aktive Schüler:innen je Modul werden nicht aufsummiert**, sondern als Maximum
+über die Abschnitte genommen: dieselbe Person ist meist in mehreren Abschnitten
+unterwegs, eine Summe zählte sie mehrfach. Der Maximalwert ist die belastbare
+Untergrenze und wird als «bis zu N von M aktiv» ausgewiesen.
+
+**Zwei Grafiken statt Zahlenkolonnen.** Der Report zeigt jetzt dieselben zwei
+Bilder, die die Lernenden von sich selbst kennen, nur mit Klassenzahlen:
+
+- das **Aktivitäts-Rhizom** (`AktivitaetsNetz`) mit der Klasse im Vordergrund
+  und allen Teilnehmenden im Hintergrund,
+- den **Kontext-Kreis** (`Ring` aus `KontextGewichtung`) im Vergleich Klasse
+  gegen alle Teilnehmenden.
+
+Beide Komponenten wurden dafür fremdsteuerbar gemacht statt kopiert:
+`AktivitaetsNetz` nimmt eine optionale `vorgabe` (und dann misst es nicht mehr
+selbst), `Ring`/`farbeFuer`/`GRAU`/`ANKER` sind exportiert. Eine zweite
+Zeichnung hätte über kurz oder lang anders ausgesehen als die erste — dann
+lesen Lehrperson und Lernende nicht mehr dasselbe Bild.
+
+**Dafür musste die Flächen-Bilanz erstmals gespiegelt werden.** Von den sechs
+Trieben war «Flächen» der einzige, der nur lokal existierte; im Klassen-Rhizom
+wäre er immer null geblieben. `auswertung.ts` schreibt jetzt debounced
+`{flaechenGefuellt, flaechenTotal}` ins Modul-Doc `lernseite-2-auswertung` —
+nur die Bilanz, nicht die gewählten Titel, die stehen schon in der
+Inhalts-Registry.
+
+**KI-Einschätzung des Rhizoms** über die neue Route
+`/api/teacher/rhizom-deutung` (Haiku, wie das Orakel). Sie richtet sich an die
+Lehrperson statt an die lernende Person: nüchtern, mit Blick auf
+Anschlussaufgaben an den weiterverfolgten Themen. Übergeben werden nur
+**Klassen-Aggregate** — Summen je Trieb, Summen je Abschnitt, Themen-Titel.
+Keine Codes, keine Einzelantworten, nichts wird gespeichert. Ohne
+`ANTHROPIC_API_KEY` erscheint dieselbe Ersatzmeldung wie beim Orakel.
+
+Betroffen: `src/lib/types.ts`, `src/lib/server/teacherStore.ts`,
+`src/app/lehrperson/report/page.tsx`,
+`src/app/lehrperson/report/_components/{KlassenRhizom,KlassenKontext}.tsx`,
+`src/app/api/teacher/rhizom-deutung/route.ts`,
+`src/app/lernen/lernseite-2/_components/{AktivitaetsNetz,KontextGewichtung}.tsx`,
+`src/app/lernen/lernseite-2/_lib/auswertung.ts`.
+
+---
+
 ## 2026-07-26 — Nebenwirkung im State-Updater, Herz-Koordinaten (Christof)
 
 **1. «Mehr lesen» wurde geschrieben, aber nicht angezeigt.** Christof meldete

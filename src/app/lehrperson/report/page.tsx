@@ -4,6 +4,8 @@ import { Suspense, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { loadTeacherOrakelSecure, loadTeacherReportSecure } from "@/lib/api";
 import { describePoll } from "@/lib/pollLabels";
+import KlassenKontext from "./_components/KlassenKontext";
+import KlassenRhizom from "./_components/KlassenRhizom";
 import type {
   PollAggregate,
   TeacherOrakel,
@@ -40,6 +42,30 @@ function istZaehler(pollId: string): boolean {
     pollId.includes("lernseite-2")
   );
 }
+
+/**
+ * Reihenfolge der Module in Lernset 2 — dieselbe wie im Lernset selbst.
+ * «Übergreifend» sammelt, was zu keinem der beiden Module gehört (Auftakt,
+ * Orakel); es steht darum zuletzt.
+ */
+const MODUL_FOLGE: TeacherOrakelBereich["modul"][] = [
+  "Vorhang auf",
+  "Philosophische Perspektive",
+  "Übergreifend",
+];
+
+/** Wie das Modul im Report überschrieben wird (voller Titel wie im Lernset). */
+const MODUL_TITEL: Record<TeacherOrakelBereich["modul"], string> = {
+  "Vorhang auf": "Vorhang auf",
+  "Philosophische Perspektive": "Eine philosophische Perspektive",
+  "Übergreifend": "Übergreifend",
+};
+
+const MODUL_IKON: Record<TeacherOrakelBereich["modul"], string> = {
+  "Vorhang auf": "theater_comedy",
+  "Philosophische Perspektive": "psychology",
+  "Übergreifend": "hub",
+};
 
 /** Eine Kennzahl der Klasse, im Zuschnitt des Lernenden-PDF. */
 function Kennzahl({ wert, titel, hinweis }: { wert: number | string; titel: string; hinweis?: string }) {
@@ -260,6 +286,33 @@ function ReportFlow() {
     };
   }, [orakel]);
 
+  /**
+   * Die Abschnitte nach Modul getrennt. Lernset 2 besteht aus zwei Modulen mit
+   * ganz unterschiedlichem Zuschnitt — «Vorhang auf» erzählt die Geschichte,
+   * «Eine philosophische Perspektive» arbeitet an den Begriffen. In einer
+   * gemeinsamen Tabelle verschwimmt das; getrennt sieht man, wo die Klasse
+   * wirklich stand.
+   */
+  const nachModul = useMemo(() => {
+    if (!orakel || orakel.bereiche.length === 0) return [];
+    const bereiche = orakel.bereiche;
+    return MODUL_FOLGE.map((modul) => {
+      const teil = bereiche.filter((b) => b.modul === modul);
+      const summe = (f: (b: TeacherOrakelBereich) => number) =>
+        teil.reduce((s, b) => s + f(b), 0);
+      return {
+        modul,
+        bereiche: teil,
+        angeschaut: summe((b) => b.angeschaut),
+        vertieft: summe((b) => b.vertieft),
+        weiterverfolgen: summe((b) => b.weiterverfolgen),
+        /* Nicht aufsummieren: dieselbe Person ist in mehreren Abschnitten
+           aktiv. Der grösste Abschnittswert ist die belastbare Untergrenze. */
+        aktiveSchueler: teil.reduce((m, b) => Math.max(m, b.aktiveSchueler), 0),
+      };
+    }).filter((g) => g.bereiche.length > 0);
+  }, [orakel]);
+
   return (
     <main className="mx-auto max-w-5xl px-lg py-xl">
       <header className="border-b border-outline-variant pb-lg">
@@ -406,41 +459,89 @@ function ReportFlow() {
             </div>
           )}
 
-          <h3 className="mt-xl text-headline-sm text-on-surface">Pro Abschnitt</h3>
+          <h3 className="mt-xl text-headline-sm text-on-surface">Die beiden Module</h3>
           <p className="mt-xs max-w-3xl text-body-sm text-on-surface-variant">
             Angeschaute Punkte, Vertiefungen («Mehr lesen») und Merkzeichen
-            («Das verfolge ich weiter»).
+            («Das verfolge ich weiter») — getrennt nach «Vorhang auf» und «Eine
+            philosophische Perspektive».
           </p>
-          {orakel.bereiche.length === 0 ? (
+          {nachModul.length === 0 ? (
             <p className="mt-sm text-body-md text-on-surface-variant">
               Noch keine Aktivität in dieser Klasse.
             </p>
           ) : (
-            <div className="mt-md overflow-x-auto rounded-xl border border-outline-variant">
-              <table className="w-full border-collapse text-body-sm">
-                <thead>
-                  <tr className="bg-surface-dim text-left text-label-sm text-on-surface-variant">
-                    <th className="px-md py-sm">Abschnitt</th>
-                    <th className="px-md py-sm">Angeschaut</th>
-                    <th className="px-md py-sm">Vertieft</th>
-                    <th className="px-md py-sm">Weiterverfolgen</th>
-                    <th className="px-md py-sm">Aktive</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {orakel.bereiche.map((b) => (
-                    <tr key={b.bereich} className="border-t border-outline-variant">
-                      <td className="px-md py-sm font-medium text-on-surface">{b.bereich}</td>
-                      <td className="px-md py-sm text-on-surface-variant">{b.angeschaut}</td>
-                      <td className="px-md py-sm text-on-surface-variant">{b.vertieft}</td>
-                      <td className="px-md py-sm text-on-surface-variant">{b.weiterverfolgen}</td>
-                      <td className="px-md py-sm text-on-surface-variant">{b.aktiveSchueler}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <div className="mt-md space-y-lg">
+              {nachModul.map((g) => (
+                <div key={g.modul}>
+                  <div className="flex flex-wrap items-baseline justify-between gap-sm">
+                    <h4 className="flex items-center gap-xs text-body-lg font-medium text-on-surface">
+                      <span className="material-symbols-outlined text-[20px] text-tertiary">
+                        {MODUL_IKON[g.modul]}
+                      </span>
+                      {MODUL_TITEL[g.modul]}
+                    </h4>
+                    <p className="text-label-sm text-on-surface-variant">
+                      {g.angeschaut} angeschaut · {g.vertieft} vertieft ·{" "}
+                      {g.weiterverfolgen} weiterverfolgt · bis zu {g.aktiveSchueler} von{" "}
+                      {orakel.n} aktiv
+                    </p>
+                  </div>
+                  <div className="mt-sm overflow-x-auto rounded-xl border border-outline-variant">
+                    <table className="w-full border-collapse text-body-sm">
+                      <thead>
+                        <tr className="bg-surface-dim text-left text-label-sm text-on-surface-variant">
+                          <th className="px-md py-sm">Abschnitt</th>
+                          <th className="px-md py-sm">Angeschaut</th>
+                          <th className="px-md py-sm">Vertieft</th>
+                          <th className="px-md py-sm">Weiterverfolgen</th>
+                          <th className="px-md py-sm">Aktive</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {g.bereiche.map((b) => (
+                          <tr key={b.bereich} className="border-t border-outline-variant">
+                            <td className="px-md py-sm font-medium text-on-surface">
+                              {b.bereich}
+                            </td>
+                            <td className="px-md py-sm text-on-surface-variant">{b.angeschaut}</td>
+                            <td className="px-md py-sm text-on-surface-variant">{b.vertieft}</td>
+                            <td className="px-md py-sm text-on-surface-variant">
+                              {b.weiterverfolgen}
+                            </td>
+                            <td className="px-md py-sm text-on-surface-variant">
+                              {b.aktiveSchueler}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              ))}
             </div>
           )}
+
+          {/* Dieselbe Grafik, die die Lernenden von sich selbst sehen — hier
+              mit den Zahlen der Klasse, dazu eine KI-Einschätzung. */}
+          <h3 className="mt-xl text-headline-sm text-on-surface">
+            Das Aktivitäts-Rhizom der Klasse
+          </h3>
+          <p className="mt-xs max-w-3xl text-body-sm text-on-surface-variant">
+            Sechs Triebe: Punkte, Flächen, Bildpunkte und Videos zeigen, wo die
+            Klasse war; Vertiefungen und Weiterverfolgen zeigen, wie tief sie
+            ging. Im Hintergrund dasselbe Rhizom aller Teilnehmenden.
+          </p>
+          <KlassenRhizom orakel={orakel} />
+
+          <h3 className="mt-xl text-headline-sm text-on-surface">
+            Achtsamkeit auf die Kontexte
+          </h3>
+          <p className="mt-xs max-w-3xl text-body-sm text-on-surface-variant">
+            Im Abschnitt «Die KI im Kontext» gewichten die Lernenden, wie viel
+            Achtsamkeit jeder Aspekt verdient. Links das Muster Ihrer Klasse,
+            rechts das aller Teilnehmenden.
+          </p>
+          <KlassenKontext kontext={orakel.kontext} />
           {/* Wie im Lernenden-PDF: die konkreten Titel, nicht nur Zahlen. Das
               «weiterverfolgt» steht zuerst, denn dort hängen die
               Anschlussaufgaben. */}

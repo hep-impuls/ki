@@ -22,8 +22,8 @@ const PREFIX = "vorhang-auf:achtsamkeit:";
 /* Warme Skala wie im KontextAkkordeon: mehr Achtsamkeit → farbiger, rötlicher.
  * Anker für die drei Stufen; dazwischen wird interpoliert (fürs Durchschnitts-
  * Muster aller). «nicht bewertet» ist der ruhige Grundton. */
-const GRAU = "#ded9cc";
-const ANKER = ["#e7c489", "#e58a3c", "#d13417"] as const; // wenig, mittel, viel
+export const GRAU = "#ded9cc";
+export const ANKER = ["#e7c489", "#e58a3c", "#d13417"] as const; // wenig, mittel, viel
 
 function hexMisch(a: string, b: string, t: number): string {
   const pa = [1, 3, 5].map((i) => parseInt(a.slice(i, i + 2), 16));
@@ -33,7 +33,7 @@ function hexMisch(a: string, b: string, t: number): string {
 }
 
 /** Wert 0..2 (oder null) → Farbe auf der Achtsamkeits-Skala. */
-function farbeFuer(v: number | null): string {
+export function farbeFuer(v: number | null): string {
   if (v == null || Number.isNaN(v)) return GRAU;
   const x = Math.max(0, Math.min(2, v));
   return x <= 1 ? hexMisch(ANKER[0], ANKER[1], x) : hexMisch(ANKER[1], ANKER[2], x - 1);
@@ -45,7 +45,7 @@ type AlleDaten =
 
 /* ── Ein Ring ─────────────────────────────────────────────────────────────── */
 
-function Ring({
+export function Ring({
   werte,
   labels,
   ariaLabel,

@@ -15,6 +15,8 @@ import type {
   StudentClassReport,
   TeacherOrakel,
   TeacherOrakelBereich,
+  TeacherOrakelKontext,
+  TeacherOrakelRhizom,
   TeacherOrakelThema,
 } from "../types";
 
@@ -292,6 +294,19 @@ function bereichFuer(base: string): string {
   return BEREICH_PREFIXE.find((b) => base.startsWith(b.prefix))?.bereich ?? "Weiteres";
 }
 
+/** Abschnitt → Modul. Videos und Unbekanntes laufen unter «Übergreifend». */
+function modulFuer(base: string): TeacherOrakelBereich["modul"] {
+  if (base.startsWith("vorhang-auf:")) return "Vorhang auf";
+  if (base.startsWith("philosophische-perspektive:")) return "Philosophische Perspektive";
+  return "Übergreifend";
+}
+
+/** Gewichtungs-Präfix der Achtsamkeits-Frage in «Die KI im Kontext». */
+const ACHTSAMKEIT_PREFIX = "vorhang-auf:achtsamkeit:";
+/** Modul-Docs mit Bewertungen bzw. Flächen-Bilanz. */
+const GEWICHT_MODUL = "lernseite-2-gewichtung";
+const AUSWERTUNG_MODUL = "lernseite-2-auswertung";
+
 /**
  * Klassen-Orakel: aggregiert die Spuren aller Klassen-Schueler:innen aus dem
  * Modul-Doc `lernseite-2-spuren` ({ ids }) pro Abschnitt — wie viel angeschaut,
@@ -337,8 +352,40 @@ export async function teacherOrakel(
   }
   const perItem = new Map<string, Item>();
 
+  /* Die sechs Triebe des Rhizoms, aufsummiert über die Klasse. */
+  const rhizom: TeacherOrakelRhizom = {
+    punkte: 0,
+    flaechen: 0,
+    bildpunkte: 0,
+    videos: 0,
+    vertiefungen: 0,
+    weiter: 0,
+  };
+  /* Achtsamkeits-Gewichtung: Summe und Anzahl je Aspekt. */
+  const kontextAgg = new Map<string, { summe: number; anzahl: number }>();
+
   let aktiv = 0;
   for (const s of students) {
+    // Flächen-Bilanz und Bewertungen liegen in eigenen Modul-Docs.
+    const ausw = s.progressByModule[AUSWERTUNG_MODUL] as unknown as
+      | { flaechenGefuellt?: unknown }
+      | undefined;
+    if (typeof ausw?.flaechenGefuellt === "number") {
+      rhizom.flaechen += ausw.flaechenGefuellt;
+    }
+    const gew = s.progressByModule[GEWICHT_MODUL] as unknown as
+      | { werte?: Record<string, unknown> }
+      | undefined;
+    if (gew?.werte && typeof gew.werte === "object") {
+      for (const [k, v] of Object.entries(gew.werte)) {
+        if (!k.startsWith(ACHTSAMKEIT_PREFIX) || typeof v !== "number") continue;
+        const a = kontextAgg.get(k) ?? { summe: 0, anzahl: 0 };
+        a.summe += v;
+        a.anzahl += 1;
+        kontextAgg.set(k, a);
+      }
+    }
+
     const doc = s.progressByModule["lernseite-2-spuren"] as unknown as
       | { ids?: unknown }
       | undefined;
@@ -348,6 +395,13 @@ export async function teacherOrakel(
     if (ids.length === 0) continue;
     aktiv += 1;
     for (const id of ids) {
+      // Rhizom-Triebe: dieselbe Klassifikation wie clientseitig in spurArt().
+      if (id.startsWith("wunsch:")) rhizom.weiter += 1;
+      else if (id.startsWith("mehr:")) rhizom.vertiefungen += 1;
+      else if (id.startsWith("video:")) rhizom.videos += 1;
+      else if (/:hs\d+$/.test(id)) rhizom.bildpunkte += 1;
+      else if (!id.includes(":kanten-") && !id.includes(":gewebe")) rhizom.punkte += 1;
+
       let art: "angeschaut" | "vertieft" | "weiterverfolgen";
       let base = id;
       if (id.startsWith("wunsch:")) {
@@ -374,9 +428,15 @@ export async function teacherOrakel(
 
   // Reihenfolge wie im Lernset; «Weiteres» ans Ende.
   const order = [...new Set(BEREICH_PREFIXE.map((b) => b.bereich)), "Weiteres"];
+  /* Abschnitt → Modul: über das Präfix, das den Abschnitt benannt hat. */
+  const modulJeBereich = new Map<string, TeacherOrakelBereich["modul"]>();
+  for (const b of BEREICH_PREFIXE) {
+    if (!modulJeBereich.has(b.bereich)) modulJeBereich.set(b.bereich, modulFuer(b.prefix));
+  }
   const bereiche: TeacherOrakelBereich[] = [...perBereich.entries()]
     .map(([bereich, a]) => ({
       bereich,
+      modul: modulJeBereich.get(bereich) ?? ("Übergreifend" as const),
       angeschaut: a.angeschaut,
       vertieft: a.vertieft,
       weiterverfolgen: a.weiterverfolgen,
@@ -399,11 +459,24 @@ export async function teacherOrakel(
         anzahl: it.anzahl,
       }));
 
+  /* Achtsamkeits-Aspekte, nach Id sortiert (entspricht der Reihenfolge im
+     Lernset). Titel aus derselben Registry wie die Themen. */
+  const kontext: TeacherOrakelKontext[] = [...kontextAgg.entries()]
+    .sort((a, b) => a[0].localeCompare(b[0], "de", { numeric: true }))
+    .map(([id, a]) => ({
+      id,
+      titel: titelFuer(id),
+      klasse: a.anzahl ? a.summe / a.anzahl : null,
+      anzahl: a.anzahl,
+    }));
+
   return {
     classCode,
     n: students.length,
     aktiv,
     bereiche,
+    rhizom,
+    kontext,
     topAngeschaut: themen("angeschaut"),
     topVertieft: themen("vertieft"),
     topWeiterverfolgen: themen("weiterverfolgen"),

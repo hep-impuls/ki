@@ -91,6 +91,8 @@ export interface StudentClassReport {
 /** Aktivitaet einer Klasse in einem Abschnitt (aus den Spuren aggregiert). */
 export interface TeacherOrakelBereich {
   bereich: string;
+  /** Zu welchem Modul der Abschnitt gehört (fürs getrennte Ausweisen). */
+  modul: "Vorhang auf" | "Philosophische Perspektive" | "Übergreifend";
   /** Angeschaute Punkte/Inhalte (Summe ueber alle Schueler:innen). */
   angeschaut: number;
   /** «Mehr lesen»-Vertiefungen. */
@@ -111,6 +113,32 @@ export interface TeacherOrakelThema {
   anzahl: number;
 }
 
+/**
+ * Die sechs Triebe des Aktivitäts-Rhizoms, aufsummiert über die Klasse.
+ * Gleiche Grössen wie im Rhizom der Lernenden, damit die Grafik im
+ * Lehrpersonen-Report dieselbe ist, nur mit Klassenzahlen.
+ */
+export interface TeacherOrakelRhizom {
+  punkte: number;
+  flaechen: number;
+  bildpunkte: number;
+  videos: number;
+  vertiefungen: number;
+  weiter: number;
+}
+
+/** Ein Aspekt der Achtsamkeits-Gewichtung im Vergleich Klasse gegen alle. */
+export interface TeacherOrakelKontext {
+  /** Spur-/Gewichtungs-Id, z.B. "vorhang-auf:achtsamkeit:3". */
+  id: string;
+  /** Klartext-Titel aus der gespiegelten Registry, sonst die Id. */
+  titel: string;
+  /** Durchschnitt der Klasse, 0..2, oder null wenn niemand bewertet hat. */
+  klasse: number | null;
+  /** Wie viele aus der Klasse diesen Aspekt bewertet haben. */
+  anzahl: number;
+}
+
 /** Klassen-Orakel: wo die Klasse in Lernseite 2 unterwegs ist. */
 export interface TeacherOrakel {
   classCode: string;
@@ -119,6 +147,10 @@ export interface TeacherOrakel {
   /** davon mit mindestens einer Spur. */
   aktiv: number;
   bereiche: TeacherOrakelBereich[];
+  /** Die sechs Triebe, aufsummiert über die Klasse. */
+  rhizom: TeacherOrakelRhizom;
+  /** Achtsamkeits-Gewichtung der Klasse je Aspekt (für den Kontext-Kreis). */
+  kontext: TeacherOrakelKontext[];
   /** Konkrete Themen (Titel), nach Häufigkeit — je Signal die stärksten. */
   topAngeschaut: TeacherOrakelThema[];
   topVertieft: TeacherOrakelThema[];
