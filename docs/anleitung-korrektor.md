@@ -150,6 +150,10 @@ neu; deine bereits **gespeicherten** Korrekturen sind sicher. Nur die noch nicht
 gespeicherten Änderungen an den genannten Stellen musst du erneut eintragen.
 Deshalb lohnt es sich, öfter zu speichern.
 
+Wir versuchen, während deiner Arbeit nichts an den Texten zu ändern. Wenn es
+doch einmal nötig ist, schreiben wir dir vorher, welche Datei betroffen ist —
+dann genügt ein Neuladen, bevor du dort weitermachst.
+
 **Die Anmeldung ist weg**
 Der Passcode gilt eine Woche, danach einmal neu eingeben. Dieselbe Meldung
 erscheint, wenn wir zwischenzeitlich eine neue Version aufgeschaltet haben.
@@ -162,3 +166,17 @@ Sekunden. Danach geht es schnell.
 Manche Texte entstehen erst beim Anzeigen aus mehreren Teilen. Wenn du eine
 Stelle nicht findest, schreib uns Datei, Abschnitt und den Wortlaut — wir
 korrigieren sie im Code.
+
+## Wer bei welcher Frage hilft
+
+Das Lernset wird von zwei Personen gepflegt:
+
+- **Lernseite 1** («Kann KI das? — eine Positionsreise») und alles rund um den
+  Editor: Pietro Rossi.
+- **Lernseite 2** («Eine ganz neue Partnerschaft» — also «Vorhang auf», die
+  philosophische Perspektive und das Orakel): Christof Glaus.
+
+Bei inhaltlichen Rückfragen lohnt es sich, gleich die richtige Person
+anzuschreiben. Bei allem, was strukturell wäre — eine Antwortoption ergänzen,
+einen Abschnitt umstellen —, gilt in beiden Fällen: melden und weiterarbeiten,
+wir setzen es im Code um.
