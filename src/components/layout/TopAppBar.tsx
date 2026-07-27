@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { unit } from "@/config/unit";
+import AccountMenu from "./AccountMenu";
 
 const navLinks = [
   { href: "/", label: "Start" },
@@ -55,6 +56,7 @@ export default function TopAppBar() {
 
         <div className="flex items-center gap-sm">
           <img src="/hep-logo.jpg" alt="hep" className="h-8 w-auto" />
+          <AccountMenu />
           <button
             type="button"
             aria-label="Hilfe"

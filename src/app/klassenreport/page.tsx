@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import AppLayout from "@/components/layout/AppLayout";
+import { ACCOUNT_OPEN_EVENT } from "@/components/layout/AccountMenu";
 import { getSession } from "@/lib/session";
 import { loadStudentClassReport } from "@/lib/api";
 import type { StudentClassReport } from "@/lib/types";
@@ -126,7 +127,12 @@ export default function KlassenreportPage() {
           <EmptyCard
             icon="school"
             text="Du bist noch keiner Klasse beigetreten. Mit einem Klassencode deiner Lehrperson siehst du hier den anonymen Vergleich."
-            cta={{ href: "/start", label: "Klassencode eingeben" }}
+            cta={{
+              label: "Klassencode eingeben",
+              // Öffnet das Account-Menü in der TopAppBar. `/start` wäre eine
+              // Sackgasse: mit bestehender Session leitet es sofort weiter.
+              onClick: () => window.dispatchEvent(new Event(ACCOUNT_OPEN_EVENT)),
+            }}
           />
         )}
 
@@ -157,21 +163,27 @@ function EmptyCard({
 }: {
   icon: string;
   text: string;
-  cta: { href: string; label: string };
+  cta: { label: string } & ({ href: string } | { onClick: () => void });
 }) {
+  const klasse =
+    "inline-flex items-center gap-sm rounded-xl bg-primary px-lg py-sm text-label-md text-on-primary shadow-sm transition hover:bg-on-primary-container";
   return (
     <div className="flex flex-col items-center gap-md rounded-xl border border-outline-variant bg-surface-bright p-xl text-center">
       <span className="material-symbols-outlined text-3xl text-on-surface-variant">
         {icon}
       </span>
       <p className="max-w-md text-body-md text-on-surface-variant">{text}</p>
-      <Link
-        href={cta.href}
-        className="inline-flex items-center gap-sm rounded-xl bg-primary px-lg py-sm text-label-md text-on-primary shadow-sm transition hover:bg-on-primary-container"
-      >
-        {cta.label}
-        <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-      </Link>
+      {"href" in cta ? (
+        <Link href={cta.href} className={klasse}>
+          {cta.label}
+          <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </Link>
+      ) : (
+        <button type="button" onClick={cta.onClick} className={klasse}>
+          {cta.label}
+          <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </button>
+      )}
     </div>
   );
 }

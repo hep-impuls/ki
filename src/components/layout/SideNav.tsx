@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { unit } from "@/config/unit";
 import { getSession } from "@/lib/session";
+import { ACCOUNT_OPEN_EVENT, SESSION_CHANGED_EVENT } from "./AccountMenu";
 
 export default function SideNav() {
   const pathname = usePathname();
@@ -13,7 +14,15 @@ export default function SideNav() {
   // Client-seitig nachgeladen (Session lebt in localStorage) → kein SSR-Mismatch.
   const [hasClass, setHasClass] = useState(false);
   useEffect(() => {
-    setHasClass(Boolean(getSession()?.teacherCode));
+    const lesen = () => setHasClass(Boolean(getSession()?.teacherCode));
+    lesen();
+    // Beitritt passiert im Account-Menü, ohne Navigation → hier nachziehen.
+    window.addEventListener(SESSION_CHANGED_EVENT, lesen);
+    window.addEventListener("storage", lesen);
+    return () => {
+      window.removeEventListener(SESSION_CHANGED_EVENT, lesen);
+      window.removeEventListener("storage", lesen);
+    };
   }, [pathname]);
 
   const isActiveModule = (href: string) => pathname?.startsWith(href);
@@ -71,24 +80,33 @@ export default function SideNav() {
 
       <div className="flex-grow" />
 
-      {/* Der Eintrag steht IMMER da. Vorher erschien er nur mit Klasse, und
-          wer den Klassencode beim Start übersprungen hatte, kam nicht mehr
-          hin: Die einzigen Links auf /start liegen im Klassenreport, den man
-          ohne Klasse nicht erreicht. */}
+      {/* Der Eintrag steht IMMER da. Ohne Klasse öffnet er das Account-Menü in
+          der TopAppBar (Beitritt ohne Navigation) — der frühere Link auf
+          `/start` war eine Sackgasse: mit bestehender Session leitet `/start`
+          sofort wieder auf die Lernseite zurück. */}
       <nav className="p-md pt-0">
-        <Link
-          href={hasClass ? "/klassenreport" : "/start"}
-          className={
-            pathname === "/klassenreport"
-              ? "flex items-center gap-sm px-sm py-sm rounded-lg bg-primary/10 text-primary font-semibold"
-              : "flex items-center gap-sm px-sm py-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"
-          }
-        >
-          <span className="material-symbols-outlined text-[20px]">groups</span>
-          <span className="text-body-md">
-            {hasClass ? "Klassenreport" : "Klasse beitreten"}
-          </span>
-        </Link>
+        {hasClass ? (
+          <Link
+            href="/klassenreport"
+            className={
+              pathname === "/klassenreport"
+                ? "flex items-center gap-sm px-sm py-sm rounded-lg bg-primary/10 text-primary font-semibold"
+                : "flex items-center gap-sm px-sm py-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"
+            }
+          >
+            <span className="material-symbols-outlined text-[20px]">groups</span>
+            <span className="text-body-md">Klassenreport</span>
+          </Link>
+        ) : (
+          <button
+            type="button"
+            onClick={() => window.dispatchEvent(new Event(ACCOUNT_OPEN_EVENT))}
+            className="flex w-full items-center gap-sm px-sm py-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"
+          >
+            <span className="material-symbols-outlined text-[20px]">groups</span>
+            <span className="text-body-md">Klasse beitreten</span>
+          </button>
+        )}
       </nav>
 
       <div className="p-md border-t border-outline-variant">
