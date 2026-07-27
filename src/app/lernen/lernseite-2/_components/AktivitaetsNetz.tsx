@@ -57,7 +57,15 @@ const LEER: NetzWerte = {
 
 type Trieb = {
   key: keyof NetzWerte;
+  /** Satz-Schreibweise, für die Vorlese-Zusammenfassung (aria). */
   label: string;
+  /**
+   * Grossbuchstaben-Schreibweise für die sichtbare Legende — direkt mit
+   * grossem «Ä» geschrieben, statt «Flächen» per CSS gross zu rechnen. Das
+   * CSS-`uppercase` bildete das ä je nach Font zu einem punktlosen «A» ab
+   * («FLACHEN»); die authentische Grossform «Ä» umgeht das.
+   */
+  anzeige: string;
   /** Grundrichtung des Triebs (Grad, SVG: -90 = nach oben). */
   winkel: number;
   fill: string;
@@ -66,12 +74,12 @@ type Trieb = {
 };
 
 const TRIEBE: Trieb[] = [
-  { key: "flaechen", label: "Flächen", winkel: -158, fill: "fill-primary", stroke: "stroke-primary", text: "text-primary" },
-  { key: "punkte", label: "Punkte", winkel: -131, fill: "fill-tertiary", stroke: "stroke-tertiary", text: "text-tertiary" },
-  { key: "bildpunkte", label: "Bildpunkte", winkel: -104, fill: "fill-secondary", stroke: "stroke-secondary", text: "text-secondary" },
-  { key: "videos", label: "Videos", winkel: -77, fill: "fill-on-surface", stroke: "stroke-on-surface", text: "text-on-surface" },
-  { key: "vertiefungen", label: "Vertiefungen", winkel: -50, fill: "fill-on-tertiary-container", stroke: "stroke-on-tertiary-container", text: "text-on-tertiary-container" },
-  { key: "weiter", label: "Weiterverfolgen", winkel: -23, fill: "fill-error", stroke: "stroke-error", text: "text-error" },
+  { key: "flaechen", label: "Flächen", anzeige: "FLÄCHEN", winkel: -158, fill: "fill-primary", stroke: "stroke-primary", text: "text-primary" },
+  { key: "punkte", label: "Punkte", anzeige: "PUNKTE", winkel: -131, fill: "fill-tertiary", stroke: "stroke-tertiary", text: "text-tertiary" },
+  { key: "bildpunkte", label: "Bildpunkte", anzeige: "BILDPUNKTE", winkel: -104, fill: "fill-secondary", stroke: "stroke-secondary", text: "text-secondary" },
+  { key: "videos", label: "Videos", anzeige: "VIDEOS", winkel: -77, fill: "fill-on-surface", stroke: "stroke-on-surface", text: "text-on-surface" },
+  { key: "vertiefungen", label: "Vertiefungen", anzeige: "VERTIEFUNGEN", winkel: -50, fill: "fill-on-tertiary-container", stroke: "stroke-on-tertiary-container", text: "text-on-tertiary-container" },
+  { key: "weiter", label: "Weiterverfolgen", anzeige: "WEITERVERFOLGEN", winkel: -23, fill: "fill-error", stroke: "stroke-error", text: "text-error" },
 ];
 
 /** Deterministischer PRNG (mulberry32). */
@@ -379,8 +387,8 @@ export default function AktivitaetsNetz({
                 {String(z[t.key]).padStart(2, "0")}
               </span>
               <span className="flex min-w-0 flex-col leading-tight">
-                <span className="truncate text-label-sm uppercase text-on-surface-variant">
-                  {t.label}
+                <span className="truncate text-label-sm text-on-surface-variant">
+                  {t.anzeige}
                 </span>
                 <span
                   className="text-label-sm text-on-surface-variant/70"
