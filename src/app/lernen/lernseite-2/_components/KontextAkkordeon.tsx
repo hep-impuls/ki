@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   leseSpurenIndices,
   merkeSpur,
@@ -11,6 +11,7 @@ import { GEWICHT_EVENT, leseGewichtungen, zieheGewichtungAusCloud } from "../_li
 import { merkeInhalt } from "../_lib/inhalte";
 import GewichtungWahl from "./GewichtungWahl";
 import { GlossarText } from "./Glossar";
+import { zeigeBeimOeffnen } from "../_lib/scrollen";
 
 /** Warme Skala für das Achtsamkeits-Muster: mehr Achtsamkeit → farbiger,
  *  rötlicher. Bewusste Ausnahme von der reinen Token-Palette (wie die
@@ -67,6 +68,8 @@ export default function KontextAkkordeon({
     flach.findIndex((f) => f.ki === ki && f.pi === pi);
 
   const [offen, setOffen] = useState<Set<number>>(new Set());
+  /** Zeile je Aspekt, um sie beim Öffnen ins Blickfeld zu holen. */
+  const zeilenRef = useRef<Record<number, HTMLLIElement | null>>({});
   const [gelesen, setGelesen] = useState<Set<number>>(new Set());
   const [gewichtungen, setGewichtungen] = useState<Record<number, number>>({});
 
@@ -107,16 +110,15 @@ export default function KontextAkkordeon({
   }, [spurKey, gesamt]);
 
   function toggle(gi: number) {
-    setOffen((prev) => {
-      const nx = new Set(prev);
-      if (nx.has(gi)) nx.delete(gi);
-      else nx.add(gi);
-      return nx;
-    });
+    // Nur EIN Aspekt offen: Ein zweiter Klick schliesst den vorherigen. Sonst
+    // stapeln sich lange Texte und man scrollt an allem vorbei.
+    const wirdGeoeffnet = !offen.has(gi);
+    setOffen(wirdGeoeffnet ? new Set([gi]) : new Set());
     if (!gelesen.has(gi)) {
       setGelesen((prev) => new Set(prev).add(gi));
       merkeSpur(`${spurKey}:${gi}`);
     }
+    if (wirdGeoeffnet) zeigeBeimOeffnen(zeilenRef.current[gi] ?? null);
   }
 
   return (
@@ -224,7 +226,13 @@ export default function KontextAkkordeon({
                 const auf = offen.has(gi);
                 const schonGelesen = gelesen.has(gi);
                 return (
-                  <li key={pi}>
+                  <li
+                    key={pi}
+                    ref={(el) => {
+                      zeilenRef.current[gi] = el;
+                    }}
+                    className="scroll-mt-24"
+                  >
                     <button
                       type="button"
                       onClick={() => toggle(gi)}

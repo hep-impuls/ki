@@ -1,6 +1,6 @@
 # Quellenauftrag · Lernseite 2 «Eine ganz neue Partnerschaft»
 
-**Paket 08 von 8.** Dieses Dokument enthält 15 Textblöcke eines Lernsets zu
+**Paket 08 von 8.** Dieses Dokument enthält 16 Textblöcke eines Lernsets zu
 Künstlicher Intelligenz und Philosophie (Berufsfachschule, Deutschschweiz).
 Jeder Block hat eine **Kennung** in eckigen Klammern, z.B. `[VA-a1b2c3]`.
 
@@ -46,9 +46,12 @@ und die Quelle ihn nur bestätigt.
 
 Jeder Block hier enthält eine prüfbare Behauptung (Zahl, Datum,
 Superlativ oder eine Aussage, die jemandem zugeschrieben wird). Deutende
-Passagen sind bewusst nicht dabei. Geh die 15 Blöcke einzeln durch.
+Passagen sind bewusst nicht dabei. Geh die 16 Blöcke einzeln durch.
 
 ### Thema 02 · Die acht Epochen
+
+**[EP-1de6e6]** *(Vertiefung «Mehr lesen» · Antike)*
+Aristoteles war zuerst Sammler und dann Systematiker: In der Lagune von Pyrrha auf Lesbos untersuchte er Fische, Kraken und Seeigel, und seine Schule trug die Verfassungen von über 150 griechischen Städten zusammen. In Athen lehrte er im Lykeion, der Überlieferung nach oft im Umhergehen, weshalb man seine Schüler «Peripatetiker» nannte, die Umherwandelnden. Aus dem vielen Material destillierte er Regeln des Schliessens: Wenn alle Menschen sterblich sind und Sokrates ein Mensch ist, dann ist Sokrates sterblich, und das gilt unabhängig davon, wer es ausspricht. Genau darin lag die Spitze gegen die Redekünstler, denn ein Schluss stimmt oder stimmt nicht, Charme ändert daran nichts. Diese Haltung wanderte über arabische Gelehrte und mittelalterliche Klosterschulen bis in unsere Schulzimmer, und noch jede Prüfung, die eine Begründung verlangt, steht in ihrer Tradition.
 
 **[EP-8cc8f0]** *(Kartentext · Zerbrechen der Ordnung)*
 Unten ziehen zahlreiche Krieger gemeinsam an einem Seil, um das Standbild zu Fall zu bringen. Die alte Weltordnung stürzt nicht von selbst. Sie wird von vielen Händen aktiv niedergerissen: Geschichte als Werk von Menschen, nicht von Schicksal.

@@ -68,8 +68,10 @@ In Irland verbrauchten die Rechenzentren 2023 bereits 21 Prozent des gemessenen 
 
 > **Belegt** («irische Statistikamt»): [CSO Ireland: Rechenzentren und Stromverbrauch 2024](https://www.cso.ie/en/releasesandpublications/ep/p-dcmec/datacentresmeteredelectricityconsumption2024/keyfindings/) — «rose to 22% in 2024»; städtische Haushalte 18 Prozent, ländliche 10 Prozent. Für 2023 nennt der Vorjahresbericht 21 Prozent bei gleichen Haushaltswerten. *(geprüft 2026-07-26)*
 
-**[VA-9979f0]** *(Fallbeispiel · Technologisch-kapitalistische Organisation)*
-Der Software-Riese Microsoft hat rund 13 Milliarden Dollar in die Firma OpenAI gesteckt, die hinter ChatGPT steht. Damit hängt eine der wichtigsten KI-Firmen eng an einem einzelnen Grosskonzern. So bündelt sich viel Macht bei wenigen Unternehmen.
+**[VA-7dc30e]** *(Fallbeispiel · Technologisch-kapitalistische Organisation)*
+Microsoft steckte zwischen 2019 und 2023 rund 13 Milliarden Dollar in OpenAI, die Firma hinter ChatGPT, und blieb ihr grösster Einzelinvestor. Im Oktober 2025 baute sich OpenAI um: Der gewinnorientierte Teil heisst jetzt «OpenAI Group PBC», die gemeinnützige «OpenAI Foundation» hält 26 Prozent daran. Formal hat Microsoft keine Kontrollrechte und sitzt nur als Beobachter ohne Stimme im Verwaltungsrat. Die Abhängigkeit bleibt trotzdem: Geld, Rechenzentren und Vertriebswege kommen zu einem grossen Teil von einem einzigen Konzern. So bündelt sich viel Macht bei wenigen Unternehmen. (Stand Mitte 2026)
+
+> **Belegt** («OpenAI Group PBC»): [OpenAI (Wikipedia)](https://de.wikipedia.org/wiki/OpenAI) — Umstrukturierung im Oktober 2025: «OpenAI Group PBC», die in «OpenAI Foundation» umbenannte Non-Profit hält 26 Prozent der Anteile. Microsoft ist grösster Einzelinvestor, aber nur nicht-stimmberechtigter Beobachter im Verwaltungsrat. *(geprüft 2026-07-26)*
 
 **[VA-2907aa]** *(Fallbeispiel · Zugang)*
 Bei den grossen Chatbots ist die Gratisstufe begrenzt: weniger Anfragen, eingeschränkter Zugriff auf die neuesten Modelle und Werkzeuge. Ein Abo für rund 20 Dollar im Monat hebt vor allem diese Grenzen an. Wer zahlen kann, arbeitet also flüssiger und mit mehr Möglichkeiten. Schon beim Zugang entsteht so ein Unterschied zwischen Menschen. Die genauen Stufen ändern sich laufend, dieser Stand ist von 2026.
@@ -80,6 +82,9 @@ Bei den grossen Chatbots ist die Gratisstufe begrenzt: weniger Anfragen, eingesc
 Die Bezahlfirma Klarna gab 2024 selbst bekannt, ihr KI-Assistent leiste die Arbeit von rund 700 Vollzeitstellen im Kundendienst. Kurz darauf investierte sie wieder stärker in menschlichen Service, weil die Qualität nicht überall reichte. Diese Abfolge zeigt, wie schnell und zugleich unsicher dieser Wandel verläuft.
 
 > **Belegt** («Klarna»): [Klarna, Medienmitteilung vom 27. Februar 2024](https://www.klarna.com/international/press/der-ki-kundenassistent-von-klarna-bearbeitet-im-ersten-monat-zwei-drittel-aller-kundendienst-anfragen/) — Klarnas eigene Angabe: Der KI-Assistent führte 2,3 Millionen Unterhaltungen, zwei Drittel aller Kundendienst-Chats, und leiste damit die Arbeit von 700 Vollzeitmitarbeitenden. Unabhängig nachgemessen wurde das nicht. *(geprüft 2026-07-26)*
+
+**[VA-66e5a4]** *(Fallbeispiel · Rollenverschiebung)*
+Am deutlichsten zeigen das die KI-Agenten, die seit 2025 in die Arbeitswelt drängen. Ein Agent bekommt nicht mehr eine einzelne Frage, sondern einen Auftrag: recherchiere das, schreib den Code, buche die Reise. Er zerlegt ihn selbst in Schritte, ruft Werkzeuge auf und arbeitet minutenlang weiter, ohne Rückfrage. Beim Programmieren heisst das: Statt Zeile für Zeile zu tippen, beschreibt man die Aufgabe, lässt den Agenten arbeiten und prüft danach, was er angerichtet hat. Die Arbeit verschiebt sich vom Ausführen zum Auftrag-Formulieren und Kontrollieren. Und je länger ein Agent allein weiterläuft, desto schwerer wird das Prüfen, denn man war bei den Zwischenschritten nicht dabei. (Stand Mitte 2026)
 
 **[VA-c7ea69]** *(Kartentext · Regulierung)*
 Der Staat versucht, KI mit Gesetzen zu lenken. Solche Regeln sollen Grundrechte, Sicherheit, Datenschutz und Urheberrecht schützen. Zugleich sollen sie Forschung und Innovation nicht unnötig behindern. Diese Balance ist schwierig, und die Regeln entstehen erst nach und nach.
@@ -177,6 +182,3 @@ Aus dem militärischen ARPANET (1969) wird das World Wide Web: 1989 als Vorschla
 
 **[PP-b4342b]** *(Vertiefung «Mehr lesen» · Internet & World Wide Web)*
 Die erste Nachricht im ARPANET wurde am 29. Oktober 1969 von Los Angeles nach Stanford geschickt, geplant war das Wort «LOGIN», nach zwei Buchstaben stürzte die Verbindung ab, übertragen war nur «LO». Aus dem Forschungsnetz weniger Universitäten wuchs über zwei Jahrzehnte ein weltweiter Verbund, doch er blieb ein Werkzeug für Fachleute. Den entscheidenden Schritt machte Tim Berners-Lee am CERN, sein Vorschlag von 1989 für ein Netz aus verknüpften Seiten trug den Vermerk seines Vorgesetzten, das sei vage, aber aufregend. So lief die erste Website der Welt auf einem Rechner bei Genf. Entscheidend war schliesslich, dass das CERN 1993 den Web-Standard zur freien Nutzung freigab, niemand musste Lizenzgebühren zahlen, und genau deshalb konnte das Netz explodieren. Offenheit war hier keine Nebensache, sondern der Bauplan des Erfolgs.
-
-**[PP-aadb5f]** *(Kartentext · KI wird öffentlich)*
-Erfunden wurde die KI nicht 2022: Benannt und erforscht wird sie seit 1956 (Dartmouth-Konferenz). Mit GPT und ChatGPT tritt sie 2022 an die Öffentlichkeit und wird alltäglich.

@@ -50,6 +50,9 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 02 · Die acht Epochen
 
+**[EP-60843e]** *(Hintergrund zum Bild · Aufklärung)*
+Joseph Wright of Derby (1734–1797) war ein englischer Maler der Aufklärung, der für seine dramatische Verwendung von Licht und Schatten bekannt wurde. Er malte diese Szene um 1766 im England der frühen Industrialisierung. Dargestellt ist ein Vortragender, der einer Gruppe von Zuhörern ein Orrery erklärt, ein mechanisches Tischmodell des Sonnensystems. Eine Lampe in der Mitte stellt die Sonne dar und beleuchtet die staunenden Gesichter ringsum. Wright gibt der Wissenschaft damit eine Feierlichkeit, wie man sie sonst nur aus religiösen Bildern kennt. Das Gemälde hängt heute im Museum von Derby in England.
+
 **[EP-207a6e]** *(Hintergrund zum Bild · Aufklärung)*
 Dieses Blatt ist kein Gemälde, sondern ein Kupferstich, der noch im Katastrophenjahr 1755 als Flugblatt entstand. Ein einzelner Urheber ist nicht überliefert, denn solche Stiche wurden rasch und in grosser Zahl gedruckt. Dargestellt ist das Erdbeben von Lissabon vom 1. November 1755 mit seinen drei Verheerungen, dem bebenden Boden, der brennenden Stadt und der Flutwelle im Hafen. Im Vordergrund kentern Schiffe in der heranrollenden Welle, im Hintergrund stehen Kirchen und Paläste in Flammen. Als eines der ersten europaweiten Medienereignisse verbreiteten solche Stiche Bild und Schrecken innert Wochen über den ganzen Kontinent.
 
@@ -151,6 +154,3 @@ Der Ausdruck «Ende der Geschichte» stammt von Francis Fukuyama (1992): Nach de
 
 **[EP-37f2ac]** *(Hintergrund zum Bild · «Ende der Geschichte»)*
 Dieses Bild ist kein Gemälde, sondern eine Pressefotografie vom 22. Dezember 1989. Aufgenommen hat sie ein Fotograf des DDR-Nachrichtendienstes ADN, heute liegt sie im Bundesarchiv. Zu sehen ist der Moment, in dem am Brandenburger Tor ein Kran ein Mauersegment heraushebt, um den neuen Grenzübergang zu öffnen. Es geschah sechs Wochen nach der Maueröffnung vom 9. November 1989. Unter dem schwebenden Betonstück stehen Grenzsoldaten, Arbeiter und Schaulustige dicht beieinander. Das nächtliche Foto wurde zu einem Sinnbild für das friedliche Ende der deutschen Teilung.
-
-**[EP-f31e12]** *(Kartentext · «Ende der Geschichte»)*
-Ein Betonsegment hängt am Haken, die «unüberwindbare» Grenze als Bauteil, das man herausheben kann. 28 Jahre teilte diese Wand die Stadt. Jetzt zeigt sich: Auch sie war gemacht, nicht Schicksal.

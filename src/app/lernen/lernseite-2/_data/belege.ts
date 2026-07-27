@@ -103,6 +103,15 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-07-26",
   },
   {
+    id: "VA-7dc30e",
+    anker: "OpenAI Group PBC",
+    url: "https://de.wikipedia.org/wiki/OpenAI",
+    titel: "OpenAI (Wikipedia)",
+    stelle:
+      "Umstrukturierung im Oktober 2025: «OpenAI Group PBC», die in «OpenAI Foundation» umbenannte Non-Profit hält 26 Prozent der Anteile. Microsoft ist grösster Einzelinvestor, aber nur nicht-stimmberechtigter Beobachter im Verwaltungsrat.",
+    geprueft: "2026-07-26",
+  },
+  {
     id: "VA-6068d8",
     anker: "UNESCO",
     url: "https://www.unesco.org/en/articles/generative-ai-unesco-study-reveals-alarming-evidence-regressive-gender-stereotypes",

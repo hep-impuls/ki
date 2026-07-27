@@ -48,6 +48,11 @@ Jeder Block hier enthält eine prüfbare Behauptung (Zahl, Datum,
 Superlativ oder eine Aussage, die jemandem zugeschrieben wird). Deutende
 Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
+### Übersicht (Hub)
+
+**[HUB-f5abb9]** *(Fliesstext · (ohne Abschnitt))*
+Kaum ein Thema ist so präsent wie die Künstliche Intelligenz — und kaum eines so schwer zu fassen. Es wird viel über sie gesagt, doch vieles bleibt schemenhaft, ein Reden über etwas, das man selten wirklich vor Augen hat. Dieses Lernset will die KI sichtbarer und verständlicher machen, indem es ihr eine Gestalt gibt.
+
 ### Thema 01 · Vorhang auf
 
 **[VA-87049e]** *(Kartentext · Der versteckte Mensch)*
@@ -155,6 +160,3 @@ Container, Freihandelsabkommen und das Internet verflechten die Weltwirtschaft f
 
 **[EP-07de36]** *(Kartentext · Antike)*
 Zwei Erfindungen tragen den Wandel. Die griechische Alphabetschrift (ab etwa 800 v. Chr.) kommt mit rund zwei Dutzend Zeichen aus. Lesen und Schreiben sind nicht mehr Sache einer Priesterkaste. Und gemünztes Geld (in Kleinasien und Griechenland ab dem 7./6. Jahrhundert v. Chr.) macht Werte zählbar, teilbar und übertragbar, unabhängig von Person und Stand. Durchsetzen konnten sie sich, weil eine see- und handelstreibende Welt Aufzeichnungen, Verträge und ein verlässliches Tauschmittel brauchte: Das Alphabet entstand aus der Handelsschrift der Phönizier, das Silber für die Münzen kam aus Bergwerken wie dem attischen Laurion.
-
-**[EP-1de6e6]** *(Vertiefung «Mehr lesen» · Antike)*
-Aristoteles war zuerst Sammler und dann Systematiker: In der Lagune von Pyrrha auf Lesbos untersuchte er Fische, Kraken und Seeigel, und seine Schule trug die Verfassungen von über 150 griechischen Städten zusammen. In Athen lehrte er im Lykeion, der Überlieferung nach oft im Umhergehen, weshalb man seine Schüler «Peripatetiker» nannte, die Umherwandelnden. Aus dem vielen Material destillierte er Regeln des Schliessens: Wenn alle Menschen sterblich sind und Sokrates ein Mensch ist, dann ist Sokrates sterblich, und das gilt unabhängig davon, wer es ausspricht. Genau darin lag die Spitze gegen die Redekünstler, denn ein Schluss stimmt oder stimmt nicht, Charme ändert daran nichts. Diese Haltung wanderte über arabische Gelehrte und mittelalterliche Klosterschulen bis in unsere Schulzimmer, und noch jede Prüfung, die eine Begründung verlangt, steht in ihrer Tradition.

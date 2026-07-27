@@ -50,6 +50,9 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 02 · Philosophische Perspektive
 
+**[PP-aadb5f]** *(Kartentext · KI wird öffentlich)*
+Erfunden wurde die KI nicht 2022: Benannt und erforscht wird sie seit 1956 (Dartmouth-Konferenz). Mit GPT und ChatGPT tritt sie 2022 an die Öffentlichkeit und wird alltäglich.
+
 **[PP-f072fb]** *(Vertiefung «Mehr lesen» · KI wird öffentlich)*
 Im Sommer 1956 lud der junge Mathematiker John McCarthy eine Handvoll Forscher ans Dartmouth College ein und gab dem Feld seinen Namen, künstliche Intelligenz; der Antrag versprach kühn, ein Sommer mit zehn Leuten werde entscheidende Fortschritte bringen. Es dauerte dann Jahrzehnte länger, mit Durchbrüchen und Enttäuschungen im Wechsel. Sichtbar wurde der Fortschritt zuerst in Spielen, 1997 schlug der Rechner Deep Blue den Schachweltmeister Garri Kasparow, 2016 besiegte AlphaGo den Go-Meister Lee Sedol mit einem Zug, den Fachleute zuerst für einen Fehler hielten. Der eigentliche Bruch kam am 30. November 2022, als ChatGPT freigeschaltet wurde, innert fünf Tagen meldeten sich eine Million Menschen an, nach zwei Monaten waren es rund hundert Millionen, schneller als je bei einer Anwendung zuvor. Erstmals konnte jede und jeder mit einer KI einfach reden. Damit wanderte eine Laborfrage mitten in Schulzimmer, Büros und Werkstätten.
 
@@ -153,6 +156,3 @@ Pico della Mirandola (1463–1494) formuliert in seiner «Rede über die Würde 
 
 **[EP-40a21a]** *(Vertiefung «Mehr lesen» · Renaissance & Aufbruch)*
 Pico war dreiundzwanzig, als er 1486 die Gelehrten Europas nach Rom einlud, um mit ihm über 900 Thesen zu streiten, und die «Rede über die Würde des Menschen» sollte die Eröffnung dieses Wettstreits werden. Der Papst verbot die Veranstaltung, ein Teil der Thesen galt als ketzerisch, doch der Text überlebte und wurde zum Manifest des neuen Selbstbewusstseins. Ein Menschenalter später zog sich Montaigne, Richter in Bordeaux, auf den Turm seines Schlosses zurück, während draussen Katholiken und Protestanten einander in Glaubenskriegen abschlachteten. In die Deckenbalken seiner Bibliothek liess er Sprüche antiker Skeptiker schnitzen und erfand beim Schreiben nebenbei eine neue Gattung: den «Essai», wörtlich den Versuch, das Ausprobieren eines Gedankens. Grösse und Zweifel gehören seither zusammen, und wer heute angesichts der KI fragt, was der Mensch eigentlich ist, führt genau dieses Gespräch weiter.
-
-**[EP-60843e]** *(Hintergrund zum Bild · Aufklärung)*
-Joseph Wright of Derby (1734–1797) war ein englischer Maler der Aufklärung, der für seine dramatische Verwendung von Licht und Schatten bekannt wurde. Er malte diese Szene um 1766 im England der frühen Industrialisierung. Dargestellt ist ein Vortragender, der einer Gruppe von Zuhörern ein Orrery erklärt, ein mechanisches Tischmodell des Sonnensystems. Eine Lampe in der Mitte stellt die Sonne dar und beleuchtet die staunenden Gesichter ringsum. Wright gibt der Wissenschaft damit eine Feierlichkeit, wie man sie sonst nur aus religiösen Bildern kennt. Das Gemälde hängt heute im Museum von Derby in England.

@@ -707,8 +707,10 @@ In Irland verbrauchten die Rechenzentren 2023 bereits 21 Prozent des gemessenen 
 **[VA-9b9d38]** *(Kartentext)*
 Die stärkste KI wird fast nur von grossen privaten Technologiekonzernen entwickelt. Bei ihnen sammeln sich Geld, Daten, Rechenzentren und Patente. Dadurch liegt viel Macht bei wenigen Firmen. Deren Geschäftsinteressen bestimmen mit, in welche Richtung sich die Technik entwickelt.
 
-**[VA-9979f0]** *(Fallbeispiel)*
-Der Software-Riese Microsoft hat rund 13 Milliarden Dollar in die Firma OpenAI gesteckt, die hinter ChatGPT steht. Damit hängt eine der wichtigsten KI-Firmen eng an einem einzelnen Grosskonzern. So bündelt sich viel Macht bei wenigen Unternehmen.
+**[VA-7dc30e]** *(Fallbeispiel)*
+Microsoft steckte zwischen 2019 und 2023 rund 13 Milliarden Dollar in OpenAI, die Firma hinter ChatGPT, und blieb ihr grösster Einzelinvestor. Im Oktober 2025 baute sich OpenAI um: Der gewinnorientierte Teil heisst jetzt «OpenAI Group PBC», die gemeinnützige «OpenAI Foundation» hält 26 Prozent daran. Formal hat Microsoft keine Kontrollrechte und sitzt nur als Beobachter ohne Stimme im Verwaltungsrat. Die Abhängigkeit bleibt trotzdem: Geld, Rechenzentren und Vertriebswege kommen zu einem grossen Teil von einem einzigen Konzern. So bündelt sich viel Macht bei wenigen Unternehmen. (Stand Mitte 2026)
+
+> **Belegt** («OpenAI Group PBC»): [OpenAI (Wikipedia)](https://de.wikipedia.org/wiki/OpenAI) — Umstrukturierung im Oktober 2025: «OpenAI Group PBC», die in «OpenAI Foundation» umbenannte Non-Profit hält 26 Prozent der Anteile. Microsoft ist grösster Einzelinvestor, aber nur nicht-stimmberechtigter Beobachter im Verwaltungsrat. *(geprüft 2026-07-26)*
 
 ### Zugang
 
@@ -735,8 +737,8 @@ Die Bezahlfirma Klarna gab 2024 selbst bekannt, ihr KI-Assistent leiste die Arbe
 **[VA-047958]** *(Kartentext)*
 Die Rolle des Menschen verschiebt sich. Statt eine Arbeit selbst auszuführen, leitet man die KI an und prüft ihr Ergebnis. Am Ende trägt der Mensch die Verantwortung für das, was er übernimmt. Aus dem Ausführenden wird also eher ein Anleiter und Kontrolleur.
 
-**[VA-ddeb05]** *(Fallbeispiel)*
-Wer heute programmiert, lässt sich von einem Werkzeug wie GitHub Copilot ganze Code-Abschnitte vorschlagen. Die eigentliche Arbeit ist dann, diese Vorschläge zu lesen, zu prüfen und zu verbessern. Aus dem Selberschreiben wird ein Anleiten und Kontrollieren.
+**[VA-66e5a4]** *(Fallbeispiel)*
+Am deutlichsten zeigen das die KI-Agenten, die seit 2025 in die Arbeitswelt drängen. Ein Agent bekommt nicht mehr eine einzelne Frage, sondern einen Auftrag: recherchiere das, schreib den Code, buche die Reise. Er zerlegt ihn selbst in Schritte, ruft Werkzeuge auf und arbeitet minutenlang weiter, ohne Rückfrage. Beim Programmieren heisst das: Statt Zeile für Zeile zu tippen, beschreibt man die Aufgabe, lässt den Agenten arbeiten und prüft danach, was er angerichtet hat. Die Arbeit verschiebt sich vom Ausführen zum Auftrag-Formulieren und Kontrollieren. Und je länger ein Agent allein weiterläuft, desto schwerer wird das Prüfen, denn man war bei den Zwischenschritten nicht dabei. (Stand Mitte 2026)
 
 ### Regulierung
 

@@ -50,6 +50,9 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 02 · Die acht Epochen
 
+**[EP-f31e12]** *(Kartentext · «Ende der Geschichte»)*
+Ein Betonsegment hängt am Haken, die «unüberwindbare» Grenze als Bauteil, das man herausheben kann. 28 Jahre teilte diese Wand die Stadt. Jetzt zeigt sich: Auch sie war gemacht, nicht Schicksal.
+
 **[EP-004fe5]** *(Hintergrund zum Bild · «Ende der Geschichte»)*
 Dieses Bild ist keine gemalte Kunst, sondern eine wissenschaftliche Aufnahme der Weltraumbehörden NASA und NOAA aus dem Jahr 2012. Es ist eine Montage aus Hunderten Aufnahmen des Satelliten Suomi NPP, denn es ist nie überall auf der Erde gleichzeitig Nacht. So hat der Planet in Wirklichkeit nie ausgesehen. Zu sehen ist die nächtliche Erde, auf der jedes Lichtpünktchen für menschliche Besiedlung und für Strom steht. Grell leuchten Europa, Ostasien und die US-Küsten, während weite Teile Afrikas, Südamerikas und Zentralasiens fast dunkel bleiben. Gerade als Konstruktion führt das Bild vor Augen, wie ungleich die vernetzte Welt verteilt ist.
 
@@ -155,8 +158,3 @@ Hartmut Rosa ist ein deutscher Soziologe, bekannt für die Diagnose der gesellsc
 
 **[OR-e41fe5]** *(Fliesstext · Verunsichert dich noch)*
 Vor über zweieinhalbtausend Jahren stiegen Menschen aus der ganzen griechischen Welt nach Delphi hinauf, um das berühmteste Orakel der Antike zu befragen. Dort sass die Priesterin Pythia auf einem Dreifuss über einer Erdspalte und gab, oft in dunklen, deutbaren Worten, Antwort. Ganze Städte fragten sie, bevor sie in den Krieg zogen oder eine Kolonie gründeten. Dem lydischen König Krösus soll sie gesagt haben, wenn er über den Grenzfluss ziehe, werde er ein grosses Reich zerstören. Er zog los, verlor und zerstörte sein eigenes. Das Orakel war ein Ort, an dem eine unübersichtliche Welt gedeutet wurde, lange bevor es Wissenschaft gab.
-
-### Übersicht (Hub)
-
-**[HUB-f5abb9]** *(Fliesstext · (ohne Abschnitt))*
-Kaum ein Thema ist so präsent wie die Künstliche Intelligenz — und kaum eines so schwer zu fassen. Es wird viel über sie gesagt, doch vieles bleibt schemenhaft, ein Reden über etwas, das man selten wirklich vor Augen hat. Dieses Lernset will die KI sichtbarer und verständlicher machen, indem es ihr eine Gestalt gibt.
