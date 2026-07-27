@@ -71,21 +71,25 @@ export default function SideNav() {
 
       <div className="flex-grow" />
 
-      {hasClass && (
-        <nav className="p-md pt-0">
-          <Link
-            href="/klassenreport"
-            className={
-              pathname === "/klassenreport"
-                ? "flex items-center gap-sm px-sm py-sm rounded-lg bg-primary/10 text-primary font-semibold"
-                : "flex items-center gap-sm px-sm py-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"
-            }
-          >
-            <span className="material-symbols-outlined text-[20px]">groups</span>
-            <span className="text-body-md">Klassenreport</span>
-          </Link>
-        </nav>
-      )}
+      {/* Der Eintrag steht IMMER da. Vorher erschien er nur mit Klasse, und
+          wer den Klassencode beim Start übersprungen hatte, kam nicht mehr
+          hin: Die einzigen Links auf /start liegen im Klassenreport, den man
+          ohne Klasse nicht erreicht. */}
+      <nav className="p-md pt-0">
+        <Link
+          href={hasClass ? "/klassenreport" : "/start"}
+          className={
+            pathname === "/klassenreport"
+              ? "flex items-center gap-sm px-sm py-sm rounded-lg bg-primary/10 text-primary font-semibold"
+              : "flex items-center gap-sm px-sm py-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"
+          }
+        >
+          <span className="material-symbols-outlined text-[20px]">groups</span>
+          <span className="text-body-md">
+            {hasClass ? "Klassenreport" : "Klasse beitreten"}
+          </span>
+        </Link>
+      </nav>
 
       <div className="p-md border-t border-outline-variant">
         <p className="text-label-sm text-on-surface-variant">

@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { classExists, saveTeacherSetupSecure } from "@/lib/api";
 
@@ -30,10 +30,18 @@ export default function LehrpersonPage() {
   const [openCode, setOpenCode] = useState("");
   const [openSecret, setOpenSecret] = useState("");
 
+  /** Beitritts-Link mit vorbefülltem Klassencode (`?class=…` auf /start). */
+  const beitrittsLink = useMemo(() => {
+    const origin = typeof window !== "undefined" ? window.location.origin : "";
+    return `${origin}/start?class=${code.trim().toUpperCase()}`;
+  }, [code]);
+
   const downloadBackup = useCallback((c: string, s: string) => {
     const url = typeof window !== "undefined" ? window.location.origin : "";
     const text =
-      `Klassencode: ${c}\nSecret: ${s}\nReport-URL: ${url}/lehrperson/report\n\n` +
+      `Klassencode: ${c}\nSecret: ${s}\n` +
+      `Link für die Schüler:innen: ${url}/start?class=${c}\n` +
+      `Report-URL: ${url}/lehrperson/report\n\n` +
       `Bewahre diese Datei sicher auf. Das Secret kann nicht wiederhergestellt werden.`;
     const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
     const a = document.createElement("a");
@@ -211,6 +219,33 @@ export default function LehrpersonPage() {
             jetzt aktiv. Gib ihn deinen Schüler:innen. Wähle nun die Pflichtmodule oder
             öffne den Report.
           </p>
+
+          {/* Fertiger Beitritts-Link. Die Startseite kennt `?class=CODE` und
+              füllt den Klassencode damit vor; ohne diesen Link musste er von
+              Hand abgetippt werden, und wer den Schritt übersprang, kam nicht
+              mehr in die Klasse. */}
+          <div className="mt-md rounded-xl border border-outline-variant bg-surface-container-low p-md">
+            <p className="text-label-md uppercase tracking-wider text-tertiary">
+              Link für die Schüler:innen
+            </p>
+            <p className="mt-xs text-body-sm text-on-surface-variant">
+              Wer diesen Link öffnet, bekommt den Klassencode schon eingetragen.
+            </p>
+            <p
+              className="mt-sm break-all rounded-lg bg-surface-bright px-sm py-xs text-body-sm text-on-surface"
+              style={{ fontFamily: "ui-monospace, monospace" }}
+            >
+              {beitrittsLink}
+            </p>
+            <button
+              type="button"
+              onClick={() => void navigator.clipboard?.writeText(beitrittsLink)}
+              className="mt-sm inline-flex items-center gap-xs rounded-full border border-outline-variant bg-surface-bright px-md py-xs text-label-md text-on-surface-variant transition-colors hover:border-tertiary hover:text-tertiary"
+            >
+              <span className="material-symbols-outlined text-[16px]">content_copy</span>
+              Link kopieren
+            </button>
+          </div>
           <div className="mt-lg flex flex-col gap-sm sm:flex-row">
             <button
               onClick={() => {
