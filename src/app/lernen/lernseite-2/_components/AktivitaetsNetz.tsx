@@ -387,7 +387,11 @@ export default function AktivitaetsNetz({
                 {String(z[t.key]).padStart(2, "0")}
               </span>
               <span className="flex min-w-0 flex-col leading-tight">
-                <span className="truncate text-label-sm text-on-surface-variant">
+                {/* `text-label-sm` setzt line-height:1; zusammen mit dem
+                    overflow:hidden von `truncate` kappt das die Umlautpunkte
+                    des grossen «Ä» oben um ~1px («FLACHEN»). Etwas mehr
+                    Zeilenhöhe gibt den Punkten Platz, die Ellipse bleibt. */}
+                <span className="truncate text-label-sm !leading-snug text-on-surface-variant">
                   {t.anzeige}
                 </span>
                 <span
