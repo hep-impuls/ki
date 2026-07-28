@@ -58,7 +58,7 @@ const station1: Station = {
       },
       schatten: {
         inhalt: "Station 1 · Schritt 3/7: Schattenseite",
-        dauerMin: 6,
+        dauerMin: 7,
         lernziel:
           "Du kannst benennen, welche Berufsgruppen bereits konkrete Jobverluste spüren, und einordnen, warum gerade Softwareentwickler betroffen sind.",
         anleitung:
@@ -177,38 +177,21 @@ const station1: Station = {
       intro:
         "Jetzt die andere Seite: Für manche Berufe sind die Veränderungen keine Abstraktion, sondern Alltag. Schau den 10vor10-Beitrag.",
       anleitung:
-        "Schau das SRF-Video von Minute 1:00 bis 4:40. Achte darauf, welche Berufsgruppe besonders betroffen ist, was die Studierenden an der FHNW dazu sagen und welche Zahl die ETH-KOF-Schätzung nennt. Was überrascht dich — und was nicht?",
+        "Schau den ganzen 10vor10-Beitrag (ca. 6 Min.). Achte darauf, welche Berufsgruppe besonders betroffen ist, was die Studierenden an der FHNW dazu sagen und welche Zahl die ETH-KOF-Schätzung nennt. Was überrascht dich — und was nicht?",
       media: [
+        // Der SRF-Player zeigt den geschnittenen Beitrag (~6 Min.), nicht die
+        // Gesamtsendung — er läuft ganz, ohne Start/Stopp-Vorgabe (Entscheid
+        // 2026-07-28). Die optimistische Schlussszene («KI macht den Dreck»)
+        // gehört damit bewusst zum Seherlebnis.
         {
           kind: "srf",
           urn: "urn:srf:video:071a2edb-dd66-4881-a42c-e720451b1b16",
           title: "10vor10 — Putzkräfte sicherer als Softwareentwickler",
           sourceKey: "10v10-ki-informatikjob",
-          start: 60,
-          end: 280,
           guidance:
-            "Fokus: Arbeitslosigkeit bei Softwareentwicklerinnen und -entwicklern. Achte auf die ETH-KOF-Schätzung von Michael Siegenthaler (2'500 arbeitslose Softwareentwickler Ende 2025) und darauf, wen der Strukturwandel zuerst trifft.",
+            "Fokus: Arbeitslosigkeit bei Softwareentwicklerinnen und -entwicklern. Achte auf die ETH-KOF-Schätzung von Michael Siegenthaler (2'500 arbeitslose Softwareentwickler Ende 2025), darauf, wen der Strukturwandel zuerst trifft — und wie die Entwickler am Schluss selbst darüber denken.",
           externalUrl:
             "https://www.srf.ch/news/wirtschaft/arbeitsmarkt-vor-umwaelzungen-ki-und-arbeitswelt-putzkraefte-sicherer-als-softwareentwickler",
-        },
-      ],
-      extras: [
-        {
-          titel: "Wie Entwickler selbst darüber denken",
-          beschreibung:
-            "Dieselbe Sendung, direkt im Anschluss: Software-Entwicklerinnen und -Entwickler auf einer Retraite sehen KI eher als Werkzeug denn als Bedrohung — mit einer klaren Bedingung.",
-          media: {
-            kind: "srf",
-            urn: "urn:srf:video:071a2edb-dd66-4881-a42c-e720451b1b16",
-            title: "10vor10 — Softwareentwickler über KI als Werkzeug",
-            sourceKey: "10v10-ki-informatikjob",
-            start: 283,
-            end: 348,
-            guidance:
-              "«KI macht den Dreck» — aber: «Wer die KI nicht einsetzt, wird in Zukunft vielleicht ersetzt.»",
-            externalUrl:
-              "https://www.srf.ch/news/wirtschaft/arbeitsmarkt-vor-umwaelzungen-ki-und-arbeitswelt-putzkraefte-sicherer-als-softwareentwickler",
-          },
         },
       ],
     } satisfies MediaBlock,
@@ -686,8 +669,6 @@ const station2: Station = {
             sourceKey: "rundschau-ki-kriminalität",
             externalUrl:
               "https://www.srf.ch/play/tv/rundschau/video/alles-gefaelscht-und-manipuliert-wie-kriminelle-kuenstliche-intelligenz-nutzen?urn=urn:srf:video:8184d9b5-410e-412f-9a67-4194b2f3ecd2",
-            start: 2697,
-            end: 2787,
             guidance:
               "Swiss Infosec simuliert einen CEO-Betrugsanruf: 50–60 % der Mitarbeitenden fallen darauf herein.",
           },
@@ -2027,7 +2008,7 @@ const station5: Station = {
     sonne: {
       inhalt:
         "Station 5 · Welt besser — Schritt 2/7: Sonnenseite (KI gegen Foodwaste)",
-      dauerMin: 4,
+      dauerMin: 6,
       lernziel:
         "Du erkennst, wie KI in einer Schweizer Bäckerei Bestellprognosen verbessert und Lebensmittelverschwendung reduziert.",
       anleitung:
@@ -2036,7 +2017,7 @@ const station5: Station = {
     schatten: {
       inhalt:
         "Station 5 · Welt besser — Schritt 3/7: Schattenseite (Datenarbeit in Kenia)",
-      dauerMin: 11,
+      dauerMin: 14,
       lernziel:
         "Du kannst benennen, welche menschlichen und sozialen Kosten hinter dem KI-Training stecken, die in Hochlohnländern unsichtbar bleiben.",
       anleitung:
@@ -2127,7 +2108,7 @@ const station5: Station = {
     intro:
       "In der Schweiz landen jährlich knapp 3 Millionen Tonnen Lebensmittel im Abfall. Ein Zürcher Startup setzt KI ein, um Bäckereien bessere Bestellprognosen zu liefern: Die KI kombiniert Kassendaten mit Wetter und sogar Zahltagen, um vorherzusagen, wie viele Brote und Törtchen morgen gebraucht werden — und reduziert so Foodwaste.",
     anleitung:
-      "Höre den Ausschnitt aus dem SRF-Espresso-Beitrag. Achte darauf, was die KI tatsächlich leistet — und was der Projektleiter ausdrücklich betont, was sie nie leisten wird.",
+      "Höre den ganzen Espresso-Beitrag (ca. 4 Min. 45 Sek.). Achte darauf, wie die Prognose funktioniert (Wetter, Zahltag), was die KI tatsächlich leistet — und was der Projektleiter ausdrücklich betont, was sie nie leisten wird.",
     media: [
       {
         kind: "audio",
@@ -2136,8 +2117,12 @@ const station5: Station = {
         sourceKey: "espresso-foodwaste",
         externalUrl:
           "https://www.srf.ch/sendungen/kassensturz-espresso/espresso/praezisere-bestellprognosen-eine-ki-sorgt-in-schweizer-baeckereien-fuer-weniger-foodwaste",
-        start: 53,
-        end: 185,
+        // Korrektur 2026-07-28: Die MP3 ist die GANZE Espresso-Sendung (13:39,
+        // per ffprobe verifiziert) — die frühere Transkript-Notiz «mp3 startet
+        // bei 6:00» war falsch. Sendungszeit = mp3-Zeit; der Foodwaste-Beitrag
+        // läuft 4:24–ca. 9:15.
+        start: 264,
+        end: 555,
       },
     ],
   },
@@ -2146,18 +2131,20 @@ const station5: Station = {
     intro:
       "Damit KI funktioniert, muss sie trainiert werden — auch mit den schlimmsten Inhalten des Internets. Diese Arbeit erledigen Menschen in Billiglohnländern, oft für einen Hungerlohn und auf Kosten ihrer psychischen Gesundheit.",
     anleitung:
-      "Schau ab Minute 21 bis ca. Minute 30. Wer sind die Menschen, die KI im Hintergrund möglich machen? Achte auf Lohn, Arbeitszeit, psychische Belastung — und darauf, wer am Ende die Verantwortung trägt.",
+      "Schau den ganzen Kassensturz-Beitrag (ca. 13 Min.). Wer sind die Menschen, die KI im Hintergrund möglich machen? Achte auf Lohn, Arbeitszeit, psychische Belastung — und darauf, wer am Ende die Verantwortung trägt.",
     media: [
+      // Der SRF-Player zeigt den bereits geschnittenen Kassensturz-Beitrag
+      // (~13 Min.), nicht die Gesamtsendung — er läuft ganz, ohne
+      // Start/Stopp-Vorgabe (Entscheid 2026-07-28). Zeitangaben in der
+      // Guidance beziehen sich auf den Beitrag (Beginn = Sendung 19:03).
       {
         kind: "srf",
         urn: "urn:srf:video:afe37702-e5f5-4466-8427-ab804baa53dc",
         title: "Kassensturz — KI allgegenwärtig, nützlich, aber beängstigend",
         sourceKey: "kassensturz-ausbeutung",
         externalUrl: "https://www.srf.ch/news",
-        start: 1260,
-        end: 1807,
         guidance:
-          "Schau ab Minute 21 bis ca. Minute 30 — es geht um die Menschen, die KI-Trainingsdaten labeln und Inhalte moderieren (Kenia), und um die rechtliche Aufarbeitung. Hinweis: Zwischen Minute 27:16 und 29:14 werden drastische Gewaltinhalte beschrieben (Arbeit von Content-Moderator:innen) — wer das nicht hören möchte, kann diesen Abschnitt überspringen, der Rest funktioniert auch ohne.",
+          "Der Beitrag zeigt die Menschen, die KI-Trainingsdaten labeln und Inhalte moderieren (Kenia), und die rechtliche Aufarbeitung. Hinweis: Ungefähr zwischen Minute 8 und 10 werden drastische Gewaltinhalte beschrieben (Arbeit von Content-Moderator:innen) — wer das nicht hören möchte, kann diesen Abschnitt überspringen, der Rest funktioniert auch ohne.",
       },
     ],
   },
@@ -2486,7 +2473,7 @@ const station6: Station = {
     sonne: {
       inhalt:
         "Station 6 · Maschinen über Leben — Schritt 2/7: Sonnenseite (KI als Präzisionswerkzeug)",
-      dauerMin: 6,
+      dauerMin: 8,
       lernziel:
         "Du kannst erklären, was das KI-System Maven im Kriegseinsatz leistet und welches Versprechen damit verbunden ist — mehr Tempo, ein Echtzeit-Lagebild und angeblich weniger Zivilopfer.",
       anleitung:
@@ -2590,8 +2577,11 @@ const station6: Station = {
     intro:
       "KI macht Kriege schneller — könnte sie sie auch präziser und damit menschlicher machen? Das Maven-System von Palantir verspricht ein Echtzeit-Lagebild und eine treffsicherere Zielauswahl. Ein zweiter, freiwilliger Ausschnitt zeigt zusätzlich, wie autonome Drohnen im Ukrainekrieg bereits heute funktionieren.",
     anleitung:
-      "Schau im ersten Ausschnitt von Minute 12:40 bis 15:06: Was leistet Maven laut Bericht — und was müsste für das Versprechen «könnte zivile Opfer reduzieren» gegen Ende alles stimmen? Mittendrin (ab 13:37) kommen im selben Ausschnitt schon kritische Stimmen zu Wort — die gehören inhaltlich zur nächsten Seite, hier zählt zuerst das Versprechen.",
+      "Schau beide Beiträge ganz. Im ersten: Was leistet Maven laut Bericht — und was müsste für das Versprechen «könnte zivile Opfer reduzieren» gegen Ende alles stimmen? Mittendrin kommen schon kritische Stimmen zu Wort — die gehören inhaltlich zur nächsten Seite, hier zählt zuerst das Versprechen.",
     media: [
+      // Beide SRF-Player zeigen die geschnittenen Beiträge, nicht die
+      // Gesamtsendungen — sie laufen ganz, ohne Start/Stopp-Vorgabe
+      // (Entscheid 2026-07-28).
       {
         kind: "srf",
         urn: "urn:srf:video:07d69605-e3b7-4d55-994e-c98dd6e5acec",
@@ -2599,20 +2589,16 @@ const station6: Station = {
         sourceKey: "10v10-ki-krieg",
         externalUrl:
           "https://www.srf.ch/news/international/nahost/ki-im-krieg-wenn-im-krieg-maschinen-statt-menschen-entscheiden",
-        start: 760,
-        end: 906,
         guidance:
-          "Schau von Minute 12:40 bis 15:06. Achte darauf, was das System Maven laut Bericht leisten kann — über 1'000 Ziele am ersten Tag, ein Echtzeit-Lagebild, Vorschläge für passende Waffensysteme — und auf das Versprechen gegen Ende: «könnte zivile Opfer reduzieren». Was müsste dafür alles stimmen? Ab Minute 13:37 kommen im selben Ausschnitt schon kritische Stimmen zu Wort — die gehören inhaltlich zur nächsten Seite (Schattenseite); hier zählt vorerst das Versprechen.",
+          "Achte darauf, was das System Maven laut Bericht leisten kann — über 1'000 Ziele am ersten Tag, ein Echtzeit-Lagebild, Vorschläge für passende Waffensysteme — und auf das Versprechen gegen Ende: «könnte zivile Opfer reduzieren». Was müsste dafür alles stimmen? Die kritischen Stimmen mittendrin gehören inhaltlich zur nächsten Seite (Schattenseite); hier zählt vorerst das Versprechen.",
       },
       {
         kind: "srf",
         urn: "urn:srf:video:480a9f85-fd27-414f-a94a-23ca090e0159",
         title: "Rundschau — Der Live-Test einer autonomen Drohne",
         sourceKey: "rundschau-ki-krieg",
-        start: 2624,
-        end: 2720,
         guidance:
-          "Schau von Minute 43:44 bis 45:20. Ein Hersteller testet eine Kamikaze-Drohne, die selbstständig — «unabhängig vom Piloten» — ins Ziel fliegt. Kurz vorher (Minute 41:37) nennt der ukrainische Minister Fedorow eine Zahl: über 80 % aller zerstörten Ziele gehen inzwischen auf Drohnen zurück — eine zweite, unabhängige Quelle für das Effizienz-Versprechen.",
+          "Ein Hersteller testet eine Kamikaze-Drohne, die selbstständig — «unabhängig vom Piloten» — ins Ziel fliegt. Achte auch auf die Zahl des ukrainischen Ministers Fedorow: über 80 % aller zerstörten Ziele gehen inzwischen auf Drohnen zurück — eine zweite, unabhängige Quelle für das Effizienz-Versprechen.",
       },
     ],
   },
@@ -2621,8 +2607,11 @@ const station6: Station = {
     intro:
       "Dasselbe System, das Präzision verspricht, kann durch Automation Bias und veraltete Daten zur Katastrophe führen. Im Süd-Iran traf ein Angriff eine Mädchenschule — 165 Kinder und 26 Lehrer starben. Am Ende des Ausschnitts zieht eine Expertin die Konsequenz: Der Grad an Autonomie wird weiter steigen — umso wichtiger bleibt «bedeutsame menschliche Kontrolle».",
     anleitung:
-      "Schau von Minute 13:50 bis 15:41: Was ist Automation Bias, was geschah im Fall der Mädchenschule — und was fordert die Expertin am Schluss für den Umgang mit wachsender Autonomie?",
+      "Schau den Beitrag (dieselbe Quelle wie auf der Sonnenseite) — diesmal mit anderem Fokus: Was ist Automation Bias, was geschah im Fall der Mädchenschule — und was fordert die Expertin am Schluss für den Umgang mit wachsender Autonomie?",
     media: [
+      // Gleiche geschnittene Quelle wie die Sonnenseite — läuft ganz, ohne
+      // Start/Stopp-Vorgabe (Entscheid 2026-07-28); der Fokus-Wechsel steckt
+      // in der Guidance.
       {
         kind: "srf",
         urn: "urn:srf:video:07d69605-e3b7-4d55-994e-c98dd6e5acec",
@@ -2630,10 +2619,8 @@ const station6: Station = {
         sourceKey: "10v10-ki-krieg",
         externalUrl:
           "https://www.srf.ch/news/international/nahost/ki-im-krieg-wenn-im-krieg-maschinen-statt-menschen-entscheiden",
-        start: 830,
-        end: 941,
         guidance:
-          "Schau von Minute 13:50 bis 15:41. Zuerst die Definition: Automation Bias heisst, dass Menschen einer Maschine mehr vertrauen als der eigenen Intuition — selbst wenn etwas nicht stimmt («Wir sagen, da ist irgendwas falsch bei uns und nicht beim System»). Dann der Fall: Eine Mädchenschule im Süd-Iran wurde getroffen, 165 Kinder und 26 Lehrer starben, weil eine veraltete Datenbank das Gebäude noch als Militärstützpunkt führte. Am Schluss ordnet die Expertin ein: Der Grad an Autonomie wird weiter steigen — umso wichtiger bleibt «bedeutsame menschliche Kontrolle».",
+          "Achte diesmal auf die zweite Hälfte des Beitrags. Zuerst die Definition: Automation Bias heisst, dass Menschen einer Maschine mehr vertrauen als der eigenen Intuition — selbst wenn etwas nicht stimmt («Wir sagen, da ist irgendwas falsch bei uns und nicht beim System»). Dann der Fall: Eine Mädchenschule im Süd-Iran wurde getroffen, 165 Kinder und 26 Lehrer starben, weil eine veraltete Datenbank das Gebäude noch als Militärstützpunkt führte. Am Schluss ordnet die Expertin ein: Der Grad an Autonomie wird weiter steigen — umso wichtiger bleibt «bedeutsame menschliche Kontrolle».",
       },
     ],
     extras: [
@@ -2648,10 +2635,8 @@ const station6: Station = {
           sourceKey: "10v10-google-krieg",
           externalUrl:
             "https://www.srf.ch/play/tv/10-vor-10/video/google-schweiz-und-kriege?urn=urn:srf:video:d0c3642e-ebaf-4664-834e-cd0392bafe9c",
-          start: 665,
-          end: 977,
           guidance:
-            "Schau von Minute 11:05 bis 16:17: Wie Cloud- und KI-Systeme — teils aus Zürich — laut Recherchen auch für die Zielbestimmung im Gaza-Krieg genutzt werden, und weshalb Schweizer Gesetze (Söldner- und Güterkontrollgesetz) Cloud-Dienste bisher nicht erfassen.",
+            "Wie Cloud- und KI-Systeme — teils aus Zürich — laut Recherchen auch für die Zielbestimmung im Gaza-Krieg genutzt werden, und weshalb Schweizer Gesetze (Söldner- und Güterkontrollgesetz) Cloud-Dienste bisher nicht erfassen.",
         },
       },
     ],
