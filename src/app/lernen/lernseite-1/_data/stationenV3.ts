@@ -998,19 +998,19 @@ const station3: Station = {
     } satisfies SubpageBanner,
     sonne: {
       inhalt: "Station 3 · Sonnenseite — Lisa baut ihre eigene KI",
-      dauerMin: 5,
+      dauerMin: 8,
       lernziel:
         "Du erkennst, wie selbst Bauen mit KI echtes Lernen und Selbstwirksamkeit fördern kann.",
       anleitung:
-        "Schau das Kurzporträt von Lisa (18) vom ETH AI Center (ca. 2 Min. 30 Sek.). Achte darauf, was sie über ihren Lernprozess sagt — nicht das Produkt, sondern der Weg. Halte danach einen Satz fest: Was hat Lisa gelernt, das sie ohne das Bauen nie gelernt hätte?",
+        "Schau dir beide Videoabschnitte an (ca. 7 Min., der Player springt automatisch zum zweiten). Achte im ersten Teil darauf, was Lisa über ihren Lernprozess sagt — nicht das Produkt, sondern der Weg; im zweiten Teil darauf, wie sie sich nach der Prämierung fühlt. Halte danach einen Satz fest: Was hat Lisa gelernt, das sie ohne das Bauen nie gelernt hätte?",
     } satisfies SubpageBanner,
     schatten: {
       inhalt: "Station 3 · Schattenseite — Zuckerflash statt Tiefenspur",
-      dauerMin: 5,
+      dauerMin: 10,
       lernziel:
-        "Du verstehst, warum KI-Prompting weniger Hirnaktivierung auslöst als eigenes Schreiben — und was das für deine Erinnerung bedeutet.",
+        "Du verstehst, warum KI-Prompting weniger Hirnaktivierung und weniger nachhaltige Zufriedenheit auslöst als eigenes Schreiben — und was das für deine Erinnerung bedeutet.",
       anleitung:
-        "Schau den Auswertungs-Abschnitt mit Hirnforscherin Barbara Studer (ca. 2 Min. 20 Sek.). Achte besonders auf den Moment, in dem Tobias gesteht: «Ich fühle nichts». Frage dich: Kenne ich dieses Gefühl? Klicke danach auf «Weiter».",
+        "Schau den zusammenhängenden Abschnitt (ca. 8 Min. 25 Sek.). Er hat einen klaren Bogen: das «Zwei-Wochen-später»-Wiedersehen mit dem Erschöpfungs-/Erfüllungsvergleich → Dopamin-, Serotonin- und Cortisol-Befunde (Unispital Zürich) → der Gedächtnistest. Achte besonders auf den Moment, in dem Tobias gesteht: «Ich fühle nichts». Frage dich danach: Kenne ich dieses Gefühl?",
     } satisfies SubpageBanner,
     swipe: {
       inhalt: "Station 3 · Werte — Was denkst du über KI und eigenes Denken?",
@@ -1092,9 +1092,9 @@ const station3: Station = {
 
   sonnenseite: {
     intro:
-      "KI muss nicht passiv konsumiert werden — man kann sie selbst bauen. Lisa (18) zeigt, wie das Entwickeln einer eigenen KI mehr Lernen auslöst als jedes Prompting.",
+      "KI muss nicht passiv konsumiert werden — man kann sie selbst bauen. Lisa (18) zeigt in zwei Abschnitten, wie das Entwickeln einer eigenen KI mehr Lernen auslöst als jedes Prompting: erst der Bauprozess, dann die Prämierung am ETH-AI-Festival. Der Player springt automatisch zum zweiten Abschnitt.",
     anleitung:
-      "Schau den Ausschnitt (ca. 2 Min. 30 Sek.). Achte darauf, was Lisa über den Prozess — nicht das Produkt — sagt. Frage dich danach: Was hat sie gelernt, das sie ohne das Bauen nie gelernt hätte?",
+      "Schau dir beide Abschnitte an (ca. 7 Min., der Player springt automatisch weiter). Achte im ersten Teil darauf, was Lisa über den Prozess — nicht das Produkt — sagt; im zweiten Teil darauf, wie sie sich nach der Prämierung fühlt. Frage dich danach: Was hat sie gelernt, das sie ohne das Bauen nie gelernt hätte?",
     media: [
       {
         kind: "youtube",
@@ -1102,17 +1102,41 @@ const station3: Station = {
         title: "Einstein — KI im Kopf",
         sourceKey: "einstein-ki-im-kopf",
         externalUrl: "https://www.youtube.com/watch?v=U5bLCVTr9_I",
-        start: 694,
-        end: 840,
+        // Mehr-Segment-Kette (Audit 2026-07-28, St. 3 Prio 6): Segment 1 verschmilzt
+        // das alte Einzel-Fenster mit der direkt anschliessenden Fiona-Könz-Passage
+        // ("selbst denken, selbst entwickeln und mitbauen"); Segment 2 = Prämierung
+        // + "sehr viele Glücksgefühle". Grenzen am Transkript verifiziert (694/915/
+        // 1392/1600 treffen alle auf saubere Szenen-/Satzwechsel). Gesamt 7:09.
+        segments: [
+          { start: 694, end: 915, label: "Lisa baut ihre eigene KI" },
+          { start: 1392, end: 1600, label: "Das Finale am ETH-AI-Festival" },
+        ],
       },
     ],
   } satisfies MediaBlock,
 
+  // Schattenseite (Audit 2026-07-28, St. 3 Prio 6): EIN zusammenhängendes Fenster
+  // 1600–2105 (statt 1917–2056) — deckt Reveal, Erschöpfungs-/Erfüllungsvergleich,
+  // Dopamin/Serotonin ("Happiness-Shower" vs. "Zuckerflash"), Cortisol-Befund
+  // Unispital Zürich und Gedächtnistest ab; endet sauber nach dem Satz "Das ist
+  // die menschliche Intelligenz." (35:05). Gesamt 8:25.
+  //
+  // Ungenutzt gebliebene Zusatzclips (Audit-Empfehlung "Extras"), NICHT verdrahtet:
+  // `MediaBlock` kennt in `_data/types.ts` noch kein `extras`-Feld und
+  // `StationV3.tsx` rendert keine "Weitere Ausschnitte — freiwillig"-Sektion
+  // (nur `AudioClip` spielt `segments` echt sequenziell; `MediaItem` für
+  // kind:"youtube" liest nur `segments[0]`, kein IFrame-Player-API-Auto-Advance).
+  // Sobald diese Phase-0-Infra ergänzt ist, hier eintragen:
+  //   1. { start: 1224, end: 1392, titel: "Ab wann gehört KI in die Schule?" }
+  //      — PH Zürich, Bernadette Spieler: unreflektierte Nutzung, Empfehlung ab
+  //      5. Klasse, Neuroplastizität.
+  //   2. (optional) { start: 2096, end: 2191, titel: "Die Synthese: Denken darf
+  //      anstrengend sein" } — Finale Synthese direkt im Anschluss ans Hauptfenster.
   schattenseite: {
     intro:
-      "Zwei Wochen nach dem Experiment: Wer hat den eigenen Text im Kopf — und wer nicht? Das Ergebnis überrascht.",
+      "Zwei Wochen nach dem Experiment treffen sich Kathrin und Tobias wieder: Wie haben sie sich beim Schreiben gefühlt, was zeigen ihre Hormonwerte — und woran erinnern sie sich heute noch?",
     anleitung:
-      "Schau den Auswertungs-Abschnitt (ca. 2 Min. 20 Sek.). Achte besonders auf den Moment, in dem Tobias gesteht: «Ich fühle nichts». Frage dich: Kenne ich dieses Gefühl?",
+      "Schau den zusammenhängenden Abschnitt (ca. 8 Min. 25 Sek.): Reveal und Erschöpfungs-/Erfüllungsvergleich → Dopamin-, Serotonin- und Cortisol-Befunde (Unispital Zürich) → Gedächtnistest. Achte besonders auf den Moment, in dem Tobias gesteht: «Ich fühle nichts». Frage dich danach: Kenne ich dieses Gefühl?",
     media: [
       {
         kind: "youtube",
@@ -1120,8 +1144,8 @@ const station3: Station = {
         title: "Einstein — KI im Kopf",
         sourceKey: "einstein-ki-im-kopf",
         externalUrl: "https://www.youtube.com/watch?v=U5bLCVTr9_I",
-        start: 1917,
-        end: 2056,
+        start: 1600,
+        end: 2105,
       },
     ],
   } satisfies MediaBlock,

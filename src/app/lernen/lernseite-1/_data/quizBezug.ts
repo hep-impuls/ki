@@ -30,7 +30,10 @@ export const QUIZ_BEZUG: Record<string, QuizBezug> = {
   "st3-mc-2": "fakten",
   "st3-mc-3": "schatten",
   "st3-mc-4": "fakten",
-  "st3-mc-5": "sonne",
+  // war "sonne": st3-mc-5 fragt nach der Schulstufen-Empfehlung (Bernadette
+  // Spieler/PH Zürich) — dieser Inhalt liegt nicht im Sonnenseite-Fenster
+  // (Lisa-Story), sondern stammt aus st3-fakt-5. Audit 2026-07-28.
+  "st3-mc-5": "fakten",
   "st3-tf-1": "schatten",
   "st3-tf-2": "fakten",
   "st3-tf-3": "schatten",
