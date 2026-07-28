@@ -130,12 +130,12 @@ export default function Home() {
           <p>Pietro Rossi &amp; Christof Glaus</p>
           <p>
             <a
-              href="https://creativecommons.org/licenses/by/4.0/"
+              href="https://creativecommons.org/licenses/by-nc/4.0/deed.de"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-on-surface underline"
             >
-              CC BY 4.0
+              CC BY-NC 4.0
             </a>
           </p>
         </div>

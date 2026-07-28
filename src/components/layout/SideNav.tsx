@@ -110,12 +110,12 @@ export default function SideNav() {
           Pietro Rossi &amp; Christof Glaus
         </p>
         <a
-          href="https://creativecommons.org/licenses/by/4.0/"
+          href="https://creativecommons.org/licenses/by-nc/4.0/deed.de"
           target="_blank"
           rel="noopener noreferrer"
           className="text-label-sm text-on-surface-variant hover:text-primary underline"
         >
-          CC BY 4.0
+          CC BY-NC 4.0
         </a>
       </div>
     </aside>
