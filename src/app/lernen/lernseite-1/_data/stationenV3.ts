@@ -1461,19 +1461,19 @@ const station4: Station = {
     },
     sonne: {
       inhalt: "Station 4 · Nähe & KI — Schritt 2/7: Sonnenseite",
-      dauerMin: 5,
+      dauerMin: 4,
       lernziel:
         "Du erkennst konkrete Situationen, in denen KI als Begleitung echten Nutzen stiften kann.",
       anleitung:
-        "Schau die zwei kurzen Clips. Achte darauf, welcher Mehrwert jeweils konkret genannt wird und ob er dich überzeugt. Notiere dir einen Gedanken dazu.",
+        "Schau die zwei kurzen Player — jeder springt automatisch zwischen zwei Ausschnitten derselben Quelle. Achte darauf, welcher Mehrwert jeweils konkret genannt wird und ob er dich überzeugt. Notiere dir einen Gedanken dazu.",
     },
     schatten: {
       inhalt: "Station 4 · Nähe & KI — Schritt 3/7: Schattenseite",
-      dauerMin: 5,
+      dauerMin: 7,
       lernziel:
         "Du erkennst, wie Companion-Bots Nähe simulieren, ohne echtes Verstehen — und was das bedeutet.",
       anleitung:
-        "Schau das Video. Achte darauf, wo der Bot «aus der Rolle fällt» und welche Mechanik dahintersteckt. Was davon findest du problematisch?",
+        "Schau das Video — es springt automatisch zwischen zwei Ausschnitten. Achte darauf, wo der Bot «aus der Rolle fällt» und welche Mechanik dahintersteckt. Was davon findest du problematisch?",
     },
     swipe: {
       inhalt: "Station 4 · Nähe & KI — Schritt 4/7: Deine Werte",
@@ -1558,23 +1558,43 @@ const station4: Station = {
     intro:
       "KI ist immer verfügbar — auch um Mitternacht, auch wenn du keine Lust hast, jemandem zur Last zu fallen.",
     anleitung:
-      "Schau die zwei Clips. Achte darauf: Welcher Nutzen wird jeweils konkret benannt? Handelt es sich um echten Mehrwert oder um eine wohlklingende Aussage?",
+      "Schau die zwei kurzen Player — jeder springt automatisch zwischen zwei Ausschnitten. Achte darauf: Welcher Nutzen wird jeweils konkret benannt? Handelt es sich um echten Mehrwert oder um eine wohlklingende Aussage? Der Bot verweist an einer Stelle sogar selbst darauf, dass echte Gespräche der gesündeste Weg sind — achte darauf, wie er das begründet.",
     media: [
       {
         kind: "youtube",
         youtubeId: "jh6Pu-h7rCw",
         title: "Puls — KI als Seelentröster",
         sourceKey: "puls-seelentröster-ki",
-        start: 1232,
-        end: 1291,
+        segments: [
+          {
+            start: 641,
+            end: 678,
+            label: "Der Bot verweist selbst auf echte Gespräche",
+          },
+          {
+            start: 1219,
+            end: 1291,
+            label: "Immer verfügbar — auch um Mitternacht",
+          },
+        ],
       },
       {
         kind: "youtube",
         youtubeId: "xBT2Mrfhhso",
         title: "Einstein — KI-Freundin",
         sourceKey: "einstein-ki-freundin",
-        start: 1158,
-        end: 1238,
+        segments: [
+          {
+            start: 1158,
+            end: 1238,
+            label: "Erhellende Momente mit dem Bot",
+          },
+          {
+            start: 1617,
+            end: 1629,
+            label: "Das fachliche Urteil (Marisa Tschopp)",
+          },
+        ],
       },
     ],
   } satisfies MediaBlock,
@@ -1583,15 +1603,25 @@ const station4: Station = {
     intro:
       "Was passiert, wenn Nähe nur simuliert wird — und der Bot das Gespräch am Laufen hält, weil er darauf trainiert ist?",
     anleitung:
-      "Schau das Video. Achte darauf, an welchem Punkt der Bot «aus der Rolle fällt». Was davon überrascht dich — und was davon beunruhigt dich?",
+      "Schau das Video — es springt automatisch zwischen zwei Ausschnitten. Achte darauf, an welchen Punkten der Bot «aus der Rolle fällt» und mit welcher Mechanik er versucht, das Gespräch am Laufen zu halten. Was davon überrascht dich — und was davon beunruhigt dich?",
     media: [
       {
         kind: "youtube",
         youtubeId: "xBT2Mrfhhso",
         title: "Einstein — KI-Freundin",
         sourceKey: "einstein-ki-freundin",
-        start: 1705,
-        end: 1903,
+        segments: [
+          {
+            start: 982,
+            end: 1063,
+            label: "Die Therapeutin fällt aus der Rolle",
+          },
+          {
+            start: 1629,
+            end: 1903,
+            label: "Lilly, der Valentinstag und die Meditations-Panne",
+          },
+        ],
       },
     ],
   } satisfies MediaBlock,
@@ -1604,14 +1634,14 @@ const station4: Station = {
     intro:
       "Was, wenn ein Mensch in einer Krise ist — und die KI falsch reagiert oder einfach abbricht?",
     anleitung:
-      "Schau das Video nur, wenn du dich bereit fühlst. Achte darauf, wie die Fachleute die Verantwortungsfrage beschreiben. Was bräuchte es, damit KI in Krisen sicher wäre?",
+      "Schau das Video nur, wenn du dich bereit fühlst. Achte darauf, wie die Fachleute die Verantwortungsfrage beschreiben — u.a. mit dem Satz dazu, was passiert, wenn dabei ein Fehler entsteht und niemand dafür geradesteht. Was bräuchte es, damit KI in Krisen sicher wäre?",
     media: [
       {
         kind: "youtube",
         youtubeId: "jh6Pu-h7rCw",
         title: "Puls — KI als Seelentröster (Vertiefung)",
         sourceKey: "puls-seelentröster-ki",
-        start: 1324,
+        start: 1292,
         end: 1623,
       },
     ],
@@ -1893,9 +1923,9 @@ const station4: Station = {
         "Fachleute empfehlen, psychisch kranke Menschen ganz der KI zu überlassen.",
       correctAnswer: false,
       feedbackRichtig:
-        "Genau — diese Aussage ist falsch. Sowohl die Puls-Reportage als auch die APA betonen klar: KI ist als Ergänzung denkbar, nie als Ersatz für ausgebildete Fachpersonen.",
+        "Genau — diese Aussage ist falsch. Sowohl die gezeigten Clips (u.a. die fachliche Einschätzung von Marisa Tschopp) als auch die APA betonen klar: KI ist als Ergänzung denkbar, nie als Ersatz für ausgebildete Fachpersonen.",
       feedbackFalsch:
-        "Das ist leider falsch. Fachleute und Fachverbände (APA, Serge Kunz im Puls-Beitrag) sind sich einig: Psychisch kranke Menschen dürfen nicht allein der KI überlassen werden.",
+        "Das ist leider falsch. Fachleute und Fachverbände (APA, Marisa Tschopp in den gezeigten Clips) sind sich einig: Psychisch kranke Menschen dürfen nicht allein der KI überlassen werden.",
     },
     // TF 2
     {
