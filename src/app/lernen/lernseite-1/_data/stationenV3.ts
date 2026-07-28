@@ -1981,7 +1981,7 @@ const station5: Station = {
     sonne: {
       inhalt:
         "Station 5 · Welt besser — Schritt 2/7: Sonnenseite (KI gegen Foodwaste)",
-      dauerMin: 5,
+      dauerMin: 4,
       lernziel:
         "Du erkennst, wie KI in einer Schweizer Bäckerei Bestellprognosen verbessert und Lebensmittelverschwendung reduziert.",
       anleitung:
@@ -1990,11 +1990,11 @@ const station5: Station = {
     schatten: {
       inhalt:
         "Station 5 · Welt besser — Schritt 3/7: Schattenseite (Datenarbeit in Kenia)",
-      dauerMin: 6,
+      dauerMin: 11,
       lernziel:
         "Du kannst benennen, welche menschlichen und sozialen Kosten hinter dem KI-Training stecken, die in Hochlohnländern unsichtbar bleiben.",
       anleitung:
-        "Schaue ab Minute 21 für rund 5 Minuten. Wer sind die Menschen, die KI im Hintergrund möglich machen? Achte auf Lohn, Arbeitszeit und psychische Belastung. Was davon wusstest du vorher nicht?",
+        "Schaue ab Minute 21 bis ca. Minute 30. Wer sind die Menschen, die KI im Hintergrund möglich machen? Achte auf Lohn, Arbeitszeit, psychische Belastung — und wer am Ende die Verantwortung trägt. Was davon wusstest du vorher nicht?",
     },
     swipe: {
       inhalt: "Station 5 · Welt besser — Schritt 4/7: Werte (Swipe)",
@@ -2079,9 +2079,9 @@ const station5: Station = {
 
   sonnenseite: {
     intro:
-      "In der Schweiz landen jährlich knapp 3 Millionen Tonnen Lebensmittel im Abfall. Ein Zürcher Startup setzt KI ein, um Bäckereien bessere Bestellprognosen zu liefern — und damit Foodwaste zu reduzieren.",
+      "In der Schweiz landen jährlich knapp 3 Millionen Tonnen Lebensmittel im Abfall. Ein Zürcher Startup setzt KI ein, um Bäckereien bessere Bestellprognosen zu liefern: Die KI kombiniert Kassendaten mit Wetter und sogar Zahltagen, um vorherzusagen, wie viele Brote und Törtchen morgen gebraucht werden — und reduziert so Foodwaste.",
     anleitung:
-      "Höre die zwei Ausschnitte aus dem SRF-Espresso-Beitrag. Achte darauf, was die KI tatsächlich leistet — und was der Projektleiter ausdrücklich betont, was sie nie leisten wird.",
+      "Höre den Ausschnitt aus dem SRF-Espresso-Beitrag. Achte darauf, was die KI tatsächlich leistet — und was der Projektleiter ausdrücklich betont, was sie nie leisten wird.",
     media: [
       {
         kind: "audio",
@@ -2090,18 +2090,8 @@ const station5: Station = {
         sourceKey: "espresso-foodwaste",
         externalUrl:
           "https://www.srf.ch/sendungen/kassensturz-espresso/espresso/praezisere-bestellprognosen-eine-ki-sorgt-in-schweizer-baeckereien-fuer-weniger-foodwaste",
-        segments: [
-          {
-            start: 95,
-            end: 115,
-            label: "Food Waste nimmt ab",
-          },
-          {
-            start: 131,
-            end: 185,
-            label: "Go Nina — ersetzt nie eine Mitarbeiterin",
-          },
-        ],
+        start: 53,
+        end: 185,
       },
     ],
   },
@@ -2110,7 +2100,7 @@ const station5: Station = {
     intro:
       "Damit KI funktioniert, muss sie trainiert werden — auch mit den schlimmsten Inhalten des Internets. Diese Arbeit erledigen Menschen in Billiglohnländern, oft für einen Hungerlohn und auf Kosten ihrer psychischen Gesundheit.",
     anleitung:
-      "Schaue ab Minute 21 für rund 5 Minuten. Wer sind die Menschen, die KI im Hintergrund möglich machen? Achte auf Lohn, Arbeitszeit und psychische Belastung.",
+      "Schau ab Minute 21 bis ca. Minute 30. Wer sind die Menschen, die KI im Hintergrund möglich machen? Achte auf Lohn, Arbeitszeit, psychische Belastung — und darauf, wer am Ende die Verantwortung trägt.",
     media: [
       {
         kind: "srf",
@@ -2118,8 +2108,10 @@ const station5: Station = {
         title: "Kassensturz — KI allgegenwärtig, nützlich, aber beängstigend",
         sourceKey: "kassensturz-ausbeutung",
         externalUrl: "https://www.srf.ch/news",
+        start: 1260,
+        end: 1807,
         guidance:
-          "Schauen Sie ab Minute 21 für rund 5 Minuten — es geht um Datenarbeiter:innen und Content-Moderation in Kenia.",
+          "Schau ab Minute 21 bis ca. Minute 30 — es geht um die Menschen, die KI-Trainingsdaten labeln und Inhalte moderieren (Kenia), und um die rechtliche Aufarbeitung. Hinweis: Zwischen Minute 27:16 und 29:14 werden drastische Gewaltinhalte beschrieben (Arbeit von Content-Moderator:innen) — wer das nicht hören möchte, kann diesen Abschnitt überspringen, der Rest funktioniert auch ohne.",
       },
     ],
   },
