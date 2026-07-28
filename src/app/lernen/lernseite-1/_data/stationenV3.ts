@@ -50,19 +50,19 @@ const station1: Station = {
       },
       sonne: {
         inhalt: "Station 1 · Schritt 2/7: Sonnenseite",
-        dauerMin: 5,
+        dauerMin: 8,
         lernziel:
-          "Du kannst erklären, was «KI-Exposition» konkret bedeutet und warum die Demografielücke KI zur Chance macht.",
+          "Du kannst erklären, was «KI-Exposition» konkret bedeutet, warum die Demografielücke KI zur Chance macht — und warum zwei unabhängige Quellen zum selben Schluss kommen.",
         anleitung:
-          "Hör das Audiofenster an. Achte auf den Unterschied zwischen Aufgabenveränderung und Stellenabbau. Was ist dein erster Gedanke danach?",
+          "Hör die beiden Audiofenster an. Achte auf den Unterschied zwischen Aufgabenveränderung und Stellenabbau — und darauf, was die Schweizer Studie und die ILO-Einschätzung gemeinsam haben. Was ist dein erster Gedanke danach?",
       },
       schatten: {
         inhalt: "Station 1 · Schritt 3/7: Schattenseite",
-        dauerMin: 5,
+        dauerMin: 6,
         lernziel:
           "Du kannst benennen, welche Berufsgruppen bereits konkrete Jobverluste spüren, und einordnen, warum gerade Softwareentwickler betroffen sind.",
         anleitung:
-          "Schau das SRF-Video ab ca. Minute 1. Notiere eine Aussage, die dich überrascht hat — und eine, die du erwartet hättest.",
+          "Schau das SRF-Video von Minute 1:00 bis 4:40. Notiere eine Aussage, die dich überrascht hat — und eine, die du erwartet hättest.",
       },
       swipe: {
         inhalt: "Station 1 · Schritt 4/7: Werte-Karten",
@@ -146,17 +146,29 @@ const station1: Station = {
 
     sonnenseite: {
       intro:
-        "Eine Studie von «Angestellte Schweiz» hat rund drei Millionen Schweizer Jobs auf KI-Exposition untersucht — hör rein, was die Zahlen wirklich sagen.",
+        "Eine Studie von «Angestellte Schweiz» hat rund drei Millionen Schweizer Jobs auf KI-Exposition untersucht — und ein Ökonom der Internationalen Arbeitsorganisation (ILO) ordnet ein, warum sich Prognosen zur KI-Produktivität so stark unterscheiden. Hör rein, was beide Quellen unabhängig voneinander sagen.",
       anleitung:
-        "Hör das Audiofenster an. Achte dabei auf den Unterschied zwischen «Jobs unter Druck» und «Jobs, die verschwinden». Notiere dir danach, welche Berufsfelder laut Studie am stärksten betroffen sind.",
+        "Hör dir beide Audio-Ausschnitte an. Achte beim ersten auf den Unterschied zwischen «Jobs unter Druck» und «Jobs, die verschwinden», beim zweiten darauf, warum die Prognosen so weit auseinandergehen. Notiere danach, zu welchem gemeinsamen Schluss zwei unabhängige Quellen kommen.",
       media: [
         {
           kind: "audio",
           src: "/audio/ki-arbeitswelt.mp3",
           title: "SRF News — KI und die Arbeitswelt",
           sourceKey: "news-ki-arbeitsplätze",
+          start: 21,
+          end: 223,
           externalUrl:
             "https://www.srf.ch/news/wirtschaft/studie-zur-arbeit-mit-ki-ki-fuehrt-zu-umwaelzung-in-der-welt-der-arbeit",
+        },
+        {
+          kind: "audio",
+          src: "https://download-media.srf.ch/world/audio/Echo_der_Zeit_radio/2025/12/Echo_der_Zeit_radio_AUDI20251217_RS_0058_3cecf2ffed104b109a9aba788d59a305.mp3",
+          title: "Echo der Zeit — Produktivität statt Massenarbeitslosigkeit",
+          sourceKey: "echo-produktivität",
+          start: 1727,
+          end: 1877,
+          externalUrl:
+            "https://www.srf.ch/news/heikle-prognose-warum-weiss-niemand-wie-viel-produktivitaet-wir-dank-ki-gewinnen",
         },
       ],
     } satisfies MediaBlock,
@@ -165,15 +177,38 @@ const station1: Station = {
       intro:
         "Jetzt die andere Seite: Für manche Berufe sind die Veränderungen keine Abstraktion, sondern Alltag. Schau den 10vor10-Beitrag.",
       anleitung:
-        "Schau das SRF-Video ab ca. Minute 1. Achte darauf, welche Berufsgruppe besonders betroffen ist und was die Studierenden an der FHNW sagen. Was überrascht dich — und was nicht?",
+        "Schau das SRF-Video von Minute 1:00 bis 4:40. Achte darauf, welche Berufsgruppe besonders betroffen ist, was die Studierenden an der FHNW dazu sagen und welche Zahl die ETH-KOF-Schätzung nennt. Was überrascht dich — und was nicht?",
       media: [
         {
           kind: "srf",
           urn: "urn:srf:video:071a2edb-dd66-4881-a42c-e720451b1b16",
           title: "10vor10 — Putzkräfte sicherer als Softwareentwickler",
           sourceKey: "10v10-ki-informatikjob",
+          start: 60,
+          end: 280,
+          guidance:
+            "Fokus: Arbeitslosigkeit bei Softwareentwicklerinnen und -entwicklern. Achte auf die ETH-KOF-Schätzung von Michael Siegenthaler (2'500 arbeitslose Softwareentwickler Ende 2025) und darauf, wen der Strukturwandel zuerst trifft.",
           externalUrl:
             "https://www.srf.ch/news/wirtschaft/arbeitsmarkt-vor-umwaelzungen-ki-und-arbeitswelt-putzkraefte-sicherer-als-softwareentwickler",
+        },
+      ],
+      extras: [
+        {
+          titel: "Wie Entwickler selbst darüber denken",
+          beschreibung:
+            "Dieselbe Sendung, direkt im Anschluss: Software-Entwicklerinnen und -Entwickler auf einer Retraite sehen KI eher als Werkzeug denn als Bedrohung — mit einer klaren Bedingung.",
+          media: {
+            kind: "srf",
+            urn: "urn:srf:video:071a2edb-dd66-4881-a42c-e720451b1b16",
+            title: "10vor10 — Softwareentwickler über KI als Werkzeug",
+            sourceKey: "10v10-ki-informatikjob",
+            start: 283,
+            end: 348,
+            guidance:
+              "«KI macht den Dreck» — aber: «Wer die KI nicht einsetzt, wird in Zukunft vielleicht ersetzt.»",
+            externalUrl:
+              "https://www.srf.ch/news/wirtschaft/arbeitsmarkt-vor-umwaelzungen-ki-und-arbeitswelt-putzkraefte-sicherer-als-softwareentwickler",
+          },
         },
       ],
     } satisfies MediaBlock,
