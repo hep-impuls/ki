@@ -37,7 +37,6 @@ import {
   quizScore,
   reflexion,
   stationBonus,
-  stationErfuellt,
   stationProzent,
   swipePick,
 } from "./stationStore";
@@ -182,7 +181,11 @@ function themaEintrag(station: Station): BerichtThema {
     tags: station.tags,
     freiwillig: !!station.freiwillig,
     erfuellung: stationErfuellung(station),
-    abgeschlossen: istAbgeschlossen(station.id) || stationErfuellt(station.id),
+    // Nur der Store zählt (gesetzt im Befund-Frame, wenn das 60%-Gate hält) —
+    // dieselbe Quelle wie Themenkarte und Badge-Sammlung. Ein bloss rechnerisch
+    // erfülltes Gate ohne besuchten Befund gilt nicht als abgeschlossen, sonst
+    // widersprechen sich Bericht und Themenfeld.
+    abgeschlossen: istAbgeschlossen(station.id),
     datum: abschlussDatum(station.id),
     quizPunkte: score.punkte,
     quizMax: score.max,

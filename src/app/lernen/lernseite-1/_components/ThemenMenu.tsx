@@ -13,7 +13,7 @@ import AbschlussVorschau from "./AbschlussVorschau";
 import Erfuellungsbalken from "./Erfuellungsbalken";
 
 /**
- * ThemenMenu (vormals ZeitstrahlMenu) — die sieben Themen als **Karten-Raster**.
+ * ThemenMenu (vormals ZeitstrahlMenu) — die sichtbaren Themen als **Karten-Raster**.
  *
  * Umbau 2026-07-28 (Entscheid: freie Wahl statt Fortschritts-Erzählung):
  *   - **Kein Zeitstrahl mehr.** Eine Zeitachse behauptet eine Reihenfolge; ein
@@ -141,7 +141,7 @@ export default function ThemenMenu({
         <p className="text-label-md uppercase tracking-wider text-primary">Themenfeld</p>
         <h1 className="mt-sm text-headline-xl text-on-surface">Wähle deine Themen</h1>
         <p className="mt-sm max-w-3xl text-body-lg text-on-surface-variant">
-          Sieben KI-Themen, alle gleichrangig — es gibt keine vorgegebene Reihenfolge und keine
+          Alle Themen sind gleichrangig — es gibt keine vorgegebene Reihenfolge und keine
           Mindestzahl. Du entscheidest, was dich interessiert und wie tief du gehst. Jede Karte
           zeigt dir, wie viel du darin schon bearbeitet hast. Dein Abschlussbericht ist jederzeit
           abrufbar und enthält alles, was du festgehalten hast.
@@ -167,7 +167,7 @@ export default function ThemenMenu({
         </div>
       )}
 
-      {/* Die 7 Themen als gleichrangiges Raster (keine Achse, keine Nummern) */}
+      {/* Die sichtbaren Themen als gleichrangiges Raster (keine Achse, keine Nummern) */}
       <ul className="grid gap-md sm:grid-cols-2 lg:grid-cols-3">
         {staende.map(({ station, erfuellung, abgeschlossen }) => (
           <li key={station.id} className="flex">
