@@ -24,7 +24,7 @@ export default function AbschlussVorschau({ onBack }: { onBack?: () => void }) {
           className="inline-flex items-center gap-xs text-label-md text-on-surface-variant transition-colors hover:text-on-surface"
         >
           <span className="material-symbols-outlined text-[18px]">arrow_back</span>
-          Zurück zum Zeitstrahl
+          Zurück zu den Themen
         </button>
       )}
 
@@ -32,7 +32,7 @@ export default function AbschlussVorschau({ onBack }: { onBack?: () => void }) {
         <p className="text-label-md uppercase tracking-wider text-tertiary">Abschluss-Vorschau</p>
         <h2 className="mt-sm text-headline-lg text-on-surface">Meine Landkarte &amp; meine Bewegung</h2>
         <p className="mt-sm max-w-3xl text-body-lg text-on-surface-variant">
-          Wo stehst du nach deinen Stationen? Halte deine Gesamthaltung fest, sieh deine
+          Wo stehst du nach deinen Themen? Halte deine Gesamthaltung fest, sieh deine
           Chancen-Risiken-Landkarte wachsen und vergleiche dich anonym mit anderen.
         </p>
       </header>

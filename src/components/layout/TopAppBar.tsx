@@ -23,9 +23,7 @@ export default function TopAppBar() {
       <div className="flex justify-between items-center h-16 px-lg md:px-xl w-full max-w-[1440px] mx-auto">
         <div className="flex items-center gap-md">
           <Link href="/" className="flex items-center gap-sm">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-on-primary shadow-sm">
-              <span className="text-label-md font-bold">{unit.shortTitle}</span>
-            </div>
+            <img src="/hep-logo.jpg" alt="hep Verlag" className="h-8 w-auto" />
             <div className="hidden sm:block leading-tight">
               <p className="text-body-sm font-semibold text-on-surface">{unit.title}</p>
               {unit.subtitle && (
@@ -55,15 +53,7 @@ export default function TopAppBar() {
         </div>
 
         <div className="flex items-center gap-sm">
-          <img src="/hep-logo.jpg" alt="hep" className="h-8 w-auto" />
           <AccountMenu />
-          <button
-            type="button"
-            aria-label="Hilfe"
-            className="flex h-8 w-8 items-center justify-center rounded-full border border-outline-variant text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
-          >
-            <span className="material-symbols-outlined text-[20px]">help_outline</span>
-          </button>
         </div>
       </div>
     </header>

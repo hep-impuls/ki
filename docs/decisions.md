@@ -10,6 +10,55 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-28 — Lernseite 1: Abschlussbericht statt Zertifikat, Themen statt Stationen (Pietro)
+
+Vier zusammenhängende Änderungen am Flow von Lernseite 1. Gemeinsamer Nenner:
+die Einheit behauptet keine Abfolge und keine Mindestleistung mehr, sondern
+zeigt ehrlich, was tatsächlich bearbeitet wurde.
+
+**1. Zertifikat → Abschlussbericht, ohne Schwelle.** Die Urkunde ist weg. An
+ihrer Stelle steht ein **Bericht**, der jederzeit abrufbar ist — die frühere
+Bedingung «ab 3 Stationen» (`ZERTIFIKAT_SCHWELLE`) ist ersatzlos gestrichen.
+Begründung: Wer frei wählen soll, darf nicht an einer Mindestzahl scheitern; und
+eine Urkunde für «3 von 7» ist eine Bewertung, die die Einheit gar nicht abgeben
+will.
+
+**2. Der Bericht enthält alle eigenen Daten und Freitexte.** Vorwissen und
+Freitext aus dem Auftakt, Ausgangs- und Endposition auf dem Schieberegler, jede
+Meinungsfrage vorher/nachher, jede Werte-Karte, jeder Faktencheck (inkl. welche
+Variante gezeigt wurde), jede Verständnisfrage mit der gegebenen Antwort und
+jeder Reflexionssatz. Ausgabe: Drucken/PDF **und** Download als Markdown-Datei.
+Datenschutz unverändert — alles wird lokal aus localStorage gelesen und lokal
+gerendert, es gibt keinen Upload; nur die Lernperson entscheidet, ob sie den
+Bericht weitergibt. Der Hinweis beim Auftakt-Freitext wurde entsprechend
+präzisiert («wird nirgends hochgeladen» statt «wird nie gespeichert»).
+
+**3. «Station 1 … 7» → «Thema · Kurzname».** Nummern erzählen eine Reihenfolge,
+die es nicht gibt. Jede Einheit trägt neu einen thematischen Kurznamen
+(`kurzname` in `stationenV3.ts`): **Arbeit · Wahrheit · Denken · Nähe · Welt ·
+Verantwortung · Technik**. Der «Zeitstrahl» ist ein **Themenfeld** aus
+gleichrangigen Karten (Raster statt Achse). Die Nummer lebt nur noch technisch
+weiter — in den Deep-Links (`#/station/3/…`) und in den Storage-Keys
+(`station-3`), damit alte Lesezeichen und lokale Fortschritte gültig bleiben.
+
+**4. Erfüllungsgrad je Thema.** Neu zeigt jede Themenkarte (und der Kopf jedes
+Themas und der Bericht), welcher Anteil der bearbeitbaren Elemente erledigt ist:
+Meinungsfragen vorher/nachher, Verständnisfragen, Werte-Karten, Faktencheck,
+Reflexionssatz. Das blosse Ansehen der Medien zählt **nicht** mit — dafür gibt es
+kein verlässliches Signal, und ein geratener Wert wäre schlechter als keiner. Das
+bestehende **60-%-Quiz-Gate** bleibt daneben bestehen und entscheidet weiterhin
+über «abgeschlossen» und die Badge-Vergabe: Erfüllungsgrad beantwortet «wie
+weit?», das Gate «gut genug?».
+
+Betroffene Stellen: `_lib/erfuellung.ts` + `_lib/bericht.ts` (neu),
+`_components/Abschlussbericht.tsx` + `Erfuellungsbalken.tsx` (neu, ersetzen
+`Zertifikat.tsx`), `ZeitstrahlMenu.tsx` → `ThemenMenu.tsx`, `StationV3.tsx`,
+`AbschlussV3.tsx`, `KiEinheitV3.tsx`, `_lib/route.ts` (Hash-Segment
+`zertifikat` → `bericht`, altes Segment bleibt als Alias gültig),
+`_lib/progressSnapshot.ts` (Lehrer-Report spiegelt neu den Erfüllungsgrad statt
+der Quote abgeschlossener Stationen), `src/config/unit.ts` (Modul-Beschreibung),
+`src/app/lehrperson/leitfaden/page.tsx` (Terminologie + Szenarien).
+
 ## 2026-07-27 — Korrektorat: in die Next.js-App integriert, nicht als zweites Hosting (Pietro)
 
 Das externe Korrektorat von `ki26` folgt dem Vorbild aus `10mio` (Passcode statt

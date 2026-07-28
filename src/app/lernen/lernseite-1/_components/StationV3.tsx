@@ -20,6 +20,8 @@ import Anleitung from "./Anleitung";
 import Hinweis from "./Hinweis";
 import WerteKarte from "./WerteKarte";
 import PollAuswertung from "./PollAuswertung";
+import Erfuellungsbalken from "./Erfuellungsbalken";
+import { stationErfuellung, type Erfuellung } from "../_lib/erfuellung";
 import { AUTO_ADVANCE_MS } from "../_lib/ui";
 import { FAKTEN_FALSCH } from "../_data/faktenPruefung";
 import { QUIZ_BEZUG } from "../_data/quizBezug";
@@ -221,10 +223,22 @@ function AudioClip({ spec }: { spec: MediaSpec }) {
   useEffect(() => {
     const el = ref.current;
     if (!el || fenster.length === 0) return;
+    // Schutz gegen Fenster ausserhalb der Datei (z.B. Zeitangaben aus der
+    // Gesamtsendung, obwohl die MP3 nur den Ausschnitt enthält): sonst klemmt
+    // currentTime am Dateiende und der Player lässt sich weder starten noch
+    // scrubben. In dem Fall spielt die Datei einfach ungeschnitten.
+    let aktiv = true;
+    const pruefeReichweite = () => {
+      const dauer = el.duration;
+      if (Number.isFinite(dauer) && dauer > 0 && fenster[0].start >= dauer) aktiv = false;
+    };
     const onLoaded = () => {
+      pruefeReichweite();
+      if (!aktiv) return;
       el.currentTime = fenster[0].start;
     };
     const onTime = () => {
+      if (!aktiv) return;
       const t = el.currentTime;
       // Sind wir in einem Fenster? Sonst zum nächsten springen bzw. stoppen.
       const drin = fenster.some((f) => t >= f.start && t < f.end);
@@ -233,6 +247,7 @@ function AudioClip({ spec }: { spec: MediaSpec }) {
       if (naechstes) el.currentTime = naechstes.start;
       else el.pause();
     };
+    pruefeReichweite();
     el.addEventListener("loadedmetadata", onLoaded);
     el.addEventListener("timeupdate", onTime);
     return () => {
@@ -709,9 +724,11 @@ function ReflexionFrame({ stationId, prompt }: { stationId: string; prompt: stri
 }
 
 function BadgeFrame({ station, onReset }: { station: Station; onReset: () => void }) {
-  // #9: Station erst bei erfülltem 60%-Gate als abgeschlossen markieren + Badges
-  // vergeben (idempotent, lokal). Speist Zeitstrahl-«grün», Badge-Sammlung und
-  // Zertifikat. Der Faktencheck zählt nur als Bonus (max. +10 %), nicht ins Gate.
+  // #9: Thema erst bei erfülltem 60%-Gate als abgeschlossen markieren + Badges
+  // vergeben (idempotent, lokal). Speist die Themenkarte («abgeschlossen»), die
+  // Badge-Sammlung und den Abschlussbericht. Der Faktencheck zählt nur als Bonus
+  // (max. +10 %), nicht ins Gate. Der **Erfüllungsgrad** (wie viel bearbeitet
+  // wurde) ist davon unabhängig und steht im Kopf der Seite.
   const erfuellt = stationErfuellt(station.id);
   const prozent = Math.round(stationProzent(station.id) * 100);
   const bonus = Math.round(stationBonus(station.id) * 100);
@@ -731,7 +748,7 @@ function BadgeFrame({ station, onReset }: { station: Station; onReset: () => voi
           <span className="material-symbols-outlined mt-[2px] text-[20px]">info</span>
           <span>
             Du hast <span className="font-semibold">{prozent} %</span> der Quizpunkte. Für den
-            Abschluss dieser Station brauchst du mindestens 60 %. Du kannst die Station neu starten
+            Abschluss dieses Themas brauchst du mindestens 60 %. Du kannst das Thema neu starten
             und die Fragen noch einmal beantworten.
           </span>
         </p>
@@ -744,7 +761,7 @@ function BadgeFrame({ station, onReset }: { station: Station; onReset: () => voi
           type="button"
           onClick={() => {
             const ok = window.confirm(
-              "Station neu starten? Dein Fortschritt in dieser Station (Quiz, Faktencheck, Werte, Meinung, Reflexion) wird gelöscht. Andere Stationen bleiben erhalten.",
+              "Thema neu starten? Dein Fortschritt in diesem Thema (Quiz, Faktencheck, Werte, Meinung, Reflexion) wird gelöscht. Andere Themen bleiben erhalten.",
             );
             if (ok) {
               resetStation(station.id);
@@ -754,7 +771,7 @@ function BadgeFrame({ station, onReset }: { station: Station; onReset: () => voi
           className="inline-flex w-fit items-center gap-xs rounded-lg bg-primary px-lg py-sm text-label-md text-on-primary transition hover:opacity-90"
         >
           <span className="material-symbols-outlined text-[18px]">restart_alt</span>
-          Station neu starten
+          Thema neu starten
         </button>
       </div>
     );
@@ -762,7 +779,7 @@ function BadgeFrame({ station, onReset }: { station: Station; onReset: () => voi
 
   return (
     <div className="flex flex-col gap-md">
-      <p className="text-body-lg text-on-surface">Geschafft! Diese Station vergibt:</p>
+      <p className="text-body-lg text-on-surface">Geschafft! Dieses Thema vergibt:</p>
       <div className="flex flex-wrap gap-md">
         {station.badges.map((b, i) => {
           const info = BADGE_INFO[b.familie];
@@ -824,7 +841,8 @@ function BadgeFrame({ station, onReset }: { station: Station; onReset: () => voi
       )}
 
       <p className="text-label-sm text-on-surface-variant">
-        Alles bleibt lokal. Deine Station zählt ab 60 % der Quizpunkte als abgeschlossen.
+        Alles bleibt lokal. Ein Thema zählt ab 60 % der Quizpunkte als abgeschlossen — wie viel du
+        insgesamt bearbeitet hast, siehst du oben am Erfüllungsgrad.
       </p>
     </div>
   );
@@ -902,6 +920,13 @@ export default function StationV3({
     else gemountet.current = true;
   }, [i]);
 
+  // Erfüllungsgrad nur clientseitig (localStorage) und bei jedem Frame-Wechsel
+  // neu — so wächst der Balken sichtbar mit den eigenen Antworten mit.
+  const [erfuellung, setErfuellung] = useState<Erfuellung | null>(null);
+  useEffect(() => {
+    setErfuellung(stationErfuellung(station));
+  }, [station, i]);
+
   const frame = frames[i];
   const banner = station.subpages[frame.sub];
   const erste = i === 0;
@@ -943,7 +968,7 @@ export default function StationV3({
           </div>
           <div>
             <p className="text-label-md uppercase tracking-wider text-primary">
-              Station {station.nummer}
+              Thema · {station.kurzname}
               {station.freiwillig && " · freiwillig"}
             </p>
             <h2 className="mt-xs text-headline-md text-on-surface">{station.frage}</h2>
@@ -956,10 +981,24 @@ export default function StationV3({
             className="inline-flex shrink-0 items-center gap-xs text-label-md text-on-surface-variant transition-colors hover:text-on-surface"
           >
             <span className="material-symbols-outlined text-[18px]">grid_view</span>
-            Menü
+            Themen
           </button>
         )}
       </div>
+
+      {/* Erfüllungsgrad dieses Themas — «wie viel habe ich hier bearbeitet?».
+          Aktualisiert sich bei jedem Frame-Wechsel (i), weil jede Antwort in den
+          lokalen Store schreibt. */}
+      {erfuellung && (
+        <div className="rounded-xl bg-surface-container-low px-md py-sm">
+          <Erfuellungsbalken
+            prozent={erfuellung.prozent}
+            erledigt={erfuellung.erledigt}
+            gesamt={erfuellung.gesamt}
+            label="dieses Themas bearbeitet"
+          />
+        </div>
+      )}
 
       {/* Fortschritt — nur der Balken; der sichtbare Zähler entfällt (#6).
           Die Schritt-Position bleibt für Screenreader über aria-label erhalten. */}
@@ -1112,7 +1151,7 @@ export default function StationV3({
         ) : (
           <span className="inline-flex items-center gap-xs rounded-lg bg-primary-container px-lg py-sm text-label-md text-on-primary-container">
             <span className="material-symbols-outlined text-[18px]">check_circle</span>
-            Station beendet
+            Thema beendet
           </span>
         )}
       </div>

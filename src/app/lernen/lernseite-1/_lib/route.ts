@@ -28,9 +28,9 @@ import type { SubpageKey } from "../_data/types";
 
 export type Route =
   | { phase: "auftakt"; schritt: number; inner: number }
-  | { phase: "stationen"; view: "menu" | "zertifikat" }
+  | { phase: "stationen"; view: "menu" | "bericht" }
   | { phase: "station"; nummer: number; sub: SubpageKey; pos: number }
-  | { phase: "abschluss"; view: "landkarte" | "zertifikat" };
+  | { phase: "abschluss"; view: "landkarte" | "bericht" };
 
 /** Oberste Orchestrator-Phase (KiEinheitV3 rendert «station» innerhalb «stationen»). */
 export type TopPhase = "auftakt" | "stationen" | "abschluss";
@@ -72,11 +72,15 @@ export function parseHash(hash: string): Route | null {
   const parts = clean.split("/").filter(Boolean);
   const [head, ...rest] = parts;
 
+  // «zertifikat» bleibt als Alt-Segment gültig (Lesezeichen aus der Zeit vor dem
+  // Abschlussbericht, 2026-07-28) und landet auf demselben Bericht.
+  const istBericht = (seg: string | undefined) => seg === "bericht" || seg === "zertifikat";
+
   switch (head) {
     case "auftakt":
       return { phase: "auftakt", schritt: intOr(rest[0], 0), inner: intOr(rest[1], 0) };
     case "stationen":
-      return { phase: "stationen", view: rest[0] === "zertifikat" ? "zertifikat" : "menu" };
+      return { phase: "stationen", view: istBericht(rest[0]) ? "bericht" : "menu" };
     case "station": {
       const nummer = intOr(rest[0], 1);
       const sub: SubpageKey = rest[1] && istSubpageKey(rest[1]) ? rest[1] : "auftakt";
@@ -84,7 +88,7 @@ export function parseHash(hash: string): Route | null {
       return { phase: "station", nummer, sub, pos };
     }
     case "abschluss":
-      return { phase: "abschluss", view: rest[0] === "zertifikat" ? "zertifikat" : "landkarte" };
+      return { phase: "abschluss", view: istBericht(rest[0]) ? "bericht" : "landkarte" };
     default:
       return null;
   }
@@ -96,11 +100,11 @@ export function toHash(route: Route): string {
     case "auftakt":
       return `#/auftakt/${route.schritt}/${route.inner}`;
     case "stationen":
-      return route.view === "zertifikat" ? "#/stationen/zertifikat" : "#/stationen";
+      return route.view === "bericht" ? "#/stationen/bericht" : "#/stationen";
     case "station":
       return `#/station/${route.nummer}/${route.sub}/${route.pos}`;
     case "abschluss":
-      return route.view === "zertifikat" ? "#/abschluss/zertifikat" : "#/abschluss";
+      return route.view === "bericht" ? "#/abschluss/bericht" : "#/abschluss";
   }
 }
 

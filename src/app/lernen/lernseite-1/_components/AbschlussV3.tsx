@@ -1,26 +1,29 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ZERTIFIKAT_SCHWELLE } from "../_data/types";
 import { AUFTAKT_SKALA_POLLS } from "../_data/auftaktPolls";
-import { abgeschlosseneStationen } from "../_lib/stationStore";
+import { STATIONEN_V3 } from "../_data/stationenV3";
+import { gesamtErfuellung } from "../_lib/erfuellung";
 import type { RouteApi } from "../_lib/route";
 import GlobalSlider from "./GlobalSlider";
 import Skala4Frage from "./Skala4Frage";
 import Landkarte from "./Landkarte";
 import KlassenSpiegel from "./KlassenSpiegel";
-import Zertifikat from "./Zertifikat";
+import Abschlussbericht from "./Abschlussbericht";
 
 /**
  * AbschlussV3 (M7) — die echte **Abschluss-Phase** der Einheit (Spec §64/§10):
  * globaler **Post-Slider** (mit Pre→Post-Bewegung), die **Chancen-Risiken-
- * Landkarte** (Radar, wächst mit den Stationen), der **Klassen-Spiegel**
- * (Ich vs. Klasse vs. alle) und der Zugang zum **Zertifikat** ab
- * {@link ZERTIFIKAT_SCHWELLE} abgeschlossenen Stationen.
+ * Landkarte** (Radar, wächst mit den Themen), der **Klassen-Spiegel**
+ * (Ich vs. Klasse vs. alle) und der Zugang zum **Abschlussbericht**.
+ *
+ * 2026-07-28: Der Bericht (früher «Zertifikat») ist **ohne Schwelle** abrufbar —
+ * die frühere Bedingung «ab 3 Stationen» ist weg, weil die Lernenden frei
+ * wählen, was sie bearbeiten.
  *
  * Unterschied zur M6-`AbschlussVorschau`: dies ist die in `KiEinheitV3`
- * verdrahtete Phase (echte Überschrift, Zertifikat-Zugang, Rücksprung zum
- * Zeitstrahl) — die Vorschau bleibt für /v3-preview bestehen.
+ * verdrahtete Phase (echte Überschrift, Bericht-Zugang, Rücksprung ins
+ * Themenfeld) — die Vorschau bleibt für /v3-preview bestehen.
  *
  * **ki26-konform:** Aggregate werden hier nur **gelesen**; geschrieben wird
  * anonym an der Quelle (Polls/Slider/Vorwissen, seit M8). Persönliche Werte
@@ -30,33 +33,31 @@ export default function AbschlussV3({
   nav,
   onBack,
 }: {
-  /** M10: im orchestrierten Flow gesetzt — die Zertifikat-Ansicht kommt dann aus
-   *  der URL (`#/abschluss/zertifikat`). Ohne `nav` lokaler State-Fallback. */
+  /** M10: im orchestrierten Flow gesetzt — die Bericht-Ansicht kommt dann aus
+   *  der URL (`#/abschluss/bericht`). Ohne `nav` lokaler State-Fallback. */
   nav?: RouteApi;
   onBack?: () => void;
 }) {
   const routed = nav?.route ?? null;
   const istRouted = nav != null;
-  const [anzahl, setAnzahl] = useState(0);
-  const [zertLocal, setZertLocal] = useState(false);
+  const [prozent, setProzent] = useState(0);
+  const [berichtLocal, setBerichtLocal] = useState(false);
 
   useEffect(() => {
-    setAnzahl(abgeschlosseneStationen().length);
+    setProzent(gesamtErfuellung(STATIONEN_V3).prozent);
   }, []);
 
-  const zeigeZertifikat = istRouted
-    ? routed?.phase === "abschluss" && routed.view === "zertifikat"
-    : zertLocal;
-  const zertOeffnen = () =>
-    istRouted ? nav!.push({ phase: "abschluss", view: "zertifikat" }) : setZertLocal(true);
-  const zertSchliessen = () =>
-    istRouted ? nav!.push({ phase: "abschluss", view: "landkarte" }) : setZertLocal(false);
+  const zeigeBericht = istRouted
+    ? routed?.phase === "abschluss" && routed.view === "bericht"
+    : berichtLocal;
+  const berichtOeffnen = () =>
+    istRouted ? nav!.push({ phase: "abschluss", view: "bericht" }) : setBerichtLocal(true);
+  const berichtSchliessen = () =>
+    istRouted ? nav!.push({ phase: "abschluss", view: "landkarte" }) : setBerichtLocal(false);
 
-  if (zeigeZertifikat) {
-    return <Zertifikat onBack={zertSchliessen} />;
+  if (zeigeBericht) {
+    return <Abschlussbericht onBack={berichtSchliessen} />;
   }
-
-  const genug = anzahl >= ZERTIFIKAT_SCHWELLE;
 
   return (
     <div className="flex flex-col gap-xl">
@@ -64,7 +65,7 @@ export default function AbschlussV3({
         <p className="text-label-md uppercase tracking-wider text-tertiary">Abschluss</p>
         <h2 className="mt-sm text-headline-lg text-on-surface">Meine Landkarte &amp; meine Bewegung</h2>
         <p className="mt-sm max-w-3xl text-body-lg text-on-surface-variant">
-          Wo stehst du nach deinen Stationen? Halte deine Gesamthaltung fest, sieh deine
+          Wo stehst du nach deinen Themen? Halte deine Gesamthaltung fest, sieh deine
           Chancen-Risiken-Landkarte wachsen und vergleiche dich anonym mit anderen.
         </p>
       </header>
@@ -114,7 +115,7 @@ export default function AbschlussV3({
         <KlassenSpiegel />
       </section>
 
-      {/* Zertifikat-Zugang + Rücksprung */}
+      {/* Bericht-Zugang + Rücksprung — der Bericht ist immer abrufbar */}
       <div className="flex flex-wrap items-center justify-between gap-sm border-t border-outline-variant pt-lg">
         {onBack ? (
           <button
@@ -123,22 +124,19 @@ export default function AbschlussV3({
             className="inline-flex items-center gap-xs text-label-md text-on-surface-variant transition-colors hover:text-on-surface"
           >
             <span className="material-symbols-outlined text-[18px]">arrow_back</span>
-            Zurück zum Zeitstrahl
+            Zurück zu den Themen
           </button>
         ) : (
           <span />
         )}
         <button
           type="button"
-          onClick={zertOeffnen}
-          disabled={!genug}
-          className="inline-flex items-center gap-sm rounded-xl bg-tertiary px-lg py-sm text-label-md text-on-tertiary shadow-sm transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
-          title={genug ? undefined : `Erst ab ${ZERTIFIKAT_SCHWELLE} abgeschlossenen Stationen`}
+          onClick={berichtOeffnen}
+          className="inline-flex items-center gap-sm rounded-xl bg-tertiary px-lg py-sm text-label-md text-on-tertiary shadow-sm transition hover:opacity-90"
+          title={`Enthält alles, was du bisher festgehalten hast — aktuell ${prozent} % der Einheit bearbeitet`}
         >
-          <span className="material-symbols-outlined text-[18px]">workspace_premium</span>
-          {genug
-            ? "Zertifikat ansehen"
-            : `Noch ${ZERTIFIKAT_SCHWELLE - anzahl} bis zum Zertifikat`}
+          <span className="material-symbols-outlined text-[18px]">description</span>
+          Abschlussbericht ansehen
         </button>
       </div>
     </div>

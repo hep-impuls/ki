@@ -33,6 +33,7 @@ import type {
 const station1: Station = {
     id: "station-1",
     nummer: 1,
+    kurzname: "Arbeit",
     frage: "Verändert KI meinen Job — zum Guten?",
     icon: "work",
     tags: ["Wirtschaft", "Politik"],
@@ -153,9 +154,8 @@ const station1: Station = {
           src: "/audio/ki-arbeitswelt.mp3",
           title: "SRF News — KI und die Arbeitswelt",
           sourceKey: "news-ki-arbeitsplätze",
-          externalUrl: "https://www.srf.ch/sendungen/news/ki-und-arbeitswelt",
-          start: 21,
-          end: 178,
+          externalUrl:
+            "https://www.srf.ch/news/wirtschaft/studie-zur-arbeit-mit-ki-ki-fuehrt-zu-umwaelzung-in-der-welt-der-arbeit",
         },
       ],
     } satisfies MediaBlock,
@@ -173,8 +173,6 @@ const station1: Station = {
           sourceKey: "10v10-ki-informatikjob",
           externalUrl:
             "https://www.srf.ch/news/wirtschaft/arbeitsmarkt-vor-umwaelzungen-ki-und-arbeitswelt-putzkraefte-sicherer-als-softwareentwickler",
-          guidance:
-            "Schauen Sie ab etwa Minute 1 für rund 4 Minuten. Achten Sie besonders auf die Aussagen zur Arbeitslosigkeit von Softwareentwicklern und was Arbeitsmarktexperte Michael Siegenthaler dazu sagt.",
         },
       ],
     } satisfies MediaBlock,
@@ -465,6 +463,7 @@ const station1: Station = {
 const station2: Station = {
     id: "station-2",
     nummer: 2,
+    kurzname: "Wahrheit",
     frage: "Kann ich noch glauben, was ich höre und sehe?",
     icon: "visibility",
     tags: ["Technologie", "Gesellschaft", "Recht"],
@@ -596,7 +595,7 @@ const station2: Station = {
       intro:
         "Ein Zürcher Cybersicherheits-Experte zeigt live, wie er mit wenigen Klicks die Stimme eines SRF-Reporters klont — und erklärt, wie Betrüger dasselbe nutzen, um Millionen zu ergaunern.",
       anleitung:
-        "Hör ab Minute 13:36 bis ca. 15:50. Achte darauf, wie wenige Schritte Luzi Sennhauser braucht. Was überrascht dich? Was macht diesen Angriff so schwer erkennbar?",
+        "Hör den Beitrag an — besonders die erste Hälfte. Achte darauf, wie wenige Schritte Luzi Sennhauser braucht. Was überrascht dich? Was macht diesen Angriff so schwer erkennbar?",
       media: [
         {
           kind: "audio",
@@ -605,8 +604,6 @@ const station2: Station = {
           sourceKey: "newsjournal-stimme-klonen",
           externalUrl:
             "https://www.srf.ch/news/schweiz/gefahr-aus-dem-telefonhoerer-geklonte-stimmen-so-geht-eine-zuercher-firma-gegen-ki-gauner-vor",
-          start: 816,
-          end: 950,
         },
       ],
     } satisfies MediaBlock,
@@ -899,6 +896,7 @@ const station2: Station = {
 const station3: Station = {
   id: "station-3",
   nummer: 3,
+  kurzname: "Denken",
   frage: "Macht KI mich klüger oder fauler?",
   icon: "psychology",
   tags: ["Individuum", "Psyche", "Bildung"],
@@ -1333,6 +1331,7 @@ const station3: Station = {
 const station4: Station = {
   id: "station-4",
   nummer: 4,
+  kurzname: "Nähe",
   frage: "Kann KI ein:e Freund:in oder Therapeut:in sein?",
   icon: "favorite",
   tags: ["Individuum", "Psyche", "Ethik"],
@@ -1824,6 +1823,7 @@ const station4: Station = {
 const station5: Station = {
   id: "station-5",
   nummer: 5,
+  kurzname: "Welt",
   frage: "Kann KI die Welt besser machen?",
   icon: "public",
   tags: ["Ökologie", "Wirtschaft", "Ethik"],
@@ -2289,6 +2289,7 @@ const station5: Station = {
 const station6: Station = {
   id: "station-6",
   nummer: 6,
+  kurzname: "Verantwortung",
   frage: "Wenn Maschinen über Leben entscheiden",
   icon: "smart_toy",
   tags: ["Politik", "Ethik", "Recht"],
@@ -2759,6 +2760,7 @@ const station6: Station = {
 const station7: Station = {
   id: "station-7",
   nummer: 7,
+  kurzname: "Technik",
   frage: "Wie funktioniert das überhaupt?",
   icon: "neurology",
   tags: ["Technologie"],

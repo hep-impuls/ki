@@ -288,7 +288,18 @@ export interface BadgeFamilieInfo {
 export interface Station {
   /** Poll-/Storage-Key, stabil: "station-1" … "station-7". */
   id: string;
+  /**
+   * Interne Ordnungszahl — **nur** für Deep-Links (`#/station/3/…`) und stabile
+   * IDs. Sie wird der Lernperson **nicht** mehr angezeigt: die Themen sind frei
+   * wählbar, eine Nummer suggeriert eine Abfolge (Entscheid 2026-07-28).
+   */
   nummer: number;
+  /**
+   * Thematischer Kurzname (ein Wort), der in der UI die Nummer ersetzt:
+   * «Thema · Arbeit» statt «Station 1». Macht die Themen benennbar, ohne eine
+   * Reihenfolge zu behaupten.
+   */
+  kurzname: string;
   /** griffige Ich-Frage (Lernenden-Titel). */
   frage: string;
   /** Material Symbol (Outlined). */
@@ -343,20 +354,9 @@ export interface LandkarteAxis {
 }
 
 /* ────────────────────────────────────────────────────────────────────────
- * Zertifikat (v3 §3) — rein abgeleitet, KEIN eigener Store; client-seitig aus
- * fortschritt + punkte + badges berechnet (ab ≥3 abgeschlossenen Stationen).
+ * Abschlussbericht (früher «Zertifikat», v3 §3) — rein abgeleitet, KEIN eigener
+ * Store; client-seitig aus den lokalen Stores gebaut. **Keine Schwelle mehr**:
+ * der Bericht ist jederzeit abrufbar und bildet ab, was tatsächlich bearbeitet
+ * wurde (Entscheid 2026-07-28 — freie Wahl statt Mindestzahl). Der Aufbau des
+ * Berichts liegt in `_lib/bericht.ts`.
  * ──────────────────────────────────────────────────────────────────────── */
-
-export interface Certificate {
-  /** abgeschlossene Stationen (IDs). */
-  stationen: string[];
-  /** gesammelte Badges (aggregiert über Familien). */
-  badges: BadgeRef[];
-  /** Ausstellungsdatum (ISO). */
-  datum: string;
-  /** optionale Quiz-Punkte gesamt. */
-  quizPunkte?: number;
-}
-
-/** Schwelle für die Zertifikats-Erzeugung (v3 §3/§0). */
-export const ZERTIFIKAT_SCHWELLE = 3 as const;

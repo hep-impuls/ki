@@ -153,8 +153,8 @@ export default function Landkarte() {
       <div className="flex items-start gap-md rounded-xl border border-outline-variant bg-surface-container-low p-lg">
         <span className="material-symbols-outlined text-[24px] text-tertiary">explore</span>
         <p className="text-body-md text-on-surface">
-          Deine Landkarte ist noch leer. Beantworte in den Stationen die Meinungs-Fragen und
-          Swipe-Karten — mit jeder Station kommt eine Achse dazu.
+          Deine Landkarte ist noch leer. Beantworte in den Themen die Meinungs-Fragen und
+          Swipe-Karten — mit jedem Thema kommt eine Achse dazu.
         </p>
       </div>
     );
@@ -170,7 +170,7 @@ export default function Landkarte() {
             Mein Standpunkt · je weiter aussen, desto mehr zum rechten Pol der Achse.
           </p>
           <p className="text-label-sm text-on-surface-variant">
-            {achsen.length} von 8 Achsen sichtbar — mehr Stationen ergänzen die Karte.
+            {achsen.length} von 8 Achsen sichtbar — mehr Themen ergänzen die Karte.
           </p>
         </div>
       )}

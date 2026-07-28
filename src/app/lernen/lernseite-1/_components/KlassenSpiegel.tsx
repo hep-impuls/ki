@@ -18,7 +18,7 @@ import PollAuswertung, { type AuswertungEintrag } from "./PollAuswertung";
  * persönliche Stufe stammt lokal aus `stationStore`.
  */
 
-/** Globale Gesamthaltung zuerst, dann je Station die erste 4er-Skala-Frage (Post). */
+/** Globale Gesamthaltung zuerst, dann je Thema die erste 4er-Skala-Frage (Post). */
 function alleEintraege(): AuswertungEintrag[] {
   const out: AuswertungEintrag[] = [];
   for (const poll of AUFTAKT_SKALA_POLLS) {
@@ -27,7 +27,7 @@ function alleEintraege(): AuswertungEintrag[] {
   for (const st of STATIONEN_V3) {
     const poll = st.polls.find((p): p is PollSkala4 => p.format === "skala4");
     if (!poll) continue;
-    out.push({ stationId: st.id, titel: `Station ${st.nummer}`, poll, phase: "post" });
+    out.push({ stationId: st.id, titel: `Thema · ${st.kurzname}`, poll, phase: "post" });
   }
   return out;
 }
@@ -52,7 +52,7 @@ export default function KlassenSpiegel() {
       <div className="flex items-start gap-md rounded-xl border border-outline-variant bg-surface-container-low p-lg">
         <span className="material-symbols-outlined text-[24px] text-tertiary">groups</span>
         <p className="text-body-md text-on-surface">
-          Sobald du eine Station bis zur «Meinung nachher» abschliesst, vergleichst du dich hier
+          Sobald du in einem Thema die «Meinung nachher» beantwortest, vergleichst du dich hier
           anonym mit deiner Klasse und allen Teilnehmenden.
         </p>
       </div>

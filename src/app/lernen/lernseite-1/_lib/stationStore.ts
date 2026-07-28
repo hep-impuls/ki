@@ -246,9 +246,14 @@ export function istAbgeschlossen(stationId: string): boolean {
   return !!read<AbschlussStore>("abschluss", {})[stationId];
 }
 
-/** IDs aller abgeschlossenen Stationen (für Zertifikat-Schwelle ≥3 in M5). */
+/** IDs aller abgeschlossenen Stationen (Zeitstrahl-«grün», Abschlussbericht). */
 export function abgeschlosseneStationen(): string[] {
   return Object.keys(read<AbschlussStore>("abschluss", {}));
+}
+
+/** Abschluss-Zeitpunkt einer Station als ISO-String (oder null) — für den Bericht. */
+export function abschlussDatum(stationId: string): string | null {
+  return read<AbschlussStore>("abschluss", {})[stationId]?.datum ?? null;
 }
 
 /**

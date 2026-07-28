@@ -6,10 +6,10 @@ import ProgressMirror from "./_components/ProgressMirror";
 /**
  * Lernseite 1 — KI-Einheit v3 (Pietro).
  *
- * Live ist seit M7 der v3-Orchestrator: Auftakt → Zeitstrahl (7 Stationen frei
- * wählbar) → Abschluss (Landkarte · Post-Slider · Klassen-Spiegel · Zertifikat
- * ab 3). Der v2-Flow (`KiEinheit`) bleibt im Repo, ist aber nicht mehr
- * eingebunden. Datenmodell ki26: persönliche Daten nur lokal, Cloud nur anonyme
+ * Live ist seit M7 der v3-Orchestrator: Auftakt → Themenfeld (7 Themen frei
+ * wählbar, je mit Erfüllungsgrad) → Abschluss (Landkarte · Post-Slider ·
+ * Klassen-Spiegel · Abschlussbericht, jederzeit und ohne Schwelle). Der v2-Flow
+ * (`KiEinheit`) bleibt im Repo, ist aber nicht mehr eingebunden. Datenmodell ki26: persönliche Daten nur lokal, Cloud nur anonyme
  * Aggregate (Casting ab M8). ProgressMirror spiegelt den lokalen Fortschritt
  * zusätzlich anonym-pseudonym (Animal-Code) für den Lehrer-Report.
  */

@@ -5,12 +5,12 @@ import DruckButton from "../_components/DruckButton";
 
 /**
  * Inhaltlicher Leitfaden für Lehrpersonen (Vorbild: 10mio
- * `einheit-uebersicht-lehrperson.astro`): der didaktische Bogen, die Stationen
+ * `einheit-uebersicht-lehrperson.astro`): der didaktische Bogen, die Themen
  * mit je einem Plenum-Anker, Unterrichts-Szenarien, was im Report ankommt.
  *
- * Die Stationen-Fragen und die Lernziele stammen aus der kanonischen
+ * Die Themen-Fragen und die Lernziele stammen aus der kanonischen
  * Inhaltsdefinition (`lernseite-1/_data/stationenV3.ts`); die Plenum-Anker sind
- * die didaktische Zutat dieses Leitfadens. Wenn dort Stationen dazukommen oder
+ * die didaktische Zutat dieses Leitfadens. Wenn dort Themen dazukommen oder
  * umformuliert werden, hier mitziehen.
  */
 
@@ -20,15 +20,16 @@ export const metadata: Metadata = {
 
 const INHALT = [
   { href: "#bogen", label: "Der Bogen der beiden Lernsets" },
-  { href: "#lernset-1", label: "Lernset 1 — die 7 Stationen mit Plenum-Anker" },
+  { href: "#lernset-1", label: "Lernset 1 — die 7 Themen mit Plenum-Anker" },
   { href: "#lernset-2", label: "Lernset 2 — die drei Themen" },
   { href: "#szenarien", label: "Drei Unterrichts-Szenarien" },
   { href: "#report", label: "Was im Report ankommt" },
   { href: "#haltung", label: "Kontroverse statt Konsens" },
 ];
 
-interface Station {
-  n: number;
+interface Thema {
+  /** Thematischer Kurzname — identisch mit `kurzname` in `stationenV3.ts`. */
+  kurz: string;
   frage: string;
   tags: string[];
   sonne: string;
@@ -36,10 +37,10 @@ interface Station {
   anker: string;
 }
 
-/** Die 7 Stationen von Lernset 1 — Fragen und Tags wie in `stationenV3.ts`. */
-const STATIONEN: Station[] = [
+/** Die 7 Themen von Lernset 1 — Kurznamen, Fragen und Tags wie in `stationenV3.ts`. */
+const STATIONEN: Thema[] = [
   {
-    n: 1,
+    kurz: "Arbeit",
     frage: "Verändert KI meinen Job — zum Guten?",
     tags: ["Wirtschaft", "Politik"],
     sonne: "KI-Exposition heisst nicht Stellenabbau; die Demografielücke macht KI zur Chance.",
@@ -48,7 +49,7 @@ const STATIONEN: Station[] = [
       "Welche Aufgabe in eurem Wunschberuf würde eine KI heute schon übernehmen — und was bliebe dann übrig?",
   },
   {
-    n: 2,
+    kurz: "Wahrheit",
     frage: "Kann ich noch glauben, was ich höre und sehe?",
     tags: ["Technologie", "Gesellschaft", "Recht"],
     sonne: "Skepsis, Austausch und unterschiedliche Generationenkompetenzen machen Fälschungen sichtbar.",
@@ -57,7 +58,7 @@ const STATIONEN: Station[] = [
       "Woran habt ihr zuletzt gemerkt, dass etwas gefälscht war? Und woran hättet ihr es nicht gemerkt?",
   },
   {
-    n: 3,
+    kurz: "Denken",
     frage: "Macht KI mich klüger oder fauler?",
     tags: ["Individuum", "Psyche", "Bildung"],
     sonne: "Selbst bauen mit KI kann echtes Lernen und Selbstwirksamkeit fördern.",
@@ -66,7 +67,7 @@ const STATIONEN: Station[] = [
       "Bei welcher Aufgabe nehmt ihr KI bewusst NICHT — und warum ausgerechnet dort?",
   },
   {
-    n: 4,
+    kurz: "Nähe",
     frage: "Kann KI ein:e Freund:in oder Therapeut:in sein?",
     tags: ["Individuum", "Psyche", "Ethik"],
     sonne: "Es gibt Situationen, in denen KI als Begleitung echten Nutzen stiftet.",
@@ -75,7 +76,7 @@ const STATIONEN: Station[] = [
       "Was kann ein Mensch, das eine KI in einem Gespräch nie können wird? Sammelt Kandidaten — und prüft sie kritisch.",
   },
   {
-    n: 5,
+    kurz: "Welt",
     frage: "Kann KI die Welt besser machen?",
     tags: ["Ökologie", "Wirtschaft", "Ethik"],
     sonne: "Eine Schweizer Bäckerei senkt mit Bestellprognosen die Lebensmittelverschwendung.",
@@ -84,7 +85,7 @@ const STATIONEN: Station[] = [
       "Wer trägt die Kosten, wer erntet den Nutzen? Zeichnet beides an die Wandtafel — und schaut euch die Lücke an.",
   },
   {
-    n: 6,
+    kurz: "Verantwortung",
     frage: "Wenn Maschinen über Leben entscheiden",
     tags: ["Politik", "Ethik", "Recht"],
     sonne: "Präzisere Lagebilder, schnellere Entscheide, potenziell weniger zivile Opfer.",
@@ -93,7 +94,7 @@ const STATIONEN: Station[] = [
       "Wo endet Unterstützung, wo beginnt Entscheidung? Zieht gemeinsam eine Linie — und begründet, warum genau dort.",
   },
   {
-    n: 7,
+    kurz: "Technik",
     frage: "Wie funktioniert das überhaupt?",
     tags: ["Technologie"],
     sonne: "Ein Sprachmodell sagt das nächste Wort voraus, gestützt auf riesige Textmengen.",
@@ -107,13 +108,13 @@ const SZENARIEN = [
   {
     dauer: "1 Lektion · 45 Min",
     titel: "Positionsreise im Schnelldurchlauf",
-    text: "Auftakt gemeinsam, dann zwei frei gewählte Stationen, Abschluss mit Landkarte. Das Zertifikat (ab 3 Stationen) bleibt aussen vor — dafür bleibt Zeit für ein Plenum.",
-    module: "Lernset 1: Auftakt · 2 Stationen · Abschluss",
+    text: "Auftakt gemeinsam, dann zwei frei gewählte Themen, Abschluss mit Landkarte. Der Abschlussbericht bleibt aussen vor — dafür bleibt Zeit für ein Plenum.",
+    module: "Lernset 1: Auftakt · 2 Themen · Abschluss",
   },
   {
     dauer: "2 Lektionen · 90 Min",
     titel: "Lernset 1 vollständig",
-    text: "Der vorgesehene Umfang: Auftakt, drei bis vier Stationen nach eigener Wahl, Abschluss mit Landkarte, Klassen-Spiegel und Zertifikat. Ein Plenum-Anker pro bearbeiteter Station.",
+    text: "Der vorgesehene Umfang: Auftakt, drei bis vier Themen nach eigener Wahl, Abschluss mit Landkarte, Klassen-Spiegel und Abschlussbericht. Ein Plenum-Anker pro bearbeitetem Thema.",
     module: "Lernset 1 komplett",
   },
   {
@@ -233,15 +234,17 @@ export default function LeitfadenLehrperson() {
                 zwei Haltungsfragen, Wert-Karten.
               </li>
               <li>
-                <strong>Zeitstrahl</strong> — 7 Stationen, frei wählbar. Jede
-                Station läuft in 7 Schritten: Meinung → Sonnenseite →
-                Schattenseite → Wert-Karten → Faktencheck → Quiz → Befund und
-                Badge.
+                <strong>Themenfeld</strong> — 7 Themen, frei wählbar, ohne
+                Reihenfolge und ohne Mindestzahl. Jedes Thema läuft in 7
+                Schritten: Meinung → Sonnenseite → Schattenseite → Wert-Karten →
+                Faktencheck → Quiz → Befund und Badge. Jede Themenkarte zeigt
+                ihren Erfüllungsgrad — den Anteil der bearbeiteten Elemente.
               </li>
               <li>
                 <strong>Abschluss</strong> — Chancen-Risiken-Landkarte,
-                Post-Slider im Vergleich zum Start, Klassen-Spiegel, Zertifikat
-                ab drei Stationen.
+                Post-Slider im Vergleich zum Start, Klassen-Spiegel und der
+                Abschlussbericht: jederzeit abrufbar, mit allen eigenen
+                Eingaben, druck- und speicherbar.
               </li>
             </ol>
             <p className="mt-md text-body-sm text-on-surface-variant">
@@ -284,15 +287,15 @@ export default function LeitfadenLehrperson() {
         </div>
       </section>
 
-      {/* ── Lernset 1 Stationen ─────────────────────────────────────── */}
+      {/* ── Lernset 1 Themen ────────────────────────────────────────── */}
       <section id="lernset-1" className="mt-xxl scroll-mt-lg">
         <h2 className="text-headline-lg text-on-surface">
-          Lernset 1 — die 7 Stationen mit Plenum-Anker
+          Lernset 1 — die 7 Themen mit Plenum-Anker
         </h2>
         <p className="mt-sm text-body-md text-on-surface-variant">
-          Jede Station stellt eine Frage und beantwortet sie zweimal: einmal von
+          Jedes Thema stellt eine Frage und beantwortet sie zweimal: einmal von
           der Sonnenseite, einmal von der Schattenseite. Genau dieser Widerspruch
-          ist das Material fürs Plenum. Zu jeder Station darum{" "}
+          ist das Material fürs Plenum. Zu jedem Thema darum{" "}
           <strong>eine</strong> Frage, die Sie aufgreifen können, sobald die
           Klasse dort war — nicht drei Optionen, eine gesetzte Frage.
         </p>
@@ -300,12 +303,12 @@ export default function LeitfadenLehrperson() {
         <div className="mt-lg space-y-md">
           {STATIONEN.map((s) => (
             <div
-              key={s.n}
+              key={s.kurz}
               className="break-inside-avoid rounded-xl border border-outline-variant bg-surface-bright p-lg shadow-sm"
             >
               <div className="flex items-start gap-md">
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary-container text-headline-sm text-on-primary-container">
-                  {s.n}
+                <div className="flex flex-shrink-0 items-center justify-center rounded-full bg-primary-container px-md py-xs text-label-md uppercase tracking-wider text-on-primary-container">
+                  {s.kurz}
                 </div>
                 <div className="min-w-0 flex-1">
                   <h3 className="text-headline-sm text-on-surface">{s.frage}</h3>
@@ -349,9 +352,9 @@ export default function LeitfadenLehrperson() {
         </div>
 
         <p className="mt-lg text-body-sm text-on-surface-variant">
-          Weil die Klasse frei wählt, sind selten alle an derselben Station. Zwei
-          bewährte Umgänge damit: entweder Sie greifen im Plenum nur die
-          Stationen auf, die im Report am häufigsten bearbeitet wurden — oder Sie
+          Weil die Klasse frei wählt, sind selten alle beim selben Thema. Zwei
+          bewährte Umgänge damit: entweder Sie greifen im Plenum nur die Themen
+          auf, die im Report am häufigsten bearbeitet wurden — oder Sie
           lassen bewusst in Gruppen berichten, wer wo war. Der zweite Weg macht
           die Streuung zum Thema statt zum Problem.
         </p>
@@ -430,8 +433,8 @@ export default function LeitfadenLehrperson() {
       <section id="report" className="mt-xxl scroll-mt-lg">
         <h2 className="text-headline-lg text-on-surface">Was im Report ankommt</h2>
         <p className="mt-sm text-body-md text-on-surface-variant">
-          Damit Sie die Plenumsphasen datengestützt setzen können — etwa: «Bei
-          Station 3 ist die Klasse 60 zu 30 auseinandergegangen. Woran liegt
+          Damit Sie die Plenumsphasen datengestützt setzen können — etwa: «Beim
+          Thema Denken ist die Klasse 60 zu 30 auseinandergegangen. Woran liegt
           das?»
         </p>
         <div className="mt-lg overflow-x-auto rounded-xl border border-outline-variant">
@@ -454,8 +457,11 @@ export default function LeitfadenLehrperson() {
                 <td className="px-md py-sm">Punktestand pro Fortschritts-Code</td>
               </tr>
               <tr>
-                <td className="px-md py-sm font-medium">Stationsfortschritt</td>
-                <td className="px-md py-sm">Prozent pro Modul und Datum der letzten Aktivität</td>
+                <td className="px-md py-sm font-medium">Erfüllungsgrad</td>
+                <td className="px-md py-sm">
+                  Prozent der bearbeiteten Elemente pro Modul und Datum der
+                  letzten Aktivität
+                </td>
               </tr>
               <tr>
                 <td className="px-md py-sm font-medium">Spuren in Lernset 2</td>
@@ -493,8 +499,8 @@ export default function LeitfadenLehrperson() {
           </p>
           <ul className="mt-md list-inside list-disc space-y-sm text-body-sm text-on-surface">
             <li>
-              <strong>Überwältigungsverbot:</strong> KI wird nicht bewertet. Jede
-              Station zeigt Sonnen- <em>und</em> Schattenseite am selben
+              <strong>Überwältigungsverbot:</strong> KI wird nicht bewertet. Jedes
+              Thema zeigt Sonnen- <em>und</em> Schattenseite am selben
               Gegenstand — auch dort, wo eine Seite bequemer wäre.
             </li>
             <li>
@@ -504,7 +510,8 @@ export default function LeitfadenLehrperson() {
             </li>
             <li>
               <strong>Schülerorientierung:</strong> Die Lernenden wählen ihre
-              Stationen selbst, und die Abschlussfrage misst keine Richtigkeit,
+              Themen selbst — ohne Mindestzahl —, und die Abschlussfrage misst
+              keine Richtigkeit,
               sondern die eigene Bewegung — von der Ausgangsposition zur
               Endposition.
             </li>

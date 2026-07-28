@@ -18,12 +18,6 @@ export default function Home() {
       <header className="mx-auto flex max-w-[1280px] items-center justify-between px-lg py-lg">
         <img src="/hep-logo.jpg" alt="hep Verlag" className="h-8 w-auto" />
         <nav className="hidden gap-lg text-body-sm font-medium text-on-surface-variant sm:flex">
-          <a className="hover:text-on-surface transition-colors" href="#module">
-            Module
-          </a>
-          <a className="hover:text-on-surface transition-colors" href="#about">
-            Über
-          </a>
           <Link className="hover:text-on-surface transition-colors" href="/lehrperson">
             Für Lehrpersonen
           </Link>

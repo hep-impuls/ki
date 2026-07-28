@@ -29,10 +29,6 @@ export default function SideNav() {
 
   return (
     <aside className="bg-surface-container-low h-[calc(100vh-4rem)] w-64 border-r border-outline-variant sticky top-16 flex-shrink-0 hidden lg:flex flex-col overflow-y-auto">
-      <div className="px-lg py-md border-b border-outline-variant">
-        <img src="/hep-logo.jpg" alt="hep Verlag" className="h-7 w-auto" />
-      </div>
-
       <nav className="p-md">
         <p className="text-label-sm uppercase tracking-wider text-on-surface-variant px-sm pb-sm">
           Navigation

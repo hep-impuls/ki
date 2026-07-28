@@ -1,14 +1,13 @@
 import Link from "next/link";
 import ActivityTracker from "@/components/ActivityTracker";
 import AppLayout from "@/components/layout/AppLayout";
-import ZeitstrahlMenu from "../_components/ZeitstrahlMenu";
+import ThemenMenu from "../_components/ThemenMenu";
 
 /**
- * v3-Vorschau (M3 → M5) — rendert jetzt den **Zeitstrahl** mit allen 7 Stationen
- * (freie Wahl, grün bei Abschluss, Fortschritt, Zertifikat ab 3). Über das Menü
- * ist weiterhin jede Stations-Shell (StationV3) erreichbar. Die v2-Einheit
- * (page.tsx → KiEinheit) bleibt unberührt. Wird in M7 durch die echte
- * Auftakt/Abschluss-Verdrahtung ersetzt.
+ * v3-Vorschau (M3 → M5) — rendert das **Themenfeld** mit allen 7 Themen (freie
+ * Wahl, Erfüllungsgrad je Thema, grün bei Abschluss, Abschlussbericht jederzeit).
+ * Über das Menü ist weiterhin jede Themen-Shell (StationV3) erreichbar. Die
+ * v2-Einheit (page.tsx → KiEinheit) bleibt unberührt.
  */
 export default function Lernseite1V3Preview() {
   return (
@@ -31,17 +30,17 @@ export default function Lernseite1V3Preview() {
         <p className="text-label-md uppercase tracking-wider text-tertiary">
           Lernseite 1 · v3-Vorschau (M6)
         </p>
-        <h1 className="mt-sm text-headline-xl text-on-surface">Zeitstrahl — Durchklick</h1>
+        <h1 className="mt-sm text-headline-xl text-on-surface">Themenfeld — Durchklick</h1>
         <p className="mt-sm text-body-lg text-on-surface-variant">
-          Sieben Stationen frei wählbar, grün bei Abschluss, mit Fortschritt und
-          Zertifikat ab drei Stationen. Über «Meine Landkarte» erreichst du die
-          Abschluss-Vorschau: globaler Slider, Chancen-Risiken-Landkarte (Radar)
-          und Klassen-Spiegel. Jede Station öffnet die 7-Subpage-Shell.
+          Sieben Themen frei wählbar, jedes mit eigenem Erfüllungsgrad, grün bei
+          Abschluss. Über «Meine Landkarte» erreichst du die Abschluss-Vorschau:
+          globaler Slider, Chancen-Risiken-Landkarte (Radar) und Klassen-Spiegel.
+          Jedes Thema öffnet die 7-Subpage-Shell.
         </p>
       </header>
 
       <section className="mt-xl">
-        <ZeitstrahlMenu />
+        <ThemenMenu />
       </section>
     </AppLayout>
   );

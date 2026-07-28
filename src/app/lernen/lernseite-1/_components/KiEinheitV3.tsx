@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import AuftaktV3 from "./AuftaktV3";
-import ZeitstrahlMenu from "./ZeitstrahlMenu";
+import ThemenMenu from "./ThemenMenu";
 import AbschlussV3 from "./AbschlussV3";
 import {
   DEFAULT_ROUTE,
@@ -16,14 +16,14 @@ import {
  * KiEinheitV3 — Orchestrator der KI-Einheit **v3** (M7, Spec §2/§5; M10-Routing).
  *
  * Eine schlanke State-Machine über den ganzen Flow auf /lernen/lernseite-1:
- *   auftakt → stationen (Zeitstrahl, 7 frei wählbar) → abschluss
- *           (Landkarte · Post-Slider · Klassen-Spiegel · Zertifikat ≥3).
+ *   auftakt → themen (Karten-Raster, 7 frei wählbar) → abschluss
+ *           (Landkarte · Post-Slider · Klassen-Spiegel · Abschlussbericht).
  *
  * **M10:** Der Navigations-Zustand lebt jetzt im **URL-Hash** (`_lib/route.ts`):
  * jeder Schritt ist adressierbar, reload-fest und über Browser-Zurück/Vor
  * blätterbar. Dieser Orchestrator **besitzt** den `useRoute()`-Hook (einzige
  * Stelle mit history-Zugriff) und reicht `route` + `push`/`replace` als `nav` an
- * AuftaktV3 / ZeitstrahlMenu / AbschlussV3 durch. localStorage (`ki26-v3-phase`)
+ * AuftaktV3 / ThemenMenu / AbschlussV3 durch. localStorage (`ki26-v3-phase`)
  * bleibt nur **Fallback**, wenn der Hash leer ist (Erstaufruf).
  *
  * **ki26-konform:** Der Hash trägt nur Navigations-Zustand; **alle** persönlichen
@@ -36,7 +36,7 @@ const STORAGE = "ki26-v3-phase";
 
 const SCHRITTE: { phase: PhaseV3; label: string; icon: string }[] = [
   { phase: "auftakt", label: "Auftakt", icon: "flag" },
-  { phase: "stationen", label: "Stationen", icon: "explore" },
+  { phase: "stationen", label: "Themen", icon: "explore" },
   { phase: "abschluss", label: "Abschluss", icon: "done_all" },
 ];
 
@@ -126,7 +126,7 @@ export default function KiEinheitV3() {
       )}
 
       {(route.phase === "stationen" || route.phase === "station") && (
-        <ZeitstrahlMenu
+        <ThemenMenu
           nav={nav}
           onWeiterZumAbschluss={() => push({ phase: "abschluss", view: "landkarte" })}
         />

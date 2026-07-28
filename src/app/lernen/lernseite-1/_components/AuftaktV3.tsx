@@ -61,7 +61,7 @@ const AUFTAKT_LERNZIEL_V3: LernzielKarteSpec = {
   aktivitaet:
     "Zuerst hältst du fest, wo dir KI begegnet ist. Dann ein gemeinsamer Reiz, deine Ausgangsposition auf dem Schieberegler, zwei kurze Haltungsfragen — und zum Schluss ein paar Wert-Karten.",
   wasKommt:
-    "Danach wählst du auf dem Zeitstrahl deine Stationen frei. Am Ende siehst du auf deiner Landkarte, wie sich deine Haltung bewegt hat.",
+    "Danach wählst du im Themenfeld frei, was dich interessiert — es gibt keine Reihenfolge und keine Mindestzahl. Am Ende siehst du auf deiner Landkarte, wie sich deine Haltung bewegt hat, und dein Abschlussbericht sammelt alles, was du festgehalten hast.",
 };
 
 const SCHRITTE = ["Vorwissen", "Reiz", "Position", "Haltung", "Werte"];
@@ -202,7 +202,7 @@ function WerteBlock({
       <BlockNav
         zurueck={() => (i > 0 ? setI(i - 1) : onBack())}
         weiter={() => (letzte ? onDone() : setI(i + 1))}
-        weiterLabel={letzte ? "Zu den Stationen" : "Weiter"}
+        weiterLabel={letzte ? "Zu den Themen" : "Weiter"}
       />
     </div>
   );
@@ -394,7 +394,8 @@ export default function AuftaktV3({
                 className="mt-sm w-full rounded-lg border border-outline-variant bg-surface-bright p-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:border-primary focus:outline-none"
               />
               <p className="mt-xs text-label-sm text-on-surface-variant">
-                Freitext bleibt nur auf deinem Gerät — wird nie gespeichert oder geteilt.
+                Freitext bleibt auf deinem Gerät — er wird nirgends hochgeladen. Am Ende erscheint
+                er in deinem Abschlussbericht, den nur du weitergeben kannst.
               </p>
             </div>
           </div>
