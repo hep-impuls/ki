@@ -16,7 +16,14 @@
 
 import type { LandkarteAxis } from "./types";
 
-export const LANDKARTE_ACHSEN: LandkarteAxis[] = [
+/**
+ * Quellen versteckter Stationen (Entscheid 2026-07-28: Station 7 «Technik»
+ * ausgeschaltet) — deren Achsen bleiben hier definiert, werden aber aus dem
+ * Export herausgefiltert. Zum Reaktivieren: Eintrag entfernen.
+ */
+const VERSTECKTE_QUELLEN = new Set<LandkarteAxis["quelle"]>(["station-7"]);
+
+const ALLE_ACHSEN: LandkarteAxis[] = [
   {
     id: "global-chance-bedrohung",
     label: "KI in meinem Leben gesamt: Chance ↔ Bedrohung",
@@ -99,3 +106,7 @@ export const LANDKARTE_ACHSEN: LandkarteAxis[] = [
     quelle: "swipe",
   },
 ];
+
+export const LANDKARTE_ACHSEN: LandkarteAxis[] = ALLE_ACHSEN.filter(
+  (a) => !VERSTECKTE_QUELLEN.has(a.quelle),
+);

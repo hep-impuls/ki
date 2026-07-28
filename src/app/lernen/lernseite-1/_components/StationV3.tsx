@@ -269,12 +269,142 @@ function AudioClip({ spec }: { spec: MediaSpec }) {
   );
 }
 
+/* ── YouTube IFrame Player API: echtes Segment-Springen (ein Embed pro Quelle) ── */
+
+/** Minimale Typen der YouTube IFrame Player API (kein @types/youtube nötig). */
+interface YtPlayer {
+  getCurrentTime(): number;
+  seekTo(seconds: number, allowSeekAhead: boolean): void;
+  pauseVideo(): void;
+  destroy?(): void;
+}
+interface YtApi {
+  Player: new (
+    el: HTMLElement,
+    opts: {
+      videoId: string;
+      host?: string;
+      playerVars?: Record<string, string | number>;
+      events?: { onStateChange?: (e: { data: number }) => void };
+    },
+  ) => YtPlayer;
+  PlayerState: { PLAYING: number };
+}
+
+const YT_API_SRC = "https://www.youtube.com/iframe_api";
+let ytApiPromise: Promise<YtApi> | null = null;
+
+/** Lädt die YouTube IFrame Player API genau einmal (Singleton-Promise). */
+function loadYouTubeApi(): Promise<YtApi> {
+  if (ytApiPromise) return ytApiPromise;
+  ytApiPromise = new Promise((resolve) => {
+    const w = window as Window & {
+      YT?: YtApi;
+      onYouTubeIframeAPIReady?: () => void;
+    };
+    if (w.YT?.Player) {
+      resolve(w.YT);
+      return;
+    }
+    const vorher = w.onYouTubeIframeAPIReady;
+    w.onYouTubeIframeAPIReady = () => {
+      vorher?.();
+      resolve(w.YT!);
+    };
+    if (!document.querySelector(`script[src="${YT_API_SRC}"]`)) {
+      const s = document.createElement("script");
+      s.src = YT_API_SRC;
+      s.async = true;
+      document.head.appendChild(s);
+    }
+  });
+  return ytApiPromise;
+}
+
+/**
+ * YouTubeSegmentPlayer — ein einziges Embed, das eine Fenster-Kette
+ * (`spec.segments`) wirklich abspielt: springt am Fenster-Ende automatisch
+ * zum nächsten Fenster und pausiert nach dem letzten (harter Stopp, den der
+ * &end-URL-Parameter nicht zuverlässig liefert). Robust gegen manuelles
+ * Scrubben — dieselbe Logik wie AudioClip: das aktive Fenster wird pro Tick
+ * aus der aktuellen Position neu bestimmt.
+ */
+function YouTubeSegmentPlayer({ spec }: { spec: MediaSpec }) {
+  const hostRef = useRef<HTMLDivElement>(null);
+  const fenster: MediaSegment[] = useMemo(() => {
+    if (spec.segments && spec.segments.length > 0) return spec.segments;
+    if (spec.start != null) {
+      return [{ start: spec.start, end: spec.end ?? Number.POSITIVE_INFINITY }];
+    }
+    return [];
+  }, [spec]);
+
+  useEffect(() => {
+    const videoId = spec.youtubeId;
+    if (!videoId || fenster.length === 0) return;
+    let player: YtPlayer | null = null;
+    let timer: number | undefined;
+    let beendet = false;
+    let abgebrochen = false;
+
+    const tick = () => {
+      if (!player || typeof player.getCurrentTime !== "function") return;
+      const t = player.getCurrentTime();
+      const drin = fenster.some((f) => t >= f.start && t < f.end);
+      if (drin) {
+        beendet = false;
+        return;
+      }
+      const naechstes = fenster.find((f) => f.start > t);
+      if (naechstes) {
+        player.seekTo(naechstes.start, true);
+      } else if (!beendet) {
+        // nach dem letzten Fenster: einmal pausieren, weiterschauen bleibt möglich
+        beendet = true;
+        player.pauseVideo();
+      }
+    };
+
+    loadYouTubeApi().then((YTApi) => {
+      if (abgebrochen || !hostRef.current) return;
+      player = new YTApi.Player(hostRef.current, {
+        videoId,
+        host: "https://www.youtube-nocookie.com",
+        playerVars: { start: Math.floor(fenster[0].start), rel: 0 },
+        events: {
+          onStateChange: (e) => {
+            if (e.data === YTApi.PlayerState.PLAYING && timer == null) {
+              timer = window.setInterval(tick, 500);
+            }
+          },
+        },
+      });
+    });
+
+    return () => {
+      abgebrochen = true;
+      if (timer != null) window.clearInterval(timer);
+      player?.destroy?.();
+    };
+  }, [spec.youtubeId, fenster]);
+
+  return (
+    <div className="aspect-video w-full overflow-hidden rounded-lg border border-outline-variant">
+      <div ref={hostRef} className="h-full w-full" />
+    </div>
+  );
+}
+
 function MediaItem({ spec }: { spec: MediaSpec }) {
   if (spec.kind === "youtube") {
     if (!spec.youtubeId) return <MediaPlatzhalter spec={spec} />;
-    const start = spec.segments?.[0]?.start ?? spec.start ?? 0;
-    const end = spec.segments?.[0]?.end ?? spec.end;
-    const endParam = end ? `&end=${end}` : "";
+    // Mehr-Segment-Kette → Player API (echtes Springen); Einzel-Fenster →
+    // schlanker Embed mit start/end-Parametern (kein API-Bedarf).
+    if (spec.segments && spec.segments.length > 0) {
+      return <YouTubeSegmentPlayer spec={spec} />;
+    }
+    const start = spec.start ?? 0;
+    const endParam = spec.end ? `&end=${spec.end}` : "";
     const url = `https://www.youtube-nocookie.com/embed/${spec.youtubeId}?start=${start}${endParam}&rel=0`;
     return (
       <div className="aspect-video w-full overflow-hidden rounded-lg border border-outline-variant">
@@ -289,10 +419,13 @@ function MediaItem({ spec }: { spec: MediaSpec }) {
     );
   }
   if (spec.kind === "srf") {
-    // v3 §9: SRF-iframe wird IMMER ganz eingebettet (kein Code-Schnitt);
-    // die Anleitung-zur-Minute steht in spec.guidance.
+    // v3 §9: SRF-iframe wird IMMER ganz eingebettet (kein Code-Schnitt).
+    // Neu (2026-07-28): `spec.start` setzt den Einstiegspunkt (startTime);
+    // stoppen müssen die Lernenden selbst — das grosse Schaufenster-Banner
+    // (SchauFenster) macht das Fenster unübersehbar.
     if (!spec.urn) return <MediaPlatzhalter spec={spec} />;
-    const url = `https://www.srf.ch/play/embed?urn=${encodeURIComponent(spec.urn)}&subdivisions=false`;
+    const startParam = spec.start != null ? `&startTime=${Math.floor(spec.start)}` : "";
+    const url = `https://www.srf.ch/play/embed?urn=${encodeURIComponent(spec.urn)}&subdivisions=false${startParam}`;
     return (
       <div className="aspect-video w-full overflow-hidden rounded-lg border border-outline-variant">
         <iframe
@@ -309,15 +442,58 @@ function MediaItem({ spec }: { spec: MediaSpec }) {
   return <AudioClip spec={spec} />;
 }
 
+/**
+ * SchauFenster — grosses, unübersehbares Banner über SRF-iframes: nennt das
+ * Zeitfenster («Schauen: Minute X bis Y»), weil der SRF-Player kein hartes
+ * Ende kennt. Der Startpunkt wird zusätzlich per `startTime` gesetzt; das
+ * **Stoppen liegt bei den Lernenden** — deshalb gross statt Kleingedrucktes.
+ */
+function SchauFenster({ spec }: { spec: MediaSpec }) {
+  if (spec.start == null && spec.end == null) return null;
+  const von = spec.start != null ? fmt(spec.start) : null;
+  const bis = spec.end != null ? fmt(spec.end) : null;
+  return (
+    <div className="rounded-lg bg-tertiary-container p-md text-on-tertiary-container">
+      <p className="flex items-center gap-sm text-headline-sm">
+        <span className="material-symbols-outlined text-[28px]">timer</span>
+        <span>
+          Schauen: {von && bis ? (
+            <>
+              Minute <strong>{von}</strong> bis <strong>{bis}</strong>
+            </>
+          ) : von ? (
+            <>
+              ab Minute <strong>{von}</strong>
+            </>
+          ) : (
+            <>
+              bis Minute <strong>{bis}</strong>
+            </>
+          )}
+        </span>
+      </p>
+      {bis && (
+        <p className="mt-xs text-body-md">
+          Das Video läuft weiter — <strong>stopp selbst bei {bis}</strong>, sonst schaust du die
+          ganze Sendung.
+        </p>
+      )}
+    </div>
+  );
+}
+
 function MediaFenster({ spec }: { spec: MediaSpec }) {
   const fenster =
     spec.segments && spec.segments.length > 0
-      ? spec.segments.map((s) => `${fmt(s.start)}–${fmt(s.end)}`).join(", ")
+      ? spec.segments
+          .map((s) => (s.label ? `${s.label} (${fmt(s.start)}–${fmt(s.end)})` : `${fmt(s.start)}–${fmt(s.end)}`))
+          .join(" · ")
       : spec.start != null && spec.end != null
         ? `${fmt(spec.start)}–${fmt(spec.end)}`
         : null;
   return (
     <figure className="flex flex-col gap-xs">
+      {spec.kind === "srf" && <SchauFenster spec={spec} />}
       <MediaItem spec={spec} />
       <figcaption className="text-label-sm text-on-surface-variant">
         {spec.title}
@@ -341,19 +517,72 @@ function MediaFenster({ spec }: { spec: MediaSpec }) {
   );
 }
 
+/**
+ * ExtrasBlock — «Weitere Ausschnitte — freiwillig» (Muster: Auftakt-Hype-Opener).
+ * Eingeklappt, zählt nicht zur Pflicht-Sehzeit; wer mag, klappt auf.
+ */
+function ExtrasBlock({ extras }: { extras: NonNullable<MediaBlock["extras"]> }) {
+  const [offen, setOffen] = useState(false);
+  return (
+    <div className="rounded-lg border border-outline-variant bg-surface-container-low p-md">
+      <p className="flex items-center gap-xs text-label-md text-on-surface-variant">
+        <span className="material-symbols-outlined text-[18px] text-tertiary">movie</span>
+        {extras.length === 1
+          ? "Ein weiterer Ausschnitt — freiwillig. Schau ihn dir an, wenn er dich interessiert."
+          : "Weitere Ausschnitte — freiwillig. Schau dir an, was dich interessiert."}
+      </p>
+      {!offen ? (
+        <button
+          type="button"
+          onClick={() => setOffen(true)}
+          className="mt-sm inline-flex items-center gap-sm text-label-md text-primary"
+        >
+          <span className="material-symbols-outlined text-[18px]">add</span>
+          {extras.length === 1 ? "Video anzeigen" : "Videos anzeigen"}
+        </button>
+      ) : (
+        <div className={`mt-md grid gap-md ${extras.length > 1 ? "md:grid-cols-2" : ""}`}>
+          {extras.map((k) => (
+            <div
+              key={k.titel}
+              className="flex flex-col gap-sm rounded-lg border border-outline-variant bg-surface-bright p-md"
+            >
+              <p className="flex items-center gap-xs text-body-md font-semibold text-on-surface">
+                <span className="material-symbols-outlined text-[20px] text-tertiary">movie</span>
+                {k.titel}
+              </p>
+              {k.beschreibung && (
+                <p className="text-body-sm text-on-surface-variant">{k.beschreibung}</p>
+              )}
+              <span className="inline-flex w-fit items-center gap-xs rounded-full bg-surface-container px-sm py-[2px] text-label-sm text-on-surface-variant">
+                <span className="material-symbols-outlined text-[14px]">redeem</span>
+                freiwillig
+              </span>
+              <MediaFenster spec={k.media} />
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 /** Medienblock im Split-Layout: Video links, Hinweis/Anleitung rechts (stapelt mobil). */
 function MediaSplit({ block, anleitung }: { block: MediaBlock; anleitung?: string }) {
   return (
-    <div className="grid gap-lg lg:grid-cols-2">
-      <div className="flex min-w-0 flex-col gap-md">
-        {block.media.map((m, i) => (
-          <MediaFenster key={i} spec={m} />
-        ))}
+    <div className="flex flex-col gap-lg">
+      <div className="grid gap-lg lg:grid-cols-2">
+        <div className="flex min-w-0 flex-col gap-md">
+          {block.media.map((m, i) => (
+            <MediaFenster key={i} spec={m} />
+          ))}
+        </div>
+        <div className="flex min-w-0 flex-col gap-md">
+          {block.intro && <Hinweis>{block.intro}</Hinweis>}
+          {(block.anleitung ?? anleitung) && <Anleitung>{block.anleitung ?? anleitung}</Anleitung>}
+        </div>
       </div>
-      <div className="flex min-w-0 flex-col gap-md">
-        {block.intro && <Hinweis>{block.intro}</Hinweis>}
-        {(block.anleitung ?? anleitung) && <Anleitung>{block.anleitung ?? anleitung}</Anleitung>}
-      </div>
+      {block.extras && block.extras.length > 0 && <ExtrasBlock extras={block.extras} />}
     </div>
   );
 }

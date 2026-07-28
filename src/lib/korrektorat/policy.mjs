@@ -278,7 +278,7 @@ export const CONST_SECTIONS = {
   PROFIL_LABELS: "Profil-Beschriftungen",
   QUIZ_BEZUG: "Quiz-Bezüge",
   STATION_BADGES: "Badges je Station",
-  STATIONEN_V3: "Die sieben Stationen",
+  STATIONEN_V3: "Die Stationen von Lernset 1",
   STIMMUNG_DECK_POST: "Stimmungsbild (nachher)",
   STIMMUNG_DECK_PRE: "Stimmungsbild (vorher)",
   STIMMUNG_VORHER: "Stimmungsbild (vorher)",

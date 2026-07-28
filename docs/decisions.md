@@ -10,6 +10,41 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-28 — Lernseite 1: Medien-Snippet-Überarbeitung, Station 7 ausgeschaltet (Pietro)
+
+Umsetzung des Medien-Audits (`docs/material-pietro/AUDIT_medien-snippets_2026-07-28.md`,
+7 Prüf-Agenten gegen die Voll-Transkripte). Entscheidungen:
+
+**1. Station 7 «Technik» ausgeschaltet.** Daten bleiben in `stationenV3.ts`
+(`versteckt: true`), aber die Station erscheint nicht mehr im Frontend — es
+gibt **6 sichtbare Themen**. `STATIONEN_V3` exportiert nur sichtbare Stationen
+(`STATIONEN_V3_ALLE` behält alle); die Landkarte-Achse `technik-vertrauen` ist
+mitgefiltert. Grund: Schatten-Pol aus dem 3Blue1Brown-Material strukturell zu
+dünn (43 s tragen die ganze Aussage).
+
+**2. Zeitziel: 5–10 Minuten Medieninhalt pro Pol.** Wo die Quelle das nicht
+hergibt (St. 4 Sonne ~3:21, St. 5 Sonne ~3:04 — MP3 enthält nur einen
+Sendungs-Ausschnitt), bleibt die Unterschreitung bewusst stehen; es wird kein
+neues Material beschafft.
+
+**3. YouTube-Mehr-Segment jetzt echt.** `spec.segments` spielt über die IFrame
+Player API wirklich nacheinander (ein Embed pro Quelle, automatisches Springen,
+harter Stopp nach dem letzten Fenster) statt nur das erste Fenster.
+
+**4. SRF-iframes: Startpunkt ja, Stopp bei den Lernenden.** `spec.start` setzt
+`startTime` im Player; ein **grosses Schaufenster-Banner** («Schauen: Minute X
+bis Y — stopp selbst») ersetzt das Kleingedruckte. Kein Code-Stopp möglich.
+
+**5. Freiwillige Zusatz-Ausschnitte.** `MediaBlock.extras` rendert unter dem
+Hauptinhalt eine eingeklappte Sektion «Weitere Ausschnitte — freiwillig»
+(Muster: Auftakt-Hype-Opener) für ungenutztes starkes Material.
+
+Betroffen: `_data/types.ts`, `_data/stationenV3.ts`, `_data/landkarte.ts`,
+`_components/StationV3.tsx`, `_components/ThemenMenu.tsx`, `src/config/unit.ts`,
+`lehrperson/leitfaden/page.tsx`, Korrektorat-Labels.
+
+---
+
 ## 2026-07-28 — Lernseite 1: Abschlussbericht statt Zertifikat, Themen statt Stationen (Pietro)
 
 Vier zusammenhängende Änderungen am Flow von Lernseite 1. Gemeinsamer Nenner:

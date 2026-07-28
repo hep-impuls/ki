@@ -2,7 +2,8 @@
  * Stations-Daten der KI-Einheit **v3** (Lernseite 1, Pietro).
  *
  * Massgebend: KI_EINHEIT_GESAMTARCHITEKTUR_v3.md §5/§6/§8/§9 + types.ts.
- * Stand M2: echter deutscher Inhalt aller 7 Stationen — verifizierte Medien-
+ * Stand M2: echter deutscher Inhalt aller Stationen (6 sichtbar, Station 7
+ * «Technik» versteckt) — verifizierte Medien-
  * Timecodes, 3 Polls (pre/post, 4er-Skala bzw. Slider St.7), 3 Swipe-Karten,
  * 5–7 Faktencheck-Fakten mit Quelle (aus deepsearch.md), Quiz-Pool 8 (5 MC + 3 W/F,
  * Distraktor-Regel §4.5), 1 Reflexion, Badges (§7), Station-4-Schutz (§4.10).
@@ -2764,6 +2765,9 @@ const station7: Station = {
   frage: "Wie funktioniert das überhaupt?",
   icon: "neurology",
   tags: ["Technologie"],
+  // Entscheid 2026-07-28: Station ausgeschaltet — Daten bleiben erhalten,
+  // aber sie erscheint nicht mehr im Frontend (6 sichtbare Themen).
+  versteckt: true,
 
   subpages: {
     auftakt: {
@@ -3190,7 +3194,8 @@ const station7: Station = {
   badges: [{ familie: "tech", anzahl: 2 }],
 };
 
-export const STATIONEN_V3: Station[] = [
+/** Alle Stationen inkl. versteckter — nur für Wartung/Reaktivierung gedacht. */
+export const STATIONEN_V3_ALLE: Station[] = [
   station1,
   station2,
   station3,
@@ -3199,3 +3204,10 @@ export const STATIONEN_V3: Station[] = [
   station6,
   station7,
 ];
+
+/**
+ * Sichtbare Stationen — das ist die Liste, die Themenfeld, Landkarte, Bericht,
+ * Poll-Registry usw. konsumieren. Versteckte Stationen (aktuell Station 7
+ * «Technik», Entscheid 2026-07-28) sind hier herausgefiltert.
+ */
+export const STATIONEN_V3: Station[] = STATIONEN_V3_ALLE.filter((s) => !s.versteckt);

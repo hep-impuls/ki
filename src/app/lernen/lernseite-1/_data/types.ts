@@ -80,6 +80,17 @@ export interface MediaSpec {
   guidance?: string;
 }
 
+/**
+ * Freiwilliger Zusatz-Ausschnitt unterhalb des Hauptmediums («Weitere
+ * Ausschnitte — freiwillig», Muster: Auftakt-Hype-Opener). Wird eingeklappt
+ * gerendert; zählt nicht zur Pflicht-Sehzeit der Subpage.
+ */
+export interface ExtraClip {
+  titel: string;
+  beschreibung?: string;
+  media: MediaSpec;
+}
+
 export interface MediaBlock {
   /** kurze Hinführung (Bridge-Stil), optional */
   intro?: string;
@@ -87,6 +98,8 @@ export interface MediaBlock {
   anleitung?: string;
   /** 1..n Clips (z.B. Audio + Video kombiniert) */
   media: MediaSpec[];
+  /** freiwillige Zusatz-Ausschnitte, eingeklappt unter dem Hauptinhalt */
+  extras?: ExtraClip[];
 }
 
 export interface Vertiefung extends MediaBlock {
@@ -308,6 +321,13 @@ export interface Station {
   tags: Bereich[];
   /** Station 4: strukturell freiwillig. */
   freiwillig?: boolean;
+  /**
+   * Station im Frontend ausgeblendet (Daten bleiben erhalten). Versteckte
+   * Stationen fehlen im exportierten `STATIONEN_V3` und damit in Themenfeld,
+   * Landkarte, Bericht und Poll-Registry (Entscheid 2026-07-28: Station 7
+   * «Technik» ausgeschaltet → 6 sichtbare Themen).
+   */
+  versteckt?: boolean;
   /** optionale Stations-Warnung (Station 4). */
   warnung?: string;
 

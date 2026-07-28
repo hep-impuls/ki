@@ -6,7 +6,7 @@ import ProgressMirror from "./_components/ProgressMirror";
 /**
  * Lernseite 1 — KI-Einheit v3 (Pietro).
  *
- * Live ist seit M7 der v3-Orchestrator: Auftakt → Themenfeld (7 Themen frei
+ * Live ist seit M7 der v3-Orchestrator: Auftakt → Themenfeld (6 Themen frei
  * wählbar, je mit Erfüllungsgrad) → Abschluss (Landkarte · Post-Slider ·
  * Klassen-Spiegel · Abschlussbericht, jederzeit und ohne Schwelle). Der v2-Flow
  * (`KiEinheit`) bleibt im Repo, ist aber nicht mehr eingebunden. Datenmodell ki26: persönliche Daten nur lokal, Cloud nur anonyme

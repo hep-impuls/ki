@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 const INHALT = [
   { href: "#bogen", label: "Der Bogen der beiden Lernsets" },
-  { href: "#lernset-1", label: "Lernset 1 — die 7 Themen mit Plenum-Anker" },
+  { href: "#lernset-1", label: "Lernset 1 — die 6 Themen mit Plenum-Anker" },
   { href: "#lernset-2", label: "Lernset 2 — die drei Themen" },
   { href: "#szenarien", label: "Drei Unterrichts-Szenarien" },
   { href: "#report", label: "Was im Report ankommt" },
@@ -37,7 +37,8 @@ interface Thema {
   anker: string;
 }
 
-/** Die 7 Themen von Lernset 1 — Kurznamen, Fragen und Tags wie in `stationenV3.ts`. */
+/** Die 6 Themen von Lernset 1 — Kurznamen, Fragen und Tags wie in `stationenV3.ts`
+ *  (Station 7 «Technik» ist seit 2026-07-28 ausgeschaltet). */
 const STATIONEN: Thema[] = [
   {
     kurz: "Arbeit",
@@ -92,15 +93,6 @@ const STATIONEN: Thema[] = [
     schatten: "«Automation Bias»: Menschen folgen der Maschine auch dann, wenn sie irrt.",
     anker:
       "Wo endet Unterstützung, wo beginnt Entscheidung? Zieht gemeinsam eine Linie — und begründet, warum genau dort.",
-  },
-  {
-    kurz: "Technik",
-    frage: "Wie funktioniert das überhaupt?",
-    tags: ["Technologie"],
-    sonne: "Ein Sprachmodell sagt das nächste Wort voraus, gestützt auf riesige Textmengen.",
-    schatten: "Niemand weiss genau, warum ein Modell diese Antwort gibt — daher Halluzinationen.",
-    anker:
-      "Wenn niemand die Antwort erklären kann: Wo darf so ein System trotzdem eingesetzt werden?",
   },
 ];
 
@@ -234,7 +226,7 @@ export default function LeitfadenLehrperson() {
                 zwei Haltungsfragen, Wert-Karten.
               </li>
               <li>
-                <strong>Themenfeld</strong> — 7 Themen, frei wählbar, ohne
+                <strong>Themenfeld</strong> — 6 Themen, frei wählbar, ohne
                 Reihenfolge und ohne Mindestzahl. Jedes Thema läuft in 7
                 Schritten: Meinung → Sonnenseite → Schattenseite → Wert-Karten →
                 Faktencheck → Quiz → Befund und Badge. Jede Themenkarte zeigt
@@ -290,7 +282,7 @@ export default function LeitfadenLehrperson() {
       {/* ── Lernset 1 Themen ────────────────────────────────────────── */}
       <section id="lernset-1" className="mt-xxl scroll-mt-lg">
         <h2 className="text-headline-lg text-on-surface">
-          Lernset 1 — die 7 Themen mit Plenum-Anker
+          Lernset 1 — die 6 Themen mit Plenum-Anker
         </h2>
         <p className="mt-sm text-body-md text-on-surface-variant">
           Jedes Thema stellt eine Frage und beantwortet sie zweimal: einmal von
