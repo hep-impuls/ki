@@ -515,19 +515,19 @@ const station2: Station = {
       },
       sonne: {
         inhalt: "Station 2 · Schritt 2/7: Sonnenseite — Familien entlarven Fakes",
-        dauerMin: 6,
+        dauerMin: 8,
         lernziel:
-          "Du erkennst, dass Skepsis, Austausch und unterschiedliche Generationenkompetenzen zusammen Fälschungen sichtbar machen können.",
+          "Du kennst konkrete Strategien — Rückwärtssuche, KI-Chatbot-Check, Bildlogik, Google Lens —, mit denen sich Fake-Schlagzeilen und Fake-Fotos entlarven lassen, und erkennst, warum Familien im Team mehr Fakes durchschauen als allein.",
         anleitung:
-          "Schau das Video-Experiment (ca. 4 Min.). Achte darauf, welche Strategie den Familien am meisten hilft, Fakes zu durchschauen. Beantworte danach die Frage im Beobachtungsauftrag.",
+          "Schau das Video-Experiment (ca. 6 Min.). Achte darauf, mit welchen Werkzeugen und welcher Logik die Familien die Fake-Schlagzeile und das Fake-Foto entlarven. Beantworte danach die Frage im Beobachtungsauftrag.",
       },
       schatten: {
         inhalt: "Station 2 · Schritt 3/7: Schattenseite — Stimmklon in Sekunden",
-        dauerMin: 5,
+        dauerMin: 6,
         lernziel:
-          "Du verstehst, wie schnell eine Stimme geklont werden kann, und weisst von einem realen Schweizer Betrugsfall.",
+          "Du verstehst, wie schnell eine Stimme geklont werden kann, und kennst einen realen Millionen-Betrugsfall aus der Schweiz.",
         anleitung:
-          "Hör den Audiobeitrag (ca. 2 Min.). Achte darauf, wie viele Schritte Luzi Sennhauser braucht, um die Stimme des Reporters zu kopieren. Überlege danach: Hätte mich dieser Anruf getäuscht?",
+          "Hör den Audiobeitrag (ca. 3 Min.). Achte darauf, wie viele Schritte Luzi Sennhauser braucht, um die Stimme des Reporters zu kopieren — und auf den Betrugsfall aus dem Kanton Schwyz. Überlege danach: Hätte mich dieser Anruf getäuscht?",
       },
       swipe: {
         inhalt: "Station 2 · Schritt 4/7: Deine Haltung — drei Aussagen",
@@ -611,18 +611,48 @@ const station2: Station = {
 
     sonnenseite: {
       intro:
-        "Drei Schweizer Familien stellen ihre Fähigkeit auf die Probe, echte von gefälschten Inhalten zu unterscheiden — und merken, dass Skepsis und Gespräch mehr helfen als Technik allein.",
+        "Zwei Familien bekommen fünf Minuten und ihre Handys: Zuerst prüfen sie eine Schlagzeile, die im Dezember viral ging («85 000 gesuchte Stellen»), dann ein Foto einer angeblichen Überschwemmung in Basel. Mit Google, ChatGPT und Google Lens gehen sie der Sache auf den Grund — und zeigen, wie echtes Entlarven funktioniert.",
       anleitung:
-        "Schau ab Minute 13:52 bis ca. 18:30. Achte darauf, welche Strategie den Familien hilft, Fakes zu entlarven. Überlege danach: Was würde dir in deinem Alltag helfen?",
+        "Schau ab Minute 27:44 bis ca. 34:12. Achte darauf, welche Werkzeuge und Denkschritte die Familien nutzen — von der Rückwärtssuche über den ChatGPT-Check bis zum Bildfehler beim Kirchturm. Überlege danach: Welche dieser Strategien würdest du selbst zuerst anwenden?",
       media: [
         {
           kind: "youtube",
           youtubeId: "3W3HoK1f7nU",
-          title: "Einstein — What the Fake",
+          title: "Einstein — What the Fake: Zwei Familien entlarven Fakes",
           sourceKey: "einstein-what-the-fake",
           externalUrl: "https://www.youtube.com/watch?v=3W3HoK1f7nU",
-          start: 832,
-          end: 1110,
+          start: 1664,
+          end: 2052,
+        },
+      ],
+      extras: [
+        {
+          titel: "Die Profi-Tipps: So prüfst du Inhalte",
+          beschreibung:
+            "Reto Vogt (MAZ) zeigt, wie er ein KI-Fake-Bild aus einem Kriegsgebiet prüft; Jürg Tschirren (SRF) ordnet ein, wie viele Fakes und Bots im Netz kursieren. Endet mit einer konkreten Tipp-Liste gegen Fake News.",
+          media: {
+            kind: "youtube",
+            youtubeId: "3W3HoK1f7nU",
+            title: "Einstein — Die Profi-Tipps gegen Fake News",
+            sourceKey: "einstein-what-the-fake",
+            externalUrl: "https://www.youtube.com/watch?v=3W3HoK1f7nU",
+            start: 563,
+            end: 829,
+          },
+        },
+        {
+          titel: "Das Fazit in einem Satz",
+          beschreibung:
+            "Was Jung und Alt beim Entlarven von Fakes je stark macht — und warum das Zusammennehmen dieser Fähigkeiten die besten Chancen gibt.",
+          media: {
+            kind: "youtube",
+            youtubeId: "3W3HoK1f7nU",
+            title: "Einstein — Generationen gegen Fake News",
+            sourceKey: "einstein-what-the-fake",
+            externalUrl: "https://www.youtube.com/watch?v=3W3HoK1f7nU",
+            start: 2162,
+            end: 2172,
+          },
         },
       ],
     } satisfies MediaBlock,
@@ -631,7 +661,7 @@ const station2: Station = {
       intro:
         "Ein Zürcher Cybersicherheits-Experte zeigt live, wie er mit wenigen Klicks die Stimme eines SRF-Reporters klont — und erklärt, wie Betrüger dasselbe nutzen, um Millionen zu ergaunern.",
       anleitung:
-        "Hör den Beitrag an — besonders die erste Hälfte. Achte darauf, wie wenige Schritte Luzi Sennhauser braucht. Was überrascht dich? Was macht diesen Angriff so schwer erkennbar?",
+        "Hör den ganzen Beitrag an. Achte darauf, wie wenige Schritte Luzi Sennhauser braucht — und auf den Betrugsfall aus dem Kanton Schwyz. Was überrascht dich? Was macht diesen Angriff so schwer erkennbar?",
       media: [
         {
           kind: "audio",
@@ -640,6 +670,27 @@ const station2: Station = {
           sourceKey: "newsjournal-stimme-klonen",
           externalUrl:
             "https://www.srf.ch/news/schweiz/gefahr-aus-dem-telefonhoerer-geklonte-stimmen-so-geht-eine-zuercher-firma-gegen-ki-gauner-vor",
+          start: 816,
+          end: 1020,
+        },
+      ],
+      extras: [
+        {
+          titel: "Der Test: CEO-Betrugsanruf im Live-Versuch",
+          beschreibung:
+            "Ein Sicherheitsberater kopiert im Testversuch die Stimme eines CEO und ruft damit eine Mitarbeiterin an — mit einer erschreckenden Erfolgsquote.",
+          media: {
+            kind: "srf",
+            urn: "urn:srf:video:8184d9b5-410e-412f-9a67-4194b2f3ecd2",
+            title: "Rundschau — Alles gefälscht und manipuliert",
+            sourceKey: "rundschau-ki-kriminalität",
+            externalUrl:
+              "https://www.srf.ch/play/tv/rundschau/video/alles-gefaelscht-und-manipuliert-wie-kriminelle-kuenstliche-intelligenz-nutzen?urn=urn:srf:video:8184d9b5-410e-412f-9a67-4194b2f3ecd2",
+            start: 2697,
+            end: 2787,
+            guidance:
+              "Swiss Infosec simuliert einen CEO-Betrugsanruf: 50–60 % der Mitarbeitenden fallen darauf herein.",
+          },
         },
       ],
     } satisfies MediaBlock,
