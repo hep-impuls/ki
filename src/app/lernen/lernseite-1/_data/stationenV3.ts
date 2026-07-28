@@ -1120,18 +1120,6 @@ const station3: Station = {
   // Dopamin/Serotonin ("Happiness-Shower" vs. "Zuckerflash"), Cortisol-Befund
   // Unispital Zürich und Gedächtnistest ab; endet sauber nach dem Satz "Das ist
   // die menschliche Intelligenz." (35:05). Gesamt 8:25.
-  //
-  // Ungenutzt gebliebene Zusatzclips (Audit-Empfehlung "Extras"), NICHT verdrahtet:
-  // `MediaBlock` kennt in `_data/types.ts` noch kein `extras`-Feld und
-  // `StationV3.tsx` rendert keine "Weitere Ausschnitte — freiwillig"-Sektion
-  // (nur `AudioClip` spielt `segments` echt sequenziell; `MediaItem` für
-  // kind:"youtube" liest nur `segments[0]`, kein IFrame-Player-API-Auto-Advance).
-  // Sobald diese Phase-0-Infra ergänzt ist, hier eintragen:
-  //   1. { start: 1224, end: 1392, titel: "Ab wann gehört KI in die Schule?" }
-  //      — PH Zürich, Bernadette Spieler: unreflektierte Nutzung, Empfehlung ab
-  //      5. Klasse, Neuroplastizität.
-  //   2. (optional) { start: 2096, end: 2191, titel: "Die Synthese: Denken darf
-  //      anstrengend sein" } — Finale Synthese direkt im Anschluss ans Hauptfenster.
   schattenseite: {
     intro:
       "Zwei Wochen nach dem Experiment treffen sich Kathrin und Tobias wieder: Wie haben sie sich beim Schreiben gefühlt, was zeigen ihre Hormonwerte — und woran erinnern sie sich heute noch?",
@@ -1146,6 +1134,36 @@ const station3: Station = {
         externalUrl: "https://www.youtube.com/watch?v=U5bLCVTr9_I",
         start: 1600,
         end: 2105,
+      },
+    ],
+    extras: [
+      {
+        titel: "Ab wann gehört KI in die Schule?",
+        beschreibung:
+          "PH Zürich (Bernadette Spieler): Kinder übernehmen KI-Antworten oft unreflektiert — warum sie KI-Hilfsmittel erst ab etwa der 5. Klasse empfiehlt und was Neuroplastizität damit zu tun hat.",
+        media: {
+          kind: "youtube",
+          youtubeId: "U5bLCVTr9_I",
+          title: "Einstein — KI im Kopf",
+          sourceKey: "einstein-ki-im-kopf",
+          externalUrl: "https://www.youtube.com/watch?v=U5bLCVTr9_I",
+          start: 1224,
+          end: 1392,
+        },
+      },
+      {
+        titel: "Die Synthese: Denken darf anstrengend sein",
+        beschreibung:
+          "Das Fazit der Sendung direkt im Anschluss ans Hauptfenster: Denken ist wie Sport — und menschliche Intelligenz verknüpft Denken mit Gefühlen.",
+        media: {
+          kind: "youtube",
+          youtubeId: "U5bLCVTr9_I",
+          title: "Einstein — KI im Kopf",
+          sourceKey: "einstein-ki-im-kopf",
+          externalUrl: "https://www.youtube.com/watch?v=U5bLCVTr9_I",
+          start: 2096,
+          end: 2191,
+        },
       },
     ],
   } satisfies MediaBlock,
@@ -1622,6 +1640,34 @@ const station4: Station = {
             label: "Lilly, der Valentinstag und die Meditations-Panne",
           },
         ],
+      },
+    ],
+    extras: [
+      {
+        titel: "Beides zugleich: gefährlich und weniger allein",
+        beschreibung:
+          "Florians O-Ton aus dem Puls-Beitrag — der ehrlichste Satz der ganzen Station: Man kann sich darin verlieren, und doch fühlt man sich weniger allein. Beide Pole in einem Atemzug.",
+        media: {
+          kind: "youtube",
+          youtubeId: "jh6Pu-h7rCw",
+          title: "Puls — KI als Seelentröster",
+          sourceKey: "puls-seelentröster-ki",
+          start: 833,
+          end: 859,
+        },
+      },
+      {
+        titel: "Der Bot ohne Freundlichkeitsfilter",
+        beschreibung:
+          "Florian schaltet den Freundlichkeitsfilter aus — und bekommt eine harte, konfigurierbare Bot-Persönlichkeit. Ein KI-«Therapeut» hat keine feste Rolle: Er ist promptbar.",
+        media: {
+          kind: "youtube",
+          youtubeId: "jh6Pu-h7rCw",
+          title: "Puls — KI als Seelentröster",
+          sourceKey: "puls-seelentröster-ki",
+          start: 886,
+          end: 944,
+        },
       },
     ],
   } satisfies MediaBlock,

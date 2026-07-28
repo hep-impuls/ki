@@ -19,8 +19,10 @@
  */
 
 import { STATIONEN_V3 } from "../_data/stationenV3";
+import { STATIONEN } from "../_data/stationen";
 import { AUFTAKT_SKALA_POLLS } from "../_data/auftaktPolls";
-import { VORWISSEN_FRAGE, VORWISSEN_OPTIONEN } from "../_data/auftakt";
+import { AUFTAKT_SWIPE_KARTEN } from "../_data/auftaktSwipe";
+import { VORWISSEN_FRAGE, VORWISSEN_OPTIONEN, PRE_POLL_FRAGE } from "../_data/auftakt";
 import {
   MR_PRE_FRAGE,
   MR_POST_FRAGE,
@@ -76,6 +78,19 @@ function poleLabel(achse?: { links: string; rechts: string }) {
   return (bucket: string): string => {
     if (bucket === "links") return achse?.links ?? "ablehnen";
     if (bucket === "rechts") return achse?.rechts ?? "zustimmen";
+    return bucket;
+  };
+}
+
+/**
+ * Label für die v2-Skala (`Skala.tsx`, Stufen 1–7) — anders als der v3-Slider,
+ * der 0–100 zählt. Wird bewusst als Bucket-Liste (`format: "auswahl"`) statt
+ * als Slider ausgewiesen, damit der Report nicht «Skala 0–100» darüberschreibt.
+ */
+function stufenLabel(achse: { links: string; rechts: string }, stufen = 7) {
+  return (bucket: string): string => {
+    const m = /^s(\d+)$/.exec(bucket);
+    if (m) return `Stufe ${m[1]} von ${stufen} (${achse.links} ↔ ${achse.rechts})`;
     return bucket;
   };
 }
@@ -142,6 +157,18 @@ function buildRegistry(): Map<string, PollMeta> {
     optionLabel: sliderLabel(GLOBAL_AXIS),
   });
 
+  // Auftakt — Werte-Karten (eigenes Set, IDs beginnen selbst mit "swipe-",
+  // der Zähler heisst daher "swipe-swipe-auftakt-…").
+  AUFTAKT_SWIPE_KARTEN.forEach((karte, i) => {
+    put(`swipe-${karte.id}`, {
+      frage: karte.aussage,
+      kontext: "Auftakt · Werte-Karte",
+      format: "swipe",
+      sortKey: `0-swipe-${String(i).padStart(2, "0")}`,
+      optionLabel: poleLabel(karte.achse),
+    });
+  });
+
   // Stationen — Polls, Swipe-Karten, Verständnisfragen.
   for (const st of STATIONEN_V3) {
     const ort = `Station ${st.nummer}: ${st.frage}`;
@@ -201,6 +228,33 @@ function buildRegistry(): Map<string, PollMeta> {
         sortKey: `${sk}-c-wc${String(i).padStart(2, "0")}`,
         optionLabel: wissenLabel,
       });
+    });
+  }
+
+  // Legacy v2 (`unitPolls.pollId.globalPre/Post`, `stationPost`): die Zähler
+  // liegen weiter in Firestore, obwohl die v2-Komponenten nicht mehr gemountet
+  // sind. Ohne Registrierung zeigt der Report nur den nackten Slug.
+  put("g-pos-pre", {
+    frage: PRE_POLL_FRAGE,
+    kontext: "Auftakt · Positions-Skala (vorher, v2)",
+    format: "auswahl",
+    sortKey: "0-pos-v2-pre",
+    optionLabel: stufenLabel(GLOBAL_AXIS),
+  });
+  put("g-pos-post", {
+    frage: "Und jetzt: Ist KI für dich eher eine Chance oder eher eine Bedrohung?",
+    kontext: "Abschluss · Positions-Skala (nachher, v2)",
+    format: "auswahl",
+    sortKey: "9-pos-v2-post",
+    optionLabel: stufenLabel(GLOBAL_AXIS),
+  });
+  for (const st of STATIONEN) {
+    put(`st${st.nummer}-pos-post`, {
+      frage: st.frage,
+      kontext: `Station ${st.nummer} (v2) · Positions-Skala (nachher)`,
+      format: "auswahl",
+      sortKey: `2-${String(st.nummer).padStart(2, "0")}-z-pos-v2`,
+      optionLabel: stufenLabel(st.achse),
     });
   }
 
