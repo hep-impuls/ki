@@ -2440,20 +2440,20 @@ const station6: Station = {
     sonne: {
       inhalt:
         "Station 6 · Maschinen über Leben — Schritt 2/7: Sonnenseite (KI als Präzisionswerkzeug)",
-      dauerMin: 5,
+      dauerMin: 6,
       lernziel:
-        "Du kannst erklären, was das KI-System Maven leistet und welches Versprechen es im Krieg gibt — mehr Präzision, schnellere Lagebilder, potenziell weniger Zivilopfer.",
+        "Du kannst erklären, was das KI-System Maven im Kriegseinsatz leistet und welches Versprechen damit verbunden ist — mehr Tempo, ein Echtzeit-Lagebild und angeblich weniger Zivilopfer.",
       anleitung:
-        "Schaue ab Minute 12 für rund 2 Minuten. Was kann Maven laut Bericht? Achte auf die Formulierung «könnte zivile Opfer reduzieren» — was setzt das voraus? Notiere dir einen Gedanken.",
+        "Schau im ersten Ausschnitt von Minute 12:40 bis 15:06. Was leistet Maven laut Bericht? Achte besonders auf das Versprechen «könnte zivile Opfer reduzieren» gegen Ende — was müsste dafür alles stimmen? Der zweite, freiwillig ergänzte Ausschnitt zeigt eine unabhängige Quelle aus dem Ukrainekrieg.",
     },
     schatten: {
       inhalt:
         "Station 6 · Maschinen über Leben — Schritt 3/7: Schattenseite (Automation Bias & Mädchenschule)",
-      dauerMin: 5,
+      dauerMin: 6,
       lernziel:
-        "Du kannst den Begriff «Automation Bias» erklären und an einem konkreten Beispiel zeigen, welche Folgen er im Krieg haben kann.",
+        "Du kannst den Begriff «Automation Bias» erklären, am Beispiel der Mädchenschule zeigen, welche Folgen er im Krieg haben kann, und einordnen, was «menschliche Kontrolle» angesichts wachsender Autonomie noch bedeuten kann.",
       anleitung:
-        "Schaue ab Minute 13, Sekunde 50, für rund 1 Minute. Was ist Automation Bias? Was war das Ergebnis im Fall der Mädchenschule? Wie alt waren die Daten in der Datenbank?",
+        "Schau von Minute 13:50 bis 15:41. Was ist Automation Bias? Was geschah im Fall der Mädchenschule im Süd-Iran? Und was fordert die Expertin am Schluss, wenn der Grad an Autonomie weiter steigt?",
     },
     swipe: {
       inhalt:
@@ -2542,9 +2542,9 @@ const station6: Station = {
 
   sonnenseite: {
     intro:
-      "KI macht Kriege schneller — könnte sie sie auch präziser und damit menschlicher machen? Das Maven-System von Palantir verspricht Echtzeit-Lagebilder und bessere Zielauswahl. Was das bedeutet, zeigt ein 10vor10-Bericht.",
+      "KI macht Kriege schneller — könnte sie sie auch präziser und damit menschlicher machen? Das Maven-System von Palantir verspricht ein Echtzeit-Lagebild und eine treffsicherere Zielauswahl. Ein zweiter, freiwilliger Ausschnitt zeigt zusätzlich, wie autonome Drohnen im Ukrainekrieg bereits heute funktionieren.",
     anleitung:
-      "Schaue ab Minute 12 für rund 2 Minuten. Was kann Maven laut Bericht leisten? Achte auf die Formulierung «könnte zivile Opfer reduzieren» — was würde das voraussetzen?",
+      "Schau im ersten Ausschnitt von Minute 12:40 bis 15:06: Was leistet Maven laut Bericht — und was müsste für das Versprechen «könnte zivile Opfer reduzieren» gegen Ende alles stimmen? Mittendrin (ab 13:37) kommen im selben Ausschnitt schon kritische Stimmen zu Wort — die gehören inhaltlich zur nächsten Seite, hier zählt zuerst das Versprechen.",
     media: [
       {
         kind: "srf",
@@ -2553,17 +2553,29 @@ const station6: Station = {
         sourceKey: "10v10-ki-krieg",
         externalUrl:
           "https://www.srf.ch/news/international/nahost/ki-im-krieg-wenn-im-krieg-maschinen-statt-menschen-entscheiden",
+        start: 760,
+        end: 906,
         guidance:
-          "Schauen Sie ab Minute 12 für rund 2 Minuten — es geht darum, was das KI-System Maven leisten kann und was Fachleute sich davon versprechen (Echtzeit-Lagebild, Ziel- und Waffenvorschläge, potenzielle Reduktion von Zivilopfern).",
+          "Schau von Minute 12:40 bis 15:06. Achte darauf, was das System Maven laut Bericht leisten kann — über 1'000 Ziele am ersten Tag, ein Echtzeit-Lagebild, Vorschläge für passende Waffensysteme — und auf das Versprechen gegen Ende: «könnte zivile Opfer reduzieren». Was müsste dafür alles stimmen? Ab Minute 13:37 kommen im selben Ausschnitt schon kritische Stimmen zu Wort — die gehören inhaltlich zur nächsten Seite (Schattenseite); hier zählt vorerst das Versprechen.",
+      },
+      {
+        kind: "srf",
+        urn: "urn:srf:video:480a9f85-fd27-414f-a94a-23ca090e0159",
+        title: "Rundschau — Der Live-Test einer autonomen Drohne",
+        sourceKey: "rundschau-ki-krieg",
+        start: 2624,
+        end: 2720,
+        guidance:
+          "Schau von Minute 43:44 bis 45:20. Ein Hersteller testet eine Kamikaze-Drohne, die selbstständig — «unabhängig vom Piloten» — ins Ziel fliegt. Kurz vorher (Minute 41:37) nennt der ukrainische Minister Fedorow eine Zahl: über 80 % aller zerstörten Ziele gehen inzwischen auf Drohnen zurück — eine zweite, unabhängige Quelle für das Effizienz-Versprechen.",
       },
     ],
   },
 
   schattenseite: {
     intro:
-      "Dasselbe System, das Präzision verspricht, kann durch Automation Bias und veraltete Daten zur Katastrophe führen. Im Süd-Iran traf ein Angriff eine Mädchenschule — 165 Kinder und 26 Lehrer starben.",
+      "Dasselbe System, das Präzision verspricht, kann durch Automation Bias und veraltete Daten zur Katastrophe führen. Im Süd-Iran traf ein Angriff eine Mädchenschule — 165 Kinder und 26 Lehrer starben. Am Ende des Ausschnitts zieht eine Expertin die Konsequenz: Der Grad an Autonomie wird weiter steigen — umso wichtiger bleibt «bedeutsame menschliche Kontrolle».",
     anleitung:
-      "Schaue ab Minute 13, Sekunde 50, für rund 1 Minute. Was ist Automation Bias? Welche Rolle spielten veraltete Daten im Fall der Mädchenschule? Was folgt daraus für den Begriff «menschliche Kontrolle»?",
+      "Schau von Minute 13:50 bis 15:41: Was ist Automation Bias, was geschah im Fall der Mädchenschule — und was fordert die Expertin am Schluss für den Umgang mit wachsender Autonomie?",
     media: [
       {
         kind: "srf",
@@ -2572,8 +2584,29 @@ const station6: Station = {
         sourceKey: "10v10-ki-krieg",
         externalUrl:
           "https://www.srf.ch/news/international/nahost/ki-im-krieg-wenn-im-krieg-maschinen-statt-menschen-entscheiden",
+        start: 830,
+        end: 941,
         guidance:
-          "Schauen Sie ab Minute 13 Sekunde 50 für rund 1 Minute — es geht um Automation Bias (Menschen vertrauen der Maschine mehr als ihrer eigenen Intuition) und den Fall der getroffenen Mädchenschule im Süd-Iran (165 Kinder, veraltete Datenbank).",
+          "Schau von Minute 13:50 bis 15:41. Zuerst die Definition: Automation Bias heisst, dass Menschen einer Maschine mehr vertrauen als der eigenen Intuition — selbst wenn etwas nicht stimmt («Wir sagen, da ist irgendwas falsch bei uns und nicht beim System»). Dann der Fall: Eine Mädchenschule im Süd-Iran wurde getroffen, 165 Kinder und 26 Lehrer starben, weil eine veraltete Datenbank das Gebäude noch als Militärstützpunkt führte. Am Schluss ordnet die Expertin ein: Der Grad an Autonomie wird weiter steigen — umso wichtiger bleibt «bedeutsame menschliche Kontrolle».",
+      },
+    ],
+    extras: [
+      {
+        titel: "Google, die Schweiz und die Kriege",
+        beschreibung:
+          "10vor10-Beitrag: Googles Cloud-Systeme sollen laut Recherchen auch der israelischen Armee zur Zielbestimmung im Gaza-Krieg dienen (Projekt Nimbus). Die Schweiz kennt bisher keine Melde- oder Bewilligungspflicht für solche Cloud-Dienste — eine Regulierungslücke.",
+        media: {
+          kind: "srf",
+          urn: "urn:srf:video:d0c3642e-ebaf-4664-834e-cd0392bafe9c",
+          title: "10vor10 — Google, die Schweiz und die Kriege",
+          sourceKey: "10v10-google-krieg",
+          externalUrl:
+            "https://www.srf.ch/play/tv/10-vor-10/video/google-schweiz-und-kriege?urn=urn:srf:video:d0c3642e-ebaf-4664-834e-cd0392bafe9c",
+          start: 665,
+          end: 977,
+          guidance:
+            "Schau von Minute 11:05 bis 16:17: Wie Cloud- und KI-Systeme — teils aus Zürich — laut Recherchen auch für die Zielbestimmung im Gaza-Krieg genutzt werden, und weshalb Schweizer Gesetze (Söldner- und Güterkontrollgesetz) Cloud-Dienste bisher nicht erfassen.",
+        },
       },
     ],
   },
