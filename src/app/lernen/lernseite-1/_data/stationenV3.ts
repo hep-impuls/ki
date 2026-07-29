@@ -1195,7 +1195,7 @@ const station3: Station = {
     {
       id: "st3-fakt-3",
       claim:
-        "ChatGPT-Nutzende konnten ihre eigenen Texte nach kurzer Zeit deutlich schlechter zitieren und empfanden weniger «Eigentum» an ihren Formulierungen — das deckt sich mit dem Ergebnis des Einstein-Experiments, in dem Tobias zwei Wochen später keinen einzigen Satz seines KI-generierten Textes erinnern konnte.",
+        "ChatGPT-Nutzende konnten ihre eigenen Texte nach kurzer Zeit deutlich schlechter zitieren und empfanden weniger «Eigentum» an ihren Formulierungen — das deckt sich mit dem Ergebnis des Einstein-Experiments, in dem Tobias sich zwei Wochen später an keinen einzigen Satz seines KI-generierten Textes erinnern konnte.",
       sourceName: "MIT Media Lab (2025) + SRF Einstein (2025)",
       sourceUrl: "https://media.mit.edu/projects/your-brain-on-chatgpt/overview/",
       date: "2025",
