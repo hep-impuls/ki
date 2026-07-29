@@ -1818,7 +1818,7 @@ const station4: Station = {
       id: "st4-mc-2",
       kind: "mc",
       frage:
-        "Was fanden Forschende (Fang et al., MIT/OpenAI 2025) in ihrer randomisierten Studie über tägliche Chatbot-Nutzung?",
+        "Was fanden Forschende (Fang et al., MIT/OpenAI 2025) in ihrer randomisierten Studie über tägliche Chatbot-Nutzung heraus?",
       optionen: [
         {
           label:
