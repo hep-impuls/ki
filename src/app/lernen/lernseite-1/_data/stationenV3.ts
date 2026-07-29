@@ -293,7 +293,7 @@ const station1: Station = {
           {
             label: "Ihre Arbeitsinhalte verändern sich durch KI.",
             feedback:
-              "Richtig. Die Studie spricht von «KI-Exposition» — die Arbeit verändert sich, aber Stellen fallen nicht automatisch weg.",
+              "Richtig. Die Studie spricht von «KI-Exposition» — die Arbeit verändert sich, aber die Stellen fallen nicht automatisch weg.",
           },
           {
             label:
