@@ -432,7 +432,7 @@ const station1: Station = {
             label:
               "KI wird das globale BIP in 10 Jahren um mehr als 25% steigern — darin sind sich alle Institutionen einig, und der Effekt ist bereits in den Börsenkursen eingepreist",
             feedback:
-              "Falsch. Keine seriöse BIP-Schätzung kommt auf +25% über 10 Jahre, und «alle einig» ist falsch — der Dissens zwischen Acemoglu und Goldman Sachs ist fundamental.",
+              "Falsch. Keine seriöse BIP-Schätzung kommt auf +25% über 10 Jahre, und «alle einig» ist falsch — der Dissens zwischen Daron Acemoglu und Goldman Sachs ist fundamental.",
           },
         ],
         correctIndices: [1],
