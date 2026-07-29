@@ -67,7 +67,7 @@ export default function GlobalSlider({
         {phase === "pre" ? "Vorher · meine Haltung" : "Nachher · meine Haltung"}
       </p>
       <p className="text-body-lg text-on-surface">
-        KI in meinem Leben gesamt — eher Bedrohung oder eher Chance?
+        KI in meinem Leben — eher Bedrohung oder eher Chance?
       </p>
 
       <input
