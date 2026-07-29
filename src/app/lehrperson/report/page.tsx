@@ -4,10 +4,12 @@ import { Suspense, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { loadTeacherOrakelSecure, loadTeacherReportSecure } from "@/lib/api";
 import { describePoll } from "@/lib/pollLabels";
+import { STATIONEN_V3 } from "@/app/lernen/lernseite-1/_data/stationenV3";
 import KlassenKontext from "./_components/KlassenKontext";
 import KlassenRhizom from "./_components/KlassenRhizom";
 import type {
   PollAggregate,
+  StationStand,
   TeacherOrakel,
   TeacherOrakelBereich,
   TeacherOrakelThema,
@@ -26,6 +28,45 @@ import type {
 
 function pct(n: number): string {
   return `${Math.round(n)}%`;
+}
+
+/** Modul-ID, unter der Lernseite 1 ihren Fortschritt spiegelt (ProgressMirror). */
+const LERNSEITE_1 = "lernseite-1";
+
+/**
+ * Die Themen von Lernset 1 in Anzeige-Reihenfolge — direkt aus der Inhalts-
+ * definition, damit Umbenennungen und ein- oder ausgeschaltete Themen im Report
+ * automatisch mitlaufen. (`stationenV3` liegt ueber die Poll-Registry ohnehin
+ * schon in diesem Bundle.)
+ */
+const THEMEN = STATIONEN_V3.map((s) => ({ id: s.id, kurzname: s.kurzname }));
+
+/**
+ * Stand eines Themas in einer Tabellenzelle. Drei Zustaende, absichtlich auch
+ * ohne Farbe unterscheidbar: nicht begonnen «–», begonnen «42 %»,
+ * abgeschlossen «78 %» mit Haken. Prozent und Haken sagen Verschiedenes — der
+ * Haken meint das 60-%-Gate auf den Verstaendnisfragen, die Prozentzahl den
+ * Anteil bearbeiteter Elemente. Beides zusammen ist die ehrliche Auskunft.
+ */
+function ThemaZelle({ stand }: { stand?: StationStand }) {
+  if (!stand) {
+    return (
+      <span className="text-on-surface-variant" aria-label="nicht begonnen">
+        –
+      </span>
+    );
+  }
+  if (stand.completed) {
+    return (
+      <span className="inline-flex items-center gap-xs font-medium text-on-surface">
+        <span className="material-symbols-outlined text-[18px] text-tertiary" aria-hidden>
+          check_circle
+        </span>
+        {pct(stand.pct)}
+      </span>
+    );
+  }
+  return <span className="text-on-surface">{pct(stand.pct)}</span>;
 }
 
 /**
@@ -245,10 +286,16 @@ function ReportFlow() {
       .catch(() => {});
   }, [code, secret]);
 
-  const moduleIds = useMemo(() => {
+  /**
+   * Module ausser Lernseite 1. Die standen frueher als zusaetzliche Spalten
+   * mit ihrer technischen ID unter der Ueberschrift «Lernset 1» — sie bekommen
+   * jetzt eine eigene kleine Tabelle darunter.
+   */
+  const weitereModule = useMemo(() => {
     if (!report) return [];
     const set = new Set<string>();
     for (const s of report.students) for (const m of Object.keys(s.modulePct)) set.add(m);
+    set.delete(LERNSEITE_1);
     return Array.from(set).sort();
   }, [report]);
 
@@ -336,45 +383,89 @@ function ReportFlow() {
             Lernset 1 · Kann KI das? Eine Positionsreise
           </h2>
           <h3 className="mt-lg text-headline-sm text-on-surface">
-            Fortschritt pro Schüler:in
+            Fortschritt pro Schüler:in und Thema
           </h3>
           {report.students.length === 0 ? (
             <p className="mt-sm text-body-md text-on-surface-variant">
               Noch keine Schüler:innen in dieser Klasse.
             </p>
           ) : (
-            <div className="mt-md overflow-x-auto rounded-xl border border-outline-variant">
-              <table className="w-full border-collapse text-body-sm">
-                <thead>
-                  <tr className="bg-surface-dim text-left text-label-sm text-on-surface-variant">
-                    <th className="px-md py-sm">Code</th>
-                    {moduleIds.map((m) => (
-                      <th key={m} className="px-md py-sm">{m}</th>
-                    ))}
-                    <th className="px-md py-sm">Quiz</th>
-                    <th className="px-md py-sm">Zuletzt aktiv</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {report.students.map((s, i) => (
-                    <tr key={s.code ?? i} className="border-t border-outline-variant">
-                      <td className="px-md py-sm font-medium text-on-surface">{s.code ?? "—"}</td>
-                      {moduleIds.map((m) => (
-                        <td key={m} className="px-md py-sm text-on-surface-variant">
-                          {s.modulePct[m] != null ? pct(s.modulePct[m]) : "–"}
-                        </td>
+            <>
+              <div className="mt-md overflow-x-auto rounded-xl border border-outline-variant">
+                <table className="w-full border-collapse text-body-sm">
+                  <thead>
+                    <tr className="bg-surface-dim text-left text-label-sm text-on-surface-variant">
+                      <th className="px-md py-sm">Code</th>
+                      {THEMEN.map((t) => (
+                        <th key={t.id} className="px-md py-sm whitespace-nowrap">
+                          {t.kurzname}
+                        </th>
                       ))}
-                      <td className="px-md py-sm text-on-surface-variant">
-                        {s.quizMax > 0 ? `${s.quizPunkte}/${s.quizMax}` : "–"}
-                      </td>
-                      <td className="px-md py-sm text-on-surface-variant">
-                        {s.lastActive ? s.lastActive.slice(0, 10) : "–"}
-                      </td>
+                      <th className="px-md py-sm border-l border-outline-variant">Gesamt</th>
+                      <th className="px-md py-sm">Quiz</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+                  </thead>
+                  <tbody>
+                    {report.students.map((s, i) => (
+                      <tr key={s.code ?? i} className="border-t border-outline-variant">
+                        <td className="px-md py-sm font-medium text-on-surface">{s.code ?? "—"}</td>
+                        {THEMEN.map((t) => (
+                          <td key={t.id} className="px-md py-sm">
+                            <ThemaZelle stand={s.stationen?.[t.id]} />
+                          </td>
+                        ))}
+                        <td className="px-md py-sm border-l border-outline-variant text-on-surface-variant">
+                          {s.modulePct[LERNSEITE_1] != null ? pct(s.modulePct[LERNSEITE_1]) : "–"}
+                        </td>
+                        <td className="px-md py-sm text-on-surface-variant">
+                          {s.quizMax > 0 ? `${s.quizPunkte}/${s.quizMax}` : "–"}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-sm text-body-sm text-on-surface-variant">
+                <span className="material-symbols-outlined align-[-4px] text-[18px] text-tertiary">
+                  check_circle
+                </span>{" "}
+                abgeschlossen (Verständnisfragen ab 60 %) · Prozentzahl = Anteil der
+                bearbeiteten Elemente dieses Themas · «–» = nicht begonnen. «Gesamt» ist
+                derselbe Anteil über alle Themen zusammen.
+              </p>
+
+              {weitereModule.length > 0 && (
+                <>
+                  <h3 className="mt-xl text-headline-sm text-on-surface">Weitere Module</h3>
+                  <div className="mt-md overflow-x-auto rounded-xl border border-outline-variant">
+                    <table className="w-full border-collapse text-body-sm">
+                      <thead>
+                        <tr className="bg-surface-dim text-left text-label-sm text-on-surface-variant">
+                          <th className="px-md py-sm">Code</th>
+                          {weitereModule.map((m) => (
+                            <th key={m} className="px-md py-sm">{m}</th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {report.students.map((s, i) => (
+                          <tr key={s.code ?? i} className="border-t border-outline-variant">
+                            <td className="px-md py-sm font-medium text-on-surface">
+                              {s.code ?? "—"}
+                            </td>
+                            {weitereModule.map((m) => (
+                              <td key={m} className="px-md py-sm text-on-surface-variant">
+                                {s.modulePct[m] != null ? pct(s.modulePct[m]) : "–"}
+                              </td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </>
+              )}
+            </>
           )}
 
           {polls.length > 0 && (

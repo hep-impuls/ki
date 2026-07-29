@@ -9,6 +9,7 @@ import {
 import type {
   PollAggregate,
   Progress,
+  StationStand,
   TeacherPrefs,
   TeacherReport,
   TeacherReportStudent,
@@ -199,6 +200,31 @@ function quizTotals(progressByModule: Record<string, Progress>) {
   return { punkte, max, modulePct };
 }
 
+/**
+ * Stand je Thema aus den `type:"station"`-Bloecken (Lernseite 1). Der Report
+ * zeigt damit pro Schueler:in, welche Themen abgeschlossen, begonnen oder gar
+ * nicht angefasst sind — vorher gab es nur das Total ueber das ganze Lernset.
+ *
+ * `pct` wird erst seit 2026-07-29 mitgespiegelt; aeltere Docs fallen auf
+ * 100/0 nach `completed` zurueck, bis der naechste Besuch den Wert nachliefert.
+ */
+function stationStaende(
+  progressByModule: Record<string, Progress>,
+): Record<string, StationStand> {
+  const out: Record<string, StationStand> = {};
+  for (const prog of Object.values(progressByModule)) {
+    for (const [blockId, block] of Object.entries(prog.blocks ?? {})) {
+      if (block.type !== "station") continue;
+      const completed = block.completed === true;
+      out[blockId] = {
+        pct: typeof block.pct === "number" ? block.pct : completed ? 100 : 0,
+        completed,
+      };
+    }
+  }
+  return out;
+}
+
 export async function teacherReport(
   classCodeRaw: string,
   secret: string,
@@ -213,6 +239,7 @@ export async function teacherReport(
     return {
       code: s.code, // Secret war korrekt → Codes sichtbar
       modulePct,
+      stationen: stationStaende(s.progressByModule),
       quizPunkte: punkte,
       quizMax: max,
       lastActive: s.lastActive,

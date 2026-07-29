@@ -10,6 +10,36 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-07-29 — Lehrer-Report: Fortschritt pro Thema statt nur pro Lernset (Pietro)
+
+Der Report zeigte für Lernseite 1 nur **einen** Prozentwert pro Schüler:in über
+das ganze Lernset. Seit die Themen frei wählbar sind und es keine Mindestzahl
+mehr gibt (Entscheid 2026-07-28), sagt dieser eine Wert wenig: Er unterscheidet
+nicht, ob jemand zwei Themen ganz oder sechs Themen halb bearbeitet hat.
+
+**Neu:** eine Spalte je Thema mit drei unterscheidbaren Zuständen — «–» nicht
+begonnen, Prozentzahl begonnen, Prozentzahl mit Haken abgeschlossen. Prozentzahl
+und Haken sagen bewusst Verschiedenes: der Haken meint das 60-%-Gate auf den
+Verständnisfragen (`stationErfuellt`), die Prozentzahl den Erfüllungsgrad
+(`stationErfuellung`). Die Spalte «Zuletzt aktiv» ist entfallen — sie beruhte
+auf `completedAt` und war fast immer leer.
+
+Betroffene Stellen:
+
+- `_lib/progressSnapshot.ts` — jeder `type:"station"`-Block spiegelt jetzt
+  zusätzlich `pct`. Nicht begonnene Themen haben weiterhin **keinen** Eintrag;
+  daraus liest der Report «nicht begonnen».
+- `src/lib/types.ts` — `ProgressBlock.pct`, neuer Typ `StationStand`,
+  `TeacherReportStudent.stationen`.
+- `src/lib/server/teacherStore.ts` — `stationStaende()`; Docs von vor dem
+  2026-07-29 haben kein `pct` und fallen auf 100/0 nach `completed` zurück, bis
+  der nächste Besuch den Wert nachliefert.
+- `src/app/lehrperson/report/page.tsx` — Themen-Spalten aus `STATIONEN_V3`
+  (keine zweite Namensliste), Legende, Module ausser `lernseite-1` in einer
+  eigenen Tabelle «Weitere Module» statt als technische Spalten-IDs unter der
+  Überschrift «Lernset 1».
+- `docs/teil-a-lernset-1.md` §A5/§A6 nachgezogen.
+
 ## 2026-07-28 — Lernseite 1: Medien-Snippet-Überarbeitung, Station 7 ausgeschaltet (Pietro)
 
 Umsetzung des Medien-Audits (`docs/material-pietro/AUDIT_medien-snippets_2026-07-28.md`,

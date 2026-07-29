@@ -15,7 +15,9 @@
  *     Arbeit tatsaechlich passiert ist.
  *   - quizScore: Summe der Quiz-Punkte ueber alle Themen.
  *   - blocks: pro **begonnenem** Thema ein `{type:"station"}` mit
- *     `completed` (60%-Quiz-Gate erfuellt) plus Quiz-Punkte (`punkte`/`max`).
+ *     `completed` (60%-Quiz-Gate erfuellt), `pct` (Erfuellungsgrad dieses
+ *     Themas) plus Quiz-Punkte (`punkte`/`max`). Nicht begonnene Themen haben
+ *     **keinen** Eintrag — daraus liest der Lehrer-Report «nicht begonnen».
  *
  * NICHT gespiegelt: Reflexionssaetze, Werte-Profil, Freitext, einzelne
  * Antworten — die bleiben lokal (Datenminimierung) und erscheinen nur im
@@ -42,6 +44,7 @@ export function buildLernseite1Progress(): Progress {
     blocks[station.id] = {
       type: "station",
       completed: istAbgeschlossen(station.id),
+      pct: erfuellung.prozent,
       punkte,
       max,
     };

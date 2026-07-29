@@ -17,6 +17,13 @@ export interface ProgressBlock {
   /** Gewaehlte Antwort/Bucket (Index, Bool, String oder Wert). */
   answer?: unknown;
   completed?: boolean;
+  /**
+   * Erfuellungsgrad des Blocks in Prozent (0–100). Bei `type:"station"` der
+   * Anteil der bearbeiteten Elemente dieses Themas — damit der Lehrer-Report
+   * pro Thema mehr zeigen kann als das binaere `completed`. Fehlt bei Docs, die
+   * vor 2026-07-29 gespiegelt wurden; die werden beim naechsten Besuch ergaenzt.
+   */
+  pct?: number;
   /** Optionaler Punktwert (z.B. Quiz). */
   punkte?: number;
   max?: number;
@@ -44,12 +51,29 @@ export interface TeacherPrefs {
 
 /* ── Report-Typen ─────────────────────────────────────────────────────────── */
 
+/**
+ * Stand eines einzelnen Themas (Station) im Lehrer-Report. Fehlt der Eintrag
+ * ganz, wurde das Thema **nicht begonnen** — gespiegelt werden nur angefangene
+ * Themen (siehe `progressSnapshot.ts`).
+ */
+export interface StationStand {
+  /** Erfuellungsgrad 0–100: Anteil der bearbeiteten Elemente dieses Themas. */
+  pct: number;
+  /** Abgeschlossen im Sinn des 60-%-Gates auf den Verstaendnisfragen. */
+  completed: boolean;
+}
+
 /** Eine Zeile in der Lehrer-Einzel-Schueler-Tabelle. */
 export interface TeacherReportStudent {
   /** Nur bei korrektem Secret befuellt (sonst anonymisiert). */
   code?: string;
   /** pct je moduleId. */
   modulePct: Record<string, number>;
+  /**
+   * Stand je Thema (stationId → Stand), aus den `type:"station"`-Bloecken aller
+   * Module. Nur begonnene Themen sind enthalten.
+   */
+  stationen: Record<string, StationStand>;
   /** Summe Quiz-Punkte ueber alle Module. */
   quizPunkte: number;
   quizMax: number;
