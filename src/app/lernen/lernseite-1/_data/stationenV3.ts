@@ -274,7 +274,7 @@ const station1: Station = {
       {
         id: "st1-fakt-6",
         claim:
-          "Ökonomen sind sich uneins: Nobelpreisträger Acemoglu (MIT) schätzt den BIP-Effekt von KI über 10 Jahre auf nur 1,1–1,6%; Goldman Sachs rechnet mit +7%. Die Spannweite zeigt, wie unsicher die Lage ist.",
+          "Ökonomen sind sich uneins: Nobelpreisträger Daron Acemoglu (MIT) schätzt den BIP-Effekt von KI über 10 Jahre auf nur 1,1–1,6%; Goldman Sachs rechnet mit +7%. Die Spannweite zeigt, wie unsicher die Lage ist.",
         figure: "1,1–1,6% vs. +7% BIP über 10 Jahre",
         sourceName: "MIT Economics / MIT Sloan",
         sourceUrl:
