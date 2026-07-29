@@ -414,7 +414,7 @@ const station1: Station = {
           {
             label: "Alle Ökonomen sind sich einig: +7%",
             feedback:
-              "Falsch. Die Meinungen gehen stark auseinander; Goldman Sachs schätzt +7%, Acemoglu (MIT) nur +1,1%.",
+              "Falsch. Die Meinungen gehen stark auseinander; Goldman Sachs schätzt +7%, Daron Acemoglu (MIT) nur +1,1%.",
           },
           {
             label:
