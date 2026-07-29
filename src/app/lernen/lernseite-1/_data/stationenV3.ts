@@ -466,7 +466,7 @@ const station1: Station = {
         feedbackRichtig:
           "Stimmt — dieser Konsens existiert nicht. Daron Acemoglu (MIT) schätzt nur +1,1% BIP über 10 Jahre und warnt vor steigender Ungleichheit; Goldman Sachs erwartet +7%. Seriöse Ökonomen sind tief gespalten.",
         feedbackFalsch:
-          "Falsch. Die Forschung ist alles andere als einig. Nobelpreisträger Acemoglu (MIT) hält die BIP-Gewinne für minimal; Goldman Sachs sieht sie als riesig. Die Spannweite zeigt, wie unsicher die Datenlage ist.",
+          "Falsch. Die Forschung ist alles andere als einig. Nobelpreisträger Daron Acemoglu (MIT) hält die BIP-Gewinne für minimal; Goldman Sachs sieht sie als riesig. Die Spannweite zeigt, wie unsicher die Datenlage ist.",
       },
     ] satisfies QuizPool,
 
