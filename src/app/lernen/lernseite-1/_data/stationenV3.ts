@@ -1073,7 +1073,7 @@ const station3: Station = {
 
   sonnenseite: {
     intro:
-      "KI muss nicht passiv konsumiert werden — man kann sie selbst bauen. Lisa (18) zeigt in zwei Abschnitten, wie das Entwickeln einer eigenen KI mehr Lernen auslöst als jedes Prompting: erst der Bauprozess, dann die Prämierung am ETH-AI-Festival. Der Player springt automatisch zum zweiten Abschnitt.",
+      "KI muss nicht passiv konsumiert werden — man kann sie selbst bauen. Lisa (18) zeigt in zwei Abschnitten, wie das Entwickeln einer eigenen KI den Lernprozess stärker fördert als jedes Prompting: erst der Bauprozess, dann die Prämierung am ETH-AI-Festival. Der Player springt automatisch zum zweiten Abschnitt.",
     anleitung:
       "Schau dir beide Abschnitte an (ca. 7 Min., der Player springt automatisch weiter). Achte im ersten Teil darauf, was Lisa über den Prozess — nicht das Produkt — sagt; im zweiten Teil darauf, wie sie sich nach der Prämierung fühlt. Frage dich danach: Was hat sie gelernt, das sie ohne das Bauen nie gelernt hätte?",
     media: [
