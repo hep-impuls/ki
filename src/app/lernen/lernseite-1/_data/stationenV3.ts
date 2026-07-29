@@ -1349,7 +1349,7 @@ const station3: Station = {
         },
         {
           label:
-            "Wer zuerst selbst schreibt und dann KI nutzt, zeigt höhere Gedächtnisaktivierung als umgekehrt",
+            "Wer zuerst selbst schreibt und dann KI nutzt, zeigt eine höhere Gedächtnisaktivierung als umgekehrt",
           feedback:
             "Korrekt — die Reihenfolge der Einführung beeinflusst die Gedächtnisaktivierung.",
         },
