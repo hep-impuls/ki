@@ -1121,7 +1121,7 @@ const station3: Station = {
       {
         titel: "Ab wann gehört KI in die Schule?",
         beschreibung:
-          "PH Zürich (Bernadette Spieler): Kinder übernehmen KI-Antworten oft unreflektiert — warum sie KI-Hilfsmittel erst ab etwa der 5. Klasse empfiehlt und was Neuroplastizität damit zu tun hat.",
+          "Bernadette Spieler (PH Zürich): Kinder übernehmen KI-Antworten oft unreflektiert — warum sie KI-Hilfsmittel erst ab etwa der 5. Klasse empfiehlt und was Neuroplastizität damit zu tun hat.",
         media: {
           kind: "youtube",
           youtubeId: "U5bLCVTr9_I",
