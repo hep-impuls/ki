@@ -52,7 +52,7 @@ export const FAKTEN_FALSCH: Record<string, string> = {
   "st4-fakt-1":
     "Die American Psychological Association (APA) empfiehlt KI-Chatbots ausdrücklich als vollwertigen Ersatz für Psychotherapie, sofern die Anwendung von einer Fachperson eingerichtet wurde.",
   "st4-fakt-2":
-    "Jede:r zehnte US-Teenager nutzt KI-Begleiter für soziale Interaktion, Freundschaft oder romantische Kontakte.",
+    "Jede:r zehnte US-Teenager:in nutzt KI-Begleiter für soziale Interaktion, Freundschaft oder romantische Kontakte.",
   "st4-fakt-3":
     "Eine randomisierte Studie (MIT/OpenAI, 981 Personen) zeigte: höhere tägliche Chatbot-Nutzung hing mit weniger Einsamkeit, weniger Abhängigkeit und mehr Sozialkontakten zusammen.",
   "st4-fakt-4":
