@@ -2590,7 +2590,7 @@ const station6: Station = {
         externalUrl:
           "https://www.srf.ch/news/international/nahost/ki-im-krieg-wenn-im-krieg-maschinen-statt-menschen-entscheiden",
         guidance:
-          "Achte darauf, was das System Maven laut Bericht leisten kann — über 1'000 Ziele am ersten Tag, ein Echtzeit-Lagebild, Vorschläge für passende Waffensysteme — und auf das Versprechen gegen Ende: «könnte zivile Opfer reduzieren». Was müsste dafür alles stimmen? Die kritischen Stimmen mittendrin gehören inhaltlich zur nächsten Seite (Schattenseite); hier zählt vorerst das Versprechen.",
+          "Achte darauf, was das System Maven laut Bericht leisten kann — über 1'000 Ziele am ersten Tag, ein Echtzeit-Lagebild, Vorschläge für passende Waffensysteme — und auf das Versprechen, dass zivile Opfer reduziert werden könnten. Was müsste dafür alles stimmen? Die kritischen Stimmen mittendrin gehören inhaltlich zur nächsten Seite (Schattenseite); hier zählt vorerst das Versprechen.",
       },
       {
         kind: "srf",
