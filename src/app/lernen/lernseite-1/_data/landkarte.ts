@@ -26,7 +26,7 @@ const VERSTECKTE_QUELLEN = new Set<LandkarteAxis["quelle"]>(["station-7"]);
 const ALLE_ACHSEN: LandkarteAxis[] = [
   {
     id: "global-chance-bedrohung",
-    label: "KI in meinem Leben gesamt: Chance ↔ Bedrohung",
+    label: "KI in meinem Leben: Chance ↔ Bedrohung",
     links: "Bedrohung",
     rechts: "Chance",
     pollIds: ["global-chance-bedrohung"],
