@@ -13,8 +13,8 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 12 |
-| Belegte Textblöcke | 9 |
+| Belege | 13 |
+| Belegte Textblöcke | 10 |
 | Begründete Nicht-Belege | 4 |
 | Aussagen mit Standdatum | 2 |
 
@@ -137,6 +137,15 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 - **Geprüft:** 2026-07-29
 
 > Wie das im Alltag aussah, zeigt Athen. Solons Gesetze standen auf hölzernen Tafeln, die drehbar an Pflöcken befestigt waren, etwa wie ein Kartenständer, und jeder konnte sie einsehen. Wer lesen konnte, war nicht mehr darauf angewiesen, dass ihm jemand vorlas und dabei die Wahrheit sagte, sondern konnte selber nachschauen, was gilt. Auf der Agora wurde dann darüber gestritten. Im Hafen Piräus prüften Händler Verträge und zahlten mit den silbernen «Eulen», wie man Athens Münzen nach ihrem Münzbild nannte. Das Silber dafür kam aus den Bergwerken von Laurion. Als dort ab 483 v. Chr. mehr Silber anfiel, wollten die Athener den Überschuss unter sich aufteilen. Themistokles überzeugte sie, davon Kriegsschiffe zu bauen. Wenige Jahre später retteten genau diese Schiffe die Stadt gegen die Perser. Und noch etwas verschob sich: Wer schreiben und rechnen konnte, kam voran, auch ohne vornehme Familie. Nicht mehr nur die Herkunft zählte, sondern das Können.
+
+### Zerbrechen der Ordnung · zerstörten sie die Wasserleitungen
+
+- **Kennung:** `EP-03c465` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Wasserversorgung im Römischen Reich (Wikipedia)](https://de.wikipedia.org/wiki/Wasserversorgung_im_R%C3%B6mischen_Reich)
+- **Fundstelle:** Zur Belagerung Roms: «Bei der vorangegangenen Belagerung wurden die in die Stadt führenden Aquädukte zerstört», worauf der Betrieb der grossen Thermen endgültig zum Erliegen kam und auch die städtischen Mühlen ausfielen. Datierung und Zuordnung zu den Ostgoten (Januar 537 bis März 538) über den Artikel «Gotenkrieg (535–554)».
+- **Geprüft:** 2026-07-29
+
+> Rom selbst zeigt den Absturz in Zahlen: Die Stadt zählte auf ihrem Höhepunkt gegen eine Million Einwohner und schrumpfte nach Kriegen und Plünderungen auf wenige Zehntausend. Als die Ostgoten die Stadt 537 belagerten, zerstörten sie die Wasserleitungen. Brunnen und Thermen versiegten, und das Leben zog sich auf Dauer ans Ufer des Tibers zurück, wo man Wasser holen konnte. Die gewaltige Betonkuppel des Pantheons blieb über tausend Jahre unübertroffen: Niemand hätte sie mehr bauen können. Zur gleichen Zeit begann die Rettung im Kleinen. Der Gelehrte Cassiodorus gründete um 550 in Süditalien das Kloster Vivarium, in dem Mönche antike Handschriften abschrieben, und bald gehörte dieses Kopieren in vielen Klöstern zum Tagewerk. Was wir heute von Cicero oder Vergil lesen, ist fast ausnahmslos durch solche Schreibstuben gegangen. Eine Zivilisation kann eben nicht nur Neues erfinden, sie kann Können auch wieder verlieren.
 
 ---
 

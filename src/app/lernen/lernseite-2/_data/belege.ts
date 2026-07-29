@@ -153,6 +153,19 @@ export const BELEGE: Beleg[] = [
       "Zur Vorgeschichte von Salamis: «man sich von Themistokles überzeugen liess, Überschusseinnahmen aus dem Silberabbau in Laurion von 483 v. Chr. an nicht unter die Bürger zu verteilen, sondern in den Schiffsbau zu investieren».",
     geprueft: "2026-07-29",
   },
+
+  /* ── Zerbrechen der Ordnung ───────────────────────────────────────────────
+   * 537 belagerten die OSTgoten Rom, nicht die Westgoten von 410. Der Text
+   * nannte vorher nur «Goten», was beide Völker verschmolz. */
+  {
+    id: "EP-03c465",
+    anker: "zerstörten sie die Wasserleitungen",
+    url: "https://de.wikipedia.org/wiki/Wasserversorgung_im_R%C3%B6mischen_Reich",
+    titel: "Wasserversorgung im Römischen Reich (Wikipedia)",
+    stelle:
+      "Zur Belagerung Roms: «Bei der vorangegangenen Belagerung wurden die in die Stadt führenden Aquädukte zerstört», worauf der Betrieb der grossen Thermen endgültig zum Erliegen kam und auch die städtischen Mühlen ausfielen. Datierung und Zuordnung zu den Ostgoten (Januar 537 bis März 538) über den Artikel «Gotenkrieg (535–554)».",
+    geprueft: "2026-07-29",
+  },
 ];
 
 /**

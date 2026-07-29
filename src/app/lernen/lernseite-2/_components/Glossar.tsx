@@ -346,6 +346,52 @@ export const GLOSSAR: Record<string, string> = {
     "Der Gifttrank aus der Pflanze Schierling, mit dem in Athen Todesurteile vollstreckt wurden.",
   Euklid:
     "Griechischer Mathematiker (um 300 v. Chr.); ordnete die Geometrie so, dass jeder Satz aus dem vorherigen bewiesen wird.",
+
+  /* Zerbrechen der Ordnung (Spätantike & Mittelalter). West- und Ostgoten
+     bewusst getrennt erklärt: Es sind zwei verschiedene Völker in zwei
+     verschiedenen Jahrhunderten, im Text leicht zu verwechseln. */
+  Westgoten:
+    "Germanisches Volk; plünderte 410 die Stadt Rom. Nicht zu verwechseln mit den Ostgoten gut hundert Jahre später.",
+  Ostgoten:
+    "Germanisches Volk; herrschte ab 493 über Italien und belagerte 537/538 Rom, wobei die Wasserleitungen zerstört wurden.",
+  Aquädukte:
+    "Römische Wasserleitungen, oft auf Bogenbrücken über Täler geführt; versorgten Städte mit Frischwasser.",
+  Tiber: "Der Fluss, an dem Rom liegt.",
+  Tibers: "Der Fluss, an dem Rom liegt.",
+  Pantheon:
+    "Tempelbau in Rom mit gewaltiger Betonkuppel; seine Bauweise konnte über tausend Jahre niemand nachmachen.",
+  Pantheons:
+    "Tempelbau in Rom mit gewaltiger Betonkuppel; seine Bauweise konnte über tausend Jahre niemand nachmachen.",
+  Cassiodorus:
+    "Römischer Gelehrter und Beamter; gründete um 550 das Kloster Vivarium, in dem Mönche antike Handschriften abschrieben.",
+  Cicero:
+    "Römischer Redner und Politiker; seine Reden und Briefe gelten als Vorbild lateinischer Sprache.",
+  Vergil: "Römischer Dichter; schrieb die «Aeneis», das grosse Epos über Roms Ursprung.",
+  Hieronymus:
+    "Gelehrter (um 347 bis 420); übersetzte die Bibel ins Lateinische. Diese Fassung prägte das Abendland.",
+  Hippo:
+    "Hafenstadt in Nordafrika, im heutigen Algerien; dort war Augustinus Bischof.",
+  Vandalen:
+    "Germanisches Volk; eroberte Nordafrika und belagerte 430 die Stadt Hippo.",
+  Manichäer:
+    "Anhänger einer damals verbreiteten Religion, die die Welt als Kampf zwischen Licht und Finsternis deutete.",
+  Confessiones:
+    "«Bekenntnisse», die Lebensrückschau des Augustinus — eines der ersten Bücher, das den Blick nach innen richtet.",
+  Rhetorikprofessor:
+    "Lehrer der Redekunst; im Römischen Reich ein angesehener und gut bezahlter Beruf.",
+  Gottesstaat:
+    "Augustinus' Schrift «De civitate Dei»: Sie stellt dem vergänglichen irdischen Staat eine bleibende geistige Gemeinschaft gegenüber.",
+  Gottesstaats:
+    "Augustinus' Schrift «De civitate Dei»: Sie stellt dem vergänglichen irdischen Staat eine bleibende geistige Gemeinschaft gegenüber.",
+
+  /* Umbruch der Neuzeit (Buchdruck, Reformation, Entdeckungen). */
+  Klerus: "Die Geistlichen einer Kirche, also Priester, Mönche und Bischöfe.",
+  "Handschriften-Kopisten":
+    "Schreiber, die Bücher von Hand abschrieben. Vor dem Buchdruck entstand so jedes Exemplar einzeln.",
+  Montaigne:
+    "Michel de Montaigne (1533 bis 1592), französischer Denker; erfand den «Essai» und machte das Zweifeln zur Methode.",
+  Skeptiker:
+    "Denkerinnen und Denker, die jede Behauptung erst prüfen und mit einem Urteil bewusst zurückhalten.",
 };
 
 function escapeRegExp(s: string): string {

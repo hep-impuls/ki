@@ -1966,12 +1966,12 @@
   "stufe": "mittel",
   "text": "Wer seine Stellung von Geburt hatte, verliert den Boden. In Athen (ab etwa 500 v. Chr.) und in Rom entscheiden Abstimmungen, Ämter und öffentliche Reden, nicht mehr allein die Familie. Wer gut reden kann, kommt nach oben. Genau da setzen die Sophisten an. Sie ziehen von Stadt zu Stadt und bringen jungen Männern gegen Bezahlung bei, wie man eine Rede aufbaut und ein Publikum überzeugt. Ihre Kernbotschaft ist heikel: Zu jeder Sache lasse sich genauso gut das Gegenteil begründen. Damit steht eine unangenehme Frage im Raum. Wenn sich alles begründen lässt, gilt dann überhaupt noch etwas? Der Prozess gegen Sokrates (399 v. Chr.), der mit dem Todesurteil endet, zeigt, wie nervös eine verunsicherte Stadt reagiert."
  },
- "EP-7d83ef": {
+ "EP-da8160": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Antike",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Der Redelehrer Protagoras brachte die neue Lage auf einen Satz: Der Mensch sei «das Mass aller Dinge». Gemeint ist, dass nicht die Götter festlegen, was wahr und richtig ist, sondern die Menschen selbst. Mit seinem Unterricht verdiente Protagoras ein Vermögen. Für viele Athener klang das nach Freiheit, für andere so, als würde der Boden unter den Füssen weich. Wie gereizt die Stimmung war, zeigt der Prozess von 399 v. Chr. Rund 500 ausgeloste Bürger sassen als Gericht zusammen, und vor ihnen verteidigte sich der siebzigjährige Sokrates. Als er nach dem Schuldspruch selber eine Strafe vorschlagen sollte, schlug er allen Ernstes eine Belohnung vor: Gratisessen auf Staatskosten. Das Gericht entschied auf den Giftbecher. Dazu muss man wissen, dass Athen kurz zuvor einen langen Krieg verloren und die Gewaltherrschaft der Dreissig Tyrannen erlebt hatte. Eine erschöpfte Stadt erträgt es schlecht, wenn jemand ihre letzten Gewissheiten in Frage stellt. Diese Angst, dass am Ende gar nichts mehr sicher ist, kehrt in jeder Umbruchszeit wieder."
+  "text": "Der Redelehrer Protagoras brachte die neue Lage auf einen Satz: Der Mensch sei «das Mass aller Dinge». Gemeint ist, dass nicht die Götter festlegen, was wahr und richtig ist, sondern die Menschen selbst. Protagoras war ein gefragter Lehrer und nahm hohe Honorare. Für viele Athener klang das nach Freiheit, für andere so, als würde der Boden unter den Füssen weich. Wie gereizt die Stimmung war, zeigt der Prozess von 399 v. Chr. Rund 500 ausgeloste Bürger sassen als Gericht zusammen, und vor ihnen verteidigte sich der siebzigjährige Sokrates. Als er nach dem Schuldspruch selber eine Strafe vorschlagen sollte, schlug er allen Ernstes eine Belohnung vor: Gratisessen auf Staatskosten. Das Gericht entschied auf den Giftbecher. Dazu muss man wissen, dass Athen kurz zuvor einen langen Krieg verloren und die Gewaltherrschaft der Dreissig Tyrannen erlebt hatte. Eine erschöpfte Stadt erträgt es schlecht, wenn jemand ihre letzten Gewissheiten in Frage stellt. Diese Angst, dass am Ende gar nichts mehr sicher ist, kehrt in jeder Umbruchszeit wieder."
  },
  "EP-8c3a46": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2078,12 +2078,12 @@
   "stufe": "tief",
   "text": "Hier verunsichert nicht neue, sondern verlorene Technik. Mit dem Weströmischen Reich (476 n. Chr.) verfallen Fernstrassen, Aquädukte, Münzwesen und die staatliche Verwaltung. Fähigkeiten wie Betonbau in römischer Qualität gehen für Jahrhunderte verloren. Die Welt wird kleiner, langsamer und unsicherer. Verloren gingen sie, weil ihre Grundlage wegbrach: Ohne Zentralmacht, Steuern und Fernhandel gab es niemanden mehr, der Strassen unterhielt oder Münzen prägte. Technik überlebt nur mit ihrer wirtschaftlichen und politischen Basis."
  },
- "EP-770409": {
+ "EP-03c465": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Zerbrechen der Ordnung",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "mittel",
-  "text": "Rom selbst zeigt den Absturz in Zahlen: Die Stadt, die auf ihrem Höhepunkt gegen eine Million Einwohner zählte, schrumpfte nach Kriegen und Plünderungen auf wenige Zehntausend. Als belagernde Goten im Jahr 537 die grossen Wasserleitungen kappten, versiegten Brunnen und Thermen, und auf Dauer zog sich das Leben der geschrumpften Stadt ans Ufer des Tibers zurück. Die gewaltige Betonkuppel des Pantheons blieb über tausend Jahre unübertroffen, niemand hätte sie mehr bauen können. Zur gleichen Zeit begann die Rettung im Kleinen: Der Gelehrte Cassiodorus gründete um 550 in Süditalien das Kloster Vivarium, in dem Mönche antike Handschriften abschrieben, und bald gehörte das Kopieren in vielen Klöstern zum Tagewerk. Was wir heute von Cicero oder Vergil lesen, ist fast ausnahmslos durch solche Schreibstuben gegangen. Eine Zivilisation kann eben nicht nur Neues erfinden, sie kann Können auch wieder verlieren."
+  "text": "Rom selbst zeigt den Absturz in Zahlen: Die Stadt zählte auf ihrem Höhepunkt gegen eine Million Einwohner und schrumpfte nach Kriegen und Plünderungen auf wenige Zehntausend. Als die Ostgoten die Stadt 537 belagerten, zerstörten sie die Wasserleitungen. Brunnen und Thermen versiegten, und das Leben zog sich auf Dauer ans Ufer des Tibers zurück, wo man Wasser holen konnte. Die gewaltige Betonkuppel des Pantheons blieb über tausend Jahre unübertroffen: Niemand hätte sie mehr bauen können. Zur gleichen Zeit begann die Rettung im Kleinen. Der Gelehrte Cassiodorus gründete um 550 in Süditalien das Kloster Vivarium, in dem Mönche antike Handschriften abschrieben, und bald gehörte dieses Kopieren in vielen Klöstern zum Tagewerk. Was wir heute von Cicero oder Vergil lesen, ist fast ausnahmslos durch solche Schreibstuben gegangen. Eine Zivilisation kann eben nicht nur Neues erfinden, sie kann Können auch wieder verlieren."
  },
  "EP-9d34d6": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2106,12 +2106,12 @@
   "stufe": "tief",
   "text": "Augustinus (354–430) verlegt den Halt vom äusseren Reich nach innen: Nicht Mauern und Macht tragen, sondern Glaube, Gewissen und Erinnerung. Er unterscheidet den vergänglichen irdischen Staat vom bleibenden «Gottesstaat» und deutet die Geschichte als Heilsweg. Die zwei Staaten sind für ihn nicht einfach Kirche und Politik, sondern zwei Gemeinschaften, die sich danach scheiden, woran ihr Herz hängt. Alltagssprachlich lebt das fort in «hör auf dein Gewissen» und «geh in dich»."
  },
- "EP-7c1802": {
+ "EP-1fcad7": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Zerbrechen der Ordnung",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Augustinus wusste, wovon er sprach, denn sein eigenes Leben war ein einziger Umweg: aufgewachsen in einer nordafrikanischen Kleinstadt, ehrgeiziger Rhetorikprofessor in Mailand, dazu lange Anhänger der Lehre der Manichäer und Vater eines unehelichen Sohnes. In seinen «Confessiones» erzählt er, wie er im Jahr 386 in einem Mailänder Garten eine Kinderstimme «nimm und lies» rufen hörte, die Bibel aufschlug und sein Leben wendete. Neu daran war der Blick nach innen: Er untersuchte Erinnerung, Zeit und Gewissen so genau, wie andere Länder vermessen. Halt, so seine Erfahrung, findet man nicht in Ämtern und Mauern, sondern in dem, was einen im Innersten trägt. Er starb 430 in Hippo, während die Vandalen die Stadt belagerten, das äussere Reich zerfiel also bis zuletzt. Sein innerer Kompass aber wurde zum Erbstück Europas, bis hin zur modernen Überzeugung, dass jeder Mensch ein Gewissen hat, dem er folgen darf."
+  "text": "Augustinus wusste, wovon er sprach, denn sein eigenes Leben war ein einziger Umweg: aufgewachsen in einer nordafrikanischen Kleinstadt, dann ehrgeiziger Rhetorikprofessor in Mailand, lange Anhänger der Lehre der Manichäer und Vater eines unehelichen Sohnes. In seinen «Confessiones» erzählt er, wie er im Jahr 386 in einem Mailänder Garten eine Kinderstimme «nimm und lies» rufen hörte, die Bibel aufschlug und sein Leben wendete. Neu daran war der Blick nach innen: Er untersuchte Erinnerung, Zeit und Gewissen so genau, wie andere Länder vermessen. Aus eigener Erfahrung wusste er: Sicherheit gibt nicht das Amt und nicht die Stadtmauer, sondern das, was einen von innen hält. Er starb 430 in Hippo, während die Vandalen die Stadt belagerten. Das äussere Reich zerfiel also bis zu seinem letzten Tag. Seine Ausrichtung nach innen aber wurde zum Erbstück Europas, bis hin zur heutigen Überzeugung, dass jeder Mensch ein Gewissen hat, dem er folgen darf."
  },
  "EP-d19c28": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2246,12 +2246,12 @@
   "stufe": "hoch",
   "text": "Pico della Mirandola (1463–1494) formuliert in seiner «Rede über die Würde des Menschen», der Mensch sei nicht auf eine feste Natur festgelegt, sondern forme sich selbst. Montaigne (1533–1592) setzt die skeptische Frage dagegen: «Que sais-je?» («Was weiss ich schon?»). Alltagssprachlich lebt beides fort in «jeder ist seines Glückes Schmied» und im Bekenntnis, etwas zu hinterfragen."
  },
- "EP-40a21a": {
+ "EP-6f74cf": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Renaissance & Aufbruch",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Pico war dreiundzwanzig, als er 1486 die Gelehrten Europas nach Rom einlud, um mit ihm über 900 Thesen zu streiten, und die «Rede über die Würde des Menschen» sollte die Eröffnung dieses Wettstreits werden. Der Papst verbot die Veranstaltung, ein Teil der Thesen galt als ketzerisch, doch der Text überlebte und wurde zum Manifest des neuen Selbstbewusstseins. Ein Menschenalter später zog sich Montaigne, Richter in Bordeaux, auf den Turm seines Schlosses zurück, während draussen Katholiken und Protestanten einander in Glaubenskriegen abschlachteten. In die Deckenbalken seiner Bibliothek liess er Sprüche antiker Skeptiker schnitzen und erfand beim Schreiben nebenbei eine neue Gattung: den «Essai», wörtlich den Versuch, das Ausprobieren eines Gedankens. Grösse und Zweifel gehören seither zusammen, und wer heute angesichts der KI fragt, was der Mensch eigentlich ist, führt genau dieses Gespräch weiter."
+  "text": "Pico war dreiundzwanzig, als er 1486 die Gelehrten Europas nach Rom einlud, um mit ihnen über 900 Thesen zu streiten, und die «Rede über die Würde des Menschen» sollte die Eröffnung dieses Wettstreits werden. Der Papst verbot die Veranstaltung, ein Teil der Thesen galt als ketzerisch, doch der Text überlebte und wurde zum Manifest des neuen Selbstbewusstseins. Ein Menschenalter später zog sich Montaigne, Richter in Bordeaux, auf den Turm seines Schlosses zurück, während draussen Katholiken und Protestanten einander in Glaubenskriegen abschlachteten. In die Deckenbalken seiner Bibliothek liess er Sprüche antiker Skeptiker schnitzen und erfand beim Schreiben nebenbei eine neue Gattung: den «Essai», wörtlich den Versuch, das Ausprobieren eines Gedankens. Grösse und Zweifel gehören seither zusammen, und wer heute angesichts der KI fragt, was der Mensch eigentlich ist, führt genau dieses Gespräch weiter."
  },
  "EP-7e9865": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
