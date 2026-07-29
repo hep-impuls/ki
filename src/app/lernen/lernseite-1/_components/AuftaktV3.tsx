@@ -59,7 +59,7 @@ const AUFTAKT_LERNZIEL_V3: LernzielKarteSpec = {
     "Du erkennst, dass es hier kein Richtig oder Falsch gibt.",
   ],
   aktivitaet:
-    "Zuerst hältst du fest, wo dir KI begegnet ist. Dann ein gemeinsamer Reiz, deine Ausgangsposition auf dem Schieberegler, zwei kurze Haltungsfragen — und zum Schluss ein paar Wert-Karten.",
+    "Zuerst hältst du fest, wo dir KI begegnet ist. Dann folgen ein gemeinsamer Reiz, deine Ausgangsposition auf dem Schieberegler, zwei kurze Haltungsfragen — und zum Schluss ein paar Wert-Karten.",
   wasKommt:
     "Danach wählst du im Themenfeld frei, was dich interessiert — es gibt keine Reihenfolge und keine Mindestzahl. Am Ende siehst du auf deiner Landkarte, wie sich deine Haltung bewegt hat, und dein Abschlussbericht sammelt alles, was du festgehalten hast.",
 };
