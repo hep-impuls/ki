@@ -319,7 +319,7 @@ const station1: Station = {
         id: "st1-mc-2",
         kind: "mc",
         frage:
-          "Welcher Berufsbereich ist laut der «Angestellte Schweiz»-Studie am stärksten von KI betroffen?",
+          "Welcher Berufsbereich ist laut der Studie «Angestellte Schweiz» am stärksten von KI betroffen?",
         optionen: [
           {
             label: "Handwerk und Bau",
