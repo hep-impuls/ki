@@ -455,7 +455,7 @@ const station1: Station = {
         feedbackRichtig:
           "Richtig verneint. Die Gesamtbeschäftigung in der Schweiz ist seit dem dritten Quartal 2020 sogar um 7,4% gestiegen — von Massenarbeitslosigkeit keine Spur.",
         feedbackFalsch:
-          "Falsch. Trotz KI-Einfluss wuchs die Schweizer Gesamtbeschäftigung seit Q3 2020 um 7,4%. Bestimmte Gruppen (z.B. Softwareentwickler) sind stärker betroffen, aber das ist kein Massenphänomen.",
+          "Falsch. Trotz KI-Einfluss wuchs die Schweizer Gesamtbeschäftigung seit dem dritten Quartal 2020 um 7,4%. Bestimmte Gruppen (z.B. Softwareentwickler) sind stärker betroffen, aber das ist kein Massenphänomen.",
       },
       {
         id: "st1-tf-3",
