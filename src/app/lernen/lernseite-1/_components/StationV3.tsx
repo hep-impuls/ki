@@ -567,10 +567,18 @@ function ExtrasBlock({ extras }: { extras: NonNullable<MediaBlock["extras"]> }) 
   );
 }
 
-/** Medienblock im Split-Layout: Video links, Hinweis/Anleitung rechts (stapelt mobil). */
+/**
+ * Medienblock im Split-Layout: Video links, Hinweis/Anleitung rechts (stapelt
+ * mobil). Bei **mehreren** Medien wandert die Anleitung nach oben über die
+ * volle Breite (direkt unter das Lernziel-Banner), damit der Seh-Auftrag vor
+ * beiden Playern steht statt neben dem ersten (Entscheid 2026-07-28).
+ */
 function MediaSplit({ block, anleitung }: { block: MediaBlock; anleitung?: string }) {
+  const anleitungText = block.anleitung ?? anleitung;
+  const mehrereMedien = block.media.length > 1;
   return (
     <div className="flex flex-col gap-lg">
+      {mehrereMedien && anleitungText && <Anleitung>{anleitungText}</Anleitung>}
       <div className="grid gap-lg lg:grid-cols-2">
         <div className="flex min-w-0 flex-col gap-md">
           {block.media.map((m, i) => (
@@ -579,7 +587,7 @@ function MediaSplit({ block, anleitung }: { block: MediaBlock; anleitung?: strin
         </div>
         <div className="flex min-w-0 flex-col gap-md">
           {block.intro && <Hinweis>{block.intro}</Hinweis>}
-          {(block.anleitung ?? anleitung) && <Anleitung>{block.anleitung ?? anleitung}</Anleitung>}
+          {!mehrereMedien && anleitungText && <Anleitung>{anleitungText}</Anleitung>}
         </div>
       </div>
       {block.extras && block.extras.length > 0 && <ExtrasBlock extras={block.extras} />}
@@ -624,7 +632,7 @@ function SubpageStepper({
   onJump: (frameIndex: number) => void;
 }) {
   return (
-    <nav aria-label="Abschnitte dieser Station" className="flex flex-wrap gap-xs">
+    <nav aria-label="Abschnitte dieses Themas" className="flex flex-wrap gap-xs">
       {gruppen.map((g, idx) => {
         const aktiv = idx === aktivIdx;
         const erledigt = idx < aktivIdx;
@@ -703,7 +711,7 @@ function PollFrame({
   return (
     <div className="flex flex-col gap-md">
       <p className="text-label-sm uppercase tracking-wider text-tertiary">
-        {phase === "pre" ? "Deine Meinung jetzt" : "Deine Meinung nach der Station"}
+        {phase === "pre" ? "Deine Meinung jetzt" : "Deine Meinung nach dem Thema"}
       </p>
       <p className="text-body-lg text-on-surface">{poll.frage}</p>
       {poll.format === "skala4" ? (
