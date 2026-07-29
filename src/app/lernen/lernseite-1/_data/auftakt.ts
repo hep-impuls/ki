@@ -21,7 +21,7 @@ export const AUFTAKT_LERNZIEL: LernzielKarteSpec = {
     "Du erkennst, dass es hier kein Richtig oder Falsch gibt.",
   ],
   aktivitaet:
-    "Zuerst hältst du fest, wo dir KI begegnet ist. Dann ein gemeinsamer Reiz, ein kurzer Wissen-Check und dein Stimmungsbild. Zum Schluss setzt du deine Position.",
+    "Zuerst hältst du fest, wo dir KI begegnet ist. Dann folgen ein gemeinsamer Reiz, ein kurzer Wissen-Check und dein Stimmungsbild. Zum Schluss setzt du deine Position.",
   wasKommt:
     "Erst ein gemeinsamer Reiz, dann deine Position, dann die Stationen — und warum: damit du am Ende deine eigene Bewegung sehen kannst.",
 };
