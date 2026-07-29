@@ -60,7 +60,7 @@ const station1: Station = {
         inhalt: "Thema Arbeit · Schritt 3/7: Schattenseite",
         dauerMin: 7,
         lernziel:
-          "Du kannst benennen, welche Berufsgruppen bereits konkrete Jobverluste spüren, und einordnen, warum gerade Softwareentwickler betroffen sind.",
+          "Du kannst benennen, welche Berufsgruppen bereits konkrete Jobverluste spüren, und einordnen, warum gerade Softwareentwicklerinnen und -entwickler betroffen sind.",
         anleitung:
           "Schau das SRF-Video von Minute 1:00 bis 4:40. Notiere eine Aussage, die dich überrascht hat — und eine, die du erwartet hättest.",
       },
