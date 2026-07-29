@@ -420,7 +420,7 @@ const station1: Station = {
             label:
               "Von rund +1% (skeptische Schätzung) bis rund +7% (optimistische Schätzung)",
             feedback:
-              "Richtig. Acemoglu schätzt 1,1–1,6%, Goldman Sachs 7% — ein Faktor von 5 bis 7.",
+              "Richtig. Daron Acemoglu schätzt 1,1–1,6%, Goldman Sachs 7% — ein Faktor von 5 bis 7.",
           },
           {
             label:
