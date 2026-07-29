@@ -1203,7 +1203,7 @@ const station3: Station = {
     {
       id: "st3-fakt-4",
       claim:
-        "Die Reihenfolge der Einführung könnte entscheidend sein: Personen, die zuerst ohne KI schrieben und danach mit KI arbeiteten («Brain-to-LLM»), zeigten höhere Gedächtnisaktivierung als jene, die den umgekehrten Weg gingen. Das deutet darauf hin, dass nicht «KI ja oder nein», sondern «wann und wie» für das Lernen ausschlaggebend ist.",
+        "Die Reihenfolge der Einführung könnte entscheidend sein: Personen, die zuerst ohne KI schrieben und danach mit KI arbeiteten («Brain-to-LLM»), zeigten eine höhere Gedächtnisaktivierung als jene, die den umgekehrten Weg gingen. Das deutet darauf hin, dass nicht «KI ja oder nein», sondern «wann und wie» für das Lernen ausschlaggebend ist.",
       sourceName: "MIT Media Lab, «Your Brain on ChatGPT» (2025)",
       sourceUrl: "https://media.mit.edu/projects/your-brain-on-chatgpt/overview/",
       date: "2025",
