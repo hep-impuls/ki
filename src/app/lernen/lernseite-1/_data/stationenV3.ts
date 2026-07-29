@@ -1557,7 +1557,7 @@ const station4: Station = {
     intro:
       "KI ist immer verfügbar — auch um Mitternacht, auch wenn du keine Lust hast, jemandem zur Last zu fallen.",
     anleitung:
-      "Schau die zwei kurzen Player — jeder springt automatisch zwischen zwei Ausschnitten. Achte darauf: Welcher Nutzen wird jeweils konkret benannt? Handelt es sich um echten Mehrwert oder um eine wohlklingende Aussage? Der Bot verweist an einer Stelle sogar selbst darauf, dass echte Gespräche der gesündeste Weg sind — achte darauf, wie er das begründet.",
+      "Schau die zwei kurzen Videos — jeder springt automatisch zwischen zwei Ausschnitten. Achte darauf: Welcher Nutzen wird jeweils konkret benannt? Handelt es sich um einen echten Mehrwert oder um eine wohlklingende Aussage? Der Bot verweist an einer Stelle sogar selbst darauf, dass echte Gespräche der gesündeste Weg sind — achte darauf, wie er das begründet.",
     media: [
       {
         kind: "youtube",
