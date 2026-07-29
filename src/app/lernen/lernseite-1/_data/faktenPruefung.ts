@@ -22,7 +22,7 @@ export const FAKTEN_FALSCH: Record<string, string> = {
   "st1-fakt-5":
     "Bei Softwareentwicklerinnen und -entwicklern hat sich die Arbeitslosigkeit in der Schweiz in zehn Jahren verdreifacht. Ende 2025 waren 25'000 von ihnen ohne Stelle — besonders betroffen sind die 20- bis 49-Jährigen.",
   "st1-fakt-6":
-    "Ökonomen sind sich einig: Nobelpreisträger Acemoglu (MIT) schätzt den BIP-Effekt von KI über 10 Jahre auf 7%; Goldman Sachs rechnet mit +1,1–1,6%. Beide Institutionen kommen zum selben Ergebnis.",
+    "Ökonomen sind sich einig: Nobelpreisträger Daron Acemoglu (MIT) schätzt den BIP-Effekt von KI über 10 Jahre auf 7%; Goldman Sachs rechnet mit +1,1–1,6%. Beide Institutionen kommen zum selben Ergebnis.",
   "st2-fakt-1":
     "Schon 3 Minuten Audio reichen, um eine Stimme mit 85% Übereinstimmung zu klonen.",
   "st2-fakt-2":
