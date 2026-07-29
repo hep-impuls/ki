@@ -74,13 +74,26 @@ export default function Abschnitt({
             <h2 className="text-headline-lg text-on-surface">{titel}</h2>
             {prefixe?.length ? <AktivitaetsKopf prefixe={prefixe} /> : null}
           </span>
-          <span
-            className={
-              "material-symbols-outlined flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-outline-variant bg-surface-bright text-on-surface-variant transition-transform group-hover/ab:text-tertiary " +
-              (offen ? "rotate-180" : "")
-            }
-          >
-            expand_more
+          <span className="relative flex h-9 w-9 flex-shrink-0 items-center justify-center">
+            {/* Solange der Abschnitt zu ist, pulsiert ein weicher Ring hinter
+                dem Pfeil: Der Kopf sieht sonst wie eine Überschrift aus, nicht
+                wie etwas, das man aufklappen kann. Beim Hover ruht er (dann ist
+                die Klickbarkeit ohnehin klar), im offenen Zustand ebenso, und
+                bei «Bewegung reduzieren» erscheint er nie. */}
+            {!offen && (
+              <span
+                aria-hidden
+                className="absolute inset-0 rounded-full bg-tertiary opacity-20 animate-ping motion-reduce:hidden group-hover/ab:hidden"
+              />
+            )}
+            <span
+              className={
+                "material-symbols-outlined relative flex h-9 w-9 items-center justify-center rounded-full border border-outline-variant bg-surface-bright text-on-surface-variant transition-transform group-hover/ab:text-tertiary " +
+                (offen ? "rotate-180" : "")
+              }
+            >
+              expand_more
+            </span>
           </span>
         </button>
         {vorschau}
