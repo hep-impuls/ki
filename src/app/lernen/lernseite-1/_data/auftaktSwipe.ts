@@ -46,7 +46,7 @@ export const AUFTAKT_SWIPE_KARTEN: SwipeKarte[] = [
   },
   {
     id: "swipe-auftakt-menschloop-2",
-    aussage: "Bei klaren Routine-Entscheidungen braucht es keine menschliche Kontrolle mehr.",
+    aussage: "Bei klaren Routineentscheidungen braucht es keine menschliche Kontrolle mehr.",
     achse: { links: "Kontrolle behalten", rechts: "Kontrolle abgeben" },
     profilKey: "menschloop-effizienz",
   },
