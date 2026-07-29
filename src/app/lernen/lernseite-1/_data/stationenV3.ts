@@ -612,7 +612,7 @@ const station2: Station = {
         {
           titel: "Die Profi-Tipps: So prüfst du Inhalte",
           beschreibung:
-            "Reto Vogt (MAZ) zeigt, wie er ein KI-Fake-Bild aus einem Kriegsgebiet prüft; Jürg Tschirren (SRF) ordnet ein, wie viele Fakes und Bots im Netz kursieren. Endet mit einer konkreten Tipp-Liste gegen Fake News.",
+            "Reto Vogt (MAZ) zeigt, wie er ein KI-Fake-Bild aus einem Kriegsgebiet prüft; Jürg Tschirren (SRF) ordnet ein, wie viele Fakes und Bots im Netz kursieren. Der Ausschnitt endet mit einer konkreten Tippliste gegen Fake News.",
           media: {
             kind: "youtube",
             youtubeId: "3W3HoK1f7nU",
