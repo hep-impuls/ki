@@ -626,7 +626,7 @@ const station2: Station = {
         {
           titel: "Das Fazit in einem Satz",
           beschreibung:
-            "Was Jung und Alt beim Entlarven von Fakes je stark macht — und warum das Zusammennehmen dieser Fähigkeiten die besten Chancen gibt.",
+            "Was Jung und Alt beim Entlarven von Fakes gut machen — und warum diese Kombination die besten Chancen bietet.",
           media: {
             kind: "youtube",
             youtubeId: "3W3HoK1f7nU",
