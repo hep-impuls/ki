@@ -1464,7 +1464,7 @@ const station4: Station = {
       lernziel:
         "Du erkennst konkrete Situationen, in denen KI als Begleitung echten Nutzen stiften kann.",
       anleitung:
-        "Schau die zwei kurzen Player — jeder springt automatisch zwischen zwei Ausschnitten derselben Quelle. Achte darauf, welcher Mehrwert jeweils konkret genannt wird und ob er dich überzeugt. Notiere dir einen Gedanken dazu.",
+        "Schau die zwei kurzen Videos — jedes springt automatisch zwischen zwei Ausschnitten derselben Quelle. Achte darauf, welcher Mehrwert jeweils konkret genannt wird und ob er dich überzeugt. Notiere dir einen Gedanken dazu.",
     },
     schatten: {
       inhalt: "Thema Nähe · Schritt 3/7: Schattenseite",
