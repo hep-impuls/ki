@@ -310,6 +310,42 @@ export const GLOSSAR: Record<string, string> = {
     "Frühes lernendes Kunstneuron (1958, Frank Rosenblatt); Urahn der heutigen neuronalen Netze.",
   Perceptrons:
     "Frühes lernendes Kunstneuron (1958, Frank Rosenblatt); Urahn der heutigen neuronalen Netze.",
+
+  /* Antike — Orte, Personen und Begriffe, die ohne Geschichtsunterricht nichts
+     sagen. Bewusst in Alltagssprache, ein Satz, kein Lexikonton. */
+  Agora:
+    "Der Markt- und Versammlungsplatz mitten in einer griechischen Stadt: Einkaufen, Politik und Gerichtsverhandlungen an einem Ort.",
+  Laurion:
+    "Silberbergwerke südlich von Athen; aus diesem Silber wurden Athens Münzen geprägt. Gearbeitet haben dort vor allem Sklaven.",
+  Themistokles:
+    "Athener Politiker (um 524–459 v. Chr.); setzte durch, dass Athen vom Silberfund eine Kriegsflotte baute statt das Geld zu verteilen.",
+  /* Beugungsformen brauchen einen eigenen Eintrag: Gesucht wird auf
+     Wortgrenze, «Solon» trifft in «Solons» darum nicht. */
+  Solon:
+    "Athener Staatsmann (um 640 bis um 560 v. Chr.); liess seine Gesetze öffentlich aufstellen, damit sie jeder nachlesen konnte.",
+  Solons:
+    "Athener Staatsmann (um 640 bis um 560 v. Chr.); liess seine Gesetze öffentlich aufstellen, damit sie jeder nachlesen konnte.",
+  Piräus: "Der Hafen von Athen, wenige Kilometer von der Stadt entfernt.",
+  Phönizier:
+    "Handelsvolk an der Küste des heutigen Libanon; von seiner Schrift stammen unsere Buchstaben ab.",
+  Phöniziern:
+    "Handelsvolk an der Küste des heutigen Libanon; von seiner Schrift stammen unsere Buchstaben ab.",
+  Protagoras:
+    "Der bekannteste Sophist (um 490–420 v. Chr.); von ihm stammt der Satz, der Mensch sei «das Mass aller Dinge».",
+  Logik:
+    "Die Regeln des sauberen Schliessens: Was folgt zwingend aus was, unabhängig davon, wer es sagt.",
+  Republik:
+    "Staat ohne König: Die Macht liegt bei gewählten Ämtern und Versammlungen, nicht bei einer Herrscherfamilie.",
+  Perser:
+    "Grossreich im heutigen Iran; griff Griechenland zweimal an (490 und 480 v. Chr.) und wurde beide Male zurückgeschlagen.",
+  "Dreissig Tyrannen":
+    "Gewaltherrschaft von dreissig Männern, die Athen 404/403 v. Chr. nach der Kriegsniederlage regierten und viele Bürger töteten.",
+  Lykeion:
+    "Die Schule des Aristoteles in Athen; nach ihr heisst heute das «Lyzeum» in manchen Ländern.",
+  Schierlingsbecher:
+    "Der Gifttrank aus der Pflanze Schierling, mit dem in Athen Todesurteile vollstreckt wurden.",
+  Euklid:
+    "Griechischer Mathematiker (um 300 v. Chr.); ordnete die Geometrie so, dass jeder Satz aus dem vorherigen bewiesen wird.",
 };
 
 function escapeRegExp(s: string): string {

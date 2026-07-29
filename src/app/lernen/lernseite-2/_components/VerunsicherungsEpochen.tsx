@@ -109,9 +109,9 @@ const EPOCHEN: Epoche[] = [
   {
     epoche: "Antike",
     span: "Athen & Rom · ~500 v.–500 n. Chr.",
-    lead: "Zum ersten Mal ordnen sich Menschen nicht über Herkunft und Mythos, sondern über Bürgerrecht, Markt und Argument. In den griechischen Stadtstaaten und der römischen Republik entsteht die Idee, dass Regeln aushandelbar sind und Bürger mitreden. Wissen soll nicht mehr geglaubt, sondern begründet werden. Das ist aufregend und beunruhigend zugleich.",
+    lead: "Lange war klar, wer bestimmt: Wer in eine vornehme Familie geboren wurde, hatte das Sagen. Und was die alten Göttergeschichten erzählten, glaubte man einfach. In den griechischen Städten und in Rom bricht das auf. Regeln macht jetzt nicht mehr der Himmel, sondern eine Versammlung von Menschen, und wer etwas erreichen will, muss es begründen. Das ist eine grosse Freiheit. Und es ist unbequem: Wenn man alles begründen kann, kann man auch alles anzweifeln. Wem soll man dann noch glauben?",
     leadMehr:
-      "«Antike» meint hier rund tausend Jahre, vom klassischen Athen des 5. Jahrhunderts v. Chr. bis zum Ende des Weströmischen Reiches. In dieser Zeit entstehen zentrale Bausteine unserer Welt: Demokratie und Republik, das geschriebene Recht, die Philosophie, die Geometrie, das Theater. Vieles davon war an Sklaverei und den Ausschluss von Frauen gebunden. Die Idee der Gleichheit galt nur einem kleinen Kreis. Und doch stammt von hier die Grundüberzeugung, dass sich die Welt mit dem Verstand ordnen und begründen lässt.",
+      "«Antike» ist ein Sammelname für rund tausend Jahre, von Athen um 450 v. Chr. bis zum Ende des Römischen Reiches im Westen um 500 n. Chr. In dieser Zeit entsteht überraschend viel, was uns heute normal vorkommt: Abstimmungen, Gesetze, die man nachlesen kann, das Theater, die Geometrie, die Philosophie. Trotzdem war das keine gerechte Welt. Die schwere Arbeit machten zu einem grossen Teil Sklaven, Frauen durften nicht mitbestimmen, und wenn die alten Texte «alle Bürger» sagen, sind damit nur die freien Männer der Stadt gemeint. Geblieben ist eine Idee: Man kann die Welt selber verstehen und nachprüfen, statt sie einfach hinzunehmen.",
     bilder: [
       {
         src: "/art/athens.jpg",
@@ -195,24 +195,26 @@ const EPOCHEN: Epoche[] = [
       },
     ],
     technologie: {
-      text: "Zwei Erfindungen tragen den Wandel. Die griechische Alphabetschrift (ab etwa 800 v. Chr.) kommt mit rund zwei Dutzend Zeichen aus. Lesen und Schreiben sind nicht mehr Sache einer Priesterkaste. Und gemünztes Geld (in Kleinasien und Griechenland ab dem 7./6. Jahrhundert v. Chr.) macht Werte zählbar, teilbar und übertragbar, unabhängig von Person und Stand. Durchsetzen konnten sie sich, weil eine see- und handelstreibende Welt Aufzeichnungen, Verträge und ein verlässliches Tauschmittel brauchte: Das Alphabet entstand aus der Handelsschrift der Phönizier, das Silber für die Münzen kam aus Bergwerken wie dem attischen Laurion.",
-      mehr: "Wie das im Alltag aussah, zeigt Athen: Auf der Agora standen hölzerne Tafeln, auf denen die Gesetze Solons für alle lesbar angeschlagen waren, und wer lesen konnte, musste dem Vorleser nicht mehr einfach glauben. Im Hafen Piräus prüften Händler Verträge und zahlten mit den silbernen «Eulen», den Münzen Athens, deren Metall aus den Bergwerken von Laurion stammte. Als dort um 483 v. Chr. eine reiche Silberader entdeckt wurde, überzeugte Themistokles die Bürger, mit dem Geld eine Kriegsflotte zu bauen, und diese Schiffe retteten Athen später gegen die Perser. Wer schreiben und rechnen konnte, kam nun voran, auch ohne adlige Ahnen. So verschob sich das Gewicht von der Herkunft zur Fähigkeit, leise, aber unumkehrbar.",
+      text: "Zwei Erfindungen treiben den Wandel. Die griechische Buchstabenschrift (ab etwa 800 v. Chr.) braucht nur rund zwei Dutzend Zeichen. Vorher war Schreiben ein Beruf für Spezialisten, die Hunderte Zeichen lernen mussten; jetzt kann es lernen, wer die Zeit dazu hat. Dazu kommen Münzen (ab dem 7./6. Jahrhundert v. Chr.). Vorher tauschte man Ware gegen Ware und handelte jedes Mal neu aus, wie viel etwas wert ist. Eine Münze dagegen gilt gleich viel, egal in wessen Hand sie liegt. So werden Werte zählbar, teilbar und weitergebbar. Durchgesetzt hat sich beides, weil eine Welt voller Häfen und Händler Verträge, Notizen und ein zuverlässiges Zahlungsmittel brauchte. Die Buchstaben übernahmen die Griechen von den Phöniziern, das Silber für die Münzen kam aus Bergwerken wie dem Laurion.",
+      mehr: "Wie das im Alltag aussah, zeigt Athen. Solons Gesetze standen auf hölzernen Tafeln, die drehbar an Pflöcken befestigt waren, etwa wie ein Kartenständer, und jeder konnte sie einsehen. Wer lesen konnte, war nicht mehr darauf angewiesen, dass ihm jemand vorlas und dabei die Wahrheit sagte, sondern konnte selber nachschauen, was gilt. Auf der Agora wurde dann darüber gestritten. Im Hafen Piräus prüften Händler Verträge und zahlten mit den silbernen «Eulen», wie man Athens Münzen nach ihrem Münzbild nannte. Das Silber dafür kam aus den Bergwerken von Laurion. Als dort ab 483 v. Chr. mehr Silber anfiel, wollten die Athener den Überschuss unter sich aufteilen. Themistokles überzeugte sie, davon Kriegsschiffe zu bauen. Wenige Jahre später retteten genau diese Schiffe die Stadt gegen die Perser. Und noch etwas verschob sich: Wer schreiben und rechnen konnte, kam voran, auch ohne vornehme Familie. Nicht mehr nur die Herkunft zählte, sondern das Können.",
       quellen: [
         { label: "Griechisches Alphabet (Wikipedia)", url: w("Griechisches_Alphabet") },
-        { label: "Geschichte des Geldes (Wikipedia)", url: w("Geschichte_des_Geldes") },
+        { label: "Altgriechische Münzen (Wikipedia)", url: w("Altgriechische_Münzen") },
+        { label: "Solon (Wikipedia)", url: w("Solon") },
+        { label: "Perserkriege (Wikipedia)", url: w("Perserkriege") },
       ],
     },
     verunsicherung: {
-      text: "Besonders der alte Geburtsadel verliert den Boden: In der attischen Demokratie (ab ~500 v. Chr.) und der römischen Republik zählen Abstimmung, Amt und öffentliche Rede, nicht mehr allein die Abstammung. Zugleich lehren die Sophisten gegen Bezahlung Redekunst und vertreten, man könne zu jeder Sache das Gegenteil ebenso gut begründen. Der Prozess gegen Sokrates (399 v. Chr.), der mit dem Todesurteil endet, zeigt, wie nervös eine verunsicherte Stadt reagiert.",
-      mehr: "Der Redelehrer Protagoras brachte die neue Lage auf den Satz, der Mensch sei «das Mass aller Dinge», und verdiente mit seinem Unterricht ein Vermögen. Für viele Athener klang das nach Befreiung, für andere nach Boden, der unter den Füssen nachgibt. Wie gereizt die Stimmung war, zeigt der Prozess von 399 v. Chr.: Vor rund 500 ausgelosten Bürgern verteidigte sich der siebzigjährige Sokrates und schlug, als er nach dem Schuldspruch eine Strafe nennen sollte, allen Ernstes eine Ehrung vor, die Speisung auf Staatskosten. Das Gericht entschied auf den Giftbecher. Athen hatte kurz zuvor Krieg, Niederlage und die Schreckensherrschaft der Dreissig Tyrannen erlebt, und eine erschöpfte Stadt erträgt Spott über ihre Gewissheiten schlecht. Die Angst, dass am Ende gar nichts mehr gilt, ist seither die Begleiterin jeder grossen Umbruchszeit.",
+      text: "Wer seine Stellung von Geburt hatte, verliert den Boden. In Athen (ab etwa 500 v. Chr.) und in Rom entscheiden Abstimmungen, Ämter und öffentliche Reden, nicht mehr allein die Familie. Wer gut reden kann, kommt nach oben. Genau da setzen die Sophisten an. Sie ziehen von Stadt zu Stadt und bringen jungen Männern gegen Bezahlung bei, wie man eine Rede aufbaut und ein Publikum überzeugt. Ihre Kernbotschaft ist heikel: Zu jeder Sache lasse sich genauso gut das Gegenteil begründen. Damit steht eine unangenehme Frage im Raum. Wenn sich alles begründen lässt, gilt dann überhaupt noch etwas? Der Prozess gegen Sokrates (399 v. Chr.), der mit dem Todesurteil endet, zeigt, wie nervös eine verunsicherte Stadt reagiert.",
+      mehr: "Der Redelehrer Protagoras brachte die neue Lage auf einen Satz: Der Mensch sei «das Mass aller Dinge». Gemeint ist, dass nicht die Götter festlegen, was wahr und richtig ist, sondern die Menschen selbst. Mit seinem Unterricht verdiente Protagoras ein Vermögen. Für viele Athener klang das nach Freiheit, für andere so, als würde der Boden unter den Füssen weich. Wie gereizt die Stimmung war, zeigt der Prozess von 399 v. Chr. Rund 500 ausgeloste Bürger sassen als Gericht zusammen, und vor ihnen verteidigte sich der siebzigjährige Sokrates. Als er nach dem Schuldspruch selber eine Strafe vorschlagen sollte, schlug er allen Ernstes eine Belohnung vor: Gratisessen auf Staatskosten. Das Gericht entschied auf den Giftbecher. Dazu muss man wissen, dass Athen kurz zuvor einen langen Krieg verloren und die Gewaltherrschaft der Dreissig Tyrannen erlebt hatte. Eine erschöpfte Stadt erträgt es schlecht, wenn jemand ihre letzten Gewissheiten in Frage stellt. Diese Angst, dass am Ende gar nichts mehr sicher ist, kehrt in jeder Umbruchszeit wieder.",
       quellen: [
         { label: "Sophisten (Wikipedia)", url: w("Sophisten") },
         { label: "Prozess des Sokrates (Wikipedia)", url: w("Prozess_des_Sokrates") },
       ],
     },
     philosophie: {
-      text: "Aristoteles (384–322 v. Chr.) setzt dem eine Methode entgegen: beobachten, unterscheiden, in Begriffe ordnen und aus Voraussetzungen schlüssig folgern (Logik). Nicht wer am besten redet, soll recht behalten, sondern was sich am besten begründen lässt. Im Alltag lebt das als Selbstverständlichkeit fort, dass man Behauptungen belegt («beweis es») und Widersprüche als Fehler gelten.",
-      mehr: "Aristoteles war zuerst Sammler und dann Systematiker: In der Lagune von Pyrrha auf Lesbos untersuchte er Fische, Kraken und Seeigel, und seine Schule trug die Verfassungen von über 150 griechischen Städten zusammen. In Athen lehrte er im Lykeion, der Überlieferung nach oft im Umhergehen, weshalb man seine Schüler «Peripatetiker» nannte, die Umherwandelnden. Aus dem vielen Material destillierte er Regeln des Schliessens: Wenn alle Menschen sterblich sind und Sokrates ein Mensch ist, dann ist Sokrates sterblich, und das gilt unabhängig davon, wer es ausspricht. Genau darin lag die Spitze gegen die Redekünstler, denn ein Schluss stimmt oder stimmt nicht, Charme ändert daran nichts. Diese Haltung wanderte über arabische Gelehrte und mittelalterliche Klosterschulen bis in unsere Schulzimmer, und noch jede Prüfung, die eine Begründung verlangt, steht in ihrer Tradition.",
+      text: "Aristoteles (384–322 v. Chr.) setzt dem etwas anderes entgegen: genau hinschauen, unterscheiden, ordnen und dann Schritt für Schritt weiterdenken. Wer den ersten Satz annimmt, muss auch den nächsten annehmen, sonst widerspricht er sich selbst. Diese Kunst des sauberen Schliessens heisst Logik. Nicht wer am besten redet, soll recht haben, sondern wer am besten begründet. Davon lebt die Schule heute noch: Jedes «beweis es» und jede Aufgabe, die eine Begründung verlangt, kommt von hier. Auch dass ein Widerspruch ein Fehler ist und nicht Geschmackssache, ist diese Idee.",
+      mehr: "Aristoteles sammelte zuerst und ordnete dann. In einer Lagune auf der Insel Lesbos untersuchte er Fische, Kraken und Seeigel und beschrieb, wie sie gebaut sind. Seine Schule trug die Gesetze von über 150 griechischen Städten zusammen. In Athen unterrichtete er im Lykeion, der Überlieferung nach oft beim Herumgehen, weshalb man seine Schüler «die Umherwandelnden» nannte. Aus dem vielen Material zog er Regeln des Schliessens. Ein Beispiel: Alle Menschen sind sterblich. Sokrates ist ein Mensch. Also ist Sokrates sterblich. Das stimmt, egal wer es sagt, egal wie sympathisch oder mächtig diese Person ist. Genau das war die Antwort an die Redekünstler: Ein Schluss stimmt oder stimmt nicht, geschicktes Reden ändert daran nichts. Über arabische Gelehrte und mittelalterliche Klosterschulen kam diese Haltung bis in unsere Schulzimmer.",
       quellen: [
         { label: "Aristoteles (Wikipedia)", url: w("Aristoteles") },
         { label: "Logik (Wikipedia)", url: w("Logik") },
@@ -1017,14 +1019,25 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
     );
   }, []);
 
+  /** Zu welcher Epoche ein Baustein-Index gehört. */
+  const epocheVon = (gi: number) => Math.floor(gi / BAUSTEINE.length);
+
   function toggle(gi: number, el?: HTMLElement | null) {
     const wirdGeoeffnet = !offen.has(gi);
+    const ei = epocheVon(gi);
     setOffen((prev) => {
-      const nx = new Set(prev);
+      // Beim Öffnen bleibt nur die eigene Epoche aufgeschlagen. Über acht
+      // Epochen sammelten sich sonst beliebig viele offene Texte, und man
+      // verlor beim Scrollen den Überblick, wo man gerade ist.
+      const nx = wirdGeoeffnet
+        ? new Set([...prev].filter((k) => epocheVon(k) === ei))
+        : new Set(prev);
       if (nx.has(gi)) nx.delete(gi);
       else nx.add(gi);
       return nx;
     });
+    // Auch die «Mehr wissen»-Einordnung der verlassenen Epochen zuklappen.
+    if (wirdGeoeffnet) setLeadOffen((prev) => new Set([...prev].filter((k) => k === ei)));
     if (!gelesen.has(gi)) {
       setGelesen((prev) => new Set(prev).add(gi));
       merkeSpur(`${SPUR}:${gi}`);
@@ -1060,15 +1073,21 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
                 type="button"
                 onClick={() => {
                   // «Mehr wissen» ordnet die Epoche ein: zählt als Vertiefung.
-                  if (!leadOffen.has(ei)) {
+                  const wirdGeoeffnet = !leadOffen.has(ei);
+                  if (wirdGeoeffnet) {
                     merkeVertiefung(`${SPUR}:einordnung:${ei}`, `${e.epoche} · Einordnung`);
                   }
                   setLeadOffen((prev) => {
-                    const nx = new Set(prev);
+                    // Beim Öffnen bleibt nur diese Epoche aufgeschlagen.
+                    const nx = wirdGeoeffnet ? new Set<number>() : new Set(prev);
                     if (nx.has(ei)) nx.delete(ei);
                     else nx.add(ei);
                     return nx;
                   });
+                  // Auch die Bausteine der verlassenen Epochen zuklappen.
+                  if (wirdGeoeffnet) {
+                    setOffen((prev) => new Set([...prev].filter((k) => epocheVon(k) === ei)));
+                  }
                 }}
                 aria-expanded={leadOffen.has(ei)}
                 className="mt-sm inline-flex items-center gap-xs rounded-full border border-outline-variant bg-surface-bright px-sm py-xs text-label-md text-on-surface-variant transition-colors hover:border-tertiary hover:text-tertiary"

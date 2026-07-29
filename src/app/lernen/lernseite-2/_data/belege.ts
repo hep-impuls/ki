@@ -120,6 +120,39 @@ export const BELEGE: Beleg[] = [
       "Untersucht wurden GPT-2, GPT-3.5 und Llama 2. Ein Modell beschrieb Frauen viermal häufiger in häuslichen Rollen als Männer; bei Llama 2 häuften sich in Männergeschichten Wörter wie «treasure» und «adventurous», in Frauengeschichten «garden» und «love».",
     geprueft: "2026-07-26",
   },
+
+  /* ── Antike («Philosophie in Zeiten der Verunsicherung») ──────────────────
+   * Alle URLs am 2026-07-29 abgerufen und die Aussage darin nachgelesen.
+   * Die Anker liegen bewusst NEBEN den Glossarbegriffen (nicht auf «Solon»,
+   * «Themistokles», «Laurion»): Bei einer Überlappung gewinnt der Beleg, und
+   * die Begriffserklärung im Hover wäre verdeckt. */
+  {
+    id: "EP-a6e85e",
+    anker: "drehbar an Pflöcken befestigt waren",
+    url: "https://de.wikipedia.org/wiki/Solon",
+    titel: "Solon (Wikipedia)",
+    stelle:
+      "Abschnitt «Solons Gesetzgebung»: Das Gesetzeswerk wurde auf Holztafeln (Axones) gesichert, «in der Art heutiger Postkartenständer drehbar an Pflöcken befestigt». Aufbewahrt wurden sie im Prytaneion — darum nennt der Lernset-Text keinen Ort.",
+    geprueft: "2026-07-29",
+  },
+  {
+    id: "EP-a6e85e",
+    anker: "nach ihrem Münzbild nannte",
+    url: "https://de.wikipedia.org/wiki/Altgriechische_M%C3%BCnzen",
+    titel: "Altgriechische Münzen (Wikipedia)",
+    stelle:
+      "Zu den Münzbildern: «Lange blieben die Münzen aus Aigina («Schildkröten» genannt) sowie die aus Korinth («Fohlen») und Athen («Eulen»)» die beherrschenden Zahlungsmittel des frühen Griechenland.",
+    geprueft: "2026-07-29",
+  },
+  {
+    id: "EP-a6e85e",
+    anker: "wollten die Athener den Überschuss unter sich aufteilen",
+    url: "https://de.wikipedia.org/wiki/Perserkriege",
+    titel: "Perserkriege (Wikipedia)",
+    stelle:
+      "Zur Vorgeschichte von Salamis: «man sich von Themistokles überzeugen liess, Überschusseinnahmen aus dem Silberabbau in Laurion von 483 v. Chr. an nicht unter die Bürger zu verteilen, sondern in den Schiffsbau zu investieren».",
+    geprueft: "2026-07-29",
+  },
 ];
 
 /**
