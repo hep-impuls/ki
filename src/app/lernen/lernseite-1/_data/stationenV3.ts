@@ -2477,7 +2477,7 @@ const station6: Station = {
       lernziel:
         "Du kannst erklären, was das KI-System Maven im Kriegseinsatz leistet und welches Versprechen damit verbunden ist — mehr Tempo, ein Echtzeit-Lagebild und angeblich weniger Zivilopfer.",
       anleitung:
-        "Schau im ersten Ausschnitt von Minute 12:40 bis 15:06. Was leistet Maven laut Bericht? Achte besonders auf das Versprechen «könnte zivile Opfer reduzieren» gegen Ende — was müsste dafür alles stimmen? Der zweite, freiwillig ergänzte Ausschnitt zeigt eine unabhängige Quelle aus dem Ukrainekrieg.",
+        "Schau im ersten Ausschnitt von Minute 12:40 bis 15:06. Was leistet Maven laut Bericht? Achte besonders auf das Versprechen, dass zivile Opfer reduziert werden könnten — was müsste dafür alles stimmen? Der zweite, freiwillig ergänzte Ausschnitt zeigt eine unabhängige Quelle aus dem Ukrainekrieg.",
     },
     schatten: {
       inhalt:
@@ -2577,7 +2577,7 @@ const station6: Station = {
     intro:
       "KI macht Kriege schneller — könnte sie sie auch präziser und damit menschlicher machen? Das Maven-System von Palantir verspricht ein Echtzeit-Lagebild und eine treffsicherere Zielauswahl. Ein zweiter, freiwilliger Ausschnitt zeigt zusätzlich, wie autonome Drohnen im Ukrainekrieg bereits heute funktionieren.",
     anleitung:
-      "Schau beide Beiträge ganz. Im ersten: Was leistet Maven laut Bericht — und was müsste für das Versprechen «könnte zivile Opfer reduzieren» gegen Ende alles stimmen? Mittendrin kommen schon kritische Stimmen zu Wort — die gehören inhaltlich zur nächsten Seite, hier zählt zuerst das Versprechen.",
+      "Schau beide Beiträge ganz. Im ersten: Was leistet Maven laut Bericht — und was müsste für das Versprechen, dass zivile Opfer reduziert werden könnten, alles stimmen? Mittendrin kommen schon kritische Stimmen zu Wort — die gehören inhaltlich zur nächsten Seite, hier zählt zuerst das Versprechen.",
     media: [
       // Beide SRF-Player zeigen die geschnittenen Beiträge, nicht die
       // Gesamtsendungen — sie laufen ganz, ohne Start/Stopp-Vorgabe
