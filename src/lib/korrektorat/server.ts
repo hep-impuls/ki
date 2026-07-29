@@ -150,12 +150,13 @@ async function inhaltsIndex(k: Konfig): Promise<Index> {
   const pfade = inhaltsDateien(await q.pfade());
   const branchVorhanden = await q.branchVorhanden();
 
-  const gelesen = await parallel(pfade, 10, async (pfad) => {
-    // Gezeigt wird immer der Stand, den Sebastian bearbeitet — also der
-    // Korrektorat-Branch, sobald es ihn gibt.
+  /* Zuerst nur die Kennungen. Bei GitHub stehen sie im Baum, der für die
+     Pfadliste ohnehin geholt wurde — dieser Schritt kostet also keine einzige
+     zusätzliche Anfrage. */
+  const kennungen = await parallel(pfade, 10, async (pfad) => {
     const [basis, branch] = await Promise.all([
-      q.lesen(pfad, "basis"),
-      branchVorhanden ? q.lesen(pfad, "branch") : Promise.resolve(null),
+      q.kennung(pfad, "basis"),
+      branchVorhanden ? q.kennung(pfad, "branch") : Promise.resolve(null),
     ]);
     return { pfad, basis, branch };
   });
@@ -163,10 +164,25 @@ async function inhaltsIndex(k: Konfig): Promise<Index> {
   const schluessel = [
     q.art,
     k.branch,
-    ...gelesen.map((g) => `${g.basis?.kennung || ""}:${g.branch?.kennung || ""}`),
+    ...kennungen.map((g) => `${g.basis || ""}:${g.branch || ""}`),
   ].join("|");
   const gecacht = indexCache.get(schluessel);
   if (gecacht) return { dateien: gecacht, branchVorhanden, art: q.art };
+
+  /* Erst beim Cache-Miss die Inhalte. Vorher stand diese Schleife VOR der
+     Cache-Abfrage: Der Cache sparte damit nur das Parsen, während jeder
+     Seitenaufruf und jede Suche weiterhin ~120 Blobs von GitHub holte (59
+     Dateien × zwei Refs). Nach rund vierzig Aufrufen war das Stundenlimit von
+     5000 Anfragen erschöpft und der Editor meldete 403. */
+  const gelesen = await parallel(kennungen, 10, async ({ pfad, basis, branch }) => {
+    // Gezeigt wird immer der Stand, den die Korrekturperson bearbeitet — also
+    // der Korrektorat-Branch, sobald es ihn gibt.
+    const [b, br] = await Promise.all([
+      basis ? q.lesen(pfad, "basis") : Promise.resolve(null),
+      branch ? q.lesen(pfad, "branch") : Promise.resolve(null),
+    ]);
+    return { pfad, basis: b, branch: br };
+  });
 
   const dateien: IndexDatei[] = [];
   for (const { pfad, basis, branch } of gelesen) {

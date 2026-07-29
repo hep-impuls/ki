@@ -32,6 +32,13 @@ export interface Quelle {
   pfade(): Promise<string[]>;
   /** Existiert der Korrektorat-Branch schon? */
   branchVorhanden(): Promise<boolean>;
+  /**
+   * Nur die Kennung, ohne den Inhalt zu holen. Bei GitHub steht sie im Baum,
+   * der ohnehin schon abgerufen ist — der Aufruf kostet also keine einzige
+   * Anfrage. Damit lässt sich der Cache-Schlüssel bilden, BEVOR man Inhalte
+   * lädt (siehe `inhaltsIndex` in server.ts).
+   */
+  kennung(pfad: string, wo: "basis" | "branch"): Promise<string | null>;
   lesen(pfad: string, wo: "basis" | "branch"): Promise<DateiStand | null>;
 }
 
@@ -73,6 +80,11 @@ function githubQuelle(k: Konfig): Quelle {
       return (await baum(k.branch)) !== null;
     },
 
+    async kennung(pfad, wo) {
+      const b = await baum(wo === "basis" ? k.basis : k.branch);
+      return b?.get(pfad) ?? null;
+    },
+
     async lesen(pfad, wo) {
       const ref = wo === "basis" ? k.basis : k.branch;
       const b = await baum(ref);
@@ -107,6 +119,17 @@ function lokaleQuelle(): Quelle {
 
     async branchVorhanden() {
       return false;
+    },
+
+    async kennung(pfad, wo) {
+      if (wo === "branch") return null; // lokal gibt es nur einen Stand
+      const abs = path.join(/* turbopackIgnore: true */ wurzel, pfad);
+      try {
+        const stat = await fs.stat(abs);
+        return `${stat.mtimeMs}:${stat.size}`;
+      } catch {
+        return null;
+      }
     },
 
     async lesen(pfad, wo) {

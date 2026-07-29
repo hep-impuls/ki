@@ -41,7 +41,28 @@ export class GitHub {
     if (init.body && !headers["Content-Type"]) headers["Content-Type"] = "application/json";
     const res = await fetch(`${API}${pfad}`, { ...init, headers, cache: "no-store" });
     if (!res.ok && res.status !== 404) {
-      throw new Error(`GitHub ${init.method || "GET"} ${pfad} → ${res.status}: ${await res.text()}`);
+      const text = await res.text();
+      /* Das Stundenlimit ist der einzige Fehler, den die Korrekturperson selbst
+         auflösen kann (warten). Darum eine Meldung in Klartext statt der
+         GitHub-Rohantwort, samt Zeitpunkt, ab dem es weitergeht. */
+      if (res.status === 403 || res.status === 429) {
+        const rest = res.headers.get("x-ratelimit-remaining");
+        if (rest === "0" || /rate limit/i.test(text)) {
+          const reset = Number(res.headers.get("x-ratelimit-reset") || 0);
+          const wann = reset
+            ? new Date(reset * 1000).toLocaleTimeString("de-CH", {
+                hour: "2-digit",
+                minute: "2-digit",
+              })
+            : null;
+          throw new Error(
+            "GitHub lässt vorübergehend keine weiteren Zugriffe zu (Stundenlimit erreicht). " +
+              (wann ? `Ab ${wann} Uhr geht es weiter. ` : "In etwa einer Stunde geht es weiter. ") +
+              "Bereits gespeicherte Korrekturen sind nicht verloren.",
+          );
+        }
+      }
+      throw new Error(`GitHub ${init.method || "GET"} ${pfad} → ${res.status}: ${text}`);
     }
     return res;
   }
