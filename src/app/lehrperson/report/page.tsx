@@ -429,9 +429,12 @@ function ReportFlow() {
                 <span className="material-symbols-outlined align-[-4px] text-[18px] text-tertiary">
                   check_circle
                 </span>{" "}
-                abgeschlossen (Verständnisfragen ab 60 %) · Prozentzahl = Anteil der
-                bearbeiteten Elemente dieses Themas · «–» = nicht begonnen. «Gesamt» ist
-                derselbe Anteil über alle Themen zusammen.
+                abgeschlossen: letzte Seite des Themas erreicht und mindestens 60 % der
+                Punkte auf den <em>beantworteten</em> Verständnisfragen · Prozentzahl =
+                Anteil der bearbeiteten Elemente dieses Themas (24–25 pro Thema) · «–» =
+                nicht begonnen. «Gesamt» rechnet über alle {THEMEN.length} Themen, auch
+                die nicht gewählten — zwei vollständig bearbeitete Themen ergeben rund{" "}
+                {pct(200 / THEMEN.length)}.
               </p>
 
               {weitereModule.length > 0 && (

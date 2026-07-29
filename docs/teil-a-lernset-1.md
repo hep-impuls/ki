@@ -84,12 +84,33 @@ Sie die Sätze vorlesen oder abtippen — abrufen können Sie sie nicht.
 ## A5 · Was Sie sehen — und was nicht
 
 **Wer wie weit ist — und in welchem Thema.** Der Klassenreport zeigt pro
-Fortschritts-Code eine Spalte je Thema: «–» heisst nicht begonnen, eine
-Prozentzahl heisst begonnen (Anteil der bearbeiteten Elemente dieses Themas),
-ein Haken daneben heisst abgeschlossen im Sinn des 60-%-Gates auf den
-Verständnisfragen. Rechts stehen der Gesamtwert über alle Themen und die
-Quiz-Punkte. Das eignet sich, um zu erkennen, wer noch nicht gestartet ist und
-welche Themen die Klasse trägt — nicht, um Leistung zu beurteilen.
+Fortschritts-Code eine Spalte je Thema mit drei möglichen Zuständen:
+
+- **«–»** — nicht begonnen.
+- **eine Prozentzahl** — begonnen; sie nennt den Anteil der bearbeiteten
+  Elemente dieses Themas. Ein Thema hat 24 bis 25 davon: je drei Meinungsfragen
+  vorher und nachher, acht Verständnisfragen, drei Werte-Karten, sechs bis
+  sieben Faktencheck-Karten, ein Reflexionssatz.
+- **Prozentzahl mit Haken** — abgeschlossen. Dafür braucht es zweierlei: die
+  letzte Seite des Themas erreicht und mindestens 60 Prozent der Punkte auf den
+  *beantworteten* Verständnisfragen. Unbeantwortete Fragen zählen nicht gegen
+  die Schwelle — wer vier Fragen überspringt und die anderen vier richtig hat,
+  bekommt den Haken.
+
+Prozentzahl und Haken sagen Verschiedenes. Jemand kann bei 83 Prozent mit Haken
+stehen (Werte-Karten und Reflexionssatz übersprungen, die Verständnisfragen
+sitzen) — oder bei 100 Prozent ohne Haken (alles bearbeitet, aber nur vier von
+acht Verständnisfragen richtig). Grob: Der Haken sagt etwas über das
+Verständnis, die Prozentzahl über die Gründlichkeit.
+
+Rechts folgen «Gesamt» und die Quiz-Punkte. **Beim Gesamtwert aufpassen:** Er
+rechnet über alle sechs Themen, auch über die nicht gewählten. Wer zwei Themen
+vollständig bearbeitet, steht bei rund 33 Prozent — das ist kein schwaches
+Ergebnis, sondern zwei ganze Themen. Die Themen-Spalten sind die verlässlichere
+Auskunft.
+
+Das eignet sich, um zu erkennen, wer noch nicht gestartet ist und welches Thema
+in der Klasse liegen bleibt — nicht, um Leistung zu beurteilen.
 
 **Wie die Klasse steht.** Darunter steht der Teil, der für die Nachbesprechung
 zählt: «Abstimmungen — Klasse gegen alle». Zu jeder Meinungsfrage sehen Sie die
@@ -128,10 +149,10 @@ Thema und vertreten danach je eine Seite, unabhängig von der eigenen Meinung.
 wodurch? Ein einziges Argument, das jemanden umgestimmt hat, ist mehr wert als
 zehn, die bestätigt haben.
 
-**Gemiedene Themen** (10 Minuten, Plenum) — Im Report sehen Sie in der
-Themen-Tabelle auf einen Blick, welche Spalte leer geblieben ist. Bringen Sie
-die Beobachtung mit ins Plenum: Welches Thema hat die Klasse umgangen, und was
-sagt das?
+**Gemiedene Themen** (10 Minuten, Plenum) — Der Report zeigt Ihnen vorher,
+welche Spalte leer geblieben ist. Bringen Sie die Beobachtung mit: Welches Thema
+hat die Klasse umgangen, und was sagt das? Fragen Sie nach dem Grund, nicht nach
+der Zahl.
 
 **Fälschungen nachbauen** (20 Minuten) — Der Faktencheck zeigt zu jeder Zahl
 eine plausible Fälschung. Lassen Sie die Klasse selbst eine bauen — und die
