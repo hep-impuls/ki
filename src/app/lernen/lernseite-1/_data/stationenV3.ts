@@ -1961,7 +1961,7 @@ const station4: Station = {
       aussage: "Gespräche mit KI-Therapie-Chatbots sind vertraulich.",
       correctAnswer: false,
       feedbackRichtig:
-        "Richtig — das ist eine weit verbreitete, aber falsche Annahme. US PIRG (2025) fand, dass alle fünf getesteten Apps Vertraulichkeit behaupteten, ohne sie tatsächlich zu gewährleisten.",
+        "Richtig — das ist eine weit verbreitete, aber falsche Annahme. US PIRG (2025) fand heraus, dass alle fünf getesteten Apps Vertraulichkeit behaupteten, ohne sie tatsächlich zu gewährleisten.",
       feedbackFalsch:
         "Das stimmt leider nicht. Tests zeigten, dass Therapie-Chatbots Vertraulichkeit versprechen, ohne sie einzuhalten. Eingaben können zum Training oder für Werbung genutzt werden.",
     },
