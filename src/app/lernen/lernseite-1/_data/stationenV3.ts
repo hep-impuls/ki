@@ -2716,7 +2716,7 @@ const station6: Station = {
     {
       id: "st6-fakt-5",
       claim:
-        "UN-Generalsekretär Guterres und das IKRK fordern bis 2026 einen rechtsverbindlichen Vertrag, der autonome Waffen ohne bedeutsame menschliche Kontrolle («meaningful human control») verbietet. Die CCW-Gespräche laufen seit 2014 — ohne substanzielles Ergebnis.",
+        "UN-Generalsekretär António Guterres und das IKRK fordern bis 2026 einen rechtsverbindlichen Vertrag, der autonome Waffen ohne bedeutsame menschliche Kontrolle («meaningful human control») verbietet. Die CCW-Gespräche laufen seit 2014 — ohne substanzielles Ergebnis.",
       figure: "Verhandlungen seit 2014; kein Ergebnis",
       sourceName: "Human Rights Watch / UN News, Mai 2025",
       sourceUrl:
