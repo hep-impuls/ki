@@ -1067,10 +1067,9 @@ export default function Lernseite2VorhangAuf() {
           </p>
         </Ausklapptext>
         <Aufgabe className="mt-md max-w-4xl">
-          Klappe die Aspekte auf, die dich interessieren, denn jeder erklärt
-          einen Faden des Geflechts. Gewichte dabei, wie viel Achtsamkeit ein
-          Aspekt verdient. Das Achtsamkeits-Muster oben wird dadurch farbiger
-          und rötlicher.
+          Klappe die Aspekte auf, die dich interessieren, denn jeder erklärt einen Faden des
+          Geflechts. Gewichte dabei, wie viel Achtsamkeit ein Aspekt verdient. Das
+          Achtsamkeits-Muster oben wird dadurch farbiger.
         </Aufgabe>
         <KontextAkkordeon
           className="mt-lg"
