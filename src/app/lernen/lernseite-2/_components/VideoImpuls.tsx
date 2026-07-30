@@ -209,7 +209,7 @@ export default function VideoImpuls({
           {videoId && !geschaut && (
             <p className="mt-sm flex items-center gap-xs text-label-sm text-on-surface-variant">
               <span className="material-symbols-outlined text-[16px]">visibility</span>
-              Wird als «geschaut» vermerkt, sobald du es zu Ende angeschaut hast.
+              Das Video wird als «geschaut» vermerkt, sobald du es zu Ende angeschaut hast.
             </p>
           )}
         </div>

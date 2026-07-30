@@ -96,7 +96,7 @@ export const OPENER_SCHWANZ_KARTEN: OpenerKarte[] = [
   {
     media: OPENER_SCHWANZ[0],
     titel: "Musik aus dem Rechner",
-    beschreibung: "Eine KI komponiert und spielt live einen Song — hör rein, wie nah das an echter Musik ist.",
+    beschreibung: "Eine KI komponiert und spielt live einen Song — hör dir an, wie sehr das nach echter Musik klingt.",
     icon: "music_note",
   },
   {

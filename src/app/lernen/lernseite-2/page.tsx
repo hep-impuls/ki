@@ -65,10 +65,9 @@ export default function Lernseite2Hub() {
           <p>
             Deshalb beginnst du gleich mit einem Muster, dessen Knoten du
             verbinden kannst — noch <strong className="text-on-surface">ohne
-            konkreten Inhalt</strong>. Es deutet nur auf den Gedanken, dass KI
-            als Phänomen zu erfassen viel <strong className="text-on-surface">Kontextarbeit</strong>{" "}
-            braucht. In diesem Lernset geht es darum immer auch um den Kontext
-            der KI.
+            konkreten Inhalt</strong>. Das Muster macht deutlich, dass es viel <strong className="text-on-surface">Kontextarbeit</strong>{" "}
+            braucht, um KI als Phänomen zu erfassen. In diesem Lernset geht es deshalb immer
+            auch um den Kontext der KI.
           </p>
           <Ausklapptext
             titel="Mehr dazu: Wie die Philosophie das weiterdenkt"

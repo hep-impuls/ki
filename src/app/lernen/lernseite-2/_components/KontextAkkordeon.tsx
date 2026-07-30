@@ -178,9 +178,8 @@ export default function KontextAkkordeon({
               Dein Achtsamkeits-Muster
             </p>
             <p className="mt-xs text-body-sm text-on-surface-variant">
-              Jeder Abschnitt steht für einen Aspekt (im Uhrzeigersinn, Kapitel
-              für Kapitel). Je mehr Achtsamkeit du ihm gibst, desto farbiger und
-              rötlicher wird er.
+              Jeder Abschnitt steht für einen Aspekt (im Uhrzeigersinn, Kapitel für
+              Kapitel). Je mehr Achtsamkeit du ihm gibst, desto farbiger wird er.
             </p>
             <div className="mt-sm flex flex-wrap items-center justify-center gap-md sm:justify-start">
               {[

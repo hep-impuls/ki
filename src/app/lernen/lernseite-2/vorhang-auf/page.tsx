@@ -182,7 +182,7 @@ const BILDER_STORY: AnschauBild[] = [
         x: 52,
         y: 17,
         titel: "Das Programm",
-        text: "«Calculation complete»: Die Maschine führt eine feste Folge von Schritten aus. Ada Lovelace sah, dass sie Anweisungen folgen kann.",
+        text: "«Calculation complete»: Die Maschine führt eine feste Folge von Schritten aus. Ada Lovelace erkannte, dass sie Anweisungen folgen kann.",
       },
     ],
   },
@@ -349,7 +349,7 @@ const BILDER_STORY: AnschauBild[] = [
     quelle:
       "Von DALL·E 2 erzeugtes Bild (2022) · Wikimedia Commons · KI-generiert; ob urheberrechtlicher Schutz besteht, hängt vom menschlichen Gestaltungsbeitrag und vom anwendbaren Recht ab",
     geschichte:
-      "DALL·E von OpenAI erzeugt Bilder aus Textbeschreibungen. DALL·E 1 kam im Januar 2021, das deutlich stärkere DALL·E 2 im April 2022, also rund ein halbes Jahr vor ChatGPT. Man gibt einen Satz ein, und das Modell «malt» ein Bild, das so nie fotografiert wurde. Es setzt das Bild Punkt für Punkt neu aus Gelerntem zusammen. Damit wurde generative KI erstmals einem breiten Publikum sichtbar. Dieses Bild ist selbst ein Ergebnis von DALL·E 2, eine zeichnende Roboterhand. Wem es rechtlich gehört, ist heikler, als es klingt: Das Schweizer Urheberrecht schützt geistige Schöpfungen von Menschen, rein maschinell Erzeugtem fehlt der Schutz darum grundsätzlich. Steckt im Ergebnis ein eigener menschlicher Gestaltungsbeitrag, kann Schutz bestehen. Es ist eine Frage des Einzelfalls.",
+      "DALL·E von OpenAI erzeugt Bilder aus Textbeschreibungen. DALL·E 1 kam im Januar 2021, das deutlich stärkere DALL·E 2 im April 2022, also rund ein halbes Jahr vor ChatGPT. Man gibt einen Satz ein, und das Modell «malt» ein Bild, das so nie fotografiert wurde. Es setzt das Bild Punkt für Punkt neu aus Gelerntem zusammen. Damit wurde generative KI erstmals einem breiten Publikum sichtbar. Dieses Bild ist selbst ein Ergebnis von DALL·E 2, eine zeichnende Roboterhand. Die Frage, wem es rechtlich gehört, ist heikel: Das Schweizer Urheberrecht schützt geistige Schöpfungen von Menschen, rein maschinell Erzeugtem fehlt dieser Schutz grundsätzlich. Steckt im Ergebnis ein eigener menschlicher Gestaltungsbeitrag, kann ein Schutz bestehen. Es ist eine Frage des Einzelfalls.",
     ki: true,
     hotspots: [
       {
@@ -368,7 +368,7 @@ const BILDER_STORY: AnschauBild[] = [
         x: 45,
         y: 82,
         titel: "Früher als ChatGPT",
-        text: "Das vergisst man leicht. Die Bild-KI war zuerst da, nämlich DALL·E 2 im April 2022, ein halbes Jahr bevor ChatGPT im November 2022 alle erreichte.",
+        text: "Das vergisst man leicht: Die Bild-KI war zuerst da, nämlich DALL·E 2 im April 2022, ein halbes Jahr bevor ChatGPT im November 2022 alle erreichte.",
       },
     ],
   },
@@ -380,7 +380,7 @@ const BILDER_STORY: AnschauBild[] = [
     kurz: "der Chatbot, der KI in den Alltag brachte",
     quelle: "Schematische Illustration, mit KI erstellt für dieses Lehrmittel · kein Foto",
     geschichte:
-      "ChatGPT von OpenAI erschien im November 2022 und machte KI für alle bedienbar. Es war ein Chatfenster mit normaler Sprache, sofort nutzbar. Innert weniger Wochen nutzten es Millionen. Das war der Moment, in dem KI im Alltag ankam. Das Modell setzt Wort für Wort den wahrscheinlich nächsten Textbaustein. Das gelingt verblüffend gut, kann aber auch überzeugend falsch sein. Zusätzlich wurde es mit menschlichem Feedback trainiert, um hilfreicher und harmloser zu antworten. Diese Illustration eines Chatfensters ist mit KI erstellt.",
+      "ChatGPT von OpenAI erschien im November 2022 und macht KI für alle bedienbar. Es ist ein Chatfenster mit normaler Sprache, sofort nutzbar. Innert weniger Wochen nutzten es Millionen. Das war der Moment, in dem KI im Alltag ankam. Das Modell setzt Wort für Wort den wahrscheinlich nächsten Textbaustein. Das gelingt verblüffend gut, kann aber auch überzeugend falsch sein. Zusätzlich wurde es mit menschlichem Feedback trainiert, um hilfreicher und harmloser zu antworten. Diese Illustration eines Chatfensters ist mit KI erstellt.",
     ki: true,
     hotspots: [
       {
@@ -626,7 +626,7 @@ export default function Lernseite2VorhangAuf() {
               geschichte:
                 "Wolfgang von Kempelens Schach spielender «Türke» schlug ab 1770 Fürsten und Kaiser. Im Innern des Kastens sass jedoch ein verborgener Mensch und lenkte die Figur. Europa stritt trotzdem jahrzehntelang darüber, ob eine Maschine denken könne. Die Täuschung bewies vor allem, wie bereitwillig wir Maschinen einen Verstand zutrauen.",
               mehr:
-                "Ein besonders eindrückliches Stück steht in der Schweiz, denn der «Schreiber» von Pierre Jaquet-Droz aus dem 18. Jahrhundert lässt sich im Museum von Neuenburg bis heute in Betrieb bestaunen. Die Figur tunkt die Feder ins Tintenfass und schreibt einen frei einstellbaren Text von bis zu vierzig Zeichen, gesteuert über auswechselbare Nockenscheiben. Weil sich das Geschriebene auf diese Weise verändern lässt, gilt der «Schreiber» als früher Vorbote des programmierbaren Computers. Der Schachtürke wiederum reiste nach Kempelens Tod mit dem Schausteller Johann Nepomuk Mälzel weiter und trat sogar gegen Napoleon an. Der Schriftsteller Edgar Allan Poe versuchte 1836 in einem Aufsatz zu beweisen, dass ein Mensch im Kasten sitzen müsse. Der Apparat verbrannte schliesslich 1854 bei einem Museumsbrand in Philadelphia. So trennen diese Geräte den schönen Schein vom wirklichen Können, eine Unterscheidung, die bei der KI wieder hochaktuell ist.",
+                "Ein besonders eindrückliches Stück steht in der Schweiz, denn der «Schreiber» von Pierre Jaquet-Droz aus dem 18. Jahrhundert lässt sich im Museum von Neuenburg bis heute in Betrieb bestaunen. Die Figur tunkt die Feder ins Tintenfass und schreibt einen frei einstellbaren Text von bis zu vierzig Zeichen, gesteuert über auswechselbare Nockenscheiben. Weil sich das Geschriebene auf diese Weise verändern lässt, gilt der «Schreiber» als früher Vorbote des programmierbaren Computers. Der «Schachtürke» wiederum reiste nach Kempelens Tod mit dem Schausteller Johann Nepomuk Mälzel weiter und trat sogar gegen Napoleon an. Der Schriftsteller Edgar Allan Poe versuchte 1836 in einem Aufsatz zu beweisen, dass ein Mensch im Kasten sitzen müsse. Der Apparat verbrannte schliesslich 1854 bei einem Museumsbrand in Philadelphia. So trennen diese Geräte den schönen Schein vom wirklichen Können, eine Unterscheidung, die bei der KI wieder hochaktuell ist.",
             },
             {
               titel: "Frankenstein",
@@ -662,7 +662,7 @@ export default function Lernseite2VorhangAuf() {
               geschichte:
                 "Das Wort «Algorithmus» geht auf den Gelehrten al-Chwarizmi zurück, der um 820 in Bagdad wirkte, und die Verfahren selbst sind noch viel älter. Erst Alan Turings gedankliche «Maschine» von 1936 und die ersten elektronischen Rechner der 1940er-Jahre veränderten alles. Von da an führte nicht mehr ein Mensch mit Papier und Bleistift die Schritte aus, sondern die Maschine selbst. Der Algorithmus wurde damit vom blossen Rezept zum Motor der Rechenmaschine.",
               mehr:
-                "Ein greifbares Beispiel für den ausführbaren Algorithmus ist die Z3 des Berliner Ingenieurs Konrad Zuse, die 1941 als erster funktionsfähiger programmgesteuerter Rechner gilt. Sie arbeitete bereits mit dem Binärsystem und wurde über einen gelochten Streifen mit Befehlen versorgt. Der Name «Algorithmus» geht auf den Gelehrten al-Chwarizmi zurück, dessen Werk zugleich dem Wort «Algebra» seinen Namen gab. Turings gedankliches Modell von 1936 beschrieb eine Maschine mit einem endlosen Band, die durch einfache Schreib- und Leseschritte jedes berechenbare Problem lösen kann. Im Zweiten Weltkrieg half Turing dann, mit eigens gebauten Maschinen den deutschen Funkschlüssel Enigma zu knacken. So wurde aus einer reinen Denkfigur in wenigen Jahren eine wirklich arbeitende Maschine. Damit war die Grundlage gelegt, auf der jede spätere KI aufbaut.",
+                "Ein greifbares Beispiel für den ausführbaren Algorithmus ist die Z3 des Berliner Ingenieurs Konrad Zuse von 1941, die als erster funktionsfähiger programmgesteuerter Rechner gilt. Sie arbeitete bereits mit dem Binärsystem und wurde über einen gelochten Streifen mit Befehlen versorgt. Der Name «Algorithmus» geht auf den Gelehrten al-Chwarizmi zurück, dessen Werk zugleich dem Wort «Algebra» seinen Namen gab. Turings gedankliches Modell von 1936 beschrieb eine Maschine mit einem endlosen Band, die durch einfache Schreib- und Leseschritte jedes berechenbare Problem lösen kann. Im Zweiten Weltkrieg half Turing dann, mit eigens gebauten Maschinen den deutschen Funkschlüssel Enigma zu knacken. So wurde aus einer reinen Denkfigur in wenigen Jahren eine wirklich arbeitende Maschine. Damit war die Grundlage gelegt, auf der jede spätere KI aufbaut.",
             },
             {
               titel: "Geburt der KI",
@@ -732,7 +732,7 @@ export default function Lernseite2VorhangAuf() {
               jahr: "1994–1998",
               text: "Mit dem wachsenden Internet wurde die schiere Menge zum Problem. Algorithmen begannen, die Flut zu sortieren und zu ordnen. Empfehlungs- und Rangfolge-Verfahren entschieden fortan, was wir zuerst sehen. Zum ersten Mal bestimmte nicht ein Mensch, sondern eine Rechenvorschrift über Sichtbarkeit im grossen Massstab.",
               geschichte:
-                "1994 schlug das Projekt GroupLens vor, Beiträge automatisch nach dem Geschmack ähnlicher Nutzer zu empfehlen. So entstand das «kollaborative Filtern». 1998 ordnete Googles PageRank Webseiten danach, wie viele andere Seiten auf sie verweisen. Damit entschied erstmals ein Algorithmus im grossen Massstab über Reihenfolge und Sichtbarkeit.",
+                "1994 schlug das Projekt GroupLens vor, Beiträge automatisch nach dem Geschmack ähnlicher Nutzerinnen und Nutzer zu empfehlen. So entstand das «kollaborative Filtern». 1998 ordnete Googles PageRank Webseiten danach, wie viele andere Seiten auf sie verweisen. Damit entschied erstmals ein Algorithmus im grossen Massstab über Reihenfolge und Sichtbarkeit.",
               mehr:
                 "Der Name PageRank spielt auf Larry Page an, der das Verfahren zusammen mit Sergey Brin an der Universität Stanford entwickelte, wo ihre Suchmaschine anfangs noch «BackRub» hiess. Die Grundidee lehnten die beiden an die Wissenschaft an, denn dort gilt ein Aufsatz als bedeutend, wenn viele andere ihn zitieren. Übertragen aufs Web heisst das, eine Seite ist wichtig, wenn viele wichtige Seiten auf sie verweisen. Fast zeitgleich brachte der Onlinehändler Amazon Ende der 1990er-Jahre Empfehlungen der Art «Kunden, die dies kauften, kauften auch jenes» gross heraus. Beide Ansätze eint, dass nicht mehr ein Mensch, sondern eine Formel über Sichtbarkeit und Reihenfolge entscheidet. Wer weit oben steht, wird gefunden, der Rest verschwindet in der Masse. So wurde der Rang zur eigentlichen Währung im Netz.",
             },
@@ -746,7 +746,7 @@ export default function Lernseite2VorhangAuf() {
               geschichte:
                 "2006 führte Facebook den «News Feed» ein. Beiträge wurden nun gebündelt und gewichtet statt bloss chronologisch angezeigt. Später bestimmten lernende Systeme anhand jeder Reaktion, jedes Klicks und jeder Verweildauer, was einzelne Nutzer sahen. Aus einer einfachen Liste wurde eine für jede Person anders zusammengestellte Bühne.",
               mehr:
-                "Als Facebook den «News Feed» im September 2006 einführte, gab es zunächst heftige Proteste, denn viele empfanden das automatische Sammeln ihrer Aktivitäten als übergriffig. Wenig später, im Jahr 2009, kam der «Gefällt mir»-Knopf dazu, der dem System laufend verriet, was Anklang findet. Aus solchen Signalen lernten die Netzwerke, wem sie welchen Beitrag zuoberst zeigen sollten. Der Bürgerrechtler Eli Pariser prägte 2011 dafür das Bild der «Filterblase», also einer Nachrichtenwelt, die jedem vor allem das Genehme vorsetzt. Am weitesten treibt es der sogenannte For-You-Feed von TikTok, der fast nur noch aus algorithmisch ausgewählten Videos besteht und ganz ohne Freundesnetz auskommt. Kritiker warnen, dass so besonders starke Gefühle belohnt werden, weil sie die Aufmerksamkeit am längsten fesseln. Was die Systeme messen, formt am Ende mit, worüber eine Gesellschaft spricht.",
+                "Als Facebook den «News Feed» im September 2006 einführte, gab es zunächst heftige Proteste, denn viele empfanden das automatische Sammeln ihrer Aktivitäten als übergriffig. Wenig später, im Jahr 2009, kam der «Gefällt mir»-Knopf dazu, der dem System laufend verriet, was Anklang findet. Aus solchen Signalen lernten die Netzwerke, wem sie welchen Beitrag zuoberst zeigen sollten. Der Bürgerrechtler Eli Pariser prägte 2011 dafür das Bild der «Filterblase», also einer Nachrichtenwelt, die jedem vor allem das Genehme vorsetzt. Am weitesten treibt es der sogenannte For-You-Feed von TikTok, der fast nur noch aus algorithmisch ausgewählten Videos besteht und ganz ohne Freundesnetz auskommt. Kritikerinnen und Kritiker warnen, dass so besonders starke Gefühle belohnt werden, weil sie die Aufmerksamkeit am längsten fesseln. Was die Systeme messen, formt am Ende mit, worüber eine Gesellschaft spricht.",
             },
             {
               titel: "Deep Learning",
@@ -778,7 +778,7 @@ export default function Lernseite2VorhangAuf() {
               kat: "daten",
               mmf: "maschine",
               jahr: "2018–2020",
-              text: "Zwischen 2018 und 2020 wurden die Sprachmodelle Stufe um Stufe grösser. Mit GPT-1, GPT-2 und GPT-3 wuchs erstaunlicherweise auch das, was sie ganz ohne eigenes Training konnten. Allein aus dem Vorhersagen des nächsten Wortes entstanden neue Fähigkeiten. Wachsen musste dafür alles zugleich, Modellgrösse, Datenmenge und Rechenzeit. Ob dabei Fähigkeiten wirklich sprunghaft auftauchen oder ob das an der Art des Messens liegt, ist in der Forschung umstritten.",
+              text: "Zwischen 2018 und 2020 wurden die Sprachmodelle Stufe um Stufe grösser. Mit GPT-1, GPT-2 und GPT-3 wuchs erstaunlicherweise auch das, was die Modelle ganz ohne eigenes Training konnten. Allein aus dem Vorhersagen des nächsten Wortes entstanden neue Fähigkeiten. Wachsen musste dafür alles zugleich, Modellgrösse, Datenmenge und Rechenzeit. Ob dabei Fähigkeiten wirklich sprunghaft auftauchen oder ob das an der Art des Messens liegt, ist in der Forschung umstritten.",
               geschichte:
                 "Ab 2018 zeigten die GPT-Modelle der Firma OpenAI, dass das blosse Vorhersagen des nächsten Wortes auf riesigen Textmengen erstaunlich weit trägt. GPT-3 aus dem Jahr 2020 hatte 175 Milliarden einstellbare Werte, sogenannte Parameter. Es konnte Texte schreiben, übersetzen und Fragen beantworten, ohne für jede Aufgabe eigens trainiert zu werden.",
               mehr:
@@ -794,7 +794,7 @@ export default function Lernseite2VorhangAuf() {
               geschichte:
                 "Heutige Modelle trainieren auf riesigen Text- und Bildmengen, in Rechenzentren mit zehntausenden von Chips. So entstand die neue Akteurin dieses Moduls. Sie ist dialogfähig und kann selbst Texte und Bilder erzeugen. Und sie ist Alltag geworden, von der Suchmaschine bis zum Schreibassistenten.",
               mehr:
-                "Das Herz dieser Rechenzentren sind spezielle Grafikchips, wie sie vor allem die Firma Nvidia herstellt, die dadurch zu einem der wertvollsten Unternehmen der Welt wurde. Ein einzelnes grosses Modell zu trainieren kostet viele Millionen Franken und verschlingt enorme Mengen an Strom. Weil die Chips stark heizen, brauchen manche Rechenzentren zudem grosse Mengen Wasser zur Kühlung, was in trockenen Regionen für Streit sorgt. Die Trainingsdaten stammen zu einem grossen Teil aus dem offenen Internet, dazu kommen Bücher und Bilder. Genau das wirft rechtliche Fragen auf, denn seit 2023 klagen Autorinnen, Verlage und Kunstschaffende, weil ihre Werke ohne Erlaubnis genutzt worden seien. Manche Fachleute warnen sogar, der Vorrat an hochwertigen Texten könnte allmählich knapp werden. So hat die scheinbar körperlose KI eine sehr handfeste Seite aus Energie, Rohstoffen und Recht.",
+                "Das Herz dieser Rechenzentren sind spezielle Grafikchips, wie sie vor allem die Firma Nvidia herstellt, die dadurch zu einem der wertvollsten Unternehmen der Welt wurde. Ein einzelnes grosses Modell zu trainieren kostet viele Millionen Franken und verschlingt enorme Mengen an Strom. Weil die Chips stark heizen, brauchen manche Rechenzentren zudem grosse Mengen Wasser zur Kühlung, was in trockenen Regionen für Kritik sorgt. Die Trainingsdaten stammen zu einem grossen Teil aus dem offenen Internet, dazu kommen Bücher und Bilder. Genau das wirft rechtliche Fragen auf, denn seit 2023 klagen Autorinnen, Verlage und Kunstschaffende, weil ihre Werke ohne Erlaubnis genutzt worden seien. Manche Fachleute warnen sogar, der Vorrat an hochwertigen Texten könnte allmählich knapp werden. So hat die scheinbar körperlose KI eine sehr handfeste Seite aus Energie, Rohstoffen und Recht.",
             },
             {
               titel: "ChatGPT: der Massenmoment",
@@ -802,11 +802,11 @@ export default function Lernseite2VorhangAuf() {
               kat: "daten",
               mmf: "mensch",
               jahr: "November 2022",
-              text: "Im November 2022 wurde die KI mit einem Schlag für alle greifbar. ChatGPT verpackte ein starkes Sprachmodell in ein einfaches Chatfenster, in dem man ganz normal fragen kann. Innert Wochen nutzten Millionen von Menschen den Chatbot. Von diesem Moment an war die KI im Alltag angekommen.",
+              text: "Im November 2022 wurde die KI mit einem Schlag für alle greifbar. ChatGPT verpackte ein starkes Sprachmodell in ein einfaches Chatfenster, in dem man ganz normal Fragen stellen kann. Innert Wochen nutzten Millionen von Menschen den Chatbot. Von diesem Moment an war die KI im Alltag angekommen.",
               geschichte:
-                "Im November 2022 veröffentlichte die Firma OpenAI ChatGPT, ein auf Gespräch getrimmtes Sprachmodell. Es antwortet auf einfache Fragen flüssig und zusammenhängend. In Rekordzeit erreichte es hunderte Millionen Nutzer. Damit löste es einen weltweiten Wettlauf um die beste KI aus.",
+                "Im November 2022 veröffentlichte die Firma OpenAI ChatGPT, ein auf Gespräch getrimmtes Sprachmodell. Es antwortet auf einfache Fragen flüssig und zusammenhängend. In Rekordzeit erreichte es hunderte Millionen Nutzerinnen und Nutzer. Damit löste es einen weltweiten Wettlauf um die beste KI aus.",
               mehr:
-                "Das Wachstum war beispiellos, denn ChatGPT erreichte schon fünf Tage nach dem Start am 30. November 2022 eine Million Nutzer und nach rund zwei Monaten hundert Millionen. Damit war es zu diesem Zeitpunkt der am schnellsten wachsende Onlinedienst für Endverbraucher überhaupt. Technisch steckte anfangs das Modell GPT-3.5 dahinter, während das deutlich stärkere GPT-4 erst im März 2023 folgte. Viele Schulen reagierten zunächst mit Verboten, so sperrte etwa die Schulbehörde von New York den Zugang, nahm das Verbot aber nach wenigen Monaten wieder zurück. Diese Kehrtwende steht für die rasche Einsicht, dass sich das Werkzeug kaum aussperren lässt und man den Umgang damit besser übt. Zugleich zeigte sich früh, dass ChatGPT auch falsche Angaben sehr überzeugend formulieren kann. Der Novembertag 2022 markiert so den Moment, an dem die KI endgültig im Alltag ankam.",
+                "Das Wachstum war beispiellos, denn ChatGPT erreichte schon fünf Tage nach dem Start am 30. November 2022 eine Million Nutzerinnen und Nutzer und nach rund zwei Monaten hundert Millionen. Damit war es zu diesem Zeitpunkt der am schnellsten wachsende Onlinedienst für Endverbraucherinnen und Endverbraucher überhaupt. Technisch steckte anfangs das Modell GPT-3.5 dahinter, während das deutlich stärkere GPT-4 erst im März 2023 folgte. Viele Schulen reagierten zunächst mit Verboten, so sperrte etwa die Schulbehörde von New York den Zugang, nahm das Verbot aber nach wenigen Monaten wieder zurück. Diese Kehrtwende steht für die rasche Einsicht, dass sich das Werkzeug kaum aussperren lässt und man den Umgang damit besser übt. Zugleich zeigte sich früh, dass ChatGPT auch falsche Angaben sehr überzeugend formulieren kann. Der Novembertag 2022 markiert so den Moment, an dem die KI endgültig im Alltag ankam.",
             },
             {
               titel: "Wettbewerb der KI-Modelle",
@@ -816,7 +816,7 @@ export default function Lernseite2VorhangAuf() {
               jahr: "ab 2023",
               text: "Nach ChatGPT begann ein weltweiter Wettlauf um die besten Modelle. Neben den US-Modellen wie GPT, Claude, Gemini und Llama traten Modelle aus China, Europa und sogar der Schweiz an. Wer eigene Modelle baut, macht sich unabhängiger von anderen. So bekam die KI auch eine politische und eine sprachliche Bedeutung.",
               geschichte:
-                "Ab 2023 rangen viele Anbieter um die besten Modelle. Aus den USA kommen GPT von OpenAI, Claude von Anthropic, Gemini von Google und Llama von Meta, dessen Gewichte man herunterladen kann, allerdings unter Metas eigener Lizenz und nicht als Open Source. Anfang 2025 sorgte das chinesische DeepSeek für Aufsehen, weil es mit wenig Aufwand mithielt, und auch Alibabas Qwen zählt dazu. Aus Europa stammt Mistral aus Frankreich, und aus der Schweiz das vollständig offene Modell «Apertus» von ETH Zürich, EPFL und dem Rechenzentrum CSCS.",
+                "Ab 2023 rangen viele Anbieter um die besten Modelle. Aus den USA kommen GPT von OpenAI, Claude von Anthropic, Gemini von Google und Llama von Meta. Die Gewichte von Llama – also die trainierten Parameter des Modells – können heruntergeladen werden, allerdings unter Metas eigener Lizenz und nicht als Open Source. Anfang 2025 sorgte das chinesische DeepSeek für Aufsehen, weil es mit wenig Aufwand mithielt, und auch Alibabas Qwen zählt dazu. Aus Europa stammt Mistral aus Frankreich, und aus der Schweiz das vollständig offene Modell «Apertus» von ETH Zürich, EPFL und dem Rechenzentrum CSCS.",
               mehr:
                 "Wie umkämpft das Feld ist, zeigte sich Anfang 2025, als das chinesische Modell DeepSeek für Aufsehen sorgte, weil es mit deutlich geringerem Aufwand trainiert worden sein soll als die US-Konkurrenz. Die Nachricht liess kurzzeitig sogar die Börsenkurse grosser Chiphersteller einbrechen, weil Anleger an den bisherigen Milliardenkosten zu zweifeln begannen. Der praktische Reiz offener Modelle liegt darin, dass man sie auf eigenen Rechnern betreiben kann, ohne Daten an einen fremden Anbieter zu schicken. Für Behörden, Spitäler oder Schulen bedeutet das einen Gewinn an Datenschutz und Unabhängigkeit. Ein Schweizer Modell wie «Apertus» ist gerade deshalb bedeutsam, weil sich damit Anwendungen bauen lassen, die nicht von einzelnen US-Konzernen abhängen. Verglichen werden die vielen Modelle auf öffentlichen Ranglisten, auf denen Menschen die Antworten bewerten. So ist ein rascher Wettlauf entstanden, in dem sich die Rangfolge fast monatlich verschiebt.",
             },
@@ -826,7 +826,7 @@ export default function Lernseite2VorhangAuf() {
               kat: "daten",
               mmf: "maschine",
               jahr: "2023–2024",
-              text: "Zuletzt lernte die KI, mehrere Sinne zu verbinden. Die Modelle bleiben nicht mehr beim Text, sondern verarbeiten auch Bilder, Sprache und teils Video. Damit beginnt die KI gleichsam zu sehen und zu hören. Aus dem reinen Textautomaten wird ein Gegenüber, das verschiedene Eindrücke zusammenführt.",
+              text: "Zuletzt lernte die KI, mehrere Sinne zu verbinden. Die Modelle bleiben nicht mehr beim Text, sondern verarbeiten auch Bilder, Sprache und teils Videos. Damit beginnt die KI gleichsam zu sehen und zu hören. Aus dem reinen Textautomaten wird ein Gegenüber, das verschiedene Eindrücke zusammenführt.",
               geschichte:
                 "Ab 2023 und 2024 wurden führende Systeme multimodal, verstanden also mehrere Arten von Eingaben. Claude 3 aus dem Jahr 2024 konnte Bilder verstehen und beschreiben. GPT-4o aus demselben Jahr nahm Text, Bild und Ton in einem Modell entgegen und antwortete in Echtzeit gesprochen. So wird aus dem Textautomaten ein Gegenüber, das mehrere Sinne verbindet.",
               mehr:
@@ -926,7 +926,7 @@ export default function Lernseite2VorhangAuf() {
             },
             {
               titel: "datenbasiert",
-              text: "Ein Kind, das tausende Hunde sieht, erkennt irgendwann jeden Hund. Von aussen sieht es bei der KI ähnlich aus, im Inneren geschieht aber etwas anderes: Ihre Fähigkeiten wachsen aus riesigen Mengen an Beispielen, nicht aus fest eingebauten Regeln. Was in den Daten gar nicht vorkommt, kann sie höchstens aus Ähnlichem zusammensetzen. Deshalb kommt es vor allem darauf an, womit sie gefüttert wurde. Und es kommt darauf an, wessen Sichtweise in diesen Daten steckt und wessen darin fehlt.",
+              text: "Ein Kind, das tausende Hunde gezeigt bekommt, erkennt irgendwann jeden Hund. Von aussen betrachtet scheint es bei der KI ähnlich zu sein, im Inneren geschieht aber etwas anderes: Ihre Fähigkeiten wachsen aus riesigen Mengen an Beispielen, nicht aus fest eingebauten Regeln. Was in den Daten gar nicht vorkommt, kann sie höchstens aus Ähnlichem zusammensetzen. Deshalb kommt es vor allem darauf an, womit sie gefüttert wurde. Und es kommt darauf an, wessen Sichtweise in diesen Daten steckt und wessen Sichtweise darin fehlt.",
               mehr:
                 "«Die Lernalgorithmen sind die Samen, die Daten der Boden», sagt der Forscher Pedro Domingos. Ohne guten Boden wächst auch aus dem besten Samen nichts. Ein Beispiel: Wurde eine KI fast nur mit englischen Texten trainiert, antwortet sie auf Deutsch oft schwächer. Zeigten die Bilddaten kaum Menschen mit dunkler Haut, erkennt sie diese schlechter. So werden Lücken und Einseitigkeiten der Daten zu Lücken und Einseitigkeiten der KI. Darum ist die Frage, woher die Daten stammen, keine Nebensache, sondern der Kern.",
             },
@@ -1067,10 +1067,9 @@ export default function Lernseite2VorhangAuf() {
           </p>
         </Ausklapptext>
         <Aufgabe className="mt-md max-w-4xl">
-          Klappe die Aspekte auf, die dich interessieren, denn jeder erklärt
-          einen Faden des Geflechts. Gewichte dabei, wie viel Achtsamkeit ein
-          Aspekt verdient. Das Achtsamkeits-Muster oben wird dadurch farbiger
-          und rötlicher.
+          Klappe die Aspekte auf, die dich interessieren, denn jeder erklärt einen Faden des
+          Geflechts. Gewichte dabei, wie viel Achtsamkeit ein Aspekt verdient. Das
+          Achtsamkeits-Muster oben wird dadurch farbiger.
         </Aufgabe>
         <KontextAkkordeon
           className="mt-lg"

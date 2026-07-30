@@ -612,7 +612,7 @@ const station2: Station = {
         {
           titel: "Die Profi-Tipps: So prüfst du Inhalte",
           beschreibung:
-            "Reto Vogt (MAZ) zeigt, wie er ein KI-Fake-Bild aus einem Kriegsgebiet prüft; Jürg Tschirren (SRF) ordnet ein, wie viele Fakes und Bots im Netz kursieren. Endet mit einer konkreten Tipp-Liste gegen Fake News.",
+            "Reto Vogt (MAZ) zeigt, wie er ein KI-Fake-Bild aus einem Kriegsgebiet prüft; Jürg Tschirren (SRF) ordnet ein, wie viele Fakes und Bots im Netz kursieren. Der Ausschnitt endet mit einer konkreten Tippliste gegen Fake News.",
           media: {
             kind: "youtube",
             youtubeId: "3W3HoK1f7nU",
@@ -626,7 +626,7 @@ const station2: Station = {
         {
           titel: "Das Fazit in einem Satz",
           beschreibung:
-            "Was Jung und Alt beim Entlarven von Fakes je stark macht — und warum das Zusammennehmen dieser Fähigkeiten die besten Chancen gibt.",
+            "Was Jung und Alt beim Entlarven von Fakes gut machen — und warum diese Kombination die besten Chancen bietet.",
           media: {
             kind: "youtube",
             youtubeId: "3W3HoK1f7nU",
@@ -1073,7 +1073,7 @@ const station3: Station = {
 
   sonnenseite: {
     intro:
-      "KI muss nicht passiv konsumiert werden — man kann sie selbst bauen. Lisa (18) zeigt in zwei Abschnitten, wie das Entwickeln einer eigenen KI mehr Lernen auslöst als jedes Prompting: erst der Bauprozess, dann die Prämierung am ETH-AI-Festival. Der Player springt automatisch zum zweiten Abschnitt.",
+      "KI muss nicht passiv konsumiert werden — man kann sie selbst bauen. Lisa (18) zeigt in zwei Abschnitten, wie das Entwickeln einer eigenen KI den Lernprozess stärker fördert als jedes Prompting: erst der Bauprozess, dann die Prämierung am ETH-AI-Festival. Der Player springt automatisch zum zweiten Abschnitt.",
     anleitung:
       "Schau dir beide Abschnitte an (ca. 7 Min., der Player springt automatisch weiter). Achte im ersten Teil darauf, was Lisa über den Prozess — nicht das Produkt — sagt; im zweiten Teil darauf, wie sie sich nach der Prämierung fühlt. Frage dich danach: Was hat sie gelernt, das sie ohne das Bauen nie gelernt hätte?",
     media: [
@@ -1121,7 +1121,7 @@ const station3: Station = {
       {
         titel: "Ab wann gehört KI in die Schule?",
         beschreibung:
-          "PH Zürich (Bernadette Spieler): Kinder übernehmen KI-Antworten oft unreflektiert — warum sie KI-Hilfsmittel erst ab etwa der 5. Klasse empfiehlt und was Neuroplastizität damit zu tun hat.",
+          "Bernadette Spieler (PH Zürich): Kinder übernehmen KI-Antworten oft unreflektiert — warum sie KI-Hilfsmittel erst ab etwa der 5. Klasse empfiehlt und was Neuroplastizität damit zu tun hat.",
         media: {
           kind: "youtube",
           youtubeId: "U5bLCVTr9_I",
@@ -1195,7 +1195,7 @@ const station3: Station = {
     {
       id: "st3-fakt-3",
       claim:
-        "ChatGPT-Nutzende konnten ihre eigenen Texte nach kurzer Zeit deutlich schlechter zitieren und empfanden weniger «Eigentum» an ihren Formulierungen — das deckt sich mit dem Ergebnis des Einstein-Experiments, in dem Tobias zwei Wochen später keinen einzigen Satz seines KI-generierten Textes erinnern konnte.",
+        "ChatGPT-Nutzende konnten ihre eigenen Texte nach kurzer Zeit deutlich schlechter zitieren und empfanden weniger «Eigentum» an ihren Formulierungen — das deckt sich mit dem Ergebnis des Einstein-Experiments, in dem Tobias sich zwei Wochen später an keinen einzigen Satz seines KI-generierten Textes erinnern konnte.",
       sourceName: "MIT Media Lab (2025) + SRF Einstein (2025)",
       sourceUrl: "https://media.mit.edu/projects/your-brain-on-chatgpt/overview/",
       date: "2025",
@@ -1203,7 +1203,7 @@ const station3: Station = {
     {
       id: "st3-fakt-4",
       claim:
-        "Die Reihenfolge der Einführung könnte entscheidend sein: Personen, die zuerst ohne KI schrieben und danach mit KI arbeiteten («Brain-to-LLM»), zeigten höhere Gedächtnisaktivierung als jene, die den umgekehrten Weg gingen. Das deutet darauf hin, dass nicht «KI ja oder nein», sondern «wann und wie» für das Lernen ausschlaggebend ist.",
+        "Die Reihenfolge der Einführung könnte entscheidend sein: Personen, die zuerst ohne KI schrieben und danach mit KI arbeiteten («Brain-to-LLM»), zeigten eine höhere Gedächtnisaktivierung als jene, die den umgekehrten Weg gingen. Das deutet darauf hin, dass nicht «KI ja oder nein», sondern «wann und wie» für das Lernen ausschlaggebend ist.",
       sourceName: "MIT Media Lab, «Your Brain on ChatGPT» (2025)",
       sourceUrl: "https://media.mit.edu/projects/your-brain-on-chatgpt/overview/",
       date: "2025",
@@ -1349,7 +1349,7 @@ const station3: Station = {
         },
         {
           label:
-            "Wer zuerst selbst schreibt und dann KI nutzt, zeigt höhere Gedächtnisaktivierung als umgekehrt",
+            "Wer zuerst selbst schreibt und dann KI nutzt, zeigt eine höhere Gedächtnisaktivierung als umgekehrt",
           feedback:
             "Korrekt — die Reihenfolge der Einführung beeinflusst die Gedächtnisaktivierung.",
         },
@@ -1464,7 +1464,7 @@ const station4: Station = {
       lernziel:
         "Du erkennst konkrete Situationen, in denen KI als Begleitung echten Nutzen stiften kann.",
       anleitung:
-        "Schau die zwei kurzen Player — jeder springt automatisch zwischen zwei Ausschnitten derselben Quelle. Achte darauf, welcher Mehrwert jeweils konkret genannt wird und ob er dich überzeugt. Notiere dir einen Gedanken dazu.",
+        "Schau die zwei kurzen Videos — jedes springt automatisch zwischen zwei Ausschnitten derselben Quelle. Achte darauf, welcher Mehrwert jeweils konkret genannt wird und ob er dich überzeugt. Notiere dir einen Gedanken dazu.",
     },
     schatten: {
       inhalt: "Thema Nähe · Schritt 3/7: Schattenseite",
@@ -1557,7 +1557,7 @@ const station4: Station = {
     intro:
       "KI ist immer verfügbar — auch um Mitternacht, auch wenn du keine Lust hast, jemandem zur Last zu fallen.",
     anleitung:
-      "Schau die zwei kurzen Player — jeder springt automatisch zwischen zwei Ausschnitten. Achte darauf: Welcher Nutzen wird jeweils konkret benannt? Handelt es sich um echten Mehrwert oder um eine wohlklingende Aussage? Der Bot verweist an einer Stelle sogar selbst darauf, dass echte Gespräche der gesündeste Weg sind — achte darauf, wie er das begründet.",
+      "Schau die zwei kurzen Videos — jedes springt automatisch zwischen zwei Ausschnitten. Achte darauf: Welcher Nutzen wird jeweils konkret benannt? Handelt es sich um einen echten Mehrwert oder um eine wohlklingende Aussage? Der Bot verweist an einer Stelle sogar selbst darauf, dass echte Gespräche der gesündeste Weg sind — achte darauf, wie er das begründet.",
     media: [
       {
         kind: "youtube",
@@ -1818,7 +1818,7 @@ const station4: Station = {
       id: "st4-mc-2",
       kind: "mc",
       frage:
-        "Was fanden Forschende (Fang et al., MIT/OpenAI 2025) in ihrer randomisierten Studie über tägliche Chatbot-Nutzung?",
+        "Was fanden Forschende (Fang et al., MIT/OpenAI 2025) in ihrer randomisierten Studie über tägliche Chatbot-Nutzung heraus?",
       optionen: [
         {
           label:
@@ -1961,7 +1961,7 @@ const station4: Station = {
       aussage: "Gespräche mit KI-Therapie-Chatbots sind vertraulich.",
       correctAnswer: false,
       feedbackRichtig:
-        "Richtig — das ist eine weit verbreitete, aber falsche Annahme. US PIRG (2025) fand, dass alle fünf getesteten Apps Vertraulichkeit behaupteten, ohne sie tatsächlich zu gewährleisten.",
+        "Richtig — das ist eine weit verbreitete, aber falsche Annahme. US PIRG (2025) fand heraus, dass alle fünf getesteten Apps Vertraulichkeit behaupteten, ohne sie tatsächlich zu gewährleisten.",
       feedbackFalsch:
         "Das stimmt leider nicht. Tests zeigten, dass Therapie-Chatbots Vertraulichkeit versprechen, ohne sie einzuhalten. Eingaben können zum Training oder für Werbung genutzt werden.",
     },
@@ -2477,7 +2477,7 @@ const station6: Station = {
       lernziel:
         "Du kannst erklären, was das KI-System Maven im Kriegseinsatz leistet und welches Versprechen damit verbunden ist — mehr Tempo, ein Echtzeit-Lagebild und angeblich weniger Zivilopfer.",
       anleitung:
-        "Schau im ersten Ausschnitt von Minute 12:40 bis 15:06. Was leistet Maven laut Bericht? Achte besonders auf das Versprechen «könnte zivile Opfer reduzieren» gegen Ende — was müsste dafür alles stimmen? Der zweite, freiwillig ergänzte Ausschnitt zeigt eine unabhängige Quelle aus dem Ukrainekrieg.",
+        "Schau im ersten Ausschnitt von Minute 12:40 bis 15:06. Was leistet Maven laut Bericht? Achte besonders auf das Versprechen, dass zivile Opfer reduziert werden könnten — was müsste dafür alles stimmen? Der zweite, freiwillig ergänzte Ausschnitt zeigt eine unabhängige Quelle aus dem Ukrainekrieg.",
     },
     schatten: {
       inhalt:
@@ -2577,7 +2577,7 @@ const station6: Station = {
     intro:
       "KI macht Kriege schneller — könnte sie sie auch präziser und damit menschlicher machen? Das Maven-System von Palantir verspricht ein Echtzeit-Lagebild und eine treffsicherere Zielauswahl. Ein zweiter, freiwilliger Ausschnitt zeigt zusätzlich, wie autonome Drohnen im Ukrainekrieg bereits heute funktionieren.",
     anleitung:
-      "Schau beide Beiträge ganz. Im ersten: Was leistet Maven laut Bericht — und was müsste für das Versprechen «könnte zivile Opfer reduzieren» gegen Ende alles stimmen? Mittendrin kommen schon kritische Stimmen zu Wort — die gehören inhaltlich zur nächsten Seite, hier zählt zuerst das Versprechen.",
+      "Schau beide Beiträge ganz. Im ersten: Was leistet Maven laut Bericht — und was müsste für das Versprechen, dass zivile Opfer reduziert werden könnten, alles stimmen? Mittendrin kommen schon kritische Stimmen zu Wort — die gehören inhaltlich zur nächsten Seite, hier zählt zuerst das Versprechen.",
     media: [
       // Beide SRF-Player zeigen die geschnittenen Beiträge, nicht die
       // Gesamtsendungen — sie laufen ganz, ohne Start/Stopp-Vorgabe
@@ -2590,7 +2590,7 @@ const station6: Station = {
         externalUrl:
           "https://www.srf.ch/news/international/nahost/ki-im-krieg-wenn-im-krieg-maschinen-statt-menschen-entscheiden",
         guidance:
-          "Achte darauf, was das System Maven laut Bericht leisten kann — über 1'000 Ziele am ersten Tag, ein Echtzeit-Lagebild, Vorschläge für passende Waffensysteme — und auf das Versprechen gegen Ende: «könnte zivile Opfer reduzieren». Was müsste dafür alles stimmen? Die kritischen Stimmen mittendrin gehören inhaltlich zur nächsten Seite (Schattenseite); hier zählt vorerst das Versprechen.",
+          "Achte darauf, was das System Maven laut Bericht leisten kann — über 1'000 Ziele am ersten Tag, ein Echtzeit-Lagebild, Vorschläge für passende Waffensysteme — und auf das Versprechen, dass zivile Opfer reduziert werden könnten. Was müsste dafür alles stimmen? Die kritischen Stimmen mittendrin gehören inhaltlich zur nächsten Seite (Schattenseite); hier zählt vorerst das Versprechen.",
       },
       {
         kind: "srf",
@@ -2716,7 +2716,7 @@ const station6: Station = {
     {
       id: "st6-fakt-5",
       claim:
-        "UN-Generalsekretär Guterres und das IKRK fordern bis 2026 einen rechtsverbindlichen Vertrag, der autonome Waffen ohne bedeutsame menschliche Kontrolle («meaningful human control») verbietet. Die CCW-Gespräche laufen seit 2014 — ohne substanzielles Ergebnis.",
+        "UN-Generalsekretär António Guterres und das IKRK fordern bis 2026 einen rechtsverbindlichen Vertrag, der autonome Waffen ohne bedeutsame menschliche Kontrolle («meaningful human control») verbietet. Die CCW-Gespräche laufen seit 2014 — ohne substanzielles Ergebnis.",
       figure: "Verhandlungen seit 2014; kein Ergebnis",
       sourceName: "Human Rights Watch / UN News, Mai 2025",
       sourceUrl:

@@ -52,7 +52,7 @@ export const FAKTEN_FALSCH: Record<string, string> = {
   "st4-fakt-1":
     "Die American Psychological Association (APA) empfiehlt KI-Chatbots ausdrücklich als vollwertigen Ersatz für Psychotherapie, sofern die Anwendung von einer Fachperson eingerichtet wurde.",
   "st4-fakt-2":
-    "Jede:r zehnte US-Teenager nutzt KI-Begleiter für soziale Interaktion, Freundschaft oder romantische Kontakte.",
+    "Jede:r zehnte US-Teenager:in nutzt KI-Begleiter für soziale Interaktion, Freundschaft oder romantische Kontakte.",
   "st4-fakt-3":
     "Eine randomisierte Studie (MIT/OpenAI, 981 Personen) zeigte: höhere tägliche Chatbot-Nutzung hing mit weniger Einsamkeit, weniger Abhängigkeit und mehr Sozialkontakten zusammen.",
   "st4-fakt-4":
@@ -84,7 +84,7 @@ export const FAKTEN_FALSCH: Record<string, string> = {
   "st6-fakt-4":
     "Im Dezember 2023 stimmten 52 Staaten in der UN-Generalversammlung für die erste Resolution zu tödlichen autonomen Waffensystemen. 104 Staaten stimmten dagegen. Ein rechtsverbindlicher Vertrag existiert bis heute nicht.",
   "st6-fakt-5":
-    "UN-Generalsekretär Guterres und das IKRK fordern bis 2030 einen rechtsverbindlichen Vertrag, der autonome Waffen ohne bedeutsame menschliche Kontrolle verbietet. Die CCW-Gespräche führten bereits 2020 zu einem verbindlichen Abkommen.",
+    "UN-Generalsekretär António Guterres und das IKRK fordern bis 2030 einen rechtsverbindlichen Vertrag, der autonome Waffen ohne bedeutsame menschliche Kontrolle verbietet. Die CCW-Gespräche führten bereits 2020 zu einem verbindlichen Abkommen.",
   "st6-fakt-6":
     "Microsoft verliess 2018 das US-Militärprojekt «Project Maven» nach internen Mitarbeiterprotesten. Google übernahm und baute das System zum heutigen Maven Smart System aus.",
   "st6-fakt-7":
