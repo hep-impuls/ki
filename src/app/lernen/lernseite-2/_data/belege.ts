@@ -78,7 +78,7 @@ export const BELEGE: Beleg[] = [
     url: "https://www.cso.ie/en/releasesandpublications/ep/p-dcmec/datacentresmeteredelectricityconsumption2024/keyfindings/",
     titel: "CSO Ireland: Rechenzentren und Stromverbrauch 2024",
     stelle:
-      "«rose to 22% in 2024»; städtische Haushalte 18 Prozent, ländliche 10 Prozent. Für 2023 nennt der Vorjahresbericht 21 Prozent bei gleichen Haushaltswerten.",
+      "«rose to 22% in 2024»; städtische Haushalte 18 Prozent, ländliche Haushalte 10 Prozent. Für 2023 nennt der Vorjahresbericht 21 Prozent bei gleichen Haushaltswerten.",
     geprueft: "2026-07-26",
   },
   {
