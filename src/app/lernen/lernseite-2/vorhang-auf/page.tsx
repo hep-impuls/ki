@@ -778,7 +778,7 @@ export default function Lernseite2VorhangAuf() {
               kat: "daten",
               mmf: "maschine",
               jahr: "2018–2020",
-              text: "Zwischen 2018 und 2020 wurden die Sprachmodelle Stufe um Stufe grösser. Mit GPT-1, GPT-2 und GPT-3 wuchs erstaunlicherweise auch das, was sie ganz ohne eigenes Training konnten. Allein aus dem Vorhersagen des nächsten Wortes entstanden neue Fähigkeiten. Wachsen musste dafür alles zugleich, Modellgrösse, Datenmenge und Rechenzeit. Ob dabei Fähigkeiten wirklich sprunghaft auftauchen oder ob das an der Art des Messens liegt, ist in der Forschung umstritten.",
+              text: "Zwischen 2018 und 2020 wurden die Sprachmodelle Stufe um Stufe grösser. Mit GPT-1, GPT-2 und GPT-3 wuchs erstaunlicherweise auch das, was die Modelle ganz ohne eigenes Training konnten. Allein aus dem Vorhersagen des nächsten Wortes entstanden neue Fähigkeiten. Wachsen musste dafür alles zugleich, Modellgrösse, Datenmenge und Rechenzeit. Ob dabei Fähigkeiten wirklich sprunghaft auftauchen oder ob das an der Art des Messens liegt, ist in der Forschung umstritten.",
               geschichte:
                 "Ab 2018 zeigten die GPT-Modelle der Firma OpenAI, dass das blosse Vorhersagen des nächsten Wortes auf riesigen Textmengen erstaunlich weit trägt. GPT-3 aus dem Jahr 2020 hatte 175 Milliarden einstellbare Werte, sogenannte Parameter. Es konnte Texte schreiben, übersetzen und Fragen beantworten, ohne für jede Aufgabe eigens trainiert zu werden.",
               mehr:
