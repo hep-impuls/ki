@@ -182,7 +182,7 @@ const BILDER_STORY: AnschauBild[] = [
         x: 52,
         y: 17,
         titel: "Das Programm",
-        text: "«Calculation complete»: Die Maschine führt eine feste Folge von Schritten aus. Ada Lovelace sah, dass sie Anweisungen folgen kann.",
+        text: "«Calculation complete»: Die Maschine führt eine feste Folge von Schritten aus. Ada Lovelace erkannte, dass sie Anweisungen folgen kann.",
       },
     ],
   },
