@@ -926,7 +926,7 @@ export default function Lernseite2VorhangAuf() {
             },
             {
               titel: "datenbasiert",
-              text: "Ein Kind, das tausende Hunde sieht, erkennt irgendwann jeden Hund. Von aussen sieht es bei der KI ähnlich aus, im Inneren geschieht aber etwas anderes: Ihre Fähigkeiten wachsen aus riesigen Mengen an Beispielen, nicht aus fest eingebauten Regeln. Was in den Daten gar nicht vorkommt, kann sie höchstens aus Ähnlichem zusammensetzen. Deshalb kommt es vor allem darauf an, womit sie gefüttert wurde. Und es kommt darauf an, wessen Sichtweise in diesen Daten steckt und wessen darin fehlt.",
+              text: "Ein Kind, das tausende Hunde sieht, erkennt irgendwann jeden Hund. Von aussen sieht es bei der KI ähnlich aus, im Inneren geschieht aber etwas anderes: Ihre Fähigkeiten wachsen aus riesigen Mengen an Beispielen, nicht aus fest eingebauten Regeln. Was in den Daten gar nicht vorkommt, kann sie höchstens aus Ähnlichem zusammensetzen. Deshalb kommt es vor allem darauf an, womit sie gefüttert wurde. Und es kommt darauf an, wessen Sichtweise in diesen Daten steckt und wessen Sichtweise darin fehlt.",
               mehr:
                 "«Die Lernalgorithmen sind die Samen, die Daten der Boden», sagt der Forscher Pedro Domingos. Ohne guten Boden wächst auch aus dem besten Samen nichts. Ein Beispiel: Wurde eine KI fast nur mit englischen Texten trainiert, antwortet sie auf Deutsch oft schwächer. Zeigten die Bilddaten kaum Menschen mit dunkler Haut, erkennt sie diese schlechter. So werden Lücken und Einseitigkeiten der Daten zu Lücken und Einseitigkeiten der KI. Darum ist die Frage, woher die Daten stammen, keine Nebensache, sondern der Kern.",
             },
