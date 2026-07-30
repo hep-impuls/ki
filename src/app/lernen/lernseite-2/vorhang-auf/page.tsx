@@ -368,7 +368,7 @@ const BILDER_STORY: AnschauBild[] = [
         x: 45,
         y: 82,
         titel: "Früher als ChatGPT",
-        text: "Das vergisst man leicht. Die Bild-KI war zuerst da, nämlich DALL·E 2 im April 2022, ein halbes Jahr bevor ChatGPT im November 2022 alle erreichte.",
+        text: "Das vergisst man leicht: Die Bild-KI war zuerst da, nämlich DALL·E 2 im April 2022, ein halbes Jahr bevor ChatGPT im November 2022 alle erreichte.",
       },
     ],
   },
