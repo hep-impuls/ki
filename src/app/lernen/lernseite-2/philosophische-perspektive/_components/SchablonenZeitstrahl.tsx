@@ -285,7 +285,7 @@ const STATIONS: Station[] = [
             y: 40,
             zoom: 1,
             title: "Champaigne, um 1645",
-            text: "Der barocke Maler Philippe de Champaigne zeigt Augustinus als Bischof am Schreibpult, umgeben von seinen Sinnbildern: dem Buch, dem brennenden Herzen und einem Lichtstrahl von oben. Das ganze Bild ist um eine Frage gebaut — woher kommt die Wahrheit? Farben und Komposition führen den Blick zwischen Himmel, Herz und Feder hin und her.",
+            text: "Der barocke Maler Philippe de Champaigne zeigt Augustinus als Bischof am Schreibpult, umgeben von seinen Sinnbildern: dem Buch, dem brennenden Herzen und einem Lichtstrahl von oben. Das ganze Bild kreist um eine Frage — woher kommt die Wahrheit? Farben und Komposition führen den Blick zwischen Himmel, Herz und Feder hin und her.",
           },
           {
             x: 60,
