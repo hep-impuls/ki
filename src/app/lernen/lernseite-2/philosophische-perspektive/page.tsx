@@ -137,11 +137,10 @@ neu auf: die Frage nach dem Menschen selbst.
               Deshalb geht es in diesem Modul vor allem um eine Frage, welche die KI neu
               aufwirft.{" "}
               <strong className="text-on-surface">Was ist der Mensch?</strong>{" "}
-              Lange galt er als der, der Wissen schafft, weitergibt und Neues
-              erdenkt. Wenn nun eine Maschine schreibt, erklärt und gestaltet,
-              gerät genau das ins Wanken, unser Denken und unsere Kreativität.
-              Neu ist die Frage aber nicht. Sie wird in der Philosophie seit jeher
-              gestellt.{" "}
+              Lange galt er als der, der Wissen schafft, weitergibt und Neues erdenkt. Wenn
+              nun eine Maschine schreibt, erklärt und gestaltet, gerät genau diese
+              Vorstellung ins Wanken, unser Denken und unsere Kreativität. Neu ist die Frage
+              aber nicht. Sie wird in der Philosophie seit jeher gestellt.{" "}
               <DenkerHover
                 name="Immanuel Kant"
                 richtung="oben"
