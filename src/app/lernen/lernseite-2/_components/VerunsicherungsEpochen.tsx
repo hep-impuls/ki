@@ -226,7 +226,7 @@ const EPOCHEN: Epoche[] = [
     span: "Spätantike & Mittelalter · ~400–1400",
     lead: "Rom zerfällt, und mit den Strassen, Städten und Gesetzen wankt die ganze Weltordnung. Was tausend Jahre selbstverständlich schien, löst sich auf: Handel schrumpft, Städte leeren sich, Wissen zieht sich in die Klöster zurück. Die Menschen suchen einen neuen Halt und finden ihn nicht mehr im Reich, sondern im Glauben.",
     leadMehr:
-      "Der Übergang von der Spätantike ins Mittelalter dauert Jahrhunderte und verläuft nicht überall gleich: Während im Westen die römische Ordnung zerfällt, blühen das oströmische (byzantinische) Reich und wenig später die islamische Welt kulturell auf und bewahren viel antikes Wissen. Im lateinischen Europa wird die Kirche zur wichtigsten Klammer. Sie stellt Schrift, Recht, Zeitrechnung und Trost. «Mittelalter» ist ein Sammelbegriff für sehr verschiedene Jahrhunderte, nicht die pauschal «dunkle Zeit», als die es oft dargestellt wird.",
+      "Der Übergang von der Spätantike ins Mittelalter dauert Jahrhunderte und verläuft nicht überall gleich: Während im Westen die römische Ordnung zerfällt, blühen das oströmische (byzantinische) Reich und wenig später die islamische Welt kulturell auf und bewahren viel antikes Wissen. Im lateinischen Europa wird die Kirche zur wichtigsten Klammer. Sie bietet Schrift, Recht, Zeitrechnung und Trost. «Mittelalter» ist ein Sammelbegriff für verschiedene Jahrhunderte, nicht für die pauschal «dunkle Zeit», als die es oft dargestellt wird.",
     bilder: [
       {
         src: "/art/rom.jpg",
