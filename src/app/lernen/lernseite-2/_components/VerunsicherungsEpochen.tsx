@@ -209,7 +209,7 @@ const EPOCHEN: Epoche[] = [
       mehr: "Der Redelehrer Protagoras brachte die neue Lage auf einen Satz: Der Mensch sei «das Mass aller Dinge». Gemeint ist, dass nicht die Götter festlegen, was wahr und richtig ist, sondern die Menschen selbst. Protagoras war ein gefragter Lehrer und nahm hohe Honorare. Für viele Athener klang das nach Freiheit, für andere so, als würde der Boden unter den Füssen weich. Wie gereizt die Stimmung war, zeigt der Prozess von 399 v. Chr. Rund 500 ausgeloste Bürger sassen als Gericht zusammen, und vor ihnen verteidigte sich der siebzigjährige Sokrates. Als er nach dem Schuldspruch selber eine Strafe vorschlagen sollte, schlug er allen Ernstes eine Belohnung vor: Gratisessen auf Staatskosten. Das Gericht entschied auf den Giftbecher. Dazu muss man wissen, dass Athen kurz zuvor einen langen Krieg verloren und die Gewaltherrschaft der Dreissig Tyrannen erlebt hatte. Eine erschöpfte Stadt erträgt es schlecht, wenn jemand ihre letzten Gewissheiten in Frage stellt. Diese Angst, dass am Ende gar nichts mehr sicher ist, kehrt in jeder Umbruchszeit wieder.",
       quellen: [
         { label: "Sophisten (Wikipedia)", url: w("Sophisten") },
-        { label: "Prozess des Sokrates (Wikipedia)", url: w("Prozess_des_Sokrates") },
+        { label: "Sokrates, Prozess und Tod (Wikipedia)", url: w("Sokrates") },
       ],
     },
     philosophie: {
@@ -424,14 +424,15 @@ const EPOCHEN: Epoche[] = [
       mehr: "Im Frühjahr 1525 druckten aufständische Bauern in Memmingen zwölf Artikel und beriefen sich darin auf das Evangelium, das nun jeder gedruckt lesen konnte: Wenn Christus alle Menschen erlöst habe, warum seien sie dann Leibeigene? Die Fürsten antworteten mit Heeren, Zehntausende Bauern starben, der Prediger Thomas Müntzer wurde nach der Schlacht bei Frankenhausen hingerichtet. Jenseits des Atlantiks war vier Jahre zuvor Tenochtitlan gefallen, eine Stadt, grösser als die meisten Städte Europas, und eingeschleppte Seuchen töteten dort mehr Menschen als alle Waffen. 1543 schliesslich soll der sterbende Kopernikus das erste gedruckte Exemplar seines Buches noch in Händen gehalten haben, des Buches, das die Erde zu einem Planeten unter Planeten machte. Aufstieg für die einen bedeutete Enteignung, Eroberung oder Kränkung für die anderen. Verunsicherung ist selten gerecht verteilt, damals so wenig wie heute.",
       quellen: [
         { label: "Deutscher Bauernkrieg (Wikipedia)", url: w("Deutscher_Bauernkrieg") },
-        { label: "Die Gesandten / Anamorphose (Wikipedia)", url: w("Die_Gesandten_(Holbein)") },
+        { label: "Die Gesandten, mit der Anamorphose (Wikipedia)", url: w("Die_Gesandten") },
       ],
     },
     philosophie: {
       text: "Pico della Mirandola (1463–1494) formuliert in seiner «Rede über die Würde des Menschen», der Mensch sei nicht auf eine feste Natur festgelegt, sondern forme sich selbst. Montaigne (1533–1592) setzt die skeptische Frage dagegen: «Que sais-je?» («Was weiss ich schon?»). Alltagssprachlich lebt beides fort in «jeder ist seines Glückes Schmied» und im Bekenntnis, etwas zu hinterfragen.",
       mehr: "Pico war dreiundzwanzig, als er 1486 die Gelehrten Europas nach Rom einlud, um mit ihnen über 900 Thesen zu streiten, und die «Rede über die Würde des Menschen» sollte die Eröffnung dieses Wettstreits werden. Der Papst verbot die Veranstaltung, ein Teil der Thesen galt als ketzerisch, doch der Text überlebte und wurde zum Manifest des neuen Selbstbewusstseins. Ein Menschenalter später zog sich Montaigne, Richter in Bordeaux, auf den Turm seines Schlosses zurück, während draussen Katholiken und Protestanten einander in Glaubenskriegen abschlachteten. In die Deckenbalken seiner Bibliothek liess er Sprüche antiker Skeptiker schnitzen und erfand beim Schreiben nebenbei eine neue Gattung: den «Essai», wörtlich den Versuch, das Ausprobieren eines Gedankens. Grösse und Zweifel gehören seither zusammen, und wer heute angesichts der KI fragt, was der Mensch eigentlich ist, führt genau dieses Gespräch weiter.",
       quellen: [
-        { label: "Über die Würde des Menschen (Wikipedia)", url: w("Über_die_Würde_des_Menschen") },
+        { label: "Oratio de hominis dignitate, Picos Rede (Wikipedia)", url: w("Oratio_de_hominis_dignitate") },
+        { label: "Giovanni Pico della Mirandola (Wikipedia)", url: w("Giovanni_Pico_della_Mirandola") },
         { label: "Michel de Montaigne (Wikipedia)", url: w("Michel_de_Montaigne") },
       ],
     },
@@ -850,7 +851,7 @@ const EPOCHEN: Epoche[] = [
       mehr: "In Detroit, einst die stolzeste Autostadt der Welt, halbierte sich die Einwohnerzahl innert weniger Jahrzehnte, ganze Strassenzüge standen leer. Im Ruhrgebiet schloss eine Zeche nach der anderen, 2018 fuhr auf Prosper-Haniel die letzte Schicht ein, und mit den Fördertürmen verschwand eine ganze Lebensform aus Werkssiedlungen, Schichtplänen und Vereinsleben. Im Osten Deutschlands wickelte nach 1990 die Treuhandanstalt Tausende von Staatsbetrieben ab, Millionen Stellen gingen verloren, und was gestern als Lebensleistung galt, zählte auf dem neuen Arbeitsmarkt oft wenig. Ingenieurinnen sattelten um, Facharbeiter pendelten westwärts oder blieben zurück. Der Umbruch kam als Freiheit und als Entwertung zugleich, je nachdem, wo man stand. Solche Erfahrungen wirken lange nach, in Familien, in Wahlergebnissen und im Misstrauen gegen jedes neue Versprechen von Fortschritt.",
       quellen: [
         { label: "Deindustrialisierung (Wikipedia)", url: w("Deindustrialisierung") },
-        { label: "Soziale Beschleunigung (Wikipedia)", url: w("Soziale_Beschleunigung") },
+        { label: "Beschleunigung und Entfremdung, Hartmut Rosa (Wikipedia)", url: w("Beschleunigung_und_Entfremdung") },
       ],
     },
     philosophie: {
