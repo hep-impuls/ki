@@ -881,7 +881,7 @@ const station2: Station = {
             label:
               "Die Kennzeichnungspflicht gilt nur für staatliche Akteure.",
             feedback:
-              "Falsch — sie gilt für alle Anbieter und Nutzer, die Inhalte veröffentlichen.",
+              "Falsch — sie gilt für alle Anbieter und Nutzerinnen, die Inhalte veröffentlichen.",
           },
         ],
         correctIndices: [1],
