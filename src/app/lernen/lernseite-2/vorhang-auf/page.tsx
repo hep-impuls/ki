@@ -1122,7 +1122,7 @@ export default function Lernseite2VorhangAuf() {
                   titel: "Zugang",
                   text: "Nicht alle können KI gleichermassen nutzen. Kosten, technische Ausstattung, Sprache und digitale Erfahrung entscheiden mit. Wer gut ausgestattet ist, profitiert stärker. So kann KI bestehende Ungleichheiten sogar vergrössern.",
                   beispiel:
-                    "Bei den grossen Chatbots ist die Gratisstufe begrenzt: weniger Anfragen, eingeschränkter Zugriff auf die neuesten Modelle und Werkzeuge. Ein Abo für rund 20 Dollar im Monat hebt vor allem diese Grenzen an. Wer zahlen kann, arbeitet also flüssiger und mit mehr Möglichkeiten. Schon beim Zugang entsteht so ein Unterschied zwischen Menschen. Was ein Abo kostet und wie viel gratis möglich ist, ändern die Anbieter ständig. Die Zahlen hier stammen von 2026.",
+                    "Bei den grossen Chatbots ist die Gratisstufe begrenzt: weniger Anfragen, eingeschränkter Zugriff auf die neuesten Modelle und Werkzeuge. Ein Abo für rund 20 Dollar im Monat (Stand 2026) hebt vor allem diese Grenzen an. Wer zahlen kann, arbeitet also flüssiger und mit mehr Möglichkeiten. Schon beim Zugang entsteht so ein Unterschied zwischen Menschen. Was ein Abo kostet und wie viel gratis möglich ist, ändern die Anbieter ständig.",
                 },
                 {
                   titel: "Arbeitsmarkt",
