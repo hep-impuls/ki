@@ -399,7 +399,7 @@ const EPOCHEN: Epoche[] = [
             y: 62,
             zoom: 2.4,
             title: "Das untere Regal: die Erde",
-            text: "Erdglobus, Rechenbuch, Laute und Gesangbuch: die irdischen Künste. Doch genau hier sitzt der Riss. An der Laute ist eine Saite gerissen, und das aufgeschlagene Gesangbuch zeigt Luther-Lieder: die zerbrochene Harmonie der Glaubensspaltung.",
+            text: "Erdglobus, Rechenbuch, Laute und Gesangbuch: die irdischen Künste. Doch genau hier zeigt sich ein Riss. An der Laute ist eine Saite gerissen, und das aufgeschlagene Gesangbuch zeigt Luther-Lieder: die zerbrochene Harmonie der Glaubensspaltung.",
           },
           {
             x: 48,
