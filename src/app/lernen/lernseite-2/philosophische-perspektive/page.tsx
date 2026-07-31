@@ -134,8 +134,8 @@ neu auf: die Frage nach dem Menschen selbst.
               neu zu ordnen und zu verstehen, was der Wandel durcheinanderbringt.
             </p>
             <p>
-              Darum geht es in diesem Modul vor allem um eine Frage, die mit der
-              KI neu aufbricht.{" "}
+              Deshalb geht es in diesem Modul vor allem um eine Frage, welche die KI neu
+              aufwirft.{" "}
               <strong className="text-on-surface">Was ist der Mensch?</strong>{" "}
               Lange galt er als der, der Wissen schafft, weitergibt und Neues
               erdenkt. Wenn nun eine Maschine schreibt, erklärt und gestaltet,
