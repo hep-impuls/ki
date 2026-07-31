@@ -338,7 +338,7 @@ const EPOCHEN: Epoche[] = [
         hintergrund:
           "Pieter Bruegel der Ältere war einer der bedeutendsten niederländischen Maler des 16. Jahrhunderts und schuf dieses Bild 1563, zur Zeit der niederländischen Renaissance. Er malte die biblische Geschichte vom Turmbau als Panorama seiner eigenen Gegenwart, denn Baustelle, Hafen und Stadt sind flämisch und nicht babylonisch gestaltet. Der gewaltige Turm erinnert mit seinen Rundbögen an das römische Kolosseum und steht bereits sichtbar schief. Vorne links besucht eine königliche Gruppe die Baustelle, vor der die Steinmetze niederknien. Diese Figur wird meist als der biblische König Nimrod gedeutet. Das Original hängt heute im Kunsthistorischen Museum in Wien.",
         contextNote:
-          "Der Turmbau zu Babel ist das Bild der Renaissance-Verunsicherung: Eine Epoche, die mit Buchdruck, Seefahrt und Kapital alles zu können scheint und ahnt, dass der Ehrgeiz das Fundament überfordern könnte. Die biblische Strafe für den Turm war die Sprachverwirrung. Bruegels Zeit erlebte ihre eigene: die Glaubensspaltung, die Europa in Lager teilte.",
+          "Der Turmbau zu Babel ist das Bild der Renaissance-Verunsicherung: Eine Epoche, die mit Buchdruck, Seefahrt und Kapital alles zu können scheint und gleichzeitig ahnt, dass der Ehrgeiz das Fundament überfordern könnte. Die biblische Strafe für den Turm war die Sprachverwirrung. Bruegels Zeit erlebte ihre eigene: die Glaubensspaltung, die Europa in Lager teilte.",
         tour: [
           {
             x: 50,
