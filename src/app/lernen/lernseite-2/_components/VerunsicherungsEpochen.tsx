@@ -328,7 +328,7 @@ const EPOCHEN: Epoche[] = [
     span: "~1400–1600",
     lead: "Neue Welten, neue Medien, neues Geld: Der Mensch rückt sich selbst ins Zentrum und verliert zugleich seine Mitte im Kosmos. Die Wiederentdeckung der Antike, die Eroberung Amerikas und der Buchdruck lassen das Selbstbewusstsein wachsen: Der Mensch traut sich zu, die Welt zu vermessen und neu zu gestalten. Gleichzeitig zeigt Kopernikus, dass die Erde nicht der Mittelpunkt ist. Grösse und Kränkung liegen dicht beieinander.",
     leadMehr:
-      "«Renaissance» heisst «Wiedergeburt». Gemeint war die Rückbesinnung auf Kunst und Wissen der Antike, ausgehend von den reichen Städten Italiens (Florenz, Venedig) ab dem 14. Jahrhundert. Sie ist untrennbar mit dem Humanismus verbunden: der Idee, dass Bildung den Menschen formt. Zugleich ist es die Zeit der Kolonialgewalt, der Hexenverfolgung und der Glaubenskriege. Der «Aufbruch» hatte eine sehr dunkle Rückseite. Kunst, Wissenschaft und Kapitalismus nehmen hier gemeinsam Fahrt auf.",
+      "«Renaissance» heisst «Wiedergeburt». Gemeint war die Rückbesinnung auf Kunst und Wissen der Antike, ausgehend von den reichen Städten Italiens (Florenz, Venedig) ab dem 14. Jahrhundert. Die Renaissance ist untrennbar mit dem Humanismus verbunden: der Idee, dass Bildung den Menschen formt. Zugleich ist es die Zeit der Kolonialgewalt, der Hexenverfolgung und der Glaubenskriege. Der «Aufbruch» hatte also eine sehr dunkle Rückseite. Kunst, Wissenschaft und Kapitalismus nehmen hier gemeinsam Fahrt auf.",
     bilder: [
       {
         src: "/art/bruegel-babel.jpg",
