@@ -916,7 +916,7 @@ export default function Lernseite2VorhangAuf() {
             stufen: ["unkenntlich", "verschwommen", "deutlich"],
           }}
           einladung="Zwölf Merkmale sind hier lose verwoben. Tippe die Punkte an. Zwischen besuchten Punkten füllen sich die Flächen, und ist das Muster gewoben, erscheint darunter das Fazit. Gewichte in jeder Karte, wie deutlich das Merkmal die Gestalt der KI macht. Je mehr «deutlich» du wählst, desto stärker werden die Konturen."
-          abschluss="Diese zwölf Eigenschaften treffen sich in einem einzigen Gegenüber. Und darin liegt das eigentlich Neue. Nicht eine einzelne Fähigkeit, sondern ihre Bündelung macht die KI zu einer Akteurin. Sie rechnet, lernt aus Daten, erkennt Muster, wettet auf Wahrscheinlichkeiten, überträgt Gelerntes, liest den Kontext, passt sich an, spricht, arbeitet im Wechselspiel, erzeugt und verbindet die Sinne. So wird sie zu etwas, dem wir mehr Einfluss auf unser Handeln zutrauen als je einer Technik zuvor."
+          abschluss="Diese zwölf Eigenschaften treten nicht getrennt auf, sondern alle gemeinsam. Und darin liegt das eigentlich Neue. Nicht eine einzelne Fähigkeit, sondern ihre Bündelung macht die KI zu einer Akteurin. Sie rechnet, lernt aus Daten, erkennt Muster, wettet auf Wahrscheinlichkeiten, überträgt Gelerntes, liest den Kontext, passt sich an, spricht, arbeitet im Wechselspiel, erzeugt und verbindet die Sinne. So wird sie zu etwas, dem wir mehr Einfluss auf unser Handeln zutrauen als je einer Technik zuvor."
           knoten={[
             {
               titel: "algorithmisch",
@@ -1122,7 +1122,7 @@ export default function Lernseite2VorhangAuf() {
                   titel: "Zugang",
                   text: "Nicht alle können KI gleichermassen nutzen. Kosten, technische Ausstattung, Sprache und digitale Erfahrung entscheiden mit. Wer gut ausgestattet ist, profitiert stärker. So kann KI bestehende Ungleichheiten sogar vergrössern.",
                   beispiel:
-                    "Bei den grossen Chatbots ist die Gratisstufe begrenzt: weniger Anfragen, eingeschränkter Zugriff auf die neuesten Modelle und Werkzeuge. Ein Abo für rund 20 Dollar im Monat hebt vor allem diese Grenzen an. Wer zahlen kann, arbeitet also flüssiger und mit mehr Möglichkeiten. Schon beim Zugang entsteht so ein Unterschied zwischen Menschen. Die genauen Stufen ändern sich laufend, dieser Stand ist von 2026.",
+                    "Bei den grossen Chatbots ist die Gratisstufe begrenzt: weniger Anfragen, eingeschränkter Zugriff auf die neuesten Modelle und Werkzeuge. Ein Abo für rund 20 Dollar im Monat hebt vor allem diese Grenzen an. Wer zahlen kann, arbeitet also flüssiger und mit mehr Möglichkeiten. Schon beim Zugang entsteht so ein Unterschied zwischen Menschen. Preise und Grenzen ändern sich laufend, dieser Stand ist von 2026.",
                 },
                 {
                   titel: "Arbeitsmarkt",

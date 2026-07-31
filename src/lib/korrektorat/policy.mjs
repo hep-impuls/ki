@@ -73,7 +73,13 @@ export const SKIP_KEYS = new Set([
   "correctIndices",
   "correctAnswer",
   "richtig",
-  "punkte",
+  /* «punkte» stand hier als Quiz-Punktzahl. Das war doppelt gesichert und hat
+     geschadet: Zahlen sammelt der Parser ohnehin nie, aber unter demselben
+     Namen liegen an 16 Stellen die INHALTLICHEN Punkte (`punkte: [{ titel,
+     text, beispiel }]`) — etwa alle Aspekte von «Die KI im Kontext». Die waren
+     dadurch im Editor unsichtbar. Gemeldet von der Korrekturperson, die die
+     Stellen nicht finden konnte. Als String kommt «punkte» im Repo nirgends
+     vor, das Entfernen legt also keinen technischen Wert offen. */
   "gewicht",
   "min",
   "max",
@@ -118,8 +124,17 @@ export const JSX_TEXT_ATTRS = new Set([
   "cta",
   "buttonLabel",
   "aria-label",
+  /* `ariaLabel` in camelCase wird als Prop weitergegeben, während `aria-label`
+     direkt im DOM landet. Beides ist Text, den jemand vorgelesen bekommt. */
+  "ariaLabel",
   "note",
   "notiz",
+  /* Abschluss- und Einladungstexte der Knotenlandschaften. Der Satz «Diese
+     zwölf Eigenschaften treffen sich …» war darum im Editor nicht auffindbar. */
+  "abschluss",
+  "einladung",
+  /* Kurzbiografien im Orakel (Delphi, Pythia). */
+  "bio",
 ]);
 
 /**

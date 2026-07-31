@@ -9,12 +9,20 @@
   <g fill="#5b5347">
     <path d="M660 470 l-16 -7 l0 14 z"/>
     <path d="M150 90 l-7 16 l14 0 z"/>
-    <path d="M300 560 l-3 -17 l14 6 z"/>
+    <!-- Tiefenachse: Die Spitze muss der Achsenrichtung (150,90) folgen. Vorher
+         standen hier Werte, deren Basispunkte seitlich statt hinter der Spitze
+         lagen — das Dreieck sass verdreht auf der Linie. Jetzt gerechnet:
+         Basis = Spitze - 17·û, Ecken = Basis ± 7·n̂. -->
+    <path d="M300 560 l-18.2 -2.7 l7.2 -12 z"/>
   </g>
   <g fill="#7a7264" font-family="ui-sans-serif, sans-serif" font-size="18" font-style="italic">
     <text x="600" y="500">Merkmal 1</text>
-    <text x="60" y="110">Merkmal 2</text>
-    <text x="270" y="556">Merkmal 3</text>
+    <!-- Tiefer gesetzt: Auf y=110 stiess das Wortende an die Pfeilspitze der
+         Hochachse (deren linke Ecke bei x=143 liegt). -->
+    <text x="55" y="128">Merkmal 2</text>
+    <!-- Rechts unter die Spitze gesetzt: Auf x=270 lief die Beschriftung quer
+         durch die Pfeilspitze hindurch. -->
+    <text x="312" y="578">Merkmal 3</text>
   </g>
   <!-- gelernte Grenzfläche (Trennebene) -->
   <polygon points="330,150 560,210 470,430 250,360" fill="#c2703d" opacity="0.16"/>
