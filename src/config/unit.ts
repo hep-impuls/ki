@@ -53,8 +53,10 @@ export const unit: UnitConfig = {
       href: "/lernen/lernseite-2",
       icon: "auto_awesome",
       subtitle: "Mensch & KI",
+      // Keine Dauer: In diesem Lernset bestimmt jede Person selbst, wie weit
+      // sie geht — eine Minutenzahl wäre eine Vorgabe, die es nicht gibt.
       description:
-        "Mit KI ist eine neue Akteurin aufgetreten. Der Auftakt «Vorhang auf» und die philosophische Perspektive spannen den Bogen — das Orakel spiegelt am Ende deinen eigenen Weg.",
+        "Mit KI ist eine neue Akteurin aufgetreten, weder Werkzeug noch Person. Du gehst ihrer Geschichte nach, prüfst ihre zwölf Merkmale und siehst an acht Epochen, dass Umbrüche schon oft verunsichert haben. Hier wird nichts abgefragt: Was du öffnest und markierst, wird zu deiner Spur. Am Schluss deutet dir das Orakel dein Muster und du nimmst ein PDF mit, das festhält, wo du warst und was du weiterverfolgen willst.",
       submodules: [
         {
           slug: "vorhang-auf",
