@@ -70,6 +70,80 @@ const LINKS: Erklaerlink[] = [
     url: "https://www.ige.ch/de/blog/blog-artikel/kuenstliche-intelligenz-koennen-ki-tools-urheberrecht-verletzen",
     modul: "Vorhang auf",
   },
+  /* Zu den Merkmalen: wie eine KI rechnet, lernt und Wahrscheinlichkeiten wählt. */
+  {
+    titel: "Warum sogar ChatGPT Rechtschreibfehler macht",
+    beschreibung:
+      "Am Alltagsbeispiel Tippfehler: Die KI lernt aus riesigen Textmengen und wählt einfach das statistisch wahrscheinlichste Wort.",
+    quelle: "SRF News",
+    url: "https://www.srf.ch/news/kuenstliche-intelligenz-von-wegen-intelligent-auch-chatgpt-macht-rechtschreibfehler",
+    modul: "Vorhang auf",
+  },
+  {
+    titel: "KI-Glossar: die Begriffe kurz erklärt",
+    beschreibung:
+      "Maschinelles Lernen, Deep Learning, Sprachmodell, Halluzination: je zwei bis drei Sätze zum Nachschlagen.",
+    quelle: "SRF Wissen",
+    url: "https://www.srf.ch/wissen/kuenstliche-intelligenz/ki-glossar-wichtige-begriffe-rund-um-ki-einfach-erklaert",
+    modul: "Vorhang auf",
+  },
+  {
+    titel: "KI-Agenten: wenn die KI selbständig handelt",
+    beschreibung:
+      "Was «agentenfähig» heisst, an Beispielen wie einen Flug buchen oder E-Mails sortieren.",
+    quelle: "Bundesamt für Sicherheit in der Informationstechnik",
+    url: "https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Technologien_sicher_gestalten/Kuenstliche-Intelligenz/KI-Agenten/ki-agenten_node.html",
+    modul: "Vorhang auf",
+  },
+  /* Zu den Kontextbereichen: Technik und Ressourcen, Recht, Arbeitsmarkt. */
+  {
+    titel: "Stille Stromfresser: Rechenzentren in der Schweiz",
+    beschreibung:
+      "Wie viel Strom die Rechenzentren hierzulande ziehen und wie viel Trinkwasser ihre Kühlung braucht.",
+    quelle: "SRF News",
+    url: "https://www.srf.ch/news/wirtschaft/digitale-infrastruktur-stille-stromfresser-immer-mehr-rechenzentren-in-der-schweiz",
+    modul: "Vorhang auf",
+  },
+  {
+    titel: "KI-Rechenzentren und das Wasser",
+    beschreibung:
+      "Warum KI zweimal Wasser kostet: direkt für die Kühlung und noch einmal über die Stromerzeugung.",
+    quelle: "SWI swissinfo.ch",
+    url: "https://www.swissinfo.ch/ger/schweizer-ki/ki-rechenzentren-setzen-schweizer-wasserressourcen-unter-druck/91322903",
+    modul: "Vorhang auf",
+  },
+  {
+    titel: "Das KI-Gesetz der EU und seine Risikostufen",
+    beschreibung:
+      "Was der AI Act regelt: verbotene Anwendungen, Hochrisiko-Systeme und Transparenzpflichten, je nach Risiko gestaffelt.",
+    quelle: "Europäisches Parlament",
+    url: "https://www.europarl.europa.eu/topics/de/article/20230601STO93804/ki-gesetz-erste-regulierung-der-kunstlichen-intelligenz",
+    modul: "Vorhang auf",
+  },
+  {
+    titel: "Wie die Schweiz KI reguliert",
+    beschreibung:
+      "Kein eigenes KI-Gesetz, sondern angepasste bestehende Gesetze. Mit dem Vergleich zur EU.",
+    quelle: "SRF",
+    url: "https://www.srf.ch/radio-srf-1/kuenstliche-intelligenz-ki-regulierung-braucht-es-rasch-strengere-massnahmen",
+    modul: "Vorhang auf",
+  },
+  {
+    titel: "KI und Jobs: Putzkräfte sicherer als Softwareentwickler",
+    beschreibung:
+      "Ein ETH-Ökonom erklärt, welche Tätigkeiten die KI übernimmt, welche Berufe sicherer sind und was das für Junge heisst.",
+    quelle: "SRF News",
+    url: "https://www.srf.ch/news/wirtschaft/arbeitsmarkt-vor-umwaelzungen-ki-und-arbeitswelt-putzkraefte-sicherer-als-softwareentwickler",
+    modul: "Vorhang auf",
+  },
+  {
+    titel: "Ein Viertel der Schweizer Stellen ist betroffen",
+    beschreibung:
+      "Eine Studie über drei Millionen Arbeitsplätze: stark betroffen sind Büro, Banken und Versicherungen, kaum das Handwerk.",
+    quelle: "SRF News",
+    url: "https://www.srf.ch/news/wirtschaft/studie-zur-arbeit-mit-ki-ki-fuehrt-zu-umwaelzung-in-der-welt-der-arbeit",
+    modul: "Vorhang auf",
+  },
 
   /* ── Eine philosophische Perspektive ───────────────────────────────────── */
   {
@@ -78,6 +152,26 @@ const LINKS: Erklaerlink[] = [
       "Was das Fach überhaupt ist, welche Grundfragen es stellt und wie seine Epochen zusammenhängen.",
     quelle: "Wikipedia",
     url: "https://de.wikipedia.org/wiki/Philosophie",
+    modul: "Eine philosophische Perspektive",
+  },
+  {
+    titel: "Nassehi: die Gesellschaft läuft in Mustern",
+    beschreibung:
+      "Warum die Digitalisierung überhaupt funktioniert: weil wir berechenbarer sind, als wir meinen.",
+    quelle: "SRF Kultur",
+    url: "https://www.srf.ch/kultur/gesellschaft-religion/muster-von-armin-nassehi-warum-wir-daten-anhaeufen-ohne-ende",
+    modul: "Eine philosophische Perspektive",
+  },
+  {
+    /* Beschreibender Titel: Der Beitrag heisst im Original «Der Philosoph, der
+       an den Samichlaus glaubt (echt jetzt!)» — das sagt über den Inhalt nichts.
+       Der Artikel erwähnt KI mit keinem Wort; er steht hier für Gabriels These
+       zur Moral, nicht als Beleg für KI-Ethik. */
+    titel: "Gabriel: Gibt es nur eine Moral?",
+    beschreibung:
+      "Seine These, dass moralische Irrtümer erkennbar sind: Die Sklaverei war schon immer falsch, man hätte nur die Sklaven fragen müssen.",
+    quelle: "SRF Kultur",
+    url: "https://www.srf.ch/kultur/gesellschaft-religion/star-philosoph-markus-gabriel-der-philosoph-der-an-den-samichlaus-glaubt-echt-jetzt",
     modul: "Eine philosophische Perspektive",
   },
 
