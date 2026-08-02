@@ -194,12 +194,22 @@ const LINKS: Erklaerlink[] = [
     url: "https://www.srf.ch/kultur/gesellschaft-religion/muster-von-armin-nassehi-warum-wir-daten-anhaeufen-ohne-ende",
     modul: "Eine philosophische Perspektive",
   },
-  /* Zu Gabriel fehlt noch ein Link. Der naheliegende SRF-Beitrag zur «einen
-     Moral» ist wieder draussen: Im Lernset steht Gabriel für den «magischen
-     Spiegel» und die «ethische Intelligenz» — dass die KI unsere Werte und
-     Gefühle aus Daten liest und die eigentliche Frage darum an uns
-     zurückgeht. Davon handelt jener Beitrag nicht, er erwähnt KI mit keinem
-     Wort. Ein thematisch danebenliegender Link ist schlechter als keiner. */
+  {
+    /* Gabriel spricht hier selbst, statt dass jemand über ihn schreibt. Das
+       war die Lehre aus zwei verworfenen Kandidaten: Eine Rezension zitiert am
+       Ende den Rezensenten, und die naheliegende SRF-Seite zur «einen Moral»
+       erwähnt KI mit keinem Wort.
+
+       Nicht gedeckt und darum in der Beschreibung nicht behauptet: dass Ethik
+       von jeher eine emotionale Grundlage habe. Das Interview sagt, die KI
+       LESE Gefühle — über die Grundlage der Ethik sagt es nichts. */
+    titel: "Gabriel: die KI ist ein Spiegel von uns",
+    beschreibung:
+      "Im Interview: Sie wird zum Terminator, wenn wir den Terminator hineinspiegeln, und zu Gandhi, wenn wir Gandhi spiegeln.",
+    quelle: "watson.ch",
+    url: "https://www.watson.ch/wissen/digital/128883092-ki-philosoph-markus-gabriel-ueber-superintelligenz-und-silicon-valley",
+    modul: "Eine philosophische Perspektive",
+  },
 
   /* ── Übergreifend ──────────────────────────────────────────────────────── */
   {
