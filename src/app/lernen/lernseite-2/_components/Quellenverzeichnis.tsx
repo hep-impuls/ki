@@ -155,6 +155,38 @@ const LINKS: Erklaerlink[] = [
     modul: "Eine philosophische Perspektive",
   },
   {
+    /* Der Text nennt den Fachbegriff «Natalität» nicht, er verhandelt den
+       Gedanken unter «Pluralität». Als Erklärung der SACHE ist er stark: Er
+       führt das Anfangen an einer 15-Jährigen vor und fragt ausdrücklich, ob
+       Jugendliche in diesem Alter politisch handeln dürfen. */
+    titel: "Arendt: jeder Mensch kann etwas anfangen",
+    beschreibung:
+      "Am Beispiel einer 15-Jährigen, die einen Schulstreik beginnt: warum Handeln für Arendt heisst, einen Anfang zu setzen.",
+    quelle: "philosophie.ch",
+    url: "https://www.philosophie.ch/2020-04-24-robaszkiewicz",
+    modul: "Eine philosophische Perspektive",
+  },
+  {
+    /* Bewusst der Anker #Überblick: Die Einleitung darüber ist deutlich
+       schwerer (Durkheim, Ethnografie, Semiotik), und der Abschnitt
+       «Aktanten» weiter unten ist Uni-Soziologie. Nur dieser eine Abschnitt
+       ist laientauglich, und er trägt das Universitäts-Beispiel. */
+    titel: "Latour: auch Dinge handeln mit",
+    beschreibung:
+      "Am Beispiel einer Universität: Studierende, Stühle, Laptops und Stifte bilden zusammen ein Netz, das als Ganzes handelt.",
+    quelle: "Wikipedia",
+    url: "https://de.wikipedia.org/wiki/Akteur-Netzwerk-Theorie#%C3%9Cberblick",
+    modul: "Eine philosophische Perspektive",
+  },
+  {
+    titel: "Der Berliner Schlüssel",
+    beschreibung:
+      "Latours bekanntestes Beispiel: ein Schlüssel, der einen zwingt, hinter sich abzuschliessen. Ein Ding, das Verhalten vorschreibt.",
+    quelle: "Wikipedia",
+    url: "https://de.wikipedia.org/wiki/Der_Berliner_Schl%C3%BCssel",
+    modul: "Eine philosophische Perspektive",
+  },
+  {
     titel: "Nassehi: die Gesellschaft läuft in Mustern",
     beschreibung:
       "Warum die Digitalisierung überhaupt funktioniert: weil wir berechenbarer sind, als wir meinen.",
