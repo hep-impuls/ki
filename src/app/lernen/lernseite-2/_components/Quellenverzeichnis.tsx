@@ -162,18 +162,12 @@ const LINKS: Erklaerlink[] = [
     url: "https://www.srf.ch/kultur/gesellschaft-religion/muster-von-armin-nassehi-warum-wir-daten-anhaeufen-ohne-ende",
     modul: "Eine philosophische Perspektive",
   },
-  {
-    /* Beschreibender Titel: Der Beitrag heisst im Original «Der Philosoph, der
-       an den Samichlaus glaubt (echt jetzt!)» — das sagt über den Inhalt nichts.
-       Der Artikel erwähnt KI mit keinem Wort; er steht hier für Gabriels These
-       zur Moral, nicht als Beleg für KI-Ethik. */
-    titel: "Gabriel: Gibt es nur eine Moral?",
-    beschreibung:
-      "Seine These, dass moralische Irrtümer erkennbar sind: Die Sklaverei war schon immer falsch, man hätte nur die Sklaven fragen müssen.",
-    quelle: "SRF Kultur",
-    url: "https://www.srf.ch/kultur/gesellschaft-religion/star-philosoph-markus-gabriel-der-philosoph-der-an-den-samichlaus-glaubt-echt-jetzt",
-    modul: "Eine philosophische Perspektive",
-  },
+  /* Zu Gabriel fehlt noch ein Link. Der naheliegende SRF-Beitrag zur «einen
+     Moral» ist wieder draussen: Im Lernset steht Gabriel für den «magischen
+     Spiegel» und die «ethische Intelligenz» — dass die KI unsere Werte und
+     Gefühle aus Daten liest und die eigentliche Frage darum an uns
+     zurückgeht. Davon handelt jener Beitrag nicht, er erwähnt KI mit keinem
+     Wort. Ein thematisch danebenliegender Link ist schlechter als keiner. */
 
   /* ── Übergreifend ──────────────────────────────────────────────────────── */
   {
