@@ -40,7 +40,7 @@ export default function Lernseite2Hub() {
 
       <header className="border-b border-outline-variant pb-lg">
         <p className="text-label-md uppercase tracking-wider text-tertiary">
-          Lernseite 2 · Mensch &amp; KI
+          Mensch &amp; KI
         </p>
         <h1 className="mt-sm text-headline-xl text-on-surface">{mod.title}</h1>
         <div className="mt-sm max-w-3xl space-y-sm text-body-lg text-on-surface-variant">
