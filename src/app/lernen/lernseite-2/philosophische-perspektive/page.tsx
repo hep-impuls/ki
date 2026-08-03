@@ -47,7 +47,7 @@ export default function Lernseite2PhilosophischePerspektive() {
         className="inline-flex items-center gap-xs text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
       >
         <span className="material-symbols-outlined text-[18px]">arrow_back</span>
-        Zurück zu Lernseite 2
+        Startseite «Eine ganz neue Partnerschaft»
       </Link>
 
       <AbschnittKopf bild="/art/philosophie-kopf.webp" gross className="mt-lg">
