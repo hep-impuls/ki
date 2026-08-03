@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ActivityTracker from "@/components/ActivityTracker";
+import HoverTipp from "@/app/lernen/lernseite-2/_components/HoverTipp";
 import { unit } from "@/config/unit";
 
 export default function Home() {
@@ -117,10 +118,35 @@ export default function Home() {
           <p className="mt-sm max-w-3xl text-body-sm text-on-surface-variant">
             Diese Plattform bündelt interaktive Module zum Thema Künstliche
             Intelligenz. Du meldest dich mit einem Code an, ohne Namen und ohne
-            E-Mail. Unter diesem Code werden Lernfortschritt und Aktivitäten in
-            Firebase gespeichert, sodass du jederzeit dort weitermachen kannst,
-            wo du aufgehört hast. Der Code ist ein Pseudonym: Wer ihn kennt,
-            sieht diesen Fortschritt.
+            E-Mail. Unter diesem Code werden Lernfortschritt und Aktivitäten in{" "}
+            <HoverTipp
+              wort="Firebase"
+              breite={320}
+              vorlesen="Firebase ist ein Datenspeicher von Google, eine Datenbank in der Cloud. Dorthin gehen nur dein Code und dein Fortschritt, kein Name und keine E-Mail. Die Verbindung ist verschlüsselt. Weil der Code der einzige Schlüssel ist, behalte ihn für dich."
+              inhalt={
+                <>
+                  <span className="block font-medium text-on-surface">
+                    Ein Datenspeicher von Google
+                  </span>
+                  <span className="mt-[2px] block text-on-surface-variant">
+                    Eine Datenbank, die nicht auf deinem Gerät liegt, sondern im
+                    Netz. Darum findest du deinen Fortschritt auch auf einem
+                    anderen Gerät wieder.
+                  </span>
+                  <span className="mt-xs block text-on-surface-variant">
+                    Dorthin gehen nur dein Code und dein Fortschritt, kein Name
+                    und keine E-Mail. Die Verbindung ist verschlüsselt.
+                  </span>
+                  <span className="mt-xs block text-on-surface-variant">
+                    Weil der Code der einzige Schlüssel ist, behalte ihn für
+                    dich: Wer ihn kennt, sieht deinen Fortschritt.
+                  </span>
+                </>
+              }
+            />{" "}
+            gespeichert, sodass du jederzeit dort weitermachen kannst, wo du
+            aufgehört hast. Der Code ist ein Pseudonym: Wer ihn kennt, sieht
+            diesen Fortschritt.
           </p>
         </div>
       </section>
