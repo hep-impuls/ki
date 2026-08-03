@@ -62,23 +62,7 @@ const LINKS: Erklaerlink[] = [
     url: "https://de.wikipedia.org/wiki/Geschichte_der_k%C3%BCnstlichen_Intelligenz",
     modul: "Vorhang auf",
   },
-  {
-    titel: "Können KI-Tools das Urheberrecht verletzen?",
-    beschreibung:
-      "Die Schweizer Rechtslage in Alltagssprache: Wem gehört ein KI-Bild, und wann wird die Nutzung heikel?",
-    quelle: "Eidgenössisches Institut für Geistiges Eigentum",
-    url: "https://www.ige.ch/de/blog/blog-artikel/kuenstliche-intelligenz-koennen-ki-tools-urheberrecht-verletzen",
-    modul: "Vorhang auf",
-  },
-  /* Zu den Merkmalen: wie eine KI rechnet, lernt und Wahrscheinlichkeiten wählt. */
-  {
-    titel: "Warum sogar ChatGPT Rechtschreibfehler macht",
-    beschreibung:
-      "Am Alltagsbeispiel Tippfehler: Die KI lernt aus riesigen Textmengen und wählt einfach das statistisch wahrscheinlichste Wort.",
-    quelle: "SRF News",
-    url: "https://www.srf.ch/news/kuenstliche-intelligenz-von-wegen-intelligent-auch-chatgpt-macht-rechtschreibfehler",
-    modul: "Vorhang auf",
-  },
+  /* Zu den Merkmalen: was die Fachwoerter des Lernsets bedeuten. */
   {
     titel: "KI-Glossar: die Begriffe kurz erklärt",
     beschreibung:

@@ -11,7 +11,9 @@ import { usePathname } from "next/navigation";
  * Nur Theme-Tokens; auf schmalen Screens ausgeblendet (dort trägt die
  * Themen-/Abschnittsliste der Seite selbst).
  */
-const SEITEN = [
+/** Die drei Seiten des Moduls. Exportiert, weil das Inhaltsverzeichnis
+ *  dieselbe Liste auf schmalen Schirmen zeigt (dort fehlt diese Navigation). */
+export const SEITEN = [
   { nr: "01", label: "Vorhang auf", href: "/lernen/lernseite-2/vorhang-auf" },
   { nr: "02", label: "Philosophie", href: "/lernen/lernseite-2/philosophische-perspektive" },
   { nr: "03", label: "Das Orakel", href: "/lernen/lernseite-2/das-orakel" },

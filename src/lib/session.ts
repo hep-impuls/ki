@@ -38,10 +38,36 @@ export interface Session {
  * Klassengroessen ausreichend; bei Bedarf Modell-Pool erweitern).
  */
 export function generateCode(): string {
-  const model = MODELS[Math.floor(Math.random() * MODELS.length)];
-  const num = String(Math.floor(Math.random() * 90) + 10);
-  const letter = LETTERS[Math.floor(Math.random() * LETTERS.length)];
-  return `${model}-${num}${letter}`;
+  for (let versuch = 0; versuch < 20; versuch++) {
+    const model = MODELS[Math.floor(Math.random() * MODELS.length)];
+    const num = String(Math.floor(Math.random() * 90) + 10);
+    const letter = LETTERS[Math.floor(Math.random() * LETTERS.length)];
+    const code = `${model}-${num}${letter}`;
+    if (!istSchaufensterCode(code)) return code;
+  }
+  // Praktisch unerreichbar (die Sperrliste ist winzig), aber ohne Rückfallwert
+  // gäbe die Funktion im Grenzfall `undefined` zurück.
+  return `QWEN-${Math.floor(Math.random() * 90) + 10}Z`;
+}
+
+/**
+ * Codes, die irgendwo als BEISPIEL sichtbar sind: im Eingabefeld, in der
+ * Anleitung für Lehrpersonen, auf einem Screenshot im Aufgabenblatt.
+ *
+ * Warum sie gesperrt gehören: Ein Code ist der einzige Schlüssel zum eigenen
+ * Fortschritt, und `/start` nimmt jeden Code an, auch einen ohne Dokument. Wer
+ * das Beispiel aus dem Feld abtippt, landet darum in derselben Sitzung wie
+ * alle anderen, die dasselbe tun, und sieht deren Spuren. Gemeldet von
+ * Christof, nachdem er es ausprobiert hatte.
+ *
+ * Vergleich case-insensitiv, weil die Beispiele mal gross, mal klein
+ * geschrieben stehen («QWEN-34r» im Platzhalter).
+ */
+const SCHAUFENSTER_CODES = new Set(["QWEN-34R", "PHI-36U"]);
+
+/** Ist das ein Beispielcode aus der Anleitung statt ein echter Zugang? */
+export function istSchaufensterCode(code: string): boolean {
+  return SCHAUFENSTER_CODES.has(code.trim().toUpperCase());
 }
 
 export function getSession(): Session | null {

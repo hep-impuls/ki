@@ -1,6 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { SEITEN as MODUL_SEITEN } from "./ModulMiniNav";
 import { leseSpuren, spurBasis, SPUR_EVENT } from "../_lib/spuren";
 import { GEWICHT_EVENT } from "../_lib/gewichtung";
 
@@ -47,6 +50,7 @@ export default function Inhaltsverzeichnis({
 }) {
   const [ids, setIds] = useState<string[]>([]);
   const [offen, setOffen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const lade = () => setIds(leseSpuren().map((s) => s.id));
@@ -150,6 +154,51 @@ export default function Inhaltsverzeichnis({
                 {eintraege.map((e) => (
                   <Zeile key={e.id} e={e} alsButton />
                 ))}
+              </div>
+
+              {/* Der Faden, nur auf schmalen Schirmen. Dort ist die
+                  schwebende ModulMiniNav ausgeblendet, und diese Liste führt
+                  bloss INNERHALB der Seite — ein Wechsel zwischen den drei
+                  Modulen war auf dem Handy damit gar nicht möglich. Auf
+                  grossen Schirmen bleibt er weg, sonst stünde er zweimal da. */}
+              <div className="mt-md border-t border-outline-variant pt-sm lg:hidden">
+                <p className="flex items-center gap-xs px-sm pb-xs text-label-sm uppercase tracking-wider text-tertiary">
+                  <span className="material-symbols-outlined text-[16px]">linear_scale</span>
+                  Der Faden
+                </p>
+                {MODUL_SEITEN.map((s) => {
+                  const hier = pathname === s.href;
+                  return (
+                    <Link
+                      key={s.href}
+                      href={s.href}
+                      onClick={() => setOffen(false)}
+                      aria-current={hier ? "page" : undefined}
+                      className={
+                        "flex items-center gap-sm rounded-lg px-sm py-xs text-label-md transition-colors " +
+                        (hier
+                          ? "bg-tertiary-container/50 text-on-surface"
+                          : "text-on-surface-variant hover:bg-surface-container hover:text-on-surface")
+                      }
+                    >
+                      <span
+                        className="text-label-sm text-tertiary/70"
+                        style={{ fontFamily: "ui-monospace, monospace" }}
+                      >
+                        {s.nr}
+                      </span>
+                      {s.label}
+                      <span
+                        className={
+                          "material-symbols-outlined ml-auto text-[16px] " +
+                          (hier ? "text-tertiary" : "text-on-surface-variant/50")
+                        }
+                      >
+                        {hier ? "my_location" : "arrow_forward"}
+                      </span>
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </>

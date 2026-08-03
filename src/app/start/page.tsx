@@ -2,7 +2,7 @@
 
 import { Suspense, useCallback, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { generateCode, getSession, saveSession } from "@/lib/session";
+import { generateCode, getSession, istSchaufensterCode, saveSession } from "@/lib/session";
 import { ensureStudent, loadStudent, linkTeacherCode } from "@/lib/db";
 import { classExists } from "@/lib/api";
 
@@ -116,6 +116,15 @@ function StartFlow() {
     const sc = returnInput.trim().toUpperCase();
     if (!sc) {
       setError("Bitte gib deinen Code ein.");
+      return;
+    }
+    // Der Code im Eingabefeld ist nur ein Formatbeispiel. Ohne diese Sperre
+    // landen alle, die ihn abtippen, in derselben Sitzung und sehen die Spuren
+    // der anderen.
+    if (istSchaufensterCode(sc)) {
+      setError(
+        "Das ist nur das Beispiel aus dem Eingabefeld, nicht dein eigener Code. Wenn du noch keinen hast, geh zurück und starte neu.",
+      );
       return;
     }
     setBusy(true);
