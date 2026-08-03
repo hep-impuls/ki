@@ -122,7 +122,7 @@ export default function Home() {
             <HoverTipp
               wort="Firebase"
               breite={320}
-              vorlesen="Firebase ist ein Datenspeicher von Google, eine Datenbank in der Cloud. Dorthin gehen nur dein Code und dein Fortschritt, kein Name und keine E-Mail. Die Verbindung ist verschlüsselt. Weil der Code der einzige Schlüssel ist, behalte ihn für dich."
+              vorlesen="Firebase ist ein Datenspeicher von Google, eine Datenbank in der Cloud. Dorthin gehen nur dein Code und dein Fortschritt, kein Name und keine E-Mail. Die Verbindung ist verschlüsselt. Es gibt kein Passwort: Der Code allein öffnet deine Spur. Darum nicht weitergeben."
               inhalt={
                 <>
                   <span className="block font-medium text-on-surface">
@@ -138,8 +138,8 @@ export default function Home() {
                     und keine E-Mail. Die Verbindung ist verschlüsselt.
                   </span>
                   <span className="mt-xs block text-on-surface-variant">
-                    Weil der Code der einzige Schlüssel ist, behalte ihn für
-                    dich: Wer ihn kennt, sieht deinen Fortschritt.
+                    Es gibt kein Passwort: Der Code allein öffnet deine Spur.
+                    Darum nicht weitergeben.
                   </span>
                 </>
               }
