@@ -73,9 +73,8 @@ export default function Lernseite2PhilosophischePerspektive() {
             Diese Seite will dem Verlorenen nicht nachtrauern. Sie stellt eine
             andere Frage.{" "}
             <strong className="text-on-surface">Was ist eigentlich neu, und was
-            hat sich verändert?</strong> Sie schaut dabei immer zugleich zurück
-            und auf heute. Besonders eine Frage bricht mit der KI neu auf, die
-            Frage nach dem Menschen selbst.
+            hat sich verändert?</strong> Sie betrachtet dabei Vergangenheit und Gegenwart zugleich. Die KI wirft besonders eine Frage
+neu auf: die Frage nach dem Menschen selbst.
           </p>
           <p>
             Der Weg dahin ist ein doppelter. Du webst den{" "}
@@ -135,14 +134,13 @@ export default function Lernseite2PhilosophischePerspektive() {
               neu zu ordnen und zu verstehen, was der Wandel durcheinanderbringt.
             </p>
             <p>
-              Darum geht es in diesem Modul vor allem um eine Frage, die mit der
-              KI neu aufbricht.{" "}
+              Deshalb geht es in diesem Modul vor allem um eine Frage, welche die KI neu
+              aufwirft.{" "}
               <strong className="text-on-surface">Was ist der Mensch?</strong>{" "}
-              Lange galt er als der, der Wissen schafft, weitergibt und Neues
-              erdenkt. Wenn nun eine Maschine schreibt, erklärt und gestaltet,
-              gerät genau das ins Wanken, unser Denken und unsere Kreativität.
-              Neu ist die Frage aber nicht. Sie wird in der Philosophie seit jeher
-              gestellt.{" "}
+              Lange galt er als der, der Wissen schafft, weitergibt und Neues erdenkt. Wenn
+              nun eine Maschine schreibt, erklärt und gestaltet, gerät genau diese
+              Vorstellung ins Wanken, unser Denken und unsere Kreativität. Neu ist die Frage
+              aber nicht. Sie wird in der Philosophie seit jeher gestellt.{" "}
               <DenkerHover
                 name="Immanuel Kant"
                 richtung="oben"
