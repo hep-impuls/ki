@@ -867,7 +867,7 @@ const EPOCHEN: Epoche[] = [
     span: "heute",
     lead: "Klimakrise und Künstliche Intelligenz zugleich: Der Individualismus allein trägt nicht mehr. Es braucht ein neues Wir. Zum ersten Mal sind die Folgen unseres Handelns global und langfristig: Was wir heute tun, entscheidet über das Klima kommender Generationen. Und mit der KI tritt ein Gegenüber auf, das spricht und gestaltet, ohne Mensch zu sein. Das zwingt zur Frage, wer eigentlich handelt und wer verantwortlich ist.",
     leadMehr:
-      "Zwei Umbrüche fallen zusammen: die ökologische Krise (Klima, Artensterben, Ressourcen) und die digitale (KI, Plattformen, Daten). Beide sind planetar und von keinem Land und keinem Einzelnen allein zu lösen. Forschende sprechen vom «Anthropozän», einem Erdzeitalter, das der Mensch selbst prägt. Die Leitfrage dieser Lernumgebung: Welche Schablone, welches «Wir» trägt uns durch eine Zeit, in der Menschen, Maschinen und Natur untrennbar verflochten sind?",
+      "Zwei Umbrüche fallen zusammen: die ökologische Krise (Klima, Artensterben, Ressourcen) und die digitale (KI, Plattformen, Daten). Beide sind planetar und können von keinem Land und keinem Einzelnen allein gelöst werden. Forschende sprechen vom «Anthropozän», einem Erdzeitalter, das der Mensch selbst prägt. Die Leitfrage dieser Lernumgebung: Welche Schablone, welches «Wir» trägt uns durch eine Zeit, in der Menschen, Maschinen und Natur untrennbar verflochten sind?",
     bilder: [
       {
         src: "/art/erde_tag.jpg",
