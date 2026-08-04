@@ -792,7 +792,7 @@ const EPOCHEN: Epoche[] = [
             y: 48,
             zoom: 1.9,
             title: "Das Brandenburger Tor",
-            text: "Dahinter die Säulen des Tors, jahrzehntelang im Sperrgebiet zwischen Ost und West. Dass ausgerechnet hier geöffnet wird, macht das Foto historisch: Das eingemauerte Wahrzeichen wird wieder Durchgang.",
+            text: "Dahinter die Säulen des Brandenburger Tors, jahrzehntelang im Sperrgebiet zwischen Ost und West. Dass ausgerechnet hier geöffnet wird, macht das Foto historisch: Das eingemauerte Wahrzeichen wird wieder ein Durchgang.",
           },
           {
             x: 55,
