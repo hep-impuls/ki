@@ -394,7 +394,7 @@ neu auf: die Frage nach dem Menschen selbst.
               titel: "Die Schrift",
               kurz: "Schrift",
               jahr: "~3300 v. Chr.",
-              text: "In Mesopotamien entsteht die Schrift, zuerst für Buchhaltung und Vorräte. Denken und Erinnern werden erstmals ausserhalb des Kopfes gespeichert.",
+              text: "In Mesopotamien entsteht die Schrift, zuerst für Buchhaltung und Vorräte. Gedanken und Erinnerungen werden erstmals ausserhalb des Kopfes gespeichert.",
               mehr: "Am Anfang standen Zählsteine und Ritzzeichen, mit denen Tempelverwalter in Uruk festhielten, wer wie viel Gerste oder wie viele Schafe abgeliefert hatte. Aus den Bildzeichen wurde die Keilschrift, in feuchten Ton gedrückt, und mit ihr entstand ein neuer Beruf, der Schreiber, der seine Kunst in jahrelanger Schule lernte und damit zu einer kleinen Elite gehörte. Bald speicherte die Schrift nicht mehr nur Vorräte, sondern Verträge, Gesetze wie die Stele des Hammurabi und Geschichten wie das Gilgamesch-Epos, das älteste grosse Erzählwerk der Menschheit. Interessant ist, dass schon damals gewarnt wurde, Platon überliefert die Sorge, wer schreibe, verlasse sich auf tote Zeichen und übe sein Gedächtnis nicht mehr. Die Klage klingt vertraut, sie begleitet seither jede Technik, die dem Kopf Arbeit abnimmt, vom Taschenrechner bis zur KI.",
             },
             {
