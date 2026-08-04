@@ -23,7 +23,12 @@ export interface Beleg {
   id: string;
   /** Wörtliche Textstelle, an die der Link gehängt wird. */
   anker: string;
-  url: string;
+  /**
+   * Fehlt bei **Buchbelegen**: Ein gedrucktes Werk hat keine Adresse, die man
+   * anklicken kann. Das Wort wird dann ein Knopf statt eines Links, und der
+   * Hinweis nennt Autorin und Titel (siehe `BelegStelle` in Glossar.tsx).
+   */
+  url?: string;
   /** Kurzname der Quelle, erscheint beim Überfahren. */
   titel: string;
   /** Wo genau in der Quelle: Seite, Abschnitt, Aphorismus. */
@@ -154,11 +159,48 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-07-29",
   },
 
+  /* ── Buchbelege: «wahrscheinlichkeitsbasiert» ─────────────────────────────
+   * Alle drei am 2026-08-04 im Buch selbst nachgeschlagen (E-Book-Volltext),
+   * nicht aus dem Gedächtnis. Ohne `url`, weil es gedruckte Werke sind.
+   *
+   * Anlass: Der Text nannte «rund 13'000 Richtungen» und schrieb Gabriel den
+   * Begriff «Vektorisierung» zu. Beides hielt der Prüfung nicht stand, siehe
+   * die Fundstellen unten. */
+  {
+    id: "VA-9f6b84",
+    anker: "Hochmut kommt vor dem",
+    titel: "Frank Jäkel, «Die intelligente Täuschung» (transcript 2025)",
+    stelle:
+      "Kapitel 2: «Der Computer verarbeitet einen Text Wort für Wort und versucht aus den bisherigen Wörtern das nächste Wort vorherzusagen. Das können Sie auch! Welches Wort folgt auf die Wörter ›Hochmut kommt vor dem …‹?» Dort auch das zweite Beispiel mit «Mensa» und «Stadt».",
+    geprueft: "2026-08-04",
+  },
+  // Die Zahl im Lernset-Text folgt genau dieser Stelle. «Rund 13'000
+  // Richtungen», wie es vorher hiess, steht so nirgends bei Zweig.
+  {
+    id: "VA-e41f4b",
+    anker: "Hunderte bis über zehntausend Richtungen",
+    titel: "Katharina Zweig, «Weiss die KI, dass sie nichts weiss?» (Heyne 2025)",
+    stelle:
+      "Wörtlich: «wir sprechen nicht von drei Dimensionen wie im Planetarium und nicht von 100 Dimensionen wie beim ersten, einfachen neuronalen Netzwerk von Bengio et al., sondern von Hunderten bis über 10 000 Richtungen.»",
+    geprueft: "2026-08-04",
+  },
+  // Gabriel benutzt das VERB und erklärt es am Beispiel eines Katzenfotos. Das
+  // Substantiv «Vektorisierung» kommt im Buch nicht vor — darum steht im
+  // Lernset-Text «vektorisieren», nicht «Vektorisierung».
+  {
+    id: "VA-e41f4b",
+    anker: "«vektorisieren»",
+    titel: "Markus Gabriel, «Ethische Intelligenz» (Ullstein 2026)",
+    stelle:
+      "Wörtlich: «Eine KI vektorisiert ein digitales Sinnfeld und übersetzt den Inhalt des Felds auf diese Weise in Mathematik.»",
+    geprueft: "2026-08-04",
+  },
+
   /* ── Zerbrechen der Ordnung ───────────────────────────────────────────────
    * 537 belagerten die OSTgoten Rom, nicht die Westgoten von 410. Der Text
    * nannte vorher nur «Goten», was beide Völker verschmolz. */
   {
-    id: "EP-03c465",
+    id: "EP-c167d2",
     anker: "zerstörten sie die Wasserleitungen",
     url: "https://de.wikipedia.org/wiki/Wasserversorgung_im_R%C3%B6mischen_Reich",
     titel: "Wasserversorgung im Römischen Reich (Wikipedia)",
@@ -206,7 +248,7 @@ export const OHNE_BELEG: KeinBeleg[] = [
     notiert: "2026-07-26",
   },
   {
-    id: "VA-2907aa",
+    id: "VA-4a5fb5",
     betrifft: "Zugang: Gratisstufe gegenüber Abo bei den grossen Chatbots",
     grund:
       "Die Preis- und Limitseiten der Anbieter ändern sich laufend, ein Beleg wäre in Monaten falsch. Der Text nennt darum kein einzelnes Produkt mehr und trägt das Standdatum 2026. Absichtlich ohne Link.",

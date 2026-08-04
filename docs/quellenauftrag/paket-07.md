@@ -48,11 +48,6 @@ Jeder Block hier enthält eine prüfbare Behauptung (Zahl, Datum,
 Superlativ oder eine Aussage, die jemandem zugeschrieben wird). Deutende
 Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
-### Übersicht (Hub)
-
-**[HUB-f5abb9]** *(Fliesstext · (ohne Abschnitt))*
-Kaum ein Thema ist so präsent wie die Künstliche Intelligenz — und kaum eines so schwer zu fassen. Es wird viel über sie gesagt, doch vieles bleibt schemenhaft, ein Reden über etwas, das man selten wirklich vor Augen hat. Dieses Lernset will die KI sichtbarer und verständlicher machen, indem es ihr eine Gestalt gibt.
-
 ### Thema 01 · Vorhang auf
 
 **[VA-87049e]** *(Kartentext · Der versteckte Mensch)*
@@ -103,8 +98,11 @@ Tippst du auf dem Handy «Salz und», schlägt die Tastatur «Pfeffer» vor. Die
 **[VA-ad6512]** *(Vertiefung «Mehr lesen» · mustererkennend)*
 Die Informatikerin Katharina Zweig bringt es nüchtern auf den Punkt. Das System hat bestimmte Wörter einfach oft in bestimmten Zusammenhängen gelesen und leitet daraus statistische Muster ab. Ein Beispiel: Es weiss, dass nach «Es war einmal» meist ein Märchen folgt, weil das millionenfach so dastand. Ein echtes Verständnis von Märchen hat es deswegen nicht. Zweigs Fazit ist deutlich, dass solche Systeme noch gar nicht wirklich intelligent sind. Sie erkennen sehr gut, aber sie begreifen nichts.
 
-**[VA-534970]** *(Vertiefung «Mehr lesen» · wahrscheinlichkeitsbasiert)*
-Fachleute nennen diese Zahlencodes Vektoren, und sie haben nicht zwei oder drei Dimensionen, sondern sehr viele. Wie viele es sind, hängt vom Modell ab, oft einige hundert bis einige tausend; die Informatikerin Katharina Zweig nennt als Grössenordnung rund 13'000 Richtungen. Einzelne Richtungen lassen sich dabei nicht als je ein ablesbarer Bedeutungsanteil verstehen, erst ihr Zusammenspiel ergibt die Lage eines Wortteils im jeweiligen Satz. Der Philosoph Markus Gabriel nennt diesen Vorgang Vektorisierung und betont, dass die KI dabei nur mit Mustern und Wahrscheinlichkeiten rechnet, ohne wirklich zu verstehen. Wie mutig die KI beim Auswählen dann würfelt, regelt eine Einstellung namens Temperatur. Ein hoher Wert macht die Antworten kreativer und unberechenbarer, ein niedriger vorhersehbarer. Das erklärt auch, warum dieselbe Frage zweimal ganz verschieden beantwortet werden kann.
+**[VA-9f6b84]** *(Kartentext · wahrscheinlichkeitsbasiert)*
+Welches Wort folgt auf «Hochmut kommt vor dem …»? Da fällt allen dasselbe ein. Genau so arbeitet die KI: Sie sagt aus dem Bisherigen das nächste Wort voraus. Meist ist die Fortsetzung aber nicht eindeutig. Nach «Nach der Vorlesung gehe ich in die …» ist «Mensa» wahrscheinlich, «Stadt» auch möglich, «Schule» kaum. Die KI berechnet für viele Möglichkeiten eine Wahrscheinlichkeit und greift dann zu. Ihre Antwort ist darum eine Wette mit sehr guten Quoten, aber eben eine Wette.
+
+**[VA-e41f4b]** *(Vertiefung «Mehr lesen» · wahrscheinlichkeitsbasiert)*
+Damit die KI überhaupt rechnen kann, wird jedes Wort, genauer jeder Wortteil, in eine lange Zahlenreihe übersetzt. Solche Zahlenreihen heissen Vektoren. Man darf sich einen Vektor als Ort in einem Raum vorstellen: «Hund» und «Katze» liegen dort nah beieinander, «Hund» und «Schraube» weit auseinander. Dieser Raum hat allerdings nicht drei Richtungen wie unserer, sondern sehr viele. Die Informatikerin Katharina Zweig nennt Hunderte bis über zehntausend Richtungen. Was eine einzelne davon bedeutet, kann niemand ablesen; erst ihr Zusammenspiel ergibt die Lage eines Wortteils. Der Philosoph Markus Gabriel nennt dieses Übersetzen in Mathematik «vektorisieren». Am Ende bleibt es ein Rechnen mit Lagen und Abständen, kein Verstehen. Wie «mutig» die KI beim Auswählen würfelt, regelt eine Einstellung namens Temperatur. Ein hoher Wert macht die Antworten kreativer und unberechenbarer, ein niedriger vorhersehbarer. Darum kann dieselbe Frage zweimal ganz verschieden beantwortet werden.
 
 **[VA-3dbf88]** *(Kartentext · generalisierend)*
 Hat eine KI tausende Katzenfotos gesehen, erkennt sie auch eine Katze auf einem Bild, das ihr völlig neu ist. Sie überträgt Gelerntes auf Neues. Aus vielen einzelnen Beispielen zieht sie eine allgemeine Regel. So kann sie sogar Sätze sinnvoll fortsetzen, die noch nie jemand geschrieben hat. Genau das unterscheidet echtes Lernen vom reinen Auswendiglernen.

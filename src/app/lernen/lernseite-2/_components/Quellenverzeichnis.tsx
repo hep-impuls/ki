@@ -206,8 +206,55 @@ const LINKS: Erklaerlink[] = [
   },
 ];
 
+/**
+ * Bücher, aus denen dieses Lernset schöpft. Eine eigene Rubrik, weil sie die
+ * Auswahlregel der Links oben nicht erfüllen: keine Kurztexte für fünf
+ * Minuten, und zwei der drei sind nicht frei zugänglich. Sie stehen hier,
+ * damit nachvollziehbar ist, woher die Aussagen kommen, und für die, die
+ * weiterlesen wollen.
+ *
+ * Die einzelnen Fundstellen hängen als Beleg an der jeweiligen Textstelle
+ * (siehe `_data/belege.ts`) und erscheinen dort beim Überfahren.
+ *
+ * `url` nur, wenn das Buch tatsächlich frei zu lesen ist — bei Jäkel Open
+ * Access (CC BY-ND 4.0) über den Verlag, geprüft am 4. August 2026.
+ */
+const BUECHER: {
+  autor: string;
+  titel: string;
+  verlag: string;
+  wofuer: string;
+  url?: string;
+  frei?: string;
+}[] = [
+  {
+    autor: "Frank Jäkel",
+    titel: "Die intelligente Täuschung",
+    verlag: "transcript 2025",
+    wofuer:
+      "Warum das Vorhersagen des nächsten Wortes noch kein Verstehen ist, erklärt am Satz «Hochmut kommt vor dem …».",
+    url: "https://www.transcript-verlag.de/978-3-8376-7752-2/die-intelligente-taeuschung/",
+    frei: "frei lesbar (Open Access)",
+  },
+  {
+    autor: "Katharina Zweig",
+    titel: "Weiss die KI, dass sie nichts weiss?",
+    verlag: "Heyne 2025",
+    wofuer:
+      "Wie Sprachmodelle rechnen: Wörter werden zu Zahlenreihen in einem Raum mit Hunderten bis über zehntausend Richtungen.",
+  },
+  {
+    autor: "Markus Gabriel",
+    titel: "Ethische Intelligenz",
+    verlag: "Ullstein 2026",
+    wofuer:
+      "Was es heisst, dass eine KI ein Sinnfeld «vektorisiert», also in Mathematik übersetzt.",
+  },
+];
+
 export default function Quellenverzeichnis({ className = "" }: { className?: string }) {
   const [offen, setOffen] = useState<Modul | null>(null);
+  const [buecherOffen, setBuecherOffen] = useState(false);
 
   const gruppen = MODULE.map((m) => ({
     ...m,
@@ -298,6 +345,96 @@ export default function Quellenverzeichnis({ className = "" }: { className?: str
           );
         })}
       </ul>
+
+      {/* Die Bücher als eigener Block, mit Trennlinie: Sie sind keine
+          Erklärlinks fürs schnelle Nachschlagen, sondern der Boden, auf dem
+          die Texte stehen. */}
+      <div className="mt-md border-t border-outline-variant pt-md">
+        <button
+          type="button"
+          onClick={() => setBuecherOffen((o) => !o)}
+          aria-expanded={buecherOffen}
+          className={
+            "flex w-full items-center gap-sm rounded-lg border bg-surface-bright px-sm py-sm text-left outline-none transition-colors hover:border-tertiary " +
+            (buecherOffen ? "border-tertiary" : "border-outline-variant")
+          }
+        >
+          <span className="material-symbols-outlined flex-shrink-0 text-[20px] text-tertiary">
+            auto_stories
+          </span>
+          <span className="min-w-0 flex-1 text-body-sm font-medium text-on-surface">
+            Bücher, aus denen dieses Lernset schöpft
+          </span>
+          <span className="flex-shrink-0 text-label-sm text-on-surface-variant">
+            {BUECHER.length}
+          </span>
+          <span
+            className={
+              "material-symbols-outlined flex-shrink-0 text-[20px] text-on-surface-variant transition-transform duration-300 " +
+              (buecherOffen ? "rotate-180" : "")
+            }
+          >
+            expand_more
+          </span>
+        </button>
+
+        {buecherOffen && (
+          <div className="animate-frame-in mt-xs pl-md">
+            <p className="mb-xs text-label-sm text-on-surface-variant">
+              Keine Fünf-Minuten-Texte, aber hier kommen die Aussagen her. Wo
+              genau, steht beim Überfahren der jeweiligen Textstelle im Lernset.
+            </p>
+            <ul className="space-y-xs">
+              {BUECHER.map((b) => {
+                const inhalt = (
+                  <>
+                    <p className="text-body-sm font-medium text-on-surface">
+                      {b.autor}: «{b.titel}»
+                    </p>
+                    <p className="mt-[2px] text-label-sm text-on-surface-variant">{b.wofuer}</p>
+                    <p className="mt-xs flex items-center gap-xs text-label-sm text-on-surface-variant">
+                      <span className="opacity-70">{b.verlag}</span>
+                      {b.frei && (
+                        /* !leading-snug: text-label-sm setzt line-height 1, die
+                           Pille wäre 12 px hoch und der Text ragte oben und
+                           unten heraus. */
+                        <span className="rounded-full bg-tertiary-container px-xs py-[1px] text-label-sm !leading-snug text-on-tertiary-container">
+                          {b.frei}
+                        </span>
+                      )}
+                    </p>
+                  </>
+                );
+
+                return (
+                  <li key={b.titel}>
+                    {b.url ? (
+                      <a
+                        href={b.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group block rounded-lg border border-outline-variant bg-surface-bright p-sm outline-none transition-colors hover:border-tertiary"
+                      >
+                        {inhalt}
+                        <span className="mt-xs inline-flex items-center gap-[2px] text-label-sm text-tertiary">
+                          Beim Verlag öffnen
+                          <span className="material-symbols-outlined text-[14px] transition-transform group-hover:translate-x-[2px]">
+                            open_in_new
+                          </span>
+                        </span>
+                      </a>
+                    ) : (
+                      <div className="rounded-lg border border-outline-variant bg-surface-bright p-sm">
+                        {inhalt}
+                      </div>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        )}
+      </div>
     </section>
   );
 }

@@ -13,10 +13,10 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 13 |
-| Belegte Textblöcke | 10 |
+| Belege | 16 |
+| Belegte Textblöcke | 12 |
 | Begründete Nicht-Belege | 4 |
-| Aussagen mit Standdatum | 2 |
+| Aussagen mit Standdatum | 3 |
 
 ---
 
@@ -66,7 +66,7 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 - **Kennung:** `VA-ed6696` (Fallbeispiel)
 - **Quelle:** [CSO Ireland: Rechenzentren und Stromverbrauch 2024](https://www.cso.ie/en/releasesandpublications/ep/p-dcmec/datacentresmeteredelectricityconsumption2024/keyfindings/)
-- **Fundstelle:** «rose to 22% in 2024»; städtische Haushalte 18 Prozent, ländliche 10 Prozent. Für 2023 nennt der Vorjahresbericht 21 Prozent bei gleichen Haushaltswerten.
+- **Fundstelle:** «rose to 22% in 2024»; städtische Haushalte 18 Prozent, ländliche Haushalte 10 Prozent. Für 2023 nennt der Vorjahresbericht 21 Prozent bei gleichen Haushaltswerten.
 - **Geprüft:** 2026-07-26
 
 > In Irland verbrauchten die Rechenzentren 2023 bereits 21 Prozent des gemessenen Stroms im Land, für 2024 meldete das irische Statistikamt 22 Prozent. Zum Vergleich, in beiden Jahren gleich: städtische Haushalte 18 Prozent, ländliche 10 Prozent. Die Rechenzentren brauchen also mehr als die Städte für sich, aber weniger als alle Haushalte zusammen. Manche Regionen bremsen deshalb den Bau neuer Zentren.
@@ -107,6 +107,33 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 > Eine UNESCO-Studie von 2024 prüfte bekannte Sprachmodelle und fand klare Klischees. Frauen wurden viel häufiger mit «Familie» und «Haushalt» verbunden, Männer mit «Karriere» und «Gehalt». Die KI gibt also die Vorurteile ihrer Trainingstexte wieder.
 
+### wahrscheinlichkeitsbasiert · Hochmut kommt vor dem
+
+- **Kennung:** `VA-9f6b84` (Kartentext)
+- **Quelle (Buch):** Frank Jäkel, «Die intelligente Täuschung» (transcript 2025)
+- **Fundstelle:** Kapitel 2: «Der Computer verarbeitet einen Text Wort für Wort und versucht aus den bisherigen Wörtern das nächste Wort vorherzusagen. Das können Sie auch! Welches Wort folgt auf die Wörter ›Hochmut kommt vor dem …‹?» Dort auch das zweite Beispiel mit «Mensa» und «Stadt».
+- **Geprüft:** 2026-08-04
+
+> Welches Wort folgt auf «Hochmut kommt vor dem …»? Da fällt allen dasselbe ein. Genau so arbeitet die KI: Sie sagt aus dem Bisherigen das nächste Wort voraus. Meist ist die Fortsetzung aber nicht eindeutig. Nach «Nach der Vorlesung gehe ich in die …» ist «Mensa» wahrscheinlich, «Stadt» auch möglich, «Schule» kaum. Die KI berechnet für viele Möglichkeiten eine Wahrscheinlichkeit und greift dann zu. Ihre Antwort ist darum eine Wette mit sehr guten Quoten, aber eben eine Wette.
+
+### wahrscheinlichkeitsbasiert · Hunderte bis über zehntausend Richtungen
+
+- **Kennung:** `VA-e41f4b` (Vertiefung «Mehr lesen»)
+- **Quelle (Buch):** Katharina Zweig, «Weiss die KI, dass sie nichts weiss?» (Heyne 2025)
+- **Fundstelle:** Wörtlich: «wir sprechen nicht von drei Dimensionen wie im Planetarium und nicht von 100 Dimensionen wie beim ersten, einfachen neuronalen Netzwerk von Bengio et al., sondern von Hunderten bis über 10 000 Richtungen.»
+- **Geprüft:** 2026-08-04
+
+> Damit die KI überhaupt rechnen kann, wird jedes Wort, genauer jeder Wortteil, in eine lange Zahlenreihe übersetzt. Solche Zahlenreihen heissen Vektoren. Man darf sich einen Vektor als Ort in einem Raum vorstellen: «Hund» und «Katze» liegen dort nah beieinander, «Hund» und «Schraube» weit auseinander. Dieser Raum hat allerdings nicht drei Richtungen wie unserer, sondern sehr viele. Die Informatikerin Katharina Zweig nennt Hunderte bis über zehntausend Richtungen. Was eine einzelne davon bedeutet, kann niemand ablesen; erst ihr Zusammenspiel ergibt die Lage eines Wortteils. Der Philosoph Markus Gabriel nennt dieses Übersetzen in Mathematik «vektorisieren». Am Ende bleibt es ein Rechnen mit Lagen und Abständen, kein Verstehen. Wie «mutig» die KI beim Auswählen würfelt, regelt eine Einstellung namens Temperatur. Ein hoher Wert macht die Antworten kreativer und unberechenbarer, ein niedriger vorhersehbarer. Darum kann dieselbe Frage zweimal ganz verschieden beantwortet werden.
+
+### wahrscheinlichkeitsbasiert · «vektorisieren»
+
+- **Kennung:** `VA-e41f4b` (Vertiefung «Mehr lesen»)
+- **Quelle (Buch):** Markus Gabriel, «Ethische Intelligenz» (Ullstein 2026)
+- **Fundstelle:** Wörtlich: «Eine KI vektorisiert ein digitales Sinnfeld und übersetzt den Inhalt des Felds auf diese Weise in Mathematik.»
+- **Geprüft:** 2026-08-04
+
+> Damit die KI überhaupt rechnen kann, wird jedes Wort, genauer jeder Wortteil, in eine lange Zahlenreihe übersetzt. Solche Zahlenreihen heissen Vektoren. Man darf sich einen Vektor als Ort in einem Raum vorstellen: «Hund» und «Katze» liegen dort nah beieinander, «Hund» und «Schraube» weit auseinander. Dieser Raum hat allerdings nicht drei Richtungen wie unserer, sondern sehr viele. Die Informatikerin Katharina Zweig nennt Hunderte bis über zehntausend Richtungen. Was eine einzelne davon bedeutet, kann niemand ablesen; erst ihr Zusammenspiel ergibt die Lage eines Wortteils. Der Philosoph Markus Gabriel nennt dieses Übersetzen in Mathematik «vektorisieren». Am Ende bleibt es ein Rechnen mit Lagen und Abständen, kein Verstehen. Wie «mutig» die KI beim Auswählen würfelt, regelt eine Einstellung namens Temperatur. Ein hoher Wert macht die Antworten kreativer und unberechenbarer, ein niedriger vorhersehbarer. Darum kann dieselbe Frage zweimal ganz verschieden beantwortet werden.
+
 ---
 
 ## Thema 02 · Die acht Epochen
@@ -140,12 +167,12 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 ### Zerbrechen der Ordnung · zerstörten sie die Wasserleitungen
 
-- **Kennung:** `EP-03c465` (Vertiefung «Mehr lesen»)
+- **Kennung:** `EP-c167d2` (Vertiefung «Mehr lesen»)
 - **Quelle:** [Wasserversorgung im Römischen Reich (Wikipedia)](https://de.wikipedia.org/wiki/Wasserversorgung_im_R%C3%B6mischen_Reich)
 - **Fundstelle:** Zur Belagerung Roms: «Bei der vorangegangenen Belagerung wurden die in die Stadt führenden Aquädukte zerstört», worauf der Betrieb der grossen Thermen endgültig zum Erliegen kam und auch die städtischen Mühlen ausfielen. Datierung und Zuordnung zu den Ostgoten (Januar 537 bis März 538) über den Artikel «Gotenkrieg (535–554)».
 - **Geprüft:** 2026-07-29
 
-> Rom selbst zeigt den Absturz in Zahlen: Die Stadt zählte auf ihrem Höhepunkt gegen eine Million Einwohner und schrumpfte nach Kriegen und Plünderungen auf wenige Zehntausend. Als die Ostgoten die Stadt 537 belagerten, zerstörten sie die Wasserleitungen. Brunnen und Thermen versiegten, und das Leben zog sich auf Dauer ans Ufer des Tibers zurück, wo man Wasser holen konnte. Die gewaltige Betonkuppel des Pantheons blieb über tausend Jahre unübertroffen: Niemand hätte sie mehr bauen können. Zur gleichen Zeit begann die Rettung im Kleinen. Der Gelehrte Cassiodorus gründete um 550 in Süditalien das Kloster Vivarium, in dem Mönche antike Handschriften abschrieben, und bald gehörte dieses Kopieren in vielen Klöstern zum Tagewerk. Was wir heute von Cicero oder Vergil lesen, ist fast ausnahmslos durch solche Schreibstuben gegangen. Eine Zivilisation kann eben nicht nur Neues erfinden, sie kann Können auch wieder verlieren.
+> Rom selbst zeigt den Absturz in Zahlen: Die Stadt zählte auf ihrem Höhepunkt gegen eine Million Einwohnerinnen und Einwohner und schrumpfte nach Kriegen und Plünderungen auf wenige Zehntausend. Als die Ostgoten die Stadt 537 belagerten, zerstörten sie die Wasserleitungen. Brunnen und Thermen versiegten, und das Leben zog sich auf Dauer ans Ufer des Tibers zurück, wo man Wasser holen konnte. Die gewaltige Betonkuppel des Pantheons blieb über tausend Jahre unübertroffen: Niemand hätte sie mehr bauen können. Zur gleichen Zeit begann die Rettung im Kleinen. Der Gelehrte Cassiodorus gründete um 550 in Süditalien das Kloster Vivarium, in dem Mönche antike Handschriften abschrieben, und bald gehörte dieses Kopieren in vielen Klöstern zum Tagewerk. Was wir heute von Cicero oder Vergil lesen, ist fast ausnahmslos durch solche Schreibstuben gegangen. Eine Zivilisation kann eben nicht nur Neues erfinden, sie kann Können auch wieder verlieren.
 
 ---
 
@@ -177,7 +204,7 @@ niemand später aus Verlegenheit eine ungefähr passende Quelle einsetzt.
 
 ### Zugang
 
-- **Kennung:** `VA-2907aa`
+- **Kennung:** `VA-4a5fb5`
 - **Betrifft:** Zugang: Gratisstufe gegenüber Abo bei den grossen Chatbots
 - **Grund:** Die Preis- und Limitseiten der Anbieter ändern sich laufend, ein Beleg wäre in Monaten falsch. Der Text nennt darum kein einzelnes Produkt mehr und trägt das Standdatum 2026. Absichtlich ohne Link.
 - **Notiert:** 2026-07-26
@@ -190,4 +217,5 @@ Diese Stellen nennen ausdrücklich einen Stand und altern darum planmässig.
 Beim nächsten Durchgang prüfen, ob die Angabe noch trägt.
 
 - `VA-7dc30e` · Technologisch-kapitalistische Organisation (Stand Mitte 2026)
+- `VA-4a5fb5` · Zugang (Stand 2026)
 - `VA-66e5a4` · Rollenverschiebung (Stand Mitte 2026)

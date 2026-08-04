@@ -45,7 +45,9 @@ const teil = (name) => {
     .map(felder);
 };
 
-const belege = teil("BELEGE").filter((b) => b.id && b.url);
+/* Buchbelege haben kein `url`. Sie gehören genauso ins Verzeichnis, sonst
+ * fehlt im Export gerade das, was aus Büchern zitiert ist. */
+const belege = teil("BELEGE").filter((b) => b.id && (b.url || b.titel));
 const ohne = teil("OHNE_BELEG").filter((b) => b.id && b.grund);
 
 /* Nach Datei/Thema gruppieren, damit das Dokument der Seite folgt. */
@@ -99,7 +101,9 @@ for (const [thema, liste] of gruppen) {
     const block = index[b.id];
     md += `\n### ${block?.ort ?? "?"} · ${b.anker}\n\n`;
     md += `- **Kennung:** \`${b.id}\` (${block?.feld ?? "?"})\n`;
-    md += `- **Quelle:** [${b.titel}](${b.url})\n`;
+    md += b.url
+      ? `- **Quelle:** [${b.titel}](${b.url})\n`
+      : `- **Quelle (Buch):** ${b.titel}\n`;
     if (b.stelle) md += `- **Fundstelle:** ${b.stelle}\n`;
     md += `- **Geprüft:** ${b.geprueft ?? "ohne Datum"}\n`;
     if (block) md += `\n> ${block.text}\n`;

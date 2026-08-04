@@ -50,9 +50,6 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 01 · Vorhang auf
 
-**[VA-6e57d1]** *(Fliesstext · Mehr dazu: die vier Blickwinkel)*
-Der erste Blickwinkel ist der technologische, also Rechenkraft, Daten und die Modelle selbst. Der zweite ist der wirtschaftliche, denn Entwicklung und Betrieb kosten viel Geld und schaffen neue Märkte. Der dritte ist der rechtlich-politische, etwa Fragen nach Regeln, Haftung und Macht. Der vierte ist der kulturelle, also wie wir mit KI leben, arbeiten und über sie sprechen. Diese vier Blickwinkel wirken zusammen und lassen sich nicht sauber trennen. Erst gemeinsam ergeben sie ein Bild davon, was KI heute ist.
-
 **[VA-e3c2cd]** *(Fallbeispiel · Rechen- und Speicherkapazität)*
 Die meisten KI-Chips kommen von einer einzigen Firma, dem US-Konzern Nvidia. Weil alle diese Chips wollen, stieg Nvidia 2024 zeitweise zum wertvollsten Unternehmen der Welt auf. Wer keine solchen Chips bekommt, kann bei den grossen Modellen kaum mithalten.
 
@@ -66,15 +63,15 @@ Google meldete in seinem Umweltbericht 2024, dass seine Treibhausgas-Emissionen 
 **[VA-ed6696]** *(Fallbeispiel · Rechenzentren)*
 In Irland verbrauchten die Rechenzentren 2023 bereits 21 Prozent des gemessenen Stroms im Land, für 2024 meldete das irische Statistikamt 22 Prozent. Zum Vergleich, in beiden Jahren gleich: städtische Haushalte 18 Prozent, ländliche 10 Prozent. Die Rechenzentren brauchen also mehr als die Städte für sich, aber weniger als alle Haushalte zusammen. Manche Regionen bremsen deshalb den Bau neuer Zentren.
 
-> **Belegt** («irische Statistikamt»): [CSO Ireland: Rechenzentren und Stromverbrauch 2024](https://www.cso.ie/en/releasesandpublications/ep/p-dcmec/datacentresmeteredelectricityconsumption2024/keyfindings/) — «rose to 22% in 2024»; städtische Haushalte 18 Prozent, ländliche 10 Prozent. Für 2023 nennt der Vorjahresbericht 21 Prozent bei gleichen Haushaltswerten. *(geprüft 2026-07-26)*
+> **Belegt** («irische Statistikamt»): [CSO Ireland: Rechenzentren und Stromverbrauch 2024](https://www.cso.ie/en/releasesandpublications/ep/p-dcmec/datacentresmeteredelectricityconsumption2024/keyfindings/) — «rose to 22% in 2024»; städtische Haushalte 18 Prozent, ländliche Haushalte 10 Prozent. Für 2023 nennt der Vorjahresbericht 21 Prozent bei gleichen Haushaltswerten. *(geprüft 2026-07-26)*
 
 **[VA-7dc30e]** *(Fallbeispiel · Technologisch-kapitalistische Organisation)*
 Microsoft steckte zwischen 2019 und 2023 rund 13 Milliarden Dollar in OpenAI, die Firma hinter ChatGPT, und blieb ihr grösster Einzelinvestor. Im Oktober 2025 baute sich OpenAI um: Der gewinnorientierte Teil heisst jetzt «OpenAI Group PBC», die gemeinnützige «OpenAI Foundation» hält 26 Prozent daran. Formal hat Microsoft keine Kontrollrechte und sitzt nur als Beobachter ohne Stimme im Verwaltungsrat. Die Abhängigkeit bleibt trotzdem: Geld, Rechenzentren und Vertriebswege kommen zu einem grossen Teil von einem einzigen Konzern. So bündelt sich viel Macht bei wenigen Unternehmen. (Stand Mitte 2026)
 
 > **Belegt** («OpenAI Group PBC»): [OpenAI (Wikipedia)](https://de.wikipedia.org/wiki/OpenAI) — Umstrukturierung im Oktober 2025: «OpenAI Group PBC», die in «OpenAI Foundation» umbenannte Non-Profit hält 26 Prozent der Anteile. Microsoft ist grösster Einzelinvestor, aber nur nicht-stimmberechtigter Beobachter im Verwaltungsrat. *(geprüft 2026-07-26)*
 
-**[VA-2907aa]** *(Fallbeispiel · Zugang)*
-Bei den grossen Chatbots ist die Gratisstufe begrenzt: weniger Anfragen, eingeschränkter Zugriff auf die neuesten Modelle und Werkzeuge. Ein Abo für rund 20 Dollar im Monat hebt vor allem diese Grenzen an. Wer zahlen kann, arbeitet also flüssiger und mit mehr Möglichkeiten. Schon beim Zugang entsteht so ein Unterschied zwischen Menschen. Die genauen Stufen ändern sich laufend, dieser Stand ist von 2026.
+**[VA-4a5fb5]** *(Fallbeispiel · Zugang)*
+Bei den grossen Chatbots ist die Gratisstufe begrenzt: weniger Anfragen, eingeschränkter Zugriff auf die neuesten Modelle und Werkzeuge. Ein Abo für rund 20 Dollar im Monat (Stand 2026) hebt vor allem diese Grenzen an. Wer zahlen kann, arbeitet also flüssiger und mit mehr Möglichkeiten. Schon beim Zugang entsteht so ein Unterschied zwischen Menschen. Was ein Abo kostet und wie viel gratis möglich ist, ändern die Anbieter ständig.
 
 > **Kein Beleg** (Zugang: Gratisstufe gegenüber Abo bei den grossen Chatbots): Die Preis- und Limitseiten der Anbieter ändern sich laufend, ein Beleg wäre in Monaten falsch. Der Text nennt darum kein einzelnes Produkt mehr und trägt das Standdatum 2026. Absichtlich ohne Link. *(notiert 2026-07-26)*
 
@@ -182,3 +179,6 @@ Aus dem militärischen ARPANET (1969) wird das World Wide Web: 1989 als Vorschla
 
 **[PP-b4342b]** *(Vertiefung «Mehr lesen» · Internet & World Wide Web)*
 Die erste Nachricht im ARPANET wurde am 29. Oktober 1969 von Los Angeles nach Stanford geschickt, geplant war das Wort «LOGIN», nach zwei Buchstaben stürzte die Verbindung ab, übertragen war nur «LO». Aus dem Forschungsnetz weniger Universitäten wuchs über zwei Jahrzehnte ein weltweiter Verbund, doch er blieb ein Werkzeug für Fachleute. Den entscheidenden Schritt machte Tim Berners-Lee am CERN, sein Vorschlag von 1989 für ein Netz aus verknüpften Seiten trug den Vermerk seines Vorgesetzten, das sei vage, aber aufregend. So lief die erste Website der Welt auf einem Rechner bei Genf. Entscheidend war schliesslich, dass das CERN 1993 den Web-Standard zur freien Nutzung freigab, niemand musste Lizenzgebühren zahlen, und genau deshalb konnte das Netz explodieren. Offenheit war hier keine Nebensache, sondern der Bauplan des Erfolgs.
+
+**[PP-aadb5f]** *(Kartentext · KI wird öffentlich)*
+Erfunden wurde die KI nicht 2022: Benannt und erforscht wird sie seit 1956 (Dartmouth-Konferenz). Mit GPT und ChatGPT tritt sie 2022 an die Öffentlichkeit und wird alltäglich.

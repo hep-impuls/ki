@@ -408,21 +408,43 @@ const TERME = Object.keys(GLOSSAR).sort((a, b) => b.length - a.length);
 const GLOSSAR_RE = new RegExp(`\\b(${TERME.map(escapeRegExp).join("|")})\\b`, "g");
 
 /** Ein Quellenlink an einer Textstelle. Öffnet die geprüfte Quelle. */
+/**
+ * «2026-08-04» → «4.8.2026». Im Datenfile bleibt das Datum ISO (kurz,
+ * sortierbar, maschinenlesbar), gelesen wird die hiesige Schreibweise.
+ *
+ * Bewusst ohne Monatsnamen: Eine Liste von zwölf Namen wäre zwölf zusätzliche
+ * Textfelder im Korrektorat, die niemand korrigieren soll. Und bewusst ohne
+ * `Date`, damit Server und Browser dasselbe ausgeben.
+ */
+function datum(iso: string): string {
+  const m = iso.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (!m) return iso;
+  return `${Number(m[3])}.${Number(m[2])}.${m[1]}`;
+}
+
 function BelegStelle({ wort, beleg }: { wort: string; beleg: Beleg }) {
+  /* Buchbelege haben keine URL. Dann wird das Wort ein Knopf statt eines Links,
+     und der Hinweis nennt das Werk statt eines Prüfdatums: Ein Buch ruft man
+     nicht ab, man schlägt darin nach. */
+  const istBuch = !beleg.url;
   return (
     <HoverTipp
       wort={wort}
       href={beleg.url}
       breite={300}
-      vorlesen={`${beleg.titel}${beleg.stelle ? ". " + beleg.stelle : ""}`}
+      vorlesen={`${istBuch ? "Nachgelesen in " : ""}${beleg.titel}${beleg.stelle ? ". " + beleg.stelle : ""}`}
       inhalt={
         <>
-          <span className="block font-medium text-on-surface">Quelle: {beleg.titel}</span>
+          <span className="block font-medium text-on-surface">
+            {istBuch ? "Nachgelesen in" : "Quelle"}: {beleg.titel}
+          </span>
           {beleg.stelle && (
             <span className="mt-[2px] block text-on-surface-variant">{beleg.stelle}</span>
           )}
           <span className="mt-xs block text-on-surface-variant opacity-70">
-            Abgerufen und geprüft am {beleg.geprueft}. Klicken öffnet die Quelle.
+            {istBuch
+              ? `Im Buch nachgeschlagen am ${datum(beleg.geprueft)}.`
+              : `Abgerufen und geprüft am ${datum(beleg.geprueft)}. Klicken öffnet die Quelle.`}
           </span>
         </>
       }

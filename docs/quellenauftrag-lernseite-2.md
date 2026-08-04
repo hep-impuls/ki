@@ -52,8 +52,8 @@ Kaum ein Thema ist so präsent wie die Künstliche Intelligenz — und kaum eine
 **[HUB-913c20]** *(Fliesstext)*
 Diese Gestalt zeigt sich nicht, wenn man die KI isoliert betrachtet. KI steht nie für sich: Sie baut auf kulturellen, technischen und wirtschaftlichen Überlegungen auf — und erst wenn man dieses Netz mitzeichnet, wird erkennbar, was da eigentlich auftritt. Darum folgt das Design dieses Lernsets einer Idee: Um das Phänomen zu verstehen, muss man das Netzwerk abbilden, in dem es steckt.
 
-**[HUB-750941]** *(Fliesstext)*
-Deshalb beginnst du gleich mit einem Muster, dessen Knoten du verbinden kannst — noch ohne konkreten Inhalt. Es deutet nur auf den Gedanken, dass KI als Phänomen zu erfassen viel Kontextarbeit braucht. In diesem Lernset geht es darum immer auch um den Kontext der KI.
+**[HUB-a8d0d0]** *(Fliesstext)*
+Deshalb beginnst du gleich mit einem Muster, dessen Knoten du verbinden kannst — noch ohne konkreten Inhalt. Das Muster macht deutlich, dass es viel Kontextarbeit braucht, um KI als Phänomen zu erfassen. In diesem Lernset geht es deshalb immer auch um den Kontext der KI.
 
 ### Mehr dazu: Wie die Philosophie das weiterdenkt
 
@@ -132,8 +132,8 @@ Zahlen werden in Ziffernrädern gespeichert und verrechnet. Das ist der mechanis
 
 ### Das Programm
 
-**[VA-7a5f73]** *(Kartentext)*
-«Calculation complete»: Die Maschine führt eine feste Folge von Schritten aus. Ada Lovelace sah, dass sie Anweisungen folgen kann.
+**[VA-9ff613]** *(Kartentext)*
+«Calculation complete»: Die Maschine führt eine feste Folge von Schritten aus. Ada Lovelace erkannte, dass sie Anweisungen folgen kann.
 
 ### Turings Code-Knacker
 
@@ -237,8 +237,8 @@ Ohne Anleitung lernt sie erstaunliche Strategien. Zwischen 2013 und 2015 zeigte 
 
 ### DALL·E: Bilder aus Worten
 
-**[VA-7a9ea2]** *(Bildgeschichte)*
-DALL·E von OpenAI erzeugt Bilder aus Textbeschreibungen. DALL·E 1 kam im Januar 2021, das deutlich stärkere DALL·E 2 im April 2022, also rund ein halbes Jahr vor ChatGPT. Man gibt einen Satz ein, und das Modell «malt» ein Bild, das so nie fotografiert wurde. Es setzt das Bild Punkt für Punkt neu aus Gelerntem zusammen. Damit wurde generative KI erstmals einem breiten Publikum sichtbar. Dieses Bild ist selbst ein Ergebnis von DALL·E 2, eine zeichnende Roboterhand. Wem es rechtlich gehört, ist heikler, als es klingt: Das Schweizer Urheberrecht schützt geistige Schöpfungen von Menschen, rein maschinell Erzeugtem fehlt der Schutz darum grundsätzlich. Steckt im Ergebnis ein eigener menschlicher Gestaltungsbeitrag, kann Schutz bestehen. Es ist eine Frage des Einzelfalls.
+**[VA-5d32b6]** *(Bildgeschichte)*
+DALL·E von OpenAI erzeugt Bilder aus Textbeschreibungen. DALL·E 1 kam im Januar 2021, das deutlich stärkere DALL·E 2 im April 2022, also rund ein halbes Jahr vor ChatGPT. Man gibt einen Satz ein, und das Modell «malt» ein Bild, das so nie fotografiert wurde. Es setzt das Bild Punkt für Punkt neu aus Gelerntem zusammen. Damit wurde generative KI erstmals einem breiten Publikum sichtbar. Dieses Bild ist selbst ein Ergebnis von DALL·E 2, eine zeichnende Roboterhand. Die Frage, wem es rechtlich gehört, ist heikel: Das Schweizer Urheberrecht schützt geistige Schöpfungen von Menschen, rein maschinell Erzeugtem fehlt dieser Schutz grundsätzlich. Steckt im Ergebnis ein eigener menschlicher Gestaltungsbeitrag, kann ein Schutz bestehen. Es ist eine Frage des Einzelfalls.
 
 ### Sprache als Pinsel
 
@@ -252,13 +252,13 @@ Das Bild existiert nirgends, das Modell setzt es Punkt für Punkt neu zusammen. 
 
 ### Früher als ChatGPT
 
-**[VA-7c92a9]** *(Kartentext)*
-Das vergisst man leicht. Die Bild-KI war zuerst da, nämlich DALL·E 2 im April 2022, ein halbes Jahr bevor ChatGPT im November 2022 alle erreichte.
+**[VA-fc6830]** *(Kartentext)*
+Das vergisst man leicht: Die Bild-KI war zuerst da, nämlich DALL·E 2 im April 2022, ein halbes Jahr bevor ChatGPT im November 2022 alle erreichte.
 
 ### ChatGPT: KI für alle
 
-**[VA-0b5988]** *(Bildgeschichte)*
-ChatGPT von OpenAI erschien im November 2022 und machte KI für alle bedienbar. Es war ein Chatfenster mit normaler Sprache, sofort nutzbar. Innert weniger Wochen nutzten es Millionen. Das war der Moment, in dem KI im Alltag ankam. Das Modell setzt Wort für Wort den wahrscheinlich nächsten Textbaustein. Das gelingt verblüffend gut, kann aber auch überzeugend falsch sein. Zusätzlich wurde es mit menschlichem Feedback trainiert, um hilfreicher und harmloser zu antworten. Diese Illustration eines Chatfensters ist mit KI erstellt.
+**[VA-b5fd64]** *(Bildgeschichte)*
+ChatGPT von OpenAI erschien im November 2022 und macht KI für alle bedienbar. Es ist ein Chatfenster mit normaler Sprache, sofort nutzbar. Innert weniger Wochen nutzten es Millionen. Das war der Moment, in dem KI im Alltag ankam. Das Modell setzt Wort für Wort den wahrscheinlich nächsten Textbaustein. Das gelingt verblüffend gut, kann aber auch überzeugend falsch sein. Zusätzlich wurde es mit menschlichem Feedback trainiert, um hilfreicher und harmloser zu antworten. Diese Illustration eines Chatfensters ist mit KI erstellt.
 
 ### Einfach reden
 
@@ -356,8 +356,8 @@ Im 18. Jahrhundert staunte Europa über kunstvolle Maschinen, die Menschen und T
 **[VA-ca68b4]** *(Bildgeschichte)*
 Wolfgang von Kempelens Schach spielender «Türke» schlug ab 1770 Fürsten und Kaiser. Im Innern des Kastens sass jedoch ein verborgener Mensch und lenkte die Figur. Europa stritt trotzdem jahrzehntelang darüber, ob eine Maschine denken könne. Die Täuschung bewies vor allem, wie bereitwillig wir Maschinen einen Verstand zutrauen.
 
-**[VA-5a7d49]** *(Vertiefung «Mehr lesen»)*
-Ein besonders eindrückliches Stück steht in der Schweiz, denn der «Schreiber» von Pierre Jaquet-Droz aus dem 18. Jahrhundert lässt sich im Museum von Neuenburg bis heute in Betrieb bestaunen. Die Figur tunkt die Feder ins Tintenfass und schreibt einen frei einstellbaren Text von bis zu vierzig Zeichen, gesteuert über auswechselbare Nockenscheiben. Weil sich das Geschriebene auf diese Weise verändern lässt, gilt der «Schreiber» als früher Vorbote des programmierbaren Computers. Der Schachtürke wiederum reiste nach Kempelens Tod mit dem Schausteller Johann Nepomuk Mälzel weiter und trat sogar gegen Napoleon an. Der Schriftsteller Edgar Allan Poe versuchte 1836 in einem Aufsatz zu beweisen, dass ein Mensch im Kasten sitzen müsse. Der Apparat verbrannte schliesslich 1854 bei einem Museumsbrand in Philadelphia. So trennen diese Geräte den schönen Schein vom wirklichen Können, eine Unterscheidung, die bei der KI wieder hochaktuell ist.
+**[VA-3da2ef]** *(Vertiefung «Mehr lesen»)*
+Ein besonders eindrückliches Stück steht in der Schweiz, denn der «Schreiber» von Pierre Jaquet-Droz aus dem 18. Jahrhundert lässt sich im Museum von Neuenburg bis heute in Betrieb bestaunen. Die Figur tunkt die Feder ins Tintenfass und schreibt einen frei einstellbaren Text von bis zu vierzig Zeichen, gesteuert über auswechselbare Nockenscheiben. Weil sich das Geschriebene auf diese Weise verändern lässt, gilt der «Schreiber» als früher Vorbote des programmierbaren Computers. Der «Schachtürke» wiederum reiste nach Kempelens Tod mit dem Schausteller Johann Nepomuk Mälzel weiter und trat sogar gegen Napoleon an. Der Schriftsteller Edgar Allan Poe versuchte 1836 in einem Aufsatz zu beweisen, dass ein Mensch im Kasten sitzen müsse. Der Apparat verbrannte schliesslich 1854 bei einem Museumsbrand in Philadelphia. So trennen diese Geräte den schönen Schein vom wirklichen Können, eine Unterscheidung, die bei der KI wieder hochaktuell ist.
 
 ### Frankenstein
 
@@ -389,8 +389,8 @@ Ein Algorithmus ist nichts anderes als eine genaue Schritt-für-Schritt-Anleitun
 **[VA-556bc0]** *(Bildgeschichte)*
 Das Wort «Algorithmus» geht auf den Gelehrten al-Chwarizmi zurück, der um 820 in Bagdad wirkte, und die Verfahren selbst sind noch viel älter. Erst Alan Turings gedankliche «Maschine» von 1936 und die ersten elektronischen Rechner der 1940er-Jahre veränderten alles. Von da an führte nicht mehr ein Mensch mit Papier und Bleistift die Schritte aus, sondern die Maschine selbst. Der Algorithmus wurde damit vom blossen Rezept zum Motor der Rechenmaschine.
 
-**[VA-03a467]** *(Vertiefung «Mehr lesen»)*
-Ein greifbares Beispiel für den ausführbaren Algorithmus ist die Z3 des Berliner Ingenieurs Konrad Zuse, die 1941 als erster funktionsfähiger programmgesteuerter Rechner gilt. Sie arbeitete bereits mit dem Binärsystem und wurde über einen gelochten Streifen mit Befehlen versorgt. Der Name «Algorithmus» geht auf den Gelehrten al-Chwarizmi zurück, dessen Werk zugleich dem Wort «Algebra» seinen Namen gab. Turings gedankliches Modell von 1936 beschrieb eine Maschine mit einem endlosen Band, die durch einfache Schreib- und Leseschritte jedes berechenbare Problem lösen kann. Im Zweiten Weltkrieg half Turing dann, mit eigens gebauten Maschinen den deutschen Funkschlüssel Enigma zu knacken. So wurde aus einer reinen Denkfigur in wenigen Jahren eine wirklich arbeitende Maschine. Damit war die Grundlage gelegt, auf der jede spätere KI aufbaut.
+**[VA-a9be93]** *(Vertiefung «Mehr lesen»)*
+Ein greifbares Beispiel für den ausführbaren Algorithmus ist die Z3 des Berliner Ingenieurs Konrad Zuse von 1941, die als erster funktionsfähiger programmgesteuerter Rechner gilt. Sie arbeitete bereits mit dem Binärsystem und wurde über einen gelochten Streifen mit Befehlen versorgt. Der Name «Algorithmus» geht auf den Gelehrten al-Chwarizmi zurück, dessen Werk zugleich dem Wort «Algebra» seinen Namen gab. Turings gedankliches Modell von 1936 beschrieb eine Maschine mit einem endlosen Band, die durch einfache Schreib- und Leseschritte jedes berechenbare Problem lösen kann. Im Zweiten Weltkrieg half Turing dann, mit eigens gebauten Maschinen den deutschen Funkschlüssel Enigma zu knacken. So wurde aus einer reinen Denkfigur in wenigen Jahren eine wirklich arbeitende Maschine. Damit war die Grundlage gelegt, auf der jede spätere KI aufbaut.
 
 ### Geburt der KI
 
@@ -452,8 +452,8 @@ Hinter dieser Wende stand oft ein einfaches mathematisches Werkzeug, der Satz vo
 **[VA-a06f2d]** *(Kartentext)*
 Mit dem wachsenden Internet wurde die schiere Menge zum Problem. Algorithmen begannen, die Flut zu sortieren und zu ordnen. Empfehlungs- und Rangfolge-Verfahren entschieden fortan, was wir zuerst sehen. Zum ersten Mal bestimmte nicht ein Mensch, sondern eine Rechenvorschrift über Sichtbarkeit im grossen Massstab.
 
-**[VA-c23425]** *(Bildgeschichte)*
-1994 schlug das Projekt GroupLens vor, Beiträge automatisch nach dem Geschmack ähnlicher Nutzer zu empfehlen. So entstand das «kollaborative Filtern». 1998 ordnete Googles PageRank Webseiten danach, wie viele andere Seiten auf sie verweisen. Damit entschied erstmals ein Algorithmus im grossen Massstab über Reihenfolge und Sichtbarkeit.
+**[VA-b13aba]** *(Bildgeschichte)*
+1994 schlug das Projekt GroupLens vor, Beiträge automatisch nach dem Geschmack ähnlicher Nutzerinnen und Nutzer zu empfehlen. So entstand das «kollaborative Filtern». 1998 ordnete Googles PageRank Webseiten danach, wie viele andere Seiten auf sie verweisen. Damit entschied erstmals ein Algorithmus im grossen Massstab über Reihenfolge und Sichtbarkeit.
 
 **[VA-22ca4c]** *(Vertiefung «Mehr lesen»)*
 Der Name PageRank spielt auf Larry Page an, der das Verfahren zusammen mit Sergey Brin an der Universität Stanford entwickelte, wo ihre Suchmaschine anfangs noch «BackRub» hiess. Die Grundidee lehnten die beiden an die Wissenschaft an, denn dort gilt ein Aufsatz als bedeutend, wenn viele andere ihn zitieren. Übertragen aufs Web heisst das, eine Seite ist wichtig, wenn viele wichtige Seiten auf sie verweisen. Fast zeitgleich brachte der Onlinehändler Amazon Ende der 1990er-Jahre Empfehlungen der Art «Kunden, die dies kauften, kauften auch jenes» gross heraus. Beide Ansätze eint, dass nicht mehr ein Mensch, sondern eine Formel über Sichtbarkeit und Reihenfolge entscheidet. Wer weit oben steht, wird gefunden, der Rest verschwindet in der Masse. So wurde der Rang zur eigentlichen Währung im Netz.
@@ -466,8 +466,8 @@ Wenig später zogen die sozialen Netzwerke nach. Statt Beiträge einfach der Rei
 **[VA-b379f7]** *(Bildgeschichte)*
 2006 führte Facebook den «News Feed» ein. Beiträge wurden nun gebündelt und gewichtet statt bloss chronologisch angezeigt. Später bestimmten lernende Systeme anhand jeder Reaktion, jedes Klicks und jeder Verweildauer, was einzelne Nutzer sahen. Aus einer einfachen Liste wurde eine für jede Person anders zusammengestellte Bühne.
 
-**[VA-48325d]** *(Vertiefung «Mehr lesen»)*
-Als Facebook den «News Feed» im September 2006 einführte, gab es zunächst heftige Proteste, denn viele empfanden das automatische Sammeln ihrer Aktivitäten als übergriffig. Wenig später, im Jahr 2009, kam der «Gefällt mir»-Knopf dazu, der dem System laufend verriet, was Anklang findet. Aus solchen Signalen lernten die Netzwerke, wem sie welchen Beitrag zuoberst zeigen sollten. Der Bürgerrechtler Eli Pariser prägte 2011 dafür das Bild der «Filterblase», also einer Nachrichtenwelt, die jedem vor allem das Genehme vorsetzt. Am weitesten treibt es der sogenannte For-You-Feed von TikTok, der fast nur noch aus algorithmisch ausgewählten Videos besteht und ganz ohne Freundesnetz auskommt. Kritiker warnen, dass so besonders starke Gefühle belohnt werden, weil sie die Aufmerksamkeit am längsten fesseln. Was die Systeme messen, formt am Ende mit, worüber eine Gesellschaft spricht.
+**[VA-5100b6]** *(Vertiefung «Mehr lesen»)*
+Als Facebook den «News Feed» im September 2006 einführte, gab es zunächst heftige Proteste, denn viele empfanden das automatische Sammeln ihrer Aktivitäten als übergriffig. Wenig später, im Jahr 2009, kam der «Gefällt mir»-Knopf dazu, der dem System laufend verriet, was Anklang findet. Aus solchen Signalen lernten die Netzwerke, wem sie welchen Beitrag zuoberst zeigen sollten. Der Bürgerrechtler Eli Pariser prägte 2011 dafür das Bild der «Filterblase», also einer Nachrichtenwelt, die jedem vor allem das Genehme vorsetzt. Am weitesten treibt es der sogenannte For-You-Feed von TikTok, der fast nur noch aus algorithmisch ausgewählten Videos besteht und ganz ohne Freundesnetz auskommt. Kritikerinnen und Kritiker warnen, dass so besonders starke Gefühle belohnt werden, weil sie die Aufmerksamkeit am längsten fesseln. Was die Systeme messen, formt am Ende mit, worüber eine Gesellschaft spricht.
 
 ### Deep Learning
 
@@ -493,8 +493,8 @@ Vor dem Transformer verarbeiteten Sprachmodelle einen Satz Wort für Wort und mu
 
 ### Die GPT-Welle
 
-**[VA-5a6bb3]** *(Kartentext)*
-Zwischen 2018 und 2020 wurden die Sprachmodelle Stufe um Stufe grösser. Mit GPT-1, GPT-2 und GPT-3 wuchs erstaunlicherweise auch das, was sie ganz ohne eigenes Training konnten. Allein aus dem Vorhersagen des nächsten Wortes entstanden neue Fähigkeiten. Wachsen musste dafür alles zugleich, Modellgrösse, Datenmenge und Rechenzeit. Ob dabei Fähigkeiten wirklich sprunghaft auftauchen oder ob das an der Art des Messens liegt, ist in der Forschung umstritten.
+**[VA-4ebf86]** *(Kartentext)*
+Zwischen 2018 und 2020 wurden die Sprachmodelle Stufe um Stufe grösser. Mit GPT-1, GPT-2 und GPT-3 wuchs erstaunlicherweise auch das, was die Modelle ganz ohne eigenes Training konnten. Allein aus dem Vorhersagen des nächsten Wortes entstanden neue Fähigkeiten. Wachsen musste dafür alles zugleich, Modellgrösse, Datenmenge und Rechenzeit. Ob dabei Fähigkeiten wirklich sprunghaft auftauchen oder ob das an der Art des Messens liegt, ist in der Forschung umstritten.
 
 **[VA-21fcd6]** *(Bildgeschichte)*
 Ab 2018 zeigten die GPT-Modelle der Firma OpenAI, dass das blosse Vorhersagen des nächsten Wortes auf riesigen Textmengen erstaunlich weit trägt. GPT-3 aus dem Jahr 2020 hatte 175 Milliarden einstellbare Werte, sogenannte Parameter. Es konnte Texte schreiben, übersetzen und Fragen beantworten, ohne für jede Aufgabe eigens trainiert zu werden.
@@ -510,35 +510,35 @@ Möglich wurde die heutige KI erst durch zwei Dinge im Übermass, riesige Datenm
 **[VA-085976]** *(Bildgeschichte)*
 Heutige Modelle trainieren auf riesigen Text- und Bildmengen, in Rechenzentren mit zehntausenden von Chips. So entstand die neue Akteurin dieses Moduls. Sie ist dialogfähig und kann selbst Texte und Bilder erzeugen. Und sie ist Alltag geworden, von der Suchmaschine bis zum Schreibassistenten.
 
-**[VA-64bfca]** *(Vertiefung «Mehr lesen»)*
-Das Herz dieser Rechenzentren sind spezielle Grafikchips, wie sie vor allem die Firma Nvidia herstellt, die dadurch zu einem der wertvollsten Unternehmen der Welt wurde. Ein einzelnes grosses Modell zu trainieren kostet viele Millionen Franken und verschlingt enorme Mengen an Strom. Weil die Chips stark heizen, brauchen manche Rechenzentren zudem grosse Mengen Wasser zur Kühlung, was in trockenen Regionen für Streit sorgt. Die Trainingsdaten stammen zu einem grossen Teil aus dem offenen Internet, dazu kommen Bücher und Bilder. Genau das wirft rechtliche Fragen auf, denn seit 2023 klagen Autorinnen, Verlage und Kunstschaffende, weil ihre Werke ohne Erlaubnis genutzt worden seien. Manche Fachleute warnen sogar, der Vorrat an hochwertigen Texten könnte allmählich knapp werden. So hat die scheinbar körperlose KI eine sehr handfeste Seite aus Energie, Rohstoffen und Recht.
+**[VA-e88f10]** *(Vertiefung «Mehr lesen»)*
+Das Herz dieser Rechenzentren sind spezielle Grafikchips, wie sie vor allem die Firma Nvidia herstellt, die dadurch zu einem der wertvollsten Unternehmen der Welt wurde. Ein einzelnes grosses Modell zu trainieren kostet viele Millionen Franken und verschlingt enorme Mengen an Strom. Weil die Chips stark heizen, brauchen manche Rechenzentren zudem grosse Mengen Wasser zur Kühlung, was in trockenen Regionen für Kritik sorgt. Die Trainingsdaten stammen zu einem grossen Teil aus dem offenen Internet, dazu kommen Bücher und Bilder. Genau das wirft rechtliche Fragen auf, denn seit 2023 klagen Autorinnen, Verlage und Kunstschaffende, weil ihre Werke ohne Erlaubnis genutzt worden seien. Manche Fachleute warnen sogar, der Vorrat an hochwertigen Texten könnte allmählich knapp werden. So hat die scheinbar körperlose KI eine sehr handfeste Seite aus Energie, Rohstoffen und Recht.
 
 ### ChatGPT: der Massenmoment
 
-**[VA-c20c91]** *(Kartentext)*
-Im November 2022 wurde die KI mit einem Schlag für alle greifbar. ChatGPT verpackte ein starkes Sprachmodell in ein einfaches Chatfenster, in dem man ganz normal fragen kann. Innert Wochen nutzten Millionen von Menschen den Chatbot. Von diesem Moment an war die KI im Alltag angekommen.
+**[VA-48f7f4]** *(Kartentext)*
+Im November 2022 wurde die KI mit einem Schlag für alle greifbar. ChatGPT verpackte ein starkes Sprachmodell in ein einfaches Chatfenster, in dem man ganz normal Fragen stellen kann. Innert Wochen nutzten Millionen von Menschen den Chatbot. Von diesem Moment an war die KI im Alltag angekommen.
 
-**[VA-d0ddd3]** *(Bildgeschichte)*
-Im November 2022 veröffentlichte die Firma OpenAI ChatGPT, ein auf Gespräch getrimmtes Sprachmodell. Es antwortet auf einfache Fragen flüssig und zusammenhängend. In Rekordzeit erreichte es hunderte Millionen Nutzer. Damit löste es einen weltweiten Wettlauf um die beste KI aus.
+**[VA-6a2b16]** *(Bildgeschichte)*
+Im November 2022 veröffentlichte die Firma OpenAI ChatGPT, ein auf Gespräch getrimmtes Sprachmodell. Es antwortet auf einfache Fragen flüssig und zusammenhängend. In Rekordzeit erreichte es hunderte Millionen Nutzerinnen und Nutzer. Damit löste es einen weltweiten Wettlauf um die beste KI aus.
 
-**[VA-e7bf5e]** *(Vertiefung «Mehr lesen»)*
-Das Wachstum war beispiellos, denn ChatGPT erreichte schon fünf Tage nach dem Start am 30. November 2022 eine Million Nutzer und nach rund zwei Monaten hundert Millionen. Damit war es zu diesem Zeitpunkt der am schnellsten wachsende Onlinedienst für Endverbraucher überhaupt. Technisch steckte anfangs das Modell GPT-3.5 dahinter, während das deutlich stärkere GPT-4 erst im März 2023 folgte. Viele Schulen reagierten zunächst mit Verboten, so sperrte etwa die Schulbehörde von New York den Zugang, nahm das Verbot aber nach wenigen Monaten wieder zurück. Diese Kehrtwende steht für die rasche Einsicht, dass sich das Werkzeug kaum aussperren lässt und man den Umgang damit besser übt. Zugleich zeigte sich früh, dass ChatGPT auch falsche Angaben sehr überzeugend formulieren kann. Der Novembertag 2022 markiert so den Moment, an dem die KI endgültig im Alltag ankam.
+**[VA-a6b1c6]** *(Vertiefung «Mehr lesen»)*
+Das Wachstum war beispiellos, denn ChatGPT erreichte schon fünf Tage nach dem Start am 30. November 2022 eine Million Nutzerinnen und Nutzer und nach rund zwei Monaten hundert Millionen. Damit war es zu diesem Zeitpunkt der am schnellsten wachsende Onlinedienst für Endverbraucherinnen und Endverbraucher überhaupt. Technisch steckte anfangs das Modell GPT-3.5 dahinter, während das deutlich stärkere GPT-4 erst im März 2023 folgte. Viele Schulen reagierten zunächst mit Verboten, so sperrte etwa die Schulbehörde von New York den Zugang, nahm das Verbot aber nach wenigen Monaten wieder zurück. Diese Kehrtwende steht für die rasche Einsicht, dass sich das Werkzeug kaum aussperren lässt und man den Umgang damit besser übt. Zugleich zeigte sich früh, dass ChatGPT auch falsche Angaben sehr überzeugend formulieren kann. Der Novembertag 2022 markiert so den Moment, an dem die KI endgültig im Alltag ankam.
 
 ### Wettbewerb der KI-Modelle
 
 **[VA-10196a]** *(Kartentext)*
 Nach ChatGPT begann ein weltweiter Wettlauf um die besten Modelle. Neben den US-Modellen wie GPT, Claude, Gemini und Llama traten Modelle aus China, Europa und sogar der Schweiz an. Wer eigene Modelle baut, macht sich unabhängiger von anderen. So bekam die KI auch eine politische und eine sprachliche Bedeutung.
 
-**[VA-6741a2]** *(Bildgeschichte)*
-Ab 2023 rangen viele Anbieter um die besten Modelle. Aus den USA kommen GPT von OpenAI, Claude von Anthropic, Gemini von Google und Llama von Meta, dessen Gewichte man herunterladen kann, allerdings unter Metas eigener Lizenz und nicht als Open Source. Anfang 2025 sorgte das chinesische DeepSeek für Aufsehen, weil es mit wenig Aufwand mithielt, und auch Alibabas Qwen zählt dazu. Aus Europa stammt Mistral aus Frankreich, und aus der Schweiz das vollständig offene Modell «Apertus» von ETH Zürich, EPFL und dem Rechenzentrum CSCS.
+**[VA-570ab7]** *(Bildgeschichte)*
+Ab 2023 rangen viele Anbieter um die besten Modelle. Aus den USA kommen GPT von OpenAI, Claude von Anthropic, Gemini von Google und Llama von Meta. Die Gewichte von Llama – also die trainierten Parameter des Modells – können heruntergeladen werden, allerdings unter Metas eigener Lizenz und nicht als Open Source. Anfang 2025 sorgte das chinesische DeepSeek für Aufsehen, weil es mit wenig Aufwand mithielt, und auch Alibabas Qwen zählt dazu. Aus Europa stammt Mistral aus Frankreich, und aus der Schweiz das vollständig offene Modell «Apertus» von ETH Zürich, EPFL und dem Rechenzentrum CSCS.
 
 **[VA-2588b1]** *(Vertiefung «Mehr lesen»)*
 Wie umkämpft das Feld ist, zeigte sich Anfang 2025, als das chinesische Modell DeepSeek für Aufsehen sorgte, weil es mit deutlich geringerem Aufwand trainiert worden sein soll als die US-Konkurrenz. Die Nachricht liess kurzzeitig sogar die Börsenkurse grosser Chiphersteller einbrechen, weil Anleger an den bisherigen Milliardenkosten zu zweifeln begannen. Der praktische Reiz offener Modelle liegt darin, dass man sie auf eigenen Rechnern betreiben kann, ohne Daten an einen fremden Anbieter zu schicken. Für Behörden, Spitäler oder Schulen bedeutet das einen Gewinn an Datenschutz und Unabhängigkeit. Ein Schweizer Modell wie «Apertus» ist gerade deshalb bedeutsam, weil sich damit Anwendungen bauen lassen, die nicht von einzelnen US-Konzernen abhängen. Verglichen werden die vielen Modelle auf öffentlichen Ranglisten, auf denen Menschen die Antworten bewerten. So ist ein rascher Wettlauf entstanden, in dem sich die Rangfolge fast monatlich verschiebt.
 
 ### Multimodalität: KI sieht und hört
 
-**[VA-f86517]** *(Kartentext)*
-Zuletzt lernte die KI, mehrere Sinne zu verbinden. Die Modelle bleiben nicht mehr beim Text, sondern verarbeiten auch Bilder, Sprache und teils Video. Damit beginnt die KI gleichsam zu sehen und zu hören. Aus dem reinen Textautomaten wird ein Gegenüber, das verschiedene Eindrücke zusammenführt.
+**[VA-35c8a5]** *(Kartentext)*
+Zuletzt lernte die KI, mehrere Sinne zu verbinden. Die Modelle bleiben nicht mehr beim Text, sondern verarbeiten auch Bilder, Sprache und teils Videos. Damit beginnt die KI gleichsam zu sehen und zu hören. Aus dem reinen Textautomaten wird ein Gegenüber, das verschiedene Eindrücke zusammenführt.
 
 **[VA-8891ce]** *(Bildgeschichte)*
 Ab 2023 und 2024 wurden führende Systeme multimodal, verstanden also mehrere Arten von Eingaben. Claude 3 aus dem Jahr 2024 konnte Bilder verstehen und beschreiben. GPT-4o aus demselben Jahr nahm Text, Bild und Ton in einem Modell entgegen und antwortete in Echtzeit gesprochen. So wird aus dem Textautomaten ein Gegenüber, das mehrere Sinne verbindet.
@@ -576,8 +576,8 @@ Das Wort Algorithmus geht auf den Gelehrten al-Chwarizmi zurück, der vor rund 1
 
 ### datenbasiert
 
-**[VA-41bfa8]** *(Kartentext)*
-Ein Kind, das tausende Hunde sieht, erkennt irgendwann jeden Hund. Von aussen sieht es bei der KI ähnlich aus, im Inneren geschieht aber etwas anderes: Ihre Fähigkeiten wachsen aus riesigen Mengen an Beispielen, nicht aus fest eingebauten Regeln. Was in den Daten gar nicht vorkommt, kann sie höchstens aus Ähnlichem zusammensetzen. Deshalb kommt es vor allem darauf an, womit sie gefüttert wurde. Und es kommt darauf an, wessen Sichtweise in diesen Daten steckt und wessen darin fehlt.
+**[VA-abcd19]** *(Kartentext)*
+Ein Kind, das tausende Hunde gezeigt bekommt, erkennt irgendwann jeden Hund. Von aussen betrachtet scheint es bei der KI ähnlich zu sein, im Inneren geschieht aber etwas anderes: Ihre Fähigkeiten wachsen aus riesigen Mengen an Beispielen, nicht aus fest eingebauten Regeln. Was in den Daten gar nicht vorkommt, kann sie höchstens aus Ähnlichem zusammensetzen. Deshalb kommt es vor allem darauf an, womit sie gefüttert wurde. Und es kommt darauf an, wessen Sichtweise in diesen Daten steckt und wessen Sichtweise darin fehlt.
 
 **[VA-6d5b0a]** *(Vertiefung «Mehr lesen»)*
 «Die Lernalgorithmen sind die Samen, die Daten der Boden», sagt der Forscher Pedro Domingos. Ohne guten Boden wächst auch aus dem besten Samen nichts. Ein Beispiel: Wurde eine KI fast nur mit englischen Texten trainiert, antwortet sie auf Deutsch oft schwächer. Zeigten die Bilddaten kaum Menschen mit dunkler Haut, erkennt sie diese schlechter. So werden Lücken und Einseitigkeiten der Daten zu Lücken und Einseitigkeiten der KI. Darum ist die Frage, woher die Daten stammen, keine Nebensache, sondern der Kern.
@@ -592,11 +592,11 @@ Die Informatikerin Katharina Zweig bringt es nüchtern auf den Punkt. Das System
 
 ### wahrscheinlichkeitsbasiert
 
-**[VA-f669ef]** *(Kartentext)*
-Eine Wetter-App sagt nicht «es regnet», sondern «80 Prozent Regen». Auch die KI rechnet in Wahrscheinlichkeiten, doch sie sucht nicht einfach das nächstbeste Wort. Jedes Wort, genauer jeder Wortteil, wird für sie zu einer langen Zahlenreihe, einem sogenannten Vektor, der Bezüge zu anderen Wortteilen festhält. In diesem Raum liegen «Hund» und «Katze» nahe beieinander, «Hund» und «Schraube» weit auseinander. Aus dem Zusammenspiel vieler solcher Bedeutungsebenen berechnet sie, welche Fortsetzung am besten passt. Ihre Antwort ist darum eine Wette mit sehr guten Quoten, aber eben eine Wette.
+**[VA-9f6b84]** *(Kartentext)*
+Welches Wort folgt auf «Hochmut kommt vor dem …»? Da fällt allen dasselbe ein. Genau so arbeitet die KI: Sie sagt aus dem Bisherigen das nächste Wort voraus. Meist ist die Fortsetzung aber nicht eindeutig. Nach «Nach der Vorlesung gehe ich in die …» ist «Mensa» wahrscheinlich, «Stadt» auch möglich, «Schule» kaum. Die KI berechnet für viele Möglichkeiten eine Wahrscheinlichkeit und greift dann zu. Ihre Antwort ist darum eine Wette mit sehr guten Quoten, aber eben eine Wette.
 
-**[VA-534970]** *(Vertiefung «Mehr lesen»)*
-Fachleute nennen diese Zahlencodes Vektoren, und sie haben nicht zwei oder drei Dimensionen, sondern sehr viele. Wie viele es sind, hängt vom Modell ab, oft einige hundert bis einige tausend; die Informatikerin Katharina Zweig nennt als Grössenordnung rund 13'000 Richtungen. Einzelne Richtungen lassen sich dabei nicht als je ein ablesbarer Bedeutungsanteil verstehen, erst ihr Zusammenspiel ergibt die Lage eines Wortteils im jeweiligen Satz. Der Philosoph Markus Gabriel nennt diesen Vorgang Vektorisierung und betont, dass die KI dabei nur mit Mustern und Wahrscheinlichkeiten rechnet, ohne wirklich zu verstehen. Wie mutig die KI beim Auswählen dann würfelt, regelt eine Einstellung namens Temperatur. Ein hoher Wert macht die Antworten kreativer und unberechenbarer, ein niedriger vorhersehbarer. Das erklärt auch, warum dieselbe Frage zweimal ganz verschieden beantwortet werden kann.
+**[VA-e41f4b]** *(Vertiefung «Mehr lesen»)*
+Damit die KI überhaupt rechnen kann, wird jedes Wort, genauer jeder Wortteil, in eine lange Zahlenreihe übersetzt. Solche Zahlenreihen heissen Vektoren. Man darf sich einen Vektor als Ort in einem Raum vorstellen: «Hund» und «Katze» liegen dort nah beieinander, «Hund» und «Schraube» weit auseinander. Dieser Raum hat allerdings nicht drei Richtungen wie unserer, sondern sehr viele. Die Informatikerin Katharina Zweig nennt Hunderte bis über zehntausend Richtungen. Was eine einzelne davon bedeutet, kann niemand ablesen; erst ihr Zusammenspiel ergibt die Lage eines Wortteils. Der Philosoph Markus Gabriel nennt dieses Übersetzen in Mathematik «vektorisieren». Am Ende bleibt es ein Rechnen mit Lagen und Abständen, kein Verstehen. Wie «mutig» die KI beim Auswählen würfelt, regelt eine Einstellung namens Temperatur. Ein hoher Wert macht die Antworten kreativer und unberechenbarer, ein niedriger vorhersehbarer. Darum kann dieselbe Frage zweimal ganz verschieden beantwortet werden.
 
 ### generalisierend
 
@@ -700,7 +700,7 @@ Für KI entstehen überall neue Rechenzentren, also grosse Hallen voller Compute
 **[VA-ed6696]** *(Fallbeispiel)*
 In Irland verbrauchten die Rechenzentren 2023 bereits 21 Prozent des gemessenen Stroms im Land, für 2024 meldete das irische Statistikamt 22 Prozent. Zum Vergleich, in beiden Jahren gleich: städtische Haushalte 18 Prozent, ländliche 10 Prozent. Die Rechenzentren brauchen also mehr als die Städte für sich, aber weniger als alle Haushalte zusammen. Manche Regionen bremsen deshalb den Bau neuer Zentren.
 
-> **Belegt** («irische Statistikamt»): [CSO Ireland: Rechenzentren und Stromverbrauch 2024](https://www.cso.ie/en/releasesandpublications/ep/p-dcmec/datacentresmeteredelectricityconsumption2024/keyfindings/) — «rose to 22% in 2024»; städtische Haushalte 18 Prozent, ländliche 10 Prozent. Für 2023 nennt der Vorjahresbericht 21 Prozent bei gleichen Haushaltswerten. *(geprüft 2026-07-26)*
+> **Belegt** («irische Statistikamt»): [CSO Ireland: Rechenzentren und Stromverbrauch 2024](https://www.cso.ie/en/releasesandpublications/ep/p-dcmec/datacentresmeteredelectricityconsumption2024/keyfindings/) — «rose to 22% in 2024»; städtische Haushalte 18 Prozent, ländliche Haushalte 10 Prozent. Für 2023 nennt der Vorjahresbericht 21 Prozent bei gleichen Haushaltswerten. *(geprüft 2026-07-26)*
 
 ### Technologisch-kapitalistische Organisation
 
@@ -717,8 +717,8 @@ Microsoft steckte zwischen 2019 und 2023 rund 13 Milliarden Dollar in OpenAI, di
 **[VA-e5b5c3]** *(Kartentext)*
 Nicht alle können KI gleichermassen nutzen. Kosten, technische Ausstattung, Sprache und digitale Erfahrung entscheiden mit. Wer gut ausgestattet ist, profitiert stärker. So kann KI bestehende Ungleichheiten sogar vergrössern.
 
-**[VA-2907aa]** *(Fallbeispiel)*
-Bei den grossen Chatbots ist die Gratisstufe begrenzt: weniger Anfragen, eingeschränkter Zugriff auf die neuesten Modelle und Werkzeuge. Ein Abo für rund 20 Dollar im Monat hebt vor allem diese Grenzen an. Wer zahlen kann, arbeitet also flüssiger und mit mehr Möglichkeiten. Schon beim Zugang entsteht so ein Unterschied zwischen Menschen. Die genauen Stufen ändern sich laufend, dieser Stand ist von 2026.
+**[VA-4a5fb5]** *(Fallbeispiel)*
+Bei den grossen Chatbots ist die Gratisstufe begrenzt: weniger Anfragen, eingeschränkter Zugriff auf die neuesten Modelle und Werkzeuge. Ein Abo für rund 20 Dollar im Monat (Stand 2026) hebt vor allem diese Grenzen an. Wer zahlen kann, arbeitet also flüssiger und mit mehr Möglichkeiten. Schon beim Zugang entsteht so ein Unterschied zwischen Menschen. Was ein Abo kostet und wie viel gratis möglich ist, ändern die Anbieter ständig.
 
 > **Kein Beleg** (Zugang: Gratisstufe gegenüber Abo bei den grossen Chatbots): Die Preis- und Limitseiten der Anbieter ändern sich laufend, ein Beleg wäre in Monaten falsch. Der Text nennt darum kein einzelnes Produkt mehr und trägt das Standdatum 2026. Absichtlich ohne Link. *(notiert 2026-07-26)*
 
@@ -793,8 +793,8 @@ Die Trainingsdaten der grossen Modelle bestehen zu einem sehr grossen Teil aus e
 **[PP-e4244e]** *(Fliesstext)*
 Seit Jahrzehnten verändert die Digitalisierung, wie wir leben und arbeiten. Mit der KI zieht dieser Wandel noch einmal an. Was sich lange bewährt hat, wird plötzlich hinterfragt. Neue Berufe entstehen, andere verschwinden, und vertraute Abläufe werden umgestellt. Auch soziale Strukturen und Rollenbilder verschieben sich.
 
-**[PP-38dfc2]** *(Fliesstext)*
-Diese Seite will dem Verlorenen nicht nachtrauern. Sie stellt eine andere Frage. Was ist eigentlich neu, und was hat sich verändert? Sie schaut dabei immer zugleich zurück und auf heute. Besonders eine Frage bricht mit der KI neu auf, die Frage nach dem Menschen selbst.
+**[PP-20cf14]** *(Fliesstext)*
+Diese Seite will dem Verlorenen nicht nachtrauern. Sie stellt eine andere Frage. Was ist eigentlich neu, und was hat sich verändert? Sie betrachtet dabei Vergangenheit und Gegenwart zugleich. Die KI wirft besonders eine Frage neu auf: die Frage nach dem Menschen selbst.
 
 **[PP-4ce21e]** *(Fliesstext)*
 Der Weg dahin ist ein doppelter. Du webst den «Teppich des Wandels» und gehst durch acht Epochen. Jede Epoche hat eine neue Technik, eine Verunsicherung und die Philosophie, die Halt gab. Öffne, was dich interessiert.
@@ -804,8 +804,8 @@ Der Weg dahin ist ein doppelter. Du webst den «Teppich des Wandels» und gehst 
 **[PP-788907]** *(Fliesstext)*
 Was ist Philosophie überhaupt? Wörtlich heisst sie «Liebe zur Weisheit». Sie ist ein eigenes wissenschaftliches Fach, aber keine erfahrungswissenschaftliche Disziplin wie Physik oder Statistik, die mit Messdaten beweisen, wie etwas zusammenhängt. Philosophie prüft Grundbegriffe und Argumente und arbeitet dabei überwiegend nicht experimentell. Sie hilft uns, neu zu ordnen und zu verstehen, was der Wandel durcheinanderbringt.
 
-**[PP-621afa]** *(Fliesstext)*
-Darum geht es in diesem Modul vor allem um eine Frage, die mit der KI neu aufbricht. Was ist der Mensch? Lange galt er als der, der Wissen schafft, weitergibt und Neues erdenkt. Wenn nun eine Maschine schreibt, erklärt und gestaltet, gerät genau das ins Wanken, unser Denken und unsere Kreativität. Neu ist die Frage aber nicht. Sie wird in der Philosophie seit jeher gestellt. Immanuel Kant hat das prominent ausgesprochen und sie ins Zentrum gerückt.
+**[PP-5b3731]** *(Fliesstext)*
+Deshalb geht es in diesem Modul vor allem um eine Frage, welche die KI neu aufwirft. Was ist der Mensch? Lange galt er als der, der Wissen schafft, weitergibt und Neues erdenkt. Wenn nun eine Maschine schreibt, erklärt und gestaltet, gerät genau diese Vorstellung ins Wanken, unser Denken und unsere Kreativität. Neu ist die Frage aber nicht. Sie wird in der Philosophie seit jeher gestellt. Immanuel Kant hat das prominent ausgesprochen und sie ins Zentrum gerückt.
 
 ### Mehr dazu: Wie wir mit KI zusammenarbeiten
 
@@ -1212,11 +1212,11 @@ Wie das im Alltag aussah, zeigt Athen. Solons Gesetze standen auf hölzernen Taf
 
 > **Belegt** («wollten die Athener den Überschuss unter sich aufteilen»): [Perserkriege (Wikipedia)](https://de.wikipedia.org/wiki/Perserkriege) — Zur Vorgeschichte von Salamis: «man sich von Themistokles überzeugen liess, Überschusseinnahmen aus dem Silberabbau in Laurion von 483 v. Chr. an nicht unter die Bürger zu verteilen, sondern in den Schiffsbau zu investieren». *(geprüft 2026-07-29)*
 
-**[EP-528d61]** *(Kartentext)*
-Wer seine Stellung von Geburt hatte, verliert den Boden. In Athen (ab etwa 500 v. Chr.) und in Rom entscheiden Abstimmungen, Ämter und öffentliche Reden, nicht mehr allein die Familie. Wer gut reden kann, kommt nach oben. Genau da setzen die Sophisten an. Sie ziehen von Stadt zu Stadt und bringen jungen Männern gegen Bezahlung bei, wie man eine Rede aufbaut und ein Publikum überzeugt. Ihre Kernbotschaft ist heikel: Zu jeder Sache lasse sich genauso gut das Gegenteil begründen. Damit steht eine unangenehme Frage im Raum. Wenn sich alles begründen lässt, gilt dann überhaupt noch etwas? Der Prozess gegen Sokrates (399 v. Chr.), der mit dem Todesurteil endet, zeigt, wie nervös eine verunsicherte Stadt reagiert.
+**[EP-94e98f]** *(Kartentext)*
+Wer seine Stellung von Geburt hatte, verliert den Boden. In Athen (ab etwa 500 v. Chr.) und in Rom entscheiden Abstimmungen, Ämter und öffentliche Reden, nicht mehr allein die Familie. Wer gut reden kann, kommt nach oben. Genau da setzen die Sophisten an. Sie ziehen von Stadt zu Stadt und bringen jungen Männern gegen Bezahlung bei, wie man eine Rede aufbaut und ein Publikum überzeugt. Ihre Kernbotschaft ist heikel: Zu jeder Sache lässt sich genauso gut das Gegenteil begründen. Damit steht eine unangenehme Frage im Raum: Wenn sich alles begründen lässt, gilt dann überhaupt noch etwas? Der Prozess gegen Sokrates (399 v. Chr.), der mit dem Todesurteil endet, zeigt, wie nervös eine verunsicherte Stadt reagiert.
 
-**[EP-da8160]** *(Vertiefung «Mehr lesen»)*
-Der Redelehrer Protagoras brachte die neue Lage auf einen Satz: Der Mensch sei «das Mass aller Dinge». Gemeint ist, dass nicht die Götter festlegen, was wahr und richtig ist, sondern die Menschen selbst. Protagoras war ein gefragter Lehrer und nahm hohe Honorare. Für viele Athener klang das nach Freiheit, für andere so, als würde der Boden unter den Füssen weich. Wie gereizt die Stimmung war, zeigt der Prozess von 399 v. Chr. Rund 500 ausgeloste Bürger sassen als Gericht zusammen, und vor ihnen verteidigte sich der siebzigjährige Sokrates. Als er nach dem Schuldspruch selber eine Strafe vorschlagen sollte, schlug er allen Ernstes eine Belohnung vor: Gratisessen auf Staatskosten. Das Gericht entschied auf den Giftbecher. Dazu muss man wissen, dass Athen kurz zuvor einen langen Krieg verloren und die Gewaltherrschaft der Dreissig Tyrannen erlebt hatte. Eine erschöpfte Stadt erträgt es schlecht, wenn jemand ihre letzten Gewissheiten in Frage stellt. Diese Angst, dass am Ende gar nichts mehr sicher ist, kehrt in jeder Umbruchszeit wieder.
+**[EP-728d30]** *(Vertiefung «Mehr lesen»)*
+Der Redelehrer Protagoras brachte die neue Lage auf einen Satz: Der Mensch sei «das Mass aller Dinge». Gemeint ist, dass nicht die Götter festlegen, was wahr und richtig ist, sondern die Menschen selbst. Protagoras war ein gefragter Lehrer und nahm hohe Honorare. Für viele Athener klang das nach Freiheit, für andere so, als würde der Boden unter ihren Füssen weich. Wie gereizt die Stimmung war, zeigt der Prozess von 399 v. Chr. Rund 500 ausgeloste Bürger sassen als Gericht zusammen, und vor ihnen verteidigte sich der siebzigjährige Sokrates. Als er nach dem Schuldspruch selber eine Strafe vorschlagen sollte, schlug er allen Ernstes eine Belohnung vor: Gratisessen auf Staatskosten. Das Gericht entschied auf den Giftbecher. Dazu muss man wissen, dass Athen kurz zuvor einen langen Krieg verloren und die Gewaltherrschaft der Dreissig Tyrannen erlebt hatte. Eine erschöpfte Stadt erträgt es schlecht, wenn jemand ihre letzten Gewissheiten in Frage stellt. Diese Angst, dass am Ende gar nichts mehr sicher ist, kehrt in jeder Umbruchszeit wieder.
 
 **[EP-8c3a46]** *(Kartentext)*
 Aristoteles (384–322 v. Chr.) setzt dem etwas anderes entgegen: genau hinschauen, unterscheiden, ordnen und dann Schritt für Schritt weiterdenken. Wer den ersten Satz annimmt, muss auch den nächsten annehmen, sonst widerspricht er sich selbst. Diese Kunst des sauberen Schliessens heisst Logik. Nicht wer am besten redet, soll recht haben, sondern wer am besten begründet. Davon lebt die Schule heute noch: Jedes «beweis es» und jede Aufgabe, die eine Begründung verlangt, kommt von hier. Auch dass ein Widerspruch ein Fehler ist und nicht Geschmackssache, ist diese Idee.
@@ -1229,8 +1229,8 @@ Aristoteles sammelte zuerst und ordnete dann. In einer Lagune auf der Insel Lesb
 **[EP-2b8e48]** *(Einleitung)*
 Rom zerfällt, und mit den Strassen, Städten und Gesetzen wankt die ganze Weltordnung. Was tausend Jahre selbstverständlich schien, löst sich auf: Handel schrumpft, Städte leeren sich, Wissen zieht sich in die Klöster zurück. Die Menschen suchen einen neuen Halt und finden ihn nicht mehr im Reich, sondern im Glauben.
 
-**[EP-d02377]** *(Einleitung, Vertiefung)*
-Der Übergang von der Spätantike ins Mittelalter dauert Jahrhunderte und verläuft nicht überall gleich: Während im Westen die römische Ordnung zerfällt, blühen das oströmische (byzantinische) Reich und wenig später die islamische Welt kulturell auf und bewahren viel antikes Wissen. Im lateinischen Europa wird die Kirche zur wichtigsten Klammer. Sie stellt Schrift, Recht, Zeitrechnung und Trost. «Mittelalter» ist ein Sammelbegriff für sehr verschiedene Jahrhunderte, nicht die pauschal «dunkle Zeit», als die es oft dargestellt wird.
+**[EP-2d4b34]** *(Einleitung, Vertiefung)*
+Der Übergang von der Spätantike ins Mittelalter dauert Jahrhunderte und verläuft nicht überall gleich: Während im Westen die römische Ordnung zerfällt, blühen das oströmische (byzantinische) Reich und wenig später die islamische Welt kulturell auf und bewahren viel antikes Wissen. Im lateinischen Europa wird die Kirche zur wichtigsten Klammer. Sie bietet Schrift, Recht, Zeitrechnung und Trost. «Mittelalter» ist ein Sammelbegriff für verschiedene Jahrhunderte, nicht für die pauschal «dunkle Zeit», als die es oft dargestellt wird.
 
 **[EP-5fb218]** *(Hintergrund zum Bild)*
 Joseph-Noël Sylvestre (1847–1926) war ein französischer Maler des akademischen Historismus, der sich auf grosse Szenen aus der Antike spezialisierte. Er malte dieses Historiengemälde 1890, also fast 1500 Jahre nach dem dargestellten Ereignis. Zu sehen ist die Plünderung Roms im Jahr 410, als die Westgoten die Stadt eroberten. Im Zentrum reisst ein Krieger die Marmorstatue eines römischen Kaisers vom Sockel, ein Sinnbild für den Sturz der alten Ordnung. Weil das Werk so spät entstand, sagt es mehr über die Untergangsängste des 19. Jahrhunderts aus als über das Jahr 410.
@@ -1262,11 +1262,11 @@ In seiner Hand hält Augustinus ein flammendes Herz, sein bekanntestes Attribut.
 **[EP-0225ba]** *(Kartentext)*
 Von oben fällt ein heller Strahl auf Augustinus, dem sein Blick entgegengeht. Er verkörpert Augustins Überzeugung, dass wahre Erkenntnis eine Art göttliche «Erleuchtung» ist: Der Mensch findet die Wahrheit, indem er sich nach innen und nach oben wendet.
 
-**[EP-6d93b0]** *(Kartentext)*
-Hier verunsichert nicht neue, sondern verlorene Technik. Mit dem Weströmischen Reich (476 n. Chr.) verfallen Fernstrassen, Aquädukte, Münzwesen und die staatliche Verwaltung. Fähigkeiten wie Betonbau in römischer Qualität gehen für Jahrhunderte verloren. Die Welt wird kleiner, langsamer und unsicherer. Verloren gingen sie, weil ihre Grundlage wegbrach: Ohne Zentralmacht, Steuern und Fernhandel gab es niemanden mehr, der Strassen unterhielt oder Münzen prägte. Technik überlebt nur mit ihrer wirtschaftlichen und politischen Basis.
+**[EP-cfa62c]** *(Kartentext)*
+Hier verunsichert nicht neue, sondern verlorene Technik. Mit dem Weströmischen Reich (476 n. Chr.) verfallen Fernstrassen, Aquädukte, das Münzwesen und die staatliche Verwaltung. Fähigkeiten wie Betonbau in römischer Qualität gehen für Jahrhunderte verloren. Die Welt wird kleiner, langsamer und unsicherer. Verloren gingen diese technischen und organisatorischen Fähigkeiten, weil ihre Grundlage wegbrach: Ohne Zentralmacht, Steuern und Fernhandel gab es niemanden mehr, der Strassen unterhielt oder Münzen prägte. Technik überlebt nur mit ihrer wirtschaftlichen und politischen Basis.
 
-**[EP-03c465]** *(Vertiefung «Mehr lesen»)*
-Rom selbst zeigt den Absturz in Zahlen: Die Stadt zählte auf ihrem Höhepunkt gegen eine Million Einwohner und schrumpfte nach Kriegen und Plünderungen auf wenige Zehntausend. Als die Ostgoten die Stadt 537 belagerten, zerstörten sie die Wasserleitungen. Brunnen und Thermen versiegten, und das Leben zog sich auf Dauer ans Ufer des Tibers zurück, wo man Wasser holen konnte. Die gewaltige Betonkuppel des Pantheons blieb über tausend Jahre unübertroffen: Niemand hätte sie mehr bauen können. Zur gleichen Zeit begann die Rettung im Kleinen. Der Gelehrte Cassiodorus gründete um 550 in Süditalien das Kloster Vivarium, in dem Mönche antike Handschriften abschrieben, und bald gehörte dieses Kopieren in vielen Klöstern zum Tagewerk. Was wir heute von Cicero oder Vergil lesen, ist fast ausnahmslos durch solche Schreibstuben gegangen. Eine Zivilisation kann eben nicht nur Neues erfinden, sie kann Können auch wieder verlieren.
+**[EP-c167d2]** *(Vertiefung «Mehr lesen»)*
+Rom selbst zeigt den Absturz in Zahlen: Die Stadt zählte auf ihrem Höhepunkt gegen eine Million Einwohnerinnen und Einwohner und schrumpfte nach Kriegen und Plünderungen auf wenige Zehntausend. Als die Ostgoten die Stadt 537 belagerten, zerstörten sie die Wasserleitungen. Brunnen und Thermen versiegten, und das Leben zog sich auf Dauer ans Ufer des Tibers zurück, wo man Wasser holen konnte. Die gewaltige Betonkuppel des Pantheons blieb über tausend Jahre unübertroffen: Niemand hätte sie mehr bauen können. Zur gleichen Zeit begann die Rettung im Kleinen. Der Gelehrte Cassiodorus gründete um 550 in Süditalien das Kloster Vivarium, in dem Mönche antike Handschriften abschrieben, und bald gehörte dieses Kopieren in vielen Klöstern zum Tagewerk. Was wir heute von Cicero oder Vergil lesen, ist fast ausnahmslos durch solche Schreibstuben gegangen. Eine Zivilisation kann eben nicht nur Neues erfinden, sie kann Können auch wieder verlieren.
 
 > **Belegt** («zerstörten sie die Wasserleitungen»): [Wasserversorgung im Römischen Reich (Wikipedia)](https://de.wikipedia.org/wiki/Wasserversorgung_im_R%C3%B6mischen_Reich) — Zur Belagerung Roms: «Bei der vorangegangenen Belagerung wurden die in die Stadt führenden Aquädukte zerstört», worauf der Betrieb der grossen Thermen endgültig zum Erliegen kam und auch die städtischen Mühlen ausfielen. Datierung und Zuordnung zu den Ostgoten (Januar 537 bis März 538) über den Artikel «Gotenkrieg (535–554)». *(geprüft 2026-07-29)*
 
@@ -1276,8 +1276,8 @@ Betroffen sind alle, besonders die städtischen Eliten: Wer sich auf Rom und sei
 **[EP-517312]** *(Vertiefung «Mehr lesen»)*
 Wie tief der Schock sass, zeigt der Gelehrte Hieronymus, der fern in Bethlehem an seiner Bibelübersetzung arbeitete: Als ihn die Nachricht erreichte, schrieb er, mit dieser einen Stadt sei der ganze Erdkreis untergegangen, und er fand tagelang nicht zur Arbeit zurück. Übers Meer flohen ausgeplünderte Senatorenfamilien nach Nordafrika, wo manche als Bittsteller in Hippo ankamen, der Bischofsstadt des Augustinus. Dort hörte er beide Vorwürfe: Die Anhänger der alten Götter gaben dem Christengott die Schuld, und die Christen fragten, warum er sie nicht geschützt hatte. Augustinus antwortete nicht mit einer schnellen Streitschrift, sondern arbeitete von 413 bis 426 an den zweiundzwanzig Büchern seines «Gottesstaats». Dass eine Katastrophe sofort einen Schuldigen braucht, hat sich seither kaum geändert, es wechseln nur die Adressaten.
 
-**[EP-5ce2b0]** *(Kartentext)*
-Augustinus (354–430) verlegt den Halt vom äusseren Reich nach innen: Nicht Mauern und Macht tragen, sondern Glaube, Gewissen und Erinnerung. Er unterscheidet den vergänglichen irdischen Staat vom bleibenden «Gottesstaat» und deutet die Geschichte als Heilsweg. Die zwei Staaten sind für ihn nicht einfach Kirche und Politik, sondern zwei Gemeinschaften, die sich danach scheiden, woran ihr Herz hängt. Alltagssprachlich lebt das fort in «hör auf dein Gewissen» und «geh in dich».
+**[EP-8c45bf]** *(Kartentext)*
+Augustinus (354–430) verlegt den Halt vom äusseren Reich nach innen: Nicht Mauern und Macht tragen, sondern Glaube, Gewissen und Erinnerung. Er unterscheidet den vergänglichen irdischen Staat vom bleibenden «Gottesstaat» und deutet die Geschichte als Heilsweg. Die zwei Staaten sind für ihn nicht einfach Kirche und Politik, sondern zwei Gemeinschaften, die sich danach scheiden, woran ihr Herz hängt. Alltagssprachlich lebt das bis heute fort in «hör auf dein Gewissen» und «geh in dich».
 
 **[EP-1fcad7]** *(Vertiefung «Mehr lesen»)*
 Augustinus wusste, wovon er sprach, denn sein eigenes Leben war ein einziger Umweg: aufgewachsen in einer nordafrikanischen Kleinstadt, dann ehrgeiziger Rhetorikprofessor in Mailand, lange Anhänger der Lehre der Manichäer und Vater eines unehelichen Sohnes. In seinen «Confessiones» erzählt er, wie er im Jahr 386 in einem Mailänder Garten eine Kinderstimme «nimm und lies» rufen hörte, die Bibel aufschlug und sein Leben wendete. Neu daran war der Blick nach innen: Er untersuchte Erinnerung, Zeit und Gewissen so genau, wie andere Länder vermessen. Aus eigener Erfahrung wusste er: Sicherheit gibt nicht das Amt und nicht die Stadtmauer, sondern das, was einen von innen hält. Er starb 430 in Hippo, während die Vandalen die Stadt belagerten. Das äussere Reich zerfiel also bis zu seinem letzten Tag. Seine Ausrichtung nach innen aber wurde zum Erbstück Europas, bis hin zur heutigen Überzeugung, dass jeder Mensch ein Gewissen hat, dem er folgen darf.
@@ -1287,14 +1287,14 @@ Augustinus wusste, wovon er sprach, denn sein eigenes Leben war ein einziger Umw
 **[EP-d19c28]** *(Einleitung)*
 Neue Welten, neue Medien, neues Geld: Der Mensch rückt sich selbst ins Zentrum und verliert zugleich seine Mitte im Kosmos. Die Wiederentdeckung der Antike, die Eroberung Amerikas und der Buchdruck lassen das Selbstbewusstsein wachsen: Der Mensch traut sich zu, die Welt zu vermessen und neu zu gestalten. Gleichzeitig zeigt Kopernikus, dass die Erde nicht der Mittelpunkt ist. Grösse und Kränkung liegen dicht beieinander.
 
-**[EP-7bc985]** *(Einleitung, Vertiefung)*
-«Renaissance» heisst «Wiedergeburt». Gemeint war die Rückbesinnung auf Kunst und Wissen der Antike, ausgehend von den reichen Städten Italiens (Florenz, Venedig) ab dem 14. Jahrhundert. Sie ist untrennbar mit dem Humanismus verbunden: der Idee, dass Bildung den Menschen formt. Zugleich ist es die Zeit der Kolonialgewalt, der Hexenverfolgung und der Glaubenskriege. Der «Aufbruch» hatte eine sehr dunkle Rückseite. Kunst, Wissenschaft und Kapitalismus nehmen hier gemeinsam Fahrt auf.
+**[EP-1695d5]** *(Einleitung, Vertiefung)*
+«Renaissance» heisst «Wiedergeburt». Gemeint war die Rückbesinnung auf Kunst und Wissen der Antike, ausgehend von den reichen Städten Italiens (Florenz, Venedig) ab dem 14. Jahrhundert. Die Renaissance ist untrennbar mit dem Humanismus verbunden: der Idee, dass Bildung den Menschen formt. Zugleich ist es die Zeit der Kolonialgewalt, der Hexenverfolgung und der Glaubenskriege. Der «Aufbruch» hatte also eine sehr dunkle Rückseite. Kunst, Wissenschaft und Kapitalismus nehmen hier gemeinsam Fahrt auf.
 
 **[EP-6b91b8]** *(Hintergrund zum Bild)*
 Pieter Bruegel der Ältere war einer der bedeutendsten niederländischen Maler des 16. Jahrhunderts und schuf dieses Bild 1563, zur Zeit der niederländischen Renaissance. Er malte die biblische Geschichte vom Turmbau als Panorama seiner eigenen Gegenwart, denn Baustelle, Hafen und Stadt sind flämisch und nicht babylonisch gestaltet. Der gewaltige Turm erinnert mit seinen Rundbögen an das römische Kolosseum und steht bereits sichtbar schief. Vorne links besucht eine königliche Gruppe die Baustelle, vor der die Steinmetze niederknien. Diese Figur wird meist als der biblische König Nimrod gedeutet. Das Original hängt heute im Kunsthistorischen Museum in Wien.
 
-**[EP-e498c1]** *(Im Kontext der Zeit)*
-Der Turmbau zu Babel ist das Bild der Renaissance-Verunsicherung: Eine Epoche, die mit Buchdruck, Seefahrt und Kapital alles zu können scheint und ahnt, dass der Ehrgeiz das Fundament überfordern könnte. Die biblische Strafe für den Turm war die Sprachverwirrung. Bruegels Zeit erlebte ihre eigene: die Glaubensspaltung, die Europa in Lager teilte.
+**[EP-18a323]** *(Im Kontext der Zeit)*
+Der Turmbau zu Babel ist das Bild der Renaissance-Verunsicherung: Eine Epoche, die mit Buchdruck, Seefahrt und Kapital alles zu können scheint und gleichzeitig ahnt, dass der Ehrgeiz das Fundament überfordern könnte. Die biblische Strafe für den Turm war die Sprachverwirrung. Bruegels Zeit erlebte ihre eigene: die Glaubensspaltung, die Europa in Lager teilte.
 
 **[EP-b30978]** *(Kartentext)*
 Der Turm füllt das Bild wie ein Gebirge: unten fertig und bewohnt, oben rohes Gestein, eine Baustelle, die in die Wolken wächst. Bruegel malt die biblische Geschichte als Panorama seiner eigenen Zeit, mit Hunderten winziger Arbeiter.
@@ -1320,8 +1320,8 @@ Zwei junge Männer auf dem Gipfel ihrer Möglichkeiten: der französische Gesand
 **[EP-513957]** *(Kartentext)*
 Himmelsglobus, Sonnenuhren, Quadrant: Instrumente zur Vermessung von Himmel und Zeit, das neue Wissen der Epoche. Wer Himmel und Stunde berechnen kann, kann navigieren und handeln: Wissenschaft und Welthandel gehören zusammen.
 
-**[EP-38df28]** *(Kartentext)*
-Erdglobus, Rechenbuch, Laute und Gesangbuch: die irdischen Künste. Doch genau hier sitzt der Riss. An der Laute ist eine Saite gerissen, und das aufgeschlagene Gesangbuch zeigt Luther-Lieder: die zerbrochene Harmonie der Glaubensspaltung.
+**[EP-09bb46]** *(Kartentext)*
+Erdglobus, Rechenbuch, Laute und Gesangbuch: die irdischen Künste. Doch genau hier zeigt sich ein Riss. An der Laute ist eine Saite gerissen, und das aufgeschlagene Gesangbuch zeigt Luther-Lieder: die zerbrochene Harmonie der Glaubensspaltung.
 
 **[EP-289292]** *(Kartentext)*
 Der graue Schrägbalken unten wird erst aus spitzem Winkel lesbar: ein Totenschädel (eine Anamorphose). Mitten im Triumph von Reichtum und Wissen erinnert Holbein an die Vergänglichkeit. Das ist der doppelte Boden der ganzen Epoche.
@@ -1397,8 +1397,8 @@ Lissabon zählte damals zu den grössten und reichsten Städten Europas, genähr
 **[EP-8833b8]** *(Kartentext)*
 Kant (1724–1804) fasst die Aufklärung in einem Satz: «Habe Mut, dich deines eigenen Verstandes zu bedienen.» Aufklärung sei der «Ausgang des Menschen aus seiner selbstverschuldeten Unmündigkeit». Verlass dich nicht auf Autoritäten, urteile selbst und trage die Verantwortung. Alltagssprachlich: «das musst du selbst entscheiden», «sei mündig».
 
-**[EP-722707]** *(Vertiefung «Mehr lesen»)*
-Kant verbrachte sein ganzes Leben in Königsberg, und der Anekdote nach stellten die Nachbarn ihre Uhren nach seinem täglichen Spaziergang: Ausgerechnet dieser unauffälligste aller Professoren schrieb die Sätze, die Europas Autoritäten herausforderten. Sein berühmter Aufsatz von 1784 antwortete auf die Frage eines Berliner Geistlichen in einer Zeitschrift, was denn diese Aufklärung eigentlich sei, das Denken fand öffentlich statt, in Journalen und Lesegesellschaften. Selbstverschuldet nannte Kant die Unmündigkeit, wenn ihr Grund nicht fehlender Verstand ist, sondern fehlender Mut, Faulheit und Feigheit. Den Gegenwind bekam er selbst zu spüren: 1794 untersagte ihm der preussische König weitere Schriften zur Religion, und Kant fügte sich, solange dieser König lebte, danach schrieb er weiter. Mündigkeit heisst seither nicht, alles besser zu wissen, sondern für das eigene Urteil einzustehen, eine Zumutung, die im Zeitalter der Suchmaschinen und Sprachmodelle nichts von ihrer Schärfe verloren hat.
+**[EP-92112c]** *(Vertiefung «Mehr lesen»)*
+Kant verbrachte sein ganzes Leben in Königsberg, und der Anekdote nach stellten die Nachbarn ihre Uhren nach seinem täglichen Spaziergang: Ausgerechnet dieser unauffälligste aller Professoren schrieb die Sätze, die Europas Autoritäten herausforderten. Sein berühmter Aufsatz von 1784 war eine Antwort: Ein Berliner Geistlicher hatte in einer Zeitschrift gefragt, was diese Aufklärung eigentlich sei. So lief das damals, denn gedacht wurde öffentlich, in Zeitschriften und in Lesegesellschaften, wo man sich zum Vorlesen und Diskutieren traf. Unmündigkeit nannte Kant «selbstverschuldet», wenn einer nicht zu wenig Verstand hat, sondern zu wenig Mut, ihn zu benutzen. Den Gegenwind bekam er selbst zu spüren: 1794 untersagte ihm der preussische König weitere Schriften zur Religion, und Kant fügte sich, solange dieser König lebte, danach schrieb er weiter. Mündigkeit heisst seither nicht, alles besser zu wissen, sondern für das eigene Urteil einzustehen, eine Zumutung, die im Zeitalter der Suchmaschinen und Sprachmodelle nichts von ihrer Schärfe verloren hat.
 
 ### Industriemoderne
 

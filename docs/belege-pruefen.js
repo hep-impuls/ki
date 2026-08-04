@@ -48,7 +48,11 @@ function teil(name) {
     .map(felder);
 }
 
-const belege = teil("BELEGE").filter((b) => b.id && b.url);
+/* Buchbelege haben kein `url` (ein gedrucktes Werk hat keine Adresse). Sie
+ * müssen trotzdem durch die Kennungs- und Anker-Prüfung, sonst wäre gerade der
+ * ungeprüfte Teil des Verzeichnisses der, der aus Büchern zitiert. Nur der
+ * `--links`-Durchlauf lässt sie aus. */
+const belege = teil("BELEGE").filter((b) => b.id && (b.url || b.titel));
 const ohne = teil("OHNE_BELEG").filter((b) => b.id && b.grund);
 
 const fehler = [];
@@ -110,7 +114,7 @@ if (warnung.length) {
 if (process.argv.includes("--links")) {
   (async () => {
     console.log("\nURLs abrufen …");
-    for (const b of belege) {
+    for (const b of belege.filter((x) => x.url)) {
       try {
         const res = await fetch(b.url, {
           redirect: "follow",

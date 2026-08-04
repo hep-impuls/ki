@@ -10,6 +10,43 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-04 — Buchbelege: das Belegsystem nimmt auch Werke ohne URL (Christof)
+
+Anlass: Der Text zu «wahrscheinlichkeitsbasiert» nannte «rund 13'000
+Richtungen» und schrieb Markus Gabriel den Begriff «Vektorisierung» zu. Beides
+hielt der Prüfung am Buch nicht stand. Zweig schreibt «von Hunderten bis über
+10 000 Richtungen»; Gabriel benutzt das Verb «vektorisiert», nicht das
+Substantiv. Der Text folgt jetzt dem Wortlaut der Bücher.
+
+**Entscheidung:** `Beleg.url` ist optional. Fehlt es, ist die Quelle ein Buch:
+Das Wort im Text wird ein Knopf statt eines Links, und der Hover nennt Autorin
+und Titel («Nachgelesen in …», «Im Buch nachgeschlagen am …»). Damit lassen
+sich Aussagen auch dann belegen, wenn die Quelle nicht im Netz steht — bisher
+war das der Grund, gute Quellen liegen zu lassen.
+
+Dazu drei Löcher geschlossen, die alle dieselbe Ursache hatten
+(`filter(b => b.id && b.url)` warf Buchbelege stillschweigend weg):
+
+- `docs/belege-pruefen.js` prüfte sie nicht → jetzt geprüft, nur der
+  `--links`-Durchlauf lässt sie aus.
+- `docs/quellen-export.js` schrieb sie nicht ins Verzeichnis → jetzt als
+  «Quelle (Buch)».
+- Das Prüfdatum stand roh als `2026-08-04` im Hover → jetzt `4.8.2026`.
+  Bewusst ohne Monatsnamen: Eine Liste von zwölf Namen wären zwölf zusätzliche
+  Textfelder im Korrektorat.
+
+Im Orakel-Quellenverzeichnis stehen die drei Bücher als eigene Rubrik am
+Schluss, getrennt von den Erklärlinks: Die Links sind Kurztexte für fünf
+Minuten, die Bücher sind der Boden darunter. Jäkels «Die intelligente
+Täuschung» ist Open Access (CC BY-ND 4.0) und darum verlinkt und als «frei
+lesbar» markiert; Zweig und Gabriel stehen ohne Link.
+
+Betroffen: `_data/belege.ts`, `_components/Glossar.tsx` (`BelegStelle`,
+`datum()`), `_components/Quellenverzeichnis.tsx` (`BUECHER`),
+`vorhang-auf/page.tsx`, `docs/belege-pruefen.js`, `docs/quellen-export.js`.
+
+---
+
 ## 2026-07-29 — Lehrer-Report: Fortschritt pro Thema statt nur pro Lernset (Pietro)
 
 Der Report zeigte für Lernseite 1 nur **einen** Prozentwert pro Schüler:in über
