@@ -691,7 +691,7 @@ const STATIONS: Station[] = [
             y: 52,
             zoom: 2.2,
             title: "Enge Hinterhöfe",
-            text: "Reihe an Reihe stehen dicht gedrängte Arbeiterhäuser, dazwischen winzige Höfe mit Wäscheleinen, kaum ein Streifen Licht dringt hinunter. So sah die Wohnwirklichkeit der Arbeiterfamilien aus: eng, rußgeschwärzt, ohne Privatheit. Der Kupferstich lässt die Enge fast körperlich spüren.",
+            text: "Reihe an Reihe stehen dicht gedrängte Arbeiterhäuser, dazwischen winzige Höfe mit Wäscheleinen, kaum ein Streifen Licht dringt hinunter. So sah die Wohnwirklichkeit der Arbeiterfamilien aus: eng, rußgeschwärzt, ohne Privatheit. Der Kupferstich macht die Enge fast körperlich spürbar.",
           },
           {
             x: 72,
