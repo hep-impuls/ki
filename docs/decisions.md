@@ -10,6 +10,50 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-04 — Antike/Technologie: drei Sachfehler korrigiert, Block erstmals belegt (Christof)
+
+Anlass: Christof fragte bei «Vorher war Schreiben ein Beruf für Spezialisten,
+die Hunderte Zeichen lernen mussten», woher die Aussage stammt. Antwort: aus
+keiner Quelle. Der Block (damals `EP-058658`) stand weder in `BELEGE` noch in
+`OHNE_BELEG` — er war nie durch das Belegsystem gelaufen. Die anschliessende
+Prüfung fand drei Fehler:
+
+1. **«Hunderte Zeichen»** — Linear B hat etwa 90 Silbenzeichen (dazu 160
+   Zeichen mit Wortbedeutung). Auf Hunderte kommt man erst mit der Keilschrift.
+2. **Das «Vorher» hatte kein Vorher** — zwischen dem Ende von Linear B (um
+   1200 v. Chr.) und dem Alphabet liegen rund vierhundert schriftlose Jahre.
+   Der Satz behauptete eine Ablösung (Spezialisten → alle), wo ein Bruch und
+   ein Neuimport von den Phöniziern war.
+3. **«wer die Zeit dazu hat»** — es war eine Frage des Geldes: keine
+   Schulpflicht, keine Schulhäuser, Unterricht beim Lehrer zuhause, und das
+   konnten sich wohlhabende Familien leisten.
+
+Dazu zwei Stellen, nach denen nicht gefragt war:
+
+- **«Vorher tauschte man Ware gegen Ware und handelte jedes Mal neu aus»** —
+  der Gegensatz in den Quellen lautet **wiegen → zählen**, nicht feilschen →
+  Festpreis. Vor der Münze zahlte man mit abgewogenem Silber. Die Wikipedia zu
+  den altgriechischen Münzen sagt es wörtlich: Münzen konnten «statt gewogen
+  abgezählt werden». Öffentlich-rechtliche Bildungsseiten erzählen zwar die
+  Ware-gegen-Ware-Version, aber die genauere Fassung ist auch die
+  anschaulichere.
+- **«das Silber für die Münzen kam aus Bergwerken wie dem Laurion»** —
+  bezogen auf die ersten Münzen (7./6. Jh.) zu früh. In Laurion war der Abbau
+  laut der Uni Heidelberg (pecunia/NumiScience) «bis zum 6. Jahrhundert v. Chr.
+  noch sehr gering» und wurde erst ab ca. 520 v. Chr. ergiebig. Laurion bleibt
+  im Vertiefungstext, wo es zeitlich hingehört (483 v. Chr., Themistokles).
+
+Der Block hat jetzt sechs Belege (`EP-8b588b`), alle deutschsprachig und frei
+zugänglich. Der Kartentext ist dadurch etwa ein Viertel länger — der alte war
+kürzer, weil er falsch verkürzte. Neue Glossareinträge: «mykenischen»,
+«Lydien», «Aigina».
+
+**Methodisch mitgenommen:** Ein Beleg-Anker, der einen Glossarbegriff
+überdeckt, verdeckt dessen Erklärung (Belege haben Vorrang). Das prüft jetzt
+ein kleines Skript, statt nur als Kommentar in `belege.ts` zu stehen.
+
+---
+
 ## 2026-08-04 — Buchbelege: das Belegsystem nimmt auch Werke ohne URL (Christof)
 
 Anlass: Der Text zu «wahrscheinlichkeitsbasiert» nannte «rund 13'000

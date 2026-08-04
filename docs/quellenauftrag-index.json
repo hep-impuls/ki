@@ -1945,12 +1945,12 @@
   "stufe": "tief",
   "text": "Gefasst, in sich gekehrt sitzt am Fussende der greise Platon, obwohl er an jenem Tag historisch gar nicht anwesend war. David setzt ihn bewusst dazu: Er wird das Gespräch aufschreiben und über zwei Jahrtausende weitertragen. Ohne diese Überlieferung wüssten wir von Sokrates fast nichts."
  },
- "EP-058658": {
+ "EP-8b588b": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Antike",
   "feld": "Kartentext",
-  "stufe": "mittel",
-  "text": "Zwei Erfindungen treiben den Wandel. Die griechische Buchstabenschrift (ab etwa 800 v. Chr.) braucht nur rund zwei Dutzend Zeichen. Vorher war Schreiben ein Beruf für Spezialisten, die Hunderte Zeichen lernen mussten; jetzt kann es lernen, wer die Zeit dazu hat. Dazu kommen Münzen (ab dem 7./6. Jahrhundert v. Chr.). Vorher tauschte man Ware gegen Ware und handelte jedes Mal neu aus, wie viel etwas wert ist. Eine Münze dagegen gilt gleich viel, egal in wessen Hand sie liegt. So werden Werte zählbar, teilbar und weitergebbar. Durchgesetzt hat sich beides, weil eine Welt voller Häfen und Händler Verträge, Notizen und ein zuverlässiges Zahlungsmittel brauchte. Die Buchstaben übernahmen die Griechen von den Phöniziern, das Silber für die Münzen kam aus Bergwerken wie dem Laurion."
+  "stufe": "hoch",
+  "text": "Zwei Erfindungen treiben den Wandel. Um 800 v. Chr. übernehmen die Griechen von den Phöniziern die Buchstabenschrift, rund zwei Dutzend Zeichen. Geschrieben wurde hier schon früher: Die Paläste der mykenischen Zeit führten ihre Listen in einer Silbenschrift mit etwa 90 Lautzeichen, dazu 160 Bildzeichen für Waren. Um 1200 v. Chr. gingen die Paläste unter und die Schrift mit ihnen; vierhundert Jahre lang wird in Griechenland nicht geschrieben. Das Alphabet ist darum kein vereinfachtes Erbe, sondern ein Neuanfang. Lernen kann es trotzdem nicht jeder: Es gibt keine Schulpflicht und keine Schulhäuser, unterrichtet wird beim Lehrer zuhause. Dazu kommen Münzen, in Lydien um 650, in griechischen Städten wie Aigina um 550 v. Chr. Vorher bezahlte man mit abgewogenem Silber: Barren, Schmuck, Bruchstücke, von denen man je nach Warenwert ein Stück abtrennte und auf die Waage legte. Eine Münze muss man nicht wiegen, man zählt sie, und sie gilt gleich viel, egal in wessen Hand sie liegt. So werden Werte zählbar, teilbar und weitergebbar. Durchgesetzt hat sich beides, weil eine Welt voller Häfen und Händler Verträge, Notizen und ein zuverlässiges Zahlungsmittel brauchte."
  },
  "EP-a6e85e": {
   "datei": "_components/VerunsicherungsEpochen.tsx",

@@ -48,6 +48,11 @@ Jeder Block hier enthält eine prüfbare Behauptung (Zahl, Datum,
 Superlativ oder eine Aussage, die jemandem zugeschrieben wird). Deutende
 Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
+### Übersicht (Hub)
+
+**[HUB-f5abb9]** *(Fliesstext · (ohne Abschnitt))*
+Kaum ein Thema ist so präsent wie die Künstliche Intelligenz — und kaum eines so schwer zu fassen. Es wird viel über sie gesagt, doch vieles bleibt schemenhaft, ein Reden über etwas, das man selten wirklich vor Augen hat. Dieses Lernset will die KI sichtbarer und verständlicher machen, indem es ihr eine Gestalt gibt.
+
 ### Thema 01 · Vorhang auf
 
 **[VA-87049e]** *(Kartentext · Der versteckte Mensch)*
@@ -155,6 +160,3 @@ Container, Freihandelsabkommen und das Internet verflechten die Weltwirtschaft f
 
 **[EP-95148a]** *(Einleitung, Vertiefung · Antike)*
 «Antike» ist ein Sammelname für rund tausend Jahre, von Athen um 450 v. Chr. bis zum Ende des Römischen Reiches im Westen um 500 n. Chr. In dieser Zeit entsteht überraschend viel, was uns heute normal vorkommt: Abstimmungen, Gesetze, die man nachlesen kann, das Theater, die Geometrie, die Philosophie. Trotzdem war das keine gerechte Welt. Die schwere Arbeit machten zu einem grossen Teil Sklaven, Frauen durften nicht mitbestimmen, und wenn die alten Texte «alle Bürger» sagen, sind damit nur die freien Männer der Stadt gemeint. Geblieben ist eine Idee: Man kann die Welt selber verstehen und nachprüfen, statt sie einfach hinzunehmen.
-
-**[EP-058658]** *(Kartentext · Antike)*
-Zwei Erfindungen treiben den Wandel. Die griechische Buchstabenschrift (ab etwa 800 v. Chr.) braucht nur rund zwei Dutzend Zeichen. Vorher war Schreiben ein Beruf für Spezialisten, die Hunderte Zeichen lernen mussten; jetzt kann es lernen, wer die Zeit dazu hat. Dazu kommen Münzen (ab dem 7./6. Jahrhundert v. Chr.). Vorher tauschte man Ware gegen Ware und handelte jedes Mal neu aus, wie viel etwas wert ist. Eine Münze dagegen gilt gleich viel, egal in wessen Hand sie liegt. So werden Werte zählbar, teilbar und weitergebbar. Durchgesetzt hat sich beides, weil eine Welt voller Häfen und Händler Verträge, Notizen und ein zuverlässiges Zahlungsmittel brauchte. Die Buchstaben übernahmen die Griechen von den Phöniziern, das Silber für die Münzen kam aus Bergwerken wie dem Laurion.

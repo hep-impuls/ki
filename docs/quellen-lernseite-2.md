@@ -13,8 +13,8 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 16 |
-| Belegte Textblöcke | 12 |
+| Belege | 22 |
+| Belegte Textblöcke | 13 |
 | Begründete Nicht-Belege | 4 |
 | Aussagen mit Standdatum | 3 |
 
@@ -164,6 +164,60 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 - **Geprüft:** 2026-07-29
 
 > Wie das im Alltag aussah, zeigt Athen. Solons Gesetze standen auf hölzernen Tafeln, die drehbar an Pflöcken befestigt waren, etwa wie ein Kartenständer, und jeder konnte sie einsehen. Wer lesen konnte, war nicht mehr darauf angewiesen, dass ihm jemand vorlas und dabei die Wahrheit sagte, sondern konnte selber nachschauen, was gilt. Auf der Agora wurde dann darüber gestritten. Im Hafen Piräus prüften Händler Verträge und zahlten mit den silbernen «Eulen», wie man Athens Münzen nach ihrem Münzbild nannte. Das Silber dafür kam aus den Bergwerken von Laurion. Als dort ab 483 v. Chr. mehr Silber anfiel, wollten die Athener den Überschuss unter sich aufteilen. Themistokles überzeugte sie, davon Kriegsschiffe zu bauen. Wenige Jahre später retteten genau diese Schiffe die Stadt gegen die Perser. Und noch etwas verschob sich: Wer schreiben und rechnen konnte, kam voran, auch ohne vornehme Familie. Nicht mehr nur die Herkunft zählte, sondern das Können.
+
+### Antike · etwa 90 Lautzeichen
+
+- **Kennung:** `EP-8b588b` (Kartentext)
+- **Quelle:** [Linearschrift B (Wikipedia)](https://de.wikipedia.org/wiki/Linearschrift_B)
+- **Fundstelle:** «Bekannt sind etwa 90 Silbenzeichen, 160 Zeichen mit Wortbedeutung sowie diverse Zahlzeichen.» Zum Gebrauch: «Die Funde sind keine literarischen Texte, sondern hauptsächlich Notizen zu wirtschaftlichen und Verwaltungszwecken.»
+- **Geprüft:** 2026-08-04
+
+> Zwei Erfindungen treiben den Wandel. Um 800 v. Chr. übernehmen die Griechen von den Phöniziern die Buchstabenschrift, rund zwei Dutzend Zeichen. Geschrieben wurde hier schon früher: Die Paläste der mykenischen Zeit führten ihre Listen in einer Silbenschrift mit etwa 90 Lautzeichen, dazu 160 Bildzeichen für Waren. Um 1200 v. Chr. gingen die Paläste unter und die Schrift mit ihnen; vierhundert Jahre lang wird in Griechenland nicht geschrieben. Das Alphabet ist darum kein vereinfachtes Erbe, sondern ein Neuanfang. Lernen kann es trotzdem nicht jeder: Es gibt keine Schulpflicht und keine Schulhäuser, unterrichtet wird beim Lehrer zuhause. Dazu kommen Münzen, in Lydien um 650, in griechischen Städten wie Aigina um 550 v. Chr. Vorher bezahlte man mit abgewogenem Silber: Barren, Schmuck, Bruchstücke, von denen man je nach Warenwert ein Stück abtrennte und auf die Waage legte. Eine Münze muss man nicht wiegen, man zählt sie, und sie gilt gleich viel, egal in wessen Hand sie liegt. So werden Werte zählbar, teilbar und weitergebbar. Durchgesetzt hat sich beides, weil eine Welt voller Häfen und Händler Verträge, Notizen und ein zuverlässiges Zahlungsmittel brauchte.
+
+### Antike · vierhundert Jahre lang wird in Griechenland nicht geschrieben
+
+- **Kennung:** `EP-8b588b` (Kartentext)
+- **Quelle:** [Dunkle Jahrhunderte (Antike) (Wikipedia)](https://de.wikipedia.org/wiki/Dunkle_Jahrhunderte_(Antike))
+- **Fundstelle:** «Die Bezeichnung ‹Dunkles Zeitalter› für die Zeit von ca. 1200 bis 750 v. Chr. lässt sich allerdings weiterhin mit der Schriftlosigkeit dieser Periode begründen.» Der Zeitraum beginnt «ab ca. 1200 v. Chr., dem Ende der sogenannten Mykenischen Palastzeit».
+- **Geprüft:** 2026-08-04
+
+> Zwei Erfindungen treiben den Wandel. Um 800 v. Chr. übernehmen die Griechen von den Phöniziern die Buchstabenschrift, rund zwei Dutzend Zeichen. Geschrieben wurde hier schon früher: Die Paläste der mykenischen Zeit führten ihre Listen in einer Silbenschrift mit etwa 90 Lautzeichen, dazu 160 Bildzeichen für Waren. Um 1200 v. Chr. gingen die Paläste unter und die Schrift mit ihnen; vierhundert Jahre lang wird in Griechenland nicht geschrieben. Das Alphabet ist darum kein vereinfachtes Erbe, sondern ein Neuanfang. Lernen kann es trotzdem nicht jeder: Es gibt keine Schulpflicht und keine Schulhäuser, unterrichtet wird beim Lehrer zuhause. Dazu kommen Münzen, in Lydien um 650, in griechischen Städten wie Aigina um 550 v. Chr. Vorher bezahlte man mit abgewogenem Silber: Barren, Schmuck, Bruchstücke, von denen man je nach Warenwert ein Stück abtrennte und auf die Waage legte. Eine Münze muss man nicht wiegen, man zählt sie, und sie gilt gleich viel, egal in wessen Hand sie liegt. So werden Werte zählbar, teilbar und weitergebbar. Durchgesetzt hat sich beides, weil eine Welt voller Häfen und Händler Verträge, Notizen und ein zuverlässiges Zahlungsmittel brauchte.
+
+### Antike · keine Schulpflicht und keine Schulhäuser
+
+- **Kennung:** `EP-8b588b` (Kartentext)
+- **Quelle:** [Schule (Wikipedia), Abschnitt zur Antike](https://de.wikipedia.org/wiki/Schule)
+- **Fundstelle:** «Dennoch gab es auch in Athen weder eine Schulpflicht noch öffentliche Schulgebäude, sondern die Kinder wurden beim Lehrer zuhause unterrichtet.» Davor: «konnten die Kinder wohlhabender Familien Athens allgemein bildende Schulen besuchen».
+- **Geprüft:** 2026-08-04
+
+> Zwei Erfindungen treiben den Wandel. Um 800 v. Chr. übernehmen die Griechen von den Phöniziern die Buchstabenschrift, rund zwei Dutzend Zeichen. Geschrieben wurde hier schon früher: Die Paläste der mykenischen Zeit führten ihre Listen in einer Silbenschrift mit etwa 90 Lautzeichen, dazu 160 Bildzeichen für Waren. Um 1200 v. Chr. gingen die Paläste unter und die Schrift mit ihnen; vierhundert Jahre lang wird in Griechenland nicht geschrieben. Das Alphabet ist darum kein vereinfachtes Erbe, sondern ein Neuanfang. Lernen kann es trotzdem nicht jeder: Es gibt keine Schulpflicht und keine Schulhäuser, unterrichtet wird beim Lehrer zuhause. Dazu kommen Münzen, in Lydien um 650, in griechischen Städten wie Aigina um 550 v. Chr. Vorher bezahlte man mit abgewogenem Silber: Barren, Schmuck, Bruchstücke, von denen man je nach Warenwert ein Stück abtrennte und auf die Waage legte. Eine Münze muss man nicht wiegen, man zählt sie, und sie gilt gleich viel, egal in wessen Hand sie liegt. So werden Werte zählbar, teilbar und weitergebbar. Durchgesetzt hat sich beides, weil eine Welt voller Häfen und Händler Verträge, Notizen und ein zuverlässiges Zahlungsmittel brauchte.
+
+### Antike · Dazu kommen Münzen
+
+- **Kennung:** `EP-8b588b` (Kartentext)
+- **Quelle:** [Altgriechische Münzen (Wikipedia)](https://de.wikipedia.org/wiki/Altgriechische_M%C3%BCnzen)
+- **Fundstelle:** «Die ersten Münzen wurden von den Lydern im Westen der heutigen Türkei zwischen 650 und ca. 620 v. Chr. als Zahlungsmittel geprägt.» Und: «Die ersten Silbermünzen wurden um 550 v. Chr. in Kleinasien und auf der Insel Aigina geprägt.»
+- **Geprüft:** 2026-08-04
+
+> Zwei Erfindungen treiben den Wandel. Um 800 v. Chr. übernehmen die Griechen von den Phöniziern die Buchstabenschrift, rund zwei Dutzend Zeichen. Geschrieben wurde hier schon früher: Die Paläste der mykenischen Zeit führten ihre Listen in einer Silbenschrift mit etwa 90 Lautzeichen, dazu 160 Bildzeichen für Waren. Um 1200 v. Chr. gingen die Paläste unter und die Schrift mit ihnen; vierhundert Jahre lang wird in Griechenland nicht geschrieben. Das Alphabet ist darum kein vereinfachtes Erbe, sondern ein Neuanfang. Lernen kann es trotzdem nicht jeder: Es gibt keine Schulpflicht und keine Schulhäuser, unterrichtet wird beim Lehrer zuhause. Dazu kommen Münzen, in Lydien um 650, in griechischen Städten wie Aigina um 550 v. Chr. Vorher bezahlte man mit abgewogenem Silber: Barren, Schmuck, Bruchstücke, von denen man je nach Warenwert ein Stück abtrennte und auf die Waage legte. Eine Münze muss man nicht wiegen, man zählt sie, und sie gilt gleich viel, egal in wessen Hand sie liegt. So werden Werte zählbar, teilbar und weitergebbar. Durchgesetzt hat sich beides, weil eine Welt voller Häfen und Händler Verträge, Notizen und ein zuverlässiges Zahlungsmittel brauchte.
+
+### Antike · man zählt sie
+
+- **Kennung:** `EP-8b588b` (Kartentext)
+- **Quelle:** [Altgriechische Münzen (Wikipedia)](https://de.wikipedia.org/wiki/Altgriechische_M%C3%BCnzen)
+- **Fundstelle:** Der entscheidende Gegensatz, wörtlich: Münzen «hatten den Vorteil, immer gleiche Größe, gleiches Gewicht und gleiches Aussehen zu besitzen und statt gewogen abgezählt werden zu können».
+- **Geprüft:** 2026-08-04
+
+> Zwei Erfindungen treiben den Wandel. Um 800 v. Chr. übernehmen die Griechen von den Phöniziern die Buchstabenschrift, rund zwei Dutzend Zeichen. Geschrieben wurde hier schon früher: Die Paläste der mykenischen Zeit führten ihre Listen in einer Silbenschrift mit etwa 90 Lautzeichen, dazu 160 Bildzeichen für Waren. Um 1200 v. Chr. gingen die Paläste unter und die Schrift mit ihnen; vierhundert Jahre lang wird in Griechenland nicht geschrieben. Das Alphabet ist darum kein vereinfachtes Erbe, sondern ein Neuanfang. Lernen kann es trotzdem nicht jeder: Es gibt keine Schulpflicht und keine Schulhäuser, unterrichtet wird beim Lehrer zuhause. Dazu kommen Münzen, in Lydien um 650, in griechischen Städten wie Aigina um 550 v. Chr. Vorher bezahlte man mit abgewogenem Silber: Barren, Schmuck, Bruchstücke, von denen man je nach Warenwert ein Stück abtrennte und auf die Waage legte. Eine Münze muss man nicht wiegen, man zählt sie, und sie gilt gleich viel, egal in wessen Hand sie liegt. So werden Werte zählbar, teilbar und weitergebbar. Durchgesetzt hat sich beides, weil eine Welt voller Häfen und Händler Verträge, Notizen und ein zuverlässiges Zahlungsmittel brauchte.
+
+### Antike · auf die Waage legte
+
+- **Kennung:** `EP-8b588b` (Kartentext)
+- **Quelle:** [Hacksilber (Wikipedia)](https://de.wikipedia.org/wiki/Hacksilber)
+- **Fundstelle:** Zum Bezahlen vor der Münze: «Der Handelswert wurde entsprechend dem Metallwert zerkleinert, abgewogen und eingetauscht. Zu diesem Zweck wurden zum Teil auch künstlerisch wertvolle Arbeiten zerkleinert und auf ihren reinen Metallwert reduziert.»
+- **Geprüft:** 2026-08-04
+
+> Zwei Erfindungen treiben den Wandel. Um 800 v. Chr. übernehmen die Griechen von den Phöniziern die Buchstabenschrift, rund zwei Dutzend Zeichen. Geschrieben wurde hier schon früher: Die Paläste der mykenischen Zeit führten ihre Listen in einer Silbenschrift mit etwa 90 Lautzeichen, dazu 160 Bildzeichen für Waren. Um 1200 v. Chr. gingen die Paläste unter und die Schrift mit ihnen; vierhundert Jahre lang wird in Griechenland nicht geschrieben. Das Alphabet ist darum kein vereinfachtes Erbe, sondern ein Neuanfang. Lernen kann es trotzdem nicht jeder: Es gibt keine Schulpflicht und keine Schulhäuser, unterrichtet wird beim Lehrer zuhause. Dazu kommen Münzen, in Lydien um 650, in griechischen Städten wie Aigina um 550 v. Chr. Vorher bezahlte man mit abgewogenem Silber: Barren, Schmuck, Bruchstücke, von denen man je nach Warenwert ein Stück abtrennte und auf die Waage legte. Eine Münze muss man nicht wiegen, man zählt sie, und sie gilt gleich viel, egal in wessen Hand sie liegt. So werden Werte zählbar, teilbar und weitergebbar. Durchgesetzt hat sich beides, weil eine Welt voller Häfen und Händler Verträge, Notizen und ein zuverlässiges Zahlungsmittel brauchte.
 
 ### Zerbrechen der Ordnung · zerstörten sie die Wasserleitungen
 

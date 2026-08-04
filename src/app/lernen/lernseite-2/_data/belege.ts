@@ -196,6 +196,86 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-04",
   },
 
+  /* ── Antike, Technologie ──────────────────────────────────────────────────
+   * Dieser Block war lange ohne Beleg, und er hatte es nötig. Drei Aussagen
+   * hielten der Prüfung am 2026-08-04 nicht stand und sind korrigiert:
+   *
+   *  1. «Vorher war Schreiben ein Beruf für Spezialisten, die Hunderte Zeichen
+   *     lernen mussten» — falsch in zwei Punkten. Linear B hat etwa 90
+   *     Silbenzeichen, nicht Hunderte (auf Hunderte kommt man erst mit der
+   *     Keilschrift). Und es gab kein «Vorher»: Zwischen dem Ende von Linear B
+   *     (um 1200 v. Chr.) und dem Alphabet liegen vierhundert schriftlose
+   *     Jahre. Der Satz verkaufte eine Ablösung, wo ein Bruch war.
+   *  2. «jetzt kann es lernen, wer die Zeit dazu hat» — es war eine Frage des
+   *     Geldes, nicht der Zeit: keine Schulpflicht, kein Schulhaus, Unterricht
+   *     beim Lehrer zuhause.
+   *  3. «Vorher tauschte man Ware gegen Ware und handelte jedes Mal neu aus»
+   *     — der Gegensatz in den Quellen lautet wiegen → zählen, nicht feilschen
+   *     → Festpreis. Vor der Münze zahlte man mit abgewogenem Silber.
+   *
+   * Ebenfalls gestrichen: «das Silber für die Münzen kam aus Bergwerken wie
+   * dem Laurion». Bezogen auf die ersten Münzen (7./6. Jh.) ist das zu früh —
+   * in Laurion war der Silberabbau laut der Lehrplattform pecunia/NumiScience
+   * der Universität Heidelberg «bis zum 6. Jahrhundert v. Chr. noch sehr
+   * gering» und wurde erst ab ca. 520 v. Chr. ergiebig
+   * (https://pecunia.zaw.uni-heidelberg.de/NumiScience/phasen-des-silberabbaus,
+   * abgerufen 2026-08-04). Laurion bleibt im Vertiefungstext, wo es zeitlich
+   * hingehört: beim Silberfund von 483 v. Chr. und Themistokles. */
+  {
+    id: "EP-8b588b",
+    anker: "etwa 90 Lautzeichen",
+    url: "https://de.wikipedia.org/wiki/Linearschrift_B",
+    titel: "Linearschrift B (Wikipedia)",
+    stelle:
+      "«Bekannt sind etwa 90 Silbenzeichen, 160 Zeichen mit Wortbedeutung sowie diverse Zahlzeichen.» Zum Gebrauch: «Die Funde sind keine literarischen Texte, sondern hauptsächlich Notizen zu wirtschaftlichen und Verwaltungszwecken.»",
+    geprueft: "2026-08-04",
+  },
+  {
+    id: "EP-8b588b",
+    anker: "vierhundert Jahre lang wird in Griechenland nicht geschrieben",
+    url: "https://de.wikipedia.org/wiki/Dunkle_Jahrhunderte_(Antike)",
+    titel: "Dunkle Jahrhunderte (Antike) (Wikipedia)",
+    stelle:
+      "«Die Bezeichnung ‹Dunkles Zeitalter› für die Zeit von ca. 1200 bis 750 v. Chr. lässt sich allerdings weiterhin mit der Schriftlosigkeit dieser Periode begründen.» Der Zeitraum beginnt «ab ca. 1200 v. Chr., dem Ende der sogenannten Mykenischen Palastzeit».",
+    geprueft: "2026-08-04",
+  },
+  {
+    id: "EP-8b588b",
+    anker: "keine Schulpflicht und keine Schulhäuser",
+    url: "https://de.wikipedia.org/wiki/Schule",
+    titel: "Schule (Wikipedia), Abschnitt zur Antike",
+    stelle:
+      "«Dennoch gab es auch in Athen weder eine Schulpflicht noch öffentliche Schulgebäude, sondern die Kinder wurden beim Lehrer zuhause unterrichtet.» Davor: «konnten die Kinder wohlhabender Familien Athens allgemein bildende Schulen besuchen».",
+    geprueft: "2026-08-04",
+  },
+  {
+    id: "EP-8b588b",
+    anker: "Dazu kommen Münzen",
+    url: "https://de.wikipedia.org/wiki/Altgriechische_M%C3%BCnzen",
+    titel: "Altgriechische Münzen (Wikipedia)",
+    stelle:
+      "«Die ersten Münzen wurden von den Lydern im Westen der heutigen Türkei zwischen 650 und ca. 620 v. Chr. als Zahlungsmittel geprägt.» Und: «Die ersten Silbermünzen wurden um 550 v. Chr. in Kleinasien und auf der Insel Aigina geprägt.»",
+    geprueft: "2026-08-04",
+  },
+  {
+    id: "EP-8b588b",
+    anker: "man zählt sie",
+    url: "https://de.wikipedia.org/wiki/Altgriechische_M%C3%BCnzen",
+    titel: "Altgriechische Münzen (Wikipedia)",
+    stelle:
+      "Der entscheidende Gegensatz, wörtlich: Münzen «hatten den Vorteil, immer gleiche Größe, gleiches Gewicht und gleiches Aussehen zu besitzen und statt gewogen abgezählt werden zu können».",
+    geprueft: "2026-08-04",
+  },
+  {
+    id: "EP-8b588b",
+    anker: "auf die Waage legte",
+    url: "https://de.wikipedia.org/wiki/Hacksilber",
+    titel: "Hacksilber (Wikipedia)",
+    stelle:
+      "Zum Bezahlen vor der Münze: «Der Handelswert wurde entsprechend dem Metallwert zerkleinert, abgewogen und eingetauscht. Zu diesem Zweck wurden zum Teil auch künstlerisch wertvolle Arbeiten zerkleinert und auf ihren reinen Metallwert reduziert.»",
+    geprueft: "2026-08-04",
+  },
+
   /* ── Zerbrechen der Ordnung ───────────────────────────────────────────────
    * 537 belagerten die OSTgoten Rom, nicht die Westgoten von 410. Der Text
    * nannte vorher nur «Goten», was beide Völker verschmolz. */

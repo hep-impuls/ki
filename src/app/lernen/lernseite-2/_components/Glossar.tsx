@@ -326,6 +326,12 @@ export const GLOSSAR: Record<string, string> = {
   Solons:
     "Athener Staatsmann (um 640 bis um 560 v. Chr.); liess seine Gesetze öffentlich aufstellen, damit sie jeder nachlesen konnte.",
   Piräus: "Der Hafen von Athen, wenige Kilometer von der Stadt entfernt.",
+  mykenischen:
+    "Die erste griechische Hochkultur (etwa 1600 bis 1200 v. Chr.), benannt nach der Burg Mykene; regiert von Palästen, die alles in Listen erfassten.",
+  Lydien:
+    "Reich im Westen der heutigen Türkei; dort wurden die ersten Münzen der Welt geprägt.",
+  Aigina:
+    "Insel im Golf von Athen; prägte eine der ersten griechischen Silbermünzen, mit einer Seeschildkröte darauf.",
   Phönizier:
     "Handelsvolk an der Küste des heutigen Libanon; von seiner Schrift stammen unsere Buchstaben ab.",
   Phöniziern:
