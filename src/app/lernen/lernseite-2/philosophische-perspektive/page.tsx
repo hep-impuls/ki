@@ -426,7 +426,7 @@ neu auf: die Frage nach dem Menschen selbst.
               titel: "Der Buchdruck",
               kurz: "Buchdruck",
               jahr: "um 1450",
-              text: "Gutenbergs bewegliche Lettern machen Wissen massenhaft kopierbar. Was bisher Klöstern und Höfen gehörte, kann sich nun verbreiten. Die Kontrolle über Wissen geht verloren und wird neu verteilt.",
+              text: "Gutenbergs bewegliche Lettern machen Wissen massenhaft kopierbar. Was bisher Klöstern und Höfen gehörte, kann sich nun verbreiten. Die Kontrolle über das Wissen geht verloren und wird neu verteilt.",
               mehr: "Johannes Gutenberg war ein Geschäftsmann in Mainz, der um 1450 Stempel, Presse und Metallguss zu einem System verband, mit dem sich Seiten beliebig oft setzen und drucken liessen. Seine erste grosse Bibel war noch so teuer wie ein Bauernhof, und weil ihn das Projekt fast ruinierte, verlor er die Werkstatt im Streit mit seinem Geldgeber. Die Idee aber war nicht mehr aufzuhalten, innert fünfzig Jahren standen Druckereien in über zweihundert Städten Europas, auch in Basel, das zu einer berühmten Druckerstadt wurde. Plötzlich konnte eine einzelne Streitschrift ein ganzes Land erreichen, Luther nutzte das siebzig Jahre später. Wer vorher wissen wollte, was wahr ist, fragte einen Priester; jetzt lasen die Leute selbst, verglichen selbst und stritten selbst.",
             },
             {
