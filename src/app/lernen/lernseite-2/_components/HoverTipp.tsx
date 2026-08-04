@@ -84,6 +84,13 @@ export default function HoverTipp({
   }, [offen, messen]);
 
   const beschriftung = vorlesen ?? (typeof inhalt === "string" ? inhalt : "");
+
+  /* Letztes Wort abtrennen, damit der Quellen-Pfeil daran kleben bleibt.
+     Ohne Leerzeichen im Anker bleibt der Kopf leer und alles hängt zusammen. */
+  const letzteLuecke = wort.lastIndexOf(" ");
+  const ankerKopf = letzteLuecke > 0 ? wort.slice(0, letzteLuecke) : "";
+  const ankerEnde = letzteLuecke > 0 ? wort.slice(letzteLuecke + 1) : wort;
+
   const gemeinsam = {
     onMouseEnter: () => setOffen(true),
     onMouseLeave: () => setOffen(false),
@@ -94,8 +101,18 @@ export default function HoverTipp({
   return (
     <span className={"relative inline-block " + className}>
       {href ? (
-        /* Beleg: durchgezogen unterstrichen, mit Quellen-Zeichen, öffnet die
-           Quelle in einem neuen Tab. Der Tooltip nennt vorher, was kommt. */
+        /* Beleg: dieselbe zurückhaltende Auszeichnung wie eine Worterklärung
+           (gepunktet), nur mit einem kleinen Pfeil dahinter. Der Pfeil ist das
+           einzige, was den Beleg vom Glossar unterscheidet, und das genügt:
+           Sechs Belege in einem Absatz dürfen den Text nicht zerstückeln.
+
+           `fontSize` steht als Inline-Stil da, nicht als `text-[…]`-Klasse.
+           Das Material-Symbols-Stylesheet von Google setzt
+           `.material-symbols-outlined { font-size: 24px }`; es kommt von einer
+           fremden Herkunft und schlägt damit jede Tailwind-Grössenklasse. Nur
+           ein Inline-Stil gewinnt dagegen. `0.75em` hält den Pfeil relativ zur
+           Textgrösse und innerhalb der Zeilenhöhe, damit die Zeilen mit Beleg
+           nicht weiter auseinanderrücken als die anderen. */
         <a
           ref={ref as React.RefObject<HTMLAnchorElement>}
           href={href}
@@ -103,14 +120,28 @@ export default function HoverTipp({
           rel="noopener noreferrer"
           aria-label={`${wort}. Quelle: ${beschriftung}`}
           {...gemeinsam}
-          className="border-b border-tertiary font-medium text-inherit outline-none transition-colors hover:text-tertiary focus-visible:rounded-sm focus-visible:ring-2 focus-visible:ring-tertiary"
+          className="text-inherit outline-none transition-colors hover:text-tertiary focus-visible:rounded-sm focus-visible:ring-2 focus-visible:ring-tertiary"
         >
-          {wort}
-          <span
-            aria-hidden
-            className="material-symbols-outlined ml-[1px] align-super text-[13px] leading-none text-tertiary"
-          >
-            open_in_new
+          {/* Ein Beleg-Anker ist oft ein halber Satz und bricht darum um. Ohne
+              Vorkehrung landet der Pfeil dann allein auf der letzten Zeile.
+              Das letzte Wort und der Pfeil bilden deshalb eine Einheit, die
+              nicht getrennt wird; der Rest bricht frei. */}
+          {ankerKopf && (
+            <span className="border-b border-dotted border-tertiary font-medium">
+              {ankerKopf}{" "}
+            </span>
+          )}
+          <span className="whitespace-nowrap">
+            <span className="border-b border-dotted border-tertiary font-medium">
+              {ankerEnde}
+            </span>
+            <span
+              aria-hidden
+              style={{ fontSize: "0.75em" }}
+              className="material-symbols-outlined ml-[2px] align-baseline leading-none text-tertiary"
+            >
+              open_in_new
+            </span>
           </span>
         </a>
       ) : (
