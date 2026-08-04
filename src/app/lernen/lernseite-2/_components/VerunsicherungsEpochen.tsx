@@ -875,7 +875,7 @@ const EPOCHEN: Epoche[] = [
         caption: "Der eine Planet: verletzlich, geteilt, ohne Ersatz",
         credit: "«Blue Marble» · NASA (Apollo 17), 1972 · gemeinfrei",
         hintergrund:
-          "Dieses Bild ist kein Gemälde, sondern eine Fotografie, die am 7. Dezember 1972 aus rund 29 000 km Entfernung entstand. Aufgenommen hat sie die Besatzung von Apollo 17, der bislang letzten bemannten Mondmission. Zu sehen ist die Erde als ganze, runde Kugel, mit Wolkenwirbeln, Ozeanen und Kontinenten in einem einzigen Blick. Von hier oben sind keine Nationen und keine Grenzen erkennbar, nur ein einziger, verletzlicher Planet im schwarzen All. «Blue Marble» wurde zu einem der meistreproduzierten Fotos der Geschichte und zur Ikone der Umweltbewegung.",
+          "Dieses Bild ist kein Gemälde, sondern eine Fotografie, die am 7. Dezember 1972 aus rund 29 000 km Entfernung entstand. Aufgenommen hat sie die Besatzung von Apollo 17, der bislang letzten bemannten Mondmission. Zu sehen ist die Erde als ganze, runde Kugel, mit Wolkenwirbeln, Ozeanen und Kontinenten in einem einzigen Blick. Von hier oben sind keine Nationen und keine Grenzen erkennbar, nur ein einziger, verletzlicher Planet im schwarzen All. «Blue Marble» wurde zu einem der meistreproduzierten Fotos der Geschichte und zu einer Ikone der Umweltbewegung.",
         contextNote:
           "Der «Blue Marble» ist das Bild vom einen, gemeinsamen «Wir»: die Erde als ein einziger, grenzenloser Planet. Genau dieses «Wir» steht heute unter doppeltem Druck: Klimakrise und eine Technik, die Wirklichkeit täuschend echt erzeugen kann. Wie sich aus lauter vernetzten Einzelnen wieder ein tragfähiges Wir bildet, ist die offene Frage, an der die Philosophie der Gegenwart arbeitet.",
         tour: [
