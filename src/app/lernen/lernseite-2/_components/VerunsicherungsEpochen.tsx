@@ -891,7 +891,7 @@ const EPOCHEN: Epoche[] = [
             y: 50,
             zoom: 1.7,
             title: "Ein Planet, keine Grenzen",
-            text: "Von hier oben sind keine Nationen, keine Grenzen, keine Konflikte zu sehen, nur ein einziger, verletzlicher Planet im schwarzen All. Genau dieser Anblick machte das Bild zur Ikone der Umwelt- und Friedensbewegung.",
+            text: "Von hier oben sind keine Nationen, keine Grenzen, keine Konflikte zu sehen, nur ein einziger, verletzlicher Planet im schwarzen All. Genau dieser Anblick machte das Bild zu einer Ikone der Umwelt- und Friedensbewegung.",
           },
           {
             x: 50,
