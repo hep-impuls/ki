@@ -131,22 +131,29 @@ const EPOCHEN: Epoche[] = [
             text: "Raffael malt 1509–1511 im Vatikan eine ideale Halle, in der sich die griechischen Denker aller Zeiten begegnen. Es ist kein realer Ort und keine reale Szene, sondern ein Bild des Denkens selbst. Es ist die Antike, wie die Renaissance sie als ihr eigenes Fundament verehrte.",
           },
           {
-            x: 50,
-            y: 42,
+            /* Der Fokusring sass im Himmel über dem Torbogen. Jetzt in der Lücke
+               zwischen den beiden, auf Aristoteles' flacher Hand — die Geste,
+               die der Text nennt. Beide Gesichter bleiben frei. */
+            x: 51.3,
+            y: 47.5,
             zoom: 2.6,
             title: "Platon und Aristoteles",
             text: "Im Zentrum steht der Grundkonflikt der Erkenntnis in einer einzigen Geste: Platon zeigt mit dem Finger nach oben, in die Welt der ewigen Ideen. Aristoteles hält die Hand flach über den Boden, zur beobachtbaren Wirklichkeit. Genau hier beginnt die Schablone, die später die gesamte Wissenschaft trägt.",
           },
           {
-            x: 37,
-            y: 40,
+            /* Sass auf dem Wandrelief über der Gruppe. Jetzt auf Sokrates'
+               ausgestreckter Hand, mit der er die Argumente abzählt. */
+            x: 35.5,
+            y: 47,
             zoom: 2.8,
             title: "Sokrates im Gespräch",
             text: "Links, im olivgrünen Gewand, zählt Sokrates an den Fingern seine Argumente ab und führt umringt von Zuhörern sein Frage-und-Antwort-Spiel vor. Diese Methode, alles so lange zu hinterfragen, bis scheinbare Gewissheiten zerbrechen, machte ihn zur unbequemsten Figur Athens und kostete ihn das Leben.",
           },
           {
-            x: 71,
-            y: 71,
+            /* Sass auf dem Rücken eines zuschauenden Jugendlichen. Jetzt auf
+               der Tafel, auf der Euklids Zirkel aufsetzt. */
+            x: 79,
+            y: 75,
             zoom: 2.8,
             title: "Euklid an der Tafel",
             text: "Rechts beugt sich Euklid mit einem Zirkel über eine Tafel und führt Jugendlichen einen geometrischen Beweis vor. Die Szene feiert ein neues Ideal: Wissen, das nicht behauptet, sondern Schritt für Schritt bewiesen und darum von jedem nachvollzogen werden kann.",
@@ -527,7 +534,9 @@ const EPOCHEN: Epoche[] = [
       mehr: "Lissabon zählte damals zu den grössten und reichsten Städten Europas, genährt vom Gold Brasiliens, und binnen Stunden lagen Zehntausende unter den Trümmern. Der Minister Pombal, selbst knapp davongekommen, soll die Losung ausgegeben haben, man müsse jetzt die Toten begraben und für die Lebenden sorgen, und er liess die Stadt nach neuen, erdbebensicheren Plänen wieder aufbauen. Zugleich stritten die berühmtesten Köpfe des Kontinents öffentlich über den Sinn des Unglücks: Voltaire klagte in einem Gedicht den frommen Optimismus an, Rousseau hielt ihm entgegen, nicht Gott habe die engen, hohen Häuser in die Stadt gestellt, sondern der Mensch. Aus der Frage nach der Schuld des Himmels wurde so die Frage nach der Verantwortung der Menschen, nach Bauweise, Stadtplanung und Vorsorge. Es ist der Moment, in dem die Katastrophe aufhört, blosse Strafe zu sein, und anfängt, eine Aufgabe zu werden.",
       quellen: [
         { label: "Erdbeben von Lissabon 1755 (Wikipedia)", url: w("Erdbeben_von_Lissabon_1755") },
-        { label: "Candide (Wikipedia)", url: w("Candide") },
+        /* Nicht «Candide» — das ist eine Begriffsklärungsseite (Roman, Musical,
+           Oper). Gemeint ist der Roman. */
+        { label: "Candide oder der Optimismus (Wikipedia)", url: w("Candide_oder_der_Optimismus") },
       ],
     },
     philosophie: {
@@ -792,8 +801,10 @@ const EPOCHEN: Epoche[] = [
             text: "Ein Betonsegment hängt am Haken, die «unüberwindbare» Grenze als Bauteil, das man herausheben kann. 28 Jahre teilte diese Wand die Stadt. Jetzt zeigt sich: Auch sie war gemacht, nicht Schicksal.",
           },
           {
-            x: 30,
-            y: 48,
+            /* Sass mitten auf dem Kranausleger. Jetzt auf der Säulenreihe des
+               Tors, rechts des Auslegers, wo das Tor unverdeckt zu sehen ist. */
+            x: 44,
+            y: 56,
             zoom: 1.9,
             title: "Das Brandenburger Tor",
             text: "Dahinter die Säulen des Tors, jahrzehntelang im Sperrgebiet zwischen Ost und West. Dass ausgerechnet hier geöffnet wird, macht das Foto historisch: Das eingemauerte Wahrzeichen wird wieder Durchgang.",
@@ -825,9 +836,13 @@ const EPOCHEN: Epoche[] = [
             text: "Ein aus vielen Satellitenaufnahmen zusammengesetztes Bild der nächtlichen Erde. Jedes Lichtpünktchen steht für menschliche Besiedlung, für Strom und Energie, die Ausbreitung der Menschheit in einem einzigen Blick.",
           },
           {
-            x: 50,
-            y: 34,
-            zoom: 2.2,
+            /* Sass auf der Sahara, also auf einer der dunklen Flächen, um die
+               es erst im nächsten Schritt geht. Jetzt auf dem hellen Band über
+               Mittel- und Westeuropa; der Ausschnitt reicht bei diesem Zoom von
+               der US-Ostküste bis Nordindien. */
+            x: 51,
+            y: 22,
+            zoom: 1.9,
             title: "Lichtbänder des Netzes",
             text: "Grell leuchten Europa, das nördliche Indien, Ostasien und die US-Küsten. Wo Strom fliesst, ist auch das digitale Netz dicht. Die hellen Adern zeichnen die Landkarte der vernetzten, industrialisierten Welt nach.",
           },

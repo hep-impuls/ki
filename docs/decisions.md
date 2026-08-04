@@ -10,6 +10,50 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-04 — Bildführungen: Fokusringe nachgemessen statt geschätzt (Christof)
+
+Rückmeldung des Lektors: Der Ring bei «Lichtbänder des Netzes» lag auf Afrika,
+der bei «Das Brandenburger Tor» auf dem Kran, und bei Raffaels «Schule von
+Athen» seien die Ringe «teils nicht sehr präzise» — mit der Vermutung, das sei
+vielleicht Absicht, um den entscheidenden Ausschnitt nicht zu verdecken.
+
+Es war keine Absicht, sondern geschätzte Koordinaten. Korrigiert:
+
+| Stopp | vorher | nachher | was dort lag |
+|---|---|---|---|
+| Lichtbänder des Netzes | 50 / 34 | 51 / 22, Zoom 1.9 | Sahara → helles Band über Europa |
+| Das Brandenburger Tor | 30 / 48 | 44 / 56 | Kranausleger → Säulenreihe des Tors |
+| Platon und Aristoteles | 50 / 42 | 51,3 / 47,5 | Himmel über dem Torbogen → Lücke zwischen beiden, auf Aristoteles' flacher Hand |
+| Sokrates im Gespräch | 37 / 40 | 35,5 / 47 | Wandrelief → seine abzählende Hand |
+| Euklid an der Tafel | 71 / 71 | 79 / 75 | Rücken eines Zuschauers → Tafel unter dem Zirkel |
+
+**Wie das jetzt bestimmt wird, statt geschätzt:** Der Fokusring ist 48 px auf
+dem Schirm und wird gegen den Zoom zurückskaliert, im Bild misst er also
+`48/(zoom · fit)` — bei den Werten hier 57 bis 84 Bildpunkte. Er ist damit
+gross genug, ein Gesicht zu verdecken, und die Position muss auf ein bis zwei
+Prozent stimmen. Vorgehen: Ausschnitt mit Prozentgitter rendern, Zielpunkt
+ablesen, Ring in Originalgrösse einzeichnen, ansehen. Die Hilfsskripte dazu
+liegen im Scratchpad (`gitter.py`, `ringe.py`), die gemessene Overlay-Grösse
+ist 575 × 790 px. Beim NASA-Bild half zusätzlich ein Helligkeitsraster über
+die Stadtlichter, das die hellen Ballungen numerisch ausweist.
+
+Die Ringe wurden anschliessend im Browser gegengeprüft: Der Marker landet
+exakt auf den eingetragenen Prozentwerten.
+
+**Zwei Ringe blieben unverändert**, weil sie richtig lagen: «Das schwebende
+Mauerstück» (68/42) und «Die Menschen unten» (55/80). «Die dunklen Flächen»
+(55/60) liegt korrekt über dem südlichen Afrika.
+
+Ebenfalls vom Lektor: Der Link zu «Candide» zeigte auf die
+**Begriffsklärungsseite** (Roman, Musical, Oper) statt auf
+«Candide oder der Optimismus». Ein Linkcheck findet das nicht, weil die Seite
+mit 200 antwortet. Neu prüft [docs/wikilinks-pruefen.mjs](wikilinks-pruefen.mjs)
+alle verlinkten Artikel über die Wikipedia-API auf beides: existiert der Titel,
+und ist er eine Begriffsklärung. Ergebnis nach der Korrektur: 78 Artikel, alle
+in Ordnung, Candide war der einzige Fall dieser Art.
+
+---
+
 ## 2026-08-04 — Antike/Technologie: drei Sachfehler korrigiert, Block erstmals belegt (Christof)
 
 Anlass: Christof fragte bei «Vorher war Schreiben ein Beruf für Spezialisten,
