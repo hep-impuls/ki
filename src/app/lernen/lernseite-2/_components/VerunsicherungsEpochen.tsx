@@ -686,7 +686,7 @@ const EPOCHEN: Epoche[] = [
             y: 35,
             zoom: 1.9,
             title: "Der Akt im Rücken",
-            text: "Hinter dem Soldaten steht ein Aktmodell, die Welt des Ateliers, der Kunst, des früheren Lebens. Sie ist noch da, aber der Maler hat ihr den Rücken zugekehrt: Zwischen Kunst und Krieg ist er nicht mehr Herr über sein Leben.",
+            text: "Hinter dem Soldaten steht ein Aktmodell, das an die Welt des Ateliers, der Kunst, des früheren Lebens erinnert. Sie ist noch da, aber der Maler hat ihr den Rücken zugekehrt: Zwischen Kunst und Krieg ist er nicht mehr Herr über sein Leben.",
           },
         ],
       },
