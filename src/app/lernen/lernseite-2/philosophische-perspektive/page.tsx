@@ -693,12 +693,11 @@ neu auf: die Frage nach dem Menschen selbst.
         vorschau={
           <p className="mt-sm max-w-3xl text-body-lg text-on-surface-variant">
             Die Epochen haben gezeigt, dass die Philosophie in unsicheren Zeiten
-            Orientierung gab. Sie liefert keine schnellen, bunten Antworten,
-            sondern eine nüchterne Klärung. Peter Sloterdijk nennt sie eine
-            Orientierungsdisziplin, die Verwirrung auf sichere Grundlagen
-            zurückführt, und er spricht von der Farbe Grau, der Farbe des ruhigen,
-            abwägenden Denkens. Genau das brauchen wir bei der KI, also Reflexion
-            statt Aufregung und Zwischentöne statt Schwarz-Weiss.
+            Orientierung gibt. Sie liefert keine schnellen, bunten Antworten, sondern eine
+            nüchterne Klärung. Peter Sloterdijk nennt sie eine Orientierungsdisziplin, die
+            Verwirrung auf sichere Grundlagen zurückführt, und er spricht von der Farbe
+            Grau, der Farbe des ruhigen, abwägenden Denkens. Genau das brauchen wir bei der
+            KI, also Reflexion statt Aufregung und Zwischentöne statt Schwarz-Weiss.
           </p>
         }
       >
