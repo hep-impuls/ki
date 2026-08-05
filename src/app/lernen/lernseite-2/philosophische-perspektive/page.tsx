@@ -739,9 +739,9 @@ neu auf: die Frage nach dem Menschen selbst.
         </Aufgabe>
         <Denkwege className="mt-lg" spurKey="philosophische-perspektive:denkwege" />
         <p className="mt-lg max-w-3xl text-body-md text-on-surface-variant">
-          Keine dieser Sichtweisen gibt ein fertiges Rezept. Aber jede öffnet einen
-          begründeten Weg, sich neu zu orientieren. Genau dazu lädt dieses Lernset
-          ein, sich wieder mehr mit Philosophie zu beschäftigen.
+          Keine dieser Sichtweisen liefert ein fertiges Rezept. Aber jede öffnet einen
+          begründeten Weg, sich neu zu orientieren. Genau dazu lädt dieses Lernset ein, sich
+          wieder mehr mit Philosophie zu beschäftigen.
         </p>
       </Abschnitt>
       </AkkordeonGruppe>
