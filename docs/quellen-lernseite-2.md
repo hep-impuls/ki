@@ -13,9 +13,9 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 41 |
-| Belegte Textblöcke | 29 |
-| Begründete Nicht-Belege | 4 |
+| Belege | 47 |
+| Belegte Textblöcke | 32 |
+| Begründete Nicht-Belege | 5 |
 | Aussagen mit Standdatum | 3 |
 
 ---
@@ -48,6 +48,24 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 - **Geprüft:** 2026-08-05
 
 > Rom galt als die ewige Stadt, seit rund achthundert Jahren hatte kein Feind sie eingenommen, dann standen 410 die Westgoten unter Alarich drei Tage lang plündernd in ihren Strassen. Die Nachricht lief durch das ganze Reich, der Gelehrte Hieronymus schrieb aus Bethlehem, eingenommen sei die Stadt, die zuvor die ganze Welt besiegt hatte. Der eigentliche Schlusspunkt kam leise, 476 setzte der Heerführer Odoaker den letzten weströmischen Kaiser ab, einen Jungen namens Romulus Augustulus, und schickte die Kaiserinsignien nach Konstantinopel. Viele Menschen merkten zunächst kaum einen Unterschied, doch über Jahrzehnte zerfielen Strassen, Wasserleitungen und Verwaltung, Städte schrumpften, Wissen ging verloren. Der Fall Roms zeigt, dass grosse Ordnungen selten mit einem Knall enden, sondern in einem langen Ausfransen, das die Menschen erst im Rückblick als Epochenbruch erkennen.
+
+### Grenzenloser Welthandel · 1956 erstmals genormte Stahlkisten auf ein umgebautes Schiff heben
+
+- **Kennung:** `PP-08cebe` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Ideal X (Wikipedia)](https://de.wikipedia.org/wiki/Ideal_X)
+- **Fundstelle:** «Die Jungfernfahrt als Containerschiff fand am 26. April 1956 auf der Route von Newark (New Jersey) nach Houston statt und wurde sowohl von Ladungsbeteiligten als auch von Gewerkschaften und Regierungsvertretern genau beobachtet.» Das Schiff war ein umgebauter T2-Tanker mit 58 Containern.
+- **Geprüft:** 2026-08-05
+
+> Den Anstoss gab ein amerikanischer Spediteur, Malcom McLean liess 1956 erstmals genormte Stahlkisten auf ein umgebautes Schiff heben, weil ihn das ewige Umladen von Hand ärgerte. Der Container senkte die Verladekosten auf einen Bruchteil, ganze Berufe am Hafen verschwanden, dafür wurde es plötzlich rentabel, auch billige Waren um die halbe Welt zu schicken. Nach dem Ende des Kalten Kriegs kam die Politik dazu, die Welthandelsorganisation entstand 1995, China trat 2001 bei und wurde zur «Fabrik der Welt». Seither steckt in einem einzigen Smartphone Arbeit aus Dutzenden Ländern, vom Kobalt aus dem Kongo über Chips aus Taiwan bis zur Software aus Amerika und Europa. Wie verletzlich das fein getaktete System ist, zeigte sich 2021, als ein einziges quer stehendes Containerschiff im Suezkanal tagelang einen Teil des Welthandels aufhielt. Grenzenlos heisst eben auch, dass eine Störung an einem Ort überall spürbar wird.
+
+### Internet & World Wide Web · vage, aber aufregend
+
+- **Kennung:** `PP-b4342b` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Heinz Nixdorf MuseumsForum: Wolkig aber aufregend, wie das Web geboren wurde](https://blog.hnf.de/wolkig-aber-aufregend-wie-das-web-geboren-wurde/)
+- **Fundstelle:** Der Vermerk stammt von Mike Sendall, dem Leiter der Arbeitsgruppe, auf dem Deckblatt des Vorschlags vom 12. März 1989: «Vague but exciting». Das Papier hiess «Information Management: A Proposal».
+- **Geprüft:** 2026-08-05
+
+> Die erste Nachricht im ARPANET wurde am 29. Oktober 1969 von Los Angeles nach Stanford geschickt, geplant war das Wort «LOGIN», nach zwei Buchstaben stürzte die Verbindung ab, übertragen war nur «LO». Aus dem Forschungsnetz weniger Universitäten wuchs über zwei Jahrzehnte ein weltweiter Verbund, doch er blieb ein Werkzeug für Fachleute. Den entscheidenden Schritt machte Tim Berners-Lee am CERN, sein Vorschlag von 1989 für ein Netz aus verknüpften Seiten trug den Vermerk seines Vorgesetzten, das sei vage, aber aufregend. So lief die erste Website der Welt auf einem Rechner bei Genf. Entscheidend war schliesslich, dass das CERN 1993 den Web-Standard zur freien Nutzung freigab, niemand musste Lizenzgebühren zahlen, und genau deshalb konnte das Netz explodieren. Offenheit war hier keine Nebensache, sondern der Bauplan des Erfolgs.
 
 ---
 
@@ -399,12 +417,55 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 > Der Traum hinter dieser Technik ist uralt: Die griechische Sage erzählt vom Bronzeriesen Talos, der Kretas Küste bewachte, die Prager Legende vom Golem aus Lehm, und 1818 liess Mary Shelley ihren Doktor Frankenstein ein künstliches Wesen erschaffen, das seinem Schöpfer entglitt. Der Fachbegriff stand 1955 erstmals im Antrag für eine Sommer-Werkstatt über «artificial intelligence» am Dartmouth College; der Antrag hielt grosse Fortschritte binnen weniger Monate für möglich, und 1956 kam die kleine Forschergruppe dort zusammen. Stattdessen folgten Jahrzehnte, in denen die Erwartungen mehrfach zusammenbrachen, man spricht von «KI-Wintern». Umso abrupter kam der Durchbruch im Alltag: ChatGPT erreichte nach dem Start Ende 2022 innert rund zwei Monaten gegen hundert Millionen Nutzerinnen und Nutzer, schneller als jede Verbraucher-Anwendung zuvor. Hinter der mühelosen Oberfläche stehen allerdings sehr irdische Anlagen, Rechenzentren, deren Strom- und Wasserbedarf mit dem ganzer Städte verglichen wird. Dass diese Technik als körperloses Gegenüber erscheint, ist vielleicht ihre grösste Täuschung.
 
+### «Ende der Geschichte» · 58 Stahlkisten von Newark nach Houston
+
+- **Kennung:** `EP-b08d96` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Malcom McLean (Wikipedia)](https://de.wikipedia.org/wiki/Malcom_McLean)
+- **Fundstelle:** «Am 26. April 1956 verliess schliesslich das erste seiner Containerschiffe, die Ideal X, den Hafen von Newark (New Jersey) mit dem Ziel Houston in Texas.» Zuvor hatte McLean «zwei gebrauchte Tanker von der US-Marine» erworben, die «zu Containerschiffen umgebaut wurden». Die Zahl 58 steht im Artikel «Ideal X» in den Schiffsdaten (Container = 58), das Schiff dort als «zum Containerfrachter umgebauter T2-SE-A1 Tanker».
+- **Geprüft:** 2026-08-05
+
+> Der Container hat einen Erfinder mit Namen: Der amerikanische Spediteur Malcom McLean liess 1956 einen umgebauten Tanker mit 58 Stahlkisten von Newark nach Houston fahren, weil ihn das teure Umladen von Hand ärgerte, und die Kosten für das Verladen einer Tonne Fracht sanken dadurch auf einen Bruchteil. Drei Jahrzehnte später reichte der Physiker Tim Berners-Lee am Forschungszentrum CERN einen Vorschlag für ein Hypertext-System ein, sein Vorgesetzter notierte darauf «vage, aber aufregend». 1993 gab das CERN diese Technik zur freien Nutzung frei, ohne Patent und ohne Gebühren, einer der folgenreichsten Verzichte der Wirtschaftsgeschichte. So senkten eine Blechkiste und ein Stück verschenkter Software gemeinsam die Kosten der Distanz, für Waren die eine, für Information die andere. Fabriken konnten dorthin wandern, wo die Löhne am tiefsten waren, und Nachrichten überallhin, wo ein Bildschirm stand. Die Welt wurde kleiner, und was das für Arbeit und Zusammenhalt bedeutet, verhandeln wir bis heute.
+
+### «Ende der Geschichte» · amerikanische Spediteur
+
+- **Kennung:** `EP-b08d96` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Malcom McLean (Wikipedia)](https://de.wikipedia.org/wiki/Malcom_McLean)
+- **Fundstelle:** McLean kaufte 1935 «von dem gesparten Geld einen gebrauchten LKW» und gründete mit seinen Geschwistern «eine kleine Spedition»; die Einleitung nennt ihn «Reeder und Transportunternehmer». Schon «1937 ärgerte sich McLean … über die langen Wartezeiten, die beim Entladen» anfielen.
+- **Geprüft:** 2026-08-05
+
+> Der Container hat einen Erfinder mit Namen: Der amerikanische Spediteur Malcom McLean liess 1956 einen umgebauten Tanker mit 58 Stahlkisten von Newark nach Houston fahren, weil ihn das teure Umladen von Hand ärgerte, und die Kosten für das Verladen einer Tonne Fracht sanken dadurch auf einen Bruchteil. Drei Jahrzehnte später reichte der Physiker Tim Berners-Lee am Forschungszentrum CERN einen Vorschlag für ein Hypertext-System ein, sein Vorgesetzter notierte darauf «vage, aber aufregend». 1993 gab das CERN diese Technik zur freien Nutzung frei, ohne Patent und ohne Gebühren, einer der folgenreichsten Verzichte der Wirtschaftsgeschichte. So senkten eine Blechkiste und ein Stück verschenkter Software gemeinsam die Kosten der Distanz, für Waren die eine, für Information die andere. Fabriken konnten dorthin wandern, wo die Löhne am tiefsten waren, und Nachrichten überallhin, wo ein Bildschirm stand. Die Welt wurde kleiner, und was das für Arbeit und Zusammenhalt bedeutet, verhandeln wir bis heute.
+
+### «Ende der Geschichte» · «vage, aber aufregend»
+
+- **Kennung:** `EP-b08d96` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Heinz Nixdorf MuseumsForum: Wolkig aber aufregend, wie das Web geboren wurde](https://blog.hnf.de/wolkig-aber-aufregend-wie-das-web-geboren-wurde/)
+- **Fundstelle:** «Laut Überlieferung stellte Berners-Lee den Vorschlag am 12. März 1989 fertig … verteilte er ihn an die Kollegen bis hinauf zum Leiter seiner Arbeitsgruppe, den englischen Physiker Mike Sendall.» Und: «In den World-Wide-Web-Mythos gingen zwei Notizen von Mike Sendall ein: das ‹Vague but exciting› … auf dem Cover.» Das Original ist englisch; die deutschen Wiedergaben schwanken (das HNF schreibt «wolkig aber aufregend», die Computerwoche «Vage, aber hochinteressant»).
+- **Geprüft:** 2026-08-05
+
+> Der Container hat einen Erfinder mit Namen: Der amerikanische Spediteur Malcom McLean liess 1956 einen umgebauten Tanker mit 58 Stahlkisten von Newark nach Houston fahren, weil ihn das teure Umladen von Hand ärgerte, und die Kosten für das Verladen einer Tonne Fracht sanken dadurch auf einen Bruchteil. Drei Jahrzehnte später reichte der Physiker Tim Berners-Lee am Forschungszentrum CERN einen Vorschlag für ein Hypertext-System ein, sein Vorgesetzter notierte darauf «vage, aber aufregend». 1993 gab das CERN diese Technik zur freien Nutzung frei, ohne Patent und ohne Gebühren, einer der folgenreichsten Verzichte der Wirtschaftsgeschichte. So senkten eine Blechkiste und ein Stück verschenkter Software gemeinsam die Kosten der Distanz, für Waren die eine, für Information die andere. Fabriken konnten dorthin wandern, wo die Löhne am tiefsten waren, und Nachrichten überallhin, wo ein Bildschirm stand. Die Welt wurde kleiner, und was das für Arbeit und Zusammenhalt bedeutet, verhandeln wir bis heute.
+
+### «Ende der Geschichte» · 1993 gab das CERN diese Technik zur freien Nutzung frei
+
+- **Kennung:** `EP-b08d96` (Vertiefung «Mehr lesen»)
+- **Quelle:** [World Wide Web (Wikipedia)](https://de.wikipedia.org/wiki/World_Wide_Web)
+- **Fundstelle:** «Am 30. April 1993 gab das Direktorium des europäischen Kernforschungszentrums CERN das World Wide Web kostenlos für die Öffentlichkeit frei.» Zur Gebührenfreiheit auch: Das WWW «baut … auf einem freien Protokoll auf, was die Entwicklung von Servern und Clients ohne Beschränkungen durch Lizenzen möglich machte».
+- **Geprüft:** 2026-08-05
+
+> Der Container hat einen Erfinder mit Namen: Der amerikanische Spediteur Malcom McLean liess 1956 einen umgebauten Tanker mit 58 Stahlkisten von Newark nach Houston fahren, weil ihn das teure Umladen von Hand ärgerte, und die Kosten für das Verladen einer Tonne Fracht sanken dadurch auf einen Bruchteil. Drei Jahrzehnte später reichte der Physiker Tim Berners-Lee am Forschungszentrum CERN einen Vorschlag für ein Hypertext-System ein, sein Vorgesetzter notierte darauf «vage, aber aufregend». 1993 gab das CERN diese Technik zur freien Nutzung frei, ohne Patent und ohne Gebühren, einer der folgenreichsten Verzichte der Wirtschaftsgeschichte. So senkten eine Blechkiste und ein Stück verschenkter Software gemeinsam die Kosten der Distanz, für Waren die eine, für Information die andere. Fabriken konnten dorthin wandern, wo die Löhne am tiefsten waren, und Nachrichten überallhin, wo ein Bildschirm stand. Die Welt wurde kleiner, und was das für Arbeit und Zusammenhalt bedeutet, verhandeln wir bis heute.
+
 ---
 
 ## Bewusst ohne Beleg
 
 Hier wurde gesucht und nichts Brauchbares gefunden. Das ist festgehalten, damit
 niemand später aus Verlegenheit eine ungefähr passende Quelle einsetzt.
+
+### «Ende der Geschichte»
+
+- **Kennung:** `EP-b08d96`
+- **Betrifft:** «die Kosten für das Verladen einer Tonne Fracht sanken dadurch auf einen Bruchteil» (gleichlautend in PP-08cebe: «senkte die Verladekosten auf einen Bruchteil»)
+- **Grund:** Die Zahl hinter dieser Aussage (rund 5.83 Dollar je Tonne im Stückgutbetrieb gegen etwa 16 Cent auf der Ideal X) geht auf Marc Levinsons «The Box» (2006) zurück. Weder die deutsche noch die englische Wikipedia führt sie, und eine frei zugängliche deutschsprachige Darstellung mit dieser Angabe haben wir am 2026-08-05 nicht gefunden. Das Buch selbst liegt uns nicht vor, und aus dem Gedächtnis wird hier nichts belegt. Die Aussage bleibt darum unbelegt stehen, statt sie in eine unscharfe Formulierung umzubauen: Belegt ist der Anlass (McLean ärgerte sich über die Wartezeiten beim Entladen), nicht die Höhe der Ersparnis.
+- **Notiert:** 2026-08-05
 
 ### Kompass und Schiesspulver
 

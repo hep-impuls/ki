@@ -506,6 +506,68 @@ export const BELEGE: Beleg[] = [
       "Der Antrag von 1955: «We propose that a 2 month, 10 man study of artificial intelligence be carried out during the summer of 1956 at Dartmouth College.» Die Werkstatt selbst lief «im Sommer 1956 vom 19. Juni bis zum 16. August». Vorher liess der Text den Begriff 1956 entstehen.",
     geprueft: "2026-08-05",
   },
+
+  /* ── Container und Web: die Kosten der Distanz ────────────────────────────
+   * Nachgetragen am 2026-08-05 auf Christofs Wunsch. Die Container-Geschichte
+   * stand in zwei Blöcken («Ende der Geschichte» und «Grenzenloser
+   * Welthandel») und in beiden ohne Beleg.
+   *
+   * Nicht belegt werden konnte die Kostenangabe («auf einen Bruchteil»), sie
+   * steht als begründeter Nicht-Beleg weiter unten. */
+  {
+    id: "EP-b08d96",
+    anker: "58 Stahlkisten von Newark nach Houston",
+    url: "https://de.wikipedia.org/wiki/Malcom_McLean",
+    titel: "Malcom McLean (Wikipedia)",
+    stelle:
+      "«Am 26. April 1956 verliess schliesslich das erste seiner Containerschiffe, die Ideal X, den Hafen von Newark (New Jersey) mit dem Ziel Houston in Texas.» Zuvor hatte McLean «zwei gebrauchte Tanker von der US-Marine» erworben, die «zu Containerschiffen umgebaut wurden». Die Zahl 58 steht im Artikel «Ideal X» in den Schiffsdaten (Container = 58), das Schiff dort als «zum Containerfrachter umgebauter T2-SE-A1 Tanker».",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-b08d96",
+    anker: "amerikanische Spediteur",
+    url: "https://de.wikipedia.org/wiki/Malcom_McLean",
+    titel: "Malcom McLean (Wikipedia)",
+    stelle:
+      "McLean kaufte 1935 «von dem gesparten Geld einen gebrauchten LKW» und gründete mit seinen Geschwistern «eine kleine Spedition»; die Einleitung nennt ihn «Reeder und Transportunternehmer». Schon «1937 ärgerte sich McLean … über die langen Wartezeiten, die beim Entladen» anfielen.",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-b08d96",
+    anker: "«vage, aber aufregend»",
+    url: "https://blog.hnf.de/wolkig-aber-aufregend-wie-das-web-geboren-wurde/",
+    titel: "Heinz Nixdorf MuseumsForum: Wolkig aber aufregend, wie das Web geboren wurde",
+    stelle:
+      "«Laut Überlieferung stellte Berners-Lee den Vorschlag am 12. März 1989 fertig … verteilte er ihn an die Kollegen bis hinauf zum Leiter seiner Arbeitsgruppe, den englischen Physiker Mike Sendall.» Und: «In den World-Wide-Web-Mythos gingen zwei Notizen von Mike Sendall ein: das ‹Vague but exciting› … auf dem Cover.» Das Original ist englisch; die deutschen Wiedergaben schwanken (das HNF schreibt «wolkig aber aufregend», die Computerwoche «Vage, aber hochinteressant»).",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-b08d96",
+    anker: "1993 gab das CERN diese Technik zur freien Nutzung frei",
+    url: "https://de.wikipedia.org/wiki/World_Wide_Web",
+    titel: "World Wide Web (Wikipedia)",
+    stelle:
+      "«Am 30. April 1993 gab das Direktorium des europäischen Kernforschungszentrums CERN das World Wide Web kostenlos für die Öffentlichkeit frei.» Zur Gebührenfreiheit auch: Das WWW «baut … auf einem freien Protokoll auf, was die Entwicklung von Servern und Clients ohne Beschränkungen durch Lizenzen möglich machte».",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "PP-08cebe",
+    anker: "1956 erstmals genormte Stahlkisten auf ein umgebautes Schiff heben",
+    url: "https://de.wikipedia.org/wiki/Ideal_X",
+    titel: "Ideal X (Wikipedia)",
+    stelle:
+      "«Die Jungfernfahrt als Containerschiff fand am 26. April 1956 auf der Route von Newark (New Jersey) nach Houston statt und wurde sowohl von Ladungsbeteiligten als auch von Gewerkschaften und Regierungsvertretern genau beobachtet.» Das Schiff war ein umgebauter T2-Tanker mit 58 Containern.",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "PP-b4342b",
+    anker: "vage, aber aufregend",
+    url: "https://blog.hnf.de/wolkig-aber-aufregend-wie-das-web-geboren-wurde/",
+    titel: "Heinz Nixdorf MuseumsForum: Wolkig aber aufregend, wie das Web geboren wurde",
+    stelle:
+      "Der Vermerk stammt von Mike Sendall, dem Leiter der Arbeitsgruppe, auf dem Deckblatt des Vorschlags vom 12. März 1989: «Vague but exciting». Das Papier hiess «Information Management: A Proposal».",
+    geprueft: "2026-08-05",
+  },
 ];
 
 /**
@@ -523,6 +585,14 @@ export interface KeinBeleg {
 }
 
 export const OHNE_BELEG: KeinBeleg[] = [
+  {
+    id: "EP-b08d96",
+    betrifft:
+      "«die Kosten für das Verladen einer Tonne Fracht sanken dadurch auf einen Bruchteil» (gleichlautend in PP-08cebe: «senkte die Verladekosten auf einen Bruchteil»)",
+    grund:
+      "Die Zahl hinter dieser Aussage (rund 5.83 Dollar je Tonne im Stückgutbetrieb gegen etwa 16 Cent auf der Ideal X) geht auf Marc Levinsons «The Box» (2006) zurück. Weder die deutsche noch die englische Wikipedia führt sie, und eine frei zugängliche deutschsprachige Darstellung mit dieser Angabe haben wir am 2026-08-05 nicht gefunden. Das Buch selbst liegt uns nicht vor, und aus dem Gedächtnis wird hier nichts belegt. Die Aussage bleibt darum unbelegt stehen, statt sie in eine unscharfe Formulierung umzubauen: Belegt ist der Anlass (McLean ärgerte sich über die Wartezeiten beim Entladen), nicht die Höhe der Ersparnis.",
+    notiert: "2026-08-05",
+  },
   {
     id: "PP-8fa9ca",
     betrifft:
