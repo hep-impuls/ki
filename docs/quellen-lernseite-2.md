@@ -13,8 +13,8 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 55 |
-| Belegte Textblöcke | 34 |
+| Belege | 58 |
+| Belegte Textblöcke | 35 |
 | Begründete Nicht-Belege | 5 |
 | Aussagen mit Standdatum | 3 |
 
@@ -407,6 +407,33 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 - **Geprüft:** 2026-08-05
 
 > Dieses Bild ist kein Gemälde, sondern eine Fotografie, die am 7. Dezember 1972 aus rund 29 000 km Entfernung entstand. Aufgenommen hat sie die Besatzung von Apollo 17, der bislang letzten bemannten Mondlandung. Zu sehen ist die Erde als ganze, runde Kugel, mit Wolkenwirbeln, Ozeanen und Kontinenten in einem einzigen Blick. Von hier oben sind keine Nationen und keine Grenzen erkennbar, nur ein einziger, verletzlicher Planet im schwarzen All. «Blue Marble» wurde zu einem der meistreproduzierten Fotos der Geschichte und zur Ikone der Umweltbewegung.
+
+### Jetzt: Umwelt & KI · ein Fluss erhält in Neuseeland eine Rechtspersönlichkeit
+
+- **Kennung:** `EP-b4107d` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Whanganui River (Wikipedia)](https://de.wikipedia.org/wiki/Whanganui_River)
+- **Fundstelle:** Abschnitt «Juristische Person»: «Im Jahr 2017 wurde dem Whanganui River, zusammen mit den ihn umgebenden Gebieten, aufgrund seiner kulturellen Bedeutung für das Volk der Māori, der Status einer juristischen Person zuerkannt.» Der Artikel «Recht der Natur» fasst es so: «der Fluss gehört sich nun selbst».
+- **Geprüft:** 2026-08-05
+
+> Latour begann als eine Art Feldforscher unter Wissenschaftlern: In den 1970er-Jahren beobachtete er zwei Jahre lang ein kalifornisches Labor, so wie Ethnologen ein fremdes Dorf beobachten, und beschrieb, wie Fakten nicht einfach gefunden, sondern in einem Geflecht aus Menschen, Geräten und Texten hergestellt werden. Später schlug er ein «Parlament der Dinge» vor, eine Politik, in der auch Flüsse, Klima und Techniken vertreten wären, weil sie längst mithandeln. Was einst exzentrisch klang, liest sich heute fast wie eine Alltagsbeschreibung: Ein Virus legt den Planeten still, ein Algorithmus entscheidet über Kredite mit, ein Fluss erhält in Neuseeland eine Rechtspersönlichkeit. Latour starb im Oktober 2022, wenige Wochen bevor ChatGPT erschien, die Debatte darüber, wie viel «Akteur» in einer solchen Maschine steckt, erlebte er nicht mehr. Seine Denkfigur aber liegt bereit: Verantwortung verschwindet nicht, wenn viele mithandeln, sie muss neu verteilt und benannt werden. Diese Linie führt weiter: Der Kyotoer Philosoph Yasuo Deguchi verschiebt das Handeln vom «Ich» auf ein «Wir», das Menschen, andere Lebewesen und Artefakte einschliesst, und schlägt vor, KI als Gefährtin zu behandeln statt als Dienerin. Gegen diese Ausweitung lässt sich Hannah Arendt stellen: Sie führte 1958 die Natalität in ihre Theorie des Handelns ein, weil dem Neuankömmling «die Fähigkeit zukommt, selbst einen neuen Anfang zu machen». Arendt schrieb lange vor der KI, doch genau hier liegt die offene Frage dieser Epoche: Heisst Handeln, in einem Geflecht mitzuwirken, oder heisst es, von selbst anzufangen? Vielleicht beginnt genau hier die Schablone, die dieser Epoche noch fehlt.
+
+### Jetzt: Umwelt & KI · selbst einen neuen Anfang zu machen
+
+- **Kennung:** `EP-b4107d` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Natalität (Wikipedia), zu Hannah Arendt](https://de.wikipedia.org/wiki/Natalit%C3%A4t)
+- **Fundstelle:** «Hannah Arendt führte 1958 den Begriff ‹Natalität› in ihre Theorie des Handelns ein.» Die Begründung wörtlich, mit Verweis auf «Vita activa», 10. Auflage 1998, S. 18: «dem Neuankömmling die Fähigkeit zukommt, selbst einen neuen Anfang zu machen, d. h. zu handeln».
+- **Geprüft:** 2026-08-05
+
+> Latour begann als eine Art Feldforscher unter Wissenschaftlern: In den 1970er-Jahren beobachtete er zwei Jahre lang ein kalifornisches Labor, so wie Ethnologen ein fremdes Dorf beobachten, und beschrieb, wie Fakten nicht einfach gefunden, sondern in einem Geflecht aus Menschen, Geräten und Texten hergestellt werden. Später schlug er ein «Parlament der Dinge» vor, eine Politik, in der auch Flüsse, Klima und Techniken vertreten wären, weil sie längst mithandeln. Was einst exzentrisch klang, liest sich heute fast wie eine Alltagsbeschreibung: Ein Virus legt den Planeten still, ein Algorithmus entscheidet über Kredite mit, ein Fluss erhält in Neuseeland eine Rechtspersönlichkeit. Latour starb im Oktober 2022, wenige Wochen bevor ChatGPT erschien, die Debatte darüber, wie viel «Akteur» in einer solchen Maschine steckt, erlebte er nicht mehr. Seine Denkfigur aber liegt bereit: Verantwortung verschwindet nicht, wenn viele mithandeln, sie muss neu verteilt und benannt werden. Diese Linie führt weiter: Der Kyotoer Philosoph Yasuo Deguchi verschiebt das Handeln vom «Ich» auf ein «Wir», das Menschen, andere Lebewesen und Artefakte einschliesst, und schlägt vor, KI als Gefährtin zu behandeln statt als Dienerin. Gegen diese Ausweitung lässt sich Hannah Arendt stellen: Sie führte 1958 die Natalität in ihre Theorie des Handelns ein, weil dem Neuankömmling «die Fähigkeit zukommt, selbst einen neuen Anfang zu machen». Arendt schrieb lange vor der KI, doch genau hier liegt die offene Frage dieser Epoche: Heisst Handeln, in einem Geflecht mitzuwirken, oder heisst es, von selbst anzufangen? Vielleicht beginnt genau hier die Schablone, die dieser Epoche noch fehlt.
+
+### Jetzt: Umwelt & KI · als Gefährtin zu behandeln statt als Dienerin
+
+- **Kennung:** `EP-b4107d` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Universität Klagenfurt, FutureTalks mit Yasuo Deguchi](https://www.aau.at/en/blog/futuretalk-human-technology-living-with-ai/)
+- **Fundstelle:** Zur WE-turn: «This framework shifts the subject of action, self, and moral value from the individual ‹I› to the collective ‹WE›, understood as a multi-agent system encompassing humans, non-human living things, and artifacts.» Zum Verhältnis zur KI: «The Fellowship Model of AI represents an entirely different vision how to engage with AI as a society and as socially, not as Master-Slave but as fellows towards a fulfilled life.»
+- **Geprüft:** 2026-08-05
+
+> Latour begann als eine Art Feldforscher unter Wissenschaftlern: In den 1970er-Jahren beobachtete er zwei Jahre lang ein kalifornisches Labor, so wie Ethnologen ein fremdes Dorf beobachten, und beschrieb, wie Fakten nicht einfach gefunden, sondern in einem Geflecht aus Menschen, Geräten und Texten hergestellt werden. Später schlug er ein «Parlament der Dinge» vor, eine Politik, in der auch Flüsse, Klima und Techniken vertreten wären, weil sie längst mithandeln. Was einst exzentrisch klang, liest sich heute fast wie eine Alltagsbeschreibung: Ein Virus legt den Planeten still, ein Algorithmus entscheidet über Kredite mit, ein Fluss erhält in Neuseeland eine Rechtspersönlichkeit. Latour starb im Oktober 2022, wenige Wochen bevor ChatGPT erschien, die Debatte darüber, wie viel «Akteur» in einer solchen Maschine steckt, erlebte er nicht mehr. Seine Denkfigur aber liegt bereit: Verantwortung verschwindet nicht, wenn viele mithandeln, sie muss neu verteilt und benannt werden. Diese Linie führt weiter: Der Kyotoer Philosoph Yasuo Deguchi verschiebt das Handeln vom «Ich» auf ein «Wir», das Menschen, andere Lebewesen und Artefakte einschliesst, und schlägt vor, KI als Gefährtin zu behandeln statt als Dienerin. Gegen diese Ausweitung lässt sich Hannah Arendt stellen: Sie führte 1958 die Natalität in ihre Theorie des Handelns ein, weil dem Neuankömmling «die Fähigkeit zukommt, selbst einen neuen Anfang zu machen». Arendt schrieb lange vor der KI, doch genau hier liegt die offene Frage dieser Epoche: Heisst Handeln, in einem Geflecht mitzuwirken, oder heisst es, von selbst anzufangen? Vielleicht beginnt genau hier die Schablone, die dieser Epoche noch fehlt.
 
 ### Jetzt: Umwelt & KI · 148 Tage lang
 

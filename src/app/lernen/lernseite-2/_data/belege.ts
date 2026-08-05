@@ -497,6 +497,45 @@ export const BELEGE: Beleg[] = [
       "«Mit Apollo 17 landeten zum sechsten und vorerst letzten Mal Menschen auf dem Mond.» Als letzte bemannte MondMISSION gilt sie seit April 2026 nicht mehr: «Apollo 17 blieb bis zur Mission Artemis 2 im Jahr 2026 der letzte bemannte Mondflug» — Artemis 2 umrundete den Mond, landete aber nicht.",
     geprueft: "2026-08-05",
   },
+  /* Latour-Vertiefung, ergänzt am 2026-08-05 auf Christofs Hinweis: Die
+   * Rechtspersönlichkeit des Flusses stand ohne Beleg da, und Latour allein
+   * markiert keinen Unterschied zwischen Mensch und Maschine — er verwischt
+   * ihn gerade. Darum kommen jetzt beide Richtungen vor: Deguchi weitet das
+   * Handeln auf Artefakte aus, Arendt setzt das Anfangen dagegen. Beide sind
+   * im Lernset schon anderswo eingeführt («Wege der Orientierung», «Was ist
+   * der Mensch?»), waren dort aber unbelegt. */
+  {
+    id: "EP-b4107d",
+    anker: "ein Fluss erhält in Neuseeland eine Rechtspersönlichkeit",
+    url: "https://de.wikipedia.org/wiki/Whanganui_River",
+    titel: "Whanganui River (Wikipedia)",
+    stelle:
+      "Abschnitt «Juristische Person»: «Im Jahr 2017 wurde dem Whanganui River, zusammen mit den ihn umgebenden Gebieten, aufgrund seiner kulturellen Bedeutung für das Volk der Māori, der Status einer juristischen Person zuerkannt.» Der Artikel «Recht der Natur» fasst es so: «der Fluss gehört sich nun selbst».",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-b4107d",
+    anker: "selbst einen neuen Anfang zu machen",
+    url: "https://de.wikipedia.org/wiki/Natalit%C3%A4t",
+    titel: "Natalität (Wikipedia), zu Hannah Arendt",
+    stelle:
+      "«Hannah Arendt führte 1958 den Begriff ‹Natalität› in ihre Theorie des Handelns ein.» Die Begründung wörtlich, mit Verweis auf «Vita activa», 10. Auflage 1998, S. 18: «dem Neuankömmling die Fähigkeit zukommt, selbst einen neuen Anfang zu machen, d. h. zu handeln».",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-b4107d",
+    // Bewusst englisch: Deguchi ist nicht ins Deutsche übersetzt, eine
+    // deutschsprachige Darstellung seiner WE-turn haben wir nicht gefunden.
+    // Die Universität Klagenfurt ist immerhin eine Hochschule im
+    // deutschsprachigen Raum, die ihn selbst eingeladen hat.
+    anker: "als Gefährtin zu behandeln statt als Dienerin",
+    url: "https://www.aau.at/en/blog/futuretalk-human-technology-living-with-ai/",
+    titel: "Universität Klagenfurt, FutureTalks mit Yasuo Deguchi",
+    stelle:
+      "Zur WE-turn: «This framework shifts the subject of action, self, and moral value from the individual ‹I› to the collective ‹WE›, understood as a multi-agent system encompassing humans, non-human living things, and artifacts.» Zum Verhältnis zur KI: «The Fellowship Model of AI represents an entirely different vision how to engage with AI as a society and as socially, not as Master-Slave but as fellows towards a fulfilled life.»",
+    geprueft: "2026-08-05",
+  },
+
   /* KI in der Verunsicherung, nachgetragen am 2026-08-05 auf Christofs
    * Hinweis: Der Block nannte die KI nur in einer Klammer, und von drei
    * Szenen der Vertiefung trugen zwei das Klima. Jetzt 2:2, und die

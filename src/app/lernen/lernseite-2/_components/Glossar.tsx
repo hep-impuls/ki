@@ -186,6 +186,8 @@ export const GLOSSAR: Record<string, string> = {
     "Bei Hartmut Rosa: ein antwortendes, lebendiges Verhältnis zur Welt — Gegenbegriff zur blossen Beschleunigung.",
   "Akteur-Netzwerk-Theorie":
     "Bruno Latours Ansatz: Wirkung entsteht im Netz aus Menschen UND Dingen — nichts handelt allein.",
+  Natalität:
+    "Bei Hannah Arendt: Jeder Mensch kommt als Neuer zur Welt und kann darum etwas anfangen, das vorher nicht abzusehen war.",
   "Manhattan-Projekt":
     "Das geheime US-Grossprojekt (1942–45), das die erste Atombombe baute.",
   Transformer:
