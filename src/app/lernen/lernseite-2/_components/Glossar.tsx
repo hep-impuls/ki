@@ -198,6 +198,8 @@ export const GLOSSAR: Record<string, string> = {
     "Aufteilung der Staatsmacht in Gesetzgebung, Regierung und Gerichte — zum Schutz vor Machtmissbrauch.",
   Anthropozän:
     "Vorgeschlagenes Erdzeitalter, in dem der Mensch die Erde (Klima, Arten, Gestein) prägend verändert.",
+  Erdüberlastungstag:
+    "Der Tag im Jahr, an dem die Menschheit mehr verbraucht hat, als die Erde in diesem Jahr nachliefern kann; berechnet wird er von der Organisation Global Footprint Network, englisch heisst er «Earth Overshoot Day».",
   /* Beugungsformen brauchen je einen eigenen Eintrag, weil auf Wortgrenze
      gesucht wird. Im Bestand steht derzeit nur «fossilen»; die übrigen Formen
      sind Vorsorge, damit der Hover nicht beim nächsten Satz ausfällt. */

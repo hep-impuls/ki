@@ -497,8 +497,40 @@ export const BELEGE: Beleg[] = [
       "«Mit Apollo 17 landeten zum sechsten und vorerst letzten Mal Menschen auf dem Mond.» Als letzte bemannte MondMISSION gilt sie seit April 2026 nicht mehr: «Apollo 17 blieb bis zur Mission Artemis 2 im Jahr 2026 der letzte bemannte Mondflug» — Artemis 2 umrundete den Mond, landete aber nicht.",
     geprueft: "2026-08-05",
   },
+  /* Klimafolgen in der Vertiefung, nachgetragen am 2026-08-05 auf Christofs
+   * Hinweis: Der «Mehr lesen»-Text war fast reine KI-Geschichte und ging auf
+   * den Klimawandel kaum ein, obwohl die Epoche «Umwelt & KI» heisst.
+   * Anker liegen NEBEN «Erdüberlastungstag» — das Wort trägt eine
+   * Glossar-Erklärung, ein Beleg darüber würde sie verdecken. */
   {
-    id: "EP-92640b",
+    id: "EP-eb0b26",
+    anker: "1971 fiel er auf den 20. Dezember",
+    url: "https://de.wikipedia.org/wiki/Erd%C3%BCberlastungstag",
+    titel: "Erdüberlastungstag (Wikipedia)",
+    stelle:
+      "Definition: der Tag, «an dem die menschliche Nachfrage nach nachwachsenden Rohstoffen das Angebot und die Kapazität der Erde zur Reproduktion dieser Ressourcen in diesem Jahr übersteigt». In der Jahrestabelle steht für 1971 der 20. Dezember; zu 2025: «Im Jahr 2025 lag der Tag am 24. Juli, das war der früheste Termin seit Beginn der Berechnungen.»",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-eb0b26",
+    anker: "am 30. Juli, kam allerdings nicht von sparsamerem Leben",
+    url: "https://de.wikipedia.org/wiki/Erd%C3%BCberlastungstag",
+    titel: "Erdüberlastungstag (Wikipedia)",
+    stelle:
+      "Wörtlich: «Für das Jahr 2026 wurde der 30. Juli als Erdüberlastungstag berechnet. Das im Vergleich zu den Vorjahren spätere Datum resultierte aber nicht aus einer nachhaltigeren Lebensweise, sondern beruhte auf aktualisierten Daten zu dessen Berechnung, die vor allem eine höhere Aufnahmefähigkeit der Ozeane für Kohlenstoff [ergaben].»",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-eb0b26",
+    anker: "weitere zwölf Prozent Verlust",
+    url: "https://de.wikipedia.org/wiki/Gletscherschwund_seit_1850",
+    titel: "Gletscherschwund seit 1850 (Wikipedia)",
+    stelle:
+      "Wörtlich: «Gemäss einer Studie der ETH Zürich hat sich das Volumen der Gletscher in der Schweiz zwischen 1931 und 2016 halbiert. Von 2016 bis 2022 haben die Gletscher laut dem Schweizerischen Gletschermessnetz (GLAMOS) weitere 12 Prozent an Volumen verloren.»",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-eb0b26",
     anker: "stand 1955 erstmals im Antrag",
     url: "https://de.wikipedia.org/wiki/Dartmouth_Conference",
     titel: "Dartmouth Conference (Wikipedia)",
