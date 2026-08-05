@@ -723,12 +723,12 @@ neu auf: die Frage nach dem Menschen selbst.
             Merleau-Ponty und Rosa.
           </p>
           <p>
-            Wichtig bleibt der Blick auf das Wesentliche. Es geht nicht darum, was
-            die Maschine dem Menschen abnimmt, sondern was Mensch und was Maschine
-            im Kern ausmacht. Der Mensch kann anfangen und er urteilt. Die Maschine
-            kann das nicht, dafür erkennt sie Muster in Daten, ob riesig oder
-            klein. Du musst nicht jedem Bereich zustimmen. Geh sie durch,
-            vergleiche und bewerte, welcher Zugang dir hilft.
+            Wichtig bleibt der Blick auf das Wesentliche. Es geht nicht darum, was die
+            Maschine dem Menschen abnimmt, sondern was Mensch und was Maschine im Kern
+            ausmacht. Der Mensch kann Neues beginnen und er urteilt. Die Maschine kann das
+            nicht, dafür erkennt sie Muster in Daten, ob riesig oder klein. Du musst nicht
+            jedem Bereich zustimmen. Geh die Bereiche durch, vergleiche und bewerte, welcher
+            Zugang dir hilft.
           </p>
         </div>
         <Aufgabe className="mt-md">
