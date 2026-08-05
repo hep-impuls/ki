@@ -89,7 +89,7 @@ Der Staat versucht, KI mit Gesetzen zu lenken. Solche Regeln sollen Grundrechte,
 **[VA-eb3a6b]** *(Fallbeispiel · Regulierung)*
 Die Europäische Union hat 2024 den AI Act beschlossen, das weltweit erste umfassende KI-Gesetz; in Kraft ist er seit dem 1. August 2024, seine Pflichten greifen aber gestaffelt über mehrere Jahre. Er teilt Anwendungen nach ihrem Risiko in Stufen ein, von frei erlaubt bis ganz verboten. Dazu kommen eigene Regeln für grosse Allzweckmodelle wie GPT oder Claude sowie Transparenzpflichten, etwa die Kennzeichnung von KI-Inhalten.
 
-> **Belegt** («gestaffelt»): [EU AI Act Service Desk: Zeitplan der Anwendung](https://ai-act-service-desk.ec.europa.eu/en/ai-act/eu-ai-act-implementation-timeline) — In Kraft am 1. August 2024. Verbote ab 2. Februar 2025, Regeln für Allzweckmodelle ab 2. August 2025, Transparenzpflichten (Artikel 50) ab 2. August 2026, Hochrisiko-Systeme ab Dezember 2027 bzw. August 2028. *(geprüft 2026-07-26)*
+> **Belegt** («gestaffelt»): [AI-Act-Service-Desk der EU: Zeitplan für die Umsetzung](https://ai-act-service-desk.ec.europa.eu/de/ai-act/timeline/zeitplan-fuer-die-umsetzung-des-eu-ki-gesetzes) — «Die Rechtsvorschriften des KI-Gesetzes der EU gelten schrittweise, wobei eine vollständige Einführung bis zum 2. August 2027 vorgesehen ist.» In Kraft am 1. August 2024, Verbote ab 2. Februar 2025, Regeln für Allzweckmodelle ab 2. August 2025, die meisten Vorschriften samt Transparenz (Artikel 50) ab 2. August 2026. *(geprüft 2026-08-05)*
 
 **[VA-03d91c]** *(Fallbeispiel · Geopolitik)*
 Ab 2022 verschärften die USA die Ausfuhrregeln für ihre stärksten KI-Chips nach China. Der Hersteller Nvidia baute daraufhin absichtlich langsamere Chips, nur um weiter liefern zu dürfen. Seit Januar 2026 werden bestimmte Ausfuhren wieder von Fall zu Fall geprüft und unter Bedingungen erlaubt. Die Regeln kippen also mit der Politik, und genau daran sieht man, dass KI längst ein Machtthema zwischen Staaten ist.
@@ -99,7 +99,7 @@ Ab 2022 verschärften die USA die Ausfuhrregeln für ihre stärksten KI-Chips na
 **[VA-6068d8]** *(Fallbeispiel · Kultureller Bias und Technikverständnis)*
 Eine UNESCO-Studie von 2024 prüfte bekannte Sprachmodelle und fand klare Klischees. Frauen wurden viel häufiger mit «Familie» und «Haushalt» verbunden, Männer mit «Karriere» und «Gehalt». Die KI gibt also die Vorurteile ihrer Trainingstexte wieder.
 
-> **Belegt** («UNESCO»): [UNESCO: Studie zu Geschlechterstereotypen in Sprachmodellen](https://www.unesco.org/en/articles/generative-ai-unesco-study-reveals-alarming-evidence-regressive-gender-stereotypes) — Untersucht wurden GPT-2, GPT-3.5 und Llama 2. Ein Modell beschrieb Frauen viermal häufiger in häuslichen Rollen als Männer; bei Llama 2 häuften sich in Männergeschichten Wörter wie «treasure» und «adventurous», in Frauengeschichten «garden» und «love». *(geprüft 2026-07-26)*
+> **Belegt** («UNESCO»): [CIO.de zur UNESCO-Studie über Geschlechterstereotype in Sprachmodellen](https://www.cio.de/article/3696289/ki-sprachmodelle-bedienen-geschlechterstereotype.html) — «Frauen würden bis zu viermal häufiger mit Hausarbeit in Verbindung gebracht als Männer … Sie stünden häufig im Kontext von Begriffen wie ‹Haus›, ‹Familie› und ‹Kinder›, während bei Männern die Begriffe ‹Firma›, ‹Führungskraft›, ‹Gehalt› und ‹Karriere› im Vordergrund stünden.» *(geprüft 2026-08-05)*
 
 **[VA-b3f295]** *(Fallbeispiel · Text- und Archivkompetenz)*
 2023 reichte ein New Yorker Anwalt einen Schriftsatz ein, für den er ChatGPT genutzt hatte. Die KI hatte sechs Gerichtsurteile frei erfunden, die es nie gab, und der Anwalt bekam eine Geldstrafe. Ohne Prüfen an der Quelle wird aus flüssigem Text schnell ein teurer Fehler.
@@ -179,6 +179,8 @@ Aus dem militärischen ARPANET (1969) wird das World Wide Web: 1989 als Vorschla
 
 **[PP-b4342b]** *(Vertiefung «Mehr lesen» · Internet & World Wide Web)*
 Die erste Nachricht im ARPANET wurde am 29. Oktober 1969 von Los Angeles nach Stanford geschickt, geplant war das Wort «LOGIN», nach zwei Buchstaben stürzte die Verbindung ab, übertragen war nur «LO». Aus dem Forschungsnetz weniger Universitäten wuchs über zwei Jahrzehnte ein weltweiter Verbund, doch er blieb ein Werkzeug für Fachleute. Den entscheidenden Schritt machte Tim Berners-Lee am CERN, sein Vorschlag von 1989 für ein Netz aus verknüpften Seiten trug den Vermerk seines Vorgesetzten, das sei vage, aber aufregend. So lief die erste Website der Welt auf einem Rechner bei Genf. Entscheidend war schliesslich, dass das CERN 1993 den Web-Standard zur freien Nutzung freigab, niemand musste Lizenzgebühren zahlen, und genau deshalb konnte das Netz explodieren. Offenheit war hier keine Nebensache, sondern der Bauplan des Erfolgs.
+
+> **Belegt** («vage, aber aufregend»): [Heinz Nixdorf MuseumsForum: Wolkig aber aufregend, wie das Web geboren wurde](https://blog.hnf.de/wolkig-aber-aufregend-wie-das-web-geboren-wurde/) — Der Vermerk stammt von Mike Sendall, dem Leiter der Arbeitsgruppe, auf dem Deckblatt des Vorschlags vom 12. März 1989: «Vague but exciting». Das Papier hiess «Information Management: A Proposal». *(geprüft 2026-08-05)*
 
 **[PP-aadb5f]** *(Kartentext · KI wird öffentlich)*
 Erfunden wurde die KI nicht 2022: Benannt und erforscht wird sie seit 1956 (Dartmouth-Konferenz). Mit GPT und ChatGPT tritt sie 2022 an die Öffentlichkeit und wird alltäglich.

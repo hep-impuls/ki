@@ -2876,12 +2876,12 @@
   "stufe": "mittel",
   "text": "Oben und an den Rändern hängen die Menschen: Programmiererinnen, Künstler, Kabelhersteller, Nutzerinnen. Viele Hände ziehen an denselben Fäden. Das «Wir» von heute ist keine Person, sondern ein Geflecht aus vielen, oft einander unbekannten Beteiligten."
  },
- "EP-396f8b": {
+ "EP-43dad6": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Jetzt: Umwelt & KI",
   "feld": "Kartentext",
   "stufe": "hoch",
-  "text": "Künstliche Intelligenz (mit ChatGPT ab 2022 alltäglich), das Smartphone und globale, digital gesteuerte Lieferketten laufen auf einer noch immer fossilen Infrastruktur. Die Automatisierung erreicht nun Sprache und Kopfarbeit. Die Naturzerstörung erreicht mit der Klimakrise erstmals eine überlebensbedrohende Grössenordnung. Die KI setzte sich nicht wegen einer neuen Idee durch (die ist alt), sondern weil drei Grundlagen zusammenkamen: riesige Datenmengen aus dem Internet, billige Parallel-Rechenleistung (Grafikchips) und die Transformer-Architektur von 2017, dazu enormes privates Kapital."
+  "text": "Künstliche Intelligenz (mit ChatGPT ab 2022 alltäglich), das Smartphone und globale, digital gesteuerte Lieferketten laufen auf einer noch immer fossilen Infrastruktur. Die Automatisierung erreicht nun Sprache und Kopfarbeit. Die Naturzerstörung erreicht mit der Klimakrise erstmals eine überlebensbedrohende Grössenordnung. Den grössten Anteil daran hat die Verbrennung von Kohle, Öl und Gas in Kraftwerken, Fahrzeugen und Heizungen; dazu kommen Industrieprozesse wie die Zementherstellung, das Methan der Viehhaltung und die Rodung der Wälder. Die KI setzte sich nicht wegen einer neuen Idee durch (die ist alt), sondern weil drei Grundlagen zusammenkamen: riesige Datenmengen aus dem Internet, billige Parallel-Rechenleistung (Grafikchips) und die Transformer-Architektur von 2017, dazu enormes privates Kapital."
  },
  "EP-92640b": {
   "datei": "_components/VerunsicherungsEpochen.tsx",

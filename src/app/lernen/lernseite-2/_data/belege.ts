@@ -560,6 +560,27 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
+    // Nachgetragen am 2026-08-05: Der Block war mit «Umwelt & KI»
+    // überschrieben, nannte aber keine der Techniken, die die Umwelt
+    // gefährden. Der ergänzte Satz braucht darum einen Beleg.
+    id: "EP-43dad6",
+    anker: "Kraftwerken, Fahrzeugen und Heizungen",
+    url: "https://de.wikipedia.org/wiki/Globale_Erw%C3%A4rmung",
+    titel: "Globale Erwärmung (Wikipedia)",
+    stelle:
+      "Für 2019, bei 59 Milliarden Tonnen CO₂-Äquivalent gesamt: «Die wichtigste Emissionsquelle war die Kohlendioxidfreisetzung aus fossilen Energieträgern und Industrieprozessen mit 38 ± 3 Mrd. Tonnen, gefolgt von Methanfreisetzung (11 ± 3,2 Mrd. Tonnen), Kohlendioxidemissionen aus Landnutzungsänderungen wie Entwaldung (6,6 ± 4,6 Mrd. Tonnen).» Die Aufzählung «Kraftwerke, Fahrzeuge, Heizungen» ist die alltagssprachliche Auflösung von «fossile Energieträger», die der Artikel nicht einzeln aufschlüsselt.",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-43dad6",
+    anker: "das Methan der Viehhaltung und die Rodung der Wälder",
+    url: "https://de.wikipedia.org/wiki/Globale_Erw%C3%A4rmung",
+    titel: "Globale Erwärmung (Wikipedia)",
+    stelle:
+      "Die Erwärmung wird «hauptsächlich durch Treibhausgase (Verbrennung von fossilen Energieträgern, Methanausstoß bei der Viehhaltung, Freisetzung von CO₂ bei der Zementherstellung) sowie durch die Rodungen von Waldgebieten verursacht».",
+    geprueft: "2026-08-05",
+  },
+  {
     id: "PP-b4342b",
     anker: "vage, aber aufregend",
     url: "https://blog.hnf.de/wolkig-aber-aufregend-wie-das-web-geboren-wurde/",

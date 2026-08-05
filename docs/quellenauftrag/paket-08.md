@@ -65,6 +65,10 @@ Wer seine Stellung von Geburt hatte, verliert den Boden. In Athen (ab etwa 500 v
 **[EP-54ba47]** *(Vertiefung «Mehr lesen» · Antike)*
 Aristoteles sammelte zuerst und ordnete dann. In einer Lagune auf der Insel Lesbos untersuchte er Fische, Kraken und Seeigel und beschrieb, wie sie gebaut sind. Seine Schule trug die Verfassungen von 158 griechischen Städten zusammen. In Athen unterrichtete er im Lykeion; nach dessen Wandelhalle, dem «Peripatos», wurde seine Schule später benannt. Aus dem vielen Material zog er Regeln des Schliessens. Ein Beispiel: Alle Menschen sind sterblich. Sokrates ist ein Mensch. Also ist Sokrates sterblich. Das stimmt, egal wer es sagt, egal wie sympathisch oder mächtig diese Person ist. Genau das war die Antwort an die Redekünstler: Ein Schluss stimmt oder stimmt nicht, geschicktes Reden ändert daran nichts. Über arabische Gelehrte und mittelalterliche Klosterschulen kam diese Haltung bis in unsere Schulzimmer.
 
+> **Belegt** («die Verfassungen von 158 griechischen Städten»): [Aristoteles (Wikipedia)](https://de.wikipedia.org/wiki/Aristoteles) — «Die Fülle des Materials, das Aristoteles sammelte (etwa zu den 158 Verfassungen der griechischen Stadtstaaten), lässt darauf schliessen, dass er über zahlreiche Mitarbeiter verfügte.» Vorher stand hier «Gesetze von über 150 Städten» — gesammelt wurden Verfassungen, das erhaltene Stück heisst «Die Verfassung der Athener». *(geprüft 2026-08-05)*
+
+> **Belegt** («nach dessen Wandelhalle»): [Peripatos (Wikipedia)](https://de.wikipedia.org/wiki/Peripatos) — Der Schulname kommt vom Ort: «leitet sich ihr Name von dem Ort ab, an dem der Unterricht stattfand, in diesem Fall vom Peripatos (Wandelhalle)». Die Herleitung vom Herumwandeln beim Lehren, die vorher hier stand, nennt der Artikel eine populäre Etymologie, die «daher nicht zu[trifft]». *(geprüft 2026-08-05)*
+
 **[EP-8cc8f0]** *(Kartentext · Zerbrechen der Ordnung)*
 Unten ziehen zahlreiche Krieger gemeinsam an einem Seil, um das Standbild zu Fall zu bringen. Die alte Weltordnung stürzt nicht von selbst. Sie wird von vielen Händen aktiv niedergerissen: Geschichte als Werk von Menschen, nicht von Schicksal.
 
