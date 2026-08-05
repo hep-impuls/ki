@@ -141,6 +141,8 @@ Der Teppich zeigt Ereignisse, die technologisch, gesellschaftlich, kulturell ode
 **[PP-ed973f]** *(Vertiefung «Mehr lesen» · Der Fall Roms)*
 Rom galt als die ewige Stadt, seit rund achthundert Jahren hatte kein Feind sie eingenommen, dann standen 410 die Westgoten unter Alarich drei Tage lang plündernd in ihren Strassen. Die Nachricht lief durch das ganze Reich, der Gelehrte Hieronymus schrieb aus Bethlehem, eingenommen sei die Stadt, die zuvor die ganze Welt besiegt hatte. Der eigentliche Schlusspunkt kam leise, 476 setzte der Heerführer Odoaker den letzten weströmischen Kaiser ab, einen Jungen namens Romulus Augustulus, und schickte die Kaiserinsignien nach Konstantinopel. Viele Menschen merkten zunächst kaum einen Unterschied, doch über Jahrzehnte zerfielen Strassen, Wasserleitungen und Verwaltung, Städte schrumpften, Wissen ging verloren. Der Fall Roms zeigt, dass grosse Ordnungen selten mit einem Knall enden, sondern in einem langen Ausfransen, das die Menschen erst im Rückblick als Epochenbruch erkennen.
 
+> **Belegt** («seit rund achthundert Jahren hatte kein Feind sie eingenommen»): [Plünderung Roms (410) (Wikipedia)](https://de.wikipedia.org/wiki/Pl%C3%BCnderung_Roms_(410)) — «Dies war die erste Einnahme Roms seit dem Einfall der Kelten rund 800 Jahre zuvor.» Die Plünderung selbst datiert der Artikel auf den 24. bis 27. August 410. Dort steht auch das Hieronymus-Zitat aus Brief 127,12, dem der Schlusssatz dieses Blocks folgt. *(geprüft 2026-08-05)*
+
 **[PP-a89d23]** *(Kartentext · Zweiter Weltkrieg)*
 Der industrialisierte Krieg und die Schoah erschüttern den Glauben an den Fortschritt im Kern. Zugleich treibt der Krieg Technologien voran, etwa Radar, Rakete und Computer.
 
@@ -158,5 +160,5 @@ Container, Freihandelsabkommen und das Internet verflechten die Weltwirtschaft f
 
 ### Thema 02 · Die acht Epochen
 
-**[EP-95148a]** *(Einleitung, Vertiefung · Antike)*
-«Antike» ist ein Sammelname für rund tausend Jahre, von Athen um 450 v. Chr. bis zum Ende des Römischen Reiches im Westen um 500 n. Chr. In dieser Zeit entsteht überraschend viel, was uns heute normal vorkommt: Abstimmungen, Gesetze, die man nachlesen kann, das Theater, die Geometrie, die Philosophie. Trotzdem war das keine gerechte Welt. Die schwere Arbeit machten zu einem grossen Teil Sklaven, Frauen durften nicht mitbestimmen, und wenn die alten Texte «alle Bürger» sagen, sind damit nur die freien Männer der Stadt gemeint. Geblieben ist eine Idee: Man kann die Welt selber verstehen und nachprüfen, statt sie einfach hinzunehmen.
+**[EP-a1d2b4]** *(Einleitung, Vertiefung · Antike)*
+«Antike» ist ein Sammelname für weit über tausend Jahre, von etwa 800 v. Chr. bis zum Ende des Römischen Reiches im Westen um 500 n. Chr. In dieser Zeit entsteht überraschend viel, was uns heute normal vorkommt: Abstimmungen, Gesetze, die man nachlesen kann, das Theater, die Geometrie, die Philosophie. Trotzdem war das keine gerechte Welt. Die schwere Arbeit machten zu einem grossen Teil Sklaven, Frauen durften nicht mitbestimmen, und wenn die alten Texte «alle Bürger» sagen, sind damit nur die freien Männer der Stadt gemeint. Geblieben ist eine Idee: Man kann die Welt selber verstehen und nachprüfen, statt sie einfach hinzunehmen.

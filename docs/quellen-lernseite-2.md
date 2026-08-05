@@ -13,8 +13,8 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 25 |
-| Belegte Textblöcke | 15 |
+| Belege | 41 |
+| Belegte Textblöcke | 29 |
 | Begründete Nicht-Belege | 4 |
 | Aussagen mit Standdatum | 3 |
 
@@ -92,9 +92,9 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 ### Regulierung · gestaffelt
 
 - **Kennung:** `VA-eb3a6b` (Fallbeispiel)
-- **Quelle:** [EU AI Act Service Desk: Zeitplan der Anwendung](https://ai-act-service-desk.ec.europa.eu/en/ai-act/eu-ai-act-implementation-timeline)
-- **Fundstelle:** In Kraft am 1. August 2024. Verbote ab 2. Februar 2025, Regeln für Allzweckmodelle ab 2. August 2025, Transparenzpflichten (Artikel 50) ab 2. August 2026, Hochrisiko-Systeme ab Dezember 2027 bzw. August 2028.
-- **Geprüft:** 2026-07-26
+- **Quelle:** [AI-Act-Service-Desk der EU: Zeitplan für die Umsetzung](https://ai-act-service-desk.ec.europa.eu/de/ai-act/timeline/zeitplan-fuer-die-umsetzung-des-eu-ki-gesetzes)
+- **Fundstelle:** «Die Rechtsvorschriften des KI-Gesetzes der EU gelten schrittweise, wobei eine vollständige Einführung bis zum 2. August 2027 vorgesehen ist.» In Kraft am 1. August 2024, Verbote ab 2. Februar 2025, Regeln für Allzweckmodelle ab 2. August 2025, die meisten Vorschriften samt Transparenz (Artikel 50) ab 2. August 2026.
+- **Geprüft:** 2026-08-05
 
 > Die Europäische Union hat 2024 den AI Act beschlossen, das weltweit erste umfassende KI-Gesetz; in Kraft ist er seit dem 1. August 2024, seine Pflichten greifen aber gestaffelt über mehrere Jahre. Er teilt Anwendungen nach ihrem Risiko in Stufen ein, von frei erlaubt bis ganz verboten. Dazu kommen eigene Regeln für grosse Allzweckmodelle wie GPT oder Claude sowie Transparenzpflichten, etwa die Kennzeichnung von KI-Inhalten.
 
@@ -110,9 +110,9 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 ### Kultureller Bias und Technikverständnis · UNESCO
 
 - **Kennung:** `VA-6068d8` (Fallbeispiel)
-- **Quelle:** [UNESCO: Studie zu Geschlechterstereotypen in Sprachmodellen](https://www.unesco.org/en/articles/generative-ai-unesco-study-reveals-alarming-evidence-regressive-gender-stereotypes)
-- **Fundstelle:** Untersucht wurden GPT-2, GPT-3.5 und Llama 2. Ein Modell beschrieb Frauen viermal häufiger in häuslichen Rollen als Männer; bei Llama 2 häuften sich in Männergeschichten Wörter wie «treasure» und «adventurous», in Frauengeschichten «garden» und «love».
-- **Geprüft:** 2026-07-26
+- **Quelle:** [CIO.de zur UNESCO-Studie über Geschlechterstereotype in Sprachmodellen](https://www.cio.de/article/3696289/ki-sprachmodelle-bedienen-geschlechterstereotype.html)
+- **Fundstelle:** «Frauen würden bis zu viermal häufiger mit Hausarbeit in Verbindung gebracht als Männer … Sie stünden häufig im Kontext von Begriffen wie ‹Haus›, ‹Familie› und ‹Kinder›, während bei Männern die Begriffe ‹Firma›, ‹Führungskraft›, ‹Gehalt› und ‹Karriere› im Vordergrund stünden.»
+- **Geprüft:** 2026-08-05
 
 > Eine UNESCO-Studie von 2024 prüfte bekannte Sprachmodelle und fand klare Klischees. Frauen wurden viel häufiger mit «Familie» und «Haushalt» verbunden, Männer mit «Karriere» und «Gehalt». Die KI gibt also die Vorurteile ihrer Trainingstexte wieder.
 
@@ -254,6 +254,150 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 - **Geprüft:** 2026-07-29
 
 > Rom selbst zeigt den Absturz in Zahlen: Die Stadt zählte auf ihrem Höhepunkt gegen eine Million Einwohnerinnen und Einwohner und schrumpfte nach Kriegen und Plünderungen auf wenige Zehntausend. Als die Ostgoten die Stadt 537 belagerten, zerstörten sie die Wasserleitungen. Brunnen und Thermen versiegten, und das Leben zog sich auf Dauer ans Ufer des Tibers zurück, wo man Wasser holen konnte. Die gewaltige Betonkuppel des Pantheons blieb über tausend Jahre unübertroffen: Niemand hätte sie mehr bauen können. Zur gleichen Zeit begann die Rettung im Kleinen. Der Gelehrte Cassiodorus gründete um 550 in Süditalien das Kloster Vivarium, in dem Mönche antike Handschriften abschrieben, und bald gehörte dieses Kopieren in vielen Klöstern zum Tagewerk. Was wir heute von Cicero oder Vergil lesen, ist fast ausnahmslos durch solche Schreibstuben gegangen. Eine Zivilisation kann eben nicht nur Neues erfinden, sie kann Können auch wieder verlieren.
+
+### Antike · die Verfassungen von 158 griechischen Städten
+
+- **Kennung:** `EP-54ba47` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Aristoteles (Wikipedia)](https://de.wikipedia.org/wiki/Aristoteles)
+- **Fundstelle:** «Die Fülle des Materials, das Aristoteles sammelte (etwa zu den 158 Verfassungen der griechischen Stadtstaaten), lässt darauf schliessen, dass er über zahlreiche Mitarbeiter verfügte.» Vorher stand hier «Gesetze von über 150 Städten» — gesammelt wurden Verfassungen, das erhaltene Stück heisst «Die Verfassung der Athener».
+- **Geprüft:** 2026-08-05
+
+> Aristoteles sammelte zuerst und ordnete dann. In einer Lagune auf der Insel Lesbos untersuchte er Fische, Kraken und Seeigel und beschrieb, wie sie gebaut sind. Seine Schule trug die Verfassungen von 158 griechischen Städten zusammen. In Athen unterrichtete er im Lykeion; nach dessen Wandelhalle, dem «Peripatos», wurde seine Schule später benannt. Aus dem vielen Material zog er Regeln des Schliessens. Ein Beispiel: Alle Menschen sind sterblich. Sokrates ist ein Mensch. Also ist Sokrates sterblich. Das stimmt, egal wer es sagt, egal wie sympathisch oder mächtig diese Person ist. Genau das war die Antwort an die Redekünstler: Ein Schluss stimmt oder stimmt nicht, geschicktes Reden ändert daran nichts. Über arabische Gelehrte und mittelalterliche Klosterschulen kam diese Haltung bis in unsere Schulzimmer.
+
+### Antike · nach dessen Wandelhalle
+
+- **Kennung:** `EP-54ba47` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Peripatos (Wikipedia)](https://de.wikipedia.org/wiki/Peripatos)
+- **Fundstelle:** Der Schulname kommt vom Ort: «leitet sich ihr Name von dem Ort ab, an dem der Unterricht stattfand, in diesem Fall vom Peripatos (Wandelhalle)». Die Herleitung vom Herumwandeln beim Lehren, die vorher hier stand, nennt der Artikel eine populäre Etymologie, die «daher nicht zu[trifft]».
+- **Geprüft:** 2026-08-05
+
+> Aristoteles sammelte zuerst und ordnete dann. In einer Lagune auf der Insel Lesbos untersuchte er Fische, Kraken und Seeigel und beschrieb, wie sie gebaut sind. Seine Schule trug die Verfassungen von 158 griechischen Städten zusammen. In Athen unterrichtete er im Lykeion; nach dessen Wandelhalle, dem «Peripatos», wurde seine Schule später benannt. Aus dem vielen Material zog er Regeln des Schliessens. Ein Beispiel: Alle Menschen sind sterblich. Sokrates ist ein Mensch. Also ist Sokrates sterblich. Das stimmt, egal wer es sagt, egal wie sympathisch oder mächtig diese Person ist. Genau das war die Antwort an die Redekünstler: Ein Schluss stimmt oder stimmt nicht, geschicktes Reden ändert daran nichts. Über arabische Gelehrte und mittelalterliche Klosterschulen kam diese Haltung bis in unsere Schulzimmer.
+
+### Antike · nur zu einer Geldbusse herab
+
+- **Kennung:** `EP-9ad93c` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Sokrates (Wikipedia)](https://de.wikipedia.org/wiki/Sokrates)
+- **Fundstelle:** Nach dem Vorschlag der Speisung im Prytaneion nannte Sokrates laut Platons Apologie doch noch eine Geldstrafe (eine Mine, von Freunden auf dreissig aufgestockt); im «Phaidon»-Artikel: «bot Kriton vergeblich an, sich bei Verhängung einer Geldstrafe für deren Zahlung zu verbürgen». Vorher fehlte dieser Zwischenschritt.
+- **Geprüft:** 2026-08-05
+
+> Der Redelehrer Protagoras brachte die neue Lage auf einen Satz: Der Mensch sei «das Mass aller Dinge». Gemeint ist, dass nicht die Götter festlegen, was wahr und richtig ist, sondern die Menschen selbst. Protagoras war ein gefragter Lehrer und nahm hohe Honorare. Für viele Athener klang das nach Freiheit, für andere so, als würde der Boden unter ihren Füssen weich. Wie gereizt die Stimmung war, zeigt der Prozess von 399 v. Chr. Rund 500 ausgeloste Bürger sassen als Gericht zusammen, und vor ihnen verteidigte sich der siebzigjährige Sokrates. Als er nach dem Schuldspruch selber eine Strafe vorschlagen sollte, schlug er zuerst allen Ernstes eine Belohnung vor, Gratisessen auf Staatskosten, und liess sich dann nur zu einer Geldbusse herab. Das Gericht entschied auf den Giftbecher. Dazu muss man wissen, dass Athen kurz zuvor einen langen Krieg verloren und die Gewaltherrschaft der Dreissig Tyrannen erlebt hatte. Eine erschöpfte Stadt erträgt es schlecht, wenn jemand ihre letzten Gewissheiten in Frage stellt. Diese Angst, dass am Ende gar nichts mehr sicher ist, kehrt in jeder Umbruchszeit wieder.
+
+### Zerbrechen der Ordnung · die Münzprägung schrumpfte auf einen Bruchteil
+
+- **Kennung:** `EP-fbded4` (Kartentext)
+- **Quelle:** [Merowinger (Wikipedia)](https://de.wikipedia.org/wiki/Merowinger)
+- **Fundstelle:** Die Prägung brach nicht ab, sie schrumpfte und wechselte den Herrn: «Um 585 stellte man so die Praxis ein, Münzen im Namen des Kaisers zu prägen.» Theudebert I. liess schon vorher Goldmünzen mit eigenem Bild schlagen. Vorher behauptete der Text, es habe niemand mehr Münzen geprägt.
+- **Geprüft:** 2026-08-05
+
+> Hier verunsichert nicht neue, sondern verlorene Technik. Mit dem Weströmischen Reich (476 n. Chr.) verfallen Fernstrassen, Aquädukte, das Münzwesen und die staatliche Verwaltung. Fähigkeiten wie Betonbau in römischer Qualität gehen für Jahrhunderte verloren. Die Welt wird kleiner, langsamer und unsicherer. Verloren gingen diese technischen und organisatorischen Fähigkeiten, weil ihre Grundlage wegbrach: Ohne Zentralmacht, Steuern und Fernhandel unterhielt niemand mehr die Strassen, und die Münzprägung schrumpfte auf einen Bruchteil. Technik überlebt nur mit ihrer wirtschaftlichen und politischen Basis.
+
+### Renaissance & Aufbruch · beschlossen aufständische Bauern in Memmingen
+
+- **Kennung:** `EP-9d10fe` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Historisches Lexikon Bayerns: Zwölf Artikel](https://www.historisches-lexikon-bayerns.de/Lexikon/Zw%C3%B6lf_Artikel)
+- **Fundstelle:** Memmingen ist der Ort der Beratung und Verabschiedung («verfassunggebende Bauernversammlung», Peter Blickle), gedruckt wurde «in der Augsburger Druckerei des Melchior Ramminger». Vorher stand hier «druckten … in Memmingen».
+- **Geprüft:** 2026-08-05
+
+> Im Frühjahr 1525 beschlossen aufständische Bauern in Memmingen zwölf Artikel und beriefen sich darin auf das Evangelium, das nun jeder gedruckt lesen konnte: Wenn Christus alle Menschen erlöst habe, warum seien sie dann Leibeigene? Die Fürsten antworteten mit Heeren, Zehntausende Bauern starben, der Prediger Thomas Müntzer wurde nach der Schlacht bei Frankenhausen hingerichtet. Jenseits des Atlantiks war vier Jahre zuvor Tenochtitlan gefallen, eine Stadt, grösser als die meisten Städte Europas, und eingeschleppte Seuchen töteten dort mehr Menschen als alle Waffen. 1543 schliesslich soll der sterbende Kopernikus das erste gedruckte Exemplar seines Buches noch in Händen gehalten haben, des Buches, das die Erde zu einem Planeten unter Planeten machte. Aufstieg für die einen bedeutete Enteignung, Eroberung oder Kränkung für die anderen. Verunsicherung ist selten gerecht verteilt, damals so wenig wie heute.
+
+### Renaissance & Aufbruch · Deckenbalken seiner Bibliothek
+
+- **Kennung:** `EP-8aaf1a` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Michel de Montaignes Turmbibliothek (Wikipedia)](https://de.wikipedia.org/wiki/Michel_de_Montaignes_Turmbibliothek)
+- **Fundstelle:** Die Sentenzen wurden gemalt beziehungsweise «in die Balken gebrannt», nicht geschnitzt. Die Skeptiker stimmen: 14 der griechischen Texte gehen auf Sextus Empiricus und Diogenes Laertios zurück, aus denen Montaigne den Pyrrhonismus kannte.
+- **Geprüft:** 2026-08-05
+
+> Pico war dreiundzwanzig, als er 1486 die Gelehrten Europas nach Rom einlud, um mit ihnen über 900 Thesen zu streiten, und die «Rede über die Würde des Menschen» sollte die Eröffnung dieses Wettstreits werden. Der Papst verbot die Veranstaltung, ein Teil der Thesen galt als ketzerisch, doch der Text überlebte und wurde zum Manifest des neuen Selbstbewusstseins. Ein Menschenalter später zog sich Montaigne, Richter in Bordeaux, auf den Turm seines Schlosses zurück, während draussen Katholiken und Protestanten einander in Glaubenskriegen abschlachteten. Auf die Deckenbalken seiner Bibliothek liess er Sprüche antiker Skeptiker malen und erfand beim Schreiben nebenbei eine neue Gattung: den «Essai», wörtlich den Versuch, das Ausprobieren eines Gedankens. Grösse und Zweifel gehören seither zusammen, und wer heute angesichts der KI fragt, was der Mensch eigentlich ist, führt genau dieses Gespräch weiter.
+
+### Aufklärung · fast sein ganzes Leben
+
+- **Kennung:** `EP-f04382` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Immanuel Kant (Wikipedia)](https://de.wikipedia.org/wiki/Immanuel_Kant)
+- **Fundstelle:** Das «fast» ist nötig: Um 1748–1754 war Kant Hauslehrer auf dem Land, «bei dem reformierten Prediger Daniel Ernst Andersch … in Judtschen bei Gumbinnen» und danach «auf dem Gut des Majors Bernhard Friedrich von Hülsen auf Gross-Arnsdorf bei Mohrungen».
+- **Geprüft:** 2026-08-05
+
+> Kant verbrachte fast sein ganzes Leben in Königsberg, und der Anekdote nach stellten die Nachbarn ihre Uhren nach seinem täglichen Spaziergang: Ausgerechnet dieser unauffälligste aller Professoren schrieb die Sätze, die Europas Autoritäten herausforderten. Sein berühmter Aufsatz von 1784 war eine Antwort: Ein Berliner Geistlicher hatte in einer Zeitschrift gefragt, was diese Aufklärung eigentlich sei. So lief das damals, denn gedacht wurde öffentlich, in Zeitschriften und in Lesegesellschaften, wo man sich zum Vorlesen und Diskutieren traf. Unmündigkeit nannte Kant «selbstverschuldet», wenn einer nicht zu wenig Verstand hat, sondern zu wenig Mut, ihn zu benutzen. Den Gegenwind bekam er selbst zu spüren: 1794 untersagte ihm der preussische König weitere Schriften zur Religion, und Kant fügte sich, solange dieser König lebte, danach schrieb er weiter. Mündigkeit heisst seither nicht, alles besser zu wissen, sondern für das eigene Urteil einzustehen, eine Zumutung, die im Zeitalter der Suchmaschinen und Sprachmodelle nichts von ihrer Schärfe verloren hat.
+
+### Industriemoderne · als ein Pferd es durchhält
+
+- **Kennung:** `EP-426ea1` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Rocket (Lokomotive) (Wikipedia)](https://de.wikipedia.org/wiki/Rocket_(Lokomotive))
+- **Fundstelle:** Die Rocket erreichte 47 km/h Höchstgeschwindigkeit; ein Englisches Vollblut läuft laut dem Artikel «Hauspferd» bis zu 70 km/h. Neu war also nicht die Spitze, sondern das Durchhalten — vorher behauptete der Text «schneller, als je ein Pferd gelaufen war».
+- **Geprüft:** 2026-08-05
+
+> Bei der Eröffnung der Eisenbahn zwischen Liverpool und Manchester 1830 geriet der Parlamentsabgeordnete William Huskisson vor eine heranfahrende Lokomotive und starb noch am selben Abend: Das neue Tempo forderte sein Opfer schon am ersten Tag. Die Faszination war trotzdem gewaltig, denn erstmals reiste man stundenlang schneller, als ein Pferd es durchhält. Damals hatte noch jede Stadt ihre eigene Sonnenzeit, in Bremen gingen die Uhren gut eine Viertelstunde hinter Berlin nach, und erst der Fahrplan erzwang die gemeinsame Stunde, in Deutschland gesetzlich ab 1893. Der Telegraf trennte unterdessen die Nachricht vom Boten: 1858 tauschten die britische Königin und der amerikanische Präsident Grussbotschaften durch ein Kabel am Grund des Atlantiks. Raum und Zeit, bis dahin Grössen der Natur, wurden zu Grössen der Technik. Wer heute über das Tempo der KI staunt oder erschrickt, wiederholt eine sehr alte Erfahrung.
+
+### Industriemoderne · Textilarbeiter
+
+- **Kennung:** `EP-ba67cc` (Kartentext)
+- **Quelle:** [Maschinenstürmer (Wikipedia)](https://de.wikipedia.org/wiki/Maschinenst%C3%BCrmer)
+- **Fundstelle:** Die Bewegung begann 1811 in Nottingham bei den Strumpfwirkern; dazu kamen «Tuchscherer (West Riding of Yorkshire), Baumwollweber (Süd-Lancashire) und Strumpfwirker (Nottingham)». Die Verengung auf «Weber», die vorher hier stand, traf nur einen Teil.
+- **Geprüft:** 2026-08-05
+
+> Besonders getroffen werden Handwerker und Weber, deren Können die Maschine entwertet, und die Landbevölkerung, die in Elendsquartieren der Städte landet. Kinder arbeiten in Fabriken und Bergwerken. In England zerschlagen Textilarbeiter ab 1811 die Maschinen, die sie arbeitslos machen (die «Ludditen»). 1848 entlädt sich die Spannung in einer Revolutionswelle quer durch Europa.
+
+### Industriemoderne · 12'000 Soldaten
+
+- **Kennung:** `EP-991c07` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Maschinenstürmer (Wikipedia)](https://de.wikipedia.org/wiki/Maschinenst%C3%BCrmer)
+- **Fundstelle:** «1811/1812 kam es zu einem regelrechten Aufruhr in Nottingham, den der englische Staat durch 12.000 Soldaten niederschlagen liess.»
+- **Geprüft:** 2026-08-05
+
+> Die nächtlichen Maschinenstürmer beriefen sich auf einen «General Ludd», den es nie gab, eine erfundene Führerfigur, die den Behörden das Zugreifen erschwerte. Das Parlament in London stellte das Zerstören von Maschinen 1812 unter die Todesstrafe, und zeitweise standen in den englischen Fabrikbezirken 12'000 Soldaten gegen die eigenen Leute im Einsatz, mehr als Wellington 1808 gegen Napoleon nach Portugal geführt hatte. Dabei waren es keine Feinde der Technik, die da zuschlugen, sondern Familienväter, deren Können über Nacht wertlos geworden war. Wählen durften sie nicht, Zusammenschlüsse von Arbeitern waren verboten, also sprachen die Hämmer. Erst Jahrzehnte später eröffneten Gewerkschaften, Streikrecht und Sozialgesetze andere Wege, den Wandel zu verhandeln. Die Frage der Maschinenstürmer aber ist geblieben: Wer fängt jene auf, deren Fähigkeiten eine neue Technik entwertet?
+
+### Industriemoderne · mehr als Wellington 1808
+
+- **Kennung:** `EP-991c07` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Luddite (englische Wikipedia)](https://en.wikipedia.org/wiki/Luddite)
+- **Fundstelle:** «The 12,000 troops deployed against the Luddites greatly exceeded in size the army which Wellington took into the Peninsula in 1808.»
+- **Geprüft:** 2026-08-05
+
+> Die nächtlichen Maschinenstürmer beriefen sich auf einen «General Ludd», den es nie gab, eine erfundene Führerfigur, die den Behörden das Zugreifen erschwerte. Das Parlament in London stellte das Zerstören von Maschinen 1812 unter die Todesstrafe, und zeitweise standen in den englischen Fabrikbezirken 12'000 Soldaten gegen die eigenen Leute im Einsatz, mehr als Wellington 1808 gegen Napoleon nach Portugal geführt hatte. Dabei waren es keine Feinde der Technik, die da zuschlugen, sondern Familienväter, deren Können über Nacht wertlos geworden war. Wählen durften sie nicht, Zusammenschlüsse von Arbeitern waren verboten, also sprachen die Hämmer. Erst Jahrzehnte später eröffneten Gewerkschaften, Streikrecht und Sozialgesetze andere Wege, den Wandel zu verhandeln. Die Frage der Maschinenstürmer aber ist geblieben: Wer fängt jene auf, deren Fähigkeiten eine neue Technik entwertet?
+
+### Zeitalter der Katastrophen · zehn Tage danach
+
+- **Kennung:** `EP-108bc5` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Clara Immerwahr (Wikipedia)](https://de.wikipedia.org/wiki/Clara_Immerwahr)
+- **Fundstelle:** «Clara Haber erschoss sich am 2. Mai 1915.» Der Giftgasangriff bei Ypern war am 22. April 1915 (Artikel «Fritz Haber») — zehn Tage, nicht «wenige Tage», wie vorher hier stand.
+- **Geprüft:** 2026-08-05
+
+> Kaum eine Figur verkörpert das Doppelgesicht dieser Epoche so wie der Chemiker Fritz Haber: Seine Ammoniaksynthese machte künstlichen Dünger möglich und hilft bis heute, Milliarden zu ernähren, und derselbe Mann überwachte 1915 bei Ypern persönlich den ersten grossen Giftgasangriff der Geschichte. Seine Frau Clara Immerwahr, selbst promovierte Chemikerin, nahm sich zehn Tage danach das Leben. Dreissig Jahre später, am 16. Juli 1945, erhellte in der Wüste von New Mexico der erste Atomtest den Nachthimmel, und Robert Oppenheimer, der wissenschaftliche Leiter, erinnerte sich später an einen Vers aus einer indischen Schrift über den «Zerstörer der Welten». Zwischen diesen beiden Daten liegt die bittere Einsicht, dass Wissen nicht danach fragt, wozu man es braucht. Seither gehört zu jeder mächtigen Technik die Frage, die damals zu spät kam: nicht nur, ob man etwas bauen kann, sondern ob man es bauen soll.
+
+### «Ende der Geschichte» · 1989 in einem Aufsatz und 1992 im gleichnamigen Buch
+
+- **Kennung:** `EP-ca525c` (Einleitung, Vertiefung)
+- **Quelle:** [Ende der Geschichte (Wikipedia)](https://de.wikipedia.org/wiki/Ende_der_Geschichte)
+- **Fundstelle:** Bekannt wurde die These «durch einen im Sommer 1989 veröffentlichten Artikel in der Zeitschrift The National Interest und ein Buch mit diesem Titel (1992)». Geprägt hat Fukuyama den Ausdruck nicht: Er «wiederholt insbesondere Gedanken, die Alexandre Kojève in den 1930er und 40er Jahren formuliert hatte».
+- **Geprüft:** 2026-08-05
+
+> Bekannt machte den Ausdruck «Ende der Geschichte» Francis Fukuyama, 1989 in einem Aufsatz und 1992 im gleichnamigen Buch: Nach dem Zusammenbruch des Ostblocks schien die liberale Marktdemokratie alternativlos. Es folgten Globalisierung, Internet und ein Boom des Individualismus. «Selbstverwirklichung» wurde zum Leitwert. Rückblickend war es keine Ruhephase, sondern die Startrampe der digitalen Umwälzung. Fukuyama meinte damit nicht, es werde nichts mehr geschehen, sondern die liberale Demokratie könnte der Endpunkt der ideologischen Entwicklung sein. Spätestens seit den Krisen der 2010er-Jahre (Finanzkrise, Klima, neue Autoritarismen) ist diese These stark umstritten.
+
+### «Ende der Geschichte» · US-Behörden NASA und NOAA
+
+- **Kennung:** `EP-f1ce65` (Hintergrund zum Bild)
+- **Quelle:** [NOAA (Wikipedia)](https://de.wikipedia.org/wiki/National_Oceanic_and_Atmospheric_Administration)
+- **Fundstelle:** Die NOAA ist die «Wetter- und Ozeanografiebehörde der Vereinigten Staaten», keine Weltraumbehörde — so nannte der Text vorher beide.
+- **Geprüft:** 2026-08-05
+
+> Dieses Bild ist keine gemalte Kunst, sondern eine wissenschaftliche Aufnahme der US-Behörden NASA und NOAA aus dem Jahr 2012. Es ist eine Montage aus Hunderten Aufnahmen des Satelliten Suomi NPP, denn es ist nie überall auf der Erde gleichzeitig Nacht. So hat der Planet in Wirklichkeit nie ausgesehen. Zu sehen ist die nächtliche Erde, auf der jedes Lichtpünktchen für menschliche Besiedlung und für Strom steht. Grell leuchten Europa, Ostasien und die US-Küsten, während weite Teile Afrikas, Südamerikas und Zentralasiens fast dunkel bleiben. Gerade als Konstruktion führt das Bild vor Augen, wie ungleich die vernetzte Welt verteilt ist.
+
+### Jetzt: Umwelt & KI · letzten bemannten Mondlandung
+
+- **Kennung:** `EP-3794d6` (Hintergrund zum Bild)
+- **Quelle:** [Apollo 17 (Wikipedia)](https://de.wikipedia.org/wiki/Apollo_17)
+- **Fundstelle:** «Mit Apollo 17 landeten zum sechsten und vorerst letzten Mal Menschen auf dem Mond.» Als letzte bemannte MondMISSION gilt sie seit April 2026 nicht mehr: «Apollo 17 blieb bis zur Mission Artemis 2 im Jahr 2026 der letzte bemannte Mondflug» — Artemis 2 umrundete den Mond, landete aber nicht.
+- **Geprüft:** 2026-08-05
+
+> Dieses Bild ist kein Gemälde, sondern eine Fotografie, die am 7. Dezember 1972 aus rund 29 000 km Entfernung entstand. Aufgenommen hat sie die Besatzung von Apollo 17, der bislang letzten bemannten Mondlandung. Zu sehen ist die Erde als ganze, runde Kugel, mit Wolkenwirbeln, Ozeanen und Kontinenten in einem einzigen Blick. Von hier oben sind keine Nationen und keine Grenzen erkennbar, nur ein einziger, verletzlicher Planet im schwarzen All. «Blue Marble» wurde zu einem der meistreproduzierten Fotos der Geschichte und zur Ikone der Umweltbewegung.
+
+### Jetzt: Umwelt & KI · stand 1955 erstmals im Antrag
+
+- **Kennung:** `EP-92640b` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Dartmouth Conference (Wikipedia)](https://de.wikipedia.org/wiki/Dartmouth_Conference)
+- **Fundstelle:** Der Antrag von 1955: «We propose that a 2 month, 10 man study of artificial intelligence be carried out during the summer of 1956 at Dartmouth College.» Die Werkstatt selbst lief «im Sommer 1956 vom 19. Juni bis zum 16. August». Vorher liess der Text den Begriff 1956 entstehen.
+- **Geprüft:** 2026-08-05
+
+> Der Traum hinter dieser Technik ist uralt: Die griechische Sage erzählt vom Bronzeriesen Talos, der Kretas Küste bewachte, die Prager Legende vom Golem aus Lehm, und 1818 liess Mary Shelley ihren Doktor Frankenstein ein künstliches Wesen erschaffen, das seinem Schöpfer entglitt. Der Fachbegriff stand 1955 erstmals im Antrag für eine Sommer-Werkstatt über «artificial intelligence» am Dartmouth College; der Antrag hielt grosse Fortschritte binnen weniger Monate für möglich, und 1956 kam die kleine Forschergruppe dort zusammen. Stattdessen folgten Jahrzehnte, in denen die Erwartungen mehrfach zusammenbrachen, man spricht von «KI-Wintern». Umso abrupter kam der Durchbruch im Alltag: ChatGPT erreichte nach dem Start Ende 2022 innert rund zwei Monaten gegen hundert Millionen Nutzerinnen und Nutzer, schneller als jede Verbraucher-Anwendung zuvor. Hinter der mühelosen Oberfläche stehen allerdings sehr irdische Anlagen, Rechenzentren, deren Strom- und Wasserbedarf mit dem ganzer Städte verglichen wird. Dass diese Technik als körperloses Gegenüber erscheint, ist vielleicht ihre grösste Täuschung.
 
 ---
 

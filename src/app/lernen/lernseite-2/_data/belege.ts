@@ -50,6 +50,9 @@ export const BELEGE: Beleg[] = [
   {
     id: "PP-8fa9ca",
     anker: "Francis Bacon",
+    // Bewusst englisch: Das Original ist Latein, und eine frei zugängliche
+    // deutsche Übersetzung des «Novum Organum» haben wir nicht gefunden
+    // (zeno.org war bei der Prüfung am 2026-08-05 nicht erreichbar).
     url: "https://www.earlymoderntexts.com/assets/pdfs/bacon1620.pdf",
     titel: "Bacon, «Novum Organum» (1620), Übersetzung Jonathan Bennett",
     stelle:
@@ -80,6 +83,8 @@ export const BELEGE: Beleg[] = [
   {
     id: "VA-ed6696",
     anker: "irische Statistikamt",
+    // Bewusst englisch: Der Text nennt die Behörde ausdrücklich, darum die
+    // Primärquelle statt eines deutschen Berichts darüber.
     url: "https://www.cso.ie/en/releasesandpublications/ep/p-dcmec/datacentresmeteredelectricityconsumption2024/keyfindings/",
     titel: "CSO Ireland: Rechenzentren und Stromverbrauch 2024",
     stelle:
@@ -101,11 +106,13 @@ export const BELEGE: Beleg[] = [
   {
     id: "VA-eb3a6b",
     anker: "gestaffelt",
-    url: "https://ai-act-service-desk.ec.europa.eu/en/ai-act/eu-ai-act-implementation-timeline",
-    titel: "EU AI Act Service Desk: Zeitplan der Anwendung",
+    // Bis 2026-08-05 stand hier die englische Fassung derselben Seite; die
+    // deutsche trägt denselben Zeitplan.
+    url: "https://ai-act-service-desk.ec.europa.eu/de/ai-act/timeline/zeitplan-fuer-die-umsetzung-des-eu-ki-gesetzes",
+    titel: "AI-Act-Service-Desk der EU: Zeitplan für die Umsetzung",
     stelle:
-      "In Kraft am 1. August 2024. Verbote ab 2. Februar 2025, Regeln für Allzweckmodelle ab 2. August 2025, Transparenzpflichten (Artikel 50) ab 2. August 2026, Hochrisiko-Systeme ab Dezember 2027 bzw. August 2028.",
-    geprueft: "2026-07-26",
+      "«Die Rechtsvorschriften des KI-Gesetzes der EU gelten schrittweise, wobei eine vollständige Einführung bis zum 2. August 2027 vorgesehen ist.» In Kraft am 1. August 2024, Verbote ab 2. Februar 2025, Regeln für Allzweckmodelle ab 2. August 2025, die meisten Vorschriften samt Transparenz (Artikel 50) ab 2. August 2026.",
+    geprueft: "2026-08-05",
   },
   {
     id: "VA-7dc30e",
@@ -119,11 +126,14 @@ export const BELEGE: Beleg[] = [
   {
     id: "VA-6068d8",
     anker: "UNESCO",
-    url: "https://www.unesco.org/en/articles/generative-ai-unesco-study-reveals-alarming-evidence-regressive-gender-stereotypes",
-    titel: "UNESCO: Studie zu Geschlechterstereotypen in Sprachmodellen",
+    // Bis 2026-08-05 stand hier die englische UNESCO-Seite. Der deutsche
+    // Fachbericht deckt alle Aussagen des Textblocks; die Studie selbst
+    // (englisch) bleibt über den Artikel auffindbar.
+    url: "https://www.cio.de/article/3696289/ki-sprachmodelle-bedienen-geschlechterstereotype.html",
+    titel: "CIO.de zur UNESCO-Studie über Geschlechterstereotype in Sprachmodellen",
     stelle:
-      "Untersucht wurden GPT-2, GPT-3.5 und Llama 2. Ein Modell beschrieb Frauen viermal häufiger in häuslichen Rollen als Männer; bei Llama 2 häuften sich in Männergeschichten Wörter wie «treasure» und «adventurous», in Frauengeschichten «garden» und «love».",
-    geprueft: "2026-07-26",
+      "«Frauen würden bis zu viermal häufiger mit Hausarbeit in Verbindung gebracht als Männer … Sie stünden häufig im Kontext von Begriffen wie ‹Haus›, ‹Familie› und ‹Kinder›, während bei Männern die Begriffe ‹Firma›, ‹Führungskraft›, ‹Gehalt› und ‹Karriere› im Vordergrund stünden.»",
+    geprueft: "2026-08-05",
   },
 
   /* ── Antike («Philosophie in Zeiten der Verunsicherung») ──────────────────
@@ -335,6 +345,166 @@ export const BELEGE: Beleg[] = [
     stelle:
       "Zur Belagerung Roms: «Bei der vorangegangenen Belagerung wurden die in die Stadt führenden Aquädukte zerstört», worauf der Betrieb der grossen Thermen endgültig zum Erliegen kam und auch die städtischen Mühlen ausfielen. Datierung und Zuordnung zu den Ostgoten (Januar 537 bis März 538) über den Artikel «Gotenkrieg (535–554)».",
     geprueft: "2026-07-29",
+  },
+
+  /* ── Epochen-Prüfung vom 2026-08-05 ───────────────────────────────────────
+   * Anlass: Christofs Frage, woher die Hieronymus-Aussage stammt — von
+   * nirgends, wie sich zeigte. Darauf wurden alle acht Epochen von
+   * «Philosophie in Zeiten der Verunsicherung» Satz für Satz nachgeschlagen
+   * (386 Einzelaussagen, jede Quelle doppelt abgerufen: einmal beim Finden,
+   * einmal beim Gegenprüfen). Die Belege hier gehören zu den 17 dabei
+   * korrigierten Stellen. Zwei Korrekturen (Kirchner 1914→1915) wurden im
+   * Gegendurchgang VERWORFEN, weil Hauptartikel und Sächsische Biografie
+   * 1914 stützen — der Text blieb dort unverändert. */
+  {
+    id: "EP-54ba47",
+    anker: "die Verfassungen von 158 griechischen Städten",
+    url: "https://de.wikipedia.org/wiki/Aristoteles",
+    titel: "Aristoteles (Wikipedia)",
+    stelle:
+      "«Die Fülle des Materials, das Aristoteles sammelte (etwa zu den 158 Verfassungen der griechischen Stadtstaaten), lässt darauf schliessen, dass er über zahlreiche Mitarbeiter verfügte.» Vorher stand hier «Gesetze von über 150 Städten» — gesammelt wurden Verfassungen, das erhaltene Stück heisst «Die Verfassung der Athener».",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-54ba47",
+    anker: "nach dessen Wandelhalle",
+    url: "https://de.wikipedia.org/wiki/Peripatos",
+    titel: "Peripatos (Wikipedia)",
+    stelle:
+      "Der Schulname kommt vom Ort: «leitet sich ihr Name von dem Ort ab, an dem der Unterricht stattfand, in diesem Fall vom Peripatos (Wandelhalle)». Die Herleitung vom Herumwandeln beim Lehren, die vorher hier stand, nennt der Artikel eine populäre Etymologie, die «daher nicht zu[trifft]».",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-9ad93c",
+    anker: "nur zu einer Geldbusse herab",
+    url: "https://de.wikipedia.org/wiki/Sokrates",
+    titel: "Sokrates (Wikipedia)",
+    stelle:
+      "Nach dem Vorschlag der Speisung im Prytaneion nannte Sokrates laut Platons Apologie doch noch eine Geldstrafe (eine Mine, von Freunden auf dreissig aufgestockt); im «Phaidon»-Artikel: «bot Kriton vergeblich an, sich bei Verhängung einer Geldstrafe für deren Zahlung zu verbürgen». Vorher fehlte dieser Zwischenschritt.",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-fbded4",
+    anker: "die Münzprägung schrumpfte auf einen Bruchteil",
+    url: "https://de.wikipedia.org/wiki/Merowinger",
+    titel: "Merowinger (Wikipedia)",
+    stelle:
+      "Die Prägung brach nicht ab, sie schrumpfte und wechselte den Herrn: «Um 585 stellte man so die Praxis ein, Münzen im Namen des Kaisers zu prägen.» Theudebert I. liess schon vorher Goldmünzen mit eigenem Bild schlagen. Vorher behauptete der Text, es habe niemand mehr Münzen geprägt.",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-9d10fe",
+    anker: "beschlossen aufständische Bauern in Memmingen",
+    url: "https://www.historisches-lexikon-bayerns.de/Lexikon/Zw%C3%B6lf_Artikel",
+    titel: "Historisches Lexikon Bayerns: Zwölf Artikel",
+    stelle:
+      "Memmingen ist der Ort der Beratung und Verabschiedung («verfassunggebende Bauernversammlung», Peter Blickle), gedruckt wurde «in der Augsburger Druckerei des Melchior Ramminger». Vorher stand hier «druckten … in Memmingen».",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-8aaf1a",
+    // Anker NEBEN «Skeptiker» — das Wort trägt eine Glossar-Erklärung, und
+    // ein Beleg darüber würde sie verdecken (docs/anker-kollision.mjs).
+    anker: "Deckenbalken seiner Bibliothek",
+    url: "https://de.wikipedia.org/wiki/Michel_de_Montaignes_Turmbibliothek",
+    titel: "Michel de Montaignes Turmbibliothek (Wikipedia)",
+    stelle:
+      "Die Sentenzen wurden gemalt beziehungsweise «in die Balken gebrannt», nicht geschnitzt. Die Skeptiker stimmen: 14 der griechischen Texte gehen auf Sextus Empiricus und Diogenes Laertios zurück, aus denen Montaigne den Pyrrhonismus kannte.",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-f04382",
+    anker: "fast sein ganzes Leben",
+    url: "https://de.wikipedia.org/wiki/Immanuel_Kant",
+    titel: "Immanuel Kant (Wikipedia)",
+    stelle:
+      "Das «fast» ist nötig: Um 1748–1754 war Kant Hauslehrer auf dem Land, «bei dem reformierten Prediger Daniel Ernst Andersch … in Judtschen bei Gumbinnen» und danach «auf dem Gut des Majors Bernhard Friedrich von Hülsen auf Gross-Arnsdorf bei Mohrungen».",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-426ea1",
+    anker: "als ein Pferd es durchhält",
+    url: "https://de.wikipedia.org/wiki/Rocket_(Lokomotive)",
+    titel: "Rocket (Lokomotive) (Wikipedia)",
+    stelle:
+      "Die Rocket erreichte 47 km/h Höchstgeschwindigkeit; ein Englisches Vollblut läuft laut dem Artikel «Hauspferd» bis zu 70 km/h. Neu war also nicht die Spitze, sondern das Durchhalten — vorher behauptete der Text «schneller, als je ein Pferd gelaufen war».",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-ba67cc",
+    anker: "Textilarbeiter",
+    url: "https://de.wikipedia.org/wiki/Maschinenst%C3%BCrmer",
+    titel: "Maschinenstürmer (Wikipedia)",
+    stelle:
+      "Die Bewegung begann 1811 in Nottingham bei den Strumpfwirkern; dazu kamen «Tuchscherer (West Riding of Yorkshire), Baumwollweber (Süd-Lancashire) und Strumpfwirker (Nottingham)». Die Verengung auf «Weber», die vorher hier stand, traf nur einen Teil.",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-991c07",
+    anker: "12'000 Soldaten",
+    url: "https://de.wikipedia.org/wiki/Maschinenst%C3%BCrmer",
+    titel: "Maschinenstürmer (Wikipedia)",
+    stelle:
+      "«1811/1812 kam es zu einem regelrechten Aufruhr in Nottingham, den der englische Staat durch 12.000 Soldaten niederschlagen liess.»",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-991c07",
+    anker: "mehr als Wellington 1808",
+    // Bewusst englisch: Der Vergleich mit Wellingtons Armee steht nur im
+    // englischen Artikel — und er gilt für 1808. Der Text sagte vorher «als
+    // auf der iberischen Halbinsel gegen Napoleon», also zeitgleich 1812;
+    // bei Salamanca führte Wellington damals aber 48'500 Mann.
+    url: "https://en.wikipedia.org/wiki/Luddite",
+    titel: "Luddite (englische Wikipedia)",
+    stelle:
+      "«The 12,000 troops deployed against the Luddites greatly exceeded in size the army which Wellington took into the Peninsula in 1808.»",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-108bc5",
+    anker: "zehn Tage danach",
+    url: "https://de.wikipedia.org/wiki/Clara_Immerwahr",
+    titel: "Clara Immerwahr (Wikipedia)",
+    stelle:
+      "«Clara Haber erschoss sich am 2. Mai 1915.» Der Giftgasangriff bei Ypern war am 22. April 1915 (Artikel «Fritz Haber») — zehn Tage, nicht «wenige Tage», wie vorher hier stand.",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-ca525c",
+    anker: "1989 in einem Aufsatz und 1992 im gleichnamigen Buch",
+    url: "https://de.wikipedia.org/wiki/Ende_der_Geschichte",
+    titel: "Ende der Geschichte (Wikipedia)",
+    stelle:
+      "Bekannt wurde die These «durch einen im Sommer 1989 veröffentlichten Artikel in der Zeitschrift The National Interest und ein Buch mit diesem Titel (1992)». Geprägt hat Fukuyama den Ausdruck nicht: Er «wiederholt insbesondere Gedanken, die Alexandre Kojève in den 1930er und 40er Jahren formuliert hatte».",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-f1ce65",
+    anker: "US-Behörden NASA und NOAA",
+    url: "https://de.wikipedia.org/wiki/National_Oceanic_and_Atmospheric_Administration",
+    titel: "NOAA (Wikipedia)",
+    stelle:
+      "Die NOAA ist die «Wetter- und Ozeanografiebehörde der Vereinigten Staaten», keine Weltraumbehörde — so nannte der Text vorher beide.",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-3794d6",
+    anker: "letzten bemannten Mondlandung",
+    url: "https://de.wikipedia.org/wiki/Apollo_17",
+    titel: "Apollo 17 (Wikipedia)",
+    stelle:
+      "«Mit Apollo 17 landeten zum sechsten und vorerst letzten Mal Menschen auf dem Mond.» Als letzte bemannte MondMISSION gilt sie seit April 2026 nicht mehr: «Apollo 17 blieb bis zur Mission Artemis 2 im Jahr 2026 der letzte bemannte Mondflug» — Artemis 2 umrundete den Mond, landete aber nicht.",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-92640b",
+    anker: "stand 1955 erstmals im Antrag",
+    url: "https://de.wikipedia.org/wiki/Dartmouth_Conference",
+    titel: "Dartmouth Conference (Wikipedia)",
+    stelle:
+      "Der Antrag von 1955: «We propose that a 2 month, 10 man study of artificial intelligence be carried out during the summer of 1956 at Dartmouth College.» Die Werkstatt selbst lief «im Sommer 1956 vom 19. Juni bis zum 16. August». Vorher liess der Text den Begriff 1956 entstehen.",
+    geprueft: "2026-08-05",
   },
 ];
 

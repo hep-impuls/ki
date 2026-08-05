@@ -10,6 +10,58 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-05 — Epochen-Prüfung: 386 Aussagen nachgeschlagen, 17 Stellen korrigiert (Christof)
+
+Anlass: Christof fragte beim Hieronymus-Satz, wo das stehe — und der Block
+hatte keinen Beleg. Daraufhin wurden alle acht Epochen von «Philosophie in
+Zeiten der Verunsicherung» Satz für Satz geprüft: 386 Einzelaussagen, je
+Epoche ein Nachschlage-Durchgang und ein Gegen-Durchgang, der jede Quelle
+selbst abruft und die Zitate kontrolliert. Nur bestätigte Funde wurden
+übernommen.
+
+**Korrigiert (Auswahl, vollständig in den Belegen `EP-…` vom 2026-08-05):**
+
+- Antike beginnt um 800 v. Chr., nicht «von Athen um 450» (Lead).
+- Peripatos: Name kommt von der Wandelhalle, nicht vom Herumwandeln beim
+  Lehren; gesammelt wurden 158 **Verfassungen**, nicht «Gesetze».
+- Sokrates nannte nach dem Prytaneion-Vorschlag noch eine Geldbusse.
+- Münzprägung nach 476: geschrumpft, nicht verschwunden (Merowinger).
+- Zwölf Artikel: in Memmingen **beschlossen**, gedruckt in Augsburg.
+- Montaigne: Sprüche **gemalt/gebrannt**, nicht geschnitzt.
+- Kant: **fast** sein ganzes Leben in Königsberg (Hauslehrerjahre um
+  1748–1754).
+- Watt: «erstmals Kraft» gestrichen — Newcomen lief seit 1712.
+- Eisenbahn 1830: schneller, als ein Pferd es **durchhält** (Rocket 47 km/h,
+  Vollblut 70 km/h — neu war die Dauer, nicht die Spitze).
+- Ludditen: **Textilarbeiter** (Strumpfwirker zuerst), nicht «Weber»; der
+  Soldatenvergleich präzisiert: 12'000, mehr als Wellingtons Korps von
+  **1808** (1812 bei Salamanca führte er 48'500 Mann).
+- Clara Immerwahr: **zehn** Tage nach Ypern, nicht «wenige».
+- Fukuyama: Aufsatz **1989**, Buch 1992; geprägt hat er den Ausdruck nicht.
+- NOAA ist Wetter- und Ozeanografiebehörde → «US-Behörden NASA und NOAA».
+- Apollo 17: letzte bemannte Mond**landung** — seit Artemis 2 (April 2026)
+  nicht mehr der letzte bemannte Mondflug.
+- «Artificial intelligence»: Begriff stand **1955** im Förderantrag
+  (McCarthy), die Dartmouth-Werkstatt lief 1956.
+
+**Verworfen wurde im Gegen-Durchgang** die Korrektur «Kirchner meldete sich
+1915 statt 1914»: Der Wikipedia-Hauptartikel und die Sächsische Biografie
+stützen 1914, nur der Sanatorien-Artikel sagt 1915. Der Text blieb.
+
+**Sprachregel für Belege präzisiert:** in der Regel deutschsprachig. Bewusst
+englisch bleiben Bacon (Original Latein, keine freie deutsche Übersetzung
+gefunden), das irische Statistikamt (der Text nennt die Behörde, also
+Primärquelle) und der Wellington-Vergleich (steht nur im englischen
+Luddite-Artikel) — Begründung jeweils als Kommentar am Beleg. Auf deutsch
+umgestellt: EU-AI-Act-Zeitplan (deutsche Fassung des Service Desk) und die
+UNESCO-Studie (CIO.de-Bericht, deckt alle Aussagen des Blocks).
+
+Damit tragen jetzt 29 Textblöcke Belege (41 Einträge). Nicht belegbar bleiben
+Blöcke, die ohne GlossarText rendern (Epochen-Leads, Bildführungs-Stopps) —
+dort greifen nur Textkorrekturen.
+
+---
+
 ## 2026-08-04 — Bildführungen: Fokusringe nachgemessen statt geschätzt (Christof)
 
 Rückmeldung des Lektors: Der Ring bei «Lichtbänder des Netzes» lag auf Afrika,
