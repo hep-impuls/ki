@@ -342,7 +342,7 @@ const BEREICHE: Bereich[] = [
         these: "Gefühle gehören zum guten Leben.",
         info: "Martha Nussbaum ist eine der bekanntesten US-amerikanischen Philosophinnen und verbindet antike Ethik (besonders Aristoteles und die Stoa) mit heutigen Fragen. Sie zeigt, dass Gefühle keine blosse Störung der Vernunft sind, sondern zu einem guten Urteil und einem gelingenden Leben dazugehören. Mit dem «Fähigkeiten-Ansatz» fragt sie konkret, was Menschen wirklich können müssen, um gut zu leben (etwa Gesundheit, Bildung, Bindung, Spiel), und wie eine Gesellschaft das ermöglichen soll. Lebenskunst heisst darum auch, die eigenen Gefühle ernst zu nehmen und gute Bedingungen zu schaffen. Werk: «Fähigkeiten schaffen» (2011).",
         begriffe: [
-          { wort: "«Fähigkeiten-Ansatz»", erklaerung: "Nussbaums Frage, was Menschen konkret können müssen, um gut zu leben (Gesundheit, Bildung, Bindung, Spiel), und was eine Gesellschaft dafür schulden." },
+          { wort: "«Fähigkeiten-Ansatz»", erklaerung: "Nussbaums Frage, was Menschen konkret können müssen, um gut zu leben (Gesundheit, Bildung, Bindung, Spiel), und was eine Gesellschaft ihnen dafür schulden." },
         ],
       },
       {
