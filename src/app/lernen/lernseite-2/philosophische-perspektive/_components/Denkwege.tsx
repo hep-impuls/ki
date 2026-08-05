@@ -350,7 +350,7 @@ const BEREICHE: Bereich[] = [
         name: "Maurice Merleau-Ponty",
         leben: "1908 bis 1961",
         these: "Wir verstehen die Welt mit dem Leib.",
-        info: "Maurice Merleau-Ponty war ein französischer Philosoph der Phänomenologie. Sein Thema ist der Leib: Wir erfahren die Welt nicht zuerst mit dem Kopf, sondern leiblich, durch Wahrnehmung, Bewegung, Berührung und Gefühl. Der Körper ist kein Ding, das wir bloss «haben», sondern die Art, wie wir zur Welt gehören. Verstehen und ein gutes Leben sind darum verkörpert, nicht rein rechnerisch. Genau das kann eine körperlose KI nicht: Sie verarbeitet Zeichen, aber sie spürt und leibt nicht. Werk: «Phänomenologie der Wahrnehmung» (1945).",
+        info: "Maurice Merleau-Ponty war ein französischer Philosoph der Phänomenologie. Sein Thema ist der Leib: Wir erfahren die Welt nicht zuerst mit dem Kopf, sondern leiblich, durch Wahrnehmung, Bewegung, Berührung und Gefühl. Der Körper ist kein Ding, das wir bloss «haben», sondern die Art, wie wir zur Welt gehören. Verstehen und ein gutes Leben sind darum verkörpert, nicht rein rechnerisch. Genau das kann eine körperlose KI nicht: Sie verarbeitet Zeichen, aber sie spürt und erlebt nicht. Werk: «Phänomenologie der Wahrnehmung» (1945).",
         begriffe: [
           { wort: "Phänomenologie", erklaerung: "Philosophische Richtung, die genau beschreibt, wie uns die Dinge erscheinen und wie wir sie leiblich erleben." },
         ],
