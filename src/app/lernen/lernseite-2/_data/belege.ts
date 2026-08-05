@@ -560,19 +560,28 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    // Nachgetragen am 2026-08-05: Der Block war mit «Umwelt & KI»
-    // überschrieben, nannte aber keine der Techniken, die die Umwelt
-    // gefährden. Der ergänzte Satz braucht darum einen Beleg.
-    id: "EP-43dad6",
-    anker: "Kraftwerken, Fahrzeugen und Heizungen",
+    /* Nachgetragen am 2026-08-05: Der Block war mit «Umwelt & KI»
+     * überschrieben, nannte aber keine der Techniken, die die Umwelt
+     * gefährden.
+     *
+     * Zwei Feinheiten, die der Text bewusst so löst:
+     *  - «Energieverbrauch» als grösster Anteil stützt sich auf die 38 von 59
+     *    Mrd. Tonnen. In dieser Zahl stecken auch Industrieprozesse wie die
+     *    Zementherstellung, die streng genommen kein Energieverbrauch sind;
+     *    die fossile Energie allein bleibt aber der grösste Posten.
+     *  - Der Satz sagt «solange die aus Kohle, Öl und Gas kommt». Ohne diese
+     *    Bedingung wäre die Aussage falsch: Strom aus Wasserkraft heizt nicht.
+     *    Gerade in der Schweiz ist das der Unterschied. */
+    id: "EP-2f2626",
+    anker: "aus Kohle, Öl und Gas kommt",
     url: "https://de.wikipedia.org/wiki/Globale_Erw%C3%A4rmung",
     titel: "Globale Erwärmung (Wikipedia)",
     stelle:
-      "Für 2019, bei 59 Milliarden Tonnen CO₂-Äquivalent gesamt: «Die wichtigste Emissionsquelle war die Kohlendioxidfreisetzung aus fossilen Energieträgern und Industrieprozessen mit 38 ± 3 Mrd. Tonnen, gefolgt von Methanfreisetzung (11 ± 3,2 Mrd. Tonnen), Kohlendioxidemissionen aus Landnutzungsänderungen wie Entwaldung (6,6 ± 4,6 Mrd. Tonnen).» Die Aufzählung «Kraftwerke, Fahrzeuge, Heizungen» ist die alltagssprachliche Auflösung von «fossile Energieträger», die der Artikel nicht einzeln aufschlüsselt.",
+      "Für 2019, bei 59 Milliarden Tonnen CO₂-Äquivalent gesamt: «Die wichtigste Emissionsquelle war die Kohlendioxidfreisetzung aus fossilen Energieträgern und Industrieprozessen mit 38 ± 3 Mrd. Tonnen, gefolgt von Methanfreisetzung (11 ± 3,2 Mrd. Tonnen), Kohlendioxidemissionen aus Landnutzungsänderungen wie Entwaldung (6,6 ± 4,6 Mrd. Tonnen).»",
     geprueft: "2026-08-05",
   },
   {
-    id: "EP-43dad6",
+    id: "EP-2f2626",
     anker: "das Methan der Viehhaltung und die Rodung der Wälder",
     url: "https://de.wikipedia.org/wiki/Globale_Erw%C3%A4rmung",
     titel: "Globale Erwärmung (Wikipedia)",
