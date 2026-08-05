@@ -13,8 +13,8 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 22 |
-| Belegte Textblöcke | 13 |
+| Belege | 25 |
+| Belegte Textblöcke | 15 |
 | Begründete Nicht-Belege | 4 |
 | Aussagen mit Standdatum | 3 |
 
@@ -39,6 +39,15 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 - **Geprüft:** 2026-07-26
 
 > Die Magnetnadel diente in China zuerst gar nicht der Seefahrt, mit magnetischen Löffeln richteten Wahrsager Häuser und Gräber günstig aus, bevor Kapitäne der Song-Zeit die Nadel mit aufs Meer nahmen. Auch das Schiesspulver entstand als Nebenprodukt, daoistische Alchemisten suchten ein Mittel für langes Leben und fanden ein Gemisch, das brannte und knallte, zuerst für Feuerwerk, bald für Waffen. Über Händler und die Feldzüge der Mongolen wanderten beide Erfindungen westwärts, wo Kanonen die Burgmauern der Ritter entwerteten und die Macht zu Königen mit grossen Heeren verschoben. Der englische Philosoph Francis Bacon schrieb um 1620, drei Erfindungen hätten das Gesicht der Welt verändert, Buchdruck, Schiesspulver und Kompass, und ahnte nicht, dass alle drei Wurzeln in China hatten. Was eine Erfindung bewirkt, entscheidet sich eben erst dort, wo sie ankommt und wozu man sie einsetzt.
+
+### Der Fall Roms · seit rund achthundert Jahren hatte kein Feind sie eingenommen
+
+- **Kennung:** `PP-ed973f` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Plünderung Roms (410) (Wikipedia)](https://de.wikipedia.org/wiki/Pl%C3%BCnderung_Roms_(410))
+- **Fundstelle:** «Dies war die erste Einnahme Roms seit dem Einfall der Kelten rund 800 Jahre zuvor.» Die Plünderung selbst datiert der Artikel auf den 24. bis 27. August 410. Dort steht auch das Hieronymus-Zitat aus Brief 127,12, dem der Schlusssatz dieses Blocks folgt.
+- **Geprüft:** 2026-08-05
+
+> Rom galt als die ewige Stadt, seit rund achthundert Jahren hatte kein Feind sie eingenommen, dann standen 410 die Westgoten unter Alarich drei Tage lang plündernd in ihren Strassen. Die Nachricht lief durch das ganze Reich, der Gelehrte Hieronymus schrieb aus Bethlehem, eingenommen sei die Stadt, die zuvor die ganze Welt besiegt hatte. Der eigentliche Schlusspunkt kam leise, 476 setzte der Heerführer Odoaker den letzten weströmischen Kaiser ab, einen Jungen namens Romulus Augustulus, und schickte die Kaiserinsignien nach Konstantinopel. Viele Menschen merkten zunächst kaum einen Unterschied, doch über Jahrzehnte zerfielen Strassen, Wasserleitungen und Verwaltung, Städte schrumpften, Wissen ging verloren. Der Fall Roms zeigt, dass grosse Ordnungen selten mit einem Knall enden, sondern in einem langen Ausfransen, das die Menschen erst im Rückblick als Epochenbruch erkennen.
 
 ---
 
@@ -218,6 +227,24 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 - **Geprüft:** 2026-08-04
 
 > Zwei Erfindungen treiben den Wandel. Um 800 v. Chr. übernehmen die Griechen von den Phöniziern die Buchstabenschrift, rund zwei Dutzend Zeichen. Geschrieben wurde hier schon früher: Die Paläste der mykenischen Zeit führten ihre Listen in einer Silbenschrift mit etwa 90 Lautzeichen, dazu 160 Bildzeichen für Waren. Um 1200 v. Chr. gingen die Paläste unter und die Schrift mit ihnen; vierhundert Jahre lang wird in Griechenland nicht geschrieben. Das Alphabet ist darum kein vereinfachtes Erbe, sondern ein Neuanfang. Lernen kann es trotzdem nicht jeder: Es gibt keine Schulpflicht und keine Schulhäuser, unterrichtet wird beim Lehrer zuhause. Dazu kommen Münzen, in Lydien um 650, in griechischen Städten wie Aigina um 550 v. Chr. Vorher bezahlte man mit abgewogenem Silber: Barren, Schmuck, Bruchstücke, von denen man je nach Warenwert ein Stück abtrennte und auf die Waage legte. Eine Münze muss man nicht wiegen, man zählt sie, und sie gilt gleich viel, egal in wessen Hand sie liegt. So werden Werte zählbar, teilbar und weitergebbar. Durchgesetzt hat sich beides, weil eine Welt voller Häfen und Händler Verträge, Notizen und ein zuverlässiges Zahlungsmittel brauchte.
+
+### Zerbrechen der Ordnung · die Stimme stocke ihm
+
+- **Kennung:** `EP-fb7e60` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Plünderung Roms (410) (Wikipedia)](https://de.wikipedia.org/wiki/Pl%C3%BCnderung_Roms_(410))
+- **Fundstelle:** Wörtlich zu Hieronymus' Reaktion: «Die Stimme stockt mir, und vor Schluchzen kann ich nicht weiterdiktieren: Die Stadt Rom ist eingenommen, die zuvor die ganze Welt besiegt hatte.» Der Artikel weist die Stelle als Briefe 127,12 nach.
+- **Geprüft:** 2026-08-05
+
+> Wie tief der Schock sass, zeigt der Gelehrte Hieronymus, der fern in Bethlehem an seiner Bibelübersetzung arbeitete: Als ihn die Nachricht erreichte, schrieb er, die Stimme stocke ihm und vor Schluchzen könne er nicht weiterdiktieren: Eingenommen sei die Stadt, die zuvor die ganze Welt besiegt hatte. Übers Meer flohen ausgeplünderte Senatorenfamilien nach Nordafrika, wo manche als Bittsteller in Hippo ankamen, der Bischofsstadt des Augustinus. Dort hörte er beide Vorwürfe: Die Anhänger der alten Götter gaben dem Christengott die Schuld, und die Christen fragten, warum er sie nicht geschützt hatte. Augustinus antwortete nicht mit einer schnellen Streitschrift, sondern arbeitete von 413 bis 426 an den zweiundzwanzig Büchern seines «Gottesstaats». Dass eine Katastrophe sofort einen Schuldigen braucht, hat sich seither kaum geändert, es wechseln nur die Adressaten.
+
+### Zerbrechen der Ordnung · fern in Bethlehem an seiner Bibelübersetzung arbeitete
+
+- **Kennung:** `EP-fb7e60` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Vulgata (Wikipedia)](https://de.wikipedia.org/wiki/Vulgata)
+- **Fundstelle:** «Nach dem Tod des Papstes 384 siedelte Hieronymus nach Bethlehem über und wandte sich der Übersetzung des Alten Testaments zu.» Der Artikel «Hieronymus (Kirchenvater)» ergänzt, dass die von ihm geleitete Gruppe sich in Bethlehem niederliess, wo Paula ein Kloster finanzierte: «Hier konnte sich Hieronymus seiner bibelwissenschaftlichen Arbeit widmen.»
+- **Geprüft:** 2026-08-05
+
+> Wie tief der Schock sass, zeigt der Gelehrte Hieronymus, der fern in Bethlehem an seiner Bibelübersetzung arbeitete: Als ihn die Nachricht erreichte, schrieb er, die Stimme stocke ihm und vor Schluchzen könne er nicht weiterdiktieren: Eingenommen sei die Stadt, die zuvor die ganze Welt besiegt hatte. Übers Meer flohen ausgeplünderte Senatorenfamilien nach Nordafrika, wo manche als Bittsteller in Hippo ankamen, der Bischofsstadt des Augustinus. Dort hörte er beide Vorwürfe: Die Anhänger der alten Götter gaben dem Christengott die Schuld, und die Christen fragten, warum er sie nicht geschützt hatte. Augustinus antwortete nicht mit einer schnellen Streitschrift, sondern arbeitete von 413 bis 426 an den zweiundzwanzig Büchern seines «Gottesstaats». Dass eine Katastrophe sofort einen Schuldigen braucht, hat sich seither kaum geändert, es wechseln nur die Adressaten.
 
 ### Zerbrechen der Ordnung · zerstörten sie die Wasserleitungen
 

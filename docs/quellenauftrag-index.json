@@ -1329,12 +1329,12 @@
   "stufe": "tief",
   "text": "Rom wird 410 geplündert, 476 endet das weströmische Reich. Für die Zeitgenossen wankt die Weltordnung selbst."
  },
- "PP-94d15d": {
+ "PP-ed973f": {
   "datei": "philosophische-perspektive/page.tsx",
   "ort": "Der Fall Roms",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "mittel",
-  "text": "Rom galt als die ewige Stadt, seit rund achthundert Jahren hatte kein Feind sie eingenommen, dann standen 410 die Westgoten unter Alarich drei Tage lang plündernd in ihren Strassen. Die Nachricht lief durch das ganze Reich, der Gelehrte Hieronymus schrieb aus Bethlehem, mit dieser einen Stadt scheine der ganze Erdkreis unterzugehen. Der eigentliche Schlusspunkt kam leise, 476 setzte der Heerführer Odoaker den letzten weströmischen Kaiser ab, einen Jungen namens Romulus Augustulus, und schickte die Kaiserinsignien nach Konstantinopel. Viele Menschen merkten zunächst kaum einen Unterschied, doch über Jahrzehnte zerfielen Strassen, Wasserleitungen und Verwaltung, Städte schrumpften, Wissen ging verloren. Der Fall Roms zeigt, dass grosse Ordnungen selten mit einem Knall enden, sondern in einem langen Ausfransen, das die Menschen erst im Rückblick als Epochenbruch erkennen."
+  "text": "Rom galt als die ewige Stadt, seit rund achthundert Jahren hatte kein Feind sie eingenommen, dann standen 410 die Westgoten unter Alarich drei Tage lang plündernd in ihren Strassen. Die Nachricht lief durch das ganze Reich, der Gelehrte Hieronymus schrieb aus Bethlehem, eingenommen sei die Stadt, die zuvor die ganze Welt besiegt hatte. Der eigentliche Schlusspunkt kam leise, 476 setzte der Heerführer Odoaker den letzten weströmischen Kaiser ab, einen Jungen namens Romulus Augustulus, und schickte die Kaiserinsignien nach Konstantinopel. Viele Menschen merkten zunächst kaum einen Unterschied, doch über Jahrzehnte zerfielen Strassen, Wasserleitungen und Verwaltung, Städte schrumpften, Wissen ging verloren. Der Fall Roms zeigt, dass grosse Ordnungen selten mit einem Knall enden, sondern in einem langen Ausfransen, das die Menschen erst im Rückblick als Epochenbruch erkennen."
  },
  "PP-17da5c": {
   "datei": "philosophische-perspektive/page.tsx",
@@ -2092,12 +2092,12 @@
   "stufe": "mittel",
   "text": "Betroffen sind alle, besonders die städtischen Eliten: Wer sich auf Rom und seine Ordnung verlassen hatte, steht plötzlich ohne Schutz da. Nach der Plünderung Roms 410 durch die Westgoten geben viele den Christen die Schuld. Sie hätten mit dem Abfall von den alten Göttern das Unglück heraufbeschworen."
  },
- "EP-517312": {
+ "EP-fb7e60": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Zerbrechen der Ordnung",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "mittel",
-  "text": "Wie tief der Schock sass, zeigt der Gelehrte Hieronymus, der fern in Bethlehem an seiner Bibelübersetzung arbeitete: Als ihn die Nachricht erreichte, schrieb er, mit dieser einen Stadt sei der ganze Erdkreis untergegangen, und er fand tagelang nicht zur Arbeit zurück. Übers Meer flohen ausgeplünderte Senatorenfamilien nach Nordafrika, wo manche als Bittsteller in Hippo ankamen, der Bischofsstadt des Augustinus. Dort hörte er beide Vorwürfe: Die Anhänger der alten Götter gaben dem Christengott die Schuld, und die Christen fragten, warum er sie nicht geschützt hatte. Augustinus antwortete nicht mit einer schnellen Streitschrift, sondern arbeitete von 413 bis 426 an den zweiundzwanzig Büchern seines «Gottesstaats». Dass eine Katastrophe sofort einen Schuldigen braucht, hat sich seither kaum geändert, es wechseln nur die Adressaten."
+  "text": "Wie tief der Schock sass, zeigt der Gelehrte Hieronymus, der fern in Bethlehem an seiner Bibelübersetzung arbeitete: Als ihn die Nachricht erreichte, schrieb er, die Stimme stocke ihm und vor Schluchzen könne er nicht weiterdiktieren: Eingenommen sei die Stadt, die zuvor die ganze Welt besiegt hatte. Übers Meer flohen ausgeplünderte Senatorenfamilien nach Nordafrika, wo manche als Bittsteller in Hippo ankamen, der Bischofsstadt des Augustinus. Dort hörte er beide Vorwürfe: Die Anhänger der alten Götter gaben dem Christengott die Schuld, und die Christen fragten, warum er sie nicht geschützt hatte. Augustinus antwortete nicht mit einer schnellen Streitschrift, sondern arbeitete von 413 bis 426 an den zweiundzwanzig Büchern seines «Gottesstaats». Dass eine Katastrophe sofort einen Schuldigen braucht, hat sich seither kaum geändert, es wechseln nur die Adressaten."
  },
  "EP-8c45bf": {
   "datei": "_components/VerunsicherungsEpochen.tsx",

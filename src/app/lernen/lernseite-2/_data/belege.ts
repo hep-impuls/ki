@@ -276,6 +276,54 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-04",
   },
 
+  /* ── Hieronymus beim Fall Roms ────────────────────────────────────────────
+   * Christof fragte am 2026-08-04, woher der Satz stamme, Hieronymus habe
+   * «fern in Bethlehem an seiner Bibelübersetzung» gearbeitet. Der Ort und die
+   * Arbeit liessen sich belegen, das Zitat nicht: Der Text liess ihn schreiben,
+   * «mit dieser einen Stadt sei der ganze Erdkreis untergegangen», und er habe
+   * «tagelang nicht zur Arbeit zurück» gefunden.
+   *
+   * Beides hielt nicht. Der Gedanke vom Erdkreis, der in einer Stadt untergeht,
+   * steht im Vorwort zu Hieronymus' Ezechiel-Kommentar («in una urbe totus
+   * orbis interiit»); zitierfähig auf Deutsch fand sich davon nichts. Was sich
+   * wörtlich belegen liess, ist die andere, stärkere Stelle aus Brief 127,12 —
+   * und die sagt etwas anderes: nicht der Erdkreis ging unter, sondern die
+   * Stadt, die den Erdkreis besiegt hatte, wurde eingenommen. Der Text folgt
+   * jetzt dieser Stelle. Die Arbeitsunterbrechung ist gestrichen, weil keine
+   * der abgerufenen deutschsprachigen Quellen sie hergibt. */
+  {
+    id: "EP-fb7e60",
+    anker: "die Stimme stocke ihm",
+    url: "https://de.wikipedia.org/wiki/Pl%C3%BCnderung_Roms_(410)",
+    titel: "Plünderung Roms (410) (Wikipedia)",
+    stelle:
+      "Wörtlich zu Hieronymus' Reaktion: «Die Stimme stockt mir, und vor Schluchzen kann ich nicht weiterdiktieren: Die Stadt Rom ist eingenommen, die zuvor die ganze Welt besiegt hatte.» Der Artikel weist die Stelle als Briefe 127,12 nach.",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-fb7e60",
+    anker: "fern in Bethlehem an seiner Bibelübersetzung arbeitete",
+    url: "https://de.wikipedia.org/wiki/Vulgata",
+    titel: "Vulgata (Wikipedia)",
+    stelle:
+      "«Nach dem Tod des Papstes 384 siedelte Hieronymus nach Bethlehem über und wandte sich der Übersetzung des Alten Testaments zu.» Der Artikel «Hieronymus (Kirchenvater)» ergänzt, dass die von ihm geleitete Gruppe sich in Bethlehem niederliess, wo Paula ein Kloster finanzierte: «Hier konnte sich Hieronymus seiner bibelwissenschaftlichen Arbeit widmen.»",
+    geprueft: "2026-08-05",
+  },
+  /* Anker bewusst auf den Achthundert-Jahre-Satz und nicht auf das Zitat:
+   * Beleg-Anker werden nach Wortlaut gesucht, nicht nach Block. Beide Texte
+   * enden gleich, ein Anker auf dem Zitat würde darum im Epochen-Block ein
+   * zweites Mal auf dieselbe Quelle verlinken. Der Achthundert-Jahre-Satz
+   * kommt nur hier vor und war ohnehin unbelegt. */
+  {
+    id: "PP-ed973f",
+    anker: "seit rund achthundert Jahren hatte kein Feind sie eingenommen",
+    url: "https://de.wikipedia.org/wiki/Pl%C3%BCnderung_Roms_(410)",
+    titel: "Plünderung Roms (410) (Wikipedia)",
+    stelle:
+      "«Dies war die erste Einnahme Roms seit dem Einfall der Kelten rund 800 Jahre zuvor.» Die Plünderung selbst datiert der Artikel auf den 24. bis 27. August 410. Dort steht auch das Hieronymus-Zitat aus Brief 127,12, dem der Schlusssatz dieses Blocks folgt.",
+    geprueft: "2026-08-05",
+  },
+
   /* ── Zerbrechen der Ordnung ───────────────────────────────────────────────
    * 537 belagerten die OSTgoten Rom, nicht die Westgoten von 410. Der Text
    * nannte vorher nur «Goten», was beide Völker verschmolz. */
