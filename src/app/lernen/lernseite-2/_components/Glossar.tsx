@@ -198,6 +198,15 @@ export const GLOSSAR: Record<string, string> = {
     "Aufteilung der Staatsmacht in Gesetzgebung, Regierung und Gerichte — zum Schutz vor Machtmissbrauch.",
   Anthropozän:
     "Vorgeschlagenes Erdzeitalter, in dem der Mensch die Erde (Klima, Arten, Gestein) prägend verändert.",
+  /* Beugungsformen brauchen je einen eigenen Eintrag, weil auf Wortgrenze
+     gesucht wird. Im Bestand steht derzeit nur «fossilen»; die übrigen Formen
+     sind Vorsorge, damit der Hover nicht beim nächsten Satz ausfällt. */
+  fossilen:
+    "Kohle, Erdöl und Erdgas: Brennstoffe aus toten Pflanzen und Tieren der Erdvorzeit; beim Verbrennen geben sie den Kohlenstoff als CO₂ frei, den die Erde über Millionen Jahre eingelagert hat.",
+  fossile:
+    "Kohle, Erdöl und Erdgas: Brennstoffe aus toten Pflanzen und Tieren der Erdvorzeit; beim Verbrennen geben sie den Kohlenstoff als CO₂ frei, den die Erde über Millionen Jahre eingelagert hat.",
+  fossiler:
+    "Kohle, Erdöl und Erdgas: Brennstoffe aus toten Pflanzen und Tieren der Erdvorzeit; beim Verbrennen geben sie den Kohlenstoff als CO₂ frei, den die Erde über Millionen Jahre eingelagert hat.",
   Sprachmodelle:
     "Programme, die aus riesigen Textmengen gelernt haben, das nächste Wort vorherzusagen, und so selbst Texte schreiben.",
   Sprachmodellen:
