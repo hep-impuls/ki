@@ -93,7 +93,7 @@ const BEREICHE: Bereich[] = [
         name: "Aristoteles",
         leben: "384 bis 322 v. Chr.",
         these: "Der Mensch strebt von Natur aus nach Wissen.",
-        info: "Aristoteles stammte aus Stagira, war Schüler Platons und Lehrer Alexanders des Grossen. Er ordnete das Wissen seiner Zeit über fast alle Gebiete, von Logik und Naturkunde bis Ethik und Politik, und machte die Beobachtung zur Methode. Seine «Metaphysik» beginnt mit dem Satz, alle Menschen strebten von Natur aus nach Wissen: Neugier ist für ihn kein Zufall, sondern Wesenszug. Der Mensch will die Ursachen verstehen, das Warum, nicht nur Fakten sammeln. Für den Umgang mit KI heisst das: Wissen ist mehr als Datenausgabe, es ist verstehen wollen.",
+        info: "Aristoteles stammte aus Stagira, war Schüler Platons und Lehrer Alexanders des Grossen. Er ordnete das Wissen seiner Zeit über fast alle Gebiete, von Logik und Naturkunde bis Ethik und Politik, und machte die Beobachtung zur Methode. Seine «Metaphysik» beginnt mit dem Satz, alle Menschen strebten von Natur aus nach Wissen: Neugier ist für ihn kein Zufall, sondern ein Wesenszug. Der Mensch will die Ursachen verstehen, das Warum, nicht nur Fakten sammeln. Für den Umgang mit KI heisst das: Wissen ist mehr als Datenausgabe, es ist verstehen wollen.",
         begriffe: [
           { wort: "Stagira", erklaerung: "Kleine Stadt im Norden des antiken Griechenlands, Geburtsort von Aristoteles." },
           { wort: "Platons", erklaerung: "Platon, athenischer Philosoph (rund 427 bis 347 v. Chr.) und Lehrer von Aristoteles, einer der Begründer der abendländischen Philosophie." },
