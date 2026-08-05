@@ -13,8 +13,8 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 52 |
-| Belegte Textblöcke | 33 |
+| Belege | 55 |
+| Belegte Textblöcke | 34 |
 | Begründete Nicht-Belege | 5 |
 | Aussagen mit Standdatum | 3 |
 
@@ -407,6 +407,33 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 - **Geprüft:** 2026-08-05
 
 > Dieses Bild ist kein Gemälde, sondern eine Fotografie, die am 7. Dezember 1972 aus rund 29 000 km Entfernung entstand. Aufgenommen hat sie die Besatzung von Apollo 17, der bislang letzten bemannten Mondlandung. Zu sehen ist die Erde als ganze, runde Kugel, mit Wolkenwirbeln, Ozeanen und Kontinenten in einem einzigen Blick. Von hier oben sind keine Nationen und keine Grenzen erkennbar, nur ein einziger, verletzlicher Planet im schwarzen All. «Blue Marble» wurde zu einem der meistreproduzierten Fotos der Geschichte und zur Ikone der Umweltbewegung.
+
+### Jetzt: Umwelt & KI · 148 Tage lang
+
+- **Kennung:** `EP-fde45c` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Writers Guild of America (Wikipedia)](https://de.wikipedia.org/wiki/Writers_Guild_of_America)
+- **Fundstelle:** Zur Dauer: «Das Ende des Streiks war auf den 26. September, 12:01 Uhr terminiert, womit der Streik 148 Tage dauerte.» Zum Gegenstand: Die WGA forderte «Regelungen zur Nutzung künstlicher Intelligenz bei der Entwicklung von Drehbüchern».
+- **Geprüft:** 2026-08-05
+
+> Im August 2018 setzte sich eine Fünfzehnjährige mit einem handgemalten Schild vor das schwedische Parlament, ein Jahr später folgten Millionen Jugendliche weltweit ihrem Schulstreik fürs Klima: Die Betroffenen der Zukunft meldeten sich als politische Kraft. 2021 hielt der Aussenminister des Inselstaats Tuvalu seine Videobotschaft an die Weltklimakonferenz im Anzug am Rednerpult, das knietief im Meer stand, um zu zeigen, was der steigende Meeresspiegel für sein Land bedeutet. Und 2023 streikten in Hollywood die Drehbuchautorinnen und Drehbuchautoren 148 Tage lang, erstmals war der Umgang mit KI ein zentraler Streitpunkt eines grossen Arbeitskampfs; am Ende standen Regeln dazu im Vertrag, und die Schauspielgewerkschaft erreichte im selben Jahr Ähnliches. Zugleich verschob sich der Boden im Alltag: Seit 2023 lassen sich Stimmen mit geringem Aufwand täuschend echt klonen, und vor der Europawahl 2024 kursierten KI-Fälschungen als Propaganda. Wer bei einer Aufnahme nicht mehr weiss, ob sie echt ist, verliert etwas, das vorher niemand eigens prüfen musste. Vier Szenen, ein Muster: Die Verunsicherung hat Gesichter, aber keinen einzelnen Verursacher, und sie verteilt sich ungleich über Generationen, Berufe und Weltgegenden. Wer sie aushalten will, ohne zu erstarren oder abzustumpfen, braucht mehr als private Zuversicht. Genau darum kreist die Suche nach einem neuen, tragfähigen Wir.
+
+### Jetzt: Umwelt & KI · die Schauspielgewerkschaft erreichte im selben Jahr Ähnliches
+
+- **Kennung:** `EP-fde45c` (Vertiefung «Mehr lesen»)
+- **Quelle:** [SAG-AFTRA (Wikipedia)](https://de.wikipedia.org/wiki/SAG-AFTRA)
+- **Fundstelle:** «Von Juli bis November 2023 befand sich SAG-AFTRA in einem grossflächigen Streik. Der Streik endete mit einer Grundsatzvereinbarung … über eine bessere Mindestvergütung, Leistungen bei der Renten- und Krankenversicherung, die Regelung des Einsatzes von künstlicher Intelligenz in der Filmbranche und Zulagen für Filme und Serien bei Streamingdiensten.»
+- **Geprüft:** 2026-08-05
+
+> Im August 2018 setzte sich eine Fünfzehnjährige mit einem handgemalten Schild vor das schwedische Parlament, ein Jahr später folgten Millionen Jugendliche weltweit ihrem Schulstreik fürs Klima: Die Betroffenen der Zukunft meldeten sich als politische Kraft. 2021 hielt der Aussenminister des Inselstaats Tuvalu seine Videobotschaft an die Weltklimakonferenz im Anzug am Rednerpult, das knietief im Meer stand, um zu zeigen, was der steigende Meeresspiegel für sein Land bedeutet. Und 2023 streikten in Hollywood die Drehbuchautorinnen und Drehbuchautoren 148 Tage lang, erstmals war der Umgang mit KI ein zentraler Streitpunkt eines grossen Arbeitskampfs; am Ende standen Regeln dazu im Vertrag, und die Schauspielgewerkschaft erreichte im selben Jahr Ähnliches. Zugleich verschob sich der Boden im Alltag: Seit 2023 lassen sich Stimmen mit geringem Aufwand täuschend echt klonen, und vor der Europawahl 2024 kursierten KI-Fälschungen als Propaganda. Wer bei einer Aufnahme nicht mehr weiss, ob sie echt ist, verliert etwas, das vorher niemand eigens prüfen musste. Vier Szenen, ein Muster: Die Verunsicherung hat Gesichter, aber keinen einzelnen Verursacher, und sie verteilt sich ungleich über Generationen, Berufe und Weltgegenden. Wer sie aushalten will, ohne zu erstarren oder abzustumpfen, braucht mehr als private Zuversicht. Genau darum kreist die Suche nach einem neuen, tragfähigen Wir.
+
+### Jetzt: Umwelt & KI · täuschend echt klonen
+
+- **Kennung:** `EP-fde45c` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Deepfake (Wikipedia)](https://de.wikipedia.org/wiki/Deepfake)
+- **Fundstelle:** Zu den geklonten Stimmen, mit Verweis auf einen Tagesschau-Bericht vom 18. Juli 2023: «Mittels KI können somit Stimmen mit geringem Aufwand täuschend echt geklont werden.» Zur Wahl: «Im April 2024 gibt es im Vorfeld der Europawahl Beispiele für den Einsatz von KI zu propagandistischen Zwecken.»
+- **Geprüft:** 2026-08-05
+
+> Im August 2018 setzte sich eine Fünfzehnjährige mit einem handgemalten Schild vor das schwedische Parlament, ein Jahr später folgten Millionen Jugendliche weltweit ihrem Schulstreik fürs Klima: Die Betroffenen der Zukunft meldeten sich als politische Kraft. 2021 hielt der Aussenminister des Inselstaats Tuvalu seine Videobotschaft an die Weltklimakonferenz im Anzug am Rednerpult, das knietief im Meer stand, um zu zeigen, was der steigende Meeresspiegel für sein Land bedeutet. Und 2023 streikten in Hollywood die Drehbuchautorinnen und Drehbuchautoren 148 Tage lang, erstmals war der Umgang mit KI ein zentraler Streitpunkt eines grossen Arbeitskampfs; am Ende standen Regeln dazu im Vertrag, und die Schauspielgewerkschaft erreichte im selben Jahr Ähnliches. Zugleich verschob sich der Boden im Alltag: Seit 2023 lassen sich Stimmen mit geringem Aufwand täuschend echt klonen, und vor der Europawahl 2024 kursierten KI-Fälschungen als Propaganda. Wer bei einer Aufnahme nicht mehr weiss, ob sie echt ist, verliert etwas, das vorher niemand eigens prüfen musste. Vier Szenen, ein Muster: Die Verunsicherung hat Gesichter, aber keinen einzelnen Verursacher, und sie verteilt sich ungleich über Generationen, Berufe und Weltgegenden. Wer sie aushalten will, ohne zu erstarren oder abzustumpfen, braucht mehr als private Zuversicht. Genau darum kreist die Suche nach einem neuen, tragfähigen Wir.
 
 ### Jetzt: Umwelt & KI · 1971 fiel er auf den 20. Dezember
 

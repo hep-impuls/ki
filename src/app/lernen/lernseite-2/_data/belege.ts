@@ -497,6 +497,39 @@ export const BELEGE: Beleg[] = [
       "«Mit Apollo 17 landeten zum sechsten und vorerst letzten Mal Menschen auf dem Mond.» Als letzte bemannte MondMISSION gilt sie seit April 2026 nicht mehr: «Apollo 17 blieb bis zur Mission Artemis 2 im Jahr 2026 der letzte bemannte Mondflug» — Artemis 2 umrundete den Mond, landete aber nicht.",
     geprueft: "2026-08-05",
   },
+  /* KI in der Verunsicherung, nachgetragen am 2026-08-05 auf Christofs
+   * Hinweis: Der Block nannte die KI nur in einer Klammer, und von drei
+   * Szenen der Vertiefung trugen zwei das Klima. Jetzt 2:2, und die
+   * KI-Verunsicherung hat eine eigene Gestalt: nicht mehr zu wissen, was echt
+   * ist. */
+  {
+    id: "EP-fde45c",
+    anker: "148 Tage lang",
+    url: "https://de.wikipedia.org/wiki/Writers_Guild_of_America",
+    titel: "Writers Guild of America (Wikipedia)",
+    stelle:
+      "Zur Dauer: «Das Ende des Streiks war auf den 26. September, 12:01 Uhr terminiert, womit der Streik 148 Tage dauerte.» Zum Gegenstand: Die WGA forderte «Regelungen zur Nutzung künstlicher Intelligenz bei der Entwicklung von Drehbüchern».",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-fde45c",
+    anker: "die Schauspielgewerkschaft erreichte im selben Jahr Ähnliches",
+    url: "https://de.wikipedia.org/wiki/SAG-AFTRA",
+    titel: "SAG-AFTRA (Wikipedia)",
+    stelle:
+      "«Von Juli bis November 2023 befand sich SAG-AFTRA in einem grossflächigen Streik. Der Streik endete mit einer Grundsatzvereinbarung … über eine bessere Mindestvergütung, Leistungen bei der Renten- und Krankenversicherung, die Regelung des Einsatzes von künstlicher Intelligenz in der Filmbranche und Zulagen für Filme und Serien bei Streamingdiensten.»",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-fde45c",
+    anker: "täuschend echt klonen",
+    url: "https://de.wikipedia.org/wiki/Deepfake",
+    titel: "Deepfake (Wikipedia)",
+    stelle:
+      "Zu den geklonten Stimmen, mit Verweis auf einen Tagesschau-Bericht vom 18. Juli 2023: «Mittels KI können somit Stimmen mit geringem Aufwand täuschend echt geklont werden.» Zur Wahl: «Im April 2024 gibt es im Vorfeld der Europawahl Beispiele für den Einsatz von KI zu propagandistischen Zwecken.»",
+    geprueft: "2026-08-05",
+  },
+
   /* Klimafolgen in der Vertiefung, nachgetragen am 2026-08-05 auf Christofs
    * Hinweis: Der «Mehr lesen»-Text war fast reine KI-Geschichte und ging auf
    * den Klimawandel kaum ein, obwohl die Epoche «Umwelt & KI» heisst.
