@@ -65,7 +65,7 @@ export const unit: UnitConfig = {
           icon: "curtains",
           subtitle: "Auftakt",
           description:
-            "Mit KI tritt eine neue Art von Akteurin auf die Bühne — weder Werkzeug noch Person. Drei Knotenlandschaften zeigen ihre Geschichte, ihre Merkmale und ihr Netz.",
+            "Mit KI tritt eine neue Art von Akteurin auf die Bühne — weder Werkzeug noch Person. Du gehst ihrer Geschichte nach, deckst ihre zwölf Merkmale auf und gewichtest, wie deutlich jedes sie ausmacht, wanderst durch Bilder von der Turing-Bombe bis DALL·E und stellst sie in ihre vier Kontexte: technisch, wirtschaftlich, rechtlich, kulturell.",
         },
         {
           slug: "philosophische-perspektive",
@@ -74,7 +74,7 @@ export const unit: UnitConfig = {
           icon: "psychology",
           subtitle: "Orientierung",
           description:
-            "Technische Umbrüche verunsichern — seit der Antike. Fünf Epochen zeigen, wie Philosophie Orientierung stiftet: von Aristoteles bis zur offenen Frage der Gegenwart.",
+            "Technische Umbrüche verunsichern — seit der Antike. Auf einem Zeitstrahl legst du Erfindungen und Erschütterungen nebeneinander, gehst acht Epochen von Athen bis heute durch, jede mit Technik, Verunsicherung und philosophischer Antwort, und prüfst an vier Denkwegen, was davon für dich tragfähig ist.",
         },
         {
           slug: "das-orakel",
@@ -83,7 +83,7 @@ export const unit: UnitConfig = {
           icon: "insights",
           subtitle: "Rückblick & Vergleich",
           description:
-            "Dein Rückblick: welche Wege du gegangen bist und deine Antwort auf die offene Frage — im anonymen Vergleich mit allen. Das Orakel deutet den Querschnitt.",
+            "Dein Rückblick: Das Orakel liest deine Spur, zeigt sie als Rhizom und vergleicht dich anonym mit allen anderen. Dazu deine Antwort auf die offene Frage, die Punkte, die du weiterverfolgen willst, das Verzeichnis aller Quellen und ein PDF zum Mitnehmen.",
         },
       ],
     },
