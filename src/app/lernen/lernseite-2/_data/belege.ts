@@ -497,6 +497,79 @@ export const BELEGE: Beleg[] = [
       "«Mit Apollo 17 landeten zum sechsten und vorerst letzten Mal Menschen auf dem Mond.» Als letzte bemannte MondMISSION gilt sie seit April 2026 nicht mehr: «Apollo 17 blieb bis zur Mission Artemis 2 im Jahr 2026 der letzte bemannte Mondflug» — Artemis 2 umrundete den Mond, landete aber nicht.",
     geprueft: "2026-08-05",
   },
+  /* ── Rechenmaschinen: Leibniz, Babbage, Lovelace ─────────────────────────
+   * Geprüft am 2026-08-05, weil Christof den Eindruck hatte, Babbage und
+   * Lovelace stünden zu nah beieinander und womöglich fehlerhaft da. Er hatte
+   * in beidem recht. Korrigiert wurden drei Punkte:
+   *
+   *  1. «Ada Lovelace schrieb 1843 das erste Programm dafür» stand als
+   *     Tatsache da, ist aber ausdrücklich umstritten — und der Lernset-Text
+   *     widersprach sich selbst, weil die Vertiefung schon «was viele
+   *     betrachten» schrieb. Jetzt steht der Einwand mit im Text.
+   *  2. Leibniz «baute» die Maschine — sie wurde nie ganz gebrauchsfähig.
+   *  3. «Ab 1837 entwarf Babbage» — 1837/38 ist das Datum der erhaltenen
+   *     Programmtabellen, nicht des Entwurfs.
+   *
+   * Der Grund für den Eindruck der Nähe war eine Auslassung: Lovelace
+   * übersetzte einen Aufsatz von Menabrea über Babbages Maschine und hängte
+   * eigene Anmerkungen an. Ohne diesen Schritt sieht es aus, als hätten die
+   * zwei gemeinsam an einem Tisch gesessen. */
+  {
+    id: "VA-b5efb0",
+    anker: "ganz gebrauchsfähig wurde sie nie",
+    url: "https://de.wikipedia.org/wiki/Staffelwalze",
+    titel: "Staffelwalze (Wikipedia)",
+    stelle:
+      "«Die erste Rechenmaschine nach dem Staffelwalzenprinzip entwickelte Gottfried Wilhelm Leibniz (1646–1716). Das Prinzip stellte er 1673 der Royal Society in London vor. Die daraus entwickelte Maschine war nahezu gebrauchsfähig, das heisst, auf ihr wurden einige Beispielaufgaben zur Funktionsprüfung gerechnet.»",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "VA-b5efb0",
+    anker: "Streitfragen künftig durch Rechnen zu entscheiden",
+    url: "https://de.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz",
+    titel: "Gottfried Wilhelm Leibniz (Wikipedia)",
+    stelle:
+      "Leibniz wörtlich: «werden zwei Philosophen, die in einen Streit geraten, nicht anders argumentieren als zwei Rechenmeister. Es genügt, dass sie eine Feder in die Hand nehmen, sich vor ein Täfelchen setzen und zueinander sagen: ‹Calculemus!› (Rechnen wir!)»",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "VA-b5efb0",
+    anker: "hängte Anmerkungen an, doppelt so lang wie der Text selbst",
+    url: "https://de.wikipedia.org/wiki/Ada_Lovelace",
+    titel: "Ada Lovelace (Wikipedia)",
+    stelle:
+      "«Das manifestierte sich 1843 in selbst hinzugefügten Notizen zu ihrer Übersetzung eines Artikels von Luigi Federico Menabrea über die Analytical Engine, die zweimal so lang waren wie der ursprüngliche Text. Sie legte in ihren Aufzeichnungen und in der Veröffentlichung auch ein konkretes Programm für die Maschine am Beispiel der Berechnung von Bernoulli-Zahlen vor.»",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "VA-647619",
+    // Anker NEBEN «Babbage» — der Name trägt eine Glossar-Erklärung.
+    anker: "ein Satz von 1837/38 ist erhalten",
+    url: "https://de.wikipedia.org/wiki/Analytical_Engine",
+    titel: "Analytical Engine (Wikipedia)",
+    stelle:
+      "«Als Programme gibt es tabellarische Darstellungen; ein Satz von 1837/38 ist erhalten und enthält bereits das Beispiel für die Auflösung eines linearen Gleichungssystems, wie es von Luigi Federico Menabrea 1842 und Ada Lovelace 1843 veröffentlicht wurde.» Der Artikel «Ada Lovelace» nennt den Einwand ausdrücklich: Sie gelte «manchen Historikern als erste Programmiererin der Welt», was «vor allem von Doron Swade … kritisiert» werde, weil «konkrete Programmbeispiele … sich auch mehrere Jahre zuvor in Babbages Aufzeichnungen befunden» hätten.",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "VA-647619",
+    anker: "seine eigene Rechenmaschine baute er allerdings dezimal",
+    url: "https://de.wikipedia.org/wiki/Dualsystem",
+    titel: "Dualsystem (Wikipedia)",
+    stelle:
+      "«Wohl weil die feinmechanischen Fertigkeiten der damaligen Zeit nicht ausreichten, griff Leibniz beim Bau seiner Rechenmaschinen auf das Dezimalsystem zurück.» Zum Zweiersystem selbst: «Explication de l'Arithmétique Binaire (Histoire de l'Academie Royale des Sciences 1703)».",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "VA-647619",
+    anker: "ab 1805 mit je einer Lochkarte pro Schuss",
+    url: "https://de.wikipedia.org/wiki/Jacquardwebstuhl",
+    titel: "Jacquardwebstuhl (Wikipedia)",
+    stelle:
+      "«Eine erhebliche Verbesserung brachte schliesslich am 19. April 1805 die Webmaschine des französischen Seidenwebers Joseph-Marie Jacquard (1752–1834). Gesteuert durch je eine Lochkarte pro Schuss werden mit ihm Kettfäden einzeln hochgezogen und so das Weben gross gemusterter Gewebe ermöglicht.» Dass Babbage die Lochkarte aus dem Webstuhl übernahm, hält der Artikel «Analytical Engine» fest: Die Eingabe «sollte über Lochkarten erfolgen, eine Methode, die in der damaligen Zeit der Steuerung mechanischer Webstühle diente».",
+    geprueft: "2026-08-05",
+  },
+
   /* Latour-Vertiefung, ergänzt am 2026-08-05 auf Christofs Hinweis: Die
    * Rechtspersönlichkeit des Flusses stand ohne Beleg da, und Latour allein
    * markiert keinen Unterschied zwischen Mensch und Maschine — er verwischt

@@ -13,8 +13,8 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 58 |
-| Belegte Textblöcke | 35 |
+| Belege | 64 |
+| Belegte Textblöcke | 37 |
 | Begründete Nicht-Belege | 5 |
 | Aussagen mit Standdatum | 3 |
 
@@ -160,6 +160,60 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 - **Geprüft:** 2026-08-04
 
 > Damit die KI überhaupt rechnen kann, wird jedes Wort, genauer jeder Wortteil, in eine lange Zahlenreihe übersetzt. Solche Zahlenreihen heissen Vektoren. Man darf sich einen Vektor als Ort in einem Raum vorstellen: «Hund» und «Katze» liegen dort nah beieinander, «Hund» und «Schraube» weit auseinander. Dieser Raum hat allerdings nicht drei Richtungen wie unserer, sondern sehr viele. Die Informatikerin Katharina Zweig nennt Hunderte bis über zehntausend Richtungen. Was eine einzelne davon bedeutet, kann niemand ablesen; erst ihr Zusammenspiel ergibt die Lage eines Wortteils. Der Philosoph Markus Gabriel nennt dieses Übersetzen in Mathematik «vektorisieren». Am Ende bleibt es ein Rechnen mit Lagen und Abständen, kein Verstehen. Wie «mutig» die KI beim Auswählen würfelt, regelt eine Einstellung namens Temperatur. Ein hoher Wert macht die Antworten kreativer und unberechenbarer, ein niedriger vorhersehbarer. Darum kann dieselbe Frage zweimal ganz verschieden beantwortet werden.
+
+### Rechenmaschinen · ganz gebrauchsfähig wurde sie nie
+
+- **Kennung:** `VA-b5efb0` (Bildgeschichte)
+- **Quelle:** [Staffelwalze (Wikipedia)](https://de.wikipedia.org/wiki/Staffelwalze)
+- **Fundstelle:** «Die erste Rechenmaschine nach dem Staffelwalzenprinzip entwickelte Gottfried Wilhelm Leibniz (1646–1716). Das Prinzip stellte er 1673 der Royal Society in London vor. Die daraus entwickelte Maschine war nahezu gebrauchsfähig, das heisst, auf ihr wurden einige Beispielaufgaben zur Funktionsprüfung gerechnet.»
+- **Geprüft:** 2026-08-05
+
+> Der Gelehrte Gottfried Wilhelm Leibniz stellte 1673 der Royal Society eine Maschine für alle vier Grundrechenarten vor; ganz gebrauchsfähig wurde sie nie. Er träumte davon, Streitfragen künftig durch Rechnen zu entscheiden. Charles Babbage entwarf ab den 1830er-Jahren die «Analytical Engine», eine frei programmierbare Rechenmaschine, gebaut wurde sie zu seinen Lebzeiten nicht. Ada Lovelace übersetzte 1843 einen Aufsatz darüber und hängte Anmerkungen an, doppelt so lang wie der Text selbst: Darin führte sie vor, wie die Maschine die Bernoulli-Zahlen berechnen würde, und hielt fest, dass sie nichts von sich aus hervorbringt.
+
+### Rechenmaschinen · Streitfragen künftig durch Rechnen zu entscheiden
+
+- **Kennung:** `VA-b5efb0` (Bildgeschichte)
+- **Quelle:** [Gottfried Wilhelm Leibniz (Wikipedia)](https://de.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz)
+- **Fundstelle:** Leibniz wörtlich: «werden zwei Philosophen, die in einen Streit geraten, nicht anders argumentieren als zwei Rechenmeister. Es genügt, dass sie eine Feder in die Hand nehmen, sich vor ein Täfelchen setzen und zueinander sagen: ‹Calculemus!› (Rechnen wir!)»
+- **Geprüft:** 2026-08-05
+
+> Der Gelehrte Gottfried Wilhelm Leibniz stellte 1673 der Royal Society eine Maschine für alle vier Grundrechenarten vor; ganz gebrauchsfähig wurde sie nie. Er träumte davon, Streitfragen künftig durch Rechnen zu entscheiden. Charles Babbage entwarf ab den 1830er-Jahren die «Analytical Engine», eine frei programmierbare Rechenmaschine, gebaut wurde sie zu seinen Lebzeiten nicht. Ada Lovelace übersetzte 1843 einen Aufsatz darüber und hängte Anmerkungen an, doppelt so lang wie der Text selbst: Darin führte sie vor, wie die Maschine die Bernoulli-Zahlen berechnen würde, und hielt fest, dass sie nichts von sich aus hervorbringt.
+
+### Rechenmaschinen · hängte Anmerkungen an, doppelt so lang wie der Text selbst
+
+- **Kennung:** `VA-b5efb0` (Bildgeschichte)
+- **Quelle:** [Ada Lovelace (Wikipedia)](https://de.wikipedia.org/wiki/Ada_Lovelace)
+- **Fundstelle:** «Das manifestierte sich 1843 in selbst hinzugefügten Notizen zu ihrer Übersetzung eines Artikels von Luigi Federico Menabrea über die Analytical Engine, die zweimal so lang waren wie der ursprüngliche Text. Sie legte in ihren Aufzeichnungen und in der Veröffentlichung auch ein konkretes Programm für die Maschine am Beispiel der Berechnung von Bernoulli-Zahlen vor.»
+- **Geprüft:** 2026-08-05
+
+> Der Gelehrte Gottfried Wilhelm Leibniz stellte 1673 der Royal Society eine Maschine für alle vier Grundrechenarten vor; ganz gebrauchsfähig wurde sie nie. Er träumte davon, Streitfragen künftig durch Rechnen zu entscheiden. Charles Babbage entwarf ab den 1830er-Jahren die «Analytical Engine», eine frei programmierbare Rechenmaschine, gebaut wurde sie zu seinen Lebzeiten nicht. Ada Lovelace übersetzte 1843 einen Aufsatz darüber und hängte Anmerkungen an, doppelt so lang wie der Text selbst: Darin führte sie vor, wie die Maschine die Bernoulli-Zahlen berechnen würde, und hielt fest, dass sie nichts von sich aus hervorbringt.
+
+### Rechenmaschinen · ein Satz von 1837/38 ist erhalten
+
+- **Kennung:** `VA-647619` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Analytical Engine (Wikipedia)](https://de.wikipedia.org/wiki/Analytical_Engine)
+- **Fundstelle:** «Als Programme gibt es tabellarische Darstellungen; ein Satz von 1837/38 ist erhalten und enthält bereits das Beispiel für die Auflösung eines linearen Gleichungssystems, wie es von Luigi Federico Menabrea 1842 und Ada Lovelace 1843 veröffentlicht wurde.» Der Artikel «Ada Lovelace» nennt den Einwand ausdrücklich: Sie gelte «manchen Historikern als erste Programmiererin der Welt», was «vor allem von Doron Swade … kritisiert» werde, weil «konkrete Programmbeispiele … sich auch mehrere Jahre zuvor in Babbages Aufzeichnungen befunden» hätten.
+- **Geprüft:** 2026-08-05
+
+> Ein oft übersehener Beitrag von Leibniz ist das Zweiersystem, das er 1703 ausführlich beschrieb und das mit den Ziffern null und eins auskommt. Genau dieses Binärsystem bildet heute die Grundlage jedes Computers, seine eigene Rechenmaschine baute er allerdings dezimal, weil die Feinmechanik der Zeit nicht weiter reichte. Babbages Maschine sollte ihre Anweisungen von Lochkarten ablesen, eine Idee aus dem Weberhandwerk: Jacquards Webstuhl steuerte ab 1805 mit je einer Lochkarte pro Schuss die Musterung. Ada Lovelace war die Tochter des Dichters Lord Byron, der schon in der Entstehung von Frankenstein vorkommt. Ob ihre Bernoulli-Rechnung das erste Programm der Geschichte war, ist umstritten: Babbage selbst hatte Jahre zuvor Programmtabellen aufgeschrieben, ein Satz von 1837/38 ist erhalten. Ihre Leistung liegt anderswo, im Blick über das Rechnen hinaus. Sie ahnte zudem, dass eine solche Maschine eines Tages sogar Musik verarbeiten könnte, sofern man Töne in Zahlen fasst. Nach ihr wurde viel später eine Programmiersprache benannt.
+
+### Rechenmaschinen · seine eigene Rechenmaschine baute er allerdings dezimal
+
+- **Kennung:** `VA-647619` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Dualsystem (Wikipedia)](https://de.wikipedia.org/wiki/Dualsystem)
+- **Fundstelle:** «Wohl weil die feinmechanischen Fertigkeiten der damaligen Zeit nicht ausreichten, griff Leibniz beim Bau seiner Rechenmaschinen auf das Dezimalsystem zurück.» Zum Zweiersystem selbst: «Explication de l'Arithmétique Binaire (Histoire de l'Academie Royale des Sciences 1703)».
+- **Geprüft:** 2026-08-05
+
+> Ein oft übersehener Beitrag von Leibniz ist das Zweiersystem, das er 1703 ausführlich beschrieb und das mit den Ziffern null und eins auskommt. Genau dieses Binärsystem bildet heute die Grundlage jedes Computers, seine eigene Rechenmaschine baute er allerdings dezimal, weil die Feinmechanik der Zeit nicht weiter reichte. Babbages Maschine sollte ihre Anweisungen von Lochkarten ablesen, eine Idee aus dem Weberhandwerk: Jacquards Webstuhl steuerte ab 1805 mit je einer Lochkarte pro Schuss die Musterung. Ada Lovelace war die Tochter des Dichters Lord Byron, der schon in der Entstehung von Frankenstein vorkommt. Ob ihre Bernoulli-Rechnung das erste Programm der Geschichte war, ist umstritten: Babbage selbst hatte Jahre zuvor Programmtabellen aufgeschrieben, ein Satz von 1837/38 ist erhalten. Ihre Leistung liegt anderswo, im Blick über das Rechnen hinaus. Sie ahnte zudem, dass eine solche Maschine eines Tages sogar Musik verarbeiten könnte, sofern man Töne in Zahlen fasst. Nach ihr wurde viel später eine Programmiersprache benannt.
+
+### Rechenmaschinen · ab 1805 mit je einer Lochkarte pro Schuss
+
+- **Kennung:** `VA-647619` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Jacquardwebstuhl (Wikipedia)](https://de.wikipedia.org/wiki/Jacquardwebstuhl)
+- **Fundstelle:** «Eine erhebliche Verbesserung brachte schliesslich am 19. April 1805 die Webmaschine des französischen Seidenwebers Joseph-Marie Jacquard (1752–1834). Gesteuert durch je eine Lochkarte pro Schuss werden mit ihm Kettfäden einzeln hochgezogen und so das Weben gross gemusterter Gewebe ermöglicht.» Dass Babbage die Lochkarte aus dem Webstuhl übernahm, hält der Artikel «Analytical Engine» fest: Die Eingabe «sollte über Lochkarten erfolgen, eine Methode, die in der damaligen Zeit der Steuerung mechanischer Webstühle diente».
+- **Geprüft:** 2026-08-05
+
+> Ein oft übersehener Beitrag von Leibniz ist das Zweiersystem, das er 1703 ausführlich beschrieb und das mit den Ziffern null und eins auskommt. Genau dieses Binärsystem bildet heute die Grundlage jedes Computers, seine eigene Rechenmaschine baute er allerdings dezimal, weil die Feinmechanik der Zeit nicht weiter reichte. Babbages Maschine sollte ihre Anweisungen von Lochkarten ablesen, eine Idee aus dem Weberhandwerk: Jacquards Webstuhl steuerte ab 1805 mit je einer Lochkarte pro Schuss die Musterung. Ada Lovelace war die Tochter des Dichters Lord Byron, der schon in der Entstehung von Frankenstein vorkommt. Ob ihre Bernoulli-Rechnung das erste Programm der Geschichte war, ist umstritten: Babbage selbst hatte Jahre zuvor Programmtabellen aufgeschrieben, ein Satz von 1837/38 ist erhalten. Ihre Leistung liegt anderswo, im Blick über das Rechnen hinaus. Sie ahnte zudem, dass eine solche Maschine eines Tages sogar Musik verarbeiten könnte, sofern man Töne in Zahlen fasst. Nach ihr wurde viel später eine Programmiersprache benannt.
 
 ---
 

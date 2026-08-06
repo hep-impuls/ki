@@ -1144,7 +1144,13 @@ export default function StoryGewebe({
                     <GlossarText text={st.text} />
                   </p>
                   {st.geschichte && (
-                    <p className="mt-sm text-body-md text-on-surface-variant">{st.geschichte}</p>
+                    /* Auch dieser Absatz durch GlossarText: Er stand als reiner
+                       Text da und trug darum weder Worterklärungen noch Belege,
+                       obwohl die Absätze darüber und darunter beides haben — in
+                       derselben Karte, in derselben Art Prosa. */
+                    <p className="mt-sm text-body-md text-on-surface-variant">
+                      <GlossarText text={st.geschichte} />
+                    </p>
                   )}
                   <KartenAktion
                     mehr={st.mehr ? <GlossarText text={st.mehr} /> : undefined}

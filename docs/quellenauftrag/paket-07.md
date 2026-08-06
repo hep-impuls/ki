@@ -141,6 +141,8 @@ Der Teppich zeigt Ereignisse, die technologisch, gesellschaftlich, kulturell ode
 **[PP-522494]** *(Vertiefung «Mehr lesen» · Der Fall Roms)*
 Rom galt als die ewige Stadt, seit rund achthundert Jahren hatte kein Feind sie eingenommen, dann plünderten 410 die Westgoten unter Alarich drei Tage lang in ihren Strassen. Die Nachricht lief durch das ganze Reich, der Gelehrte Hieronymus schrieb aus Bethlehem, eingenommen sei die Stadt, die zuvor die ganze Welt besiegt hatte. Der eigentliche Schlusspunkt kam leise: 476 setzte der Heerführer Odoaker den letzten weströmischen Kaiser ab, einen Jungen namens Romulus Augustulus, und schickte die Kaiserinsignien nach Konstantinopel. Viele Menschen merkten zunächst kaum einen Unterschied, doch über die Jahrzehnte zerfielen Strassen, Wasserleitungen und Verwaltung, Städte schrumpften, Wissen ging verloren. Der Fall Roms zeigt, dass grosse Ordnungen selten mit einem Knall enden, sondern in einem langen Ausfransen, das die Menschen erst im Rückblick als Epochenbruch erkennen.
 
+> **Belegt** («seit rund achthundert Jahren hatte kein Feind sie eingenommen»): [Plünderung Roms (410) (Wikipedia)](https://de.wikipedia.org/wiki/Pl%C3%BCnderung_Roms_(410)) — «Dies war die erste Einnahme Roms seit dem Einfall der Kelten rund 800 Jahre zuvor.» Die Plünderung selbst datiert der Artikel auf den 24. bis 27. August 410. Dort steht auch das Hieronymus-Zitat aus Brief 127,12, dem der Schlusssatz dieses Blocks folgt. *(geprüft 2026-08-05)*
+
 **[PP-a89d23]** *(Kartentext · Zweiter Weltkrieg)*
 Der industrialisierte Krieg und die Schoah erschüttern den Glauben an den Fortschritt im Kern. Zugleich treibt der Krieg Technologien voran, etwa Radar, Rakete und Computer.
 
