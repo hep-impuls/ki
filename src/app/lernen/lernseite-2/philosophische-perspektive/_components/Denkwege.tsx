@@ -93,7 +93,7 @@ const BEREICHE: Bereich[] = [
         name: "Aristoteles",
         leben: "384 bis 322 v. Chr.",
         these: "Der Mensch strebt von Natur aus nach Wissen.",
-        info: "Aristoteles stammte aus Stagira, war Schüler Platons und Lehrer Alexanders des Grossen. Er ordnete das Wissen seiner Zeit über fast alle Gebiete, von Logik und Naturkunde bis Ethik und Politik, und machte die Beobachtung zur Methode. Seine «Metaphysik» beginnt mit dem Satz, alle Menschen strebten von Natur aus nach Wissen: Neugier ist für ihn kein Zufall, sondern Wesenszug. Der Mensch will die Ursachen verstehen, das Warum, nicht nur Fakten sammeln. Für den Umgang mit KI heisst das: Wissen ist mehr als Datenausgabe, es ist verstehen wollen.",
+        info: "Aristoteles stammte aus Stagira, war Schüler Platons und Lehrer Alexanders des Grossen. Er ordnete das Wissen seiner Zeit über fast alle Gebiete, von Logik und Naturkunde bis Ethik und Politik, und machte die Beobachtung zur Methode. Seine «Metaphysik» beginnt mit dem Satz, alle Menschen strebten von Natur aus nach Wissen: Neugier ist für ihn kein Zufall, sondern ein Wesenszug. Der Mensch will die Ursachen verstehen, das Warum, nicht nur Fakten sammeln. Für den Umgang mit KI heisst das: Wissen ist mehr als Datenausgabe, es ist verstehen wollen.",
         begriffe: [
           { wort: "Stagira", erklaerung: "Kleine Stadt im Norden des antiken Griechenlands, Geburtsort von Aristoteles." },
           { wort: "Platons", erklaerung: "Platon, athenischer Philosoph (rund 427 bis 347 v. Chr.) und Lehrer von Aristoteles, einer der Begründer der abendländischen Philosophie." },
@@ -116,7 +116,7 @@ const BEREICHE: Bereich[] = [
         name: "Georg Wilhelm Friedrich Hegel",
         leben: "1770 bis 1831",
         these: "Denken heisst unterscheiden.",
-        info: "Hegel war der Hauptvertreter des deutschen Idealismus und dachte die Wirklichkeit als Entfaltung des «Geistes». Stark verkürzt lässt sich seine Dialektik als Bewegung beschreiben, in der ein Begriff an seinen eigenen inneren Spannungen weiterbestimmt wird. Die berühmte Formel «These, Antithese, Synthese» stammt übrigens nicht von Hegel und trifft sein Verfahren nicht durchgehend, als erste Merkhilfe taugt sie aber. Erst indem der Mensch auseinanderhält, was ist und was sein soll, kann er urteilen und sich entscheiden. So wird Unterscheiden mehr als Rechnen, nämlich ein bewusster, freier Akt. Hauptwerk: «Phänomenologie des Geistes» (1807).",
+        info: "Hegel war der Hauptvertreter des deutschen Idealismus und dachte die Wirklichkeit als Entfaltung des «Geistes». Stark verkürzt lässt sich seine Dialektik als Bewegung beschreiben, in der ein Begriff an seinen eigenen inneren Spannungen weiterbestimmt wird. Die berühmte Formel «These, Antithese, Synthese» stammt übrigens nicht von Hegel und trifft sein Verfahren nicht durchgehend, als erste Merkhilfe taugt sie aber. Erst indem der Mensch auseinanderhält, was ist und was sein soll, kann er urteilen und sich entscheiden. So wird das Unterscheiden zu mehr als blossem Rechnen. Es ist ein bewusster, freier Akt. Hauptwerk: «Phänomenologie des Geistes» (1807).",
         begriffe: [
           { wort: "deutschen Idealismus", erklaerung: "Philosophische Strömung um 1800 (Kant, Fichte, Schelling, Hegel), die Denken und Geist ins Zentrum stellt." },
           { wort: "Dialektik", erklaerung: "Denken in Gegensätzen: Ein Gedanke treibt sich durch seine eigenen Widersprüche weiter, statt einfach zu behaupten." },
@@ -127,7 +127,7 @@ const BEREICHE: Bereich[] = [
         name: "Hannah Arendt",
         leben: "1906 bis 1975",
         these: "Der Mensch kann neu anfangen.",
-        info: "Hannah Arendt, jüdische politische Denkerin, floh vor den Nazis über Frankreich in die USA. Aus der Erfahrung des Totalitarismus fragte sie, was Handeln und Freiheit ausmacht. Ihr Schlüsselbegriff ist die «Natalität»: Weil jeder Mensch geboren wird, kann er etwas Neues anfangen, das aus dem Bisherigen nicht ableitbar ist. Dazu kommt das Urteilen, das eigenständige Prüfen, auch aus der Sicht anderer. Von Arendt her gelesen setzt eine KI Wahrscheinliches fort und wiederholt Muster; anfangen und urteilen in ihrem Sinn kann sie nicht. Werk: «Vita activa».",
+        info: "Hannah Arendt, jüdische politische Denkerin, floh vor den Nazis über Frankreich in die USA. Aus der Erfahrung des Totalitarismus fragte sie, was Handeln und Freiheit ausmacht. Ihr Schlüsselbegriff ist die «Natalität»: Weil jeder Mensch geboren wird, kann er etwas Neues anfangen, das aus dem Bisherigen nicht ableitbar ist. Dazu kommt das Urteilen, das eigenständige Prüfen, auch aus der Sicht anderer. Von Arendt her gelesen setzt eine KI Wahrscheinliches fort und wiederholt Muster; anfangen und urteilen in ihrem Sinn kann sie nicht. Hauptwerk: «Vita activa».",
         begriffe: [
           { wort: "Totalitarismus", erklaerung: "Herrschaftsform, die das ganze Leben kontrollieren will und keine Freiheit zulässt, etwa NS-Diktatur und Stalinismus." },
           { wort: "«Natalität»", erklaerung: "Arendts Begriff für die Gebürtlichkeit: Weil jeder Mensch neu geboren wird, kann er Neues in die Welt bringen." },
@@ -150,7 +150,7 @@ const BEREICHE: Bereich[] = [
         name: "Peter Sloterdijk",
         leben: "geboren 1947",
         these: "Der Mensch ist ein übendes Wesen.",
-        info: "Peter Sloterdijk ist einer der bekanntesten deutschsprachigen Gegenwartsphilosophen, bekannt für die «Sphären»-Trilogie und einen essayistischen, oft provokanten Stil. In «Du musst dein Leben ändern» beschreibt er den Menschen als übendes Wesen: Wir werden, wer wir sind, durch Übung, Wiederholung und Selbstformung, er nennt das «Anthropotechnik». Der Satz ist kein Befehl, sondern der Grundton eines Lebens, das sich immer wieder in Form bringt. Übertragen auf die KI: Eine Maschine kann eine Aufgabe erledigen, aber nicht für uns üben, wer weiter übt, bleibt fähig und urteilsfähig. Werk: «Du musst dein Leben ändern» (2009).",
+        info: "Peter Sloterdijk ist einer der bekanntesten deutschsprachigen Gegenwartsphilosophen, bekannt für die «Sphären»-Trilogie und einen essayistischen, oft provokanten Stil. In «Du musst dein Leben ändern» beschreibt er den Menschen als übendes Wesen: Wir werden, wer wir sind, durch Übung, Wiederholung und Selbstformung. Er nennt das «Anthropotechnik». Der Satz ist kein Befehl, sondern der Grundton eines Lebens, das sich immer wieder in Form bringt. Übertragen auf die KI: Eine Maschine kann eine Aufgabe erledigen, aber nicht für uns üben, wer weiter übt, bleibt fähig und urteilsfähig. Hauptwerk: «Du musst dein Leben ändern» (2009).",
         begriffe: [
           { wort: "«Anthropotechnik»", erklaerung: "Sloterdijks Wort für die Techniken, mit denen der Mensch an sich selbst arbeitet und sich formt (Üben, Trainieren, Gewohnheiten)." },
         ],
@@ -160,7 +160,7 @@ const BEREICHE: Bereich[] = [
         name: "Siri Hustvedt",
         leben: "geboren 1955",
         these: "Der Geist ist kein Computer.",
-        info: "Siri Hustvedt ist US-amerikanische Schriftstellerin und Essayistin, die Literatur mit Hirnforschung und Philosophie verbindet. In «Die Illusion der Gewissheit» wendet sie sich gegen das Bild, das Gehirn sei ein Computer. Denken und Fühlen hängen für sie am lebendigen Körper und an gelebter Erfahrung, sie spricht vom «verkörperten Geist». Ihr Argument: Eine KI kann Sprache und Gefühle täuschend echt nachahmen, aber sie erlebt nichts und macht keine Erfahrung. Ihr «produktiver Zweifel» hilft, das flüssige Modell nicht mit der Wirklichkeit zu verwechseln. Werk: «Die Illusion der Gewissheit» (2018).",
+        info: "Siri Hustvedt ist US-amerikanische Schriftstellerin und Essayistin, die Literatur mit Hirnforschung und Philosophie verbindet. In «Die Illusion der Gewissheit» wendet sie sich gegen das Bild, das Gehirn sei ein Computer. Denken und Fühlen hängen für sie am lebendigen Körper und an gelebter Erfahrung, sie spricht vom «verkörperten Geist». Ihr Argument: Eine KI kann Sprache und Gefühle täuschend echt nachahmen, aber sie erlebt nichts und macht keine Erfahrung. Ihr «produktiver Zweifel» hilft, das flüssige Modell nicht mit der Wirklichkeit zu verwechseln. Hauptwerk: «Die Illusion der Gewissheit» (2018).",
         begriffe: [
           { wort: "«verkörperten Geist»", erklaerung: "Die Idee, dass Denken und Fühlen untrennbar an den lebendigen Körper gebunden sind, nicht bloss ein Rechnen im Kopf." },
         ],
@@ -208,7 +208,7 @@ const BEREICHE: Bereich[] = [
     ],
     absaetze: [
       "Moderne Gesellschaften sind unübersichtlich geworden. Niemand überblickt mehr das Ganze, nicht die Wirtschaft, nicht die Verwaltung, nicht die Technik. Aus dem Gefühl, den Überblick verloren zu haben, entsteht schnell Überforderung. Und doch funktioniert erstaunlich vieles: Der Zug fährt, der Lohn kommt, das Spital behandelt. Wie geht das zusammen? Hier helfen zwei Denker, die die Gesellschaft nicht bewerten, sondern erklären.",
-      "Armin Nassehi sagt: Unsere Gesellschaft ist längst in «Mustern» gebaut, in Zahlen, Statistiken und Abläufen, die auch ohne einen einzelnen Überblick funktionieren. Kein Mensch muss das Ganze verstehen, damit es läuft, das System trägt sich über seine Muster. Die KI passt genau in diese Welt, denn sie erkennt Muster hervorragend, ohne ihren Sinn zu verstehen. Wer das begreift, sieht die KI nüchterner und weniger bedrohlich.",
+      "Armin Nassehi sagt: Unsere Gesellschaft ist längst in «Mustern» aufgebaut, in Zahlen, Statistiken und Abläufen, die auch ohne einen einzelnen Überblick funktionieren. Kein Mensch muss das Ganze verstehen, damit es läuft, das System trägt sich über seine Muster. Die KI passt genau in diese Welt, denn sie erkennt Muster hervorragend, ohne ihren Sinn zu verstehen. Wer das begreift, sieht die KI nüchterner und weniger bedrohlich.",
       "Bruno Latour ergänzt: Nichts wirkt allein. Jede Handlung hängt an einem Netz aus Menschen, Geräten, Regeln und Gewohnheiten, er nennt es ein Netzwerk von «Akteuren», zu denen auch die Dinge gehören. Orientierung gewinnt man darum nicht, indem man alles überblickt, sondern indem man das eigene Netz kennt: Wovon hänge ich ab, wer und was wirkt hier mit mir zusammen?",
     ],
     hilft:
@@ -342,7 +342,7 @@ const BEREICHE: Bereich[] = [
         these: "Gefühle gehören zum guten Leben.",
         info: "Martha Nussbaum ist eine der bekanntesten US-amerikanischen Philosophinnen und verbindet antike Ethik (besonders Aristoteles und die Stoa) mit heutigen Fragen. Sie zeigt, dass Gefühle keine blosse Störung der Vernunft sind, sondern zu einem guten Urteil und einem gelingenden Leben dazugehören. Mit dem «Fähigkeiten-Ansatz» fragt sie konkret, was Menschen wirklich können müssen, um gut zu leben (etwa Gesundheit, Bildung, Bindung, Spiel), und wie eine Gesellschaft das ermöglichen soll. Lebenskunst heisst darum auch, die eigenen Gefühle ernst zu nehmen und gute Bedingungen zu schaffen. Werk: «Fähigkeiten schaffen» (2011).",
         begriffe: [
-          { wort: "«Fähigkeiten-Ansatz»", erklaerung: "Nussbaums Frage, was Menschen konkret können müssen, um gut zu leben (Gesundheit, Bildung, Bindung, Spiel), und was eine Gesellschaft dafür schulden." },
+          { wort: "«Fähigkeiten-Ansatz»", erklaerung: "Nussbaums Frage, was Menschen konkret können müssen, um gut zu leben (Gesundheit, Bildung, Bindung, Spiel), und was eine Gesellschaft ihnen dafür schulden." },
         ],
       },
       {
@@ -350,7 +350,7 @@ const BEREICHE: Bereich[] = [
         name: "Maurice Merleau-Ponty",
         leben: "1908 bis 1961",
         these: "Wir verstehen die Welt mit dem Leib.",
-        info: "Maurice Merleau-Ponty war ein französischer Philosoph der Phänomenologie. Sein Thema ist der Leib: Wir erfahren die Welt nicht zuerst mit dem Kopf, sondern leiblich, durch Wahrnehmung, Bewegung, Berührung und Gefühl. Der Körper ist kein Ding, das wir bloss «haben», sondern die Art, wie wir zur Welt gehören. Verstehen und ein gutes Leben sind darum verkörpert, nicht rein rechnerisch. Genau das kann eine körperlose KI nicht: Sie verarbeitet Zeichen, aber sie spürt und leibt nicht. Werk: «Phänomenologie der Wahrnehmung» (1945).",
+        info: "Maurice Merleau-Ponty war ein französischer Philosoph der Phänomenologie. Sein Thema ist der Leib: Wir erfahren die Welt nicht zuerst mit dem Kopf, sondern leiblich, durch Wahrnehmung, Bewegung, Berührung und Gefühl. Der Körper ist kein Ding, das wir bloss «haben», sondern die Art, wie wir zur Welt gehören. Verstehen und ein gutes Leben sind darum verkörpert, nicht rein rechnerisch. Genau das kann eine körperlose KI nicht: Sie verarbeitet Zeichen, aber sie spürt und erlebt nicht. Werk: «Phänomenologie der Wahrnehmung» (1945).",
         begriffe: [
           { wort: "Phänomenologie", erklaerung: "Philosophische Richtung, die genau beschreibt, wie uns die Dinge erscheinen und wie wir sie leiblich erleben." },
         ],

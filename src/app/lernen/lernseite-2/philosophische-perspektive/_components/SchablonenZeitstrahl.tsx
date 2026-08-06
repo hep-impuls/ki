@@ -691,7 +691,7 @@ const STATIONS: Station[] = [
             y: 52,
             zoom: 2.2,
             title: "Enge Hinterhöfe",
-            text: "Reihe an Reihe stehen dicht gedrängte Arbeiterhäuser, dazwischen winzige Höfe mit Wäscheleinen, kaum ein Streifen Licht dringt hinunter. So sah die Wohnwirklichkeit der Arbeiterfamilien aus: eng, rußgeschwärzt, ohne Privatheit. Der Kupferstich lässt die Enge fast körperlich spüren.",
+            text: "Reihe an Reihe stehen dicht gedrängte Arbeiterhäuser, dazwischen winzige Höfe mit Wäscheleinen, kaum ein Streifen Licht dringt hinunter. So sah die Wohnwirklichkeit der Arbeiterfamilien aus: eng, rußgeschwärzt, ohne Privatheit. Der Kupferstich macht die Enge fast körperlich spürbar.",
           },
           {
             x: 72,
@@ -880,7 +880,7 @@ const STATIONS: Station[] = [
             y: 44,
             zoom: 2,
             title: "Wolken, Meere, Kontinente",
-            text: "Wolkenwirbel, Ozeane und Landmassen liegen in einem einzigen Blick beieinander — ein geschlossenes, zusammenhängendes System. Der „Blue Marble“ wurde so zum Bezugspunkt für die Vorstellung eines globalen „Wir“: die Einsicht, dass alles auf diesem Planeten miteinander verbunden ist.",
+            text: "Wolkenwirbel, Ozeane und Landmassen liegen auf einen einzigen Blick beieinander — ein geschlossenes, zusammenhängendes System. Der „Blue Marble“ wurde so zum Bezugspunkt für die Vorstellung eines globalen „Wir“: die Einsicht, dass alles auf diesem Planeten miteinander verbunden ist.",
           },
         ],
         alt: "Foto der Erde aus dem All („Blue Marble“, Apollo 17)",

@@ -22,50 +22,50 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 ## Thema 02 · Philosophische Perspektive
 
-### Kompass und Schiesspulver · daoistische Alchemisten
+### Kompass und Schiesspulver · Daoistische Alchemisten
 
-- **Kennung:** `PP-8fa9ca` (Vertiefung «Mehr lesen»)
+- **Kennung:** `PP-f6cce2` (Vertiefung «Mehr lesen»)
 - **Quelle:** [Schwarzpulver (Wikipedia)](https://de.wikipedia.org/wiki/Schwarzpulver)
 - **Fundstelle:** Abschnitt «Geschichte»: Chinesische Alchemisten fanden die explosive Mischung bei Versuchen zur Herstellung eines Lebenselixiers.
 - **Geprüft:** 2026-07-26
 
-> Die Magnetnadel diente in China zuerst gar nicht der Seefahrt, mit magnetischen Löffeln richteten Wahrsager Häuser und Gräber günstig aus, bevor Kapitäne der Song-Zeit die Nadel mit aufs Meer nahmen. Auch das Schiesspulver entstand als Nebenprodukt, daoistische Alchemisten suchten ein Mittel für langes Leben und fanden ein Gemisch, das brannte und knallte, zuerst für Feuerwerk, bald für Waffen. Über Händler und die Feldzüge der Mongolen wanderten beide Erfindungen westwärts, wo Kanonen die Burgmauern der Ritter entwerteten und die Macht zu Königen mit grossen Heeren verschoben. Der englische Philosoph Francis Bacon schrieb um 1620, drei Erfindungen hätten das Gesicht der Welt verändert, Buchdruck, Schiesspulver und Kompass, und ahnte nicht, dass alle drei Wurzeln in China hatten. Was eine Erfindung bewirkt, entscheidet sich eben erst dort, wo sie ankommt und wozu man sie einsetzt.
+> Die Magnetnadel diente in China zuerst gar nicht der Seefahrt. Mit magnetischen Löffeln richteten Wahrsager Häuser und Gräber günstig aus, bevor Kapitäne der Song-Zeit die Nadel mit aufs Meer nahmen. Auch das Schiesspulver entstand als Nebenprodukt. Daoistische Alchemisten suchten ein Mittel für langes Leben und fanden ein Gemisch, das brannte und knallte, zuerst für Feuerwerk, bald für Waffen. Über Händler und die Feldzüge der Mongolen wanderten beide Erfindungen westwärts, wo Kanonen die Burgmauern der Ritter entwerteten und die Macht zu Königen mit grossen Heeren verschoben. Der englische Philosoph Francis Bacon schrieb um 1620, drei Erfindungen hätten das Gesicht der Welt verändert: Buchdruck, Schiesspulver und Kompass. Er ahnte nicht, dass alle drei Wurzeln in China hatten. Was eine Erfindung bewirkt, entscheidet sich eben erst dort, wo sie ankommt und wozu man sie einsetzt.
 
 ### Kompass und Schiesspulver · Francis Bacon
 
-- **Kennung:** `PP-8fa9ca` (Vertiefung «Mehr lesen»)
+- **Kennung:** `PP-f6cce2` (Vertiefung «Mehr lesen»)
 - **Quelle:** [Bacon, «Novum Organum» (1620), Übersetzung Jonathan Bennett](https://www.earlymoderntexts.com/assets/pdfs/bacon1620.pdf)
 - **Fundstelle:** Erstes Buch, Aphorismus 129, Seite 46: «printing, gunpowder, and the nautical compass. These three have changed the whole aspect and state of things throughout the world».
 - **Geprüft:** 2026-07-26
 
-> Die Magnetnadel diente in China zuerst gar nicht der Seefahrt, mit magnetischen Löffeln richteten Wahrsager Häuser und Gräber günstig aus, bevor Kapitäne der Song-Zeit die Nadel mit aufs Meer nahmen. Auch das Schiesspulver entstand als Nebenprodukt, daoistische Alchemisten suchten ein Mittel für langes Leben und fanden ein Gemisch, das brannte und knallte, zuerst für Feuerwerk, bald für Waffen. Über Händler und die Feldzüge der Mongolen wanderten beide Erfindungen westwärts, wo Kanonen die Burgmauern der Ritter entwerteten und die Macht zu Königen mit grossen Heeren verschoben. Der englische Philosoph Francis Bacon schrieb um 1620, drei Erfindungen hätten das Gesicht der Welt verändert, Buchdruck, Schiesspulver und Kompass, und ahnte nicht, dass alle drei Wurzeln in China hatten. Was eine Erfindung bewirkt, entscheidet sich eben erst dort, wo sie ankommt und wozu man sie einsetzt.
+> Die Magnetnadel diente in China zuerst gar nicht der Seefahrt. Mit magnetischen Löffeln richteten Wahrsager Häuser und Gräber günstig aus, bevor Kapitäne der Song-Zeit die Nadel mit aufs Meer nahmen. Auch das Schiesspulver entstand als Nebenprodukt. Daoistische Alchemisten suchten ein Mittel für langes Leben und fanden ein Gemisch, das brannte und knallte, zuerst für Feuerwerk, bald für Waffen. Über Händler und die Feldzüge der Mongolen wanderten beide Erfindungen westwärts, wo Kanonen die Burgmauern der Ritter entwerteten und die Macht zu Königen mit grossen Heeren verschoben. Der englische Philosoph Francis Bacon schrieb um 1620, drei Erfindungen hätten das Gesicht der Welt verändert: Buchdruck, Schiesspulver und Kompass. Er ahnte nicht, dass alle drei Wurzeln in China hatten. Was eine Erfindung bewirkt, entscheidet sich eben erst dort, wo sie ankommt und wozu man sie einsetzt.
 
 ### Der Fall Roms · seit rund achthundert Jahren hatte kein Feind sie eingenommen
 
-- **Kennung:** `PP-ed973f` (Vertiefung «Mehr lesen»)
+- **Kennung:** `PP-522494` (Vertiefung «Mehr lesen»)
 - **Quelle:** [Plünderung Roms (410) (Wikipedia)](https://de.wikipedia.org/wiki/Pl%C3%BCnderung_Roms_(410))
 - **Fundstelle:** «Dies war die erste Einnahme Roms seit dem Einfall der Kelten rund 800 Jahre zuvor.» Die Plünderung selbst datiert der Artikel auf den 24. bis 27. August 410. Dort steht auch das Hieronymus-Zitat aus Brief 127,12, dem der Schlusssatz dieses Blocks folgt.
 - **Geprüft:** 2026-08-05
 
-> Rom galt als die ewige Stadt, seit rund achthundert Jahren hatte kein Feind sie eingenommen, dann standen 410 die Westgoten unter Alarich drei Tage lang plündernd in ihren Strassen. Die Nachricht lief durch das ganze Reich, der Gelehrte Hieronymus schrieb aus Bethlehem, eingenommen sei die Stadt, die zuvor die ganze Welt besiegt hatte. Der eigentliche Schlusspunkt kam leise, 476 setzte der Heerführer Odoaker den letzten weströmischen Kaiser ab, einen Jungen namens Romulus Augustulus, und schickte die Kaiserinsignien nach Konstantinopel. Viele Menschen merkten zunächst kaum einen Unterschied, doch über Jahrzehnte zerfielen Strassen, Wasserleitungen und Verwaltung, Städte schrumpften, Wissen ging verloren. Der Fall Roms zeigt, dass grosse Ordnungen selten mit einem Knall enden, sondern in einem langen Ausfransen, das die Menschen erst im Rückblick als Epochenbruch erkennen.
+> Rom galt als die ewige Stadt, seit rund achthundert Jahren hatte kein Feind sie eingenommen, dann plünderten 410 die Westgoten unter Alarich drei Tage lang in ihren Strassen. Die Nachricht lief durch das ganze Reich, der Gelehrte Hieronymus schrieb aus Bethlehem, eingenommen sei die Stadt, die zuvor die ganze Welt besiegt hatte. Der eigentliche Schlusspunkt kam leise: 476 setzte der Heerführer Odoaker den letzten weströmischen Kaiser ab, einen Jungen namens Romulus Augustulus, und schickte die Kaiserinsignien nach Konstantinopel. Viele Menschen merkten zunächst kaum einen Unterschied, doch über die Jahrzehnte zerfielen Strassen, Wasserleitungen und Verwaltung, Städte schrumpften, Wissen ging verloren. Der Fall Roms zeigt, dass grosse Ordnungen selten mit einem Knall enden, sondern in einem langen Ausfransen, das die Menschen erst im Rückblick als Epochenbruch erkennen.
 
 ### Grenzenloser Welthandel · 1956 erstmals genormte Stahlkisten auf ein umgebautes Schiff heben
 
-- **Kennung:** `PP-08cebe` (Vertiefung «Mehr lesen»)
+- **Kennung:** `PP-122a06` (Vertiefung «Mehr lesen»)
 - **Quelle:** [Ideal X (Wikipedia)](https://de.wikipedia.org/wiki/Ideal_X)
 - **Fundstelle:** «Die Jungfernfahrt als Containerschiff fand am 26. April 1956 auf der Route von Newark (New Jersey) nach Houston statt und wurde sowohl von Ladungsbeteiligten als auch von Gewerkschaften und Regierungsvertretern genau beobachtet.» Das Schiff war ein umgebauter T2-Tanker mit 58 Containern.
 - **Geprüft:** 2026-08-05
 
-> Den Anstoss gab ein amerikanischer Spediteur, Malcom McLean liess 1956 erstmals genormte Stahlkisten auf ein umgebautes Schiff heben, weil ihn das ewige Umladen von Hand ärgerte. Der Container senkte die Verladekosten auf einen Bruchteil, ganze Berufe am Hafen verschwanden, dafür wurde es plötzlich rentabel, auch billige Waren um die halbe Welt zu schicken. Nach dem Ende des Kalten Kriegs kam die Politik dazu, die Welthandelsorganisation entstand 1995, China trat 2001 bei und wurde zur «Fabrik der Welt». Seither steckt in einem einzigen Smartphone Arbeit aus Dutzenden Ländern, vom Kobalt aus dem Kongo über Chips aus Taiwan bis zur Software aus Amerika und Europa. Wie verletzlich das fein getaktete System ist, zeigte sich 2021, als ein einziges quer stehendes Containerschiff im Suezkanal tagelang einen Teil des Welthandels aufhielt. Grenzenlos heisst eben auch, dass eine Störung an einem Ort überall spürbar wird.
+> Den Anstoss gab ein amerikanischer Spediteur. Malcom McLean liess 1956 erstmals genormte Stahlkisten auf ein umgebautes Schiff heben, weil ihn das ewige Umladen von Hand ärgerte. Der Container senkte die Verladekosten auf einen Bruchteil, ganze Berufe am Hafen verschwanden, dafür wurde es plötzlich rentabel, auch billige Waren um die halbe Welt zu schicken. Nach dem Ende des Kalten Kriegs kam die Politik dazu, die Welthandelsorganisation entstand 1995, China trat 2001 bei und wurde zur «Fabrik der Welt». Seither steckt in einem einzigen Smartphone Arbeit aus Dutzenden Ländern, vom Kobalt aus dem Kongo über Chips aus Taiwan bis zur Software aus Amerika und Europa. Wie verletzlich das fein getaktete System ist, zeigte sich 2021, als ein einziges quer stehendes Containerschiff im Suezkanal tagelang einen Teil des Welthandels aufhielt. Grenzenlos heisst eben auch, dass eine Störung an einem Ort überall spürbar wird.
 
 ### Internet & World Wide Web · vage, aber aufregend
 
-- **Kennung:** `PP-b4342b` (Vertiefung «Mehr lesen»)
+- **Kennung:** `PP-67bb7f` (Vertiefung «Mehr lesen»)
 - **Quelle:** [Heinz Nixdorf MuseumsForum: Wolkig aber aufregend, wie das Web geboren wurde](https://blog.hnf.de/wolkig-aber-aufregend-wie-das-web-geboren-wurde/)
 - **Fundstelle:** Der Vermerk stammt von Mike Sendall, dem Leiter der Arbeitsgruppe, auf dem Deckblatt des Vorschlags vom 12. März 1989: «Vague but exciting». Das Papier hiess «Information Management: A Proposal».
 - **Geprüft:** 2026-08-05
 
-> Die erste Nachricht im ARPANET wurde am 29. Oktober 1969 von Los Angeles nach Stanford geschickt, geplant war das Wort «LOGIN», nach zwei Buchstaben stürzte die Verbindung ab, übertragen war nur «LO». Aus dem Forschungsnetz weniger Universitäten wuchs über zwei Jahrzehnte ein weltweiter Verbund, doch er blieb ein Werkzeug für Fachleute. Den entscheidenden Schritt machte Tim Berners-Lee am CERN, sein Vorschlag von 1989 für ein Netz aus verknüpften Seiten trug den Vermerk seines Vorgesetzten, das sei vage, aber aufregend. So lief die erste Website der Welt auf einem Rechner bei Genf. Entscheidend war schliesslich, dass das CERN 1993 den Web-Standard zur freien Nutzung freigab, niemand musste Lizenzgebühren zahlen, und genau deshalb konnte das Netz explodieren. Offenheit war hier keine Nebensache, sondern der Bauplan des Erfolgs.
+> Die erste Nachricht im ARPANET wurde am 29. Oktober 1969 von Los Angeles nach Stanford geschickt. Geplant war das Wort «LOGIN», nach zwei Buchstaben stürzte die Verbindung ab, übertragen wurde nur «LO». Aus dem Forschungsnetz weniger Universitäten wuchs über zwei Jahrzehnte ein weltweiter Verbund, doch er blieb ein Werkzeug für Fachleute. Den entscheidenden Schritt machte Tim Berners-Lee am CERN. Sein Vorschlag von 1989 für ein Netz aus verknüpften Seiten wurde von seinem Vorgesetzten als vage, aber aufregend bezeichnet. So lief die erste Website der Welt auf einem Rechner bei Genf. Entscheidend war schliesslich, dass das CERN 1993 den Web-Standard zur freien Nutzung freigab, niemand musste Lizenzgebühren zahlen, und genau deshalb konnte das Netz explodieren. Offenheit war hier keine Nebensache, sondern der Bauplan des Erfolgs.
 
 ---
 
@@ -338,21 +338,21 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 ### Industriemoderne · als ein Pferd es durchhält
 
-- **Kennung:** `EP-426ea1` (Vertiefung «Mehr lesen»)
+- **Kennung:** `EP-9309b8` (Vertiefung «Mehr lesen»)
 - **Quelle:** [Rocket (Lokomotive) (Wikipedia)](https://de.wikipedia.org/wiki/Rocket_(Lokomotive))
 - **Fundstelle:** Die Rocket erreichte 47 km/h Höchstgeschwindigkeit; ein Englisches Vollblut läuft laut dem Artikel «Hauspferd» bis zu 70 km/h. Neu war also nicht die Spitze, sondern das Durchhalten — vorher behauptete der Text «schneller, als je ein Pferd gelaufen war».
 - **Geprüft:** 2026-08-05
 
-> Bei der Eröffnung der Eisenbahn zwischen Liverpool und Manchester 1830 geriet der Parlamentsabgeordnete William Huskisson vor eine heranfahrende Lokomotive und starb noch am selben Abend: Das neue Tempo forderte sein Opfer schon am ersten Tag. Die Faszination war trotzdem gewaltig, denn erstmals reiste man stundenlang schneller, als ein Pferd es durchhält. Damals hatte noch jede Stadt ihre eigene Sonnenzeit, in Bremen gingen die Uhren gut eine Viertelstunde hinter Berlin nach, und erst der Fahrplan erzwang die gemeinsame Stunde, in Deutschland gesetzlich ab 1893. Der Telegraf trennte unterdessen die Nachricht vom Boten: 1858 tauschten die britische Königin und der amerikanische Präsident Grussbotschaften durch ein Kabel am Grund des Atlantiks. Raum und Zeit, bis dahin Grössen der Natur, wurden zu Grössen der Technik. Wer heute über das Tempo der KI staunt oder erschrickt, wiederholt eine sehr alte Erfahrung.
+> Bei der Eröffnung der Eisenbahn zwischen Liverpool und Manchester 1830 geriet der Parlamentsabgeordnete William Huskisson vor eine heranfahrende Lokomotive und starb noch am selben Abend: Das neue Tempo forderte sein Opfer schon am ersten Tag. Die Faszination war trotzdem gewaltig, denn erstmals reiste man stundenlang schneller, als ein Pferd es durchhält. Damals hatte noch jede Stadt ihre eigene Sonnenzeit, in Bremen gingen die Uhren gut eine Viertelstunde hinter Berlin nach, und erst der Fahrplan erzwang die gemeinsame Stunde, in Deutschland gesetzlich ab 1893. Der Telegraf trennte unterdessen die Nachricht vom Boten: 1858 tauschten die britische Königin und der amerikanische Präsident Grussbotschaften durch ein Kabel am Grund des Atlantiks. Raum und Zeit, bis dahin Grössen der Natur, wurden zu Grössen der Technik. Wer heute über das Tempo der KI staunt oder erschrickt, macht dieselbe Erfahrung wie die Menschen der Industrialisierung.
 
 ### Industriemoderne · Textilarbeiter
 
-- **Kennung:** `EP-ba67cc` (Kartentext)
+- **Kennung:** `EP-b8a47b` (Kartentext)
 - **Quelle:** [Maschinenstürmer (Wikipedia)](https://de.wikipedia.org/wiki/Maschinenst%C3%BCrmer)
 - **Fundstelle:** Die Bewegung begann 1811 in Nottingham bei den Strumpfwirkern; dazu kamen «Tuchscherer (West Riding of Yorkshire), Baumwollweber (Süd-Lancashire) und Strumpfwirker (Nottingham)». Die Verengung auf «Weber», die vorher hier stand, traf nur einen Teil.
 - **Geprüft:** 2026-08-05
 
-> Besonders getroffen werden Handwerker und Weber, deren Können die Maschine entwertet, und die Landbevölkerung, die in Elendsquartieren der Städte landet. Kinder arbeiten in Fabriken und Bergwerken. In England zerschlagen Textilarbeiter ab 1811 die Maschinen, die sie arbeitslos machen (die «Ludditen»). 1848 entlädt sich die Spannung in einer Revolutionswelle quer durch Europa.
+> Besonders getroffen werden Handwerker und Weber, deren Können die Maschine entwertet, und die Landbevölkerung, die in Elendsquartieren der Städte landet. Kinder arbeiten in Fabriken und Bergwerken. In England zerschlagen Textilarbeiter ab 1811 in einer Protestbewegung die Maschinen, die sie arbeitslos machen (die «Ludditen»). 1848 entlädt sich die Spannung in einer Revolutionswelle quer durch Europa.
 
 ### Industriemoderne · 12'000 Soldaten
 
@@ -374,12 +374,12 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 ### Zeitalter der Katastrophen · zehn Tage danach
 
-- **Kennung:** `EP-108bc5` (Vertiefung «Mehr lesen»)
+- **Kennung:** `EP-e07817` (Vertiefung «Mehr lesen»)
 - **Quelle:** [Clara Immerwahr (Wikipedia)](https://de.wikipedia.org/wiki/Clara_Immerwahr)
 - **Fundstelle:** «Clara Haber erschoss sich am 2. Mai 1915.» Der Giftgasangriff bei Ypern war am 22. April 1915 (Artikel «Fritz Haber») — zehn Tage, nicht «wenige Tage», wie vorher hier stand.
 - **Geprüft:** 2026-08-05
 
-> Kaum eine Figur verkörpert das Doppelgesicht dieser Epoche so wie der Chemiker Fritz Haber: Seine Ammoniaksynthese machte künstlichen Dünger möglich und hilft bis heute, Milliarden zu ernähren, und derselbe Mann überwachte 1915 bei Ypern persönlich den ersten grossen Giftgasangriff der Geschichte. Seine Frau Clara Immerwahr, selbst promovierte Chemikerin, nahm sich zehn Tage danach das Leben. Dreissig Jahre später, am 16. Juli 1945, erhellte in der Wüste von New Mexico der erste Atomtest den Nachthimmel, und Robert Oppenheimer, der wissenschaftliche Leiter, erinnerte sich später an einen Vers aus einer indischen Schrift über den «Zerstörer der Welten». Zwischen diesen beiden Daten liegt die bittere Einsicht, dass Wissen nicht danach fragt, wozu man es braucht. Seither gehört zu jeder mächtigen Technik die Frage, die damals zu spät kam: nicht nur, ob man etwas bauen kann, sondern ob man es bauen soll.
+> Kaum eine Figur verkörpert das Doppelgesicht dieser Epoche so wie der Chemiker Fritz Haber: Seine Ammoniaksynthese machte künstlichen Dünger möglich und hilft bis heute, Milliarden zu ernähren. Derselbe Mann überwachte 1915 bei Ypern persönlich den ersten grossen Giftgasangriff der Geschichte. Seine Frau Clara Immerwahr, selbst promovierte Chemikerin, nahm sich zehn Tage danach das Leben. Dreissig Jahre später, am 16. Juli 1945, erhellte in der Wüste von New Mexico der erste Atomtest den Nachthimmel, und Robert Oppenheimer, der wissenschaftliche Leiter, erinnerte sich später an einen Vers aus einer indischen Schrift über den «Zerstörer der Welten». Zwischen diesen beiden Daten liegt die bittere Einsicht, dass Wissen nicht danach fragt, wozu man es braucht. Seither gehört zu jeder mächtigen Technik die Frage, die damals zu spät kam: nicht nur, ob man etwas bauen kann, sondern ob man es bauen soll.
 
 ### «Ende der Geschichte» · 1989 in einem Aufsatz und 1992 im gleichnamigen Buch
 
@@ -401,12 +401,12 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 ### Jetzt: Umwelt & KI · letzten bemannten Mondlandung
 
-- **Kennung:** `EP-3794d6` (Hintergrund zum Bild)
+- **Kennung:** `EP-53e8e4` (Hintergrund zum Bild)
 - **Quelle:** [Apollo 17 (Wikipedia)](https://de.wikipedia.org/wiki/Apollo_17)
 - **Fundstelle:** «Mit Apollo 17 landeten zum sechsten und vorerst letzten Mal Menschen auf dem Mond.» Als letzte bemannte MondMISSION gilt sie seit April 2026 nicht mehr: «Apollo 17 blieb bis zur Mission Artemis 2 im Jahr 2026 der letzte bemannte Mondflug» — Artemis 2 umrundete den Mond, landete aber nicht.
 - **Geprüft:** 2026-08-05
 
-> Dieses Bild ist kein Gemälde, sondern eine Fotografie, die am 7. Dezember 1972 aus rund 29 000 km Entfernung entstand. Aufgenommen hat sie die Besatzung von Apollo 17, der bislang letzten bemannten Mondlandung. Zu sehen ist die Erde als ganze, runde Kugel, mit Wolkenwirbeln, Ozeanen und Kontinenten in einem einzigen Blick. Von hier oben sind keine Nationen und keine Grenzen erkennbar, nur ein einziger, verletzlicher Planet im schwarzen All. «Blue Marble» wurde zu einem der meistreproduzierten Fotos der Geschichte und zur Ikone der Umweltbewegung.
+> Dieses Bild ist kein Gemälde, sondern eine Fotografie, die am 7. Dezember 1972 aus rund 29 000 km Entfernung entstand. Aufgenommen hat sie die Besatzung von Apollo 17, der bislang letzten bemannten Mondlandung. Zu sehen ist die Erde als ganze, runde Kugel, mit Wolkenwirbeln, Ozeanen und Kontinenten in einem einzigen Blick. Von hier oben sind keine Nationen und keine Grenzen erkennbar, nur ein einziger, verletzlicher Planet im schwarzen All. «Blue Marble» wurde zu einem der meistreproduzierten Fotos der Geschichte und zu einer Ikone der Umweltbewegung.
 
 ### Jetzt: Umwelt & KI · ein Fluss erhält in Neuseeland eine Rechtspersönlichkeit
 
@@ -500,39 +500,39 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 ### «Ende der Geschichte» · 58 Stahlkisten von Newark nach Houston
 
-- **Kennung:** `EP-b08d96` (Vertiefung «Mehr lesen»)
+- **Kennung:** `EP-fbb1d9` (Vertiefung «Mehr lesen»)
 - **Quelle:** [Malcom McLean (Wikipedia)](https://de.wikipedia.org/wiki/Malcom_McLean)
 - **Fundstelle:** «Am 26. April 1956 verliess schliesslich das erste seiner Containerschiffe, die Ideal X, den Hafen von Newark (New Jersey) mit dem Ziel Houston in Texas.» Zuvor hatte McLean «zwei gebrauchte Tanker von der US-Marine» erworben, die «zu Containerschiffen umgebaut wurden». Die Zahl 58 steht im Artikel «Ideal X» in den Schiffsdaten (Container = 58), das Schiff dort als «zum Containerfrachter umgebauter T2-SE-A1 Tanker».
 - **Geprüft:** 2026-08-05
 
-> Der Container hat einen Erfinder mit Namen: Der amerikanische Spediteur Malcom McLean liess 1956 einen umgebauten Tanker mit 58 Stahlkisten von Newark nach Houston fahren, weil ihn das teure Umladen von Hand ärgerte, und die Kosten für das Verladen einer Tonne Fracht sanken dadurch auf einen Bruchteil. Drei Jahrzehnte später reichte der Physiker Tim Berners-Lee am Forschungszentrum CERN einen Vorschlag für ein Hypertext-System ein, sein Vorgesetzter notierte darauf «vage, aber aufregend». 1993 gab das CERN diese Technik zur freien Nutzung frei, ohne Patent und ohne Gebühren, einer der folgenreichsten Verzichte der Wirtschaftsgeschichte. So senkten eine Blechkiste und ein Stück verschenkter Software gemeinsam die Kosten der Distanz, für Waren die eine, für Information die andere. Fabriken konnten dorthin wandern, wo die Löhne am tiefsten waren, und Nachrichten überallhin, wo ein Bildschirm stand. Die Welt wurde kleiner, und was das für Arbeit und Zusammenhalt bedeutet, verhandeln wir bis heute.
+> Der Container hat einen Erfinder mit Namen: Der amerikanische Spediteur Malcom McLean liess 1956 einen umgebauten Tanker mit 58 Stahlkisten von Newark nach Houston fahren, weil ihn das teure Umladen von Hand ärgerte, und die Kosten für das Verladen einer Tonne Fracht sanken dadurch auf einen Bruchteil. Drei Jahrzehnte später reichte der Physiker Tim Berners-Lee am Forschungszentrum CERN einen Vorschlag für ein Hypertext-System ein, sein Vorgesetzter notierte darauf «vage, aber aufregend». 1993 gab das CERN diese Technik zur freien Nutzung frei, ohne Patent und ohne Gebühren, einer der folgenreichsten Verzichte der Wirtschaftsgeschichte. So senkten eine Blechkiste und ein Stück verschenkter Software gemeinsam die Kosten der Distanz: die eine für Waren, die andere für Informationen. Fabriken konnten dorthin wandern, wo die Löhne am tiefsten waren, und Nachrichten überallhin, wo ein Bildschirm stand. Die Welt wurde kleiner. Was das für Arbeit und Zusammenhalt bedeutet, verhandeln wir bis heute.
 
 ### «Ende der Geschichte» · amerikanische Spediteur
 
-- **Kennung:** `EP-b08d96` (Vertiefung «Mehr lesen»)
+- **Kennung:** `EP-fbb1d9` (Vertiefung «Mehr lesen»)
 - **Quelle:** [Malcom McLean (Wikipedia)](https://de.wikipedia.org/wiki/Malcom_McLean)
 - **Fundstelle:** McLean kaufte 1935 «von dem gesparten Geld einen gebrauchten LKW» und gründete mit seinen Geschwistern «eine kleine Spedition»; die Einleitung nennt ihn «Reeder und Transportunternehmer». Schon «1937 ärgerte sich McLean … über die langen Wartezeiten, die beim Entladen» anfielen.
 - **Geprüft:** 2026-08-05
 
-> Der Container hat einen Erfinder mit Namen: Der amerikanische Spediteur Malcom McLean liess 1956 einen umgebauten Tanker mit 58 Stahlkisten von Newark nach Houston fahren, weil ihn das teure Umladen von Hand ärgerte, und die Kosten für das Verladen einer Tonne Fracht sanken dadurch auf einen Bruchteil. Drei Jahrzehnte später reichte der Physiker Tim Berners-Lee am Forschungszentrum CERN einen Vorschlag für ein Hypertext-System ein, sein Vorgesetzter notierte darauf «vage, aber aufregend». 1993 gab das CERN diese Technik zur freien Nutzung frei, ohne Patent und ohne Gebühren, einer der folgenreichsten Verzichte der Wirtschaftsgeschichte. So senkten eine Blechkiste und ein Stück verschenkter Software gemeinsam die Kosten der Distanz, für Waren die eine, für Information die andere. Fabriken konnten dorthin wandern, wo die Löhne am tiefsten waren, und Nachrichten überallhin, wo ein Bildschirm stand. Die Welt wurde kleiner, und was das für Arbeit und Zusammenhalt bedeutet, verhandeln wir bis heute.
+> Der Container hat einen Erfinder mit Namen: Der amerikanische Spediteur Malcom McLean liess 1956 einen umgebauten Tanker mit 58 Stahlkisten von Newark nach Houston fahren, weil ihn das teure Umladen von Hand ärgerte, und die Kosten für das Verladen einer Tonne Fracht sanken dadurch auf einen Bruchteil. Drei Jahrzehnte später reichte der Physiker Tim Berners-Lee am Forschungszentrum CERN einen Vorschlag für ein Hypertext-System ein, sein Vorgesetzter notierte darauf «vage, aber aufregend». 1993 gab das CERN diese Technik zur freien Nutzung frei, ohne Patent und ohne Gebühren, einer der folgenreichsten Verzichte der Wirtschaftsgeschichte. So senkten eine Blechkiste und ein Stück verschenkter Software gemeinsam die Kosten der Distanz: die eine für Waren, die andere für Informationen. Fabriken konnten dorthin wandern, wo die Löhne am tiefsten waren, und Nachrichten überallhin, wo ein Bildschirm stand. Die Welt wurde kleiner. Was das für Arbeit und Zusammenhalt bedeutet, verhandeln wir bis heute.
 
 ### «Ende der Geschichte» · «vage, aber aufregend»
 
-- **Kennung:** `EP-b08d96` (Vertiefung «Mehr lesen»)
+- **Kennung:** `EP-fbb1d9` (Vertiefung «Mehr lesen»)
 - **Quelle:** [Heinz Nixdorf MuseumsForum: Wolkig aber aufregend, wie das Web geboren wurde](https://blog.hnf.de/wolkig-aber-aufregend-wie-das-web-geboren-wurde/)
 - **Fundstelle:** «Laut Überlieferung stellte Berners-Lee den Vorschlag am 12. März 1989 fertig … verteilte er ihn an die Kollegen bis hinauf zum Leiter seiner Arbeitsgruppe, den englischen Physiker Mike Sendall.» Und: «In den World-Wide-Web-Mythos gingen zwei Notizen von Mike Sendall ein: das ‹Vague but exciting› … auf dem Cover.» Das Original ist englisch; die deutschen Wiedergaben schwanken (das HNF schreibt «wolkig aber aufregend», die Computerwoche «Vage, aber hochinteressant»).
 - **Geprüft:** 2026-08-05
 
-> Der Container hat einen Erfinder mit Namen: Der amerikanische Spediteur Malcom McLean liess 1956 einen umgebauten Tanker mit 58 Stahlkisten von Newark nach Houston fahren, weil ihn das teure Umladen von Hand ärgerte, und die Kosten für das Verladen einer Tonne Fracht sanken dadurch auf einen Bruchteil. Drei Jahrzehnte später reichte der Physiker Tim Berners-Lee am Forschungszentrum CERN einen Vorschlag für ein Hypertext-System ein, sein Vorgesetzter notierte darauf «vage, aber aufregend». 1993 gab das CERN diese Technik zur freien Nutzung frei, ohne Patent und ohne Gebühren, einer der folgenreichsten Verzichte der Wirtschaftsgeschichte. So senkten eine Blechkiste und ein Stück verschenkter Software gemeinsam die Kosten der Distanz, für Waren die eine, für Information die andere. Fabriken konnten dorthin wandern, wo die Löhne am tiefsten waren, und Nachrichten überallhin, wo ein Bildschirm stand. Die Welt wurde kleiner, und was das für Arbeit und Zusammenhalt bedeutet, verhandeln wir bis heute.
+> Der Container hat einen Erfinder mit Namen: Der amerikanische Spediteur Malcom McLean liess 1956 einen umgebauten Tanker mit 58 Stahlkisten von Newark nach Houston fahren, weil ihn das teure Umladen von Hand ärgerte, und die Kosten für das Verladen einer Tonne Fracht sanken dadurch auf einen Bruchteil. Drei Jahrzehnte später reichte der Physiker Tim Berners-Lee am Forschungszentrum CERN einen Vorschlag für ein Hypertext-System ein, sein Vorgesetzter notierte darauf «vage, aber aufregend». 1993 gab das CERN diese Technik zur freien Nutzung frei, ohne Patent und ohne Gebühren, einer der folgenreichsten Verzichte der Wirtschaftsgeschichte. So senkten eine Blechkiste und ein Stück verschenkter Software gemeinsam die Kosten der Distanz: die eine für Waren, die andere für Informationen. Fabriken konnten dorthin wandern, wo die Löhne am tiefsten waren, und Nachrichten überallhin, wo ein Bildschirm stand. Die Welt wurde kleiner. Was das für Arbeit und Zusammenhalt bedeutet, verhandeln wir bis heute.
 
 ### «Ende der Geschichte» · 1993 gab das CERN diese Technik zur freien Nutzung frei
 
-- **Kennung:** `EP-b08d96` (Vertiefung «Mehr lesen»)
+- **Kennung:** `EP-fbb1d9` (Vertiefung «Mehr lesen»)
 - **Quelle:** [World Wide Web (Wikipedia)](https://de.wikipedia.org/wiki/World_Wide_Web)
 - **Fundstelle:** «Am 30. April 1993 gab das Direktorium des europäischen Kernforschungszentrums CERN das World Wide Web kostenlos für die Öffentlichkeit frei.» Zur Gebührenfreiheit auch: Das WWW «baut … auf einem freien Protokoll auf, was die Entwicklung von Servern und Clients ohne Beschränkungen durch Lizenzen möglich machte».
 - **Geprüft:** 2026-08-05
 
-> Der Container hat einen Erfinder mit Namen: Der amerikanische Spediteur Malcom McLean liess 1956 einen umgebauten Tanker mit 58 Stahlkisten von Newark nach Houston fahren, weil ihn das teure Umladen von Hand ärgerte, und die Kosten für das Verladen einer Tonne Fracht sanken dadurch auf einen Bruchteil. Drei Jahrzehnte später reichte der Physiker Tim Berners-Lee am Forschungszentrum CERN einen Vorschlag für ein Hypertext-System ein, sein Vorgesetzter notierte darauf «vage, aber aufregend». 1993 gab das CERN diese Technik zur freien Nutzung frei, ohne Patent und ohne Gebühren, einer der folgenreichsten Verzichte der Wirtschaftsgeschichte. So senkten eine Blechkiste und ein Stück verschenkter Software gemeinsam die Kosten der Distanz, für Waren die eine, für Information die andere. Fabriken konnten dorthin wandern, wo die Löhne am tiefsten waren, und Nachrichten überallhin, wo ein Bildschirm stand. Die Welt wurde kleiner, und was das für Arbeit und Zusammenhalt bedeutet, verhandeln wir bis heute.
+> Der Container hat einen Erfinder mit Namen: Der amerikanische Spediteur Malcom McLean liess 1956 einen umgebauten Tanker mit 58 Stahlkisten von Newark nach Houston fahren, weil ihn das teure Umladen von Hand ärgerte, und die Kosten für das Verladen einer Tonne Fracht sanken dadurch auf einen Bruchteil. Drei Jahrzehnte später reichte der Physiker Tim Berners-Lee am Forschungszentrum CERN einen Vorschlag für ein Hypertext-System ein, sein Vorgesetzter notierte darauf «vage, aber aufregend». 1993 gab das CERN diese Technik zur freien Nutzung frei, ohne Patent und ohne Gebühren, einer der folgenreichsten Verzichte der Wirtschaftsgeschichte. So senkten eine Blechkiste und ein Stück verschenkter Software gemeinsam die Kosten der Distanz: die eine für Waren, die andere für Informationen. Fabriken konnten dorthin wandern, wo die Löhne am tiefsten waren, und Nachrichten überallhin, wo ein Bildschirm stand. Die Welt wurde kleiner. Was das für Arbeit und Zusammenhalt bedeutet, verhandeln wir bis heute.
 
 ### Jetzt: Umwelt & KI · aus Kohle, Öl und Gas kommt
 
@@ -561,21 +561,21 @@ niemand später aus Verlegenheit eine ungefähr passende Quelle einsetzt.
 
 ### «Ende der Geschichte»
 
-- **Kennung:** `EP-b08d96`
+- **Kennung:** `EP-fbb1d9`
 - **Betrifft:** «die Kosten für das Verladen einer Tonne Fracht sanken dadurch auf einen Bruchteil» (gleichlautend in PP-08cebe: «senkte die Verladekosten auf einen Bruchteil»)
 - **Grund:** Die Zahl hinter dieser Aussage (rund 5.83 Dollar je Tonne im Stückgutbetrieb gegen etwa 16 Cent auf der Ideal X) geht auf Marc Levinsons «The Box» (2006) zurück. Weder die deutsche noch die englische Wikipedia führt sie, und eine frei zugängliche deutschsprachige Darstellung mit dieser Angabe haben wir am 2026-08-05 nicht gefunden. Das Buch selbst liegt uns nicht vor, und aus dem Gedächtnis wird hier nichts belegt. Die Aussage bleibt darum unbelegt stehen, statt sie in eine unscharfe Formulierung umzubauen: Belegt ist der Anlass (McLean ärgerte sich über die Wartezeiten beim Entladen), nicht die Höhe der Ersparnis.
 - **Notiert:** 2026-08-05
 
 ### Kompass und Schiesspulver
 
-- **Kennung:** `PP-8fa9ca`
+- **Kennung:** `PP-f6cce2`
 - **Betrifft:** «mit magnetischen Löffeln richteten Wahrsager Häuser und Gräber günstig aus»
 - **Grund:** Die Wahrsage-Herkunft des Kompasses ist in der Fachliteratur (Needham) belegt, aber wir haben keine frei zugängliche deutschsprachige Seite gefunden, die genau den Löffel-Kompass der Wahrsager beschreibt. Der Wikipedia-Artikel «Kompass» erwähnt ihn nur beiläufig. Bis eine tragfähige Quelle da ist, bleibt die Stelle ohne Link.
 - **Notiert:** 2026-07-26
 
 ### Kompass und Schiesspulver
 
-- **Kennung:** `PP-8fa9ca`
+- **Kennung:** `PP-f6cce2`
 - **Betrifft:** «der Legende nach auch Napoleon und Benjamin Franklin»
 - **Grund:** Steht so nicht in diesem Block, sondern beim Schachtürken; hier nur als Hinweis, dass Legenden-Zuschreibungen grundsätzlich keinen Beleg bekommen. Sie sind im Text bereits als Legende gekennzeichnet.
 - **Notiert:** 2026-07-26

@@ -39,8 +39,8 @@ export interface Beleg {
 
 export const BELEGE: Beleg[] = [
   {
-    id: "PP-8fa9ca",
-    anker: "daoistische Alchemisten",
+    id: "PP-f6cce2",
+    anker: "Daoistische Alchemisten",
     url: "https://de.wikipedia.org/wiki/Schwarzpulver",
     titel: "Schwarzpulver (Wikipedia)",
     stelle:
@@ -48,7 +48,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-07-26",
   },
   {
-    id: "PP-8fa9ca",
+    id: "PP-f6cce2",
     anker: "Francis Bacon",
     // Bewusst englisch: Das Original ist Latein, und eine frei zugängliche
     // deutsche Übersetzung des «Novum Organum» haben wir nicht gefunden
@@ -325,7 +325,7 @@ export const BELEGE: Beleg[] = [
    * zweites Mal auf dieselbe Quelle verlinken. Der Achthundert-Jahre-Satz
    * kommt nur hier vor und war ohnehin unbelegt. */
   {
-    id: "PP-ed973f",
+    id: "PP-522494",
     anker: "seit rund achthundert Jahren hatte kein Feind sie eingenommen",
     url: "https://de.wikipedia.org/wiki/Pl%C3%BCnderung_Roms_(410)",
     titel: "Plünderung Roms (410) (Wikipedia)",
@@ -422,7 +422,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "EP-426ea1",
+    id: "EP-9309b8",
     anker: "als ein Pferd es durchhält",
     url: "https://de.wikipedia.org/wiki/Rocket_(Lokomotive)",
     titel: "Rocket (Lokomotive) (Wikipedia)",
@@ -431,7 +431,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "EP-ba67cc",
+    id: "EP-b8a47b",
     anker: "Textilarbeiter",
     url: "https://de.wikipedia.org/wiki/Maschinenst%C3%BCrmer",
     titel: "Maschinenstürmer (Wikipedia)",
@@ -462,7 +462,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "EP-108bc5",
+    id: "EP-e07817",
     anker: "zehn Tage danach",
     url: "https://de.wikipedia.org/wiki/Clara_Immerwahr",
     titel: "Clara Immerwahr (Wikipedia)",
@@ -489,7 +489,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "EP-3794d6",
+    id: "EP-53e8e4",
     anker: "letzten bemannten Mondlandung",
     url: "https://de.wikipedia.org/wiki/Apollo_17",
     titel: "Apollo 17 (Wikipedia)",
@@ -619,7 +619,7 @@ export const BELEGE: Beleg[] = [
    * Nicht belegt werden konnte die Kostenangabe («auf einen Bruchteil»), sie
    * steht als begründeter Nicht-Beleg weiter unten. */
   {
-    id: "EP-b08d96",
+    id: "EP-fbb1d9",
     anker: "58 Stahlkisten von Newark nach Houston",
     url: "https://de.wikipedia.org/wiki/Malcom_McLean",
     titel: "Malcom McLean (Wikipedia)",
@@ -628,7 +628,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "EP-b08d96",
+    id: "EP-fbb1d9",
     anker: "amerikanische Spediteur",
     url: "https://de.wikipedia.org/wiki/Malcom_McLean",
     titel: "Malcom McLean (Wikipedia)",
@@ -637,7 +637,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "EP-b08d96",
+    id: "EP-fbb1d9",
     anker: "«vage, aber aufregend»",
     url: "https://blog.hnf.de/wolkig-aber-aufregend-wie-das-web-geboren-wurde/",
     titel: "Heinz Nixdorf MuseumsForum: Wolkig aber aufregend, wie das Web geboren wurde",
@@ -646,7 +646,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "EP-b08d96",
+    id: "EP-fbb1d9",
     anker: "1993 gab das CERN diese Technik zur freien Nutzung frei",
     url: "https://de.wikipedia.org/wiki/World_Wide_Web",
     titel: "World Wide Web (Wikipedia)",
@@ -655,7 +655,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "PP-08cebe",
+    id: "PP-122a06",
     anker: "1956 erstmals genormte Stahlkisten auf ein umgebautes Schiff heben",
     url: "https://de.wikipedia.org/wiki/Ideal_X",
     titel: "Ideal X (Wikipedia)",
@@ -694,7 +694,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "PP-b4342b",
+    id: "PP-67bb7f",
     anker: "vage, aber aufregend",
     url: "https://blog.hnf.de/wolkig-aber-aufregend-wie-das-web-geboren-wurde/",
     titel: "Heinz Nixdorf MuseumsForum: Wolkig aber aufregend, wie das Web geboren wurde",
@@ -720,7 +720,7 @@ export interface KeinBeleg {
 
 export const OHNE_BELEG: KeinBeleg[] = [
   {
-    id: "EP-b08d96",
+    id: "EP-fbb1d9",
     betrifft:
       "«die Kosten für das Verladen einer Tonne Fracht sanken dadurch auf einen Bruchteil» (gleichlautend in PP-08cebe: «senkte die Verladekosten auf einen Bruchteil»)",
     grund:
@@ -728,7 +728,7 @@ export const OHNE_BELEG: KeinBeleg[] = [
     notiert: "2026-08-05",
   },
   {
-    id: "PP-8fa9ca",
+    id: "PP-f6cce2",
     betrifft:
       "«mit magnetischen Löffeln richteten Wahrsager Häuser und Gräber günstig aus»",
     grund:
@@ -736,7 +736,7 @@ export const OHNE_BELEG: KeinBeleg[] = [
     notiert: "2026-07-26",
   },
   {
-    id: "PP-8fa9ca",
+    id: "PP-f6cce2",
     betrifft: "«der Legende nach auch Napoleon und Benjamin Franklin»",
     grund:
       "Steht so nicht in diesem Block, sondern beim Schachtürken; hier nur als Hinweis, dass Legenden-Zuschreibungen grundsätzlich keinen Beleg bekommen. Sie sind im Text bereits als Legende gekennzeichnet.",

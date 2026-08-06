@@ -599,7 +599,7 @@ export default function OrakelDashboard() {
             auf einem{" "}
             <DenkerHover
               name="Dreifuss"
-              bio="Dreibeiniger Kultsitz über der Erdspalte, auf dem die Pythia ihre Sprüche gab. In der Antike ein Sinnbild des Heiligtums von Delphi."
+              bio="Dreibeiniger Kultsitz über der Erdspalte, auf dem die Pythia ihre Sprüche äusserte. In der Antike ein Sinnbild des Heiligtums von Delphi."
             />{" "}
             über einer Erdspalte und gab, oft in dunklen, deutbaren Worten,
             Antwort. Ganze Städte fragten sie, bevor sie in den Krieg zogen oder
