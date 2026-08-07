@@ -510,19 +510,19 @@
   "stufe": "hoch",
   "text": "Neben dem Traum vom künstlichen Wesen läuft eine zweite Linie, die des Rechnens. Im 17. und 19. Jahrhundert bauten Gelehrte Maschinen, die selbständig rechnen sollten. Von Leibniz' Rechenrad bis zu Babbages programmierbarem Entwurf wird die Idee greifbar, dass sich Denken in klare Schritte zerlegen lässt. Damit wird zum ersten Mal vorstellbar, dass eine Maschine Aufgaben des Geistes übernimmt."
  },
- "VA-b5efb0": {
+ "VA-bf4fa3": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Rechenmaschinen",
   "feld": "Bildgeschichte",
   "stufe": "hoch",
-  "text": "Der Gelehrte Gottfried Wilhelm Leibniz stellte 1673 der Royal Society eine Maschine für alle vier Grundrechenarten vor; ganz gebrauchsfähig wurde sie nie. Er träumte davon, Streitfragen künftig durch Rechnen zu entscheiden. Charles Babbage entwarf ab den 1830er-Jahren die «Analytical Engine», eine frei programmierbare Rechenmaschine, gebaut wurde sie zu seinen Lebzeiten nicht. Ada Lovelace übersetzte 1843 einen Aufsatz darüber und hängte Anmerkungen an, doppelt so lang wie der Text selbst: Darin führte sie vor, wie die Maschine die Bernoulli-Zahlen berechnen würde, und hielt fest, dass sie nichts von sich aus hervorbringt."
+  "text": "Der Gelehrte Gottfried Wilhelm Leibniz stellte 1673 der Royal Society eine Maschine für alle vier Grundrechenarten vor; ganz gebrauchsfähig wurde sie nie. Er träumte davon, Streitfragen künftig durch Rechnen zu entscheiden. Charles Babbage entwarf ab den 1830er-Jahren die «Analytical Engine», eine frei programmierbare Rechenmaschine, gebaut wurde sie zu seinen Lebzeiten nicht. Ada Lovelace übersetzte 1843 einen Aufsatz darüber und hängte Anmerkungen an, doppelt so lang wie der Text selbst. Darin führte sie vor, wie die Maschine die Bernoulli-Zahlen berechnen würde, und hielt fest, dass sie nichts von sich aus hervorbringt."
  },
- "VA-647619": {
+ "VA-3e3b6a": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Rechenmaschinen",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Ein oft übersehener Beitrag von Leibniz ist das Zweiersystem, das er 1703 ausführlich beschrieb und das mit den Ziffern null und eins auskommt. Genau dieses Binärsystem bildet heute die Grundlage jedes Computers, seine eigene Rechenmaschine baute er allerdings dezimal, weil die Feinmechanik der Zeit nicht weiter reichte. Babbages Maschine sollte ihre Anweisungen von Lochkarten ablesen, eine Idee aus dem Weberhandwerk: Jacquards Webstuhl steuerte ab 1805 mit je einer Lochkarte pro Schuss die Musterung. Ada Lovelace war die Tochter des Dichters Lord Byron, der schon in der Entstehung von Frankenstein vorkommt. Ob ihre Bernoulli-Rechnung das erste Programm der Geschichte war, ist umstritten: Babbage selbst hatte Jahre zuvor Programmtabellen aufgeschrieben, ein Satz von 1837/38 ist erhalten. Ihre Leistung liegt anderswo, im Blick über das Rechnen hinaus. Sie ahnte zudem, dass eine solche Maschine eines Tages sogar Musik verarbeiten könnte, sofern man Töne in Zahlen fasst. Nach ihr wurde viel später eine Programmiersprache benannt."
+  "text": "Ein oft übersehener Beitrag von Leibniz ist das Zweiersystem, das er 1703 ausführlich beschrieb und das mit den Ziffern null und eins auskommt. Genau dieses Binärsystem bildet heute die Grundlage jedes Computers, seine eigene Rechenmaschine baute er allerdings dezimal, weil die Feinmechanik der Zeit nicht weiter reichte. Babbages Maschine sollte ihre Anweisungen von Lochkarten ablesen, eine Idee aus dem Weberhandwerk. Jacquards Webstuhl steuerte ab 1805 mit je einer Lochkarte pro Schuss die Musterung. Ada Lovelace war die Tochter des Dichters Lord Byron, der schon in der Entstehung von Frankenstein vorkommt. Ob ihre Bernoulli-Rechnung das erste Programm der Geschichte war, ist umstritten, denn Babbage selbst hatte Jahre zuvor Programmtabellen aufgeschrieben, ein Satz von 1837/38 ist erhalten. Lovelaces Leistung liegt ohnehin anderswo, im Blick über das Rechnen hinaus. Sie ahnte, dass eine solche Maschine eines Tages sogar Musik verarbeiten könnte, sofern man Töne in Zahlen fasst. Wie sehr das nachwirkt, zeigt ein später Gruss. 1980 wurde eine Programmiersprache nach Ada Lovelace benannt, und ihre Normnummer MIL-STD-1815 nennt ihr Geburtsjahr."
  },
  "VA-b719df": {
   "datei": "vorhang-auf/page.tsx",

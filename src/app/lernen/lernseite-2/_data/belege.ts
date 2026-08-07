@@ -515,7 +515,7 @@ export const BELEGE: Beleg[] = [
    * eigene Anmerkungen an. Ohne diesen Schritt sieht es aus, als hätten die
    * zwei gemeinsam an einem Tisch gesessen. */
   {
-    id: "VA-b5efb0",
+    id: "VA-bf4fa3",
     anker: "ganz gebrauchsfähig wurde sie nie",
     url: "https://de.wikipedia.org/wiki/Staffelwalze",
     titel: "Staffelwalze (Wikipedia)",
@@ -524,7 +524,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "VA-b5efb0",
+    id: "VA-bf4fa3",
     anker: "Streitfragen künftig durch Rechnen zu entscheiden",
     url: "https://de.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz",
     titel: "Gottfried Wilhelm Leibniz (Wikipedia)",
@@ -533,7 +533,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "VA-b5efb0",
+    id: "VA-bf4fa3",
     anker: "hängte Anmerkungen an, doppelt so lang wie der Text selbst",
     url: "https://de.wikipedia.org/wiki/Ada_Lovelace",
     titel: "Ada Lovelace (Wikipedia)",
@@ -542,7 +542,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "VA-647619",
+    id: "VA-3e3b6a",
     // Anker NEBEN «Babbage» — der Name trägt eine Glossar-Erklärung.
     anker: "ein Satz von 1837/38 ist erhalten",
     url: "https://de.wikipedia.org/wiki/Analytical_Engine",
@@ -552,7 +552,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "VA-647619",
+    id: "VA-3e3b6a",
     anker: "seine eigene Rechenmaschine baute er allerdings dezimal",
     url: "https://de.wikipedia.org/wiki/Dualsystem",
     titel: "Dualsystem (Wikipedia)",
@@ -561,7 +561,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "VA-647619",
+    id: "VA-3e3b6a",
     anker: "ab 1805 mit je einer Lochkarte pro Schuss",
     url: "https://de.wikipedia.org/wiki/Jacquardwebstuhl",
     titel: "Jacquardwebstuhl (Wikipedia)",

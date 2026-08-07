@@ -186,6 +186,15 @@ export const GLOSSAR: Record<string, string> = {
     "Bei Hartmut Rosa: ein antwortendes, lebendiges Verhältnis zur Welt — Gegenbegriff zur blossen Beschleunigung.",
   "Akteur-Netzwerk-Theorie":
     "Bruno Latours Ansatz: Wirkung entsteht im Netz aus Menschen UND Dingen — nichts handelt allein.",
+  /* «Bernoulli-Rechnung» ist die Wendung im Lernset-Text, «Bernoulli-Zahlen»
+     die Sache selbst — beide brauchen einen Eintrag, weil auf Wortgrenze
+     gesucht wird. */
+  "Bernoulli-Zahlen":
+    "Eine Zahlenfolge aus der Mathematik, benannt nach ihrem Entdecker Jakob I Bernoulli; sie taucht unter anderem in der Zahlentheorie auf.",
+  "Bernoulli-Rechnung":
+    "Das Rechenbeispiel in Lovelaces Anmerkungen; sie zeigte Schritt für Schritt, wie die Maschine die Bernoulli-Zahlen ermitteln würde, eine Zahlenfolge aus der Mathematik.",
+  Programmiersprache:
+    "Eine künstliche Sprache, in der Menschen einem Computer Anweisungen aufschreiben.",
   Natalität:
     "Bei Hannah Arendt: Jeder Mensch kommt als Neuer zur Welt und kann darum etwas anfangen, das vorher nicht abzusehen war.",
   "Manhattan-Projekt":
