@@ -1039,6 +1039,25 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
     );
   }, []);
 
+  /**
+   * Dasselbe für die Epochenbilder. `BildZoom` registriert einen Bildtitel
+   * erst, wenn dort eine Führung läuft — wer eine Führung nie öffnet, hinter-
+   * lässt für dieses Bild keinen Namen, und in der Knotenkarte des Orakels
+   * stand dann statt des Titels eine Ersatzbezeichnung. Weil die Karte die
+   * Zähler ALLER Browser zeigt, betraf das fast jedes Bild.
+   *
+   * ID und Titel müssen genau dem entsprechen, was `BildZoom` schreibt
+   * (`spurKey` unten: `…:epochen-bild:{Epoche}`, Titel `{Epoche} · {alt}`),
+   * sonst entstehen zwei Einträge für dasselbe Bild.
+   */
+  useEffect(() => {
+    EPOCHEN.forEach((e, ei) =>
+      e.bilder.forEach((b, bi) =>
+        merkeInhalt(`philosophische-perspektive:epochen-bild:${ei}:${bi}`, `${e.epoche} · ${b.alt}`),
+      ),
+    );
+  }, []);
+
   /** Zu welcher Epoche ein Baustein-Index gehört. */
   const epocheVon = (gi: number) => Math.floor(gi / BAUSTEINE.length);
 
