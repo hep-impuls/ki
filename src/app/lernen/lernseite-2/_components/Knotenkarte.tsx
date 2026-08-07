@@ -139,7 +139,31 @@ export default function Knotenkarte({ className = "" }: { className?: string }) 
     return subscribePollCounts(SPUREN_POLL_ID, setCounts);
   }, []);
 
-  const titelVon = (id: string) => inhalte[id] ?? id.split(":").slice(-2).join(" ");
+  /**
+   * Titel zu einer Punkt-ID.
+   *
+   * Die Registry (`leseInhalte`) wird PRO BROWSER gefüllt, und zwar nur für
+   * Inhalte, die hier auch besucht wurden. Die Ansicht «alle» zeigt aber
+   * Zähler aus allen Browsern — für Punkte, die man selbst nie geöffnet hat,
+   * ist der Titel darum unbekannt. Auf einem frischen Gerät betrifft das
+   * fast alles.
+   *
+   * Vorher stand als Ersatz `id.split(":").slice(-2).join(" ")`, was aus
+   * einer ID wie «…:teppich:5:1» die Zeichenfolge «5 1» machte: sah wie eine
+   * Zahlenangabe aus und war keine. Jetzt sagt der Ersatztext, was er weiss —
+   * den Bereich — und was er nicht weiss.
+   */
+  const titelVon = (id: string) => {
+    const bekannt = inhalte[id];
+    if (bekannt) return bekannt;
+    const bereich = areaVon(id).name;
+    /* Alle Ziffernfolgen der ID, nicht nur die letzte: «…:bilder:2:hs0» und
+       «…:bilder:3:hs0» enden beide auf 0 und wären sonst gleich beschriftet. */
+    const zahlen = [...id.matchAll(/\d+/g)].map((m) => m[0]);
+    return zahlen.length
+      ? `${bereich} · Punkt ${zahlen.join(".")}`
+      : `${bereich} · noch nicht besucht`;
+  };
 
   const punkte = useMemo<Punkt[]>(() => {
     if (ansicht === "geklickt") {
