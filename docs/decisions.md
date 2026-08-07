@@ -106,7 +106,25 @@ in Ordnung, Candide war der einzige Fall dieser Art.
 
 ---
 
-## 2026-08-04 — Antike/Technologie: drei Sachfehler korrigiert, Block erstmals belegt (Christof)
+## 2026-08-07 — Vercel baut nur einmal pro Commit: main zuerst pushen, Korrektorat-Branch danach (Christof)
+
+Symptom: Der Push von `0603a35` auf `main` erzeugte **kein**
+Production-Deployment, die Live-Seite blieb einen Tag auf dem alten Stand.
+GitHub zeigte für den Commit nur ein Preview-Deployment (Build erfolgreich,
+aber unter einer Preview-URL).
+
+Ursache: Derselbe Commit wurde in einem Zug auf `main` **und** auf
+`korrektorat/runde-1` gepusht (Branch-Nachführung für den Korrektorat-Editor).
+Vercel dedupliziert Deployments pro Commit — der Branch-Push gewann, wurde als
+Preview gebaut, und der `main`-Push wurde als Duplikat übersprungen. An allen
+Tagen zuvor ging jeder Push nur auf `main`, darum fiel das nie auf.
+
+**Regel:** Nie denselben Commit gleichzeitig auf `main` und einen zweiten
+Branch pushen. Erst `main` pushen, das Production-Deployment abwarten (unter
+GitHub → Deployments sichtbar), dann den Korrektorat-Branch nachziehen — dessen
+Build darf ruhig übersprungen werden, der Editor liest Git, nicht Vercel.
+
+Behoben durch einen frischen Commit nur auf `main` (dieser Eintrag).
 
 Anlass: Christof fragte bei «Vorher war Schreiben ein Beruf für Spezialisten,
 die Hunderte Zeichen lernen mussten», woher die Aussage stammt. Antwort: aus
