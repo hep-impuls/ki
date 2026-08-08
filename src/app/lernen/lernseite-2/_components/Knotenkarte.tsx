@@ -369,7 +369,13 @@ export default function Knotenkarte({ className = "" }: { className?: string }) 
                 : "Noch keine Daten — sobald Inhalte weiterverfolgt oder vertieft werden, erscheinen hier die stärksten."}
         </p>
       ) : (
-        <div className="mt-md grid items-center gap-lg lg:grid-cols-[minmax(0,1fr)_20rem]">
+        /* `grid-cols-1` ist hier nicht Zierde: Ohne Spaltenangabe ist die
+           implizite Spalte «auto», also so breit wie ihr längster Inhalt — und
+           seit die Bildpunkte ihre vollen Titel tragen, schob das die Liste
+           samt Punktwolke aus dem Bild (auf 412 px: 657 px Dokumentbreite).
+           Tailwinds `grid-cols-1` heisst `minmax(0, 1fr)` und darf darum
+           schrumpfen, womit das `truncate` der Titel wieder greift. */
+        <div className="mt-md grid grid-cols-1 items-center gap-lg lg:grid-cols-[minmax(0,1fr)_20rem]">
           {/* Punktwolke */}
           <svg
             viewBox={`0 0 ${VB_W} ${VB_H}`}
