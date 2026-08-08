@@ -92,13 +92,33 @@ Dutzende herabhängende Schnüre, teils weiter verzweigt, ergeben eine ganze Dat
 
 ### Der Schachtürke
 
-**[VA-34c77f]** *(Bildgeschichte)*
-Der «Schachtürke» war ein Schach spielender Automat, den Wolfgang von Kempelen 1770 am Wiener Hof vorführte. Der «Türke» war dabei keine Person, sondern eine Puppe: Kopf und Oberkörper in Lebensgrösse, mit schwarzem Bart, osmanischem Gewand und Turban, hinter einem Schachbrett auf einer Truhe voller Zahnräder. Von diesem Kostüm hat die Maschine ihren Namen. Es war Teil der Vorstellung, denn solche Kleidung galt im 18. Jahrhundert als die eines orientalischen Zauberers und versprach dem Publikum Geheimnis. Jahrzehntelang schlug er prominente Gegner, der Legende nach auch Napoleon und Benjamin Franklin, und liess ganz Europa rätseln, ob eine Maschine denken könne. In Wahrheit sass im Innern ein versteckter Schachmeister, der die Figur über Hebel und Magnete steuerte. Beim Öffnen zeigte man geschickt immer nur einen Teil des Kastens. Nach Kempelens Tod tourte Johann Nepomuk Mälzel den Automaten um die Welt, bis er 1854 bei einem Brand zerstört wurde. Dieses Bild ist ein Kupferstich von Joseph Friedrich zu Racknitz von 1789, der den vermuteten Mechanismus samt verborgenem Bediener zu erklären versuchte. Getroffen hat er es nicht: Seine Rekonstruktion gilt als unmöglich, weil die Masse nicht zum wirklichen Apparat passen. Auch das gehört zur Geschichte, denn man rätselte damals ohne Einblick. Der Schachtürke ist bis heute das Sinnbild dafür, wie bereitwillig wir Maschinen Intelligenz zuschreiben und wie oft «automatische» Leistung in Wahrheit versteckte menschliche Arbeit ist. Nicht zufällig heisst Amazons Klickarbeiter-Plattform «Mechanical Turk».
+**[VA-e2fb52]** *(Bildgeschichte)*
+Der «Schachtürke» war ein Schach spielender Automat, den Wolfgang von Kempelen 1770 am Wiener Hof vorführte. Jahrzehntelang schlug er prominente Gegner, der Legende nach auch Napoleon und Benjamin Franklin, und liess ganz Europa rätseln, ob eine Maschine denken könne. In Wahrheit sass im Innern ein versteckter Schachmeister. Nach Kempelens Tod tourte Johann Nepomuk Mälzel den Automaten um die Welt, bis er 1854 bei einem Brand zerstört wurde. Der Schachtürke ist bis heute das Sinnbild dafür, wie bereitwillig wir Maschinen Intelligenz zuschreiben und wie oft «automatische» Leistung in Wahrheit versteckte menschliche Arbeit ist. Nicht zufällig heisst Amazons Klickarbeiter-Plattform «Mechanical Turk».
+
+### Der Schein
+
+**[VA-c4ea88]** *(Kartentext)*
+Der «Türke» ist keine Person, sondern eine Puppe: Kopf und Oberkörper in Lebensgrösse, mit schwarzem Bart, osmanischem Gewand und Turban. Von diesem Kostüm hat die Maschine ihren Namen. Es gehörte zur Vorstellung, denn solche Kleidung galt im 18. Jahrhundert als die eines orientalischen Zauberers und versprach dem Publikum Geheimnis. Unter Mälzel kam später ein Sprechwerk dazu, das mitten in der Partie «Échec!» rufen konnte.
+
+> **Belegt** («osmanischem Gewand und Turban»): [Schachtürke (Wikipedia)](https://de.wikipedia.org/wiki/Schacht%C3%BCrke) — Abschnitt «Funktionsweise»: «Die Maschine bestand aus einem lebensgroßen Modell eines menschlichen Kopfes und Oberkörpers mit schwarzem Bart und grauen Augen, welcher in osmanische Gewändern und einen Turban gekleidet war.» In der Einleitung: «eine lebensgroße, orientalisch gekleidete Figur, die hinter einem Schachbrett saß», und der Automat wurde «auch kurz ‹Türke› genannt». *(geprüft 2026-08-08)*
+
+> **Belegt** («eines orientalischen Zauberers»): [Schachtürke (Wikipedia), zur Wirkung des Kostüms](https://de.wikipedia.org/wiki/Schacht%C3%BCrke) — Die Kleidung war laut dem dort zitierten Autor Tom Standage «die traditionelle Kleidung eines orientalischen Zauberers» — das Kostüm gehörte also zur Schaustellerei, nicht zur Mechanik. *(geprüft 2026-08-08)*
+
+> **Belegt** («später ein Sprechwerk dazu»): [Schachtürke (Wikipedia), zum Sprechwerk](https://de.wikipedia.org/wiki/Schacht%C3%BCrke) — «Nach dem Erwerb durch Mälzel wurde ein Sprachmodul hinzugefügt, das der Maschine erlaubte, während einer Partie ‹Échec!› (französisch für ‹Schach!›) zu sagen.» Im Lernset «Sprechwerk», weil «Modul» hier moderner klingt als die Sache ist. *(geprüft 2026-08-08)*
 
 ### Der versteckte Mensch
 
-**[VA-87049e]** *(Kartentext)*
-Im Innern kauert ein Mensch und zieht die Fäden. Die «Intelligenz» der Maschine war menschlich. Auch heute steckt oft mehr Handarbeit drin, als man sieht.
+**[VA-0fb159]** *(Kartentext)*
+Hier kauert der Schachmeister und zieht die Fäden. Die Züge des Gegners erkannte er an Magneten unter den Figuren, den linken Arm der Puppe führte er über eine Hebelmechanik, einen Pantographen. Zum Sehen brauchte er eine Kerze, für deren Rauch eine Lüftung eingebaut war. Die «Intelligenz» der Maschine war menschlich. Auch heute steckt oft mehr Handarbeit drin, als man sieht.
+
+> **Belegt** («an Magneten unter den Figuren»): [Schachtürke (Wikipedia), zur Mechanik](https://de.wikipedia.org/wiki/Schacht%C3%BCrke) — Zum Erkennen der Züge: «Jede Schachfigur hatte einen kleinen, starken Magneten an ihrer Unterseite. Wenn sie auf das Brett gestellt wurden, zogen sie jeweils einen darunter befestigten Magneten an, der mit einer Schnur verbunden war. So konnte der Operator im Inneren erkennen, wenn Figuren bewegt wurden.» Dazu waren die Felder innen mit 1 bis 64 markiert. Zum Arm: «Im Inneren der Maschine befand sich außerdem ein Steckbrett-Schachfeld, das über eine pantographenartige Hebelmechanik mit dem linken Arm des Modells verbunden war.» *(geprüft 2026-08-08)*
+
+> **Belegt** («für deren Rauch eine Lüftung eingebaut war»): [Schachtürke (Wikipedia), zur Kerze im Kasten](https://de.wikipedia.org/wiki/Schacht%C3%BCrke) — «Dem Operator war dies alles mithilfe einer einfachen Kerze sichtbar, für die ein Belüftungssystem im Inneren des Modells integriert war.» *(geprüft 2026-08-08)*
+
+### Der Blick in den Kasten
+
+**[VA-03a61c]** *(Kartentext)*
+Öffnete Kempelen die linke Tür, sah das Publikum Zahnräder und Uhrwerk, bei zusätzlich offenen Hintertüren sogar durch die ganze Maschine hindurch. Gerade der Beweis der Leere gehörte zur Täuschung, denn der Bediener rückte auf einem verschiebbaren Sitz jeweils dorthin, wo niemand hinsah. Auch dieser Stich rät bloss. Joseph Friedrich zu Racknitz versuchte 1789 den verborgenen Bediener zu erklären. Seine Rekonstruktion gilt als unmöglich, weil die Masse nicht zum wirklichen Apparat passen. Selbst die Erklärung kann also falsch sein.
 
 ### Frankenstein
 
@@ -1735,7 +1755,7 @@ Latour begann als eine Art Feldforscher unter Wissenschaftlern: In den 1970er-Ja
 
 > **Belegt** («selbst einen neuen Anfang zu machen»): [Natalität (Wikipedia), zu Hannah Arendt](https://de.wikipedia.org/wiki/Natalit%C3%A4t) — «Hannah Arendt führte 1958 den Begriff ‹Natalität› in ihre Theorie des Handelns ein.» Die Begründung wörtlich, mit Verweis auf «Vita activa», 10. Auflage 1998, S. 18: «dem Neuankömmling die Fähigkeit zukommt, selbst einen neuen Anfang zu machen, d. h. zu handeln». *(geprüft 2026-08-05)*
 
-> **Belegt** («als Gefährtin zu behandeln statt als Dienerin»): [Universität Klagenfurt, FutureTalks mit Yasuo Deguchi](https://www.aau.at/en/blog/futuretalk-human-technology-living-with-ai/) — Zur WE-turn: «This framework shifts the subject of action, self, and moral value from the individual ‹I› to the collective ‹WE›, understood as a multi-agent system encompassing humans, non-human living things, and artifacts.» Zum Verhältnis zur KI: «The Fellowship Model of AI represents an entirely different vision how to engage with AI as a society and as socially, not as Master-Slave but as fellows towards a fulfilled life.» *(geprüft 2026-08-05)*
+> **Belegt** («als Gefährtin zu behandeln statt als Dienerin»): [Yasuo Deguchi, «WE-turn and Its Implications» (JSPS Bonn, Kolloquium 2023)](https://jsps-bonn.de/wp-content/uploads/veranstaltungen/kolloquien/2023_17.German-Japanese_Colloquium_Abstracts_new.pdf) — Deguchi selbst zur Verschiebung: «the turn of the subject or the unit of any somatic action from an individual or ‹I› to a multiagent system or ‹We›, that includes the ‹I›». Und zum Verhältnis zur Technik: «the third section proposes the fellowship model for the ideal relationship among all members of the We, which includes humans, non-human lives, and non-lives (natural things and artifacts) … The fellowship model is an alternative to … the master-slave model.» Daher im Lernset «Gefährtin statt Dienerin». *(geprüft 2026-08-08)*
 
 ## Thema 02 · Wege der Orientierung
 

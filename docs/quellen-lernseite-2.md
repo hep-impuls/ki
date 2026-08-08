@@ -13,8 +13,8 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 67 |
-| Belegte Textblöcke | 38 |
+| Belege | 71 |
+| Belegte Textblöcke | 40 |
 | Begründete Nicht-Belege | 5 |
 | Aussagen mit Standdatum | 3 |
 
@@ -161,32 +161,68 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 > Damit die KI überhaupt rechnen kann, wird jedes Wort, genauer jeder Wortteil, in eine lange Zahlenreihe übersetzt. Solche Zahlenreihen heissen Vektoren. Man darf sich einen Vektor als Ort in einem Raum vorstellen: «Hund» und «Katze» liegen dort nah beieinander, «Hund» und «Schraube» weit auseinander. Dieser Raum hat allerdings nicht drei Richtungen wie unserer, sondern sehr viele. Die Informatikerin Katharina Zweig nennt Hunderte bis über zehntausend Richtungen. Was eine einzelne davon bedeutet, kann niemand ablesen; erst ihr Zusammenspiel ergibt die Lage eines Wortteils. Der Philosoph Markus Gabriel nennt dieses Übersetzen in Mathematik «vektorisieren». Am Ende bleibt es ein Rechnen mit Lagen und Abständen, kein Verstehen. Wie «mutig» die KI beim Auswählen würfelt, regelt eine Einstellung namens Temperatur. Ein hoher Wert macht die Antworten kreativer und unberechenbarer, ein niedriger vorhersehbarer. Darum kann dieselbe Frage zweimal ganz verschieden beantwortet werden.
 
-### Der Schachtürke · osmanischem Gewand und Turban
+### Der Schein · osmanischem Gewand und Turban
 
-- **Kennung:** `VA-34c77f` (Bildgeschichte)
+- **Kennung:** `VA-c4ea88` (Kartentext)
 - **Quelle:** [Schachtürke (Wikipedia)](https://de.wikipedia.org/wiki/Schacht%C3%BCrke)
 - **Fundstelle:** Abschnitt «Funktionsweise»: «Die Maschine bestand aus einem lebensgroßen Modell eines menschlichen Kopfes und Oberkörpers mit schwarzem Bart und grauen Augen, welcher in osmanische Gewändern und einen Turban gekleidet war.» In der Einleitung: «eine lebensgroße, orientalisch gekleidete Figur, die hinter einem Schachbrett saß», und der Automat wurde «auch kurz ‹Türke› genannt».
 - **Geprüft:** 2026-08-08
 
-> Der «Schachtürke» war ein Schach spielender Automat, den Wolfgang von Kempelen 1770 am Wiener Hof vorführte. Der «Türke» war dabei keine Person, sondern eine Puppe: Kopf und Oberkörper in Lebensgrösse, mit schwarzem Bart, osmanischem Gewand und Turban, hinter einem Schachbrett auf einer Truhe voller Zahnräder. Von diesem Kostüm hat die Maschine ihren Namen. Es war Teil der Vorstellung, denn solche Kleidung galt im 18. Jahrhundert als die eines orientalischen Zauberers und versprach dem Publikum Geheimnis. Jahrzehntelang schlug er prominente Gegner, der Legende nach auch Napoleon und Benjamin Franklin, und liess ganz Europa rätseln, ob eine Maschine denken könne. In Wahrheit sass im Innern ein versteckter Schachmeister, der die Figur über Hebel und Magnete steuerte. Beim Öffnen zeigte man geschickt immer nur einen Teil des Kastens. Nach Kempelens Tod tourte Johann Nepomuk Mälzel den Automaten um die Welt, bis er 1854 bei einem Brand zerstört wurde. Dieses Bild ist ein Kupferstich von Joseph Friedrich zu Racknitz von 1789, der den vermuteten Mechanismus samt verborgenem Bediener zu erklären versuchte. Getroffen hat er es nicht: Seine Rekonstruktion gilt als unmöglich, weil die Masse nicht zum wirklichen Apparat passen. Auch das gehört zur Geschichte, denn man rätselte damals ohne Einblick. Der Schachtürke ist bis heute das Sinnbild dafür, wie bereitwillig wir Maschinen Intelligenz zuschreiben und wie oft «automatische» Leistung in Wahrheit versteckte menschliche Arbeit ist. Nicht zufällig heisst Amazons Klickarbeiter-Plattform «Mechanical Turk».
+> Der «Türke» ist keine Person, sondern eine Puppe: Kopf und Oberkörper in Lebensgrösse, mit schwarzem Bart, osmanischem Gewand und Turban. Von diesem Kostüm hat die Maschine ihren Namen. Es gehörte zur Vorstellung, denn solche Kleidung galt im 18. Jahrhundert als die eines orientalischen Zauberers und versprach dem Publikum Geheimnis. Unter Mälzel kam später ein Sprechwerk dazu, das mitten in der Partie «Échec!» rufen konnte.
 
-### Der Schachtürke · eines orientalischen Zauberers
+### Der Schein · eines orientalischen Zauberers
 
-- **Kennung:** `VA-34c77f` (Bildgeschichte)
+- **Kennung:** `VA-c4ea88` (Kartentext)
 - **Quelle:** [Schachtürke (Wikipedia), zur Wirkung des Kostüms](https://de.wikipedia.org/wiki/Schacht%C3%BCrke)
 - **Fundstelle:** Die Kleidung war laut dem dort zitierten Autor Tom Standage «die traditionelle Kleidung eines orientalischen Zauberers» — das Kostüm gehörte also zur Schaustellerei, nicht zur Mechanik.
 - **Geprüft:** 2026-08-08
 
-> Der «Schachtürke» war ein Schach spielender Automat, den Wolfgang von Kempelen 1770 am Wiener Hof vorführte. Der «Türke» war dabei keine Person, sondern eine Puppe: Kopf und Oberkörper in Lebensgrösse, mit schwarzem Bart, osmanischem Gewand und Turban, hinter einem Schachbrett auf einer Truhe voller Zahnräder. Von diesem Kostüm hat die Maschine ihren Namen. Es war Teil der Vorstellung, denn solche Kleidung galt im 18. Jahrhundert als die eines orientalischen Zauberers und versprach dem Publikum Geheimnis. Jahrzehntelang schlug er prominente Gegner, der Legende nach auch Napoleon und Benjamin Franklin, und liess ganz Europa rätseln, ob eine Maschine denken könne. In Wahrheit sass im Innern ein versteckter Schachmeister, der die Figur über Hebel und Magnete steuerte. Beim Öffnen zeigte man geschickt immer nur einen Teil des Kastens. Nach Kempelens Tod tourte Johann Nepomuk Mälzel den Automaten um die Welt, bis er 1854 bei einem Brand zerstört wurde. Dieses Bild ist ein Kupferstich von Joseph Friedrich zu Racknitz von 1789, der den vermuteten Mechanismus samt verborgenem Bediener zu erklären versuchte. Getroffen hat er es nicht: Seine Rekonstruktion gilt als unmöglich, weil die Masse nicht zum wirklichen Apparat passen. Auch das gehört zur Geschichte, denn man rätselte damals ohne Einblick. Der Schachtürke ist bis heute das Sinnbild dafür, wie bereitwillig wir Maschinen Intelligenz zuschreiben und wie oft «automatische» Leistung in Wahrheit versteckte menschliche Arbeit ist. Nicht zufällig heisst Amazons Klickarbeiter-Plattform «Mechanical Turk».
+> Der «Türke» ist keine Person, sondern eine Puppe: Kopf und Oberkörper in Lebensgrösse, mit schwarzem Bart, osmanischem Gewand und Turban. Von diesem Kostüm hat die Maschine ihren Namen. Es gehörte zur Vorstellung, denn solche Kleidung galt im 18. Jahrhundert als die eines orientalischen Zauberers und versprach dem Publikum Geheimnis. Unter Mälzel kam später ein Sprechwerk dazu, das mitten in der Partie «Échec!» rufen konnte.
 
-### Der Schachtürke · Seine Rekonstruktion gilt als unmöglich
+### Der Schein · später ein Sprechwerk dazu
 
-- **Kennung:** `VA-34c77f` (Bildgeschichte)
+- **Kennung:** `VA-c4ea88` (Kartentext)
+- **Quelle:** [Schachtürke (Wikipedia), zum Sprechwerk](https://de.wikipedia.org/wiki/Schacht%C3%BCrke)
+- **Fundstelle:** «Nach dem Erwerb durch Mälzel wurde ein Sprachmodul hinzugefügt, das der Maschine erlaubte, während einer Partie ‹Échec!› (französisch für ‹Schach!›) zu sagen.» Im Lernset «Sprechwerk», weil «Modul» hier moderner klingt als die Sache ist.
+- **Geprüft:** 2026-08-08
+
+> Der «Türke» ist keine Person, sondern eine Puppe: Kopf und Oberkörper in Lebensgrösse, mit schwarzem Bart, osmanischem Gewand und Turban. Von diesem Kostüm hat die Maschine ihren Namen. Es gehörte zur Vorstellung, denn solche Kleidung galt im 18. Jahrhundert als die eines orientalischen Zauberers und versprach dem Publikum Geheimnis. Unter Mälzel kam später ein Sprechwerk dazu, das mitten in der Partie «Échec!» rufen konnte.
+
+### Der versteckte Mensch · an Magneten unter den Figuren
+
+- **Kennung:** `VA-0fb159` (Kartentext)
+- **Quelle:** [Schachtürke (Wikipedia), zur Mechanik](https://de.wikipedia.org/wiki/Schacht%C3%BCrke)
+- **Fundstelle:** Zum Erkennen der Züge: «Jede Schachfigur hatte einen kleinen, starken Magneten an ihrer Unterseite. Wenn sie auf das Brett gestellt wurden, zogen sie jeweils einen darunter befestigten Magneten an, der mit einer Schnur verbunden war. So konnte der Operator im Inneren erkennen, wenn Figuren bewegt wurden.» Dazu waren die Felder innen mit 1 bis 64 markiert. Zum Arm: «Im Inneren der Maschine befand sich außerdem ein Steckbrett-Schachfeld, das über eine pantographenartige Hebelmechanik mit dem linken Arm des Modells verbunden war.»
+- **Geprüft:** 2026-08-08
+
+> Hier kauert der Schachmeister und zieht die Fäden. Die Züge des Gegners erkannte er an Magneten unter den Figuren, den linken Arm der Puppe führte er über eine Hebelmechanik, einen Pantographen. Zum Sehen brauchte er eine Kerze, für deren Rauch eine Lüftung eingebaut war. Die «Intelligenz» der Maschine war menschlich. Auch heute steckt oft mehr Handarbeit drin, als man sieht.
+
+### Der versteckte Mensch · für deren Rauch eine Lüftung eingebaut war
+
+- **Kennung:** `VA-0fb159` (Kartentext)
+- **Quelle:** [Schachtürke (Wikipedia), zur Kerze im Kasten](https://de.wikipedia.org/wiki/Schacht%C3%BCrke)
+- **Fundstelle:** «Dem Operator war dies alles mithilfe einer einfachen Kerze sichtbar, für die ein Belüftungssystem im Inneren des Modells integriert war.»
+- **Geprüft:** 2026-08-08
+
+> Hier kauert der Schachmeister und zieht die Fäden. Die Züge des Gegners erkannte er an Magneten unter den Figuren, den linken Arm der Puppe führte er über eine Hebelmechanik, einen Pantographen. Zum Sehen brauchte er eine Kerze, für deren Rauch eine Lüftung eingebaut war. Die «Intelligenz» der Maschine war menschlich. Auch heute steckt oft mehr Handarbeit drin, als man sieht.
+
+### Der Blick in den Kasten · Zahnräder und Uhrwerk
+
+- **Kennung:** `VA-03a61c` (Kartentext)
+- **Quelle:** [Schachtürke (Wikipedia), zur Vorführung des offenen Kastens](https://de.wikipedia.org/wiki/Schacht%C3%BCrke)
+- **Fundstelle:** «Beim Öffnen der linken Seite wurden Zahnräder und Uhrwerkmechanismen sichtbar. Dieser Bereich war so konstruiert, dass man durch die gesamte Maschine hindurchsehen konnte, wenn gleichzeitig auch die hinteren Türen geöffnet wurden.» Und zum verschiebbaren Sitz: «Mithilfe eines ausgeklügelten Systems aus Magneten, Hebeln und beweglichen Sitzvorrichtungen konnte sich die versteckte Person im Gehäuse so positionieren, dass sie bei den Vorführungen nicht entdeckt wurde.»
+- **Geprüft:** 2026-08-08
+
+> Öffnete Kempelen die linke Tür, sah das Publikum Zahnräder und Uhrwerk, bei zusätzlich offenen Hintertüren sogar durch die ganze Maschine hindurch. Gerade der Beweis der Leere gehörte zur Täuschung, denn der Bediener rückte auf einem verschiebbaren Sitz jeweils dorthin, wo niemand hinsah. Auch dieser Stich rät bloss. Joseph Friedrich zu Racknitz versuchte 1789 den verborgenen Bediener zu erklären. Seine Rekonstruktion gilt als unmöglich, weil die Masse nicht zum wirklichen Apparat passen. Selbst die Erklärung kann also falsch sein.
+
+### Der Blick in den Kasten · Seine Rekonstruktion gilt als unmöglich
+
+- **Kennung:** `VA-03a61c` (Kartentext)
 - **Quelle:** [Schachtürke (Wikipedia), zur Racknitz-Darstellung](https://de.wikipedia.org/wiki/Schacht%C3%BCrke)
 - **Fundstelle:** Bildlegende zum Kupferstich: «Die Darstellung basiert auf Racknitz' Berechnungen und gilt aufgrund der Proportionen der tatsächlichen Apparatur als unmöglich.»
 - **Geprüft:** 2026-08-08
 
-> Der «Schachtürke» war ein Schach spielender Automat, den Wolfgang von Kempelen 1770 am Wiener Hof vorführte. Der «Türke» war dabei keine Person, sondern eine Puppe: Kopf und Oberkörper in Lebensgrösse, mit schwarzem Bart, osmanischem Gewand und Turban, hinter einem Schachbrett auf einer Truhe voller Zahnräder. Von diesem Kostüm hat die Maschine ihren Namen. Es war Teil der Vorstellung, denn solche Kleidung galt im 18. Jahrhundert als die eines orientalischen Zauberers und versprach dem Publikum Geheimnis. Jahrzehntelang schlug er prominente Gegner, der Legende nach auch Napoleon und Benjamin Franklin, und liess ganz Europa rätseln, ob eine Maschine denken könne. In Wahrheit sass im Innern ein versteckter Schachmeister, der die Figur über Hebel und Magnete steuerte. Beim Öffnen zeigte man geschickt immer nur einen Teil des Kastens. Nach Kempelens Tod tourte Johann Nepomuk Mälzel den Automaten um die Welt, bis er 1854 bei einem Brand zerstört wurde. Dieses Bild ist ein Kupferstich von Joseph Friedrich zu Racknitz von 1789, der den vermuteten Mechanismus samt verborgenem Bediener zu erklären versuchte. Getroffen hat er es nicht: Seine Rekonstruktion gilt als unmöglich, weil die Masse nicht zum wirklichen Apparat passen. Auch das gehört zur Geschichte, denn man rätselte damals ohne Einblick. Der Schachtürke ist bis heute das Sinnbild dafür, wie bereitwillig wir Maschinen Intelligenz zuschreiben und wie oft «automatische» Leistung in Wahrheit versteckte menschliche Arbeit ist. Nicht zufällig heisst Amazons Klickarbeiter-Plattform «Mechanical Turk».
+> Öffnete Kempelen die linke Tür, sah das Publikum Zahnräder und Uhrwerk, bei zusätzlich offenen Hintertüren sogar durch die ganze Maschine hindurch. Gerade der Beweis der Leere gehörte zur Täuschung, denn der Bediener rückte auf einem verschiebbaren Sitz jeweils dorthin, wo niemand hinsah. Auch dieser Stich rät bloss. Joseph Friedrich zu Racknitz versuchte 1789 den verborgenen Bediener zu erklären. Seine Rekonstruktion gilt als unmöglich, weil die Masse nicht zum wirklichen Apparat passen. Selbst die Erklärung kann also falsch sein.
 
 ### Rechenmaschinen · ganz gebrauchsfähig wurde sie nie
 

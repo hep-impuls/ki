@@ -347,8 +347,13 @@ export default function BilderAnschauung({
                 </span>
                 <div className="min-w-0">
                   <p className="text-body-md font-semibold">{bild.hotspots[hot].titel}</p>
+                  {/* Auch die Punkt-Texte durch GlossarText — dieselbe Lücke wie
+                      unten bei der Bildgeschichte und vorher bei StoryGewebe.
+                      Nötig geworden, als die Einzelheiten zum Schachtürken von
+                      der Geschichte zu den Bildpunkten wanderten: Die Belege
+                      wären sonst mitgewandert und unsichtbar geworden. */}
                   <p className="mt-xs text-body-sm leading-relaxed opacity-90">
-                    {bild.hotspots[hot].text}
+                    <GlossarText text={bild.hotspots[hot].text} />
                   </p>
                 </div>
               </div>

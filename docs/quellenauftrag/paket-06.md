@@ -50,6 +50,9 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 02 · Die acht Epochen
 
+**[EP-37f2ac]** *(Hintergrund zum Bild · «Ende der Geschichte»)*
+Dieses Bild ist kein Gemälde, sondern eine Pressefotografie vom 22. Dezember 1989. Aufgenommen hat sie ein Fotograf des DDR-Nachrichtendienstes ADN, heute liegt sie im Bundesarchiv. Zu sehen ist der Moment, in dem am Brandenburger Tor ein Kran ein Mauersegment heraushebt, um den neuen Grenzübergang zu öffnen. Es geschah sechs Wochen nach der Maueröffnung vom 9. November 1989. Unter dem schwebenden Betonstück stehen Grenzsoldaten, Arbeiter und Schaulustige dicht beieinander. Das nächtliche Foto wurde zu einem Sinnbild für das friedliche Ende der deutschen Teilung.
+
 **[EP-f31e12]** *(Kartentext · «Ende der Geschichte»)*
 Ein Betonsegment hängt am Haken, die «unüberwindbare» Grenze als Bauteil, das man herausheben kann. 28 Jahre teilte diese Wand die Stadt. Jetzt zeigt sich: Auch sie war gemacht, nicht Schicksal.
 
@@ -146,7 +149,7 @@ Latour begann als eine Art Feldforscher unter Wissenschaftlern: In den 1970er-Ja
 
 > **Belegt** («selbst einen neuen Anfang zu machen»): [Natalität (Wikipedia), zu Hannah Arendt](https://de.wikipedia.org/wiki/Natalit%C3%A4t) — «Hannah Arendt führte 1958 den Begriff ‹Natalität› in ihre Theorie des Handelns ein.» Die Begründung wörtlich, mit Verweis auf «Vita activa», 10. Auflage 1998, S. 18: «dem Neuankömmling die Fähigkeit zukommt, selbst einen neuen Anfang zu machen, d. h. zu handeln». *(geprüft 2026-08-05)*
 
-> **Belegt** («als Gefährtin zu behandeln statt als Dienerin»): [Universität Klagenfurt, FutureTalks mit Yasuo Deguchi](https://www.aau.at/en/blog/futuretalk-human-technology-living-with-ai/) — Zur WE-turn: «This framework shifts the subject of action, self, and moral value from the individual ‹I› to the collective ‹WE›, understood as a multi-agent system encompassing humans, non-human living things, and artifacts.» Zum Verhältnis zur KI: «The Fellowship Model of AI represents an entirely different vision how to engage with AI as a society and as socially, not as Master-Slave but as fellows towards a fulfilled life.» *(geprüft 2026-08-05)*
+> **Belegt** («als Gefährtin zu behandeln statt als Dienerin»): [Yasuo Deguchi, «WE-turn and Its Implications» (JSPS Bonn, Kolloquium 2023)](https://jsps-bonn.de/wp-content/uploads/veranstaltungen/kolloquien/2023_17.German-Japanese_Colloquium_Abstracts_new.pdf) — Deguchi selbst zur Verschiebung: «the turn of the subject or the unit of any somatic action from an individual or ‹I› to a multiagent system or ‹We›, that includes the ‹I›». Und zum Verhältnis zur Technik: «the third section proposes the fellowship model for the ideal relationship among all members of the We, which includes humans, non-human lives, and non-lives (natural things and artifacts) … The fellowship model is an alternative to … the master-slave model.» Daher im Lernset «Gefährtin statt Dienerin». *(geprüft 2026-08-08)*
 
 ### Thema 02 · Wege der Orientierung
 
@@ -191,8 +194,3 @@ Maurice Merleau-Ponty war ein französischer Philosoph der Phänomenologie. Sein
 
 **[DW-cfa60f]** *(Zur Philosophie · Lebenskunst)*
 Hartmut Rosa ist ein deutscher Soziologe, bekannt für die Diagnose der gesellschaftlichen «Beschleunigung». Dagegen setzt er den Begriff «Resonanz»: Ein gelingendes Leben entsteht nicht durch mehr Kontrolle, mehr Tempo und mehr Verfügbarkeit, sondern durch ein lebendiges, wechselseitiges Antworten zwischen Mensch und Welt, ein Berührtwerden. Vieles, was zählt, lässt sich gerade nicht erzwingen oder verfügbar machen, es muss einem begegnen. In einer Welt schneller KI erinnert er daran, das Sich-berühren-Lassen nicht zu verlernen. Werke: «Resonanz» (2016), «Unverfügbarkeit» (2018).
-
-### Thema 03 · Das Orakel
-
-**[OR-e41fe5]** *(Fliesstext · Verunsichert dich noch)*
-Vor über zweieinhalbtausend Jahren stiegen Menschen aus der ganzen griechischen Welt nach Delphi hinauf, um das berühmteste Orakel der Antike zu befragen. Dort sass die Priesterin Pythia auf einem Dreifuss über einer Erdspalte und gab, oft in dunklen, deutbaren Worten, Antwort. Ganze Städte fragten sie, bevor sie in den Krieg zogen oder eine Kolonie gründeten. Dem lydischen König Krösus soll sie gesagt haben, wenn er über den Grenzfluss ziehe, werde er ein grosses Reich zerstören. Er zog los, verlor und zerstörte sein eigenes. Das Orakel war ein Ort, an dem eine unübersichtliche Welt gedeutet wurde, lange bevor es Wissenschaft gab.

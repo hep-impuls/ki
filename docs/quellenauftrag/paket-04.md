@@ -50,6 +50,9 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 02 · Philosophische Perspektive
 
+**[PP-aadb5f]** *(Kartentext · KI wird öffentlich)*
+Erfunden wurde die KI nicht 2022: Benannt und erforscht wird sie seit 1956 (Dartmouth-Konferenz). Mit GPT und ChatGPT tritt sie 2022 an die Öffentlichkeit und wird alltäglich.
+
 **[PP-f72dd4]** *(Vertiefung «Mehr lesen» · KI wird öffentlich)*
 Im Sommer 1956 lud der junge Mathematiker John McCarthy eine Handvoll Forscher ans Dartmouth College ein und gab dem Feld seinen Namen, künstliche Intelligenz. Der Antrag versprach kühn, ein Sommer mit zehn Leuten werde entscheidende Fortschritte bringen. Es dauerte dann Jahrzehnte länger, mit Durchbrüchen und Enttäuschungen im Wechsel. Sichtbar wurde der Fortschritt zuerst in Spielen: 1997 schlug der Rechner Deep Blue den Schachweltmeister Garri Kasparow, 2016 besiegte AlphaGo den Go-Meister Lee Sedol mit einem Zug, den Fachleute zuerst für einen Fehler hielten. Der eigentliche Bruch kam am 30. November 2022, als ChatGPT freigeschaltet wurde. Innert fünf Tagen meldeten sich eine Million Menschen an, nach zwei Monaten waren es rund hundert Millionen, schneller als je bei einer Anwendung zuvor. Erstmals konnte jede und jeder mit einer KI einfach reden. Damit wanderte eine Laborfrage mitten in Schulzimmer, Büros und Werkstätten.
 
@@ -171,8 +174,3 @@ Im Frühjahr 1525 beschlossen aufständische Bauern in Memmingen zwölf Artikel 
 
 **[EP-2e7bfd]** *(Kartentext · Renaissance & Aufbruch)*
 Pico della Mirandola (1463–1494) formuliert in seiner «Rede über die Würde des Menschen», der Mensch sei nicht auf eine feste Natur festgelegt, sondern forme sich selbst. Montaigne (1533–1592) setzt die skeptische Frage dagegen: «Que sais-je?» («Was weiss ich schon?»). Alltagssprachlich lebt beides fort in «jeder ist seines Glückes Schmied» und im Bekenntnis, etwas zu hinterfragen.
-
-**[EP-8aaf1a]** *(Vertiefung «Mehr lesen» · Renaissance & Aufbruch)*
-Pico war dreiundzwanzig, als er 1486 die Gelehrten Europas nach Rom einlud, um mit ihnen über 900 Thesen zu streiten, und die «Rede über die Würde des Menschen» sollte die Eröffnung dieses Wettstreits werden. Der Papst verbot die Veranstaltung, ein Teil der Thesen galt als ketzerisch, doch der Text überlebte und wurde zum Manifest des neuen Selbstbewusstseins. Ein Menschenalter später zog sich Montaigne, Richter in Bordeaux, auf den Turm seines Schlosses zurück, während draussen Katholiken und Protestanten einander in Glaubenskriegen abschlachteten. Auf die Deckenbalken seiner Bibliothek liess er Sprüche antiker Skeptiker malen und erfand beim Schreiben nebenbei eine neue Gattung: den «Essai», wörtlich den Versuch, das Ausprobieren eines Gedankens. Grösse und Zweifel gehören seither zusammen, und wer heute angesichts der KI fragt, was der Mensch eigentlich ist, führt genau dieses Gespräch weiter.
-
-> **Belegt** («Deckenbalken seiner Bibliothek»): [Michel de Montaignes Turmbibliothek (Wikipedia)](https://de.wikipedia.org/wiki/Michel_de_Montaignes_Turmbibliothek) — Die Sentenzen wurden gemalt beziehungsweise «in die Balken gebrannt», nicht geschnitzt. Die Skeptiker stimmen: 14 der griechischen Texte gehen auf Sextus Empiricus und Diogenes Laertios zurück, aus denen Montaigne den Pyrrhonismus kannte. *(geprüft 2026-08-05)*

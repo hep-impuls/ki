@@ -1,6 +1,6 @@
 # Quellenauftrag · Lernseite 2 «Eine ganz neue Partnerschaft»
 
-**Paket 08 von 8.** Dieses Dokument enthält 18 Textblöcke eines Lernsets zu
+**Paket 08 von 8.** Dieses Dokument enthält 19 Textblöcke eines Lernsets zu
 Künstlicher Intelligenz und Philosophie (Berufsfachschule, Deutschschweiz).
 Jeder Block hat eine **Kennung** in eckigen Klammern, z.B. `[VA-a1b2c3]`.
 
@@ -46,9 +46,12 @@ und die Quelle ihn nur bestätigt.
 
 Jeder Block hier enthält eine prüfbare Behauptung (Zahl, Datum,
 Superlativ oder eine Aussage, die jemandem zugeschrieben wird). Deutende
-Passagen sind bewusst nicht dabei. Geh die 18 Blöcke einzeln durch.
+Passagen sind bewusst nicht dabei. Geh die 19 Blöcke einzeln durch.
 
 ### Thema 02 · Die acht Epochen
+
+**[EP-a1d2b4]** *(Einleitung, Vertiefung · Antike)*
+«Antike» ist ein Sammelname für weit über tausend Jahre, von etwa 800 v. Chr. bis zum Ende des Römischen Reiches im Westen um 500 n. Chr. In dieser Zeit entsteht überraschend viel, was uns heute normal vorkommt: Abstimmungen, Gesetze, die man nachlesen kann, das Theater, die Geometrie, die Philosophie. Trotzdem war das keine gerechte Welt. Die schwere Arbeit machten zu einem grossen Teil Sklaven, Frauen durften nicht mitbestimmen, und wenn die alten Texte «alle Bürger» sagen, sind damit nur die freien Männer der Stadt gemeint. Geblieben ist eine Idee: Man kann die Welt selber verstehen und nachprüfen, statt sie einfach hinzunehmen.
 
 **[EP-a6e85e]** *(Vertiefung «Mehr lesen» · Antike)*
 Wie das im Alltag aussah, zeigt Athen. Solons Gesetze standen auf hölzernen Tafeln, die drehbar an Pflöcken befestigt waren, etwa wie ein Kartenständer, und jeder konnte sie einsehen. Wer lesen konnte, war nicht mehr darauf angewiesen, dass ihm jemand vorlas und dabei die Wahrheit sagte, sondern konnte selber nachschauen, was gilt. Auf der Agora wurde dann darüber gestritten. Im Hafen Piräus prüften Händler Verträge und zahlten mit den silbernen «Eulen», wie man Athens Münzen nach ihrem Münzbild nannte. Das Silber dafür kam aus den Bergwerken von Laurion. Als dort ab 483 v. Chr. mehr Silber anfiel, wollten die Athener den Überschuss unter sich aufteilen. Themistokles überzeugte sie, davon Kriegsschiffe zu bauen. Wenige Jahre später retteten genau diese Schiffe die Stadt gegen die Perser. Und noch etwas verschob sich: Wer schreiben und rechnen konnte, kam voran, auch ohne vornehme Familie. Nicht mehr nur die Herkunft zählte, sondern das Können.

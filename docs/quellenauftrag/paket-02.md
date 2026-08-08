@@ -50,6 +50,9 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 01 · Vorhang auf
 
+**[VA-4f5fef]** *(Vertiefung «Mehr lesen» · Geburt der KI)*
+Den Namen «Artificial Intelligence» prägte der Mathematiker John McCarthy, der das Treffen organisierte und bewusst einen neutralen Begriff suchte, auch um sich vom älteren Feld der Kybernetik abzugrenzen. Im Antrag von 1955 standen weitere namhafte Forscher, etwa der IBM-Ingenieur Nathaniel Rochester und Claude Shannon, der Begründer der Informationstheorie. Das Treffen fand im Sommer 1956 im Städtchen Hanover im US-Staat New Hampshire statt und war als mehrwöchiger Arbeitsaufenthalt gedacht. Finanziert wurde es zu einem grossen Teil von der Rockefeller-Stiftung. Statt eines einzelnen Durchbruchs brachte der Sommer vor allem viele Einzelideen und dauerhafte Kontakte. Trotzdem gilt Dartmouth als Geburtsstunde des Fachs, weil hier erstmals ein gemeinsamer Name und ein gemeinsames Ziel entstanden. Der erhoffte rasche Erfolg aber liess Jahrzehnte auf sich warten.
+
 **[VA-5a7106]** *(Kartentext · Symbolische KI)*
 Die erste grosse KI-Richtung verstand Denken als das Anwenden klarer Regeln. Wissen wurde in Wenn-dann-Sätze gefasst, und Schliessen bedeutete, aus Regeln neue Sätze abzuleiten. In eng begrenzten Welten wie dem Schach funktionierte das erstaunlich gut. An der offenen, mehrdeutigen Alltagswelt aber scheiterte dieser Weg.
 
@@ -151,6 +154,3 @@ Du kannst der KI ein Foto deines Kühlschranks zeigen und nach einem Rezept frag
 
 **[VA-87db90]** *(Vertiefung «Mehr lesen» · multimodal)*
 Frühe Programme konnten nur eines, entweder Text oder Bild oder Ton. Multimodale Modelle verbinden diese Kanäle in einem einzigen Netz. Damit rücken sie näher an uns Menschen heran, denn auch wir denken nicht in getrennten Sinnen. Ein Beispiel: Du fotografierst eine Mathe-Aufgabe, und die KI liest sie, rechnet und erklärt den Lösungsweg. Oder du zeigst ihr ein Diagramm, und sie fasst es in Worten zusammen. So wird die Grenze zwischen Lesen, Sehen und Hören für die Maschine durchlässig.
-
-**[VA-6e57d1]** *(Fliesstext · Mehr dazu: die vier Blickwinkel)*
-Der erste Blickwinkel ist der technologische, also Rechenkraft, Daten und die Modelle selbst. Der zweite ist der wirtschaftliche, denn Entwicklung und Betrieb kosten viel Geld und schaffen neue Märkte. Der dritte ist der rechtlich-politische, etwa Fragen nach Regeln, Haftung und Macht. Der vierte ist der kulturelle, also wie wir mit KI leben, arbeiten und über sie sprechen. Diese vier Blickwinkel wirken zusammen und lassen sich nicht sauber trennen. Erst gemeinsam ergeben sie ein Bild davon, was KI heute ist.

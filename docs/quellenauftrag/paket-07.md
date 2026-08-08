@@ -48,6 +48,11 @@ Jeder Block hier enthält eine prüfbare Behauptung (Zahl, Datum,
 Superlativ oder eine Aussage, die jemandem zugeschrieben wird). Deutende
 Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
+### Thema 03 · Das Orakel
+
+**[OR-e41fe5]** *(Fliesstext · Verunsichert dich noch)*
+Vor über zweieinhalbtausend Jahren stiegen Menschen aus der ganzen griechischen Welt nach Delphi hinauf, um das berühmteste Orakel der Antike zu befragen. Dort sass die Priesterin Pythia auf einem Dreifuss über einer Erdspalte und gab, oft in dunklen, deutbaren Worten, Antwort. Ganze Städte fragten sie, bevor sie in den Krieg zogen oder eine Kolonie gründeten. Dem lydischen König Krösus soll sie gesagt haben, wenn er über den Grenzfluss ziehe, werde er ein grosses Reich zerstören. Er zog los, verlor und zerstörte sein eigenes. Das Orakel war ein Ort, an dem eine unübersichtliche Welt gedeutet wurde, lange bevor es Wissenschaft gab.
+
 ### Übersicht (Hub)
 
 **[HUB-f5abb9]** *(Fliesstext · (ohne Abschnitt))*
@@ -55,8 +60,12 @@ Kaum ein Thema ist so präsent wie die Künstliche Intelligenz — und kaum eine
 
 ### Thema 01 · Vorhang auf
 
-**[VA-87049e]** *(Kartentext · Der versteckte Mensch)*
-Im Innern kauert ein Mensch und zieht die Fäden. Die «Intelligenz» der Maschine war menschlich. Auch heute steckt oft mehr Handarbeit drin, als man sieht.
+**[VA-0fb159]** *(Kartentext · Der versteckte Mensch)*
+Hier kauert der Schachmeister und zieht die Fäden. Die Züge des Gegners erkannte er an Magneten unter den Figuren, den linken Arm der Puppe führte er über eine Hebelmechanik, einen Pantographen. Zum Sehen brauchte er eine Kerze, für deren Rauch eine Lüftung eingebaut war. Die «Intelligenz» der Maschine war menschlich. Auch heute steckt oft mehr Handarbeit drin, als man sieht.
+
+> **Belegt** («an Magneten unter den Figuren»): [Schachtürke (Wikipedia), zur Mechanik](https://de.wikipedia.org/wiki/Schacht%C3%BCrke) — Zum Erkennen der Züge: «Jede Schachfigur hatte einen kleinen, starken Magneten an ihrer Unterseite. Wenn sie auf das Brett gestellt wurden, zogen sie jeweils einen darunter befestigten Magneten an, der mit einer Schnur verbunden war. So konnte der Operator im Inneren erkennen, wenn Figuren bewegt wurden.» Dazu waren die Felder innen mit 1 bis 64 markiert. Zum Arm: «Im Inneren der Maschine befand sich außerdem ein Steckbrett-Schachfeld, das über eine pantographenartige Hebelmechanik mit dem linken Arm des Modells verbunden war.» *(geprüft 2026-08-08)*
+
+> **Belegt** («für deren Rauch eine Lüftung eingebaut war»): [Schachtürke (Wikipedia), zur Kerze im Kasten](https://de.wikipedia.org/wiki/Schacht%C3%BCrke) — «Dem Operator war dies alles mithilfe einer einfachen Kerze sichtbar, für die ein Belüftungssystem im Inneren des Modells integriert war.» *(geprüft 2026-08-08)*
 
 **[VA-749479]** *(Kartentext · Menschen an der Maschine)*
 Bedienerinnen richteten die Bombe ein und lasen sie ab, rund um die Uhr. Aus Turings Idee der universellen Rechenmaschine wird ein reales, kriegsentscheidendes Werkzeug und eine Geburtsstunde des Computers.
@@ -157,8 +166,3 @@ Eratosthenes leitete die berühmte Bibliothek von Alexandria und trug den Spitzn
 
 **[PP-7c7442]** *(Kartentext · Grenzenloser Welthandel)*
 Container, Freihandelsabkommen und das Internet verflechten die Weltwirtschaft fast grenzenlos: Waren, Kapital und Daten zirkulieren rund um den Planeten. Es ist die jüngste und dichteste Form der Globalisierung.
-
-### Thema 02 · Die acht Epochen
-
-**[EP-a1d2b4]** *(Einleitung, Vertiefung · Antike)*
-«Antike» ist ein Sammelname für weit über tausend Jahre, von etwa 800 v. Chr. bis zum Ende des Römischen Reiches im Westen um 500 n. Chr. In dieser Zeit entsteht überraschend viel, was uns heute normal vorkommt: Abstimmungen, Gesetze, die man nachlesen kann, das Theater, die Geometrie, die Philosophie. Trotzdem war das keine gerechte Welt. Die schwere Arbeit machten zu einem grossen Teil Sklaven, Frauen durften nicht mitbestimmen, und wenn die alten Texte «alle Bürger» sagen, sind damit nur die freien Männer der Stadt gemeint. Geblieben ist eine Idee: Man kann die Welt selber verstehen und nachprüfen, statt sie einfach hinzunehmen.

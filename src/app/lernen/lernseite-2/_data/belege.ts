@@ -503,9 +503,17 @@ export const BELEGE: Beleg[] = [
    * Volk? Jetzt steht da, dass es eine Puppe ist und woher der Name kommt.
    * Beim Nachschlagen kam dazu, dass der gezeigte Kupferstich den Mechanismus
    * falsch darstellt; das stand vorher nicht im Text, obwohl genau dieses Bild
-   * daneben liegt. */
+   * daneben liegt.
+   *
+   * Am selben Tag umgezogen: Christof fand die Bildgeschichte zu lang. Die
+   * Einzelheiten stehen jetzt bei den drei Bildpunkten, wo man sie an der Sache
+   * selbst sieht — Turban bei Punkt 1 (VA-c4ea88), versteckter Mann bei Punkt 2
+   * (VA-0fb159), offenes Fach bei Punkt 3 (VA-03a61c). Beim Verschieben fiel
+   * eine Ungenauigkeit auf: Es hiess, der Bediener habe die Figur «über Hebel
+   * und Magnete» gesteuert. Die Magnete dienten dem Erkennen der gegnerischen
+   * Züge, der Arm lief über einen Pantographen. Beides jetzt getrennt. */
   {
-    id: "VA-34c77f",
+    id: "VA-c4ea88",
     anker: "osmanischem Gewand und Turban",
     url: "https://de.wikipedia.org/wiki/Schacht%C3%BCrke",
     titel: "Schachtürke (Wikipedia)",
@@ -514,7 +522,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-08",
   },
   {
-    id: "VA-34c77f",
+    id: "VA-c4ea88",
     anker: "eines orientalischen Zauberers",
     url: "https://de.wikipedia.org/wiki/Schacht%C3%BCrke",
     titel: "Schachtürke (Wikipedia), zur Wirkung des Kostüms",
@@ -523,7 +531,43 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-08",
   },
   {
-    id: "VA-34c77f",
+    id: "VA-c4ea88",
+    anker: "später ein Sprechwerk dazu",
+    url: "https://de.wikipedia.org/wiki/Schacht%C3%BCrke",
+    titel: "Schachtürke (Wikipedia), zum Sprechwerk",
+    stelle:
+      "«Nach dem Erwerb durch Mälzel wurde ein Sprachmodul hinzugefügt, das der Maschine erlaubte, während einer Partie ‹Échec!› (französisch für ‹Schach!›) zu sagen.» Im Lernset «Sprechwerk», weil «Modul» hier moderner klingt als die Sache ist.",
+    geprueft: "2026-08-08",
+  },
+  {
+    id: "VA-0fb159",
+    anker: "an Magneten unter den Figuren",
+    url: "https://de.wikipedia.org/wiki/Schacht%C3%BCrke",
+    titel: "Schachtürke (Wikipedia), zur Mechanik",
+    stelle:
+      "Zum Erkennen der Züge: «Jede Schachfigur hatte einen kleinen, starken Magneten an ihrer Unterseite. Wenn sie auf das Brett gestellt wurden, zogen sie jeweils einen darunter befestigten Magneten an, der mit einer Schnur verbunden war. So konnte der Operator im Inneren erkennen, wenn Figuren bewegt wurden.» Dazu waren die Felder innen mit 1 bis 64 markiert. Zum Arm: «Im Inneren der Maschine befand sich außerdem ein Steckbrett-Schachfeld, das über eine pantographenartige Hebelmechanik mit dem linken Arm des Modells verbunden war.»",
+    geprueft: "2026-08-08",
+  },
+  {
+    id: "VA-0fb159",
+    anker: "für deren Rauch eine Lüftung eingebaut war",
+    url: "https://de.wikipedia.org/wiki/Schacht%C3%BCrke",
+    titel: "Schachtürke (Wikipedia), zur Kerze im Kasten",
+    stelle:
+      "«Dem Operator war dies alles mithilfe einer einfachen Kerze sichtbar, für die ein Belüftungssystem im Inneren des Modells integriert war.»",
+    geprueft: "2026-08-08",
+  },
+  {
+    id: "VA-03a61c",
+    anker: "Zahnräder und Uhrwerk",
+    url: "https://de.wikipedia.org/wiki/Schacht%C3%BCrke",
+    titel: "Schachtürke (Wikipedia), zur Vorführung des offenen Kastens",
+    stelle:
+      "«Beim Öffnen der linken Seite wurden Zahnräder und Uhrwerkmechanismen sichtbar. Dieser Bereich war so konstruiert, dass man durch die gesamte Maschine hindurchsehen konnte, wenn gleichzeitig auch die hinteren Türen geöffnet wurden.» Und zum verschiebbaren Sitz: «Mithilfe eines ausgeklügelten Systems aus Magneten, Hebeln und beweglichen Sitzvorrichtungen konnte sich die versteckte Person im Gehäuse so positionieren, dass sie bei den Vorführungen nicht entdeckt wurde.»",
+    geprueft: "2026-08-08",
+  },
+  {
+    id: "VA-03a61c",
     anker: "Seine Rekonstruktion gilt als unmöglich",
     url: "https://de.wikipedia.org/wiki/Schacht%C3%BCrke",
     titel: "Schachtürke (Wikipedia), zur Racknitz-Darstellung",

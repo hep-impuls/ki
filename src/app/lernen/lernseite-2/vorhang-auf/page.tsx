@@ -101,26 +101,29 @@ const BILDER_STORY: AnschauBild[] = [
     kurz: "der scheinbar denkende Automat",
     quelle:
       "Kupferstich, Joseph Friedrich zu Racknitz, 1789 · Wikimedia Commons · gemeinfrei",
+    /* Kurz gehalten auf Christofs Wunsch — die Einzelheiten stehen bei den
+       drei Bildpunkten, wo man sie an der Sache selbst sieht: der Turban bei
+       Punkt 1, der versteckte Mann bei Punkt 2, das offene Fach bei Punkt 3. */
     geschichte:
-      "Der «Schachtürke» war ein Schach spielender Automat, den Wolfgang von Kempelen 1770 am Wiener Hof vorführte. Der «Türke» war dabei keine Person, sondern eine Puppe: Kopf und Oberkörper in Lebensgrösse, mit schwarzem Bart, osmanischem Gewand und Turban, hinter einem Schachbrett auf einer Truhe voller Zahnräder. Von diesem Kostüm hat die Maschine ihren Namen. Es war Teil der Vorstellung, denn solche Kleidung galt im 18. Jahrhundert als die eines orientalischen Zauberers und versprach dem Publikum Geheimnis. Jahrzehntelang schlug er prominente Gegner, der Legende nach auch Napoleon und Benjamin Franklin, und liess ganz Europa rätseln, ob eine Maschine denken könne. In Wahrheit sass im Innern ein versteckter Schachmeister, der die Figur über Hebel und Magnete steuerte. Beim Öffnen zeigte man geschickt immer nur einen Teil des Kastens. Nach Kempelens Tod tourte Johann Nepomuk Mälzel den Automaten um die Welt, bis er 1854 bei einem Brand zerstört wurde. Dieses Bild ist ein Kupferstich von Joseph Friedrich zu Racknitz von 1789, der den vermuteten Mechanismus samt verborgenem Bediener zu erklären versuchte. Getroffen hat er es nicht: Seine Rekonstruktion gilt als unmöglich, weil die Masse nicht zum wirklichen Apparat passen. Auch das gehört zur Geschichte, denn man rätselte damals ohne Einblick. Der Schachtürke ist bis heute das Sinnbild dafür, wie bereitwillig wir Maschinen Intelligenz zuschreiben und wie oft «automatische» Leistung in Wahrheit versteckte menschliche Arbeit ist. Nicht zufällig heisst Amazons Klickarbeiter-Plattform «Mechanical Turk».",
+      "Der «Schachtürke» war ein Schach spielender Automat, den Wolfgang von Kempelen 1770 am Wiener Hof vorführte. Jahrzehntelang schlug er prominente Gegner, der Legende nach auch Napoleon und Benjamin Franklin, und liess ganz Europa rätseln, ob eine Maschine denken könne. In Wahrheit sass im Innern ein versteckter Schachmeister. Nach Kempelens Tod tourte Johann Nepomuk Mälzel den Automaten um die Welt, bis er 1854 bei einem Brand zerstört wurde. Der Schachtürke ist bis heute das Sinnbild dafür, wie bereitwillig wir Maschinen Intelligenz zuschreiben und wie oft «automatische» Leistung in Wahrheit versteckte menschliche Arbeit ist. Nicht zufällig heisst Amazons Klickarbeiter-Plattform «Mechanical Turk».",
     hotspots: [
       {
         x: 44,
         y: 18,
         titel: "Der Schein",
-        text: "Der «Türke» scheint selbständig Schach zu denken, ein Wunderautomat des 18. Jahrhunderts.",
+        text: "Der «Türke» ist keine Person, sondern eine Puppe: Kopf und Oberkörper in Lebensgrösse, mit schwarzem Bart, osmanischem Gewand und Turban. Von diesem Kostüm hat die Maschine ihren Namen. Es gehörte zur Vorstellung, denn solche Kleidung galt im 18. Jahrhundert als die eines orientalischen Zauberers und versprach dem Publikum Geheimnis. Unter Mälzel kam später ein Sprechwerk dazu, das mitten in der Partie «Échec!» rufen konnte.",
       },
       {
         x: 57,
         y: 57,
         titel: "Der versteckte Mensch",
-        text: "Im Innern kauert ein Mensch und zieht die Fäden. Die «Intelligenz» der Maschine war menschlich. Auch heute steckt oft mehr Handarbeit drin, als man sieht.",
+        text: "Hier kauert der Schachmeister und zieht die Fäden. Die Züge des Gegners erkannte er an Magneten unter den Figuren, den linken Arm der Puppe führte er über eine Hebelmechanik, einen Pantographen. Zum Sehen brauchte er eine Kerze, für deren Rauch eine Lüftung eingebaut war. Die «Intelligenz» der Maschine war menschlich. Auch heute steckt oft mehr Handarbeit drin, als man sieht.",
       },
       {
         x: 20,
         y: 55,
-        titel: "Die Attrappe",
-        text: "Links dreht sich Getriebe bloss zur Schau. Vorsicht vor der Illusion der Selbständigkeit.",
+        titel: "Der Blick in den Kasten",
+        text: "Öffnete Kempelen die linke Tür, sah das Publikum Zahnräder und Uhrwerk, bei zusätzlich offenen Hintertüren sogar durch die ganze Maschine hindurch. Gerade der Beweis der Leere gehörte zur Täuschung, denn der Bediener rückte auf einem verschiebbaren Sitz jeweils dorthin, wo niemand hinsah. Auch dieser Stich rät bloss. Joseph Friedrich zu Racknitz versuchte 1789 den verborgenen Bediener zu erklären. Seine Rekonstruktion gilt als unmöglich, weil die Masse nicht zum wirklichen Apparat passen. Selbst die Erklärung kann also falsch sein.",
       },
     ],
   },
