@@ -3,6 +3,15 @@
 **Für Pietro, von Christof · 2026-08-08 · betrifft `src/app/layout.tsx` und
 `src/app/globals.css` (gemeinsame Dateien, darum als Vorschlag)**
 
+> **Stand 2026-08-08: Befund 1 ist erledigt** — auf Christofs Zuruf umgesetzt,
+> `&display=swap` → `&display=block` bei der Material-Symbols-Zeile in
+> `layout.tsx`. Nachgeprüft: Die Seite fordert `display=block`, Google liefert
+> `font-display: block`, Inter bleibt auf `swap`, alle Icons rendern weiterhin
+> als Glyphe (24 px breit, nicht als Wort).
+>
+> **Befund 2 ist offen** und braucht deinen Entscheid, weil er das Aussehen
+> beider Lernseiten verändert.
+
 Zwei Befunde an derselben Stelle. Beide sind an der Quelle nachgeprüft, nicht
 vermutet — die Nachweise stehen jeweils dabei.
 
