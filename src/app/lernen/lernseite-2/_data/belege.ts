@@ -497,6 +497,41 @@ export const BELEGE: Beleg[] = [
       "«Mit Apollo 17 landeten zum sechsten und vorerst letzten Mal Menschen auf dem Mond.» Als letzte bemannte MondMISSION gilt sie seit April 2026 nicht mehr: «Apollo 17 blieb bis zur Mission Artemis 2 im Jahr 2026 der letzte bemannte Mondflug» — Artemis 2 umrundete den Mond, landete aber nicht.",
     geprueft: "2026-08-05",
   },
+  /* ── Der Schachtürke ──────────────────────────────────────────────────────
+   * Ergänzt am 2026-08-08 auf Christofs Hinweis: «als Türke kostümierte Figur»
+   * liess offen, wer oder was der «Türke» überhaupt ist — eine Person? ein
+   * Volk? Jetzt steht da, dass es eine Puppe ist und woher der Name kommt.
+   * Beim Nachschlagen kam dazu, dass der gezeigte Kupferstich den Mechanismus
+   * falsch darstellt; das stand vorher nicht im Text, obwohl genau dieses Bild
+   * daneben liegt. */
+  {
+    id: "VA-34c77f",
+    anker: "osmanischem Gewand und Turban",
+    url: "https://de.wikipedia.org/wiki/Schacht%C3%BCrke",
+    titel: "Schachtürke (Wikipedia)",
+    stelle:
+      "Abschnitt «Funktionsweise»: «Die Maschine bestand aus einem lebensgroßen Modell eines menschlichen Kopfes und Oberkörpers mit schwarzem Bart und grauen Augen, welcher in osmanische Gewändern und einen Turban gekleidet war.» In der Einleitung: «eine lebensgroße, orientalisch gekleidete Figur, die hinter einem Schachbrett saß», und der Automat wurde «auch kurz ‹Türke› genannt».",
+    geprueft: "2026-08-08",
+  },
+  {
+    id: "VA-34c77f",
+    anker: "eines orientalischen Zauberers",
+    url: "https://de.wikipedia.org/wiki/Schacht%C3%BCrke",
+    titel: "Schachtürke (Wikipedia), zur Wirkung des Kostüms",
+    stelle:
+      "Die Kleidung war laut dem dort zitierten Autor Tom Standage «die traditionelle Kleidung eines orientalischen Zauberers» — das Kostüm gehörte also zur Schaustellerei, nicht zur Mechanik.",
+    geprueft: "2026-08-08",
+  },
+  {
+    id: "VA-34c77f",
+    anker: "Seine Rekonstruktion gilt als unmöglich",
+    url: "https://de.wikipedia.org/wiki/Schacht%C3%BCrke",
+    titel: "Schachtürke (Wikipedia), zur Racknitz-Darstellung",
+    stelle:
+      "Bildlegende zum Kupferstich: «Die Darstellung basiert auf Racknitz' Berechnungen und gilt aufgrund der Proportionen der tatsächlichen Apparatur als unmöglich.»",
+    geprueft: "2026-08-08",
+  },
+
   /* ── Rechenmaschinen: Leibniz, Babbage, Lovelace ─────────────────────────
    * Geprüft am 2026-08-05, weil Christof den Eindruck hatte, Babbage und
    * Lovelace stünden zu nah beieinander und womöglich fehlerhaft da. Er hatte
@@ -598,15 +633,19 @@ export const BELEGE: Beleg[] = [
   {
     id: "EP-b4107d",
     // Bewusst englisch: Deguchi ist nicht ins Deutsche übersetzt, eine
-    // deutschsprachige Darstellung seiner WE-turn haben wir nicht gefunden.
-    // Die Universität Klagenfurt ist immerhin eine Hochschule im
-    // deutschsprachigen Raum, die ihn selbst eingeladen hat.
+    // deutschsprachige Darstellung der WE-turn gibt es nicht.
+    //
+    // Bis 2026-08-08 stand hier ein Blogbeitrag der Universität Klagenfurt.
+    // Der ist weggefallen: Der ganze Blog-Bereich von aau.at antwortet mit
+    // 502/504, eine Archivfassung existiert nicht. Der Ersatz ist ohnehin
+    // besser, weil Deguchi darin selbst spricht — sein Abstract für das
+    // Deutsch-Japanische Kolloquium der JSPS Bonn (2023).
     anker: "als Gefährtin zu behandeln statt als Dienerin",
-    url: "https://www.aau.at/en/blog/futuretalk-human-technology-living-with-ai/",
-    titel: "Universität Klagenfurt, FutureTalks mit Yasuo Deguchi",
+    url: "https://jsps-bonn.de/wp-content/uploads/veranstaltungen/kolloquien/2023_17.German-Japanese_Colloquium_Abstracts_new.pdf",
+    titel: "Yasuo Deguchi, «WE-turn and Its Implications» (JSPS Bonn, Kolloquium 2023)",
     stelle:
-      "Zur WE-turn: «This framework shifts the subject of action, self, and moral value from the individual ‹I› to the collective ‹WE›, understood as a multi-agent system encompassing humans, non-human living things, and artifacts.» Zum Verhältnis zur KI: «The Fellowship Model of AI represents an entirely different vision how to engage with AI as a society and as socially, not as Master-Slave but as fellows towards a fulfilled life.»",
-    geprueft: "2026-08-05",
+      "Deguchi selbst zur Verschiebung: «the turn of the subject or the unit of any somatic action from an individual or ‹I› to a multiagent system or ‹We›, that includes the ‹I›». Und zum Verhältnis zur Technik: «the third section proposes the fellowship model for the ideal relationship among all members of the We, which includes humans, non-human lives, and non-lives (natural things and artifacts) … The fellowship model is an alternative to … the master-slave model.» Daher im Lernset «Gefährtin statt Dienerin».",
+    geprueft: "2026-08-08",
   },
 
   /* KI in der Verunsicherung, nachgetragen am 2026-08-05 auf Christofs

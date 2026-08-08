@@ -13,8 +13,8 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 64 |
-| Belegte Textblöcke | 37 |
+| Belege | 67 |
+| Belegte Textblöcke | 38 |
 | Begründete Nicht-Belege | 5 |
 | Aussagen mit Standdatum | 3 |
 
@@ -160,6 +160,33 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 - **Geprüft:** 2026-08-04
 
 > Damit die KI überhaupt rechnen kann, wird jedes Wort, genauer jeder Wortteil, in eine lange Zahlenreihe übersetzt. Solche Zahlenreihen heissen Vektoren. Man darf sich einen Vektor als Ort in einem Raum vorstellen: «Hund» und «Katze» liegen dort nah beieinander, «Hund» und «Schraube» weit auseinander. Dieser Raum hat allerdings nicht drei Richtungen wie unserer, sondern sehr viele. Die Informatikerin Katharina Zweig nennt Hunderte bis über zehntausend Richtungen. Was eine einzelne davon bedeutet, kann niemand ablesen; erst ihr Zusammenspiel ergibt die Lage eines Wortteils. Der Philosoph Markus Gabriel nennt dieses Übersetzen in Mathematik «vektorisieren». Am Ende bleibt es ein Rechnen mit Lagen und Abständen, kein Verstehen. Wie «mutig» die KI beim Auswählen würfelt, regelt eine Einstellung namens Temperatur. Ein hoher Wert macht die Antworten kreativer und unberechenbarer, ein niedriger vorhersehbarer. Darum kann dieselbe Frage zweimal ganz verschieden beantwortet werden.
+
+### Der Schachtürke · osmanischem Gewand und Turban
+
+- **Kennung:** `VA-34c77f` (Bildgeschichte)
+- **Quelle:** [Schachtürke (Wikipedia)](https://de.wikipedia.org/wiki/Schacht%C3%BCrke)
+- **Fundstelle:** Abschnitt «Funktionsweise»: «Die Maschine bestand aus einem lebensgroßen Modell eines menschlichen Kopfes und Oberkörpers mit schwarzem Bart und grauen Augen, welcher in osmanische Gewändern und einen Turban gekleidet war.» In der Einleitung: «eine lebensgroße, orientalisch gekleidete Figur, die hinter einem Schachbrett saß», und der Automat wurde «auch kurz ‹Türke› genannt».
+- **Geprüft:** 2026-08-08
+
+> Der «Schachtürke» war ein Schach spielender Automat, den Wolfgang von Kempelen 1770 am Wiener Hof vorführte. Der «Türke» war dabei keine Person, sondern eine Puppe: Kopf und Oberkörper in Lebensgrösse, mit schwarzem Bart, osmanischem Gewand und Turban, hinter einem Schachbrett auf einer Truhe voller Zahnräder. Von diesem Kostüm hat die Maschine ihren Namen. Es war Teil der Vorstellung, denn solche Kleidung galt im 18. Jahrhundert als die eines orientalischen Zauberers und versprach dem Publikum Geheimnis. Jahrzehntelang schlug er prominente Gegner, der Legende nach auch Napoleon und Benjamin Franklin, und liess ganz Europa rätseln, ob eine Maschine denken könne. In Wahrheit sass im Innern ein versteckter Schachmeister, der die Figur über Hebel und Magnete steuerte. Beim Öffnen zeigte man geschickt immer nur einen Teil des Kastens. Nach Kempelens Tod tourte Johann Nepomuk Mälzel den Automaten um die Welt, bis er 1854 bei einem Brand zerstört wurde. Dieses Bild ist ein Kupferstich von Joseph Friedrich zu Racknitz von 1789, der den vermuteten Mechanismus samt verborgenem Bediener zu erklären versuchte. Getroffen hat er es nicht: Seine Rekonstruktion gilt als unmöglich, weil die Masse nicht zum wirklichen Apparat passen. Auch das gehört zur Geschichte, denn man rätselte damals ohne Einblick. Der Schachtürke ist bis heute das Sinnbild dafür, wie bereitwillig wir Maschinen Intelligenz zuschreiben und wie oft «automatische» Leistung in Wahrheit versteckte menschliche Arbeit ist. Nicht zufällig heisst Amazons Klickarbeiter-Plattform «Mechanical Turk».
+
+### Der Schachtürke · eines orientalischen Zauberers
+
+- **Kennung:** `VA-34c77f` (Bildgeschichte)
+- **Quelle:** [Schachtürke (Wikipedia), zur Wirkung des Kostüms](https://de.wikipedia.org/wiki/Schacht%C3%BCrke)
+- **Fundstelle:** Die Kleidung war laut dem dort zitierten Autor Tom Standage «die traditionelle Kleidung eines orientalischen Zauberers» — das Kostüm gehörte also zur Schaustellerei, nicht zur Mechanik.
+- **Geprüft:** 2026-08-08
+
+> Der «Schachtürke» war ein Schach spielender Automat, den Wolfgang von Kempelen 1770 am Wiener Hof vorführte. Der «Türke» war dabei keine Person, sondern eine Puppe: Kopf und Oberkörper in Lebensgrösse, mit schwarzem Bart, osmanischem Gewand und Turban, hinter einem Schachbrett auf einer Truhe voller Zahnräder. Von diesem Kostüm hat die Maschine ihren Namen. Es war Teil der Vorstellung, denn solche Kleidung galt im 18. Jahrhundert als die eines orientalischen Zauberers und versprach dem Publikum Geheimnis. Jahrzehntelang schlug er prominente Gegner, der Legende nach auch Napoleon und Benjamin Franklin, und liess ganz Europa rätseln, ob eine Maschine denken könne. In Wahrheit sass im Innern ein versteckter Schachmeister, der die Figur über Hebel und Magnete steuerte. Beim Öffnen zeigte man geschickt immer nur einen Teil des Kastens. Nach Kempelens Tod tourte Johann Nepomuk Mälzel den Automaten um die Welt, bis er 1854 bei einem Brand zerstört wurde. Dieses Bild ist ein Kupferstich von Joseph Friedrich zu Racknitz von 1789, der den vermuteten Mechanismus samt verborgenem Bediener zu erklären versuchte. Getroffen hat er es nicht: Seine Rekonstruktion gilt als unmöglich, weil die Masse nicht zum wirklichen Apparat passen. Auch das gehört zur Geschichte, denn man rätselte damals ohne Einblick. Der Schachtürke ist bis heute das Sinnbild dafür, wie bereitwillig wir Maschinen Intelligenz zuschreiben und wie oft «automatische» Leistung in Wahrheit versteckte menschliche Arbeit ist. Nicht zufällig heisst Amazons Klickarbeiter-Plattform «Mechanical Turk».
+
+### Der Schachtürke · Seine Rekonstruktion gilt als unmöglich
+
+- **Kennung:** `VA-34c77f` (Bildgeschichte)
+- **Quelle:** [Schachtürke (Wikipedia), zur Racknitz-Darstellung](https://de.wikipedia.org/wiki/Schacht%C3%BCrke)
+- **Fundstelle:** Bildlegende zum Kupferstich: «Die Darstellung basiert auf Racknitz' Berechnungen und gilt aufgrund der Proportionen der tatsächlichen Apparatur als unmöglich.»
+- **Geprüft:** 2026-08-08
+
+> Der «Schachtürke» war ein Schach spielender Automat, den Wolfgang von Kempelen 1770 am Wiener Hof vorführte. Der «Türke» war dabei keine Person, sondern eine Puppe: Kopf und Oberkörper in Lebensgrösse, mit schwarzem Bart, osmanischem Gewand und Turban, hinter einem Schachbrett auf einer Truhe voller Zahnräder. Von diesem Kostüm hat die Maschine ihren Namen. Es war Teil der Vorstellung, denn solche Kleidung galt im 18. Jahrhundert als die eines orientalischen Zauberers und versprach dem Publikum Geheimnis. Jahrzehntelang schlug er prominente Gegner, der Legende nach auch Napoleon und Benjamin Franklin, und liess ganz Europa rätseln, ob eine Maschine denken könne. In Wahrheit sass im Innern ein versteckter Schachmeister, der die Figur über Hebel und Magnete steuerte. Beim Öffnen zeigte man geschickt immer nur einen Teil des Kastens. Nach Kempelens Tod tourte Johann Nepomuk Mälzel den Automaten um die Welt, bis er 1854 bei einem Brand zerstört wurde. Dieses Bild ist ein Kupferstich von Joseph Friedrich zu Racknitz von 1789, der den vermuteten Mechanismus samt verborgenem Bediener zu erklären versuchte. Getroffen hat er es nicht: Seine Rekonstruktion gilt als unmöglich, weil die Masse nicht zum wirklichen Apparat passen. Auch das gehört zur Geschichte, denn man rätselte damals ohne Einblick. Der Schachtürke ist bis heute das Sinnbild dafür, wie bereitwillig wir Maschinen Intelligenz zuschreiben und wie oft «automatische» Leistung in Wahrheit versteckte menschliche Arbeit ist. Nicht zufällig heisst Amazons Klickarbeiter-Plattform «Mechanical Turk».
 
 ### Rechenmaschinen · ganz gebrauchsfähig wurde sie nie
 
@@ -483,9 +510,9 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 ### Jetzt: Umwelt & KI · als Gefährtin zu behandeln statt als Dienerin
 
 - **Kennung:** `EP-b4107d` (Vertiefung «Mehr lesen»)
-- **Quelle:** [Universität Klagenfurt, FutureTalks mit Yasuo Deguchi](https://www.aau.at/en/blog/futuretalk-human-technology-living-with-ai/)
-- **Fundstelle:** Zur WE-turn: «This framework shifts the subject of action, self, and moral value from the individual ‹I› to the collective ‹WE›, understood as a multi-agent system encompassing humans, non-human living things, and artifacts.» Zum Verhältnis zur KI: «The Fellowship Model of AI represents an entirely different vision how to engage with AI as a society and as socially, not as Master-Slave but as fellows towards a fulfilled life.»
-- **Geprüft:** 2026-08-05
+- **Quelle:** [Yasuo Deguchi, «WE-turn and Its Implications» (JSPS Bonn, Kolloquium 2023)](https://jsps-bonn.de/wp-content/uploads/veranstaltungen/kolloquien/2023_17.German-Japanese_Colloquium_Abstracts_new.pdf)
+- **Fundstelle:** Deguchi selbst zur Verschiebung: «the turn of the subject or the unit of any somatic action from an individual or ‹I› to a multiagent system or ‹We›, that includes the ‹I›». Und zum Verhältnis zur Technik: «the third section proposes the fellowship model for the ideal relationship among all members of the We, which includes humans, non-human lives, and non-lives (natural things and artifacts) … The fellowship model is an alternative to … the master-slave model.» Daher im Lernset «Gefährtin statt Dienerin».
+- **Geprüft:** 2026-08-08
 
 > Latour begann als eine Art Feldforscher unter Wissenschaftlern: In den 1970er-Jahren beobachtete er zwei Jahre lang ein kalifornisches Labor, so wie Ethnologen ein fremdes Dorf beobachten, und beschrieb, wie Fakten nicht einfach gefunden, sondern in einem Geflecht aus Menschen, Geräten und Texten hergestellt werden. Später schlug er ein «Parlament der Dinge» vor, eine Politik, in der auch Flüsse, Klima und Techniken vertreten wären, weil sie längst mithandeln. Was einst exzentrisch klang, liest sich heute fast wie eine Alltagsbeschreibung: Ein Virus legt den Planeten still, ein Algorithmus entscheidet über Kredite mit, ein Fluss erhält in Neuseeland eine Rechtspersönlichkeit. Latour starb im Oktober 2022, wenige Wochen bevor ChatGPT erschien, die Debatte darüber, wie viel «Akteur» in einer solchen Maschine steckt, erlebte er nicht mehr. Seine Denkfigur aber liegt bereit: Verantwortung verschwindet nicht, wenn viele mithandeln, sie muss neu verteilt und benannt werden. Diese Linie führt weiter: Der Kyotoer Philosoph Yasuo Deguchi verschiebt das Handeln vom «Ich» auf ein «Wir», das Menschen, andere Lebewesen und Artefakte einschliesst, und schlägt vor, KI als Gefährtin zu behandeln statt als Dienerin. Gegen diese Ausweitung lässt sich Hannah Arendt stellen: Sie führte 1958 die Natalität in ihre Theorie des Handelns ein, weil dem Neuankömmling «die Fähigkeit zukommt, selbst einen neuen Anfang zu machen». Arendt schrieb lange vor der KI, doch genau hier liegt die offene Frage dieser Epoche: Heisst Handeln, in einem Geflecht mitzuwirken, oder heisst es, von selbst anzufangen? Vielleicht beginnt genau hier die Schablone, die dieser Epoche noch fehlt.
 

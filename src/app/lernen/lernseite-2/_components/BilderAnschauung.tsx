@@ -9,6 +9,7 @@ import {
   zieheSpurenAusCloud,
 } from "../_lib/spuren";
 import { merkeInhalt } from "../_lib/inhalte";
+import { GlossarText } from "./Glossar";
 
 /**
  * BilderAnschauung — eine Bilderstrecke, die sich in einen Anschauungsmodus
@@ -357,8 +358,12 @@ export default function BilderAnschauung({
                   <span className="material-symbols-outlined text-[16px]">history_edu</span>
                   Kontext &amp; Geschichte
                 </p>
+                {/* Durch GlossarText, damit Worterklärungen und Quellenbelege
+                    auch hier erscheinen. Dieselbe Lücke hatte StoryGewebe:
+                    Der Absatz stand als reiner Text da, Belege blieben darum
+                    unsichtbar — sie sind gesetzt, wurden aber nie gerendert. */}
                 <p className="mt-xs text-body-sm leading-relaxed opacity-90">
-                  {bild.geschichte}
+                  <GlossarText text={bild.geschichte} />
                 </p>
                 <p className="mt-sm flex items-center gap-xs text-label-sm opacity-60">
                   <span className="material-symbols-outlined text-[16px]">touch_app</span>
