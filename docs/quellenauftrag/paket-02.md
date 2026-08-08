@@ -50,6 +50,18 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 01 · Vorhang auf
 
+**[VA-556bc0]** *(Bildgeschichte · Der Algorithmus wird ausführbar)*
+Das Wort «Algorithmus» geht auf den Gelehrten al-Chwarizmi zurück, der um 820 in Bagdad wirkte, und die Verfahren selbst sind noch viel älter. Erst Alan Turings gedankliche «Maschine» von 1936 und die ersten elektronischen Rechner der 1940er-Jahre veränderten alles. Von da an führte nicht mehr ein Mensch mit Papier und Bleistift die Schritte aus, sondern die Maschine selbst. Der Algorithmus wurde damit vom blossen Rezept zum Motor der Rechenmaschine.
+
+**[VA-a9be93]** *(Vertiefung «Mehr lesen» · Der Algorithmus wird ausführbar)*
+Ein greifbares Beispiel für den ausführbaren Algorithmus ist die Z3 des Berliner Ingenieurs Konrad Zuse von 1941, die als erster funktionsfähiger programmgesteuerter Rechner gilt. Sie arbeitete bereits mit dem Binärsystem und wurde über einen gelochten Streifen mit Befehlen versorgt. Der Name «Algorithmus» geht auf den Gelehrten al-Chwarizmi zurück, dessen Werk zugleich dem Wort «Algebra» seinen Namen gab. Turings gedankliches Modell von 1936 beschrieb eine Maschine mit einem endlosen Band, die durch einfache Schreib- und Leseschritte jedes berechenbare Problem lösen kann. Im Zweiten Weltkrieg half Turing dann, mit eigens gebauten Maschinen den deutschen Funkschlüssel Enigma zu knacken. So wurde aus einer reinen Denkfigur in wenigen Jahren eine wirklich arbeitende Maschine. Damit war die Grundlage gelegt, auf der jede spätere KI aufbaut.
+
+**[VA-d97186]** *(Kartentext · Geburt der KI)*
+1956 bekommt der alte Traum endlich einen Namen. An einem Sommertreffen am Dartmouth College in den USA prägen Forscher den Begriff «Künstliche Intelligenz». Aus verstreuten Ideen und Erzählungen wird ein eigenes Forschungsprogramm mit grossen Zielen. Die Fachleute rechneten damals mit Durchbrüchen innert weniger Jahre.
+
+**[VA-d4805d]** *(Bildgeschichte · Geburt der KI)*
+Im Sommer 1956 trafen sich am Dartmouth College Forscher um John McCarthy und Marvin Minsky. Ihr Anspruch war es, jede Facette der Intelligenz durch Maschinen nachzubilden. Der alte Traum bekam damit einen Namen und Geld für die Forschung. Man erwartete rasche Erfolge.
+
 **[VA-4f5fef]** *(Vertiefung «Mehr lesen» · Geburt der KI)*
 Den Namen «Artificial Intelligence» prägte der Mathematiker John McCarthy, der das Treffen organisierte und bewusst einen neutralen Begriff suchte, auch um sich vom älteren Feld der Kybernetik abzugrenzen. Im Antrag von 1955 standen weitere namhafte Forscher, etwa der IBM-Ingenieur Nathaniel Rochester und Claude Shannon, der Begründer der Informationstheorie. Das Treffen fand im Sommer 1956 im Städtchen Hanover im US-Staat New Hampshire statt und war als mehrwöchiger Arbeitsaufenthalt gedacht. Finanziert wurde es zu einem grossen Teil von der Rockefeller-Stiftung. Statt eines einzelnen Durchbruchs brachte der Sommer vor allem viele Einzelideen und dauerhafte Kontakte. Trotzdem gilt Dartmouth als Geburtsstunde des Fachs, weil hier erstmals ein gemeinsamer Name und ein gemeinsames Ziel entstanden. Der erhoffte rasche Erfolg aber liess Jahrzehnte auf sich warten.
 
@@ -142,15 +154,3 @@ Jede einzelne dieser Eigenschaften gab es in Ansätzen schon früher. Neu ist, d
 
 **[VA-048602]** *(Vertiefung «Mehr lesen» · algorithmisch)*
 Das Wort Algorithmus geht auf den Gelehrten al-Chwarizmi zurück, der vor rund 1200 Jahren in Bagdad Rechenwege aufschrieb. Ein Algorithmus ist nichts Geheimnisvolles, sondern eine klare Anleitung, wie aus einer Eingabe eine Ausgabe wird. Auch das Lernen der KI ist so eine Anleitung. Beim Training verstellt sie viele Milliarden winziger Zahlenwerte immer wieder ein kleines bisschen, bis ihre Antworten besser passen. Man kann sich das wie das Drehen an Millionen kleiner Regler vorstellen. Das klingt weniger nach Denken und mehr nach Rechnen, und genau das ist es auch.
-
-**[VA-f4651b]** *(Kartentext · kontextsensitiv)*
-Das Wort «Bank» kann eine Sitzbank oder eine Geldbank sein. Was gemeint ist, verrät erst der Zusammenhang. Die KI achtet genau darauf. Sie bezieht ein, was vorher gesagt wurde, welche Rolle sie übernehmen soll und welche Unterlagen du ihr mitgibst. Dieselbe Frage kann darum je nach Umfeld eine andere Antwort ergeben.
-
-**[VA-983c1b]** *(Vertiefung «Mehr lesen» · dialoghaft)*
-Früher musste man einem Computer in einer eigenen Programmiersprache genau sagen, was er tun soll. Sprachmodelle drehen das um, denn die Anweisung ist jetzt einfach normaler Text. «Die heisseste neue Programmiersprache ist Englisch», sagt der KI-Forscher Andrej Karpathy und meint genau das. Ein Beispiel: Statt Programmcode zu schreiben, bittest du einfach «Fasse diesen Text in drei Sätzen zusammen». Das macht die Technik für alle bedienbar, auch ohne Vorwissen. Zugleich verwischt es die Grenze zwischen einem Befehl an eine Maschine und einem Gespräch mit einem Gegenüber.
-
-**[VA-7ad8b5]** *(Kartentext · multimodal)*
-Du kannst der KI ein Foto deines Kühlschranks zeigen und nach einem Rezept fragen. Bei manchen Systemen laufen Text, Bild und Ton in einem einzigen Modell zusammen, bei anderen arbeiten dafür mehrere Bausteine zusammen. Sie liest, sieht und hört und antwortet wahlweise in Wort, Bild oder Stimme. Auch eine Skizze oder ein gesprochener Satz sind für sie eine Eingabe. So nimmt sie die Welt über mehrere Kanäle zugleich auf.
-
-**[VA-87db90]** *(Vertiefung «Mehr lesen» · multimodal)*
-Frühe Programme konnten nur eines, entweder Text oder Bild oder Ton. Multimodale Modelle verbinden diese Kanäle in einem einzigen Netz. Damit rücken sie näher an uns Menschen heran, denn auch wir denken nicht in getrennten Sinnen. Ein Beispiel: Du fotografierst eine Mathe-Aufgabe, und die KI liest sie, rechnet und erklärt den Lösungsweg. Oder du zeigst ihr ein Diagramm, und sie fasst es in Worten zusammen. So wird die Grenze zwischen Lesen, Sehen und Hören für die Maschine durchlässig.

@@ -576,6 +576,51 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-08",
   },
 
+  /* ── Quipu und Frankenstein ───────────────────────────────────────────────
+   * Ergänzt am 2026-08-08, als Christof das Verhältnis von Bildgeschichte zu
+   * Bildpunkten in der ganzen Galerie verschoben haben wollte (kürzere
+   * Geschichte, gehaltvollere Punkte — so wie beim Schachtürken). Umgeschichtet
+   * wurde vor allem Vorhandenes; wo ein Punkt danach zu dünn geblieben wäre,
+   * kam Neues dazu, und das ist hier belegt. */
+  {
+    id: "VA-e54444",
+    anker: "Eine Null ist ein Abschnitt ohne Knoten",
+    url: "https://de.wikipedia.org/wiki/Quipu",
+    titel: "Quipu (Wikipedia), zum Stellenwert der Knoten",
+    stelle:
+      "«Die Stellen (Zehnerpotenzen) wurden in der Reihenfolge ihrer Höhe vom Ansatz zum freien Ende hin abgelesen, also: Tausender-Hunderter-Zehner-Einer. Die Ziffer Null wurde für alle Stellen als knotenfreier Gruppenabschnitt geschrieben.»",
+    geprueft: "2026-08-08",
+  },
+  {
+    id: "VA-e32c4a",
+    anker: "ist bis heute nicht entziffert",
+    url: "https://de.wikipedia.org/wiki/Quipu",
+    titel: "Quipu (Wikipedia), zum Entschlüsselungsstand",
+    stelle:
+      "«Nach heutiger Erkenntnis gab es zwei verschiedene Schriftsysteme: eines zur zahlenmäßigen Erfassung von Mengen […] und ein phonetisch orientiertes System für Nachrichtenverkehr, wie Briefwechseln.» Und dazu: «Die Knotenschrift für den Schriftverkehr ist bis heute nicht entziffert.»",
+    geprueft: "2026-08-08",
+  },
+  {
+    id: "VA-4b9944",
+    // Achtung beim Nachschlagen: «Frankenstein oder Der moderne Prometheus»
+    // ist eine Weiterleitung, der Artikel liegt unter «Frankenstein (Roman)».
+    anker: "es lernt durch blosses Zuhören sprechen",
+    url: "https://de.wikipedia.org/wiki/Frankenstein_(Roman)",
+    titel: "Frankenstein (Roman) (Wikipedia), zum Geschöpf",
+    stelle:
+      "Abschnitt «Übersicht»: «Es hat in seinen zwei Lebensjahren durch bloßes Zuhören sprechen gelernt und eine erstaunliche Bildung erworben.» Zur Lektüre: «Miltons Paradise Lost löst in ihm Reflexionen über sein Dasein aus (Kap. 15)», dazu in der Anmerkung Volneys «Les Ruines» und «Goethes Werther», und Plutarchs Doppelbiographien, «mit Hilfe derer Frankensteins Geschöpf versucht, die Menschheit zu ergründen». Zur Forderung nach Gemeinschaft: «Es fordert von seinem Schöpfer, seine Einsamkeit durch eine ihm entsprechende Gefährtin zu beenden.» Und im Wortlaut des Geschöpfs: «Ich war gütig und gut. Nur das Elend ließ mich böse werden.»",
+    geprueft: "2026-08-08",
+  },
+  {
+    id: "VA-ec8745",
+    anker: "den Blick auf den Schöpfer, nicht auf das Geschöpf",
+    url: "https://de.wikipedia.org/wiki/Frankenstein_(Roman)",
+    titel: "Frankenstein (Roman) (Wikipedia), Abschnitt «Prometheus-Motiv»",
+    stelle:
+      "«Im Gegensatz zum Populärverständnis fokussiert der Titel die Aufmerksamkeit nicht auf das Geschöpf, sondern auf seinen Schöpfer.»",
+    geprueft: "2026-08-08",
+  },
+
   /* ── Rechenmaschinen: Leibniz, Babbage, Lovelace ─────────────────────────
    * Geprüft am 2026-08-05, weil Christof den Eindruck hatte, Babbage und
    * Lovelace stünden zu nah beieinander und womöglich fehlerhaft da. Er hatte

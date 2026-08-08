@@ -13,8 +13,8 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 71 |
-| Belegte Textblöcke | 40 |
+| Belege | 75 |
+| Belegte Textblöcke | 44 |
 | Begründete Nicht-Belege | 5 |
 | Aussagen mit Standdatum | 3 |
 
@@ -223,6 +223,42 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 - **Geprüft:** 2026-08-08
 
 > Öffnete Kempelen die linke Tür, sah das Publikum Zahnräder und Uhrwerk, bei zusätzlich offenen Hintertüren sogar durch die ganze Maschine hindurch. Gerade der Beweis der Leere gehörte zur Täuschung, denn der Bediener rückte auf einem verschiebbaren Sitz jeweils dorthin, wo niemand hinsah. Auch dieser Stich rät bloss. Joseph Friedrich zu Racknitz versuchte 1789 den verborgenen Bediener zu erklären. Seine Rekonstruktion gilt als unmöglich, weil die Masse nicht zum wirklichen Apparat passen. Selbst die Erklärung kann also falsch sein.
+
+### Knoten sind Zahlen · Eine Null ist ein Abschnitt ohne Knoten
+
+- **Kennung:** `VA-e54444` (Kartentext)
+- **Quelle:** [Quipu (Wikipedia), zum Stellenwert der Knoten](https://de.wikipedia.org/wiki/Quipu)
+- **Fundstelle:** «Die Stellen (Zehnerpotenzen) wurden in der Reihenfolge ihrer Höhe vom Ansatz zum freien Ende hin abgelesen, also: Tausender-Hunderter-Zehner-Einer. Die Ziffer Null wurde für alle Stellen als knotenfreier Gruppenabschnitt geschrieben.»
+- **Geprüft:** 2026-08-08
+
+> Art, Zahl und Höhe der Knoten codieren Werte im Zehnersystem. Die Höhe sagt die Stelle, gelesen vom Ansatz zum freien Ende hin, also von den Tausendern zu den Einern. Eine Null ist ein Abschnitt ohne Knoten. Rechnen und Erinnern werden hier nicht ins Rad ausgelagert, sondern in den Faden.
+
+### Ein Gewebe aus Daten · ist bis heute nicht entziffert
+
+- **Kennung:** `VA-e32c4a` (Kartentext)
+- **Quelle:** [Quipu (Wikipedia), zum Entschlüsselungsstand](https://de.wikipedia.org/wiki/Quipu)
+- **Fundstelle:** «Nach heutiger Erkenntnis gab es zwei verschiedene Schriftsysteme: eines zur zahlenmäßigen Erfassung von Mengen […] und ein phonetisch orientiertes System für Nachrichtenverkehr, wie Briefwechseln.» Und dazu: «Die Knotenschrift für den Schriftverkehr ist bis heute nicht entziffert.»
+- **Geprüft:** 2026-08-08
+
+> Dutzende herabhängende Schnüre, teils weiter verzweigt, ergeben eine ganze Datenbank aus Textil. Auch Farbe und Drehrichtung der Fäden trugen Bedeutung. Die Zahlen-Quipus können wir heute lesen, ein zweites, erzählendes System ist bis heute nicht entziffert. Ein Teil dieser Daten bleibt für uns stumm.
+
+### Das erschaffene Wesen · es lernt durch blosses Zuhören sprechen
+
+- **Kennung:** `VA-4b9944` (Kartentext)
+- **Quelle:** [Frankenstein (Roman) (Wikipedia), zum Geschöpf](https://de.wikipedia.org/wiki/Frankenstein_(Roman))
+- **Fundstelle:** Abschnitt «Übersicht»: «Es hat in seinen zwei Lebensjahren durch bloßes Zuhören sprechen gelernt und eine erstaunliche Bildung erworben.» Zur Lektüre: «Miltons Paradise Lost löst in ihm Reflexionen über sein Dasein aus (Kap. 15)», dazu in der Anmerkung Volneys «Les Ruines» und «Goethes Werther», und Plutarchs Doppelbiographien, «mit Hilfe derer Frankensteins Geschöpf versucht, die Menschheit zu ergründen». Zur Forderung nach Gemeinschaft: «Es fordert von seinem Schöpfer, seine Einsamkeit durch eine ihm entsprechende Gefährtin zu beenden.» Und im Wortlaut des Geschöpfs: «Ich war gütig und gut. Nur das Elend ließ mich böse werden.»
+- **Geprüft:** 2026-08-08
+
+> Eben belebt, betrachtet die Kreatur sich selbst. Ein neues Wesen ist in der Welt, und niemand hat es gefragt. Böse geboren ist es nicht, es lernt durch blosses Zuhören sprechen und liest Milton, Plutarch und Goethes Werther. Was es fordert, ist Gemeinschaft, und erst Zurückweisung und Einsamkeit machen es zum Rächer.
+
+### Die Flucht des Schöpfers · den Blick auf den Schöpfer, nicht auf das Geschöpf
+
+- **Kennung:** `VA-ec8745` (Kartentext)
+- **Quelle:** [Frankenstein (Roman) (Wikipedia), Abschnitt «Prometheus-Motiv»](https://de.wikipedia.org/wiki/Frankenstein_(Roman))
+- **Fundstelle:** «Im Gegensatz zum Populärverständnis fokussiert der Titel die Aufmerksamkeit nicht auf das Geschöpf, sondern auf seinen Schöpfer.»
+- **Geprüft:** 2026-08-08
+
+> Victor Frankenstein flieht entsetzt vor seinem Werk, statt für es zu sorgen. Das eigentliche Unheil ist damit nicht die Schöpfung, sondern die verweigerte Verantwortung. Darum lenkt schon der Untertitel den Blick auf den Schöpfer, nicht auf das Geschöpf.
 
 ### Rechenmaschinen · ganz gebrauchsfähig wurde sie nie
 

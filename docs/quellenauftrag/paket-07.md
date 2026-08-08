@@ -48,6 +48,20 @@ Jeder Block hier enthält eine prüfbare Behauptung (Zahl, Datum,
 Superlativ oder eine Aussage, die jemandem zugeschrieben wird). Deutende
 Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
+### Thema 02 · Wege der Orientierung
+
+**[DW-9a56e8]** *(Zur Philosophie · Lebenskunst)*
+Wilhelm Schmid ist ein freier Philosoph in Berlin und hat die «Philosophie der Lebenskunst» im deutschsprachigen Raum bekannt gemacht. Sein Thema: Aus einer Einsicht folgt noch keine Tat, das kennt jeder von den guten Vorsätzen. Was hilft, ist Übung in kleinsten Schritten, täglich, fast beiläufig, aber regelmässig, nicht das ganze Buch auf einmal, sondern jeden Tag eine Seite. Weil Freude stärker wirkt als Zwang, soll man sich am Schönen orientieren, zu dem man Ja sagen kann. So werden neue Gewohnheiten gebildet. Wie lange das dauert, hat die Psychologie untersucht, nicht die Philosophie: Eine oft zitierte Studie fand einen Mittelwert von 66 Tagen, mit sehr grossen Unterschieden je nach Person und Gewohnheit. Werk: «Philosophie der Lebenskunst» (1998).
+
+**[DW-38ffda]** *(Zur Philosophie · Lebenskunst)*
+Martha Nussbaum ist eine der bekanntesten US-amerikanischen Philosophinnen und verbindet antike Ethik (besonders Aristoteles und die Stoa) mit heutigen Fragen. Sie zeigt, dass Gefühle keine blosse Störung der Vernunft sind, sondern zu einem guten Urteil und einem gelingenden Leben dazugehören. Mit dem «Fähigkeiten-Ansatz» fragt sie konkret, was Menschen wirklich können müssen, um gut zu leben (etwa Gesundheit, Bildung, Bindung, Spiel), und wie eine Gesellschaft das ermöglichen soll. Lebenskunst heisst darum auch, die eigenen Gefühle ernst zu nehmen und gute Bedingungen zu schaffen. Werk: «Fähigkeiten schaffen» (2011).
+
+**[DW-890f29]** *(Zur Philosophie · Lebenskunst)*
+Maurice Merleau-Ponty war ein französischer Philosoph der Phänomenologie. Sein Thema ist der Leib: Wir erfahren die Welt nicht zuerst mit dem Kopf, sondern leiblich, durch Wahrnehmung, Bewegung, Berührung und Gefühl. Der Körper ist kein Ding, das wir bloss «haben», sondern die Art, wie wir zur Welt gehören. Verstehen und ein gutes Leben sind darum verkörpert, nicht rein rechnerisch. Genau das kann eine körperlose KI nicht: Sie verarbeitet Zeichen, aber sie spürt und erlebt nicht. Werk: «Phänomenologie der Wahrnehmung» (1945).
+
+**[DW-cfa60f]** *(Zur Philosophie · Lebenskunst)*
+Hartmut Rosa ist ein deutscher Soziologe, bekannt für die Diagnose der gesellschaftlichen «Beschleunigung». Dagegen setzt er den Begriff «Resonanz»: Ein gelingendes Leben entsteht nicht durch mehr Kontrolle, mehr Tempo und mehr Verfügbarkeit, sondern durch ein lebendiges, wechselseitiges Antworten zwischen Mensch und Welt, ein Berührtwerden. Vieles, was zählt, lässt sich gerade nicht erzwingen oder verfügbar machen, es muss einem begegnen. In einer Welt schneller KI erinnert er daran, das Sich-berühren-Lassen nicht zu verlernen. Werke: «Resonanz» (2016), «Unverfügbarkeit» (2018).
+
 ### Thema 03 · Das Orakel
 
 **[OR-e41fe5]** *(Fliesstext · Verunsichert dich noch)*
@@ -67,23 +81,29 @@ Hier kauert der Schachmeister und zieht die Fäden. Die Züge des Gegners erkann
 
 > **Belegt** («für deren Rauch eine Lüftung eingebaut war»): [Schachtürke (Wikipedia), zur Kerze im Kasten](https://de.wikipedia.org/wiki/Schacht%C3%BCrke) — «Dem Operator war dies alles mithilfe einer einfachen Kerze sichtbar, für die ein Belüftungssystem im Inneren des Modells integriert war.» *(geprüft 2026-08-08)*
 
-**[VA-749479]** *(Kartentext · Menschen an der Maschine)*
-Bedienerinnen richteten die Bombe ein und lasen sie ab, rund um die Uhr. Aus Turings Idee der universellen Rechenmaschine wird ein reales, kriegsentscheidendes Werkzeug und eine Geburtsstunde des Computers.
+**[VA-d8841e]** *(Kartentext · Die Therapeutin (DOCTOR))*
+Das bekannteste Skript hiess «DOCTOR» und imitierte eine Psychotherapeutin. Es gab Aussagen als Fragen zurück, etwa «In welcher Weise?» oder «Erzähl mir mehr». Die Rolle war geschickt gewählt, denn eine Therapeutin darf zurückfragen, ohne selbst etwas zu wissen.
 
-**[VA-5635ae]** *(Kartentext · Die Therapeutin (DOCTOR))*
-Das bekannteste Skript imitierte eine Psychotherapeutin. Es gab Aussagen als Fragen zurück, etwa «In welcher Weise?» oder «Erzähl mir mehr».
+**[VA-59f729]** *(Bildgeschichte · Maschinelles Lernen)*
+Ab den 1990er-Jahren verschob sich die KI vom Regeln-Schreiben zum Lernen aus Beispielen. Ein Modell fasst jedes Beispiel als Punkt in einem Raum mit vielen Merkmalen auf. Es versteht dabei keine Bedeutung, sondern rechnet mit Lage und Abstand. Diese Denkweise steckt bis heute in vielen Anwendungen.
 
-**[VA-1381cf]** *(Bildgeschichte · Maschinelles Lernen)*
-Ab den 1990er-Jahren verschob sich die KI vom Regeln-Schreiben zum Lernen aus Beispielen. Ein Modell fasst jedes Beispiel als Punkt in einem Raum mit vielen Merkmalen auf, oft mit Hunderten oder Tausenden Dimensionen, und Ähnliches liegt nah beieinander. «Lernen» heisst dann, eine Grenze zu finden, die Gruppen trennt. Danach kann das Modell Neues einordnen. Es versteht dabei keine Bedeutung, sondern rechnet mit Lage und Abstand. Diese Denkweise ist ein Grundmodell des überwachten Lernens, also des Lernens an vorsortierten Beispielen, und steckt bis heute in vielen Anwendungen. Diese schematische Illustration ist mit KI erstellt.
+**[VA-0923e6]** *(Kartentext · Achsen sind Merkmale)*
+Jede Achse steht für ein Merkmal der Daten, etwa eine Grösse, eine Farbe oder die Häufigkeit eines Wortes. Oft sind es Hunderte oder Tausende Achsen, hier sind nur drei angedeutet, weil mehr nicht zeichenbar ist.
 
-**[VA-019688]** *(Kartentext · Ein Wesen zum Umsorgen)*
-Mit drei Knöpfen wurde gefüttert, gespielt und sauber gemacht. Es war Pflege rund um die Uhr, sonst «starb» das Wesen.
+**[VA-89e606]** *(Kartentext · Ein Wesen zum Umsorgen)*
+Mit drei Knöpfen wurde gefüttert, gespielt und sauber gemacht. Es war Pflege rund um die Uhr, denn das Wesen meldete sich, wann es wollte, und wer es zu lange liess, fand es «gestorben».
 
-**[VA-ab8ab0]** *(Kartentext · Belohnung steigt)*
-Punkte sind die Belohnung. Über viele Spiele hinweg versucht die KI, sie zu maximieren, und die Kurve klettert.
+**[VA-f601fd]** *(Kartentext · Belohnung steigt)*
+Punkte sind die Belohnung. Über viele Partien hinweg richtet die KI ihr Verhalten darauf aus, sie zu maximieren, und die Kurve klettert. Nichts sonst sagt ihr, was gut ist.
 
-**[VA-9e6dd4]** *(Kartentext · Der Durchbruch)*
-Innert Wochen nutzten Millionen ChatGPT. Es war der Moment, in dem KI im Alltag vieler Menschen ankam.
+**[VA-9fc8c7]** *(Kartentext · Versuch und Irrtum)*
+Ohne Anleitung lernt sie erstaunliche Strategien und übertraf bei manchen Spielen den Menschen. Gelernt wird allein durch Wiederholung, über sehr viele Partien hinweg, ohne dass ihr jemand die Regeln erklärt.
+
+**[VA-c04e13]** *(Kartentext · Einfach reden)*
+Man tippt eine Frage in ganz normaler Sprache, und die KI antwortet flüssig. Es braucht keine Fachkenntnis, keinen Befehl und keine Schulung, und genau das erklärt, warum es so schnell so viele erreichte.
+
+**[VA-d18bcf]** *(Kartentext · Der Durchbruch)*
+Innert weniger Wochen nutzten Millionen ChatGPT. Es war der Moment, in dem KI im Alltag vieler Menschen ankam, und der Moment, in dem Schulen und Betriebe plötzlich Regeln brauchten.
 
 **[VA-79e7f6]** *(Kartentext · Yan Shi's Automat)*
 Der Traum vom künstlichen Menschen ist nicht nur europäisch, sondern kehrt in vielen Kulturen wieder. Auch in China erzählte man früh von einer täuschend lebendigen Figur. Ein Handwerker führt sie dem König vor, und niemand erkennt zuerst, dass sie gebaut ist. Schon hier klingt die Frage an, wo die Grenze zwischen echtem und nachgeahmtem Leben verläuft.
@@ -146,23 +166,3 @@ Philosophie liefert keine Bedienungsanleitung und keine Prognose. Sie ordnet Beg
 
 **[PP-d95ea2]** *(Fliesstext · Der Teppich des Wandels)*
 Der Teppich zeigt Ereignisse, die technologisch, gesellschaftlich, kulturell oder erfinderisch sind. Sie bilden vier Fäden, die nebeneinander durch die Zeit laufen, von Pflug, Rad und Schrift bis zur KI. Das Entscheidende ist ihre Wechselwirkung, denn sie hängen voneinander ab. Eisenbahn und Schifffahrt etwa hätten sich nie so verbreitet, wenn nicht auch kulturell das Interesse bestanden hätte, zu reisen, Handel zu treiben und neue Länder zu besitzen.
-
-**[PP-522494]** *(Vertiefung «Mehr lesen» · Der Fall Roms)*
-Rom galt als die ewige Stadt, seit rund achthundert Jahren hatte kein Feind sie eingenommen, dann plünderten 410 die Westgoten unter Alarich drei Tage lang in ihren Strassen. Die Nachricht lief durch das ganze Reich, der Gelehrte Hieronymus schrieb aus Bethlehem, eingenommen sei die Stadt, die zuvor die ganze Welt besiegt hatte. Der eigentliche Schlusspunkt kam leise: 476 setzte der Heerführer Odoaker den letzten weströmischen Kaiser ab, einen Jungen namens Romulus Augustulus, und schickte die Kaiserinsignien nach Konstantinopel. Viele Menschen merkten zunächst kaum einen Unterschied, doch über die Jahrzehnte zerfielen Strassen, Wasserleitungen und Verwaltung, Städte schrumpften, Wissen ging verloren. Der Fall Roms zeigt, dass grosse Ordnungen selten mit einem Knall enden, sondern in einem langen Ausfransen, das die Menschen erst im Rückblick als Epochenbruch erkennen.
-
-> **Belegt** («seit rund achthundert Jahren hatte kein Feind sie eingenommen»): [Plünderung Roms (410) (Wikipedia)](https://de.wikipedia.org/wiki/Pl%C3%BCnderung_Roms_(410)) — «Dies war die erste Einnahme Roms seit dem Einfall der Kelten rund 800 Jahre zuvor.» Die Plünderung selbst datiert der Artikel auf den 24. bis 27. August 410. Dort steht auch das Hieronymus-Zitat aus Brief 127,12, dem der Schlusssatz dieses Blocks folgt. *(geprüft 2026-08-05)*
-
-**[PP-a89d23]** *(Kartentext · Zweiter Weltkrieg)*
-Der industrialisierte Krieg und die Schoah erschüttern den Glauben an den Fortschritt im Kern. Zugleich treibt der Krieg Technologien voran, etwa Radar, Rakete und Computer.
-
-**[PP-2b090e]** *(Vertiefung «Mehr lesen» · Die Schrift)*
-Am Anfang standen Zählsteine und Ritzzeichen, mit denen Tempelverwalter in Uruk festhielten, wer wie viel Gerste oder wie viele Schafe abgeliefert hatte. Aus den Bildzeichen wurde die Keilschrift, in feuchten Ton gedrückt, und mit ihr entstand ein neuer Beruf, der Schreiber, der seine Kunst in jahrelanger Schule lernte und damit zu einer kleinen Elite gehörte. Bald speicherte die Schrift nicht mehr nur Vorräte, sondern Verträge, Gesetze wie die Stele des Hammurabi und Geschichten wie das Gilgamesch-Epos, das älteste grosse Erzählwerk der Menschheit. Interessant ist, dass schon damals gewarnt wurde: Platon überliefert die Sorge, wer schreibe, verlasse sich auf tote Zeichen und übe sein Gedächtnis nicht mehr. Die Klage klingt vertraut, sie begleitet seither jede Technik, die dem Kopf Arbeit abnimmt, vom Taschenrechner bis zur KI.
-
-**[PP-312b05]** *(Vertiefung «Mehr lesen» · Ozeantaugliche Schiffe)*
-Der portugiesische Prinz Heinrich der Seefahrer liess im 15. Jahrhundert systematisch Küsten erkunden, Karten sammeln und Schiffe verbessern. So entstand die Karavelle, die mit ihren dreieckigen Segeln auch gegen den Wind kreuzen konnte. Damit wagten sich Seeleute erstmals planmässig auf offene Ozeanrouten, auf denen man wochenlang kein Land sah und nach Sternen und Kompass steuerte. Dabei war Europa spät dran. Die chinesischen Flotten des Admirals Zheng He waren schon Jahrzehnte zuvor mit Schiffen bis Ostafrika gesegelt, gegen die eine Karavelle winzig wirkte. Doch der Kaiserhof brach die teuren Fahrten ab und verbot die Hochseefahrt. In Europa dagegen konkurrierten viele Königreiche. Wer eine neue Route fand, wurde reich, also rüsteten alle weiter. So entschied nicht das beste Schiff über den Lauf der Geschichte, sondern die Frage, welche Gesellschaft ihre Schiffe wohin schickte und wozu.
-
-**[PP-adee46]** *(Vertiefung «Mehr lesen» · Die Erde wird vermessen)*
-Eratosthenes leitete die berühmte Bibliothek von Alexandria und trug den Spitznamen «Beta», weil er in vielen Fächern der Zweitbeste war, in keinem der Erste. Er wusste aus Berichten, dass die Mittagssonne im südlichen Syene zur Sommersonnenwende senkrecht steht, während sie in Alexandria zur selben Stunde um ein Fünfzigstel eines Vollkreises schräg einfällt. Also brauchte er nur noch die Distanz zwischen beiden Städten, die geschulte Schrittzähler abgemessen hatten, und multiplizierte sie mit fünfzig. Je nach angenommener Länge des antiken Längenmasses lag sein Ergebnis nur wenige Prozent neben dem heutigen Wert. Ausgerechnet Kolumbus rechnete anderthalb Jahrtausende später mit einem viel zu kleinen Erdumfang, sonst hätte er die Fahrt nach Westen wohl nie gewagt. Gute Messungen können Weltbilder tragen, und falsche können Weltgeschichte machen.
-
-**[PP-7c7442]** *(Kartentext · Grenzenloser Welthandel)*
-Container, Freihandelsabkommen und das Internet verflechten die Weltwirtschaft fast grenzenlos: Waren, Kapital und Daten zirkulieren rund um den Planeten. Es ist die jüngste und dichteste Form der Globalisierung.

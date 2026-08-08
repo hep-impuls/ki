@@ -72,23 +72,23 @@ Ein Zusammenhang: Zuerst tritt die neue Akteurin auf, dann ordnet die philosophi
 
 ### Quipu: Knoten der Anden
 
-**[VA-efd1d7]** *(Bildgeschichte)*
-Quipus waren das Buchhaltungs- und Erinnerungssystem der Inka und älterer Andenkulturen. Statt Zahlen zu schreiben, knüpfte man sie. An einer Hauptschnur hängen Nebenschnüre, deren Knotenart, Knotenzahl und Knotenhöhe Werte im Zehnersystem festhalten. Auch Farbe, Drehrichtung und Anordnung trugen Bedeutung. Eigene Spezialisten, die «Quipucamayocs», legten sie an und lasen sie vor. Rechnen und Erinnern wurden hier nicht ins Rad ausgelagert, sondern in den Faden. So entstand eine Datenbank aus Textil, Jahrhunderte vor dem Computer. Diese Aufnahme zeigt ein erhaltenes Quipu.
+**[VA-a17773]** *(Bildgeschichte)*
+Quipus waren das Buchhaltungs- und Erinnerungssystem der Inka und älterer Andenkulturen. Statt Zahlen zu schreiben, knüpfte man sie. An einer Hauptschnur hängen Nebenschnüre, deren Knoten die Werte festhalten. Eigene Spezialisten, die «Quipucamayocs», legten sie an und lasen sie vor. So entstand eine Datenbank aus Textil, Jahrhunderte vor dem Computer.
 
 ### Die Hauptschnur
 
-**[VA-51b0f8]** *(Kartentext)*
-An der waagrechten Trägerschnur oben hängen alle Nebenschnüre. Das Quipu ist ein Speicher aus Fäden, eine Buchhaltung und Chronik der Inka.
+**[VA-7997a5]** *(Kartentext)*
+An der waagrechten Trägerschnur oben hängen alle Nebenschnüre, sie hält das ganze Bündel zusammen. Ein Quipu ist damit ein Speicher aus Fäden, den man zusammenlegen und tragen kann, Buchhaltung und Chronik der Inka in einem.
 
 ### Knoten sind Zahlen
 
-**[VA-48d374]** *(Kartentext)*
-Art, Zahl und Höhe der Knoten codieren Werte im Zehnersystem. Rechnen und Erinnern werden hier nicht ins Rad ausgelagert, sondern in den Faden.
+**[VA-e54444]** *(Kartentext)*
+Art, Zahl und Höhe der Knoten codieren Werte im Zehnersystem. Die Höhe sagt die Stelle, gelesen vom Ansatz zum freien Ende hin, also von den Tausendern zu den Einern. Eine Null ist ein Abschnitt ohne Knoten. Rechnen und Erinnern werden hier nicht ins Rad ausgelagert, sondern in den Faden.
 
 ### Ein Gewebe aus Daten
 
-**[VA-a9b92c]** *(Kartentext)*
-Dutzende herabhängende Schnüre, teils weiter verzweigt, ergeben eine ganze Datenbank aus Textil. Auch Farbe und Drehrichtung der Fäden trugen Bedeutung, lange vor dem Computer.
+**[VA-e32c4a]** *(Kartentext)*
+Dutzende herabhängende Schnüre, teils weiter verzweigt, ergeben eine ganze Datenbank aus Textil. Auch Farbe und Drehrichtung der Fäden trugen Bedeutung. Die Zahlen-Quipus können wir heute lesen, ein zweites, erzählendes System ist bis heute nicht entziffert. Ein Teil dieser Daten bleibt für uns stumm.
 
 ### Der Schachtürke
 
@@ -120,180 +120,189 @@ Hier kauert der Schachmeister und zieht die Fäden. Die Züge des Gegners erkann
 **[VA-03a61c]** *(Kartentext)*
 Öffnete Kempelen die linke Tür, sah das Publikum Zahnräder und Uhrwerk, bei zusätzlich offenen Hintertüren sogar durch die ganze Maschine hindurch. Gerade der Beweis der Leere gehörte zur Täuschung, denn der Bediener rückte auf einem verschiebbaren Sitz jeweils dorthin, wo niemand hinsah. Auch dieser Stich rät bloss. Joseph Friedrich zu Racknitz versuchte 1789 den verborgenen Bediener zu erklären. Seine Rekonstruktion gilt als unmöglich, weil die Masse nicht zum wirklichen Apparat passen. Selbst die Erklärung kann also falsch sein.
 
+> **Belegt** («Zahnräder und Uhrwerk»): [Schachtürke (Wikipedia), zur Vorführung des offenen Kastens](https://de.wikipedia.org/wiki/Schacht%C3%BCrke) — «Beim Öffnen der linken Seite wurden Zahnräder und Uhrwerkmechanismen sichtbar. Dieser Bereich war so konstruiert, dass man durch die gesamte Maschine hindurchsehen konnte, wenn gleichzeitig auch die hinteren Türen geöffnet wurden.» Und zum verschiebbaren Sitz: «Mithilfe eines ausgeklügelten Systems aus Magneten, Hebeln und beweglichen Sitzvorrichtungen konnte sich die versteckte Person im Gehäuse so positionieren, dass sie bei den Vorführungen nicht entdeckt wurde.» *(geprüft 2026-08-08)*
+
+> **Belegt** («Seine Rekonstruktion gilt als unmöglich»): [Schachtürke (Wikipedia), zur Racknitz-Darstellung](https://de.wikipedia.org/wiki/Schacht%C3%BCrke) — Bildlegende zum Kupferstich: «Die Darstellung basiert auf Racknitz' Berechnungen und gilt aufgrund der Proportionen der tatsächlichen Apparatur als unmöglich.» *(geprüft 2026-08-08)*
+
 ### Frankenstein
 
-**[VA-3cd9b7]** *(Bildgeschichte)*
-Mary Shelley schrieb «Frankenstein oder der moderne Prometheus» mit achtzehn Jahren, und der Roman erschien 1818. Victor Frankenstein erschafft aus toter Materie ein lebendes Wesen und flieht im Augenblick des Gelingens entsetzt vor seinem Werk. Die Kreatur ist nicht böse geboren, denn erst Zurückweisung und Einsamkeit machen sie zum Rächer. Der eigentliche Fehler ist also nicht die Schöpfung, sondern die verweigerte Verantwortung. Dieses Bild ist das Frontispiz der Ausgabe von 1831, ein Stich nach Theodor von Holst, und zeigt den Moment der Flucht. Bis heute steht «Frankenstein» für die Angst vor Technik, die sich der Kontrolle entzieht, und für die Frage, wer für das Gemachte einsteht.
+**[VA-80fee9]** *(Bildgeschichte)*
+Mary Shelley schrieb «Frankenstein oder der moderne Prometheus» mit achtzehn Jahren, und der Roman erschien 1818. Victor Frankenstein erschafft aus toter Materie ein lebendes Wesen und flieht im Augenblick des Gelingens entsetzt vor seinem Werk. Bis heute steht «Frankenstein» für die Angst vor Technik, die sich der Kontrolle entzieht, und für die Frage, wer für das Gemachte einsteht.
 
 ### Das erschaffene Wesen
 
-**[VA-f86909]** *(Kartentext)*
-Eben belebt, betrachtet die Kreatur sich selbst. Ein neues Wesen ist in der Welt, und niemand hat es gefragt.
+**[VA-4b9944]** *(Kartentext)*
+Eben belebt, betrachtet die Kreatur sich selbst. Ein neues Wesen ist in der Welt, und niemand hat es gefragt. Böse geboren ist es nicht, es lernt durch blosses Zuhören sprechen und liest Milton, Plutarch und Goethes Werther. Was es fordert, ist Gemeinschaft, und erst Zurückweisung und Einsamkeit machen es zum Rächer.
 
 ### Die Flucht des Schöpfers
 
-**[VA-b2b302]** *(Kartentext)*
-Victor Frankenstein flieht entsetzt vor seinem Werk. Das eigentliche Unheil ist die verweigerte Verantwortung.
+**[VA-ec8745]** *(Kartentext)*
+Victor Frankenstein flieht entsetzt vor seinem Werk, statt für es zu sorgen. Das eigentliche Unheil ist damit nicht die Schöpfung, sondern die verweigerte Verantwortung. Darum lenkt schon der Untertitel den Blick auf den Schöpfer, nicht auf das Geschöpf.
 
 ### Wissen und sein Preis
 
-**[VA-886625]** *(Kartentext)*
-Zu Füssen liegen Buch und Schädel. Sie stehen für das Wissen, das belebt, und für den Tod, der ihm folgt.
+**[VA-18dd0f]** *(Kartentext)*
+Zu Füssen liegen Buch und Schädel. Sie stehen für das Wissen, das belebt, und für den Tod, der ihm folgt. Das Blatt ist das Frontispiz der Ausgabe von 1831, ein Stich nach Theodor von Holst, und zeigt den Moment der Flucht.
 
 ### Rechenmaschinen
 
-**[VA-01da93]** *(Bildgeschichte)*
-Der Traum vom mechanischen Rechnen reicht von Leibniz' Rechenrad um 1673 bis zu Charles Babbage. Ab den 1830er-Jahren entwarf Babbage die «Analytical Engine», eine universelle, programmierbare Maschine, die zu seinen Lebzeiten nie fertig gebaut wurde. Ada Lovelace erkannte 1843, dass eine solche Maschine nicht nur Zahlen, sondern beliebige Zeichen verarbeiten könnte, und schrieb das, was oft als erstes Computerprogramm gilt. Zugleich hielt sie fest, dass die Maschine nichts von sich aus hervorbringt. Der Holzstich von 1853 zeigt einen Teil von Babbages Differenzmaschine, den mechanischen Urahn des Prozessors, angetrieben von Hand.
+**[VA-0d55ae]** *(Bildgeschichte)*
+Der Traum vom mechanischen Rechnen reicht von Leibniz' Rechenrad um 1673 bis zu Charles Babbage. Ab den 1830er-Jahren entwarf Babbage die «Analytical Engine», eine universelle, programmierbare Maschine, die zu seinen Lebzeiten nie fertig gebaut wurde. Ada Lovelace erkannte 1843, dass eine solche Maschine nicht nur Zahlen, sondern beliebige Zeichen verarbeiten könnte.
+
+### Von Hand angetrieben
+
+**[VA-4aeede]** *(Kartentext)*
+Eine Kurbel treibt das Werk an, noch ganz ohne Strom, aber die Rechenlogik ist schon da. Zu sehen ist ein Teil der Differenzmaschine, die Babbage vor der «Analytical Engine» entwarf, im Holzstich von 1853.
 
 ### Rechnen in Rädern
 
-**[VA-87a982]** *(Kartentext)*
-Zahlen werden in Ziffernrädern gespeichert und verrechnet. Das ist der mechanische Urahn des Prozessors.
+**[VA-b263f7]** *(Kartentext)*
+Zahlen werden in Ziffernrädern gespeichert und verrechnet, Stelle um Stelle, mit Übertrag von Rad zu Rad. Das ist der mechanische Urahn des Prozessors, gebaut aus Messing statt aus Silizium.
 
 ### Das Programm
 
-**[VA-9ff613]** *(Kartentext)*
-«Calculation complete»: Die Maschine führt eine feste Folge von Schritten aus. Ada Lovelace erkannte, dass sie Anweisungen folgen kann.
+**[VA-41e69e]** *(Kartentext)*
+«Calculation complete», die Maschine führt eine feste Folge von Schritten aus. Ada Lovelace erkannte, dass eine solche Maschine Anweisungen folgen kann, und schrieb 1843 das, was viele als erstes Computerprogramm betrachten. Zugleich hielt sie fest, dass die Maschine nichts von sich aus hervorbringt.
 
 ### Turings Code-Knacker
 
-**[VA-72d3c3]** *(Bildgeschichte)*
-Im Zweiten Weltkrieg verschlüsselte die deutsche Wehrmacht ihren Funk mit der Enigma. Vorgearbeitet hatten polnische Mathematiker, die die Enigma schon in den 1930er-Jahren analysierten und mit der «bomba» eine erste Prüfmaschine bauten. In Bletchley Park in England entwarfen darauf Alan Turing und Gordon Welchman die «Bombe», eine elektromechanische Maschine, die Tausende möglicher Walzenstellungen systematisch durchprobierte und die unmöglichen ausschied. Das Knacken der Enigma verkürzte den Krieg erheblich. Turing hatte 1936 mit der Turingmaschine ein Modell beschrieben, das zur theoretischen Grundlage der Informatik wurde, und fragte 1950, ob Maschinen denken können. Das Foto zeigt eine US-Version der Bombe mit einer Bedienerin, denn die Maschinen liefen rund um die Uhr und wurden meist von Frauen bedient. Aus Turings Idee der universellen Rechenmaschine wurde hier ein reales, kriegsentscheidendes Werkzeug und eine Geburtsstunde des Computers.
+**[VA-69d340]** *(Bildgeschichte)*
+Im Zweiten Weltkrieg verschlüsselte die deutsche Wehrmacht ihren Funk mit der Enigma. Vorgearbeitet hatten polnische Mathematiker, die die Enigma schon in den 1930er-Jahren analysierten und mit der «bomba» eine erste Prüfmaschine bauten. In Bletchley Park in England entwarfen darauf Alan Turing und Gordon Welchman die «Bombe», eine elektromechanische Maschine gegen den deutschen Funkverkehr. Das Knacken der Enigma verkürzte den Krieg erheblich.
 
 ### Die Trommeln
 
-**[VA-dbab53]** *(Kartentext)*
-Die Reihen runder Trommeln bilden die Walzen der Enigma nach. Die Maschine ahmt das deutsche Chiffriergerät nach, um es zu überlisten.
+**[VA-1543cd]** *(Kartentext)*
+Die Reihen runder Trommeln bilden die Walzen der Enigma nach, jede Trommel eine Walze. Die Maschine ahmt das deutsche Chiffriergerät nach, um es zu überlisten, nicht um es zu verstehen.
 
 ### Systematisch durchprobieren
 
-**[VA-b543aa]** *(Kartentext)*
-An den oberen Rädchen wird die Maschine eingestellt. Die «Bombe» testet mechanisch Tausende Walzenstellungen und scheidet die unmöglichen aus. Rechnen wird hier zur Suche.
+**[VA-d43cd9]** *(Kartentext)*
+An den oberen Rädchen wird die Maschine eingestellt. Die «Bombe» testet mechanisch Tausende möglicher Walzenstellungen und scheidet die unmöglichen aus, bis so wenige übrig bleiben, dass ein Mensch sie prüfen kann. Rechnen wird hier zur Suche.
 
 ### Menschen an der Maschine
 
-**[VA-749479]** *(Kartentext)*
-Bedienerinnen richteten die Bombe ein und lasen sie ab, rund um die Uhr. Aus Turings Idee der universellen Rechenmaschine wird ein reales, kriegsentscheidendes Werkzeug und eine Geburtsstunde des Computers.
+**[VA-a321dc]** *(Kartentext)*
+Das Foto zeigt eine US-Version der Bombe. Bedienerinnen richteten sie ein und lasen sie ab, rund um die Uhr, denn die Maschinen liefen ohne Pause und wurden meist von Frauen bedient. Turing hatte 1936 mit der Turingmaschine ein Modell beschrieben, das zur theoretischen Grundlage der Informatik wurde, und fragte 1950, ob Maschinen denken können. Hier wird aus seiner Idee der universellen Rechenmaschine ein reales, kriegsentscheidendes Werkzeug und eine Geburtsstunde des Computers.
 
 ### ELIZA: der erste Chatbot
 
-**[VA-af1a06]** *(Bildgeschichte)*
-ELIZA schrieb Joseph Weizenbaum 1966 am MIT. Es war eines der ersten «sprechenden» Programme. Sein bekanntestes Skript hiess «DOCTOR», imitierte eine Psychotherapeutin und spiegelte die Eingaben als Fragen zurück, etwa «In welcher Weise?». ELIZA verstand nichts und folgte nur einfachen Mustern, wirkte aber verblüffend menschlich. Weizenbaum erschrak, wie sehr sich Menschen dem Programm anvertrauten, und wurde später zu einem frühen Kritiker der KI. Der «ELIZA-Effekt» beschreibt bis heute unsere Neigung, hinter flüssiger Sprache echtes Verstehen zu vermuten. Diese Illustration eines Fernschreiber-Dialogs ist mit KI erstellt.
+**[VA-be20f1]** *(Bildgeschichte)*
+ELIZA schrieb Joseph Weizenbaum 1966 am MIT, eines der ersten «sprechenden» Programme. Es wirkte verblüffend menschlich, obwohl kaum mehr dahinter steckte als eine Handvoll Regeln. Der «ELIZA-Effekt» beschreibt bis heute unsere Neigung, hinter flüssiger Sprache echtes Verstehen zu vermuten.
 
 ### Die Therapeutin (DOCTOR)
 
-**[VA-5635ae]** *(Kartentext)*
-Das bekannteste Skript imitierte eine Psychotherapeutin. Es gab Aussagen als Fragen zurück, etwa «In welcher Weise?» oder «Erzähl mir mehr».
+**[VA-d8841e]** *(Kartentext)*
+Das bekannteste Skript hiess «DOCTOR» und imitierte eine Psychotherapeutin. Es gab Aussagen als Fragen zurück, etwa «In welcher Weise?» oder «Erzähl mir mehr». Die Rolle war geschickt gewählt, denn eine Therapeutin darf zurückfragen, ohne selbst etwas zu wissen.
 
 ### Ein Skript, kein Verstehen
 
-**[VA-558f0c]** *(Kartentext)*
-ELIZA folgte einfachen Mustern und spiegelte Sätze zurück. Sie verstand nichts und wirkte doch verblüffend menschlich.
+**[VA-d51273]** *(Kartentext)*
+ELIZA folgte einfachen Mustern und spiegelte Sätze zurück, Wort für Wort umgestellt. Sie verstand nichts und wirkte doch verblüffend menschlich. Kein Modell, kein Lernen, keine Daten, nur Regeln, die ein Mensch geschrieben hatte.
 
 ### Der ELIZA-Effekt
 
-**[VA-e14e2f]** *(Kartentext)*
-Menschen vertrauten sich dem Programm an wie einem Menschen. Bis heute überschätzen wir gern, was Maschinen «verstehen».
+**[VA-b1514c]** *(Kartentext)*
+Menschen vertrauten sich dem Programm an wie einem Menschen. Weizenbaum erschrak darüber, wie weit das ging, und wurde später zu einem frühen Kritiker der KI. Bis heute überschätzen wir gern, was Maschinen «verstehen».
 
 ### Maschinelles Lernen
 
-**[VA-1381cf]** *(Bildgeschichte)*
-Ab den 1990er-Jahren verschob sich die KI vom Regeln-Schreiben zum Lernen aus Beispielen. Ein Modell fasst jedes Beispiel als Punkt in einem Raum mit vielen Merkmalen auf, oft mit Hunderten oder Tausenden Dimensionen, und Ähnliches liegt nah beieinander. «Lernen» heisst dann, eine Grenze zu finden, die Gruppen trennt. Danach kann das Modell Neues einordnen. Es versteht dabei keine Bedeutung, sondern rechnet mit Lage und Abstand. Diese Denkweise ist ein Grundmodell des überwachten Lernens, also des Lernens an vorsortierten Beispielen, und steckt bis heute in vielen Anwendungen. Diese schematische Illustration ist mit KI erstellt.
+**[VA-59f729]** *(Bildgeschichte)*
+Ab den 1990er-Jahren verschob sich die KI vom Regeln-Schreiben zum Lernen aus Beispielen. Ein Modell fasst jedes Beispiel als Punkt in einem Raum mit vielen Merkmalen auf. Es versteht dabei keine Bedeutung, sondern rechnet mit Lage und Abstand. Diese Denkweise steckt bis heute in vielen Anwendungen.
 
 ### Achsen sind Merkmale
 
-**[VA-5eed22]** *(Kartentext)*
-Jede Achse steht für ein Merkmal der Daten. Oft sind es Hunderte oder Tausende, hier nur drei angedeutet.
+**[VA-0923e6]** *(Kartentext)*
+Jede Achse steht für ein Merkmal der Daten, etwa eine Grösse, eine Farbe oder die Häufigkeit eines Wortes. Oft sind es Hunderte oder Tausende Achsen, hier sind nur drei angedeutet, weil mehr nicht zeichenbar ist.
 
 ### Ähnliches liegt nah
 
-**[VA-26d28d]** *(Kartentext)*
-Verwandte Beispiele landen dicht beieinander und bilden Gruppen. So «versteht» das Modell nicht Bedeutung, sondern Lage im Raum.
+**[VA-edd542]** *(Kartentext)*
+Verwandte Beispiele landen dicht beieinander und bilden Gruppen. So «versteht» das Modell nicht Bedeutung, sondern Lage im Raum. Nähe ist alles, was es von Ähnlichkeit weiss.
 
 ### Die gelernte Grenze
 
-**[VA-848f8f]** *(Kartentext)*
-Das Modell sucht eine Fläche, die die Gruppen trennt. «Lernen» heisst, diese Grenze aus Beispielen immer besser zu ziehen. Dann kann es Neues einordnen.
+**[VA-bbf698]** *(Kartentext)*
+Das Modell sucht eine Fläche, die die Gruppen trennt. «Lernen» heisst, diese Grenze aus Beispielen immer besser zu ziehen, danach kann es Neues einordnen. Das ist das Grundmodell des überwachten Lernens, also des Lernens an vorsortierten Beispielen.
 
 ### Tamagotchi: das virtuelle Haustier
 
-**[VA-3545b3]** *(Bildgeschichte)*
-Das Tamagotchi kam 1996 in Japan von der Firma Bandai auf den Markt. Es war ein eiförmiges Taschengerät mit einem digitalen Wesen, das gefüttert, gepflegt und beschäftigt werden wollte, sonst «starb» es. Millionen banden sich emotional an ein paar Bildpunkte, und an Schulen wurden die piepsenden Geräte zeitweise verboten. Tamagotchis zeigen, wie leicht wir Maschinen wie Lebewesen behandeln. Sie sind ein früher Vorläufer der virtuellen Haustiere und der heutigen KI-Begleiter. Dieses Foto zeigt ein erhaltenes Gerät aus einer Museumssammlung.
+**[VA-4cc7f3]** *(Bildgeschichte)*
+Das Tamagotchi kam 1996 in Japan von der Firma Bandai auf den Markt, ein eiförmiges Taschengerät mit einem digitalen Wesen darin. Tamagotchis zeigen, wie leicht wir Maschinen wie Lebewesen behandeln. Sie sind ein früher Vorläufer der virtuellen Haustiere und der heutigen KI-Begleiter.
 
 ### Gefühle für Pixel
 
-**[VA-9d4338]** *(Kartentext)*
-Auf dem kleinen Schirm lebte ein wenige Bildpunkte grosses Wesen. Millionen banden sich emotional daran, denn wir behandeln Maschinen erstaunlich leicht wie Lebewesen.
+**[VA-847a76]** *(Kartentext)*
+Auf dem kleinen Schirm lebte ein wenige Bildpunkte grosses Wesen. Millionen banden sich emotional daran, und an Schulen wurden die piepsenden Geräte zeitweise verboten, weil sie mitten im Unterricht Aufmerksamkeit forderten. Wir behandeln Maschinen erstaunlich leicht wie Lebewesen.
 
 ### Ein Wesen zum Umsorgen
 
-**[VA-019688]** *(Kartentext)*
-Mit drei Knöpfen wurde gefüttert, gespielt und sauber gemacht. Es war Pflege rund um die Uhr, sonst «starb» das Wesen.
+**[VA-89e606]** *(Kartentext)*
+Mit drei Knöpfen wurde gefüttert, gespielt und sauber gemacht. Es war Pflege rund um die Uhr, denn das Wesen meldete sich, wann es wollte, und wer es zu lange liess, fand es «gestorben».
 
 ### Wegbereiter
 
-**[VA-f15552]** *(Kartentext)*
-An der Kette hing es immer am Körper. Tamagotchis ebneten den Weg für virtuelle Haustiere und Gefährten, heute für sprechende KI-Begleiter.
+**[VA-2a8d27]** *(Kartentext)*
+An der Kette hing es immer am Körper, ein Wesen zum Mittragen und Vorzeigen. Tamagotchis ebneten den Weg für virtuelle Haustiere und Gefährten, heute für sprechende KI-Begleiter. Das Foto zeigt ein erhaltenes Gerät aus einer Museumssammlung.
 
 ### Lernen durch Spielen (DQN)
 
-**[VA-870af3]** *(Bildgeschichte)*
-Zwischen 2013 und 2015 zeigte «Deep Q-Network» von DeepMind, dass eine KI klassische Arcade-Spiele allein durch Ausprobieren lernen kann. Sie sah nur die Bildpunkte des Schirms und den Punktestand, aber keine Regeln. Über viele Partien hinweg richtete sie ihr Verhalten auf die Belohnung durch Punkte aus und übertraf bei manchen Spielen den Menschen. Dieses «verstärkende Lernen» wurde später zur Grundlage von Systemen wie AlphaGo, das 2016 Lee Sedol schlug, einen der stärksten Go-Spieler der Welt. Diese schematische Illustration ist mit KI erstellt und zeigt kein Originalspiel.
+**[VA-73cf36]** *(Bildgeschichte)*
+Zwischen 2013 und 2015 zeigte «Deep Q-Network» von DeepMind, dass eine KI klassische Arcade-Spiele allein durch Ausprobieren lernen kann. Dieses «verstärkende Lernen» wurde später zur Grundlage von Systemen wie AlphaGo, das 2016 Lee Sedol schlug, einen der stärksten Go-Spieler der Welt.
 
 ### Die Umgebung
 
-**[VA-20bd26]** *(Kartentext)*
-Das Spiel ist die Umgebung. Die KI sieht nur die Bildpunkte des Schirms und den Punktestand, aber keine Regeln.
+**[VA-b0de64]** *(Kartentext)*
+Das Spiel ist die Umgebung. Die KI sieht nur die Bildpunkte des Schirms und den Punktestand, aber keine Regeln, kein Ziel und keine Erklärung, was ein Ziegel oder ein Schläger sein soll. Die Zeichnung hier zeigt kein Originalspiel.
 
 ### Belohnung steigt
 
-**[VA-ab8ab0]** *(Kartentext)*
-Punkte sind die Belohnung. Über viele Spiele hinweg versucht die KI, sie zu maximieren, und die Kurve klettert.
+**[VA-f601fd]** *(Kartentext)*
+Punkte sind die Belohnung. Über viele Partien hinweg richtet die KI ihr Verhalten darauf aus, sie zu maximieren, und die Kurve klettert. Nichts sonst sagt ihr, was gut ist.
 
 ### Versuch und Irrtum
 
-**[VA-7be0e7]** *(Kartentext)*
-Ohne Anleitung lernt sie erstaunliche Strategien. Zwischen 2013 und 2015 zeigte «Deep Q-Network», dass Maschinen im Spiel stärker werden können als Menschen.
+**[VA-9fc8c7]** *(Kartentext)*
+Ohne Anleitung lernt sie erstaunliche Strategien und übertraf bei manchen Spielen den Menschen. Gelernt wird allein durch Wiederholung, über sehr viele Partien hinweg, ohne dass ihr jemand die Regeln erklärt.
 
 ### DALL·E: Bilder aus Worten
 
-**[VA-5d32b6]** *(Bildgeschichte)*
-DALL·E von OpenAI erzeugt Bilder aus Textbeschreibungen. DALL·E 1 kam im Januar 2021, das deutlich stärkere DALL·E 2 im April 2022, also rund ein halbes Jahr vor ChatGPT. Man gibt einen Satz ein, und das Modell «malt» ein Bild, das so nie fotografiert wurde. Es setzt das Bild Punkt für Punkt neu aus Gelerntem zusammen. Damit wurde generative KI erstmals einem breiten Publikum sichtbar. Dieses Bild ist selbst ein Ergebnis von DALL·E 2, eine zeichnende Roboterhand. Die Frage, wem es rechtlich gehört, ist heikel: Das Schweizer Urheberrecht schützt geistige Schöpfungen von Menschen, rein maschinell Erzeugtem fehlt dieser Schutz grundsätzlich. Steckt im Ergebnis ein eigener menschlicher Gestaltungsbeitrag, kann ein Schutz bestehen. Es ist eine Frage des Einzelfalls.
+**[VA-94521b]** *(Bildgeschichte)*
+DALL·E von OpenAI erzeugt Bilder aus Textbeschreibungen. DALL·E 1 kam im Januar 2021, das deutlich stärkere DALL·E 2 im April 2022, also rund ein halbes Jahr vor ChatGPT. Man gibt einen Satz ein, und das Modell «malt» ein Bild, das so nie fotografiert wurde. Damit wurde generative KI erstmals einem breiten Publikum sichtbar.
 
 ### Sprache als Pinsel
 
-**[VA-2389e3]** *(Kartentext)*
-Ein Satz genügt als Auftrag, und die Maschine «zeichnet». Mit DALL·E 2 im April 2022 entstand zu jeder Beschreibung ein neues Bild.
+**[VA-d48e9b]** *(Kartentext)*
+Ein Satz genügt als Auftrag, und die Maschine «zeichnet». Mit DALL·E 2 im April 2022 entstand zu jeder Beschreibung ein neues Bild, ohne Pinsel, ohne Kamera und ohne Vorlage.
 
 ### Erfunden, nicht gefunden
 
-**[VA-48f40d]** *(Kartentext)*
-Das Bild existiert nirgends, das Modell setzt es Punkt für Punkt neu zusammen. Dieses hier hat DALL·E 2 erzeugt. Ob so etwas urheberrechtlich geschützt ist, hängt davon ab, wie viel ein Mensch daran gestaltet hat.
+**[VA-4f1563]** *(Kartentext)*
+Das Bild existiert nirgends, das Modell setzt es Punkt für Punkt neu aus Gelerntem zusammen. Dieses hier hat DALL·E 2 erzeugt, eine zeichnende Roboterhand. Wem es rechtlich gehört, ist heikel. Das Schweizer Urheberrecht schützt geistige Schöpfungen von Menschen, rein maschinell Erzeugtem fehlt dieser Schutz grundsätzlich. Steckt im Ergebnis ein eigener menschlicher Gestaltungsbeitrag, kann ein Schutz bestehen. Es ist eine Frage des Einzelfalls.
 
 ### Früher als ChatGPT
 
-**[VA-fc6830]** *(Kartentext)*
-Das vergisst man leicht: Die Bild-KI war zuerst da, nämlich DALL·E 2 im April 2022, ein halbes Jahr bevor ChatGPT im November 2022 alle erreichte.
+**[VA-e162c6]** *(Kartentext)*
+Das vergisst man leicht, die Bild-KI war zuerst da. DALL·E 2 erschien im April 2022, ein halbes Jahr bevor ChatGPT im November 2022 alle erreichte. Der Aufschrei kam erst mit dem Text.
 
 ### ChatGPT: KI für alle
 
-**[VA-b5fd64]** *(Bildgeschichte)*
-ChatGPT von OpenAI erschien im November 2022 und macht KI für alle bedienbar. Es ist ein Chatfenster mit normaler Sprache, sofort nutzbar. Innert weniger Wochen nutzten es Millionen. Das war der Moment, in dem KI im Alltag ankam. Das Modell setzt Wort für Wort den wahrscheinlich nächsten Textbaustein. Das gelingt verblüffend gut, kann aber auch überzeugend falsch sein. Zusätzlich wurde es mit menschlichem Feedback trainiert, um hilfreicher und harmloser zu antworten. Diese Illustration eines Chatfensters ist mit KI erstellt.
+**[VA-b8e402]** *(Bildgeschichte)*
+ChatGPT von OpenAI erschien im November 2022 und macht KI für alle bedienbar, ein Chatfenster mit normaler Sprache, sofort nutzbar. Das war der Moment, in dem KI im Alltag ankam, nicht der Moment, in dem sie erfunden wurde. Was darunter arbeitet, ist ein Sprachmodell, das Text fortsetzt.
 
 ### Einfach reden
 
-**[VA-93a119]** *(Kartentext)*
-Man tippt eine Frage in ganz normaler Sprache, und die KI antwortet flüssig. Es braucht keine Fachkenntnis und keinen Befehl.
+**[VA-c04e13]** *(Kartentext)*
+Man tippt eine Frage in ganz normaler Sprache, und die KI antwortet flüssig. Es braucht keine Fachkenntnis, keinen Befehl und keine Schulung, und genau das erklärt, warum es so schnell so viele erreichte.
 
 ### Wort für Wort
 
-**[VA-7376cf]** *(Kartentext)*
-Das Modell setzt immer den wahrscheinlich nächsten Textbaustein. Das ist verblüffend gut, aber ohne echtes Wissen. Es kann auch überzeugend irren.
+**[VA-0bbcca]** *(Kartentext)*
+Das Modell setzt immer den wahrscheinlich nächsten Textbaustein. Das ist verblüffend gut, aber ohne echtes Wissen, es kann auch überzeugend irren. Zusätzlich wurde es mit menschlichem Feedback trainiert, um hilfreicher und harmloser zu antworten.
 
 ### Der Durchbruch
 
-**[VA-9e6dd4]** *(Kartentext)*
-Innert Wochen nutzten Millionen ChatGPT. Es war der Moment, in dem KI im Alltag vieler Menschen ankam.
+**[VA-d18bcf]** *(Kartentext)*
+Innert weniger Wochen nutzten Millionen ChatGPT. Es war der Moment, in dem KI im Alltag vieler Menschen ankam, und der Moment, in dem Schulen und Betriebe plötzlich Regeln brauchten.
 
 ### Vorhang auf: eine neue Akteurin
 

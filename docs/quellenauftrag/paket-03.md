@@ -50,6 +50,18 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 01 · Vorhang auf
 
+**[VA-f4651b]** *(Kartentext · kontextsensitiv)*
+Das Wort «Bank» kann eine Sitzbank oder eine Geldbank sein. Was gemeint ist, verrät erst der Zusammenhang. Die KI achtet genau darauf. Sie bezieht ein, was vorher gesagt wurde, welche Rolle sie übernehmen soll und welche Unterlagen du ihr mitgibst. Dieselbe Frage kann darum je nach Umfeld eine andere Antwort ergeben.
+
+**[VA-983c1b]** *(Vertiefung «Mehr lesen» · dialoghaft)*
+Früher musste man einem Computer in einer eigenen Programmiersprache genau sagen, was er tun soll. Sprachmodelle drehen das um, denn die Anweisung ist jetzt einfach normaler Text. «Die heisseste neue Programmiersprache ist Englisch», sagt der KI-Forscher Andrej Karpathy und meint genau das. Ein Beispiel: Statt Programmcode zu schreiben, bittest du einfach «Fasse diesen Text in drei Sätzen zusammen». Das macht die Technik für alle bedienbar, auch ohne Vorwissen. Zugleich verwischt es die Grenze zwischen einem Befehl an eine Maschine und einem Gespräch mit einem Gegenüber.
+
+**[VA-7ad8b5]** *(Kartentext · multimodal)*
+Du kannst der KI ein Foto deines Kühlschranks zeigen und nach einem Rezept fragen. Bei manchen Systemen laufen Text, Bild und Ton in einem einzigen Modell zusammen, bei anderen arbeiten dafür mehrere Bausteine zusammen. Sie liest, sieht und hört und antwortet wahlweise in Wort, Bild oder Stimme. Auch eine Skizze oder ein gesprochener Satz sind für sie eine Eingabe. So nimmt sie die Welt über mehrere Kanäle zugleich auf.
+
+**[VA-87db90]** *(Vertiefung «Mehr lesen» · multimodal)*
+Frühe Programme konnten nur eines, entweder Text oder Bild oder Ton. Multimodale Modelle verbinden diese Kanäle in einem einzigen Netz. Damit rücken sie näher an uns Menschen heran, denn auch wir denken nicht in getrennten Sinnen. Ein Beispiel: Du fotografierst eine Mathe-Aufgabe, und die KI liest sie, rechnet und erklärt den Lösungsweg. Oder du zeigst ihr ein Diagramm, und sie fasst es in Worten zusammen. So wird die Grenze zwischen Lesen, Sehen und Hören für die Maschine durchlässig.
+
 **[VA-6e57d1]** *(Fliesstext · Mehr dazu: die vier Blickwinkel)*
 Der erste Blickwinkel ist der technologische, also Rechenkraft, Daten und die Modelle selbst. Der zweite ist der wirtschaftliche, denn Entwicklung und Betrieb kosten viel Geld und schaffen neue Märkte. Der dritte ist der rechtlich-politische, etwa Fragen nach Regeln, Haftung und Macht. Der vierte ist der kulturelle, also wie wir mit KI leben, arbeiten und über sie sprechen. Diese vier Blickwinkel wirken zusammen und lassen sich nicht sauber trennen. Erst gemeinsam ergeben sie ein Bild davon, was KI heute ist.
 
@@ -170,17 +182,3 @@ Die Industrialisierung reisst die alte Gesellschaft auseinander: Landflucht, Kin
 
 **[PP-d13f6a]** *(Kartentext · Der Computer)*
 Im Schatten des Kriegs entstehen die ersten programmierbaren Rechner, etwa Zuses Z3, Colossus und ENIAC. Turings Idee der universellen Maschine wird Wirklichkeit.
-
-**[PP-50cec7]** *(Vertiefung «Mehr lesen» · Der Computer)*
-Konrad Zuse begann im Wohnzimmer seiner Eltern in Berlin, Rechenmaschinen zu bauen, und vollendete 1941 mit der Z3 aus gebrauchten Telefonrelais den ersten frei programmierbaren Rechner, der wenige Jahre später bei einem Luftangriff zerstört wurde. In Grossbritannien half der geheime Röhrenrechner Colossus, verschlüsselte deutsche Funksprüche zu knacken, seine Existenz blieb noch Jahrzehnte nach dem Krieg Staatsgeheimnis. Der amerikanische ENIAC wog rund dreissig Tonnen, füllte einen Saal und berechnete Flugbahnen für die Artillerie. Dabei war «Computer» damals noch eine Berufsbezeichnung für Menschen, meist Frauen, die im Akkord von Hand rechneten, und es waren sechs von ihnen, die den ENIAC programmierten. Die gedankliche Grundlage hatte Alan Turing schon 1936 gelegt, mit der Idee einer einzigen Maschine, die jede berechenbare Aufgabe ausführen kann, wenn man ihr Programm wechselt. Genau diese Universalität steckt heute in jedem Handy, jedem Auto und jedem KI-Modell.
-
-**[PP-1d3e84]** *(Vertiefung «Mehr lesen» · Die Rakete)*
-Die V2 war die erste Rakete, die den Rand des Weltraums erreichte, und zugleich eine Terrorwaffe, die auf London und Antwerpen fiel. In der unterirdischen Fabrik Mittelbau-Dora mussten KZ-Häftlinge sie zusammenbauen, bei der Produktion starben mehr Menschen als durch die Einschläge der Raketen. Nach 1945 sicherten sich die Siegermächte die Ingenieure und Baupläne: Wernher von Braun ging mit seinem Team in die USA, die Sowjetunion setzte auf Sergei Koroljow, der Stalins Lager überlebt hatte. Die Rakete, die 1957 den Sputnik in die Umlaufbahn trug, war eigentlich als Interkontinentalrakete für Atomsprengköpfe entwickelt worden. Dass dieselben Triebwerke Zerstörung oder Forschung tragen können, machte die Rakete zum Lehrstück über Technik und Verantwortung.
-
-**[PP-e5b77e]** *(Kartentext · Internet & World Wide Web)*
-Aus dem militärischen ARPANET (1969) wird das World Wide Web: 1989 als Vorschlag, 1991 als erste Website, 1993 vom CERN zur freien Nutzung freigegeben. Information fliesst plötzlich weltweit, sofort und für alle. Das ist das grösste Medienereignis seit dem Buchdruck.
-
-**[PP-67bb7f]** *(Vertiefung «Mehr lesen» · Internet & World Wide Web)*
-Die erste Nachricht im ARPANET wurde am 29. Oktober 1969 von Los Angeles nach Stanford geschickt. Geplant war das Wort «LOGIN», nach zwei Buchstaben stürzte die Verbindung ab, übertragen wurde nur «LO». Aus dem Forschungsnetz weniger Universitäten wuchs über zwei Jahrzehnte ein weltweiter Verbund, doch er blieb ein Werkzeug für Fachleute. Den entscheidenden Schritt machte Tim Berners-Lee am CERN. Sein Vorschlag von 1989 für ein Netz aus verknüpften Seiten wurde von seinem Vorgesetzten als vage, aber aufregend bezeichnet. So lief die erste Website der Welt auf einem Rechner bei Genf. Entscheidend war schliesslich, dass das CERN 1993 den Web-Standard zur freien Nutzung freigab, niemand musste Lizenzgebühren zahlen, und genau deshalb konnte das Netz explodieren. Offenheit war hier keine Nebensache, sondern der Bauplan des Erfolgs.
-
-> **Belegt** («vage, aber aufregend»): [Heinz Nixdorf MuseumsForum: Wolkig aber aufregend, wie das Web geboren wurde](https://blog.hnf.de/wolkig-aber-aufregend-wie-das-web-geboren-wurde/) — Der Vermerk stammt von Mike Sendall, dem Leiter der Arbeitsgruppe, auf dem Deckblatt des Vorschlags vom 12. März 1989: «Vague but exciting». Das Papier hiess «Information Management: A Proposal». *(geprüft 2026-08-05)*

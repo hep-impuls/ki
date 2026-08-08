@@ -10,6 +10,32 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-08 — Bildergalerie: die Geschichte trägt den Rahmen, die Punkte tragen die Einzelheiten (Christof)
+
+Anlass: Christof fand den Text zum Schachtürken zu lang und wollte die
+Einzelheiten dort, wo man sie auch sieht — bei den nummerierten Bildpunkten.
+Danach für alle elf Bilder der Galerie in «Vorhang auf» durchgezogen.
+
+**Die Regel für neue Bilder:** Die `geschichte` beantwortet, *was das ist* —
+wer, wann, wie es ausging, was davon bleibt. Alles, was man am Bild zeigen
+kann, gehört in den Bildpunkt, der darauf liegt. Ein Satz, der in beiden steht,
+gehört nur in den Punkt. Als Grössenordnung tragen die Punkte zusammen jetzt
+etwa zwei Drittel des Textes, vorher war es ein Drittel.
+
+Warum überhaupt so: Die Geschichte liest man einmal, die Punkte tippt man
+einzeln an. Wissen, das am Bild hängt, bleibt beim Antippen hängen — der lange
+Absatz davor wurde eher überflogen.
+
+**Zwei Fallen, die dabei aufgefallen sind:**
+
+- Punkt-Texte liefen als reiner Text, ohne `GlossarText`. Belege und
+  Worterklärungen waren dort unsichtbar. Behoben; damit sind alle drei Stellen
+  (StoryGewebe, Bildgeschichte, Bildpunkt) gleich.
+- Ein Text unter `MIN_LAENGE = 90` (docs/quellenauftrag.js) kommt gar nicht in
+  den Quellen-Index und wird nie auf Belege geprüft. Zwei Schachtürke-Punkte
+  lagen mit 88 Zeichen knapp darunter. Wer kurze Texte schreibt, die eine
+  prüfbare Behauptung enthalten, sollte das wissen.
+
 ## 2026-08-05 — Epochen-Prüfung: 386 Aussagen nachgeschlagen, 17 Stellen korrigiert (Christof)
 
 Anlass: Christof fragte beim Hieronymus-Satz, wo das stehe — und der Block

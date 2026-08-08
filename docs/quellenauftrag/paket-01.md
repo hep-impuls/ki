@@ -56,38 +56,54 @@ Der «Schachtürke» war ein Schach spielender Automat, den Wolfgang von Kempele
 **[VA-03a61c]** *(Kartentext · Der Blick in den Kasten)*
 Öffnete Kempelen die linke Tür, sah das Publikum Zahnräder und Uhrwerk, bei zusätzlich offenen Hintertüren sogar durch die ganze Maschine hindurch. Gerade der Beweis der Leere gehörte zur Täuschung, denn der Bediener rückte auf einem verschiebbaren Sitz jeweils dorthin, wo niemand hinsah. Auch dieser Stich rät bloss. Joseph Friedrich zu Racknitz versuchte 1789 den verborgenen Bediener zu erklären. Seine Rekonstruktion gilt als unmöglich, weil die Masse nicht zum wirklichen Apparat passen. Selbst die Erklärung kann also falsch sein.
 
-**[VA-3cd9b7]** *(Bildgeschichte · Frankenstein)*
-Mary Shelley schrieb «Frankenstein oder der moderne Prometheus» mit achtzehn Jahren, und der Roman erschien 1818. Victor Frankenstein erschafft aus toter Materie ein lebendes Wesen und flieht im Augenblick des Gelingens entsetzt vor seinem Werk. Die Kreatur ist nicht böse geboren, denn erst Zurückweisung und Einsamkeit machen sie zum Rächer. Der eigentliche Fehler ist also nicht die Schöpfung, sondern die verweigerte Verantwortung. Dieses Bild ist das Frontispiz der Ausgabe von 1831, ein Stich nach Theodor von Holst, und zeigt den Moment der Flucht. Bis heute steht «Frankenstein» für die Angst vor Technik, die sich der Kontrolle entzieht, und für die Frage, wer für das Gemachte einsteht.
+> **Belegt** («Zahnräder und Uhrwerk»): [Schachtürke (Wikipedia), zur Vorführung des offenen Kastens](https://de.wikipedia.org/wiki/Schacht%C3%BCrke) — «Beim Öffnen der linken Seite wurden Zahnräder und Uhrwerkmechanismen sichtbar. Dieser Bereich war so konstruiert, dass man durch die gesamte Maschine hindurchsehen konnte, wenn gleichzeitig auch die hinteren Türen geöffnet wurden.» Und zum verschiebbaren Sitz: «Mithilfe eines ausgeklügelten Systems aus Magneten, Hebeln und beweglichen Sitzvorrichtungen konnte sich die versteckte Person im Gehäuse so positionieren, dass sie bei den Vorführungen nicht entdeckt wurde.» *(geprüft 2026-08-08)*
 
-**[VA-01da93]** *(Bildgeschichte · Rechenmaschinen)*
-Der Traum vom mechanischen Rechnen reicht von Leibniz' Rechenrad um 1673 bis zu Charles Babbage. Ab den 1830er-Jahren entwarf Babbage die «Analytical Engine», eine universelle, programmierbare Maschine, die zu seinen Lebzeiten nie fertig gebaut wurde. Ada Lovelace erkannte 1843, dass eine solche Maschine nicht nur Zahlen, sondern beliebige Zeichen verarbeiten könnte, und schrieb das, was oft als erstes Computerprogramm gilt. Zugleich hielt sie fest, dass die Maschine nichts von sich aus hervorbringt. Der Holzstich von 1853 zeigt einen Teil von Babbages Differenzmaschine, den mechanischen Urahn des Prozessors, angetrieben von Hand.
+> **Belegt** («Seine Rekonstruktion gilt als unmöglich»): [Schachtürke (Wikipedia), zur Racknitz-Darstellung](https://de.wikipedia.org/wiki/Schacht%C3%BCrke) — Bildlegende zum Kupferstich: «Die Darstellung basiert auf Racknitz' Berechnungen und gilt aufgrund der Proportionen der tatsächlichen Apparatur als unmöglich.» *(geprüft 2026-08-08)*
 
-**[VA-72d3c3]** *(Bildgeschichte · Turings Code-Knacker)*
-Im Zweiten Weltkrieg verschlüsselte die deutsche Wehrmacht ihren Funk mit der Enigma. Vorgearbeitet hatten polnische Mathematiker, die die Enigma schon in den 1930er-Jahren analysierten und mit der «bomba» eine erste Prüfmaschine bauten. In Bletchley Park in England entwarfen darauf Alan Turing und Gordon Welchman die «Bombe», eine elektromechanische Maschine, die Tausende möglicher Walzenstellungen systematisch durchprobierte und die unmöglichen ausschied. Das Knacken der Enigma verkürzte den Krieg erheblich. Turing hatte 1936 mit der Turingmaschine ein Modell beschrieben, das zur theoretischen Grundlage der Informatik wurde, und fragte 1950, ob Maschinen denken können. Das Foto zeigt eine US-Version der Bombe mit einer Bedienerin, denn die Maschinen liefen rund um die Uhr und wurden meist von Frauen bedient. Aus Turings Idee der universellen Rechenmaschine wurde hier ein reales, kriegsentscheidendes Werkzeug und eine Geburtsstunde des Computers.
+**[VA-80fee9]** *(Bildgeschichte · Frankenstein)*
+Mary Shelley schrieb «Frankenstein oder der moderne Prometheus» mit achtzehn Jahren, und der Roman erschien 1818. Victor Frankenstein erschafft aus toter Materie ein lebendes Wesen und flieht im Augenblick des Gelingens entsetzt vor seinem Werk. Bis heute steht «Frankenstein» für die Angst vor Technik, die sich der Kontrolle entzieht, und für die Frage, wer für das Gemachte einsteht.
 
-**[VA-af1a06]** *(Bildgeschichte · ELIZA: der erste Chatbot)*
-ELIZA schrieb Joseph Weizenbaum 1966 am MIT. Es war eines der ersten «sprechenden» Programme. Sein bekanntestes Skript hiess «DOCTOR», imitierte eine Psychotherapeutin und spiegelte die Eingaben als Fragen zurück, etwa «In welcher Weise?». ELIZA verstand nichts und folgte nur einfachen Mustern, wirkte aber verblüffend menschlich. Weizenbaum erschrak, wie sehr sich Menschen dem Programm anvertrauten, und wurde später zu einem frühen Kritiker der KI. Der «ELIZA-Effekt» beschreibt bis heute unsere Neigung, hinter flüssiger Sprache echtes Verstehen zu vermuten. Diese Illustration eines Fernschreiber-Dialogs ist mit KI erstellt.
+**[VA-18dd0f]** *(Kartentext · Wissen und sein Preis)*
+Zu Füssen liegen Buch und Schädel. Sie stehen für das Wissen, das belebt, und für den Tod, der ihm folgt. Das Blatt ist das Frontispiz der Ausgabe von 1831, ein Stich nach Theodor von Holst, und zeigt den Moment der Flucht.
 
-**[VA-3545b3]** *(Bildgeschichte · Tamagotchi: das virtuelle Haustier)*
-Das Tamagotchi kam 1996 in Japan von der Firma Bandai auf den Markt. Es war ein eiförmiges Taschengerät mit einem digitalen Wesen, das gefüttert, gepflegt und beschäftigt werden wollte, sonst «starb» es. Millionen banden sich emotional an ein paar Bildpunkte, und an Schulen wurden die piepsenden Geräte zeitweise verboten. Tamagotchis zeigen, wie leicht wir Maschinen wie Lebewesen behandeln. Sie sind ein früher Vorläufer der virtuellen Haustiere und der heutigen KI-Begleiter. Dieses Foto zeigt ein erhaltenes Gerät aus einer Museumssammlung.
+**[VA-0d55ae]** *(Bildgeschichte · Rechenmaschinen)*
+Der Traum vom mechanischen Rechnen reicht von Leibniz' Rechenrad um 1673 bis zu Charles Babbage. Ab den 1830er-Jahren entwarf Babbage die «Analytical Engine», eine universelle, programmierbare Maschine, die zu seinen Lebzeiten nie fertig gebaut wurde. Ada Lovelace erkannte 1843, dass eine solche Maschine nicht nur Zahlen, sondern beliebige Zeichen verarbeiten könnte.
 
-**[VA-870af3]** *(Bildgeschichte · Lernen durch Spielen (DQN))*
-Zwischen 2013 und 2015 zeigte «Deep Q-Network» von DeepMind, dass eine KI klassische Arcade-Spiele allein durch Ausprobieren lernen kann. Sie sah nur die Bildpunkte des Schirms und den Punktestand, aber keine Regeln. Über viele Partien hinweg richtete sie ihr Verhalten auf die Belohnung durch Punkte aus und übertraf bei manchen Spielen den Menschen. Dieses «verstärkende Lernen» wurde später zur Grundlage von Systemen wie AlphaGo, das 2016 Lee Sedol schlug, einen der stärksten Go-Spieler der Welt. Diese schematische Illustration ist mit KI erstellt und zeigt kein Originalspiel.
+**[VA-4aeede]** *(Kartentext · Von Hand angetrieben)*
+Eine Kurbel treibt das Werk an, noch ganz ohne Strom, aber die Rechenlogik ist schon da. Zu sehen ist ein Teil der Differenzmaschine, die Babbage vor der «Analytical Engine» entwarf, im Holzstich von 1853.
 
-**[VA-7be0e7]** *(Kartentext · Versuch und Irrtum)*
-Ohne Anleitung lernt sie erstaunliche Strategien. Zwischen 2013 und 2015 zeigte «Deep Q-Network», dass Maschinen im Spiel stärker werden können als Menschen.
+**[VA-41e69e]** *(Kartentext · Das Programm)*
+«Calculation complete», die Maschine führt eine feste Folge von Schritten aus. Ada Lovelace erkannte, dass eine solche Maschine Anweisungen folgen kann, und schrieb 1843 das, was viele als erstes Computerprogramm betrachten. Zugleich hielt sie fest, dass die Maschine nichts von sich aus hervorbringt.
 
-**[VA-5d32b6]** *(Bildgeschichte · DALL·E: Bilder aus Worten)*
-DALL·E von OpenAI erzeugt Bilder aus Textbeschreibungen. DALL·E 1 kam im Januar 2021, das deutlich stärkere DALL·E 2 im April 2022, also rund ein halbes Jahr vor ChatGPT. Man gibt einen Satz ein, und das Modell «malt» ein Bild, das so nie fotografiert wurde. Es setzt das Bild Punkt für Punkt neu aus Gelerntem zusammen. Damit wurde generative KI erstmals einem breiten Publikum sichtbar. Dieses Bild ist selbst ein Ergebnis von DALL·E 2, eine zeichnende Roboterhand. Die Frage, wem es rechtlich gehört, ist heikel: Das Schweizer Urheberrecht schützt geistige Schöpfungen von Menschen, rein maschinell Erzeugtem fehlt dieser Schutz grundsätzlich. Steckt im Ergebnis ein eigener menschlicher Gestaltungsbeitrag, kann ein Schutz bestehen. Es ist eine Frage des Einzelfalls.
+**[VA-69d340]** *(Bildgeschichte · Turings Code-Knacker)*
+Im Zweiten Weltkrieg verschlüsselte die deutsche Wehrmacht ihren Funk mit der Enigma. Vorgearbeitet hatten polnische Mathematiker, die die Enigma schon in den 1930er-Jahren analysierten und mit der «bomba» eine erste Prüfmaschine bauten. In Bletchley Park in England entwarfen darauf Alan Turing und Gordon Welchman die «Bombe», eine elektromechanische Maschine gegen den deutschen Funkverkehr. Das Knacken der Enigma verkürzte den Krieg erheblich.
 
-**[VA-2389e3]** *(Kartentext · Sprache als Pinsel)*
-Ein Satz genügt als Auftrag, und die Maschine «zeichnet». Mit DALL·E 2 im April 2022 entstand zu jeder Beschreibung ein neues Bild.
+**[VA-a321dc]** *(Kartentext · Menschen an der Maschine)*
+Das Foto zeigt eine US-Version der Bombe. Bedienerinnen richteten sie ein und lasen sie ab, rund um die Uhr, denn die Maschinen liefen ohne Pause und wurden meist von Frauen bedient. Turing hatte 1936 mit der Turingmaschine ein Modell beschrieben, das zur theoretischen Grundlage der Informatik wurde, und fragte 1950, ob Maschinen denken können. Hier wird aus seiner Idee der universellen Rechenmaschine ein reales, kriegsentscheidendes Werkzeug und eine Geburtsstunde des Computers.
 
-**[VA-fc6830]** *(Kartentext · Früher als ChatGPT)*
-Das vergisst man leicht: Die Bild-KI war zuerst da, nämlich DALL·E 2 im April 2022, ein halbes Jahr bevor ChatGPT im November 2022 alle erreichte.
+**[VA-be20f1]** *(Bildgeschichte · ELIZA: der erste Chatbot)*
+ELIZA schrieb Joseph Weizenbaum 1966 am MIT, eines der ersten «sprechenden» Programme. Es wirkte verblüffend menschlich, obwohl kaum mehr dahinter steckte als eine Handvoll Regeln. Der «ELIZA-Effekt» beschreibt bis heute unsere Neigung, hinter flüssiger Sprache echtes Verstehen zu vermuten.
 
-**[VA-b5fd64]** *(Bildgeschichte · ChatGPT: KI für alle)*
-ChatGPT von OpenAI erschien im November 2022 und macht KI für alle bedienbar. Es ist ein Chatfenster mit normaler Sprache, sofort nutzbar. Innert weniger Wochen nutzten es Millionen. Das war der Moment, in dem KI im Alltag ankam. Das Modell setzt Wort für Wort den wahrscheinlich nächsten Textbaustein. Das gelingt verblüffend gut, kann aber auch überzeugend falsch sein. Zusätzlich wurde es mit menschlichem Feedback trainiert, um hilfreicher und harmloser zu antworten. Diese Illustration eines Chatfensters ist mit KI erstellt.
+**[VA-4cc7f3]** *(Bildgeschichte · Tamagotchi: das virtuelle Haustier)*
+Das Tamagotchi kam 1996 in Japan von der Firma Bandai auf den Markt, ein eiförmiges Taschengerät mit einem digitalen Wesen darin. Tamagotchis zeigen, wie leicht wir Maschinen wie Lebewesen behandeln. Sie sind ein früher Vorläufer der virtuellen Haustiere und der heutigen KI-Begleiter.
+
+**[VA-73cf36]** *(Bildgeschichte · Lernen durch Spielen (DQN))*
+Zwischen 2013 und 2015 zeigte «Deep Q-Network» von DeepMind, dass eine KI klassische Arcade-Spiele allein durch Ausprobieren lernen kann. Dieses «verstärkende Lernen» wurde später zur Grundlage von Systemen wie AlphaGo, das 2016 Lee Sedol schlug, einen der stärksten Go-Spieler der Welt.
+
+**[VA-b0de64]** *(Kartentext · Die Umgebung)*
+Das Spiel ist die Umgebung. Die KI sieht nur die Bildpunkte des Schirms und den Punktestand, aber keine Regeln, kein Ziel und keine Erklärung, was ein Ziegel oder ein Schläger sein soll. Die Zeichnung hier zeigt kein Originalspiel.
+
+**[VA-94521b]** *(Bildgeschichte · DALL·E: Bilder aus Worten)*
+DALL·E von OpenAI erzeugt Bilder aus Textbeschreibungen. DALL·E 1 kam im Januar 2021, das deutlich stärkere DALL·E 2 im April 2022, also rund ein halbes Jahr vor ChatGPT. Man gibt einen Satz ein, und das Modell «malt» ein Bild, das so nie fotografiert wurde. Damit wurde generative KI erstmals einem breiten Publikum sichtbar.
+
+**[VA-d48e9b]** *(Kartentext · Sprache als Pinsel)*
+Ein Satz genügt als Auftrag, und die Maschine «zeichnet». Mit DALL·E 2 im April 2022 entstand zu jeder Beschreibung ein neues Bild, ohne Pinsel, ohne Kamera und ohne Vorlage.
+
+**[VA-e162c6]** *(Kartentext · Früher als ChatGPT)*
+Das vergisst man leicht, die Bild-KI war zuerst da. DALL·E 2 erschien im April 2022, ein halbes Jahr bevor ChatGPT im November 2022 alle erreichte. Der Aufschrei kam erst mit dem Text.
+
+**[VA-b8e402]** *(Bildgeschichte · ChatGPT: KI für alle)*
+ChatGPT von OpenAI erschien im November 2022 und macht KI für alle bedienbar, ein Chatfenster mit normaler Sprache, sofort nutzbar. Das war der Moment, in dem KI im Alltag ankam, nicht der Moment, in dem sie erfunden wurde. Was darunter arbeitet, ist ein Sprachmodell, das Text fortsetzt.
 
 **[VA-d576c2]** *(Fliesstext · Mehr dazu: der Weg durch diese Seite)*
 Um die KI zu verstehen, nähern wir uns ihr aus mehreren Richtungen. Zuerst fragen wir nach der Herkunft, also wie das Phänomen einer denkenden Maschine kulturell und technisch entstanden ist. Das erzählt die KI-Story. Einzelne Stationen werden danach in Bildern greifbar, die begehbare Punkte tragen. Dann treten die Merkmale hervor, jene Eigenschaften, die wir seit November 2022 mit den grossen Sprachmodellen täglich erleben. Zum Schluss geht es um die Kontexte, in denen die neue Akteurin heute steckt. Das Fazit vorweg lautet, dass KI weit mehr ist als das Chatfenster, in das wir unsere Fragen tippen.
@@ -154,15 +170,3 @@ Ein oft übersehener Beitrag von Leibniz ist das Zweiersystem, das er 1703 ausf�
 
 **[VA-b719df]** *(Kartentext · Der Algorithmus wird ausführbar)*
 Ein Algorithmus ist nichts anderes als eine genaue Schritt-für-Schritt-Anleitung, um eine Aufgabe zu lösen. Solche Anleitungen kennt die Menschheit seit der Antike. Mit den ersten Computern aber wird der Algorithmus ausführbar, denn nun arbeitet eine Maschine das Verfahren selbsttätig ab. Damit wird aus einer Idee auf Papier eine Kraft, die selbständig handelt.
-
-**[VA-556bc0]** *(Bildgeschichte · Der Algorithmus wird ausführbar)*
-Das Wort «Algorithmus» geht auf den Gelehrten al-Chwarizmi zurück, der um 820 in Bagdad wirkte, und die Verfahren selbst sind noch viel älter. Erst Alan Turings gedankliche «Maschine» von 1936 und die ersten elektronischen Rechner der 1940er-Jahre veränderten alles. Von da an führte nicht mehr ein Mensch mit Papier und Bleistift die Schritte aus, sondern die Maschine selbst. Der Algorithmus wurde damit vom blossen Rezept zum Motor der Rechenmaschine.
-
-**[VA-a9be93]** *(Vertiefung «Mehr lesen» · Der Algorithmus wird ausführbar)*
-Ein greifbares Beispiel für den ausführbaren Algorithmus ist die Z3 des Berliner Ingenieurs Konrad Zuse von 1941, die als erster funktionsfähiger programmgesteuerter Rechner gilt. Sie arbeitete bereits mit dem Binärsystem und wurde über einen gelochten Streifen mit Befehlen versorgt. Der Name «Algorithmus» geht auf den Gelehrten al-Chwarizmi zurück, dessen Werk zugleich dem Wort «Algebra» seinen Namen gab. Turings gedankliches Modell von 1936 beschrieb eine Maschine mit einem endlosen Band, die durch einfache Schreib- und Leseschritte jedes berechenbare Problem lösen kann. Im Zweiten Weltkrieg half Turing dann, mit eigens gebauten Maschinen den deutschen Funkschlüssel Enigma zu knacken. So wurde aus einer reinen Denkfigur in wenigen Jahren eine wirklich arbeitende Maschine. Damit war die Grundlage gelegt, auf der jede spätere KI aufbaut.
-
-**[VA-d97186]** *(Kartentext · Geburt der KI)*
-1956 bekommt der alte Traum endlich einen Namen. An einem Sommertreffen am Dartmouth College in den USA prägen Forscher den Begriff «Künstliche Intelligenz». Aus verstreuten Ideen und Erzählungen wird ein eigenes Forschungsprogramm mit grossen Zielen. Die Fachleute rechneten damals mit Durchbrüchen innert weniger Jahre.
-
-**[VA-d4805d]** *(Bildgeschichte · Geburt der KI)*
-Im Sommer 1956 trafen sich am Dartmouth College Forscher um John McCarthy und Marvin Minsky. Ihr Anspruch war es, jede Facette der Intelligenz durch Maschinen nachzubilden. Der alte Traum bekam damit einen Namen und Geld für die Forschung. Man erwartete rasche Erfolge.
