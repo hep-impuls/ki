@@ -620,6 +620,17 @@ export const BELEGE: Beleg[] = [
       "«Im Gegensatz zum Populärverständnis fokussiert der Titel die Aufmerksamkeit nicht auf das Geschöpf, sondern auf seinen Schöpfer.»",
     geprueft: "2026-08-08",
   },
+  {
+    // Auf Christofs Wunsch, damit «überwachtes Lernen» im Bildpunkt anklickbar
+    // ist und nicht nur die Kurzfassung im Nebensatz dasteht.
+    id: "VA-bbf698",
+    anker: "überwachten Lernens",
+    url: "https://de.wikipedia.org/wiki/%C3%9Cberwachtes_Lernen",
+    titel: "Überwachtes Lernen (Wikipedia)",
+    stelle:
+      "«Überwachtes Lernen (englisch supervised learning) ist eine wichtige Kategorie des Maschinellen Lernens. Dabei wird ein Lernalgorithmus mit Datensätzen trainiert und validiert, die für jede Eingabe einen passenden Ausgabewert enthalten. Man bezeichnet solche Datensätze als markiert oder gelabelt.» Beispiel dort: Bilder von Katzen und Hunden, denen «in der Regel ein Mensch» das Label beigefügt hat — im Lernset «vorsortierte Beispiele». Abgegrenzt wird es vom unüberwachten Lernen, «bei dem das Modell selbst ohne Vorgaben Muster oder Strukturen identifiziert».",
+    geprueft: "2026-08-08",
+  },
 
   /* ── Rechenmaschinen: Leibniz, Babbage, Lovelace ─────────────────────────
    * Geprüft am 2026-08-05, weil Christof den Eindruck hatte, Babbage und

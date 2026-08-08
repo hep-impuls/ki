@@ -85,10 +85,14 @@ An der waagrechten Trägerschnur oben hängen alle Nebenschnüre, sie hält das 
 **[VA-e54444]** *(Kartentext)*
 Art, Zahl und Höhe der Knoten codieren Werte im Zehnersystem. Die Höhe sagt die Stelle, gelesen vom Ansatz zum freien Ende hin, also von den Tausendern zu den Einern. Eine Null ist ein Abschnitt ohne Knoten. Rechnen und Erinnern werden hier nicht ins Rad ausgelagert, sondern in den Faden.
 
+> **Belegt** («Eine Null ist ein Abschnitt ohne Knoten»): [Quipu (Wikipedia), zum Stellenwert der Knoten](https://de.wikipedia.org/wiki/Quipu) — «Die Stellen (Zehnerpotenzen) wurden in der Reihenfolge ihrer Höhe vom Ansatz zum freien Ende hin abgelesen, also: Tausender-Hunderter-Zehner-Einer. Die Ziffer Null wurde für alle Stellen als knotenfreier Gruppenabschnitt geschrieben.» *(geprüft 2026-08-08)*
+
 ### Ein Gewebe aus Daten
 
 **[VA-e32c4a]** *(Kartentext)*
 Dutzende herabhängende Schnüre, teils weiter verzweigt, ergeben eine ganze Datenbank aus Textil. Auch Farbe und Drehrichtung der Fäden trugen Bedeutung. Die Zahlen-Quipus können wir heute lesen, ein zweites, erzählendes System ist bis heute nicht entziffert. Ein Teil dieser Daten bleibt für uns stumm.
+
+> **Belegt** («ist bis heute nicht entziffert»): [Quipu (Wikipedia), zum Entschlüsselungsstand](https://de.wikipedia.org/wiki/Quipu) — «Nach heutiger Erkenntnis gab es zwei verschiedene Schriftsysteme: eines zur zahlenmäßigen Erfassung von Mengen […] und ein phonetisch orientiertes System für Nachrichtenverkehr, wie Briefwechseln.» Und dazu: «Die Knotenschrift für den Schriftverkehr ist bis heute nicht entziffert.» *(geprüft 2026-08-08)*
 
 ### Der Schachtürke
 
@@ -134,10 +138,14 @@ Mary Shelley schrieb «Frankenstein oder der moderne Prometheus» mit achtzehn J
 **[VA-4b9944]** *(Kartentext)*
 Eben belebt, betrachtet die Kreatur sich selbst. Ein neues Wesen ist in der Welt, und niemand hat es gefragt. Böse geboren ist es nicht, es lernt durch blosses Zuhören sprechen und liest Milton, Plutarch und Goethes Werther. Was es fordert, ist Gemeinschaft, und erst Zurückweisung und Einsamkeit machen es zum Rächer.
 
+> **Belegt** («es lernt durch blosses Zuhören sprechen»): [Frankenstein (Roman) (Wikipedia), zum Geschöpf](https://de.wikipedia.org/wiki/Frankenstein_(Roman)) — Abschnitt «Übersicht»: «Es hat in seinen zwei Lebensjahren durch bloßes Zuhören sprechen gelernt und eine erstaunliche Bildung erworben.» Zur Lektüre: «Miltons Paradise Lost löst in ihm Reflexionen über sein Dasein aus (Kap. 15)», dazu in der Anmerkung Volneys «Les Ruines» und «Goethes Werther», und Plutarchs Doppelbiographien, «mit Hilfe derer Frankensteins Geschöpf versucht, die Menschheit zu ergründen». Zur Forderung nach Gemeinschaft: «Es fordert von seinem Schöpfer, seine Einsamkeit durch eine ihm entsprechende Gefährtin zu beenden.» Und im Wortlaut des Geschöpfs: «Ich war gütig und gut. Nur das Elend ließ mich böse werden.» *(geprüft 2026-08-08)*
+
 ### Die Flucht des Schöpfers
 
 **[VA-ec8745]** *(Kartentext)*
 Victor Frankenstein flieht entsetzt vor seinem Werk, statt für es zu sorgen. Das eigentliche Unheil ist damit nicht die Schöpfung, sondern die verweigerte Verantwortung. Darum lenkt schon der Untertitel den Blick auf den Schöpfer, nicht auf das Geschöpf.
+
+> **Belegt** («den Blick auf den Schöpfer, nicht auf das Geschöpf»): [Frankenstein (Roman) (Wikipedia), Abschnitt «Prometheus-Motiv»](https://de.wikipedia.org/wiki/Frankenstein_(Roman)) — «Im Gegensatz zum Populärverständnis fokussiert der Titel die Aufmerksamkeit nicht auf das Geschöpf, sondern auf seinen Schöpfer.» *(geprüft 2026-08-08)*
 
 ### Wissen und sein Preis
 
@@ -224,10 +232,12 @@ Verwandte Beispiele landen dicht beieinander und bilden Gruppen. So «versteht»
 **[VA-bbf698]** *(Kartentext)*
 Das Modell sucht eine Fläche, die die Gruppen trennt. «Lernen» heisst, diese Grenze aus Beispielen immer besser zu ziehen, danach kann es Neues einordnen. Das ist das Grundmodell des überwachten Lernens, also des Lernens an vorsortierten Beispielen.
 
+> **Belegt** («überwachten Lernens»): [Überwachtes Lernen (Wikipedia)](https://de.wikipedia.org/wiki/%C3%9Cberwachtes_Lernen) — «Überwachtes Lernen (englisch supervised learning) ist eine wichtige Kategorie des Maschinellen Lernens. Dabei wird ein Lernalgorithmus mit Datensätzen trainiert und validiert, die für jede Eingabe einen passenden Ausgabewert enthalten. Man bezeichnet solche Datensätze als markiert oder gelabelt.» Beispiel dort: Bilder von Katzen und Hunden, denen «in der Regel ein Mensch» das Label beigefügt hat — im Lernset «vorsortierte Beispiele». Abgegrenzt wird es vom unüberwachten Lernen, «bei dem das Modell selbst ohne Vorgaben Muster oder Strukturen identifiziert». *(geprüft 2026-08-08)*
+
 ### Tamagotchi: das virtuelle Haustier
 
-**[VA-4cc7f3]** *(Bildgeschichte)*
-Das Tamagotchi kam 1996 in Japan von der Firma Bandai auf den Markt, ein eiförmiges Taschengerät mit einem digitalen Wesen darin. Tamagotchis zeigen, wie leicht wir Maschinen wie Lebewesen behandeln. Sie sind ein früher Vorläufer der virtuellen Haustiere und der heutigen KI-Begleiter.
+**[VA-282d23]** *(Bildgeschichte)*
+Das Tamagotchi kam 1996 in Japan von der Firma Bandai auf den Markt, ein eiförmiges Taschengerät mit einem digitalen Wesen darin. Tamagotchis zeigen, wie leicht wir Maschinen wie Lebewesen behandeln. Sie sind selbst virtuelle Haustiere und Vorläufer der heutigen KI-Begleiterinnen.
 
 ### Gefühle für Pixel
 
@@ -241,8 +251,8 @@ Mit drei Knöpfen wurde gefüttert, gespielt und sauber gemacht. Es war Pflege r
 
 ### Wegbereiter
 
-**[VA-2a8d27]** *(Kartentext)*
-An der Kette hing es immer am Körper, ein Wesen zum Mittragen und Vorzeigen. Tamagotchis ebneten den Weg für virtuelle Haustiere und Gefährten, heute für sprechende KI-Begleiter. Das Foto zeigt ein erhaltenes Gerät aus einer Museumssammlung.
+**[VA-841291]** *(Kartentext)*
+An der Kette hing es immer am Körper, ein Wesen zum Mittragen und Vorzeigen. Tamagotchis waren selbst virtuelle Haustiere und ebneten den Weg zu den heutigen sprechenden KI-Begleiterinnen. Das Foto zeigt ein erhaltenes Gerät aus einer Museumssammlung.
 
 ### Lernen durch Spielen (DQN)
 

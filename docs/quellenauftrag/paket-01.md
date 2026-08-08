@@ -84,8 +84,8 @@ Das Foto zeigt eine US-Version der Bombe. Bedienerinnen richteten sie ein und la
 **[VA-be20f1]** *(Bildgeschichte · ELIZA: der erste Chatbot)*
 ELIZA schrieb Joseph Weizenbaum 1966 am MIT, eines der ersten «sprechenden» Programme. Es wirkte verblüffend menschlich, obwohl kaum mehr dahinter steckte als eine Handvoll Regeln. Der «ELIZA-Effekt» beschreibt bis heute unsere Neigung, hinter flüssiger Sprache echtes Verstehen zu vermuten.
 
-**[VA-4cc7f3]** *(Bildgeschichte · Tamagotchi: das virtuelle Haustier)*
-Das Tamagotchi kam 1996 in Japan von der Firma Bandai auf den Markt, ein eiförmiges Taschengerät mit einem digitalen Wesen darin. Tamagotchis zeigen, wie leicht wir Maschinen wie Lebewesen behandeln. Sie sind ein früher Vorläufer der virtuellen Haustiere und der heutigen KI-Begleiter.
+**[VA-282d23]** *(Bildgeschichte · Tamagotchi: das virtuelle Haustier)*
+Das Tamagotchi kam 1996 in Japan von der Firma Bandai auf den Markt, ein eiförmiges Taschengerät mit einem digitalen Wesen darin. Tamagotchis zeigen, wie leicht wir Maschinen wie Lebewesen behandeln. Sie sind selbst virtuelle Haustiere und Vorläufer der heutigen KI-Begleiterinnen.
 
 **[VA-73cf36]** *(Bildgeschichte · Lernen durch Spielen (DQN))*
 Zwischen 2013 und 2015 zeigte «Deep Q-Network» von DeepMind, dass eine KI klassische Arcade-Spiele allein durch Ausprobieren lernen kann. Dieses «verstärkende Lernen» wurde später zur Grundlage von Systemen wie AlphaGo, das 2016 Lee Sedol schlug, einen der stärksten Go-Spieler der Welt.

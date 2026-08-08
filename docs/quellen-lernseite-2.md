@@ -13,8 +13,8 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 75 |
-| Belegte Textblöcke | 44 |
+| Belege | 76 |
+| Belegte Textblöcke | 45 |
 | Begründete Nicht-Belege | 5 |
 | Aussagen mit Standdatum | 3 |
 
@@ -259,6 +259,15 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 - **Geprüft:** 2026-08-08
 
 > Victor Frankenstein flieht entsetzt vor seinem Werk, statt für es zu sorgen. Das eigentliche Unheil ist damit nicht die Schöpfung, sondern die verweigerte Verantwortung. Darum lenkt schon der Untertitel den Blick auf den Schöpfer, nicht auf das Geschöpf.
+
+### Die gelernte Grenze · überwachten Lernens
+
+- **Kennung:** `VA-bbf698` (Kartentext)
+- **Quelle:** [Überwachtes Lernen (Wikipedia)](https://de.wikipedia.org/wiki/%C3%9Cberwachtes_Lernen)
+- **Fundstelle:** «Überwachtes Lernen (englisch supervised learning) ist eine wichtige Kategorie des Maschinellen Lernens. Dabei wird ein Lernalgorithmus mit Datensätzen trainiert und validiert, die für jede Eingabe einen passenden Ausgabewert enthalten. Man bezeichnet solche Datensätze als markiert oder gelabelt.» Beispiel dort: Bilder von Katzen und Hunden, denen «in der Regel ein Mensch» das Label beigefügt hat — im Lernset «vorsortierte Beispiele». Abgegrenzt wird es vom unüberwachten Lernen, «bei dem das Modell selbst ohne Vorgaben Muster oder Strukturen identifiziert».
+- **Geprüft:** 2026-08-08
+
+> Das Modell sucht eine Fläche, die die Gruppen trennt. «Lernen» heisst, diese Grenze aus Beispielen immer besser zu ziehen, danach kann es Neues einordnen. Das ist das Grundmodell des überwachten Lernens, also des Lernens an vorsortierten Beispielen.
 
 ### Rechenmaschinen · ganz gebrauchsfähig wurde sie nie
 

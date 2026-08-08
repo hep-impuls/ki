@@ -237,12 +237,12 @@
   "stufe": "tief",
   "text": "Das Modell sucht eine Fläche, die die Gruppen trennt. «Lernen» heisst, diese Grenze aus Beispielen immer besser zu ziehen, danach kann es Neues einordnen. Das ist das Grundmodell des überwachten Lernens, also des Lernens an vorsortierten Beispielen."
  },
- "VA-4cc7f3": {
+ "VA-282d23": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Tamagotchi: das virtuelle Haustier",
   "feld": "Bildgeschichte",
   "stufe": "hoch",
-  "text": "Das Tamagotchi kam 1996 in Japan von der Firma Bandai auf den Markt, ein eiförmiges Taschengerät mit einem digitalen Wesen darin. Tamagotchis zeigen, wie leicht wir Maschinen wie Lebewesen behandeln. Sie sind ein früher Vorläufer der virtuellen Haustiere und der heutigen KI-Begleiter."
+  "text": "Das Tamagotchi kam 1996 in Japan von der Firma Bandai auf den Markt, ein eiförmiges Taschengerät mit einem digitalen Wesen darin. Tamagotchis zeigen, wie leicht wir Maschinen wie Lebewesen behandeln. Sie sind selbst virtuelle Haustiere und Vorläufer der heutigen KI-Begleiterinnen."
  },
  "VA-847a76": {
   "datei": "vorhang-auf/page.tsx",
@@ -258,12 +258,12 @@
   "stufe": "mittel",
   "text": "Mit drei Knöpfen wurde gefüttert, gespielt und sauber gemacht. Es war Pflege rund um die Uhr, denn das Wesen meldete sich, wann es wollte, und wer es zu lange liess, fand es «gestorben»."
  },
- "VA-2a8d27": {
+ "VA-841291": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Wegbereiter",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "An der Kette hing es immer am Körper, ein Wesen zum Mittragen und Vorzeigen. Tamagotchis ebneten den Weg für virtuelle Haustiere und Gefährten, heute für sprechende KI-Begleiter. Das Foto zeigt ein erhaltenes Gerät aus einer Museumssammlung."
+  "text": "An der Kette hing es immer am Körper, ein Wesen zum Mittragen und Vorzeigen. Tamagotchis waren selbst virtuelle Haustiere und ebneten den Weg zu den heutigen sprechenden KI-Begleiterinnen. Das Foto zeigt ein erhaltenes Gerät aus einer Museumssammlung."
  },
  "VA-73cf36": {
   "datei": "vorhang-auf/page.tsx",

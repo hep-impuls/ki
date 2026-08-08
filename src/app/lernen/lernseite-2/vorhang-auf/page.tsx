@@ -290,7 +290,7 @@ const BILDER_STORY: AnschauBild[] = [
     kurz: "Bindung an ein digitales Wesen",
     quelle: "Foto: Museum Rotterdam · Wikimedia Commons · CC BY-SA 3.0",
     geschichte:
-      "Das Tamagotchi kam 1996 in Japan von der Firma Bandai auf den Markt, ein eiförmiges Taschengerät mit einem digitalen Wesen darin. Tamagotchis zeigen, wie leicht wir Maschinen wie Lebewesen behandeln. Sie sind ein früher Vorläufer der virtuellen Haustiere und der heutigen KI-Begleiter.",
+      "Das Tamagotchi kam 1996 in Japan von der Firma Bandai auf den Markt, ein eiförmiges Taschengerät mit einem digitalen Wesen darin. Tamagotchis zeigen, wie leicht wir Maschinen wie Lebewesen behandeln. Sie sind selbst virtuelle Haustiere und Vorläufer der heutigen KI-Begleiterinnen.",
     hotspots: [
       {
         x: 53,
@@ -308,7 +308,7 @@ const BILDER_STORY: AnschauBild[] = [
         x: 22,
         y: 50,
         titel: "Wegbereiter",
-        text: "An der Kette hing es immer am Körper, ein Wesen zum Mittragen und Vorzeigen. Tamagotchis ebneten den Weg für virtuelle Haustiere und Gefährten, heute für sprechende KI-Begleiter. Das Foto zeigt ein erhaltenes Gerät aus einer Museumssammlung.",
+        text: "An der Kette hing es immer am Körper, ein Wesen zum Mittragen und Vorzeigen. Tamagotchis waren selbst virtuelle Haustiere und ebneten den Weg zu den heutigen sprechenden KI-Begleiterinnen. Das Foto zeigt ein erhaltenes Gerät aus einer Museumssammlung.",
       },
     ],
   },
