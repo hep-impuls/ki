@@ -689,7 +689,7 @@ export default function OrakelDashboard() {
       wert: `${flaechenGefuellt} / ${flaechenTotal || "–"}`,
       text:
         flaechenTotal === 0
-          ? "Noch keine Fläche geknüpft — besuche benachbarte Punkte, dann füllen sich Maschen."
+          ? "Noch keine Fläche geknüpft. Besuche benachbarte Punkte, dann füllen sich Maschen."
           : "Maschen, die du in den Geweben (Teppich, KI-Story, Merkmale, Muster) vollständig geknüpft hast.",
       alle: `${flaechenAlle}× von allen geknüpft`,
     },
@@ -713,7 +713,7 @@ export default function OrakelDashboard() {
       wert: `${meineWuensche} / ${WUNSCH_TOTAL}`,
       text:
         meineWuensche === 0
-          ? `Noch kein «das verfolge ich weiter» gesetzt — möglich wären ${WUNSCH_TOTAL}.`
+          ? `Noch kein «das verfolge ich weiter» gesetzt, möglich wären ${WUNSCH_TOTAL}.`
           : `Merkzeichen gesetzt, von ${WUNSCH_TOTAL} möglichen.`,
       alle: `${summeMitPrefix(alleSpuren, "wunsch:")}× von allen gesetzt`,
       rahmen: "akzent",
@@ -830,13 +830,13 @@ export default function OrakelDashboard() {
       <section aria-label="Worum es hier geht" className="mt-lg">
         <p className="text-body-lg text-on-surface-variant">
           Hier laufen deine Spuren zusammen. Das Orakel zeigt, was du in diesem
-          Lernset getan hast — <strong className="text-on-surface">wo du
+          Lernset getan hast: <strong className="text-on-surface">wo du
           weitergehen möchtest</strong>, was du{" "}
           <strong className="text-on-surface">vertieft</strong> hast, wo du{" "}
           <strong className="text-on-surface">Relevanz</strong> sahst und was
           für dich <strong className="text-on-surface">ohne Bedeutung</strong>{" "}
           blieb, welche Punkte du angeklickt und ob du die Aktivitäten im Muster
-          verbunden hast. Mehrere Perspektiven auf dieselben Daten — jeweils, wo
+          verbunden hast. Mehrere Perspektiven auf dieselben Daten, jeweils, wo
           es geht, neben den anonymen Werten aller. Zum Schluss deutet die KI
           deinen Weg in wenigen Sätzen.
         </p>
@@ -904,7 +904,7 @@ export default function OrakelDashboard() {
         className="mt-xl mb-lg"
         schwebend
         titel="Dein Aktivitäts-Rhizom"
-        unterzeile="Aus einer Wurzel wächst dein Tun: vier Triebe (Punkte, Flächen, Bildpunkte, Videos) verzweigen sich — im Hintergrund das Rhizom aller, im Vordergrund deins."
+        unterzeile="Aus einer Wurzel wächst dein Tun: vier Triebe (Punkte, Flächen, Bildpunkte, Videos) verzweigen sich. Im Hintergrund das Rhizom aller, im Vordergrund deins."
       />
 
       {/* 1 — Perspektiven auf deine Aktivität */}
@@ -1004,7 +1004,7 @@ export default function OrakelDashboard() {
                   <span className="material-symbols-outlined text-[16px] text-on-surface-variant/60">
                     lock
                   </span>
-                  Nur bei dir — kein anonymer Vergleich mit allen.
+                  Nur bei dir, kein anonymer Vergleich mit allen.
                 </p>
               )}
             </div>
@@ -1020,13 +1020,13 @@ export default function OrakelDashboard() {
             Was dich besonders interessiert hat
           </h2>
           <p className="mt-xs text-body-sm text-on-surface-variant">
-            Die Inhalte, die du ausgewählt hast — die Grundlage, aus der das
+            Die Inhalte, die du ausgewählt hast: die Grundlage, aus der das
             Orakel dein Interesse deutet.
           </p>
           {!auswertung.some((a) => a.labels.length > 0) && (
             <p className="mt-md rounded-xl border border-outline-variant bg-surface-bright p-md text-body-sm text-on-surface-variant">
               Bisher hast du vor allem die <strong className="text-on-surface">Muster
-              bespielt</strong> — {flaechenGefuellt}{" "}
+              bespielt</strong>: {flaechenGefuellt}{" "}
               {flaechenGefuellt === 1 ? "Fläche" : "Flächen"} geknüpft, ohne
               Inhalte zu öffnen. Auch das ist eine Spur, die das Orakel deuten
               kann.
@@ -1076,7 +1076,7 @@ export default function OrakelDashboard() {
             <div className="relative p-md">
             <p className="flex items-center gap-sm text-label-md uppercase tracking-wider text-tertiary">
               <span className="material-symbols-outlined text-[18px]">auto_awesome</span>
-              Das Orakel spricht — erste Stimme: wo du warst und was noch lohnt
+              Das Orakel spricht, erste Stimme: wo du warst und was noch lohnt
             </p>
             <div className="mt-sm">
             {intOrakel.status === "idle" && (
@@ -1108,7 +1108,7 @@ export default function OrakelDashboard() {
             )}
             {intOrakel.status === "zu-wenig" && (
               <p className="text-body-sm text-on-surface-variant">
-                Noch zu wenige Spuren — erkunde erst ein paar Inhalte oder Muster.
+                Noch zu wenige Spuren. Erkunde erst ein paar Inhalte oder Muster.
               </p>
             )}
             {intOrakel.status === "kein-schluessel" && (
@@ -1119,7 +1119,7 @@ export default function OrakelDashboard() {
             )}
             {intOrakel.status === "fehler" && (
               <p className="text-body-sm text-error">
-                Das Orakel ist gerade nicht erreichbar — versuch es gleich nochmals.
+                Das Orakel ist gerade nicht erreichbar, versuch es gleich nochmals.
               </p>
             )}
             {intOrakel.status === "ok" && intOrakel.text && (
@@ -1149,8 +1149,8 @@ export default function OrakelDashboard() {
           Deine Spur durchs Gewebe
         </h2>
         <p className="mt-xs text-body-sm text-on-surface-variant">
-          {meineGesamt} von {GESAMT_TOTAL} Knoten hast du besucht — daneben, wie
-          oft alle zusammen dort waren. Tippe einen Bereich an, um dorthin
+          {meineGesamt} von {GESAMT_TOTAL} Knoten hast du besucht; daneben
+          steht, wie oft alle zusammen dort waren. Tippe einen Bereich an, um dorthin
           zurückzukehren.
         </p>
         <div className="mt-md overflow-hidden rounded-xl border border-outline-variant bg-surface-bright">
@@ -1196,9 +1196,9 @@ export default function OrakelDashboard() {
       <section id="knotenkarte" className="mt-xl scroll-mt-24" aria-label="Knotenkarte der Inhalte">
         <h2 className="text-headline-md text-on-surface">Knotenkarte der Inhalte</h2>
         <p className="mt-xs max-w-3xl text-body-sm text-on-surface-variant">
-          Die stärksten Knoten im Gewebe: je grösser der Punkt, desto häufiger —
-          höchstens fünf pro Register, darüber hinaus nur, was über 40-mal
-          angeklickt wurde. Jeder Bereich in seiner Farbe.
+          Die stärksten Knoten im Gewebe: je grösser der Punkt, desto häufiger.
+          Gezeigt werden höchstens fünf pro Register, darüber hinaus nur, was
+          über 40-mal angeklickt wurde. Jeder Bereich in seiner Farbe.
         </p>
         <Knotenkarte className="mt-md" />
       </section>
@@ -1307,7 +1307,7 @@ export default function OrakelDashboard() {
             <p className="text-body-md text-on-surface-variant">
               Dafür braucht das Orakel erst deine Einordnungen. Bewerte im
               «Teppich des Wandels» und bei «Philosophie in Zeiten der
-              Verunsicherung», oder wähle unten deine Grundhaltung zur KI — dann
+              Verunsicherung», oder wähle unten deine Grundhaltung zur KI, dann
               kehr zurück.
             </p>
           )}
@@ -1388,11 +1388,11 @@ export default function OrakelDashboard() {
                     <span className="material-symbols-outlined text-[18px]">
                       check_circle
                     </span>
-                    Schön — das Orakel hat dich gesehen.
+                    Schön, das Orakel hat dich gesehen.
                   </p>
                 ) : (
                   <p className="text-body-sm text-on-surface-variant">
-                    Kein Problem — wähle oben eine{" "}
+                    Kein Problem, wähle oben eine{" "}
                     <strong className="text-on-surface">andere Form</strong> des
                     Orakels und befrage es erneut.
                   </p>
@@ -1439,7 +1439,7 @@ export default function OrakelDashboard() {
           </div>
           {!name.trim() && (
             <p className="mt-xs text-label-sm text-on-surface-variant">
-              Tipp: Trage zuerst deinen Namen ein — er erscheint dann auf dem
+              Tipp: Trage zuerst deinen Namen ein, er erscheint dann auf dem
               Ausdruck.
             </p>
           )}
@@ -1455,8 +1455,8 @@ export default function OrakelDashboard() {
         </h2>
         <p className="mt-xs text-body-sm text-on-surface-variant">
           {blickWahl
-            ? `${blickTotal} ${blickTotal === 1 ? "Stimme" : "Stimmen"} insgesamt — deine ist markiert.`
-            : "Wähle eine Haltung — danach siehst du, wie alle geantwortet haben."}
+            ? `${blickTotal} ${blickTotal === 1 ? "Stimme" : "Stimmen"} insgesamt, deine ist markiert.`
+            : "Wähle eine Haltung, danach siehst du, wie alle geantwortet haben."}
         </p>
         <div className="mt-md flex flex-col gap-sm">
           {BLICK_OPTIONEN.map((o) => {
@@ -1545,7 +1545,7 @@ export default function OrakelDashboard() {
       >
         <p className="flex items-center gap-sm text-label-md uppercase tracking-wider text-tertiary">
           <span className="material-symbols-outlined text-[20px]">lock</span>
-          Datenschutz — kurz
+          Datenschutz in Kürze
         </p>
         <p className="mt-sm text-body-sm text-on-surface-variant">
           Du meldest dich nur mit einem <strong className="text-on-surface">Code</strong>{" "}
@@ -1564,20 +1564,20 @@ export default function OrakelDashboard() {
             <li>
               <strong className="text-on-surface">Anonyme Zähler:</strong> Jeder
               Klick zählt <strong className="text-on-surface">+1</strong> auf einen
-              Zähler ohne Code — daraus entstehen «alle», Knotenkarte und Rhizom.
+              Zähler ohne Code. Daraus entstehen «alle», Knotenkarte und Rhizom.
               Nicht rückverfolgbar.
             </li>
             <li>
               <strong className="text-on-surface">Dein Fortschritt:</strong> welche
               Punkte du besucht, welche Inhalte du ausgewählt und wie du bewertet
               hast, liegt zusätzlich unter deinem Code in der Cloud (Google
-              Firebase) — damit du geräteübergreifend weitermachen kannst. Keine
+              Firebase), damit du geräteübergreifend weitermachen kannst. Keine
               Reflexionstexte, keine Einzelantworten.
             </li>
             <li>
               <strong className="text-on-surface">Klassencode (optional):</strong>{" "}
               Gibst du den Klassencode deiner Lehrperson ein, wird dein Code der
-              Klasse zugeordnet — weiterhin ohne deinen Namen.
+              Klasse zugeordnet, weiterhin ohne deinen Namen.
             </li>
             <li>
               <strong className="text-on-surface">Das Orakel:</strong> bekommt nur

@@ -65,7 +65,7 @@ export const unit: UnitConfig = {
           icon: "curtains",
           subtitle: "Auftakt",
           description:
-            "Mit KI tritt eine neue Art von Akteurin auf die Bühne — weder Werkzeug noch Person. Du gehst ihrer Geschichte nach, deckst ihre zwölf Merkmale auf und gewichtest, wie deutlich jedes sie ausmacht, wanderst durch Bilder von der Turing-Bombe bis DALL·E und stellst sie in ihre vier Kontexte: technisch, wirtschaftlich, rechtlich, kulturell.",
+            "Mit KI tritt eine neue Art von Akteurin auf die Bühne, weder Werkzeug noch Person. Du gehst ihrer Geschichte nach, deckst ihre zwölf Merkmale auf und gewichtest, wie deutlich jedes sie ausmacht, wanderst durch Bilder von der Turing-Bombe bis DALL·E und stellst sie in ihre vier Kontexte: technisch, wirtschaftlich, rechtlich, kulturell.",
         },
         {
           slug: "philosophische-perspektive",
@@ -74,7 +74,7 @@ export const unit: UnitConfig = {
           icon: "psychology",
           subtitle: "Orientierung",
           description:
-            "Technische Umbrüche verunsichern — seit der Antike. Auf einem Zeitstrahl legst du Erfindungen und Erschütterungen nebeneinander, gehst acht Epochen von Athen bis heute durch, jede mit Technik, Verunsicherung und philosophischer Antwort, und prüfst an vier Denkwegen, was davon für dich tragfähig ist.",
+            "Technische Umbrüche verunsichern, seit der Antike. Auf einem Zeitstrahl legst du Erfindungen und Erschütterungen nebeneinander, gehst acht Epochen von Athen bis heute durch, jede mit Technik, Verunsicherung und philosophischer Antwort, und prüfst an vier Denkwegen, was davon für dich tragfähig ist.",
         },
         {
           slug: "das-orakel",

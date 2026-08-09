@@ -45,7 +45,7 @@ export default function Lernseite2DasOrakel() {
         <p className="mt-md max-w-3xl text-body-lg text-on-surface-variant">
           «Erkenne dich selbst» stand über dem Orakel von Delphi. Hier laufen
           die Fäden zusammen: deine Wege durchs Modul und dein Interesse an den
-          Inhalten — daneben der anonyme Querschnitt aller, gedeutet vom Orakel.
+          Inhalten. Daneben der anonyme Querschnitt aller, gedeutet vom Orakel.
         </p>
       </AbschnittKopf>
 

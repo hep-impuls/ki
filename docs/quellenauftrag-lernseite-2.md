@@ -46,14 +46,14 @@ und die Quelle ihn nur bestätigt.
 
 ### (ohne Abschnitt)
 
-**[HUB-f5abb9]** *(Fliesstext)*
-Kaum ein Thema ist so präsent wie die Künstliche Intelligenz — und kaum eines so schwer zu fassen. Es wird viel über sie gesagt, doch vieles bleibt schemenhaft, ein Reden über etwas, das man selten wirklich vor Augen hat. Dieses Lernset will die KI sichtbarer und verständlicher machen, indem es ihr eine Gestalt gibt.
+**[HUB-e725d2]** *(Fliesstext)*
+Kaum ein Thema ist so präsent wie die Künstliche Intelligenz, und kaum eines so schwer zu fassen. Es wird viel über sie gesagt, doch vieles bleibt schemenhaft, ein Reden über etwas, das man selten wirklich vor Augen hat. Dieses Lernset will die KI sichtbarer und verständlicher machen, indem es ihr eine Gestalt gibt.
 
-**[HUB-913c20]** *(Fliesstext)*
-Diese Gestalt zeigt sich nicht, wenn man die KI isoliert betrachtet. KI steht nie für sich: Sie baut auf kulturellen, technischen und wirtschaftlichen Überlegungen auf — und erst wenn man dieses Netz mitzeichnet, wird erkennbar, was da eigentlich auftritt. Darum folgt das Design dieses Lernsets einer Idee: Um das Phänomen zu verstehen, muss man das Netzwerk abbilden, in dem es steckt.
+**[HUB-19a97d]** *(Fliesstext)*
+Diese Gestalt zeigt sich nicht, wenn man die KI isoliert betrachtet. KI steht nie für sich: Sie baut auf kulturellen, technischen und wirtschaftlichen Überlegungen auf, und erst wenn man dieses Netz mitzeichnet, wird erkennbar, was da eigentlich auftritt. Darum folgt das Design dieses Lernsets einer Idee: Um das Phänomen zu verstehen, muss man das Netzwerk abbilden, in dem es steckt.
 
-**[HUB-a8d0d0]** *(Fliesstext)*
-Deshalb beginnst du gleich mit einem Muster, dessen Knoten du verbinden kannst — noch ohne konkreten Inhalt. Das Muster macht deutlich, dass es viel Kontextarbeit braucht, um KI als Phänomen zu erfassen. In diesem Lernset geht es deshalb immer auch um den Kontext der KI.
+**[HUB-71da1a]** *(Fliesstext)*
+Deshalb beginnst du gleich mit einem Muster, dessen Knoten du verbinden kannst, noch ohne konkreten Inhalt. Das Muster macht deutlich, dass es viel Kontextarbeit braucht, um KI als Phänomen zu erfassen. In diesem Lernset geht es deshalb immer auch um den Kontext der KI.
 
 ### Mehr dazu: Wie die Philosophie das weiterdenkt
 
@@ -65,8 +65,8 @@ In diesem Lernset tritt die Philosophie deshalb in den Vordergrund. Wir werden s
 
 ### Der Faden durch das Modul
 
-**[HUB-8d2d8d]** *(Fliesstext)*
-Ein Zusammenhang: Zuerst tritt die neue Akteurin auf, dann ordnet die philosophische Perspektive ein — und am Ende spiegelt das Orakel deinen eigenen Weg durchs Modul.
+**[HUB-58475f]** *(Fliesstext)*
+Ein Zusammenhang: Zuerst tritt die neue Akteurin auf, dann ordnet die philosophische Perspektive ein, und am Ende spiegelt das Orakel deinen eigenen Weg durchs Modul.
 
 ## Thema 01 · Vorhang auf
 
@@ -1916,8 +1916,8 @@ Vor über zweieinhalbtausend Jahren stiegen Menschen aus der ganzen griechischen
 **[OR-1c92b9]** *(Fliesstext)*
 Wir nennen diesen Rückblick trotzdem «Orakel», aber aus einem anderen Grund. Seine Deutungen kommen nicht aus dem allwissenden Blick der Götter. Sie sind musterhaft, genau wie die KI arbeitet. Wo die Pythia Zeichen deutete, erkennt die KI Muster in den gesammelten Spuren und spiegelt sie dir zurück. Kein höheres Wissen, sondern erkannte Regelmässigkeit. Und wie schon in Delphi gilt: entscheiden musst am Ende du selbst.
 
-**[OR-552dcc]** *(Fliesstext)*
-Hier laufen deine Spuren zusammen. Das Orakel zeigt, was du in diesem Lernset getan hast — wo du weitergehen möchtest, was du vertieft hast, wo du Relevanz sahst und was für dich ohne Bedeutung blieb, welche Punkte du angeklickt und ob du die Aktivitäten im Muster verbunden hast. Mehrere Perspektiven auf dieselben Daten — jeweils, wo es geht, neben den anonymen Werten aller. Zum Schluss deutet die KI deinen Weg in wenigen Sätzen.
+**[OR-15b14e]** *(Fliesstext)*
+Hier laufen deine Spuren zusammen. Das Orakel zeigt, was du in diesem Lernset getan hast: wo du weitergehen möchtest, was du vertieft hast, wo du Relevanz sahst und was für dich ohne Bedeutung blieb, welche Punkte du angeklickt und ob du die Aktivitäten im Muster verbunden hast. Mehrere Perspektiven auf dieselben Daten, jeweils, wo es geht, neben den anonymen Werten aller. Zum Schluss deutet die KI deinen Weg in wenigen Sätzen.
 
 **[OR-33b082]** *(Fliesstext)*
 Gezählt wird pro Fortschritts-Code, der hier mindestens eine Aktivität gemacht hat. Wer sich nur eingeloggt, aber nichts geöffnet hat, zählt nicht mit. Jede Person zählt so einmal, ganz ohne Namen.
@@ -1932,24 +1932,24 @@ info Der Link öffnet den Abschnitt an der richtigen Stelle. Den einzelnen Punkt
 
 ### Was dich besonders interessiert hat
 
-**[OR-6ec80d]** *(Fliesstext)*
-Die Inhalte, die du ausgewählt hast — die Grundlage, aus der das Orakel dein Interesse deutet.
+**[OR-d16ac8]** *(Fliesstext)*
+Die Inhalte, die du ausgewählt hast: die Grundlage, aus der das Orakel dein Interesse deutet.
 
-**[OR-d2a56b]** *(Fliesstext)*
-Bisher hast du vor allem die Muster bespielt — […] geknüpft, ohne Inhalte zu öffnen. Auch das ist eine Spur, die das Orakel deuten kann.
+**[OR-12c639]** *(Fliesstext)*
+Bisher hast du vor allem die Muster bespielt: […] geknüpft, ohne Inhalte zu öffnen. Auch das ist eine Spur, die das Orakel deuten kann.
 
 **[OR-51dfa4]** *(Fliesstext)*
 insights In einfacher Sprache und drei Absätzen: wo du vor allem aktiv warst, was du bevorzugt hast, und was sich noch lohnt.
 
 ### Deine Spur durchs Gewebe
 
-**[OR-36b88f]** *(Fliesstext)*
-[…] von […] Knoten hast du besucht — daneben, wie oft alle zusammen dort waren. Tippe einen Bereich an, um dorthin zurückzukehren.
+**[OR-368796]** *(Fliesstext)*
+[…] von […] Knoten hast du besucht; daneben steht, wie oft alle zusammen dort waren. Tippe einen Bereich an, um dorthin zurückzukehren.
 
 ### Knotenkarte der Inhalte
 
-**[OR-a3f18b]** *(Fliesstext)*
-Die stärksten Knoten im Gewebe: je grösser der Punkt, desto häufiger — höchstens fünf pro Register, darüber hinaus nur, was über 40-mal angeklickt wurde. Jeder Bereich in seiner Farbe.
+**[OR-0a9918]** *(Fliesstext)*
+Die stärksten Knoten im Gewebe: je grösser der Punkt, desto häufiger. Gezeigt werden höchstens fünf pro Register, darüber hinaus nur, was über 40-mal angeklickt wurde. Jeder Bereich in seiner Farbe.
 
 ### Achtsamkeit auf die Kontexte
 
@@ -1961,8 +1961,8 @@ Bei «Die KI im Kontext» hast du für jeden Aspekt gewählt, wie viel Achtsamke
 **[OR-a47cee]** *(Fliesstext)*
 Was für ein KI-Typ bist du? Das Orakel liest aus deinen Einordnungen, ob du die KI eher zuversichtlich siehst oder eher als Gefahr, und sagt dir kurz, woran es das festmacht. Es ist eine Lesart deiner Klicks, kein Urteil über dich. Wähle eine Form, und wenn sie dir nicht zusagt, befrage es in einer anderen. Dazu schickt dein Browser eine Zusammenfassung deiner Aktivität: Zähler, Bewertungen und die Titel der Punkte, die du gewählt hast. Ohne Namen und ohne deinen Fortschritts-Code.
 
-**[OR-dff0e0]** *(Fliesstext)*
-Dafür braucht das Orakel erst deine Einordnungen. Bewerte im «Teppich des Wandels» und bei «Philosophie in Zeiten der Verunsicherung», oder wähle unten deine Grundhaltung zur KI — dann kehr zurück.
+**[OR-46e10c]** *(Fliesstext)*
+Dafür braucht das Orakel erst deine Einordnungen. Bewerte im «Teppich des Wandels» und bei «Philosophie in Zeiten der Verunsicherung», oder wähle unten deine Grundhaltung zur KI, dann kehr zurück.
 
 **[OR-6b0d5c]** *(Fliesstext)*
 Das Orakel schweigt: Auf dem Server ist gerade kein KI-Schlüssel hinterlegt. Sobald er gesetzt ist, deutet es deine Aktivität hier.

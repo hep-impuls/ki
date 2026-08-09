@@ -143,8 +143,8 @@ Und die KI? Sie kann bei der Umsetzung helfen, etwa eine App, die an die kleinen
 
 ### Thema 03 · Das Orakel
 
-**[OR-36b88f]** *(Fliesstext · Deine Spur durchs Gewebe)*
-[…] von […] Knoten hast du besucht — daneben, wie oft alle zusammen dort waren. Tippe einen Bereich an, um dorthin zurückzukehren.
+**[OR-368796]** *(Fliesstext · Deine Spur durchs Gewebe)*
+[…] von […] Knoten hast du besucht; daneben steht, wie oft alle zusammen dort waren. Tippe einen Bereich an, um dorthin zurückzukehren.
 
-**[OR-a3f18b]** *(Fliesstext · Knotenkarte der Inhalte)*
-Die stärksten Knoten im Gewebe: je grösser der Punkt, desto häufiger — höchstens fünf pro Register, darüber hinaus nur, was über 40-mal angeklickt wurde. Jeder Bereich in seiner Farbe.
+**[OR-0a9918]** *(Fliesstext · Knotenkarte der Inhalte)*
+Die stärksten Knoten im Gewebe: je grösser der Punkt, desto häufiger. Gezeigt werden höchstens fünf pro Register, darüber hinaus nur, was über 40-mal angeklickt wurde. Jeder Bereich in seiner Farbe.

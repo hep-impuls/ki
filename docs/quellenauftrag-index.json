@@ -1,24 +1,24 @@
 {
- "HUB-f5abb9": {
+ "HUB-e725d2": {
   "datei": "page.tsx",
   "ort": "(ohne Abschnitt)",
   "feld": "Fliesstext",
   "stufe": "mittel",
-  "text": "Kaum ein Thema ist so präsent wie die Künstliche Intelligenz — und kaum eines so schwer zu fassen. Es wird viel über sie gesagt, doch vieles bleibt schemenhaft, ein Reden über etwas, das man selten wirklich vor Augen hat. Dieses Lernset will die KI sichtbarer und verständlicher machen, indem es ihr eine Gestalt gibt."
+  "text": "Kaum ein Thema ist so präsent wie die Künstliche Intelligenz, und kaum eines so schwer zu fassen. Es wird viel über sie gesagt, doch vieles bleibt schemenhaft, ein Reden über etwas, das man selten wirklich vor Augen hat. Dieses Lernset will die KI sichtbarer und verständlicher machen, indem es ihr eine Gestalt gibt."
  },
- "HUB-913c20": {
+ "HUB-19a97d": {
   "datei": "page.tsx",
   "ort": "(ohne Abschnitt)",
   "feld": "Fliesstext",
   "stufe": "tief",
-  "text": "Diese Gestalt zeigt sich nicht, wenn man die KI isoliert betrachtet. KI steht nie für sich: Sie baut auf kulturellen, technischen und wirtschaftlichen Überlegungen auf — und erst wenn man dieses Netz mitzeichnet, wird erkennbar, was da eigentlich auftritt. Darum folgt das Design dieses Lernsets einer Idee: Um das Phänomen zu verstehen, muss man das Netzwerk abbilden, in dem es steckt."
+  "text": "Diese Gestalt zeigt sich nicht, wenn man die KI isoliert betrachtet. KI steht nie für sich: Sie baut auf kulturellen, technischen und wirtschaftlichen Überlegungen auf, und erst wenn man dieses Netz mitzeichnet, wird erkennbar, was da eigentlich auftritt. Darum folgt das Design dieses Lernsets einer Idee: Um das Phänomen zu verstehen, muss man das Netzwerk abbilden, in dem es steckt."
  },
- "HUB-a8d0d0": {
+ "HUB-71da1a": {
   "datei": "page.tsx",
   "ort": "(ohne Abschnitt)",
   "feld": "Fliesstext",
   "stufe": "tief",
-  "text": "Deshalb beginnst du gleich mit einem Muster, dessen Knoten du verbinden kannst — noch ohne konkreten Inhalt. Das Muster macht deutlich, dass es viel Kontextarbeit braucht, um KI als Phänomen zu erfassen. In diesem Lernset geht es deshalb immer auch um den Kontext der KI."
+  "text": "Deshalb beginnst du gleich mit einem Muster, dessen Knoten du verbinden kannst, noch ohne konkreten Inhalt. Das Muster macht deutlich, dass es viel Kontextarbeit braucht, um KI als Phänomen zu erfassen. In diesem Lernset geht es deshalb immer auch um den Kontext der KI."
  },
  "HUB-7342bd": {
   "datei": "page.tsx",
@@ -34,12 +34,12 @@
   "stufe": "tief",
   "text": "In diesem Lernset tritt die Philosophie deshalb in den Vordergrund. Wir werden sehen, dass Menschen seit Menschengedenken von ihren eigenen Entwicklungen fasziniert, aber auch besorgt und verunsichert waren. Die Fragen der Philosophie lösen diese Unsicherheit nicht einfach auf. Sie können jedoch Orientierung geben und helfen, den Geschehnissen der eigenen Zeit klarer und gelassener zu begegnen."
  },
- "HUB-8d2d8d": {
+ "HUB-58475f": {
   "datei": "page.tsx",
   "ort": "Der Faden durch das Modul",
   "feld": "Fliesstext",
   "stufe": "tief",
-  "text": "Ein Zusammenhang: Zuerst tritt die neue Akteurin auf, dann ordnet die philosophische Perspektive ein — und am Ende spiegelt das Orakel deinen eigenen Weg durchs Modul."
+  "text": "Ein Zusammenhang: Zuerst tritt die neue Akteurin auf, dann ordnet die philosophische Perspektive ein, und am Ende spiegelt das Orakel deinen eigenen Weg durchs Modul."
  },
  "VA-a17773": {
   "datei": "vorhang-auf/page.tsx",
@@ -3233,12 +3233,12 @@
   "stufe": "tief",
   "text": "Wir nennen diesen Rückblick trotzdem «Orakel», aber aus einem anderen Grund. Seine Deutungen kommen nicht aus dem allwissenden Blick der Götter. Sie sind musterhaft, genau wie die KI arbeitet. Wo die Pythia Zeichen deutete, erkennt die KI Muster in den gesammelten Spuren und spiegelt sie dir zurück. Kein höheres Wissen, sondern erkannte Regelmässigkeit. Und wie schon in Delphi gilt: entscheiden musst am Ende du selbst."
  },
- "OR-552dcc": {
+ "OR-15b14e": {
   "datei": "das-orakel/_components/OrakelDashboard.tsx",
   "ort": "Verunsichert dich noch",
   "feld": "Fliesstext",
   "stufe": "tief",
-  "text": "Hier laufen deine Spuren zusammen. Das Orakel zeigt, was du in diesem Lernset getan hast — wo du weitergehen möchtest, was du vertieft hast, wo du Relevanz sahst und was für dich ohne Bedeutung blieb, welche Punkte du angeklickt und ob du die Aktivitäten im Muster verbunden hast. Mehrere Perspektiven auf dieselben Daten — jeweils, wo es geht, neben den anonymen Werten aller. Zum Schluss deutet die KI deinen Weg in wenigen Sätzen."
+  "text": "Hier laufen deine Spuren zusammen. Das Orakel zeigt, was du in diesem Lernset getan hast: wo du weitergehen möchtest, was du vertieft hast, wo du Relevanz sahst und was für dich ohne Bedeutung blieb, welche Punkte du angeklickt und ob du die Aktivitäten im Muster verbunden hast. Mehrere Perspektiven auf dieselben Daten, jeweils, wo es geht, neben den anonymen Werten aller. Zum Schluss deutet die KI deinen Weg in wenigen Sätzen."
  },
  "OR-33b082": {
   "datei": "das-orakel/_components/OrakelDashboard.tsx",
@@ -3261,19 +3261,19 @@
   "stufe": "tief",
   "text": "info Der Link öffnet den Abschnitt an der richtigen Stelle. Den einzelnen Punkt suchst du dort noch selbst."
  },
- "OR-6ec80d": {
+ "OR-d16ac8": {
   "datei": "das-orakel/_components/OrakelDashboard.tsx",
   "ort": "Was dich besonders interessiert hat",
   "feld": "Fliesstext",
   "stufe": "tief",
-  "text": "Die Inhalte, die du ausgewählt hast — die Grundlage, aus der das Orakel dein Interesse deutet."
+  "text": "Die Inhalte, die du ausgewählt hast: die Grundlage, aus der das Orakel dein Interesse deutet."
  },
- "OR-d2a56b": {
+ "OR-12c639": {
   "datei": "das-orakel/_components/OrakelDashboard.tsx",
   "ort": "Was dich besonders interessiert hat",
   "feld": "Fliesstext",
   "stufe": "tief",
-  "text": "Bisher hast du vor allem die Muster bespielt — […] geknüpft, ohne Inhalte zu öffnen. Auch das ist eine Spur, die das Orakel deuten kann."
+  "text": "Bisher hast du vor allem die Muster bespielt: […] geknüpft, ohne Inhalte zu öffnen. Auch das ist eine Spur, die das Orakel deuten kann."
  },
  "OR-51dfa4": {
   "datei": "das-orakel/_components/OrakelDashboard.tsx",
@@ -3282,19 +3282,19 @@
   "stufe": "tief",
   "text": "insights In einfacher Sprache und drei Absätzen: wo du vor allem aktiv warst, was du bevorzugt hast, und was sich noch lohnt."
  },
- "OR-36b88f": {
+ "OR-368796": {
   "datei": "das-orakel/_components/OrakelDashboard.tsx",
   "ort": "Deine Spur durchs Gewebe",
   "feld": "Fliesstext",
   "stufe": "mittel",
-  "text": "[…] von […] Knoten hast du besucht — daneben, wie oft alle zusammen dort waren. Tippe einen Bereich an, um dorthin zurückzukehren."
+  "text": "[…] von […] Knoten hast du besucht; daneben steht, wie oft alle zusammen dort waren. Tippe einen Bereich an, um dorthin zurückzukehren."
  },
- "OR-a3f18b": {
+ "OR-0a9918": {
   "datei": "das-orakel/_components/OrakelDashboard.tsx",
   "ort": "Knotenkarte der Inhalte",
   "feld": "Fliesstext",
   "stufe": "mittel",
-  "text": "Die stärksten Knoten im Gewebe: je grösser der Punkt, desto häufiger — höchstens fünf pro Register, darüber hinaus nur, was über 40-mal angeklickt wurde. Jeder Bereich in seiner Farbe."
+  "text": "Die stärksten Knoten im Gewebe: je grösser der Punkt, desto häufiger. Gezeigt werden höchstens fünf pro Register, darüber hinaus nur, was über 40-mal angeklickt wurde. Jeder Bereich in seiner Farbe."
  },
  "OR-4ded85": {
   "datei": "das-orakel/_components/OrakelDashboard.tsx",
@@ -3310,12 +3310,12 @@
   "stufe": "tief",
   "text": "Was für ein KI-Typ bist du? Das Orakel liest aus deinen Einordnungen, ob du die KI eher zuversichtlich siehst oder eher als Gefahr, und sagt dir kurz, woran es das festmacht. Es ist eine Lesart deiner Klicks, kein Urteil über dich. Wähle eine Form, und wenn sie dir nicht zusagt, befrage es in einer anderen. Dazu schickt dein Browser eine Zusammenfassung deiner Aktivität: Zähler, Bewertungen und die Titel der Punkte, die du gewählt hast. Ohne Namen und ohne deinen Fortschritts-Code."
  },
- "OR-dff0e0": {
+ "OR-46e10c": {
   "datei": "das-orakel/_components/OrakelDashboard.tsx",
   "ort": "Das Orakel spricht",
   "feld": "Fliesstext",
   "stufe": "tief",
-  "text": "Dafür braucht das Orakel erst deine Einordnungen. Bewerte im «Teppich des Wandels» und bei «Philosophie in Zeiten der Verunsicherung», oder wähle unten deine Grundhaltung zur KI — dann kehr zurück."
+  "text": "Dafür braucht das Orakel erst deine Einordnungen. Bewerte im «Teppich des Wandels» und bei «Philosophie in Zeiten der Verunsicherung», oder wähle unten deine Grundhaltung zur KI, dann kehr zurück."
  },
  "OR-6b0d5c": {
   "datei": "das-orakel/_components/OrakelDashboard.tsx",

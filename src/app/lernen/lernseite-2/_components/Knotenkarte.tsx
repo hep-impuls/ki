@@ -44,19 +44,19 @@ const ANSICHTEN: { id: Ansicht; label: string; icon: string; hinweis: string }[]
     id: "geklickt",
     label: "Angeklickt",
     icon: "ads_click",
-    hinweis: "Die fünf stärksten Punkte — und alles, was über 40-mal angeklickt wurde: KI-Story, Bilder (gezählt pro Punkt im Bild), Merkmale, Teppich und Epochen.",
+    hinweis: "Die fünf stärksten Punkte und alles, was über 40-mal angeklickt wurde: KI-Story, Bilder (gezählt pro Punkt im Bild), Merkmale, Teppich und Epochen.",
   },
   {
     id: "weiter",
     label: "Weiterverfolgt",
     icon: "bookmark",
-    hinweis: "Inhalte, die alle am häufigsten weiterverfolgen möchten — dem könntest du nachgehen.",
+    hinweis: "Inhalte, die alle am häufigsten weiterverfolgen möchten, dem könntest du nachgehen.",
   },
   {
     id: "vertieft",
     label: "Vertieft",
     icon: "unfold_more",
-    hinweis: "Wo am häufigsten «Mehr lesen» geöffnet wurde — die Punkte mit dem grössten Sog in die Tiefe.",
+    hinweis: "Wo am häufigsten «Mehr lesen» geöffnet wurde: die Punkte mit dem grössten Sog in die Tiefe.",
   },
   {
     id: "bekannt",
@@ -143,7 +143,7 @@ function MaybeLink({
         className +
         " underline decoration-outline-variant underline-offset-2 hover:text-tertiary hover:decoration-tertiary"
       }
-      title={`${titel} — zum Abschnitt springen`}
+      title={`${titel}, zum Abschnitt springen`}
     >
       {children}
     </Link>
@@ -455,7 +455,7 @@ export default function Knotenkarte({ className = "" }: { className?: string }) 
         </span>
         <span className="flex items-center gap-xs opacity-70">
           <span className="material-symbols-outlined text-[16px]">group</span>
-          Klasse — mit Klassencode (online)
+          Klasse, mit Klassencode (online)
         </span>
         <span className="flex items-center gap-xs">
           <span className="inline-block h-2.5 w-2.5 rounded-full bg-outline" />
@@ -483,12 +483,12 @@ export default function Knotenkarte({ className = "" }: { className?: string }) 
       {gefiltert.length === 0 ? (
         <p className="mt-md rounded-xl border border-dashed border-outline-variant bg-surface-container-low p-md text-body-sm text-on-surface-variant">
           {ebene === "du"
-            ? "Hier hast du noch nichts markiert — sobald du Punkte anklickst, weiterverfolgst oder vertiefst, erscheinen sie hier. Wechsle auf «Alle», um das Kollektiv zu sehen."
+            ? "Hier hast du noch nichts markiert. Sobald du Punkte anklickst, weiterverfolgst oder vertiefst, erscheinen sie hier. Wechsle auf «Alle», um das Kollektiv zu sehen."
             : ansicht === "bekannt"
-              ? "Noch keine Bekanntheits-Bewertungen — bewerte im «Teppich des Wandels», was dir bekannt war."
+              ? "Noch keine Bekanntheits-Bewertungen. Bewerte im «Teppich des Wandels», was dir bekannt war."
               : ansicht === "geklickt"
-                ? "Noch keine Klicks gezählt — sobald Punkte angeklickt werden, erscheinen hier die stärksten."
-                : "Noch keine Daten — sobald Inhalte weiterverfolgt oder vertieft werden, erscheinen hier die stärksten."}
+                ? "Noch keine Klicks gezählt. Sobald Punkte angeklickt werden, erscheinen hier die stärksten."
+                : "Noch keine Daten. Sobald Inhalte weiterverfolgt oder vertieft werden, erscheinen hier die stärksten."}
         </p>
       ) : (
         /* `grid-cols-1` ist hier nicht Zierde: Ohne Spaltenangabe ist die

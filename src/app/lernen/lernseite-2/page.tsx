@@ -45,7 +45,7 @@ export default function Lernseite2Hub() {
         <h1 className="mt-sm text-headline-xl text-on-surface">{mod.title}</h1>
         <div className="mt-sm max-w-3xl space-y-sm text-body-lg text-on-surface-variant">
           <p>
-            Kaum ein Thema ist so präsent wie die Künstliche Intelligenz — und
+            Kaum ein Thema ist so präsent wie die Künstliche Intelligenz, und
             kaum eines so schwer zu fassen. Es wird viel über sie gesagt, doch
             vieles bleibt schemenhaft, ein Reden über etwas, das man selten
             wirklich vor Augen hat. Dieses Lernset will die KI{" "}
@@ -56,7 +56,7 @@ export default function Lernseite2Hub() {
           <p>
             Diese Gestalt zeigt sich nicht, wenn man die KI isoliert betrachtet.
             KI steht nie für sich: Sie baut auf kulturellen, technischen und
-            wirtschaftlichen Überlegungen auf — und erst wenn man dieses Netz
+            wirtschaftlichen Überlegungen auf, und erst wenn man dieses Netz
             mitzeichnet, wird erkennbar, was da eigentlich auftritt. Darum folgt
             das Design dieses Lernsets einer Idee: Um das Phänomen zu verstehen,
             muss man das <strong className="text-on-surface">Netzwerk abbilden</strong>,
@@ -64,7 +64,7 @@ export default function Lernseite2Hub() {
           </p>
           <p>
             Deshalb beginnst du gleich mit einem Muster, dessen Knoten du
-            verbinden kannst — noch <strong className="text-on-surface">ohne
+            verbinden kannst, noch <strong className="text-on-surface">ohne
             konkreten Inhalt</strong>. Das Muster macht deutlich, dass es viel <strong className="text-on-surface">Kontextarbeit</strong>{" "}
             braucht, um KI als Phänomen zu erfassen. In diesem Lernset geht es deshalb immer
             auch um den Kontext der KI.
@@ -161,7 +161,7 @@ export default function Lernseite2Hub() {
         className="mt-xl"
         spurId="video:hub"
         videoId="d8w2hVHH7Xo"
-        titel="Eine ganz neue Partnerschaft — worum es geht"
+        titel="Eine ganz neue Partnerschaft: worum es geht"
         beschreibung="Ein kurzer Einstieg ins Modul: Was ist da aufgetreten, und warum lohnt es sich, genauer hinzuschauen?"
       />
 
@@ -170,7 +170,7 @@ export default function Lernseite2Hub() {
           <h2 className="text-headline-md text-on-surface">Der Faden durch das Modul</h2>
           <p className="mt-xs max-w-3xl text-body-sm text-on-surface-variant">
             Ein Zusammenhang: Zuerst tritt die neue Akteurin auf, dann ordnet
-            die philosophische Perspektive ein — und am Ende spiegelt das
+            die philosophische Perspektive ein, und am Ende spiegelt das
             Orakel deinen eigenen Weg durchs Modul.
           </p>
         </div>
