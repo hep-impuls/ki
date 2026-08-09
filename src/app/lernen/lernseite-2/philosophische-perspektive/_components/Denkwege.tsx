@@ -516,7 +516,29 @@ export default function Denkwege({
   }, [standKey, idx]);
 
   useEffect(() => {
-    BEREICHE.forEach((b, i) => merkeInhalt(`${spurKey}:${i}`, b.titel));
+    BEREICHE.forEach((b, i) => {
+      merkeInhalt(`${spurKey}:${i}`, b.titel);
+      /* Auch die Denkerinnen und Denker gleich registrieren — ALLE, nicht nur
+         die aufgeklappten. Vorher schrieb den Titel allein `KartenAktion`, und
+         die rendert erst, wenn jemand die Box öffnet. Ergebnis: Von 20 Namen war
+         in einem Browser, der die Seite durchgearbeitet hatte, kein einziger
+         bekannt. In der Knotenkarte stand darum bei den weiterverfolgten
+         Stimmen «Orientierung · Punkt 0».
+         ACHTUNG, zwei Kennungen für dieselbe Person: Das Merkzeichen läuft unter
+         `philosophische-perspektive:denker:…` (siehe `wunschId` unten), die
+         Vertiefung unter `…:denkwege:denker:…` (siehe `denkerSpur`). Beide
+         Formen erscheinen in der Knotenkarte — die eine im Register
+         «Weiterverfolgt», die andere in «Vertieft» —, darum brauchen beide einen
+         Titel. Zusammenlegen würde die gesammelten anonymen Zähler auseinander-
+         reissen; das wäre eine Wanderung, nicht eine Korrektur. Der Wortlaut ist
+         derselbe wie bei `KartenAktion` und `merkeVertiefung`, sonst gäbe es zwei
+         Fassungen desselben Inhalts. */
+      b.denker.forEach((p) => {
+        const titel = `${p.name}: ${p.these}`;
+        merkeInhalt(`philosophische-perspektive:denker:${i}:${p.slug}`, titel);
+        merkeInhalt(denkerSpur(i, p.slug), titel);
+      });
+    });
   }, [spurKey]);
 
   function geheZu(ziel: number) {

@@ -10,6 +10,37 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-08 — Die 20 Denker hatten keinen Titel; Ersatztext benannte Verschiedenes gleich (Christof)
+
+Christof mobil: In der Knotenkarte fehlt teils noch der Text. Der Screenshot
+zeigte fünf Zeilen, vier ohne Titel und **drei mit demselben** Text
+(«Orientierung · Punkt 0»), obwohl es verschiedene Inhalte waren. Zwei Fehler
+übereinander:
+
+**1. Kein Titel.** Den Titel einer Person schrieb allein `KartenAktion` — und die
+rendert erst, wenn jemand die Box aufklappt. Gemessen: In einem Browser, der die
+Seite durchgearbeitet hatte, war von 20 Namen **kein einziger** registriert. Die
+anderen Komponenten registrieren ihre Inhalte längst beim Rendern; `Denkwege` tat
+es nur für die vier Bereiche, nicht für die Personen. Jetzt für alle.
+
+**2. Ersatztext ohne Unterscheidungskraft.** Er las nur die Ziffern der Kennung,
+also wurde `…:denker:0:aristoteles` zu «Punkt 0» — und dasselbe für jede Person
+des Bereichs. Neu wird ein sprechendes letztes Segment als Name genommen
+(«Orientierung · Aristoteles»); Zähl-Segmente wie `hs0` gehen weiter den
+Ziffernweg.
+
+**Wichtig für alle, die hier weiterbauen: Eine Person hat ZWEI Kennungen.**
+Das Merkzeichen läuft unter `philosophische-perspektive:denker:{i}:{slug}`, die
+Vertiefung unter `…:denkwege:denker:{i}:{slug}`. Beide erscheinen in der
+Knotenkarte, in verschiedenen Registern, darum brauchen beide einen Titel — genau
+daran ist mein erster Versuch gescheitert, er registrierte nur eine Form.
+Zusammenlegen wäre sauberer, würde aber die gesammelten anonymen Zähler
+auseinanderreissen; das wäre eine Wanderung, keine Korrektur.
+
+**Regel:** Titel gehören dorthin, wo der Inhalt DEFINIERT ist, und werden beim
+Rendern für ALLE Einträge geschrieben — nicht erst beim Anklicken. Sonst kennt
+das Orakel nur, was jemand zufällig geöffnet hat.
+
 ## 2026-08-08 — «Wege der Orientierung» merkt sich den Bereich; Ebenen-Umschalter pulsiert (Christof)
 
 **Der Standort ging verloren, aber nicht dort, wo es aussah.** Christof: Wer bei

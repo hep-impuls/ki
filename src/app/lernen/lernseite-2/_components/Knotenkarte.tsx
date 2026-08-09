@@ -227,7 +227,20 @@ export default function Knotenkarte({ className = "" }: { className?: string }) 
     const bekannt = inhalte[id];
     if (bekannt) return bekannt;
     const bereich = areaVon(id).name;
-    /* Alle Ziffernfolgen der ID, nicht nur die letzte: «…:bilder:2:hs0» und
+    /* Steckt ein sprechender Name in der Kennung, ist er der beste Ersatz.
+       «…:denker:0:aristoteles» wurde vorher zu «Orientierung · Punkt 0», und
+       zwar für JEDE Person dieses Bereichs — drei Zeilen der Rangliste hiessen
+       gleich, obwohl sie verschiedene Inhalte waren. Ausgeschlossen sind reine
+       Zähl-Segmente wie «hs0» oder «12». */
+    const letztes = id.split(":").pop() ?? "";
+    if (/^[a-zäöüéèà][a-zäöüéèà-]{2,}$/i.test(letztes)) {
+      const name = letztes
+        .split("-")
+        .map((t) => t.charAt(0).toUpperCase() + t.slice(1))
+        .join("-");
+      return `${bereich} · ${name}`;
+    }
+    /* Sonst alle Ziffernfolgen, nicht nur die letzte: «…:bilder:2:hs0» und
        «…:bilder:3:hs0» enden beide auf 0 und wären sonst gleich beschriftet. */
     const zahlen = [...id.matchAll(/\d+/g)].map((m) => m[0]);
     return zahlen.length
