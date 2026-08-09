@@ -687,6 +687,13 @@ export default function OrakelDashboard() {
   const staerkste = [...bereichsAnteile].sort((a, b) => b.anteil - a.anteil).slice(0, 2);
   const schwaechste = [...bereichsAnteile].sort((a, b) => a.anteil - b.anteil).slice(0, 2);
 
+  /* Steht der Abschnitt der ersten Stimme? Einmal berechnet, weil sowohl die
+     Navigation als auch der Abschnitt selbst daran hängen und die beiden nicht
+     auseinanderlaufen dürfen. */
+  const ersteStimmeDa = auswertung.some(
+    (a) => a.labels.length > 0 || a.flaechenGefuellt > 0,
+  );
+
   /* Die drei Felder mit Sprungliste bekommen je einen eigenen Rahmen, damit man
      sieht, dass hier etwas dahinter steckt. Die Farbe folgt der Bedeutung
      (Akzent = weiterverfolgen, positiv = relevant, gedämpft = ohne Bedeutung).
@@ -918,17 +925,32 @@ export default function OrakelDashboard() {
         </p>
       </section>
 
-      {/* Inhaltsverzeichnis (Navigation) + Klammersymbol oben rechts */}
+      {/* Inhaltsverzeichnis (Navigation) + Klammersymbol oben rechts.
+          Die einzige Navigation dieser Seite; in `page.tsx` stand dieselbe
+          Liste ein zweites Mal.
+
+          Die erste Orakel-Stimme kommt nur in die Liste, wenn ihr Abschnitt
+          auch gerendert wird. Er hängt an gewählten Inhalten oder geknüpften
+          Flächen, und ein Eintrag ohne Ziel wäre ein Blindgänger: Der Sprung
+          sucht per getElementById, findet nichts und tut still nichts. */}
       <Inhaltsverzeichnis
         className="mt-lg"
         ohneFortschritt
         eintraege={[
           { id: "perspektiven", label: "Perspektiven auf deine Aktivität" },
+          ...(ersteStimmeDa
+            ? [
+                {
+                  id: "orakel-erste-stimme",
+                  label: "Das Orakel spricht, erste Stimme",
+                },
+              ]
+            : []),
           { id: "deine-spur", label: "Deine Spur durchs Gewebe" },
           { id: "knotenkarte", label: "Knotenkarte der Inhalte" },
           { id: "achtsamkeit", label: "Achtsamkeit auf die Kontexte" },
-          { id: "orakel-spricht", label: "Das Orakel spricht" },
           { id: "blick", label: "Wie blickst du heute auf KI?" },
+          { id: "orakel-spricht", label: "Das Orakel spricht, zweite Stimme" },
           { id: "rueckmeldung", label: "Deine Rückmeldung" },
         ]}
       />
@@ -1048,8 +1070,12 @@ export default function OrakelDashboard() {
 
       {/* 1b — Was dich besonders interessiert hat (analytisch, aus den
           tatsächlich gewählten Inhalten — oder dem reinen Muster-Bespielen) */}
-      {auswertung.some((a) => a.labels.length > 0 || a.flaechenGefuellt > 0) && (
-        <section className="mt-xl" aria-label="Was dich besonders interessiert hat">
+      {ersteStimmeDa && (
+        <section
+          id="orakel-erste-stimme"
+          className="mt-xl scroll-mt-24"
+          aria-label="Was dich besonders interessiert hat und die erste Orakel-Stimme"
+        >
           <h2 className="text-headline-md text-on-surface">
             Was dich besonders interessiert hat
           </h2>
@@ -1850,9 +1876,16 @@ export default function OrakelDashboard() {
             <div style={{ breakBefore: "page", pageBreakBefore: "always" }}>
             {intOrakel.status === "ok" && intOrakel.text && (
               <>
-                <h2 style={{ fontSize: "1.1rem", margin: "0 0 0.4rem" }}>
-                  Wo ich aktiv war und was sich noch lohnt
+                {/* Titel wie in der Navigation, Gegenstand als Unterzeile:
+                    «erste Stimme» sagt, WELCHE der zwei Stimmen spricht, die
+                    Unterzeile sagt, WOVON. Beides zusammen, weil der Ausdruck
+                    ohne die Seite gelesen wird. */}
+                <h2 style={{ fontSize: "1.1rem", margin: "0 0 0.1rem" }}>
+                  Das Orakel spricht, erste Stimme
                 </h2>
+                <p style={{ margin: "0 0 0.4rem", fontSize: "0.85rem", color: "#555" }}>
+                  Wo ich aktiv war und was sich noch lohnt
+                </p>
                 <p style={{ margin: 0, fontSize: "1.05rem", lineHeight: 1.6, whiteSpace: "pre-line" }}>
                   {intOrakel.text}
                 </p>
@@ -1868,12 +1901,15 @@ export default function OrakelDashboard() {
 
             {aktuell.status === "ok" && aktuell.text && (
               <>
-                {/* Der Ausdruck bleibt bei den Lernenden, darum muss die
-                    Überschrift den Gegenstand nennen und nicht bloss die Form.
-                    «Wissenschaftliche Deutung» sagte nicht, wovon. */}
-                <h2 style={{ fontSize: "1.1rem", margin: "1.75rem 0 0.4rem" }}>
-                  Mein KI-Typ, {STILE.find((s) => s.id === stil)?.label.toLowerCase()} gedeutet
+                {/* Der Ausdruck bleibt bei den Lernenden, darum nennt die
+                    Unterzeile den Gegenstand und die gewählte Form. «Wissen-
+                    schaftliche Deutung» allein sagte nicht, wovon. */}
+                <h2 style={{ fontSize: "1.1rem", margin: "1.75rem 0 0.1rem" }}>
+                  Das Orakel spricht, zweite Stimme
                 </h2>
+                <p style={{ margin: "0 0 0.4rem", fontSize: "0.85rem", color: "#555" }}>
+                  Mein KI-Typ, {STILE.find((s) => s.id === stil)?.label.toLowerCase()} gedeutet
+                </p>
                 <p style={{ margin: 0, fontSize: "1.05rem", lineHeight: 1.6, whiteSpace: "pre-line" }}>
                   {aktuell.text}
                 </p>

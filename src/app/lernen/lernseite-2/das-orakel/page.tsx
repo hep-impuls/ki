@@ -4,7 +4,6 @@ import AppLayout from "@/components/layout/AppLayout";
 import OrakelDashboard from "./_components/OrakelDashboard";
 import SeitenNavigation from "../_components/SeitenNavigation";
 import ModulMiniNav from "../_components/ModulMiniNav";
-import Inhaltsverzeichnis from "../_components/Inhaltsverzeichnis";
 import AbschnittKopf from "../_components/AbschnittKopf";
 
 /**
@@ -49,25 +48,13 @@ export default function Lernseite2DasOrakel() {
         </p>
       </AbschnittKopf>
 
-      {/* Klammersymbol oben rechts. Auf schmalen Schirmen liegt darin auch
-          «Der Faden», weil die schwebende ModulMiniNav dort ausgeblendet ist —
-          ohne dieses Verzeichnis gab es auf dem Handy weder eine
-          Kapitelnavigation noch einen Weg zurück in die anderen zwei Module.
-          `ohneFortschritt`, weil diese Seite ein Rückblick ist und keine
-          Aufgaben zum Abhaken hat. */}
-      <Inhaltsverzeichnis
-        className="mt-xl max-w-3xl"
-        ohneFortschritt
-        eintraege={[
-          { id: "perspektiven", label: "Perspektiven auf deine Aktivität" },
-          { id: "deine-spur", label: "Deine Spur durchs Gewebe" },
-          { id: "knotenkarte", label: "Knotenkarte der Inhalte" },
-          { id: "achtsamkeit", label: "Achtsamkeit auf die Kontexte" },
-          { id: "orakel-spricht", label: "Das Orakel spricht" },
-          { id: "blick", label: "Blick auf KI" },
-          { id: "rueckmeldung", label: "Deine Rückmeldung" },
-        ]}
-      />
+      {/* Das Inhaltsverzeichnis samt Klammersymbol steht im Dashboard, nicht
+          hier. Vorher stand es an BEIDEN Stellen: «Auf dieser Seite» erschien
+          zweimal untereinander, das Klammersymbol oben rechts doppelt
+          übereinander. Die zwei Listen drifteten schon auseinander (hier «Blick
+          auf KI», dort «Wie blickst du heute auf KI?»). Die Abschnitte entstehen
+          im Dashboard, und nur dort kennt die Liste auch die bedingten
+          Abschnitte wie die erste Orakel-Stimme. */}
 
       <section className="mt-xl">
         <OrakelDashboard />
