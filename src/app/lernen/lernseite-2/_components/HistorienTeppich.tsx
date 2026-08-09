@@ -321,7 +321,7 @@ export default function HistorienTeppich({
             {alleBesucht ? "done_all" : "touch_app"}
           </span>
           {besucht.size === 0
-            ? "Tippe die Punkte an — die Fäden weben sich ein"
+            ? "Tippe die Punkte an, die Fäden weben sich ein"
             : `${besucht.size} von ${n} Punkten besucht`}
         </p>
         {besucht.size > 0 && (
@@ -374,7 +374,7 @@ export default function HistorienTeppich({
           preserveAspectRatio="none"
           className="block w-full select-none aspect-[720/430] sm:aspect-[720/300]"
           role="img"
-          aria-label="Teppich des Wandels: vier Fäden — Technologie, Entdeckungen, gesellschaftliche Ereignisse und kulturelle Praxen — weben sich durchs Antippen der Punkte ein; zwischen besuchten Punkten füllen sich gemusterte Maschen."
+          aria-label="Teppich des Wandels: vier Fäden (Technologie, Entdeckungen, gesellschaftliche Ereignisse und kulturelle Praxen) weben sich durchs Antippen der Punkte ein; zwischen besuchten Punkten füllen sich gemusterte Maschen."
         >
           {/* Webmuster — 12 leuchtende Farb-/Textur-Kombinationen; jede neue
               Masche bringt die nächste, so wächst die Vielfalt mit dem Füllen */}
@@ -523,13 +523,14 @@ export default function HistorienTeppich({
           <div className="rounded-xl border border-outline-variant bg-surface-container-low p-lg">
             <p className="flex items-start gap-sm text-body-md text-on-surface-variant">
               <span className="material-symbols-outlined text-[20px] text-tertiary">explore</span>
-              So geht es: Im Teppich liegen vier Fäden verborgen — Technologie,
-              Entdeckungen, gesellschaftliche Ereignisse und kulturelle Praxen.
+              So geht es: Im Teppich liegen vier Fäden verborgen, nämlich
+              Technologie, Entdeckungen, gesellschaftliche Ereignisse und
+              kulturelle Praxen.
               Tippe einen Punkt an: Seine Geschichte erscheint hier, und sobald
               zwei benachbarte Punkte desselben Fadens besucht sind, wird das
               Fadenstück dazwischen sichtbar. Über die Legende oben lassen sich
               ganze Fäden ein- und ausblenden; erneutes Antippen wählt einen
-              Punkt wieder ab. Die Fäden kreuzen sich zwischendurch — und laufen
+              Punkt wieder ab. Die Fäden kreuzen sich zwischendurch und laufen
               auch allein.
             </p>
           </div>

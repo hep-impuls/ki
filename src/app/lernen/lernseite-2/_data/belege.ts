@@ -147,7 +147,7 @@ export const BELEGE: Beleg[] = [
     url: "https://de.wikipedia.org/wiki/Solon",
     titel: "Solon (Wikipedia)",
     stelle:
-      "Abschnitt «Solons Gesetzgebung»: Das Gesetzeswerk wurde auf Holztafeln (Axones) gesichert, «in der Art heutiger Postkartenständer drehbar an Pflöcken befestigt». Aufbewahrt wurden sie im Prytaneion — darum nennt der Lernset-Text keinen Ort.",
+      "Abschnitt «Solons Gesetzgebung»: Das Gesetzeswerk wurde auf Holztafeln (Axones) gesichert, «in der Art heutiger Postkartenständer drehbar an Pflöcken befestigt». Aufbewahrt wurden sie im Prytaneion. Darum nennt der Lernset-Text keinen Ort.",
     geprueft: "2026-07-29",
   },
   {
@@ -362,7 +362,7 @@ export const BELEGE: Beleg[] = [
     url: "https://de.wikipedia.org/wiki/Aristoteles",
     titel: "Aristoteles (Wikipedia)",
     stelle:
-      "«Die Fülle des Materials, das Aristoteles sammelte (etwa zu den 158 Verfassungen der griechischen Stadtstaaten), lässt darauf schliessen, dass er über zahlreiche Mitarbeiter verfügte.» Vorher stand hier «Gesetze von über 150 Städten» — gesammelt wurden Verfassungen, das erhaltene Stück heisst «Die Verfassung der Athener».",
+      "«Die Fülle des Materials, das Aristoteles sammelte (etwa zu den 158 Verfassungen der griechischen Stadtstaaten), lässt darauf schliessen, dass er über zahlreiche Mitarbeiter verfügte.» Vorher stand hier «Gesetze von über 150 Städten». Gesammelt wurden Verfassungen, das erhaltene Stück heisst «Die Verfassung der Athener».",
     geprueft: "2026-08-05",
   },
   {
@@ -427,7 +427,7 @@ export const BELEGE: Beleg[] = [
     url: "https://de.wikipedia.org/wiki/Rocket_(Lokomotive)",
     titel: "Rocket (Lokomotive) (Wikipedia)",
     stelle:
-      "Die Rocket erreichte 47 km/h Höchstgeschwindigkeit; ein Englisches Vollblut läuft laut dem Artikel «Hauspferd» bis zu 70 km/h. Neu war also nicht die Spitze, sondern das Durchhalten — vorher behauptete der Text «schneller, als je ein Pferd gelaufen war».",
+      "Die Rocket erreichte 47 km/h Höchstgeschwindigkeit; ein Englisches Vollblut läuft laut dem Artikel «Hauspferd» bis zu 70 km/h. Neu war also nicht die Spitze, sondern das Durchhalten; vorher behauptete der Text «schneller, als je ein Pferd gelaufen war».",
     geprueft: "2026-08-05",
   },
   {
@@ -467,7 +467,7 @@ export const BELEGE: Beleg[] = [
     url: "https://de.wikipedia.org/wiki/Clara_Immerwahr",
     titel: "Clara Immerwahr (Wikipedia)",
     stelle:
-      "«Clara Haber erschoss sich am 2. Mai 1915.» Der Giftgasangriff bei Ypern war am 22. April 1915 (Artikel «Fritz Haber») — zehn Tage, nicht «wenige Tage», wie vorher hier stand.",
+      "«Clara Haber erschoss sich am 2. Mai 1915.» Der Giftgasangriff bei Ypern war am 22. April 1915 (Artikel «Fritz Haber»), also zehn Tage, nicht «wenige Tage», wie vorher hier stand.",
     geprueft: "2026-08-05",
   },
   {
@@ -485,7 +485,7 @@ export const BELEGE: Beleg[] = [
     url: "https://de.wikipedia.org/wiki/National_Oceanic_and_Atmospheric_Administration",
     titel: "NOAA (Wikipedia)",
     stelle:
-      "Die NOAA ist die «Wetter- und Ozeanografiebehörde der Vereinigten Staaten», keine Weltraumbehörde — so nannte der Text vorher beide.",
+      "Die NOAA ist die «Wetter- und Ozeanografiebehörde der Vereinigten Staaten», keine Weltraumbehörde. So nannte der Text vorher beide.",
     geprueft: "2026-08-05",
   },
   {
@@ -494,7 +494,7 @@ export const BELEGE: Beleg[] = [
     url: "https://de.wikipedia.org/wiki/Apollo_17",
     titel: "Apollo 17 (Wikipedia)",
     stelle:
-      "«Mit Apollo 17 landeten zum sechsten und vorerst letzten Mal Menschen auf dem Mond.» Als letzte bemannte MondMISSION gilt sie seit April 2026 nicht mehr: «Apollo 17 blieb bis zur Mission Artemis 2 im Jahr 2026 der letzte bemannte Mondflug» — Artemis 2 umrundete den Mond, landete aber nicht.",
+      "«Mit Apollo 17 landeten zum sechsten und vorerst letzten Mal Menschen auf dem Mond.» Als letzte bemannte MondMISSION gilt sie seit April 2026 nicht mehr: «Apollo 17 blieb bis zur Mission Artemis 2 im Jahr 2026 der letzte bemannte Mondflug». Artemis 2 umrundete den Mond, landete aber nicht.",
     geprueft: "2026-08-05",
   },
   /* ── Der Schachtürke ──────────────────────────────────────────────────────
@@ -527,7 +527,7 @@ export const BELEGE: Beleg[] = [
     url: "https://de.wikipedia.org/wiki/Schacht%C3%BCrke",
     titel: "Schachtürke (Wikipedia), zur Wirkung des Kostüms",
     stelle:
-      "Die Kleidung war laut dem dort zitierten Autor Tom Standage «die traditionelle Kleidung eines orientalischen Zauberers» — das Kostüm gehörte also zur Schaustellerei, nicht zur Mechanik.",
+      "Die Kleidung war laut dem dort zitierten Autor Tom Standage «die traditionelle Kleidung eines orientalischen Zauberers». Das Kostüm gehörte also zur Schaustellerei, nicht zur Mechanik.",
     geprueft: "2026-08-08",
   },
   {
@@ -628,7 +628,7 @@ export const BELEGE: Beleg[] = [
     url: "https://de.wikipedia.org/wiki/%C3%9Cberwachtes_Lernen",
     titel: "Überwachtes Lernen (Wikipedia)",
     stelle:
-      "«Überwachtes Lernen (englisch supervised learning) ist eine wichtige Kategorie des Maschinellen Lernens. Dabei wird ein Lernalgorithmus mit Datensätzen trainiert und validiert, die für jede Eingabe einen passenden Ausgabewert enthalten. Man bezeichnet solche Datensätze als markiert oder gelabelt.» Beispiel dort: Bilder von Katzen und Hunden, denen «in der Regel ein Mensch» das Label beigefügt hat — im Lernset «vorsortierte Beispiele». Abgegrenzt wird es vom unüberwachten Lernen, «bei dem das Modell selbst ohne Vorgaben Muster oder Strukturen identifiziert».",
+      "«Überwachtes Lernen (englisch supervised learning) ist eine wichtige Kategorie des Maschinellen Lernens. Dabei wird ein Lernalgorithmus mit Datensätzen trainiert und validiert, die für jede Eingabe einen passenden Ausgabewert enthalten. Man bezeichnet solche Datensätze als markiert oder gelabelt.» Beispiel dort: Bilder von Katzen und Hunden, denen «in der Regel ein Mensch» das Label beigefügt hat, im Lernset «vorsortierte Beispiele». Abgegrenzt wird es vom unüberwachten Lernen, «bei dem das Modell selbst ohne Vorgaben Muster oder Strukturen identifiziert».",
     geprueft: "2026-08-08",
   },
 

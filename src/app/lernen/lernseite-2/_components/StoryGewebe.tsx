@@ -79,13 +79,13 @@ const ANSICHTEN = [
     id: "gewebe",
     label: "Gewebe",
     hinweis:
-      "Freies Netz — zieh die Punkte mit Maus oder Finger, das Gewebe federt mit. Verbunden bleibt, was zusammengehört.",
+      "Freies Netz: Zieh die Punkte mit Maus oder Finger, das Gewebe federt mit. Verbunden bleibt, was zusammengehört.",
   },
   {
     id: "zeit",
     label: "Zeitlich",
     hinweis:
-      "Eine Perlenschnur von früher (oben) nach heute (unten). Bewege den Zeiger durchs Muster — die Kette schwingt; tippe eine Perle zum Lesen.",
+      "Eine Perlenschnur von früher (oben) nach heute (unten). Bewege den Zeiger durchs Muster, die Kette schwingt; tippe eine Perle zum Lesen.",
   },
 ] as const;
 
@@ -312,7 +312,7 @@ function StoryPerlschnur({
       onPointerLeave={onUp}
       className="mx-auto block w-full max-w-[560px] touch-none select-none"
       role="img"
-      aria-label="Die KI-Story als hängende Perlenschnur — von früher (oben) nach heute (unten)."
+      aria-label="Die KI-Story als hängende Perlenschnur, von früher (oben) nach heute (unten)."
     >
       <text x={P_AX + 12} y={P_AY - 8} fontSize="11" letterSpacing="0.08em" className="fill-on-surface-variant uppercase" opacity="0.7">
         früher
@@ -903,7 +903,7 @@ export default function StoryGewebe({
         <div className="mb-sm flex flex-wrap items-center justify-between gap-sm">
           <p className="flex items-center gap-xs text-label-md uppercase tracking-wider text-tertiary">
             <span className="material-symbols-outlined text-[16px]">filter_alt</span>
-            Drei Stationen sind per Zufall gesetzt — hol dir die übrigen dazu
+            Drei Stationen sind per Zufall gesetzt, hol dir die übrigen dazu
           </p>
           <div className="flex gap-xs">
             <button
@@ -1116,10 +1116,10 @@ export default function StoryGewebe({
           <div className="rounded-xl border border-outline-variant bg-surface-container-low p-lg">
             <p className="flex items-start gap-sm text-body-md text-on-surface-variant">
               <span className="material-symbols-outlined text-[20px] text-tertiary">explore</span>
-              So geht es: Das ganze Gewebe ist sichtbar — drei Punkte sind
+              So geht es: Das ganze Gewebe ist sichtbar, drei Punkte sind
               schon hervorgehoben. Über die Stichworte oben hebst du weitere
               Punkte fett hervor, und ihre Verbindungen färben sich ein. Tippe
-              einen Punkt an — seine Geschichte erscheint hier und bleibt
+              einen Punkt an, seine Geschichte erscheint hier und bleibt
               stehen. Im Gewebe lassen sich die Punkte auch ziehen; «Zeitlich»
               reiht die hervorgehobenen Stationen als Perlenschnur von früher
               nach heute.

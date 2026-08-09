@@ -293,10 +293,10 @@ export default function FadenNetz({
             {done ? "done_all" : "swipe"}
           </span>
           {done
-            ? `Alle ${n} Knoten besucht — das Muster ist gewoben`
+            ? `Alle ${n} Knoten besucht, das Muster ist gewoben`
             : started
             ? `${visited.size} von ${n} Knoten besucht`
-            : "Fahr den Fäden nach — mehrere Wege sind möglich"}
+            : "Fahr den Fäden nach, mehrere Wege sind möglich"}
         </p>
         {started && (
           <button

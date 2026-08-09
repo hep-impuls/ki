@@ -81,7 +81,7 @@ export default function BilderAnschauung({
     bilder.forEach((b, i) => {
       merkeInhalt(`${spurKey}:${i}`, b.titel);
       b.hotspots.forEach((h, hi) =>
-        merkeInhalt(`${spurKey}:${i}:hs${hi}`, `${b.titel} — ${h.titel}`),
+        merkeInhalt(`${spurKey}:${i}:hs${hi}`, `${b.titel} · ${h.titel}`),
       );
     });
   }, [bilder, spurKey]);
@@ -251,7 +251,7 @@ export default function BilderAnschauung({
           className="fixed inset-0 z-[60] flex flex-col bg-inverse-surface/95"
           role="dialog"
           aria-modal="true"
-          aria-label={`${bild.titel} — Anschauungsmodus`}
+          aria-label={`${bild.titel}, Anschauungsmodus`}
         >
           {/* Kopfzeile */}
           <div className="flex items-center justify-between gap-md px-md py-sm text-inverse-on-surface">
@@ -394,13 +394,13 @@ export default function BilderAnschauung({
                 </p>
                 <p className="mt-sm flex items-center gap-xs text-label-sm opacity-60">
                   <span className="material-symbols-outlined text-[16px]">touch_app</span>
-                  Tippe die leuchtenden Punkte im Bild an — jeder erzählt ein Detail.
+                  Tippe die leuchtenden Punkte im Bild an, jeder erzählt ein Detail.
                 </p>
               </div>
             ) : (
               <p className="mx-auto flex max-w-3xl items-center gap-sm text-body-sm text-inverse-on-surface opacity-75">
                 <span className="material-symbols-outlined text-[20px]">touch_app</span>
-                Tippe die leuchtenden Punkte an — jeder erzählt etwas über das,
+                Tippe die leuchtenden Punkte an, jeder erzählt etwas über das,
                 worin die neue Akteurin verwoben ist.
               </p>
             )}

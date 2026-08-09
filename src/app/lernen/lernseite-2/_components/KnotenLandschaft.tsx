@@ -467,14 +467,14 @@ export default function KnotenLandschaft({
             {done ? "done_all" : "touch_app"}
           </span>
           {done
-            ? `Alle ${n} Punkte besucht — das Muster ist gewoben`
+            ? `Alle ${n} Punkte besucht, das Muster ist gewoben`
             : started
             ? `${visited.size} von ${n} Punkten besucht${
                 kantenAktiv.size > 0 ? ` · ${kantenAktiv.size} Verbindungen` : ""
               }`
             : kantenInteraktiv
             ? "Punkte antippen, Verbindungen einloggen"
-            : "Punkte antippen — zwischen ihnen füllen sich Flächen"}
+            : "Punkte antippen, zwischen ihnen füllen sich Flächen"}
         </p>
         {started && (
           <button

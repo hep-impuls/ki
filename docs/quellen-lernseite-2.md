@@ -174,7 +174,7 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 - **Kennung:** `VA-c4ea88` (Kartentext)
 - **Quelle:** [Schachtürke (Wikipedia), zur Wirkung des Kostüms](https://de.wikipedia.org/wiki/Schacht%C3%BCrke)
-- **Fundstelle:** Die Kleidung war laut dem dort zitierten Autor Tom Standage «die traditionelle Kleidung eines orientalischen Zauberers» — das Kostüm gehörte also zur Schaustellerei, nicht zur Mechanik.
+- **Fundstelle:** Die Kleidung war laut dem dort zitierten Autor Tom Standage «die traditionelle Kleidung eines orientalischen Zauberers». Das Kostüm gehörte also zur Schaustellerei, nicht zur Mechanik.
 - **Geprüft:** 2026-08-08
 
 > Der «Türke» ist keine Person, sondern eine Puppe: Kopf und Oberkörper in Lebensgrösse, mit schwarzem Bart, osmanischem Gewand und Turban. Von diesem Kostüm hat die Maschine ihren Namen. Es gehörte zur Vorstellung, denn solche Kleidung galt im 18. Jahrhundert als die eines orientalischen Zauberers und versprach dem Publikum Geheimnis. Unter Mälzel kam später ein Sprechwerk dazu, das mitten in der Partie «Échec!» rufen konnte.
@@ -264,7 +264,7 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 - **Kennung:** `VA-bbf698` (Kartentext)
 - **Quelle:** [Überwachtes Lernen (Wikipedia)](https://de.wikipedia.org/wiki/%C3%9Cberwachtes_Lernen)
-- **Fundstelle:** «Überwachtes Lernen (englisch supervised learning) ist eine wichtige Kategorie des Maschinellen Lernens. Dabei wird ein Lernalgorithmus mit Datensätzen trainiert und validiert, die für jede Eingabe einen passenden Ausgabewert enthalten. Man bezeichnet solche Datensätze als markiert oder gelabelt.» Beispiel dort: Bilder von Katzen und Hunden, denen «in der Regel ein Mensch» das Label beigefügt hat — im Lernset «vorsortierte Beispiele». Abgegrenzt wird es vom unüberwachten Lernen, «bei dem das Modell selbst ohne Vorgaben Muster oder Strukturen identifiziert».
+- **Fundstelle:** «Überwachtes Lernen (englisch supervised learning) ist eine wichtige Kategorie des Maschinellen Lernens. Dabei wird ein Lernalgorithmus mit Datensätzen trainiert und validiert, die für jede Eingabe einen passenden Ausgabewert enthalten. Man bezeichnet solche Datensätze als markiert oder gelabelt.» Beispiel dort: Bilder von Katzen und Hunden, denen «in der Regel ein Mensch» das Label beigefügt hat, im Lernset «vorsortierte Beispiele». Abgegrenzt wird es vom unüberwachten Lernen, «bei dem das Modell selbst ohne Vorgaben Muster oder Strukturen identifiziert».
 - **Geprüft:** 2026-08-08
 
 > Das Modell sucht eine Fläche, die die Gruppen trennt. «Lernen» heisst, diese Grenze aus Beispielen immer besser zu ziehen, danach kann es Neues einordnen. Das ist das Grundmodell des überwachten Lernens, also des Lernens an vorsortierten Beispielen.
@@ -331,7 +331,7 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 - **Kennung:** `EP-a6e85e` (Vertiefung «Mehr lesen»)
 - **Quelle:** [Solon (Wikipedia)](https://de.wikipedia.org/wiki/Solon)
-- **Fundstelle:** Abschnitt «Solons Gesetzgebung»: Das Gesetzeswerk wurde auf Holztafeln (Axones) gesichert, «in der Art heutiger Postkartenständer drehbar an Pflöcken befestigt». Aufbewahrt wurden sie im Prytaneion — darum nennt der Lernset-Text keinen Ort.
+- **Fundstelle:** Abschnitt «Solons Gesetzgebung»: Das Gesetzeswerk wurde auf Holztafeln (Axones) gesichert, «in der Art heutiger Postkartenständer drehbar an Pflöcken befestigt». Aufbewahrt wurden sie im Prytaneion. Darum nennt der Lernset-Text keinen Ort.
 - **Geprüft:** 2026-07-29
 
 > Wie das im Alltag aussah, zeigt Athen. Solons Gesetze standen auf hölzernen Tafeln, die drehbar an Pflöcken befestigt waren, etwa wie ein Kartenständer, und jeder konnte sie einsehen. Wer lesen konnte, war nicht mehr darauf angewiesen, dass ihm jemand vorlas und dabei die Wahrheit sagte, sondern konnte selber nachschauen, was gilt. Auf der Agora wurde dann darüber gestritten. Im Hafen Piräus prüften Händler Verträge und zahlten mit den silbernen «Eulen», wie man Athens Münzen nach ihrem Münzbild nannte. Das Silber dafür kam aus den Bergwerken von Laurion. Als dort ab 483 v. Chr. mehr Silber anfiel, wollten die Athener den Überschuss unter sich aufteilen. Themistokles überzeugte sie, davon Kriegsschiffe zu bauen. Wenige Jahre später retteten genau diese Schiffe die Stadt gegen die Perser. Und noch etwas verschob sich: Wer schreiben und rechnen konnte, kam voran, auch ohne vornehme Familie. Nicht mehr nur die Herkunft zählte, sondern das Können.
@@ -439,7 +439,7 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 - **Kennung:** `EP-54ba47` (Vertiefung «Mehr lesen»)
 - **Quelle:** [Aristoteles (Wikipedia)](https://de.wikipedia.org/wiki/Aristoteles)
-- **Fundstelle:** «Die Fülle des Materials, das Aristoteles sammelte (etwa zu den 158 Verfassungen der griechischen Stadtstaaten), lässt darauf schliessen, dass er über zahlreiche Mitarbeiter verfügte.» Vorher stand hier «Gesetze von über 150 Städten» — gesammelt wurden Verfassungen, das erhaltene Stück heisst «Die Verfassung der Athener».
+- **Fundstelle:** «Die Fülle des Materials, das Aristoteles sammelte (etwa zu den 158 Verfassungen der griechischen Stadtstaaten), lässt darauf schliessen, dass er über zahlreiche Mitarbeiter verfügte.» Vorher stand hier «Gesetze von über 150 Städten». Gesammelt wurden Verfassungen, das erhaltene Stück heisst «Die Verfassung der Athener».
 - **Geprüft:** 2026-08-05
 
 > Aristoteles sammelte zuerst und ordnete dann. In einer Lagune auf der Insel Lesbos untersuchte er Fische, Kraken und Seeigel und beschrieb, wie sie gebaut sind. Seine Schule trug die Verfassungen von 158 griechischen Städten zusammen. In Athen unterrichtete er im Lykeion; nach dessen Wandelhalle, dem «Peripatos», wurde seine Schule später benannt. Aus dem vielen Material zog er Regeln des Schliessens. Ein Beispiel: Alle Menschen sind sterblich. Sokrates ist ein Mensch. Also ist Sokrates sterblich. Das stimmt, egal wer es sagt, egal wie sympathisch oder mächtig diese Person ist. Genau das war die Antwort an die Redekünstler: Ein Schluss stimmt oder stimmt nicht, geschicktes Reden ändert daran nichts. Über arabische Gelehrte und mittelalterliche Klosterschulen kam diese Haltung bis in unsere Schulzimmer.
@@ -502,7 +502,7 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 - **Kennung:** `EP-9309b8` (Vertiefung «Mehr lesen»)
 - **Quelle:** [Rocket (Lokomotive) (Wikipedia)](https://de.wikipedia.org/wiki/Rocket_(Lokomotive))
-- **Fundstelle:** Die Rocket erreichte 47 km/h Höchstgeschwindigkeit; ein Englisches Vollblut läuft laut dem Artikel «Hauspferd» bis zu 70 km/h. Neu war also nicht die Spitze, sondern das Durchhalten — vorher behauptete der Text «schneller, als je ein Pferd gelaufen war».
+- **Fundstelle:** Die Rocket erreichte 47 km/h Höchstgeschwindigkeit; ein Englisches Vollblut läuft laut dem Artikel «Hauspferd» bis zu 70 km/h. Neu war also nicht die Spitze, sondern das Durchhalten; vorher behauptete der Text «schneller, als je ein Pferd gelaufen war».
 - **Geprüft:** 2026-08-05
 
 > Bei der Eröffnung der Eisenbahn zwischen Liverpool und Manchester 1830 geriet der Parlamentsabgeordnete William Huskisson vor eine heranfahrende Lokomotive und starb noch am selben Abend: Das neue Tempo forderte sein Opfer schon am ersten Tag. Die Faszination war trotzdem gewaltig, denn erstmals reiste man stundenlang schneller, als ein Pferd es durchhält. Damals hatte noch jede Stadt ihre eigene Sonnenzeit, in Bremen gingen die Uhren gut eine Viertelstunde hinter Berlin nach, und erst der Fahrplan erzwang die gemeinsame Stunde, in Deutschland gesetzlich ab 1893. Der Telegraf trennte unterdessen die Nachricht vom Boten: 1858 tauschten die britische Königin und der amerikanische Präsident Grussbotschaften durch ein Kabel am Grund des Atlantiks. Raum und Zeit, bis dahin Grössen der Natur, wurden zu Grössen der Technik. Wer heute über das Tempo der KI staunt oder erschrickt, macht dieselbe Erfahrung wie die Menschen der Industrialisierung.
@@ -538,7 +538,7 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 - **Kennung:** `EP-e07817` (Vertiefung «Mehr lesen»)
 - **Quelle:** [Clara Immerwahr (Wikipedia)](https://de.wikipedia.org/wiki/Clara_Immerwahr)
-- **Fundstelle:** «Clara Haber erschoss sich am 2. Mai 1915.» Der Giftgasangriff bei Ypern war am 22. April 1915 (Artikel «Fritz Haber») — zehn Tage, nicht «wenige Tage», wie vorher hier stand.
+- **Fundstelle:** «Clara Haber erschoss sich am 2. Mai 1915.» Der Giftgasangriff bei Ypern war am 22. April 1915 (Artikel «Fritz Haber»), also zehn Tage, nicht «wenige Tage», wie vorher hier stand.
 - **Geprüft:** 2026-08-05
 
 > Kaum eine Figur verkörpert das Doppelgesicht dieser Epoche so wie der Chemiker Fritz Haber: Seine Ammoniaksynthese machte künstlichen Dünger möglich und hilft bis heute, Milliarden zu ernähren. Derselbe Mann überwachte 1915 bei Ypern persönlich den ersten grossen Giftgasangriff der Geschichte. Seine Frau Clara Immerwahr, selbst promovierte Chemikerin, nahm sich zehn Tage danach das Leben. Dreissig Jahre später, am 16. Juli 1945, erhellte in der Wüste von New Mexico der erste Atomtest den Nachthimmel, und Robert Oppenheimer, der wissenschaftliche Leiter, erinnerte sich später an einen Vers aus einer indischen Schrift über den «Zerstörer der Welten». Zwischen diesen beiden Daten liegt die bittere Einsicht, dass Wissen nicht danach fragt, wozu man es braucht. Seither gehört zu jeder mächtigen Technik die Frage, die damals zu spät kam: nicht nur, ob man etwas bauen kann, sondern ob man es bauen soll.
@@ -556,7 +556,7 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 - **Kennung:** `EP-f1ce65` (Hintergrund zum Bild)
 - **Quelle:** [NOAA (Wikipedia)](https://de.wikipedia.org/wiki/National_Oceanic_and_Atmospheric_Administration)
-- **Fundstelle:** Die NOAA ist die «Wetter- und Ozeanografiebehörde der Vereinigten Staaten», keine Weltraumbehörde — so nannte der Text vorher beide.
+- **Fundstelle:** Die NOAA ist die «Wetter- und Ozeanografiebehörde der Vereinigten Staaten», keine Weltraumbehörde. So nannte der Text vorher beide.
 - **Geprüft:** 2026-08-05
 
 > Dieses Bild ist keine gemalte Kunst, sondern eine wissenschaftliche Aufnahme der US-Behörden NASA und NOAA aus dem Jahr 2012. Es ist eine Montage aus Hunderten Aufnahmen des Satelliten Suomi NPP, denn es ist nie überall auf der Erde gleichzeitig Nacht. So hat der Planet in Wirklichkeit nie ausgesehen. Zu sehen ist die nächtliche Erde, auf der jedes Lichtpünktchen für menschliche Besiedlung und für Strom steht. Grell leuchten Europa, Ostasien und die US-Küsten, während weite Teile Afrikas, Südamerikas und Zentralasiens fast dunkel bleiben. Gerade als Konstruktion führt das Bild vor Augen, wie ungleich die vernetzte Welt verteilt ist.
@@ -565,7 +565,7 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 - **Kennung:** `EP-53e8e4` (Hintergrund zum Bild)
 - **Quelle:** [Apollo 17 (Wikipedia)](https://de.wikipedia.org/wiki/Apollo_17)
-- **Fundstelle:** «Mit Apollo 17 landeten zum sechsten und vorerst letzten Mal Menschen auf dem Mond.» Als letzte bemannte MondMISSION gilt sie seit April 2026 nicht mehr: «Apollo 17 blieb bis zur Mission Artemis 2 im Jahr 2026 der letzte bemannte Mondflug» — Artemis 2 umrundete den Mond, landete aber nicht.
+- **Fundstelle:** «Mit Apollo 17 landeten zum sechsten und vorerst letzten Mal Menschen auf dem Mond.» Als letzte bemannte MondMISSION gilt sie seit April 2026 nicht mehr: «Apollo 17 blieb bis zur Mission Artemis 2 im Jahr 2026 der letzte bemannte Mondflug». Artemis 2 umrundete den Mond, landete aber nicht.
 - **Geprüft:** 2026-08-05
 
 > Dieses Bild ist kein Gemälde, sondern eine Fotografie, die am 7. Dezember 1972 aus rund 29 000 km Entfernung entstand. Aufgenommen hat sie die Besatzung von Apollo 17, der bislang letzten bemannten Mondlandung. Zu sehen ist die Erde als ganze, runde Kugel, mit Wolkenwirbeln, Ozeanen und Kontinenten in einem einzigen Blick. Von hier oben sind keine Nationen und keine Grenzen erkennbar, nur ein einziger, verletzlicher Planet im schwarzen All. «Blue Marble» wurde zu einem der meistreproduzierten Fotos der Geschichte und zu einer Ikone der Umweltbewegung.

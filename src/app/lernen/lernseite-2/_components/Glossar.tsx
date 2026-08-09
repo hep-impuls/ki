@@ -17,11 +17,11 @@ export const GLOSSAR: Record<string, string> = {
   Sophisten:
     "Bezahlte Wanderlehrer im antiken Griechenland; Platon warf ihnen vor, Wahrheit sei bei ihnen verhandelbar.",
   Keilschrift:
-    "Eine der ältesten Schriften — keilförmige Zeichen, in feuchten Ton gedrückt.",
+    "Eine der ältesten Schriften: keilförmige Zeichen, in feuchten Ton gedrückt.",
   Quipu:
-    "Anden-Knotenschnur, die Zahlen und Daten in Knoten speichert — statt in Schrift.",
+    "Anden-Knotenschnur, die Zahlen und Daten in Knoten speichert, statt in Schrift.",
   Quipus:
-    "Anden-Knotenschnüre, die Zahlen und Daten in Knoten speichern — statt in Schrift.",
+    "Anden-Knotenschnüre, die Zahlen und Daten in Knoten speichern, statt in Schrift.",
   Papyrus:
     "Beschreibbares Material aus der Papyrusstaude, im alten Ägypten hergestellt.",
   Stellenwertsystem:
@@ -29,7 +29,7 @@ export const GLOSSAR: Record<string, string> = {
   Algorithmus:
     "Eine endliche, klar festgelegte Folge von Schritten zum Lösen einer Aufgabe.",
   Heliozentrik:
-    "Das Weltbild, in dem die Sonne im Zentrum steht — nicht die Erde.",
+    "Das Weltbild, in dem die Sonne im Zentrum steht, nicht die Erde.",
   Karavelle:
     "Wendiges Segelschiff, das die europäischen Ozeanfahrten ab dem 15. Jahrhundert ermöglichte.",
   Reformation:
@@ -49,11 +49,11 @@ export const GLOSSAR: Record<string, string> = {
   "KI-Winter":
     "Phasen, in denen Geldgeber und Öffentlichkeit den Glauben an die KI verloren.",
   "Deep Learning":
-    "KI-Methode mit vielschichtigen künstlichen neuronalen Netzen — Grundlage heutiger Modelle.",
+    "KI-Methode mit vielschichtigen künstlichen neuronalen Netzen, die Grundlage heutiger Modelle.",
   Deepfakes:
     "Täuschend echte, mit KI erzeugte oder manipulierte Bilder, Stimmen und Videos.",
   ARPANET:
-    "Militärisches Forschungsnetz der USA (1969) — der Vorläufer des Internets.",
+    "Militärisches Forschungsnetz der USA (1969), der Vorläufer des Internets.",
   Enigma:
     "Die Chiffriermaschine, mit der die deutsche Wehrmacht ihren Funk verschlüsselte.",
   Container:
@@ -63,16 +63,16 @@ export const GLOSSAR: Record<string, string> = {
   Aristoteles:
     "Griechischer Philosoph (Schüler Platons); prägte die formale Logik und zahlreiche empirisch orientierte Untersuchungen.",
   Philosophie:
-    "Wörtlich «Liebe zur Weisheit» — das begründende Nachdenken über die Grundfragen.",
+    "Wörtlich «Liebe zur Weisheit»: das begründende Nachdenken über die Grundfragen.",
   Völkerwanderung:
     "Umbruchszeit (4.–6. Jh.), in der germanische Verbände ins Römische Reich zogen.",
   Augustinus:
-    "Kirchenvater (354–430); verlegte nach dem Fall Roms den Halt nach innen — Glaube und Gewissen.",
+    "Kirchenvater (354–430); verlegte nach dem Fall Roms den Halt nach innen: Glaube und Gewissen.",
   Mittelalter:
     "Epoche zwischen Antike und Neuzeit (~500–1500), geprägt von Christentum und Feudalordnung.",
-  Bias: "Systematische Verzerrung — etwa wenn Daten bestimmte Gruppen bevorzugen oder ausblenden.",
+  Bias: "Systematische Verzerrung, etwa wenn Daten bestimmte Gruppen bevorzugen oder ausblenden.",
   Flugschriften:
-    "Billige Druckblätter — das schnelle Massenmedium der Reformationszeit.",
+    "Billige Druckblätter, das schnelle Massenmedium der Reformationszeit.",
   Algorithmen:
     "Klar festgelegte Folgen von Schritten, nach denen Computer arbeiten; manche ziehen dabei auch den Zufall hinzu.",
   Voltaire:
@@ -80,13 +80,13 @@ export const GLOSSAR: Record<string, string> = {
   Terror:
     "Die Schreckensherrschaft 1793/94: Die Revolution liess Tausende unter der Guillotine hinrichten.",
   Kant: "Immanuel Kant (1724–1804): «Habe Mut, dich deines eigenen Verstandes zu bedienen.»",
-  Radar: "Ortung per Funkwellen — im Zweiten Weltkrieg entscheidend weiterentwickelt.",
+  Radar: "Ortung per Funkwellen, im Zweiten Weltkrieg entscheidend weiterentwickelt.",
   ENIAC:
     "Einer der ersten elektronischen Computer (USA, 1945), gebaut für Militärberechnungen.",
   Colossus:
-    "Britischer Röhrenrechner (1943) zum Knacken deutscher Chiffren — lange geheim gehalten.",
+    "Britischer Röhrenrechner (1943) zum Knacken deutscher Chiffren, lange geheim gehalten.",
   Sputnik:
-    "Der erste Satellit im All (Sowjetunion, 1957) — löste im Westen den «Sputnik-Schock» aus.",
+    "Der erste Satellit im All (Sowjetunion, 1957). Er löste im Westen den «Sputnik-Schock» aus.",
   Ostblock:
     "Die sozialistischen Staaten unter sowjetischer Führung bis 1989/91.",
   Digitalisierung:
@@ -94,30 +94,30 @@ export const GLOSSAR: Record<string, string> = {
   "World Wide Web":
     "Das verlinkte Seitensystem von Tim Berners-Lee: Vorschlag 1989, erste Website 1991, 1993 vom CERN zur freien Nutzung freigegeben.",
   Arbeitsteilung:
-    "Aufteilung der Arbeit in spezialisierte Tätigkeiten — Grundlage von Städten und Handel.",
+    "Aufteilung der Arbeit in spezialisierte Tätigkeiten, die Grundlage von Städten und Handel.",
   Mesopotamien:
-    "Das Zweistromland (im heutigen Irak) — früher Schauplatz von Schrift, Rad und Stadt.",
+    "Das Zweistromland (im heutigen Irak), früher Schauplatz von Schrift, Rad und Stadt.",
   Hochkulturen:
     "Frühe komplexe Gesellschaften mit Städten, Schrift und Verwaltung.",
   Keilschrifttafeln:
-    "Tontafeln mit eingedrückten keilförmigen Zeichen — die ältesten Schriftdokumente.",
+    "Tontafeln mit eingedrückten keilförmigen Zeichen, die ältesten Schriftdokumente.",
   Buchdruck:
     "Das Verfahren, Texte mit beweglichen Metalllettern massenhaft zu vervielfältigen; in Europa ab etwa 1450 durch Gutenberg.",
-  Jikji: "Koreanische Schrift von 1377 — das älteste erhaltene Buch aus beweglichen Metalllettern.",
+  Jikji: "Koreanische Schrift von 1377, das älteste erhaltene Buch aus beweglichen Metalllettern.",
   Schiesspulver:
-    "In China entwickelte Explosivmischung — veränderte Krieg und Machtverhältnisse weltweit.",
+    "In China entwickelte Explosivmischung. Sie veränderte Krieg und Machtverhältnisse weltweit.",
   Lettern: "Einzelne, bewegliche Druckbuchstaben aus Metall.",
   Kompass:
-    "Instrument mit Magnetnadel zur Richtungsbestimmung — kam aus China nach Europa.",
+    "Instrument mit Magnetnadel zur Richtungsbestimmung. Es kam aus China nach Europa.",
   Automatisierung:
     "Maschinen übernehmen Abläufe, die vorher Menschen ausführten.",
   Landflucht: "Massenhafte Abwanderung vom Land in die Städte.",
-  Marx: "Karl Marx (1818–1883): analysierte Kapitalismus und Industriegesellschaft — Verhältnisse sind gemacht, also veränderbar.",
+  Marx: "Karl Marx (1818–1883): analysierte Kapitalismus und Industriegesellschaft. Verhältnisse sind gemacht, also veränderbar.",
   Industriemoderne:
     "Die von Fabrik, Dampfkraft und Stadt geprägte Epoche des 19. Jahrhunderts.",
-  V2: "Deutsche Grossrakete des Zweiten Weltkriegs — als Waffe gebaut, technisch der erste Schritt ins All.",
+  V2: "Deutsche Grossrakete des Zweiten Weltkriegs, als Waffe gebaut, technisch der erste Schritt ins All.",
   Satelliten:
-    "Künstliche Himmelskörper in der Erdumlaufbahn — für Funk, Navigation, Wetter und Militär.",
+    "Künstliche Himmelskörper in der Erdumlaufbahn, für Funk, Navigation, Wetter und Militär.",
   ChatGPT: "Der 2022 veröffentlichte Chatbot von OpenAI, der KI massentauglich machte.",
   Expertensysteme:
     "Frühe KI der 1970er/80er, die Fachwissen in Wenn-dann-Regeln goss.",
@@ -132,7 +132,7 @@ export const GLOSSAR: Record<string, string> = {
   Kopernikus:
     "Astronom (1473–1543); setzte die Sonne ins Zentrum des Weltbilds.",
   Psychoanalyse:
-    "Sigmund Freuds Lehre vom Unbewussten — der Mensch ist «nicht Herr im eigenen Haus».",
+    "Sigmund Freuds Lehre vom Unbewussten: Der Mensch ist «nicht Herr im eigenen Haus».",
   Evolutionstheorie:
     "Darwins Erklärung, wie Arten durch Variation und Auslese entstehen.",
   Atomkern:
@@ -140,9 +140,9 @@ export const GLOSSAR: Record<string, string> = {
   Hiroshima:
     "Japanische Stadt, am 6. August 1945 durch die erste Atombombe zerstört.",
   "neolithische Revolution":
-    "Der Übergang zu Ackerbau und Sesshaftigkeit — die tiefste Umwälzung der Menschheitsgeschichte.",
+    "Der Übergang zu Ackerbau und Sesshaftigkeit, die tiefste Umwälzung der Menschheitsgeschichte.",
   Eigentum:
-    "Rechtlich anerkannte Verfügung über Dinge — entsteht historisch mit Vorräten und Feldern.",
+    "Rechtlich anerkannte Verfügung über Dinge. Sie entsteht historisch mit Vorräten und Feldern.",
   Karawanen: "Handelszüge aus Lasttieren durch Wüsten und Steppen.",
   "islamische Blütezeit":
     "Etwa 8.–13. Jahrhundert: Wissenschaft und Kultur der islamischen Welt in voller Blüte.",
@@ -151,7 +151,7 @@ export const GLOSSAR: Record<string, string> = {
   Disputation:
     "Das geregelte wissenschaftliche Streitgespräch der mittelalterlichen Universität.",
   institutionalisiert:
-    "Etwas bekommt feste Regeln, Ämter und Dauer — es wird zur Einrichtung.",
+    "Etwas bekommt feste Regeln, Ämter und Dauer, es wird zur Einrichtung.",
   Öffentlichkeit:
     "Der Raum, in dem Bürgerinnen und Bürger gemeinsam über Angelegenheiten aller verhandeln.",
   Lieferketten:
@@ -173,7 +173,7 @@ export const GLOSSAR: Record<string, string> = {
   Ludditen:
     "Englische Arbeiter, die ab 1811 Maschinen zerstörten, weil sie ihre Arbeit vernichteten.",
   Rundfunk:
-    "Verbreitung von Ton (später Bild) an ein Massenpublikum über Funkwellen — Radio und Fernsehen.",
+    "Verbreitung von Ton (später Bild) an ein Massenpublikum über Funkwellen: Radio und Fernsehen.",
   Existenzialismus:
     "Philosophie des 20. Jh.: Der Mensch hat kein festes Wesen, sondern macht sich durch seine Wahl.",
   "Banalität des Bösen":
@@ -183,9 +183,9 @@ export const GLOSSAR: Record<string, string> = {
   Deindustrialisierung:
     "Rückgang der Fabrikarbeit in einer Region, weil Produktion abwandert oder wegfällt.",
   Resonanz:
-    "Bei Hartmut Rosa: ein antwortendes, lebendiges Verhältnis zur Welt — Gegenbegriff zur blossen Beschleunigung.",
+    "Bei Hartmut Rosa: ein antwortendes, lebendiges Verhältnis zur Welt, der Gegenbegriff zur blossen Beschleunigung.",
   "Akteur-Netzwerk-Theorie":
-    "Bruno Latours Ansatz: Wirkung entsteht im Netz aus Menschen UND Dingen — nichts handelt allein.",
+    "Bruno Latours Ansatz: Wirkung entsteht im Netz aus Menschen UND Dingen, nichts handelt allein.",
   /* «Bernoulli-Rechnung» ist die Wendung im Lernset-Text, «Bernoulli-Zahlen»
      die Sache selbst — beide brauchen einen Eintrag, weil auf Wortgrenze
      gesucht wird. */
@@ -202,11 +202,11 @@ export const GLOSSAR: Record<string, string> = {
   Transformer:
     "Die KI-Architektur von 2017; sie setzt ganz auf den schon vorher bekannten Attention-Mechanismus und ist die Grundlage heutiger Sprachmodelle wie ChatGPT.",
   "Newcomen-Maschine":
-    "Frühe Dampfmaschine (1712) zum Abpumpen von Grubenwasser — Vorläuferin von Watts Maschine.",
+    "Frühe Dampfmaschine (1712) zum Abpumpen von Grubenwasser, die Vorläuferin von Watts Maschine.",
   Humanismus:
     "Bildungsbewegung der Renaissance: Der Mensch und seine Formung durch Bildung rücken ins Zentrum.",
   Gewaltenteilung:
-    "Aufteilung der Staatsmacht in Gesetzgebung, Regierung und Gerichte — zum Schutz vor Machtmissbrauch.",
+    "Aufteilung der Staatsmacht in Gesetzgebung, Regierung und Gerichte, zum Schutz vor Machtmissbrauch.",
   Anthropozän:
     "Vorgeschlagenes Erdzeitalter, in dem der Mensch die Erde (Klima, Arten, Gestein) prägend verändert.",
   Erdüberlastungstag:
@@ -404,7 +404,7 @@ export const GLOSSAR: Record<string, string> = {
   Manichäer:
     "Anhänger einer damals verbreiteten Religion, die die Welt als Kampf zwischen Licht und Finsternis deutete.",
   Confessiones:
-    "«Bekenntnisse», die Lebensrückschau des Augustinus — eines der ersten Bücher, das den Blick nach innen richtet.",
+    "«Bekenntnisse», die Lebensrückschau des Augustinus und zugleich eines der ersten Bücher, das den Blick nach innen richtet.",
   Rhetorikprofessor:
     "Lehrer der Redekunst; im Römischen Reich ein angesehener und gut bezahlter Beruf.",
   Gottesstaat:

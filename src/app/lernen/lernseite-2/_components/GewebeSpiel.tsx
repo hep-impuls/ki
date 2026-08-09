@@ -194,7 +194,7 @@ export default function GewebeSpiel({
         viewBox={`0 0 ${VB_W} ${hoehe}`}
         className="block h-auto w-full select-none"
         role="group"
-        aria-label="Gewebe-Spiel: Punkte antippen — zwischen aktiven Punkten färben sich die Felder."
+        aria-label="Gewebe-Spiel: Punkte antippen, zwischen aktiven Punkten färben sich die Felder."
       >
         {/* Delaunay-Web: feines Netz + gefüllte Maschen (teils farbig, teils
             gemustert) zwischen aktiven Punkten */}
@@ -373,12 +373,12 @@ export default function GewebeSpiel({
               {komplett ? "check_circle" : "info"}
             </span>
             <span>
-              Dieses Muster hat <strong className="text-on-surface">keinen Inhalt</strong> —
-              es steht nur für die Idee, dass KI immer in einem Netz aus Bezügen
+              Dieses Muster hat <strong className="text-on-surface">keinen Inhalt</strong>.
+              Es steht nur für die Idee, dass KI immer in einem Netz aus Bezügen
               steckt. Tippe die Punkte an: Zwischen ihnen entstehen Flächen.{" "}
               {komplett ? (
                 <strong className="text-tertiary">
-                  Muster vollständig aufgedeckt — als Aktivität erfasst.
+                  Muster vollständig aufgedeckt, als Aktivität erfasst.
                 </strong>
               ) : (
                 <>
@@ -393,7 +393,7 @@ export default function GewebeSpiel({
         </div>
       ) : (
         <p className="mt-xs text-label-sm text-on-surface-variant">
-          Tippe die Punkte an — zwischen aktiven Punkten färben sich die Felder.
+          Tippe die Punkte an, zwischen aktiven Punkten färben sich die Felder.
         </p>
       )}
     </div>

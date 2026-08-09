@@ -90,7 +90,7 @@ export default function FortschrittsCode({ className = "" }: { className?: strin
         </div>
       ) : (
         <p className="mt-sm text-body-sm text-on-surface-variant">
-          Sobald du die erste Aufgabe machst, bekommst du automatisch einen Code —
+          Sobald du die erste Aufgabe machst, bekommst du automatisch einen Code,
           er erscheint dann hier.
         </p>
       )}
@@ -99,7 +99,7 @@ export default function FortschrittsCode({ className = "" }: { className?: strin
         Notiere dir diesen Code. Gibst du ihn auf einem{" "}
         <strong className="text-on-surface">anderen Gerät oder Browser</strong> ein,
         bekommst du deinen ganzen Fortschritt (angeklickte Punkte, Flächen,
-        Bewertungen) zurück. Es gibt kein Passwort — der Code ist dein Schlüssel.
+        Bewertungen) zurück. Es gibt kein Passwort, der Code ist dein Schlüssel.
       </p>
 
       {eingabeOffen ? (
