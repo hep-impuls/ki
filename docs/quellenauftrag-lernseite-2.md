@@ -1938,8 +1938,10 @@ Die Inhalte, die du ausgewählt hast: die Grundlage, aus der das Orakel dein Int
 **[OR-12c639]** *(Fliesstext)*
 Bisher hast du vor allem die Muster bespielt: […] geknüpft, ohne Inhalte zu öffnen. Auch das ist eine Spur, die das Orakel deuten kann.
 
-**[OR-51dfa4]** *(Fliesstext)*
-insights In einfacher Sprache und drei Absätzen: wo du vor allem aktiv warst, was du bevorzugt hast, und was sich noch lohnt.
+### Das Orakel spricht
+
+**[OR-0165b1]** *(Fliesstext)*
+In einfacher Sprache und drei Absätzen: wo du vor allem aktiv warst, was du bevorzugt hast, und was sich für dich noch lohnt. Grundlage sind deine Zahlen und die Inhalte, die du oben ausgewählt hast.
 
 ### Deine Spur durchs Gewebe
 

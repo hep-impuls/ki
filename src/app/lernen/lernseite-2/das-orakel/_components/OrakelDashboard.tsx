@@ -1072,8 +1072,7 @@ export default function OrakelDashboard() {
           tatsächlich gewählten Inhalten — oder dem reinen Muster-Bespielen) */}
       {ersteStimmeDa && (
         <section
-          id="orakel-erste-stimme"
-          className="mt-xl scroll-mt-24"
+          className="mt-xl"
           aria-label="Was dich besonders interessiert hat und die erste Orakel-Stimme"
         >
           <h2 className="text-headline-md text-on-surface">
@@ -1121,9 +1120,36 @@ export default function OrakelDashboard() {
               ))}
           </div>
 
-          {/* Das Orakel antwortet direkt auf die Interessens-Auswertung —
-              die erste seiner zwei Stimmen (die zweite: die Stil-Deutung
-              weiter unten). Ambient: KI-Aquarell als stille Umgebung. */}
+        </section>
+      )}
+
+      {/* Die erste Orakel-Stimme als EIGENER Abschnitt, gebaut wie die zweite:
+          Hauptüberschrift «Das Orakel spricht», darunter die Kleinzeile mit der
+          Stimme und ihrem Gegenstand.
+
+          Zwei Meldungen Christofs vom 2026-08-09 führen hierher. Erstens sass
+          der Sprung-Anker am Abschnitt «Was dich besonders interessiert hat»;
+          die Stimme steht an seinem Fuss, also landete der Sprung oben und der
+          angeklickte Titel weit unten im Bild. Ein Navigationseintrag muss das
+          an den obersten Rand bringen, was er benennt. Zweitens war die erste
+          Stimme nur eine Kleinzeile in einer Karte, während die zweite eine
+          Hauptüberschrift trug: zwei Stimmen desselben Orakels, ungleich
+          gewichtet. Beides löst derselbe Schnitt. */}
+      {ersteStimmeDa && (
+        <section
+          id="orakel-erste-stimme"
+          className="mt-xl scroll-mt-24"
+          aria-label="Das Orakel spricht, erste Stimme"
+        >
+          <h2 className="text-headline-md text-on-surface">Das Orakel spricht</h2>
+          <p className="mt-xs text-label-md uppercase tracking-wider text-tertiary">
+            Erste Stimme: wo du warst und was noch lohnt
+          </p>
+          <p className="mt-xs max-w-3xl text-body-sm text-on-surface-variant">
+            In einfacher Sprache und drei Absätzen: wo du vor allem aktiv warst,
+            was du bevorzugt hast, und was sich für dich noch lohnt. Grundlage
+            sind deine Zahlen und die Inhalte, die du oben ausgewählt hast.
+          </p>
           <div className="relative mt-md overflow-hidden rounded-xl border border-tertiary/40 bg-surface-bright">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -1134,19 +1160,14 @@ export default function OrakelDashboard() {
               className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-35"
             />
             <div className="relative p-md">
-            <p className="flex items-center gap-sm text-label-md uppercase tracking-wider text-tertiary">
-              <span className="material-symbols-outlined text-[18px]">auto_awesome</span>
-              Das Orakel spricht, erste Stimme: wo du warst und was noch lohnt
-            </p>
-            <div className="mt-sm">
+            <div>
             {intOrakel.status === "idle" && (
               <div className="flex flex-wrap items-center justify-between gap-sm">
                 <p className="flex items-center gap-sm text-body-sm text-on-surface-variant">
                   <span className="material-symbols-outlined text-[20px] text-tertiary">
                     insights
                   </span>
-                  In einfacher Sprache und drei Absätzen: wo du vor allem aktiv
-                  warst, was du bevorzugt hast, und was sich noch lohnt.
+                  Bereit für die erste Stimme?
                 </p>
                 <button
                   type="button"

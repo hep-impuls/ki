@@ -3275,12 +3275,12 @@
   "stufe": "tief",
   "text": "Bisher hast du vor allem die Muster bespielt: […] geknüpft, ohne Inhalte zu öffnen. Auch das ist eine Spur, die das Orakel deuten kann."
  },
- "OR-51dfa4": {
+ "OR-0165b1": {
   "datei": "das-orakel/_components/OrakelDashboard.tsx",
-  "ort": "Was dich besonders interessiert hat",
+  "ort": "Das Orakel spricht",
   "feld": "Fliesstext",
   "stufe": "tief",
-  "text": "insights In einfacher Sprache und drei Absätzen: wo du vor allem aktiv warst, was du bevorzugt hast, und was sich noch lohnt."
+  "text": "In einfacher Sprache und drei Absätzen: wo du vor allem aktiv warst, was du bevorzugt hast, und was sich für dich noch lohnt. Grundlage sind deine Zahlen und die Inhalte, die du oben ausgewählt hast."
  },
  "OR-368796": {
   "datei": "das-orakel/_components/OrakelDashboard.tsx",
