@@ -10,6 +10,34 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-08 — «Wege der Orientierung» merkt sich den Bereich; Ebenen-Umschalter pulsiert (Christof)
+
+**Der Standort ging verloren, aber nicht dort, wo es aussah.** Christof: Wer bei
+«Wege der Orientierung» war, aufs Orakel ging und zurückkam, war nicht mehr dort.
+Nachgemessen: Der Abschnitt klappte korrekt auf und scrollte hin — sowohl über
+den Zurück-Knopf des Browsers als auch über die Navigation. Verloren ging die
+Stelle INNERHALB des Abschnitts: `Denkwege` hatte `useState(0)` und begann immer
+wieder bei Bereich 1 von 4.
+
+`StoryGewebe` (`ki26-story-offen:…`) und `HistorienTeppich`
+(`ki26-teppich-offen:…`) merken sich ihre offene Karte längst; `Denkwege` war die
+einzige der drei ohne. Jetzt mit `ki26-denkwege-stand:{spurKey}` nach demselben
+Muster. **Wer eine neue durchklickbare Komponente baut, denkt daran mit** — sonst
+verliert man beim Sprung ins Orakel den Faden.
+
+Diese Ansichts-Schlüssel werden vom «Aktivitäten zurücksetzen» bewusst NICHT
+gelöscht: Das löscht Aktivitäten, nicht die Blickposition.
+
+**Der Umschalter «Alle / Nur ich» pulsiert, bis er einmal benutzt wurde**, danach
+nie mehr (`ki26-knotenkarte-ebene-benutzt`). Man übersah ihn und merkte nicht,
+dass die Karte zwei Blickwinkel hat. Dauerhaftes Pulsieren wäre die schlechtere
+Lösung: Was immer blinkt, wird zum Störer.
+
+Umgesetzt mit Tailwinds `animate-ping` — schon bei den Bildpunkten in Gebrauch.
+Bewusst KEINE eigene Animation, denn die hätte in die gemeinsame `globals.css`
+gemusst, und die wird nur nach Absprache mit Pietro angefasst. Bei reduzierter
+Bewegung (`motion-reduce`) bleibt es still.
+
 ## 2026-08-08 — Knotenkarte verlinkt; die Adresstabelle liegt jetzt in `_lib/ziele.ts` (Christof)
 
 Schritt 4 der Rückmeldung. Schritt 3 (punkt-genaue Ziele) bleibt zurückgestellt,

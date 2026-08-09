@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import {
   leseSpuren,
   leseSpurenIndices,
@@ -434,6 +434,32 @@ export default function Denkwege({
 }) {
   const gesamt = BEREICHE.length;
   const [idx, setIdx] = useState(0);
+
+  /**
+   * Zuletzt angesehener Bereich — über Navigation und Neuladen hinweg gemerkt.
+   *
+   * Ohne das begann «Wege der Orientierung» immer wieder bei Bereich 1: Wer bei
+   * Bereich 3 war, aufs Orakel ging und zurückkam, stand wieder am Anfang. Der
+   * Abschnitt selbst klappte korrekt auf (`AkkordeonGruppe` merkt sich das),
+   * nur die Stelle darin war weg. Christof hat das am 2026-08-08 gemeldet.
+   *
+   * Gleiches Muster wie `ki26-story-offen:…` in StoryGewebe und
+   * `ki26-teppich-offen:…` im HistorienTeppich — diese Komponente war die
+   * einzige der drei ohne.
+   */
+  const standKey = `ki26-denkwege-stand:${spurKey}`;
+  const gespeicherterStand = useRef<number | null>(
+    (() => {
+      if (typeof window === "undefined") return null;
+      try {
+        const v = window.localStorage.getItem(standKey);
+        const num = v === null || v === "" ? NaN : Number(v);
+        return Number.isInteger(num) ? num : null;
+      } catch {
+        return null; // Privatmodus
+      }
+    })(),
+  );
   const [gesehen, setGesehen] = useState<Set<number>>(new Set());
   /* Aufgeklappte Info-Box (nur eine offen), Schlüssel «bereichIdx-denkerIdx». */
   const [offeneBox, setOffeneBox] = useState<string | null>(null);
@@ -469,10 +495,25 @@ export default function Denkwege({
       }
     }
     restore();
+    /* Zuletzt angesehenen Bereich wiederherstellen — nur beim ersten Aufbau,
+       darum im selben Effect und gegen `gesamt` geprüft (Bereiche können
+       wegfallen, ein alter Stand darf nicht ins Leere zeigen). */
+    const g = gespeicherterStand.current;
+    if (g !== null && g > 0 && g < gesamt) setIdx(g);
     void zieheSpurenAusCloud();
     window.addEventListener(SPUR_EVENT, restore);
     return () => window.removeEventListener(SPUR_EVENT, restore);
   }, [spurKey, gesamt]);
+
+  /* Jeden Wechsel merken. Kein eigener Effect für den Erst-Stand nötig: `idx`
+     startet auf 0, und 0 zu speichern ist richtig. */
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(standKey, String(idx));
+    } catch {
+      /* Privatmodus → dann eben ohne Merken */
+    }
+  }, [standKey, idx]);
 
   useEffect(() => {
     BEREICHE.forEach((b, i) => merkeInhalt(`${spurKey}:${i}`, b.titel));

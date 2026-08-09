@@ -104,6 +104,9 @@ type Punkt = {
   alle: number;
 };
 
+/** Merker: Ebenen-Umschalter schon benutzt → Pulsieren aus. */
+const EBENE_BENUTZT_KEY = "ki26-knotenkarte-ebene-benutzt";
+
 const VB_W = 360;
 const VB_H = 260;
 const CENTER = { x: 180, y: 128 };
@@ -158,6 +161,25 @@ export default function Knotenkarte({ className = "" }: { className?: string }) 
     bekannt: {},
   });
   const [inhalte, setInhalte] = useState<Record<string, string>>({});
+  /* Wurde der Ebenen-Umschalter «Alle / Nur ich» schon benutzt? Steuert nur das
+     Pulsieren. Erst nach dem Aufbau aus dem Speicher lesen, damit Server- und
+     Browser-Fassung beim ersten Rendern übereinstimmen (sonst Hydrations-Streit). */
+  const [ebeneBenutzt, setEbeneBenutzt] = useState(true);
+  useEffect(() => {
+    try {
+      setEbeneBenutzt(window.localStorage.getItem(EBENE_BENUTZT_KEY) === "1");
+    } catch {
+      setEbeneBenutzt(false); // Privatmodus: dann pulsiert es eben jedes Mal
+    }
+  }, []);
+  function ebeneBenutztMerken() {
+    setEbeneBenutzt(true);
+    try {
+      window.localStorage.setItem(EBENE_BENUTZT_KEY, "1");
+    } catch {
+      /* Privatmodus */
+    }
+  }
 
   useEffect(() => {
     const lade = () => {
@@ -332,25 +354,42 @@ export default function Knotenkarte({ className = "" }: { className?: string }) 
           <span className="material-symbols-outlined text-[18px]">scatter_plot</span>
           Knotenkarte der Inhalte
         </p>
-        {/* Ebene: nur die eigenen Punkte oder alle einblenden */}
-        <div className="inline-flex overflow-hidden rounded-full border border-outline-variant">
-          {([["alle", "Alle"], ["du", "Nur ich"]] as const).map(([e, label]) => (
-            <button
-              key={e}
-              type="button"
-              onClick={() => setEbene(e)}
-              aria-pressed={ebene === e}
-              className={
-                "px-md py-xs text-label-sm transition-colors " +
-                (ebene === e
-                  ? "bg-tertiary-container text-on-tertiary-container"
-                  : "bg-surface-bright text-on-surface-variant hover:text-tertiary")
-              }
-            >
-              {label}
-            </button>
-          ))}
-        </div>
+        {/* Ebene: nur die eigenen Punkte oder alle einblenden.
+            Der Umschalter pulsiert, bis er einmal benutzt wurde — man übersieht
+            ihn sonst und merkt nicht, dass die Karte zwei Blickwinkel hat.
+            Danach ist Ruhe: Ein Element, das dauernd blinkt, wird zum Störer.
+            `animate-ping` ist Tailwind-Bordgut und schon bei den Bildpunkten in
+            Gebrauch; eine eigene Animation hätte in die gemeinsame globals.css
+            gemusst. Bei reduzierter Bewegung bleibt es still. */}
+        <span className="relative inline-flex">
+          {!ebeneBenutzt && (
+            <span
+              aria-hidden="true"
+              className="absolute -inset-1 animate-ping rounded-full bg-tertiary/20 motion-reduce:hidden"
+            />
+          )}
+          <span className="relative inline-flex overflow-hidden rounded-full border border-outline-variant bg-surface-bright">
+            {([["alle", "Alle"], ["du", "Nur ich"]] as const).map(([e, label]) => (
+              <button
+                key={e}
+                type="button"
+                onClick={() => {
+                  setEbene(e);
+                  ebeneBenutztMerken();
+                }}
+                aria-pressed={ebene === e}
+                className={
+                  "px-md py-xs text-label-sm transition-colors " +
+                  (ebene === e
+                    ? "bg-tertiary-container text-on-tertiary-container"
+                    : "bg-surface-bright text-on-surface-variant hover:text-tertiary")
+                }
+              >
+                {label}
+              </button>
+            ))}
+          </span>
+        </span>
       </div>
 
       {/* Ansichts-Umschalter */}
