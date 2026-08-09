@@ -420,8 +420,16 @@ function baueZusammenfassung(a: Aktivitaet): string {
       const angefangen = a.bereiche
         .filter((b) => b.du > 0 && b.du < b.total)
         /* Ohne Klammer geschrieben, weil die erste Stimme Klammer-Einschübe nicht
-           verwenden darf und ein Modell die Form seiner Eingabe nachahmt. */
-        .map((b) => `${b.label}, davon ${b.total - b.du} von ${b.total} noch offen`);
+           verwenden darf und ein Modell die Form seiner Eingabe nachahmt.
+
+           Und mit dem Gesehenen zuerst. Die knappere Fassung «davon 11 von 12
+           noch offen» wurde auf Production zu «da fehlen dir nur noch 11 von 12
+           Punkten» verdreht, was den Sinn umkehrt; nennt man erst das Gesehene,
+           ist die Richtung eindeutig. */
+        .map(
+          (b) =>
+            `${b.label}, dort ${b.du} von ${b.total} gesehen, ${b.total - b.du} noch offen`,
+        );
       return [
         offen.length ? `Noch gar nicht besucht: ${offen.join("; ")}.` : "",
         angefangen.length
@@ -533,7 +541,10 @@ const SPRACHE =
   "Verben mit trennbarem Präfix auf das «ge» im Partizip, also «du hast " +
   "durchgearbeitet», nicht «du hast durcharbeitet»; bist du unsicher, nimm ein " +
   "einfaches Verb wie «gelesen» oder «angeschaut». Keine " +
-  "erfundenen Wörter." +
+  "erfundenen Wörter und keine erfundenen Wortschöpfungen. " +
+  "Schreib nicht, was die Person will, fühlt oder sicher denkt; du siehst ihre " +
+  "Zahlen, nicht ihre Absichten. Also nicht «du möchtest sicher mehr wissen», " +
+  "sondern «dort ist noch viel offen»." +
   /* Der Vergleichssatz sitzt NICHT mehr hier, sondern wird in deute() je Stimme
      gewählt: die erste vergleicht Schwerpunkte, die zweite nur die Blick-Umfrage. */
   ZEICHEN;

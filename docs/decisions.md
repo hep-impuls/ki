@@ -10,6 +10,76 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-09 — Die zwei Orakel-Stimmen haben getrennte Aufgaben (Christof)
+
+Bisher deuteten beide Stimmen dasselbe, nämlich die Aktivität, und
+unterschieden sich nur im Ton. Zwei Antworten auf eine Frage. Jetzt hat jede
+ihre eigene:
+
+- **Erste Stimme** («wo du warst und was noch lohnt») antwortet in **einfacher
+  Sprache** und in **drei Absätzen**: auf welcher Seite man vor allem aktiv war,
+  was man bevorzugt hat, was sich noch zu verfolgen lohnt.
+- **Zweite Stimme** («wie du mit der KI in die Zukunft gehst») fragt, **was für
+  ein KI-Typ** man ist, also ob man die KI eher zuversichtlich sieht oder eher
+  als Gefahr, mit kurzer Begründung.
+
+**Der wichtigste Einzelbefund ist sachlich, nicht sprachlich.** Die Etiketten,
+aus denen sich ein KI-Typ scheinbar begründen liesse, gelten gar nicht der KI:
+«froh über diese Technik» und «hätte es nie gebraucht» stammen aus den
+Epochen-Bausteinen und meinen den Pflug, den Buchdruck, die Dampfmaschine;
+«hilft mir heute» meint eine philosophische Sichtweise. Aus einem Urteil über
+den Pflug einen KI-Typ zu machen ist ein Fehlschluss, und ein Fehlschluss in
+gepflegter Sprache liest sich wie ein Befund.
+
+**Darum die Rangfolge der Quellen:** Hauptquelle ist die selbst gewählte
+Grundhaltung («Wie blickst du heute auf KI»), denn nur sie gilt wirklich der
+KI, und sie wird mit dem eigenen Wort wiedergegeben statt in ein Entweder-oder
+gepresst. Die übrigen Einordnungen darf das Orakel nur als Muster deuten, wie
+jemand auf Wandel überhaupt blickt, und muss das so sagen. Liegt weder eine
+Grundhaltung noch eine Einordnung vor, wird nicht geraten: dann sagt die
+Stimme, dass die Spuren nicht reichen, und nennt die drei Stellen, wo sich die
+Haltung zeigen lässt.
+
+**Und die Lehre, die über diesen Fall hinausgeht: Ein Verbot gegen eine
+verlockende Vorlage verliert.** Beide Stimmen bekamen denselben Bericht mit
+vierzehn Aktivitätszeilen. Die zweite hat daraufhin die Aktivität nacherzählt,
+obwohl es ihr ausdrücklich verboten war, hat «alle vier Lektionen» erfunden und
+den Rückfallweg übersprungen. Keine Formulierung hat das behoben. Erst als die
+Vorlage wegfiel und jede Stimme nur noch ihre eigenen Daten bekam, stimmte die
+Antwort. **Wenn ein Modell etwas nicht tun soll, nimm ihm das Material dafür weg,
+statt es zu verbieten.**
+
+Kleinere Lehren aus derselben Runde:
+
+- **Wortzahlen wirken nicht, Satzzahlen wirken.** «Höchstens 150 Wörter» ergab
+  167 und 203; die Satzzahl je Absatz hielt das Modell beide Male ein. Länge
+  wird über die Satzzahl gesteuert.
+- **Widersprüchliche Zahlen machen die weichere Vorgabe wertlos.** Drei Absätze
+  mit je zwei Sätzen von höchstens fünfzehn Wörtern ergeben neunzig Wörter,
+  verlangt waren mindestens hundertzehn. Aus der Obergrenze wäre die Zielgrösse
+  geworden und die einfache Sprache als erste weggefallen.
+- **Eine Verbotsliste ist kein Grundsatz.** Untersagt waren «ignorieren»,
+  «vernachlässigen», «auslassen» — das Modell schrieb «links liegen gelassen».
+  Jetzt steht der Grundsatz da, mit den Wörtern als Beispielen.
+- **Was man nicht empfehlen kann, muss man mitliefern.** Absatz 3 soll sagen,
+  was sich noch lohnt, durfte aber nur Namen aus dem Bericht nennen, und der
+  Bericht filterte die unbesuchten Bereiche heraus. Der Absatz war unerfüllbar,
+  bis die Lücke ausdrücklich im Bericht stand.
+- **Missverständliche Datenzeilen werden an der Zeile behoben, nicht per Regel.**
+  «Davon 11 von 12 noch offen» wurde zu «da fehlen dir nur noch 11 von 12
+  Punkten» verdreht. Jetzt steht das Gesehene zuerst.
+
+Gefunden hat das eine adversarische Prüfung mit fünf unabhängigen Lesarten
+(Widerspruch, einfache Sprache, Erfindungsrisiko, Rollentrennung, Ton und
+Typografie): 44 Befunde, 11 davon schwer. Das war teurer als der Einbau selbst
+und hat sich gelohnt, denn drei der schweren Befunde hätten im Unterricht
+falsche Aussagen erzeugt, ohne wie ein Fehler auszusehen.
+
+Stellen: [`deutung/route.ts`](../src/app/api/orakel/deutung/route.ts)
+(`KI_TYP`, `baueHaltungsbericht`, `VERGLEICH_ERSTE`/`VERGLEICH_ZWEITE`) ·
+[`OrakelDashboard.tsx`](../src/app/lernen/lernseite-2/das-orakel/_components/OrakelDashboard.tsx)
+(`SEITEN`, `baueAktivitaet`, Beschriftungen der zwei Blöcke).
+
 ## 2026-08-09 — KI-Rückmeldungen denken die anderen mit (Christof)
 
 Bisher sah das Orakel nur, was **diese** Person getan hat, und daneben das
