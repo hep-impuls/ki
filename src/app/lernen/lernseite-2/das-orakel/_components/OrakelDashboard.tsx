@@ -80,7 +80,7 @@ const BEREICHE: { prefix: string; label: string; total: number; href: string }[]
 ];
 
 const GESAMT_TOTAL = BEREICHE.reduce((s, b) => s + b.total, 0);
-const BILDER_TOTAL = 11; // Bilderstrecke «Bilder zur KI-Geschichte»
+const BILDER_TOTAL = 11; // Bilderstrecke «Bilder zur KI-Story»
 const VIDEO_TOTAL = 3;
 
 /* ── Abschnitt einer Spur-Basis-ID (für die PDF-Vertiefen-Liste) ──────────────
@@ -89,7 +89,7 @@ const VIDEO_TOTAL = 3;
 const ABSCHNITT_PREFIXE: { prefix: string; titel: string }[] = [
   { prefix: "vorhang-auf:story", titel: "Die KI-Story" },
   { prefix: "vorhang-auf:weisheit", titel: "Merkmale der neuen Akteurin" },
-  { prefix: "vorhang-auf:bild", titel: "Bilder zur KI-Geschichte" },
+  { prefix: "vorhang-auf:bild", titel: "Bilder zur KI-Story" },
   { prefix: "vorhang-auf:kontext", titel: "Die KI im Kontext" },
   { prefix: "philosophische-perspektive:teppich", titel: "Der Teppich des Wandels" },
   { prefix: "philosophische-perspektive:epochen-bild", titel: "Bilder der Verunsicherung" },
@@ -516,7 +516,7 @@ export default function OrakelDashboard() {
       icon: "imagesmode",
       titel: "Bilder angeschaut",
       wert: `${meineBilder} / ${BILDER_TOTAL}`,
-      text: "Bilder der Strecke «Bilder zur KI-Geschichte», die du geöffnet hast.",
+      text: "Bilder der Strecke «Bilder zur KI-Story», die du geöffnet hast.",
       alle: `${summeMitArt(alleSpuren, "vorhang-auf:bild", ["bild"])}× von allen geöffnet`,
     },
     {

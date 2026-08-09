@@ -306,7 +306,7 @@ const INHALTE_MODUL = "lernseite-2-inhalte";
 const BEREICH_PREFIXE: { prefix: string; bereich: string }[] = [
   { prefix: "vorhang-auf:story", bereich: "Die KI-Story" },
   { prefix: "vorhang-auf:weisheit", bereich: "Merkmale der neuen Akteurin" },
-  { prefix: "vorhang-auf:bild", bereich: "Bilder zur KI-Geschichte" },
+  { prefix: "vorhang-auf:bild", bereich: "Bilder zur KI-Story" },
   { prefix: "vorhang-auf:kontext", bereich: "Die KI im Kontext" },
   { prefix: "philosophische-perspektive:teppich", bereich: "Der Teppich des Wandels" },
   { prefix: "philosophische-perspektive:epochen-bild", bereich: "Bilder der Verunsicherung" },

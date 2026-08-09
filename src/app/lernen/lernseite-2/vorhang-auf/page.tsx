@@ -101,6 +101,8 @@ const BILDER_STORY: AnschauBild[] = [
     kurz: "der scheinbar denkende Automat",
     quelle:
       "Kupferstich, Joseph Friedrich zu Racknitz, 1789 · Wikimedia Commons · gemeinfrei",
+    // Beispielbild für den Knopf «Das verfolge ich weiter» (2026-08-08).
+    weiterverfolgen: true,
     /* Kurz gehalten auf Christofs Wunsch — die Einzelheiten stehen bei den
        drei Bildpunkten, wo man sie an der Sache selbst sieht: der Turban bei
        Punkt 1, der versteckte Mann bei Punkt 2, das offene Fach bei Punkt 3. */
@@ -455,7 +457,7 @@ export default function Lernseite2VorhangAuf() {
         eintraege={[
           { id: "einstiegsmuster", label: "Einstiegsmuster", prefixe: ["vorhang-auf:gewebe"] },
           { id: "ki-story", label: "Die KI-Story", prefixe: ["vorhang-auf:story"] },
-          { id: "bilder", label: "Bilder zur KI-Geschichte", prefixe: ["vorhang-auf:bild"] },
+          { id: "bilder", label: "Bilder zur KI-Story", prefixe: ["vorhang-auf:bild"] },
           { id: "merkmale", label: "Die Merkmale der neuen Akteurin", prefixe: ["vorhang-auf:weisheit"] },
           { id: "ki-kontext", label: "Die KI im Kontext", prefixe: ["vorhang-auf:kontext"] },
         ]}
@@ -846,7 +848,7 @@ export default function Lernseite2VorhangAuf() {
         id="bilder"
         className="mt-xl max-w-5xl"
         bild="/art/vorhang-bilder.webp"
-        titel="Bilder zur KI-Geschichte"
+        titel="Bilder zur KI-Story"
         prefixe={["vorhang-auf:bild"]}
         vorschau={
           <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">

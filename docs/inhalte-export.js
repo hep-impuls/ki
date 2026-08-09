@@ -170,7 +170,7 @@ function extrahiere(src) {
   // 5b) Inhalts-Arrays am Dateianfang (vor dem JSX) benennen
   const constRe = /^const ([A-Z][A-Z_0-9]*)\s*(?::[^=]+)?=\s*\[/gm;
   const CONST_TITEL = {
-    BILDER_STORY: "Bilderstrecke «Bilder zur KI-Geschichte» (Daten)",
+    BILDER_STORY: "Bilderstrecke «Bilder zur KI-Story» (Daten)",
     EPOCHEN: "Die acht Epochen (Daten)",
     BEREICHE: "Die Bereiche (Daten)",
   };

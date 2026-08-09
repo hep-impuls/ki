@@ -46,6 +46,9 @@ interface Bild {
   /** Abschluss-Stopp der Führung: verknüpft das Bild mit Technik &
    *  Verunsicherung der Epoche. */
   contextNote?: string;
+  /** Knopf «Das verfolge ich weiter» auf der Startseite des Bildes im Zoom
+   *  (siehe `ZoomImg.weiterverfolgen` in BildZoom.tsx). */
+  weiterverfolgen?: boolean;
 }
 interface Baustein {
   text: string;
@@ -118,6 +121,8 @@ const EPOCHEN: Epoche[] = [
         alt: "Raffaels Fresko «Die Schule von Athen»",
         caption: "Die Denker der Antike, versammelt im Gespräch",
         credit: "Raffael, «Die Schule von Athen», 1509–1511 · gemeinfrei",
+        // Beispielbild für den Knopf «Das verfolge ich weiter» (2026-08-08).
+        weiterverfolgen: true,
         hintergrund:
           "Raffael (1483–1520) gehört zu den bedeutendsten Malern der italienischen Hochrenaissance und schuf dieses Fresko zwischen 1509 und 1511 für die Bibliothek von Papst Julius II. im Vatikan. Es zeigt keine reale Szene, sondern versammelt in einer idealen Halle über fünfzig Denker der Antike. Im Zentrum stehen Platon und Aristoteles, umgeben von Figuren, die traditionell als Sokrates, Pythagoras, Euklid, Ptolemäus und Diogenes gedeutet werden. Viele weitere Zuordnungen sind in der Forschung allerdings unsicher oder umstritten. Am rechten Rand hat sich Raffael selbst ins Bild gemalt.",
         contextNote:
@@ -1285,6 +1290,7 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
             einordnung: b.hintergrund,
             tour: b.tour,
             contextNote: b.contextNote,
+            weiterverfolgen: b.weiterverfolgen,
           }))}
           startIdx={zoom.bild}
           epoch={EPOCHEN[zoom.ep].epoche}

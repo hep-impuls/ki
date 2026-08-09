@@ -10,6 +10,7 @@ import {
 } from "../_lib/spuren";
 import { merkeInhalt } from "../_lib/inhalte";
 import { GlossarText } from "./Glossar";
+import KartenAktion from "./KartenAktion";
 
 /**
  * BilderAnschauung — eine Bilderstrecke, die sich in einen Anschauungsmodus
@@ -41,6 +42,16 @@ export interface AnschauBild {
   /** Längere Geschichte/Einordnung — beschreibt Bild und Kontext, erscheint
    *  in der Erzähl-Leiste, solange kein Hotspot gewählt ist. */
   geschichte?: string;
+  /**
+   * Setzt den Knopf «Das verfolge ich weiter» unter die Bildgeschichte, also
+   * auf die Startseite des Bildes. Das Merkzeichen fliesst wie überall ins
+   * Orakel (Spur `wunsch:{spurKey}:{i}`).
+   *
+   * Vorerst ein Feld pro Bild und nicht für alle Bilder auf einmal: Christof
+   * wollte am 2026-08-08 erst an einem Beispiel sehen, wie es sich anfühlt.
+   * Ausrollen heisst dann, diese Zeile bei den übrigen Bildern zu ergänzen.
+   */
+  weiterverfolgen?: boolean;
   hotspots: AnschauHotspot[];
 }
 
@@ -370,6 +381,13 @@ export default function BilderAnschauung({
                 <p className="mt-xs text-body-sm leading-relaxed opacity-90">
                   <GlossarText text={bild.geschichte} />
                 </p>
+                {bild.weiterverfolgen && (
+                  <KartenAktion
+                    wunschId={`wunsch:${spurKey}:${offen}`}
+                    titel={bild.titel}
+                    aufDunkel
+                  />
+                )}
                 <p className="mt-sm flex items-center gap-xs text-label-sm opacity-60">
                   <span className="material-symbols-outlined text-[16px]">touch_app</span>
                   Tippe die leuchtenden Punkte im Bild an — jeder erzählt ein Detail.

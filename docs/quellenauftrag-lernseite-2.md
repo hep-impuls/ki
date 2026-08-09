@@ -597,7 +597,7 @@ Ab 2023 und 2024 wurden führende Systeme multimodal, verstanden also mehrere Ar
 **[VA-6d2bfc]** *(Vertiefung «Mehr lesen»)*
 Besonders sichtbar wurde die erzeugende Seite ab 2022, als Programme wie DALL-E, Midjourney und das offene Stable Diffusion aus einer blossen Textbeschreibung fertige Bilder malten. Kurz darauf folgte die Videoerzeugung, etwa als OpenAI 2024 sein System Sora vorstellte, das aus wenigen Sätzen kurze, verblüffend echt wirkende Filmszenen erzeugt. Umgekehrt kann eine multimodale KI auch Bestehendes deuten, also ein Foto beschreiben, eine Grafik erklären oder eine handschriftliche Notiz entziffern. Ein eindrückliches Beispiel ist eine App für blinde Menschen, die seit 2023 mit Hilfe eines solchen Modells die Umgebung in Worte fasst. So wird die Kamera des Handys zu einer Art vorlesendem Auge. Grundlage dafür ist, dass die Systeme Bild, Text und Ton in derselben inneren Sprache aus Zahlen darstellen. Dadurch lassen sich die Sinne in einem einzigen Modell verbinden, statt für jede Aufgabe ein eigenes Programm zu brauchen.
 
-### Bilder zur KI-Geschichte
+### Bilder zur KI-Story
 
 **[VA-4cceaa]** *(Fliesstext)*
 Bilder machen abstrakte Ideen anschaulich. Elf Werke spannen den Bogen von den frühen Rechenhilfen bis zu ChatGPT und den heutigen Bildgeneratoren. In jedem Bild kannst du begehbare Punkte antippen und so ein Detail nach dem anderen entdecken.
