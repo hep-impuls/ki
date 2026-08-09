@@ -243,12 +243,20 @@ function baueZusammenfassung(a: Aktivitaet): string {
  * darum wird das Präteritum untersagt; Perfekt und Präsens sind ohnehin die
  * natürlicheren Formen im gesprochenen Deutsch. Hilft das nicht, bleibt der
  * Wechsel auf ein stärkeres Modell.
+ *
+ * Nachtrag 2026-08-09: Auch das Perfekt ist nicht überall sicher. Beobachtet
+ * «du hast durcharbeitet» statt «durchgearbeitet» — bei trennbaren Präfixen
+ * fällt dem Modell das «ge» heraus. Darum ausdrücklich genannt, mit dem
+ * Ausweichweg, ein einfaches Verb zu nehmen.
  */
 const SPRACHE =
   " Schreib in Präsens und Perfekt. **Vermeide das Präteritum**, also nicht " +
   "«du markiertest» oder «du tastetest», sondern «du hast markiert», «du " +
   "tastest». Bilde nur Verbformen, die du sicher beherrschst; im Zweifel " +
-  "umschreiben («du hast … gesetzt» statt einer seltenen Form). Keine " +
+  "umschreiben («du hast … gesetzt» statt einer seltenen Form). Achte bei " +
+  "Verben mit trennbarem Präfix auf das «ge» im Partizip, also «du hast " +
+  "durchgearbeitet», nicht «du hast durcharbeitet»; bist du unsicher, nimm ein " +
+  "einfaches Verb wie «gelesen» oder «angeschaut». Keine " +
   "erfundenen Wörter." +
   VERGLEICH +
   ZEICHEN;
