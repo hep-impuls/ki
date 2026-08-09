@@ -3254,6 +3254,13 @@
   "stufe": "tief",
   "text": "Der Gesamtüberblick über deinen Weg. Die Zähler (Punkte, Flächen, Bilder, Videos) messen dein Tun; die letzten drei entstehen aus deinen eigenen Bewertungen. Weiter unten dann alles pro Aufgabe."
  },
+ "OR-ca85bb": {
+  "datei": "das-orakel/_components/OrakelDashboard.tsx",
+  "ort": "Perspektiven auf deine Aktivität",
+  "feld": "Fliesstext",
+  "stufe": "tief",
+  "text": "info Der Link öffnet den Abschnitt an der richtigen Stelle. Den einzelnen Punkt suchst du dort noch selbst."
+ },
  "OR-6ec80d": {
   "datei": "das-orakel/_components/OrakelDashboard.tsx",
   "ort": "Was dich besonders interessiert hat",

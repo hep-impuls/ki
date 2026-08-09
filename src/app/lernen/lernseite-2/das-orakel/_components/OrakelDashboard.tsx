@@ -449,6 +449,26 @@ export default function OrakelDashboard() {
       interessen: auswertung
         .filter((a) => a.labels.length > 0)
         .map((a) => ({ bereich: a.bereich, labels: a.labels })),
+      /* Die anonymen Sammelzahlen mitgeben, damit die Deutung «du im Verhältnis
+         zu allen» sagen kann (Christofs Vorgabe 2026-08-09). Vorher sah die KI
+         neben den eigenen Zahlen nur das MÖGLICHE Total, nie das Verhalten der
+         anderen; der Vergleich «du ↔ alle» wurde bloss angezeigt, nicht gedeutet.
+         Es sind dieselben Zahlen, die auf dieser Seite ohnehin stehen, also kein
+         neuer Datenweg und keine neue Datenschutzfrage.
+         Absichtlich NICHT dabei: eine Zahl der Teilnehmenden. Die Zähler zählen
+         Klicks, nicht Köpfe; was man daraus nicht rechnen darf, sagt die Regel
+         `VERGLEICH` in der Route. */
+      alle: {
+        bereiche: BEREICHE.map((b) => ({
+          label: b.label,
+          besuche: summeMitArt(alleSpuren, b.prefix, ["punkt", "video"]),
+        })).filter((b) => b.besuche > 0),
+        blick: BLICK_OPTIONEN.map((o) => ({
+          label: o.label,
+          stimmen: blickCounts[o.id] ?? 0,
+        })).filter((b) => b.stimmen > 0),
+        blickStimmen: blickTotal,
+      },
     };
   }, [
     meine,
@@ -462,6 +482,9 @@ export default function OrakelDashboard() {
     flaechenGefuellt,
     flaechenTotal,
     auswertung,
+    alleSpuren,
+    blickCounts,
+    blickTotal,
   ]);
 
   /* Aktionen — Blick-Poll */

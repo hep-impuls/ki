@@ -10,6 +10,64 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-09 — KI-Rückmeldungen denken die anderen mit (Christof)
+
+Bisher sah das Orakel nur, was **diese** Person getan hat, und daneben das
+*mögliche* Total. Die eigenen Zahlen waren damit ohne Bezugsgrösse: «36 von 114
+Knoten» sagt nichts darüber, ob das viel ist. Auf dem Bildschirm stand der
+Vergleich «ich / alle» längst — die KI durfte ihn nur nicht deuten.
+
+**Neu bekommt die persönliche Deutung die anonymen Sammelzahlen mit**, die der
+Browser für die Ansicht «Alle» ohnehin schon geladen hat: Besuche je Bereich und
+die Verteilung der Blick-Umfrage. Kein neuer Datenweg, keine neue
+Datenschutzfrage.
+
+**Die Grenze hängt an der Art der Zahl**, und das ist der ganze Punkt:
+
+- Die **Blick-Umfrage** ist eine Stimme pro Gerät, also echt pro Person. Sätze
+  wie «die meisten blicken neugierig, du kritisch» sind zulässig.
+- Die **Bereichs-Besuche** sind Klick-Summen über alle. Wie viele Personen
+  dahinterstehen, wissen wir nicht. Erlaubt ist nur der Vergleich der
+  **Schwerpunkte** (was liegt bei allen vorn, worauf hat sich diese Person
+  konzentriert). Verboten: Durchschnitt pro Person, Rangfolge, «fleissiger als
+  andere». Ohne diese Regel rechnet ein Modell die Summe bereitwillig in einen
+  Durchschnitt um und erfindet eine Rangliste, die die Daten nicht tragen.
+
+Fehlen die Vergleichszahlen, deutet das Orakel nur die eigene Aktivität und
+erwähnt die anderen nicht.
+
+**Die Klassen-Deutung bleibt bei der Lehrperson** (Christofs Entscheid). Für die
+Lernenden gibt es damit zwei Ebenen: das eigene Tun und die Gesamtheit aller.
+Eine dritte, klassenbezogene KI-Rückmeldung schülerseitig wird nicht gebaut.
+
+Stellen: [`route.ts` der Deutung](../src/app/api/orakel/deutung/route.ts)
+(`VERGLEICH`, `Aktivitaet.alle`, `baueZusammenfassung`) ·
+[`OrakelDashboard.tsx`](../src/app/lernen/lernseite-2/das-orakel/_components/OrakelDashboard.tsx)
+(`baueAktivitaet`).
+
+## 2026-08-09 — Erzeugte Texte ohne KI-Zeichen (Christof)
+
+Doppelpunkt und Gedankenstrich sind die zwei Zeichen, an denen man einen
+maschinell geschriebenen Text erkennt, noch vor jeder Formulierung. Weil das
+Orakel unmittelbar neben handgeschriebenen Lehrmitteltexten steht, fällt der
+Unterschied dort besonders auf.
+
+**Regel für alle drei LLM-Routen:** keine Gedankenstriche («—», «–»), Zahlbereiche
+ausgeschrieben («60 bis 90 Wörter»); Doppelpunkte nur, wenn danach wirklich eine
+Aufzählung oder ein Zitat folgt, nie als Stilmittel für eine Pause.
+
+**Und die Anweisung selbst hält sich daran.** Das ist der Teil, den man leicht
+übersieht: Der Prompt-Stil schlägt auf den Ausgabe-Stil durch. Solange in den
+Regeln selbst Gedankenstriche standen, war die Regel durch ihr eigenes Beispiel
+entkräftet. Deshalb sind sie aus allen Prompt-Strings entfernt. Ebenso wird
+gesagt, dass die übergebenen Zahlen in Zeilen der Form «Feld: Wert» kommen und
+diese Schreibweise **nicht** in den Antworttext übernommen werden darf — sonst
+wandert der Doppelpunkt über die Daten wieder herein.
+
+Gilt für: [Deutung](../src/app/api/orakel/deutung/route.ts) ·
+[Querschnitt](../src/app/api/orakel/querschnitt/route.ts) ·
+[Rhizom-Deutung der Lehrperson](../src/app/api/teacher/rhizom-deutung/route.ts).
+
 ## 2026-08-08 — Knotenkarte: immer «Bereich · Konkretes» (Christof)
 
 Christofs Regel, und sie ist richtig: In der Rangliste stand «Kaffeehaus &

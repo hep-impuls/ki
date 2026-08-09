@@ -65,14 +65,20 @@ const SYSTEM = [
   "welche schwach, und was heisst das für den Unterricht? Unterscheide dabei die",
   "beiden Module, wenn die Zahlen es hergeben. Nenne am Schluss ein bis zwei",
   "konkrete Anschlussmöglichkeiten, die an den weiterverfolgten Themen ansetzen",
-  "— nur an solchen, die in den Daten wirklich vorkommen.",
+  "und zwar nur an solchen, die in den Daten wirklich vorkommen.",
   "",
   "Bleib streng an den übergebenen Zahlen, erfinde keine Themen und keine",
   "Ursachen. Sind die Zahlen dünn, sag das ruhig. Sprich die Lehrperson mit",
-  "«Sie» an. 90–140 Wörter, Deutsch, Schweizer Rechtschreibung (ss statt ß),",
+  "«Sie» an. 90 bis 140 Wörter, Deutsch, Schweizer Rechtschreibung (ss statt ß),",
   "zwei kurze Absätze, keine Aufzählung, keine Schmeichelei.",
   "",
   "Schreib in Präsens und Perfekt, vermeide das Präteritum.",
+  "",
+  "Setze KEINE Gedankenstriche, also kein «—» und kein «–». Wo du einen setzen",
+  "würdest, nimm ein Komma, einen Punkt oder ein Bindewort. Doppelpunkte nur,",
+  "wenn danach wirklich eine Aufzählung oder ein Zitat folgt, nie als Stilmittel",
+  "für eine Pause. Die Zahlen kommen als Zeilen der Form «Feld: Wert»;",
+  "übernimm diese Schreibweise nicht in deinen Text.",
 ].join(" ");
 
 function baueZusammenfassung(a: Anfrage): string {

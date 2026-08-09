@@ -44,46 +44,118 @@ interface Aktivitaet {
   flaechenGefuellt?: number;
   flaechenTotal?: number;
   interessen?: { bereich: string; labels: string[] }[];
+  /**
+   * Die anonymen Sammelzahlen, damit die Deutung «du im Verhältnis zu allen»
+   * sagen kann (Christofs Vorgabe 2026-08-09). Vorher sah die KI nur die eigenen
+   * Zahlen und daneben das MÖGLICHE Total; ein Satz wie «du bist tiefer gegangen
+   * als die meisten» war ihr darum verwehrt.
+   *
+   * Optional: Sind die Zähler noch nicht geladen, fehlt das Feld, und die
+   * Deutung fällt auf die reine Eigensicht zurück.
+   */
+  alle?: {
+    /** Verteilung der Blick-Umfrage. Eine Stimme pro Gerät, also echt pro Person. */
+    blick: { label: string; stimmen: number }[];
+    blickStimmen: number;
+    /** Besuche je Bereich, summiert über alle. NICHT pro Person. */
+    bereiche: { label: string; besuche: number }[];
+  };
 }
+
+/**
+ * Der Vergleich «du im Verhältnis zu allen» (Christofs Vorgabe 2026-08-09).
+ *
+ * Was erlaubt ist und was nicht, hängt an der Art der Zahl, und das ist die
+ * ganze Schwierigkeit:
+ *
+ *  · Die BLICK-Umfrage ist eine Stimme pro Gerät. Sie ist damit echt pro Person
+ *    und erlaubt Sätze wie «die meisten blicken neugierig, du kritisch».
+ *  · Die BEREICHS-Besuche sind Summen über alle Teilnehmenden. Wie viele
+ *    Personen dahinterstehen, wissen wir NICHT (die Zähler sind anonym und
+ *    zählen Klicks, nicht Köpfe). Ein Durchschnitt pro Person ist daraus nicht
+ *    berechenbar, und «du liegst über dem Durchschnitt» wäre erfunden.
+ *    Zulässig ist der Vergleich der SCHWERPUNKTE: was bei allen vorn liegt
+ *    gegenüber dem, worauf sich diese Person konzentriert hat.
+ *
+ * Ohne diese Grenze rechnet ein Modell die Summe bereitwillig in einen
+ * Durchschnitt um und behauptet eine Rangfolge, die die Daten nicht tragen.
+ */
+const VERGLEICH =
+  " Sind ZUM VERGLEICH anonyme Zahlen aller Teilnehmenden angegeben, stell " +
+  "einen Bezug her, aber höchstens in einem Satz, und bleib streng bei dem, " +
+  "was die Zahlen hergeben. Bei der Blick-Umfrage darfst du sagen, wie die " +
+  "Mehrheit blickt und wie diese Person dazu steht. Bei den Bereichs-Besuchen " +
+  "vergleiche nur SCHWERPUNKTE, also welcher Bereich bei allen vorn liegt und " +
+  "worauf sich diese Person konzentriert hat. Diese Zahlen sind Summen über " +
+  "alle und zählen Klicks, nicht Personen. Rechne daraus KEINEN Durchschnitt " +
+  "pro Person, behaupte keinen Rang und schreib nie, jemand sei besser, " +
+  "schneller oder fleissiger als andere. Fehlen die Vergleichszahlen, deute " +
+  "nur die eigene Aktivität und erwähne die anderen nicht.";
+
+/**
+ * Typografie-Regel für JEDEN erzeugten Text (Christofs Vorgabe 2026-08-09).
+ *
+ * Gedankenstrich und beiläufiger Doppelpunkt sind die zwei Zeichen, an denen man
+ * maschinell erzeugten Text sofort erkennt. In den handgeschriebenen Texten des
+ * Lernsets werden sie längst vermieden; hier entsteht der Text erst zur
+ * Laufzeit, also muss die Regel in die Anweisung.
+ *
+ * Nicht absolut: «nur dort, wo es nötig ist». Ein Doppelpunkt vor einer echten
+ * Aufzählung bleibt richtig.
+ *
+ * Der letzte Satz ist der wichtigste und der am leichtesten zu übersehen: Die
+ * Zahlen kommen als «Feld: Wert»-Zeilen. Ein Modell spiegelt den Stil seiner
+ * Eingabe, und genau daraus entstand der doppelpunktreiche Ton. Aus demselben
+ * Grund sind die Gedankenstriche AUS DEN ANWEISUNGEN SELBST entfernt — eine
+ * Regel gegen Gedankenstriche, die in einem Text voller Gedankenstriche steht,
+ * hebt sich auf.
+ */
+const ZEICHEN =
+  " Setze KEINE Gedankenstriche, also kein «—» und kein «–». Wo du einen " +
+  "setzen würdest, nimm ein Komma, einen Punkt oder ein Bindewort. " +
+  "Doppelpunkte nur, wenn danach wirklich eine Aufzählung oder ein Zitat " +
+  "folgt, nie als Stilmittel für eine Pause. Die Zahlen werden dir in Zeilen " +
+  "der Form «Feld: Wert» übergeben; übernimm diese Schreibweise nicht in " +
+  "deinen Text, sondern schreib in ganzen Sätzen.";
 
 const STIL_SYSTEM: Record<Stil, string> = {
   wissenschaftlich: [
     "Du bist das Orakel eines Lernmoduls über KI und Philosophie an einer",
     "Berufsfachschule. Deute die dir übergebene Lern-Aktivität EINER",
-    "Person nüchtern und analytisch — wie eine knappe, sachliche",
+    "Person nüchtern und analytisch, wie eine knappe, sachliche",
     "Lernstandsbeschreibung. Sprich die Person mit «du» an. Benenne, worauf sie",
     "sich konzentriert hat, wo sie in die Tiefe ging, was sie hoch oder tief",
     "gewichtete. Keine Schmeichelei, keine erfundenen Fakten über die Zahlen",
-    "hinaus. 60–90 Wörter, Deutsch, Schweizer Rechtschreibung (ss statt ß), ein",
+    "hinaus. 60 bis 90 Wörter, Deutsch, Schweizer Rechtschreibung (ss statt ß), ein",
     "zusammenhängender Absatz, keine Aufzählung.",
   ].join(" "),
   literarisch: [
     "Du bist das Orakel eines Lernmoduls über KI und Philosophie. Deute die dir",
-    "übergebene Lern-Aktivität EINER Person literarisch — als kleinen,",
+    "übergebene Lern-Aktivität EINER Person literarisch, als kleinen,",
     "bildhaften Prosatext über ihren Weg durch das Gewebe des Moduls. Sprich sie",
     "mit «du» an, nutze Metaphern (Fäden, Wege, Licht, Muster), bleibe aber an",
-    "den tatsächlichen Zahlen. Keine erfundenen Fakten. 60–90 Wörter, Deutsch,",
+    "den tatsächlichen Zahlen. Keine erfundenen Fakten. 60 bis 90 Wörter, Deutsch,",
     "Schweizer Rechtschreibung (ss statt ß), ein zusammenhängender Absatz,",
     "poetisch, aber nicht kitschig.",
   ].join(" "),
   fantastisch: [
-    "Du bist ein altes, sehendes Orakel — mythisch, geheimnisvoll, feierlich.",
+    "Du bist ein altes, sehendes Orakel, mythisch, geheimnisvoll, feierlich.",
     "Deute die dir übergebene Lern-Aktivität EINER Person, die vor dich",
     "getreten ist, wie eine Seherin eine Reise deutet. Sprich sie mit «du» an,",
     "in orakelhaftem, fantastischem Ton (Sterne, Schwellen, verborgene Pfade,",
     "Weissagung), aber bleibe an den tatsächlichen Zahlen und erfinde keine",
-    "Fakten. 60–90 Wörter, Deutsch, Schweizer Rechtschreibung (ss statt ß), ein",
+    "Fakten. 60 bis 90 Wörter, Deutsch, Schweizer Rechtschreibung (ss statt ß), ein",
     "zusammenhängender Absatz. Ende mit einer kurzen, weissagenden Wendung.",
   ].join(" "),
   interesse: [
     "Du bist das Orakel eines Lernmoduls über KI und Philosophie an einer",
     "Berufsfachschule. Gib eine KNAPPE, analytische Rückmeldung zum INTERESSE",
-    "der Person — in leicht orakelhaftem, aber klarem Ton. Sprich sie mit «du»",
+    "der Person, in leicht orakelhaftem, aber klarem Ton. Sprich sie mit «du»",
     "an. Stütze dich NUR auf die übergebenen Zahlen und die «Ausgewählten",
-    "Inhalte»: Benenne, welche Themen sie vor allem gewählt hat (zwei bis drei",
+    "Inhalte». Benenne, welche Themen sie vor allem gewählt hat (zwei bis drei",
     "namentlich) und was das über ihre Neugier verrät. Hat sie vor allem",
     "Flächen geknüpft und wenig Inhalte gewählt, benenne das freundlich als",
-    "spielerisches Erkunden der Muster. Erfinde nichts. 50–80 Wörter, Deutsch,",
+    "spielerisches Erkunden der Muster. Erfinde nichts. 50 bis 80 Wörter, Deutsch,",
     "Schweizer Rechtschreibung (ss statt ß), ein zusammenhängender Absatz.",
   ].join(" "),
 };
@@ -112,6 +184,24 @@ function baueZusammenfassung(a: Aktivitaet): string {
           (x) => `Ausgewählte Inhalte in «${x.bereich}»: ${x.labels.join(", ")}.`,
         )
       : []),
+    /* Die Sammelzahlen zuletzt und ausdrücklich benannt, damit das Modell sie
+       nicht mit den eigenen Zahlen verwechselt. */
+    ...(a.alle
+      ? [
+          "",
+          "ZUM VERGLEICH, die anonymen Zahlen ALLER Teilnehmenden:",
+          a.alle.bereiche.length
+            ? `Besuche je Bereich bei allen zusammen: ${a.alle.bereiche
+                .map((b) => `${b.label}: ${b.besuche}`)
+                .join("; ")}.`
+            : "",
+          a.alle.blickStimmen > 0
+            ? `Umfrage «Wie blickst du auf KI?» bei allen (${a.alle.blickStimmen} Stimmen): ${a.alle.blick
+                .map((b) => `${b.label}: ${b.stimmen}`)
+                .join("; ")}.`
+            : "",
+        ]
+      : []),
   ];
   return zeilen.filter(Boolean).join("\n");
 }
@@ -131,16 +221,18 @@ const SPRACHE =
   "«du markiertest» oder «du tastetest», sondern «du hast markiert», «du " +
   "tastest». Bilde nur Verbformen, die du sicher beherrschst; im Zweifel " +
   "umschreiben («du hast … gesetzt» statt einer seltenen Form). Keine " +
-  "erfundenen Wörter.";
+  "erfundenen Wörter." +
+  VERGLEICH +
+  ZEICHEN;
 
 /** Für alle Stile: die tatsächlich gewählten Inhalte aufgreifen, nichts
  *  dazuerfinden. */
 const GEMEINSAM =
   " Sind konkrete «Ausgewählte Inhalte» genannt, greif ein bis drei davon " +
-  "namentlich auf und deute daraus das Interesse der Person — erfinde keine " +
+  "namentlich auf und deute daraus das Interesse der Person, erfinde keine " +
   "Inhalte, die nicht in der Liste stehen. Sind viele Flächen geknüpft, aber " +
   "kaum Inhalte ausgewählt, deute das behutsam als «vor allem die Muster " +
-  "bespielt» — spielerisch erkundet, inhaltlich noch offen.";
+  "bespielt», spielerisch erkundet, inhaltlich noch offen.";
 
 async function deute(stil: Stil, zusammenfassung: string): Promise<string | null> {
   const apiKey = process.env.ANTHROPIC_API_KEY;

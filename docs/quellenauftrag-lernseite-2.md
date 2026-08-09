@@ -1927,6 +1927,9 @@ Gezählt wird pro Fortschritts-Code, der hier mindestens eine Aktivität gemacht
 **[OR-831c6f]** *(Fliesstext)*
 Der Gesamtüberblick über deinen Weg. Die Zähler (Punkte, Flächen, Bilder, Videos) messen dein Tun; die letzten drei entstehen aus deinen eigenen Bewertungen. Weiter unten dann alles pro Aufgabe.
 
+**[OR-ca85bb]** *(Fliesstext)*
+info Der Link öffnet den Abschnitt an der richtigen Stelle. Den einzelnen Punkt suchst du dort noch selbst.
+
 ### Was dich besonders interessiert hat
 
 **[OR-6ec80d]** *(Fliesstext)*
