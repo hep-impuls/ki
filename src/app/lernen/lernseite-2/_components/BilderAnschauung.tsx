@@ -42,16 +42,6 @@ export interface AnschauBild {
   /** Längere Geschichte/Einordnung — beschreibt Bild und Kontext, erscheint
    *  in der Erzähl-Leiste, solange kein Hotspot gewählt ist. */
   geschichte?: string;
-  /**
-   * Setzt den Knopf «Das verfolge ich weiter» unter die Bildgeschichte, also
-   * auf die Startseite des Bildes. Das Merkzeichen fliesst wie überall ins
-   * Orakel (Spur `wunsch:{spurKey}:{i}`).
-   *
-   * Vorerst ein Feld pro Bild und nicht für alle Bilder auf einmal: Christof
-   * wollte am 2026-08-08 erst an einem Beispiel sehen, wie es sich anfühlt.
-   * Ausrollen heisst dann, diese Zeile bei den übrigen Bildern zu ergänzen.
-   */
-  weiterverfolgen?: boolean;
   hotspots: AnschauHotspot[];
 }
 
@@ -229,15 +219,16 @@ export default function BilderAnschauung({
                   </p>
                 </div>
               </button>
-              {b.weiterverfolgen && (
-                <div className="border-t border-outline-variant p-sm">
-                  <KartenAktion
-                    className="mt-0"
-                    wunschId={`wunsch:${spurKey}:${i}`}
-                    titel={b.titel}
-                  />
-                </div>
-              )}
+              {/* Merkzeichen für jedes Bild. Kein Feld in den Daten mehr: Es gibt
+                  kein Bild, bei dem man es nicht wollen würde, und ein Schalter
+                  pro Bild wäre nur eine Stelle, die man beim nächsten vergisst. */}
+              <div className="border-t border-outline-variant p-sm">
+                <KartenAktion
+                  className="mt-0"
+                  wunschId={`wunsch:${spurKey}:${i}`}
+                  titel={b.titel}
+                />
+              </div>
             </div>
           );
         })}

@@ -10,6 +10,40 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-08 — «Das verfolge ich weiter» bei jedem Bild, Gesamtzahl 138 (Christof)
+
+Das Merkzeichen sitzt auf der **Vorderseite** jedes Bildes: bei der Bilderstrecke
+auf der Karte unter «Punkte zum Entdecken», bei den Epochen unter der
+Bildunterschrift. Nicht in der geöffneten Bildansicht — Christofs Begründung:
+So lässt sich auch im Nachhinein rasch entscheiden, ohne jedes Bild wieder zu
+öffnen.
+
+**Kein Schalter in den Daten.** Kurz gab es ein Feld `weiterverfolgen` pro Bild
+(für die Muster-Runde). Es ist wieder weg: Es gibt kein Bild, bei dem man das
+Merkzeichen nicht wollen würde, und ein Feld pro Bild wäre nur eine Stelle, die
+man beim nächsten vergisst.
+
+**Beim Einbauen auf der Karte:** Die Bildkarte WAR selbst der Knopf. Ein Knopf
+im Knopf ist ungültiges HTML, und der Klick aufs Merkzeichen hätte das Bild
+geöffnet. Die Karte ist jetzt ein Rahmen, das Öffnen ein eigener Knopf darin.
+Wer dort etwas Anklickbares ergänzt: nicht in den Öffnen-Knopf hineinlegen, und
+`focus-within` statt `focus-visible` verwenden, weil ein Rahmen keinen Fokus
+bekommt.
+
+**Gesamtzahl der möglichen Merkzeichen: 138.** Das Orakel zeigt «x / 138». Die
+Zahl ist handgepflegt (`WUNSCH_TOTAL` in `OrakelDashboard.tsx`), weil das
+Dashboard eine eigene Seite ist und die Karten der anderen Seiten nicht sehen
+kann. Damit sie nicht still veraltet, gibt es
+[docs/weiterverfolgen-zaehlen.mjs](weiterverfolgen-zaehlen.mjs): Das Skript
+zählt die Merkzeichen aus den Daten nach und bricht mit einer Meldung ab, wenn
+die Konstante nicht stimmt. **Nach jedem neuen Bild, jeder neuen Station oder
+Denkerin einmal laufen lassen** — gehört ab jetzt zur Prüfkette neben
+`belege-pruefen`, `anker-kollision` und `wikilinks-pruefen`.
+
+Zusammensetzung: 22 Stationen der KI-Story · 12 Merkmale · 11 Bilder zur
+KI-Story · 33 Punkte im Teppich · 24 Epochen-Bausteine (8 × 3) · 16 Bilder der
+Epochen · 20 Denkerinnen und Denker.
+
 ## 2026-08-08 — Bildergalerie: die Geschichte trägt den Rahmen, die Punkte tragen die Einzelheiten (Christof)
 
 Anlass: Christof fand den Text zum Schachtürken zu lang und wollte die

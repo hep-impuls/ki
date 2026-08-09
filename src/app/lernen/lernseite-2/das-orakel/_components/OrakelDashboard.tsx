@@ -83,6 +83,21 @@ const GESAMT_TOTAL = BEREICHE.reduce((s, b) => s + b.total, 0);
 const BILDER_TOTAL = 11; // Bilderstrecke «Bilder zur KI-Story»
 const VIDEO_TOTAL = 3;
 
+/**
+ * Wie viele Merkzeichen «Das verfolge ich weiter» überhaupt möglich sind.
+ *
+ * Zusammensetzung (Stand 2026-08-08): 22 Stationen der KI-Story · 12 Merkmale ·
+ * 11 Bilder zur KI-Story · 33 Punkte im Teppich · 24 Epochen-Bausteine (8 × 3) ·
+ * 16 Bilder der Epochen · 20 Denkerinnen und Denker.
+ *
+ * Handgepflegt, weil das Dashboard eine eigene Seite ist und die Karten der
+ * anderen Seiten nicht sehen kann. Damit die Zahl nicht still veraltet, rechnet
+ * `node docs/weiterverfolgen-zaehlen.mjs` sie aus den Daten nach und meldet
+ * jede Abweichung — bei neuen Bildern, Stationen oder Denkerinnen also dort
+ * nachsehen, nicht hier raten.
+ */
+const WUNSCH_TOTAL = 138;
+
 /* ── Abschnitt einer Spur-Basis-ID (für die PDF-Vertiefen-Liste) ──────────────
  * Ordnet eine Basis-ID (ohne «wunsch:»-Präfix) dem Titel des Abschnitts zu, aus
  * dem sie stammt. Spezifische Präfixe zuerst (erster Treffer gewinnt). */
@@ -529,11 +544,11 @@ export default function OrakelDashboard() {
     {
       icon: "bookmark_added",
       titel: "Weiterverfolgen",
-      wert: `${meineWuensche}`,
+      wert: `${meineWuensche} / ${WUNSCH_TOTAL}`,
       text:
         meineWuensche === 0
-          ? "Noch kein «das verfolge ich weiter» gesetzt."
-          : "Merkzeichen gesetzt.",
+          ? `Noch kein «das verfolge ich weiter» gesetzt — möglich wären ${WUNSCH_TOTAL}.`
+          : `Merkzeichen gesetzt, von ${WUNSCH_TOTAL} möglichen.`,
       alle: `${summeMitPrefix(alleSpuren, "wunsch:")}× von allen gesetzt`,
     },
     {

@@ -46,9 +46,6 @@ interface Bild {
   /** Abschluss-Stopp der Führung: verknüpft das Bild mit Technik &
    *  Verunsicherung der Epoche. */
   contextNote?: string;
-  /** Knopf «Das verfolge ich weiter» auf der Startseite des Bildes im Zoom
-   *  (siehe `ZoomImg.weiterverfolgen` in BildZoom.tsx). */
-  weiterverfolgen?: boolean;
 }
 interface Baustein {
   text: string;
@@ -121,8 +118,6 @@ const EPOCHEN: Epoche[] = [
         alt: "Raffaels Fresko «Die Schule von Athen»",
         caption: "Die Denker der Antike, versammelt im Gespräch",
         credit: "Raffael, «Die Schule von Athen», 1509–1511 · gemeinfrei",
-        // Beispielbild für den Knopf «Das verfolge ich weiter» (2026-08-08).
-        weiterverfolgen: true,
         hintergrund:
           "Raffael (1483–1520) gehört zu den bedeutendsten Malern der italienischen Hochrenaissance und schuf dieses Fresko zwischen 1509 und 1511 für die Bibliothek von Papst Julius II. im Vatikan. Es zeigt keine reale Szene, sondern versammelt in einer idealen Halle über fünfzig Denker der Antike. Im Zentrum stehen Platon und Aristoteles, umgeben von Figuren, die traditionell als Sokrates, Pythagoras, Euklid, Ptolemäus und Diogenes gedeutet werden. Viele weitere Zuordnungen sind in der Forschung allerdings unsicher oder umstritten. Am rechten Rand hat sich Raffael selbst ins Bild gemalt.",
         contextNote:
@@ -1185,14 +1180,13 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
                     </InfoPunkt>
                     {/* Merkzeichen direkt bei der Miniatur, nicht erst im Zoom:
                         So lässt sich auch im Nachhinein rasch entscheiden, ohne
-                        jedes Bild noch einmal zu öffnen. */}
-                    {b.weiterverfolgen && (
-                      <KartenAktion
-                        className="mt-sm"
-                        wunschId={`wunsch:${SPUR}-bild:${ei}:${bi}`}
-                        titel={`${e.epoche} · ${b.alt}`}
-                      />
-                    )}
+                        jedes Bild noch einmal zu öffnen. Für jedes Bild, ohne
+                        Schalter in den Daten. */}
+                    <KartenAktion
+                      className="mt-sm"
+                      wunschId={`wunsch:${SPUR}-bild:${ei}:${bi}`}
+                      titel={`${e.epoche} · ${b.alt}`}
+                    />
                   </figcaption>
                 </figure>
               ))}

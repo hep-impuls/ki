@@ -101,8 +101,6 @@ const BILDER_STORY: AnschauBild[] = [
     kurz: "der scheinbar denkende Automat",
     quelle:
       "Kupferstich, Joseph Friedrich zu Racknitz, 1789 · Wikimedia Commons · gemeinfrei",
-    // Beispielbild für den Knopf «Das verfolge ich weiter» (2026-08-08).
-    weiterverfolgen: true,
     /* Kurz gehalten auf Christofs Wunsch — die Einzelheiten stehen bei den
        drei Bildpunkten, wo man sie an der Sache selbst sieht: der Turban bei
        Punkt 1, der versteckte Mann bei Punkt 2, das offene Fach bei Punkt 3. */
