@@ -36,6 +36,26 @@ Datenschutzfrage.
 Fehlen die Vergleichszahlen, deutet das Orakel nur die eigene Aktivität und
 erwähnt die anderen nicht.
 
+**Zwei Lehren aus der Prüfung auf Production**, beide teurer als der Einbau
+selbst:
+
+1. **Eine Kann-Bestimmung neben einer knappen Wortzahl ist keine Regel.** Erste
+   Fassung: «stell einen Bezug her, aber höchstens in einem Satz». Im Budget von
+   60 bis 90 Wörtern fiel genau dieser Satz als erster weg, und zurück kam eine
+   tadellose Deutung, in der die anderen nicht vorkamen. Jetzt: genau ein Satz,
+   gegen Ende, verbindlich.
+2. **Was wir selbst ausrechnen können, rechnen wir selbst aus.** Die Bereiche
+   gingen in Seitenreihenfolge hinaus. Haiku las aus acht Zahlen den falschen
+   Spitzenreiter («Verunsicherung» mit 59 statt «KI-Story» mit 77) und schrieb
+   den Irrtum als Tatsache in die Deutung. Jetzt gehen sie absteigend hinaus, der
+   Spitzenreiter wird eigens benannt, und die Anweisung sagt ausdrücklich, sich
+   darauf zu verlassen statt selbst zu sortieren. Sortieren kostet nichts,
+   Kopfrechnen im Modell ist unzuverlässig.
+
+Dazu eine Ton-Schranke: keine Wörter wie «ignorieren» oder «vernachlässigen». Das
+Modell schrieb «ignorierst du dagegen … weitgehend». Ein anderer Schwerpunkt ist
+kein Versäumnis.
+
 **Die Klassen-Deutung bleibt bei der Lehrperson** (Christofs Entscheid). Für die
 Lernenden gibt es damit zwei Ebenen: das eigene Tun und die Gesamtheit aller.
 Eine dritte, klassenbezogene KI-Rückmeldung schülerseitig wird nicht gebaut.

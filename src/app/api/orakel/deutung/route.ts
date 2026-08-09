@@ -96,7 +96,11 @@ const VERGLEICH =
   "worauf sich diese Person konzentriert hat. Diese Zahlen sind Summen über " +
   "alle und zählen Klicks, nicht Personen. Rechne daraus KEINEN Durchschnitt " +
   "pro Person, behaupte keinen Rang und schreib nie, jemand sei besser, " +
-  "schneller oder fleissiger als andere. Fehlen die Vergleichszahlen, deute " +
+  "schneller oder fleissiger als andere. Welcher Bereich bei allen vorn liegt, " +
+  "wird dir ausdrücklich gesagt; verlass dich darauf und ermittle es nicht " +
+  "selbst aus den Zahlen. Beschreib den Unterschied sachlich und ohne Wörter " +
+  "wie «ignorieren», «vernachlässigen» oder «auslassen»; ein anderer " +
+  "Schwerpunkt ist kein Versäumnis. Fehlen die Vergleichszahlen, deute " +
   "nur die eigene Aktivität und erwähne die anderen nicht.";
 
 /**
@@ -192,13 +196,30 @@ function baueZusammenfassung(a: Aktivitaet): string {
         )
       : []),
     /* Die Sammelzahlen zuletzt und ausdrücklich benannt, damit das Modell sie
-       nicht mit den eigenen Zahlen verwechselt. */
+       nicht mit den eigenen Zahlen verwechselt.
+
+       Die Bereiche gehen ABSTEIGEND hinaus und der Spitzenreiter wird eigens
+       genannt. Grund: In der ersten Fassung standen sie in Seitenreihenfolge,
+       und Haiku hat aus acht Zahlen den falschen Spitzenreiter gelesen (es nannte
+       «Verunsicherung» mit 59 statt «KI-Story» mit 77) und diesen Irrtum als
+       Tatsache in die Deutung geschrieben. Sortieren ist billig, Rechnen im
+       Modell ist unzuverlässig: Was wir selbst ausrechnen können, rechnen wir
+       selbst aus. */
     ...(a.alle
       ? [
           "",
           "ZUM VERGLEICH, die anonymen Zahlen ALLER Teilnehmenden:",
           a.alle.bereiche.length
-            ? `Besuche je Bereich bei allen zusammen: ${a.alle.bereiche
+            ? `Am häufigsten besucht bei allen zusammen ist «${
+                [...a.alle.bereiche].sort((x, y) => y.besuche - x.besuche)[0]
+                  .label
+              }».`
+            : "",
+          a.alle.bereiche.length
+            ? `Besuche je Bereich bei allen zusammen, absteigend geordnet: ${[
+                ...a.alle.bereiche,
+              ]
+                .sort((x, y) => y.besuche - x.besuche)
                 .map((b) => `${b.label}: ${b.besuche}`)
                 .join("; ")}.`
             : "",
