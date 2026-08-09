@@ -1938,6 +1938,9 @@ Die Inhalte, die du ausgewählt hast — die Grundlage, aus der das Orakel dein 
 **[OR-d2a56b]** *(Fliesstext)*
 Bisher hast du vor allem die Muster bespielt — […] geknüpft, ohne Inhalte zu öffnen. Auch das ist eine Spur, die das Orakel deuten kann.
 
+**[OR-51dfa4]** *(Fliesstext)*
+insights In einfacher Sprache und drei Absätzen: wo du vor allem aktiv warst, was du bevorzugt hast, und was sich noch lohnt.
+
 ### Deine Spur durchs Gewebe
 
 **[OR-36b88f]** *(Fliesstext)*
@@ -1955,11 +1958,11 @@ Bei «Die KI im Kontext» hast du für jeden Aspekt gewählt, wie viel Achtsamke
 
 ### Das Orakel spricht
 
-**[OR-00d180]** *(Fliesstext)*
-Das Orakel deutet deine eigene Aktivität in wenigen Sätzen. Wähle eine Form, und wenn sie dir nicht zusagt, befrage es in einer anderen. Dazu schickt dein Browser eine Zusammenfassung deiner Aktivität: Zähler, Bewertungen und die Titel der Punkte, die du gewählt hast. Ohne Namen und ohne deinen Fortschritts-Code.
+**[OR-a47cee]** *(Fliesstext)*
+Was für ein KI-Typ bist du? Das Orakel liest aus deinen Einordnungen, ob du die KI eher zuversichtlich siehst oder eher als Gefahr, und sagt dir kurz, woran es das festmacht. Es ist eine Lesart deiner Klicks, kein Urteil über dich. Wähle eine Form, und wenn sie dir nicht zusagt, befrage es in einer anderen. Dazu schickt dein Browser eine Zusammenfassung deiner Aktivität: Zähler, Bewertungen und die Titel der Punkte, die du gewählt hast. Ohne Namen und ohne deinen Fortschritts-Code.
 
-**[OR-cd8f18]** *(Fliesstext)*
-Für eine Deutung braucht das Orakel erst ein paar Spuren. Geh durch das Modul, klicke Punkte an — dann kehr zurück.
+**[OR-dff0e0]** *(Fliesstext)*
+Dafür braucht das Orakel erst deine Einordnungen. Bewerte im «Teppich des Wandels» und bei «Philosophie in Zeiten der Verunsicherung», oder wähle unten deine Grundhaltung zur KI — dann kehr zurück.
 
 **[OR-6b0d5c]** *(Fliesstext)*
 Das Orakel schweigt: Auf dem Server ist gerade kein KI-Schlüssel hinterlegt. Sobald er gesetzt ist, deutet es deine Aktivität hier.

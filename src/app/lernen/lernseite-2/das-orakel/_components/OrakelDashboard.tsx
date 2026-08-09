@@ -81,6 +81,26 @@ const BEREICHE: { prefix: string; label: string; total: number; href: string }[]
   { prefix: "video:", label: "Video-Impulse", total: 3, href: "/lernen/lernseite-2" },
 ];
 
+/* ── Seiten des Lernsets ───────────────────────────────────────────────────
+ * Für die erste Orakel-Stimme, die sagt, WO man vor allem aktiv war. Der
+ * Schlüssel ist der erste Teil des Spur-Präfixes, die Bereiche summieren sich
+ * darüber zu Seiten.
+ *
+ * Die Bezeichnungen sind absichtlich kurz und ohne Gedankenstrich. Die vollen
+ * Titel heissen «Vorhang auf — eine neue Akteurin» und «Das Orakel — erkenne
+ * dich selbst»; das Modell zitiert, was wir ihm geben, und würde den
+ * Gedankenstrich mitschleppen, den die Typografie-Regel verbietet.
+ *
+ * Die Video-Impulse fehlen mit Absicht: sie liegen auf der Übersichtsseite und
+ * sind keine eigene Lernseite. Sie stehen ohnehin als eigene Zahl im Bericht. */
+const SEITEN: { schluessel: string; label: string }[] = [
+  { schluessel: "vorhang-auf", label: "Vorhang auf" },
+  {
+    schluessel: "philosophische-perspektive",
+    label: "Philosophische Perspektive",
+  },
+];
+
 const GESAMT_TOTAL = BEREICHE.reduce((s, b) => s + b.total, 0);
 const BILDER_TOTAL = 11; // Bilderstrecke «Bilder zur KI-Story»
 const VIDEO_TOTAL = 3;
@@ -428,16 +448,22 @@ export default function OrakelDashboard() {
 
   /* Aktivitäts-Snapshot fürs Orakel bauen */
   const baueAktivitaet = useCallback(() => {
+    /* Die Bereichszahlen sind gedeckelt, `meineGesamt` war es nicht. Bei
+       Altbestand aus einer früheren Spur-Struktur hätte im Bericht «120 von 114
+       Knoten» gestanden, also genau der Unsinn, den die Deckelung eine Zeile
+       weiter unten verhindert. Darum die Gesamtzahl aus den gedeckelten Werten
+       bilden, nicht aus der Rohsumme. */
+    const bereiche = BEREICHE.map((b) => ({
+      label: b.label,
+      du: Math.min(meine[b.prefix] ?? 0, b.total),
+      total: b.total,
+    }));
     return {
-      knotenDu: meineGesamt,
+      knotenDu: bereiche.reduce((n, b) => n + b.du, 0),
       knotenGesamt: GESAMT_TOTAL,
-      bereiche: BEREICHE.map((b) => ({
-        label: b.label,
-        // Gedeckelt: Spuren aus einer früheren Struktur können den Bereich
-        // sonst über 100 Prozent treiben, und die KI deutet dann «8 von 4».
-        du: Math.min(meine[b.prefix] ?? 0, b.total),
-        total: b.total,
-      })),
+      // Gedeckelt: Spuren aus einer früheren Struktur können den Bereich
+      // sonst über 100 Prozent treiben, und die KI deutet dann «8 von 4».
+      bereiche,
       wuensche: meineWuensche,
       kombinationen: meineKombis,
       bilder: meineBilder,
@@ -449,6 +475,46 @@ export default function OrakelDashboard() {
       interessen: auswertung
         .filter((a) => a.labels.length > 0)
         .map((a) => ({ bereich: a.bereich, labels: a.labels })),
+      /* Für die erste Stimme, Absatz 1: auf WELCHER Seite war die Person vor
+         allem aktiv. Wir summieren selbst, statt das Modell acht Bereichszahlen
+         zu Seiten addieren zu lassen (siehe Decision-Log 2026-08-09: es hat aus
+         acht Zahlen schon den falschen Spitzenreiter gelesen). */
+      seiten: SEITEN.map((s) => {
+        const teile = BEREICHE.filter((b) =>
+          b.prefix.startsWith(`${s.schluessel}:`),
+        );
+        return {
+          label: s.label,
+          du: teile.reduce(
+            (n, b) => n + Math.min(meine[b.prefix] ?? 0, b.total),
+            0,
+          ),
+          total: teile.reduce((n, b) => n + b.total, 0),
+        };
+      }),
+      /* Für die erste Stimme, Absatz 3: die Punkte, die die Person selbst mit
+         «Das verfolge ich weiter» markiert hat, mit Titel statt bloss als Zahl.
+         Ohne die Titel könnte das Orakel nur «zwei Merkzeichen» sagen und müsste
+         sich für einen Vorschlag etwas ausdenken. */
+      weiterverfolgt: vertiefteGruppen.map((g) => ({
+        abschnitt: g.abschnitt,
+        titel: g.titel,
+      })),
+      /* Für die zweite Stimme: die Haltungs-Urteile mit Titel, gruppiert nach
+         dem Etikett («froh über diese Technik», «hätte es nie gebraucht», …).
+         Die blossen Zähler `technikFroh`/`technikAbschaffen` sagen, WIE VIEL
+         jemand so eingeordnet hat, aber nicht WORAN, und ohne das Woran bleibt
+         jede Begründung eine Behauptung. */
+      haltung: (() => {
+        const m = new Map<string, string[]>();
+        for (const e of [...bewertet.relevant, ...bewertet.ohne]) {
+          if (!e.zusatz) continue;
+          const arr = m.get(e.zusatz) ?? [];
+          if (!arr.includes(e.titel)) arr.push(e.titel);
+          m.set(e.zusatz, arr);
+        }
+        return [...m.entries()].map(([urteil, titel]) => ({ urteil, titel }));
+      })(),
       /* Die anonymen Sammelzahlen mitgeben, damit die Deutung «du im Verhältnis
          zu allen» sagen kann (Christofs Vorgabe 2026-08-09). Vorher sah die KI
          neben den eigenen Zahlen nur das MÖGLICHE Total, nie das Verhalten der
@@ -485,6 +551,8 @@ export default function OrakelDashboard() {
     alleSpuren,
     blickCounts,
     blickTotal,
+    vertiefteGruppen,
+    bewertet,
   ]);
 
   /* Aktionen — Blick-Poll */
@@ -1003,7 +1071,7 @@ export default function OrakelDashboard() {
             <div className="relative p-md">
             <p className="flex items-center gap-sm text-label-md uppercase tracking-wider text-tertiary">
               <span className="material-symbols-outlined text-[18px]">auto_awesome</span>
-              Das Orakel spricht — erste Stimme: dein Interesse
+              Das Orakel spricht — erste Stimme: wo du warst und was noch lohnt
             </p>
             <div className="mt-sm">
             {intOrakel.status === "idle" && (
@@ -1012,7 +1080,8 @@ export default function OrakelDashboard() {
                   <span className="material-symbols-outlined text-[20px] text-tertiary">
                     insights
                   </span>
-                  Das Orakel kann dir dein Interesse kurz deuten.
+                  In einfacher Sprache und drei Absätzen: wo du vor allem aktiv
+                  warst, was du bevorzugt hast, und was sich noch lohnt.
                 </p>
                 <button
                   type="button"
@@ -1148,14 +1217,17 @@ export default function OrakelDashboard() {
       <section id="orakel-spricht" className="mt-xl scroll-mt-24" aria-label="Das Orakel spricht">
         <h2 className="text-headline-md text-on-surface">Das Orakel spricht</h2>
         <p className="mt-xs text-label-md uppercase tracking-wider text-tertiary">
-          Zweite Stimme: dein Weg durchs Lernset
+          Zweite Stimme: wie du mit der KI in die Zukunft gehst
         </p>
         <p className="mt-xs text-body-sm text-on-surface-variant">
-          Das Orakel deutet deine eigene Aktivität in wenigen Sätzen. Wähle eine
-          Form, und wenn sie dir nicht zusagt, befrage es in einer anderen. Dazu
-          schickt dein Browser eine Zusammenfassung deiner Aktivität: Zähler,
-          Bewertungen und die Titel der Punkte, die du gewählt hast. Ohne Namen
-          und ohne deinen Fortschritts-Code.
+          Was für ein KI-Typ bist du? Das Orakel liest aus deinen Einordnungen,
+          ob du die KI eher zuversichtlich siehst oder eher als Gefahr, und sagt
+          dir kurz, woran es das festmacht. Es ist eine Lesart deiner Klicks,
+          kein Urteil über dich. Wähle eine Form, und wenn sie dir nicht zusagt,
+          befrage es in einer anderen. Dazu schickt dein Browser eine
+          Zusammenfassung deiner Aktivität: Zähler, Bewertungen und die Titel der
+          Punkte, die du gewählt hast. Ohne Namen und ohne deinen
+          Fortschritts-Code.
         </p>
 
         {/* Stil-Wahl */}
@@ -1204,7 +1276,7 @@ export default function OrakelDashboard() {
             <div className="flex flex-col items-start gap-sm">
               <p className="text-body-md text-on-surface-variant">
                 Bereit für die <strong className="text-on-surface">{STILE.find((s) => s.id === stil)?.label.toLowerCase()}e</strong>{" "}
-                Deutung deiner Aktivität?
+                Antwort auf die Frage, was für ein KI-Typ du bist?
               </p>
               <button
                 type="button"
@@ -1222,14 +1294,16 @@ export default function OrakelDashboard() {
               <span className="material-symbols-outlined animate-spin text-[20px] text-tertiary">
                 progress_activity
               </span>
-              Das Orakel deutet deine Spuren …
+              Das Orakel liest deine Haltung …
             </p>
           )}
 
           {aktuell.status === "zu-wenig" && (
             <p className="text-body-md text-on-surface-variant">
-              Für eine Deutung braucht das Orakel erst ein paar Spuren. Geh durch
-              das Modul, klicke Punkte an — dann kehr zurück.
+              Dafür braucht das Orakel erst deine Einordnungen. Bewerte im
+              «Teppich des Wandels» und bei «Philosophie in Zeiten der
+              Verunsicherung», oder wähle unten deine Grundhaltung zur KI — dann
+              kehr zurück.
             </p>
           )}
 
@@ -1698,7 +1772,7 @@ export default function OrakelDashboard() {
             {intOrakel.status === "ok" && intOrakel.text && (
               <>
                 <h2 style={{ fontSize: "1.1rem", margin: "0 0 0.4rem" }}>
-                  Das Orakel zu meinem Interesse
+                  Wo ich aktiv war und was sich noch lohnt
                 </h2>
                 <p style={{ margin: 0, fontSize: "1.05rem", lineHeight: 1.6, whiteSpace: "pre-line" }}>
                   {intOrakel.text}
@@ -1708,8 +1782,11 @@ export default function OrakelDashboard() {
 
             {aktuell.status === "ok" && aktuell.text && (
               <>
+                {/* Der Ausdruck bleibt bei den Lernenden, darum muss die
+                    Überschrift den Gegenstand nennen und nicht bloss die Form.
+                    «Wissenschaftliche Deutung» sagte nicht, wovon. */}
                 <h2 style={{ fontSize: "1.1rem", margin: "1.75rem 0 0.4rem" }}>
-                  {STILE.find((s) => s.id === stil)?.label}e Deutung
+                  Mein KI-Typ, {STILE.find((s) => s.id === stil)?.label.toLowerCase()} gedeutet
                 </h2>
                 <p style={{ margin: 0, fontSize: "1.05rem", lineHeight: 1.6, whiteSpace: "pre-line" }}>
                   {aktuell.text}

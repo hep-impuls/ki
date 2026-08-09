@@ -3275,6 +3275,13 @@
   "stufe": "tief",
   "text": "Bisher hast du vor allem die Muster bespielt — […] geknüpft, ohne Inhalte zu öffnen. Auch das ist eine Spur, die das Orakel deuten kann."
  },
+ "OR-51dfa4": {
+  "datei": "das-orakel/_components/OrakelDashboard.tsx",
+  "ort": "Was dich besonders interessiert hat",
+  "feld": "Fliesstext",
+  "stufe": "tief",
+  "text": "insights In einfacher Sprache und drei Absätzen: wo du vor allem aktiv warst, was du bevorzugt hast, und was sich noch lohnt."
+ },
  "OR-36b88f": {
   "datei": "das-orakel/_components/OrakelDashboard.tsx",
   "ort": "Deine Spur durchs Gewebe",
@@ -3296,19 +3303,19 @@
   "stufe": "tief",
   "text": "Bei «Die KI im Kontext» hast du für jeden Aspekt gewählt, wie viel Achtsamkeit er verdient. Hier steht deine Wahl neben der Verteilung aller Nutzenden."
  },
- "OR-00d180": {
+ "OR-a47cee": {
   "datei": "das-orakel/_components/OrakelDashboard.tsx",
   "ort": "Das Orakel spricht",
   "feld": "Fliesstext",
   "stufe": "tief",
-  "text": "Das Orakel deutet deine eigene Aktivität in wenigen Sätzen. Wähle eine Form, und wenn sie dir nicht zusagt, befrage es in einer anderen. Dazu schickt dein Browser eine Zusammenfassung deiner Aktivität: Zähler, Bewertungen und die Titel der Punkte, die du gewählt hast. Ohne Namen und ohne deinen Fortschritts-Code."
+  "text": "Was für ein KI-Typ bist du? Das Orakel liest aus deinen Einordnungen, ob du die KI eher zuversichtlich siehst oder eher als Gefahr, und sagt dir kurz, woran es das festmacht. Es ist eine Lesart deiner Klicks, kein Urteil über dich. Wähle eine Form, und wenn sie dir nicht zusagt, befrage es in einer anderen. Dazu schickt dein Browser eine Zusammenfassung deiner Aktivität: Zähler, Bewertungen und die Titel der Punkte, die du gewählt hast. Ohne Namen und ohne deinen Fortschritts-Code."
  },
- "OR-cd8f18": {
+ "OR-dff0e0": {
   "datei": "das-orakel/_components/OrakelDashboard.tsx",
   "ort": "Das Orakel spricht",
   "feld": "Fliesstext",
   "stufe": "tief",
-  "text": "Für eine Deutung braucht das Orakel erst ein paar Spuren. Geh durch das Modul, klicke Punkte an — dann kehr zurück."
+  "text": "Dafür braucht das Orakel erst deine Einordnungen. Bewerte im «Teppich des Wandels» und bei «Philosophie in Zeiten der Verunsicherung», oder wähle unten deine Grundhaltung zur KI — dann kehr zurück."
  },
  "OR-6b0d5c": {
   "datei": "das-orakel/_components/OrakelDashboard.tsx",
