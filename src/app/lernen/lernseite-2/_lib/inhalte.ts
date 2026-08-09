@@ -1,6 +1,6 @@
 "use client";
 
-import { doc, serverTimestamp, setDoc } from "firebase/firestore";
+import { doc, getDoc, serverTimestamp, setDoc } from "firebase/firestore";
 import { getFirebase } from "@/lib/firebase";
 import { seg } from "@/lib/paths";
 import { getSession } from "@/lib/session";
@@ -28,6 +28,8 @@ import { getSession } from "@/lib/session";
 const KEY = "ki26-inhalte-lernseite-2";
 /** Modul-Kennung des Pro-Nutzer-Titel-Docs (gespiegelte Registry). */
 const INHALTE_MODUL = "lernseite-2-inhalte";
+/** Meldung, wenn Titel dazugekommen sind (Gegenstück zu SPUR_EVENT). */
+export const INHALTE_EVENT = "ki26-inhalte";
 
 function lesen(): Record<string, string> {
   if (typeof window === "undefined") return {};
@@ -78,6 +80,48 @@ export function merkeInhalt(basisId: string, titel: string): void {
   o[basisId] = titel;
   schreiben(o);
   scheduleMirror();
+}
+
+/**
+ * Cloud → lokal: die gespiegelte Titel-Registry zurückholen und mit dem lokalen
+ * Bestand vereinen (lokale Titel gewinnen — sie kommen aus dem gerade
+ * gerenderten Code und sind damit die aktuellen).
+ *
+ * WARUM ES DAS BRAUCHT. Die Registry wird PRO BROWSER gefüllt, und zwar nur von
+ * Komponenten, die dort gerendert haben. Das Orakel rendert die Inhalte der
+ * anderen Seiten nicht. Auf einem zweiten Gerät kamen darum die Punkte zurück
+ * (`zieheSpurenAusCloud`) und die Bewertungen (`zieheGewichtungAusCloud`), die
+ * NAMEN aber nicht — die Knotenkarte zeigte «Epochen · Punkt 4.0» statt des
+ * Titels. Das Spiegeln gab es schon, nur das Zurückholen fehlte. Christof hat
+ * das am 2026-08-08 als «bei manchen Browsern fehlen die Titel» gemeldet.
+ *
+ * Feuert INHALTE_EVENT, damit offene Ansichten sich neu beschriften. No-op ohne
+ * Code/Config. Idempotent.
+ */
+export async function zieheInhalteAusCloud(): Promise<void> {
+  if (typeof window === "undefined") return;
+  const code = getSession()?.studentCode;
+  if (!code) return;
+  const { db } = getFirebase();
+  if (!db) return;
+  try {
+    const s = seg.progressDoc(code, INHALTE_MODUL);
+    const snap = await getDoc(doc(db, s[0], ...s.slice(1)));
+    if (!snap.exists()) return;
+    const remote = snap.data()?.titel;
+    if (!remote || typeof remote !== "object" || Array.isArray(remote)) return;
+    const lokal = lesen();
+    const zusammen: Record<string, string> = {
+      ...(remote as Record<string, string>),
+      ...lokal,
+    };
+    if (JSON.stringify(zusammen) !== JSON.stringify(lokal)) {
+      schreiben(zusammen);
+      window.dispatchEvent(new CustomEvent(INHALTE_EVENT, { detail: { cloud: true } }));
+    }
+  } catch (err) {
+    console.warn("[inhalte] cloud pull failed", err);
+  }
 }
 
 /** Ganze Registry lesen. */

@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
+import Link from "next/link";
 import {
   castVote,
   loadPollCounts,
@@ -39,7 +40,7 @@ import {
   leseAuswertung,
   type AuswertungEintrag,
 } from "../../_lib/auswertung";
-import { leseInhalte } from "../../_lib/inhalte";
+import { INHALTE_EVENT, leseInhalte, zieheInhalteAusCloud } from "../../_lib/inhalte";
 
 /**
  * Orakel-Dashboard (Thema 03) — «erkenne dich selbst».
@@ -98,24 +99,56 @@ const VIDEO_TOTAL = 3;
  */
 const WUNSCH_TOTAL = 138;
 
-/* ── Abschnitt einer Spur-Basis-ID (für die PDF-Vertiefen-Liste) ──────────────
- * Ordnet eine Basis-ID (ohne «wunsch:»-Präfix) dem Titel des Abschnitts zu, aus
- * dem sie stammt. Spezifische Präfixe zuerst (erster Treffer gewinnt). */
-const ABSCHNITT_PREFIXE: { prefix: string; titel: string }[] = [
-  { prefix: "vorhang-auf:story", titel: "Die KI-Story" },
-  { prefix: "vorhang-auf:weisheit", titel: "Merkmale der neuen Akteurin" },
-  { prefix: "vorhang-auf:bild", titel: "Bilder zur KI-Story" },
-  { prefix: "vorhang-auf:kontext", titel: "Die KI im Kontext" },
-  { prefix: "philosophische-perspektive:teppich", titel: "Der Teppich des Wandels" },
-  { prefix: "philosophische-perspektive:epochen-bild", titel: "Bilder der Verunsicherung" },
-  { prefix: "philosophische-perspektive:epochen", titel: "Philosophie in Zeiten der Verunsicherung" },
-  { prefix: "philosophische-perspektive:denker", titel: "Wege der Orientierung" },
-  { prefix: "philosophische-perspektive:denkwege", titel: "Wege der Orientierung" },
-  { prefix: "philosophische-perspektive:einstieg", titel: "Was ist Philosophie?" },
-  { prefix: "video:", titel: "Video-Impulse" },
+/* ── Abschnitt und Adresse einer Spur-Basis-ID ────────────────────────────────
+ * Ordnet eine Basis-ID (ohne «wunsch:»-Präfix) dem Abschnitt zu, aus dem sie
+ * stammt: Titel für die Beschriftung, `href` fürs Hinspringen. Spezifische
+ * Präfixe zuerst (erster Treffer gewinnt).
+ *
+ * Die Adresse führt zum ABSCHNITT, nicht zum einzelnen Punkt. Das genügt, weil
+ * `AkkordeonGruppe` den Abschnitt am Hash aufklappt und hinscrollt — man landet
+ * also mit dem Inhalt vor sich. Punkt-genaue Sprungziele bräuchten in jeder der
+ * sechs Inhalts-Komponenten eine eigene Aufklapp-Steuerung; das ist bewusst
+ * noch nicht gebaut (Entscheid 2026-08-08 mit Christof).
+ *
+ * Die Anker sind gegen die Seiten geprüft: ki-story, bilder, merkmale,
+ * ki-kontext, teppich, epochen, denkwege, was-philosophie. */
+const V = "/lernen/lernseite-2/vorhang-auf";
+const P = "/lernen/lernseite-2/philosophische-perspektive";
+const ABSCHNITT_PREFIXE: { prefix: string; titel: string; href: string }[] = [
+  { prefix: "vorhang-auf:story", titel: "Die KI-Story", href: `${V}#ki-story` },
+  { prefix: "vorhang-auf:weisheit", titel: "Merkmale der neuen Akteurin", href: `${V}#merkmale` },
+  { prefix: "vorhang-auf:bild", titel: "Bilder zur KI-Story", href: `${V}#bilder` },
+  { prefix: "vorhang-auf:kontext", titel: "Die KI im Kontext", href: `${V}#ki-kontext` },
+  { prefix: "philosophische-perspektive:teppich", titel: "Der Teppich des Wandels", href: `${P}#teppich` },
+  { prefix: "philosophische-perspektive:epochen-bild", titel: "Bilder der Verunsicherung", href: `${P}#epochen` },
+  { prefix: "philosophische-perspektive:epochen", titel: "Philosophie in Zeiten der Verunsicherung", href: `${P}#epochen` },
+  { prefix: "philosophische-perspektive:denker", titel: "Wege der Orientierung", href: `${P}#denkwege` },
+  { prefix: "philosophische-perspektive:denkwege", titel: "Wege der Orientierung", href: `${P}#denkwege` },
+  { prefix: "philosophische-perspektive:einstieg", titel: "Was ist Philosophie?", href: `${P}#was-philosophie` },
+  { prefix: "video:", titel: "Video-Impulse", href: "/lernen/lernseite-2" },
 ];
 function abschnittFuer(basisId: string): string {
   return ABSCHNITT_PREFIXE.find((a) => basisId.startsWith(a.prefix))?.titel ?? "Weiteres";
+}
+function hrefFuer(basisId: string): string | undefined {
+  return ABSCHNITT_PREFIXE.find((a) => basisId.startsWith(a.prefix))?.href;
+}
+
+/** Ein Eintrag in einer aufklappbaren Feld-Liste. */
+type Sprung = { id: string; titel: string; abschnitt: string; href: string; zusatz?: string };
+
+/** Nach Abschnitt gruppieren, Reihenfolge der Abschnitte wie in der Tabelle. */
+function gruppiere(eintraege: Sprung[]): { abschnitt: string; posten: Sprung[] }[] {
+  const rang = new Map(ABSCHNITT_PREFIXE.map((a, i) => [a.titel, i]));
+  const nach = new Map<string, Sprung[]>();
+  for (const e of eintraege) {
+    const liste = nach.get(e.abschnitt) ?? [];
+    liste.push(e);
+    nach.set(e.abschnitt, liste);
+  }
+  return [...nach.entries()]
+    .map(([abschnitt, posten]) => ({ abschnitt, posten }))
+    .sort((a, b) => (rang.get(a.abschnitt) ?? 99) - (rang.get(b.abschnitt) ?? 99));
 }
 
 /* ── Bewertungs-Präfixe (lokal, aus gewichtung.ts) ────────────────────────── */
@@ -129,6 +162,39 @@ const P_GESTALT = "vorhang-auf:gestalt"; // [unkenntlich, verschwommen, deutlich
 function zaehleStufe(prefix: string, stufe: number): number {
   return Object.values(leseGewichtungen(prefix)).filter((s) => s === stufe).length;
 }
+
+/**
+ * Von einer Bewertung zurück zum bewerteten Inhalt.
+ *
+ * Die Bewertungen liegen als `{index: stufe}` je Präfix. Was der Index bedeutet,
+ * hängt an der Komponente, die die Bewertung anbietet — und da liegt eine Falle:
+ *
+ *  · Teppich und Merkmale zählen den PUNKT (Index = Punkt-Nummer).
+ *  · Die drei Epochen-Bausteine zählen die EPOCHE (`index={ei}`), nicht den
+ *    Baustein. Die Inhalts-ID der Bausteine ist aber `epochen:{ei*3+ti}`, mit
+ *    ti = 0 Technologie, 1 Verunsicherung, 2 Philosophie (Reihenfolge von
+ *    BAUSTEINE in VerunsicherungsEpochen.tsx). Ohne diese Umrechnung zeigte
+ *    eine Bewertung der Renaissance auf einen Punkt der Antike.
+ *
+ * `was` benennt, WELCHE Frage so beantwortet wurde — nötig, weil ein Feld drei
+ * verschiedene Bewertungen zusammenfasst und ein Punkt mehrfach vorkommen kann.
+ */
+const BEWERTUNGEN: {
+  prefix: string;
+  /** Stufe, die als «relevant» bzw. «ohne Bedeutung» gilt. */
+  stufe: number;
+  /** Feld, in dem der Eintrag erscheint. */
+  feld: "relevant" | "ohne";
+  was: string;
+  inhaltsId: (index: number) => string;
+}[] = [
+  { prefix: P_RELEVANZ, stufe: 2, feld: "relevant", was: "prägt mein Leben", inhaltsId: (i) => `philosophische-perspektive:teppich:${i}` },
+  { prefix: P_PHILO, stufe: 0, feld: "relevant", was: "hilft mir heute", inhaltsId: (i) => `philosophische-perspektive:epochen:${i * 3 + 2}` },
+  { prefix: P_TECHNIK, stufe: 0, feld: "relevant", was: "froh über diese Technik", inhaltsId: (i) => `philosophische-perspektive:epochen:${i * 3}` },
+  { prefix: P_RELEVANZ, stufe: 0, feld: "ohne", was: "kaum relevant", inhaltsId: (i) => `philosophische-perspektive:teppich:${i}` },
+  { prefix: P_PHILO, stufe: 2, feld: "ohne", was: "ergibt für mich keinen Sinn", inhaltsId: (i) => `philosophische-perspektive:epochen:${i * 3 + 2}` },
+  { prefix: P_TECHNIK, stufe: 2, feld: "ohne", was: "hätte es nie gebraucht", inhaltsId: (i) => `philosophische-perspektive:epochen:${i * 3}` },
+];
 
 /* ── Blick-Umfrage ────────────────────────────────────────────────────────── */
 
@@ -198,10 +264,15 @@ export default function OrakelDashboard() {
    * damit beide Anzeigen dieselbe Zahl zeigen. */
   const [meineKnoten, setMeineKnoten] = useState(0);
   /* Punkte, die noch vertieft werden möchten («das verfolge ich weiter»),
-   * je mit Titel und Abschnitt (für die PDF-Liste). */
-  const [vertiefteTitel, setVertiefteTitel] = useState<
-    { titel: string; abschnitt: string }[]
-  >([]);
+   * je mit Titel, Abschnitt und Adresse (PDF-Liste UND das aufklappbare Feld). */
+  const [vertiefteTitel, setVertiefteTitel] = useState<Sprung[]>([]);
+  /* Bewertete Punkte für die zwei Bewertungs-Felder. */
+  const [bewertet, setBewertet] = useState<{ relevant: Sprung[]; ohne: Sprung[] }>({
+    relevant: [],
+    ohne: [],
+  });
+  /* Welches Feld ist aufgeklappt (höchstens eines, wie bei den Abschnitten). */
+  const [feldOffen, setFeldOffen] = useState<string | null>(null);
   /* deine Bewertungen (lokal) */
   const [bew, setBew] = useState({
     relevanzStark: 0,
@@ -269,28 +340,62 @@ export default function OrakelDashboard() {
       gestaltDeutlich: zaehleStufe(P_GESTALT, 2),
     });
     const reg = leseInhalte();
+    /* Titel aus der Registry; wo sie fehlt (fremder Browser, Inhaltsseite dort
+     * nie geöffnet), holt `zieheInhalteAusCloud` unten nach und diese Funktion
+     * läuft über INHALTE_EVENT erneut. Ohne Titel kein Eintrag — ein Link
+     * «Punkt 4.0» hilft niemandem. */
     const wunschEintraege = spuren
       .filter((s) => s.id.startsWith("wunsch:"))
       .map((s) => {
         const base = s.id.slice(7);
         const titel = reg[base];
-        return titel ? { titel, abschnitt: abschnittFuer(base) } : null;
+        const href = hrefFuer(base);
+        return titel && href
+          ? { id: base, titel, abschnitt: abschnittFuer(base), href }
+          : null;
       })
-      .filter((e): e is { titel: string; abschnitt: string } => Boolean(e));
+      .filter((e): e is Sprung => Boolean(e));
     setVertiefteTitel(wunschEintraege);
+
+    /* Die bewerteten Punkte für «Für dich relevant» und «Ohne Bedeutung». */
+    const gesammelt: { relevant: Sprung[]; ohne: Sprung[] } = { relevant: [], ohne: [] };
+    for (const b of BEWERTUNGEN) {
+      for (const [index, stufe] of Object.entries(leseGewichtungen(b.prefix))) {
+        if (stufe !== b.stufe) continue;
+        const id = b.inhaltsId(Number(index));
+        const titel = reg[id];
+        const href = hrefFuer(id);
+        if (!titel || !href) continue;
+        gesammelt[b.feld].push({
+          id,
+          titel,
+          abschnitt: abschnittFuer(id),
+          href,
+          zusatz: b.was,
+        });
+      }
+    }
+    setBewertet(gesammelt);
     setAuswertung(leseAuswertung());
   }, []);
 
   useEffect(() => {
     lokalLesen();
+    /* Die Titel-Registry aus der Cloud nachholen. Das Orakel rendert die
+       Inhalts-Komponenten nicht und kennt darum nur, was in DIESEM Browser
+       einmal gerendert hat. Ohne diesen Zug blieben die Listen auf einem
+       zweiten Gerät leer, obwohl die Merkzeichen da sind. */
+    void zieheInhalteAusCloud();
     window.addEventListener(SPUR_EVENT, lokalLesen);
     window.addEventListener(GEWICHT_EVENT, lokalLesen);
     window.addEventListener(AUSWERTUNG_EVENT, lokalLesen);
+    window.addEventListener(INHALTE_EVENT, lokalLesen);
     window.addEventListener("storage", lokalLesen);
     return () => {
       window.removeEventListener(SPUR_EVENT, lokalLesen);
       window.removeEventListener(GEWICHT_EVENT, lokalLesen);
       window.removeEventListener(AUSWERTUNG_EVENT, lokalLesen);
+      window.removeEventListener(INHALTE_EVENT, lokalLesen);
       window.removeEventListener("storage", lokalLesen);
     };
   }, [lokalLesen]);
@@ -502,6 +607,17 @@ export default function OrakelDashboard() {
   const staerkste = [...bereichsAnteile].sort((a, b) => b.anteil - a.anteil).slice(0, 2);
   const schwaechste = [...bereichsAnteile].sort((a, b) => a.anteil - b.anteil).slice(0, 2);
 
+  /* Die drei Felder mit Sprungliste bekommen je einen eigenen Rahmen, damit man
+     sieht, dass hier etwas dahinter steckt. Die Farbe folgt der Bedeutung
+     (Akzent = weiterverfolgen, positiv = relevant, gedämpft = ohne Bedeutung).
+     Farbe allein genügt nicht: Wer Farben schlecht unterscheidet, erkennt das
+     Aufklappen am Pfeil und an der Beschriftung «… anzeigen». */
+  const RAHMEN = {
+    akzent: "border-tertiary/60 bg-tertiary-container/10",
+    positiv: "border-primary/50 bg-primary-container/10",
+    gedaempft: "border-outline bg-surface-container-low/40",
+  } as const;
+
   const perspektiven: {
     icon: string;
     titel: string;
@@ -509,6 +625,10 @@ export default function OrakelDashboard() {
     text: string;
     alle?: string;
     nurDu?: boolean;
+    /** Rahmenfarbe — nur bei Feldern mit Sprungliste. */
+    rahmen?: keyof typeof RAHMEN;
+    /** Aufklappbare Liste mit Links zu den Abschnitten. */
+    liste?: Sprung[];
   }[] = [
     {
       icon: "ads_click",
@@ -550,6 +670,8 @@ export default function OrakelDashboard() {
           ? `Noch kein «das verfolge ich weiter» gesetzt — möglich wären ${WUNSCH_TOTAL}.`
           : `Merkzeichen gesetzt, von ${WUNSCH_TOTAL} möglichen.`,
       alle: `${summeMitPrefix(alleSpuren, "wunsch:")}× von allen gesetzt`,
+      rahmen: "akzent",
+      liste: vertiefteTitel,
     },
     {
       icon: "menu_book",
@@ -567,6 +689,8 @@ export default function OrakelDashboard() {
       wert: `${bew.relevanzStark + bew.philoHilft + bew.technikFroh}`,
       text: `Punkte, die dein Leben prägen (${bew.relevanzStark}), Sichtweisen, die dir heute helfen (${bew.philoHilft}), und Technik, über die du froh bist (${bew.technikFroh}).`,
       nurDu: true,
+      rahmen: "positiv",
+      liste: bewertet.relevant,
     },
     {
       icon: "do_not_disturb_on",
@@ -574,6 +698,8 @@ export default function OrakelDashboard() {
       wert: `${bew.relevanzKaum + bew.philoKeinSinn + bew.technikAbschaffen}`,
       text: `Was du als kaum relevant (${bew.relevanzKaum}), sinnlos (${bew.philoKeinSinn}) oder überflüssig (${bew.technikAbschaffen}) markiert hast.`,
       nurDu: true,
+      rahmen: "gedaempft",
+      liste: bewertet.ohne,
     },
     {
       icon: "sentiment_stressed",
@@ -749,7 +875,10 @@ export default function OrakelDashboard() {
           {perspektiven.map((p) => (
             <div
               key={p.titel}
-              className="rounded-xl border border-outline-variant bg-surface-bright p-md"
+              className={
+                "rounded-xl border p-md " +
+                (p.rahmen ? RAHMEN[p.rahmen] : "border-outline-variant bg-surface-bright")
+              }
             >
               <div className="flex items-center gap-sm">
                 <span className="material-symbols-outlined text-[20px] text-tertiary">
@@ -761,6 +890,63 @@ export default function OrakelDashboard() {
               </div>
               <p className="mt-sm text-headline-sm text-on-surface">{p.wert}</p>
               <p className="mt-xs text-body-sm text-on-surface-variant">{p.text}</p>
+              {p.liste && p.liste.length > 0 && (
+                <>
+                  <button
+                    type="button"
+                    onClick={() => setFeldOffen(feldOffen === p.titel ? null : p.titel)}
+                    aria-expanded={feldOffen === p.titel}
+                    className="mt-sm inline-flex items-center gap-xs rounded-full border border-outline-variant bg-surface-bright px-md py-xs text-label-sm text-on-surface-variant transition-colors hover:border-tertiary hover:text-tertiary"
+                  >
+                    <span className="material-symbols-outlined text-[16px]">
+                      {feldOffen === p.titel ? "expand_less" : "expand_more"}
+                    </span>
+                    {feldOffen === p.titel
+                      ? "Liste schliessen"
+                      : `${p.liste.length === 1 ? "Punkt" : "Punkte"} anzeigen`}
+                  </button>
+                  {feldOffen === p.titel && (
+                    <div className="animate-frame-in mt-sm space-y-sm border-t border-outline-variant/60 pt-sm">
+                      {gruppiere(p.liste).map((g) => (
+                        <div key={g.abschnitt}>
+                          <p className="text-label-sm uppercase tracking-wider text-on-surface-variant opacity-70">
+                            {g.abschnitt}
+                          </p>
+                          <ul className="mt-xs space-y-xs">
+                            {g.posten.map((s, i) => (
+                              <li key={`${s.id}-${s.zusatz ?? ""}-${i}`}>
+                                <Link
+                                  href={s.href}
+                                  className="group flex items-start gap-xs text-body-sm text-on-surface hover:text-tertiary"
+                                >
+                                  <span className="material-symbols-outlined mt-0.5 flex-shrink-0 text-[16px] text-tertiary">
+                                    arrow_forward
+                                  </span>
+                                  <span className="min-w-0">
+                                    <span className="underline decoration-outline-variant underline-offset-2 group-hover:decoration-tertiary">
+                                      {s.titel}
+                                    </span>
+                                    {s.zusatz && (
+                                      <span className="ml-xs text-label-sm text-on-surface-variant">
+                                        · {s.zusatz}
+                                      </span>
+                                    )}
+                                  </span>
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                      <p className="flex items-start gap-xs text-label-sm text-on-surface-variant opacity-80">
+                        <span className="material-symbols-outlined mt-px text-[14px]">info</span>
+                        Der Link öffnet den Abschnitt an der richtigen Stelle. Den einzelnen
+                        Punkt suchst du dort noch selbst.
+                      </p>
+                    </div>
+                  )}
+                </>
+              )}
               {p.alle && (
                 <p className="mt-sm flex items-center gap-xs border-t border-outline-variant/60 pt-sm text-label-sm text-on-surface-variant">
                   <span className="material-symbols-outlined text-[16px] text-tertiary">groups</span>

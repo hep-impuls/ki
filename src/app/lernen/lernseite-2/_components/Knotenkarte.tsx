@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { SPUR_EVENT, SPUREN_POLL_ID, leseSpuren, spurArt } from "../_lib/spuren";
 import { GEWICHT_EVENT, leseGewichtungen } from "../_lib/gewichtung";
-import { leseInhalte } from "../_lib/inhalte";
+import { INHALTE_EVENT, leseInhalte, zieheInhalteAusCloud } from "../_lib/inhalte";
 import {
   loadPollCounts,
   subscribePollCounts,
@@ -126,11 +126,17 @@ export default function Knotenkarte({ className = "" }: { className?: string }) 
       setInhalte(leseInhalte());
     };
     lade();
+    /* Titel aus der Cloud nachholen. Ohne das fehlten sie auf jedem zweiten
+       Gerät: Die Punkte kommen über `zieheSpurenAusCloud` zurück, die Namen
+       lagen aber nur im Browser, in dem die Inhaltsseiten gerendert hatten. */
+    void zieheInhalteAusCloud();
     window.addEventListener(SPUR_EVENT, lade);
     window.addEventListener(GEWICHT_EVENT, lade);
+    window.addEventListener(INHALTE_EVENT, lade);
     return () => {
       window.removeEventListener(SPUR_EVENT, lade);
       window.removeEventListener(GEWICHT_EVENT, lade);
+      window.removeEventListener(INHALTE_EVENT, lade);
     };
   }, []);
 
@@ -414,19 +420,24 @@ export default function Knotenkarte({ className = "" }: { className?: string }) 
           {/* Rangliste (Top 10) */}
           <ol className="flex flex-col gap-xs">
             {top.map((p, i) => (
-              <li key={p.id} className="flex items-center gap-sm">
+              <li key={p.id} className="flex items-start gap-sm">
                 <span
                   className="w-5 flex-shrink-0 text-right text-label-sm text-on-surface-variant"
                   style={{ fontFamily: "ui-monospace, monospace" }}
                 >
                   {i + 1}
                 </span>
-                <span className={"h-2.5 w-2.5 flex-shrink-0 rounded-full " + p.area.fill.replace("fill-", "bg-")} />
+                <span className={"mt-1.5 h-2.5 w-2.5 flex-shrink-0 rounded-full " + p.area.fill.replace("fill-", "bg-")} />
                 {/* Titel + kleines «du»-Häkchen direkt daneben (nicht in der Zahlenspalte) */}
-                <span className="flex min-w-0 flex-1 items-center gap-xs">
+                <span className="flex min-w-0 flex-1 items-start gap-xs">
                   <span
                     className={
-                      "truncate text-body-sm " +
+                      /* Zwei Zeilen statt einer: Christof sah «Jetzt: Umwelt & KI ·
+                         Phil…» und konnte nicht erkennen, welcher Punkt gemeint war.
+                         Titel wie «Antike · Raffaels Fresko ‹Die Schule von Athen›»
+                         passen nie in eine Zeile dieser Spalte. `title` bleibt für
+                         den ganz langen Fall. */
+                      "line-clamp-2 text-body-sm " +
                       (p.du ? "font-medium text-on-surface" : "text-on-surface")
                     }
                     title={p.titel}
@@ -435,7 +446,7 @@ export default function Knotenkarte({ className = "" }: { className?: string }) 
                   </span>
                   {p.du && (
                     <span
-                      className="material-symbols-outlined flex-shrink-0 text-[15px] text-tertiary"
+                      className="material-symbols-outlined mt-0.5 flex-shrink-0 text-[15px] text-tertiary"
                       title="von dir angeklickt"
                       aria-label="von dir angeklickt"
                     >
@@ -445,7 +456,7 @@ export default function Knotenkarte({ className = "" }: { className?: string }) 
                 </span>
                 {/* Zahlenspalte: fixe Breite, rechtsbündig */}
                 <span
-                  className="w-16 flex-shrink-0 text-right text-label-sm text-on-surface-variant"
+                  className="w-16 flex-shrink-0 pt-0.5 text-right text-label-sm text-on-surface-variant"
                   style={{ fontFamily: "ui-monospace, monospace" }}
                 >
                   {ansicht === "bekannt"

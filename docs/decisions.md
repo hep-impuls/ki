@@ -10,6 +10,46 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-08 — Titel kamen auf dem zweiten Gerät nicht zurück; drei Orakel-Felder mit Sprungliste (Christof)
+
+**Der Fehler und seine Ursache.** Christof meldete, dass die Punkttitel in der
+Knotenkarte «nicht bei allen Browsern» stehen. Es war kein Browser-Problem: Die
+Titel-Registry (`_lib/inhalte.ts`) wird pro Browser von den Inhalts-Komponenten
+beim Rendern gefüllt, und das Orakel rendert diese Komponenten nicht. `spuren.ts`
+und `gewichtung.ts` haben je ein `zieheAusCloud`, mit dem ihre Daten auf einem
+neuen Gerät zurückkommen — **bei `inhalte.ts` fehlte dieses Gegenstück**.
+Gespiegelt wurde immer schon, nur nie zurückgeholt. Darum kamen die Punkte wieder
+und die Namen nicht.
+
+Behoben mit `zieheInhalteAusCloud()` nach demselben Muster (lokale Titel gewinnen,
+`INHALTE_EVENT` lässt offene Ansichten sich neu beschriften). Nachgeprüft: alle
+195 Titel gelöscht, nur das Orakel geladen, alle 195 wieder da.
+
+**Grenze, die bleibt:** Der Zug geht über den Fortschritts-Code. Ohne Code oder
+mit einem anderen Code gibt es nichts zu holen; in der Ansicht «Alle» können
+Titel fremder Inhalte weiterhin fehlen, wenn man die Inhaltsseiten in diesem
+Browser nie geöffnet hat. Dafür bräuchte es einen erzeugten Titel-Katalog — erst
+bauen, wenn es auffällt.
+
+**Wer eine neue Datenart anlegt**, die pro Nutzer:in gespiegelt wird: immer beide
+Richtungen bauen. Spiegeln ohne Zurückholen sieht im eigenen Browser vollständig
+aus und fehlt auf jedem zweiten Gerät.
+
+**Drei Felder im Orakel sind aufklappbar** («Weiterverfolgen», «Für dich
+relevant», «Ohne Bedeutung»), je mit eigenem Rahmen und einer nach Abschnitt
+gruppierten Liste von Links. Zwei Dinge dazu:
+
+- Die Links führen zum **Abschnitt**, nicht zum einzelnen Punkt. Das genügt, weil
+  `AkkordeonGruppe` am Hash aufklappt und hinscrollt. Punkt-genaue Ziele
+  bräuchten in jeder der sechs Inhalts-Komponenten eine eigene
+  Aufklapp-Steuerung; bewusst zurückgestellt, bis klar ist, ob es fehlt. Der
+  Hinweis unter der Liste sagt das den Lernenden.
+- Von einer Bewertung zurück zum Inhalt führt `BEWERTUNGEN` in
+  `OrakelDashboard.tsx`. **Falle:** Teppich und Merkmale zählen den Punkt, die
+  drei Epochen-Bausteine dagegen die EPOCHE (`index={ei}`), während die
+  Inhalts-ID `epochen:{ei*3+ti}` lautet. Ohne diese Umrechnung zeigt eine
+  Bewertung der Renaissance auf einen Punkt der Antike.
+
 ## 2026-08-08 — «Das verfolge ich weiter» bei jedem Bild, Gesamtzahl 138 (Christof)
 
 Das Merkzeichen sitzt auf der **Vorderseite** jedes Bildes: bei der Bilderstrecke
