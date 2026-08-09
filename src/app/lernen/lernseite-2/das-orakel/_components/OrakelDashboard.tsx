@@ -38,6 +38,7 @@ import {
   AUSWERTUNG_EVENT,
   FLAECHEN_POLL_ID,
   leseAuswertung,
+  zieheAuswertungAusCloud,
   type AuswertungEintrag,
 } from "../../_lib/auswertung";
 import { INHALTE_EVENT, leseInhalte, zieheInhalteAusCloud } from "../../_lib/inhalte";
@@ -356,6 +357,10 @@ export default function OrakelDashboard() {
        einmal gerendert hat. Ohne diesen Zug blieben die Listen auf einem
        zweiten Gerät leer, obwohl die Merkzeichen da sind. */
     void zieheInhalteAusCloud();
+    /* Und die gemeldeten Bereiche selbst. Ohne diesen Zug fehlte auf einem
+       zweiten Gerät der ganze Abschnitt «Was dich besonders interessiert hat»
+       und mit ihm die erste Orakel-Stimme, die darin steckt. */
+    void zieheAuswertungAusCloud();
     window.addEventListener(SPUR_EVENT, lokalLesen);
     window.addEventListener(GEWICHT_EVENT, lokalLesen);
     window.addEventListener(AUSWERTUNG_EVENT, lokalLesen);
@@ -1564,10 +1569,10 @@ export default function OrakelDashboard() {
             </li>
             <li>
               <strong className="text-on-surface">Dein Fortschritt:</strong> welche
-              Punkte du besucht und wie du bewertet hast, liegt zusätzlich unter
-              deinem Code in der Cloud (Google Firebase) — damit du
-              geräteübergreifend weitermachen kannst. Keine Reflexionstexte, keine
-              Einzelantworten.
+              Punkte du besucht, welche Inhalte du ausgewählt und wie du bewertet
+              hast, liegt zusätzlich unter deinem Code in der Cloud (Google
+              Firebase) — damit du geräteübergreifend weitermachen kannst. Keine
+              Reflexionstexte, keine Einzelantworten.
             </li>
             <li>
               <strong className="text-on-surface">Klassencode (optional):</strong>{" "}

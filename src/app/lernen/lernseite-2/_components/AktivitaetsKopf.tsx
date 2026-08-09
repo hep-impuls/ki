@@ -8,7 +8,11 @@ import {
   zaehleAktivitaet,
   zieheSpurenAusCloud,
 } from "../_lib/spuren";
-import { AUSWERTUNG_EVENT, zaehleFlaechen } from "../_lib/auswertung";
+import {
+  AUSWERTUNG_EVENT,
+  zaehleFlaechen,
+  zieheAuswertungAusCloud,
+} from "../_lib/auswertung";
 import { GEWICHT_EVENT } from "../_lib/gewichtung";
 
 /**
@@ -90,7 +94,12 @@ export default function AktivitaetsKopf({
     lesen();
     // Cloud-Spuren nur einmal (über den Seitentitel-Badge) nachholen; die
     // Abschnitts-Badges aktualisieren sich danach über das Spur-Event.
-    if (!proAbschnitt) void zieheSpurenAusCloud();
+    // Die Flächen-Zahl kommt aus dem Auswertungs-Store, der ebenfalls einen
+    // Spiegel hat; ohne diesen Zug zeigte ein zweites Gerät hier eine Null.
+    if (!proAbschnitt) {
+      void zieheSpurenAusCloud();
+      void zieheAuswertungAusCloud();
+    }
     window.addEventListener(SPUR_EVENT, lesen);
     window.addEventListener(AUSWERTUNG_EVENT, lesen);
     window.addEventListener(GEWICHT_EVENT, lesen);

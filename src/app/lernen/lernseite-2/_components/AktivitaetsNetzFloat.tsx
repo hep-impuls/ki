@@ -6,7 +6,11 @@ import {
   zaehleAktivitaet,
   zieheSpurenAusCloud,
 } from "../_lib/spuren";
-import { AUSWERTUNG_EVENT, zaehleFlaechen } from "../_lib/auswertung";
+import {
+  AUSWERTUNG_EVENT,
+  zaehleFlaechen,
+  zieheAuswertungAusCloud,
+} from "../_lib/auswertung";
 import AktivitaetsNetz from "./AktivitaetsNetz";
 
 /** Die sechs angezeigten Kennzahlen (wie im grossen Netz). */
@@ -96,6 +100,8 @@ export default function AktivitaetsNetzFloat() {
     };
     lesen();
     void zieheSpurenAusCloud();
+    // Auch die Flächen-Bilanz, sonst zeigt ein zweites Gerät hier eine Null.
+    void zieheAuswertungAusCloud();
     window.addEventListener(SPUR_EVENT, lesen);
     window.addEventListener(AUSWERTUNG_EVENT, lesen);
     return () => {

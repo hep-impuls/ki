@@ -10,11 +10,23 @@
  *    Interessens-Rückmeldung.
  *
  * Die Komponenten rufen `melde(...)` bei jeder Änderung; das Orakel liest per
- * `leseAuswertung()` und lauscht auf `AUSWERTUNG_EVENT`. Rein lokal
- * (localStorage), wie `spuren`/`gewichtung`. Kein Cloud-Spiegel.
+ * `leseAuswertung()` und lauscht auf `AUSWERTUNG_EVENT`.
+ *
+ * SPIEGEL (seit 2026-08-09 vollständig). Vorher ging nur die Flächen-BILANZ in
+ * die Cloud, für den Trieb «Flächen» in der Lehrpersonen-Ansicht, und
+ * zurückgeholt wurde nichts. Die Einträge selbst, also auch die Titel der
+ * gewählten Inhalte, lebten allein in diesem Browser.
+ *
+ * Das hatte eine Folge, die nicht wie ein Fehler aussah: Der Abschnitt «Was dich
+ * besonders interessiert hat» im Orakel wird nur gerendert, wenn hier Einträge
+ * liegen, und in ihm steckt die erste Orakel-Stimme. Auf einem zweiten Gerät
+ * kamen die besuchten Punkte und die Bewertungen brav zurück, dieser Abschnitt
+ * aber fehlte samt seiner Stimme. Keine Meldung, nur eine leere Stelle.
+ *
+ * Jetzt geht der ganze Store mit und `zieheAuswertungAusCloud()` holt ihn zurück.
  */
 
-import { doc, serverTimestamp, setDoc } from "firebase/firestore";
+import { doc, getDoc, serverTimestamp, setDoc } from "firebase/firestore";
 import { getFirebase } from "@/lib/firebase";
 import { getSession } from "@/lib/session";
 import { seg } from "@/lib/paths";
@@ -40,28 +52,83 @@ function auswertungDocRef(code: string) {
 }
 
 /**
- * Debounce fürs Cloud-Spiegeln. Gespiegelt wird nur die **Bilanz** (wie viele
- * Flächen von wie vielen), nicht die gewählten Titel: Die stehen schon in der
- * Inhalts-Registry, und das Klassen-Rhizom braucht bloss die Zahl. Ohne diesen
- * Spiegel fehlte der Lehrpersonen-Ansicht der Trieb «Flächen», den die
- * Lernenden in ihrem eigenen Rhizom sehen.
+ * Cloud-Spiegel schreiben.
+ *
+ * Zwei Felder mit verschiedenen Aufgaben:
+ *
+ *  - `flaechenGefuellt` / `flaechenTotal` — die Bilanz, die die
+ *    Lehrpersonen-Ansicht serverseitig liest (Trieb «Flächen» im Klassen-Rhizom).
+ *    Namen und Form bleiben unverändert, sonst bricht `teacherStore.ts`.
+ *  - `bereicheJson` — der ganze Store, damit er auf einem zweiten Gerät
+ *    zurückkommt.
+ *
+ * Warum der Store als JSON-ZEICHENKETTE und nicht als Firestore-Map: `setDoc`
+ * mit `merge: true` vereinigt verschachtelte Maps Schlüssel für Schlüssel. Ein
+ * Eintrag, den «Seite von vorne beginnen» lokal löscht, bliebe in der Cloud
+ * stehen und käme beim nächsten Herunterholen zurück. Eine Zeichenkette wird
+ * ganz ersetzt, damit wirkt ein Löschen auch dort. Die Inhalts-Registry
+ * (`inhalte.ts`) darf eine Map sein, weil aus ihr nie etwas verschwindet.
  */
+function spiegeln(): void {
+  const code = getSession()?.studentCode;
+  if (!code) return;
+  const ref = auswertungDocRef(code);
+  if (!ref) return;
+  const { gefuellt, total } = zaehleFlaechen();
+  void setDoc(
+    ref,
+    {
+      flaechenGefuellt: gefuellt,
+      flaechenTotal: total,
+      bereicheJson: JSON.stringify(lesen()),
+      updatedAt: serverTimestamp(),
+    },
+    { merge: true },
+  ).catch((err) => console.warn("[auswertung] mirror failed", err));
+}
+
+/** Debounce fürs Spiegeln, damit nicht jede Masche einzeln schreibt. */
 let mirrorTimer: ReturnType<typeof setTimeout> | null = null;
 function scheduleMirror(): void {
   if (mirrorTimer) clearTimeout(mirrorTimer);
   mirrorTimer = setTimeout(() => {
     mirrorTimer = null;
-    const code = getSession()?.studentCode;
-    if (!code) return;
-    const ref = auswertungDocRef(code);
-    if (!ref) return;
-    const { gefuellt, total } = zaehleFlaechen();
-    void setDoc(
-      ref,
-      { flaechenGefuellt: gefuellt, flaechenTotal: total, updatedAt: serverTimestamp() },
-      { merge: true },
-    ).catch((err) => console.warn("[auswertung] mirror failed", err));
+    spiegeln();
   }, 1500);
+}
+
+/**
+ * Cloud → lokal: den gespiegelten Store zurückholen, lokale Einträge gewinnen.
+ *
+ * Lokal gewinnt, weil ein lokaler Eintrag von einer Komponente stammt, die in
+ * diesem Browser gerade gerendert hat, und damit aktueller ist als der Spiegel.
+ * Fehlt ein Bereich lokal, kommt er aus der Cloud, und genau das füllt den
+ * Abschnitt «Was dich besonders interessiert hat» auf einem zweiten Gerät.
+ *
+ * Feuert `AUSWERTUNG_EVENT`, damit offene Ansichten nachziehen. No-op ohne Code
+ * oder Firebase-Konfiguration. Idempotent.
+ */
+export async function zieheAuswertungAusCloud(): Promise<void> {
+  if (typeof window === "undefined") return;
+  const code = getSession()?.studentCode;
+  if (!code) return;
+  const ref = auswertungDocRef(code);
+  if (!ref) return;
+  try {
+    const snap = await getDoc(ref);
+    if (!snap.exists()) return;
+    const roh = snap.data()?.bereicheJson;
+    if (typeof roh !== "string" || roh.length === 0) return;
+    const remote = JSON.parse(roh) as unknown;
+    if (!remote || typeof remote !== "object" || Array.isArray(remote)) return;
+    const lokal = lesen();
+    const zusammen: Store = { ...(remote as Store), ...lokal };
+    if (JSON.stringify(zusammen) === JSON.stringify(lokal)) return;
+    schreiben(zusammen);
+    window.dispatchEvent(new CustomEvent(AUSWERTUNG_EVENT, { detail: { cloud: true } }));
+  } catch (err) {
+    console.warn("[auswertung] cloud pull failed", err);
+  }
 }
 
 /**
@@ -143,9 +210,15 @@ export function melde(key: string, eintrag: AuswertungEintrag): void {
 
 /**
  * Auswertungs-Bilanzen löschen, deren Schlüssel (Spur-Präfix) einen der
- * Teil-Strings enthält («Seite von vorne beginnen»). Rein lokal (kein
- * Cloud-Spiegel). Der anonyme Flächen-Zähler und sein Register bleiben
- * unberührt, damit erneutes Weben die Kollektiv-Werte nicht aufbläht.
+ * Teil-Strings enthält («Seite von vorne beginnen»). Der anonyme Flächen-Zähler
+ * und sein Register bleiben unberührt, damit erneutes Weben die Kollektiv-Werte
+ * nicht aufbläht.
+ *
+ * Das Löschen geht SOFORT in die Cloud, nicht über den Debounce. Sonst hätte der
+ * Spiegel dem Zurücksetzen widersprochen: das nächste `zieheAuswertungAusCloud`
+ * hätte die gelöschten Bereiche wieder hereingeholt, und ein Zurücksetzen, das
+ * sich selbst rückgängig macht, ist schlimmer als keines. Ein Spiegel muss beide
+ * Richtungen kennen, auch die des Verschwindens.
  */
 export function loescheAuswertungEnthaltend(teile: string[]): void {
   if (typeof window === "undefined" || teile.length === 0) return;
@@ -159,6 +232,11 @@ export function loescheAuswertungEnthaltend(teile: string[]): void {
   }
   if (!geaendert) return;
   schreiben(o);
+  if (mirrorTimer) {
+    clearTimeout(mirrorTimer);
+    mirrorTimer = null;
+  }
+  spiegeln();
   window.dispatchEvent(new CustomEvent(AUSWERTUNG_EVENT, { detail: { neustart: true } }));
 }
 

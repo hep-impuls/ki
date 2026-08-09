@@ -8,7 +8,12 @@ import {
   zaehleAlleAusPoll,
   zieheSpurenAusCloud,
 } from "../_lib/spuren";
-import { AUSWERTUNG_EVENT, FLAECHEN_POLL_ID, zaehleFlaechen } from "../_lib/auswertung";
+import {
+  AUSWERTUNG_EVENT,
+  FLAECHEN_POLL_ID,
+  zaehleFlaechen,
+  zieheAuswertungAusCloud,
+} from "../_lib/auswertung";
 import {
   loadPollCounts,
   subscribePollCounts,
@@ -205,6 +210,8 @@ export default function AktivitaetsNetz({
     };
     lesen();
     void zieheSpurenAusCloud();
+    // Auch die Flächen-Bilanz, sonst zeigt ein zweites Gerät hier eine Null.
+    void zieheAuswertungAusCloud();
     window.addEventListener(SPUR_EVENT, lesen);
     window.addEventListener(AUSWERTUNG_EVENT, lesen);
     return () => {
