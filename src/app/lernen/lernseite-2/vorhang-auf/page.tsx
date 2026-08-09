@@ -885,7 +885,7 @@ export default function Lernseite2VorhangAuf() {
         prefixe={["vorhang-auf:weisheit"]}
         vorschau={
           <p className="mt-sm max-w-4xl text-body-lg text-on-surface-variant">
-            <GlossarText text="Seit November 2022 nutzen wir grosse Sprachmodelle fast täglich. Aber was genau ist da als neue Akteurin aufgetreten? Zwölf Eigenschaften zusammen machen das Neue aus, nicht eine davon allein." />
+            <GlossarText text="Seit November 2022 nutzen wir grosse Sprachmodelle fast täglich. Aber was genau ist da als neue Akteurin aufgetreten? Hier sind zwölf Merkmale versammelt. Die Zahl ist ungefähr, man kann die Merkmale breiter oder enger schneiden. Wichtig ist etwas anderes: Kein Merkmal macht die KI allein aus. Erst ihr Zusammenspiel gibt ihr Wirkung und macht sie versuchsweise fassbar." />
           </p>
         }
       >
@@ -893,15 +893,16 @@ export default function Lernseite2VorhangAuf() {
           spurId="vorhang-auf:vertiefung:buendelung"
         >
           <p>
-            <GlossarText text="Jede einzelne dieser Eigenschaften gab es in Ansätzen schon früher. Neu ist, dass sie nun gebündelt in einem System zusammenkommen. Die KI erkennt Muster in riesigen Datenmengen und arbeitet mit Wahrscheinlichkeiten statt mit festen Regeln. Sie reagiert auf den Zusammenhang und passt ihre Antworten daran an. Sie wirkt allgemein einsetzbar, weil sie nicht für eine einzige Aufgabe gebaut ist. Genau diese Kombination macht sie zu einem Werkzeug, das sich wie ein Gegenüber anfühlt. Im Muster unten kannst du die zwölf Merkmale einzeln öffnen und nachlesen." />
+            <GlossarText text="Jede einzelne dieser Eigenschaften gab es in Ansätzen schon früher. Neu ist, dass sie nun gebündelt in einem System zusammenkommen. Die KI erkennt Muster in riesigen Datenmengen und arbeitet mit Wahrscheinlichkeiten statt mit festen Regeln. Sie reagiert auf den Zusammenhang und passt ihre Antworten daran an. Sie wirkt allgemein einsetzbar, weil sie nicht für eine einzige Aufgabe gebaut ist. Genau diese Kombination macht sie zu einem Werkzeug, das sich wie ein Gegenüber anfühlt. Im Muster unten kannst du die Merkmale einzeln öffnen und nachlesen." />
           </p>
         </Ausklapptext>
         <Aufgabe className="mt-md max-w-4xl">
-          Tippe die zwölf Punkte im Geflecht an. Jeder wird beschriftet und
-          zeigt unten seine Definition. Zwischen besuchten Punkten füllen sich
-          Flächen, und je mehr Punkte du besuchst, desto dichter wird das
-          Gewebe. Ziel ist, alle zwölf Merkmale zu öffnen. Dann erscheint unter
-          dem Muster das Fazit.
+          Die Punkte tragen ihre Namen. Tippe die Merkmale an, die dich
+          interessieren. Unten erscheint dann eine kurze Erklärung. Es gibt
+          keine feste Zahl von Merkmalen, die zwölf hier sind ein Vorschlag.
+          Wichtig ist das Zusammenspiel: Kein Merkmal wirkt allein. Zwischen
+          besuchten Punkten füllen sich Flächen. Öffnest du alle, erscheint
+          unter dem Muster das Fazit.
         </Aufgabe>
         <KnotenLandschaft
           className="mt-lg"
@@ -912,14 +913,15 @@ export default function Lernseite2VorhangAuf() {
           kantenInteraktiv={false}
           weben
           glossar
+          immerBeschriftet
           bereichLabel="Die Merkmale der neuen Akteurin"
           gewichtung={{
             prefix: "vorhang-auf:gestalt",
             frage: "Macht dieses Merkmal die Gestalt der KI …",
             stufen: ["unkenntlich", "verschwommen", "deutlich"],
           }}
-          einladung="Zwölf Merkmale sind hier lose verwoben. Tippe die Punkte an. Zwischen besuchten Punkten füllen sich die Flächen, und ist das Muster gewoben, erscheint darunter das Fazit. Gewichte in jeder Karte, wie deutlich das Merkmal die Gestalt der KI macht. Je mehr «deutlich» du wählst, desto stärker werden die Konturen."
-          abschluss="Diese zwölf Eigenschaften treten nicht getrennt auf, sondern alle gemeinsam. Und darin liegt das eigentlich Neue. Nicht eine einzelne Fähigkeit, sondern ihre Bündelung macht die KI zu einer Akteurin. Sie rechnet, lernt aus Daten, erkennt Muster, wettet auf Wahrscheinlichkeiten, überträgt Gelerntes, liest den Kontext, passt sich an, spricht, arbeitet im Wechselspiel, erzeugt und verbindet die Sinne. So wird sie zu etwas, dem wir mehr Einfluss auf unser Handeln zutrauen als je einer Technik zuvor."
+          einladung="Die Merkmale sind hier lose verwoben, jeder Punkt trägt seinen Namen. Tippe an, was dich interessiert. Zwischen besuchten Punkten füllen sich die Flächen; öffnest du alle, erscheint darunter das Fazit. Gewichte in jeder Karte, wie deutlich das Merkmal die Gestalt der KI macht. Je mehr «deutlich» du wählst, desto stärker werden die Konturen."
+          abschluss="Diese Eigenschaften treten nicht getrennt auf, sondern gemeinsam. Und darin liegt das eigentlich Neue. Ob man zwölf zählt oder anders schneidet, ist zweitrangig. Nicht eine einzelne Fähigkeit, sondern ihre Bündelung macht die KI zu einer Akteurin. Sie rechnet, lernt aus Daten, erkennt Muster, wettet auf Wahrscheinlichkeiten, überträgt Gelerntes, liest den Kontext, passt sich an, spricht, arbeitet im Wechselspiel, erzeugt und verbindet die Sinne. So wird sie zu etwas, dem wir mehr Einfluss auf unser Handeln zutrauen als je einer Technik zuvor."
           knoten={[
             {
               titel: "algorithmisch",

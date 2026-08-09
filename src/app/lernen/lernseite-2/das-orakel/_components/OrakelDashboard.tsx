@@ -42,6 +42,7 @@ import {
   type AuswertungEintrag,
 } from "../../_lib/auswertung";
 import { INHALTE_EVENT, leseInhalte, zieheInhalteAusCloud } from "../../_lib/inhalte";
+import { leseBlick, schreibeBlick, zieheBlickAusCloud } from "../../_lib/blick";
 import { abschnittFuer, gruppiere, hrefFuer, type Sprung } from "../../_lib/ziele";
 
 /**
@@ -188,7 +189,6 @@ const STILE: { id: Stil; label: string; icon: string; beschreibung: string }[] =
 
 /* ── lokale Schlüssel ─────────────────────────────────────────────────────── */
 
-const KEY_BLICK = "ki26-orakel-blick";
 const KEY_NAME = "ki26-orakel-name";
 
 function summeMitPrefix(counts: PollCounts, prefix: string): number {
@@ -378,7 +378,14 @@ export default function OrakelDashboard() {
   /* Poll-Wahl + Name laden */
   useEffect(() => {
     try {
-      setBlickWahl(window.localStorage.getItem(KEY_BLICK));
+      /* Pro Fortschritts-Code, nicht pro Gerät: leseBlick übernimmt einmalig
+         den alten Geräte-Eintrag, zieheBlickAusCloud holt die eigene Wahl auf
+         einem zweiten Gerät nach (ohne neue Stimme, die steckt schon im
+         Zähler). */
+      setBlickWahl(leseBlick());
+      void zieheBlickAusCloud().then((wahl) => {
+        if (wahl) setBlickWahl(wahl);
+      });
       setName(window.localStorage.getItem(KEY_NAME) ?? "");
     } catch {
       /* Privatmodus */
@@ -562,13 +569,9 @@ export default function OrakelDashboard() {
 
   /* Aktionen — Blick-Poll */
   function blickWaehlen(id: string) {
-    if (blickWahl) return; // eine Stimme pro Gerät
+    if (blickWahl) return; // eine Stimme pro Fortschritts-Code
     setBlickWahl(id);
-    try {
-      window.localStorage.setItem(KEY_BLICK, id);
-    } catch {
-      /* Privatmodus */
-    }
+    schreibeBlick(id);
     // Nie aus der Entwicklung zählen (localhost teilt sich die Zähler mit
     // der Produktion).
     if (zaehltAnonym()) void castVote(BLICK_POLL_ID, id);
@@ -1218,6 +1221,72 @@ export default function OrakelDashboard() {
 
       <FadenDivider className="mt-xl" />
 
+      {/* Blick-Umfrage — direkt VOR dem zweiten Orakel, denn die selbst
+          gewählte Grundhaltung ist dessen Hauptquelle. Erst fragen, dann
+          deuten (Christofs Vorgabe 2026-08-09; vorher stand die Umfrage weit
+          unten bei den Findmind-Umfragen, und das Orakel musste auf eine Wahl
+          verweisen, die man noch gar nicht gesehen hatte). */}
+      <section id="blick" className="mt-xl scroll-mt-24" aria-label="Blick auf KI">
+        <h2 className="text-headline-md text-on-surface">
+          Wie blickst du heute auf KI?
+        </h2>
+        <p className="mt-xs text-body-sm text-on-surface-variant">
+          {blickWahl
+            ? `${blickTotal} ${blickTotal === 1 ? "Stimme" : "Stimmen"} insgesamt, deine ist markiert.`
+            : "Wähle eine Haltung, danach siehst du, wie alle geantwortet haben. Das Orakel unten bezieht deine Wahl in seine Deutung ein."}
+        </p>
+        <div className="mt-md flex flex-col gap-sm">
+          {BLICK_OPTIONEN.map((o) => {
+            const n = Number(blickCounts[o.id] ?? 0);
+            const anteil = blickTotal > 0 ? n / blickTotal : 0;
+            const meineWahl = blickWahl === o.id;
+            return (
+              <button
+                key={o.id}
+                type="button"
+                onClick={() => blickWaehlen(o.id)}
+                disabled={Boolean(blickWahl)}
+                className={
+                  "relative overflow-hidden rounded-xl border p-md text-left transition " +
+                  (meineWahl
+                    ? "border-tertiary bg-tertiary-container/40"
+                    : "border-outline-variant bg-surface-bright") +
+                  (blickWahl ? "" : " hover:-translate-y-0.5 hover:shadow-sm")
+                }
+              >
+                {blickWahl && (
+                  <div
+                    aria-hidden
+                    className="absolute inset-y-0 left-0 bg-tertiary/10 transition-[width] duration-700"
+                    style={{ width: `${anteil * 100}%` }}
+                  />
+                )}
+                <div className="relative flex items-center justify-between gap-md">
+                  <span className="inline-flex items-center gap-sm text-body-md text-on-surface">
+                    <span className="material-symbols-outlined text-[20px] text-tertiary">
+                      {o.icon}
+                    </span>
+                    {o.label}
+                    {meineWahl && (
+                      <span className="rounded-lg bg-tertiary px-sm py-xs text-label-sm text-on-tertiary">
+                        du
+                      </span>
+                    )}
+                  </span>
+                  {blickWahl && (
+                    <span className="text-label-sm text-on-surface-variant">
+                      {Math.round(anteil * 100)} % ({n})
+                    </span>
+                  )}
+                </div>
+              </button>
+            );
+          })}
+        </div>
+      </section>
+
+      <FadenDivider className="mt-xl" />
+
       {/* 4 — Das Orakel: KI deutet deine Aktivität */}
       <section id="orakel-spricht" className="mt-xl scroll-mt-24" aria-label="Das Orakel spricht">
         <h2 className="text-headline-md text-on-surface">Das Orakel spricht</h2>
@@ -1305,9 +1374,9 @@ export default function OrakelDashboard() {
 
           {aktuell.status === "zu-wenig" && (
             <p className="text-body-md text-on-surface-variant">
-              Dafür braucht das Orakel erst deine Einordnungen. Bewerte im
-              «Teppich des Wandels» und bei «Philosophie in Zeiten der
-              Verunsicherung», oder wähle unten deine Grundhaltung zur KI, dann
+              Dafür braucht das Orakel erst deine Einordnungen. Wähle gleich
+              oberhalb deine Grundhaltung zur KI, oder bewerte im «Teppich des
+              Wandels» und bei «Philosophie in Zeiten der Verunsicherung», dann
               kehr zurück.
             </p>
           )}
@@ -1443,68 +1512,6 @@ export default function OrakelDashboard() {
               Ausdruck.
             </p>
           )}
-        </div>
-      </section>
-
-      <FadenDivider className="mt-xl" />
-
-      {/* Blick-Umfrage — direkt vor den Findmind-Umfragen */}
-      <section id="blick" className="mt-xl scroll-mt-24" aria-label="Blick auf KI">
-        <h2 className="text-headline-md text-on-surface">
-          Wie blickst du heute auf KI?
-        </h2>
-        <p className="mt-xs text-body-sm text-on-surface-variant">
-          {blickWahl
-            ? `${blickTotal} ${blickTotal === 1 ? "Stimme" : "Stimmen"} insgesamt, deine ist markiert.`
-            : "Wähle eine Haltung, danach siehst du, wie alle geantwortet haben."}
-        </p>
-        <div className="mt-md flex flex-col gap-sm">
-          {BLICK_OPTIONEN.map((o) => {
-            const n = Number(blickCounts[o.id] ?? 0);
-            const anteil = blickTotal > 0 ? n / blickTotal : 0;
-            const meineWahl = blickWahl === o.id;
-            return (
-              <button
-                key={o.id}
-                type="button"
-                onClick={() => blickWaehlen(o.id)}
-                disabled={Boolean(blickWahl)}
-                className={
-                  "relative overflow-hidden rounded-xl border p-md text-left transition " +
-                  (meineWahl
-                    ? "border-tertiary bg-tertiary-container/40"
-                    : "border-outline-variant bg-surface-bright") +
-                  (blickWahl ? "" : " hover:-translate-y-0.5 hover:shadow-sm")
-                }
-              >
-                {blickWahl && (
-                  <div
-                    aria-hidden
-                    className="absolute inset-y-0 left-0 bg-tertiary/10 transition-[width] duration-700"
-                    style={{ width: `${anteil * 100}%` }}
-                  />
-                )}
-                <div className="relative flex items-center justify-between gap-md">
-                  <span className="inline-flex items-center gap-sm text-body-md text-on-surface">
-                    <span className="material-symbols-outlined text-[20px] text-tertiary">
-                      {o.icon}
-                    </span>
-                    {o.label}
-                    {meineWahl && (
-                      <span className="rounded-lg bg-tertiary px-sm py-xs text-label-sm text-on-tertiary">
-                        du
-                      </span>
-                    )}
-                  </span>
-                  {blickWahl && (
-                    <span className="text-label-sm text-on-surface-variant">
-                      {Math.round(anteil * 100)} % ({n})
-                    </span>
-                  )}
-                </div>
-              </button>
-            );
-          })}
         </div>
       </section>
 
@@ -1670,13 +1677,31 @@ export default function OrakelDashboard() {
               {new Date().toLocaleDateString("de-CH")}
             </p>
 
-            {/* Aktivitätsnetz als Grafik */}
-            <div style={{ margin: "1.25rem 0 0", maxWidth: "26rem" }}>
+            {/* Aktivitätsnetz als Grafik. `breakInside: avoid`, weil ein quer
+                durchgeschnittenes SVG der hässlichste aller Umbrüche ist: Läuft
+                Seite 1 über (anderes Papier, andere Skalierung, längere Texte),
+                rutscht der ganze Block auf die nächste Seite statt zu reissen.
+                Christofs Meldung 2026-08-09: «pdf-Seiten z.T. falsch
+                umbrochen». */}
+            <div
+              style={{
+                margin: "1.25rem 0 0",
+                maxWidth: "26rem",
+                breakInside: "avoid",
+                pageBreakInside: "avoid",
+              }}
+            >
               <AktivitaetsNetz titel="Dein Aktivitätsnetz" />
             </div>
 
-            {/* Kontextkreise (du / alle) als Grafik */}
-            <div style={{ margin: "1.5rem 0 0" }}>
+            {/* Kontextkreise (du / alle) als Grafik, ebenfalls unteilbar */}
+            <div
+              style={{
+                margin: "1.5rem 0 0",
+                breakInside: "avoid",
+                pageBreakInside: "avoid",
+              }}
+            >
               <KontextGewichtung />
             </div>
 
@@ -1819,7 +1844,14 @@ export default function OrakelDashboard() {
             </h2>
             {vertiefteGruppen.length > 0 ? (
               vertiefteGruppen.map((g) => (
-                <div key={g.abschnitt} style={{ marginTop: "0.5rem" }}>
+                <div
+                  key={g.abschnitt}
+                  style={{
+                    marginTop: "0.5rem",
+                    breakInside: "avoid",
+                    pageBreakInside: "avoid",
+                  }}
+                >
                   <p style={{ margin: "0 0 0.15rem", fontSize: "0.85rem", fontWeight: 700, color: "#333" }}>
                     {g.abschnitt}
                   </p>

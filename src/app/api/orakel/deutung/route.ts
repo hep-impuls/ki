@@ -221,7 +221,7 @@ const KI_TYP =
   "KI gewählt» UND «Keine einzelnen Inhalte eingeordnet», dann rate nicht. " +
   "Schreib dann NUR, dass die Spuren für diese Frage noch nicht reichen, und " +
   "nenn die drei Stellen, an denen sich die Haltung zeigen lässt, nämlich die " +
-  "Umfrage «Wie blickst du heute auf KI» weiter unten auf dieser Seite, die " +
+  "Umfrage «Wie blickst du heute auf KI» gleich oberhalb dieser Deutung, die " +
   "Bewertungen im «Teppich des Wandels» und die Einordnungen in «Philosophie in " +
   "Zeiten der Verunsicherung». Dieser Text ist dann kurz, nämlich zwei bis drei " +
   "Sätze, und das ist richtig so. Deute in diesem Fall nichts und nenn keine " +

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 
 /**
  * Quellen — Links, die einen Begriff oder ein Thema dieses Lernsets möglichst
@@ -256,6 +256,31 @@ export default function Quellenverzeichnis({ className = "" }: { className?: str
   const [offen, setOffen] = useState<Modul | null>(null);
   const [buecherOffen, setBuecherOffen] = useState(false);
 
+  /* Beim Umschalten den angeklickten Kopf an seiner Bildschirmposition halten.
+     Es ist immer nur eine Gruppe offen. Klickt man eine untere Gruppe an,
+     während weiter oben eine offene zusammenklappt, verschwinden über dem
+     Finger etliche Zeilen: Die Seite rutscht nach oben, der Blick landet
+     unterhalb des Akkordeons statt beim gewählten Kapitel (Christofs Meldung
+     2026-08-09). Darum wird die Kopf-Position vor dem Umschalten gemerkt und
+     im useLayoutEffect zurückgeschoben. Der läuft synchron nach dem Neuaufbau
+     und vor dem Zeichnen, anders als requestAnimationFrame, das in
+     Hintergrund-Tabs gar nicht feuert. */
+  const korrektur = useRef<{ el: HTMLElement; top: number } | null>(null);
+  const stabilHalten = (el: HTMLElement, umschalten: () => void) => {
+    korrektur.current = { el, top: el.getBoundingClientRect().top };
+    umschalten();
+  };
+  useLayoutEffect(() => {
+    if (!korrektur.current) return;
+    const { el, top } = korrektur.current;
+    korrektur.current = null;
+    const delta = el.getBoundingClientRect().top - top;
+    if (delta !== 0) {
+      const roller = document.scrollingElement ?? document.documentElement;
+      roller.scrollTop += delta;
+    }
+  }, [offen, buecherOffen]);
+
   const gruppen = MODULE.map((m) => ({
     ...m,
     links: LINKS.filter((l) => l.modul === m.name),
@@ -286,7 +311,11 @@ export default function Quellenverzeichnis({ className = "" }: { className?: str
             <li key={g.name}>
               <button
                 type="button"
-                onClick={() => setOffen((v) => (v === g.name ? null : g.name))}
+                onClick={(e) =>
+                  stabilHalten(e.currentTarget, () =>
+                    setOffen((v) => (v === g.name ? null : g.name)),
+                  )
+                }
                 aria-expanded={auf}
                 className={
                   "flex w-full items-center gap-sm rounded-lg border bg-surface-bright px-sm py-sm text-left outline-none transition-colors hover:border-tertiary " +
@@ -352,7 +381,7 @@ export default function Quellenverzeichnis({ className = "" }: { className?: str
       <div className="mt-md border-t border-outline-variant pt-md">
         <button
           type="button"
-          onClick={() => setBuecherOffen((o) => !o)}
+          onClick={(e) => stabilHalten(e.currentTarget, () => setBuecherOffen((o) => !o))}
           aria-expanded={buecherOffen}
           className={
             "flex w-full items-center gap-sm rounded-lg border bg-surface-bright px-sm py-sm text-left outline-none transition-colors hover:border-tertiary " +

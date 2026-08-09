@@ -222,6 +222,7 @@ export default function KnotenLandschaft({
   bereichLabel,
   weben = false,
   glossar = false,
+  immerBeschriftet = false,
 }: {
   knoten: LandKnoten[];
   /** Eine oder mehrere Anordnungen; bei mehreren erscheint ein Umschalter. */
@@ -266,6 +267,11 @@ export default function KnotenLandschaft({
   /** true → Karten-Text und «Mehr lesen» laufen durch GlossarText, sodass
    *  bekannte Fachbegriffe eine Hover-Erklärung bekommen (z.B. Temperatur). */
   glossar?: boolean;
+  /** true → jeder Punkt trägt seinen Namen von Anfang an, nicht erst nach dem
+   *  Besuch. Für Landschaften, in denen man NACH INTERESSE wählt (Merkmale):
+   *  Ohne Namen liesse sich gar nicht wählen; der bisherige Hover-Tooltip half
+   *  nur mit Maus und existiert auf Touchscreens nicht (Christof 2026-08-09). */
+  immerBeschriftet?: boolean;
 }) {
   const n = knoten.length;
   // Aggregierte Kontur-Stärke (0..1) aus den Gewichtungen — live.
@@ -775,20 +781,24 @@ export default function KnotenLandschaft({
                   }
                   opacity={reached ? 1 : 0.65}
                 />
-                {/* Beschriftung — erscheint mit dem Besuch */}
-                {reached && (
+                {/* Beschriftung — erscheint mit dem Besuch; mit
+                    `immerBeschriftet` von Anfang an (gedämpft, bis besucht) */}
+                {(reached || immerBeschriftet) && (
                   <text
                     x={labelX}
                     y="22"
                     textAnchor="middle"
                     fontSize="11"
-                    className="fill-on-surface-variant animate-frame-in"
+                    opacity={reached ? 1 : 0.7}
+                    className={
+                      "fill-on-surface-variant" + (reached ? " animate-frame-in" : "")
+                    }
                   >
                     {name}
                   </text>
                 )}
-                {/* Tooltip vor dem Besuch */}
-                {!reached && (
+                {/* Tooltip vor dem Besuch (nur wo die Namen nicht ohnehin stehen) */}
+                {!reached && !immerBeschriftet && (
                   <g className="pointer-events-none opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100">
                     <rect
                       x={tipXRel}

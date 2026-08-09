@@ -49,16 +49,22 @@ export function Ring({
   werte,
   labels,
   ariaLabel,
+  auswahl = null,
+  onWahl,
 }: {
   /** Pro Aspekt ein Wert 0..2 (Achtsamkeit) oder null (nicht bewertet). */
   werte: (number | null)[];
   /** Optionaler Klartext-Titel pro Aspekt (für Hover/Screenreader). */
   labels: string[];
   ariaLabel: string;
+  /** Ausgewählter Aspekt (wird in beiden Ringen gleich hervorgehoben). */
+  auswahl?: number | null;
+  /** Antippen eines Segments. Ohne Handler bleibt der Ring rein anzeigend. */
+  onWahl?: (gi: number) => void;
 }) {
   const n = werte.length;
   return (
-    <svg viewBox="0 0 220 220" className="h-40 w-40 flex-shrink-0 sm:h-44 sm:w-44" role="img" aria-label={ariaLabel}>
+    <svg viewBox="0 0 220 220" className="h-40 w-40 flex-shrink-0 sm:h-44 sm:w-44" role="group" aria-label={ariaLabel}>
       {werte.map((v, gi) => {
         const step = 360 / n;
         const luecke = n > 1 ? 2.2 : 0;
@@ -78,13 +84,39 @@ export function Ring({
           `A ${ri} ${ri} 0 ${gross} 0 ${px(ri, a0)} ${py(ri, a0)}`,
           "Z",
         ].join(" ");
+        const gewaehlt = auswahl === gi;
+        /* Die Beschriftung hing vorher allein am SVG-<title>, also am nativen
+           Maus-Tooltip. Den gibt es auf Touchscreens nicht, und Browser zeigen
+           ihn unterschiedlich (Christofs Meldung 2026-08-09). Darum ist jedes
+           Segment jetzt antippbar und per Tab erreichbar; die Beschriftung
+           erscheint fest unter den Ringen. Der <title> bleibt als Zugabe für
+           Maus-Nutzende. */
         return (
           <path
             key={gi}
             d={d}
             fill={farbeFuer(v)}
-            className="stroke-surface-bright transition-[fill] duration-500"
-            strokeWidth={1.5}
+            className={
+              "transition-[fill] duration-500 " +
+              (onWahl ? "cursor-pointer focus-visible:outline-none " : "") +
+              (gewaehlt ? "stroke-on-surface" : "stroke-surface-bright")
+            }
+            strokeWidth={gewaehlt ? 3 : 1.5}
+            {...(onWahl
+              ? {
+                  role: "button",
+                  tabIndex: 0,
+                  "aria-pressed": gewaehlt,
+                  "aria-label": labels[gi] ?? `Aspekt ${gi + 1}`,
+                  onClick: () => onWahl(gi),
+                  onKeyDown: (e: React.KeyboardEvent) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      onWahl(gi);
+                    }
+                  },
+                }
+              : {})}
           >
             <title>{labels[gi] ?? `Aspekt ${gi + 1}`}</title>
           </path>
@@ -106,10 +138,16 @@ function PlatzhalterRing({ text }: { text: string }) {
 
 /* ── Hauptkomponente ────────────────────────────────────────────────────────── */
 
+/** Stufen-Wörter in der Reihenfolge der gespeicherten Werte 0/1/2. */
+const STUFEN = ["wenig", "mittel", "viel"] as const;
+
 export default function KontextGewichtung({ className = "" }: { className?: string }) {
   const [eigen, setEigen] = useState<Record<number, number>>({});
   const [labels, setLabels] = useState<Record<string, string>>({});
   const [alle, setAlle] = useState<AlleDaten | null>(null);
+  /* Angetippter Aspekt; gilt für beide Ringe zugleich, denn der Vergleich
+     «du ↔ alle» pro Aspekt ist der Zweck der Grafik. */
+  const [auswahl, setAuswahl] = useState<number | null>(null);
 
   useEffect(() => {
     const lade = () => {
@@ -187,6 +225,20 @@ export default function KontextGewichtung({ className = "" }: { className?: stri
   const alleHatDaten = !grund && werteAlle.some((v) => v != null);
   const leer = n === 0 || (duGewichtet === 0 && !alleHatDaten && !grund);
 
+  /* Auswahl absichern, falls die Aspektzahl nach einem Daten-Update schrumpft. */
+  const sel = auswahl != null && auswahl < n ? auswahl : null;
+
+  /** Beschreibt die Verteilung aller für einen Aspekt, z.B. «1× wenig, 2× viel». */
+  const alleZeile = (gi: number): string => {
+    if (grund) return "erscheint online";
+    const a = alleAspekte[gi];
+    if (!a) return "noch keine Bewertungen";
+    const teile = (["wenig", "mittel", "viel"] as const)
+      .filter((k) => a[k] > 0)
+      .map((k) => `${a[k]}× ${k}`);
+    return teile.length ? teile.join(", ") : "noch keine Bewertungen";
+  };
+
   return (
     <section className={"rounded-2xl border border-outline-variant bg-surface-bright p-md sm:p-lg " + className}>
       <p className="flex items-center gap-xs text-label-md uppercase tracking-wider text-tertiary">
@@ -196,7 +248,11 @@ export default function KontextGewichtung({ className = "" }: { className?: stri
       <p className="mt-xs max-w-2xl text-body-sm text-on-surface-variant">
         Im Abschnitt «Die KI im Kontext» hast du gewichtet, wie viel Achtsamkeit
         jeder Aspekt verdient. Jeder Ringabschnitt steht für einen Aspekt. Links
-        dein Muster, rechts das aller Nutzenden.
+        dein Muster, rechts das aller Nutzenden.{" "}
+        <span className="print:hidden">
+          Tippe einen Abschnitt an, dann steht hier, welcher Aspekt es ist und
+          wie er gewichtet wurde.
+        </span>
       </p>
 
       {leer ? (
@@ -209,7 +265,13 @@ export default function KontextGewichtung({ className = "" }: { className?: stri
           <div className="mt-lg flex flex-col items-center justify-center gap-lg sm:flex-row sm:gap-xl">
             {/* Dein Muster */}
             <figure className="flex flex-col items-center gap-sm">
-              <Ring werte={werteDu} labels={labelArr} ariaLabel="Dein Achtsamkeits-Muster über die Kontext-Aspekte" />
+              <Ring
+                werte={werteDu}
+                labels={labelArr}
+                ariaLabel="Dein Achtsamkeits-Muster über die Kontext-Aspekte"
+                auswahl={sel}
+                onWahl={(gi) => setAuswahl(gi === sel ? null : gi)}
+              />
               <figcaption className="text-center">
                 <span className="block text-body-md font-medium text-on-surface">Du</span>
                 <span className="block text-label-sm text-on-surface-variant">
@@ -227,6 +289,8 @@ export default function KontextGewichtung({ className = "" }: { className?: stri
                   werte={werteAlle}
                   labels={labelArr}
                   ariaLabel="Durchschnittliches Achtsamkeits-Muster aller Nutzenden"
+                  auswahl={sel}
+                  onWahl={(gi) => setAuswahl(gi === sel ? null : gi)}
                 />
               )}
               <figcaption className="text-center">
@@ -240,6 +304,30 @@ export default function KontextGewichtung({ className = "" }: { className?: stri
                 </span>
               </figcaption>
             </figure>
+          </div>
+
+          {/* Angetippter Aspekt: fest sichtbare Beschriftung statt Maus-Tooltip.
+              Im Druck ausgeblendet, dort gibt es nichts anzutippen. */}
+          <div
+            className="print:hidden mt-md rounded-xl border border-outline-variant bg-surface-container-low p-md text-body-sm text-on-surface-variant"
+            aria-live="polite"
+          >
+            {sel == null ? (
+              <span>
+                Noch kein Abschnitt angetippt. Wähle in einem der Ringe einen
+                Abschnitt, dann steht hier sein Name mit deiner Gewichtung und
+                der aller Nutzenden.
+              </span>
+            ) : (
+              <span>
+                <strong className="text-on-surface">{labelArr[sel]}</strong>
+                {" · "}du:{" "}
+                <strong className="text-on-surface">
+                  {werteDu[sel] != null ? STUFEN[werteDu[sel]!] : "nicht bewertet"}
+                </strong>
+                {" · "}alle: {alleZeile(sel)}
+              </span>
+            )}
           </div>
 
           {/* Legende */}

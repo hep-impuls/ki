@@ -609,13 +609,13 @@ Die Strecke beginnt beim Auslagern des Denkens in Knotenschnüre, den Quipus der
 
 ### Die Merkmale der neuen Akteurin
 
-**[VA-2e2840]** *(Fliesstext)*
-Seit November 2022 nutzen wir grosse Sprachmodelle fast täglich. Aber was genau ist da als neue Akteurin aufgetreten? Zwölf Eigenschaften zusammen machen das Neue aus, nicht eine davon allein.
+**[VA-c12dee]** *(Fliesstext)*
+Seit November 2022 nutzen wir grosse Sprachmodelle fast täglich. Aber was genau ist da als neue Akteurin aufgetreten? Hier sind zwölf Merkmale versammelt. Die Zahl ist ungefähr, man kann die Merkmale breiter oder enger schneiden. Wichtig ist etwas anderes: Kein Merkmal macht die KI allein aus. Erst ihr Zusammenspiel gibt ihr Wirkung und macht sie versuchsweise fassbar.
 
 ### Mehr dazu: warum die Bündelung zählt
 
-**[VA-0f0649]** *(Fliesstext)*
-Jede einzelne dieser Eigenschaften gab es in Ansätzen schon früher. Neu ist, dass sie nun gebündelt in einem System zusammenkommen. Die KI erkennt Muster in riesigen Datenmengen und arbeitet mit Wahrscheinlichkeiten statt mit festen Regeln. Sie reagiert auf den Zusammenhang und passt ihre Antworten daran an. Sie wirkt allgemein einsetzbar, weil sie nicht für eine einzige Aufgabe gebaut ist. Genau diese Kombination macht sie zu einem Werkzeug, das sich wie ein Gegenüber anfühlt. Im Muster unten kannst du die zwölf Merkmale einzeln öffnen und nachlesen.
+**[VA-3ff1fb]** *(Fliesstext)*
+Jede einzelne dieser Eigenschaften gab es in Ansätzen schon früher. Neu ist, dass sie nun gebündelt in einem System zusammenkommen. Die KI erkennt Muster in riesigen Datenmengen und arbeitet mit Wahrscheinlichkeiten statt mit festen Regeln. Sie reagiert auf den Zusammenhang und passt ihre Antworten daran an. Sie wirkt allgemein einsetzbar, weil sie nicht für eine einzige Aufgabe gebaut ist. Genau diese Kombination macht sie zu einem Werkzeug, das sich wie ein Gegenüber anfühlt. Im Muster unten kannst du die Merkmale einzeln öffnen und nachlesen.
 
 ### algorithmisch
 
@@ -1961,8 +1961,8 @@ Bei «Die KI im Kontext» hast du für jeden Aspekt gewählt, wie viel Achtsamke
 **[OR-a47cee]** *(Fliesstext)*
 Was für ein KI-Typ bist du? Das Orakel liest aus deinen Einordnungen, ob du die KI eher zuversichtlich siehst oder eher als Gefahr, und sagt dir kurz, woran es das festmacht. Es ist eine Lesart deiner Klicks, kein Urteil über dich. Wähle eine Form, und wenn sie dir nicht zusagt, befrage es in einer anderen. Dazu schickt dein Browser eine Zusammenfassung deiner Aktivität: Zähler, Bewertungen und die Titel der Punkte, die du gewählt hast. Ohne Namen und ohne deinen Fortschritts-Code.
 
-**[OR-46e10c]** *(Fliesstext)*
-Dafür braucht das Orakel erst deine Einordnungen. Bewerte im «Teppich des Wandels» und bei «Philosophie in Zeiten der Verunsicherung», oder wähle unten deine Grundhaltung zur KI, dann kehr zurück.
+**[OR-62057c]** *(Fliesstext)*
+Dafür braucht das Orakel erst deine Einordnungen. Wähle gleich oberhalb deine Grundhaltung zur KI, oder bewerte im «Teppich des Wandels» und bei «Philosophie in Zeiten der Verunsicherung», dann kehr zurück.
 
 **[OR-6b0d5c]** *(Fliesstext)*
 Das Orakel schweigt: Auf dem Server ist gerade kein KI-Schlüssel hinterlegt. Sobald er gesetzt ist, deutet es deine Aktivität hier.
