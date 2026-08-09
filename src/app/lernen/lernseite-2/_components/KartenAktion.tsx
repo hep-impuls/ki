@@ -21,7 +21,7 @@ export default function KartenAktion({
   mehr,
   wunschId,
   titel,
-  aufDunkel = false,
+  className,
 }: {
   /** Optionaler Vertiefungstext hinter «Mehr lesen» (Text oder bereits mit
    *  Glossar-Begriffen angereicherter Knoten). */
@@ -31,13 +31,13 @@ export default function KartenAktion({
   /** Klartext-Titel des Inhalts — für lesbare Labels in der Sternenkarte. */
   titel?: string;
   /**
-   * Für die Bild-Ansichten, die auf `inverse-surface` liegen (Anschauungsmodus
-   * der Bilderstrecke, BildZoom der Epochen). Dort sind die hellen
-   * Flächen-Tokens falsch herum: `bg-surface-bright` wäre ein weisser Klotz im
-   * abgedunkelten Bild. Gleiche Form, gleiche Beschriftung, nur die Farben
-   * gespiegelt.
+   * Ersetzt den Standard-Abstand `mt-md` der Knopfreihe. Nötig auf den
+   * Bildkarten, wo der Knopf dicht unter der Bildunterschrift sitzt — dort
+   * würde `mt-md` die Karte auseinanderreissen. Ersetzt, nicht ergänzt: Zwei
+   * `mt-`-Klassen am selben Element streiten sich, und wer gewinnt, hängt an
+   * der Reihenfolge im erzeugten CSS, nicht an der im String.
    */
-  aufDunkel?: boolean;
+  className?: string;
 }) {
   const [offen, setOffen] = useState(false);
   const [wunsch, setWunsch] = useState(false);
@@ -87,7 +87,7 @@ export default function KartenAktion({
   }
 
   return (
-    <div className="mt-md flex flex-wrap items-center gap-sm">
+    <div className={`flex flex-wrap items-center gap-sm ${className ?? "mt-md"}`}>
       {mehr && (
         <button
           type="button"
@@ -107,13 +107,9 @@ export default function KartenAktion({
         aria-pressed={wunsch}
         className={
           "inline-flex items-center gap-xs rounded-full border px-md py-xs text-label-md transition-colors " +
-          (aufDunkel
-            ? wunsch
-              ? "border-tertiary bg-tertiary text-on-tertiary"
-              : "border-inverse-on-surface/40 bg-inverse-on-surface/10 text-inverse-on-surface hover:border-tertiary hover:bg-inverse-on-surface/20"
-            : wunsch
-              ? "border-tertiary bg-tertiary-container text-on-tertiary-container"
-              : "border-outline-variant bg-surface-bright text-on-surface-variant hover:border-tertiary hover:text-tertiary")
+          (wunsch
+            ? "border-tertiary bg-tertiary-container text-on-tertiary-container"
+            : "border-outline-variant bg-surface-bright text-on-surface-variant hover:border-tertiary hover:text-tertiary")
         }
       >
         <span className="material-symbols-outlined text-[16px]">

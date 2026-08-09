@@ -169,56 +169,76 @@ export default function BilderAnschauung({
         {bilder.map((b, i) => {
           const gesehen = angeschaut.has(i);
           return (
-            <button
+            /* Die Karte war früher selbst der Knopf. Sie ist jetzt ein Rahmen,
+               weil unten das Merkzeichen «Das verfolge ich weiter» dazukommt —
+               ein Knopf im Knopf ist ungültiges HTML, und ein Klick darauf
+               hätte gleich das Bild geöffnet. Das Öffnen ist darum ein eigener
+               Knopf, der Bild und Beschriftung umfasst; das Merkzeichen ist
+               sein Geschwister. `focus-within` statt `focus-visible`, weil der
+               Rahmen selbst keinen Fokus bekommt. */
+            <div
               key={i}
-              type="button"
-              onClick={() => oeffnen(i)}
-              aria-label={`${b.titel} (${b.jahr}) im Anschauungsmodus öffnen`}
-              className="group relative overflow-hidden rounded-xl border border-outline-variant bg-surface-bright text-left shadow-sm outline-none transition hover:-translate-y-0.5 hover:shadow-lg focus-visible:-translate-y-0.5 focus-visible:shadow-lg"
+              className="group relative overflow-hidden rounded-xl border border-outline-variant bg-surface-bright text-left shadow-sm transition focus-within:-translate-y-0.5 focus-within:shadow-lg hover:-translate-y-0.5 hover:shadow-lg"
             >
-              <div className="relative aspect-[4/3] bg-surface-container-low">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={b.src}
-                  alt={b.alt}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                />
-                <span className="absolute inset-0 flex items-center justify-center bg-inverse-surface/0 transition-colors group-hover:bg-inverse-surface/25">
-                  <span className="flex items-center gap-xs rounded-full bg-surface-bright/90 px-md py-xs text-label-md text-on-surface opacity-0 shadow-sm transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
-                    <span className="material-symbols-outlined text-[18px] text-tertiary">
-                      zoom_in
+              <button
+                type="button"
+                onClick={() => oeffnen(i)}
+                aria-label={`${b.titel} (${b.jahr}) im Anschauungsmodus öffnen`}
+                className="block w-full text-left outline-none"
+              >
+                <div className="relative aspect-[4/3] bg-surface-container-low">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={b.src}
+                    alt={b.alt}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                  <span className="absolute inset-0 flex items-center justify-center bg-inverse-surface/0 transition-colors group-hover:bg-inverse-surface/25">
+                    <span className="flex items-center gap-xs rounded-full bg-surface-bright/90 px-md py-xs text-label-md text-on-surface opacity-0 shadow-sm transition-opacity group-hover:opacity-100 group-focus-within:opacity-100">
+                      <span className="material-symbols-outlined text-[18px] text-tertiary">
+                        zoom_in
+                      </span>
+                      Anschauen
                     </span>
-                    Anschauen
                   </span>
-                </span>
-                {gesehen && (
-                  <span className="absolute right-2 top-2 flex h-6 w-6 items-center justify-center rounded-full bg-tertiary text-on-tertiary shadow-sm">
-                    <span className="material-symbols-outlined text-[16px]">check</span>
-                  </span>
-                )}
-                {b.ki && (
-                  <span className="absolute left-2 top-2 flex items-center gap-1 rounded-full bg-inverse-surface/80 px-2 py-0.5 text-label-sm text-inverse-on-surface shadow-sm">
-                    <span className="material-symbols-outlined text-[13px]">auto_awesome</span>
-                    KI-erstellt
-                  </span>
-                )}
-              </div>
-              <div className="border-t border-outline-variant p-sm">
-                <p className="flex items-baseline justify-between gap-sm">
-                  <span className="truncate text-body-sm font-medium text-on-surface">
-                    {b.titel}
-                  </span>
-                  <span className="flex-shrink-0 text-label-sm text-tertiary">{b.jahr}</span>
-                </p>
-                <p className="mt-xs flex items-center gap-xs text-label-sm text-on-surface-variant">
-                  <span className="material-symbols-outlined text-[14px] text-tertiary">
-                    location_on
-                  </span>
-                  {b.hotspots.length} Punkte zum Entdecken
-                </p>
-              </div>
-            </button>
+                  {gesehen && (
+                    <span className="absolute right-2 top-2 flex h-6 w-6 items-center justify-center rounded-full bg-tertiary text-on-tertiary shadow-sm">
+                      <span className="material-symbols-outlined text-[16px]">check</span>
+                    </span>
+                  )}
+                  {b.ki && (
+                    <span className="absolute left-2 top-2 flex items-center gap-1 rounded-full bg-inverse-surface/80 px-2 py-0.5 text-label-sm text-inverse-on-surface shadow-sm">
+                      <span className="material-symbols-outlined text-[13px]">auto_awesome</span>
+                      KI-erstellt
+                    </span>
+                  )}
+                </div>
+                <div className="border-t border-outline-variant p-sm">
+                  <p className="flex items-baseline justify-between gap-sm">
+                    <span className="truncate text-body-sm font-medium text-on-surface">
+                      {b.titel}
+                    </span>
+                    <span className="flex-shrink-0 text-label-sm text-tertiary">{b.jahr}</span>
+                  </p>
+                  <p className="mt-xs flex items-center gap-xs text-label-sm text-on-surface-variant">
+                    <span className="material-symbols-outlined text-[14px] text-tertiary">
+                      location_on
+                    </span>
+                    {b.hotspots.length} Punkte zum Entdecken
+                  </p>
+                </div>
+              </button>
+              {b.weiterverfolgen && (
+                <div className="border-t border-outline-variant p-sm">
+                  <KartenAktion
+                    className="mt-0"
+                    wunschId={`wunsch:${spurKey}:${i}`}
+                    titel={b.titel}
+                  />
+                </div>
+              )}
+            </div>
           );
         })}
       </div>
@@ -381,13 +401,6 @@ export default function BilderAnschauung({
                 <p className="mt-xs text-body-sm leading-relaxed opacity-90">
                   <GlossarText text={bild.geschichte} />
                 </p>
-                {bild.weiterverfolgen && (
-                  <KartenAktion
-                    wunschId={`wunsch:${spurKey}:${offen}`}
-                    titel={bild.titel}
-                    aufDunkel
-                  />
-                )}
                 <p className="mt-sm flex items-center gap-xs text-label-sm opacity-60">
                   <span className="material-symbols-outlined text-[16px]">touch_app</span>
                   Tippe die leuchtenden Punkte im Bild an — jeder erzählt ein Detail.

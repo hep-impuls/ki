@@ -5,7 +5,6 @@ import { createPortal } from "react-dom";
 import { merkeSpur } from "../../_lib/spuren";
 import { merkeInhalt } from "../../_lib/inhalte";
 import { GlossarText } from "../../_components/Glossar";
-import KartenAktion from "../../_components/KartenAktion";
 
 /**
  * BildZoom — Vollbild-Viewer im Stil von Google Arts & Culture für die
@@ -39,15 +38,6 @@ export interface ZoomImg {
   tour?: TourStop[];
   /** Abschluss-Text: verknüpft das Bild mit Technik & Verunsicherung der Epoche. */
   contextNote?: string;
-  /**
-   * Setzt den Knopf «Das verfolge ich weiter» unter die Einordnung, also auf
-   * die Startseite des Bildes (nicht während einer laufenden Führung, dort
-   * gehört die Fläche der Navigation). Braucht `spurKey`.
-   *
-   * Wie in der Bilderstrecke vorerst ein Feld pro Bild: Christof wollte am
-   * 2026-08-08 erst an je einem Beispiel sehen, wie es sich anfühlt.
-   */
-  weiterverfolgen?: boolean;
 }
 
 interface Props {
@@ -623,15 +613,6 @@ export default function BildZoom({ images, startIdx, epoch, onClose, spurKey }: 
                 <p className="mt-xs text-body-sm leading-relaxed text-inverse-on-surface/90">
                   <GlossarText text={img.einordnung} />
                 </p>
-              </div>
-            )}
-            {img.weiterverfolgen && spurKey && (
-              <div className="flex justify-center">
-                <KartenAktion
-                  wunschId={`wunsch:${spurKey}:${idx}`}
-                  titel={`${epoch} · ${img.alt}`}
-                  aufDunkel
-                />
               </div>
             )}
           </div>

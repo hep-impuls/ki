@@ -1183,6 +1183,16 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
                     >
                       <GlossarText text={b.hintergrund} />
                     </InfoPunkt>
+                    {/* Merkzeichen direkt bei der Miniatur, nicht erst im Zoom:
+                        So lässt sich auch im Nachhinein rasch entscheiden, ohne
+                        jedes Bild noch einmal zu öffnen. */}
+                    {b.weiterverfolgen && (
+                      <KartenAktion
+                        className="mt-sm"
+                        wunschId={`wunsch:${SPUR}-bild:${ei}:${bi}`}
+                        titel={`${e.epoche} · ${b.alt}`}
+                      />
+                    )}
                   </figcaption>
                 </figure>
               ))}
@@ -1290,7 +1300,6 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
             einordnung: b.hintergrund,
             tour: b.tour,
             contextNote: b.contextNote,
-            weiterverfolgen: b.weiterverfolgen,
           }))}
           startIdx={zoom.bild}
           epoch={EPOCHEN[zoom.ep].epoche}
