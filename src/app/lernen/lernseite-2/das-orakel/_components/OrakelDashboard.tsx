@@ -43,6 +43,14 @@ import {
 } from "../../_lib/auswertung";
 import { INHALTE_EVENT, leseInhalte, zieheInhalteAusCloud } from "../../_lib/inhalte";
 import { leseBlick, schreibeBlick, zieheBlickAusCloud } from "../../_lib/blick";
+import {
+  formatiereWann,
+  leseDeutungen,
+  schreibeDeutung,
+  schreibeStil,
+  schreibeZufrieden,
+  type GespeicherteDeutung,
+} from "../../_lib/deutungen";
 import { abschnittFuer, gruppiere, hrefFuer, type Sprung } from "../../_lib/ziele";
 
 /**
@@ -220,8 +228,11 @@ interface OrakelZustand {
   text: string | null;
   status: "idle" | "laedt" | "ok" | "fehler" | "kein-schluessel" | "zu-wenig";
   zufrieden: boolean | null;
+  /** Wann der Text erzeugt wurde (ISO). Eine wiederhergestellte Deutung
+   *  beschreibt den Stand von damals; die Zeile «Deutung vom …» sagt das. */
+  wann: string | null;
 }
-const LEER: OrakelZustand = { text: null, status: "idle", zufrieden: null };
+const LEER: OrakelZustand = { text: null, status: "idle", zufrieden: null, wann: null };
 
 export default function OrakelDashboard() {
   /* deine Spur (lokal) */
@@ -387,6 +398,23 @@ export default function OrakelDashboard() {
         if (wahl) setBlickWahl(wahl);
       });
       setName(window.localStorage.getItem(KEY_NAME) ?? "");
+      /* Gespeicherte Deutungen wiederherstellen (pro Code, nur dieses Gerät).
+         Der Stil zuerst, damit der Text unter dem Stil steht, in dem er
+         erzeugt wurde. */
+      const gespeichert = leseDeutungen();
+      if (gespeichert.stil) setStil(gespeichert.stil);
+      const wieder = (d?: GespeicherteDeutung): OrakelZustand =>
+        d
+          ? { text: d.text, status: "ok", zufrieden: d.zufrieden, wann: d.wann }
+          : LEER;
+      if (gespeichert.deutungen.interesse) {
+        setIntOrakel(wieder(gespeichert.deutungen.interesse));
+      }
+      setOrakel({
+        wissenschaftlich: wieder(gespeichert.deutungen.wissenschaftlich),
+        literarisch: wieder(gespeichert.deutungen.literarisch),
+        fantastisch: wieder(gespeichert.deutungen.fantastisch),
+      });
     } catch {
       /* Privatmodus */
     }
@@ -591,16 +619,17 @@ export default function OrakelDashboard() {
           | { text?: string; grund?: string }
           | null;
         if (data?.text) {
-          setOrakel((prev) => ({ ...prev, [welcher]: { text: data.text!, status: "ok", zufrieden: null } }));
+          const wann = schreibeDeutung(welcher, data.text);
+          setOrakel((prev) => ({ ...prev, [welcher]: { text: data.text!, status: "ok", zufrieden: null, wann } }));
         } else if (data?.grund === "zu-wenig") {
-          setOrakel((prev) => ({ ...prev, [welcher]: { text: null, status: "zu-wenig", zufrieden: null } }));
+          setOrakel((prev) => ({ ...prev, [welcher]: { text: null, status: "zu-wenig", zufrieden: null, wann: null } }));
         } else if (data?.grund === "kein-schluessel") {
-          setOrakel((prev) => ({ ...prev, [welcher]: { text: null, status: "kein-schluessel", zufrieden: null } }));
+          setOrakel((prev) => ({ ...prev, [welcher]: { text: null, status: "kein-schluessel", zufrieden: null, wann: null } }));
         } else {
           throw new Error("leer");
         }
       } catch {
-        setOrakel((prev) => ({ ...prev, [welcher]: { text: null, status: "fehler", zufrieden: null } }));
+        setOrakel((prev) => ({ ...prev, [welcher]: { text: null, status: "fehler", zufrieden: null, wann: null } }));
       }
     },
     [baueAktivitaet],
@@ -608,11 +637,12 @@ export default function OrakelDashboard() {
 
   function zufriedenSetzen(welcher: Stil, wert: boolean) {
     setOrakel((prev) => ({ ...prev, [welcher]: { ...prev[welcher], zufrieden: wert } }));
+    schreibeZufrieden(welcher, wert);
   }
 
   /* Interessens-Orakel: analytische Antwort auf die Interessens-Auswertung. */
   const interesseBefragen = useCallback(async () => {
-    setIntOrakel({ text: null, status: "laedt", zufrieden: null });
+    setIntOrakel({ text: null, status: "laedt", zufrieden: null, wann: null });
     try {
       const res = await fetch("/api/orakel/deutung", {
         method: "POST",
@@ -623,16 +653,17 @@ export default function OrakelDashboard() {
         | { text?: string; grund?: string }
         | null;
       if (data?.text) {
-        setIntOrakel({ text: data.text, status: "ok", zufrieden: null });
+        const wann = schreibeDeutung("interesse", data.text);
+        setIntOrakel({ text: data.text, status: "ok", zufrieden: null, wann });
       } else if (data?.grund === "zu-wenig") {
-        setIntOrakel({ text: null, status: "zu-wenig", zufrieden: null });
+        setIntOrakel({ text: null, status: "zu-wenig", zufrieden: null, wann: null });
       } else if (data?.grund === "kein-schluessel") {
-        setIntOrakel({ text: null, status: "kein-schluessel", zufrieden: null });
+        setIntOrakel({ text: null, status: "kein-schluessel", zufrieden: null, wann: null });
       } else {
         throw new Error("leer");
       }
     } catch {
-      setIntOrakel({ text: null, status: "fehler", zufrieden: null });
+      setIntOrakel({ text: null, status: "fehler", zufrieden: null, wann: null });
     }
   }, [baueAktivitaet]);
 
@@ -1130,14 +1161,23 @@ export default function OrakelDashboard() {
                 <p className="whitespace-pre-line text-body-lg text-on-surface">
                   {intOrakel.text}
                 </p>
-                <button
-                  type="button"
-                  onClick={() => void interesseBefragen()}
-                  className="mt-sm inline-flex items-center gap-xs rounded-lg px-sm py-xs text-label-md text-on-surface-variant transition-colors hover:text-tertiary"
-                >
-                  <span className="material-symbols-outlined text-[16px]">refresh</span>
-                  Neu deuten
-                </button>
+                <div className="mt-sm flex flex-wrap items-center gap-md">
+                  {intOrakel.wann && (
+                    /* Eine wiederhergestellte Deutung beschreibt den Stand von
+                       damals; das Datum macht das sichtbar. */
+                    <span className="text-label-sm text-on-surface-variant opacity-80">
+                      Deutung vom {formatiereWann(intOrakel.wann)}
+                    </span>
+                  )}
+                  <button
+                    type="button"
+                    onClick={() => void interesseBefragen()}
+                    className="inline-flex items-center gap-xs rounded-lg px-sm py-xs text-label-md text-on-surface-variant transition-colors hover:text-tertiary"
+                  >
+                    <span className="material-symbols-outlined text-[16px]">refresh</span>
+                    Neu deuten
+                  </button>
+                </div>
               </>
             )}
             </div>
@@ -1312,7 +1352,10 @@ export default function OrakelDashboard() {
               <button
                 key={s.id}
                 type="button"
-                onClick={() => setStil(s.id)}
+                onClick={() => {
+                  setStil(s.id);
+                  schreibeStil(s.id);
+                }}
                 aria-pressed={aktivGewaehlt}
                 className={
                   "rounded-xl border p-md text-left transition " +
@@ -1415,6 +1458,11 @@ export default function OrakelDashboard() {
               <p className="mt-sm whitespace-pre-line text-body-lg text-on-surface">
                 {aktuell.text}
               </p>
+              {aktuell.wann && (
+                <p className="mt-sm text-label-sm text-on-surface-variant opacity-80">
+                  Deutung vom {formatiereWann(aktuell.wann)}
+                </p>
+              )}
 
               {/* Zufriedenheit */}
               <div className="mt-lg border-t border-outline-variant/60 pt-md">
@@ -1612,8 +1660,9 @@ export default function OrakelDashboard() {
               Am Ende jeder Seite kannst du deine Aktivitäten zurücksetzen, lokal
               und im Cloud-Spiegel. Die lokale Kopie geht ausserdem bei gelöschtem
               Verlauf, Privatmodus oder Gerätewechsel verloren; die Cloud-Kopie
-              kehrt mit deinem Code zurück. Willst du deine Deutung behalten,
-              drucke sie als PDF aus.
+              kehrt mit deinem Code zurück. Die Deutungen des Orakels bleiben
+              nur auf diesem Gerät gespeichert und kommen nicht in die Cloud;
+              willst du sie dauerhaft behalten, drucke sie als PDF aus.
             </li>
           </ul>
         </Ausklapptext>
@@ -1807,6 +1856,13 @@ export default function OrakelDashboard() {
                 <p style={{ margin: 0, fontSize: "1.05rem", lineHeight: 1.6, whiteSpace: "pre-line" }}>
                   {intOrakel.text}
                 </p>
+                {intOrakel.wann && (
+                  /* Ohne diese Zeile trüge eine gestern erzeugte Deutung nur
+                     das heutige Druckdatum im Kopf, als wäre sie von heute. */
+                  <p style={{ margin: "0.3rem 0 0", fontSize: "0.8rem", color: "#555" }}>
+                    Deutung vom {formatiereWann(intOrakel.wann)}
+                  </p>
+                )}
               </>
             )}
 
@@ -1821,6 +1877,11 @@ export default function OrakelDashboard() {
                 <p style={{ margin: 0, fontSize: "1.05rem", lineHeight: 1.6, whiteSpace: "pre-line" }}>
                   {aktuell.text}
                 </p>
+                {aktuell.wann && (
+                  <p style={{ margin: "0.3rem 0 0", fontSize: "0.8rem", color: "#555" }}>
+                    Deutung vom {formatiereWann(aktuell.wann)}
+                  </p>
+                )}
               </>
             )}
 
