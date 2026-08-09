@@ -10,6 +10,29 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-08 — Knotenkarte: immer «Bereich · Konkretes» (Christof)
+
+Christofs Regel, und sie ist richtig: In der Rangliste stand «Kaffeehaus &
+Öffentlichkeit» ohne jeden Hinweis, woher das kommt — direkt neben einem
+«Merkmale · Punkt 4», das den Bereich nannte. Zwei Muster in einer Liste, und
+beim ersten weiss man nicht, welcher Abschnitt gemeint ist.
+
+**Jetzt trägt jede Zeile den Bereich vorne.** Angefügt an EINER Stelle
+(`titelVon`), nicht in jedem Zweig einzeln — vorher hängte nur der Ersatztext den
+Bereich an, der echte Titel nicht. `konkretVon` liefert den konkreten Teil,
+`titelVon` setzt den Bereich davor und lässt ihn weg, wenn der Titel schon so
+beginnt. Wichtig: Der Hinweis beim Überfahren des Punktes hängte den Bereich
+HINTEN an — das musste raus, sonst «Epochen · Antike · Technologie · Epochen».
+
+Der Bereichsname ist der kurze aus `AREAS` («Teppich», «Merkmale»), nicht der
+volle Abschnittstitel («Der Teppich des Wandels»): In der schmalen Spalte auf dem
+Handy bliebe vom konkreten Teil sonst nichts übrig.
+
+**Dazu zwei weitere Titel, die nur beim Anklicken entstanden** und darum als
+«Punkt 0.1» erschienen: die Infopunkte «Hintergrund zum Bild» der Epochen (16).
+Jetzt beim Rendern registriert, wie die Bilder selbst. Damit ist in allen vier
+Registern kein Ersatztext mehr zu sehen — geprüft in 375 px Breite.
+
 ## 2026-08-08 — Die 20 Denker hatten keinen Titel; Ersatztext benannte Verschiedenes gleich (Christof)
 
 Christof mobil: In der Knotenkarte fehlt teils noch der Text. Der Screenshot

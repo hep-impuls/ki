@@ -1052,9 +1052,18 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
    */
   useEffect(() => {
     EPOCHEN.forEach((e, ei) =>
-      e.bilder.forEach((b, bi) =>
-        merkeInhalt(`philosophische-perspektive:epochen-bild:${ei}:${bi}`, `${e.epoche} · ${b.alt}`),
-      ),
+      e.bilder.forEach((b, bi) => {
+        merkeInhalt(`philosophische-perspektive:epochen-bild:${ei}:${bi}`, `${e.epoche} · ${b.alt}`);
+        /* Und der Infopunkt «Hintergrund zum Bild» daneben, aus demselben Grund:
+           Sein Titel entstand bisher erst beim Aufklappen (über `merkeVertiefung`
+           in InfoPunkt), darum stand im Register «Vertieft» der Knotenkarte
+           «Epochen · Punkt 0.1». Wortlaut und ID müssen zu `spurId`/`spurTitel`
+           unten passen, sonst gibt es zwei Einträge für dieselbe Sache. */
+        merkeInhalt(
+          `${SPUR}:bildinfo:${ei}:${bi}`,
+          `${e.epoche} · Hintergrund zu «${b.caption}»`,
+        );
+      }),
     );
   }, []);
 

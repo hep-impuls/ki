@@ -223,29 +223,46 @@ export default function Knotenkarte({ className = "" }: { className?: string }) 
    * Zahlenangabe aus und war keine. Jetzt sagt der Ersatztext, was er weiss —
    * den Bereich — und was er nicht weiss.
    */
-  const titelVon = (id: string) => {
+  /** Nur der konkrete Teil des Namens, OHNE Bereich. */
+  const konkretVon = (id: string) => {
     const bekannt = inhalte[id];
     if (bekannt) return bekannt;
-    const bereich = areaVon(id).name;
     /* Steckt ein sprechender Name in der Kennung, ist er der beste Ersatz.
-       «…:denker:0:aristoteles» wurde vorher zu «Orientierung · Punkt 0», und
-       zwar für JEDE Person dieses Bereichs — drei Zeilen der Rangliste hiessen
-       gleich, obwohl sie verschiedene Inhalte waren. Ausgeschlossen sind reine
-       Zähl-Segmente wie «hs0» oder «12». */
+       «…:denker:0:aristoteles» wurde vorher zu «Punkt 0», und zwar für JEDE
+       Person dieses Bereichs — drei Zeilen der Rangliste hiessen gleich, obwohl
+       sie verschiedene Inhalte waren. Ausgeschlossen sind reine Zähl-Segmente
+       wie «hs0» oder «12». */
     const letztes = id.split(":").pop() ?? "";
     if (/^[a-zäöüéèà][a-zäöüéèà-]{2,}$/i.test(letztes)) {
-      const name = letztes
+      return letztes
         .split("-")
         .map((t) => t.charAt(0).toUpperCase() + t.slice(1))
         .join("-");
-      return `${bereich} · ${name}`;
     }
     /* Sonst alle Ziffernfolgen, nicht nur die letzte: «…:bilder:2:hs0» und
        «…:bilder:3:hs0» enden beide auf 0 und wären sonst gleich beschriftet. */
     const zahlen = [...id.matchAll(/\d+/g)].map((m) => m[0]);
-    return zahlen.length
-      ? `${bereich} · Punkt ${zahlen.join(".")}`
-      : `${bereich} · noch nicht besucht`;
+    return zahlen.length ? `Punkt ${zahlen.join(".")}` : "noch nicht besucht";
+  };
+
+  /**
+   * Anzeigename: IMMER «Bereich · Konkretes».
+   *
+   * Christofs Regel vom 2026-08-08, und sie ist richtig: Vorher trugen nur die
+   * Ersatztexte den Bereich, die echten Titel nicht. In der Rangliste stand dann
+   * «Kaffeehaus & Öffentlichkeit» ohne jeden Hinweis, woher das kommt — neben
+   * einem «Merkmale · Punkt 4», das den Bereich nannte. Zwei Muster in einer
+   * Liste. Jetzt setzt der Bereich immer vorne, an EINER Stelle angefügt statt in
+   * jedem Zweig einzeln.
+   *
+   * Der Bereichsname ist der kurze aus AREAS («Teppich», «Merkmale»), nicht der
+   * volle Abschnittstitel («Der Teppich des Wandels»): In einer schmalen Spalte
+   * auf dem Handy bliebe vom konkreten Teil sonst nichts übrig.
+   */
+  const titelVon = (id: string) => {
+    const konkret = konkretVon(id);
+    const bereich = areaVon(id).name;
+    return konkret.startsWith(bereich) ? konkret : `${bereich} · ${konkret}`;
   };
 
   const punkte = useMemo<Punkt[]>(() => {
@@ -499,7 +516,9 @@ export default function Knotenkarte({ className = "" }: { className?: string }) 
               const x = CENTER.x + rad * Math.cos(i * GOLDWINKEL);
               const y = CENTER.y + rad * Math.sin(i * GOLDWINKEL);
               const href = hrefFuer(p.id);
-              const beschriftung = `${p.titel} · ${p.area.name}${
+              /* Der Bereich steckt seit 2026-08-08 schon vorne im Titel — hier
+                 nicht noch einmal anhängen, sonst «Epochen · Antike · … · Epochen». */
+              const beschriftung = `${p.titel}${
                 ansicht === "bekannt" ? "" : ` · alle ${p.alle}`
               }${p.du ? " · du" : ""}`;
               const inhalt = (
