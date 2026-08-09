@@ -216,8 +216,20 @@ const ZEICHEN =
  */
 const KI_TYP =
   " DEINE AUFGABE ist die Frage, wie diese Person mit der KI in die Zukunft " +
-  "geht, also was für ein KI-Typ sie ist. Beschreib NICHT nochmals, wo sie " +
-  "überall geklickt hat; das sagt ihr eine andere Stimme. " +
+  "geht, also was für ein KI-Typ sie ist. " +
+  "PRÜFE ZUERST die Datenlage. Steht im Bericht «Keine eigene Grundhaltung zur " +
+  "KI gewählt» UND «Keine einzelnen Inhalte eingeordnet», dann rate nicht. " +
+  "Schreib dann NUR, dass die Spuren für diese Frage noch nicht reichen, und " +
+  "nenn die drei Stellen, an denen sich die Haltung zeigen lässt, nämlich die " +
+  "Umfrage «Wie blickst du heute auf KI» weiter unten auf dieser Seite, die " +
+  "Bewertungen im «Teppich des Wandels» und die Einordnungen in «Philosophie in " +
+  "Zeiten der Verunsicherung». Dieser Text ist dann kurz, nämlich zwei bis drei " +
+  "Sätze, und das ist richtig so. Deute in diesem Fall nichts und nenn keine " +
+  "Inhalte. " +
+  "Steht dagegen eine Grundhaltung oder eine Einordnung da, gilt das Folgende. " +
+  "Sag im ERSTEN Satz, wie diese Person auf die KI blickt, ob eher " +
+  "zuversichtlich, eher besorgt oder beides zugleich. Ohne diesen Satz ist die " +
+  "Antwort unbrauchbar. " +
   "Woraus du schliessen darfst, und woraus nicht, ist hier entscheidend. " +
   "Ist eine SELBST GEWÄHLTE GRUNDHALTUNG angegeben, ist sie deine Hauptquelle. " +
   "Gib sie mit dem angegebenen Wort wieder, also neugierig, pragmatisch, " +
@@ -243,13 +255,13 @@ const KI_TYP =
   "Aussage über ihr Wesen, sondern über das, was ihre Spuren zeigen. ZWEITENS, " +
   "gib ihr kein Etikett, das wertet, und stell keine Haltung über eine andere; " +
   "Zuversicht ist nicht besser als Sorge, und Sorge ist nicht klüger als " +
-  "Zuversicht. DRITTENS, ist KEINE Grundhaltung angegeben und stehen KEINE " +
-  "Einordnungen mit Titel da, dann rate nicht. Sag dann, dass die Spuren dafür " +
-  "noch nicht reichen, und nenn die drei Stellen, an denen sie ihre Haltung " +
-  "zeigen kann, nämlich die Umfrage «Wie blickst du heute auf KI» weiter unten " +
-  "auf dieser Seite, die Bewertungen im «Teppich des Wandels» und die " +
-  "Einordnungen in «Philosophie in Zeiten der Verunsicherung». Blosse Zähler " +
-  "ohne Titel sind keine Grundlage für eine Begründung.";
+  "Zuversicht. DRITTENS, stell nie dar, dass etwas fehlt oder versäumt wurde. " +
+  "Keine Wendung, die ein Nicht-Angeschautes als Mangel zeichnet, also weder " +
+  "«ignoriert» noch «vernachlässigt», «ausgelassen», «links liegen gelassen» " +
+  "oder «kaum beachtet». Sag, wo der Schwerpunkt liegt, nicht, wo er fehlt. " +
+  "Zum Schluss zwei Formsachen. Verwende für Titel die Zeichen « und », keine " +
+  "geraden Anführungszeichen. Und schreib nichts über Zahlen, die nicht im " +
+  "Bericht stehen; erfinde keine Anzahl von Kapiteln, Lektionen oder Epochen.";
 
 const STIL_SYSTEM: Record<Stil, string> = {
   wissenschaftlich:
@@ -308,7 +320,7 @@ const STIL_SYSTEM: Record<Stil, string> = {
     "Fachwort, erklär es in drei bis vier Wörtern. Sag «du hast … angeschaut» und",
     "nicht «die Auseinandersetzung mit …»; also lieber ein Tätigkeitswort als eine",
     "Wortkette. Statt «Knoten» schreib «Punkte». Keine Einschübe in Klammern.",
-    "Je Absatz drei bis fünf kurze Sätze, insgesamt höchstens 150 Wörter. Deutsch,",
+    "Je Absatz GENAU DREI kurze Sätze, also neun Sätze im ganzen Text. Deutsch,",
     "Schweizer Rechtschreibung (ss statt ß).",
   ].join(" "),
 };
@@ -317,6 +329,52 @@ const STIL_SYSTEM: Record<Stil, string> = {
  *  zum Titel gehört und nicht wie ein Feldtrenner aussieht. */
 function zitiere(titel: string[]): string {
   return titel.map((t) => `«${t}»`).join(", ");
+}
+
+/**
+ * Bericht für die ZWEITE Stimme: nur was zur Haltung gehört.
+ *
+ * Der wichtigste Befund der Prüfung auf Production, und er liess sich mit keiner
+ * Regel beheben: Beide Stimmen bekamen denselben Bericht mit vierzehn
+ * Aktivitätszeilen. Die zweite hat daraufhin die Aktivität nacherzählt, obwohl
+ * `KI_TYP` das ausdrücklich verbietet, hat «alle vier Lektionen» erfunden und den
+ * Rückfallweg «dann rate nicht» übersprungen, obwohl weder eine Grundhaltung noch
+ * eine Einordnung vorlag.
+ *
+ * Ein Verbot gegen eine verlockende Vorlage verliert. Also nehmen wir die Vorlage
+ * weg. Was hier fehlt, kann nicht nacherzählt werden, und wenn nichts übrig
+ * bleibt, ist die einzige mögliche Antwort die ehrliche.
+ *
+ * Absichtlich NICHT dabei: Seiten, Bereiche, Bilder, Videos, Flächen, die
+ * Merkzeichen-Titel (die gehören zum Interesse, nicht zur Haltung) und die
+ * blossen Zähler wie `technikFroh`. Letztere sagen, WIE VIEL jemand eingeordnet
+ * hat, nicht WORAN, und genau daraus entstand die erfundene Begründung.
+ */
+function baueHaltungsbericht(a: Aktivitaet): string {
+  const zeilen: string[] = [
+    a.blickWahl
+      ? `Selbst gewählte Grundhaltung zur KI: ${a.blickWahl}.`
+      : "Keine eigene Grundhaltung zur KI gewählt.",
+    ...(a.haltung?.length
+      ? a.haltung.map((x) => `Eingeordnet als «${x.urteil}»: ${zitiere(x.titel)}.`)
+      : ["Keine einzelnen Inhalte eingeordnet."]),
+    a.gestaltDeutlich > 0
+      ? `KI-Merkmale, die als «deutlich» gewichtet wurden: ${a.gestaltDeutlich}.`
+      : "",
+    a.verunsichertNochHeute > 0
+      ? `Frühere Verunsicherungen, die diese Person noch heute betreffen: ${a.verunsichertNochHeute}.`
+      : "",
+    ...(a.alle && a.alle.blickStimmen > 0
+      ? [
+          "",
+          "ZUM VERGLEICH, die anonymen Zahlen ALLER Teilnehmenden:",
+          `Umfrage «Wie blickst du heute auf KI» bei allen, ${a.alle.blickStimmen} ${
+            a.alle.blickStimmen === 1 ? "Stimme" : "Stimmen"
+          }: ${a.alle.blick.map((b) => `${b.label}: ${b.stimmen}`).join("; ")}.`,
+        ]
+      : []),
+  ];
+  return zeilen.filter(Boolean).join("\n");
 }
 
 function baueZusammenfassung(a: Aktivitaet): string {
@@ -455,6 +513,11 @@ function baueZusammenfassung(a: Aktivitaet): string {
  * natürlicheren Formen im gesprochenen Deutsch. Hilft das nicht, bleibt der
  * Wechsel auf ein stärkeres Modell.
  *
+ * Nachtrag 2026-08-09, Länge: Wortzahlen wirken bei diesem Modell nicht. Die
+ * erste Stimme bekam «insgesamt höchstens 150 Wörter» und lieferte 167 und 203.
+ * Die Satzzahl je Absatz hielt sie dagegen beide Male ein. Länge wird darum über
+ * die Satzzahl gesteuert, nicht über die Wortzahl.
+ *
  * Nachtrag 2026-08-09: Auch das Perfekt ist nicht überall sicher. Beobachtet
  * «du hast durcharbeitet» statt «durchgearbeitet» — bei trennbaren Präfixen
  * fällt dem Modell das «ge» heraus. Darum ausdrücklich genannt, mit dem
@@ -567,7 +630,12 @@ export async function POST(req: NextRequest) {
     if ((a.knotenDu ?? 0) < 1 && (a.flaechenGefuellt ?? 0) < 1) {
       return NextResponse.json({ grund: "zu-wenig" }, { status: 200 });
     }
-    const text = await deute(stil, baueZusammenfassung(a));
+    /* Jede Stimme bekommt nur ihre eigenen Daten. Die erste den vollen
+       Aktivitätsbericht, die zweite ausschliesslich das, was zur Haltung
+       gehört. */
+    const bericht =
+      stil === "interesse" ? baueZusammenfassung(a) : baueHaltungsbericht(a);
+    const text = await deute(stil, bericht);
     if (!text) {
       return NextResponse.json({ grund: "kein-schluessel" }, { status: 200 });
     }
