@@ -79,10 +79,17 @@ interface Aktivitaet {
  *
  * Ohne diese Grenze rechnet ein Modell die Summe bereitwillig in einen
  * Durchschnitt um und behauptet eine Rangfolge, die die Daten nicht tragen.
+ *
+ * Der Satz ist ausdrücklich als PFLICHT formuliert. Die erste Fassung sagte
+ * «stell einen Bezug her, aber höchstens in einem Satz» — und im Budget von 60
+ * bis 90 Wörtern fiel genau dieser Satz als erster weg. Auf Production kam eine
+ * tadellose Eigendeutung zurück, in der die anderen nicht vorkamen. Eine
+ * Kann-Bestimmung neben einer knappen Wortzahl ist keine Regel.
  */
 const VERGLEICH =
-  " Sind ZUM VERGLEICH anonyme Zahlen aller Teilnehmenden angegeben, stell " +
-  "einen Bezug her, aber höchstens in einem Satz, und bleib streng bei dem, " +
+  " Sind ZUM VERGLEICH anonyme Zahlen aller Teilnehmenden angegeben, dann MUSS " +
+  "genau ein Satz deines Textes diesen Bezug herstellen, und zwar gegen Ende. " +
+  "Nicht mehr als ein Satz, aber dieser eine fehlt nie. Bleib streng bei dem, " +
   "was die Zahlen hergeben. Bei der Blick-Umfrage darfst du sagen, wie die " +
   "Mehrheit blickt und wie diese Person dazu steht. Bei den Bereichs-Besuchen " +
   "vergleiche nur SCHWERPUNKTE, also welcher Bereich bei allen vorn liegt und " +
