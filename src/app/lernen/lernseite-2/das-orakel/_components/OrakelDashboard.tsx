@@ -41,6 +41,7 @@ import {
   type AuswertungEintrag,
 } from "../../_lib/auswertung";
 import { INHALTE_EVENT, leseInhalte, zieheInhalteAusCloud } from "../../_lib/inhalte";
+import { abschnittFuer, gruppiere, hrefFuer, type Sprung } from "../../_lib/ziele";
 
 /**
  * Orakel-Dashboard (Thema 03) — «erkenne dich selbst».
@@ -99,57 +100,6 @@ const VIDEO_TOTAL = 3;
  */
 const WUNSCH_TOTAL = 138;
 
-/* ── Abschnitt und Adresse einer Spur-Basis-ID ────────────────────────────────
- * Ordnet eine Basis-ID (ohne «wunsch:»-Präfix) dem Abschnitt zu, aus dem sie
- * stammt: Titel für die Beschriftung, `href` fürs Hinspringen. Spezifische
- * Präfixe zuerst (erster Treffer gewinnt).
- *
- * Die Adresse führt zum ABSCHNITT, nicht zum einzelnen Punkt. Das genügt, weil
- * `AkkordeonGruppe` den Abschnitt am Hash aufklappt und hinscrollt — man landet
- * also mit dem Inhalt vor sich. Punkt-genaue Sprungziele bräuchten in jeder der
- * sechs Inhalts-Komponenten eine eigene Aufklapp-Steuerung; das ist bewusst
- * noch nicht gebaut (Entscheid 2026-08-08 mit Christof).
- *
- * Die Anker sind gegen die Seiten geprüft: ki-story, bilder, merkmale,
- * ki-kontext, teppich, epochen, denkwege, was-philosophie. */
-const V = "/lernen/lernseite-2/vorhang-auf";
-const P = "/lernen/lernseite-2/philosophische-perspektive";
-const ABSCHNITT_PREFIXE: { prefix: string; titel: string; href: string }[] = [
-  { prefix: "vorhang-auf:story", titel: "Die KI-Story", href: `${V}#ki-story` },
-  { prefix: "vorhang-auf:weisheit", titel: "Merkmale der neuen Akteurin", href: `${V}#merkmale` },
-  { prefix: "vorhang-auf:bild", titel: "Bilder zur KI-Story", href: `${V}#bilder` },
-  { prefix: "vorhang-auf:kontext", titel: "Die KI im Kontext", href: `${V}#ki-kontext` },
-  { prefix: "philosophische-perspektive:teppich", titel: "Der Teppich des Wandels", href: `${P}#teppich` },
-  { prefix: "philosophische-perspektive:epochen-bild", titel: "Bilder der Verunsicherung", href: `${P}#epochen` },
-  { prefix: "philosophische-perspektive:epochen", titel: "Philosophie in Zeiten der Verunsicherung", href: `${P}#epochen` },
-  { prefix: "philosophische-perspektive:denker", titel: "Wege der Orientierung", href: `${P}#denkwege` },
-  { prefix: "philosophische-perspektive:denkwege", titel: "Wege der Orientierung", href: `${P}#denkwege` },
-  { prefix: "philosophische-perspektive:einstieg", titel: "Was ist Philosophie?", href: `${P}#was-philosophie` },
-  { prefix: "video:", titel: "Video-Impulse", href: "/lernen/lernseite-2" },
-];
-function abschnittFuer(basisId: string): string {
-  return ABSCHNITT_PREFIXE.find((a) => basisId.startsWith(a.prefix))?.titel ?? "Weiteres";
-}
-function hrefFuer(basisId: string): string | undefined {
-  return ABSCHNITT_PREFIXE.find((a) => basisId.startsWith(a.prefix))?.href;
-}
-
-/** Ein Eintrag in einer aufklappbaren Feld-Liste. */
-type Sprung = { id: string; titel: string; abschnitt: string; href: string; zusatz?: string };
-
-/** Nach Abschnitt gruppieren, Reihenfolge der Abschnitte wie in der Tabelle. */
-function gruppiere(eintraege: Sprung[]): { abschnitt: string; posten: Sprung[] }[] {
-  const rang = new Map(ABSCHNITT_PREFIXE.map((a, i) => [a.titel, i]));
-  const nach = new Map<string, Sprung[]>();
-  for (const e of eintraege) {
-    const liste = nach.get(e.abschnitt) ?? [];
-    liste.push(e);
-    nach.set(e.abschnitt, liste);
-  }
-  return [...nach.entries()]
-    .map(([abschnitt, posten]) => ({ abschnitt, posten }))
-    .sort((a, b) => (rang.get(a.abschnitt) ?? 99) - (rang.get(b.abschnitt) ?? 99));
-}
 
 /* ── Bewertungs-Präfixe (lokal, aus gewichtung.ts) ────────────────────────── */
 

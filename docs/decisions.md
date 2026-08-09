@@ -10,6 +10,32 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-08 — Knotenkarte verlinkt; die Adresstabelle liegt jetzt in `_lib/ziele.ts` (Christof)
+
+Schritt 4 der Rückmeldung. Schritt 3 (punkt-genaue Ziele) bleibt zurückgestellt,
+Christof: «momentan nicht nötig».
+
+In der Knotenkarte führen jetzt **beide** Darstellungen zum Inhalt: der Titel in
+der Rangliste als gewöhnlicher Link (Rechtsklick, neuer Tab, Tastatur) und der
+Punkt in der Grafik als Klickfläche. Zweigleisig mit Absicht — im Bild wäre ein
+Link nicht auffindbar, in der Liste ist er die verlässliche Bedienung.
+
+**Wer an der Grafik arbeitet, muss zwei Dinge wissen:**
+
+- Die kleinsten Punkte haben Radius 3. Darüber liegt eine unsichtbare
+  Trefferfläche von mindestens 12, sonst trifft man sie mit dem Finger nicht.
+- Das SVG trägt `role="group"`, nicht mehr `role="img"`. Mit bedienbaren
+  Elementen darin würde `role="img"` die Grafik als EIN Bild ausgeben und die
+  Links verschweigen. Wer wieder Interaktives einbaut: `role` mitdenken.
+
+**Die Adresstabelle ist aus dem Orakel-Dashboard nach
+[`_lib/ziele.ts`](../src/app/lernen/lernseite-2/_lib/ziele.ts) gewandert**, weil
+die Knotenkarte sie auch braucht. Sie ist ab jetzt die einzige Stelle, an der
+steht, welcher Inhalts-Präfix zu welchem Abschnitt und welcher Adresse gehört.
+Wer einen neuen Bereich anlegt, ergänzt dort einen Eintrag — sonst ist der Punkt
+in der Karte stumm (bewusst: ohne Adresse bleibt er ein Punkt statt ins Leere zu
+führen).
+
 ## 2026-08-08 — Titel kamen auf dem zweiten Gerät nicht zurück; drei Orakel-Felder mit Sprungliste (Christof)
 
 **Der Fehler und seine Ursache.** Christof meldete, dass die Punkttitel in der

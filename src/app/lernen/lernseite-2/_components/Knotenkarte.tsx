@@ -1,9 +1,12 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { SPUR_EVENT, SPUREN_POLL_ID, leseSpuren, spurArt } from "../_lib/spuren";
 import { GEWICHT_EVENT, leseGewichtungen } from "../_lib/gewichtung";
 import { INHALTE_EVENT, leseInhalte, zieheInhalteAusCloud } from "../_lib/inhalte";
+import { hrefFuer } from "../_lib/ziele";
 import {
   loadPollCounts,
   subscribePollCounts,
@@ -106,7 +109,46 @@ const VB_H = 260;
 const CENTER = { x: 180, y: 128 };
 const GOLDWINKEL = 2.399963229728653; // 137.5° in rad
 
+/**
+ * Titel als Link — oder als schlichter Text, wenn es keine Adresse gibt.
+ *
+ * Ohne Adresse (unbekanntes Präfix) bleibt es Text: Ein Link, der nirgendwohin
+ * führt, ist schlimmer als kein Link.
+ */
+function MaybeLink({
+  href,
+  className,
+  titel,
+  children,
+}: {
+  href?: string;
+  className: string;
+  titel: string;
+  children: React.ReactNode;
+}) {
+  if (!href) {
+    return (
+      <span className={className} title={titel}>
+        {children}
+      </span>
+    );
+  }
+  return (
+    <Link
+      href={href}
+      className={
+        className +
+        " underline decoration-outline-variant underline-offset-2 hover:text-tertiary hover:decoration-tertiary"
+      }
+      title={`${titel} — zum Abschnitt springen`}
+    >
+      {children}
+    </Link>
+  );
+}
+
 export default function Knotenkarte({ className = "" }: { className?: string }) {
+  const router = useRouter();
   const [ansicht, setAnsicht] = useState<Ansicht>("geklickt");
   /* Ebene: «alle» = Kollektiv (anonyme Zähler), «du» = nur die eigenen Punkte. */
   const [ebene, setEbene] = useState<"alle" | "du">("alle");
@@ -350,6 +392,11 @@ export default function Knotenkarte({ className = "" }: { className?: string }) 
           <span className="inline-block h-2.5 w-2.5 rounded-full bg-outline" />
           alle
         </span>
+        {/* Dass die Punkte führen, sieht man ihnen nicht an — darum sagen. */}
+        <span className="flex items-center gap-xs text-tertiary">
+          <span className="material-symbols-outlined text-[16px]">ads_click</span>
+          Punkt oder Titel anklicken führt zum Inhalt
+        </span>
       </div>
 
       {/* Bereichs-Farben (wie die Triebe des Rhizoms: jeder Bereich ein Ton) */}
@@ -386,16 +433,25 @@ export default function Knotenkarte({ className = "" }: { className?: string }) 
           <svg
             viewBox={`0 0 ${VB_W} ${VB_H}`}
             className="block w-full"
-            role="img"
-            aria-label={`Punktwolke: ${gefiltert.length} Inhalte, Grösse nach Stärke (${aktInfo.label}, ${ebene === "du" ? "nur ich" : "alle"}).`}
+            /* `role="group"`, nicht `role="img"`: Seit die Punkte Links sind,
+               enthält die Grafik bedienbare Elemente. Ein `role="img"` würde sie
+               als EIN Bild ausgeben und die Links verschweigen. Wer vorlesen
+               lässt, findet dieselben Ziele ohnehin in der Rangliste darunter —
+               dort als gewöhnliche Links mit Text. */
+            role="group"
+            aria-label={`Punktwolke: ${gefiltert.length} Inhalte, Grösse nach Stärke (${aktInfo.label}, ${ebene === "du" ? "nur ich" : "alle"}). Jeder Punkt führt zu seinem Abschnitt.`}
           >
             {sichtbar.map((p, i) => {
               const r = 3 + 13 * Math.sqrt(p.staerke / maxStaerke);
               const rad = 13 * Math.sqrt(i);
               const x = CENTER.x + rad * Math.cos(i * GOLDWINKEL);
               const y = CENTER.y + rad * Math.sin(i * GOLDWINKEL);
-              return (
-                <g key={p.id}>
+              const href = hrefFuer(p.id);
+              const beschriftung = `${p.titel} · ${p.area.name}${
+                ansicht === "bekannt" ? "" : ` · alle ${p.alle}`
+              }${p.du ? " · du" : ""}`;
+              const inhalt = (
+                <>
                   <circle cx={x} cy={y} r={r} className={p.area.fill} opacity={0.55} />
                   {p.du && (
                     <circle
@@ -407,12 +463,28 @@ export default function Knotenkarte({ className = "" }: { className?: string }) 
                       className="stroke-tertiary"
                     />
                   )}
-                  <title>
-                    {p.titel} · {p.area.name}
-                    {ansicht === "bekannt" ? "" : ` · alle ${p.alle}`}
-                    {p.du ? " · du" : ""}
-                  </title>
-                </g>
+                  {/* Unsichtbare, grössere Trefferfläche: Die kleinsten Punkte
+                      haben Radius 3, das trifft man mit dem Finger nicht. */}
+                  {href && <circle cx={x} cy={y} r={Math.max(r + 6, 12)} fill="transparent" />}
+                  <title>{beschriftung}</title>
+                </>
+              );
+              /* Ohne Adresse (unbekanntes Präfix) bleibt der Punkt ein Punkt —
+                 lieber nicht klickbar als ins Leere führend. */
+              if (!href) return <g key={p.id}>{inhalt}</g>;
+              return (
+                <a
+                  key={p.id}
+                  href={href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    router.push(href);
+                  }}
+                  aria-label={`Zum Abschnitt: ${beschriftung}`}
+                  className="cursor-pointer outline-none focus-visible:opacity-70"
+                >
+                  {inhalt}
+                </a>
               );
             })}
           </svg>
@@ -430,7 +502,11 @@ export default function Knotenkarte({ className = "" }: { className?: string }) 
                 <span className={"mt-1.5 h-2.5 w-2.5 flex-shrink-0 rounded-full " + p.area.fill.replace("fill-", "bg-")} />
                 {/* Titel + kleines «du»-Häkchen direkt daneben (nicht in der Zahlenspalte) */}
                 <span className="flex min-w-0 flex-1 items-start gap-xs">
-                  <span
+                  {/* Der Titel ist ein Link zum Abschnitt. In der Liste ein echtes
+                      `a` (Rechtsklick, neuer Tab, Tastatur), im Bild oben nur eine
+                      Klickfläche — dort wäre ein Link pro Punkt nicht auffindbar. */}
+                  <MaybeLink
+                    href={hrefFuer(p.id)}
                     className={
                       /* Zwei Zeilen statt einer: Christof sah «Jetzt: Umwelt & KI ·
                          Phil…» und konnte nicht erkennen, welcher Punkt gemeint war.
@@ -440,10 +516,10 @@ export default function Knotenkarte({ className = "" }: { className?: string }) 
                       "line-clamp-2 text-body-sm " +
                       (p.du ? "font-medium text-on-surface" : "text-on-surface")
                     }
-                    title={p.titel}
+                    titel={p.titel}
                   >
                     {p.titel}
-                  </span>
+                  </MaybeLink>
                   {p.du && (
                     <span
                       className="material-symbols-outlined mt-0.5 flex-shrink-0 text-[15px] text-tertiary"
