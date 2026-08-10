@@ -93,6 +93,19 @@ export default function LehrpersonPage() {
     router.push(`/lehrperson/report?${params.toString()}`);
   }, [openCode, openSecret, router]);
 
+  /**
+   * Gesamtübersicht — dieselbe Anmeldung, nur ein weiterer Blick. Ob der Code
+   * dafür freigeschaltet ist, entscheidet der Server; hier wird nicht
+   * vorsortiert.
+   */
+  const openAdmin = useCallback(() => {
+    const c = openCode.trim().toUpperCase();
+    const s = openSecret.trim();
+    if (!c || !s) return;
+    const params = new URLSearchParams({ code: c, secret: s });
+    router.push(`/lehrperson/admin?${params.toString()}`);
+  }, [openCode, openSecret, router]);
+
   return (
     <main className="mx-auto max-w-2xl px-lg py-xl">
       <header className="border-b border-outline-variant pb-lg">
@@ -168,6 +181,15 @@ export default function LehrpersonPage() {
                 className="inline-flex items-center justify-center gap-sm rounded-xl bg-secondary px-lg py-sm text-label-md text-on-secondary shadow-sm transition hover:opacity-90"
               >
                 Report öffnen
+              </button>
+              {/* Dieselben Zugangsdaten, weiterer Blick: die Gesamtübersicht ist
+                  nur für freigeschaltete Codes sichtbar, darum steht der Knopf
+                  hier unauffällig und meldet sich selbst, wenn es nicht geht. */}
+              <button
+                onClick={openAdmin}
+                className="inline-flex items-center justify-center gap-xs text-label-md text-on-surface-variant underline underline-offset-4 transition hover:text-on-surface"
+              >
+                Nutzung über alle Klassen
               </button>
             </div>
           </div>

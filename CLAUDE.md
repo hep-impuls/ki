@@ -137,12 +137,19 @@ NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=…
 NEXT_PUBLIC_FIREBASE_APP_ID=…
 NEXT_PUBLIC_UNIT_ID=ki26
 FIREBASE_SERVICE_ACCOUNT=<minifiziertes JSON oder Base64>   ← server-only, nur Pietro
+ADMIN_CLASS_CODES=ZZ-BEISPIEL,PIRO-FS-A26   ← optional, server-only
 ```
 
 Die sechs `NEXT_PUBLIC_FIREBASE_*`-Werte und `NEXT_PUBLIC_UNIT_ID` sind
 browser-public und für Christof gefahrlos teilbar (direkt aus Pietros
 `.env.local` übernehmen). `FIREBASE_SERVICE_ACCOUNT` braucht nur Pietro
 (Lehrer-Tier / Route Handlers). `.env.local` ist gitignored.
+
+`ADMIN_CLASS_CODES` (kommagetrennt) schaltet Klassencodes für die
+klassenübergreifende Nutzungsübersicht `/lehrperson/admin` frei — Alternative
+zum Feld `istAdmin: true` am Lehrer-Doc, gedacht für den Erststart ohne
+Konsolenzugriff. **Die Liste enthält kein Geheimnis:** ohne das selbstgewählte
+Secret der Lehrperson nützt ein Code darin nichts.
 
 **⚠️ `FIREBASE_SERVICE_ACCOUNT` muss einzeilig sein.** Next.js liest `.env.local`
 zeilenweise — mehrzeiliger JSON-Wert wird nach `{` abgeschnitten → 503.
@@ -194,11 +201,12 @@ Two handoff docs in [design/](design/) define the **target architecture** this r
 
 - `src/app/` — Next.js App Router pages. `layout.tsx` setzt `lang="de"` und globale Metadaten. `page.tsx` ist die Titelseite. Lernmodule unter `lernen/lernseite-{1,2}/`.
 - `src/lib/` — geteilte Infrastruktur: `firebase.ts` (Client-Singleton), `session.ts` (Fortschritts-Code `MODELL-NNX`, z.B. `QWEN-34R` — LLM-Name + 2 Ziffern + Grossbuchstabe; früher Tier-Codes, alte gelten weiter — + localStorage), `paths.ts` (Firestore-Pfade), `types.ts`, `db.ts` (Client-SDK-Ops), `api.ts` (Route-Handler-Wrapper), `progressMirror.ts`, `polls.ts` (Aggregat-Zähler). Server-only: `firebaseAdmin.ts`, `server/teacherStore.ts`, `server/apiResponse.ts`.
-- `src/app/api/` — 6 Route Handlers (teacher/setup, teacher/prefs, teacher/report, student/class-exists, student/class-prefs, student/class-report). Alle `POST`, alle `runtime="nodejs"` (Admin SDK).
+- `src/app/api/` — 21 Route Handlers in fünf Gruppen: `teacher/*` (setup, prefs, report, orakel, rhizom-deutung), `student/*` (class-exists, class-prefs, class-report), `admin/report` (klassenübergreifende Nutzungsübersicht), `orakel/*` und `korrektorat/*`. Alle `POST`, alle `runtime="nodejs"` (Admin SDK).
 - `src/app/start/` — Schüler-Onboarding (Fortschritts-Code generieren, Klassencode optional; `?class=CODE` befüllt/verknüpft einen Klassencode vorab, für Lehrpersonen-Links).
-- `src/app/lehrperson/` — Lehrer-UI: Klasse anlegen, Report, plus die beiden Anleitungen `anleitung/` (Bedienung) und `leitfaden/` (Didaktik). `setup/` (Pflichtmodule) existiert, wird aber schülerseitig **nicht durchgesetzt** — siehe [docs/handoff-lehrpersonen-und-klassenbeitritt.md](docs/handoff-lehrpersonen-und-klassenbeitritt.md) §4.
+- `src/app/lehrperson/` — Lehrer-UI: Klasse anlegen, Report, `admin/` (Nutzung über alle Klassen), plus die beiden Anleitungen `anleitung/` (Bedienung) und `leitfaden/` (Didaktik). `setup/` (Pflichtmodule) existiert, wird aber schülerseitig **nicht durchgesetzt** — siehe [docs/handoff-lehrpersonen-und-klassenbeitritt.md](docs/handoff-lehrpersonen-und-klassenbeitritt.md) §4.
+- **Admin-Tier (`/lehrperson/admin`, seit 2026-08-10)** — klassenübergreifende Nutzungsübersicht. **Kein eigenes Passwort:** Anmeldung wie bei jeder Lehrperson (Klassencode + eigenes Secret), zusätzlich muss der Code freigeschaltet sein — `istAdmin: true` am Lehrer-Doc oder in `ADMIN_CLASS_CODES`. Zeigt Zahlen und Klassencodes, **keine Fortschritts-Codes**. Zehn Minuten Zwischenspeicher, Standdatum sichtbar. Details und Begründung: [docs/handoff-pietro-admindashboard.md](docs/handoff-pietro-admindashboard.md).
 - `src/components/layout/AccountMenu.tsx` — Account-Panel in der TopAppBar: Fortschritts-Code anzeigen und **jederzeit einer Klasse beitreten**. Wer einen Klassenbeitritt anbieten will, verlinkt **nicht** auf `/start`, sondern feuert `ACCOUNT_OPEN_EVENT` (`/start` leitet bei bestehender Session sofort weiter → Sackgasse). Details: [docs/handoff-lehrpersonen-und-klassenbeitritt.md](docs/handoff-lehrpersonen-und-klassenbeitritt.md) §2.
-- `src/components/ActivityTracker.tsx` — bleibt vorerst unverändert (R6 verschoben).
+- `src/components/ActivityTracker.tsx` — **schreibt seit 2026-08-10 nichts mehr.** R6 war seit `efc20a9` (26.06.) gebaut, der Engagement-Tracker lief also; ausgeschaltet, weil niemand die Daten je gelesen hat. Komponente bleibt auf allen zwölf Seiten stehen, `src/lib/engagement.ts` liegt unangetastet daneben — Rückkehr ist eine Zeile, aber erst mit Auswertung und nachgezogenen Datenschutz-Sätzen (Entscheid-Log 2026-08-10).
 - `src/components/SessionGate.tsx` — Gate: ohne Session → Redirect `/start`. Aktiv über `src/app/lernen/layout.tsx` für **alle** `/lernen/**`-Routen (Lernseite 1 + 2). Der Fortschritts-Code wird damit im ersten Schritt (`/start`) erzeugt/eingegeben; ein Code fürs ganze Set.
 - **KI-Einheit (Lernseite 1, Pietro)** — vollständige Umsetzung unter `src/app/lernen/lernseite-1/`: Auftakt, 5 Stationen, Abschluss, Landkarte, Zertifikat. Fortschritt wird via `ProgressMirror.tsx` nach Firestore gespiegelt.
 
@@ -241,7 +249,7 @@ Stellen) ergänzen — jüngste oben.
 
 ## Open questions
 
-- **R6 — Engagement-Tracker-Umbau** (`ActivityTracker.tsx` → Session-basiert): verschoben, geteilte Datei → mit Christof koordinieren.
+- ~~**R6 — Engagement-Tracker-Umbau**~~: **erledigt** — war seit `efc20a9` (2026-06-26) gebaut, das Gegenteil stand hier sechs Wochen lang. Seit 2026-08-10 bewusst ausgeschaltet. Offen bleibt nur: Wollen wir Engagement überhaupt erfassen? Dann zuerst die Auswertung bauen, dann die Datenschutz-Sätze nachziehen, dann einschalten — mit Christof zu koordinieren (geteilte Datei).
 - **Pflichtmodule ohne Wirkung** — `/lehrperson/setup` schreibt `requiredModules`, schülerseitig wird nichts durchgesetzt (`loadStudentClassPrefs()` hat keinen Aufrufer). Entweder den Knopf «Pflichtmodule wählen» auf `/lehrperson` entfernen oder das Gate bauen. Entscheid 2026-07-27: kein Gate.
 - **`npm run lint` defekt** — `next lint` interpretiert «lint» als Projektverzeichnis (Next 16 hat den Befehl entfernt). Ersatz bis zur Migration auf die ESLint-CLI: `npx tsc --noEmit`.
 - ~~**SessionGate auf lernseite-1**~~: **erledigt 2026-07-22** — Gate über `src/app/lernen/layout.tsx` für ganz `/lernen/**` aktiv (Login als erster Schritt, ein Code für Lernseite 1 + 2).
@@ -271,8 +279,10 @@ an" für Christof): [docs/handoff-firebase-ki26.md](docs/handoff-firebase-ki26.m
   Secret, Report-Aggregation; umgeht Rules via Admin SDK).
 
 **Neue Routen:** `src/app/api/{teacher/setup,teacher/prefs,teacher/report,student/class-exists,student/class-prefs,student/class-report}/route.ts`
-· `src/app/start/page.tsx` (Onboarding) · `src/app/lehrperson/{,setup,report}/page.tsx`
-· `src/components/SessionGate.tsx` (opt-in Gate).
+· `src/app/start/page.tsx` (Onboarding) · `src/app/lehrperson/{,setup,report,admin}/page.tsx`
+· `src/components/SessionGate.tsx` (opt-in Gate). Seither dazugekommen:
+`teacher/orakel`, `teacher/rhizom-deutung`, `admin/report`, `orakel/*`,
+`korrektorat/*` — die vollständige Liste steht im Architektur-Abschnitt.
 
 **Backend-Entscheid:** Lehrer-Tier läuft als **Next.js Route Handlers + Firebase
 Admin SDK** (nicht Cloud Function) — kein Deploy ins geteilte `iperka-lms`, Admin
@@ -283,7 +293,12 @@ E2E-Test lokal + Production (`https://hep-ki.vercel.app`) bestanden.
 **Datenschutz:** ki26 speichert jetzt pseudonyme Pro-Schüler-Daten (Code →
 Fortschritt). Das frühere „nur anonyme Aggregate"-Statement ist revidiert
 (siehe Decision-Log 2026-06-26). Detaildaten (Reflexion, Profil, Einzelantworten)
-bleiben lokal; gespiegelt wird nur ein minimaler Fortschritts-Snapshot.
+bleiben lokal; gespiegelt wird nur ein minimaler Fortschritts-Snapshot. Seit dem
+Abschalten des Engagement-Trackers (2026-08-10) stimmt dieser Satz wieder — der
+Tracker hatte zusätzlich Seitenaufrufe und Verweildauern pro Code abgelegt.
+Klassenübergreifend gibt es neu `/lehrperson/admin`; die Ansicht zeigt nur Zahlen
+und Klassencodes, **keine Fortschritts-Codes**. Die Zusagen dazu stehen in
+`/start` und in der Lehrpersonen-Anleitung («Welche Daten entstehen»).
 
-**ActivityTracker.tsx unverändert** (R6 — Engagement-Umbau — verschoben, geteilte
-Datei → mit Christof koordinieren).
+**ActivityTracker.tsx schreibt nichts** (seit 2026-08-10 ausgeschaltet — siehe
+Architektur-Abschnitt oben und Entscheid-Log).

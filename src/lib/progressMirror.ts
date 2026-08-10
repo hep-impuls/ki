@@ -19,14 +19,37 @@ import { saveProgress } from "./db";
 import type { Progress } from "./types";
 
 /**
- * Einen Fortschritts-Snapshot spiegeln. No-op ohne Session. Fehler werden
+ * Zuletzt erfolgreich geschriebener Stand je Modul (nur im Speicher, pro
+ * Seitenaufruf). Der Spiegel laeuft auf einem Taktgeber alle 30 Sekunden —
+ * ohne diesen Vergleich schreibt eine offen liegen gelassene Seite stuendlich
+ * 120-mal denselben Inhalt. Erst nach erfolgreichem Schreiben merken, damit ein
+ * fehlgeschlagener Versuch beim naechsten Takt wiederholt wird.
+ */
+const zuletztGespiegelt = new Map<string, string>();
+
+/**
+ * Einen Fortschritts-Snapshot spiegeln. No-op ohne Session und **no-op, wenn
+ * sich seit dem letzten Schreiben nichts geaendert hat**. Fehler werden
  * geschluckt (Spiegel darf die UX nie blockieren).
  */
 export async function mirrorProgress(moduleId: string, progress: Progress): Promise<void> {
   const session = getSession();
   if (!session?.studentCode) return;
+
+  // Schluessel enthaelt den Code: nach einem Code-Wechsel im selben Tab soll der
+  // erste Schreibvorgang wieder durchgehen.
+  const key = `${session.studentCode}::${moduleId}`;
+  let stand: string | null = null;
+  try {
+    stand = JSON.stringify(progress);
+  } catch {
+    stand = null; // nicht serialisierbar → im Zweifel schreiben
+  }
+  if (stand !== null && zuletztGespiegelt.get(key) === stand) return;
+
   try {
     await saveProgress(session.studentCode, moduleId, progress);
+    if (stand !== null) zuletztGespiegelt.set(key, stand);
   } catch (err) {
     console.warn("[progressMirror] failed", moduleId, err);
   }

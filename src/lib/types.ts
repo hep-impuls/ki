@@ -47,6 +47,13 @@ export interface TeacherPrefs {
   updatedAt: string;
   /** SHA-256(secret.trim()) — Klartext wird nie gespeichert. */
   secretHash?: string;
+  /**
+   * Darf diese Lehrperson die klassenübergreifende Nutzungsübersicht sehen?
+   * Bewusst **kein** eigenes Admin-Passwort: die Anmeldung bleibt Klassencode +
+   * selbstgewähltes Secret, dieses Merkmal vergibt nur die *Berechtigung*. Wird
+   * von Hand in der Firebase-Konsole gesetzt (oder über `ADMIN_CLASS_CODES`).
+   */
+  istAdmin?: boolean;
 }
 
 /* ── Report-Typen ─────────────────────────────────────────────────────────── */
@@ -179,4 +186,55 @@ export interface TeacherOrakel {
   topAngeschaut: TeacherOrakelThema[];
   topVertieft: TeacherOrakelThema[];
   topWeiterverfolgen: TeacherOrakelThema[];
+}
+
+/* ── Admin-Übersicht (klassenübergreifend) ────────────────────────────────── */
+
+/** Wie weit ein einzelnes Modul über alle Codes hinweg bearbeitet ist. */
+export interface AdminModul {
+  moduleId: string;
+  /** Codes mit mindestens einem gespiegelten Fortschritt in diesem Modul. */
+  begonnen: number;
+  /** Davon abgeschlossen (`completedAt` gesetzt oder 100 %). */
+  abgeschlossen: number;
+  /**
+   * Mittlerer Erfüllungsgrad, 0–100 — oder **null**, wenn das Modul gar keinen
+   * Erfüllungsgrad spiegelt. Lernseite 2 legt statt `pct` eigene Strukturen ab
+   * (`ids`, `werte`); dort wäre jede Prozentzahl erfunden.
+   */
+  pctSchnitt: number | null;
+}
+
+/** Eine Zeile der Klassen-Tabelle. `classCode: null` = Codes ohne Klasse. */
+export interface AdminKlasse {
+  classCode: string | null;
+  /** Anzahl Fortschritts-Codes in dieser Klasse. */
+  n: number;
+  /** Davon in den letzten 7 Tagen aktiv. */
+  aktiv7: number;
+  /** Mittlerer Erfüllungsgrad über die Module mit `pct`, 0–100, sonst null. */
+  pctSchnitt: number | null;
+  letzteAktivitaet: string | null;
+}
+
+/**
+ * Klassenübergreifende Nutzungsübersicht. Enthält **keine** Fortschritts-Codes:
+ * Zahlen und Klassen ja, Einzelpersonen nein — siehe Entscheid 2026-08-10.
+ */
+export interface AdminReport {
+  /** Wann die Zahlen berechnet wurden (ISO). Kann aus dem Cache stammen. */
+  stand: string;
+  /** true = aus dem Zwischenspeicher, nicht frisch gelesen. */
+  ausCache: boolean;
+  codesGesamt: number;
+  codesMitKlasse: number;
+  codesOhneKlasse: number;
+  /** Angelegte Klassen aus der `teachers`-Sammlung (auch leere). */
+  klassenGesamt: number;
+  aktiv7: number;
+  aktiv30: number;
+  /** Wie viele Codes überhaupt je etwas gespiegelt haben. */
+  mitFortschritt: number;
+  module: AdminModul[];
+  klassen: AdminKlasse[];
 }

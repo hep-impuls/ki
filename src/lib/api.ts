@@ -11,7 +11,12 @@
  * Browser darf `teachers/*` nicht direkt lesen/schreiben — Admin SDK only).
  */
 
-import type { StudentClassReport, TeacherReport, TeacherOrakel } from "./types";
+import type {
+  AdminReport,
+  StudentClassReport,
+  TeacherReport,
+  TeacherOrakel,
+} from "./types";
 
 async function postApi<T>(path: string, payload: Record<string, unknown>): Promise<T> {
   const res = await fetch(`/api/${path}`, {
@@ -94,4 +99,19 @@ export async function loadTeacherOrakelSecure(
   secret: string,
 ): Promise<TeacherOrakel> {
   return postApi<TeacherOrakel>("teacher/orakel", { classCode, secret });
+}
+
+/* ── Admin (freigeschalteter Klassencode) ─────────────────────────────────── */
+
+/**
+ * Klassenübergreifende Nutzungsübersicht. Dieselbe Anmeldung wie beim Report;
+ * der Server prüft zusätzlich, ob der Code freigeschaltet ist (sonst 403).
+ * `frisch` umgeht den 10-Minuten-Zwischenspeicher.
+ */
+export async function loadAdminReportSecure(
+  classCode: string,
+  secret: string,
+  frisch = false,
+): Promise<AdminReport> {
+  return postApi<AdminReport>("admin/report", { classCode, secret, frisch });
 }

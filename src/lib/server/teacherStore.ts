@@ -3,10 +3,14 @@ import "server-only";
 import { getAdminDb, hashSecretNode } from "../firebaseAdmin";
 import {
   teacherDocPath,
+  teachersPath,
   studentsPath,
   pollsPath,
 } from "../paths";
 import type {
+  AdminKlasse,
+  AdminModul,
+  AdminReport,
   PollAggregate,
   Progress,
   StationStand,
@@ -508,4 +512,236 @@ export async function teacherOrakel(
     topVertieft: themen("vertieft"),
     topWeiterverfolgen: themen("weiterverfolgen"),
   };
+}
+
+/* ── Admin: klassenübergreifende Nutzungsübersicht ────────────────────────── */
+
+/**
+ * Der Admin-Tier hat **kein eigenes Passwort**. Die Anmeldung ist dieselbe wie
+ * für jede Lehrperson — Klassencode plus selbstgewähltes Secret; das
+ * Passwort-Management bleibt damit in den Händen der Lehrpersonen (Entscheid
+ * 2026-08-10). Zusätzlich braucht es nur die *Berechtigung*, und die kann sich
+ * niemand selbst geben:
+ *
+ *   - `istAdmin: true` am Lehrer-Doc (von Hand in der Firebase-Konsole), oder
+ *   - der Klassencode steht in `ADMIN_CLASS_CODES` (kommagetrennt, für den
+ *     Erststart ohne Konsolenzugriff). Die Liste enthält kein Geheimnis — ohne
+ *     das Secret der Lehrperson nützt sie nichts.
+ */
+export class NotAdminError extends Error {}
+
+function adminCodesAusEnv(): Set<string> {
+  return new Set(
+    (process.env.ADMIN_CLASS_CODES ?? "")
+      .split(",")
+      .map((c) => canonicalClassCode(c))
+      .filter(Boolean),
+  );
+}
+
+async function assertAdmin(classCodeRaw: string, secret: string): Promise<string> {
+  const classCode = canonicalClassCode(classCodeRaw);
+  const prefs = await assertSecret(classCode, secret); // wirft bei falschem Secret
+  if (prefs.istAdmin === true) return classCode;
+  if (adminCodesAusEnv().has(classCode)) return classCode;
+  throw new NotAdminError();
+}
+
+/**
+ * Firestore liefert Zeitpunkte je nach Feld als `Timestamp` (serverTimestamp)
+ * oder als ISO-String (`completedAt`). Beides auf ISO bringen, alles andere
+ * verwerfen.
+ */
+function alsIso(v: unknown): string | null {
+  if (!v) return null;
+  if (typeof v === "string") return v;
+  if (typeof v === "object" && v !== null && "toDate" in v) {
+    try {
+      const d = (v as { toDate: () => Date }).toDate();
+      return Number.isNaN(d.getTime()) ? null : d.toISOString();
+    } catch {
+      return null;
+    }
+  }
+  return null;
+}
+
+/**
+ * Promises mit Obergrenze gleichzeitig laufen lassen. Der Lehrer-Report liest
+ * die Fortschritts-Unterkollektionen heute **nacheinander** (`await` in der
+ * Schleife) — bei einer Klasse egal, über alle Codes hinweg wären das hunderte
+ * Roundtrips hintereinander. Gelesen wird gleich viel, es dauert nur nicht mehr
+ * ewig.
+ */
+async function parallelMitLimit<T, R>(
+  items: T[],
+  limit: number,
+  fn: (item: T) => Promise<R>,
+): Promise<R[]> {
+  const out: R[] = new Array(items.length);
+  let next = 0;
+  const worker = async () => {
+    for (;;) {
+      const i = next++;
+      if (i >= items.length) return;
+      out[i] = await fn(items[i]);
+    }
+  };
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
+  return out;
+}
+
+/**
+ * Zwischenspeicher: Die Übersicht liest die ganze `students`-Sammlung samt
+ * Fortschritt — bei 500 Codes rund 500 Dokumente pro Aufruf. Ein Dashboard
+ * schaut man ein paarmal am Tag an, darum wird das Ergebnis zehn Minuten
+ * behalten und mit sichtbarem Standdatum ausgeliefert.
+ *
+ * Bewusst *kein* denormalisiertes Aggregat am Schüler-Doc: das würde bei jedem
+ * `mirrorProgress` einen zusätzlichen Schreibvorgang kosten — also die
+ * Dauerlast erhöhen, um eine seltene Leselast zu senken. Falsches Geschäft.
+ */
+const ADMIN_CACHE_MS = 10 * 60 * 1000;
+let adminCache: { stand: number; report: AdminReport } | null = null;
+
+export async function adminReport(
+  classCodeRaw: string,
+  secret: string,
+  frisch = false,
+): Promise<AdminReport> {
+  await assertAdmin(classCodeRaw, secret);
+
+  const jetzt = Date.now();
+  if (!frisch && adminCache && jetzt - adminCache.stand < ADMIN_CACHE_MS) {
+    return { ...adminCache.report, ausCache: true };
+  }
+
+  // Pfade kommen ausschliesslich aus `paths.ts` (fest auf `abstimmungen/ki26`).
+  // Diese Route nimmt **keine** Bereichsangabe aus dem Request entgegen.
+  const [studentsSnap, teachersSnap] = await Promise.all([
+    db().collection(studentsPath).get(),
+    db().collection(teachersPath).get(),
+  ]);
+
+  const codes = studentsSnap.docs.map((d) => ({
+    id: d.id,
+    teacherCode:
+      ((d.data() as { teacherCode?: string | null })?.teacherCode ?? null) || null,
+  }));
+
+  const bundles = await parallelMitLimit(studentsSnap.docs, 20, async (docSnap) => {
+    const progSnap = await docSnap.ref.collection("progress").get();
+    const module: { moduleId: string; pct: number | null; fertig: boolean }[] = [];
+    let letzte: string | null = null;
+    for (const p of progSnap.docs) {
+      const data = p.data() as Progress;
+      // Nur echte Erfuellungsgrade zaehlen. Lernseite 2 spiegelt kein `pct`,
+      // sondern eigene Strukturen — ein fehlendes Feld als 0 % zu lesen wuerde
+      // aktive Module als unbearbeitet ausweisen.
+      const pct =
+        typeof data.pct === "number" && Number.isFinite(data.pct)
+          ? Math.max(0, Math.min(100, data.pct))
+          : null;
+      const fertig = Boolean(data.completedAt) || (pct !== null && pct >= 100);
+      module.push({ moduleId: p.id, pct, fertig });
+      const ts = alsIso(data.updatedAt) ?? alsIso(data.completedAt);
+      if (ts && (!letzte || ts > letzte)) letzte = ts;
+    }
+    return { code: docSnap.id, module, letzte };
+  });
+
+  const tage = (n: number) => new Date(jetzt - n * 24 * 60 * 60 * 1000).toISOString();
+  const grenze7 = tage(7);
+  const grenze30 = tage(30);
+
+  /* ── Modul-Zeilen ──────────────────────────────────────────────────────── */
+  const proModul = new Map<
+    string,
+    { begonnen: number; fertig: number; summe: number; mitPct: number }
+  >();
+  for (const b of bundles) {
+    for (const m of b.module) {
+      const e = proModul.get(m.moduleId) ?? { begonnen: 0, fertig: 0, summe: 0, mitPct: 0 };
+      e.begonnen += 1;
+      if (m.fertig) e.fertig += 1;
+      if (m.pct !== null) {
+        e.summe += m.pct;
+        e.mitPct += 1;
+      }
+      proModul.set(m.moduleId, e);
+    }
+  }
+  const module: AdminModul[] = [...proModul.entries()]
+    .sort((a, b) => a[0].localeCompare(b[0], "de"))
+    .map(([moduleId, e]) => ({
+      moduleId,
+      begonnen: e.begonnen,
+      abgeschlossen: e.fertig,
+      pctSchnitt: e.mitPct ? Math.round(e.summe / e.mitPct) : null,
+    }));
+
+  /* ── Klassen-Zeilen ────────────────────────────────────────────────────── */
+  const klassenVon = new Map(codes.map((c) => [c.id, c.teacherCode]));
+  type Acc = {
+    n: number;
+    aktiv7: number;
+    summe: number;
+    anzahl: number;
+    letzte: string | null;
+  };
+  const proKlasse = new Map<string | null, Acc>();
+  // Angelegte, aber leere Klassen sollen trotzdem als Zeile erscheinen.
+  for (const t of teachersSnap.docs) {
+    proKlasse.set(canonicalClassCode(t.id), {
+      n: 0,
+      aktiv7: 0,
+      summe: 0,
+      anzahl: 0,
+      letzte: null,
+    });
+  }
+  for (const b of bundles) {
+    const key = klassenVon.get(b.code) ?? null;
+    const e = proKlasse.get(key) ?? { n: 0, aktiv7: 0, summe: 0, anzahl: 0, letzte: null };
+    e.n += 1;
+    if (b.letzte && b.letzte >= grenze7) e.aktiv7 += 1;
+    for (const m of b.module) {
+      if (m.pct === null) continue; // Module ohne Erfuellungsgrad verzerren den Schnitt
+      e.summe += m.pct;
+      e.anzahl += 1;
+    }
+    if (b.letzte && (!e.letzte || b.letzte > e.letzte)) e.letzte = b.letzte;
+    proKlasse.set(key, e);
+  }
+  const klassen: AdminKlasse[] = [...proKlasse.entries()]
+    .map(([classCode, e]) => ({
+      classCode,
+      n: e.n,
+      aktiv7: e.aktiv7,
+      pctSchnitt: e.anzahl ? Math.round(e.summe / e.anzahl) : null,
+      letzteAktivitaet: e.letzte,
+    }))
+    // Grösste zuerst; «ohne Klasse» ans Ende, egal wie gross.
+    .sort((a, b) => {
+      if (a.classCode === null) return 1;
+      if (b.classCode === null) return -1;
+      return b.n - a.n || a.classCode.localeCompare(b.classCode, "de");
+    });
+
+  const report: AdminReport = {
+    stand: new Date(jetzt).toISOString(),
+    ausCache: false,
+    codesGesamt: codes.length,
+    codesMitKlasse: codes.filter((c) => c.teacherCode).length,
+    codesOhneKlasse: codes.filter((c) => !c.teacherCode).length,
+    klassenGesamt: teachersSnap.size,
+    aktiv7: bundles.filter((b) => b.letzte && b.letzte >= grenze7).length,
+    aktiv30: bundles.filter((b) => b.letzte && b.letzte >= grenze30).length,
+    mitFortschritt: bundles.filter((b) => b.module.length > 0).length,
+    module,
+    klassen,
+  };
+
+  adminCache = { stand: jetzt, report };
+  return report;
 }

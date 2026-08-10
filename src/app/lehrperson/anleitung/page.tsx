@@ -460,6 +460,14 @@ export default function AnleitungLehrperson() {
           richtigen Antworten bei den Haltungsfragen. Die Quiz-Punkte in Lernset 1
           dienen der Selbstkontrolle, nicht der Beurteilung.
         </p>
+        <p className="mt-md text-body-sm text-on-surface-variant">
+          Über alle Klassen hinweg gibt es zusätzlich eine Nutzungsübersicht für
+          die Autoren des Lernsets: wie viele Codes es gibt, wie weit die Module
+          im Mittel kommen, wann zuletzt gearbeitet wurde. Diese Übersicht zeigt
+          Zahlen und Klassencodes, aber <strong>keine Fortschritts-Codes</strong>{" "}
+          und keine Einzelwerte. In eine fremde Klasse hineinsehen kann damit
+          niemand — dafür braucht es weiterhin deren Klassencode und Secret.
+        </p>
       </section>
 
       {/* ── FAQ ─────────────────────────────────────────────────────── */}

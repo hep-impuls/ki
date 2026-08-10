@@ -3,6 +3,69 @@
 **Von:** Christof · **Stand:** 2026-08-10 · **Betrifft:** Admin SDK, geteiltes
 Firebase-Projekt, Datenschutz-Aussagen → deshalb diese Abstimmung.
 
+## Antwort von Pietro — 2026-08-10: entschieden und gebaut
+
+Danke, das war die richtige Reihenfolge. Alle fünf Fragen sind entschieden, und
+das Dashboard steht bereits: `/lehrperson/admin`, Route `POST /api/admin/report`.
+Ausführliche Begründungen im [Entscheid-Log](decisions.md), hier die Kurzform.
+
+1. **Kein eigenes Admin-Passwort.** Weder Korrektorat-Muster noch mein
+   Lehrer-Secret als Generalschlüssel. Die Anmeldung bleibt für alle gleich —
+   Klassencode plus selbstgewähltes Secret, das Passwort-Management gehört den
+   Lehrpersonen. Neu ist nur die *Berechtigung*: `istAdmin: true` am Lehrer-Doc
+   (Firebase-Konsole) oder der Code in `ADMIN_CLASS_CODES`. Dein Code kann
+   freigeschaltet werden, ohne dass du ein Service-Account brauchst.
+2. **Reichweite fest auf `abstimmungen/ki26`** — einverstanden. Die Route nimmt
+   keine Bereichsangabe aus dem Request entgegen und benutzt keine
+   `collectionGroup`-Abfragen (die liefen projektweit und läsen `10mio` mit).
+3. **`progress.updatedAt`** — und deine Frage hat sich erledigt: **R6 ist seit
+   dem 26. Juni gebaut** (`efc20a9`). `CLAUDE.md` und dieses Dokument waren beide
+   veraltet. Der Tracker lief also die ganze Zeit; er ist jetzt *ausgeschaltet*,
+   weil niemand die Daten je gelesen hat und die Block-Erfassung ohnehin tot war.
+4. **k-Schwelle: für Lernende ja, für Lehrpersonen und Admins nein.** Wer das
+   Service-Account hat, liest ohnehin jedes Dokument — die Schwelle wäre dort
+   Theater. Die Schranke, die wirklich etwas kostet, ist eine andere: **die
+   Übersicht zeigt keine Fortschritts-Codes.** Zahlen und Klassencodes ja,
+   Einzelpersonen nein.
+5. **Datenschutz-Sätze nachgezogen**, vor dem Bauen: `/start` nennt die
+   Gesamtauswertung, die Anleitung hat einen Absatz im Abschnitt «Welche Daten
+   entstehen».
+
+**Zu deinen zwei Befunden.** Das NUL-Byte ist raus (`2f2e800`) — und du hattest
+mit `ripgrep` recht: nachgemessen gibt `rg` an der alten Fassung nur «binary file
+matches» aus und zeigt keine Trefferzeilen. `git grep` funktionierte, `rg` nicht.
+Die grössere Nebenwirkung war aber eine andere: das NUL-Byte schaltete Gits
+Zeilenenden-Normalisierung ab, die Datei lag als einzige mit CRLF im Index. Der
+Commit normalisiert sie darum einmalig — 511 Zeilen im Diff, eine echte Änderung.
+`npm run lint` bleibt defekt, `npx tsc --noEmit` ist der Ersatz.
+
+**Zum Kostenpunkt.** Kein Aggregat-Doc: das hiesse bei jedem `mirrorProgress` ein
+zusätzlicher Schreibvorgang, also mehr Dauerlast für weniger seltene Leselast.
+Stattdessen zehn Minuten Zwischenspeicher mit sichtbarem Standdatum, und die
+Fortschritts-Unterkollektionen werden zwanzigfach parallel gelesen statt
+nacheinander. Nebenbei: `mirrorProgress` schreibt jetzt nur noch bei echter
+Änderung — der 30-Sekunden-Takt hat vorher offene Seiten stündlich 120-mal
+denselben Inhalt schreiben lassen.
+
+**Zur Aufteilung.** Deine Beobachtung stimmt und ist in der Route umgesetzt: es
+wird die ganze `students`-Sammlung gelesen, `teacherCode: null` erscheint als
+eigene Gruppe «ohne Klasse». Beim ersten echten Durchlauf waren das 9 von 15
+Codes — ohne diese Gruppe hätte man die Mehrheit übersehen.
+
+Die **Anzeige ist ein Erstentwurf von mir**, nicht dein Terrain besetzt: vier
+Kennzahlen, eine Modul-Tabelle, eine Klassen-Tabelle. Nimm sie gern auseinander.
+Ein Detail, über das ich beim Bauen gestolpert bin und das du kennen solltest:
+Lernset 2 spiegelt kein `pct`, sondern eigene Strukturen (`ids`, `werte`). Ein
+fehlendes Feld als 0 % zu lesen wies deine Module als unbearbeitet aus, obwohl
+dort gearbeitet wurde — die Spalte sagt dort jetzt «ohne Prozentwert». Wenn du
+für Lernset 2 einen Erfüllungsgrad definieren willst, wäre das die Stelle.
+
+**Freischalten deines Codes:** in der Firebase-Konsole unter
+`abstimmungen/ki26/teachers/{DEIN-CODE}` das Feld `istAdmin` auf `true` setzen.
+Sag Bescheid, ich mache das.
+
+---
+
 ## Worum es geht
 
 Wir möchten eine Übersicht über die Nutzung des Lernsets, quer über alle Klassen

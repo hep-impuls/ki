@@ -1,24 +1,30 @@
 "use client";
 
-import { useEffect } from "react";
-import { initEngagement } from "@/lib/engagement";
-
 /**
  * ActivityTracker — geteilte Komponente (lernseite-1 *und* lernseite-2).
  *
- * **Umbau R6:** schreibt nicht mehr in die top-level `activities`-Collection
- * (anon-Auth-`uid`), sondern richtet den neuen Engagement-Tracker
- * (`src/lib/engagement.ts`) ein: `module_view`/`module_close`/`block_view`
- * namespaced unter `abstimmungen/ki26/engagement`, getragen vom Animal-Code der
- * Session statt einer anonymen `uid`. No-op ohne Schueler-Session.
+ * **Seit 2026-08-10 schreibt diese Komponente nichts mehr.** Sie steht bewusst
+ * weiter auf allen zwölf Seiten, damit die Aufrufstellen unangetastet bleiben
+ * und das Erfassen mit einer einzigen Änderung wieder eingeschaltet werden kann.
  *
- * **Prop-API unveraendert** (Drop-in fuer alle bestehenden Call-Sites):
+ * Warum aus (Entscheid 2026-08-10, siehe `docs/decisions.md`):
+ * - Der Engagement-Tracker (`src/lib/engagement.ts`) legte pro Seitenaufruf und
+ *   pro Seitenschluss ein Ereignis mit Code, Seite, Zeitpunkt und Verweildauer
+ *   unter `abstimmungen/ki26/engagement` ab.
+ * - **Niemand hat diese Daten je gelesen** — es gibt keine Auswertung, kein
+ *   Skript, keine Route dafür.
+ * - Es war zugleich die feinkörnigste Datenspur der ganzen App und damit die
+ *   einzige, die den Satz «dein Fortschritt wird unter deinem Code gespeichert»
+ *   auf `/start` untertrieben hätte.
+ * - Die Block-Erfassung war ohnehin tot: das Merkmal `data-block-id`, an das sie
+ *   sich hängt, kommt im ganzen Projekt nicht vor.
+ *
+ * Wer das Erfassen wieder will, baut zuerst die Auswertung und zieht die
+ * Datenschutz-Sätze nach (`/start`, `lehrperson/anleitung`,
+ * `lehrperson/leitfaden`) — dann hier `initEngagement` wieder einhängen.
+ *
+ * **Prop-API unverändert** (Drop-in für alle bestehenden Aufrufstellen):
  *   <ActivityTracker type="page_view" page="lernseite-1" />
- * - `page`     → Engagement-`slug` (Modul-Kennung).
- * - `type`/`lessonId` werden weiterhin akzeptiert, sind aber im Engagement-
- *   Modell nicht mehr noetig (das Engagement-Setup erledigt view/close/block in
- *   einem). Sie bleiben Teil der Signatur, damit kein Call-Site angefasst werden
- *   muss; `block_view` haengt automatisch an `[data-block-id]`-Elementen.
  */
 
 export type ActivityType = "page_view" | "lesson_open" | "lesson_complete";
@@ -29,13 +35,6 @@ type Props = {
   lessonId?: string;
 };
 
-export default function ActivityTracker({ page }: Props) {
-  useEffect(() => {
-    // initEngagement gibt eine Cleanup-Funktion zurueck (Listener entfernen +
-    // letzte Session flushen). No-op ohne Session/Code.
-    const cleanup = initEngagement({ slug: page });
-    return cleanup;
-  }, [page]);
-
+export default function ActivityTracker(_props: Props) {
   return null;
 }

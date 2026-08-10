@@ -10,6 +10,93 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-10 — Admin-Dashboard: fünf Entscheide (Pietro)
+
+Antworten auf Christofs fünf Fragen aus
+[handoff-pietro-admindashboard.md](handoff-pietro-admindashboard.md), am selben
+Tag umgesetzt. Eine Woche vor dem öffentlichen Start; Claude riet, nur zu
+entscheiden und nach dem Start zu bauen — Entscheid war, beides heute zu machen.
+
+**1 · Anmeldung: kein eigenes Admin-Passwort.** Das Passwort-Management bleibt
+bei den Lehrpersonen — sie wählen Klassencode und Secret selbst, wie bisher. Der
+Admin-Blick ist keine zweite Anmeldung, sondern eine *Berechtigung*: `istAdmin:
+true` am Lehrer-Doc (von Hand in der Firebase-Konsole) oder der Klassencode in
+`ADMIN_CLASS_CODES`. Damit fällt beides weg, was Christof vorgeschlagen hatte:
+ein ausgestellter Passcode nach Korrektorat-Muster (das ist genau das Modell, das
+wir nicht wollen) und Pietros Lehrer-Secret als Generalschlüssel (dann wäre eine
+Klasse der Hauptschlüssel für alle). Berechtigung kann sich niemand selbst geben,
+sonst sähe jede neu angelegte Klasse alle anderen.
+
+**2 · Reichweite: fest auf `abstimmungen/ki26`.** War strukturell schon so —
+`paths.ts` bildet jeden Pfad aus `UNIT_ID` (Env), keine Funktion baut sich einen
+Pfad selbst. Als Bauvorschrift festgehalten: **die Admin-Route nimmt keine
+Bereichs- oder Pfadangabe aus dem Request entgegen**, und es gibt **keine
+`collectionGroup`-Abfragen** im Admin-Tier — die laufen projektweit und würden
+`10mio` mitlesen.
+
+**3 · Nutzung wird über `progress.updatedAt` gemessen.** R6 nicht vorziehen —
+siehe den eigenen Eintrag weiter unten, R6 war längst gebaut.
+
+**4 · k-Schwelle gilt für Lernende, nicht für Lehrpersonen und Admins.** Die
+Schwelle `< 5` bleibt dort, wo sie steht (`studentClassReport`). Für den
+Admin-Blick wäre sie Theater: wer `FIREBASE_SERVICE_ACCOUNT` hat, liest ohnehin
+jedes Dokument. Stattdessen die Schranke, die etwas kostet und nichts vortäuscht:
+**die Übersicht zeigt keine Fortschritts-Codes.** Zahlen und Klassencodes ja,
+Einzelpersonen nein — und in eine fremde Klasse sieht man nur mit deren Secret.
+
+**5 · Datenschutz-Aussagen nachgezogen, vor dem Bauen.** Der Satz auf `/start`
+nennt jetzt die Gesamtauswertung («nur Zahlen, keine einzelnen Codes»), die
+Lehrpersonen-Anleitung hat einen Absatz dazu im Abschnitt «Welche Daten
+entstehen». App Check bleibt aus und ist hier nicht das Thema: die Route läuft
+über das Admin SDK hinter der Anmeldung.
+
+**Kosten.** Die Übersicht liest die ganze `students`-Sammlung samt Fortschritt.
+Kein denormalisiertes Aggregat am Schüler-Doc — das würde bei *jedem*
+`mirrorProgress` einen zusätzlichen Schreibvorgang kosten, also die Dauerlast
+erhöhen, um eine seltene Leselast zu senken. Stattdessen zehn Minuten
+Zwischenspeicher mit sichtbarem Standdatum, und die Unterkollektionen werden
+zwanzigfach parallel gelesen statt nacheinander.
+
+---
+
+## 2026-08-10 — Engagement-Tracking ausgeschaltet (Pietro)
+
+`ActivityTracker` schreibt nichts mehr. Die Komponente bleibt auf allen zwölf
+Seiten stehen, damit die Aufrufstellen unangetastet sind und das Erfassen mit
+einer einzigen Änderung zurückkommt.
+
+Der Befund, der dazu führte: **R6 war seit dem 26. Juni gebaut** (Commit
+`efc20a9`), `CLAUDE.md` und Christofs Handoff sagten sechs Wochen lang das
+Gegenteil. Der Tracker legte seither pro Seitenaufruf und pro Seitenschluss ein
+Ereignis mit Code, Seite, Zeitpunkt und Verweildauer unter
+`abstimmungen/ki26/engagement` ab.
+
+Drei Gründe fürs Ausschalten:
+
+- **Niemand liest die Daten.** Keine Auswertung, kein Skript, keine Route im
+  ganzen Projekt greift auf `engagement` zu.
+- **Ein Teil war tot.** Die Block-Erfassung hängt sich an `[data-block-id]`; das
+  Merkmal kommt im ganzen Projekt nur in einem Kommentar vor.
+- **Es war die feinkörnigste Datenspur der App** — feiner als das, was
+  `CLAUDE.md` als «minimaler Fortschritts-Snapshot» beschreibt, und damit die
+  einzige Stelle, an der die Zusage auf `/start` untertrieben hätte.
+
+Wer das Erfassen zurückholt, baut zuerst die Auswertung und zieht die
+Datenschutz-Sätze nach. `src/lib/engagement.ts` bleibt unangetastet liegen.
+
+---
+
+## 2026-08-10 — Fortschritts-Spiegel schreibt nur noch bei Änderung (Pietro)
+
+`mirrorProgress()` vergleicht den Schnappschuss mit dem zuletzt erfolgreich
+geschriebenen und schreibt bei Gleichheit nicht. Grund: der Spiegel läuft auf
+einem 30-Sekunden-Takt; eine offen liegen gelassene Seite schrieb bisher
+stündlich 120-mal denselben Inhalt. Gemerkt wird erst *nach* erfolgreichem
+Schreiben, damit ein fehlgeschlagener Versuch beim nächsten Takt wiederholt wird.
+Gilt für beide Lernseiten, da es in der geteilten Funktion sitzt.
+
+---
+
 ## 2026-08-10 — Kein rohes NUL-Byte im Quelltext (Pietro)
 
 `teacherStore.ts` enthielt an einer Stelle ein **echtes NUL-Byte** (0x00) als
