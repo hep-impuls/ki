@@ -292,6 +292,12 @@ export const GLOSSAR: Record<string, string> = {
     "Zweiter Teil von Goethes Tragödie «Faust» (1832). Faust ist darin der Gelehrte, der mit dem Teufel paktiert; der zweite Teil weitet die Geschichte zu einer Parabel über die Menschheit aus.",
   Phiole:
     "Birnenförmiges Glasgefäss mit langem, engem Hals, wie es schon die Alchemisten der Antike benutzten.",
+  Theoreme:
+    "Bewiesene Sätze der Mathematik oder Logik. Ein Theorem gilt erst, wenn es lückenlos aus Annahmen hergeleitet ist.",
+  Perzeptron:
+    "Sehr einfaches künstliches Nervennetz, 1957 von Frank Rosenblatt vorgestellt. Es lernt aus Beispielen, statt Regeln vorgesetzt zu bekommen.",
+  Psychotherapeuten:
+    "Fachperson, die seelische Belastungen im Gespräch behandelt. ELIZA ahmte eine Gesprächsform nach, in der vor allem zurückgefragt wird.",
   SHRDLU:
     "Programm von 1972, das Sprachverstehen und planvolles Handeln verband; es bewegte auf Befehl farbige Klötze in einer erfundenen Welt.",
   "Terry Winograd":
@@ -575,14 +581,20 @@ export function GlossarText({ text: rohText }: { text: string }) {
     if (i >= 0) marken.push({ von: i, bis: i + anker.length, wort: anker, beleg });
   }
 
-  // 2) Glossar-Begriffe, je erstes Vorkommen.
-  const verwendet = new Set<string>();
+  /* 2) Glossar-Begriffe. ALLE Vorkommen werden gesammelt, ausgezeichnet wird
+     später das erste, das frei ist.
+
+     Vorher wurde nur das erste Vorkommen aufgenommen. Lag es innerhalb eines
+     Beleg-Ankers, verwarf die Ausgabe-Schleife es als Überlappung, und der
+     Begriff blieb im ganzen Text ohne Erklärung. Aufgefallen an «Perzeptron»:
+     Das erste Vorkommen steckt im Anker «Frank Rosenblatts Perzeptron von
+     1957», und die zweite Nennung, an der die Erklärung gebraucht wird, ging
+     leer aus. Ein stiller Verlust, den niemand sieht. */
   let m: RegExpExecArray | null;
   GLOSSAR_RE.lastIndex = 0;
   while ((m = GLOSSAR_RE.exec(text)) !== null) {
     const wort = m[1];
-    if (verwendet.has(wort) || !GLOSSAR[wort]) continue;
-    verwendet.add(wort);
+    if (!GLOSSAR[wort]) continue;
     marken.push({ von: m.index, bis: m.index + wort.length, wort, erklaerung: GLOSSAR[wort] });
   }
 
@@ -598,8 +610,16 @@ export function GlossarText({ text: rohText }: { text: string }) {
      weiss, was in einem `**…**`-Bereich liegt. */
   const stuecke: { von: number; bis: number; knoten: React.ReactNode }[] = [];
   let last = 0;
+  /* Jeder Glossar-Begriff wird höchstens EINMAL erklärt. Weil oben alle
+     Vorkommen gesammelt sind, rutscht die Erklärung automatisch auf die nächste
+     Nennung, wenn die erste in einem Beleg-Anker steckt. */
+  const erklaert = new Set<string>();
   for (const k of marken) {
     if (k.von < last) continue; // überlappt einen schon gesetzten Treffer
+    if (!k.beleg) {
+      if (erklaert.has(k.wort)) continue;
+      erklaert.add(k.wort);
+    }
     if (k.von > last) {
       stuecke.push({ von: last, bis: k.von, knoten: text.slice(last, k.von) });
     }

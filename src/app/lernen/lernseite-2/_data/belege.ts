@@ -973,8 +973,11 @@ export const BELEGE: Beleg[] = [
    * Die neue Mittelschicht nennt Leitgedanke und Gegenspieler, und beides ist
    * hier belegt. */
   {
-    id: "VA-433f97",
-    anker: "38 Theoreme",
+    id: "VA-43386e",
+    /* Der Link sitzt am Programm, nicht an der Zahl (Christofs Wunsch
+       2026-08-10). So bleibt «Theoreme» frei für seine Hover-Erklärung, und der
+       Quellenlink hängt an dem, was die Quelle beschreibt. */
+    anker: "Programm Logic Theorist",
     url: "https://de.wikipedia.org/wiki/Allen_Newell",
     titel: "Allen Newell (Wikipedia)",
     stelle:
@@ -982,7 +985,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-10",
   },
   {
-    id: "VA-433f97",
+    id: "VA-43386e",
     anker: "Frank Rosenblatts Perzeptron von 1957",
     url: "https://de.wikipedia.org/wiki/Perzeptron",
     titel: "Perzeptron (Wikipedia)",
@@ -991,7 +994,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-10",
   },
   {
-    id: "VA-433f97",
+    id: "VA-43386e",
     anker: "das ausschliessende Oder nicht lösen kann",
     url: "https://de.wikipedia.org/wiki/Perzeptron",
     titel: "Perzeptron (Wikipedia), zur Kritik von 1969",
