@@ -438,7 +438,7 @@ export default function Lernseite2VorhangAuf() {
           <AktivitaetsKopf />
         </div>
         <p className="mt-md max-w-3xl text-body-lg text-on-surface-variant">
-          <GlossarText text="Kaum ein Thema ist so präsent wie die Künstliche Intelligenz. Und kaum eines ist so schwer zu fassen. Diese Seite gibt der KI einen Ort, an dem wir ihrer Gestalt nachgehen, statt nur über sie zu reden." />
+          <GlossarText text="Kaum ein Thema ist so präsent wie die Künstliche Intelligenz (KI). Und kaum eines ist so schwer zu fassen. Diese Seite gibt der KI einen Ort, an dem wir ihrer Gestalt nachgehen, statt nur über sie zu reden." />
         </p>
       </AbschnittKopf>
       <Ausklapptext className="mt-md max-w-3xl" titel="Mehr dazu: der Weg durch diese Seite"

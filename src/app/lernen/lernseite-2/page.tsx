@@ -45,10 +45,10 @@ export default function Lernseite2Hub() {
         <h1 className="mt-sm text-headline-xl text-on-surface">{mod.title}</h1>
         <div className="mt-sm max-w-3xl space-y-sm text-body-lg text-on-surface-variant">
           <p>
-            Kaum ein Thema ist so präsent wie die Künstliche Intelligenz, und
-            kaum eines so schwer zu fassen. Es wird viel über sie gesagt, doch
-            vieles bleibt schemenhaft, ein Reden über etwas, das man selten
-            wirklich vor Augen hat. Dieses Lernset will die KI{" "}
+            Kaum ein Thema ist so präsent wie die Künstliche Intelligenz (KI) und kaum eines
+            so schwer zu fassen. Es wird viel über sie gesagt, doch vieles bleibt
+            schemenhaft, ein Reden über etwas, das man selten wirklich vor Augen hat. Dieses
+            Lernset will die KI{" "}
             <strong className="text-on-surface">sichtbarer und verständlicher</strong>{" "}
             machen, indem es ihr eine <strong className="text-on-surface">Gestalt</strong>{" "}
             gibt.
@@ -74,12 +74,11 @@ export default function Lernseite2Hub() {
             spurId="hub:vertiefung:philosophie"
           >
             <p>
-              Genau hier setzt später die philosophische Perspektive an:
-              Philosophie ist kein Werkzeug für schnelle oder endgültige
-              Antworten. Sie hilft vielmehr, die Phänomene einer Zeit besser zu
-              verstehen: Sie hält inne, ordnet komplexe Entwicklungen und fragt
-              nach ihren Zusammenhängen und Folgen. Dabei geht es nicht darum,
-              die Welt auf einfache Erklärungen zu reduzieren, sondern neue
+              Genau hier setzt später die philosophische Perspektive an. Philosophie ist
+              kein Werkzeug für schnelle oder endgültige Antworten. Sie hilft vielmehr, die
+              Phänomene einer Zeit besser zu verstehen. Sie hält inne, ordnet komplexe
+              Entwicklungen und fragt nach ihren Zusammenhängen und Folgen. Dabei geht es
+              nicht darum, die Welt auf einfache Erklärungen zu reduzieren, sondern neue
               Perspektiven zu öffnen.
             </p>
             <p>
