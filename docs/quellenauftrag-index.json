@@ -1,10 +1,10 @@
 {
- "HUB-e725d2": {
+ "HUB-c31f2e": {
   "datei": "page.tsx",
   "ort": "(ohne Abschnitt)",
   "feld": "Fliesstext",
   "stufe": "mittel",
-  "text": "Kaum ein Thema ist so präsent wie die Künstliche Intelligenz, und kaum eines so schwer zu fassen. Es wird viel über sie gesagt, doch vieles bleibt schemenhaft, ein Reden über etwas, das man selten wirklich vor Augen hat. Dieses Lernset will die KI sichtbarer und verständlicher machen, indem es ihr eine Gestalt gibt."
+  "text": "Kaum ein Thema ist so präsent wie die Künstliche Intelligenz (KI) und kaum eines so schwer zu fassen. Es wird viel über sie gesagt, doch vieles bleibt schemenhaft, ein Reden über etwas, das man selten wirklich vor Augen hat. Dieses Lernset will die KI sichtbarer und verständlicher machen, indem es ihr eine Gestalt gibt."
  },
  "HUB-19a97d": {
   "datei": "page.tsx",
@@ -20,12 +20,12 @@
   "stufe": "tief",
   "text": "Deshalb beginnst du gleich mit einem Muster, dessen Knoten du verbinden kannst, noch ohne konkreten Inhalt. Das Muster macht deutlich, dass es viel Kontextarbeit braucht, um KI als Phänomen zu erfassen. In diesem Lernset geht es deshalb immer auch um den Kontext der KI."
  },
- "HUB-7342bd": {
+ "HUB-38adc2": {
   "datei": "page.tsx",
   "ort": "Mehr dazu: Wie die Philosophie das weiterdenkt",
   "feld": "Fliesstext",
   "stufe": "tief",
-  "text": "Genau hier setzt später die philosophische Perspektive an: Philosophie ist kein Werkzeug für schnelle oder endgültige Antworten. Sie hilft vielmehr, die Phänomene einer Zeit besser zu verstehen: Sie hält inne, ordnet komplexe Entwicklungen und fragt nach ihren Zusammenhängen und Folgen. Dabei geht es nicht darum, die Welt auf einfache Erklärungen zu reduzieren, sondern neue Perspektiven zu öffnen."
+  "text": "Genau hier setzt später die philosophische Perspektive an. Philosophie ist kein Werkzeug für schnelle oder endgültige Antworten. Sie hilft vielmehr, die Phänomene einer Zeit besser zu verstehen. Sie hält inne, ordnet komplexe Entwicklungen und fragt nach ihren Zusammenhängen und Folgen. Dabei geht es nicht darum, die Welt auf einfache Erklärungen zu reduzieren, sondern neue Perspektiven zu öffnen."
  },
  "HUB-053ade": {
   "datei": "page.tsx",
@@ -349,19 +349,19 @@
   "stufe": "mittel",
   "text": "Innert weniger Wochen nutzten Millionen ChatGPT. Es war der Moment, in dem KI im Alltag vieler Menschen ankam, und der Moment, in dem Schulen und Betriebe plötzlich Regeln brauchten."
  },
- "VA-fa9b33": {
+ "VA-207abd": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Vorhang auf: eine neue Akteurin",
   "feld": "Fliesstext",
   "stufe": "tief",
-  "text": "Kaum ein Thema ist so präsent wie die Künstliche Intelligenz. Und kaum eines ist so schwer zu fassen. Diese Seite gibt der KI einen Ort, an dem wir ihrer Gestalt nachgehen, statt nur über sie zu reden."
+  "text": "Kaum ein Thema ist so präsent wie die Künstliche Intelligenz (KI). Und kaum eines ist so schwer zu fassen. Diese Seite gibt der KI einen Ort, an dem wir ihrer Gestalt nachgehen, statt nur über sie zu reden."
  },
- "VA-d576c2": {
+ "VA-3289b1": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Mehr dazu: der Weg durch diese Seite",
   "feld": "Fliesstext",
   "stufe": "hoch",
-  "text": "Um die KI zu verstehen, nähern wir uns ihr aus mehreren Richtungen. Zuerst fragen wir nach der Herkunft, also wie das Phänomen einer denkenden Maschine kulturell und technisch entstanden ist. Das erzählt die KI-Story. Einzelne Stationen werden danach in Bildern greifbar, die begehbare Punkte tragen. Dann treten die Merkmale hervor, jene Eigenschaften, die wir seit November 2022 mit den grossen Sprachmodellen täglich erleben. Zum Schluss geht es um die Kontexte, in denen die neue Akteurin heute steckt. Das Fazit vorweg lautet, dass KI weit mehr ist als das Chatfenster, in das wir unsere Fragen tippen."
+  "text": "Um die KI zu verstehen, nähern wir uns ihr aus mehreren Richtungen. Zuerst fragen wir nach der Herkunft, also wie das Phänomen einer denkenden Maschine kulturell und technisch entstanden ist. Das erzählt die **KI-Story**. Einzelne Stationen werden danach in **Bildern** greifbar, die begehbare Punkte tragen. Dann treten die **Merkmale** hervor, jene Eigenschaften, die wir seit November 2022 mit den grossen Sprachmodellen täglich erleben. Zum Schluss geht es um die **Kontexte**, in denen die neue Akteurin heute steckt. Das Fazit vorweg lautet, dass KI weit mehr ist als das Chatfenster, in das wir unsere Fragen tippen."
  },
  "VA-916558": {
   "datei": "vorhang-auf/page.tsx",

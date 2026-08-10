@@ -491,13 +491,54 @@ type Marke = {
 };
 
 /**
+ * `**fett**` aus dem Text lösen: gibt den Text OHNE die Sternchen zurück und
+ * die Bereiche, die fett werden, in den Koordinaten dieses sauberen Textes.
+ *
+ * Warum überhaupt eine Auszeichnung im String und nicht `<strong>` im JSX: Die
+ * Korrekturperson bearbeitet im Korrektorat genau EIN Feld je Textstelle. Würde
+ * man den Satz für ein fettes Wort in mehrere `GlossarText` und `<strong>`
+ * zerschneiden, zerfiele er dort in lauter Bruchstücke, und der Zusammenhang
+ * wäre beim Korrigieren nicht mehr zu sehen.
+ */
+function loeseFett(text: string): { sauber: string; fett: { von: number; bis: number }[] } {
+  const fett: { von: number; bis: number }[] = [];
+  let sauber = "";
+  let i = 0;
+  while (i < text.length) {
+    const auf = text.indexOf("**", i);
+    if (auf < 0) {
+      sauber += text.slice(i);
+      break;
+    }
+    const zu = text.indexOf("**", auf + 2);
+    if (zu < 0) {
+      // Einzelnes «**» ohne Gegenstück: unverändert stehen lassen.
+      sauber += text.slice(i);
+      break;
+    }
+    sauber += text.slice(i, auf);
+    const von = sauber.length;
+    sauber += text.slice(auf + 2, zu);
+    fett.push({ von, bis: sauber.length });
+    i = zu + 2;
+  }
+  return { sauber, fett };
+}
+
+/**
  * Text auszeichnen: Das ERSTE Vorkommen jedes Glossar-Begriffs bekommt eine
  * Hover-Erklärung, jeder Beleg-Anker einen Quellenlink. Beide werden in einem
  * Durchgang gesucht, dann nach Position sortiert; überlappende Treffer werden
  * verworfen, damit nichts doppelt ausgezeichnet wird. Belege haben Vorrang,
  * weil sie die genauere Auszeichnung sind.
+ *
+ * Zusätzlich wird `**so markiertes**` fett gesetzt. Das läuft als eigene,
+ * ÄUSSERE Schicht über dem Ergebnis, nicht als weiterer Konkurrent in der
+ * Marken-Liste: Sonst würde ein fett gesetzter Glossar-Begriff seine
+ * Hover-Erklärung verlieren, und zwar unbemerkt.
  */
-export function GlossarText({ text }: { text: string }) {
+export function GlossarText({ text: rohText }: { text: string }) {
+  const { sauber: text, fett } = loeseFett(rohText);
   const marken: Marke[] = [];
 
   // 1) Belege: wörtliche Anker, längste zuerst (siehe BELEG_NACH_ANKER).
@@ -525,21 +566,59 @@ export function GlossarText({ text }: { text: string }) {
       b.bis - b.von - (a.bis - a.von),
   );
 
-  const teile: React.ReactNode[] = [];
+  /* Stücke mit ihrer Position im Text sammeln, damit die Fett-Schicht danach
+     weiss, was in einem `**…**`-Bereich liegt. */
+  const stuecke: { von: number; bis: number; knoten: React.ReactNode }[] = [];
   let last = 0;
   for (const k of marken) {
     if (k.von < last) continue; // überlappt einen schon gesetzten Treffer
-    if (k.von > last) teile.push(text.slice(last, k.von));
-    teile.push(
-      k.beleg ? (
+    if (k.von > last) {
+      stuecke.push({ von: last, bis: k.von, knoten: text.slice(last, k.von) });
+    }
+    stuecke.push({
+      von: k.von,
+      bis: k.bis,
+      knoten: k.beleg ? (
         <BelegStelle key={k.von} wort={k.wort} beleg={k.beleg} />
       ) : (
         <Begriff key={k.von} wort={k.wort} erklaerung={k.erklaerung!} />
       ),
-    );
+    });
     last = k.bis;
   }
-  if (last < text.length) teile.push(text.slice(last));
+  if (last < text.length) {
+    stuecke.push({ von: last, bis: text.length, knoten: text.slice(last) });
+  }
+
+  /* Fett-Schicht. Reiner Text wird an den Bereichsgrenzen weiter zerlegt, damit
+     genau die markierten Wörter fett werden. Eine Glossar- oder Beleg-Stelle
+     wird als Ganzes fett, wenn ihr Anfang im Bereich liegt: Sie ist ein eigenes
+     Element und lässt sich nicht mitten im Wort aufteilen. */
+  const imFett = (p: number) => fett.some((f) => p >= f.von && p < f.bis);
+  const teile: React.ReactNode[] = [];
+  for (const s of stuecke) {
+    if (typeof s.knoten !== "string") {
+      teile.push(imFett(s.von) ? <strong>{s.knoten}</strong> : s.knoten);
+      continue;
+    }
+    if (fett.length === 0) {
+      teile.push(s.knoten);
+      continue;
+    }
+    // Grenzen innerhalb dieses Text-Stücks, aufsteigend und ohne Dubletten.
+    const grenzen = [
+      s.von,
+      ...fett.flatMap((f) => [f.von, f.bis]).filter((g) => g > s.von && g < s.bis),
+      s.bis,
+    ].sort((a, b) => a - b);
+    for (let i = 0; i < grenzen.length - 1; i++) {
+      const a = grenzen[i];
+      const b = grenzen[i + 1];
+      if (a === b) continue;
+      const stueck = text.slice(a, b);
+      teile.push(imFett(a) ? <strong>{stueck}</strong> : stueck);
+    }
+  }
 
   return (
     <>

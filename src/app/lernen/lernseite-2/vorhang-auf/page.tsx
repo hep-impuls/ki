@@ -445,7 +445,7 @@ export default function Lernseite2VorhangAuf() {
           spurId="vorhang-auf:vertiefung:weg"
         >
         <p>
-          <GlossarText text="Um die KI zu verstehen, nähern wir uns ihr aus mehreren Richtungen. Zuerst fragen wir nach der Herkunft, also wie das Phänomen einer denkenden Maschine kulturell und technisch entstanden ist. Das erzählt die KI-Story. Einzelne Stationen werden danach in Bildern greifbar, die begehbare Punkte tragen. Dann treten die Merkmale hervor, jene Eigenschaften, die wir seit November 2022 mit den grossen Sprachmodellen täglich erleben. Zum Schluss geht es um die Kontexte, in denen die neue Akteurin heute steckt. Das Fazit vorweg lautet, dass KI weit mehr ist als das Chatfenster, in das wir unsere Fragen tippen." />
+          <GlossarText text="Um die KI zu verstehen, nähern wir uns ihr aus mehreren Richtungen. Zuerst fragen wir nach der Herkunft, also wie das Phänomen einer denkenden Maschine kulturell und technisch entstanden ist. Das erzählt die **KI-Story**. Einzelne Stationen werden danach in **Bildern** greifbar, die begehbare Punkte tragen. Dann treten die **Merkmale** hervor, jene Eigenschaften, die wir seit November 2022 mit den grossen Sprachmodellen täglich erleben. Zum Schluss geht es um die **Kontexte**, in denen die neue Akteurin heute steckt. Das Fazit vorweg lautet, dass KI weit mehr ist als das Chatfenster, in das wir unsere Fragen tippen." />
         </p>
       </Ausklapptext>
 

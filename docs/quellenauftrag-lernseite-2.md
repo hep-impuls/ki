@@ -46,8 +46,8 @@ und die Quelle ihn nur bestätigt.
 
 ### (ohne Abschnitt)
 
-**[HUB-e725d2]** *(Fliesstext)*
-Kaum ein Thema ist so präsent wie die Künstliche Intelligenz, und kaum eines so schwer zu fassen. Es wird viel über sie gesagt, doch vieles bleibt schemenhaft, ein Reden über etwas, das man selten wirklich vor Augen hat. Dieses Lernset will die KI sichtbarer und verständlicher machen, indem es ihr eine Gestalt gibt.
+**[HUB-c31f2e]** *(Fliesstext)*
+Kaum ein Thema ist so präsent wie die Künstliche Intelligenz (KI) und kaum eines so schwer zu fassen. Es wird viel über sie gesagt, doch vieles bleibt schemenhaft, ein Reden über etwas, das man selten wirklich vor Augen hat. Dieses Lernset will die KI sichtbarer und verständlicher machen, indem es ihr eine Gestalt gibt.
 
 **[HUB-19a97d]** *(Fliesstext)*
 Diese Gestalt zeigt sich nicht, wenn man die KI isoliert betrachtet. KI steht nie für sich: Sie baut auf kulturellen, technischen und wirtschaftlichen Überlegungen auf, und erst wenn man dieses Netz mitzeichnet, wird erkennbar, was da eigentlich auftritt. Darum folgt das Design dieses Lernsets einer Idee: Um das Phänomen zu verstehen, muss man das Netzwerk abbilden, in dem es steckt.
@@ -57,8 +57,8 @@ Deshalb beginnst du gleich mit einem Muster, dessen Knoten du verbinden kannst, 
 
 ### Mehr dazu: Wie die Philosophie das weiterdenkt
 
-**[HUB-7342bd]** *(Fliesstext)*
-Genau hier setzt später die philosophische Perspektive an: Philosophie ist kein Werkzeug für schnelle oder endgültige Antworten. Sie hilft vielmehr, die Phänomene einer Zeit besser zu verstehen: Sie hält inne, ordnet komplexe Entwicklungen und fragt nach ihren Zusammenhängen und Folgen. Dabei geht es nicht darum, die Welt auf einfache Erklärungen zu reduzieren, sondern neue Perspektiven zu öffnen.
+**[HUB-38adc2]** *(Fliesstext)*
+Genau hier setzt später die philosophische Perspektive an. Philosophie ist kein Werkzeug für schnelle oder endgültige Antworten. Sie hilft vielmehr, die Phänomene einer Zeit besser zu verstehen. Sie hält inne, ordnet komplexe Entwicklungen und fragt nach ihren Zusammenhängen und Folgen. Dabei geht es nicht darum, die Welt auf einfache Erklärungen zu reduzieren, sondern neue Perspektiven zu öffnen.
 
 **[HUB-053ade]** *(Fliesstext)*
 In diesem Lernset tritt die Philosophie deshalb in den Vordergrund. Wir werden sehen, dass Menschen seit Menschengedenken von ihren eigenen Entwicklungen fasziniert, aber auch besorgt und verunsichert waren. Die Fragen der Philosophie lösen diese Unsicherheit nicht einfach auf. Sie können jedoch Orientierung geben und helfen, den Geschehnissen der eigenen Zeit klarer und gelassener zu begegnen.
@@ -316,13 +316,13 @@ Innert weniger Wochen nutzten Millionen ChatGPT. Es war der Moment, in dem KI im
 
 ### Vorhang auf: eine neue Akteurin
 
-**[VA-fa9b33]** *(Fliesstext)*
-Kaum ein Thema ist so präsent wie die Künstliche Intelligenz. Und kaum eines ist so schwer zu fassen. Diese Seite gibt der KI einen Ort, an dem wir ihrer Gestalt nachgehen, statt nur über sie zu reden.
+**[VA-207abd]** *(Fliesstext)*
+Kaum ein Thema ist so präsent wie die Künstliche Intelligenz (KI). Und kaum eines ist so schwer zu fassen. Diese Seite gibt der KI einen Ort, an dem wir ihrer Gestalt nachgehen, statt nur über sie zu reden.
 
 ### Mehr dazu: der Weg durch diese Seite
 
-**[VA-d576c2]** *(Fliesstext)*
-Um die KI zu verstehen, nähern wir uns ihr aus mehreren Richtungen. Zuerst fragen wir nach der Herkunft, also wie das Phänomen einer denkenden Maschine kulturell und technisch entstanden ist. Das erzählt die KI-Story. Einzelne Stationen werden danach in Bildern greifbar, die begehbare Punkte tragen. Dann treten die Merkmale hervor, jene Eigenschaften, die wir seit November 2022 mit den grossen Sprachmodellen täglich erleben. Zum Schluss geht es um die Kontexte, in denen die neue Akteurin heute steckt. Das Fazit vorweg lautet, dass KI weit mehr ist als das Chatfenster, in das wir unsere Fragen tippen.
+**[VA-3289b1]** *(Fliesstext)*
+Um die KI zu verstehen, nähern wir uns ihr aus mehreren Richtungen. Zuerst fragen wir nach der Herkunft, also wie das Phänomen einer denkenden Maschine kulturell und technisch entstanden ist. Das erzählt die **KI-Story**. Einzelne Stationen werden danach in **Bildern** greifbar, die begehbare Punkte tragen. Dann treten die **Merkmale** hervor, jene Eigenschaften, die wir seit November 2022 mit den grossen Sprachmodellen täglich erleben. Zum Schluss geht es um die **Kontexte**, in denen die neue Akteurin heute steckt. Das Fazit vorweg lautet, dass KI weit mehr ist als das Chatfenster, in das wir unsere Fragen tippen.
 
 ### Die KI-Story
 

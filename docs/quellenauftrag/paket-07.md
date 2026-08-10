@@ -69,8 +69,8 @@ Vor über zweieinhalbtausend Jahren stiegen Menschen aus der ganzen griechischen
 
 ### Übersicht (Hub)
 
-**[HUB-e725d2]** *(Fliesstext · (ohne Abschnitt))*
-Kaum ein Thema ist so präsent wie die Künstliche Intelligenz, und kaum eines so schwer zu fassen. Es wird viel über sie gesagt, doch vieles bleibt schemenhaft, ein Reden über etwas, das man selten wirklich vor Augen hat. Dieses Lernset will die KI sichtbarer und verständlicher machen, indem es ihr eine Gestalt gibt.
+**[HUB-c31f2e]** *(Fliesstext · (ohne Abschnitt))*
+Kaum ein Thema ist so präsent wie die Künstliche Intelligenz (KI) und kaum eines so schwer zu fassen. Es wird viel über sie gesagt, doch vieles bleibt schemenhaft, ein Reden über etwas, das man selten wirklich vor Augen hat. Dieses Lernset will die KI sichtbarer und verständlicher machen, indem es ihr eine Gestalt gibt.
 
 ### Thema 01 · Vorhang auf
 
