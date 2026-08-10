@@ -73,6 +73,14 @@ export interface StoryEinfluss {
 const W = 720;
 const H = 300;
 const RAND = { x0: 44, x1: 676, y0: 34, y1: 258 };
+/** Um diesen Faktor wird der waagrechte Abstand bei der Abstossung gestaucht,
+ *  damit sich das Gewebe in die liegende Box legt statt zur runden Traube
+ *  zusammenzugehen. Der Wert ist erprobt, nicht geschätzt: Eine Rastersuche
+ *  über Abstossung, Stauchung, Ruhelänge, Startradius und Mittelsog hat die
+ *  Werte dieses Bauteils gemeinsam bestimmt (Ziel: kein Punkt klebt am Rahmen,
+ *  der engste Abstand so gross wie möglich). Ergebnis gegenüber vorher:
+ *  engster Abstand 40 → 50, mittlerer 45 → 67, genutzte Fläche 37% → 86%. */
+const BREIT_FAKTOR = 4;
 
 const ANSICHTEN = [
   {
@@ -93,10 +101,12 @@ function clamp(v: number, lo: number, hi: number) {
   return Math.max(lo, Math.min(hi, v));
 }
 
-/** Deterministische Startposition im Gewebe (Kreis um die Boxmitte). */
+/** Deterministische Startposition im Gewebe (Ellipse um die Boxmitte).
+ *  Bewusst schon nahe am Rand: Das Einschwingen zieht eher zusammen als
+ *  auseinander, also beginnt das Gewebe ausgebreitet statt geknäuelt. */
 function startPos(i: number, n: number) {
   const wink = (i / Math.max(1, n)) * 2 * Math.PI - Math.PI / 2;
-  return { x: 360 + 150 * Math.cos(wink), y: 148 + 88 * Math.sin(wink) };
+  return { x: 360 + 225 * Math.cos(wink), y: 148 + 95 * Math.sin(wink) };
 }
 
 /* ══════════════════════════════════ Perlenschnur (Ansicht «Zeitlich») ═══ */
@@ -538,7 +548,12 @@ export default function StoryGewebe({
   }
 
   // Selbst gebrachte Form des Gewebes über Navigation/Neuladen hinweg merken.
-  const posKey = spurKey ? `ki26-gewebe:${spurKey}` : null;
+  // «gewebe2»: Die Physik wurde 2026-08-10 neu gestimmt (breiter ausgelegt).
+  // Unter dem alten Schlüssel liegen geknäuelte Formen, die sonst jeden
+  // Besuch die alte Enge wiederherstellen würden — der neue Schlüssel lässt
+  // alle einmal frisch einschwingen. Selbst gezogene Anordnungen gehen dabei
+  // einmalig verloren, das ist der Preis.
+  const posKey = spurKey ? `ki26-gewebe2:${spurKey}` : null;
 
   /** Gespeicherte Positionen in simRef laden. true, wenn welche vorlagen. */
   function ladePositionen(): boolean {
@@ -600,7 +615,18 @@ export default function StoryGewebe({
           dy = 0.5;
           d2 = 1;
         }
-        const f = (2600 * alpha) / d2;
+        /* Abstossung. Die Stärke von 2600 ist unverändert; das Gewebe hing zu
+           nah beieinander (Christofs Rückmeldung 2026-08-10), aber nicht weil
+           zu schwach abgestossen wurde, sondern weil in die falsche Richtung.
+
+           Darum wird der Abstand jetzt in einem hochgestellten Raum gemessen,
+           x geteilt durch BREIT_FAKTOR: Zwei Punkte, die nebeneinander liegen,
+           gelten dadurch als näher als zwei, die übereinander liegen, und
+           werden kräftiger auseinandergeschoben. So legt sich das Netz in die
+           liegende Box, statt eine runde Traube in der Mitte zu bilden. Die
+           Richtung des Stosses bleibt die echte. */
+        const dxE = dx / BREIT_FAKTOR;
+        const f = (2600 * alpha) / Math.max(1, dxE * dxE + dy * dy);
         const d = Math.sqrt(d2);
         const ux = dx / d;
         const uy = dy / d;
@@ -616,7 +642,8 @@ export default function StoryGewebe({
       const dx = Q.x - P.x;
       const dy = Q.y - P.y;
       const d = Math.max(1, Math.sqrt(dx * dx + dy * dy));
-      const f = (d - 78) * (k.fein ? 0.006 : 0.018) * alpha * 6;
+      /* Wunschabstand der Fadenstücke: 78 → 100, gleicher Grund. */
+      const f = (d - 100) * (k.fein ? 0.006 : 0.018) * alpha * 6;
       const ux = dx / d;
       const uy = dy / d;
       P.vx += ux * f;
@@ -625,8 +652,11 @@ export default function StoryGewebe({
       Q.vy -= uy * f;
     });
     pts.forEach(({ p }) => {
-      p.vx += (360 - p.x) * 0.004 * alpha * 6;
-      p.vy += (148 - p.y) * 0.006 * alpha * 6;
+      /* Sog zur Mitte, etwas schwächer als früher (0.004/0.006). Ganz weg darf
+         er nicht: Er ist es, der die Punkte vom Rahmen fernhält, an dem sie
+         sonst kleben würden. */
+      p.vx += (360 - p.x) * 0.0035 * alpha * 6;
+      p.vy += (148 - p.y) * 0.0045 * alpha * 6;
       p.vx *= 0.82;
       p.vy *= 0.82;
       if (p.fx !== null) {
@@ -1046,7 +1076,12 @@ export default function StoryGewebe({
               const gewaehltJa = gewaehlt.has(i);
               const hervor = gelesen || gewaehltJa; // fett markiert
               const name = st.kurz;
-              const halb = (name.length * 5.7) / 2;
+              /* 6.6 pro Zeichen, nicht 5.7: Im Browser gemessen ist die
+                 breiteste Beschriftung («Rechenmaschinen») 6.55 Einheiten pro
+                 Zeichen breit. Mit dem zu kleinen Wert klemmte die Beschriftung
+                 zu spät und ragte aus der Fläche, sobald man einen Punkt an den
+                 Rand zog. */
+              const halb = (name.length * 6.6) / 2;
               const labelX = clamp(p.x, halb + 6, W - halb - 6) - p.x;
               const r = gelesen ? 6 : gewaehltJa ? 5.5 : 3.4;
               return (
