@@ -579,8 +579,8 @@ export default function HistorienTeppich({
         )}
         Punkt antippen liest die Geschichte und webt den Faden ein. Sichtbar
         wird ein Fadenstück, sobald seine beiden Enden besucht sind. Erneutes
-        Antippen wählt einen Punkt wieder ab. Die Legende oben schaltet ganze
-        Fäden an und aus.
+        Antippen wählt einen Punkt wieder ab. Die Legende oben wählt einen
+        ganzen Faden auf einmal an, mit allen seinen Punkten.
       </p>
 
       {/* Besuchte Punkte — bleiben stehen, in Besuchs-Reihenfolge */}
@@ -594,10 +594,11 @@ export default function HistorienTeppich({
               kulturelle Praxen.
               Tippe einen Punkt an: Seine Geschichte erscheint hier, und sobald
               zwei benachbarte Punkte desselben Fadens besucht sind, wird das
-              Fadenstück dazwischen sichtbar. Über die Legende oben lassen sich
-              ganze Fäden ein- und ausblenden; erneutes Antippen wählt einen
-              Punkt wieder ab. Die Fäden kreuzen sich zwischendurch und laufen
-              auch allein.
+              Fadenstück dazwischen sichtbar. Über die Legende oben wählst du
+              einen ganzen Faden auf einmal an, dann gelten alle seine Punkte
+              als besucht; erneutes Antippen wählt einen Punkt oder einen Faden
+              wieder ab. Die Fäden kreuzen sich zwischendurch und laufen auch
+              allein.
             </p>
           </div>
         ) : (

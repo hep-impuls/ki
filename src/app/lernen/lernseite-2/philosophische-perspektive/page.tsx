@@ -244,7 +244,11 @@ neu auf: die Frage nach dem Menschen selbst.
           Tippe die Punkte an. Jeder erzählt seine Geschichte, und Stück für
           Stück webt sich der Teppich. Bewerte in jeder Karte, ob dir der Punkt
           bekannt war und wie relevant er für dein Leben ist. Erneutes Antippen
-          wählt ihn wieder ab. Die Legende schaltet ganze Fäden an und aus.
+          wählt ihn wieder ab. Über die Legende kannst du auch einen ganzen
+          Faden auf einmal anwählen, zum Beispiel alle Punkte der Technologie.
+          Dann gelten alle Punkte dieses Fadens als besucht, auch die, die du
+          nicht gelesen hast. Wer den Faden erst sehen und später lesen will,
+          schaltet ihn mit einem zweiten Klick wieder aus.
         </Aufgabe>
         <HistorienTeppich
           className="mt-lg"
