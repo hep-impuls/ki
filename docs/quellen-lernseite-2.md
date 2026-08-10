@@ -13,8 +13,8 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 82 |
-| Belegte Textblöcke | 48 |
+| Belege | 85 |
+| Belegte Textblöcke | 49 |
 | Begründete Nicht-Belege | 6 |
 | Aussagen mit Standdatum | 3 |
 
@@ -367,6 +367,33 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 - **Geprüft:** 2026-08-10
 
 > Nach dieser Anleitung sollte menschlicher Samen zunächst vierzig Tage lang in einem verschlossenen Gefäss bei gleichmässiger Wärme reifen. Anschliessend sollte das entstehende Wesen vierzig Wochen lang mit dem sogenannten Arcanum des menschlichen Blutes ernährt werden. Am Ende, so die Vorstellung, sollte daraus ein winziger, aber vollständiger Mensch entstehen. Der Philosoph Ernst Bloch sah in der alchemistischen Werkstatt eine frühe, bewusst auf Veränderung gerichtete Form der Technik. Auch Goethe griff das Motiv auf: In «Faust II» ist es nicht Faust selbst, sondern sein ehemaliger Gehilfe Wagner, dem die Erschaffung des leuchtenden Homunkulus im Glas gelingt. Dieser sehnt sich danach, vollständig körperlich zu werden. Am Ende zerschellt seine Phiole am Muschelwagen der Meeresgöttin Galatee, worauf sich ihr Leuchten im Meer ausbreitet. Bei Goethe erscheint der Homunkulus als ausserordentlich kluges und hellsichtiges Wesen, als künstlicher Geist, der die Gedanken anderer durchschauen kann. Darin lässt sich eine Verbindung zur heutigen Diskussion über künstliche Intelligenz erkennen, denn in beiden Fällen geht es um die Vorstellung eines vom Menschen geschaffenen Verstandes, der die Fähigkeiten gewöhnlicher Menschen möglicherweise übertrifft.
+
+### Symbolische KI · 38 Theoreme
+
+- **Kennung:** `VA-65ebb0` (Bildgeschichte)
+- **Quelle:** [Allen Newell (Wikipedia)](https://de.wikipedia.org/wiki/Allen_Newell)
+- **Fundstelle:** «Newell entwickelt 1956 mit Herbert A. Simon den Logic Theorist. Dieses Programm war erstmals dazu in der Lage, eine Menge von logischen Theoremen zu beweisen. Konkret führte der Logic Theorist den Beweis von 38 Theoremen aus der Principia Mathematica von Bertrand Russell und Alfred North Whitehead.» Und zur Bedeutung: «Dieses Ergebnis war ein Meilenstein der künstlichen Intelligenz, da gezeigt wurde, dass Programme zu Aktionen fähig sind, für die ein Mensch Intelligenz braucht.»
+- **Geprüft:** 2026-08-10
+
+> Der Leitgedanke war, dass sich Intelligenz aus aufgeschriebenem Wissen und logischen Schritten zusammensetzen lässt. 1956 bewies der Logic Theorist von Allen Newell und Herbert Simon 38 Theoreme aus Bertrand Russells «Principia Mathematica». Das galt als Beleg, dass ein Programm leisten kann, wofür ein Mensch Intelligenz braucht. Dagegen stand von Anfang an ein zweiter Weg, der nicht Regeln aufschreiben, sondern aus Beispielen lernen wollte, etwa Frank Rosenblatts Perzeptron von 1957. Diese Konkurrenz entschied sich zunächst gegen das Lernen: 1969 zeigten Marvin Minsky und Seymour Papert, dass ein einlagiges Perzeptron schon das ausschliessende Oder nicht lösen kann, also die Frage, ob genau eine von zwei Bedingungen zutrifft. Die Forschung an neuronalen Netzen kam darauf zum Stillstand, und die symbolische Richtung bestimmte das Feld für zwei Jahrzehnte.
+
+### Symbolische KI · Frank Rosenblatts Perzeptron von 1957
+
+- **Kennung:** `VA-65ebb0` (Bildgeschichte)
+- **Quelle:** [Perzeptron (Wikipedia)](https://de.wikipedia.org/wiki/Perzeptron)
+- **Fundstelle:** «Das Perzeptron … ist ein vereinfachtes künstliches neuronales Netz, das zuerst von Frank Rosenblatt 1957 vorgestellt wurde.»
+- **Geprüft:** 2026-08-10
+
+> Der Leitgedanke war, dass sich Intelligenz aus aufgeschriebenem Wissen und logischen Schritten zusammensetzen lässt. 1956 bewies der Logic Theorist von Allen Newell und Herbert Simon 38 Theoreme aus Bertrand Russells «Principia Mathematica». Das galt als Beleg, dass ein Programm leisten kann, wofür ein Mensch Intelligenz braucht. Dagegen stand von Anfang an ein zweiter Weg, der nicht Regeln aufschreiben, sondern aus Beispielen lernen wollte, etwa Frank Rosenblatts Perzeptron von 1957. Diese Konkurrenz entschied sich zunächst gegen das Lernen: 1969 zeigten Marvin Minsky und Seymour Papert, dass ein einlagiges Perzeptron schon das ausschliessende Oder nicht lösen kann, also die Frage, ob genau eine von zwei Bedingungen zutrifft. Die Forschung an neuronalen Netzen kam darauf zum Stillstand, und die symbolische Richtung bestimmte das Feld für zwei Jahrzehnte.
+
+### Symbolische KI · das ausschliessende Oder nicht lösen kann
+
+- **Kennung:** `VA-65ebb0` (Bildgeschichte)
+- **Quelle:** [Perzeptron (Wikipedia), zur Kritik von 1969](https://de.wikipedia.org/wiki/Perzeptron)
+- **Fundstelle:** «Marvin Minsky und Seymour Papert wiesen jedoch 1969 nach, dass ein einlagiges Perzeptron den XOR-Operator nicht auflösen kann (Problem der linearen Separierbarkeit). Dies führte zu einem Stillstand in der Forschung der künstlichen neuronalen Netze.» XOR ist das ausschliessende Oder, wahr also genau dann, wenn eine von zwei Bedingungen zutrifft und nicht beide.
+- **Geprüft:** 2026-08-10
+
+> Der Leitgedanke war, dass sich Intelligenz aus aufgeschriebenem Wissen und logischen Schritten zusammensetzen lässt. 1956 bewies der Logic Theorist von Allen Newell und Herbert Simon 38 Theoreme aus Bertrand Russells «Principia Mathematica». Das galt als Beleg, dass ein Programm leisten kann, wofür ein Mensch Intelligenz braucht. Dagegen stand von Anfang an ein zweiter Weg, der nicht Regeln aufschreiben, sondern aus Beispielen lernen wollte, etwa Frank Rosenblatts Perzeptron von 1957. Diese Konkurrenz entschied sich zunächst gegen das Lernen: 1969 zeigten Marvin Minsky und Seymour Papert, dass ein einlagiges Perzeptron schon das ausschliessende Oder nicht lösen kann, also die Frage, ob genau eine von zwei Bedingungen zutrifft. Die Forschung an neuronalen Netzen kam darauf zum Stillstand, und die symbolische Richtung bestimmte das Feld für zwei Jahrzehnte.
 
 ### Der Homunkulus · sein ehemaliger Gehilfe Wagner
 

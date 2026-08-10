@@ -967,6 +967,38 @@ export const BELEGE: Beleg[] = [
       "«Homunkulus besteigt den Proteus-Delphin und zerschellt am Muschelwagen der Meeresgöttin Galatee, der Tochter des Nereus. Es entsteht ein Meeresleuchten.» Goethe schreibt «Galatee», nicht «Galatea»; der Lernset-Text folgt dem.",
     geprueft: "2026-08-10",
   },
+  /* ── Symbolische KI ──────────────────────────────────────────────────────
+   * Die Karte hatte zwei fast gleichlautende Absätze und erklärte nicht, woran
+   * sich die Richtung eigentlich absetzte (Christofs Rückmeldung 2026-08-10).
+   * Die neue Mittelschicht nennt Leitgedanke und Gegenspieler, und beides ist
+   * hier belegt. */
+  {
+    id: "VA-65ebb0",
+    anker: "38 Theoreme",
+    url: "https://de.wikipedia.org/wiki/Allen_Newell",
+    titel: "Allen Newell (Wikipedia)",
+    stelle:
+      "«Newell entwickelt 1956 mit Herbert A. Simon den Logic Theorist. Dieses Programm war erstmals dazu in der Lage, eine Menge von logischen Theoremen zu beweisen. Konkret führte der Logic Theorist den Beweis von 38 Theoremen aus der Principia Mathematica von Bertrand Russell und Alfred North Whitehead.» Und zur Bedeutung: «Dieses Ergebnis war ein Meilenstein der künstlichen Intelligenz, da gezeigt wurde, dass Programme zu Aktionen fähig sind, für die ein Mensch Intelligenz braucht.»",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "VA-65ebb0",
+    anker: "Frank Rosenblatts Perzeptron von 1957",
+    url: "https://de.wikipedia.org/wiki/Perzeptron",
+    titel: "Perzeptron (Wikipedia)",
+    stelle:
+      "«Das Perzeptron … ist ein vereinfachtes künstliches neuronales Netz, das zuerst von Frank Rosenblatt 1957 vorgestellt wurde.»",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "VA-65ebb0",
+    anker: "das ausschliessende Oder nicht lösen kann",
+    url: "https://de.wikipedia.org/wiki/Perzeptron",
+    titel: "Perzeptron (Wikipedia), zur Kritik von 1969",
+    stelle:
+      "«Marvin Minsky und Seymour Papert wiesen jedoch 1969 nach, dass ein einlagiges Perzeptron den XOR-Operator nicht auflösen kann (Problem der linearen Separierbarkeit). Dies führte zu einem Stillstand in der Forschung der künstlichen neuronalen Netze.» XOR ist das ausschliessende Oder, wahr also genau dann, wenn eine von zwei Bedingungen zutrifft und nicht beide.",
+    geprueft: "2026-08-10",
+  },
   {
     id: "VA-245306",
     anker: "sein ehemaliger Gehilfe Wagner",

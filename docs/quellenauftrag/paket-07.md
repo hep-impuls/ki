@@ -50,6 +50,9 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 02 · Wege der Orientierung
 
+**[DW-15ffd8]** *(Zur Philosophie · Lebenskunst)*
+Michel Foucault war ein französischer Philosoph, der untersuchte, wie Macht und Wissen unser Leben prägen (in Gefängnis, Klinik, Sexualität). In seinem Spätwerk entdeckte er die antike «Sorge um sich selbst» wieder: sich um das eigene Leben kümmern und es bewusst gestalten. Er nennt das eine «Ästhetik der Existenz», das Leben formen wie ein Kunstwerk. Es geht nicht darum, fremden Normen zu gehorchen, sondern die eigene Lebensform aktiv zu wählen und einzuüben. Werk: «Die Sorge um sich» (1984).
+
 **[DW-9a56e8]** *(Zur Philosophie · Lebenskunst)*
 Wilhelm Schmid ist ein freier Philosoph in Berlin und hat die «Philosophie der Lebenskunst» im deutschsprachigen Raum bekannt gemacht. Sein Thema: Aus einer Einsicht folgt noch keine Tat, das kennt jeder von den guten Vorsätzen. Was hilft, ist Übung in kleinsten Schritten, täglich, fast beiläufig, aber regelmässig, nicht das ganze Buch auf einmal, sondern jeden Tag eine Seite. Weil Freude stärker wirkt als Zwang, soll man sich am Schönen orientieren, zu dem man Ja sagen kann. So werden neue Gewohnheiten gebildet. Wie lange das dauert, hat die Psychologie untersucht, nicht die Philosophie: Eine oft zitierte Studie fand einen Mittelwert von 66 Tagen, mit sehr grossen Unterschieden je nach Person und Gewohnheit. Werk: «Philosophie der Lebenskunst» (1998).
 
@@ -163,6 +166,3 @@ Wörtlich wird «Was ist der Mensch?» laut Google Trends kaum häufiger gesucht
 
 **[PP-f89d1d]** *(Kartentext · Sie gibt keine Rezepte, sondern Orientierung)*
 Philosophie liefert keine Bedienungsanleitung und keine Prognose. Sie ordnet Begriffe, deckt verborgene Annahmen auf und wägt Gründe ab. So hilft sie zu klären, worüber wir eigentlich streiten. Hegels Bild der «Eule der Minerva» oben sagt, dass Verstehen oft erst im Rückblick kommt. Genau dieses Begreifen brauchen wir aber, um die Gegenwart zu gestalten.
-
-**[PP-d95ea2]** *(Fliesstext · Der Teppich des Wandels)*
-Der Teppich zeigt Ereignisse, die technologisch, gesellschaftlich, kulturell oder erfinderisch sind. Sie bilden vier Fäden, die nebeneinander durch die Zeit laufen, von Pflug, Rad und Schrift bis zur KI. Das Entscheidende ist ihre Wechselwirkung, denn sie hängen voneinander ab. Eisenbahn und Schifffahrt etwa hätten sich nie so verbreitet, wenn nicht auch kulturell das Interesse bestanden hätte, zu reisen, Handel zu treiben und neue Länder zu besitzen.

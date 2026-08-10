@@ -1,6 +1,6 @@
 # Quellenauftrag · Lernseite 2 «Eine ganz neue Partnerschaft»
 
-**Paket 08 von 8.** Dieses Dokument enthält 25 Textblöcke eines Lernsets zu
+**Paket 08 von 8.** Dieses Dokument enthält 26 Textblöcke eines Lernsets zu
 Künstlicher Intelligenz und Philosophie (Berufsfachschule, Deutschschweiz).
 Jeder Block hat eine **Kennung** in eckigen Klammern, z.B. `[VA-a1b2c3]`.
 
@@ -46,9 +46,12 @@ und die Quelle ihn nur bestätigt.
 
 Jeder Block hier enthält eine prüfbare Behauptung (Zahl, Datum,
 Superlativ oder eine Aussage, die jemandem zugeschrieben wird). Deutende
-Passagen sind bewusst nicht dabei. Geh die 25 Blöcke einzeln durch.
+Passagen sind bewusst nicht dabei. Geh die 26 Blöcke einzeln durch.
 
 ### Thema 02 · Philosophische Perspektive
+
+**[PP-d95ea2]** *(Fliesstext · Der Teppich des Wandels)*
+Der Teppich zeigt Ereignisse, die technologisch, gesellschaftlich, kulturell oder erfinderisch sind. Sie bilden vier Fäden, die nebeneinander durch die Zeit laufen, von Pflug, Rad und Schrift bis zur KI. Das Entscheidende ist ihre Wechselwirkung, denn sie hängen voneinander ab. Eisenbahn und Schifffahrt etwa hätten sich nie so verbreitet, wenn nicht auch kulturell das Interesse bestanden hätte, zu reisen, Handel zu treiben und neue Länder zu besitzen.
 
 **[PP-522494]** *(Vertiefung «Mehr lesen» · Der Fall Roms)*
 Rom galt als die ewige Stadt, seit rund achthundert Jahren hatte kein Feind sie eingenommen, dann plünderten 410 die Westgoten unter Alarich drei Tage lang in ihren Strassen. Die Nachricht lief durch das ganze Reich, der Gelehrte Hieronymus schrieb aus Bethlehem, eingenommen sei die Stadt, die zuvor die ganze Welt besiegt hatte. Der eigentliche Schlusspunkt kam leise: 476 setzte der Heerführer Odoaker den letzten weströmischen Kaiser ab, einen Jungen namens Romulus Augustulus, und schickte die Kaiserinsignien nach Konstantinopel. Viele Menschen merkten zunächst kaum einen Unterschied, doch über die Jahrzehnte zerfielen Strassen, Wasserleitungen und Verwaltung, Städte schrumpften, Wissen ging verloren. Der Fall Roms zeigt, dass grosse Ordnungen selten mit einem Knall enden, sondern in einem langen Ausfransen, das die Menschen erst im Rückblick als Epochenbruch erkennen.

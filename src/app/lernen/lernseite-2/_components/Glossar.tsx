@@ -276,6 +276,26 @@ export const GLOSSAR: Record<string, string> = {
     "Von Claude Shannon begründete mathematische Theorie, die Information messbar macht; sie behandelt Übertragung, Kompression und Kodierung von Nachrichten.",
   "Rockefeller-Stiftung":
     "1913 von John D. Rockefeller gegründete US-Stiftung in New York, die Gesundheitswesen, Wissenschaft und Kultur fördert; sie finanzierte auch das Dartmouth-Treffen von 1956.",
+  /* Die vier Stellen aus dem Homunkulus-Text, auf Christofs Wunsch mit
+     Hover-Erklärung (2026-08-10). Angaben an der deutschen Wikipedia geprüft.
+
+     «Faust II» statt «Faust»: Die Auszeichnung nimmt immer das ERSTE Vorkommen
+     eines Begriffs, und «Faust» steht zuerst im Werktitel «Faust II». Ein
+     Eintrag «Faust» hätte darum die Hälfte des Titels unterstrichen und den
+     zweiten «Faust», den die Figur meint, unberührt gelassen. Der Eintrag am
+     ganzen Titel erklärt beides, Werk und Figur. */
+  "Ernst Bloch":
+    "Ernst Bloch (1885 bis 1977), deutscher Philosoph in der Tradition von Karl Marx; sein Hauptwerk «Das Prinzip Hoffnung» denkt über Utopie und noch nicht Verwirklichtes nach.",
+  Goethe:
+    "Johann Wolfgang von Goethe (1749 bis 1832), deutscher Dichter, Politiker und Naturforscher; einer der bedeutendsten Schöpfer deutschsprachiger Dichtung.",
+  "Faust II":
+    "Zweiter Teil von Goethes Tragödie «Faust» (1832). Faust ist darin der Gelehrte, der mit dem Teufel paktiert; der zweite Teil weitet die Geschichte zu einer Parabel über die Menschheit aus.",
+  Phiole:
+    "Birnenförmiges Glasgefäss mit langem, engem Hals, wie es schon die Alchemisten der Antike benutzten.",
+  SHRDLU:
+    "Programm von 1972, das Sprachverstehen und planvolles Handeln verband; es bewegte auf Befehl farbige Klötze in einer erfundenen Welt.",
+  "Terry Winograd":
+    "US-amerikanischer Informatiker, Professor in Stanford; entwickelte SHRDLU und wurde später als Kritiker überhöhter KI-Erwartungen bekannt.",
   Kempelen:
     "Wolfgang von Kempelen (1734 bis 1804); baute den «Schachtürken», einen scheinbar denkenden Automaten mit verstecktem Spieler.",
   "Jaquet-Droz":

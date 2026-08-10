@@ -50,6 +50,9 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 01 · Vorhang auf
 
+**[VA-048602]** *(Vertiefung «Mehr lesen» · algorithmisch)*
+Das Wort Algorithmus geht auf den Gelehrten al-Chwarizmi zurück, der vor rund 1200 Jahren in Bagdad Rechenwege aufschrieb. Ein Algorithmus ist nichts Geheimnisvolles, sondern eine klare Anleitung, wie aus einer Eingabe eine Ausgabe wird. Auch das Lernen der KI ist so eine Anleitung. Beim Training verstellt sie viele Milliarden winziger Zahlenwerte immer wieder ein kleines bisschen, bis ihre Antworten besser passen. Man kann sich das wie das Drehen an Millionen kleiner Regler vorstellen. Das klingt weniger nach Denken und mehr nach Rechnen, und genau das ist es auch.
+
 **[VA-f4651b]** *(Kartentext · kontextsensitiv)*
 Das Wort «Bank» kann eine Sitzbank oder eine Geldbank sein. Was gemeint ist, verrät erst der Zusammenhang. Die KI achtet genau darauf. Sie bezieht ein, was vorher gesagt wurde, welche Rolle sie übernehmen soll und welche Unterlagen du ihr mitgibst. Dieselbe Frage kann darum je nach Umfeld eine andere Antwort ergeben.
 
@@ -179,6 +182,3 @@ James Watt war Instrumentenmacher in Glasgow und sollte 1764 ein Modell der alte
 
 **[PP-fa84ba]** *(Verunsicherungs-Stopp · Die Dampfmaschine)*
 Die Industrialisierung reisst die alte Gesellschaft auseinander: Landflucht, Kinderarbeit, Elendsquartiere im Schatten der Fabriken. 1848 entlädt sich die Spannung in Revolutionen quer durch Europa. In den Epochen unten zeigt die Industriemoderne, wie Marx den Umbruch begreift.
-
-**[PP-d13f6a]** *(Kartentext · Der Computer)*
-Im Schatten des Kriegs entstehen die ersten programmierbaren Rechner, etwa Zuses Z3, Colossus und ENIAC. Turings Idee der universellen Maschine wird Wirklichkeit.

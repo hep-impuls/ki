@@ -50,6 +50,11 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 02 · Die acht Epochen
 
+**[EP-e07817]** *(Vertiefung «Mehr lesen» · Zeitalter der Katastrophen)*
+Kaum eine Figur verkörpert das Doppelgesicht dieser Epoche so wie der Chemiker Fritz Haber: Seine Ammoniaksynthese machte künstlichen Dünger möglich und hilft bis heute, Milliarden zu ernähren. Derselbe Mann überwachte 1915 bei Ypern persönlich den ersten grossen Giftgasangriff der Geschichte. Seine Frau Clara Immerwahr, selbst promovierte Chemikerin, nahm sich zehn Tage danach das Leben. Dreissig Jahre später, am 16. Juli 1945, erhellte in der Wüste von New Mexico der erste Atomtest den Nachthimmel, und Robert Oppenheimer, der wissenschaftliche Leiter, erinnerte sich später an einen Vers aus einer indischen Schrift über den «Zerstörer der Welten». Zwischen diesen beiden Daten liegt die bittere Einsicht, dass Wissen nicht danach fragt, wozu man es braucht. Seither gehört zu jeder mächtigen Technik die Frage, die damals zu spät kam: nicht nur, ob man etwas bauen kann, sondern ob man es bauen soll.
+
+> **Belegt** («zehn Tage danach»): [Clara Immerwahr (Wikipedia)](https://de.wikipedia.org/wiki/Clara_Immerwahr) — «Clara Haber erschoss sich am 2. Mai 1915.» Der Giftgasangriff bei Ypern war am 22. April 1915 (Artikel «Fritz Haber»), also zehn Tage, nicht «wenige Tage», wie vorher hier stand. *(geprüft 2026-08-05)*
+
 **[EP-3732ce]** *(Vertiefung «Mehr lesen» · Zeitalter der Katastrophen)*
 Vor Verdun standen sich 1916 zwei Armeen fast ein Jahr lang gegenüber, Hunderttausende starben um wenige Kilometer Boden, und viele Überlebende brachten ein Leiden mit nach Hause, für das die Medizin erst Worte suchen musste: das unkontrollierbare Zittern der sogenannten «Kriegszitterer». Eine Generation später organisierten Ministerien, Ämter und Bahnverwaltungen den Massenmord an den europäischen Juden mit Fahrplänen und Formularen. Das Verbrechen wurde bürokratisch erfasst und erhielt Aktenzeichen. Am 6. August 1945 zerstörte eine einzige Bombe Hiroshima, und bis zum Jahresende zählte man in dieser einen Stadt gegen 140 000 Tote. Danach übten Schulkinder in Ost und West, sich bei Atomalarm unter die Pulte zu ducken, die Angst vor dem Ende war Teil des Alltags geworden. Wer nach 1945 vom Fortschritt sprach, sprach mit Vorbehalt. Diese geerbte Skepsis meldet sich bis heute, sobald eine neue, mächtige Technik auftritt.
 
@@ -193,6 +198,3 @@ Donna Haraway ist US-amerikanische Wissenschaftshistorikerin und feministische D
 
 **[DW-90c840]** *(Fliesstext · Transformation von Mensch und Maschine)*
 Am äussersten Rand steht der «Transhumanismus», die Idee, den Menschen durch Technik grenzenlos zu steigern, vielleicht sogar den Tod zu überwinden. Zum Einordnen helfen zwei ältere Muster als Gegenschablone. Zum einen die religiösen Heilsversprechen, denen der Transhumanismus verblüffend ähnelt, nur dass hier die Technik die Erlösung bringen soll. Zum anderen die endzeitlichen Untergangserzählungen, in denen die KI alles auslöscht. Beides, Erlösung wie Weltuntergang, sind grosse, alte Geschichten. Wer sie erkennt, fällt weder auf den Hype noch auf die Panik herein.
-
-**[DW-15ffd8]** *(Zur Philosophie · Lebenskunst)*
-Michel Foucault war ein französischer Philosoph, der untersuchte, wie Macht und Wissen unser Leben prägen (in Gefängnis, Klinik, Sexualität). In seinem Spätwerk entdeckte er die antike «Sorge um sich selbst» wieder: sich um das eigene Leben kümmern und es bewusst gestalten. Er nennt das eine «Ästhetik der Existenz», das Leben formen wie ein Kunstwerk. Es geht nicht darum, fremden Normen zu gehorchen, sondern die eigene Lebensform aktiv zu wählen und einzuüben. Werk: «Die Sorge um sich» (1984).
