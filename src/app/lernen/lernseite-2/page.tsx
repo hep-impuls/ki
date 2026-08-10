@@ -74,12 +74,11 @@ export default function Lernseite2Hub() {
             spurId="hub:vertiefung:philosophie"
           >
             <p>
-              Genau hier setzt später die philosophische Perspektive an:
-              Philosophie ist kein Werkzeug für schnelle oder endgültige
-              Antworten. Sie hilft vielmehr, die Phänomene einer Zeit besser zu
-              verstehen: Sie hält inne, ordnet komplexe Entwicklungen und fragt
-              nach ihren Zusammenhängen und Folgen. Dabei geht es nicht darum,
-              die Welt auf einfache Erklärungen zu reduzieren, sondern neue
+              Genau hier setzt später die philosophische Perspektive an. Philosophie ist
+              kein Werkzeug für schnelle oder endgültige Antworten. Sie hilft vielmehr, die
+              Phänomene einer Zeit besser zu verstehen: Sie hält inne, ordnet komplexe
+              Entwicklungen und fragt nach ihren Zusammenhängen und Folgen. Dabei geht es
+              nicht darum, die Welt auf einfache Erklärungen zu reduzieren, sondern neue
               Perspektiven zu öffnen.
             </p>
             <p>
