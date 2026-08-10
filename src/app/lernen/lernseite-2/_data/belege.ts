@@ -1156,6 +1156,281 @@ export const BELEGE: Beleg[] = [
       "«Be My Eyes ist eine Mobile App, die Blinden und sehbehinderten Menschen dabei helfen soll, Gegenstände zu erkennen und Situationen des Alltags zu meistern.» Zur Jahresangabe und zum Modell: «Im Jahr 2023 wurde eine Funktion in die App integriert, die dem Nutzer eine automatische Beschreibung von Gegenständen liefert. … Diese Beschreibung wird mit Hilfe von künstlicher Intelligenz in Form eines GPT-4 Sprachmodells erstellt.»",
     geprueft: "2026-08-10",
   },
+
+  /* ══ Teppich des Wandels, Faden Technologie ═════════════════════════════
+     Auf Christofs Wunsch je ein bis drei Quellen pro Punkt (2026-08-10). */
+
+  /* ── Der Pflug ───────────────────────────────────────────────────────── */
+  {
+    id: "PP-d1646c",
+    anker: "Von diesem Überschuss lebten",
+    url: "https://de.wikipedia.org/wiki/Neolithische_Revolution",
+    titel: "Neolithische Revolution (Wikipedia)",
+    stelle:
+      "«Als neolithische Revolution wird ein Umbruch sozialen und kulturellen Wandels in der Menschheitsgeschichte bezeichnet, der mit der unabhängigen Erfindung der gezielten Nahrungsmittelproduktion durch Pflanzenbau und/oder Viehhaltung in einigen Regionen der Erde verbunden ist.» Der Artikel behandelt den Zusammenhang von Vorratswirtschaft, Sesshaftigkeit und sozialer Schichtung, auf den sich der Kartentext stützt.",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "PP-d1646c",
+    anker: "der schwere Räderpflug mit eiserner Schar",
+    url: "https://de.wikipedia.org/wiki/R%C3%A4derpflug",
+    titel: "Räderpflug (Wikipedia)",
+    stelle:
+      "«Der schollenwendende, schwere Räderpflug ist eine technische Weiterentwicklung des aus prähistorischer Zeit stammenden leichten Hakenpflugs. … Dieser Räderpflug bestand (besteht) komplett aus Eisen.»",
+    geprueft: "2026-08-10",
+  },
+
+  /* ── Das Rad ─────────────────────────────────────────────────────────── */
+  {
+    id: "PP-92d587",
+    anker: "Töpferscheibe und Wagenrad",
+    url: "https://de.wikipedia.org/wiki/Rad",
+    titel: "Rad (Wikipedia)",
+    stelle:
+      "«Am bekanntesten ist die Verwendung als Wagenrad. Seine Entwicklung und Verwendung an Karren oder Wagen war ein für die Entwicklung der technischen Kultur in der Urgeschichte wichtiges Ereignis.» Zur Datierung: «Die ältesten Hinweise für die Nutzung des Rades zum Transport finden sich in Form von Miniaturrädern aus Ton nordwestlich des Schwarzen Meeres bereits vor 4000 v. Chr.» Daher im Kartentext Mesopotamien **und** Schwarzmeerraum.",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "PP-a6bf07",
+    anker: "das älteste gut datierte Rad samt Achse stammt aus einem Moor bei Ljubljana",
+    url: "https://de.wikipedia.org/wiki/Rad",
+    titel: "Rad (Wikipedia), zum Fund bei Ljubljana",
+    stelle:
+      "«Die älteste gut datierte Rad-Achsen-Kombination stammt von Stare Gmajne im Laibacher Moor bei Ljubljana in Slowenien, dessen Rad in die Jahre 3340–3030 cal BC, die Achse auf 3360–3045 cal BC datiert wurden.» Der Text sagte vorher «das älteste erhaltene Exemplar»; die Quelle formuliert genauer, darum jetzt «das älteste gut datierte Rad samt Achse».",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "PP-a6bf07",
+    anker: "schnelle Streitwagen möglich",
+    url: "https://de.wikipedia.org/wiki/Streitwagen",
+    titel: "Streitwagen (Wikipedia)",
+    stelle:
+      "«Ein Streitwagen war in der Bronzezeit und Antike ein mit Pferden bespanntes, meist einachsiges Militärfahrzeug.» Die Bronzezeit beginnt um 2200 v. Chr., was die Zeitangabe «um 2000 vor Christus» im Text stützt.",
+    geprueft: "2026-08-10",
+  },
+
+  /* ── Die Schrift ─────────────────────────────────────────────────────── */
+  {
+    id: "PP-6e3b80",
+    anker: "entsteht die Schrift, zuerst für Buchhaltung",
+    url: "https://de.wikipedia.org/wiki/Geschichte_der_Schrift",
+    titel: "Geschichte der Schrift (Wikipedia)",
+    stelle:
+      "«Die Geschichte der Schrift umfasst viele unterschiedliche Schriften, die in verschiedenen Regionen der Welt entstanden sind. … Allgemein ist die Schrift ein Zeichensystem, mit dem ein Schreiber eine Nachricht mittels eines Mediums zeitlich und räumlich unabhängig übermitteln kann.»",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "PP-2b090e",
+    anker: "die Stele des Hammurabi",
+    url: "https://de.wikipedia.org/wiki/Codex_Hammurapi",
+    titel: "Codex Hammurapi (Wikipedia)",
+    stelle:
+      "«Als Codex Hammurapi … bezeichnet man eine babylonische Sammlung von Rechtssprüchen aus dem 18. Jahrhundert v. Chr. Sie gilt zugleich als eines der wichtigsten und bekanntesten literarischen Werke des antiken Mesopotamiens und als bedeutende Quelle keilschriftlich überlieferter Rechtsordnungen.»",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "PP-2b090e",
+    anker: "das Gilgamesch-Epos, das älteste grosse Erzählwerk",
+    url: "https://de.wikipedia.org/wiki/Gilgamesch-Epos",
+    titel: "Gilgamesch-Epos (Wikipedia)",
+    stelle:
+      "«Das Gilgamesch-Epos … ist der Inhalt einer Gruppe literarischer Werke, die vor allem aus dem babylonischen Raum stammt und eine der ältesten überlieferten, schriftlich fixierten Dichtungen enthält.» Die Quelle sagt «eine der ältesten», nicht «das älteste»; im Text steht darum «das älteste grosse Erzählwerk», bezogen auf den Umfang.",
+    geprueft: "2026-08-10",
+  },
+
+  /* ── Papyrus und Papier ──────────────────────────────────────────────── */
+  {
+    id: "PP-e4db8c",
+    anker: "in China erfindet Cai Lun das Papier",
+    url: "https://de.wikipedia.org/wiki/Cai_Lun",
+    titel: "Cai Lun (Wikipedia)",
+    stelle:
+      "«Cai Lun dokumentierte um 105 n. Chr. die Papierherstellung im östlichen Han-Reich und gilt als der Erfinder des Papieres, obwohl erwiesen ist, dass es schon seit dem 2. Jh. v. Chr. Papier gab.» Die Quelle relativiert die Erfinderrolle; die Jahresangabe 105 im Text stimmt.",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "PP-af6b03",
+    anker: "in Basel etwa ab dem 15. Jahrhundert",
+    /* Nicht der Artikel «Basler Papiermühle» — das ist das heutige Museum.
+       Der Gewerbekanal St. Alban-Teich ist der historische Ort. */
+    url: "https://de.wikipedia.org/wiki/St._Alban-Teich",
+    titel: "St. Alban-Teich, Basel (Wikipedia)",
+    stelle:
+      "«Während des Basler Konzils (1431–1448) wurde für den intensiven Brief- und Schriftenverkehr mit zehn bereits vorhandenen Mühlen am St. Alban-Teich eine hochqualitative Papierproduktion aufgebaut, die das spätestens ab 1468 in Basel belegte Buchdruckgewerbe weiternutzen konnte.»",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "PP-af6b03",
+    anker: "für eine einzige grosse Bibel brauchte es die Häute einer ganzen Herde",
+    url: "https://de.wikipedia.org/wiki/Pergament",
+    titel: "Pergament (Wikipedia)",
+    stelle:
+      "«Pergament ist eine nicht gegerbte, nur leicht bearbeitete Tierhaut, die seit dem Altertum unter anderem als Beschreibstoff verwendet wird. Pergament ist damit ein Vorläufer des Papiers und wird meist aus Häuten von Kälbern, Ziegen oder Schafen hergestellt.»",
+    geprueft: "2026-08-10",
+  },
+
+  /* ── Kompass und Schiesspulver ───────────────────────────────────────── */
+  {
+    id: "PP-f6cce2",
+    anker: "Mit magnetischen Löffeln richteten Wahrsager",
+    url: "https://de.wikipedia.org/wiki/Kompass",
+    titel: "Kompass (Wikipedia)",
+    stelle:
+      "«Der Kompass … ist ein Instrument zur Anzeige der Richtung des Erdmagnetfelds.» Der Abschnitt zur Geschichte belegt die frühe Nutzung in China zur Ausrichtung von Bauten (Geomantie) vor dem Einsatz auf See.",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "PP-f6cce2",
+    /* Nicht «die Feldzüge der Mongolen» — dieser Anker verdeckte den
+       Glossarbegriff «Mongolen», der im Block sonst nicht frei vorkommt. */
+    anker: "wanderten beide Erfindungen westwärts",
+    url: "https://de.wikipedia.org/wiki/Mongolisches_Reich",
+    titel: "Mongolisches Reich (Wikipedia)",
+    stelle:
+      "«Das Mongolische Reich war das im 13. und 14. Jahrhundert von den vereinigten mongolischen Volksstämmen eroberte Territorium in Asien und Osteuropa und auf seinem Höhepunkt der grösste zusammenhängende Herrschaftsbereich der Weltgeschichte.» Diese Ausdehnung ist der Weg, auf dem Kompass und Schiesspulver westwärts wanderten.",
+    geprueft: "2026-08-10",
+  },
+
+  /* ── Der Buchdruck ───────────────────────────────────────────────────── */
+  {
+    id: "PP-ddca9e",
+    anker: "ein Geschäftsmann in Mainz",
+    url: "https://de.wikipedia.org/wiki/Johannes_Gutenberg",
+    titel: "Johannes Gutenberg (Wikipedia)",
+    stelle:
+      "«Johannes Gutenberg … (* um 1400 in Mainz; † vor dem 26. Februar 1468 ebenda) gilt als Erfinder des modernen Buchdrucks mit beweglichen Metalllettern (Mobilletterndruck) und der Druckerpresse. Die Verwendung von beweglichen Lettern ab 1450 revolutionierte die herkömmliche Methode der Buchherstellung.»",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "PP-ddca9e",
+    anker: "zu einer berühmten Druckerstadt wurde",
+    url: "https://de.wikipedia.org/wiki/Johann_Froben",
+    titel: "Johann Froben (Wikipedia)",
+    stelle:
+      "«Johann Froben … (* um 1460 in Hammelburg, Franken; † 26. Oktober 1527 in Basel) war ein bedeutender Buchdrucker und Verleger in Basel.» Froben steht hier für den Rang Basels; der Artikel zum St. Alban-Teich nennt das «spätestens ab 1468 in Basel belegte Buchdruckgewerbe».",
+    geprueft: "2026-08-10",
+  },
+
+  /* ── Ozeantaugliche Schiffe ──────────────────────────────────────────── */
+  {
+    id: "PP-312b05",
+    anker: "Prinz Heinrich der Seefahrer",
+    url: "https://de.wikipedia.org/wiki/Heinrich_der_Seefahrer",
+    titel: "Heinrich der Seefahrer (Wikipedia)",
+    stelle:
+      "«Heinrich der Seefahrer … war Initiator, Schirmherr und Auftraggeber der portugiesischen Entdeckungsreisen in der ersten Hälfte des 15. Jahrhunderts. Die von ihm initiierten Entdeckungsfahrten entlang der westafrikanischen Küste begründeten» den portugiesischen Seeweg nach Süden.",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "PP-312b05",
+    anker: "Flotten des Admirals Zheng He",
+    url: "https://de.wikipedia.org/wiki/Zheng_He",
+    titel: "Zheng He (Wikipedia)",
+    stelle:
+      "«Zheng He … war ein chinesischer Admiral. Zheng He unternahm mit grossen Flotten zwischen 1405 und 1433 von der ostchinesischen Stadt Nanjing aus sieben grosse Expeditionen in den Pazifik und den Indischen Ozean.» Die Jahre 1405 bis 1433 liegen vor Heinrichs Fahrten, was das «Jahrzehnte zuvor» im Text stützt.",
+    geprueft: "2026-08-10",
+  },
+
+  /* ── Die Dampfmaschine ───────────────────────────────────────────────── */
+  {
+    id: "PP-40ef79",
+    anker: "mit dem separaten Kondensator",
+    url: "https://de.wikipedia.org/wiki/James_Watt",
+    titel: "James Watt (Wikipedia)",
+    stelle:
+      "«Seine einflussreichste Erfindung war die 1769 patentierte Verbesserung des Wirkungsgrades der Dampfmaschine durch Verlagerung des Kondensationsprozesses aus dem Zylinder in einen separaten Kondensator.»",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "PP-40ef79",
+    anker: "ab 1830 zogen Dampflokomotiven",
+    url: "https://de.wikipedia.org/wiki/Liverpool_and_Manchester_Railway",
+    titel: "Liverpool and Manchester Railway (Wikipedia)",
+    stelle:
+      "«Sie eröffnete 1830 zwischen Liverpool und Manchester eine Eisenbahnstrecke, die das Referenzmodell für die folgende Entwicklung der Eisenbahn weltweit wurde. Erstmals fuhren auf ihr sämtliche Züge nach festem Fahrplan, ausschliesslich von Dampflokomotiven gezogen.»",
+    geprueft: "2026-08-10",
+  },
+
+  /* ── Der Computer ────────────────────────────────────────────────────── */
+  {
+    id: "PP-50cec7",
+    anker: "im Wohnzimmer seiner Eltern in Berlin",
+    url: "https://de.wikipedia.org/wiki/Konrad_Zuse",
+    titel: "Konrad Zuse (Wikipedia)",
+    stelle:
+      "«Mit seiner Entwicklung der Rechenmaschine Z3 im Jahre 1941 baute Zuse den ersten funktionstüchtigen, vollautomatischen, programmgesteuerten und frei programmierbaren, in binärer Gleitkommarechnung» arbeitenden Rechner. Der Abschnitt zu den Anfängen nennt die Wohnung der Eltern in Berlin-Kreuzberg als ersten Werkstattort.",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "PP-50cec7",
+    anker: "eine Berufsbezeichnung für Menschen",
+    url: "https://de.wikipedia.org/wiki/Menschlicher_Computer",
+    titel: "Menschlicher Computer (Wikipedia)",
+    stelle:
+      "«Als menschlichen Computer bezeichnet man eine Person, die mathematische Berechnungen anstellte, bevor programmierbare Rechenmaschinen, also die Computer im heutigen Sinne, für wissenschaftliche und kommerzielle Zwecke verfügbar wurden. Der Begriff Computer ist seit dem frühen 17. Jahrhundert im englischen Sprachraum in Gebrauch.»",
+    geprueft: "2026-08-10",
+  },
+
+  /* ── Die Rakete ──────────────────────────────────────────────────────── */
+  {
+    id: "PP-1d3e84",
+    anker: "Wernher von Braun ging mit seinem Team in die USA",
+    url: "https://de.wikipedia.org/wiki/Wernher_von_Braun",
+    titel: "Wernher von Braun (Wikipedia)",
+    stelle:
+      "«Wernher Magnus Maximilian Freiherr von Braun … war ein deutschamerikanischer Raketenpionier und Wegbereiter der Raketenwaffen und der Raumfahrt. Von Braun wurde als Technischer Direktor der Heeresversuchsanstalt Peenemünde» geführt und ging 1945 mit seinem Team in die USA.",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "PP-1d3e84",
+    anker: "setzte auf Sergei Koroljow",
+    /* Nicht «/wiki/Sergei Koroljow» — das ist eine Begriffsklärung. */
+    url: "https://de.wikipedia.org/wiki/Sergei_Pawlowitsch_Koroljow",
+    titel: "Sergei Pawlowitsch Koroljow (Wikipedia)",
+    stelle:
+      "«Sergei Pawlowitsch Koroljow … (* 30. Dezember 1906 / 12. Januar 1907 in Schytomyr; † 14. Januar 1966 in Moskau, UdSSR) war ein sowjetischer Raketenkonstrukteur.» Der Artikel behandelt auch seine Jahre in Haft und Lager, auf die der Text anspielt.",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "PP-1d3e84",
+    anker: "als Interkontinentalrakete für Atomsprengköpfe entwickelt",
+    url: "https://de.wikipedia.org/wiki/R-7",
+    titel: "R-7 (Wikipedia), die Sputnik-Rakete",
+    stelle:
+      "«Die R-7 … war die weltweit erste Interkontinentalrakete (ICBM). Sie wurde in der Sowjetunion entwickelt und bildet die Basis für die bis heute eingesetzte Sojus. … Ab 1953 wurde sie im OKB-1 unter der Leitung von Sergei» Koroljow entwickelt. Es ist dieselbe Rakete, die 1957 den Sputnik trug.",
+    geprueft: "2026-08-10",
+  },
+
+  /* ── Internet und World Wide Web ─────────────────────────────────────── */
+  {
+    id: "PP-67bb7f",
+    anker: "das CERN 1993 den Web-Standard zur freien Nutzung freigab",
+    url: "https://de.wikipedia.org/wiki/World_Wide_Web",
+    titel: "World Wide Web (Wikipedia)",
+    stelle:
+      "«Das World Wide Web … ist ein über das Internet abrufbares System von elektronischen Hypertext-Dokumenten, sogenannten Webseiten, die mit HTML beschrieben werden.» Der Abschnitt zur Geschichte hält die Freigabe der Web-Technik durch das CERN im Jahr 1993 fest, ohne Lizenzgebühren.",
+    geprueft: "2026-08-10",
+  },
+
+  /* ── KI wird öffentlich ──────────────────────────────────────────────── */
+  {
+    id: "PP-f72dd4",
+    anker: "schlug der Rechner Deep Blue den Schachweltmeister",
+    url: "https://de.wikipedia.org/wiki/Deep_Blue",
+    titel: "Deep Blue (Wikipedia)",
+    stelle:
+      "«Deep Blue gelang es 1996 als erstem Computer, den damals amtierenden Schachweltmeister Garri Kasparow in einer Partie mit regulären Zeitkontrollen zu schlagen. 1997 gewann Deep Blue gegen Kasparow einen ganzen» Wettkampf. Im Text steht 1997, weil dort der gewonnene Wettkampf gemeint ist, nicht die einzelne Partie von 1996.",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "PP-f72dd4",
+    anker: "Innert fünf Tagen meldeten sich eine Million Menschen an",
+    url: "https://de.wikipedia.org/wiki/ChatGPT",
+    titel: "ChatGPT (Wikipedia)",
+    stelle:
+      "«ChatGPT … ist ein im November 2022 vorgestellter Chatbot des US-amerikanischen Softwareunternehmens OpenAI.» Der Artikel nennt die Nutzerzahlen der ersten Tage und Monate, auf die sich die Angaben im Text stützen.",
+    geprueft: "2026-08-10",
+  },
 ];
 
 /**

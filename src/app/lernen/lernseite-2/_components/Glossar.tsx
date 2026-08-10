@@ -97,6 +97,12 @@ export const GLOSSAR: Record<string, string> = {
     "Aufteilung der Arbeit in spezialisierte Tätigkeiten, die Grundlage von Städten und Handel.",
   Mesopotamien:
     "Das Zweistromland (im heutigen Irak), früher Schauplatz von Schrift, Rad und Stadt.",
+  /* Zweiter Schlüssel in der gebeugten Form, weil die Auszeichnung wörtlich
+     sucht: Beim Pflug steht «in den frühen Städten Mesopotamiens». */
+  Mesopotamiens:
+    "Das Zweistromland (im heutigen Irak), früher Schauplatz von Schrift, Rad und Stadt.",
+  Uruk:
+    "Eine der ältesten Städte der Welt, im Süden des heutigen Irak. Dort entstanden die frühesten bekannten Schriftzeichen.",
   Hochkulturen:
     "Frühe komplexe Gesellschaften mit Städten, Schrift und Verwaltung.",
   Keilschrifttafeln:

@@ -1033,8 +1033,8 @@ Wer mit dem Grabstock arbeitete, lockerte den Boden Loch für Loch, ein Gespann 
 **[PP-92d587]** *(Kartentext)*
 Töpferscheibe und Wagenrad entstehen in Mesopotamien und dem Schwarzmeerraum. Das Rad macht Lasten beweglich. Transport, Handel und Krieg verändern sich.
 
-**[PP-1d0b25]** *(Vertiefung «Mehr lesen»)*
-Die eigentliche Erfindung war nicht die runde Scheibe, sondern das Zusammenspiel von Rad und Achse, das Reibung in Rollen verwandelt. Die ältesten Funde stammen aus dem 4. Jahrtausend vor Christus, das älteste erhaltene Exemplar wurde in einem Moor bei Ljubljana entdeckt, eine massive Holzscheibe, über fünftausend Jahre alt. Solche schweren Vollräder trugen Ochsenkarren mit Getreide, erst das leichte Speichenrad machte um 2000 vor Christus schnelle Streitwagen möglich, mit denen ganze Reiche erobert wurden. Ein Rad nützt allerdings wenig ohne Wege, deshalb wuchsen mit den Wagen auch Strassen, Brücken und Raststationen, ein frühes Beispiel dafür, dass Technik immer Infrastruktur nach sich zieht. So veränderte eine drehende Scheibe, wie weit Waren, Armeen und Nachrichten reisen konnten.
+**[PP-a6bf07]** *(Vertiefung «Mehr lesen»)*
+Die eigentliche Erfindung war nicht die runde Scheibe, sondern das Zusammenspiel von Rad und Achse, das Reibung in Rollen verwandelt. Die ältesten Funde stammen aus dem 4. Jahrtausend vor Christus, das älteste gut datierte Rad samt Achse stammt aus einem Moor bei Ljubljana, eine massive Holzscheibe, über fünftausend Jahre alt. Solche schweren Vollräder trugen Ochsenkarren mit Getreide, erst das leichte Speichenrad machte um 2000 vor Christus schnelle Streitwagen möglich, mit denen ganze Reiche erobert wurden. Ein Rad nützt allerdings wenig ohne Wege, deshalb wuchsen mit den Wagen auch Strassen, Brücken und Raststationen, ein frühes Beispiel dafür, dass Technik immer Infrastruktur nach sich zieht. So veränderte eine drehende Scheibe, wie weit Waren, Armeen und Nachrichten reisen konnten.
 
 ### Die Schrift
 
