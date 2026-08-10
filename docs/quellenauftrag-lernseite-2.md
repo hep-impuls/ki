@@ -331,8 +331,8 @@ Die KI hat eine lange Vorgeschichte. Schon lange vor dem Computer träumten Mens
 
 ### Mehr dazu: die beiden Fäden der Geschichte
 
-**[VA-0a01b5]** *(Fliesstext)*
-Durch die Geschichte laufen zwei Fäden nebeneinander. Der eine Faden ist die Erzählung vom belebten Ding, zum Beispiel beim Golem oder bei Frankensteins Geschöpf. Der andere Faden ist die Technik, die das Rechnen und Denken Schritt für Schritt an Maschinen abgibt. Ein wichtiger Baustein auf diesem Weg ist der Algorithmus. Im Jahr 1950 fragte der Mathematiker Alan Turing, ob Maschinen denken können, und schlug dafür den Turing-Test vor. Im Jahr 1956 gab die Dartmouth-Konferenz dem jungen Forschungsfeld seinen Namen, nämlich künstliche Intelligenz. In den heutigen Sprachmodellen treffen beide Fäden zusammen, die alte Vorstellung vom künstlichen Wesen und die reale Auslagerung des Rechnens.
+**[VA-577e03]** *(Fliesstext)*
+Durch die Geschichte laufen zwei Fäden nebeneinander. Der eine Faden ist die Erzählung vom belebten Ding, zum Beispiel beim Golem oder bei Frankensteins Geschöpf. Der andere Faden ist die Technik, die das Rechnen und Denken Schritt für Schritt an Maschinen abgibt. Ein wichtiger Baustein auf diesem Weg ist der Algorithmus. Im Jahr 1950 fragte der Mathematiker Alan Turing, ob Maschinen denken können, und schlug dafür den Turing-Test vor. Im Jahr 1956 gab die Dartmouth-Konferenz dem jungen Forschungsfeld seinen Namen, nämlich **künstliche Intelligenz**. In den heutigen Sprachmodellen treffen beide Fäden zusammen, die alte Vorstellung vom künstlichen Wesen und die reale Auslagerung des Rechnens.
 
 **[VA-3800d9]** *(Fliesstext)*
 Worum es hier geht: Die KI ist nicht aus dem Nichts entstanden. Zwei alte Linien laufen auf sie zu. Die eine ist der Traum vom künstlichen Wesen, die andere ist die Technik des Rechnens. In diesem Gewebe suchst du die Spuren beider Linien.

@@ -505,7 +505,7 @@ export default function Lernseite2VorhangAuf() {
           spurId="vorhang-auf:vertiefung:faeden"
         >
           <p>
-            <GlossarText text="Durch die Geschichte laufen zwei Fäden nebeneinander. Der eine Faden ist die Erzählung vom belebten Ding, zum Beispiel beim Golem oder bei Frankensteins Geschöpf. Der andere Faden ist die Technik, die das Rechnen und Denken Schritt für Schritt an Maschinen abgibt. Ein wichtiger Baustein auf diesem Weg ist der Algorithmus. Im Jahr 1950 fragte der Mathematiker Alan Turing, ob Maschinen denken können, und schlug dafür den Turing-Test vor. Im Jahr 1956 gab die Dartmouth-Konferenz dem jungen Forschungsfeld seinen Namen, nämlich künstliche Intelligenz. In den heutigen Sprachmodellen treffen beide Fäden zusammen, die alte Vorstellung vom künstlichen Wesen und die reale Auslagerung des Rechnens." />
+            <GlossarText text="Durch die Geschichte laufen zwei Fäden nebeneinander. Der eine Faden ist die Erzählung vom belebten Ding, zum Beispiel beim Golem oder bei Frankensteins Geschöpf. Der andere Faden ist die Technik, die das Rechnen und Denken Schritt für Schritt an Maschinen abgibt. Ein wichtiger Baustein auf diesem Weg ist der Algorithmus. Im Jahr 1950 fragte der Mathematiker Alan Turing, ob Maschinen denken können, und schlug dafür den Turing-Test vor. Im Jahr 1956 gab die Dartmouth-Konferenz dem jungen Forschungsfeld seinen Namen, nämlich **künstliche Intelligenz**. In den heutigen Sprachmodellen treffen beide Fäden zusammen, die alte Vorstellung vom künstlichen Wesen und die reale Auslagerung des Rechnens." />
           </p>
         </Ausklapptext>
         <Aufgabe className="mt-md max-w-4xl">
