@@ -2,8 +2,12 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
+  leseAbwahlIndices,
   leseSpurenIndices,
+  loescheAbwahl,
+  loescheAbwahlPrefix,
   loescheSpuren,
+  merkeAbwahl,
   merkeSpur,
   SPUR_EVENT,
   zieheSpurenAusCloud,
@@ -246,11 +250,18 @@ export default function HistorienTeppich({
     }
   }, [offeneKarte]);
   /** Bewusst wieder weggeklickte Punkte — bleiben beim Spur-Restore draussen,
-   *  damit die Leiste unten nicht überquillt (die Aktivität bleibt gezählt). */
+   *  damit die Leiste unten nicht überquillt (die Aktivität bleibt gezählt).
+   *
+   *  Dieser Ref ist nur der schnelle Zugriff; haltbar liegt die Abwahl in
+   *  `spuren.ts` (localStorage + Fortschritts-Doc). Vorher lag sie NUR hier,
+   *  und weil ein Ref den Seitenwechsel nicht übersteht, kam ein
+   *  ausgeschalteter Faden danach wieder eingeschaltet zurück. */
   const abgewaehlt = useRef<Set<number>>(new Set());
 
   useEffect(() => {
     function restore() {
+      // Haltbare Abwahl zuerst einlesen, sonst gewinnt die Spur.
+      leseAbwahlIndices(spurKey).forEach((i) => abgewaehlt.current.add(i));
       const idx = leseSpurenIndices(spurKey).filter(
         (i) => i >= 0 && i < n && !abgewaehlt.current.has(i),
       );
@@ -276,6 +287,7 @@ export default function HistorienTeppich({
   function besuche(i: number) {
     if (besucht.has(i)) {
       abgewaehlt.current.add(i);
+      merkeAbwahl(`${spurKey}:${i}`);
       setBesucht((prev) => {
         const nx = new Set(prev);
         nx.delete(i);
@@ -286,6 +298,7 @@ export default function HistorienTeppich({
       return;
     }
     abgewaehlt.current.delete(i);
+    loescheAbwahl([`${spurKey}:${i}`]);
     setBesucht((prev) => new Set(prev).add(i));
     setReihenfolge((prev) => (prev.includes(i) ? prev : [...prev, i]));
     // Zuletzt angeklickter Punkt → sein Accordion ist offen.
@@ -299,6 +312,7 @@ export default function HistorienTeppich({
     const alleAn = idx.every((i) => besucht.has(i));
     if (alleAn) {
       idx.forEach((i) => abgewaehlt.current.add(i));
+      idx.forEach((i) => merkeAbwahl(`${spurKey}:${i}`));
       setBesucht((prev) => {
         const nx = new Set(prev);
         idx.forEach((i) => nx.delete(i));
@@ -306,6 +320,7 @@ export default function HistorienTeppich({
       });
       setReihenfolge((prev) => prev.filter((x) => !idx.includes(x)));
     } else {
+      loescheAbwahl(idx.map((i) => `${spurKey}:${i}`));
       idx.forEach((i) => {
         abgewaehlt.current.delete(i);
         if (!besucht.has(i)) merkeSpur(`${spurKey}:${i}`);
@@ -321,6 +336,9 @@ export default function HistorienTeppich({
 
   function zuruecksetzen() {
     loescheSpuren(spurKey);
+    // Auch die haltbare Abwahl, sonst bliebe ein früher ausgeschalteter Punkt
+    // nach dem Zurücksetzen unsichtbar.
+    loescheAbwahlPrefix(spurKey);
     if (offenKey) {
       try {
         window.localStorage.removeItem(offenKey);
