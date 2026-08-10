@@ -914,6 +914,68 @@ export const BELEGE: Beleg[] = [
       "Der Vermerk stammt von Mike Sendall, dem Leiter der Arbeitsgruppe, auf dem Deckblatt des Vorschlags vom 12. März 1989: «Vague but exciting». Das Papier hiess «Information Management: A Proposal».",
     geprueft: "2026-08-05",
   },
+
+  /* ── Der Homunkulus ──────────────────────────────────────────────────────
+   * Belege zur überarbeiteten Fassung (Kontrolle 2026-08-10). Die Korrektur
+   * hat drei Sachfehler der alten Fassung behoben, und die Quellen bestätigen
+   * genau diese Punkte: die Schrift wird Paracelsus ZUGESCHRIEBEN (nicht von
+   * ihm verfasst), die Fristen sind vierzig Tage und vierzig Wochen, und im
+   * Faust zerschellt die Phiole am Muschelwagen der Galatee, statt dass sich
+   * der Homunkulus ins Meer stürzt. */
+  {
+    id: "VA-ea0099",
+    anker: "«Menschlein»",
+    url: "https://de.wikipedia.org/wiki/Homunkulus",
+    titel: "Homunkulus (Wikipedia)",
+    stelle:
+      "«Der Homunkulus oder lateinisch Homunculus („Menschlein“) bezeichnet einen künstlich geschaffenen (kleinen) Menschen.»",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "VA-b6861b",
+    anker: "Tradition der Alchemie",
+    url: "https://de.wikipedia.org/wiki/Alchemie",
+    titel: "Alchemie (Wikipedia)",
+    stelle:
+      "«Als Alchemie oder Alchimie … bezeichnet man in der Geschichte der Chemie frühe Vorläufer der heutigen Wissenschaft.» Und weiter: «Die Alchemie ist ein alter Zweig der Naturphilosophie und hatte in der westlichen Welt zwischen 1550 und 1650 eine Blütezeit. Sie wurde im Laufe des 17. und 18. Jahrhunderts von der modernen Chemie und der Pharmakologie abgelöst.» Das deckt beides, den Beitrag zur neuzeitlichen Chemie und die Nähe zur Naturphilosophie.",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "VA-b6861b",
+    anker: "die Paracelsus zugeschrieben",
+    url: "https://de.wikipedia.org/wiki/Homunkulus",
+    titel: "Homunkulus (Wikipedia), zur Zuschreibung der Schrift",
+    stelle:
+      "«Genau beschrieben wird die angebliche Herstellung eines Homunkulus in der Schrift De natura rerum (1538), die allgemein Paracelsus zugeschrieben wird.» Zur Datierung: Die Wikipedia nennt 1538, der Lernset-Text sagt «traditionell auf die Jahre 1537/38 datiert». Beide Angaben stehen in der Literatur; die Schrift wurde 1537 verfasst und später gedruckt. Der Text bleibt darum bei der Doppelangabe.",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "VA-245306",
+    anker: "Arcanum des menschlichen Blutes",
+    url: "https://de.wikipedia.org/wiki/Homunkulus",
+    titel: "Homunkulus (Wikipedia), zur Anleitung",
+    stelle:
+      "«Paracelsus gibt eine konkrete Anleitung für die Erzeugung eines Homunkulus: Man müsse menschliche Spermien 40 Tage in einem Gefäß im (wärmenden) Pferdemist verfaulen lassen. Was sich dann rege, sei „einem Menschen gleich, doch durchsichtig“. 40 Wochen lang müsse man dieses Wesen dann bei konstanter Wärme mit dem Arcanum des Menschenbluts nähren, und schließlich werde ein menschliches Kind entstehen, jedoch viel kleiner als ein natürlich geborenes.»",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "VA-245306",
+    anker: "Muschelwagen der Meeresgöttin Galatee",
+    url: "https://de.wikipedia.org/wiki/Faust._Der_Trag%C3%B6die_zweiter_Teil",
+    titel: "Faust. Der Tragödie zweiter Teil (Wikipedia)",
+    stelle:
+      "«Homunkulus besteigt den Proteus-Delphin und zerschellt am Muschelwagen der Meeresgöttin Galatee, der Tochter des Nereus. Es entsteht ein Meeresleuchten.» Goethe schreibt «Galatee», nicht «Galatea»; der Lernset-Text folgt dem.",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "VA-245306",
+    anker: "sein ehemaliger Gehilfe Wagner",
+    url: "https://de.wikipedia.org/wiki/Homunkulus",
+    titel: "Homunkulus (Wikipedia), zur Rolle Wagners",
+    stelle:
+      "«In einem Entwurf vom 17. Dezember 1826 beschreibt Goethe explizit Wagner als Schöpfer des Homunculus, in der endgültigen Fassung fehlt dieser Teil.» Die Szene spielt in Wagners Laboratorium, und der Artikel zum zweiten Teil nennt ihn «mittlerweile selbst Doktor, Professor und praktizierender Alchemist». Die Zuschreibung an Wagner ist also die gängige Lesart, im Text selbst aber nicht ausgesprochen.",
+    geprueft: "2026-08-10",
+  },
 ];
 
 /**
@@ -967,6 +1029,14 @@ export const OHNE_BELEG: KeinBeleg[] = [
     grund:
       "Die Preis- und Limitseiten der Anbieter ändern sich laufend, ein Beleg wäre in Monaten falsch. Der Text nennt darum kein einzelnes Produkt mehr und trägt das Standdatum 2026. Absichtlich ohne Link.",
     notiert: "2026-07-26",
+  },
+  {
+    id: "VA-245306",
+    betrifft:
+      "«Der Philosoph Ernst Bloch sah in der alchemistischen Werkstatt eine frühe, bewusst auf Veränderung gerichtete Form der Technik.»",
+    grund:
+      "Der Gedanke steht bei Bloch im «Prinzip Hoffnung», wo die Alchemie als vorwegnehmende, auf Verwandlung zielende Praxis erscheint. Belegen können wir das am 2026-08-10 nicht: Der Wikipedia-Artikel zu Ernst Bloch erwähnt die Alchemie nicht, der Artikel «Alchemie» erwähnt Bloch nicht, und eine frei zugängliche deutschsprachige Seite mit dieser Aussage haben wir nicht gefunden. Das Werk selbst liegt uns nicht vor, und aus dem Gedächtnis wird hier nichts belegt. Die frühere Fassung enthielt sogar ein wörtliches Zitat («älteste gewollte Form von Technik»); die Kontrolle hat es zur Paraphrase entschärft, was ohne Quelle die richtige Wahl ist. Ein Zitat verlangt eine Fundstelle, eine Paraphrase trägt sich als Deutung selbst.",
+    notiert: "2026-08-10",
   },
 ];
 

@@ -268,6 +268,14 @@ export const GLOSSAR: Record<string, string> = {
     "Londoner KI-Firma (heute Teil von Google); baute AlphaGo.",
   McCarthy:
     "John McCarthy (1927 bis 2011), US-Informatiker; prägte 1956 den Begriff «künstliche Intelligenz».",
+  /* Die drei Namen aus dem Dartmouth-Text, auf Christofs Wunsch mit
+     Hover-Erklärung (2026-08-10). Angaben geprüft an der deutschen Wikipedia. */
+  "Marvin Minsky":
+    "Marvin Minsky (1927 bis 2016), US-Forscher; begründete 1956 in Dartmouth mit McCarthy, Rochester und Shannon den Begriff der künstlichen Intelligenz und später das KI-Labor am MIT.",
+  Informationstheorie:
+    "Von Claude Shannon begründete mathematische Theorie, die Information messbar macht; sie behandelt Übertragung, Kompression und Kodierung von Nachrichten.",
+  "Rockefeller-Stiftung":
+    "1913 von John D. Rockefeller gegründete US-Stiftung in New York, die Gesundheitswesen, Wissenschaft und Kultur fördert; sie finanzierte auch das Dartmouth-Treffen von 1956.",
   Kempelen:
     "Wolfgang von Kempelen (1734 bis 1804); baute den «Schachtürken», einen scheinbar denkenden Automaten mit verstecktem Spieler.",
   "Jaquet-Droz":

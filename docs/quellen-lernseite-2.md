@@ -13,9 +13,9 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 76 |
-| Belegte Textblöcke | 45 |
-| Begründete Nicht-Belege | 5 |
+| Belege | 82 |
+| Belegte Textblöcke | 48 |
+| Begründete Nicht-Belege | 6 |
 | Aussagen mit Standdatum | 3 |
 
 ---
@@ -322,6 +322,60 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 - **Geprüft:** 2026-08-05
 
 > Ein oft übersehener Beitrag von Leibniz ist das Zweiersystem, das er 1703 ausführlich beschrieb und das mit den Ziffern null und eins auskommt. Genau dieses Binärsystem bildet heute die Grundlage jedes Computers, seine eigene Rechenmaschine baute er allerdings dezimal, weil die Feinmechanik der Zeit nicht weiter reichte. Babbages Maschine sollte ihre Anweisungen von Lochkarten ablesen, eine Idee aus dem Weberhandwerk. Jacquards Webstuhl steuerte ab 1805 mit je einer Lochkarte pro Schuss die Musterung. Ada Lovelace war die Tochter des Dichters Lord Byron, der schon in der Entstehung von Frankenstein vorkommt. Ob ihre Bernoulli-Rechnung das erste Programm der Geschichte war, ist umstritten, denn Babbage selbst hatte Jahre zuvor Programmtabellen aufgeschrieben, ein Satz von 1837/38 ist erhalten. Lovelaces Leistung liegt ohnehin anderswo, im Blick über das Rechnen hinaus. Sie ahnte, dass eine solche Maschine eines Tages sogar Musik verarbeiten könnte, sofern man Töne in Zahlen fasst. Wie sehr das nachwirkt, zeigt ein später Gruss. 1980 wurde eine Programmiersprache nach Ada Lovelace benannt, und ihre Normnummer MIL-STD-1815 nennt ihr Geburtsjahr.
+
+### Der Homunkulus · «Menschlein»
+
+- **Kennung:** `VA-ea0099` (Kartentext)
+- **Quelle:** [Homunkulus (Wikipedia)](https://de.wikipedia.org/wiki/Homunkulus)
+- **Fundstelle:** «Der Homunkulus oder lateinisch Homunculus („Menschlein“) bezeichnet einen künstlich geschaffenen (kleinen) Menschen.»
+- **Geprüft:** 2026-08-10
+
+> Schon seit Langem träumen Menschen davon, künstliches Leben zu erschaffen. Ein Homunkulus (von lateinisch homunculus, «Menschlein») ist ein solches künstlich geschaffenes Wesen, das der Vorstellung nach in einem verschlossenen Gefäss heranwachsen sollte.
+
+### Der Homunkulus · Tradition der Alchemie
+
+- **Kennung:** `VA-b6861b` (Bildgeschichte)
+- **Quelle:** [Alchemie (Wikipedia)](https://de.wikipedia.org/wiki/Alchemie)
+- **Fundstelle:** «Als Alchemie oder Alchimie … bezeichnet man in der Geschichte der Chemie frühe Vorläufer der heutigen Wissenschaft.» Und weiter: «Die Alchemie ist ein alter Zweig der Naturphilosophie und hatte in der westlichen Welt zwischen 1550 und 1650 eine Blütezeit. Sie wurde im Laufe des 17. und 18. Jahrhunderts von der modernen Chemie und der Pharmakologie abgelöst.» Das deckt beides, den Beitrag zur neuzeitlichen Chemie und die Nähe zur Naturphilosophie.
+- **Geprüft:** 2026-08-10
+
+> Die Vorstellung gehört zur Tradition der Alchemie. Diese verband handwerkliche Praktiken und Naturbeobachtungen mit philosophischen und religiösen Ideen und trug zur Entwicklung der neuzeitlichen Chemie bei. In der Schrift «De natura rerum», die Paracelsus zugeschrieben und traditionell auf die Jahre 1537/38 datiert wird, findet sich eine erstaunlich konkrete Anleitung zur Erzeugung eines Homunkulus.
+
+### Der Homunkulus · die Paracelsus zugeschrieben
+
+- **Kennung:** `VA-b6861b` (Bildgeschichte)
+- **Quelle:** [Homunkulus (Wikipedia), zur Zuschreibung der Schrift](https://de.wikipedia.org/wiki/Homunkulus)
+- **Fundstelle:** «Genau beschrieben wird die angebliche Herstellung eines Homunkulus in der Schrift De natura rerum (1538), die allgemein Paracelsus zugeschrieben wird.» Zur Datierung: Die Wikipedia nennt 1538, der Lernset-Text sagt «traditionell auf die Jahre 1537/38 datiert». Beide Angaben stehen in der Literatur; die Schrift wurde 1537 verfasst und später gedruckt. Der Text bleibt darum bei der Doppelangabe.
+- **Geprüft:** 2026-08-10
+
+> Die Vorstellung gehört zur Tradition der Alchemie. Diese verband handwerkliche Praktiken und Naturbeobachtungen mit philosophischen und religiösen Ideen und trug zur Entwicklung der neuzeitlichen Chemie bei. In der Schrift «De natura rerum», die Paracelsus zugeschrieben und traditionell auf die Jahre 1537/38 datiert wird, findet sich eine erstaunlich konkrete Anleitung zur Erzeugung eines Homunkulus.
+
+### Der Homunkulus · Arcanum des menschlichen Blutes
+
+- **Kennung:** `VA-245306` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Homunkulus (Wikipedia), zur Anleitung](https://de.wikipedia.org/wiki/Homunkulus)
+- **Fundstelle:** «Paracelsus gibt eine konkrete Anleitung für die Erzeugung eines Homunkulus: Man müsse menschliche Spermien 40 Tage in einem Gefäß im (wärmenden) Pferdemist verfaulen lassen. Was sich dann rege, sei „einem Menschen gleich, doch durchsichtig“. 40 Wochen lang müsse man dieses Wesen dann bei konstanter Wärme mit dem Arcanum des Menschenbluts nähren, und schließlich werde ein menschliches Kind entstehen, jedoch viel kleiner als ein natürlich geborenes.»
+- **Geprüft:** 2026-08-10
+
+> Nach dieser Anleitung sollte menschlicher Samen zunächst vierzig Tage lang in einem verschlossenen Gefäss bei gleichmässiger Wärme reifen. Anschliessend sollte das entstehende Wesen vierzig Wochen lang mit dem sogenannten Arcanum des menschlichen Blutes ernährt werden. Am Ende, so die Vorstellung, sollte daraus ein winziger, aber vollständiger Mensch entstehen. Der Philosoph Ernst Bloch sah in der alchemistischen Werkstatt eine frühe, bewusst auf Veränderung gerichtete Form der Technik. Auch Goethe griff das Motiv auf: In «Faust II» ist es nicht Faust selbst, sondern sein ehemaliger Gehilfe Wagner, dem die Erschaffung des leuchtenden Homunkulus im Glas gelingt. Dieser sehnt sich danach, vollständig körperlich zu werden. Am Ende zerschellt seine Phiole am Muschelwagen der Meeresgöttin Galatee, worauf sich ihr Leuchten im Meer ausbreitet. Bei Goethe erscheint der Homunkulus als ausserordentlich kluges und hellsichtiges Wesen, als künstlicher Geist, der die Gedanken anderer durchschauen kann. Darin lässt sich eine Verbindung zur heutigen Diskussion über künstliche Intelligenz erkennen, denn in beiden Fällen geht es um die Vorstellung eines vom Menschen geschaffenen Verstandes, der die Fähigkeiten gewöhnlicher Menschen möglicherweise übertrifft.
+
+### Der Homunkulus · Muschelwagen der Meeresgöttin Galatee
+
+- **Kennung:** `VA-245306` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Faust. Der Tragödie zweiter Teil (Wikipedia)](https://de.wikipedia.org/wiki/Faust._Der_Trag%C3%B6die_zweiter_Teil)
+- **Fundstelle:** «Homunkulus besteigt den Proteus-Delphin und zerschellt am Muschelwagen der Meeresgöttin Galatee, der Tochter des Nereus. Es entsteht ein Meeresleuchten.» Goethe schreibt «Galatee», nicht «Galatea»; der Lernset-Text folgt dem.
+- **Geprüft:** 2026-08-10
+
+> Nach dieser Anleitung sollte menschlicher Samen zunächst vierzig Tage lang in einem verschlossenen Gefäss bei gleichmässiger Wärme reifen. Anschliessend sollte das entstehende Wesen vierzig Wochen lang mit dem sogenannten Arcanum des menschlichen Blutes ernährt werden. Am Ende, so die Vorstellung, sollte daraus ein winziger, aber vollständiger Mensch entstehen. Der Philosoph Ernst Bloch sah in der alchemistischen Werkstatt eine frühe, bewusst auf Veränderung gerichtete Form der Technik. Auch Goethe griff das Motiv auf: In «Faust II» ist es nicht Faust selbst, sondern sein ehemaliger Gehilfe Wagner, dem die Erschaffung des leuchtenden Homunkulus im Glas gelingt. Dieser sehnt sich danach, vollständig körperlich zu werden. Am Ende zerschellt seine Phiole am Muschelwagen der Meeresgöttin Galatee, worauf sich ihr Leuchten im Meer ausbreitet. Bei Goethe erscheint der Homunkulus als ausserordentlich kluges und hellsichtiges Wesen, als künstlicher Geist, der die Gedanken anderer durchschauen kann. Darin lässt sich eine Verbindung zur heutigen Diskussion über künstliche Intelligenz erkennen, denn in beiden Fällen geht es um die Vorstellung eines vom Menschen geschaffenen Verstandes, der die Fähigkeiten gewöhnlicher Menschen möglicherweise übertrifft.
+
+### Der Homunkulus · sein ehemaliger Gehilfe Wagner
+
+- **Kennung:** `VA-245306` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Homunkulus (Wikipedia), zur Rolle Wagners](https://de.wikipedia.org/wiki/Homunkulus)
+- **Fundstelle:** «In einem Entwurf vom 17. Dezember 1826 beschreibt Goethe explizit Wagner als Schöpfer des Homunculus, in der endgültigen Fassung fehlt dieser Teil.» Die Szene spielt in Wagners Laboratorium, und der Artikel zum zweiten Teil nennt ihn «mittlerweile selbst Doktor, Professor und praktizierender Alchemist». Die Zuschreibung an Wagner ist also die gängige Lesart, im Text selbst aber nicht ausgesprochen.
+- **Geprüft:** 2026-08-10
+
+> Nach dieser Anleitung sollte menschlicher Samen zunächst vierzig Tage lang in einem verschlossenen Gefäss bei gleichmässiger Wärme reifen. Anschliessend sollte das entstehende Wesen vierzig Wochen lang mit dem sogenannten Arcanum des menschlichen Blutes ernährt werden. Am Ende, so die Vorstellung, sollte daraus ein winziger, aber vollständiger Mensch entstehen. Der Philosoph Ernst Bloch sah in der alchemistischen Werkstatt eine frühe, bewusst auf Veränderung gerichtete Form der Technik. Auch Goethe griff das Motiv auf: In «Faust II» ist es nicht Faust selbst, sondern sein ehemaliger Gehilfe Wagner, dem die Erschaffung des leuchtenden Homunkulus im Glas gelingt. Dieser sehnt sich danach, vollständig körperlich zu werden. Am Ende zerschellt seine Phiole am Muschelwagen der Meeresgöttin Galatee, worauf sich ihr Leuchten im Meer ausbreitet. Bei Goethe erscheint der Homunkulus als ausserordentlich kluges und hellsichtiges Wesen, als künstlicher Geist, der die Gedanken anderer durchschauen kann. Darin lässt sich eine Verbindung zur heutigen Diskussion über künstliche Intelligenz erkennen, denn in beiden Fällen geht es um die Vorstellung eines vom Menschen geschaffenen Verstandes, der die Fähigkeiten gewöhnlicher Menschen möglicherweise übertrifft.
 
 ---
 
@@ -755,6 +809,13 @@ niemand später aus Verlegenheit eine ungefähr passende Quelle einsetzt.
 - **Betrifft:** Zugang: Gratisstufe gegenüber Abo bei den grossen Chatbots
 - **Grund:** Die Preis- und Limitseiten der Anbieter ändern sich laufend, ein Beleg wäre in Monaten falsch. Der Text nennt darum kein einzelnes Produkt mehr und trägt das Standdatum 2026. Absichtlich ohne Link.
 - **Notiert:** 2026-07-26
+
+### Der Homunkulus
+
+- **Kennung:** `VA-245306`
+- **Betrifft:** «Der Philosoph Ernst Bloch sah in der alchemistischen Werkstatt eine frühe, bewusst auf Veränderung gerichtete Form der Technik.»
+- **Grund:** Der Gedanke steht bei Bloch im «Prinzip Hoffnung», wo die Alchemie als vorwegnehmende, auf Verwandlung zielende Praxis erscheint. Belegen können wir das am 2026-08-10 nicht: Der Wikipedia-Artikel zu Ernst Bloch erwähnt die Alchemie nicht, der Artikel «Alchemie» erwähnt Bloch nicht, und eine frei zugängliche deutschsprachige Seite mit dieser Aussage haben wir nicht gefunden. Das Werk selbst liegt uns nicht vor, und aus dem Gedächtnis wird hier nichts belegt. Die frühere Fassung enthielt sogar ein wörtliches Zitat («älteste gewollte Form von Technik»); die Kontrolle hat es zur Paraphrase entschärft, was ohne Quelle die richtige Wahl ist. Ein Zitat verlangt eine Fundstelle, eine Paraphrase trägt sich als Deutung selbst.
+- **Notiert:** 2026-08-10
 
 ---
 
