@@ -973,7 +973,7 @@ export const BELEGE: Beleg[] = [
    * Die neue Mittelschicht nennt Leitgedanke und Gegenspieler, und beides ist
    * hier belegt. */
   {
-    id: "VA-65ebb0",
+    id: "VA-433f97",
     anker: "38 Theoreme",
     url: "https://de.wikipedia.org/wiki/Allen_Newell",
     titel: "Allen Newell (Wikipedia)",
@@ -982,7 +982,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-10",
   },
   {
-    id: "VA-65ebb0",
+    id: "VA-433f97",
     anker: "Frank Rosenblatts Perzeptron von 1957",
     url: "https://de.wikipedia.org/wiki/Perzeptron",
     titel: "Perzeptron (Wikipedia)",
@@ -991,12 +991,12 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-10",
   },
   {
-    id: "VA-65ebb0",
+    id: "VA-433f97",
     anker: "das ausschliessende Oder nicht lösen kann",
     url: "https://de.wikipedia.org/wiki/Perzeptron",
     titel: "Perzeptron (Wikipedia), zur Kritik von 1969",
     stelle:
-      "«Marvin Minsky und Seymour Papert wiesen jedoch 1969 nach, dass ein einlagiges Perzeptron den XOR-Operator nicht auflösen kann (Problem der linearen Separierbarkeit). Dies führte zu einem Stillstand in der Forschung der künstlichen neuronalen Netze.» XOR ist das ausschliessende Oder, wahr also genau dann, wenn eine von zwei Bedingungen zutrifft und nicht beide.",
+      "«Marvin Minsky und Seymour Papert wiesen jedoch 1969 nach, dass ein einlagiges Perzeptron den XOR-Operator nicht auflösen kann (Problem der linearen Separierbarkeit). Dies führte zu einem Stillstand in der Forschung der künstlichen neuronalen Netze.» Einlagig heisst: mit nur einer Schicht. XOR ist das ausschliessende Oder, wahr also genau dann, wenn eine von zwei Bedingungen zutrifft und nicht beide.",
     geprueft: "2026-08-10",
   },
   {
