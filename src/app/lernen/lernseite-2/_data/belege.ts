@@ -1119,7 +1119,7 @@ export const BELEGE: Beleg[] = [
 
   /* ── Multimodalität ──────────────────────────────────────────────────── */
   {
-    id: "VA-de37a1",
+    id: "VA-b49823",
     anker: "nahm Text, Bild und Ton in einem Modell entgegen",
     /* Zu GPT-4o gibt es keinen deutschen Artikel; der englische ist die
        nächstliegende belegbare Quelle. */

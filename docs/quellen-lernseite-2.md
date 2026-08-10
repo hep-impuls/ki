@@ -487,12 +487,12 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 ### Multimodalität: KI sieht und hört · nahm Text, Bild und Ton in einem Modell entgegen
 
-- **Kennung:** `VA-de37a1` (Bildgeschichte)
+- **Kennung:** `VA-b49823` (Bildgeschichte)
 - **Quelle:** [GPT-4o (Wikipedia, englisch)](https://en.wikipedia.org/wiki/GPT-4o)
 - **Fundstelle:** «GPT-4o (‹o› for ‹omni›) is a multilingual, multimodal generative pre-trained transformer developed by OpenAI and released in May 2024 … It can process and generate text, images and audio.»
 - **Geprüft:** 2026-08-10
 
-> Ab 2023 und 2024 wurden führende Systeme multimodal, verstanden also mehrere Arten von Eingaben. Claude 3 aus dem Jahr 2024 konnte Bilder verstehen und beschreiben. GPT-4o aus demselben Jahr nahm Text, Bild und Ton in einem Modell entgegen und antwortete in Echtzeit gesprochen. Wenn man sagt, die KI sehe und höre, ist das ein Bild: Kamera und Mikrofon liefern Daten, und das Modell verarbeitet sie im selben Zahlenraum wie Text. Ein Sinneseindruck ist damit nicht verbunden.
+> Ab 2023 und 2024 wurden führende Systeme multimodal, verstanden also mehrere Arten von Eingaben. Claude 3 aus dem Jahr 2024 konnte Bilder verstehen und beschreiben. GPT-4o aus demselben Jahr nahm Text, Bild und Ton in einem Modell entgegen und antwortete in Echtzeit gesprochen. Wenn man sagt, die KI sehe und höre, ist das ein Bild: Kamera und Mikrofon liefern Daten, und das Modell verarbeitet sie im selben Zahlenraum wie Text. Ein Sinnesorgan ist das nicht, und ein Empfinden entsteht dabei nicht.
 
 ### Multimodalität: KI sieht und hört · das offene Stable Diffusion
 

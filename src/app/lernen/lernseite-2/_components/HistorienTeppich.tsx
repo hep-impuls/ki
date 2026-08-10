@@ -48,23 +48,37 @@ export interface TeppichPunkt {
   verunsicherung?: string;
 }
 
-const W = 720;
 /**
- * Zeichenfläche. Die Höhe ist von 300 auf 380 gewachsen, weil der Teppich zu
- * eng geknüpft war (Christofs Rückmeldung 2026-08-10).
+ * Zeichenfläche. Beide Masse sind gewachsen, weil der Teppich zu eng geknüpft
+ * war: zuerst die Höhe von 300 auf 380, dann die Breite von 720 auf 1020
+ * (Christofs Rückmeldungen 2026-08-10).
  *
- * Warum nur die Höhe: In der Breite ist nichts zu holen, die 33 Punkte liegen
- * schon zwischen x=30 und x=708 von 720. Der engste Abstand zweier Punkte
- * betrug 41 Einheiten, und diese Nachbarn stehen vertikal beieinander.
+ * Warum das Seitenverhältnis mitwächst: `preserveAspectRatio="none"` streckt
+ * den viewBox auf die Box, die das Seitenverhältnis vorgibt. Stimmen die beiden
+ * nicht überein, werden Schrift und Punkte verzerrt. Darum stehen `W`, `H` und
+ * die Klasse `aspect-[1020/380]` immer im gleichen Verhältnis.
  *
- * Höhe UND Seitenverhältnis wachsen gemeinsam, darum bleibt das Verhältnis von
- * Pixel zu Einheit gleich und nichts wird verzerrt. Die y-Werte der Punkte
- * werden mit `Y_STRECKUNG` mitgezogen, sonst sässe der Teppich oben und unten
- * bliebe leerer Raum. Die Punkte selbst bleiben unverändert in der Seite
- * stehen; gestreckt wird an dieser einen Stelle.
+ * Und warum die Breite nicht allein genügte: Ein grösserer viewBox in derselben
+ * Box ist nur ein Verkleinern, die Beschriftungen schrumpfen mit und die Enge
+ * bleibt. Umgekehrt ist eine breitere Box allein nur ein Vergrössern, dann
+ * wachsen die Beschriftungen mit und die Enge bleibt ebenfalls. Raum entsteht
+ * erst, wenn beides zusammen wächst: Die Zeichnung liegt mit `MIN_BREITE`
+ * breiter als die Spalte, in einem seitwärts verschiebbaren Rahmen. Der
+ * Teppich wird also wörtlich ausgerollt. Im Druck fällt das weg, dort muss er
+ * ganz auf die Seite.
  */
+const W = 1020;
 const H = 380;
+const X_STRECKUNG = W / 720;
 const Y_STRECKUNG = H / 300;
+
+/**
+ * Wie breit die Zeichnung mindestens liegt. 1320 Pixel bei einem viewBox von
+ * 1020 heisst: rund 1,3 Pixel pro Einheit, gleich viel wie vorher in der Spalte
+ * von 929 Pixeln bei 720 Einheiten. Die Schrift bleibt also gleich gross, und
+ * der gewonnene Platz liegt vollständig zwischen den Knoten.
+ */
+const MIN_BREITE = "min-w-[1020px] sm:min-w-[1320px]";
 
 const FADEN_META: Record<
   FadenArt,
@@ -159,13 +173,33 @@ export default function HistorienTeppich({
   bewertungen?: { prefix: string; frage: string; stufen: [string, string, string] }[];
   className?: string;
 }) {
-  /* Die y-Werte auf die gewachsene Höhe ziehen. Alles Weitere (Maschen, Fäden,
-     Beschriftungen) rechnet mit diesen Punkten, also genügt die eine Stelle. */
+  /* Die Punkte auf die gewachsene Fläche ziehen. Alles Weitere (Maschen, Fäden,
+     Beschriftungen) rechnet mit diesen Punkten, also genügt die eine Stelle.
+     Die Daten selbst bleiben im ursprünglichen 720×300-Raster stehen. */
   const punkte = useMemo(
-    () => punkteRoh.map((p) => ({ ...p, y: Math.round(p.y * Y_STRECKUNG) })),
+    () =>
+      punkteRoh.map((p) => ({
+        ...p,
+        x: Math.round(p.x * X_STRECKUNG),
+        y: Math.round(p.y * Y_STRECKUNG),
+      })),
     [punkteRoh],
   );
   const n = punkte.length;
+  /* Der Teppich liegt breiter als die Spalte. Ob er wirklich übersteht, hängt
+     vom Fenster ab, darum wird gemessen statt geraten, und bei jeder
+     Grössenänderung neu. */
+  const rahmen = useRef<HTMLDivElement | null>(null);
+  const [ragtUeber, setRagtUeber] = useState(false);
+  useEffect(() => {
+    const el = rahmen.current;
+    if (!el) return;
+    const pruefe = () => setRagtUeber(el.scrollWidth > el.clientWidth + 4);
+    pruefe();
+    const beobachter = new ResizeObserver(pruefe);
+    beobachter.observe(el);
+    return () => beobachter.disconnect();
+  }, []);
   // Gewebe-Maschen: Delaunay-Dreiecke über die Punkte; nur nicht zu grosse
   // (lokale) Maschen füllen den Teppich, wenn alle drei Ecken besucht sind.
   const maschen = useMemo(
@@ -388,12 +422,16 @@ export default function HistorienTeppich({
         })}
       </div>
 
-      {/* Der Teppich */}
-      <div className="overflow-hidden rounded-xl border border-outline-variant bg-surface-container-low/60 p-sm sm:p-md">
+      {/* Der Teppich, seitwärts verschiebbar, damit er breiter liegt als die
+          Spalte. Der Hinweis erscheint nur, wenn wirklich etwas verdeckt ist. */}
+      <div
+        ref={rahmen}
+        className="overflow-x-auto overflow-y-hidden overscroll-x-contain rounded-xl border border-outline-variant bg-surface-container-low/60 p-sm sm:p-md print:overflow-visible"
+      >
         <svg
           viewBox={`0 0 ${W} ${H}`}
           preserveAspectRatio="none"
-          className="block w-full select-none aspect-[720/545] sm:aspect-[720/380]"
+          className={`block w-full select-none aspect-[1020/380] ${MIN_BREITE} print:min-w-0`}
           role="img"
           aria-label="Teppich des Wandels: vier Fäden (Technologie, Entdeckungen, gesellschaftliche Ereignisse und kulturelle Praxen) weben sich durchs Antippen der Punkte ein; zwischen besuchten Punkten füllen sich gemusterte Maschen."
         >
@@ -532,6 +570,13 @@ export default function HistorienTeppich({
         </svg>
       </div>
       <p className="mt-xs text-label-sm text-on-surface-variant">
+        {ragtUeber && (
+          <span className="mr-xs inline-flex items-center gap-2xs text-tertiary print:hidden">
+            <span className="material-symbols-outlined text-[16px]">swipe</span>
+            Der Teppich liegt breiter als die Seite, seitwärts schieben zeigt den
+            Rest.
+          </span>
+        )}
         Punkt antippen liest die Geschichte und webt den Faden ein. Sichtbar
         wird ein Fadenstück, sobald seine beiden Enden besucht sind. Erneutes
         Antippen wählt einen Punkt wieder ab. Die Legende oben schaltet ganze

@@ -626,14 +626,20 @@ Wie umkämpft das Feld ist, zeigte sich Anfang 2025, als das chinesische Modell 
 
 ### Multimodalität: KI sieht und hört
 
-**[VA-eb20f7]** *(Kartentext)*
-Zuletzt lernte die KI, mehrere Arten von Eingaben zu verbinden. Die Modelle bleiben nicht mehr beim Text, sondern verarbeiten auch Bilder, Sprache und teils Videos. Sinne sind das nicht. Die KI empfindet nichts, sie rechnet mit Zahlenreihen, in die Bild und Ton übersetzt wurden. Aus dem reinen Textautomaten wird so ein Gegenüber, das verschiedene Eingaben zusammenführt.
+**[VA-88b995]** *(Kartentext)*
+Zuletzt lernte die KI, mehrere Arten von Eingaben zu verbinden. Die Modelle bleiben nicht mehr beim Text, sondern verarbeiten auch Bilder, Sprache und teils Videos. Sinne sind das nicht. Sehen und Hören sind bei uns Vorgänge im Körper: Auge und Ohr sind lebendige Organe, Nerven leiten den Reiz weiter, und wir empfinden dabei etwas. Die KI hat eine Kamera und ein Mikrofon, und was diese aufnehmen, wird für sie zu Zahlenreihen. Aus dem reinen Textautomaten wird so ein Gegenüber, das verschiedene Eingaben zusammenführt.
 
-**[VA-de37a1]** *(Bildgeschichte)*
-Ab 2023 und 2024 wurden führende Systeme multimodal, verstanden also mehrere Arten von Eingaben. Claude 3 aus dem Jahr 2024 konnte Bilder verstehen und beschreiben. GPT-4o aus demselben Jahr nahm Text, Bild und Ton in einem Modell entgegen und antwortete in Echtzeit gesprochen. Wenn man sagt, die KI sehe und höre, ist das ein Bild: Kamera und Mikrofon liefern Daten, und das Modell verarbeitet sie im selben Zahlenraum wie Text. Ein Sinneseindruck ist damit nicht verbunden.
+**[VA-b49823]** *(Bildgeschichte)*
+Ab 2023 und 2024 wurden führende Systeme multimodal, verstanden also mehrere Arten von Eingaben. Claude 3 aus dem Jahr 2024 konnte Bilder verstehen und beschreiben. GPT-4o aus demselben Jahr nahm Text, Bild und Ton in einem Modell entgegen und antwortete in Echtzeit gesprochen. Wenn man sagt, die KI sehe und höre, ist das ein Bild: Kamera und Mikrofon liefern Daten, und das Modell verarbeitet sie im selben Zahlenraum wie Text. Ein Sinnesorgan ist das nicht, und ein Empfinden entsteht dabei nicht.
 
 **[VA-3986c2]** *(Vertiefung «Mehr lesen»)*
 Besonders sichtbar wurde die erzeugende Seite ab 2022, als Programme wie DALL-E, Midjourney und das offene Stable Diffusion aus einer blossen Textbeschreibung fertige Bilder malten. Kurz darauf folgte die Videoerzeugung, etwa als OpenAI 2024 sein System Sora vorstellte, das aus wenigen Sätzen kurze Filmszenen erzeugt. Umgekehrt kann eine multimodale KI auch Bestehendes deuten, also ein Foto beschreiben, eine Grafik erklären oder eine handschriftliche Notiz entziffern. Ein Beispiel dafür ist Be My Eyes, eine App für blinde Menschen: Seit 2023 beschreibt ein solches Modell dort Gegenstände, die die Handykamera aufnimmt. Grundlage ist, dass die Systeme Bild, Text und Ton in derselben inneren Sprache aus Zahlen darstellen. Dadurch lassen sich die verschiedenen Kanäle in einem einzigen Modell verbinden, statt für jede Aufgabe ein eigenes Programm zu brauchen.
+
+> **Belegt** («das offene Stable Diffusion»): [Stable Diffusion (Wikipedia)](https://de.wikipedia.org/wiki/Stable_Diffusion) — «Stable Diffusion ist ein Deep-Learning-Text-zu-Bild-Generator. Die Open-Source-Software wird hauptsächlich zur Generierung detaillierter Bilder auf der Grundlage von Textbeschreibungen verwendet.» Daher im Text «das offene»: Der Quelltext ist frei verfügbar, anders als bei DALL-E und Midjourney. *(geprüft 2026-08-10)*
+
+> **Belegt** («sein System Sora vorstellte»): [Sora (Wikipedia)](https://de.wikipedia.org/wiki/Sora_(k%C3%BCnstliche_Intelligenz)) — «Sora ist eine von OpenAI entwickelte und 2024 veröffentlichte generative künstliche Intelligenz, die auf die Erstellung von Videos aus Texteingaben spezialisiert ist. Das Modell akzeptiert Textbeschreibungen (Prompts) und generiert daraus kurze Videoclips in fotorealistischer Qualität.» *(geprüft 2026-08-10)*
+
+> **Belegt** («Be My Eyes, eine App für blinde Menschen»): [Be My Eyes (Wikipedia)](https://de.wikipedia.org/wiki/Be_My_Eyes) — «Be My Eyes ist eine Mobile App, die Blinden und sehbehinderten Menschen dabei helfen soll, Gegenstände zu erkennen und Situationen des Alltags zu meistern.» Zur Jahresangabe und zum Modell: «Im Jahr 2023 wurde eine Funktion in die App integriert, die dem Nutzer eine automatische Beschreibung von Gegenständen liefert. … Diese Beschreibung wird mit Hilfe von künstlicher Intelligenz in Form eines GPT-4 Sprachmodells erstellt.» *(geprüft 2026-08-10)*
 
 ### Bilder zur KI-Story
 
@@ -737,11 +743,11 @@ Generativ heisst herstellend, denn die KI stellt Neues her, statt Fertiges nachz
 
 ### multimodal
 
-**[VA-7ad8b5]** *(Kartentext)*
-Du kannst der KI ein Foto deines Kühlschranks zeigen und nach einem Rezept fragen. Bei manchen Systemen laufen Text, Bild und Ton in einem einzigen Modell zusammen, bei anderen arbeiten dafür mehrere Bausteine zusammen. Sie liest, sieht und hört und antwortet wahlweise in Wort, Bild oder Stimme. Auch eine Skizze oder ein gesprochener Satz sind für sie eine Eingabe. So nimmt sie die Welt über mehrere Kanäle zugleich auf.
+**[VA-bedcc3]** *(Kartentext)*
+Du kannst der KI ein Foto deines Kühlschranks zeigen und nach einem Rezept fragen. Bei manchen Systemen laufen Text, Bild und Ton in einem einzigen Modell zusammen, bei anderen arbeiten dafür mehrere Bausteine zusammen. Sie liest, sieht und hört und antwortet wahlweise in Wort, Bild oder Stimme. Auch eine Skizze oder ein gesprochener Satz sind für sie eine Eingabe. Lesen, Sehen und Hören sind dabei nur Vergleiche. Es sind Kanäle und keine Sinne, denn ein Körper, der empfindet, ist nicht im Spiel.
 
-**[VA-fac221]** *(Vertiefung «Mehr lesen»)*
-Frühe Programme konnten nur eines, entweder Text oder Bild oder Ton. Multimodale Modelle verbinden diese Kanäle in einem einzigen Netz. Das erinnert an uns Menschen, die auch nicht in getrennten Sinnen denken. Der Vergleich hat aber eine Grenze: Wir empfinden, das Modell rechnet. Bild und Ton werden für es zu Zahlenreihen, und in denen sucht es Muster. Ein Beispiel: Du fotografierst eine Mathe-Aufgabe, und die KI liest sie, rechnet und erklärt den Lösungsweg. Oder du zeigst ihr ein Diagramm, und sie fasst es in Worten zusammen. So wird die Grenze zwischen Lesen, Sehen und Hören für die Maschine durchlässig.
+**[VA-a2fa07]** *(Vertiefung «Mehr lesen»)*
+Frühe Programme konnten nur eines, entweder Text oder Bild oder Ton. Multimodale Modelle verbinden diese Kanäle in einem einzigen Netz. Das erinnert an uns Menschen, die auch nicht in getrennten Sinnen denken. Der Vergleich hat aber eine harte Grenze: Unsere Sinne sind Organe eines lebendigen Körpers, und wir empfinden mit ihnen. Das Modell rechnet. Bild und Ton werden für es zu Zahlenreihen, und in denen sucht es Muster. Ein Beispiel: Du fotografierst eine Mathe-Aufgabe, und die KI liest sie, rechnet und erklärt den Lösungsweg. Oder du zeigst ihr ein Diagramm, und sie fasst es in Worten zusammen. So wird die Grenze zwischen Lesen, Sehen und Hören für die Maschine durchlässig.
 
 ### agentenfähig
 
