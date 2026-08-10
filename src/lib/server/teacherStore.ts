@@ -446,7 +446,7 @@ export async function teacherOrakel(
       const agg = ensure(bereichFuer(base));
       agg[art] += 1;
       agg.schueler.add(s.code);
-      const key = `${art} ${base}`;
+      const key = `${art}\u0000${base}`;
       const vorhanden = perItem.get(key);
       if (vorhanden) vorhanden.anzahl += 1;
       else perItem.set(key, { art, base, anzahl: 1 });

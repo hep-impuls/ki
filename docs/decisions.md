@@ -10,6 +10,33 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-10 — Kein rohes NUL-Byte im Quelltext (Pietro)
+
+`teacherStore.ts` enthielt an einer Stelle ein **echtes NUL-Byte** (0x00) als
+Trennzeichen im zusammengesetzten Map-Schlüssel `` `${art}\0${base}` ``. Christof
+hat das beim Anfassen der Datei gemeldet. Es steht jetzt als Escape-Sequenz
+`\u0000` im Quelltext — **dasselbe Zeichen zur Laufzeit**, identisches Verhalten,
+aber die Datei ist wieder reiner Text.
+
+Warum das mehr als Kosmetik war: Git stuft eine Datei mit NUL-Byte als
+`-text` ein (`git ls-files --eol` zeigte `i/-text w/-text`) und schaltet damit
+die **Zeilenenden-Normalisierung ab**. Die Datei lag deshalb als einzige mit
+CRLF im Repo, während der Rest mit LF liegt. Mit dem Wegfall des NUL-Bytes greift
+`core.autocrlf` wieder — darum normalisiert derselbe Commit die Datei einmalig
+auf LF und erzeugt einen Diff über alle 511 Zeilen. Einmalige Kosten; danach sind
+Diffs auf dieser Datei wieder normal lesbar.
+
+**Regel:** Steuerzeichen in Zeichenketten werden als Escape geschrieben
+(`\u0000`, `\t`), nie als rohes Byte. Betroffen war nur diese eine Stelle
+(`src/lib/server/teacherStore.ts:449`); ein Scan über `src/` und `docs/` fand
+sonst keine NUL-Bytes in Quelldateien.
+
+Offen, mit Christof zu besprechen: ein `.gitattributes` mit `* text=auto eol=lf`
+würde die Zeilenenden repoweit festnageln — heute liegen zwei, drei Dateien mit
+CRLF im Index. Bewusst *nicht* im Alleingang gemacht, da repoweit wirksam.
+
+---
+
 ## 2026-08-09 — Die zwei Orakel-Stimmen haben getrennte Aufgaben (Christof)
 
 Bisher deuteten beide Stimmen dasselbe, nämlich die Aktivität, und
