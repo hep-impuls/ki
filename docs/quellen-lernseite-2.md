@@ -13,8 +13,8 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 85 |
-| Belegte Textblöcke | 49 |
+| Belege | 98 |
+| Belegte Textblöcke | 59 |
 | Begründete Nicht-Belege | 6 |
 | Aussagen mit Standdatum | 3 |
 
@@ -368,6 +368,87 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 > Nach dieser Anleitung sollte menschlicher Samen zunächst vierzig Tage lang in einem verschlossenen Gefäss bei gleichmässiger Wärme reifen. Anschliessend sollte das entstehende Wesen vierzig Wochen lang mit dem sogenannten Arcanum des menschlichen Blutes ernährt werden. Am Ende, so die Vorstellung, sollte daraus ein winziger, aber vollständiger Mensch entstehen. Der Philosoph Ernst Bloch sah in der alchemistischen Werkstatt eine frühe, bewusst auf Veränderung gerichtete Form der Technik. Auch Goethe griff das Motiv auf: In «Faust II» ist es nicht Faust selbst, sondern sein ehemaliger Gehilfe Wagner, dem die Erschaffung des leuchtenden Homunkulus im Glas gelingt. Dieser sehnt sich danach, vollständig körperlich zu werden. Am Ende zerschellt seine Phiole am Muschelwagen der Meeresgöttin Galatee, worauf sich ihr Leuchten im Meer ausbreitet. Bei Goethe erscheint der Homunkulus als ausserordentlich kluges und hellsichtiges Wesen, als künstlicher Geist, der die Gedanken anderer durchschauen kann. Darin lässt sich eine Verbindung zur heutigen Diskussion über künstliche Intelligenz erkennen, denn in beiden Fällen geht es um die Vorstellung eines vom Menschen geschaffenen Verstandes, der die Fähigkeiten gewöhnlicher Menschen möglicherweise übertrifft.
 
+### Hephaistos & Talos · «Argonautika» des Apollonios von Rhodos
+
+- **Kennung:** `VA-0b0ee9` (Bildgeschichte)
+- **Quelle:** [Talos (Riese) (Wikipedia)](https://de.wikipedia.org/wiki/Talos_(Riese))
+- **Fundstelle:** Der Artikel führt als Belege für den Mythos «Apollonios Rhodios, Argonautika 4,1641–1642» und die «Bibliotheke des Apollodor 1,9,26,3» an, dazu Pausanias und Pomponius Mela. Die «Ilias» kommt darin nicht vor. Homer erzählt in Gesang 18 die goldenen Mägde und die selbstfahrenden Dreifüsse des Hephaistos, aber nicht Talos.
+- **Geprüft:** 2026-08-10
+
+> Hier laufen zwei Erzählungen zusammen, und sie stammen aus verschiedenen Zeiten. Das ist wichtig, weil sie oft in einen Topf geworfen werden. Die goldenen Mägde stehen in Homers «Ilias», dem rund 2800 Jahre alten Heldengedicht. Der Schmiedegott Hephaistos hat sie sich selbst gebaut. Sie haben Verstand, Stimme und Kraft, und dazu fertigt er selbstfahrende Dreifüsse. Talos dagegen kommt in der «Ilias» nicht vor. Der bronzene Riese wird erst Jahrhunderte später ausführlich erzählt. Die bekannte Fassung steht in der «Argonautika» des Apollonios von Rhodos aus dem 3. Jahrhundert vor Christus, kürzer auch bei anderen antiken Autoren. Zwei Quellen also, mehrere Jahrhunderte auseinander. Gemeinsam ist ihnen der Gedanke: Menschen erzählten von Automaten, lange bevor es das Wort dafür gab.
+
+### Hephaistos & Talos · zog ihm dann den Nagel aus der Ferse
+
+- **Kennung:** `VA-f81579` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Talos (Riese) (Wikipedia), zum Ende des Riesen](https://de.wikipedia.org/wiki/Talos_(Riese))
+- **Fundstelle:** «Talos ist ein eherner (bronzener) Riese, den ein vom Kopf bis zur Ferse reichender „Blutkanal“ lebendig hält. … Talos umkreiste die Insel dreimal täglich und warf Steine auf Schiffe, die sich näherten. … Medea betörte ihn, indem sie ihm Unsterblichkeit versprach; dann zog sie ihm den „Nagel“ (den verschließenden Pfropfen) aus der Ferse, woraufhin das Blut herausfloss und der Riese starb. In anderen Versionen verletzte er sich am Knöchel bzw. wurde von Poias mit einem Pfeil an der Ferse getroffen.»
+- **Geprüft:** 2026-08-10
+
+> Talos war unverwundbar, bis auf eine einzige Stelle. Durch seinen Körper lief ein Blutkanal vom Kopf bis zur Ferse, und ein Nagel hielt ihn verschlossen. Dieses Blut hielt den Riesen lebendig. Auf der Heimfahrt der Argonauten brachte ihn die Zauberin Medea zu Fall. Sie betörte ihn mit dem Versprechen der Unsterblichkeit und zog ihm dann den Nagel aus der Ferse. Das Blut floss aus, und der Wächter starb. Andere Fassungen erzählen es anders: Dort verletzt er sich selbst am Knöchel, oder ein Pfeil trifft ihn an der Ferse. Seinen Dienst tat er gründlich. Er umkreiste Kreta dreimal am Tag und warf Steine auf Schiffe, die sich näherten. Bemerkenswert ist das Verhältnis von Macht und Schwachstelle. Die ganze Kraft des Wächters liess sich an einem winzigen Punkt aufheben. Schon dieser früheste Mythos verbindet also die künstliche Kraft mit der Frage, wie man sie im Notfall stoppt. Dieselbe Sorge um einen sicheren Ausschalter begleitet die Technik bis in heutige Debatten.
+
+### Der Algorithmus wird ausführbar · der um 820 in Bagdad wirkte
+
+- **Kennung:** `VA-556bc0` (Bildgeschichte)
+- **Quelle:** [Al-Chwarizmi (Wikipedia)](https://de.wikipedia.org/wiki/Al-Chwarizmi)
+- **Fundstelle:** «Seine Lebensleistung erbrachte er jedoch in Bagdad und wirkte dort im „Haus der Weisheit“, der berühmten Hochschule von Bagdad. Von seinem Namen leitet sich der Begriff Algorithmus ab.»
+- **Geprüft:** 2026-08-10
+
+> Das Wort «Algorithmus» geht auf den Gelehrten al-Chwarizmi zurück, der um 820 in Bagdad wirkte, und die Verfahren selbst sind noch viel älter. Erst Alan Turings gedankliche «Maschine» von 1936 und die ersten elektronischen Rechner der 1940er-Jahre veränderten alles. Von da an führte nicht mehr ein Mensch mit Papier und Bleistift die Schritte aus, sondern die Maschine selbst. Der Algorithmus wurde damit vom blossen Rezept zum Motor der Rechenmaschine.
+
+### Der Algorithmus wird ausführbar · Z3 des Berliner Ingenieurs Konrad Zuse von 1941
+
+- **Kennung:** `VA-04e5a4` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Zuse Z3 (Wikipedia)](https://de.wikipedia.org/wiki/Zuse_Z3)
+- **Fundstelle:** «Die Z3 war einer der ersten funktionsfähigen Digitalrechner weltweit und wurde am 12. Mai 1941 von Konrad Zuse in seiner Werkstatt in der Methfesselstraße 7 in Berlin-Kreuzberg vorgestellt.» Der Text sagte vorher «als erster funktionsfähiger programmgesteuerter Rechner»; die Quelle formuliert vorsichtiger, darum jetzt «einer der ersten».
+- **Geprüft:** 2026-08-10
+
+> Ein greifbares Beispiel für den ausführbaren Algorithmus ist die Z3 des Berliner Ingenieurs Konrad Zuse von 1941, die als einer der ersten funktionsfähigen programmgesteuerter Rechner gilt. Sie arbeitete bereits mit dem Binärsystem und wurde über einen gelochten Streifen mit Befehlen versorgt. Der Name «Algorithmus» geht auf den Gelehrten al-Chwarizmi zurück, dessen Werk zugleich dem Wort «Algebra» seinen Namen gab. Turings gedankliches Modell von 1936 beschrieb eine Maschine mit einem endlosen Band, die durch einfache Schreib- und Leseschritte jedes berechenbare Problem lösen kann. Im Zweiten Weltkrieg half Turing dann, mit eigens gebauten Maschinen den deutschen Funkschlüssel Enigma zu knacken. So wurde aus einer reinen Denkfigur in wenigen Jahren eine wirklich arbeitende Maschine. Damit war die Grundlage gelegt, auf der jede spätere KI aufbaut.
+
+### Expertensysteme · für die Diagnose von Infektionen
+
+- **Kennung:** `VA-47b959` (Bildgeschichte)
+- **Quelle:** [Mycin, Expertensystem (Wikipedia)](https://de.wikipedia.org/wiki/Mycin_(Expertensystem))
+- **Fundstelle:** «Mycin ist ein seit 1972 an der Stanford University in der Programmiersprache Lisp entwickeltes Expertensystem, das zur Diagnose und Therapie von Infektionskrankheiten durch Antibiotika eingesetzt wurde.»
+- **Geprüft:** 2026-08-10
+
+> Systeme wie MYCIN gossen das Wissen von Fachleuten in tausende Wenn-dann-Regeln, etwa für die Diagnose von Infektionen. In ihrem engen Gebiet waren sie nützlich. Doch sie blieben teuer im Unterhalt. Und sie waren starr gegenüber allem, was in keiner Regel stand.
+
+### KI-Winter · «nuklearen Winter»
+
+- **Kennung:** `VA-1d359e` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Nuklearer Winter (Wikipedia)](https://de.wikipedia.org/wiki/Nuklearer_Winter)
+- **Fundstelle:** «Nuklearer Winter bezeichnet die Verdunkelung und Abkühlung der Erdatmosphäre als Folge einer großen Anzahl von Kernwaffenexplosionen.» Daran lehnt sich der Ausdruck «KI-Winter» an, also an eine damals viel diskutierte Katastrophenvorstellung.
+- **Geprüft:** 2026-08-10
+
+> Der Ausdruck «KI-Winter» wurde 1984 an einer Fachtagung geprägt, in bewusster Anlehnung an den damals viel diskutierten «nuklearen Winter». In den USA strich die Forschungsagentur DARPA schon in den 1970er-Jahren Gelder, nachdem hoch gesteckte Ziele wie das automatische Verstehen gesprochener Sprache nicht erreicht wurden. Besonders folgenreich war das Buch «Perceptrons» von Marvin Minsky und Seymour Papert aus dem Jahr 1969, das die Grenzen einfacher neuronaler Netze aufzeigte. Danach galt die Forschung an solchen Netzen lange als Sackgasse, und die Mittel flossen in andere Ansätze. Erst viele Jahre später sollten neuronale Netze eine glänzende Rückkehr feiern. Rückblickend zeigen die Winter ein Muster, denn jedes Mal folgten auf überzogene Versprechen zuerst Enttäuschung und Geldentzug. Und jedes Mal kehrte die KI danach mit einer neuen Grundidee stärker zurück.
+
+### Statistische KI · ersten alltagstauglichen Diktiersoftware für den Heimgebrauch
+
+- **Kennung:** `VA-7f8fb6` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Dragon NaturallySpeaking (Wikipedia)](https://de.wikipedia.org/wiki/Dragon_NaturallySpeaking)
+- **Fundstelle:** «Vorläufer von Dragon NaturallySpeaking war die Software DragonDictate, die für DOS geschrieben war und noch keine kontinuierliche Spracherkennung ermöglichte. Dragon NaturallySpeaking 1.0 erschien 1997.» Das Neue war also das durchgehende Sprechen statt Wort für Wort.
+- **Geprüft:** 2026-08-10
+
+> Hinter dieser Wende stand oft ein einfaches mathematisches Werkzeug, der Satz von Bayes, mit dem sich Wahrscheinlichkeiten aus Häufigkeiten berechnen lassen. Ein Spamfilter etwa lernt aus vielen Beispielmails, wie verdächtig einzelne Wörter sind, und schätzt daraus, wie wahrscheinlich eine neue Mail Werbung ist. Auch gesprochene Sprache wurde nun mit statistischen Modellen erkannt, was 1997 zur ersten alltagstauglichen Diktiersoftware für den Heimgebrauch führte. Ähnlich begann man, Übersetzungen nicht mehr über Grammatikregeln, sondern über die Häufigkeit von Wortpaaren in grossen zweisprachigen Textsammlungen zu berechnen. Der gemeinsame Gedanke war, dass die Maschine nichts versteht, sondern aus vielen Fällen die wahrscheinlichste Antwort schätzt. Voraussetzung dafür waren wachsende Rechenkraft und immer grössere Datenmengen. Damit war der Boden für alles bereitet, was danach kam.
+
+### Statistische KI · Wahrscheinlichkeiten aus Häufigkeiten berechnen lassen
+
+- **Kennung:** `VA-7f8fb6` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Satz von Bayes (Wikipedia)](https://de.wikipedia.org/wiki/Satz_von_Bayes)
+- **Fundstelle:** «Der Satz von Bayes ist ein mathematischer Satz aus der Wahrscheinlichkeitstheorie, der die Berechnung bedingter Wahrscheinlichkeiten beschreibt. Er ist nach dem englischen Mathematiker Thomas Bayes benannt.»
+- **Geprüft:** 2026-08-10
+
+> Hinter dieser Wende stand oft ein einfaches mathematisches Werkzeug, der Satz von Bayes, mit dem sich Wahrscheinlichkeiten aus Häufigkeiten berechnen lassen. Ein Spamfilter etwa lernt aus vielen Beispielmails, wie verdächtig einzelne Wörter sind, und schätzt daraus, wie wahrscheinlich eine neue Mail Werbung ist. Auch gesprochene Sprache wurde nun mit statistischen Modellen erkannt, was 1997 zur ersten alltagstauglichen Diktiersoftware für den Heimgebrauch führte. Ähnlich begann man, Übersetzungen nicht mehr über Grammatikregeln, sondern über die Häufigkeit von Wortpaaren in grossen zweisprachigen Textsammlungen zu berechnen. Der gemeinsame Gedanke war, dass die Maschine nichts versteht, sondern aus vielen Fällen die wahrscheinlichste Antwort schätzt. Voraussetzung dafür waren wachsende Rechenkraft und immer grössere Datenmengen. Damit war der Boden für alles bereitet, was danach kam.
+
+### Algorithmen kuratieren Social Media · «News Feed» im September 2006
+
+- **Kennung:** `VA-5100b6` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Feed (Facebook) (englische Wikipedia)](https://en.wikipedia.org/wiki/Facebook_News_Feed)
+- **Fundstelle:** «Before 2006, Facebook simply consisted of profiles, requiring the user to visit a profile to see any new posts. On September 6, 2006, Facebook announced a new home page feature called „News Feed“.» Zu den Protesten führt der Artikel Berichte vom 6. und 7. September 2006 an, darunter «Inside the Backlash Against Facebook» (Time) und «Users protest over ‹creepy› Facebook update» (The Register).
+- **Geprüft:** 2026-08-10
+
+> Als Facebook den «News Feed» im September 2006 einführte, gab es zunächst heftige Proteste, denn viele empfanden das automatische Sammeln ihrer Aktivitäten als übergriffig. Wenig später, im Jahr 2009, kam der «Gefällt mir»-Knopf dazu, der dem System laufend verriet, was Anklang findet. Aus solchen Signalen lernten die Netzwerke, wem sie welchen Beitrag zuoberst zeigen sollten. Der Bürgerrechtler Eli Pariser prägte 2011 dafür das Bild der «Filterblase», also einer Nachrichtenwelt, die jedem vor allem das Genehme vorsetzt. Am weitesten treibt es der sogenannte For-You-Feed von TikTok, der fast nur noch aus algorithmisch ausgewählten Videos besteht und ganz ohne Freundesnetz auskommt. Kritikerinnen und Kritiker warnen, dass so besonders starke Gefühle belohnt werden, weil sie die Aufmerksamkeit am längsten fesseln. Was die Systeme messen, formt am Ende mit, worüber eine Gesellschaft spricht.
+
 ### Symbolische KI · Programm Logic Theorist
 
 - **Kennung:** `VA-43386e` (Bildgeschichte)
@@ -403,6 +484,42 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 - **Geprüft:** 2026-08-10
 
 > Nach dieser Anleitung sollte menschlicher Samen zunächst vierzig Tage lang in einem verschlossenen Gefäss bei gleichmässiger Wärme reifen. Anschliessend sollte das entstehende Wesen vierzig Wochen lang mit dem sogenannten Arcanum des menschlichen Blutes ernährt werden. Am Ende, so die Vorstellung, sollte daraus ein winziger, aber vollständiger Mensch entstehen. Der Philosoph Ernst Bloch sah in der alchemistischen Werkstatt eine frühe, bewusst auf Veränderung gerichtete Form der Technik. Auch Goethe griff das Motiv auf: In «Faust II» ist es nicht Faust selbst, sondern sein ehemaliger Gehilfe Wagner, dem die Erschaffung des leuchtenden Homunkulus im Glas gelingt. Dieser sehnt sich danach, vollständig körperlich zu werden. Am Ende zerschellt seine Phiole am Muschelwagen der Meeresgöttin Galatee, worauf sich ihr Leuchten im Meer ausbreitet. Bei Goethe erscheint der Homunkulus als ausserordentlich kluges und hellsichtiges Wesen, als künstlicher Geist, der die Gedanken anderer durchschauen kann. Darin lässt sich eine Verbindung zur heutigen Diskussion über künstliche Intelligenz erkennen, denn in beiden Fällen geht es um die Vorstellung eines vom Menschen geschaffenen Verstandes, der die Fähigkeiten gewöhnlicher Menschen möglicherweise übertrifft.
+
+### Multimodalität: KI sieht und hört · nahm Text, Bild und Ton in einem Modell entgegen
+
+- **Kennung:** `VA-de37a1` (Bildgeschichte)
+- **Quelle:** [GPT-4o (Wikipedia, englisch)](https://en.wikipedia.org/wiki/GPT-4o)
+- **Fundstelle:** «GPT-4o (‹o› for ‹omni›) is a multilingual, multimodal generative pre-trained transformer developed by OpenAI and released in May 2024 … It can process and generate text, images and audio.»
+- **Geprüft:** 2026-08-10
+
+> Ab 2023 und 2024 wurden führende Systeme multimodal, verstanden also mehrere Arten von Eingaben. Claude 3 aus dem Jahr 2024 konnte Bilder verstehen und beschreiben. GPT-4o aus demselben Jahr nahm Text, Bild und Ton in einem Modell entgegen und antwortete in Echtzeit gesprochen. Wenn man sagt, die KI sehe und höre, ist das ein Bild: Kamera und Mikrofon liefern Daten, und das Modell verarbeitet sie im selben Zahlenraum wie Text. Ein Sinneseindruck ist damit nicht verbunden.
+
+### Multimodalität: KI sieht und hört · das offene Stable Diffusion
+
+- **Kennung:** `VA-3986c2` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Stable Diffusion (Wikipedia)](https://de.wikipedia.org/wiki/Stable_Diffusion)
+- **Fundstelle:** «Stable Diffusion ist ein Deep-Learning-Text-zu-Bild-Generator. Die Open-Source-Software wird hauptsächlich zur Generierung detaillierter Bilder auf der Grundlage von Textbeschreibungen verwendet.» Daher im Text «das offene»: Der Quelltext ist frei verfügbar, anders als bei DALL-E und Midjourney.
+- **Geprüft:** 2026-08-10
+
+> Besonders sichtbar wurde die erzeugende Seite ab 2022, als Programme wie DALL-E, Midjourney und das offene Stable Diffusion aus einer blossen Textbeschreibung fertige Bilder malten. Kurz darauf folgte die Videoerzeugung, etwa als OpenAI 2024 sein System Sora vorstellte, das aus wenigen Sätzen kurze Filmszenen erzeugt. Umgekehrt kann eine multimodale KI auch Bestehendes deuten, also ein Foto beschreiben, eine Grafik erklären oder eine handschriftliche Notiz entziffern. Ein Beispiel dafür ist Be My Eyes, eine App für blinde Menschen: Seit 2023 beschreibt ein solches Modell dort Gegenstände, die die Handykamera aufnimmt. Grundlage ist, dass die Systeme Bild, Text und Ton in derselben inneren Sprache aus Zahlen darstellen. Dadurch lassen sich die verschiedenen Kanäle in einem einzigen Modell verbinden, statt für jede Aufgabe ein eigenes Programm zu brauchen.
+
+### Multimodalität: KI sieht und hört · sein System Sora vorstellte
+
+- **Kennung:** `VA-3986c2` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Sora (Wikipedia)](https://de.wikipedia.org/wiki/Sora_(k%C3%BCnstliche_Intelligenz))
+- **Fundstelle:** «Sora ist eine von OpenAI entwickelte und 2024 veröffentlichte generative künstliche Intelligenz, die auf die Erstellung von Videos aus Texteingaben spezialisiert ist. Das Modell akzeptiert Textbeschreibungen (Prompts) und generiert daraus kurze Videoclips in fotorealistischer Qualität.»
+- **Geprüft:** 2026-08-10
+
+> Besonders sichtbar wurde die erzeugende Seite ab 2022, als Programme wie DALL-E, Midjourney und das offene Stable Diffusion aus einer blossen Textbeschreibung fertige Bilder malten. Kurz darauf folgte die Videoerzeugung, etwa als OpenAI 2024 sein System Sora vorstellte, das aus wenigen Sätzen kurze Filmszenen erzeugt. Umgekehrt kann eine multimodale KI auch Bestehendes deuten, also ein Foto beschreiben, eine Grafik erklären oder eine handschriftliche Notiz entziffern. Ein Beispiel dafür ist Be My Eyes, eine App für blinde Menschen: Seit 2023 beschreibt ein solches Modell dort Gegenstände, die die Handykamera aufnimmt. Grundlage ist, dass die Systeme Bild, Text und Ton in derselben inneren Sprache aus Zahlen darstellen. Dadurch lassen sich die verschiedenen Kanäle in einem einzigen Modell verbinden, statt für jede Aufgabe ein eigenes Programm zu brauchen.
+
+### Multimodalität: KI sieht und hört · Be My Eyes, eine App für blinde Menschen
+
+- **Kennung:** `VA-3986c2` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Be My Eyes (Wikipedia)](https://de.wikipedia.org/wiki/Be_My_Eyes)
+- **Fundstelle:** «Be My Eyes ist eine Mobile App, die Blinden und sehbehinderten Menschen dabei helfen soll, Gegenstände zu erkennen und Situationen des Alltags zu meistern.» Zur Jahresangabe und zum Modell: «Im Jahr 2023 wurde eine Funktion in die App integriert, die dem Nutzer eine automatische Beschreibung von Gegenständen liefert. … Diese Beschreibung wird mit Hilfe von künstlicher Intelligenz in Form eines GPT-4 Sprachmodells erstellt.»
+- **Geprüft:** 2026-08-10
+
+> Besonders sichtbar wurde die erzeugende Seite ab 2022, als Programme wie DALL-E, Midjourney und das offene Stable Diffusion aus einer blossen Textbeschreibung fertige Bilder malten. Kurz darauf folgte die Videoerzeugung, etwa als OpenAI 2024 sein System Sora vorstellte, das aus wenigen Sätzen kurze Filmszenen erzeugt. Umgekehrt kann eine multimodale KI auch Bestehendes deuten, also ein Foto beschreiben, eine Grafik erklären oder eine handschriftliche Notiz entziffern. Ein Beispiel dafür ist Be My Eyes, eine App für blinde Menschen: Seit 2023 beschreibt ein solches Modell dort Gegenstände, die die Handykamera aufnimmt. Grundlage ist, dass die Systeme Bild, Text und Ton in derselben inneren Sprache aus Zahlen darstellen. Dadurch lassen sich die verschiedenen Kanäle in einem einzigen Modell verbinden, statt für jede Aufgabe ein eigenes Programm zu brauchen.
 
 ---
 

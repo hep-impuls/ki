@@ -309,7 +309,17 @@ export const GLOSSAR: Record<string, string> = {
   Golem:
     "Prager Sagengestalt: eine aus Lehm geformte Figur, die dienen soll, und ausser Kontrolle gerät.",
   Talos:
-    "Bronzeriese der griechischen Sage, der Kreta bewachte; ein antiker Traum von der künstlichen Kreatur.",
+    "Bronzeriese der griechischen Sage, der Kreta bewachte. Erzählt wird er vor allem in der «Argonautika» des Apollonios von Rhodos, nicht in der «Ilias».",
+  Binärsystem:
+    "Zahlensystem mit nur zwei Ziffern, null und eins. Computer rechnen damit, weil Strom entweder fliesst oder nicht.",
+  MYCIN:
+    "Expertensystem, ab 1972 in Stanford entwickelt. Es sollte Infektionskrankheiten erkennen und die Behandlung mit Antibiotika vorschlagen.",
+  "Satz von Bayes":
+    "Rechenregel der Wahrscheinlichkeit. Sie sagt, wie sich eine Einschätzung ändert, sobald ein neuer Hinweis dazukommt.",
+  /* Der Schlüssel trägt die gebeugte Form, weil die Auszeichnung wörtlich
+     sucht: Im Text steht «erster funktionsfähiger programmgesteuerter Rechner». */
+  "programmgesteuerter Rechner":
+    "Maschine, die ein gespeichertes Programm Schritt für Schritt abarbeitet, also ein Computer. Sie rechnet nicht nur, sie führt Anweisungen aus.",
   Descartes:
     "René Descartes (1596 bis 1650), französischer Philosoph, «Ich denke, also bin ich».",
   Hegel:

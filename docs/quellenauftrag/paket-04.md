@@ -50,6 +50,9 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 02 · Philosophische Perspektive
 
+**[PP-fa84ba]** *(Verunsicherungs-Stopp · Die Dampfmaschine)*
+Die Industrialisierung reisst die alte Gesellschaft auseinander: Landflucht, Kinderarbeit, Elendsquartiere im Schatten der Fabriken. 1848 entlädt sich die Spannung in Revolutionen quer durch Europa. In den Epochen unten zeigt die Industriemoderne, wie Marx den Umbruch begreift.
+
 **[PP-d13f6a]** *(Kartentext · Der Computer)*
 Im Schatten des Kriegs entstehen die ersten programmierbaren Rechner, etwa Zuses Z3, Colossus und ENIAC. Turings Idee der universellen Maschine wird Wirklichkeit.
 
@@ -171,6 +174,3 @@ Augustinus wusste, wovon er sprach, denn sein eigenes Leben war ein einziger Umw
 
 **[EP-6b91b8]** *(Hintergrund zum Bild · Renaissance & Aufbruch)*
 Pieter Bruegel der Ältere war einer der bedeutendsten niederländischen Maler des 16. Jahrhunderts und schuf dieses Bild 1563, zur Zeit der niederländischen Renaissance. Er malte die biblische Geschichte vom Turmbau als Panorama seiner eigenen Gegenwart, denn Baustelle, Hafen und Stadt sind flämisch und nicht babylonisch gestaltet. Der gewaltige Turm erinnert mit seinen Rundbögen an das römische Kolosseum und steht bereits sichtbar schief. Vorne links besucht eine königliche Gruppe die Baustelle, vor der die Steinmetze niederknien. Diese Figur wird meist als der biblische König Nimrod gedeutet. Das Original hängt heute im Kunsthistorischen Museum in Wien.
-
-**[EP-98e975]** *(Hintergrund zum Bild · Renaissance & Aufbruch)*
-Hans Holbein der Jüngere (um 1497 bis 1543) war ein deutscher Maler der Renaissance, der lange am englischen Königshof wirkte. Er malte dieses Doppelporträt 1533 in London. Dargestellt sind zwei junge Männer auf der Höhe ihrer Macht, links der französische Gesandte Jean de Dinteville und rechts sein Freund Georges de Selve, Bischof von Lavaur. Zwischen ihnen steht ein Regal mit Instrumenten und Büchern, ein Inventar des neuen Wissens ihrer Zeit. Quer im Vordergrund liegt ein stark verzerrter Totenschädel, der erst aus einem schrägen Blickwinkel erkennbar wird und an die Vergänglichkeit mahnt. Heute hängt das Werk in der National Gallery in London.

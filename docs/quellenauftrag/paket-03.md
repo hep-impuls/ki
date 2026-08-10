@@ -50,6 +50,9 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 01 · Vorhang auf
 
+**[VA-3ff1fb]** *(Fliesstext · Mehr dazu: warum die Bündelung zählt)*
+Jede einzelne dieser Eigenschaften gab es in Ansätzen schon früher. Neu ist, dass sie nun gebündelt in einem System zusammenkommen. Die KI erkennt Muster in riesigen Datenmengen und arbeitet mit Wahrscheinlichkeiten statt mit festen Regeln. Sie reagiert auf den Zusammenhang und passt ihre Antworten daran an. Sie wirkt allgemein einsetzbar, weil sie nicht für eine einzige Aufgabe gebaut ist. Genau diese Kombination macht sie zu einem Werkzeug, das sich wie ein Gegenüber anfühlt. Im Muster unten kannst du die Merkmale einzeln öffnen und nachlesen.
+
 **[VA-048602]** *(Vertiefung «Mehr lesen» · algorithmisch)*
 Das Wort Algorithmus geht auf den Gelehrten al-Chwarizmi zurück, der vor rund 1200 Jahren in Bagdad Rechenwege aufschrieb. Ein Algorithmus ist nichts Geheimnisvolles, sondern eine klare Anleitung, wie aus einer Eingabe eine Ausgabe wird. Auch das Lernen der KI ist so eine Anleitung. Beim Training verstellt sie viele Milliarden winziger Zahlenwerte immer wieder ein kleines bisschen, bis ihre Antworten besser passen. Man kann sich das wie das Drehen an Millionen kleiner Regler vorstellen. Das klingt weniger nach Denken und mehr nach Rechnen, und genau das ist es auch.
 
@@ -62,8 +65,8 @@ Früher musste man einem Computer in einer eigenen Programmiersprache genau sage
 **[VA-7ad8b5]** *(Kartentext · multimodal)*
 Du kannst der KI ein Foto deines Kühlschranks zeigen und nach einem Rezept fragen. Bei manchen Systemen laufen Text, Bild und Ton in einem einzigen Modell zusammen, bei anderen arbeiten dafür mehrere Bausteine zusammen. Sie liest, sieht und hört und antwortet wahlweise in Wort, Bild oder Stimme. Auch eine Skizze oder ein gesprochener Satz sind für sie eine Eingabe. So nimmt sie die Welt über mehrere Kanäle zugleich auf.
 
-**[VA-87db90]** *(Vertiefung «Mehr lesen» · multimodal)*
-Frühe Programme konnten nur eines, entweder Text oder Bild oder Ton. Multimodale Modelle verbinden diese Kanäle in einem einzigen Netz. Damit rücken sie näher an uns Menschen heran, denn auch wir denken nicht in getrennten Sinnen. Ein Beispiel: Du fotografierst eine Mathe-Aufgabe, und die KI liest sie, rechnet und erklärt den Lösungsweg. Oder du zeigst ihr ein Diagramm, und sie fasst es in Worten zusammen. So wird die Grenze zwischen Lesen, Sehen und Hören für die Maschine durchlässig.
+**[VA-fac221]** *(Vertiefung «Mehr lesen» · multimodal)*
+Frühe Programme konnten nur eines, entweder Text oder Bild oder Ton. Multimodale Modelle verbinden diese Kanäle in einem einzigen Netz. Das erinnert an uns Menschen, die auch nicht in getrennten Sinnen denken. Der Vergleich hat aber eine Grenze: Wir empfinden, das Modell rechnet. Bild und Ton werden für es zu Zahlenreihen, und in denen sucht es Muster. Ein Beispiel: Du fotografierst eine Mathe-Aufgabe, und die KI liest sie, rechnet und erklärt den Lösungsweg. Oder du zeigst ihr ein Diagramm, und sie fasst es in Worten zusammen. So wird die Grenze zwischen Lesen, Sehen und Hören für die Maschine durchlässig.
 
 **[VA-6e57d1]** *(Fliesstext · Mehr dazu: die vier Blickwinkel)*
 Der erste Blickwinkel ist der technologische, also Rechenkraft, Daten und die Modelle selbst. Der zweite ist der wirtschaftliche, denn Entwicklung und Betrieb kosten viel Geld und schaffen neue Märkte. Der dritte ist der rechtlich-politische, etwa Fragen nach Regeln, Haftung und Macht. Der vierte ist der kulturelle, also wie wir mit KI leben, arbeiten und über sie sprechen. Diese vier Blickwinkel wirken zusammen und lassen sich nicht sauber trennen. Erst gemeinsam ergeben sie ein Bild davon, was KI heute ist.
@@ -179,6 +182,3 @@ Johannes Gutenberg war ein Geschäftsmann in Mainz, der um 1450 Stempel, Presse 
 
 **[PP-40ef79]** *(Vertiefung «Mehr lesen» · Die Dampfmaschine)*
 James Watt war Instrumentenmacher in Glasgow und sollte 1764 ein Modell der alten Newcomen-Pumpe reparieren, dabei erkannte er, wie viel Energie sie verschwendete, und fand mit dem separaten Kondensator den entscheidenden Verbesserungstrick. Mit dem Unternehmer Matthew Boulton machte er daraus ein Geschäft. Boulton soll einem Besucher gesagt haben, er verkaufe hier, was alle Welt begehre, nämlich Kraft. Um Kunden zu überzeugen, rechnete Watt die Leistung seiner Maschinen in ersetzte Pferde um, daher stammt die Masseinheit Pferdestärke. Fabriken mussten nun nicht mehr an Bächen liegen, sie rückten in die Städte, und ab 1830 zogen Dampflokomotiven Menschen und Waren in einem Tempo übers Land, das kein Pferdegespann durchhielt. Kraft war damit zur Ware geworden, messbar, kaufbar und beliebig vermehrbar. Hier beginnt die Geschichte, in der Maschinen Schritt für Schritt Arbeit übernehmen, deren jüngstes Kapitel die KI schreibt.
-
-**[PP-fa84ba]** *(Verunsicherungs-Stopp · Die Dampfmaschine)*
-Die Industrialisierung reisst die alte Gesellschaft auseinander: Landflucht, Kinderarbeit, Elendsquartiere im Schatten der Fabriken. 1848 entlädt sich die Spannung in Revolutionen quer durch Europa. In den Epochen unten zeigt die Industriemoderne, wie Marx den Umbruch begreift.

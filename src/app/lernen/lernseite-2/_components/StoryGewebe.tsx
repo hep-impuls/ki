@@ -916,7 +916,20 @@ export default function StoryGewebe({
             </button>
             <button
               type="button"
-              onClick={() => setGewaehlt(new Set(alle))}
+              /* Auch «Alle» registriert die Stationen, genau wie «Zufall (3)»
+                 daneben und wie das Antippen einzelner Punkte.
+
+                 Vorher setzte dieser Knopf NUR die Anzeige. Das hatte zwei
+                 Folgen, und Christof hat die erste am 2026-08-10 gemeldet:
+                 Nach dem Verlassen der Seite kam beim Zurückkommen wieder die
+                 Standardansicht, weil die Wiederherstellung nur registrierte
+                 Punkte kennt. Und schlimmer, die zweite Folge war unsichtbar:
+                 Wer «Alle» drückte, tauchte mit diesen Punkten nirgends auf,
+                 nicht im Rhizom, nicht in der Knotenkarte, nicht im Orakel. */
+              onClick={() => {
+                setGewaehlt(new Set(alle));
+                if (spurKey) alle.forEach((i) => merkeSpur(`${spurKey}:${i}`));
+              }}
               className="inline-flex items-center gap-xs rounded-full border border-outline-variant px-sm py-xs text-label-md text-on-surface-variant transition-colors hover:border-tertiary hover:text-tertiary"
             >
               <span className="material-symbols-outlined text-[16px]">select_all</span>

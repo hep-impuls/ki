@@ -967,6 +967,111 @@ export const BELEGE: Beleg[] = [
       "«Homunkulus besteigt den Proteus-Delphin und zerschellt am Muschelwagen der Meeresgöttin Galatee, der Tochter des Nereus. Es entsteht ein Meeresleuchten.» Goethe schreibt «Galatee», nicht «Galatea»; der Lernset-Text folgt dem.",
     geprueft: "2026-08-10",
   },
+  /* ── Antike Mythen ───────────────────────────────────────────────────────
+   * Christofs Rückmeldung 2026-08-10: Der Text sagte nicht, woher die zwei
+   * Erzählungen stammen, und liess offen, dass Talos NICHT in der «Ilias»
+   * steht. Die Belege halten die Quellenlage jetzt am Text selbst fest. */
+  {
+    id: "VA-0b0ee9",
+    anker: "«Argonautika» des Apollonios von Rhodos",
+    url: "https://de.wikipedia.org/wiki/Talos_(Riese)",
+    titel: "Talos (Riese) (Wikipedia)",
+    stelle:
+      "Der Artikel führt als Belege für den Mythos «Apollonios Rhodios, Argonautika 4,1641–1642» und die «Bibliotheke des Apollodor 1,9,26,3» an, dazu Pausanias und Pomponius Mela. Die «Ilias» kommt darin nicht vor. Homer erzählt in Gesang 18 die goldenen Mägde und die selbstfahrenden Dreifüsse des Hephaistos, aber nicht Talos.",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "VA-f81579",
+    anker: "zog ihm dann den Nagel aus der Ferse",
+    url: "https://de.wikipedia.org/wiki/Talos_(Riese)",
+    titel: "Talos (Riese) (Wikipedia), zum Ende des Riesen",
+    stelle:
+      "«Talos ist ein eherner (bronzener) Riese, den ein vom Kopf bis zur Ferse reichender „Blutkanal“ lebendig hält. … Talos umkreiste die Insel dreimal täglich und warf Steine auf Schiffe, die sich näherten. … Medea betörte ihn, indem sie ihm Unsterblichkeit versprach; dann zog sie ihm den „Nagel“ (den verschließenden Pfropfen) aus der Ferse, woraufhin das Blut herausfloss und der Riese starb. In anderen Versionen verletzte er sich am Knöchel bzw. wurde von Poias mit einem Pfeil an der Ferse getroffen.»",
+    geprueft: "2026-08-10",
+  },
+
+  /* ── Der Algorithmus wird ausführbar ─────────────────────────────────── */
+  {
+    id: "VA-556bc0",
+    /* Anker daneben, nicht auf dem Namen: «al-Chwarizmi» soll seine
+       Hover-Erklärung behalten, und ein Beleg würde sie verdecken. */
+    anker: "der um 820 in Bagdad wirkte",
+    url: "https://de.wikipedia.org/wiki/Al-Chwarizmi",
+    titel: "Al-Chwarizmi (Wikipedia)",
+    stelle:
+      "«Seine Lebensleistung erbrachte er jedoch in Bagdad und wirkte dort im „Haus der Weisheit“, der berühmten Hochschule von Bagdad. Von seinem Namen leitet sich der Begriff Algorithmus ab.»",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "VA-04e5a4",
+    anker: "Z3 des Berliner Ingenieurs Konrad Zuse von 1941",
+    url: "https://de.wikipedia.org/wiki/Zuse_Z3",
+    titel: "Zuse Z3 (Wikipedia)",
+    stelle:
+      "«Die Z3 war einer der ersten funktionsfähigen Digitalrechner weltweit und wurde am 12. Mai 1941 von Konrad Zuse in seiner Werkstatt in der Methfesselstraße 7 in Berlin-Kreuzberg vorgestellt.» Der Text sagte vorher «als erster funktionsfähiger programmgesteuerter Rechner»; die Quelle formuliert vorsichtiger, darum jetzt «einer der ersten».",
+    geprueft: "2026-08-10",
+  },
+
+  /* ── Expertensysteme ─────────────────────────────────────────────────── */
+  {
+    id: "VA-47b959",
+    anker: "für die Diagnose von Infektionen",
+    /* Nicht «/wiki/Mycin» — das ist eine Begriffsklärung, weil Mycine auch
+       eine Gruppe von Antibiotika sind. Gemeint ist das Expertensystem. */
+    url: "https://de.wikipedia.org/wiki/Mycin_(Expertensystem)",
+    titel: "Mycin, Expertensystem (Wikipedia)",
+    stelle:
+      "«Mycin ist ein seit 1972 an der Stanford University in der Programmiersprache Lisp entwickeltes Expertensystem, das zur Diagnose und Therapie von Infektionskrankheiten durch Antibiotika eingesetzt wurde.»",
+    geprueft: "2026-08-10",
+  },
+
+  /* ── KI-Winter ───────────────────────────────────────────────────────── */
+  {
+    id: "VA-1d359e",
+    anker: "«nuklearen Winter»",
+    url: "https://de.wikipedia.org/wiki/Nuklearer_Winter",
+    titel: "Nuklearer Winter (Wikipedia)",
+    stelle:
+      "«Nuklearer Winter bezeichnet die Verdunkelung und Abkühlung der Erdatmosphäre als Folge einer großen Anzahl von Kernwaffenexplosionen.» Daran lehnt sich der Ausdruck «KI-Winter» an, also an eine damals viel diskutierte Katastrophenvorstellung.",
+    geprueft: "2026-08-10",
+  },
+
+  /* ── Statistische KI ─────────────────────────────────────────────────── */
+  {
+    id: "VA-7f8fb6",
+    anker: "ersten alltagstauglichen Diktiersoftware für den Heimgebrauch",
+    url: "https://de.wikipedia.org/wiki/Dragon_NaturallySpeaking",
+    titel: "Dragon NaturallySpeaking (Wikipedia)",
+    stelle:
+      "«Vorläufer von Dragon NaturallySpeaking war die Software DragonDictate, die für DOS geschrieben war und noch keine kontinuierliche Spracherkennung ermöglichte. Dragon NaturallySpeaking 1.0 erschien 1997.» Das Neue war also das durchgehende Sprechen statt Wort für Wort.",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "VA-7f8fb6",
+    anker: "Wahrscheinlichkeiten aus Häufigkeiten berechnen lassen",
+    url: "https://de.wikipedia.org/wiki/Satz_von_Bayes",
+    titel: "Satz von Bayes (Wikipedia)",
+    stelle:
+      "«Der Satz von Bayes ist ein mathematischer Satz aus der Wahrscheinlichkeitstheorie, der die Berechnung bedingter Wahrscheinlichkeiten beschreibt. Er ist nach dem englischen Mathematiker Thomas Bayes benannt.»",
+    geprueft: "2026-08-10",
+  },
+
+  /* ── Social-Media-Feed ───────────────────────────────────────────────── */
+  {
+    id: "VA-5100b6",
+    /* Bewusst englisch, mit Grund: Die deutsche Wikipedia trägt das Datum der
+       News-Feed-Einführung nicht. Der Artikel «Facebook» beschreibt die
+       Funktion, nennt aber kein Jahr und sagt an einer Stelle sogar, bis 2012
+       sei die Profilseite die Startseite gewesen. Der englische Artikel datiert
+       präzise und führt die zeitgenössischen Berichte über die Proteste. */
+    anker: "«News Feed» im September 2006",
+    url: "https://en.wikipedia.org/wiki/Facebook_News_Feed",
+    titel: "Feed (Facebook) (englische Wikipedia)",
+    stelle:
+      "«Before 2006, Facebook simply consisted of profiles, requiring the user to visit a profile to see any new posts. On September 6, 2006, Facebook announced a new home page feature called „News Feed“.» Zu den Protesten führt der Artikel Berichte vom 6. und 7. September 2006 an, darunter «Inside the Backlash Against Facebook» (Time) und «Users protest over ‹creepy› Facebook update» (The Register).",
+    geprueft: "2026-08-10",
+  },
+
   /* ── Symbolische KI ──────────────────────────────────────────────────────
    * Die Karte hatte zwei fast gleichlautende Absätze und erklärte nicht, woran
    * sich die Richtung eigentlich absetzte (Christofs Rückmeldung 2026-08-10).
@@ -1009,6 +1114,46 @@ export const BELEGE: Beleg[] = [
     titel: "Homunkulus (Wikipedia), zur Rolle Wagners",
     stelle:
       "«In einem Entwurf vom 17. Dezember 1826 beschreibt Goethe explizit Wagner als Schöpfer des Homunculus, in der endgültigen Fassung fehlt dieser Teil.» Die Szene spielt in Wagners Laboratorium, und der Artikel zum zweiten Teil nennt ihn «mittlerweile selbst Doktor, Professor und praktizierender Alchemist». Die Zuschreibung an Wagner ist also die gängige Lesart, im Text selbst aber nicht ausgesprochen.",
+    geprueft: "2026-08-10",
+  },
+
+  /* ── Multimodalität ──────────────────────────────────────────────────── */
+  {
+    id: "VA-de37a1",
+    anker: "nahm Text, Bild und Ton in einem Modell entgegen",
+    /* Zu GPT-4o gibt es keinen deutschen Artikel; der englische ist die
+       nächstliegende belegbare Quelle. */
+    url: "https://en.wikipedia.org/wiki/GPT-4o",
+    titel: "GPT-4o (Wikipedia, englisch)",
+    stelle:
+      "«GPT-4o (‹o› for ‹omni›) is a multilingual, multimodal generative pre-trained transformer developed by OpenAI and released in May 2024 … It can process and generate text, images and audio.»",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "VA-3986c2",
+    anker: "das offene Stable Diffusion",
+    url: "https://de.wikipedia.org/wiki/Stable_Diffusion",
+    titel: "Stable Diffusion (Wikipedia)",
+    stelle:
+      "«Stable Diffusion ist ein Deep-Learning-Text-zu-Bild-Generator. Die Open-Source-Software wird hauptsächlich zur Generierung detaillierter Bilder auf der Grundlage von Textbeschreibungen verwendet.» Daher im Text «das offene»: Der Quelltext ist frei verfügbar, anders als bei DALL-E und Midjourney.",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "VA-3986c2",
+    anker: "sein System Sora vorstellte",
+    url: "https://de.wikipedia.org/wiki/Sora_(k%C3%BCnstliche_Intelligenz)",
+    titel: "Sora (Wikipedia)",
+    stelle:
+      "«Sora ist eine von OpenAI entwickelte und 2024 veröffentlichte generative künstliche Intelligenz, die auf die Erstellung von Videos aus Texteingaben spezialisiert ist. Das Modell akzeptiert Textbeschreibungen (Prompts) und generiert daraus kurze Videoclips in fotorealistischer Qualität.»",
+    geprueft: "2026-08-10",
+  },
+  {
+    id: "VA-3986c2",
+    anker: "Be My Eyes, eine App für blinde Menschen",
+    url: "https://de.wikipedia.org/wiki/Be_My_Eyes",
+    titel: "Be My Eyes (Wikipedia)",
+    stelle:
+      "«Be My Eyes ist eine Mobile App, die Blinden und sehbehinderten Menschen dabei helfen soll, Gegenstände zu erkennen und Situationen des Alltags zu meistern.» Zur Jahresangabe und zum Modell: «Im Jahr 2023 wurde eine Funktion in die App integriert, die dem Nutzer eine automatische Beschreibung von Gegenständen liefert. … Diese Beschreibung wird mit Hilfe von künstlicher Intelligenz in Form eines GPT-4 Sprachmodells erstellt.»",
     geprueft: "2026-08-10",
   },
 ];

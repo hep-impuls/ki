@@ -50,6 +50,9 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 02 · Die acht Epochen
 
+**[EP-98e975]** *(Hintergrund zum Bild · Renaissance & Aufbruch)*
+Hans Holbein der Jüngere (um 1497 bis 1543) war ein deutscher Maler der Renaissance, der lange am englischen Königshof wirkte. Er malte dieses Doppelporträt 1533 in London. Dargestellt sind zwei junge Männer auf der Höhe ihrer Macht, links der französische Gesandte Jean de Dinteville und rechts sein Freund Georges de Selve, Bischof von Lavaur. Zwischen ihnen steht ein Regal mit Instrumenten und Büchern, ein Inventar des neuen Wissens ihrer Zeit. Quer im Vordergrund liegt ein stark verzerrter Totenschädel, der erst aus einem schrägen Blickwinkel erkennbar wird und an die Vergänglichkeit mahnt. Heute hängt das Werk in der National Gallery in London.
+
 **[EP-cb210c]** *(Kartentext · Renaissance & Aufbruch)*
 Drei Techniken beschleunigen alles. Der Buchdruck mit beweglichen Lettern (Gutenberg, um 1450) macht Texte massenhaft und billig. Kompass und ozeantaugliche Schiffe öffnen die Seewege. Und die doppelte Buchführung (in Italien seit dem 14. Jahrhundert, systematisiert von Luca Pacioli 1494) verwandelt Handel in ein nachprüfbares Rechenwerk. Durchsetzen konnte sich der Buchdruck erst, als billiges Papier (über die islamische Welt aus China) und eine wachsende, lesehungrige Stadt- und Handelsschicht zusammenkamen. Die doppelte Buchführung entsprang dem Bedarf der italienischen Handelshäuser, Kredite und Gewinne zu verfolgen.
 
@@ -165,6 +168,3 @@ Felix Nussbaum (1904–1944) war ein jüdischer Maler aus Osnabrück, dessen Wer
 
 **[EP-d4b7a6]** *(Kartentext · Zeitalter der Katastrophen)*
 Über der Mauer ein gekappter Baum, an dem ein Zweig blüht. Mitten im Grau ein winziges Zeichen von Leben, oder von einer Welt, die draussen einfach weitergeht. 1944 wurde Nussbaum deportiert und in Auschwitz ermordet.
-
-**[EP-3f56d0]** *(Kartentext · Zeitalter der Katastrophen)*
-Technik automatisiert das Töten. Im Ersten Weltkrieg schaffen Maschinengewehr, Artillerie und Giftgas die anonyme Materialschlacht mit Millionen Toten. Der Rundfunk (ab den 1920ern) wird zum Massenmedium und zum Propaganda-Werkzeug der Diktaturen. 1945 zeigt die Atombombe, dass Menschen die Welt vernichten können. Möglich wurde diese Zerstörungskraft durch die industrielle Massenfertigung und die organisierte Wissenschaft: Der Staat der «totalen Kriege» lenkte Forschung, Fabriken und Rohstoffe auf ein einziges Ziel. Die Atombombe entstand im gigantischen «Manhattan-Projekt».

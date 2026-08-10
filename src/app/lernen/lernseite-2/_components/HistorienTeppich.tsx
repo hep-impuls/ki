@@ -49,7 +49,22 @@ export interface TeppichPunkt {
 }
 
 const W = 720;
-const H = 300;
+/**
+ * Zeichenfläche. Die Höhe ist von 300 auf 380 gewachsen, weil der Teppich zu
+ * eng geknüpft war (Christofs Rückmeldung 2026-08-10).
+ *
+ * Warum nur die Höhe: In der Breite ist nichts zu holen, die 33 Punkte liegen
+ * schon zwischen x=30 und x=708 von 720. Der engste Abstand zweier Punkte
+ * betrug 41 Einheiten, und diese Nachbarn stehen vertikal beieinander.
+ *
+ * Höhe UND Seitenverhältnis wachsen gemeinsam, darum bleibt das Verhältnis von
+ * Pixel zu Einheit gleich und nichts wird verzerrt. Die y-Werte der Punkte
+ * werden mit `Y_STRECKUNG` mitgezogen, sonst sässe der Teppich oben und unten
+ * bliebe leerer Raum. Die Punkte selbst bleiben unverändert in der Seite
+ * stehen; gestreckt wird an dieser einen Stelle.
+ */
+const H = 380;
+const Y_STRECKUNG = H / 300;
 
 const FADEN_META: Record<
   FadenArt,
@@ -129,7 +144,7 @@ function MaschenPattern({ id, farbe, variante }: { id: string; farbe: string; va
 }
 
 export default function HistorienTeppich({
-  punkte,
+  punkte: punkteRoh,
   spurKey,
   wunschKey,
   bewertungen = [],
@@ -144,6 +159,12 @@ export default function HistorienTeppich({
   bewertungen?: { prefix: string; frage: string; stufen: [string, string, string] }[];
   className?: string;
 }) {
+  /* Die y-Werte auf die gewachsene Höhe ziehen. Alles Weitere (Maschen, Fäden,
+     Beschriftungen) rechnet mit diesen Punkten, also genügt die eine Stelle. */
+  const punkte = useMemo(
+    () => punkteRoh.map((p) => ({ ...p, y: Math.round(p.y * Y_STRECKUNG) })),
+    [punkteRoh],
+  );
   const n = punkte.length;
   // Gewebe-Maschen: Delaunay-Dreiecke über die Punkte; nur nicht zu grosse
   // (lokale) Maschen füllen den Teppich, wenn alle drei Ecken besucht sind.
@@ -372,7 +393,7 @@ export default function HistorienTeppich({
         <svg
           viewBox={`0 0 ${W} ${H}`}
           preserveAspectRatio="none"
-          className="block w-full select-none aspect-[720/430] sm:aspect-[720/300]"
+          className="block w-full select-none aspect-[720/545] sm:aspect-[720/380]"
           role="img"
           aria-label="Teppich des Wandels: vier Fäden (Technologie, Entdeckungen, gesellschaftliche Ereignisse und kulturelle Praxen) weben sich durchs Antippen der Punkte ein; zwischen besuchten Punkten füllen sich gemusterte Maschen."
         >
