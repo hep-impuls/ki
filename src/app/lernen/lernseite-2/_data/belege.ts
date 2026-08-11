@@ -1431,6 +1431,114 @@ export const BELEGE: Beleg[] = [
       "«ChatGPT … ist ein im November 2022 vorgestellter Chatbot des US-amerikanischen Softwareunternehmens OpenAI.» Der Artikel nennt die Nutzerzahlen der ersten Tage und Monate, auf die sich die Angaben im Text stützen.",
     geprueft: "2026-08-10",
   },
+
+  /* ══ Teppich des Wandels, Faden Entdeckungen ════════════════════════════
+     Zweite Wunschliste von Christof (2026-08-11). */
+
+  /* ── Die Erde wird vermessen ─────────────────────────────────────────── */
+  {
+    id: "PP-adee46",
+    anker: "leitete die berühmte Bibliothek von Alexandria und trug den Spitznamen",
+    url: "https://de.wikipedia.org/wiki/Eratosthenes",
+    titel: "Eratosthenes (Wikipedia)",
+    stelle:
+      "«Im Auftrag der ägyptischen Könige aus der Dynastie der Ptolemäer leitete er rund ein halbes Jahrhundert lang die Bibliothek von Alexandria, die bedeutendste Bibliothek der Antike.» Und zum Spitznamen: «Auch der Spitzname Beta – ‹der Zweite› im Sinne von ‹zweitrangig› – war gebräuchlich.» Die Begründung «in vielen Fächern der Zweitbeste, in keinem der Erste» gehört bei der Quelle genau genommen zum zweiten Spitznamen «Fünfkämpfer»; beide standen für dasselbe Urteil.",
+    geprueft: "2026-08-11",
+  },
+  {
+    id: "PP-adee46",
+    anker: "rechnete anderthalb Jahrtausende später mit einem viel zu kleinen Erdumfang",
+    url: "https://de.wikipedia.org/wiki/Christoph_Kolumbus",
+    titel: "Christoph Kolumbus (Wikipedia)",
+    stelle:
+      "«Da er zudem für die Entfernung zwischen den Längengraden eine zu kleine Zahl annahm, erhielt er einen Abstand von unter 4.500 km zwischen den Kanaren und Japan. Der wirkliche Abstand beträgt fast 20.000 km, doch aufgrund seiner falschen Zahlen hielt Kolumbus die von ihm später entdeckten Inseln in der Karibik für dem chinesischen Festland nahe.»",
+    geprueft: "2026-08-11",
+  },
+
+  /* ── Die Null und das Stellenwertsystem ──────────────────────────────── */
+  {
+    id: "PP-e898ee",
+    anker: "Indische Gelehrte machen die Null zur Zahl",
+    url: "https://de.wikipedia.org/wiki/Null",
+    titel: "Null (Wikipedia), Abschnitt «Indien und Südostasien»",
+    stelle:
+      "«Vermutlich beeinflusst durch das babylonische Sexagesimalsystem sowie durch Astronomie und Kalenderrechnung entstand zwischen 300 v. Chr. und 500 n. Chr. in Indien das dezimale Stellenwertsystem mit 0 und Zahlzeichen für 1, …, 9.» Der Abschnitt belegt auch das Wort «shunya» für die Null «spätestens seit dem 5.» Jahrhundert.",
+    geprueft: "2026-08-11",
+  },
+
+  /* ── Amerika, die Welt wird grösser ──────────────────────────────────── */
+  {
+    id: "PP-b1fae0",
+    anker: "beschriftete ein Kartenmacher 1507 den Kontinent mit",
+    url: "https://de.wikipedia.org/wiki/Martin_Waldseem%C3%BCller",
+    titel: "Martin Waldseemüller (Wikipedia)",
+    stelle:
+      "«Martin Waldseemüller … war ein deutscher Kartograf der Renaissance. Er erstellte 1507 die erste Weltkarte, auf der die Landmassen im Westen als eigenständiger Kontinent und nach Amerigo Vespucci mit dem Namen ‹America› [bezeichnet wurden].»",
+    geprueft: "2026-08-11",
+  },
+  {
+    id: "PP-b1fae0",
+    anker: "Mais, Kartoffel, Tomate und Kakao kamen nach Europa",
+    /* Die deutsche Wikipedia führt den Artikel unter dem englischen Titel. */
+    url: "https://de.wikipedia.org/wiki/Columbian_Exchange",
+    titel: "Columbian Exchange (Wikipedia)",
+    stelle:
+      "«Columbian Exchange (englisch für Kolumbianischer Austausch) ist ein auf Forschungsarbeiten des US-amerikanischen Historikers Alfred W. Crosby zurückgehender Ausdruck, der seit den 1970er Jahren verwendet wird, um die enorme Verbreitung und Wechselwirkung von für die jeweiligen Kontinente zunächst neuartigen landwirtschaftlichen» Pflanzen und Tiere zu bezeichnen.",
+    geprueft: "2026-08-11",
+  },
+
+  /* ── Die Erde verliert die Mitte ─────────────────────────────────────── */
+  {
+    id: "PP-6d48f8",
+    anker: "Jupitermonde und die Phasen der Venus sah",
+    url: "https://de.wikipedia.org/wiki/Galileische_Monde",
+    titel: "Galileische Monde (Wikipedia)",
+    stelle:
+      "«Die Galileischen Monde … sind die vier grössten Monde des Planeten Jupiter: Io, Europa, Ganymed, Kallisto. Durch die Bezeichnung als Galileische Monde wird der italienische Astronom und Naturforscher Galileo Galilei geehrt, der sie 1610 als Erster beschrieb.» Im Text steht «ab 1609», weil Galilei in jenem Jahr mit den Beobachtungen begann; die Monde beschrieb er 1610.",
+    geprueft: "2026-08-11",
+  },
+  {
+    id: "PP-6d48f8",
+    anker: "seiner Überzeugung abzuschwören",
+    url: "https://de.wikipedia.org/wiki/Galileo_Galilei",
+    titel: "Galileo Galilei (Wikipedia), zum Prozess von 1633",
+    stelle:
+      "Einen eigenen Artikel zum Prozess gibt es auf der deutschen Wikipedia nicht; der Personenartikel führt das Verfahren aus. Er belegt den Weg dorthin: «Daraufhin eröffnete die Römische Inquisition nach Vorarbeit des bedeutenden Kirchenlehrers Kardinal Robert Bellarmin … ein Untersuchungsverfahren.»",
+    geprueft: "2026-08-11",
+  },
+
+  /* ── Die Evolution ───────────────────────────────────────────────────── */
+  {
+    id: "PP-8df5c4",
+    anker: "Alfred Russel Wallace ihm 1858 dieselbe Idee in einem Brief schickte",
+    url: "https://de.wikipedia.org/wiki/Alfred_Russel_Wallace",
+    titel: "Alfred Russel Wallace (Wikipedia)",
+    stelle:
+      "«Alfred Russel Wallace … war ein weitgehend autodidaktisch gebildeter britischer Naturforscher. … Bei seinem Aufenthalt im Malaiischen Archipel erkannte» er unabhängig von Darwin das Prinzip der natürlichen Auslese; der Artikel schildert den Brief von 1858, der Darwin zur Veröffentlichung bewegte.",
+    geprueft: "2026-08-11",
+  },
+  {
+    id: "PP-8df5c4",
+    /* Nicht «… an Darwins Verteidiger» — das verdeckte den Glossarbegriff
+       «Darwins», der im Block sonst nicht frei vorkommt. */
+    anker: "Berühmt wurde die Spottfrage",
+    url: "https://de.wikipedia.org/wiki/Huxley-Wilberforce-Debatte",
+    titel: "Huxley-Wilberforce-Debatte (Wikipedia)",
+    stelle:
+      "«Dabei soll es zu einem Wortgefecht zwischen Thomas Henry Huxley … und Samuel Wilberforce, Bischof von Oxford, gekommen sein, bei dem Wilberforce fragte, ob Huxley lieber väterlicher- oder mütterlicherseits von Affen abstamme.» Die Quelle datiert die Debatte auf den 30. Juni 1860 und schreibt bewusst «soll»: Es gibt keinen Wortlaut, nur Erinnerungen der Anwesenden.",
+    geprueft: "2026-08-11",
+  },
+
+  /* ── Die Kernspaltung ────────────────────────────────────────────────── */
+  {
+    id: "PP-0c8b04",
+    anker: "Otto Hahn und Fritz Strassmann finden im bestrahlten Uran",
+    url: "https://de.wikipedia.org/wiki/Kernspaltung",
+    titel: "Kernspaltung (Wikipedia)",
+    stelle:
+      "«Otto Hahn und seinem Assistenten Fritz Straßmann gelang dann am 17. Dezember 1938 am Berliner Kaiser-Wilhelm-Institut für Chemie der Beweis einer neutroneninduzierten Kernspaltung von Uran durch den radiochemischen Nachweis des Spaltprodukts Barium.» Die Quelle schreibt «Straßmann», im Text steht «Strassmann» nach Schweizer Rechtschreibung.",
+    geprueft: "2026-08-11",
+  },
 ];
 
 /**

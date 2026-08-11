@@ -13,8 +13,8 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 125 |
-| Belegte Textblöcke | 72 |
+| Belege | 135 |
+| Belegte Textblöcke | 78 |
 | Begründete Nicht-Belege | 6 |
 | Aussagen mit Standdatum | 3 |
 
@@ -309,6 +309,96 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 - **Geprüft:** 2026-08-10
 
 > Im Sommer 1956 lud der junge Mathematiker John McCarthy eine Handvoll Forscher ans Dartmouth College ein und gab dem Feld seinen Namen, künstliche Intelligenz. Der Antrag versprach kühn, ein Sommer mit zehn Leuten werde entscheidende Fortschritte bringen. Es dauerte dann Jahrzehnte länger, mit Durchbrüchen und Enttäuschungen im Wechsel. Sichtbar wurde der Fortschritt zuerst in Spielen: 1997 schlug der Rechner Deep Blue den Schachweltmeister Garri Kasparow, 2016 besiegte AlphaGo den Go-Meister Lee Sedol mit einem Zug, den Fachleute zuerst für einen Fehler hielten. Der eigentliche Bruch kam am 30. November 2022, als ChatGPT freigeschaltet wurde. Innert fünf Tagen meldeten sich eine Million Menschen an, nach zwei Monaten waren es rund hundert Millionen, schneller als je bei einer Anwendung zuvor. Erstmals konnte jede und jeder mit einer KI einfach reden. Damit wanderte eine Laborfrage mitten in Schulzimmer, Büros und Werkstätten.
+
+### Die Erde wird vermessen · leitete die berühmte Bibliothek von Alexandria und trug den Spitznamen
+
+- **Kennung:** `PP-adee46` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Eratosthenes (Wikipedia)](https://de.wikipedia.org/wiki/Eratosthenes)
+- **Fundstelle:** «Im Auftrag der ägyptischen Könige aus der Dynastie der Ptolemäer leitete er rund ein halbes Jahrhundert lang die Bibliothek von Alexandria, die bedeutendste Bibliothek der Antike.» Und zum Spitznamen: «Auch der Spitzname Beta – ‹der Zweite› im Sinne von ‹zweitrangig› – war gebräuchlich.» Die Begründung «in vielen Fächern der Zweitbeste, in keinem der Erste» gehört bei der Quelle genau genommen zum zweiten Spitznamen «Fünfkämpfer»; beide standen für dasselbe Urteil.
+- **Geprüft:** 2026-08-11
+
+> Eratosthenes leitete die berühmte Bibliothek von Alexandria und trug den Spitznamen «Beta», weil er in vielen Fächern der Zweitbeste war, in keinem der Erste. Er wusste aus Berichten, dass die Mittagssonne im südlichen Syene zur Sommersonnenwende senkrecht steht, während sie in Alexandria zur selben Stunde um ein Fünfzigstel eines Vollkreises schräg einfällt. Also brauchte er nur noch die Distanz zwischen beiden Städten, die geschulte Schrittzähler abgemessen hatten, und multiplizierte sie mit fünfzig. Je nach angenommener Länge des antiken Längenmasses lag sein Ergebnis nur wenige Prozent neben dem heutigen Wert. Ausgerechnet Kolumbus rechnete anderthalb Jahrtausende später mit einem viel zu kleinen Erdumfang, sonst hätte er die Fahrt nach Westen wohl nie gewagt. Gute Messungen können Weltbilder tragen, und falsche können Weltgeschichte machen.
+
+### Die Erde wird vermessen · rechnete anderthalb Jahrtausende später mit einem viel zu kleinen Erdumfang
+
+- **Kennung:** `PP-adee46` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Christoph Kolumbus (Wikipedia)](https://de.wikipedia.org/wiki/Christoph_Kolumbus)
+- **Fundstelle:** «Da er zudem für die Entfernung zwischen den Längengraden eine zu kleine Zahl annahm, erhielt er einen Abstand von unter 4.500 km zwischen den Kanaren und Japan. Der wirkliche Abstand beträgt fast 20.000 km, doch aufgrund seiner falschen Zahlen hielt Kolumbus die von ihm später entdeckten Inseln in der Karibik für dem chinesischen Festland nahe.»
+- **Geprüft:** 2026-08-11
+
+> Eratosthenes leitete die berühmte Bibliothek von Alexandria und trug den Spitznamen «Beta», weil er in vielen Fächern der Zweitbeste war, in keinem der Erste. Er wusste aus Berichten, dass die Mittagssonne im südlichen Syene zur Sommersonnenwende senkrecht steht, während sie in Alexandria zur selben Stunde um ein Fünfzigstel eines Vollkreises schräg einfällt. Also brauchte er nur noch die Distanz zwischen beiden Städten, die geschulte Schrittzähler abgemessen hatten, und multiplizierte sie mit fünfzig. Je nach angenommener Länge des antiken Längenmasses lag sein Ergebnis nur wenige Prozent neben dem heutigen Wert. Ausgerechnet Kolumbus rechnete anderthalb Jahrtausende später mit einem viel zu kleinen Erdumfang, sonst hätte er die Fahrt nach Westen wohl nie gewagt. Gute Messungen können Weltbilder tragen, und falsche können Weltgeschichte machen.
+
+### Die Null und das Stellenwertsystem · Indische Gelehrte machen die Null zur Zahl
+
+- **Kennung:** `PP-e898ee` (Kartentext)
+- **Quelle:** [Null (Wikipedia), Abschnitt «Indien und Südostasien»](https://de.wikipedia.org/wiki/Null)
+- **Fundstelle:** «Vermutlich beeinflusst durch das babylonische Sexagesimalsystem sowie durch Astronomie und Kalenderrechnung entstand zwischen 300 v. Chr. und 500 n. Chr. in Indien das dezimale Stellenwertsystem mit 0 und Zahlzeichen für 1, …, 9.» Der Abschnitt belegt auch das Wort «shunya» für die Null «spätestens seit dem 5.» Jahrhundert.
+- **Geprüft:** 2026-08-11
+
+> Indische Gelehrte machen die Null zur Zahl und schaffen das Stellenwertsystem, unsere heutigen Ziffern. Rechnen wird einfach genug für alle.
+
+### Amerika, die Welt wird grösser · beschriftete ein Kartenmacher 1507 den Kontinent mit
+
+- **Kennung:** `PP-b1fae0` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Martin Waldseemüller (Wikipedia)](https://de.wikipedia.org/wiki/Martin_Waldseem%C3%BCller)
+- **Fundstelle:** «Martin Waldseemüller … war ein deutscher Kartograf der Renaissance. Er erstellte 1507 die erste Weltkarte, auf der die Landmassen im Westen als eigenständiger Kontinent und nach Amerigo Vespucci mit dem Namen ‹America› [bezeichnet wurden].»
+- **Geprüft:** 2026-08-11
+
+> Kolumbus suchte gar keinen neuen Kontinent, er wollte den Seeweg nach Indien und zu dessen Gewürzen finden und hielt die Erde für deutlich kleiner, als sie ist. Bis zu seinem Tod bestand er darauf, in Asien gewesen zu sein, weshalb die Bewohner der Karibik «Indios» genannt wurden. Dass es sich um eine für Europa neue Weltgegend handelte, sprach der Seefahrer Amerigo Vespucci aus, nach ihm beschriftete ein Kartenmacher 1507 den Kontinent mit «America». Folgenreich war vor allem der Austausch der Lebenswelten: Mais, Kartoffel, Tomate und Kakao kamen nach Europa, Pferde, Weizen, Zuckerrohr und Krankheiten gelangten nach Amerika. Die bescheidene Kartoffel wurde später zum Grundnahrungsmittel in weiten Teilen Europas und veränderte auch die Schweizer Landwirtschaft. So steckt in jedem Teller Rösti ein Stück von 1492.
+
+### Amerika, die Welt wird grösser · Mais, Kartoffel, Tomate und Kakao kamen nach Europa
+
+- **Kennung:** `PP-b1fae0` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Columbian Exchange (Wikipedia)](https://de.wikipedia.org/wiki/Columbian_Exchange)
+- **Fundstelle:** «Columbian Exchange (englisch für Kolumbianischer Austausch) ist ein auf Forschungsarbeiten des US-amerikanischen Historikers Alfred W. Crosby zurückgehender Ausdruck, der seit den 1970er Jahren verwendet wird, um die enorme Verbreitung und Wechselwirkung von für die jeweiligen Kontinente zunächst neuartigen landwirtschaftlichen» Pflanzen und Tiere zu bezeichnen.
+- **Geprüft:** 2026-08-11
+
+> Kolumbus suchte gar keinen neuen Kontinent, er wollte den Seeweg nach Indien und zu dessen Gewürzen finden und hielt die Erde für deutlich kleiner, als sie ist. Bis zu seinem Tod bestand er darauf, in Asien gewesen zu sein, weshalb die Bewohner der Karibik «Indios» genannt wurden. Dass es sich um eine für Europa neue Weltgegend handelte, sprach der Seefahrer Amerigo Vespucci aus, nach ihm beschriftete ein Kartenmacher 1507 den Kontinent mit «America». Folgenreich war vor allem der Austausch der Lebenswelten: Mais, Kartoffel, Tomate und Kakao kamen nach Europa, Pferde, Weizen, Zuckerrohr und Krankheiten gelangten nach Amerika. Die bescheidene Kartoffel wurde später zum Grundnahrungsmittel in weiten Teilen Europas und veränderte auch die Schweizer Landwirtschaft. So steckt in jedem Teller Rösti ein Stück von 1492.
+
+### Die Erde verliert die Mitte · Jupitermonde und die Phasen der Venus sah
+
+- **Kennung:** `PP-6d48f8` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Galileische Monde (Wikipedia)](https://de.wikipedia.org/wiki/Galileische_Monde)
+- **Fundstelle:** «Die Galileischen Monde … sind die vier grössten Monde des Planeten Jupiter: Io, Europa, Ganymed, Kallisto. Durch die Bezeichnung als Galileische Monde wird der italienische Astronom und Naturforscher Galileo Galilei geehrt, der sie 1610 als Erster beschrieb.» Im Text steht «ab 1609», weil Galilei in jenem Jahr mit den Beobachtungen begann; die Monde beschrieb er 1610.
+- **Geprüft:** 2026-08-11
+
+> Nikolaus Kopernikus war Domherr in Frauenburg an der Ostsee und rechnete jahrzehntelang an seinem Sonnensystem. Veröffentlicht wurde das Werk «De revolutionibus» erst 1543, in seinem Todesjahr. Ein vorsichtiger Herausgeber schob ungefragt ein Vorwort ein, das alles zur blossen Rechenhilfe erklärte, so blieb das Buch zunächst fast unbeachtet. Ernst wurde es, als Galileo Galilei ab 1609 mit dem Fernrohr Jupitermonde und die Phasen der Venus sah, also Dinge, die sich nicht um die Erde drehten; 1633 zwang ihn die Inquisition, seiner Überzeugung abzuschwören. Das Merkwürdige an dieser Revolution ist, dass sich im Alltag nichts änderte, die Sonne ging weiter auf und unter wie immer. Verschoben hat sich hingegen etwas im Kopf. Der Mensch schaute nun von einem gewöhnlichen Planeten aus ins All statt aus dessen Mitte. Grosse Umbrüche beginnen manchmal unsichtbar, als neue Beschreibung derselben Welt.
+
+### Die Erde verliert die Mitte · seiner Überzeugung abzuschwören
+
+- **Kennung:** `PP-6d48f8` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Galileo Galilei (Wikipedia), zum Prozess von 1633](https://de.wikipedia.org/wiki/Galileo_Galilei)
+- **Fundstelle:** Einen eigenen Artikel zum Prozess gibt es auf der deutschen Wikipedia nicht; der Personenartikel führt das Verfahren aus. Er belegt den Weg dorthin: «Daraufhin eröffnete die Römische Inquisition nach Vorarbeit des bedeutenden Kirchenlehrers Kardinal Robert Bellarmin … ein Untersuchungsverfahren.»
+- **Geprüft:** 2026-08-11
+
+> Nikolaus Kopernikus war Domherr in Frauenburg an der Ostsee und rechnete jahrzehntelang an seinem Sonnensystem. Veröffentlicht wurde das Werk «De revolutionibus» erst 1543, in seinem Todesjahr. Ein vorsichtiger Herausgeber schob ungefragt ein Vorwort ein, das alles zur blossen Rechenhilfe erklärte, so blieb das Buch zunächst fast unbeachtet. Ernst wurde es, als Galileo Galilei ab 1609 mit dem Fernrohr Jupitermonde und die Phasen der Venus sah, also Dinge, die sich nicht um die Erde drehten; 1633 zwang ihn die Inquisition, seiner Überzeugung abzuschwören. Das Merkwürdige an dieser Revolution ist, dass sich im Alltag nichts änderte, die Sonne ging weiter auf und unter wie immer. Verschoben hat sich hingegen etwas im Kopf. Der Mensch schaute nun von einem gewöhnlichen Planeten aus ins All statt aus dessen Mitte. Grosse Umbrüche beginnen manchmal unsichtbar, als neue Beschreibung derselben Welt.
+
+### Die Evolution · Alfred Russel Wallace ihm 1858 dieselbe Idee in einem Brief schickte
+
+- **Kennung:** `PP-8df5c4` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Alfred Russel Wallace (Wikipedia)](https://de.wikipedia.org/wiki/Alfred_Russel_Wallace)
+- **Fundstelle:** «Alfred Russel Wallace … war ein weitgehend autodidaktisch gebildeter britischer Naturforscher. … Bei seinem Aufenthalt im Malaiischen Archipel erkannte» er unabhängig von Darwin das Prinzip der natürlichen Auslese; der Artikel schildert den Brief von 1858, der Darwin zur Veröffentlichung bewegte.
+- **Geprüft:** 2026-08-11
+
+> Als junger Mann segelte Charles Darwin fünf Jahre lang auf der «Beagle» um die Welt und sammelte Käfer, Fossilien und Finken, deren Schnäbel sich von Insel zu Insel unterschieden. Die Erklärung dafür trug er danach über zwanzig Jahre mit sich herum, ohne sie zu veröffentlichen, denn er wusste, wie sehr sie das fromme England treffen würde. Erst als der jüngere Forscher Alfred Russel Wallace ihm 1858 dieselbe Idee in einem Brief schickte, ging Darwin an die Öffentlichkeit, und die Erstauflage der «Entstehung der Arten» war am ersten Tag vergriffen. Im Buch selbst kam der Mensch fast nicht vor, nur ein einziger Satz deutete an, dass auch auf seine Herkunft Licht fallen werde. Gestritten wurde trotzdem sofort über den Affen im Stammbaum. Berühmt wurde die Spottfrage an Darwins Verteidiger, ob er denn väterlicherseits oder mütterlicherseits vom Affen abstamme. Eine Idee ohne jede Maschine hatte genügt, um das Selbstbild einer Epoche zu erschüttern.
+
+### Die Evolution · Berühmt wurde die Spottfrage
+
+- **Kennung:** `PP-8df5c4` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Huxley-Wilberforce-Debatte (Wikipedia)](https://de.wikipedia.org/wiki/Huxley-Wilberforce-Debatte)
+- **Fundstelle:** «Dabei soll es zu einem Wortgefecht zwischen Thomas Henry Huxley … und Samuel Wilberforce, Bischof von Oxford, gekommen sein, bei dem Wilberforce fragte, ob Huxley lieber väterlicher- oder mütterlicherseits von Affen abstamme.» Die Quelle datiert die Debatte auf den 30. Juni 1860 und schreibt bewusst «soll»: Es gibt keinen Wortlaut, nur Erinnerungen der Anwesenden.
+- **Geprüft:** 2026-08-11
+
+> Als junger Mann segelte Charles Darwin fünf Jahre lang auf der «Beagle» um die Welt und sammelte Käfer, Fossilien und Finken, deren Schnäbel sich von Insel zu Insel unterschieden. Die Erklärung dafür trug er danach über zwanzig Jahre mit sich herum, ohne sie zu veröffentlichen, denn er wusste, wie sehr sie das fromme England treffen würde. Erst als der jüngere Forscher Alfred Russel Wallace ihm 1858 dieselbe Idee in einem Brief schickte, ging Darwin an die Öffentlichkeit, und die Erstauflage der «Entstehung der Arten» war am ersten Tag vergriffen. Im Buch selbst kam der Mensch fast nicht vor, nur ein einziger Satz deutete an, dass auch auf seine Herkunft Licht fallen werde. Gestritten wurde trotzdem sofort über den Affen im Stammbaum. Berühmt wurde die Spottfrage an Darwins Verteidiger, ob er denn väterlicherseits oder mütterlicherseits vom Affen abstamme. Eine Idee ohne jede Maschine hatte genügt, um das Selbstbild einer Epoche zu erschüttern.
+
+### Die Kernspaltung · Otto Hahn und Fritz Strassmann finden im bestrahlten Uran
+
+- **Kennung:** `PP-0c8b04` (Kartentext)
+- **Quelle:** [Kernspaltung (Wikipedia)](https://de.wikipedia.org/wiki/Kernspaltung)
+- **Fundstelle:** «Otto Hahn und seinem Assistenten Fritz Straßmann gelang dann am 17. Dezember 1938 am Berliner Kaiser-Wilhelm-Institut für Chemie der Beweis einer neutroneninduzierten Kernspaltung von Uran durch den radiochemischen Nachweis des Spaltprodukts Barium.» Die Quelle schreibt «Straßmann», im Text steht «Strassmann» nach Schweizer Rechtschreibung.
+- **Geprüft:** 2026-08-11
+
+> Otto Hahn und Fritz Strassmann finden im bestrahlten Uran ein Element, das dort nicht sein dürfte. Lise Meitner und Otto Frisch erklären den Befund: Der Atomkern ist gespalten. Wenige Jahre später wird daraus die Bombe. Wissenschaft und Weltpolitik sind untrennbar verknotet.
 
 ---
 
