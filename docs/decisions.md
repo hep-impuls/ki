@@ -10,6 +10,42 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-11 — Kein Secret mehr in der Adresszeile (Pietro)
+
+Bis heute reichte der Lehrer-Hub die Zugangsdaten als Query-Parameter weiter:
+`/lehrperson/report?code=PIRO-FS-A26&secret=…`. Damit stand das Secret im
+Browserverlauf, in der Adressleisten-Vervollständigung und in jedem Lesezeichen.
+
+**Der Fall, der wehtut, ist der Beamer.** Wer den Klassen-Report im Unterricht
+zeigt, projiziert das Secret an die Wand. Und weil der Report die einzelnen
+Fortschritts-Codes nennt, könnte danach jede Person aus der Klasse den Report
+aller öffnen — genau das, was das Secret verhindern soll.
+
+**Neu:** Beim Absenden landen Code und Secret im `sessionStorage`
+(`src/lib/lehrperson/zugang.ts`), die Adresse bleibt `/lehrperson/report`. Wer
+eine der drei geschützten Seiten direkt aufruft, bekommt ein kleines
+Eingabefeld auf der Seite statt einer Fehlermeldung
+(`src/app/lehrperson/_components/ZugangGate.tsx`). Betroffen sind `report/`,
+`setup/` und `admin/`.
+
+- **`sessionStorage`, nicht `localStorage`:** Der Zugang soll das Schliessen des
+  Tabs nicht überleben. An einem geteilten Schulrechner ist das der Unterschied
+  zwischen «ich war kurz im Report» und «der Nächste auch».
+- **Kein signiertes Cookie** wie bei `/autoren`: Der Server prüft das Secret
+  ohnehin bei jedem Aufruf gegen den Hash. Hier ging es nicht um eine
+  zusätzliche Prüfung, sondern nur darum, das Secret aus der Adresszeile zu
+  bekommen.
+- **Alte Lesezeichen funktionieren weiter.** Stehen die Parameter doch in der
+  Adresse, werden sie einmal übernommen und die Adresse per `router.replace`
+  sofort bereinigt — kein zusätzlicher Verlaufseintrag.
+
+**Der Preis:** Ein Lesezeichen führt nicht mehr mit einem Klick in den Report,
+sondern fragt die zwei Angaben ab. Bewusst in Kauf genommen. Der Hinweis in der
+Lehrpersonen-Anleitung, der bisher das Gegenteil empfahl («Lesezeichen setzen,
+bedenken Sie aber…»), ist entsprechend umgeschrieben.
+
+---
+
 ## 2026-08-10 — Admin-Dashboard: fünf Entscheide (Pietro)
 
 Antworten auf Christofs fünf Fragen aus

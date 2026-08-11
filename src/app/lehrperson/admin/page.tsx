@@ -2,8 +2,8 @@
 
 import { Suspense, useCallback, useEffect, useState } from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { loadAdminReportSecure } from "@/lib/api";
+import { ZugangFormular, useZugang } from "../_components/ZugangGate";
 import type { AdminReport } from "@/lib/types";
 
 /**
@@ -85,9 +85,7 @@ function Stand({ anteil }: { anteil: number | null }) {
 }
 
 function AdminFlow() {
-  const search = useSearchParams();
-  const code = (search.get("code") ?? "").toUpperCase();
-  const secret = search.get("secret") ?? "";
+  const { zugang, bereit, setzen } = useZugang("/lehrperson/admin");
 
   const [report, setReport] = useState<AdminReport | null>(null);
   const [loading, setLoading] = useState(true);
@@ -95,13 +93,9 @@ function AdminFlow() {
 
   const laden = useCallback(
     (frisch: boolean) => {
-      if (!code || !secret) {
-        setError("Klassencode oder Secret fehlt. Bitte über den Lehrer-Hub öffnen.");
-        setLoading(false);
-        return;
-      }
+      if (!zugang) return;
       setLoading(true);
-      loadAdminReportSecure(code, secret, frisch)
+      loadAdminReportSecure(zugang.code, zugang.secret, frisch)
         .then((r) => {
           setReport(r);
           setError(null);
@@ -109,12 +103,17 @@ function AdminFlow() {
         .catch((err) => setError(err instanceof Error ? err.message : "Laden fehlgeschlagen."))
         .finally(() => setLoading(false));
     },
-    [code, secret],
+    [zugang],
   );
 
   useEffect(() => {
+    if (!bereit) return;
+    if (!zugang) {
+      setLoading(false);
+      return;
+    }
     laden(false);
-  }, [laden]);
+  }, [bereit, zugang, laden]);
 
   return (
     <main className="mx-auto max-w-5xl px-lg py-xl">
@@ -136,7 +135,15 @@ function AdminFlow() {
         </p>
       </header>
 
-      {loading && !report && (
+      {bereit && !zugang && (
+        <ZugangFormular
+          titel="Anmelden"
+          hinweis="Klassencode und Secret wie beim Report. Sichtbar wird die Gesamtübersicht nur mit einem dafür freigeschalteten Code."
+          onZugang={setzen}
+        />
+      )}
+
+      {zugang && loading && !report && (
         <p className="mt-xl text-body-md text-on-surface-variant">Zahlen werden geladen …</p>
       )}
 

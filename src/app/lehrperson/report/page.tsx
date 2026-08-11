@@ -1,8 +1,8 @@
 "use client";
 
 import { Suspense, useEffect, useMemo, useState } from "react";
-import { useSearchParams } from "next/navigation";
 import { loadTeacherOrakelSecure, loadTeacherReportSecure } from "@/lib/api";
+import { ZugangFormular, useZugang } from "../_components/ZugangGate";
 import { describePoll } from "@/lib/pollLabels";
 import { STATIONEN_V3 } from "@/app/lernen/lernseite-1/_data/stationenV3";
 import KlassenKontext from "./_components/KlassenKontext";
@@ -261,9 +261,7 @@ function ThemenListe({
 }
 
 function ReportFlow() {
-  const search = useSearchParams();
-  const code = (search.get("code") ?? "").toUpperCase();
-  const secret = search.get("secret") ?? "";
+  const { zugang, bereit, setzen } = useZugang("/lehrperson/report");
 
   const [report, setReport] = useState<TeacherReport | null>(null);
   const [orakel, setOrakel] = useState<TeacherOrakel | null>(null);
@@ -271,11 +269,13 @@ function ReportFlow() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!code || !secret) {
-      setError("Klassencode oder Secret fehlt. Bitte über den Lehrer-Hub öffnen.");
+    if (!bereit) return;
+    if (!zugang) {
+      // Kein Zugang im Tab → das Formular unten übernimmt, keine Fehlermeldung.
       setLoading(false);
       return;
     }
+    const { code, secret } = zugang;
     loadTeacherReportSecure(code, secret)
       .then(setReport)
       .catch((err) => setError(err instanceof Error ? err.message : "Laden fehlgeschlagen."))
@@ -284,7 +284,7 @@ function ReportFlow() {
     loadTeacherOrakelSecure(code, secret)
       .then(setOrakel)
       .catch(() => {});
-  }, [code, secret]);
+  }, [bereit, zugang]);
 
   /**
    * Module ausser Lernseite 1. Die standen frueher als zusaetzliche Spalten
@@ -366,7 +366,9 @@ function ReportFlow() {
         <p className="text-label-md uppercase tracking-wider text-tertiary">
           Lehrpersonen · Report
         </p>
-        <h1 className="mt-sm text-headline-xl text-on-surface">Klasse {code || "—"}</h1>
+        <h1 className="mt-sm text-headline-xl text-on-surface">
+          Klasse {zugang?.code || "—"}
+        </h1>
         {report && (
           <p className="mt-sm text-body-md text-on-surface-variant">
             {report.n} Schüler:innen
@@ -374,7 +376,17 @@ function ReportFlow() {
         )}
       </header>
 
-      {loading && <p className="mt-xl text-body-md text-on-surface-variant">Lädt …</p>}
+      {bereit && !zugang && (
+        <ZugangFormular
+          titel="Klassen-Report öffnen"
+          hinweis="Klassencode und Secret, die du beim Anlegen der Klasse gewählt hast."
+          onZugang={setzen}
+        />
+      )}
+
+      {zugang && loading && (
+        <p className="mt-xl text-body-md text-on-surface-variant">Lädt …</p>
+      )}
       {error && <p className="mt-xl text-body-md text-error">{error}</p>}
 
       {report && !loading && (

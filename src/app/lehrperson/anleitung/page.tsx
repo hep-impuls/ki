@@ -379,11 +379,13 @@ export default function AnleitungLehrperson() {
         </ul>
 
         <div className="mt-md">
-          <Hinweis titel="Report-Link aufbewahren:">
-            Code und Secret stehen in der Adresszeile. Wer den Report regelmässig
-            braucht, setzt ein Lesezeichen — bedenken Sie aber, dass das Secret
-            damit im Browserverlauf steht. Auf geteilten Geräten besser jedes Mal
-            neu eingeben.
+          <Hinweis titel="Das Secret steht nie in der Adresszeile:">
+            Code und Secret bleiben im Browser-Tab und verschwinden, sobald Sie
+            ihn schliessen. Ein Lesezeichen auf{" "}
+            <Code>/lehrperson/report</Code> ist deshalb gefahrlos — es fragt beim
+            nächsten Mal einfach wieder nach den beiden Angaben. Das ist
+            Absicht: Wer den Report am Beamer zeigt, soll nicht sein Secret an
+            die Wand projizieren.
           </Hinweis>
         </div>
       </section>

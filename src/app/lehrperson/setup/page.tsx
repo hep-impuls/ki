@@ -1,9 +1,9 @@
 "use client";
 
 import { Suspense, useCallback, useEffect, useMemo, useState } from "react";
-import { useSearchParams } from "next/navigation";
 import { unit } from "@/config/unit";
 import { loadTeacherPrefsSecure, saveTeacherSetupSecure } from "@/lib/api";
+import { ZugangFormular, useZugang } from "../_components/ZugangGate";
 
 /**
  * Pflichtmodul-Auswahl (Vorbild: 10mio `teacher-setup.astro`).
@@ -31,9 +31,9 @@ function flatModules(): FlatModule[] {
 }
 
 function SetupFlow() {
-  const search = useSearchParams();
-  const code = (search.get("code") ?? "").toUpperCase();
-  const secret = search.get("secret") ?? "";
+  const { zugang, bereit, setzen } = useZugang("/lehrperson/setup");
+  const code = zugang?.code ?? "";
+  const secret = zugang?.secret ?? "";
 
   const modules = useMemo(flatModules, []);
   const [selected, setSelected] = useState<Set<string>>(new Set());
@@ -43,8 +43,9 @@ function SetupFlow() {
   const [saved, setSaved] = useState(false);
 
   useEffect(() => {
+    if (!bereit) return;
     if (!code || !secret) {
-      setError("Klassencode oder Secret fehlt. Bitte über den Lehrer-Hub öffnen.");
+      // Kein Zugang im Tab → das Formular unten übernimmt, keine Fehlermeldung.
       setLoading(false);
       return;
     }
@@ -52,7 +53,7 @@ function SetupFlow() {
       .then((req) => setSelected(new Set(req)))
       .catch((err) => setError(err instanceof Error ? err.message : "Laden fehlgeschlagen."))
       .finally(() => setLoading(false));
-  }, [code, secret]);
+  }, [bereit, code, secret]);
 
   const toggle = useCallback((slug: string) => {
     setSelected((prev) => {
@@ -90,7 +91,13 @@ function SetupFlow() {
         </p>
       </header>
 
-      {loading ? (
+      {bereit && !zugang ? (
+        <ZugangFormular
+          titel="Pflichtmodule wählen"
+          hinweis="Klassencode und Secret, die du beim Anlegen der Klasse gewählt hast."
+          onZugang={setzen}
+        />
+      ) : loading ? (
         <p className="mt-xl text-body-md text-on-surface-variant">Lädt …</p>
       ) : (
         <>

@@ -4,6 +4,7 @@ import { useCallback, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { classExists, saveTeacherSetupSecure } from "@/lib/api";
+import { speichereZugang } from "@/lib/lehrperson/zugang";
 
 /**
  * Lehrer-Hub (Vorbild: 10mio `teacher.astro`).
@@ -85,26 +86,40 @@ export default function LehrpersonPage() {
     [code, secret, downloadBackup],
   );
 
-  const openReport = useCallback(() => {
-    const c = openCode.trim().toUpperCase();
-    const s = openSecret.trim();
-    if (!c || !s) return;
-    const params = new URLSearchParams({ code: c, secret: s });
-    router.push(`/lehrperson/report?${params.toString()}`);
-  }, [openCode, openSecret, router]);
+  /**
+   * Zugangsdaten in den Tab legen und auf die *nackte* Adresse navigieren.
+   *
+   * Früher wurden Code und Secret als Query-Parameter weitergereicht — damit
+   * stand das Secret in der Adresszeile, im Verlauf und in jedem Lesezeichen.
+   * Wer den Report am Beamer zeigt, projizierte es an die Wand; die Klasse
+   * hätte danach den Report aller öffnen können. Siehe
+   * `src/lib/lehrperson/zugang.ts`.
+   */
+  const oeffneMitZugang = useCallback(
+    (pfad: string, c: string, s: string) => {
+      const code = c.trim().toUpperCase();
+      const secret = s.trim();
+      if (!code || !secret) return;
+      speichereZugang({ code, secret });
+      router.push(pfad);
+    },
+    [router],
+  );
+
+  const openReport = useCallback(
+    () => oeffneMitZugang("/lehrperson/report", openCode, openSecret),
+    [oeffneMitZugang, openCode, openSecret],
+  );
 
   /**
    * Gesamtübersicht — dieselbe Anmeldung, nur ein weiterer Blick. Ob der Code
    * dafür freigeschaltet ist, entscheidet der Server; hier wird nicht
    * vorsortiert.
    */
-  const openAdmin = useCallback(() => {
-    const c = openCode.trim().toUpperCase();
-    const s = openSecret.trim();
-    if (!c || !s) return;
-    const params = new URLSearchParams({ code: c, secret: s });
-    router.push(`/lehrperson/admin?${params.toString()}`);
-  }, [openCode, openSecret, router]);
+  const openAdmin = useCallback(
+    () => oeffneMitZugang("/lehrperson/admin", openCode, openSecret),
+    [oeffneMitZugang, openCode, openSecret],
+  );
 
   return (
     <main className="mx-auto max-w-2xl px-lg py-xl">
@@ -309,25 +324,13 @@ export default function LehrpersonPage() {
           </div>
           <div className="mt-lg flex flex-col gap-sm sm:flex-row">
             <button
-              onClick={() => {
-                const params = new URLSearchParams({
-                  code: code.trim().toUpperCase(),
-                  secret: secret.trim(),
-                });
-                router.push(`/lehrperson/setup?${params.toString()}`);
-              }}
+              onClick={() => oeffneMitZugang("/lehrperson/setup", code, secret)}
               className="inline-flex flex-1 items-center justify-center gap-sm rounded-xl bg-primary px-lg py-sm text-label-md text-on-primary shadow-sm transition hover:bg-on-primary-container"
             >
               Pflichtmodule wählen
             </button>
             <button
-              onClick={() => {
-                const params = new URLSearchParams({
-                  code: code.trim().toUpperCase(),
-                  secret: secret.trim(),
-                });
-                router.push(`/lehrperson/report?${params.toString()}`);
-              }}
+              onClick={() => oeffneMitZugang("/lehrperson/report", code, secret)}
               className="inline-flex flex-1 items-center justify-center gap-sm rounded-xl border border-outline-variant px-lg py-sm text-label-md text-on-surface transition hover:bg-surface-dim"
             >
               Report öffnen
