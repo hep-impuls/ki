@@ -2,12 +2,9 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
-  leseAbwahlIndices,
   leseSpurenIndices,
-  loescheAbwahl,
-  loescheAbwahlPrefix,
+  loescheSpur,
   loescheSpuren,
-  merkeAbwahl,
   merkeSpur,
   SPUR_EVENT,
   zieheSpurenAusCloud,
@@ -249,22 +246,14 @@ export default function HistorienTeppich({
       /* Privatmodus */
     }
   }, [offeneKarte]);
-  /** Bewusst wieder weggeklickte Punkte — bleiben beim Spur-Restore draussen,
-   *  damit die Leiste unten nicht überquillt (die Aktivität bleibt gezählt).
-   *
-   *  Dieser Ref ist nur der schnelle Zugriff; haltbar liegt die Abwahl in
-   *  `spuren.ts` (localStorage + Fortschritts-Doc). Vorher lag sie NUR hier,
-   *  und weil ein Ref den Seitenwechsel nicht übersteht, kam ein
-   *  ausgeschalteter Faden danach wieder eingeschaltet zurück. */
-  const abgewaehlt = useRef<Set<number>>(new Set());
+  /* Kein Merker für abgewählte Punkte mehr: Ein Abwählen LÖSCHT die Spur
+     (Entscheid Christof, 2026-08-10), und eine gelöschte Spur kann der Restore
+     nicht zurückbringen. Vorher stand hier ein `useRef`, der den Seitenwechsel
+     nicht überstand, weshalb ausgeschaltete Fäden wieder auftauchten. */
 
   useEffect(() => {
     function restore() {
-      // Haltbare Abwahl zuerst einlesen, sonst gewinnt die Spur.
-      leseAbwahlIndices(spurKey).forEach((i) => abgewaehlt.current.add(i));
-      const idx = leseSpurenIndices(spurKey).filter(
-        (i) => i >= 0 && i < n && !abgewaehlt.current.has(i),
-      );
+      const idx = leseSpurenIndices(spurKey).filter((i) => i >= 0 && i < n);
       if (idx.length === 0) return;
       setBesucht((prev) => {
         const nx = new Set(prev);
@@ -286,8 +275,8 @@ export default function HistorienTeppich({
   /** Antippen wählt an — erneutes Antippen wählt wieder ab. */
   function besuche(i: number) {
     if (besucht.has(i)) {
-      abgewaehlt.current.add(i);
-      merkeAbwahl(`${spurKey}:${i}`);
+      // Abwählen nimmt die Spur zurück, der Punkt zählt also nicht mehr.
+      loescheSpur([`${spurKey}:${i}`]);
       setBesucht((prev) => {
         const nx = new Set(prev);
         nx.delete(i);
@@ -297,8 +286,6 @@ export default function HistorienTeppich({
       setOffeneKarte((o) => (o === i ? null : o));
       return;
     }
-    abgewaehlt.current.delete(i);
-    loescheAbwahl([`${spurKey}:${i}`]);
     setBesucht((prev) => new Set(prev).add(i));
     setReihenfolge((prev) => (prev.includes(i) ? prev : [...prev, i]));
     // Zuletzt angeklickter Punkt → sein Accordion ist offen.
@@ -311,8 +298,8 @@ export default function HistorienTeppich({
     const idx = punkte.map((p, i) => ({ p, i })).filter(({ p }) => p.faden === art).map(({ i }) => i);
     const alleAn = idx.every((i) => besucht.has(i));
     if (alleAn) {
-      idx.forEach((i) => abgewaehlt.current.add(i));
-      idx.forEach((i) => merkeAbwahl(`${spurKey}:${i}`));
+      // Faden herausnehmen nimmt auch alle seine Punkte aus der Zählung.
+      loescheSpur(idx.map((i) => `${spurKey}:${i}`));
       setBesucht((prev) => {
         const nx = new Set(prev);
         idx.forEach((i) => nx.delete(i));
@@ -320,9 +307,7 @@ export default function HistorienTeppich({
       });
       setReihenfolge((prev) => prev.filter((x) => !idx.includes(x)));
     } else {
-      loescheAbwahl(idx.map((i) => `${spurKey}:${i}`));
       idx.forEach((i) => {
-        abgewaehlt.current.delete(i);
         if (!besucht.has(i)) merkeSpur(`${spurKey}:${i}`);
       });
       setBesucht((prev) => {
@@ -336,9 +321,6 @@ export default function HistorienTeppich({
 
   function zuruecksetzen() {
     loescheSpuren(spurKey);
-    // Auch die haltbare Abwahl, sonst bliebe ein früher ausgeschalteter Punkt
-    // nach dem Zurücksetzen unsichtbar.
-    loescheAbwahlPrefix(spurKey);
     if (offenKey) {
       try {
         window.localStorage.removeItem(offenKey);
@@ -347,7 +329,6 @@ export default function HistorienTeppich({
       }
     }
     gespeichertOffen.current = null;
-    abgewaehlt.current = new Set();
     setBesucht(new Set());
     setReihenfolge([]);
     setOffeneKarte(null);

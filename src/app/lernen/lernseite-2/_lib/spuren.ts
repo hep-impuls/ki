@@ -232,84 +232,36 @@ export async function loescheSpurenEnthaltend(teile: string[]): Promise<void> {
   }
 }
 
-/* ── Abwahl ───────────────────────────────────────────────────────────────
+/**
+ * Einzelne Spuren wieder entfernen — ein abgewählter Punkt zählt nicht mehr.
  *
- * Ein wieder weggeklickter Punkt behält seine Spur (die Aktivität bleibt
- * gezählt), soll aber nicht mehr angezeigt werden. Diese Abwahl lag bis
- * 2026-08-10 nur in einem `useRef` im Teppich, lebte also solange die Seite
- * offen war. Nach einem Seitenwechsel war sie weg, und `restore()` holte jeden
- * je registrierten Punkt zurück — ein ausgeschalteter Faden erschien wieder
- * eingeschaltet (Christofs Rückmeldung).
+ * Entscheid Christof, 2026-08-10: Wer einen Faden wieder herausnimmt, soll auch
+ * dessen Punkte zurückgenommen bekommen. Vorher blieb die Zählung stehen und
+ * nur die Anzeige verschwand, was die Zahl im Rhizom unberechenbar machte
+ * (Punkte kumulierten, Flächen folgten der Anzeige).
  *
- * Darum ein eigener, haltbarer Merker. Er liegt im selben Fortschritts-Dokument
- * wie die Spuren: Bei `merge: true` wird ein Array **ersetzt**, nicht vereinigt,
- * also propagiert auch das Zurücknehmen einer Abwahl korrekt.
+ * Der Cloud-Spiegel wird SOFORT mit dem vollen Rest überschrieben, sonst
+ * brächte der nächste Pull die Spur zurück (er vereinigt und löscht nie).
+ *
+ * Das anonyme Zähl-Register (`KEY_GEZAEHLT`) bleibt bewusst stehen: Die
+ * Kollektiv-Zähler im «alle» laufen nicht rückwärts, und erneutes Anwählen darf
+ * sie nicht ein zweites Mal hochtreiben.
  */
-
-const KEY_ABWAHL = "ki26-abwahl-lernseite-2";
-
-function leseAbwahl(): string[] {
-  if (typeof window === "undefined") return [];
-  try {
-    const raw = window.localStorage.getItem(KEY_ABWAHL);
-    const arr = raw ? (JSON.parse(raw) as unknown) : [];
-    return Array.isArray(arr) ? arr.filter((x): x is string => typeof x === "string") : [];
-  } catch {
-    return [];
-  }
-}
-
-function schreibeAbwahl(ids: string[]): void {
-  try {
-    window.localStorage.setItem(KEY_ABWAHL, JSON.stringify(ids));
-  } catch {
-    /* Privatmodus */
-  }
+export function loescheSpur(ids: string[]): void {
+  if (typeof window === "undefined" || ids.length === 0) return;
+  const weg = new Set(ids);
+  const rest = lesen().filter((s) => !weg.has(s.id));
+  schreiben(rest);
+  window.dispatchEvent(new CustomEvent(SPUR_EVENT, { detail: { entfernt: ids } }));
   const code = getSession()?.studentCode;
   if (!code) return;
   const ref = spurenDocRef(code);
   if (!ref) return;
-  void setDoc(ref, { abgewaehlt: ids, updatedAt: serverTimestamp() }, { merge: true }).catch(
-    (err) => console.warn("[spuren] abwahl mirror failed", err),
-  );
-}
-
-/** Punkt als abgewählt merken (Anzeige aus, Spur bleibt). */
-export function merkeAbwahl(id: string): void {
-  if (typeof window === "undefined" || !id) return;
-  const ids = leseAbwahl();
-  if (ids.includes(id)) return;
-  schreibeAbwahl([...ids, id]);
-}
-
-/** Abwahl zurücknehmen (Punkt wird wieder angezeigt). */
-export function loescheAbwahl(ids: string[]): void {
-  if (typeof window === "undefined" || ids.length === 0) return;
-  const weg = new Set(ids);
-  const rest = leseAbwahl().filter((x) => !weg.has(x));
-  schreibeAbwahl(rest);
-}
-
-/** Alle Abwahlen eines Musters aufheben (fürs «Zurücksetzen»). */
-export function loescheAbwahlPrefix(prefix: string): void {
-  if (typeof window === "undefined" || !prefix) return;
-  const rest = leseAbwahl().filter(
-    (x) => x !== prefix && !x.startsWith(`${prefix}:`),
-  );
-  schreibeAbwahl(rest);
-}
-
-/** Indizes der abgewählten Punkte eines Musters (analog `leseSpurenIndices`). */
-export function leseAbwahlIndices(spurKey: string): number[] {
-  const prefix = `${spurKey}:`;
-  const out: number[] = [];
-  for (const id of leseAbwahl()) {
-    if (id.startsWith(prefix)) {
-      const n = Number(id.slice(prefix.length));
-      if (Number.isInteger(n)) out.push(n);
-    }
-  }
-  return out;
+  void setDoc(
+    ref,
+    { ids: rest.map((s) => s.id), updatedAt: serverTimestamp() },
+    { merge: true },
+  ).catch((err) => console.warn("[spuren] loescheSpur mirror failed", err));
 }
 
 /** Alle Spuren lesen (nur lokal). */
@@ -356,15 +308,6 @@ export async function zieheSpurenAusCloud(): Promise<void> {
   try {
     const snap = await getDoc(ref);
     if (!snap.exists()) return;
-    /* Abwahl mitziehen, sonst käme ein auf diesem Gerät ausgeschalteter Faden
-       nach dem Spur-Pull wieder eingeschaltet zurück. Vereinigt, nicht ersetzt,
-       gleiche Regel wie bei den Spuren: ein Pull löscht hier nie. */
-    const fernAbwahl = snap.data()?.abgewaehlt;
-    if (Array.isArray(fernAbwahl) && fernAbwahl.length > 0) {
-      const lokal = new Set(leseAbwahl());
-      const neuAbwahl = fernAbwahl.filter((x): x is string => typeof x === "string" && !lokal.has(x));
-      if (neuAbwahl.length > 0) schreibeAbwahl([...lokal, ...neuAbwahl]);
-    }
     const remote = snap.data()?.ids;
     if (!Array.isArray(remote) || remote.length === 0) return;
     const spuren = lesen();

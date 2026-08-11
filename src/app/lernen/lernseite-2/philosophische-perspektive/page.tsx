@@ -247,8 +247,8 @@ neu auf: die Frage nach dem Menschen selbst.
           wählt ihn wieder ab. Über die Legende kannst du auch einen ganzen
           Faden auf einmal anwählen, zum Beispiel alle Punkte der Technologie.
           Dann gelten alle Punkte dieses Fadens als besucht, auch die, die du
-          nicht gelesen hast. Wer den Faden erst sehen und später lesen will,
-          schaltet ihn mit einem zweiten Klick wieder aus.
+          nicht gelesen hast. Ein zweiter Klick nimmt den Faden mit allen seinen
+          Punkten wieder heraus.
         </Aufgabe>
         <HistorienTeppich
           className="mt-lg"

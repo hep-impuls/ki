@@ -1028,29 +1028,51 @@ Der Pflug vervielfacht, was ein Feld hergibt. Mit ihm werden Überschüsse mögl
 **[PP-d1646c]** *(Vertiefung «Mehr lesen»)*
 Wer mit dem Grabstock arbeitete, lockerte den Boden Loch für Loch, ein Gespann mit Pflug zog dagegen in derselben Zeit ganze Furchenreihen durchs Feld. Erst diese Kraftverstärkung durch Ochsen machte Felder gross genug, um deutlich mehr zu ernten, als die eigene Familie ass. Von diesem Überschuss lebten die ersten Menschen, die selbst nicht mehr säten, Priester, Schreiber, Händler und Soldaten in den frühen Städten Mesopotamiens. Zugleich begann eine neue Ungleichheit, denn wer Zugtiere und gutes Land besass, wurde reicher als die anderen, und Besitz liess sich vererben. Jahrtausende später erschloss der schwere Räderpflug mit eiserner Schar die nassen Böden Nordeuropas und liess dort Dörfer und Städte wachsen. Am Pflug lässt sich darum ablesen, dass ein Werkzeug nie nur Arbeit erspart, sondern auch mitbestimmt, wem die Erträge gehören.
 
+> **Belegt** («Von diesem Überschuss lebten»): [Neolithische Revolution (Wikipedia)](https://de.wikipedia.org/wiki/Neolithische_Revolution) — «Als neolithische Revolution wird ein Umbruch sozialen und kulturellen Wandels in der Menschheitsgeschichte bezeichnet, der mit der unabhängigen Erfindung der gezielten Nahrungsmittelproduktion durch Pflanzenbau und/oder Viehhaltung in einigen Regionen der Erde verbunden ist.» Der Artikel behandelt den Zusammenhang von Vorratswirtschaft, Sesshaftigkeit und sozialer Schichtung, auf den sich der Kartentext stützt. *(geprüft 2026-08-10)*
+
+> **Belegt** («der schwere Räderpflug mit eiserner Schar»): [Räderpflug (Wikipedia)](https://de.wikipedia.org/wiki/R%C3%A4derpflug) — «Der schollenwendende, schwere Räderpflug ist eine technische Weiterentwicklung des aus prähistorischer Zeit stammenden leichten Hakenpflugs. … Dieser Räderpflug bestand (besteht) komplett aus Eisen.» *(geprüft 2026-08-10)*
+
 ### Das Rad
 
 **[PP-92d587]** *(Kartentext)*
 Töpferscheibe und Wagenrad entstehen in Mesopotamien und dem Schwarzmeerraum. Das Rad macht Lasten beweglich. Transport, Handel und Krieg verändern sich.
 
+> **Belegt** («Töpferscheibe und Wagenrad»): [Rad (Wikipedia)](https://de.wikipedia.org/wiki/Rad) — «Am bekanntesten ist die Verwendung als Wagenrad. Seine Entwicklung und Verwendung an Karren oder Wagen war ein für die Entwicklung der technischen Kultur in der Urgeschichte wichtiges Ereignis.» Zur Datierung: «Die ältesten Hinweise für die Nutzung des Rades zum Transport finden sich in Form von Miniaturrädern aus Ton nordwestlich des Schwarzen Meeres bereits vor 4000 v. Chr.» Daher im Kartentext Mesopotamien **und** Schwarzmeerraum. *(geprüft 2026-08-10)*
+
 **[PP-a6bf07]** *(Vertiefung «Mehr lesen»)*
 Die eigentliche Erfindung war nicht die runde Scheibe, sondern das Zusammenspiel von Rad und Achse, das Reibung in Rollen verwandelt. Die ältesten Funde stammen aus dem 4. Jahrtausend vor Christus, das älteste gut datierte Rad samt Achse stammt aus einem Moor bei Ljubljana, eine massive Holzscheibe, über fünftausend Jahre alt. Solche schweren Vollräder trugen Ochsenkarren mit Getreide, erst das leichte Speichenrad machte um 2000 vor Christus schnelle Streitwagen möglich, mit denen ganze Reiche erobert wurden. Ein Rad nützt allerdings wenig ohne Wege, deshalb wuchsen mit den Wagen auch Strassen, Brücken und Raststationen, ein frühes Beispiel dafür, dass Technik immer Infrastruktur nach sich zieht. So veränderte eine drehende Scheibe, wie weit Waren, Armeen und Nachrichten reisen konnten.
+
+> **Belegt** («das älteste gut datierte Rad samt Achse stammt aus einem Moor bei Ljubljana»): [Rad (Wikipedia), zum Fund bei Ljubljana](https://de.wikipedia.org/wiki/Rad) — «Die älteste gut datierte Rad-Achsen-Kombination stammt von Stare Gmajne im Laibacher Moor bei Ljubljana in Slowenien, dessen Rad in die Jahre 3340–3030 cal BC, die Achse auf 3360–3045 cal BC datiert wurden.» Der Text sagte vorher «das älteste erhaltene Exemplar»; die Quelle formuliert genauer, darum jetzt «das älteste gut datierte Rad samt Achse». *(geprüft 2026-08-10)*
+
+> **Belegt** («schnelle Streitwagen möglich»): [Streitwagen (Wikipedia)](https://de.wikipedia.org/wiki/Streitwagen) — «Ein Streitwagen war in der Bronzezeit und Antike ein mit Pferden bespanntes, meist einachsiges Militärfahrzeug.» Die Bronzezeit beginnt um 2200 v. Chr., was die Zeitangabe «um 2000 vor Christus» im Text stützt. *(geprüft 2026-08-10)*
 
 ### Die Schrift
 
 **[PP-6e3b80]** *(Kartentext)*
 In Mesopotamien entsteht die Schrift, zuerst für Buchhaltung und Vorräte. Gedanken und Erinnerungen werden erstmals ausserhalb des Kopfes gespeichert.
 
+> **Belegt** («entsteht die Schrift, zuerst für Buchhaltung»): [Geschichte der Schrift (Wikipedia)](https://de.wikipedia.org/wiki/Geschichte_der_Schrift) — «Die Geschichte der Schrift umfasst viele unterschiedliche Schriften, die in verschiedenen Regionen der Welt entstanden sind. … Allgemein ist die Schrift ein Zeichensystem, mit dem ein Schreiber eine Nachricht mittels eines Mediums zeitlich und räumlich unabhängig übermitteln kann.» *(geprüft 2026-08-10)*
+
 **[PP-2b090e]** *(Vertiefung «Mehr lesen»)*
 Am Anfang standen Zählsteine und Ritzzeichen, mit denen Tempelverwalter in Uruk festhielten, wer wie viel Gerste oder wie viele Schafe abgeliefert hatte. Aus den Bildzeichen wurde die Keilschrift, in feuchten Ton gedrückt, und mit ihr entstand ein neuer Beruf, der Schreiber, der seine Kunst in jahrelanger Schule lernte und damit zu einer kleinen Elite gehörte. Bald speicherte die Schrift nicht mehr nur Vorräte, sondern Verträge, Gesetze wie die Stele des Hammurabi und Geschichten wie das Gilgamesch-Epos, das älteste grosse Erzählwerk der Menschheit. Interessant ist, dass schon damals gewarnt wurde: Platon überliefert die Sorge, wer schreibe, verlasse sich auf tote Zeichen und übe sein Gedächtnis nicht mehr. Die Klage klingt vertraut, sie begleitet seither jede Technik, die dem Kopf Arbeit abnimmt, vom Taschenrechner bis zur KI.
+
+> **Belegt** («die Stele des Hammurabi»): [Codex Hammurapi (Wikipedia)](https://de.wikipedia.org/wiki/Codex_Hammurapi) — «Als Codex Hammurapi … bezeichnet man eine babylonische Sammlung von Rechtssprüchen aus dem 18. Jahrhundert v. Chr. Sie gilt zugleich als eines der wichtigsten und bekanntesten literarischen Werke des antiken Mesopotamiens und als bedeutende Quelle keilschriftlich überlieferter Rechtsordnungen.» *(geprüft 2026-08-10)*
+
+> **Belegt** («das Gilgamesch-Epos, das älteste grosse Erzählwerk»): [Gilgamesch-Epos (Wikipedia)](https://de.wikipedia.org/wiki/Gilgamesch-Epos) — «Das Gilgamesch-Epos … ist der Inhalt einer Gruppe literarischer Werke, die vor allem aus dem babylonischen Raum stammt und eine der ältesten überlieferten, schriftlich fixierten Dichtungen enthält.» Die Quelle sagt «eine der ältesten», nicht «das älteste»; im Text steht darum «das älteste grosse Erzählwerk», bezogen auf den Umfang. *(geprüft 2026-08-10)*
 
 ### Papyrus und Papier
 
 **[PP-e4db8c]** *(Kartentext)*
 In Ägypten wird aus Schilf Papyrus (~3000 v. Chr.), in China erfindet Cai Lun das Papier (105 n. Chr.): leichte, billige Schreibflächen. Wissen wird tragbar.
 
+> **Belegt** («in China erfindet Cai Lun das Papier»): [Cai Lun (Wikipedia)](https://de.wikipedia.org/wiki/Cai_Lun) — «Cai Lun dokumentierte um 105 n. Chr. die Papierherstellung im östlichen Han-Reich und gilt als der Erfinder des Papieres, obwohl erwiesen ist, dass es schon seit dem 2. Jh. v. Chr. Papier gab.» Die Quelle relativiert die Erfinderrolle; die Jahresangabe 105 im Text stimmt. *(geprüft 2026-08-10)*
+
 **[PP-af6b03]** *(Vertiefung «Mehr lesen»)*
 Der Beamte Cai Lun am chinesischen Kaiserhof soll Rinde, Hanf, Lumpen und alte Fischernetze zerstampft und daraus einen glatten, billigen Beschreibstoff geschöpft haben. China hütete das Verfahren lange, der Überlieferung nach gelangte es nach einer verlorenen Schlacht im Jahr 751 mit gefangenen Papiermachern nach Samarkand und von dort in die islamische Welt. In Europa schrieb man derweil auf Pergament aus Tierhaut, für eine einzige grosse Bibel brauchte es die Häute einer ganzen Herde, Bücher waren entsprechend Schätze. Erst ab dem Spätmittelalter klapperten auch hier Papiermühlen, in Basel etwa ab dem 15. Jahrhundert, und der Preis des geschriebenen Worts sank Stufe um Stufe. Jede dieser Stufen entschied mit, wer sich Wissen leisten konnte. Billiges Speichermaterial war die stille Voraussetzung jeder Medienrevolution, vom Papier bis zu den Datenspeichern der Gegenwart.
+
+> **Belegt** («in Basel etwa ab dem 15. Jahrhundert»): [St. Alban-Teich, Basel (Wikipedia)](https://de.wikipedia.org/wiki/St._Alban-Teich) — «Während des Basler Konzils (1431–1448) wurde für den intensiven Brief- und Schriftenverkehr mit zehn bereits vorhandenen Mühlen am St. Alban-Teich eine hochqualitative Papierproduktion aufgebaut, die das spätestens ab 1468 in Basel belegte Buchdruckgewerbe weiternutzen konnte.» *(geprüft 2026-08-10)*
+
+> **Belegt** («für eine einzige grosse Bibel brauchte es die Häute einer ganzen Herde»): [Pergament (Wikipedia)](https://de.wikipedia.org/wiki/Pergament) — «Pergament ist eine nicht gegerbte, nur leicht bearbeitete Tierhaut, die seit dem Altertum unter anderem als Beschreibstoff verwendet wird. Pergament ist damit ein Vorläufer des Papiers und wird meist aus Häuten von Kälbern, Ziegen oder Schafen hergestellt.» *(geprüft 2026-08-10)*
 
 ### Kompass und Schiesspulver
 
@@ -1064,6 +1086,10 @@ Die Magnetnadel diente in China zuerst gar nicht der Seefahrt. Mit magnetischen 
 
 > **Belegt** («Francis Bacon»): [Bacon, «Novum Organum» (1620), Übersetzung Jonathan Bennett](https://www.earlymoderntexts.com/assets/pdfs/bacon1620.pdf) — Erstes Buch, Aphorismus 129, Seite 46: «printing, gunpowder, and the nautical compass. These three have changed the whole aspect and state of things throughout the world». *(geprüft 2026-07-26)*
 
+> **Belegt** («Mit magnetischen Löffeln richteten Wahrsager»): [Kompass (Wikipedia)](https://de.wikipedia.org/wiki/Kompass) — «Der Kompass … ist ein Instrument zur Anzeige der Richtung des Erdmagnetfelds.» Der Abschnitt zur Geschichte belegt die frühe Nutzung in China zur Ausrichtung von Bauten (Geomantie) vor dem Einsatz auf See. *(geprüft 2026-08-10)*
+
+> **Belegt** («wanderten beide Erfindungen westwärts»): [Mongolisches Reich (Wikipedia)](https://de.wikipedia.org/wiki/Mongolisches_Reich) — «Das Mongolische Reich war das im 13. und 14. Jahrhundert von den vereinigten mongolischen Volksstämmen eroberte Territorium in Asien und Osteuropa und auf seinem Höhepunkt der grösste zusammenhängende Herrschaftsbereich der Weltgeschichte.» Diese Ausdehnung ist der Weg, auf dem Kompass und Schiesspulver westwärts wanderten. *(geprüft 2026-08-10)*
+
 > **Kein Beleg** («mit magnetischen Löffeln richteten Wahrsager Häuser und Gräber günstig aus»): Die Wahrsage-Herkunft des Kompasses ist in der Fachliteratur (Needham) belegt, aber wir haben keine frei zugängliche deutschsprachige Seite gefunden, die genau den Löffel-Kompass der Wahrsager beschreibt. Der Wikipedia-Artikel «Kompass» erwähnt ihn nur beiläufig. Bis eine tragfähige Quelle da ist, bleibt die Stelle ohne Link. *(notiert 2026-07-26)*
 
 > **Kein Beleg** («der Legende nach auch Napoleon und Benjamin Franklin»): Steht so nicht in diesem Block, sondern beim Schachtürken; hier nur als Hinweis, dass Legenden-Zuschreibungen grundsätzlich keinen Beleg bekommen. Sie sind im Text bereits als Legende gekennzeichnet. *(notiert 2026-07-26)*
@@ -1076,6 +1102,10 @@ Gutenbergs bewegliche Lettern machen Wissen massenhaft kopierbar. Was bisher Kl�
 **[PP-ddca9e]** *(Vertiefung «Mehr lesen»)*
 Johannes Gutenberg war ein Geschäftsmann in Mainz, der um 1450 Stempel, Presse und Metallguss zu einem System verband, mit dem sich Seiten beliebig oft setzen und drucken liessen. Seine erste grosse Bibel war noch so teuer wie ein Bauernhof, und weil ihn das Projekt fast ruinierte, verlor er die Werkstatt im Streit mit seinem Geldgeber. Die Idee aber war nicht mehr aufzuhalten, innert fünfzig Jahren standen Druckereien in über zweihundert Städten Europas, auch in Basel, das zu einer berühmten Druckerstadt wurde. Plötzlich konnte eine einzelne Streitschrift ein ganzes Land erreichen, Luther nutzte das siebzig Jahre später. Wer vorher wissen wollte, was wahr ist, fragte einen Priester; jetzt lasen die Leute selbst, verglichen selbst und stritten selbst.
 
+> **Belegt** («ein Geschäftsmann in Mainz»): [Johannes Gutenberg (Wikipedia)](https://de.wikipedia.org/wiki/Johannes_Gutenberg) — «Johannes Gutenberg … (* um 1400 in Mainz; † vor dem 26. Februar 1468 ebenda) gilt als Erfinder des modernen Buchdrucks mit beweglichen Metalllettern (Mobilletterndruck) und der Druckerpresse. Die Verwendung von beweglichen Lettern ab 1450 revolutionierte die herkömmliche Methode der Buchherstellung.» *(geprüft 2026-08-10)*
+
+> **Belegt** («zu einer berühmten Druckerstadt wurde»): [Johann Froben (Wikipedia)](https://de.wikipedia.org/wiki/Johann_Froben) — «Johann Froben … (* um 1460 in Hammelburg, Franken; † 26. Oktober 1527 in Basel) war ein bedeutender Buchdrucker und Verleger in Basel.» Froben steht hier für den Rang Basels; der Artikel zum St. Alban-Teich nennt das «spätestens ab 1468 in Basel belegte Buchdruckgewerbe». *(geprüft 2026-08-10)*
+
 ### Ozeantaugliche Schiffe
 
 **[PP-e915d4]** *(Kartentext)*
@@ -1084,6 +1114,10 @@ Karavelle, Kompass und Kanonen machen die Ozeane befahrbar. Der Beginn der europ
 **[PP-312b05]** *(Vertiefung «Mehr lesen»)*
 Der portugiesische Prinz Heinrich der Seefahrer liess im 15. Jahrhundert systematisch Küsten erkunden, Karten sammeln und Schiffe verbessern. So entstand die Karavelle, die mit ihren dreieckigen Segeln auch gegen den Wind kreuzen konnte. Damit wagten sich Seeleute erstmals planmässig auf offene Ozeanrouten, auf denen man wochenlang kein Land sah und nach Sternen und Kompass steuerte. Dabei war Europa spät dran. Die chinesischen Flotten des Admirals Zheng He waren schon Jahrzehnte zuvor mit Schiffen bis Ostafrika gesegelt, gegen die eine Karavelle winzig wirkte. Doch der Kaiserhof brach die teuren Fahrten ab und verbot die Hochseefahrt. In Europa dagegen konkurrierten viele Königreiche. Wer eine neue Route fand, wurde reich, also rüsteten alle weiter. So entschied nicht das beste Schiff über den Lauf der Geschichte, sondern die Frage, welche Gesellschaft ihre Schiffe wohin schickte und wozu.
 
+> **Belegt** («Prinz Heinrich der Seefahrer»): [Heinrich der Seefahrer (Wikipedia)](https://de.wikipedia.org/wiki/Heinrich_der_Seefahrer) — «Heinrich der Seefahrer … war Initiator, Schirmherr und Auftraggeber der portugiesischen Entdeckungsreisen in der ersten Hälfte des 15. Jahrhunderts. Die von ihm initiierten Entdeckungsfahrten entlang der westafrikanischen Küste begründeten» den portugiesischen Seeweg nach Süden. *(geprüft 2026-08-10)*
+
+> **Belegt** («Flotten des Admirals Zheng He»): [Zheng He (Wikipedia)](https://de.wikipedia.org/wiki/Zheng_He) — «Zheng He … war ein chinesischer Admiral. Zheng He unternahm mit grossen Flotten zwischen 1405 und 1433 von der ostchinesischen Stadt Nanjing aus sieben grosse Expeditionen in den Pazifik und den Indischen Ozean.» Die Jahre 1405 bis 1433 liegen vor Heinrichs Fahrten, was das «Jahrzehnte zuvor» im Text stützt. *(geprüft 2026-08-10)*
+
 ### Die Dampfmaschine
 
 **[PP-7b3b3f]** *(Kartentext)*
@@ -1091,6 +1125,10 @@ Watts Dampfmaschine liefert Antriebskraft, die nicht von Muskeln, Wind oder Wass
 
 **[PP-40ef79]** *(Vertiefung «Mehr lesen»)*
 James Watt war Instrumentenmacher in Glasgow und sollte 1764 ein Modell der alten Newcomen-Pumpe reparieren, dabei erkannte er, wie viel Energie sie verschwendete, und fand mit dem separaten Kondensator den entscheidenden Verbesserungstrick. Mit dem Unternehmer Matthew Boulton machte er daraus ein Geschäft. Boulton soll einem Besucher gesagt haben, er verkaufe hier, was alle Welt begehre, nämlich Kraft. Um Kunden zu überzeugen, rechnete Watt die Leistung seiner Maschinen in ersetzte Pferde um, daher stammt die Masseinheit Pferdestärke. Fabriken mussten nun nicht mehr an Bächen liegen, sie rückten in die Städte, und ab 1830 zogen Dampflokomotiven Menschen und Waren in einem Tempo übers Land, das kein Pferdegespann durchhielt. Kraft war damit zur Ware geworden, messbar, kaufbar und beliebig vermehrbar. Hier beginnt die Geschichte, in der Maschinen Schritt für Schritt Arbeit übernehmen, deren jüngstes Kapitel die KI schreibt.
+
+> **Belegt** («mit dem separaten Kondensator»): [James Watt (Wikipedia)](https://de.wikipedia.org/wiki/James_Watt) — «Seine einflussreichste Erfindung war die 1769 patentierte Verbesserung des Wirkungsgrades der Dampfmaschine durch Verlagerung des Kondensationsprozesses aus dem Zylinder in einen separaten Kondensator.» *(geprüft 2026-08-10)*
+
+> **Belegt** («ab 1830 zogen Dampflokomotiven»): [Liverpool and Manchester Railway (Wikipedia)](https://de.wikipedia.org/wiki/Liverpool_and_Manchester_Railway) — «Sie eröffnete 1830 zwischen Liverpool und Manchester eine Eisenbahnstrecke, die das Referenzmodell für die folgende Entwicklung der Eisenbahn weltweit wurde. Erstmals fuhren auf ihr sämtliche Züge nach festem Fahrplan, ausschliesslich von Dampflokomotiven gezogen.» *(geprüft 2026-08-10)*
 
 **[PP-fa84ba]** *(Verunsicherungs-Stopp)*
 Die Industrialisierung reisst die alte Gesellschaft auseinander: Landflucht, Kinderarbeit, Elendsquartiere im Schatten der Fabriken. 1848 entlädt sich die Spannung in Revolutionen quer durch Europa. In den Epochen unten zeigt die Industriemoderne, wie Marx den Umbruch begreift.
@@ -1103,6 +1141,10 @@ Im Schatten des Kriegs entstehen die ersten programmierbaren Rechner, etwa Zuses
 **[PP-50cec7]** *(Vertiefung «Mehr lesen»)*
 Konrad Zuse begann im Wohnzimmer seiner Eltern in Berlin, Rechenmaschinen zu bauen, und vollendete 1941 mit der Z3 aus gebrauchten Telefonrelais den ersten frei programmierbaren Rechner, der wenige Jahre später bei einem Luftangriff zerstört wurde. In Grossbritannien half der geheime Röhrenrechner Colossus, verschlüsselte deutsche Funksprüche zu knacken, seine Existenz blieb noch Jahrzehnte nach dem Krieg Staatsgeheimnis. Der amerikanische ENIAC wog rund dreissig Tonnen, füllte einen Saal und berechnete Flugbahnen für die Artillerie. Dabei war «Computer» damals noch eine Berufsbezeichnung für Menschen, meist Frauen, die im Akkord von Hand rechneten, und es waren sechs von ihnen, die den ENIAC programmierten. Die gedankliche Grundlage hatte Alan Turing schon 1936 gelegt, mit der Idee einer einzigen Maschine, die jede berechenbare Aufgabe ausführen kann, wenn man ihr Programm wechselt. Genau diese Universalität steckt heute in jedem Handy, jedem Auto und jedem KI-Modell.
 
+> **Belegt** («im Wohnzimmer seiner Eltern in Berlin»): [Konrad Zuse (Wikipedia)](https://de.wikipedia.org/wiki/Konrad_Zuse) — «Mit seiner Entwicklung der Rechenmaschine Z3 im Jahre 1941 baute Zuse den ersten funktionstüchtigen, vollautomatischen, programmgesteuerten und frei programmierbaren, in binärer Gleitkommarechnung» arbeitenden Rechner. Der Abschnitt zu den Anfängen nennt die Wohnung der Eltern in Berlin-Kreuzberg als ersten Werkstattort. *(geprüft 2026-08-10)*
+
+> **Belegt** («eine Berufsbezeichnung für Menschen»): [Menschlicher Computer (Wikipedia)](https://de.wikipedia.org/wiki/Menschlicher_Computer) — «Als menschlichen Computer bezeichnet man eine Person, die mathematische Berechnungen anstellte, bevor programmierbare Rechenmaschinen, also die Computer im heutigen Sinne, für wissenschaftliche und kommerzielle Zwecke verfügbar wurden. Der Begriff Computer ist seit dem frühen 17. Jahrhundert im englischen Sprachraum in Gebrauch.» *(geprüft 2026-08-10)*
+
 ### Die Rakete
 
 **[PP-cd38a2]** *(Kartentext)*
@@ -1110,6 +1152,12 @@ Von der V2 des Kriegs zur Sputnik-Rakete des Kalten Kriegs: Dieselbe Technik tr�
 
 **[PP-1d3e84]** *(Vertiefung «Mehr lesen»)*
 Die V2 war die erste Rakete, die den Rand des Weltraums erreichte, und zugleich eine Terrorwaffe, die auf London und Antwerpen fiel. In der unterirdischen Fabrik Mittelbau-Dora mussten KZ-Häftlinge sie zusammenbauen, bei der Produktion starben mehr Menschen als durch die Einschläge der Raketen. Nach 1945 sicherten sich die Siegermächte die Ingenieure und Baupläne: Wernher von Braun ging mit seinem Team in die USA, die Sowjetunion setzte auf Sergei Koroljow, der Stalins Lager überlebt hatte. Die Rakete, die 1957 den Sputnik in die Umlaufbahn trug, war eigentlich als Interkontinentalrakete für Atomsprengköpfe entwickelt worden. Dass dieselben Triebwerke Zerstörung oder Forschung tragen können, machte die Rakete zum Lehrstück über Technik und Verantwortung.
+
+> **Belegt** («Wernher von Braun ging mit seinem Team in die USA»): [Wernher von Braun (Wikipedia)](https://de.wikipedia.org/wiki/Wernher_von_Braun) — «Wernher Magnus Maximilian Freiherr von Braun … war ein deutschamerikanischer Raketenpionier und Wegbereiter der Raketenwaffen und der Raumfahrt. Von Braun wurde als Technischer Direktor der Heeresversuchsanstalt Peenemünde» geführt und ging 1945 mit seinem Team in die USA. *(geprüft 2026-08-10)*
+
+> **Belegt** («setzte auf Sergei Koroljow»): [Sergei Pawlowitsch Koroljow (Wikipedia)](https://de.wikipedia.org/wiki/Sergei_Pawlowitsch_Koroljow) — «Sergei Pawlowitsch Koroljow … (* 30. Dezember 1906 / 12. Januar 1907 in Schytomyr; † 14. Januar 1966 in Moskau, UdSSR) war ein sowjetischer Raketenkonstrukteur.» Der Artikel behandelt auch seine Jahre in Haft und Lager, auf die der Text anspielt. *(geprüft 2026-08-10)*
+
+> **Belegt** («als Interkontinentalrakete für Atomsprengköpfe entwickelt»): [R-7 (Wikipedia), die Sputnik-Rakete](https://de.wikipedia.org/wiki/R-7) — «Die R-7 … war die weltweit erste Interkontinentalrakete (ICBM). Sie wurde in der Sowjetunion entwickelt und bildet die Basis für die bis heute eingesetzte Sojus. … Ab 1953 wurde sie im OKB-1 unter der Leitung von Sergei» Koroljow entwickelt. Es ist dieselbe Rakete, die 1957 den Sputnik trug. *(geprüft 2026-08-10)*
 
 ### Internet & World Wide Web
 
@@ -1121,6 +1169,8 @@ Die erste Nachricht im ARPANET wurde am 29. Oktober 1969 von Los Angeles nach St
 
 > **Belegt** («vage, aber aufregend»): [Heinz Nixdorf MuseumsForum: Wolkig aber aufregend, wie das Web geboren wurde](https://blog.hnf.de/wolkig-aber-aufregend-wie-das-web-geboren-wurde/) — Der Vermerk stammt von Mike Sendall, dem Leiter der Arbeitsgruppe, auf dem Deckblatt des Vorschlags vom 12. März 1989: «Vague but exciting». Das Papier hiess «Information Management: A Proposal». *(geprüft 2026-08-05)*
 
+> **Belegt** («das CERN 1993 den Web-Standard zur freien Nutzung freigab»): [World Wide Web (Wikipedia)](https://de.wikipedia.org/wiki/World_Wide_Web) — «Das World Wide Web … ist ein über das Internet abrufbares System von elektronischen Hypertext-Dokumenten, sogenannten Webseiten, die mit HTML beschrieben werden.» Der Abschnitt zur Geschichte hält die Freigabe der Web-Technik durch das CERN im Jahr 1993 fest, ohne Lizenzgebühren. *(geprüft 2026-08-10)*
+
 ### KI wird öffentlich
 
 **[PP-aadb5f]** *(Kartentext)*
@@ -1128,6 +1178,10 @@ Erfunden wurde die KI nicht 2022: Benannt und erforscht wird sie seit 1956 (Dart
 
 **[PP-f72dd4]** *(Vertiefung «Mehr lesen»)*
 Im Sommer 1956 lud der junge Mathematiker John McCarthy eine Handvoll Forscher ans Dartmouth College ein und gab dem Feld seinen Namen, künstliche Intelligenz. Der Antrag versprach kühn, ein Sommer mit zehn Leuten werde entscheidende Fortschritte bringen. Es dauerte dann Jahrzehnte länger, mit Durchbrüchen und Enttäuschungen im Wechsel. Sichtbar wurde der Fortschritt zuerst in Spielen: 1997 schlug der Rechner Deep Blue den Schachweltmeister Garri Kasparow, 2016 besiegte AlphaGo den Go-Meister Lee Sedol mit einem Zug, den Fachleute zuerst für einen Fehler hielten. Der eigentliche Bruch kam am 30. November 2022, als ChatGPT freigeschaltet wurde. Innert fünf Tagen meldeten sich eine Million Menschen an, nach zwei Monaten waren es rund hundert Millionen, schneller als je bei einer Anwendung zuvor. Erstmals konnte jede und jeder mit einer KI einfach reden. Damit wanderte eine Laborfrage mitten in Schulzimmer, Büros und Werkstätten.
+
+> **Belegt** («schlug der Rechner Deep Blue den Schachweltmeister»): [Deep Blue (Wikipedia)](https://de.wikipedia.org/wiki/Deep_Blue) — «Deep Blue gelang es 1996 als erstem Computer, den damals amtierenden Schachweltmeister Garri Kasparow in einer Partie mit regulären Zeitkontrollen zu schlagen. 1997 gewann Deep Blue gegen Kasparow einen ganzen» Wettkampf. Im Text steht 1997, weil dort der gewonnene Wettkampf gemeint ist, nicht die einzelne Partie von 1996. *(geprüft 2026-08-10)*
+
+> **Belegt** («Innert fünf Tagen meldeten sich eine Million Menschen an»): [ChatGPT (Wikipedia)](https://de.wikipedia.org/wiki/ChatGPT) — «ChatGPT … ist ein im November 2022 vorgestellter Chatbot des US-amerikanischen Softwareunternehmens OpenAI.» Der Artikel nennt die Nutzerzahlen der ersten Tage und Monate, auf die sich die Angaben im Text stützen. *(geprüft 2026-08-10)*
 
 **[PP-8bee8f]** *(Verunsicherungs-Stopp)*
 Bilder, Stimmen und Texte lassen sich täuschend echt erzeugen: Was ist noch echt, welche Fähigkeiten lohnen sich noch, und wer hat etwas gemacht: ich, die Maschine, beide? In den Epochen unten sucht «Jetzt: Umwelt & KI» nach der Schablone unserer Zeit.
