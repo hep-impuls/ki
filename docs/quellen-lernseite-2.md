@@ -13,8 +13,8 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 135 |
-| Belegte Textblöcke | 78 |
+| Belege | 137 |
+| Belegte Textblöcke | 79 |
 | Begründete Nicht-Belege | 6 |
 | Aussagen mit Standdatum | 3 |
 
@@ -58,7 +58,7 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 > Den Anstoss gab ein amerikanischer Spediteur. Malcom McLean liess 1956 erstmals genormte Stahlkisten auf ein umgebautes Schiff heben, weil ihn das ewige Umladen von Hand ärgerte. Der Container senkte die Verladekosten auf einen Bruchteil, ganze Berufe am Hafen verschwanden, dafür wurde es plötzlich rentabel, auch billige Waren um die halbe Welt zu schicken. Nach dem Ende des Kalten Kriegs kam die Politik dazu, die Welthandelsorganisation entstand 1995, China trat 2001 bei und wurde zur «Fabrik der Welt». Seither steckt in einem einzigen Smartphone Arbeit aus Dutzenden Ländern, vom Kobalt aus dem Kongo über Chips aus Taiwan bis zur Software aus Amerika und Europa. Wie verletzlich das fein getaktete System ist, zeigte sich 2021, als ein einziges quer stehendes Containerschiff im Suezkanal tagelang einen Teil des Welthandels aufhielt. Grenzenlos heisst eben auch, dass eine Störung an einem Ort überall spürbar wird.
 
-### Internet & World Wide Web · vage, aber aufregend
+### Internet & World Wide Web · als vage, aber aufregend bezeichnet
 
 - **Kennung:** `PP-67bb7f` (Vertiefung «Mehr lesen»)
 - **Quelle:** [Heinz Nixdorf MuseumsForum: Wolkig aber aufregend, wie das Web geboren wurde](https://blog.hnf.de/wolkig-aber-aufregend-wie-das-web-geboren-wurde/)
@@ -400,11 +400,20 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 > Otto Hahn und Fritz Strassmann finden im bestrahlten Uran ein Element, das dort nicht sein dürfte. Lise Meitner und Otto Frisch erklären den Befund: Der Atomkern ist gespalten. Wenige Jahre später wird daraus die Bombe. Wissenschaft und Weltpolitik sind untrennbar verknotet.
 
+### Ackerbau & Sesshaftigkeit · Die ältesten Bauerndörfer entstanden um 9500 v. Chr.
+
+- **Kennung:** `PP-656bce` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Jungsteinzeit (Wikipedia)](https://de.wikipedia.org/wiki/Jungsteinzeit)
+- **Fundstelle:** «Nach derzeitigem Kenntnisstand begann das Neolithikum zuerst um 9500 v. Chr. im Fruchtbaren Halbmond Vorderasiens (vor allem an den Südrändern des Zagros- und Taurusgebirges).» Und zur zweiten Jahresangabe im Text: «Das Beginndatum wird allerdings grundsätzlich auf die betrachtete Region bezogen, so dass die Jungsteinzeit etwa in Mittel- und Nordwesteuropa erst zwischen 5800 und 4000 v. Chr.» beginnt.
+- **Geprüft:** 2026-08-11
+
+> Die Jungsteinzeit begann nicht überall gleichzeitig. Die ältesten Bauerndörfer entstanden um 9500 v. Chr. im sogenannten Fruchtbaren Halbmond im Nahen Osten, wo verschiedene Wildgetreide wuchsen, die sich kultivieren liessen; in Mitteleuropa setzte die Wende erst zwischen 5800 und 4000 v. Chr. ein. In Siedlungen wie Çatalhöyük lebten Tausende Menschen Wand an Wand, man stieg über die Dächer in die Häuser. Bemerkenswert ist, was Skelettfunde zeigen: Die ersten Bauern waren oft kleiner und kränker als die jagenden und sammelnden Menschen vor ihnen, sesshaftes Leben bedeutete zunächst mehr Arbeit, einseitigere Nahrung und ansteckende Krankheiten in der Enge. Geblieben sind die Menschen trotzdem, denn wer ein volles Kornlager hatte, konnte schlechte Jahre überstehen, und musste zugleich bleiben, um es zu verteidigen. Auch in der Schweiz lässt sich diese Wende besichtigen, die Pfahlbaudörfer am Zürichsee und Bodensee gehören heute zum UNESCO-Welterbe. Mit dem Vorrat kam das Planen, und mit dem Planen eine neue Art, an morgen zu denken.
+
 ---
 
 ## Thema 01 · Vorhang auf
 
-### Rechen- und Speicherkapazität · Nvidia
+### Rechen- und Speicherkapazität · stieg Nvidia 2024 zeitweise zum wertvollsten Unternehmen der Welt auf
 
 - **Kennung:** `VA-e3c2cd` (Fallbeispiel)
 - **Quelle:** [WirtschaftsWoche: Nvidia wertvollste Aktiengesellschaft der Welt](https://www.wiwo.de/unternehmen/it/us-boersen-nvidia-jetzt-wertvollste-aktiengesellschaft-der-welt/30072326.html)
@@ -458,7 +467,7 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 > Microsoft steckte zwischen 2019 und 2023 rund 13 Milliarden Dollar in OpenAI, die Firma hinter ChatGPT, und blieb ihr grösster Einzelinvestor. Im Oktober 2025 baute sich OpenAI um: Der gewinnorientierte Teil heisst jetzt «OpenAI Group PBC», die gemeinnützige «OpenAI Foundation» hält 26 Prozent daran. Formal hat Microsoft keine Kontrollrechte und sitzt nur als Beobachter ohne Stimme im Verwaltungsrat. Die Abhängigkeit bleibt trotzdem: Geld, Rechenzentren und Vertriebswege kommen zu einem grossen Teil von einem einzigen Konzern. So bündelt sich viel Macht bei wenigen Unternehmen. (Stand Mitte 2026)
 
-### Kultureller Bias und Technikverständnis · UNESCO
+### Kultureller Bias und Technikverständnis · Eine UNESCO-Studie von 2024
 
 - **Kennung:** `VA-6068d8` (Fallbeispiel)
 - **Quelle:** [CIO.de zur UNESCO-Studie über Geschlechterstereotype in Sprachmodellen](https://www.cio.de/article/3696289/ki-sprachmodelle-bedienen-geschlechterstereotype.html)
@@ -1244,6 +1253,15 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 - **Geprüft:** 2026-08-05
 
 > Künstliche Intelligenz (mit ChatGPT ab 2022 alltäglich), das Smartphone und globale, digital gesteuerte Lieferketten laufen auf einer noch immer fossilen Infrastruktur. Die Automatisierung erreicht nun Sprache und Kopfarbeit. Die Naturzerstörung erreicht mit der Klimakrise erstmals eine überlebensbedrohende Grössenordnung. Den grössten Anteil daran hat der Energieverbrauch: Jede Technik, die läuft, braucht Energie, und solange die aus Kohle, Öl und Gas kommt, heizt jede Nutzung mit. Dazu kommen Quellen ohne Stecker, das Methan der Viehhaltung und die Rodung der Wälder. Die KI setzte sich nicht wegen einer neuen Idee durch (die ist alt), sondern weil drei Grundlagen zusammenkamen: riesige Datenmengen aus dem Internet, billige Parallel-Rechenleistung (Grafikchips) und die Transformer-Architektur von 2017, dazu enormes privates Kapital.
+
+### «Ende der Geschichte» · notierte darauf «vage, aber aufregend»
+
+- **Kennung:** `EP-fbb1d9` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Heinz Nixdorf MuseumsForum: Wolkig aber aufregend, wie das Web geboren wurde](https://blog.hnf.de/wolkig-aber-aufregend-wie-das-web-geboren-wurde/)
+- **Fundstelle:** Der Vermerk stammt von Mike Sendall, dem Leiter der Arbeitsgruppe, auf dem Deckblatt des Vorschlags vom 12. März 1989: «Vague but exciting». Das Papier hiess «Information Management: A Proposal».
+- **Geprüft:** 2026-08-05
+
+> Der Container hat einen Erfinder mit Namen: Der amerikanische Spediteur Malcom McLean liess 1956 einen umgebauten Tanker mit 58 Stahlkisten von Newark nach Houston fahren, weil ihn das teure Umladen von Hand ärgerte, und die Kosten für das Verladen einer Tonne Fracht sanken dadurch auf einen Bruchteil. Drei Jahrzehnte später reichte der Physiker Tim Berners-Lee am Forschungszentrum CERN einen Vorschlag für ein Hypertext-System ein, sein Vorgesetzter notierte darauf «vage, aber aufregend». 1993 gab das CERN diese Technik zur freien Nutzung frei, ohne Patent und ohne Gebühren, einer der folgenreichsten Verzichte der Wirtschaftsgeschichte. So senkten eine Blechkiste und ein Stück verschenkter Software gemeinsam die Kosten der Distanz: die eine für Waren, die andere für Informationen. Fabriken konnten dorthin wandern, wo die Löhne am tiefsten waren, und Nachrichten überallhin, wo ein Bildschirm stand. Die Welt wurde kleiner. Was das für Arbeit und Zusammenhalt bedeutet, verhandeln wir bis heute.
 
 ---
 

@@ -64,7 +64,10 @@ export const BELEGE: Beleg[] = [
    * Alle URLs am 2026-07-26 abgerufen, die Zahlen in der Quelle nachgelesen. */
   {
     id: "VA-e3c2cd",
-    anker: "Nvidia",
+    /* Nicht bloss «Nvidia»: Der Name kommt in drei Blöcken vor (auch in «Big
+       Data & Gegenwart» und «Geopolitik»), und die Anker-Zuordnung ist global.
+       Ein kurzer Anker hängt seine Quelle darum an fremde Aussagen. */
+    anker: "stieg Nvidia 2024 zeitweise zum wertvollsten Unternehmen der Welt auf",
     url: "https://www.wiwo.de/unternehmen/it/us-boersen-nvidia-jetzt-wertvollste-aktiengesellschaft-der-welt/30072326.html",
     titel: "WirtschaftsWoche: Nvidia wertvollste Aktiengesellschaft der Welt",
     stelle:
@@ -125,7 +128,11 @@ export const BELEGE: Beleg[] = [
   },
   {
     id: "VA-6068d8",
-    anker: "UNESCO",
+    /* Nicht bloss «UNESCO»: Das Wort steht auch im Teppich, wo die Pfahlbauten
+       zum UNESCO-Welterbe gehören. Weil die Anker-Zuordnung global ist, hing
+       dort bis 2026-08-11 diese Studie über Geschlechterstereotype — Christof
+       hat den Fehler gefunden («komisch, dass das Geschlecht vernetzt ist»). */
+    anker: "Eine UNESCO-Studie von 2024",
     // Bis 2026-08-05 stand hier die englische UNESCO-Seite. Der deutsche
     // Fachbericht deckt alle Aussagen des Textblocks; die Studie selbst
     // (englisch) bleibt über den Artikel auffindbar.
@@ -907,7 +914,20 @@ export const BELEGE: Beleg[] = [
   },
   {
     id: "PP-67bb7f",
-    anker: "vage, aber aufregend",
+    /* Das Zitat steht in zwei Blöcken (hier und bei «Ende der Geschichte»).
+       Dieselbe Quelle passt zu beiden, aber jeder Block braucht seinen eigenen
+       Eintrag: Ein Anker, der in einen fremden Block leckt, hängt seine Quelle
+       sonst irgendwann an eine Aussage, die sie nicht deckt. */
+    anker: "als vage, aber aufregend bezeichnet",
+    url: "https://blog.hnf.de/wolkig-aber-aufregend-wie-das-web-geboren-wurde/",
+    titel: "Heinz Nixdorf MuseumsForum: Wolkig aber aufregend, wie das Web geboren wurde",
+    stelle:
+      "Der Vermerk stammt von Mike Sendall, dem Leiter der Arbeitsgruppe, auf dem Deckblatt des Vorschlags vom 12. März 1989: «Vague but exciting». Das Papier hiess «Information Management: A Proposal».",
+    geprueft: "2026-08-05",
+  },
+  {
+    id: "EP-fbb1d9",
+    anker: "notierte darauf «vage, aber aufregend»",
     url: "https://blog.hnf.de/wolkig-aber-aufregend-wie-das-web-geboren-wurde/",
     titel: "Heinz Nixdorf MuseumsForum: Wolkig aber aufregend, wie das Web geboren wurde",
     stelle:
@@ -1537,6 +1557,19 @@ export const BELEGE: Beleg[] = [
     titel: "Kernspaltung (Wikipedia)",
     stelle:
       "«Otto Hahn und seinem Assistenten Fritz Straßmann gelang dann am 17. Dezember 1938 am Berliner Kaiser-Wilhelm-Institut für Chemie der Beweis einer neutroneninduzierten Kernspaltung von Uran durch den radiochemischen Nachweis des Spaltprodukts Barium.» Die Quelle schreibt «Straßmann», im Text steht «Strassmann» nach Schweizer Rechtschreibung.",
+    geprueft: "2026-08-11",
+  },
+
+  /* ── Teppich, Faden kulturelle Praxen: Ackerbau ──────────────────────── */
+  {
+    id: "PP-656bce",
+    /* Bewusst kurz vor «im sogenannten Fruchtbaren Halbmond»: Diese Wörter
+       tragen den Glossar-Hover, ein längerer Anker würde ihn verdecken. */
+    anker: "Die ältesten Bauerndörfer entstanden um 9500 v. Chr.",
+    url: "https://de.wikipedia.org/wiki/Jungsteinzeit",
+    titel: "Jungsteinzeit (Wikipedia)",
+    stelle:
+      "«Nach derzeitigem Kenntnisstand begann das Neolithikum zuerst um 9500 v. Chr. im Fruchtbaren Halbmond Vorderasiens (vor allem an den Südrändern des Zagros- und Taurusgebirges).» Und zur zweiten Jahresangabe im Text: «Das Beginndatum wird allerdings grundsätzlich auf die betrachtete Region bezogen, so dass die Jungsteinzeit etwa in Mittel- und Nordwesteuropa erst zwischen 5800 und 4000 v. Chr.» beginnt.",
     geprueft: "2026-08-11",
   },
 ];

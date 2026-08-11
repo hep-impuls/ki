@@ -149,6 +149,14 @@ export const GLOSSAR: Record<string, string> = {
     "Der Übergang zu Ackerbau und Sesshaftigkeit, die tiefste Umwälzung der Menschheitsgeschichte.",
   Eigentum:
     "Rechtlich anerkannte Verfügung über Dinge. Sie entsteht historisch mit Vorräten und Feldern.",
+  /* Der Schlüssel trägt die gebeugte Form, weil die Auszeichnung wörtlich
+     sucht: Im Text steht «im sogenannten Fruchtbaren Halbmond». */
+  "Fruchtbaren Halbmond":
+    "Landstreifen am Rand der Syrischen Wüste, von Israel über Syrien bis in den Irak und Iran. Eines der Gebiete, in denen Ackerbau und Viehzucht entstanden.",
+  "Çatalhöyük":
+    "Jungsteinzeitliche Siedlung in der heutigen Türkei, bewohnt zwischen etwa 7500 und 5700 v. Chr. Sie gilt als die erste Grosssiedlung der Weltgeschichte.",
+  Pfahlbaudörfer:
+    "Holzhäuser auf Pfählen an Seeufern und in Feuchtgebieten. Rund um die Alpen führt die UNESCO 111 solche Fundstellen als Welterbe, 56 davon in der Schweiz.",
   Karawanen: "Handelszüge aus Lasttieren durch Wüsten und Steppen.",
   "islamische Blütezeit":
     "Etwa 8.–13. Jahrhundert: Wissenschaft und Kultur der islamischen Welt in voller Blüte.",
@@ -483,7 +491,25 @@ export function Begriff({ wort, erklaerung }: { wort: string; erklaerung: string
 }
 
 const TERME = Object.keys(GLOSSAR).sort((a, b) => b.length - a.length);
-const GLOSSAR_RE = new RegExp(`\\b(${TERME.map(escapeRegExp).join("|")})\\b`, "g");
+
+/**
+ * Wortgrenze, aber unicode-fähig — **nicht** `\b`.
+ *
+ * In JavaScript kennt `\b` nur `[A-Za-z0-9_]`. Ein Begriff, der mit einem
+ * Nicht-ASCII-Buchstaben beginnt oder endet, hat dort deshalb keine Wortgrenze
+ * und wird **nie** gefunden. Zwei Einträge waren dadurch stumm, ohne dass es
+ * jemand sah: «Çatalhöyük» und «Öffentlichkeit» (gefunden 2026-08-11, als der
+ * Hover zu Çatalhöyük nicht erschien).
+ *
+ * Die zweite, umgekehrte Wirkung: Zwischen einem ASCII-Buchstaben und einem
+ * Umlaut sieht `\b` eine Grenze, wo keine ist. «Container» würde also mitten in
+ * «Containerübergabe» markiert. Im Bestand kommt das derzeit nicht vor, mit der
+ * Unicode-Grenze kann es auch nicht mehr vorkommen.
+ */
+const GLOSSAR_RE = new RegExp(
+  `(?<![\\p{L}\\p{N}_])(${TERME.map(escapeRegExp).join("|")})(?![\\p{L}\\p{N}_])`,
+  "gu",
+);
 
 /** Ein Quellenlink an einer Textstelle. Öffnet die geprüfte Quelle. */
 /**

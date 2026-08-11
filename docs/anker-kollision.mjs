@@ -66,6 +66,17 @@ try {
 
 const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
+/**
+ * Wortgrenze wie in `Glossar.tsx` — unicode-fähig statt `\b`.
+ *
+ * Muss mit der Auszeichnung übereinstimmen, sonst prüft dieses Skript etwas
+ * anderes als die Seite anzeigt. `\b` kennt nur `[A-Za-z0-9_]` und findet darum
+ * keinen Begriff, der mit einem Umlaut beginnt oder endet.
+ */
+function grenze(term) {
+  return new RegExp(`(?<![\\p{L}\\p{N}_])${esc(term)}(?![\\p{L}\\p{N}_])`, "u");
+}
+
 /** Kommt `term` im Blocktext vor, ohne von einem Anker dieses Blocks verdeckt zu sein? */
 function nochFrei(id, term) {
   const text = bloecke[id]?.text;
@@ -74,14 +85,14 @@ function nochFrei(id, term) {
   for (const x of belege.filter((y) => y.id === id)) {
     rest = rest.split(x.anker).join(" ".repeat(x.anker.length));
   }
-  return new RegExp(`\\b${esc(term)}\\b`).test(rest);
+  return grenze(term).test(rest);
 }
 
 let echte = 0;
 const harmlos = [];
 for (const { id, anker: a } of belege) {
   for (const t of terme) {
-    if (!new RegExp(`\\b${esc(t)}\\b`).test(a)) continue;
+    if (!grenze(t).test(a)) continue;
     const frei = nochFrei(id, t);
     if (frei === true) {
       harmlos.push(`Anker «${a}» verdeckt «${t}», der Begriff kommt im Block aber frei vor`);

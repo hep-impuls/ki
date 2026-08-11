@@ -74,7 +74,7 @@ Der erste Blickwinkel ist der technologische, also Rechenkraft, Daten und die Mo
 **[VA-e3c2cd]** *(Fallbeispiel · Rechen- und Speicherkapazität)*
 Die meisten KI-Chips kommen von einer einzigen Firma, dem US-Konzern Nvidia. Weil alle diese Chips wollen, stieg Nvidia 2024 zeitweise zum wertvollsten Unternehmen der Welt auf. Wer keine solchen Chips bekommt, kann bei den grossen Modellen kaum mithalten.
 
-> **Belegt** («Nvidia»): [WirtschaftsWoche: Nvidia wertvollste Aktiengesellschaft der Welt](https://www.wiwo.de/unternehmen/it/us-boersen-nvidia-jetzt-wertvollste-aktiengesellschaft-der-welt/30072326.html) — 5. November 2024, Börsenwert 3,4 Billionen Dollar. Im Juni 2024 stand Nvidia schon einmal an der Spitze, konnte den Platz aber nur einen Tag halten. Darum «zeitweise». *(geprüft 2026-07-26)*
+> **Belegt** («stieg Nvidia 2024 zeitweise zum wertvollsten Unternehmen der Welt auf»): [WirtschaftsWoche: Nvidia wertvollste Aktiengesellschaft der Welt](https://www.wiwo.de/unternehmen/it/us-boersen-nvidia-jetzt-wertvollste-aktiengesellschaft-der-welt/30072326.html) — 5. November 2024, Börsenwert 3,4 Billionen Dollar. Im Juni 2024 stand Nvidia schon einmal an der Spitze, konnte den Platz aber nur einen Tag halten. Darum «zeitweise». *(geprüft 2026-07-26)*
 
 **[VA-0210fd]** *(Fallbeispiel · Energie und Ressourcen)*
 Google meldete in seinem Umweltbericht 2024, dass seine Treibhausgas-Emissionen seit 2019 um rund 48 Prozent gestiegen sind (Bezugsjahr 2023). Als Gründe nennt der Konzern den wachsenden Energiebedarf seiner Rechenzentren und die Emissionen seiner Lieferkette; die KI ist also ein Treiber davon, nicht die einzige Ursache. Ein Wert, der eigentlich sinken sollte, zeigt jedenfalls nach oben.
@@ -120,7 +120,7 @@ Ab 2022 verschärften die USA die Ausfuhrregeln für ihre stärksten KI-Chips na
 **[VA-6068d8]** *(Fallbeispiel · Kultureller Bias und Technikverständnis)*
 Eine UNESCO-Studie von 2024 prüfte bekannte Sprachmodelle und fand klare Klischees. Frauen wurden viel häufiger mit «Familie» und «Haushalt» verbunden, Männer mit «Karriere» und «Gehalt». Die KI gibt also die Vorurteile ihrer Trainingstexte wieder.
 
-> **Belegt** («UNESCO»): [CIO.de zur UNESCO-Studie über Geschlechterstereotype in Sprachmodellen](https://www.cio.de/article/3696289/ki-sprachmodelle-bedienen-geschlechterstereotype.html) — «Frauen würden bis zu viermal häufiger mit Hausarbeit in Verbindung gebracht als Männer … Sie stünden häufig im Kontext von Begriffen wie ‹Haus›, ‹Familie› und ‹Kinder›, während bei Männern die Begriffe ‹Firma›, ‹Führungskraft›, ‹Gehalt› und ‹Karriere› im Vordergrund stünden.» *(geprüft 2026-08-05)*
+> **Belegt** («Eine UNESCO-Studie von 2024»): [CIO.de zur UNESCO-Studie über Geschlechterstereotype in Sprachmodellen](https://www.cio.de/article/3696289/ki-sprachmodelle-bedienen-geschlechterstereotype.html) — «Frauen würden bis zu viermal häufiger mit Hausarbeit in Verbindung gebracht als Männer … Sie stünden häufig im Kontext von Begriffen wie ‹Haus›, ‹Familie› und ‹Kinder›, während bei Männern die Begriffe ‹Firma›, ‹Führungskraft›, ‹Gehalt› und ‹Karriere› im Vordergrund stünden.» *(geprüft 2026-08-05)*
 
 **[VA-b3f295]** *(Fallbeispiel · Text- und Archivkompetenz)*
 2023 reichte ein New Yorker Anwalt einen Schriftsatz ein, für den er ChatGPT genutzt hatte. Die KI hatte sechs Gerichtsurteile frei erfunden, die es nie gab, und der Anwalt bekam eine Geldstrafe. Ohne Prüfen an der Quelle wird aus flüssigem Text schnell ein teurer Fehler.
