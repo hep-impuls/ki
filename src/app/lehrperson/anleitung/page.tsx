@@ -448,8 +448,9 @@ export default function AnleitungLehrperson() {
                 </td>
                 <td className="py-sm">
                   Ein minimaler Fortschritts-Schnappschuss pro Modul (Prozent,
-                  Quiz-Punkte), die Zugehörigkeit zum Klassencode und anonyme
-                  Abstimmungs-Zähler
+                  Quiz-Punkte), die Zugehörigkeit zum Klassencode sowie anonyme
+                  Zähler: Abstimmungen, angeklickte Inhalte, geöffnete Themen und
+                  gestartete Ausdrucke — jeweils ohne Code und ohne Zeitpunkt
                 </td>
               </tr>
             </tbody>
@@ -467,6 +468,11 @@ export default function AnleitungLehrperson() {
           Zahlen und Klassencodes, aber <strong>keine Fortschritts-Codes</strong>{" "}
           und keine Einzelwerte. In eine fremde Klasse hineinsehen kann damit
           niemand — dafür braucht es weiterhin deren Klassencode und Secret.
+          Daneben sehen die Autoren, welche Inhalte wie oft angeklickt wurden,
+          welche Themen geöffnet werden und wie oft ein Ausdruck gestartet wird.
+          Das sind reine Summen über alle Nutzenden, damit sich das Lernmittel
+          verbessern lässt: Ein Zähler steigt pro Gerät nur einmal, und weder
+          Code noch Zeitpunkt gehören dazu.
         </p>
       </section>
 

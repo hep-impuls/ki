@@ -286,7 +286,8 @@ function StartFlow() {
           Dein Fortschritt wird unter deinem Code gespeichert, ohne Namen. Wer
           den Code kennt, sieht ihn: bewahre ihn für dich auf. In die
           Gesamtauswertung des Lernsets fliessen nur Zahlen ein — wie viele
-          unterwegs sind und wie weit —, keine einzelnen Codes.
+          unterwegs sind, wie weit sie kommen und welche Inhalte oft geöffnet
+          werden —, keine einzelnen Codes und keine Zeitpunkte.
         </p>
       </section>
     </main>

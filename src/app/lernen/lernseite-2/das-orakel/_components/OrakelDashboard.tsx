@@ -43,6 +43,7 @@ import {
 } from "../../_lib/auswertung";
 import { INHALTE_EVENT, leseInhalte, zieheInhalteAusCloud } from "../../_lib/inhalte";
 import { leseBlick, schreibeBlick, zieheBlickAusCloud } from "../../_lib/blick";
+import { merkeDruck } from "../../_lib/nutzung";
 import {
   formatiereWann,
   leseDeutungen,
@@ -1594,7 +1595,13 @@ export default function OrakelDashboard() {
             />
             <button
               type="button"
-              onClick={() => window.print()}
+              onClick={() => {
+                // Anonym mitzählen, wie oft ein Ausdruck gestartet wird. Ob
+                // daraus wirklich ein gespeichertes PDF wird, weiss der Browser
+                // uns nicht zu sagen — der Druckdialog gehört dem System.
+                merkeDruck();
+                window.print();
+              }}
               className="inline-flex items-center gap-sm rounded-xl bg-tertiary px-lg py-sm text-label-md text-on-tertiary shadow-sm transition hover:bg-on-tertiary-container"
             >
               <span className="material-symbols-outlined text-[18px]">print</span>
