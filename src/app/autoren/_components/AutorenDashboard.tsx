@@ -201,9 +201,22 @@ export default function AutorenDashboard() {
   return (
     <AppLayout>
       <header className="border-b border-outline-variant pb-lg">
-        <p className="text-label-md uppercase tracking-wider text-tertiary">
-          Für Pietro und Christof
-        </p>
+        <div className="flex flex-wrap items-start justify-between gap-md">
+          <p className="text-label-md uppercase tracking-wider text-tertiary">
+            Für Pietro und Christof
+          </p>
+          <button
+            type="button"
+            onClick={async () => {
+              await fetch("/api/autoren/auth", { method: "DELETE" });
+              window.location.reload();
+            }}
+            className="inline-flex items-center gap-xs rounded-lg border border-outline-variant px-sm py-2xs text-label-md text-on-surface-variant transition hover:text-on-surface"
+          >
+            <span className="material-symbols-outlined text-[16px]">logout</span>
+            Abmelden
+          </button>
+        </div>
         <h1 className="mt-sm text-headline-xl text-on-surface">
           Was mit Lernseite 2 geschieht
         </h1>
