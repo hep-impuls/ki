@@ -1748,6 +1748,126 @@ export const BELEGE: Beleg[] = [
       "«Für ihre Errungenschaften erhielt Lise Meitner zahlreiche Ehrungen, jedoch weder den Nobelpreis für Chemie noch den Nobelpreis für Physik, obwohl sie für beide Nobelpreise vielfach nominiert wurde.» Und: «Nachdem Otto Hahn den Chemie-Nobelpreis des Jahres 1944 erhalten hatte, nominierte er Lise Meitner 1948 für den Physik-Nobelpreis.» Zum Bomben-Satz im Text: Die Quelle fasst es allgemeiner («In der Nachkriegszeit stellte Lise Meitner die Entwicklung der Kernwaffen in Frage»); das wörtliche Nein zur Mitarbeit stammt aus ihrer Biografie.",
     geprueft: "2026-08-11",
   },
+
+  /* ══ Teppich des Wandels, Faden kulturelle Praxen ═══════════════════════
+     Abschluss der Kontrollrunde (2026-08-11); Ackerbau ist oben versorgt. */
+
+  /* ── Gewürz- und Seidenhandel ────────────────────────────────────────── */
+  {
+    id: "PP-c9ffe5",
+    /* Ohne das Wort «Pest» im Anker: Das trägt den neuen Glossar-Hover und
+       kommt im Block nur einmal vor. */
+    anker: "1347 erreichte über die Handelswege",
+    url: "https://de.wikipedia.org/wiki/Seidenstra%C3%9Fe",
+    titel: "Seidenstrasse (Wikipedia)",
+    stelle:
+      "«Das in Europa wohl bekannteste und folgenreichste Beispiel für die Verbreitung von Krankheiten entlang der Seidenstrasse ist die Ausbreitung der Pest im 14. Jahrhundert. … Durch diesen regen Austausch wurden auch Pestbakterien, die vor allem in wild lebenden Nagetierpopulationen Asiens vorkommen, nach Europa gebracht.» Die Quelle datiert die Welle ins 14. Jahrhundert; 1347 ist das übliche Jahr ihrer Ankunft in Europa.",
+    geprueft: "2026-08-11",
+  },
+
+  /* ── Das Haus der Weisheit ───────────────────────────────────────────── */
+  {
+    id: "PP-08e272",
+    anker: "Haus der Weisheit",
+    /* Nicht «/wiki/Haus der Weisheit» — das führt auf eine Begriffsklärung.
+       Der Bagdader Artikel trägt den Klammerzusatz. */
+    url: "https://de.wikipedia.org/wiki/Haus_der_Weisheit_(Bagdad)",
+    titel: "Haus der Weisheit, Bagdad (Wikipedia)",
+    stelle:
+      "«Das Haus der Weisheit … war eine Art Akademie, die im Jahr 825 von dem Abbasiden-Kalifen al-Ma'mūn in Bagdad gegründet wurde. … Im Haus der Weisheit arbeiteten zeitweise rund 90 Menschen an wissenschaftlichen Übersetzungen, vor allem aus dem Griechischen.» Der Artikel datiert die Gründung auf 825; die Jahresangabe «~820» der Karte trägt darum die Tilde.",
+    geprueft: "2026-08-11",
+  },
+  {
+    id: "PP-ff6ef2",
+    /* Nicht «Hier arbeitete al-Chwarizmi»: «al-Chwarizmi» trägt den
+       Glossar-Hover und kommt im Block nur dort frei vor. */
+    anker: "der Algebra den Namen gab",
+    url: "https://de.wikipedia.org/wiki/Al-Chwarizmi",
+    titel: "Al-Chwarizmi (Wikipedia)",
+    stelle:
+      "«Chwarizmi, der vor allem als einer der Begründer der Algebra bekannt ist, gilt als einer der bedeutendsten Mathematiker.» Und zur zweiten Behauptung des Satzes: «Von seinem Namen leitet sich der Begriff Algorithmus ab.»",
+    geprueft: "2026-08-11",
+  },
+  {
+    id: "PP-ff6ef2",
+    /* Ohne «die Mongolen» im Anker: Der Begriff trägt den Glossar-Hover und
+       kommt im Block nur an dieser Stelle vor. */
+    anker: "Bagdad 1258 eroberten",
+    url: "https://de.wikipedia.org/wiki/Eroberung_von_Bagdad",
+    titel: "Eroberung von Bagdad (Wikipedia)",
+    stelle:
+      "«Die mongolische Eroberung Bagdads fand am 10. Februar 1258 statt. Die Mongolen unter Hülegü eroberten und zerstörten die Hauptstadt der abbasidischen Kalifen.» Die Tigris-Erzählung führt der Text selbst als Chronisten-Bericht, nicht als Tatsache.",
+    geprueft: "2026-08-11",
+  },
+
+  /* ── Die Universität ─────────────────────────────────────────────────── */
+  {
+    id: "PP-d94a91",
+    anker: "In Bologna, Paris und Oxford entsteht eine neue Praxis",
+    url: "https://de.wikipedia.org/wiki/Universit%C3%A4t",
+    titel: "Universität (Wikipedia)",
+    stelle:
+      "«An den damals neu gegründeten Institutionen von Bologna (gegründet 1088), Paris (gegründet um 1150) oder Oxford (gegründet im 12. Jahrhundert)» entwickelte sich der Lehrbetrieb. Zum Wort: «vom lateinischen universitas magistrorum et scolarium, ‹Gemeinschaft der Lehrer und Schüler›».",
+    geprueft: "2026-08-11",
+  },
+  {
+    id: "PP-1aae8d",
+    anker: "In Bologna hatten sogar die Studenten das Sagen",
+    url: "https://de.wikipedia.org/wiki/Universit%C3%A4t_Bologna",
+    titel: "Universität Bologna (Wikipedia)",
+    stelle:
+      "«Um 1350 begann die Stadt auch, die Professoren zu besolden. Davor waren sie von den Studenten bezahlt worden.» Der Artikel beschreibt die frühe Universität als Zusammenschluss der Studentenschaft mit eigener Gerichtsbarkeit.",
+    geprueft: "2026-08-11",
+  },
+  {
+    id: "PP-1aae8d",
+    anker: "ihre erste Universität 1460 in Basel",
+    url: "https://de.wikipedia.org/wiki/Universit%C3%A4t_Basel",
+    titel: "Universität Basel (Wikipedia)",
+    stelle:
+      "«Die Universität Basel … wurde im Jahr 1460 gegründet und ist somit die älteste Universität der Schweiz.»",
+    geprueft: "2026-08-11",
+  },
+
+  /* ── Kaffeehaus-Öffentlichkeit ───────────────────────────────────────── */
+  {
+    id: "PP-eddc6f",
+    anker: "trafen sich Reeder und Kaufleute",
+    url: "https://de.wikipedia.org/wiki/Lloyd%E2%80%99s_of_London",
+    titel: "Lloyd's of London (Wikipedia)",
+    stelle:
+      "«Lloyd's of London mit Sitz in London ist ein internationaler Versicherungsmarkt. … keine Firma oder Kapitalgesellschaft, sondern eine Börse, an der mit Versicherungen gehandelt wird.» Zum Ursprung im Kaffeehaus: Der Artikel verweist auf «die gemeinsamen Anfänge in Lloyd's Kaffeehaus».",
+    geprueft: "2026-08-11",
+  },
+
+  /* ── Grenzenloser Welthandel ─────────────────────────────────────────── */
+  {
+    id: "PP-122a06",
+    anker: "die Welthandelsorganisation entstand 1995",
+    url: "https://de.wikipedia.org/wiki/Welthandelsorganisation",
+    titel: "Welthandelsorganisation (Wikipedia)",
+    stelle:
+      "«Die Welthandelsorganisation … ist eine internationale Organisation mit Sitz in Genf, die sich mit der Regelung von Handels- und Wirtschaftsbeziehungen beschäftigt.» Gegründet wurde sie im April 1994, und: «Januar 1995 nahm sie ihre Arbeit in Genf auf.» Das «entstand 1995» im Text meint diese Arbeitsaufnahme.",
+    geprueft: "2026-08-11",
+  },
+  {
+    id: "PP-122a06",
+    anker: "China trat 2001 bei",
+    url: "https://de.wikipedia.org/wiki/China-Schock",
+    titel: "China-Schock (Wikipedia)",
+    stelle:
+      "«… nach dem Beitritt Chinas zur Welthandelsorganisation (WTO) im Dezember 2001.» Und zur Folge: «Der erste China-Schock entstand aus der Verbindung von Chinas WTO-Beitritt 2001, niedrigen Produktionskosten, einer rasch wachsenden Exportindustrie und der Öffnung westlicher Märkte.»",
+    geprueft: "2026-08-11",
+  },
+  {
+    id: "PP-122a06",
+    anker: "quer stehendes Containerschiff im Suezkanal",
+    url: "https://de.wikipedia.org/wiki/Ever_Given",
+    titel: "Ever Given (Wikipedia)",
+    stelle:
+      "Die Ever Given wurde bekannt, als sie «am 23. März 2021 im Suezkanal bei starkem Wind an einer Uferböschung des Kanals auf Grund lief, sich schräg stellte und dadurch die Schifffahrtsrinne des Kanals sechs Tage lang blockierte.»",
+    geprueft: "2026-08-11",
+  },
 ];
 
 /**

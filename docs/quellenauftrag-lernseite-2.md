@@ -1022,7 +1022,7 @@ Dieser Krieg unterschied sich von allen früheren. Er wurde mit Fabriken, Fahrpl
 
 > **Belegt** («Verbrechen gegen die Menschlichkeit»): [Nürnberger Prozesse (Wikipedia)](https://de.wikipedia.org/wiki/N%C3%BCrnberger_Prozesse) — «Die Nürnberger Prozesse wurden nach dem Zweiten Weltkrieg gegen führende Repräsentanten des NS-Staates durchgeführt. Sie fanden zwischen dem 20. November 1945 und dem 14. April 1949 im Justizpalast Nürnberg statt.» Der Artikel beginnt den Bedeutungs-Absatz mit «Zum ersten Mal in der Geschichte» — darauf stützt sich das «erstmals» im Text. *(geprüft 2026-08-11)*
 
-> **Belegt** («die Allgemeine Erklärung der Menschenrechte»): [Allgemeine Erklärung der Menschenrechte (Wikipedia)](https://de.wikipedia.org/wiki/Allgemeine_Erkl%C3%A4rung_der_Menschenrechte) — «Die Allgemeine Erklärung der Menschenrechte … ist eine rechtlich nicht bindende Resolution der Generalversammlung der Vereinten Nationen zu den Menschenrechten. Sie wurde am 10. Dezember 1948 im Palais de Chaillot in Paris verkündet.» *(geprüft 2026-08-11)*
+> **Belegt** («UNO beschloss 1948 die Allgemeine Erklärung der Menschenrechte»): [Allgemeine Erklärung der Menschenrechte (Wikipedia)](https://de.wikipedia.org/wiki/Allgemeine_Erkl%C3%A4rung_der_Menschenrechte) — «Die Allgemeine Erklärung der Menschenrechte … ist eine rechtlich nicht bindende Resolution der Generalversammlung der Vereinten Nationen zu den Menschenrechten. Sie wurde am 10. Dezember 1948 im Palais de Chaillot in Paris verkündet.» *(geprüft 2026-08-11)*
 
 ### Mondfahrt im Kalten Krieg
 
@@ -1304,21 +1304,35 @@ Karawanen und Schiffe verbinden China, Indien, Arabien und Europa: Seide, Pfeffe
 **[PP-c9ffe5]** *(Vertiefung «Mehr lesen»)*
 Kaum ein Händler reiste je die ganze Strecke von China ans Mittelmeer. Die Waren wanderten in Etappen und wechselten in Oasenstädten wie Samarkand von Karawane zu Karawane. Unterwegs vervielfachte sich der Preis, in Rom klagte der Gelehrte Plinius, wie viel Gold das Reich Jahr für Jahr für Seide, Pfeffer und Weihrauch nach Osten abfliessen lasse. Wie kostbar Gewürze waren, zeigt das Jahr 410, als die Westgoten von Rom neben Gold und Silber auch dreitausend Pfund Pfeffer als Tribut verlangten. China hütete das Geheimnis der Seide über Jahrhunderte, der Legende nach schmuggelten schliesslich Mönche Seidenraupeneier in hohlen Wanderstäben nach Byzanz. Doch die Routen transportierten nicht nur kostbare Waren, 1347 erreichte über die Handelswege auch die Pest Europa und tötete binnen weniger Jahre einen grossen Teil der Bevölkerung. Vernetzung bringt Reichtum und Risiko in einem, diese Erfahrung ist viel älter als unsere Zeit.
 
+> **Belegt** («1347 erreichte über die Handelswege»): [Seidenstrasse (Wikipedia)](https://de.wikipedia.org/wiki/Seidenstra%C3%9Fe) — «Das in Europa wohl bekannteste und folgenreichste Beispiel für die Verbreitung von Krankheiten entlang der Seidenstrasse ist die Ausbreitung der Pest im 14. Jahrhundert. … Durch diesen regen Austausch wurden auch Pestbakterien, die vor allem in wild lebenden Nagetierpopulationen Asiens vorkommen, nach Europa gebracht.» Die Quelle datiert die Welle ins 14. Jahrhundert; 1347 ist das übliche Jahr ihrer Ankunft in Europa. *(geprüft 2026-08-11)*
+
 ### Das Haus der Weisheit
 
 **[PP-08e272]** *(Kartentext)*
 Im Bagdader «Haus der Weisheit» übersetzen, sammeln und erweitern Gelehrte das Wissen Griechenlands, Persiens und Indiens. Das ist Wissenschaft als organisierte Praxis, Jahrhunderte vor Europas Universitäten.
 
+> **Belegt** («Haus der Weisheit»): [Haus der Weisheit, Bagdad (Wikipedia)](https://de.wikipedia.org/wiki/Haus_der_Weisheit_(Bagdad)) — «Das Haus der Weisheit … war eine Art Akademie, die im Jahr 825 von dem Abbasiden-Kalifen al-Ma'mūn in Bagdad gegründet wurde. … Im Haus der Weisheit arbeiteten zeitweise rund 90 Menschen an wissenschaftlichen Übersetzungen, vor allem aus dem Griechischen.» Der Artikel datiert die Gründung auf 825; die Jahresangabe «~820» der Karte trägt darum die Tilde. *(geprüft 2026-08-11)*
+
 **[PP-ff6ef2]** *(Vertiefung «Mehr lesen»)*
 Bagdad war um das Jahr 800 eine der grössten und reichsten Städte der Welt, und seine Kalifen sammelten Bücher mit demselben Ehrgeiz wie Gold. Gesandte reisten bis nach Byzanz, um griechische Handschriften zu holen, und berühmte Übersetzer sollen für ihre Arbeit mit dem Gewicht der Bücher in Gold entlohnt worden sein. Hier arbeitete al-Chwarizmi, dessen Lehrbuch über das «al-dschabr» genannte Umformen von Gleichungen der Algebra den Namen gab, und aus seinem eigenen Namen wurde später das Wort «Algorithmus». Möglich machte den Betrieb auch das Papier, das über Samarkand in die Stadt gekommen war und Bücher erschwinglich machte. Als die Mongolen Bagdad 1258 eroberten, sollen die hineingeworfenen Bücher den Tigris dunkel gefärbt haben, so erzählten es die Chronisten. Wissenszentren sind kostbar und verletzlich zugleich, beides gehört zu ihrer Geschichte.
+
+> **Belegt** («der Algebra den Namen gab»): [Al-Chwarizmi (Wikipedia)](https://de.wikipedia.org/wiki/Al-Chwarizmi) — «Chwarizmi, der vor allem als einer der Begründer der Algebra bekannt ist, gilt als einer der bedeutendsten Mathematiker.» Und zur zweiten Behauptung des Satzes: «Von seinem Namen leitet sich der Begriff Algorithmus ab.» *(geprüft 2026-08-11)*
+
+> **Belegt** («Als die Mongolen Bagdad 1258 eroberten»): [Eroberung von Bagdad (Wikipedia)](https://de.wikipedia.org/wiki/Eroberung_von_Bagdad) — «Die mongolische Eroberung Bagdads fand am 10. Februar 1258 statt. Die Mongolen unter Hülegü eroberten und zerstörten die Hauptstadt der abbasidischen Kalifen.» Die Tigris-Erzählung führt der Text selbst als Chronisten-Bericht, nicht als Tatsache. *(geprüft 2026-08-11)*
 
 ### Die Universität
 
 **[PP-d94a91]** *(Kartentext)*
 In Bologna, Paris und Oxford entsteht eine neue Praxis: gemeinsames, geregeltes Lernen und Streiten. Wissen bekommt einen eigenen Ort und eigene Regeln.
 
+> **Belegt** («In Bologna, Paris und Oxford entsteht eine neue Praxis»): [Universität (Wikipedia)](https://de.wikipedia.org/wiki/Universit%C3%A4t) — «An den damals neu gegründeten Institutionen von Bologna (gegründet 1088), Paris (gegründet um 1150) oder Oxford (gegründet im 12. Jahrhundert)» entwickelte sich der Lehrbetrieb. Zum Wort: «vom lateinischen universitas magistrorum et scolarium, ‹Gemeinschaft der Lehrer und Schüler›». *(geprüft 2026-08-11)*
+
 **[PP-1aae8d]** *(Vertiefung «Mehr lesen»)*
 Das Wort «universitas» bezeichnete ursprünglich keine Gebäude, sondern eine Genossenschaft. Lehrende und Lernende schlossen sich zusammen wie Handwerker in einer Zunft. Die Parallele war ernst gemeint, wer fertig war, wurde «Magister», also Meister, so wie in der Werkstatt auf den Lehrling der Geselle und der Meister folgte. In Bologna hatten sogar die Studenten das Sagen, sie stellten die Professoren an und belegten sie mit Bussen, wenn eine Vorlesung zu spät begann oder der Stoff nicht durchgenommen war. Kaiser und Päpste gewährten den Universitäten eigene Rechte, und weil überall auf Latein gelehrt wurde, zogen Studenten quer durch Europa von Schule zu Schule. Die Schweiz bekam ihre erste Universität 1460 in Basel. Dass Wissen dort entsteht, wo man fragt, streitet und geprüft wird, ist seither die Grundidee geblieben, egal wie sehr sich die Werkzeuge ändern.
+
+> **Belegt** («In Bologna hatten sogar die Studenten das Sagen»): [Universität Bologna (Wikipedia)](https://de.wikipedia.org/wiki/Universit%C3%A4t_Bologna) — «Um 1350 begann die Stadt auch, die Professoren zu besolden. Davor waren sie von den Studenten bezahlt worden.» Der Artikel beschreibt die frühe Universität als Zusammenschluss der Studentenschaft mit eigener Gerichtsbarkeit. *(geprüft 2026-08-11)*
+
+> **Belegt** («ihre erste Universität 1460 in Basel»): [Universität Basel (Wikipedia)](https://de.wikipedia.org/wiki/Universit%C3%A4t_Basel) — «Die Universität Basel … wurde im Jahr 1460 gegründet und ist somit die älteste Universität der Schweiz.» *(geprüft 2026-08-11)*
 
 ### Kaffeehaus-Öffentlichkeit
 
@@ -1327,6 +1341,8 @@ In den Kaffeehäusern von London und Paris diskutieren Bürger über Zeitungen, 
 
 **[PP-eddc6f]** *(Vertiefung «Mehr lesen»)*
 In London nannte man die Kaffeehäuser «Penny Universities», für einen Penny Eintritt bekam man ein Getränk, die neuesten Zeitungen und Gespräche mit Fremden über Handel, Politik und Wissenschaft. Jedes Haus hatte sein Stammpublikum, bei Lloyd's trafen sich Reeder und Kaufleute, aus ihren Geschäften rund um Schiffsladungen wurde eine der grössten Versicherungsbörsen der Welt. Die Obrigkeit erkannte die Sprengkraft sofort, König Karl II. wollte die Häuser 1675 als Orte der Gerüchte und des Aufruhrs schliessen lassen und musste den Erlass nach heftigem Widerstand zurücknehmen. Ganz offen war diese Öffentlichkeit allerdings nicht, Frauen blieben als Gäste meist ausgeschlossen, und wer arm war, hatte weder Zeit noch Penny. Neu war trotzdem das Prinzip, dass am Tisch das Argument zählen sollte und nicht der Stand. Jede Debatte darüber, wer heute in digitalen Räumen mitreden kann, verhandelt im Kern dasselbe.
+
+> **Belegt** («trafen sich Reeder und Kaufleute»): [Lloyd's of London (Wikipedia)](https://de.wikipedia.org/wiki/Lloyd%E2%80%99s_of_London) — «Lloyd's of London mit Sitz in London ist ein internationaler Versicherungsmarkt. … keine Firma oder Kapitalgesellschaft, sondern eine Börse, an der mit Versicherungen gehandelt wird.» Zum Ursprung im Kaffeehaus: Der Artikel verweist auf «die gemeinsamen Anfänge in Lloyd's Kaffeehaus». *(geprüft 2026-08-11)*
 
 ### Grenzenloser Welthandel
 
@@ -1337,6 +1353,12 @@ Container, Freihandelsabkommen und das Internet verflechten die Weltwirtschaft f
 Den Anstoss gab ein amerikanischer Spediteur. Malcom McLean liess 1956 erstmals genormte Stahlkisten auf ein umgebautes Schiff heben, weil ihn das ewige Umladen von Hand ärgerte. Der Container senkte die Verladekosten auf einen Bruchteil, ganze Berufe am Hafen verschwanden, dafür wurde es plötzlich rentabel, auch billige Waren um die halbe Welt zu schicken. Nach dem Ende des Kalten Kriegs kam die Politik dazu, die Welthandelsorganisation entstand 1995, China trat 2001 bei und wurde zur «Fabrik der Welt». Seither steckt in einem einzigen Smartphone Arbeit aus Dutzenden Ländern, vom Kobalt aus dem Kongo über Chips aus Taiwan bis zur Software aus Amerika und Europa. Wie verletzlich das fein getaktete System ist, zeigte sich 2021, als ein einziges quer stehendes Containerschiff im Suezkanal tagelang einen Teil des Welthandels aufhielt. Grenzenlos heisst eben auch, dass eine Störung an einem Ort überall spürbar wird.
 
 > **Belegt** («1956 erstmals genormte Stahlkisten auf ein umgebautes Schiff heben»): [Ideal X (Wikipedia)](https://de.wikipedia.org/wiki/Ideal_X) — «Die Jungfernfahrt als Containerschiff fand am 26. April 1956 auf der Route von Newark (New Jersey) nach Houston statt und wurde sowohl von Ladungsbeteiligten als auch von Gewerkschaften und Regierungsvertretern genau beobachtet.» Das Schiff war ein umgebauter T2-Tanker mit 58 Containern. *(geprüft 2026-08-05)*
+
+> **Belegt** («die Welthandelsorganisation entstand 1995»): [Welthandelsorganisation (Wikipedia)](https://de.wikipedia.org/wiki/Welthandelsorganisation) — «Die Welthandelsorganisation … ist eine internationale Organisation mit Sitz in Genf, die sich mit der Regelung von Handels- und Wirtschaftsbeziehungen beschäftigt.» Gegründet wurde sie im April 1994, und: «Januar 1995 nahm sie ihre Arbeit in Genf auf.» Das «entstand 1995» im Text meint diese Arbeitsaufnahme. *(geprüft 2026-08-11)*
+
+> **Belegt** («China trat 2001 bei»): [China-Schock (Wikipedia)](https://de.wikipedia.org/wiki/China-Schock) — «… nach dem Beitritt Chinas zur Welthandelsorganisation (WTO) im Dezember 2001.» Und zur Folge: «Der erste China-Schock entstand aus der Verbindung von Chinas WTO-Beitritt 2001, niedrigen Produktionskosten, einer rasch wachsenden Exportindustrie und der Öffnung westlicher Märkte.» *(geprüft 2026-08-11)*
+
+> **Belegt** («quer stehendes Containerschiff im Suezkanal»): [Ever Given (Wikipedia)](https://de.wikipedia.org/wiki/Ever_Given) — Die Ever Given wurde bekannt, als sie «am 23. März 2021 im Suezkanal bei starkem Wind an einer Uferböschung des Kanals auf Grund lief, sich schräg stellte und dadurch die Schifffahrtsrinne des Kanals sechs Tage lang blockierte.» *(geprüft 2026-08-11)*
 
 ### Philosophie in Zeiten der Verunsicherung
 

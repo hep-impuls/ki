@@ -185,6 +185,15 @@ export const GLOSSAR: Record<string, string> = {
     "Sowjetischer Kosmonaut. Am 12. April 1961 als erster Mensch im Weltraum.",
   "Michail Gorbatschow":
     "Letzter Präsident der Sowjetunion. Seine Reformen Glasnost und Perestroika leiteten das Ende des Ostblocks ein.",
+  /* Teppich, Faden «Kulturelle Praxen» (Abschluss der Kontrollrunde). */
+  Plinius:
+    "Plinius der Ältere, römischer Gelehrter (23/24 bis 79 n. Chr.). Seine «Naturalis historia» ist eine Naturkunde in 37 Büchern.",
+  Pest:
+    "Der «Schwarze Tod» ab 1347: eine Seuchenwelle, die in Europa einen grossen Teil der Bevölkerung tötete.",
+  Zunft:
+    "Zusammenschluss von Handwerkern desselben Gewerbes, mit eigenen Regeln, Ausbildungsstufen und Rechten.",
+  "Karl II.":
+    "Englischer König von 1660 bis 1685. Sein Versuch, die Kaffeehäuser zu schliessen, scheiterte am Widerstand.",
   Karawanen: "Handelszüge aus Lasttieren durch Wüsten und Steppen.",
   "islamische Blütezeit":
     "Etwa 8.–13. Jahrhundert: Wissenschaft und Kultur der islamischen Welt in voller Blüte.",

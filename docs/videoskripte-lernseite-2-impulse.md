@@ -63,8 +63,7 @@ Akteurin ist, die Wandel auslöst und verunsichert. Im zweiten, der
 «philosophischen Perspektive», gehen wir dem Muster nach — dass solche
 Verunsicherung nicht neu ist und wie Philosophie schon früher Orientierung gegeben
 hat und heute geben kann. Und im dritten, dem «Orakel», gehst du deinem eigenen
-Weg nach: wie du dich durch diese Fragen bewegt hast und wo du stehst. Fangen wir
-an — bei der Verunsicherung.
+Weg nach: wie du dich durch diese Fragen bewegt hast und wo du stehst. Vorhang auf!
 
 ### Was vermittelt wird & wo die Komplexität liegt
 
