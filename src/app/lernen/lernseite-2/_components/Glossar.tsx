@@ -157,6 +157,34 @@ export const GLOSSAR: Record<string, string> = {
     "Jungsteinzeitliche Siedlung in der heutigen Türkei, bewohnt zwischen etwa 7500 und 5700 v. Chr. Sie gilt als die erste Grosssiedlung der Weltgeschichte.",
   Pfahlbaudörfer:
     "Holzhäuser auf Pfählen an Seeufern und in Feuchtgebieten. Rund um die Alpen führt die UNESCO 111 solche Fundstellen als Welterbe, 56 davon in der Schweiz.",
+  /* Teppich des Wandels, Fäden «Gesellschaftliche Ereignisse» und
+     «Entdeckungen» (Christofs Kontrollrunde 2026-08-11). */
+  Odoaker:
+    "Weströmischer Offizier germanischer Herkunft. Setzte 476 den letzten weströmischen Kaiser ab und wurde König von Italien.",
+  "Romulus Augustulus":
+    "Der letzte weströmische Kaiser, noch ein Jugendlicher. 476 von Odoaker abgesetzt.",
+  Azteken:
+    "Hochkultur im Tal von Mexiko, 14. bis frühes 16. Jahrhundert, mit der Hauptstadt Tenochtitlan.",
+  Inka:
+    "Indigene Kultur in Südamerika. Ihr Reich reichte um 1530 vom heutigen Ecuador bis nach Chile.",
+  "La Malinche":
+    "Dolmetscherin und Vermittlerin des Eroberers Cortés. Ohne sie hätte er mit den Verbündeten kaum verhandeln können.",
+  Ablassbriefe:
+    "Kirchliche Schreiben gegen Geld, die zeitliche Sündenstrafen erlassen sollten. Ihr Verkauf löste 1517 Luthers Thesen aus.",
+  "Huldrych Zwingli":
+    "Der erste Zürcher Reformator (1484–1531). Aus der Zürcher und der Genfer Reformation gingen die reformierten Kirchen hervor.",
+  Pombal:
+    "Sebastião de Melo, Marquês de Pombal, Erster Minister Portugals. Baute Lissabon nach dem Beben von 1755 planvoll wieder auf.",
+  Robespierre:
+    "Anführer der radikalen Phase der Französischen Revolution. Organisierte den Terror und wurde 1794 selbst hingerichtet.",
+  "Hannah Arendt":
+    "Politische Denkerin (1906–1975), floh vor den Nazis in die USA. Untersuchte, wie totalitäre Herrschaft funktioniert.",
+  "Margaret Hamilton":
+    "Informatikerin am MIT. Leitete die Entwicklung der Bordsoftware für die Apollo-Mondlandungen.",
+  "Juri Gagarin":
+    "Sowjetischer Kosmonaut. Am 12. April 1961 als erster Mensch im Weltraum.",
+  "Michail Gorbatschow":
+    "Letzter Präsident der Sowjetunion. Seine Reformen Glasnost und Perestroika leiteten das Ende des Ostblocks ein.",
   Karawanen: "Handelszüge aus Lasttieren durch Wüsten und Steppen.",
   "islamische Blütezeit":
     "Etwa 8.–13. Jahrhundert: Wissenschaft und Kultur der islamischen Welt in voller Blüte.",

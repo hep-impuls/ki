@@ -1572,6 +1572,182 @@ export const BELEGE: Beleg[] = [
       "«Nach derzeitigem Kenntnisstand begann das Neolithikum zuerst um 9500 v. Chr. im Fruchtbaren Halbmond Vorderasiens (vor allem an den Südrändern des Zagros- und Taurusgebirges).» Und zur zweiten Jahresangabe im Text: «Das Beginndatum wird allerdings grundsätzlich auf die betrachtete Region bezogen, so dass die Jungsteinzeit etwa in Mittel- und Nordwesteuropa erst zwischen 5800 und 4000 v. Chr.» beginnt.",
     geprueft: "2026-08-11",
   },
+
+  /* ══ Teppich des Wandels, Faden gesellschaftliche Ereignisse ════════════
+     Kontrollrunde auf Christofs Wunsch (2026-08-11): mindestens eine Quelle
+     je Karte, wo etwas behauptet wird. */
+
+  /* ── Der Prozess des Sokrates ────────────────────────────────────────── */
+  {
+    id: "PP-f38562",
+    anker: "trank den Giftbecher",
+    url: "https://de.wikipedia.org/wiki/Sokrates",
+    titel: "Sokrates (Wikipedia)",
+    stelle:
+      "«Gut gesichert ist das Jahr seines Prozesses und Todes, 399 v. Chr.» Und zum Giftbecher: «Bis zur Hinrichtung durch den Schierlingsbecher beschäftigten ihn und die zu Besuch im Gefängnis weilenden Freunde und Schüler philosophische Fragen.» Der Giftbecher im Text ist dieser Schierlingsbecher.",
+    geprueft: "2026-08-11",
+  },
+
+  /* ── Kolonialisierung ────────────────────────────────────────────────── */
+  {
+    id: "PP-28a11e",
+    anker: "im Vertrag von Tordesillas eine Linie",
+    url: "https://de.wikipedia.org/wiki/Vertrag_von_Tordesillas",
+    titel: "Vertrag von Tordesillas (Wikipedia)",
+    stelle:
+      "«Im Vertrag von Tordesillas, abgeschlossen am 7. Juni 1494 in der spanischen Stadt Tordesillas, wurden die Herrschaftsbereiche Portugals und Kastiliens im Atlantik … neu abgegrenzt.» Die Quelle sagt Kastilien, der Text Spanien: Kastilien war der Kern des entstehenden Spanien.",
+    geprueft: "2026-08-11",
+  },
+  {
+    id: "PP-28a11e",
+    anker: "Der Mönch Bartolomé de Las Casas",
+    url: "https://de.wikipedia.org/wiki/Bartolom%C3%A9_de_Las_Casas",
+    titel: "Bartolomé de Las Casas (Wikipedia)",
+    stelle:
+      "«… war ein spanischer Theologe, Dominikaner und Historiker sowie der erste Bischof von Chiapas im heutigen Mexiko. … wurde ab 1514 dann aber einer der schärfsten und meistbeachteten Kritiker der Conquista sowie Streiter für die Würde der Indigenen Völker Amerikas.» Als Dominikaner war er Ordensmann, daher «Mönch» im Text.",
+    geprueft: "2026-08-11",
+  },
+
+  /* ── Reformation ─────────────────────────────────────────────────────── */
+  {
+    id: "PP-bcd011",
+    anker: "mit seinen 95 Thesen zunächst eine Gelehrtendebatte",
+    url: "https://de.wikipedia.org/wiki/95_Thesen",
+    titel: "95 Thesen (Wikipedia)",
+    stelle:
+      "«Martin Luthers 95 Thesen …, in denen er sich gegen den Missbrauch des Ablasses und besonders gegen den geschäftsmässigen Handel mit Ablassbriefen aussprach, wurden am 31. Oktober 1517 als Beifügung an einen Brief an den Erzbischof von Mainz und Magdeburg, Albrecht von Brandenburg, erstmals in Umlauf gebracht.»",
+    geprueft: "2026-08-11",
+  },
+
+  /* ── Das Erdbeben von Lissabon ───────────────────────────────────────── */
+  {
+    id: "PP-39fd0b",
+    anker: "Am Morgen des 1. November 1755",
+    url: "https://de.wikipedia.org/wiki/Erdbeben_von_Lissabon_1755",
+    titel: "Erdbeben von Lissabon 1755 (Wikipedia)",
+    stelle:
+      "«Das Erdbeben von Lissabon am 1. November 1755 zerstörte zusammen mit einem Grossbrand und einem Tsunami die portugiesische Hauptstadt Lissabon fast vollständig. Mit 30.000 bis 100.000 Todesopfern war dieses Erdbeben eine der verheerendsten Naturkatastrophen der europäischen Geschichte.»",
+    geprueft: "2026-08-11",
+  },
+  {
+    id: "PP-39fd0b",
+    anker: "verschickte Fragebögen über den Ablauf des Bebens",
+    url: "https://de.wikipedia.org/wiki/Erdbeben_von_Lissabon_1755",
+    titel: "Erdbeben von Lissabon 1755 (Wikipedia), zur Erdbebenforschung",
+    stelle:
+      "«Der Premierminister sorgte nicht nur für den Wiederaufbau, sondern ordnete auch eine Umfrage bei allen Pfarrern an, um Fakten über das Beben und seine Auswirkungen zu sammeln.» Der Abschnitt heisst «Erdbebenforschung» — daher die Formulierung im Text, dies sei ein Anfang der modernen Erdbebenforschung.",
+    geprueft: "2026-08-11",
+  },
+
+  /* ── Französische Revolution ─────────────────────────────────────────── */
+  {
+    id: "PP-ed6671",
+    anker: "befreite zwar nur sieben Gefangene",
+    url: "https://de.wikipedia.org/wiki/Sturm_auf_die_Bastille",
+    titel: "Sturm auf die Bastille (Wikipedia)",
+    stelle:
+      "«Sie befreite die Gefangenen: vier Urkundenfälscher, zwei Geisteskranke und vermutlich den adligen Schriftsteller Marquis de Sade, den seine Familie wegen seines wüsten Lebenswandels in der Bastille hatte festsetzen lassen.» Die Aufzählung ergibt sieben.",
+    geprueft: "2026-08-11",
+  },
+  {
+    id: "PP-ed6671",
+    anker: "Die Schriftstellerin Olympe de Gouges forderte 1791",
+    url: "https://de.wikipedia.org/wiki/Olympe_de_Gouges",
+    titel: "Olympe de Gouges (Wikipedia)",
+    stelle:
+      "«Olympe de Gouges … (* 7. Mai 1748 in Montauban; † 3. November 1793 in Paris) war eine Revolutionärin, Frauenrechtlerin und Schriftstellerin im Zeitalter der Aufklärung. Sie ist die Verfasserin der Erklärung der Rechte der Frau und Bürgerin von 1791.» Ihre Hinrichtung während des Terrors schildert der Artikel im Abschnitt zum Prozess.",
+    geprueft: "2026-08-11",
+  },
+
+  /* ── Zweiter Weltkrieg ───────────────────────────────────────────────── */
+  {
+    id: "PP-70817b",
+    anker: "Verbrechen gegen die Menschlichkeit",
+    url: "https://de.wikipedia.org/wiki/N%C3%BCrnberger_Prozesse",
+    titel: "Nürnberger Prozesse (Wikipedia)",
+    stelle:
+      "«Die Nürnberger Prozesse wurden nach dem Zweiten Weltkrieg gegen führende Repräsentanten des NS-Staates durchgeführt. Sie fanden zwischen dem 20. November 1945 und dem 14. April 1949 im Justizpalast Nürnberg statt.» Der Artikel beginnt den Bedeutungs-Absatz mit «Zum ersten Mal in der Geschichte» — darauf stützt sich das «erstmals» im Text.",
+    geprueft: "2026-08-11",
+  },
+  {
+    id: "PP-70817b",
+    /* Mit «UNO beschloss 1948» davor: Der kurze Anker käme auch im
+       Epochen-Block «Weltkriege» vor und würde dort lecken. */
+    anker: "UNO beschloss 1948 die Allgemeine Erklärung der Menschenrechte",
+    url: "https://de.wikipedia.org/wiki/Allgemeine_Erkl%C3%A4rung_der_Menschenrechte",
+    titel: "Allgemeine Erklärung der Menschenrechte (Wikipedia)",
+    stelle:
+      "«Die Allgemeine Erklärung der Menschenrechte … ist eine rechtlich nicht bindende Resolution der Generalversammlung der Vereinten Nationen zu den Menschenrechten. Sie wurde am 10. Dezember 1948 im Palais de Chaillot in Paris verkündet.»",
+    geprueft: "2026-08-11",
+  },
+
+  /* ── Mondfahrt im Kalten Krieg ───────────────────────────────────────── */
+  {
+    id: "PP-39c9bb",
+    anker: "rund 600 Millionen Menschen am Fernseher",
+    url: "https://de.wikipedia.org/wiki/Apollo_11",
+    titel: "Apollo 11 (Wikipedia)",
+    stelle:
+      "«Weltweit verfolgten rund 600 Millionen Menschen die Fernsehübertragung der Mondlandung 1969.»",
+    geprueft: "2026-08-11",
+  },
+
+  /* ── Zusammenbruch der Sowjetunion ───────────────────────────────────── */
+  {
+    id: "PP-6310fd",
+    anker: "scheiterte in Moskau ein Putsch der alten Garde",
+    url: "https://de.wikipedia.org/wiki/Zerfall_der_Sowjetunion",
+    titel: "Zerfall der Sowjetunion (Wikipedia)",
+    stelle:
+      "«Deren Zerfall in fünfzehn unabhängige Staaten begann mit der Unabhängigkeitserklärung Litauens am 11. März 1990, beschleunigte sich nach dem gescheiterten Augustputsch in Moskau 1991 und endete am 8. Dezember 1991 mit den Belowescher Vereinbarungen.» Zum Datum im Text: «Nach dem Rücktritt des letzten Präsidenten der UdSSR Michail Gorbatschow am 25. Dezember 1991 endete ihre Existenz am 26. Dezember.»",
+    geprueft: "2026-08-11",
+  },
+
+  /* ══ Teppich, Faden Entdeckungen: Nachzügler der Kontrollrunde ══════════ */
+
+  /* ── Die Null, Vertiefung ────────────────────────────────────────────── */
+  {
+    id: "PP-3a1b29",
+    anker: "Der indische Gelehrte Brahmagupta beschrieb im Jahr 628",
+    url: "https://de.wikipedia.org/wiki/Brahmagupta",
+    titel: "Brahmagupta (Wikipedia)",
+    stelle:
+      "«… verfasste … das Buch Brahmasphutasiddhanta … im Jahre 628.» Und: «Darüber hinaus stellte Brahmagupta in diesem Werk Regeln für die Arithmetik mit negativen Zahlen und mit der Zahl 0 auf, die schon weitgehend unserem modernen Verständnis entsprechen.»",
+    geprueft: "2026-08-11",
+  },
+
+  /* ── Die Erde verliert die Mitte, Vertiefung ─────────────────────────── */
+  {
+    id: "PP-6d48f8",
+    anker: "schob ungefragt ein Vorwort ein",
+    url: "https://de.wikipedia.org/wiki/De_revolutionibus_orbium_coelestium",
+    titel: "De revolutionibus orbium coelestium (Wikipedia)",
+    stelle:
+      "«Andreas Osiander … fügte dem Manuskript ein anonymes Vorwort hinzu, wonach die heliozentrische Weltsicht weder wahr noch plausibel sein müsse.» Dass es ohne Zustimmung geschah, zeigt die Folge: «Johannes Kepler entlarvte Osianders ‹Fälschung› anhand von Notizen im Exemplar des Nürnberger Astronomen Hieronymus Schreiber.»",
+    geprueft: "2026-08-11",
+  },
+
+  /* ── Die Evolution, Vertiefung ───────────────────────────────────────── */
+  {
+    id: "PP-8df5c4",
+    anker: "war am ersten Tag vergriffen",
+    url: "https://de.wikipedia.org/wiki/%C3%9Cber_die_Entstehung_der_Arten",
+    titel: "Über die Entstehung der Arten (Wikipedia)",
+    stelle:
+      "«Die erste Auflage von 1250 Exemplaren kam am 22. November 1859 in den Handel, aber die Zahl der Bestellungen war bereits grösser, daher war diese Auflage sofort vergriffen.» Genauer als der Text: Sie war schon durch Vorbestellungen überzeichnet.",
+    geprueft: "2026-08-11",
+  },
+
+  /* ── Die Kernspaltung, Vertiefung ────────────────────────────────────── */
+  {
+    id: "PP-2dfab2",
+    anker: "Den Nobelpreis dafür erhielt 1944 Hahn allein",
+    url: "https://de.wikipedia.org/wiki/Lise_Meitner",
+    titel: "Lise Meitner (Wikipedia)",
+    stelle:
+      "«Für ihre Errungenschaften erhielt Lise Meitner zahlreiche Ehrungen, jedoch weder den Nobelpreis für Chemie noch den Nobelpreis für Physik, obwohl sie für beide Nobelpreise vielfach nominiert wurde.» Und: «Nachdem Otto Hahn den Chemie-Nobelpreis des Jahres 1944 erhalten hatte, nominierte er Lise Meitner 1948 für den Physik-Nobelpreis.» Zum Bomben-Satz im Text: Die Quelle fasst es allgemeiner («In der Nachkriegszeit stellte Lise Meitner die Entwicklung der Kernwaffen in Frage»); das wörtliche Nein zur Mitarbeit stammt aus ihrer Biografie.",
+    geprueft: "2026-08-11",
+  },
 ];
 
 /**

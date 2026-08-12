@@ -13,8 +13,8 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 137 |
-| Belegte Textblöcke | 79 |
+| Belege | 153 |
+| Belegte Textblöcke | 89 |
 | Begründete Nicht-Belege | 6 |
 | Aussagen mit Standdatum | 3 |
 
@@ -408,6 +408,150 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 - **Geprüft:** 2026-08-11
 
 > Die Jungsteinzeit begann nicht überall gleichzeitig. Die ältesten Bauerndörfer entstanden um 9500 v. Chr. im sogenannten Fruchtbaren Halbmond im Nahen Osten, wo verschiedene Wildgetreide wuchsen, die sich kultivieren liessen; in Mitteleuropa setzte die Wende erst zwischen 5800 und 4000 v. Chr. ein. In Siedlungen wie Çatalhöyük lebten Tausende Menschen Wand an Wand, man stieg über die Dächer in die Häuser. Bemerkenswert ist, was Skelettfunde zeigen: Die ersten Bauern waren oft kleiner und kränker als die jagenden und sammelnden Menschen vor ihnen, sesshaftes Leben bedeutete zunächst mehr Arbeit, einseitigere Nahrung und ansteckende Krankheiten in der Enge. Geblieben sind die Menschen trotzdem, denn wer ein volles Kornlager hatte, konnte schlechte Jahre überstehen, und musste zugleich bleiben, um es zu verteidigen. Auch in der Schweiz lässt sich diese Wende besichtigen, die Pfahlbaudörfer am Zürichsee und Bodensee gehören heute zum UNESCO-Welterbe. Mit dem Vorrat kam das Planen, und mit dem Planen eine neue Art, an morgen zu denken.
+
+### Der Prozess des Sokrates · trank den Giftbecher
+
+- **Kennung:** `PP-f38562` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Sokrates (Wikipedia)](https://de.wikipedia.org/wiki/Sokrates)
+- **Fundstelle:** «Gut gesichert ist das Jahr seines Prozesses und Todes, 399 v. Chr.» Und zum Giftbecher: «Bis zur Hinrichtung durch den Schierlingsbecher beschäftigten ihn und die zu Besuch im Gefängnis weilenden Freunde und Schüler philosophische Fragen.» Der Giftbecher im Text ist dieser Schierlingsbecher.
+- **Geprüft:** 2026-08-11
+
+> Athen hatte gerade den langen Krieg gegen Sparta verloren, die Stadt war voller Misstrauen, als der siebzigjährige Sokrates vor gut fünfhundert Geschworene treten musste. Vorgeworfen wurde ihm, die Götter zu missachten und die Jugend zu verderben, dabei hatte er nur getan, was er immer tat, nämlich auf dem Marktplatz Feldherren, Handwerker und Politiker zu fragen, was Gerechtigkeit oder Tapferkeit eigentlich sei. Wer antwortete, verstrickte sich meist in Widersprüche, und genau das machte ihn gefährlich unbeliebt. Ein Fluchtplan seiner Freunde lag bereit, doch Sokrates blieb und trank den Giftbecher, weil er die Gesetze seiner Stadt nicht brechen wollte. Sein Schüler Platon schrieb die Verteidigungsrede nieder, und aus dem Skandalurteil wurde der Gründungsmoment der abendländischen Philosophie. Seither gehören beide zusammen, das beharrliche Fragen und der Mut, den es kostet.
+
+### Kolonialisierung · im Vertrag von Tordesillas eine Linie
+
+- **Kennung:** `PP-28a11e` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Vertrag von Tordesillas (Wikipedia)](https://de.wikipedia.org/wiki/Vertrag_von_Tordesillas)
+- **Fundstelle:** «Im Vertrag von Tordesillas, abgeschlossen am 7. Juni 1494 in der spanischen Stadt Tordesillas, wurden die Herrschaftsbereiche Portugals und Kastiliens im Atlantik … neu abgegrenzt.» Die Quelle sagt Kastilien, der Text Spanien: Kastilien war der Kern des entstehenden Spanien.
+- **Geprüft:** 2026-08-11
+
+> Schon 1494 zogen Spanien und Portugal im Vertrag von Tordesillas eine Linie über den Atlantik und teilten die aussereuropäische Welt unter sich auf, gefragt wurde dort niemand. Eroberer wie Cortés und Pizarro stürzten die Reiche der Azteken und Inka, und das gelang nicht mit wenigen hundert Soldaten allein: Entscheidend waren zehntausende indigene Verbündete, die mit den Herrschern ihre eigenen Rechnungen offen hatten, Vermittlerinnen wie La Malinche, innere Machtkämpfe und die eingeschleppten Pocken, die mehr Menschen töteten als jede Waffe. Auf den Plantagen der Kolonien arbeiteten bald Millionen verschleppte Afrikanerinnen und Afrikaner, der transatlantische Sklavenhandel wurde zu einem Fundament des europäischen Reichtums. Es gab auch Widerspruch: Der Mönch Bartolomé de Las Casas beschrieb die Gräuel und stritt vor dem spanischen Hof für die Rechte der Ureinwohner, durchgesetzt hat er sich nicht. So entstand eine Weltordnung, in der Europa jahrhundertelang bestimmte, wessen Sprache, Religion und Wissen zählt. Viele Länder tragen bis heute Grenzen, Sprachen und Ungleichheiten aus dieser Zeit.
+
+### Kolonialisierung · Der Mönch Bartolomé de Las Casas
+
+- **Kennung:** `PP-28a11e` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Bartolomé de Las Casas (Wikipedia)](https://de.wikipedia.org/wiki/Bartolom%C3%A9_de_Las_Casas)
+- **Fundstelle:** «… war ein spanischer Theologe, Dominikaner und Historiker sowie der erste Bischof von Chiapas im heutigen Mexiko. … wurde ab 1514 dann aber einer der schärfsten und meistbeachteten Kritiker der Conquista sowie Streiter für die Würde der Indigenen Völker Amerikas.» Als Dominikaner war er Ordensmann, daher «Mönch» im Text.
+- **Geprüft:** 2026-08-11
+
+> Schon 1494 zogen Spanien und Portugal im Vertrag von Tordesillas eine Linie über den Atlantik und teilten die aussereuropäische Welt unter sich auf, gefragt wurde dort niemand. Eroberer wie Cortés und Pizarro stürzten die Reiche der Azteken und Inka, und das gelang nicht mit wenigen hundert Soldaten allein: Entscheidend waren zehntausende indigene Verbündete, die mit den Herrschern ihre eigenen Rechnungen offen hatten, Vermittlerinnen wie La Malinche, innere Machtkämpfe und die eingeschleppten Pocken, die mehr Menschen töteten als jede Waffe. Auf den Plantagen der Kolonien arbeiteten bald Millionen verschleppte Afrikanerinnen und Afrikaner, der transatlantische Sklavenhandel wurde zu einem Fundament des europäischen Reichtums. Es gab auch Widerspruch: Der Mönch Bartolomé de Las Casas beschrieb die Gräuel und stritt vor dem spanischen Hof für die Rechte der Ureinwohner, durchgesetzt hat er sich nicht. So entstand eine Weltordnung, in der Europa jahrhundertelang bestimmte, wessen Sprache, Religion und Wissen zählt. Viele Länder tragen bis heute Grenzen, Sprachen und Ungleichheiten aus dieser Zeit.
+
+### Reformation · mit seinen 95 Thesen zunächst eine Gelehrtendebatte
+
+- **Kennung:** `PP-bcd011` (Vertiefung «Mehr lesen»)
+- **Quelle:** [95 Thesen (Wikipedia)](https://de.wikipedia.org/wiki/95_Thesen)
+- **Fundstelle:** «Martin Luthers 95 Thesen …, in denen er sich gegen den Missbrauch des Ablasses und besonders gegen den geschäftsmässigen Handel mit Ablassbriefen aussprach, wurden am 31. Oktober 1517 als Beifügung an einen Brief an den Erzbischof von Mainz und Magdeburg, Albrecht von Brandenburg, erstmals in Umlauf gebracht.»
+- **Geprüft:** 2026-08-11
+
+> Auslöser war ein Geschäftsmodell. Die Kirche verkaufte Ablassbriefe und finanzierte damit unter anderem den Petersdom in Rom. Nach kirchlicher Lehre erliessen sie nicht die Schuld, dafür blieb die Beichte zuständig, sondern die zeitliche Strafe für bereits vergebene Sünden. In der Verkaufspraxis verschwamm dieser Unterschied, und viele verstanden es schlicht als gekaufte Vergebung. Der Mönch und Professor Martin Luther wollte 1517 mit seinen 95 Thesen zunächst eine Gelehrtendebatte anstossen, doch Drucker vervielfältigten sie ohne sein Zutun, und innert Wochen kannte man sie im ganzen Reich. Als er 1521 vor Kaiser und Reichstag den Widerruf verweigerte, war aus dem Streit eine Bewegung geworden, die Fürsten, Städte und Bauern erfasste. In Zürich predigte fast gleichzeitig Huldrych Zwingli gegen die alten Bräuche. Die Schweiz wurde zu einem Zentrum der Reformation und zugleich konfessionell gespalten. Aus der Frage, wer die Heilige Schrift auslegen darf, wurden Kriege, aber auch Schulen, Bibelübersetzungen und das Lesen in der Volkssprache. Wer heute fragt, wem man beim Deuten der Welt trauen soll, steht in einer sehr alten Debatte.
+
+### Das Erdbeben von Lissabon · Am Morgen des 1. November 1755
+
+- **Kennung:** `PP-39fd0b` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Erdbeben von Lissabon 1755 (Wikipedia)](https://de.wikipedia.org/wiki/Erdbeben_von_Lissabon_1755)
+- **Fundstelle:** «Das Erdbeben von Lissabon am 1. November 1755 zerstörte zusammen mit einem Grossbrand und einem Tsunami die portugiesische Hauptstadt Lissabon fast vollständig. Mit 30.000 bis 100.000 Todesopfern war dieses Erdbeben eine der verheerendsten Naturkatastrophen der europäischen Geschichte.»
+- **Geprüft:** 2026-08-11
+
+> Am Morgen des 1. November 1755 sassen die Menschen in Lissabons vollen Kirchen, als die Erde mehrfach bebte, umstürzende Kerzen die Stadt entzündeten und eine Flutwelle die Fliehenden am Hafen traf. Zehntausende starben in einer der reichsten Städte Europas, die vom Kolonialhandel und vom Gold aus Brasilien lebte. Der Minister Pombal handelte nüchtern, liess die Toten bestatten, die Stadt erdbebensicher neu aufbauen und verschickte Fragebögen über den Ablauf des Bebens, ein Anfang der modernen Erdbebenforschung. Zugleich stritten die berühmtesten Köpfe der Zeit öffentlich über den Sinn der Katastrophe. Voltaire verspottete in «Candide» die Lehre, wir lebten in der besten aller möglichen Welten. Rousseau hielt dagegen, nicht Gott, sondern die eng und hoch gebaute Stadt habe so viele Opfer verursacht. Damit war eine neue Denkweise geboren: Katastrophen galten nicht mehr nur als Strafe, sondern als Ereignisse mit Ursachen, die man erforschen und deren Folgen man mindern kann.
+
+### Das Erdbeben von Lissabon · verschickte Fragebögen über den Ablauf des Bebens
+
+- **Kennung:** `PP-39fd0b` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Erdbeben von Lissabon 1755 (Wikipedia), zur Erdbebenforschung](https://de.wikipedia.org/wiki/Erdbeben_von_Lissabon_1755)
+- **Fundstelle:** «Der Premierminister sorgte nicht nur für den Wiederaufbau, sondern ordnete auch eine Umfrage bei allen Pfarrern an, um Fakten über das Beben und seine Auswirkungen zu sammeln.» Der Abschnitt heisst «Erdbebenforschung» — daher die Formulierung im Text, dies sei ein Anfang der modernen Erdbebenforschung.
+- **Geprüft:** 2026-08-11
+
+> Am Morgen des 1. November 1755 sassen die Menschen in Lissabons vollen Kirchen, als die Erde mehrfach bebte, umstürzende Kerzen die Stadt entzündeten und eine Flutwelle die Fliehenden am Hafen traf. Zehntausende starben in einer der reichsten Städte Europas, die vom Kolonialhandel und vom Gold aus Brasilien lebte. Der Minister Pombal handelte nüchtern, liess die Toten bestatten, die Stadt erdbebensicher neu aufbauen und verschickte Fragebögen über den Ablauf des Bebens, ein Anfang der modernen Erdbebenforschung. Zugleich stritten die berühmtesten Köpfe der Zeit öffentlich über den Sinn der Katastrophe. Voltaire verspottete in «Candide» die Lehre, wir lebten in der besten aller möglichen Welten. Rousseau hielt dagegen, nicht Gott, sondern die eng und hoch gebaute Stadt habe so viele Opfer verursacht. Damit war eine neue Denkweise geboren: Katastrophen galten nicht mehr nur als Strafe, sondern als Ereignisse mit Ursachen, die man erforschen und deren Folgen man mindern kann.
+
+### Französische Revolution · befreite zwar nur sieben Gefangene
+
+- **Kennung:** `PP-ed6671` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Sturm auf die Bastille (Wikipedia)](https://de.wikipedia.org/wiki/Sturm_auf_die_Bastille)
+- **Fundstelle:** «Sie befreite die Gefangenen: vier Urkundenfälscher, zwei Geisteskranke und vermutlich den adligen Schriftsteller Marquis de Sade, den seine Familie wegen seines wüsten Lebenswandels in der Bastille hatte festsetzen lassen.» Die Aufzählung ergibt sieben.
+- **Geprüft:** 2026-08-11
+
+> Der Staat war bankrott, das Brot teuer, und als König Ludwig XVI. 1789 erstmals seit 175 Jahren die Stände einberief, erklärten sich die Vertreter des dritten Standes kurzerhand zur Nationalversammlung. Der Sturm auf die Bastille am 14. Juli befreite zwar nur sieben Gefangene, wurde aber zum Zeichen, dass die alte Macht fallen kann. Wenige Wochen später verkündete die Versammlung die Menschen- und Bürgerrechte, Adelsprivilegien fielen, Frankreich probte eine Ordnung, in der Gesetze für alle gelten. Die Schriftstellerin Olympe de Gouges forderte 1791 dieselben Rechte auch für Frauen; 1793 wurde sie während des Terrors wegen ihrer politischen Schriften guillotiniert, wie der König und wie später Robespierre, der den Terror organisiert hatte. Die Revolution frass ihre eigenen Kinder und mündete in Napoleons Kaiserreich, doch ihre Ideen liessen sich nicht mehr einfangen. Fast jede heutige Verfassung, auch die schweizerische, trägt Spuren dieses Umbruchs.
+
+### Französische Revolution · Die Schriftstellerin Olympe de Gouges forderte 1791
+
+- **Kennung:** `PP-ed6671` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Olympe de Gouges (Wikipedia)](https://de.wikipedia.org/wiki/Olympe_de_Gouges)
+- **Fundstelle:** «Olympe de Gouges … (* 7. Mai 1748 in Montauban; † 3. November 1793 in Paris) war eine Revolutionärin, Frauenrechtlerin und Schriftstellerin im Zeitalter der Aufklärung. Sie ist die Verfasserin der Erklärung der Rechte der Frau und Bürgerin von 1791.» Ihre Hinrichtung während des Terrors schildert der Artikel im Abschnitt zum Prozess.
+- **Geprüft:** 2026-08-11
+
+> Der Staat war bankrott, das Brot teuer, und als König Ludwig XVI. 1789 erstmals seit 175 Jahren die Stände einberief, erklärten sich die Vertreter des dritten Standes kurzerhand zur Nationalversammlung. Der Sturm auf die Bastille am 14. Juli befreite zwar nur sieben Gefangene, wurde aber zum Zeichen, dass die alte Macht fallen kann. Wenige Wochen später verkündete die Versammlung die Menschen- und Bürgerrechte, Adelsprivilegien fielen, Frankreich probte eine Ordnung, in der Gesetze für alle gelten. Die Schriftstellerin Olympe de Gouges forderte 1791 dieselben Rechte auch für Frauen; 1793 wurde sie während des Terrors wegen ihrer politischen Schriften guillotiniert, wie der König und wie später Robespierre, der den Terror organisiert hatte. Die Revolution frass ihre eigenen Kinder und mündete in Napoleons Kaiserreich, doch ihre Ideen liessen sich nicht mehr einfangen. Fast jede heutige Verfassung, auch die schweizerische, trägt Spuren dieses Umbruchs.
+
+### Zweiter Weltkrieg · Verbrechen gegen die Menschlichkeit
+
+- **Kennung:** `PP-70817b` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Nürnberger Prozesse (Wikipedia)](https://de.wikipedia.org/wiki/N%C3%BCrnberger_Prozesse)
+- **Fundstelle:** «Die Nürnberger Prozesse wurden nach dem Zweiten Weltkrieg gegen führende Repräsentanten des NS-Staates durchgeführt. Sie fanden zwischen dem 20. November 1945 und dem 14. April 1949 im Justizpalast Nürnberg statt.» Der Artikel beginnt den Bedeutungs-Absatz mit «Zum ersten Mal in der Geschichte» — darauf stützt sich das «erstmals» im Text.
+- **Geprüft:** 2026-08-11
+
+> Dieser Krieg unterschied sich von allen früheren. Er wurde mit Fabriken, Fahrplänen und Formularen geführt, und die Mehrheit seiner weit über fünfzig Millionen Toten waren Zivilistinnen und Zivilisten. Die Schoah, der organisierte Mord an sechs Millionen europäischen Jüdinnen und Juden, geschah nicht in einem Rückfall in wilde Vorzeiten, sondern mitten im Land der Dichter, Ingenieure und Beamten, mit Aktenzeichen und Zugfahrplänen. Genau das machte die Erschütterung so tief. Bildung und Technik hatten die Barbarei nicht verhindert, sie hatten sie effizienter gemacht. Nach 1945 versuchte die Welt, Lehren zu ziehen, in Nürnberg stand erstmals die Führungsriege eines Staates für «Verbrechen gegen die Menschlichkeit» vor einem internationalen Gericht, und die neu gegründete UNO beschloss 1948 die Allgemeine Erklärung der Menschenrechte. Die Philosophin Hannah Arendt, selbst vor den Nazis geflohen, beschrieb später, wie gewöhnlich und pflichtbewusst viele Täter wirkten, und prägte dafür das Wort von der «Banalität des Bösen». Seither weiss man, dass Fortschritt keine Richtung kennt und Verantwortung sich nicht an Systeme delegieren lässt.
+
+### Zweiter Weltkrieg · UNO beschloss 1948 die Allgemeine Erklärung der Menschenrechte
+
+- **Kennung:** `PP-70817b` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Allgemeine Erklärung der Menschenrechte (Wikipedia)](https://de.wikipedia.org/wiki/Allgemeine_Erkl%C3%A4rung_der_Menschenrechte)
+- **Fundstelle:** «Die Allgemeine Erklärung der Menschenrechte … ist eine rechtlich nicht bindende Resolution der Generalversammlung der Vereinten Nationen zu den Menschenrechten. Sie wurde am 10. Dezember 1948 im Palais de Chaillot in Paris verkündet.»
+- **Geprüft:** 2026-08-11
+
+> Dieser Krieg unterschied sich von allen früheren. Er wurde mit Fabriken, Fahrplänen und Formularen geführt, und die Mehrheit seiner weit über fünfzig Millionen Toten waren Zivilistinnen und Zivilisten. Die Schoah, der organisierte Mord an sechs Millionen europäischen Jüdinnen und Juden, geschah nicht in einem Rückfall in wilde Vorzeiten, sondern mitten im Land der Dichter, Ingenieure und Beamten, mit Aktenzeichen und Zugfahrplänen. Genau das machte die Erschütterung so tief. Bildung und Technik hatten die Barbarei nicht verhindert, sie hatten sie effizienter gemacht. Nach 1945 versuchte die Welt, Lehren zu ziehen, in Nürnberg stand erstmals die Führungsriege eines Staates für «Verbrechen gegen die Menschlichkeit» vor einem internationalen Gericht, und die neu gegründete UNO beschloss 1948 die Allgemeine Erklärung der Menschenrechte. Die Philosophin Hannah Arendt, selbst vor den Nazis geflohen, beschrieb später, wie gewöhnlich und pflichtbewusst viele Täter wirkten, und prägte dafür das Wort von der «Banalität des Bösen». Seither weiss man, dass Fortschritt keine Richtung kennt und Verantwortung sich nicht an Systeme delegieren lässt.
+
+### Mondfahrt im Kalten Krieg · rund 600 Millionen Menschen am Fernseher
+
+- **Kennung:** `PP-39c9bb` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Apollo 11 (Wikipedia)](https://de.wikipedia.org/wiki/Apollo_11)
+- **Fundstelle:** «Weltweit verfolgten rund 600 Millionen Menschen die Fernsehübertragung der Mondlandung 1969.»
+- **Geprüft:** 2026-08-11
+
+> Der Wettlauf begann mit Schrecken für Amerika. Im Jahr 1957 zog der sowjetische Sputnik piepsend über den Nachthimmel, 1961 umkreiste Juri Gagarin als erster Mensch die Erde. Präsident Kennedy antwortete mit einem Versprechen, das damals vermessen klang: Noch vor Ende des Jahrzehnts sollten Amerikaner den Mond betreten. Rund vierhunderttausend Menschen arbeiteten daraufhin am Apollo-Programm, von den Näherinnen der Raumanzüge bis zu den Programmiererinnen wie Margaret Hamilton, deren Bordsoftware beim Landeanflug trotz Alarmmeldungen das Wichtigste zuerst rechnete. Am 20. Juli 1969 sahen rund 600 Millionen Menschen am Fernseher zu, wie Neil Armstrong die Leiter hinabstieg, eine grössere Live-Übertragung hatte es bis dahin nie gegeben. Der Bordcomputer der Mondfähre besass dabei weniger Rechenleistung als heute ein einfaches Mobiltelefon. Die Mondfahrt zeigt, was Gesellschaften technisch erreichen, wenn politischer Wille, Geld und die Angst vor dem Rivalen zusammenkommen.
+
+### Zusammenbruch der Sowjetunion · scheiterte in Moskau ein Putsch der alten Garde
+
+- **Kennung:** `PP-6310fd` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Zerfall der Sowjetunion (Wikipedia)](https://de.wikipedia.org/wiki/Zerfall_der_Sowjetunion)
+- **Fundstelle:** «Deren Zerfall in fünfzehn unabhängige Staaten begann mit der Unabhängigkeitserklärung Litauens am 11. März 1990, beschleunigte sich nach dem gescheiterten Augustputsch in Moskau 1991 und endete am 8. Dezember 1991 mit den Belowescher Vereinbarungen.» Zum Datum im Text: «Nach dem Rücktritt des letzten Präsidenten der UdSSR Michail Gorbatschow am 25. Dezember 1991 endete ihre Existenz am 26. Dezember.»
+- **Geprüft:** 2026-08-11
+
+> Jahrzehntelang war die Welt in zwei bewaffnete Lager geteilt, mit Zehntausenden Atomsprengköpfen, geteilten Städten und Stellvertreterkriegen. Dann reformierte Michail Gorbatschow die Sowjetunion mit «Glasnost» und «Perestroika», also Offenheit und Umbau, und löste damit mehr aus, als er wollte. Im November 1989 genügte eine missverständliche Pressekonferenz in Ost-Berlin, und noch in derselben Nacht tanzten Menschen auf der Mauer, die 28 Jahre lang eine tödliche Grenze gewesen war. Zwei Jahre später scheiterte in Moskau ein Putsch der alten Garde, die Teilrepubliken erklärten sich unabhängig, und am 25. Dezember 1991 wurde die rote Fahne über dem Kreml eingeholt. Eine Supermacht verschwand ohne Krieg, einfach durch Auflösung, das hatte kaum jemand für möglich gehalten. Wer damals jung war, erlebte, wie schnell eine scheinbar ewige Weltordnung enden kann.
+
+### Die Null und das Stellenwertsystem · Der indische Gelehrte Brahmagupta beschrieb im Jahr 628
+
+- **Kennung:** `PP-3a1b29` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Brahmagupta (Wikipedia)](https://de.wikipedia.org/wiki/Brahmagupta)
+- **Fundstelle:** «… verfasste … das Buch Brahmasphutasiddhanta … im Jahre 628.» Und: «Darüber hinaus stellte Brahmagupta in diesem Werk Regeln für die Arithmetik mit negativen Zahlen und mit der Zahl 0 auf, die schon weitgehend unserem modernen Verständnis entsprechen.»
+- **Geprüft:** 2026-08-11
+
+> Der indische Gelehrte Brahmagupta beschrieb im Jahr 628 Regeln, wie man mit der Null rechnet. Damit war das Nichts zur vollwertigen Zahl geworden, eine Idee, auf die weder die Griechen noch die Römer gekommen waren. Wie stark sie ist, zeigt ein Vergleich: Die Jahreszahl 1888 braucht in römischer Schreibweise dreizehn Zeichen, im Stellenwertsystem vier. Mit römischen Zahlen konnte kaum jemand schriftlich multiplizieren, man schob Steinchen auf Rechenbrettern; mit den neuen Ziffern genügten Feder und Papier. Der Kaufmannssohn Leonardo Fibonacci lernte das System im Mittelmeerhandel kennen und warb 1202 in seinem «Liber Abaci» dafür. Es dauerte trotzdem Jahrhunderte. Florenz etwa verbot die neuen Ziffern zeitweise in Kontobüchern, weil man Fälschungen fürchtete. Am Ende setzte sich die Schreibweise durch, mit der heute alle Welt rechnet und ohne die kein Computer Daten in Nullen und Einsen speichern würde.
+
+### Die Erde verliert die Mitte · schob ungefragt ein Vorwort ein
+
+- **Kennung:** `PP-6d48f8` (Vertiefung «Mehr lesen»)
+- **Quelle:** [De revolutionibus orbium coelestium (Wikipedia)](https://de.wikipedia.org/wiki/De_revolutionibus_orbium_coelestium)
+- **Fundstelle:** «Andreas Osiander … fügte dem Manuskript ein anonymes Vorwort hinzu, wonach die heliozentrische Weltsicht weder wahr noch plausibel sein müsse.» Dass es ohne Zustimmung geschah, zeigt die Folge: «Johannes Kepler entlarvte Osianders ‹Fälschung› anhand von Notizen im Exemplar des Nürnberger Astronomen Hieronymus Schreiber.»
+- **Geprüft:** 2026-08-11
+
+> Nikolaus Kopernikus war Domherr in Frauenburg an der Ostsee und rechnete jahrzehntelang an seinem Sonnensystem. Veröffentlicht wurde das Werk «De revolutionibus» erst 1543, in seinem Todesjahr. Ein vorsichtiger Herausgeber schob ungefragt ein Vorwort ein, das alles zur blossen Rechenhilfe erklärte, so blieb das Buch zunächst fast unbeachtet. Ernst wurde es, als Galileo Galilei ab 1609 mit dem Fernrohr Jupitermonde und die Phasen der Venus sah, also Dinge, die sich nicht um die Erde drehten; 1633 zwang ihn die Inquisition, seiner Überzeugung abzuschwören. Das Merkwürdige an dieser Revolution ist, dass sich im Alltag nichts änderte, die Sonne ging weiter auf und unter wie immer. Verschoben hat sich hingegen etwas im Kopf. Der Mensch schaute nun von einem gewöhnlichen Planeten aus ins All statt aus dessen Mitte. Grosse Umbrüche beginnen manchmal unsichtbar, als neue Beschreibung derselben Welt.
+
+### Die Evolution · war am ersten Tag vergriffen
+
+- **Kennung:** `PP-8df5c4` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Über die Entstehung der Arten (Wikipedia)](https://de.wikipedia.org/wiki/%C3%9Cber_die_Entstehung_der_Arten)
+- **Fundstelle:** «Die erste Auflage von 1250 Exemplaren kam am 22. November 1859 in den Handel, aber die Zahl der Bestellungen war bereits grösser, daher war diese Auflage sofort vergriffen.» Genauer als der Text: Sie war schon durch Vorbestellungen überzeichnet.
+- **Geprüft:** 2026-08-11
+
+> Als junger Mann segelte Charles Darwin fünf Jahre lang auf der «Beagle» um die Welt und sammelte Käfer, Fossilien und Finken, deren Schnäbel sich von Insel zu Insel unterschieden. Die Erklärung dafür trug er danach über zwanzig Jahre mit sich herum, ohne sie zu veröffentlichen, denn er wusste, wie sehr sie das fromme England treffen würde. Erst als der jüngere Forscher Alfred Russel Wallace ihm 1858 dieselbe Idee in einem Brief schickte, ging Darwin an die Öffentlichkeit, und die Erstauflage der «Entstehung der Arten» war am ersten Tag vergriffen. Im Buch selbst kam der Mensch fast nicht vor, nur ein einziger Satz deutete an, dass auch auf seine Herkunft Licht fallen werde. Gestritten wurde trotzdem sofort über den Affen im Stammbaum. Berühmt wurde die Spottfrage an Darwins Verteidiger, ob er denn väterlicherseits oder mütterlicherseits vom Affen abstamme. Eine Idee ohne jede Maschine hatte genügt, um das Selbstbild einer Epoche zu erschüttern.
+
+### Die Kernspaltung · Den Nobelpreis dafür erhielt 1944 Hahn allein
+
+- **Kennung:** `PP-2dfab2` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Lise Meitner (Wikipedia)](https://de.wikipedia.org/wiki/Lise_Meitner)
+- **Fundstelle:** «Für ihre Errungenschaften erhielt Lise Meitner zahlreiche Ehrungen, jedoch weder den Nobelpreis für Chemie noch den Nobelpreis für Physik, obwohl sie für beide Nobelpreise vielfach nominiert wurde.» Und: «Nachdem Otto Hahn den Chemie-Nobelpreis des Jahres 1944 erhalten hatte, nominierte er Lise Meitner 1948 für den Physik-Nobelpreis.» Zum Bomben-Satz im Text: Die Quelle fasst es allgemeiner («In der Nachkriegszeit stellte Lise Meitner die Entwicklung der Kernwaffen in Frage»); das wörtliche Nein zur Mitarbeit stammt aus ihrer Biografie.
+- **Geprüft:** 2026-08-11
+
+> Lise Meitner hatte drei Jahrzehnte in Berlin geforscht, als sie 1938 als Jüdin aus Deutschland fliehen musste, ihre Arbeit lief brieflich weiter. Im Dezember fand ihr Kollege Otto Hahn im bestrahlten Uran zu seiner Ratlosigkeit das viel leichtere Element Barium und schrieb ihr, vielleicht wisse sie eine Erklärung. Auf einem Winterspaziergang im schwedischen Exil rechnete Meitner mit ihrem Neffen Otto Frisch nach: Der Kern war tatsächlich zerplatzt, und die frei werdende Energie passte genau zu Einsteins Formel. Den Nobelpreis dafür erhielt 1944 Hahn allein. Als man Meitner später für den Bau der Bombe gewinnen wollte, lehnte sie ab, sie wolle mit einer Bombe nichts zu tun haben. In ihrer Geschichte steckt beides, der Ruhm der Erkenntnis und die Frage, wem er zugerechnet wird und was daraus gemacht werden darf.
 
 ---
 
