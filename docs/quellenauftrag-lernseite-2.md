@@ -1318,7 +1318,7 @@ Bagdad war um das Jahr 800 eine der grössten und reichsten Städte der Welt, un
 
 > **Belegt** («der Algebra den Namen gab»): [Al-Chwarizmi (Wikipedia)](https://de.wikipedia.org/wiki/Al-Chwarizmi) — «Chwarizmi, der vor allem als einer der Begründer der Algebra bekannt ist, gilt als einer der bedeutendsten Mathematiker.» Und zur zweiten Behauptung des Satzes: «Von seinem Namen leitet sich der Begriff Algorithmus ab.» *(geprüft 2026-08-11)*
 
-> **Belegt** («Als die Mongolen Bagdad 1258 eroberten»): [Eroberung von Bagdad (Wikipedia)](https://de.wikipedia.org/wiki/Eroberung_von_Bagdad) — «Die mongolische Eroberung Bagdads fand am 10. Februar 1258 statt. Die Mongolen unter Hülegü eroberten und zerstörten die Hauptstadt der abbasidischen Kalifen.» Die Tigris-Erzählung führt der Text selbst als Chronisten-Bericht, nicht als Tatsache. *(geprüft 2026-08-11)*
+> **Belegt** («Bagdad 1258 eroberten»): [Eroberung von Bagdad (Wikipedia)](https://de.wikipedia.org/wiki/Eroberung_von_Bagdad) — «Die mongolische Eroberung Bagdads fand am 10. Februar 1258 statt. Die Mongolen unter Hülegü eroberten und zerstörten die Hauptstadt der abbasidischen Kalifen.» Die Tigris-Erzählung führt der Text selbst als Chronisten-Bericht, nicht als Tatsache. *(geprüft 2026-08-11)*
 
 ### Die Universität
 
@@ -1970,8 +1970,8 @@ Hegel war der Hauptvertreter des deutschen Idealismus und dachte die Wirklichkei
 **[DW-9cb029]** *(Zur Philosophie)*
 Hannah Arendt, jüdische politische Denkerin, floh vor den Nazis über Frankreich in die USA. Aus der Erfahrung des Totalitarismus fragte sie, was Handeln und Freiheit ausmacht. Ihr Schlüsselbegriff ist die «Natalität»: Weil jeder Mensch geboren wird, kann er etwas Neues anfangen, das aus dem Bisherigen nicht ableitbar ist. Dazu kommt das Urteilen, das eigenständige Prüfen, auch aus der Sicht anderer. Von Arendt her gelesen setzt eine KI Wahrscheinliches fort und wiederholt Muster; anfangen und urteilen in ihrem Sinn kann sie nicht. Hauptwerk: «Vita activa».
 
-**[DW-d36c9a]** *(Zur Philosophie)*
-Martin Heidegger gehört zu den einflussreichsten Philosophen des 20. Jahrhunderts und ist zugleich schwer belastet. Er trat am 1. Mai 1933 in die NSDAP ein, war als Rektor an der Gleichschaltung der Universität Freiburg beteiligt und blieb bis 1945 Parteimitglied; in seinen «Schwarzen Heften» stehen antisemitische Äusserungen. Umstritten ist nicht, ob das geschah, sondern wie stark es sein Werk prägt. In «Sein und Zeit» fragte er neu nach dem Sinn von Sein. Den Menschen nennt er «Dasein», seinen Grundzug die «Sorge»: Uns geht es um unser eigenes Leben, wir kümmern uns, fragen nach Sinn und wissen um unsere Endlichkeit. Von hier aus argumentieren viele, einer Maschine sei nichts wichtig, ihr gehe es um nichts, sie sorge sich nicht. Menschlich bleibe dieses Betroffensein vom eigenen Leben. Hauptwerk: «Sein und Zeit» (1927).
+**[DW-b27bae]** *(Zur Philosophie)*
+Martin Heidegger gehört zu den einflussreichsten Philosophen des 20. Jahrhunderts und ist zugleich schwer belastet. Er trat am 1. Mai 1933 in die NSDAP ein, war als Rektor an der Gleichschaltung der Universität Freiburg beteiligt und blieb bis 1945 Parteimitglied; in seinen «Schwarzen Heften» stehen antisemitische Äusserungen. Umstritten ist nicht, ob das geschah, sondern wie stark es sein Werk prägt. In «Sein und Zeit» fragte er neu nach dem Sinn von Sein. Den Menschen nennt er «Dasein», seinen Grundzug die «Sorge». Das Wort führt leicht in die Irre, gemeint ist nicht Kummer: Wir sind nie unbeteiligte Zuschauer einer Welt, die uns gegenübersteht, sondern immer schon in ihr beschäftigt. Wir hantieren mit Dingen und haben es mit anderen Menschen zu tun. Ein Hammer zeigt sich als Hammer beim Hämmern, nicht beim Betrachten. Erst in diesem Umgang bekommen die Dinge ihre Bedeutung, und erst so entsteht Sinn. Von hier aus argumentieren viele, eine Maschine habe keine solche Welt: Sie verarbeitet Zeichen, ohne mit etwas zu tun zu haben. Hauptwerk: «Sein und Zeit» (1927).
 
 **[DW-ec680f]** *(Zur Philosophie)*
 Peter Sloterdijk ist einer der bekanntesten deutschsprachigen Gegenwartsphilosophen, bekannt für die «Sphären»-Trilogie und einen essayistischen, oft provokanten Stil. In «Du musst dein Leben ändern» beschreibt er den Menschen als übendes Wesen: Wir werden, wer wir sind, durch Übung, Wiederholung und Selbstformung. Er nennt das «Anthropotechnik». Der Satz ist kein Befehl, sondern der Grundton eines Lebens, das sich immer wieder in Form bringt. Übertragen auf die KI: Eine Maschine kann eine Aufgabe erledigen, aber nicht für uns üben, wer weiter übt, bleibt fähig und urteilsfähig. Hauptwerk: «Du musst dein Leben ändern» (2009).
@@ -1982,8 +1982,8 @@ Siri Hustvedt ist US-amerikanische Schriftstellerin und Essayistin, die Literatu
 **[DW-ac769d]** *(Fliesstext)*
 «Was ist der Mensch?» Diese Frage ist so alt wie die Philosophie selbst. Schon Aristoteles sah den Menschen als Wesen, das von Natur aus nach Wissen strebt, neugierig, fragend, nie ganz fertig. Immanuel Kant machte die Frage zur Kernfrage überhaupt und gab eine Richtung vor: Der Mensch ist frei, er kann aus eigener Einsicht handeln, und darum trägt er Verantwortung. Georg Wilhelm Friedrich Hegel fügt hinzu, dass der Mensch ein Wesen ist, das unterscheidet. Erst indem wir Gegensätze auseinanderhalten, was ist und was sein soll, können wir urteilen und uns frei entscheiden. So bekommt gerade das Unterscheiden und Entscheiden eine zutiefst menschliche Seite.
 
-**[DW-512d97]** *(Fliesstext)*
-Hannah Arendt nennt einen weiteren Wesenszug das Anfangen. Mit jedem Menschen kommt etwas Neues in die Welt, das aus dem Bisherigen nicht ableitbar ist. Und der Mensch urteilt, er hält inne und entscheidet selbst. Martin Heidegger fügt die «Sorge» hinzu: Dem Menschen ist sein eigenes Leben nicht gleichgültig, er kümmert sich, fragt nach Sinn, weiss um seine Endlichkeit.
+**[DW-975d48]** *(Fliesstext)*
+Hannah Arendt nennt einen weiteren Wesenszug: das Anfangen. Mit jedem Menschen kommt etwas Neues in die Welt, das aus dem Bisherigen nicht ableitbar ist. Und der Mensch urteilt, er hält inne und entscheidet selbst. Martin Heidegger fügt die «Sorge» hinzu, und damit meint er nicht Kummer oder Bekümmerung. Er meint: Wir stehen der Welt nie unbeteiligt gegenüber, sondern sind immer schon mit Dingen und Menschen beschäftigt. Erst in diesem Umgang bekommen die Dinge überhaupt eine Bedeutung, und erst darin entsteht Sinn.
 
 **[DW-b16463]** *(Fliesstext)*
 Peter Sloterdijk beschreibt den Menschen als übendes Wesen. Wir werden, wer wir sind, durch Übung und Wiederholung, und niemand kann für uns üben. Siri Hustvedt hält dagegen, der Geist sei kein Computer: Denken und Fühlen hängen für sie am lebendigen Körper und an gelebter Erfahrung. Eine Maschine könne Sprache und Gefühle täuschend echt nachahmen, erlebe dabei aber nichts.
@@ -1991,8 +1991,8 @@ Peter Sloterdijk beschreibt den Menschen als übendes Wesen. Wir werden, wer wir
 **[DW-70b48a]** *(Fliesstext)*
 Worauf das alles zielt, ist nicht der Vergleich mit der Maschine. Es geht nicht darum, ob eine KI auch anfangen, urteilen oder unterscheiden könnte. Es geht darum, was uns in unserem Wesen ausmacht. Und diese Züge sind nicht etwas, das wir bloss tun, sondern etwas, das wir sind.
 
-**[DW-e1b0c1]** *(Was dir das jetzt hilft)*
-Wenn dich die schnelle, kluge KI verunsichert, kehr zur Frage zurück, was dich als Mensch ausmacht. Neugier, Anfangen, Urteilen, Sorge, das bleibt deins, ganz gleich, wie gut die Maschine formuliert. Dafür braucht es am Ende ein Grundvertrauen: dass diese Wesenszüge nicht einfach verschwinden, nur weil eine Maschine gute Sätze schreibt.
+**[DW-1c50a1]** *(Was dir das jetzt hilft)*
+Wenn dich die schnelle, kluge KI verunsichert, kehr zur Frage zurück, was dich als Mensch ausmacht. Neugier, Anfangen, Urteilen und das Beteiligtsein an der Welt, das bleibt deins, ganz gleich, wie gut die Maschine formuliert. Dafür braucht es am Ende ein Grundvertrauen: dass diese Wesenszüge nicht einfach verschwinden, nur weil eine Maschine gute Sätze schreibt.
 
 ### Netzwerke und Systeme
 
