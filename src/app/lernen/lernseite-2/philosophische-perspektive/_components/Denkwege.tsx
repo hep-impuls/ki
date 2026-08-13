@@ -10,6 +10,7 @@ import {
 } from "../../_lib/spuren";
 import { merkeInhalt } from "../../_lib/inhalte";
 import { merkeVertiefung } from "../../_lib/vertiefung";
+import Ausklapptext from "../../_components/Ausklapptext";
 import GewichtungWahl from "../../_components/GewichtungWahl";
 import KartenAktion from "../../_components/KartenAktion";
 import { Begriff } from "../../_components/Glossar";
@@ -52,6 +53,16 @@ interface Denker {
   /** Unbekannte Begriffe im Info-Text (Orte, Figuren, Fachwörter) mit kurzer
    *  Hover-Erklärung; jeweils beim ERSTEN Vorkommen angehängt. */
   begriffe?: Begriffserklaerung[];
+  /**
+   * Fallbeispiel aus dem Alltag heutiger Jugendlicher, hinter einem eigenen
+   * Knopf «Fallbeispiel». Der Einstieg über die Info bleibt theoretisch; hier
+   * wird der Gedanke an einer Situation greifbar, die man kennt.
+   *
+   * Zählt beim ersten Aufklappen als **Vertiefung** («Mehr lesen») und
+   * erscheint darum im Rhizom, in der Knotenkarte und im Orakel — dieselbe
+   * Handlung wie das Aufklappen einer Vertiefung im Teppich.
+   */
+  fallbeispiel?: string;
 }
 
 interface Bereich {
@@ -98,7 +109,10 @@ const BEREICHE: Bereich[] = [
           { wort: "Stagira", erklaerung: "Kleine Stadt im Norden des antiken Griechenlands, Geburtsort von Aristoteles." },
           { wort: "Platons", erklaerung: "Platon, athenischer Philosoph (rund 427 bis 347 v. Chr.) und Lehrer von Aristoteles, einer der Begründer der abendländischen Philosophie." },
           { wort: "Alexanders des Grossen", erklaerung: "Alexander der Grosse (356 bis 323 v. Chr.), makedonischer König, der ein Weltreich bis nach Indien eroberte; als Jugendlicher von Aristoteles unterrichtet." },
+          { wort: "Staunen", erklaerung: "Bei Aristoteles der Anfang aller Philosophie: Etwas fällt dir auf und du kannst es dir nicht erklären. Aus diesem Zustand entsteht die Frage." },
         ],
+        fallbeispiel:
+          "Du liegst abends im Bett und scrollst. Der Feed liefert genau das, was dich interessiert, ein Video nach dem anderen, alle interessant. Nach vierzig Minuten legst du das Handy weg. Und jetzt die unangenehme Frage: Was wolltest du eigentlich wissen? Meistens nichts. Es wurde dir ja schon gegeben. Aristoteles würde hier nicht das Handy verbieten. Ihn würde interessieren, was gar nicht mehr passiert: das Staunen. Neugier fängt bei ihm damit an, dass dir etwas auffällt und du es dir nicht erklären kannst. In dieser Lücke entsteht eine eigene Frage. Ein Feed lässt diese Lücke nie entstehen, denn er füllt sie, bevor du sie merkst. Dasselbe gilt für eine KI, die auf jede Eingabe eine fertige Antwort legt. Der Unterschied zeigt sich später. Wenn dich jemand etwas fragt, das einen Schritt weitergeht als die Antwort, die du bekommen hast, trägt nur, was du verstanden hast. Probier es umgekehrt: Merk dir heute eine Sache, die dich wirklich wundert, und such eine Woche lang selbst nach dem Warum, bevor du fragst. Genau das meint Aristoteles mit Streben nach Wissen. Nicht Antworten haben, sondern eine Frage nicht loslassen.",
       },
       {
         slug: "kant",
@@ -668,6 +682,22 @@ export default function Denkwege({
                       <p className="text-body-sm leading-relaxed text-on-surface-variant">
                         <InfoText text={p.info} begriffe={p.begriffe} />
                       </p>
+                      {p.fallbeispiel && (
+                        /* Der Knopf trägt die gleiche Spur-Basis wie das
+                           Weiterverfolgen darunter, nur mit «mehr:» statt
+                           «wunsch:» — so zählt das Aufklappen als Vertiefung,
+                           genau wie ein «Mehr lesen» im Teppich. */
+                        <Ausklapptext
+                          className="mt-sm"
+                          titel="Fallbeispiel"
+                          spurId={`mehr:philosophische-perspektive:denker:${idx}:${p.slug}`}
+                          spurTitel={`${p.name}: Fallbeispiel`}
+                        >
+                          <p className="leading-relaxed">
+                            <InfoText text={p.fallbeispiel} begriffe={p.begriffe} />
+                          </p>
+                        </Ausklapptext>
+                      )}
                       <KartenAktion
                         wunschId={`wunsch:philosophische-perspektive:denker:${idx}:${p.slug}`}
                         titel={`${p.name}: ${p.these}`}
