@@ -775,7 +775,7 @@ export default function OrakelDashboard() {
       icon: "favorite",
       titel: "Für dich relevant",
       wert: `${bew.relevanzStark + bew.philoHilft + bew.technikFroh}`,
-      text: `Punkte, die dein Leben prägen (${bew.relevanzStark}), Sichtweisen, die dir heute helfen (${bew.philoHilft}), und Technik, über die du froh bist (${bew.technikFroh}).`,
+      text: `Punkte, die dein Leben prägen (${bew.relevanzStark}), Sichtweisen, die dir heute helfen (${bew.philoHilft}) und Technik, über die du froh bist (${bew.technikFroh}).`,
       nurDu: true,
       rahmen: "positiv",
       liste: bewertet.relevant,
@@ -1694,7 +1694,7 @@ export default function OrakelDashboard() {
               Bewertungen und die Titel der Punkte, die du gewählt hast. Ohne
               Namen und ohne deinen Code. Verarbeitet wird sie vom KI-Dienst
               Anthropic (Modell Claude Haiku), einzig um den Deutungstext zu
-              erzeugen. Wir speichern die Anfrage nicht, und es entsteht kein
+              erzeugen. Wir speichern die Anfrage nicht und es entsteht kein
               Profil daraus. Weil die Zusammenfassung zu einer einzelnen Person
               gehört, nennen wir sie <em>pseudonym</em>, nicht anonym.
             </li>

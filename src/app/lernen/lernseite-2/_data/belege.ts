@@ -103,7 +103,7 @@ export const BELEGE: Beleg[] = [
     url: "https://www.klarna.com/international/press/der-ki-kundenassistent-von-klarna-bearbeitet-im-ersten-monat-zwei-drittel-aller-kundendienst-anfragen/",
     titel: "Klarna, Medienmitteilung vom 27. Februar 2024",
     stelle:
-      "Klarnas eigene Angabe: Der KI-Assistent führte 2,3 Millionen Unterhaltungen, zwei Drittel aller Kundendienst-Chats, und leiste damit die Arbeit von 700 Vollzeitmitarbeitenden. Unabhängig nachgemessen wurde das nicht.",
+      "Klarnas eigene Angabe: Der KI-Assistent führte 2,3 Millionen Unterhaltungen, zwei Drittel aller Kundendienst-Chats und leiste damit die Arbeit von 700 Vollzeitmitarbeitenden. Unabhängig nachgemessen wurde das nicht.",
     geprueft: "2026-07-26",
   },
   {
@@ -149,7 +149,7 @@ export const BELEGE: Beleg[] = [
    * «Themistokles», «Laurion»): Bei einer Überlappung gewinnt der Beleg, und
    * die Begriffserklärung im Hover wäre verdeckt. */
   {
-    id: "EP-a6e85e",
+    id: "EP-d33896",
     anker: "drehbar an Pflöcken befestigt waren",
     url: "https://de.wikipedia.org/wiki/Solon",
     titel: "Solon (Wikipedia)",
@@ -158,7 +158,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-07-29",
   },
   {
-    id: "EP-a6e85e",
+    id: "EP-d33896",
     anker: "nach ihrem Münzbild nannte",
     url: "https://de.wikipedia.org/wiki/Altgriechische_M%C3%BCnzen",
     titel: "Altgriechische Münzen (Wikipedia)",
@@ -167,7 +167,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-07-29",
   },
   {
-    id: "EP-a6e85e",
+    id: "EP-d33896",
     anker: "wollten die Athener den Überschuss unter sich aufteilen",
     url: "https://de.wikipedia.org/wiki/Perserkriege",
     titel: "Perserkriege (Wikipedia)",
@@ -239,7 +239,7 @@ export const BELEGE: Beleg[] = [
    * abgerufen 2026-08-04). Laurion bleibt im Vertiefungstext, wo es zeitlich
    * hingehört: beim Silberfund von 483 v. Chr. und Themistokles. */
   {
-    id: "EP-8b588b",
+    id: "EP-f0377d",
     anker: "etwa 90 Lautzeichen",
     url: "https://de.wikipedia.org/wiki/Linearschrift_B",
     titel: "Linearschrift B (Wikipedia)",
@@ -248,7 +248,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-04",
   },
   {
-    id: "EP-8b588b",
+    id: "EP-f0377d",
     anker: "vierhundert Jahre lang wird in Griechenland nicht geschrieben",
     url: "https://de.wikipedia.org/wiki/Dunkle_Jahrhunderte_(Antike)",
     titel: "Dunkle Jahrhunderte (Antike) (Wikipedia)",
@@ -257,7 +257,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-04",
   },
   {
-    id: "EP-8b588b",
+    id: "EP-f0377d",
     anker: "keine Schulpflicht und keine Schulhäuser",
     url: "https://de.wikipedia.org/wiki/Schule",
     titel: "Schule (Wikipedia), Abschnitt zur Antike",
@@ -266,7 +266,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-04",
   },
   {
-    id: "EP-8b588b",
+    id: "EP-f0377d",
     anker: "Dazu kommen Münzen",
     url: "https://de.wikipedia.org/wiki/Altgriechische_M%C3%BCnzen",
     titel: "Altgriechische Münzen (Wikipedia)",
@@ -275,7 +275,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-04",
   },
   {
-    id: "EP-8b588b",
+    id: "EP-f0377d",
     anker: "man zählt sie",
     url: "https://de.wikipedia.org/wiki/Altgriechische_M%C3%BCnzen",
     titel: "Altgriechische Münzen (Wikipedia)",
@@ -284,7 +284,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-04",
   },
   {
-    id: "EP-8b588b",
+    id: "EP-f0377d",
     anker: "auf die Waage legte",
     url: "https://de.wikipedia.org/wiki/Hacksilber",
     titel: "Hacksilber (Wikipedia)",
@@ -309,16 +309,16 @@ export const BELEGE: Beleg[] = [
    * jetzt dieser Stelle. Die Arbeitsunterbrechung ist gestrichen, weil keine
    * der abgerufenen deutschsprachigen Quellen sie hergibt. */
   {
-    id: "EP-fb7e60",
+    id: "EP-ddde72",
     anker: "die Stimme stocke ihm",
     url: "https://de.wikipedia.org/wiki/Pl%C3%BCnderung_Roms_(410)",
     titel: "Plünderung Roms (410) (Wikipedia)",
     stelle:
-      "Wörtlich zu Hieronymus' Reaktion: «Die Stimme stockt mir, und vor Schluchzen kann ich nicht weiterdiktieren: Die Stadt Rom ist eingenommen, die zuvor die ganze Welt besiegt hatte.» Der Artikel weist die Stelle als Briefe 127,12 nach.",
+      "Wörtlich zu Hieronymus' Reaktion: «Die Stimme stockt mir und vor Schluchzen kann ich nicht weiterdiktieren: Die Stadt Rom ist eingenommen, die zuvor die ganze Welt besiegt hatte.» Der Artikel weist die Stelle als Briefe 127,12 nach.",
     geprueft: "2026-08-05",
   },
   {
-    id: "EP-fb7e60",
+    id: "EP-ddde72",
     anker: "fern in Bethlehem an seiner Bibelübersetzung arbeitete",
     url: "https://de.wikipedia.org/wiki/Vulgata",
     titel: "Vulgata (Wikipedia)",
@@ -332,7 +332,7 @@ export const BELEGE: Beleg[] = [
    * zweites Mal auf dieselbe Quelle verlinken. Der Achthundert-Jahre-Satz
    * kommt nur hier vor und war ohnehin unbelegt. */
   {
-    id: "PP-522494",
+    id: "PP-52d713",
     anker: "seit rund achthundert Jahren hatte kein Feind sie eingenommen",
     url: "https://de.wikipedia.org/wiki/Pl%C3%BCnderung_Roms_(410)",
     titel: "Plünderung Roms (410) (Wikipedia)",
@@ -345,7 +345,7 @@ export const BELEGE: Beleg[] = [
    * 537 belagerten die OSTgoten Rom, nicht die Westgoten von 410. Der Text
    * nannte vorher nur «Goten», was beide Völker verschmolz. */
   {
-    id: "EP-c167d2",
+    id: "EP-112f69",
     anker: "zerstörten sie die Wasserleitungen",
     url: "https://de.wikipedia.org/wiki/Wasserversorgung_im_R%C3%B6mischen_Reich",
     titel: "Wasserversorgung im Römischen Reich (Wikipedia)",
@@ -382,7 +382,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "EP-9ad93c",
+    id: "EP-ba3edc",
     anker: "nur zu einer Geldbusse herab",
     url: "https://de.wikipedia.org/wiki/Sokrates",
     titel: "Sokrates (Wikipedia)",
@@ -391,7 +391,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "EP-fbded4",
+    id: "EP-9b7189",
     anker: "die Münzprägung schrumpfte auf einen Bruchteil",
     url: "https://de.wikipedia.org/wiki/Merowinger",
     titel: "Merowinger (Wikipedia)",
@@ -400,7 +400,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "EP-9d10fe",
+    id: "EP-b390cc",
     anker: "beschlossen aufständische Bauern in Memmingen",
     url: "https://www.historisches-lexikon-bayerns.de/Lexikon/Zw%C3%B6lf_Artikel",
     titel: "Historisches Lexikon Bayerns: Zwölf Artikel",
@@ -420,7 +420,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "EP-f04382",
+    id: "EP-f9ae19",
     anker: "fast sein ganzes Leben",
     url: "https://de.wikipedia.org/wiki/Immanuel_Kant",
     titel: "Immanuel Kant (Wikipedia)",
@@ -429,7 +429,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "EP-9309b8",
+    id: "EP-cada84",
     anker: "als ein Pferd es durchhält",
     url: "https://de.wikipedia.org/wiki/Rocket_(Lokomotive)",
     titel: "Rocket (Lokomotive) (Wikipedia)",
@@ -447,7 +447,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "EP-991c07",
+    id: "EP-c6ae89",
     anker: "12'000 Soldaten",
     url: "https://de.wikipedia.org/wiki/Maschinenst%C3%BCrmer",
     titel: "Maschinenstürmer (Wikipedia)",
@@ -456,7 +456,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "EP-991c07",
+    id: "EP-c6ae89",
     anker: "mehr als Wellington 1808",
     // Bewusst englisch: Der Vergleich mit Wellingtons Armee steht nur im
     // englischen Artikel — und er gilt für 1808. Der Text sagte vorher «als
@@ -469,7 +469,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "EP-e07817",
+    id: "EP-30fb42",
     anker: "zehn Tage danach",
     url: "https://de.wikipedia.org/wiki/Clara_Immerwahr",
     titel: "Clara Immerwahr (Wikipedia)",
@@ -608,7 +608,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-08",
   },
   {
-    id: "VA-4b9944",
+    id: "VA-f8feb4",
     // Achtung beim Nachschlagen: «Frankenstein oder Der moderne Prometheus»
     // ist eine Weiterleitung, der Artikel liegt unter «Frankenstein (Roman)».
     anker: "es lernt durch blosses Zuhören sprechen",
@@ -657,7 +657,7 @@ export const BELEGE: Beleg[] = [
    * eigene Anmerkungen an. Ohne diesen Schritt sieht es aus, als hätten die
    * zwei gemeinsam an einem Tisch gesessen. */
   {
-    id: "VA-bf4fa3",
+    id: "VA-282d51",
     anker: "ganz gebrauchsfähig wurde sie nie",
     url: "https://de.wikipedia.org/wiki/Staffelwalze",
     titel: "Staffelwalze (Wikipedia)",
@@ -666,7 +666,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "VA-bf4fa3",
+    id: "VA-282d51",
     anker: "Streitfragen künftig durch Rechnen zu entscheiden",
     url: "https://de.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz",
     titel: "Gottfried Wilhelm Leibniz (Wikipedia)",
@@ -675,7 +675,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "VA-bf4fa3",
+    id: "VA-282d51",
     anker: "hängte Anmerkungen an, doppelt so lang wie der Text selbst",
     url: "https://de.wikipedia.org/wiki/Ada_Lovelace",
     titel: "Ada Lovelace (Wikipedia)",
@@ -684,7 +684,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "VA-3e3b6a",
+    id: "VA-803b94",
     // Anker NEBEN «Babbage» — der Name trägt eine Glossar-Erklärung.
     anker: "ein Satz von 1837/38 ist erhalten",
     url: "https://de.wikipedia.org/wiki/Analytical_Engine",
@@ -694,7 +694,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "VA-3e3b6a",
+    id: "VA-803b94",
     anker: "seine eigene Rechenmaschine baute er allerdings dezimal",
     url: "https://de.wikipedia.org/wiki/Dualsystem",
     titel: "Dualsystem (Wikipedia)",
@@ -703,7 +703,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "VA-3e3b6a",
+    id: "VA-803b94",
     anker: "ab 1805 mit je einer Lochkarte pro Schuss",
     url: "https://de.wikipedia.org/wiki/Jacquardwebstuhl",
     titel: "Jacquardwebstuhl (Wikipedia)",
@@ -720,7 +720,7 @@ export const BELEGE: Beleg[] = [
    * im Lernset schon anderswo eingeführt («Wege der Orientierung», «Was ist
    * der Mensch?»), waren dort aber unbelegt. */
   {
-    id: "EP-b4107d",
+    id: "EP-bf8bae",
     anker: "ein Fluss erhält in Neuseeland eine Rechtspersönlichkeit",
     url: "https://de.wikipedia.org/wiki/Whanganui_River",
     titel: "Whanganui River (Wikipedia)",
@@ -729,7 +729,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "EP-b4107d",
+    id: "EP-bf8bae",
     anker: "selbst einen neuen Anfang zu machen",
     url: "https://de.wikipedia.org/wiki/Natalit%C3%A4t",
     titel: "Natalität (Wikipedia), zu Hannah Arendt",
@@ -738,7 +738,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "EP-b4107d",
+    id: "EP-bf8bae",
     // Bewusst englisch: Deguchi ist nicht ins Deutsche übersetzt, eine
     // deutschsprachige Darstellung der WE-turn gibt es nicht.
     //
@@ -761,7 +761,7 @@ export const BELEGE: Beleg[] = [
    * KI-Verunsicherung hat eine eigene Gestalt: nicht mehr zu wissen, was echt
    * ist. */
   {
-    id: "EP-fde45c",
+    id: "EP-5b7d88",
     anker: "148 Tage lang",
     url: "https://de.wikipedia.org/wiki/Writers_Guild_of_America",
     titel: "Writers Guild of America (Wikipedia)",
@@ -770,7 +770,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "EP-fde45c",
+    id: "EP-5b7d88",
     anker: "die Schauspielgewerkschaft erreichte im selben Jahr Ähnliches",
     url: "https://de.wikipedia.org/wiki/SAG-AFTRA",
     titel: "SAG-AFTRA (Wikipedia)",
@@ -779,7 +779,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "EP-fde45c",
+    id: "EP-5b7d88",
     anker: "täuschend echt klonen",
     url: "https://de.wikipedia.org/wiki/Deepfake",
     titel: "Deepfake (Wikipedia)",
@@ -794,7 +794,7 @@ export const BELEGE: Beleg[] = [
    * Anker liegen NEBEN «Erdüberlastungstag» — das Wort trägt eine
    * Glossar-Erklärung, ein Beleg darüber würde sie verdecken. */
   {
-    id: "EP-eb0b26",
+    id: "EP-588f72",
     anker: "1971 fiel er auf den 20. Dezember",
     url: "https://de.wikipedia.org/wiki/Erd%C3%BCberlastungstag",
     titel: "Erdüberlastungstag (Wikipedia)",
@@ -803,7 +803,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "EP-eb0b26",
+    id: "EP-588f72",
     anker: "am 30. Juli, kam allerdings nicht von sparsamerem Leben",
     url: "https://de.wikipedia.org/wiki/Erd%C3%BCberlastungstag",
     titel: "Erdüberlastungstag (Wikipedia)",
@@ -812,7 +812,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "EP-eb0b26",
+    id: "EP-588f72",
     anker: "weitere zwölf Prozent Verlust",
     url: "https://de.wikipedia.org/wiki/Gletscherschwund_seit_1850",
     titel: "Gletscherschwund seit 1850 (Wikipedia)",
@@ -821,7 +821,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "EP-eb0b26",
+    id: "EP-588f72",
     anker: "stand 1955 erstmals im Antrag",
     url: "https://de.wikipedia.org/wiki/Dartmouth_Conference",
     titel: "Dartmouth Conference (Wikipedia)",
@@ -913,7 +913,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-05",
   },
   {
-    id: "PP-67bb7f",
+    id: "PP-74bda0",
     /* Das Zitat steht in zwei Blöcken (hier und bei «Ende der Geschichte»).
        Dieselbe Quelle passt zu beiden, aber jeder Block braucht seinen eigenen
        Eintrag: Ein Anker, der in einen fremden Block leckt, hängt seine Quelle
@@ -975,7 +975,7 @@ export const BELEGE: Beleg[] = [
     url: "https://de.wikipedia.org/wiki/Homunkulus",
     titel: "Homunkulus (Wikipedia), zur Anleitung",
     stelle:
-      "«Paracelsus gibt eine konkrete Anleitung für die Erzeugung eines Homunkulus: Man müsse menschliche Spermien 40 Tage in einem Gefäß im (wärmenden) Pferdemist verfaulen lassen. Was sich dann rege, sei „einem Menschen gleich, doch durchsichtig“. 40 Wochen lang müsse man dieses Wesen dann bei konstanter Wärme mit dem Arcanum des Menschenbluts nähren, und schließlich werde ein menschliches Kind entstehen, jedoch viel kleiner als ein natürlich geborenes.»",
+      "«Paracelsus gibt eine konkrete Anleitung für die Erzeugung eines Homunkulus: Man müsse menschliche Spermien 40 Tage in einem Gefäß im (wärmenden) Pferdemist verfaulen lassen. Was sich dann rege, sei „einem Menschen gleich, doch durchsichtig“. 40 Wochen lang müsse man dieses Wesen dann bei konstanter Wärme mit dem Arcanum des Menschenbluts nähren und schließlich werde ein menschliches Kind entstehen, jedoch viel kleiner als ein natürlich geborenes.»",
     geprueft: "2026-08-10",
   },
   {
@@ -992,7 +992,7 @@ export const BELEGE: Beleg[] = [
    * Erzählungen stammen, und liess offen, dass Talos NICHT in der «Ilias»
    * steht. Die Belege halten die Quellenlage jetzt am Text selbst fest. */
   {
-    id: "VA-0b0ee9",
+    id: "VA-1169fe",
     anker: "«Argonautika» des Apollonios von Rhodos",
     url: "https://de.wikipedia.org/wiki/Talos_(Riese)",
     titel: "Talos (Riese) (Wikipedia)",
@@ -1001,7 +1001,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-10",
   },
   {
-    id: "VA-f81579",
+    id: "VA-3e6316",
     anker: "zog ihm dann den Nagel aus der Ferse",
     url: "https://de.wikipedia.org/wiki/Talos_(Riese)",
     titel: "Talos (Riese) (Wikipedia), zum Ende des Riesen",
@@ -1047,7 +1047,7 @@ export const BELEGE: Beleg[] = [
 
   /* ── KI-Winter ───────────────────────────────────────────────────────── */
   {
-    id: "VA-1d359e",
+    id: "VA-e53161",
     anker: "«nuklearen Winter»",
     url: "https://de.wikipedia.org/wiki/Nuklearer_Winter",
     titel: "Nuklearer Winter (Wikipedia)",
@@ -1133,13 +1133,13 @@ export const BELEGE: Beleg[] = [
     url: "https://de.wikipedia.org/wiki/Homunkulus",
     titel: "Homunkulus (Wikipedia), zur Rolle Wagners",
     stelle:
-      "«In einem Entwurf vom 17. Dezember 1826 beschreibt Goethe explizit Wagner als Schöpfer des Homunculus, in der endgültigen Fassung fehlt dieser Teil.» Die Szene spielt in Wagners Laboratorium, und der Artikel zum zweiten Teil nennt ihn «mittlerweile selbst Doktor, Professor und praktizierender Alchemist». Die Zuschreibung an Wagner ist also die gängige Lesart, im Text selbst aber nicht ausgesprochen.",
+      "«In einem Entwurf vom 17. Dezember 1826 beschreibt Goethe explizit Wagner als Schöpfer des Homunculus, in der endgültigen Fassung fehlt dieser Teil.» Die Szene spielt in Wagners Laboratorium und der Artikel zum zweiten Teil nennt ihn «mittlerweile selbst Doktor, Professor und praktizierender Alchemist». Die Zuschreibung an Wagner ist also die gängige Lesart, im Text selbst aber nicht ausgesprochen.",
     geprueft: "2026-08-10",
   },
 
   /* ── Multimodalität ──────────────────────────────────────────────────── */
   {
-    id: "VA-b49823",
+    id: "VA-e41918",
     anker: "nahm Text, Bild und Ton in einem Modell entgegen",
     /* Zu GPT-4o gibt es keinen deutschen Artikel; der englische ist die
        nächstliegende belegbare Quelle. */
@@ -1182,7 +1182,7 @@ export const BELEGE: Beleg[] = [
 
   /* ── Der Pflug ───────────────────────────────────────────────────────── */
   {
-    id: "PP-d1646c",
+    id: "PP-0294b1",
     anker: "Von diesem Überschuss lebten",
     url: "https://de.wikipedia.org/wiki/Neolithische_Revolution",
     titel: "Neolithische Revolution (Wikipedia)",
@@ -1191,7 +1191,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-10",
   },
   {
-    id: "PP-d1646c",
+    id: "PP-0294b1",
     anker: "der schwere Räderpflug mit eiserner Schar",
     url: "https://de.wikipedia.org/wiki/R%C3%A4derpflug",
     titel: "Räderpflug (Wikipedia)",
@@ -1240,7 +1240,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-10",
   },
   {
-    id: "PP-2b090e",
+    id: "PP-4d58a4",
     anker: "die Stele des Hammurabi",
     url: "https://de.wikipedia.org/wiki/Codex_Hammurapi",
     titel: "Codex Hammurapi (Wikipedia)",
@@ -1249,7 +1249,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-10",
   },
   {
-    id: "PP-2b090e",
+    id: "PP-4d58a4",
     anker: "das Gilgamesch-Epos, das älteste grosse Erzählwerk",
     url: "https://de.wikipedia.org/wiki/Gilgamesch-Epos",
     titel: "Gilgamesch-Epos (Wikipedia)",
@@ -1269,7 +1269,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-10",
   },
   {
-    id: "PP-af6b03",
+    id: "PP-002f10",
     anker: "in Basel etwa ab dem 15. Jahrhundert",
     /* Nicht der Artikel «Basler Papiermühle» — das ist das heutige Museum.
        Der Gewerbekanal St. Alban-Teich ist der historische Ort. */
@@ -1280,7 +1280,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-10",
   },
   {
-    id: "PP-af6b03",
+    id: "PP-002f10",
     anker: "für eine einzige grosse Bibel brauchte es die Häute einer ganzen Herde",
     url: "https://de.wikipedia.org/wiki/Pergament",
     titel: "Pergament (Wikipedia)",
@@ -1353,7 +1353,7 @@ export const BELEGE: Beleg[] = [
 
   /* ── Die Dampfmaschine ───────────────────────────────────────────────── */
   {
-    id: "PP-40ef79",
+    id: "PP-0c7324",
     anker: "mit dem separaten Kondensator",
     url: "https://de.wikipedia.org/wiki/James_Watt",
     titel: "James Watt (Wikipedia)",
@@ -1362,7 +1362,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-10",
   },
   {
-    id: "PP-40ef79",
+    id: "PP-0c7324",
     anker: "ab 1830 zogen Dampflokomotiven",
     url: "https://de.wikipedia.org/wiki/Liverpool_and_Manchester_Railway",
     titel: "Liverpool and Manchester Railway (Wikipedia)",
@@ -1423,7 +1423,7 @@ export const BELEGE: Beleg[] = [
 
   /* ── Internet und World Wide Web ─────────────────────────────────────── */
   {
-    id: "PP-67bb7f",
+    id: "PP-74bda0",
     anker: "das CERN 1993 den Web-Standard zur freien Nutzung freigab",
     url: "https://de.wikipedia.org/wiki/World_Wide_Web",
     titel: "World Wide Web (Wikipedia)",
@@ -1457,7 +1457,7 @@ export const BELEGE: Beleg[] = [
 
   /* ── Die Erde wird vermessen ─────────────────────────────────────────── */
   {
-    id: "PP-adee46",
+    id: "PP-dca913",
     anker: "leitete die berühmte Bibliothek von Alexandria und trug den Spitznamen",
     url: "https://de.wikipedia.org/wiki/Eratosthenes",
     titel: "Eratosthenes (Wikipedia)",
@@ -1466,7 +1466,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-11",
   },
   {
-    id: "PP-adee46",
+    id: "PP-dca913",
     anker: "rechnete anderthalb Jahrtausende später mit einem viel zu kleinen Erdumfang",
     url: "https://de.wikipedia.org/wiki/Christoph_Kolumbus",
     titel: "Christoph Kolumbus (Wikipedia)",
@@ -1529,7 +1529,7 @@ export const BELEGE: Beleg[] = [
 
   /* ── Die Evolution ───────────────────────────────────────────────────── */
   {
-    id: "PP-8df5c4",
+    id: "PP-a0320e",
     anker: "Alfred Russel Wallace ihm 1858 dieselbe Idee in einem Brief schickte",
     url: "https://de.wikipedia.org/wiki/Alfred_Russel_Wallace",
     titel: "Alfred Russel Wallace (Wikipedia)",
@@ -1538,7 +1538,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-11",
   },
   {
-    id: "PP-8df5c4",
+    id: "PP-a0320e",
     /* Nicht «… an Darwins Verteidiger» — das verdeckte den Glossarbegriff
        «Darwins», der im Block sonst nicht frei vorkommt. */
     anker: "Berühmt wurde die Spottfrage",
@@ -1562,7 +1562,7 @@ export const BELEGE: Beleg[] = [
 
   /* ── Teppich, Faden kulturelle Praxen: Ackerbau ──────────────────────── */
   {
-    id: "PP-656bce",
+    id: "PP-3c0394",
     /* Bewusst kurz vor «im sogenannten Fruchtbaren Halbmond»: Diese Wörter
        tragen den Glossar-Hover, ein längerer Anker würde ihn verdecken. */
     anker: "Die ältesten Bauerndörfer entstanden um 9500 v. Chr.",
@@ -1579,7 +1579,7 @@ export const BELEGE: Beleg[] = [
 
   /* ── Der Prozess des Sokrates ────────────────────────────────────────── */
   {
-    id: "PP-f38562",
+    id: "PP-28bc86",
     anker: "trank den Giftbecher",
     url: "https://de.wikipedia.org/wiki/Sokrates",
     titel: "Sokrates (Wikipedia)",
@@ -1590,7 +1590,7 @@ export const BELEGE: Beleg[] = [
 
   /* ── Kolonialisierung ────────────────────────────────────────────────── */
   {
-    id: "PP-28a11e",
+    id: "PP-815d58",
     anker: "im Vertrag von Tordesillas eine Linie",
     url: "https://de.wikipedia.org/wiki/Vertrag_von_Tordesillas",
     titel: "Vertrag von Tordesillas (Wikipedia)",
@@ -1599,7 +1599,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-11",
   },
   {
-    id: "PP-28a11e",
+    id: "PP-815d58",
     anker: "Der Mönch Bartolomé de Las Casas",
     url: "https://de.wikipedia.org/wiki/Bartolom%C3%A9_de_Las_Casas",
     titel: "Bartolomé de Las Casas (Wikipedia)",
@@ -1610,7 +1610,7 @@ export const BELEGE: Beleg[] = [
 
   /* ── Reformation ─────────────────────────────────────────────────────── */
   {
-    id: "PP-bcd011",
+    id: "PP-b6b641",
     anker: "mit seinen 95 Thesen zunächst eine Gelehrtendebatte",
     url: "https://de.wikipedia.org/wiki/95_Thesen",
     titel: "95 Thesen (Wikipedia)",
@@ -1661,7 +1661,7 @@ export const BELEGE: Beleg[] = [
 
   /* ── Zweiter Weltkrieg ───────────────────────────────────────────────── */
   {
-    id: "PP-70817b",
+    id: "PP-72d801",
     anker: "Verbrechen gegen die Menschlichkeit",
     url: "https://de.wikipedia.org/wiki/N%C3%BCrnberger_Prozesse",
     titel: "Nürnberger Prozesse (Wikipedia)",
@@ -1670,7 +1670,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-11",
   },
   {
-    id: "PP-70817b",
+    id: "PP-72d801",
     /* Mit «UNO beschloss 1948» davor: Der kurze Anker käme auch im
        Epochen-Block «Weltkriege» vor und würde dort lecken. */
     anker: "UNO beschloss 1948 die Allgemeine Erklärung der Menschenrechte",
@@ -1694,7 +1694,7 @@ export const BELEGE: Beleg[] = [
 
   /* ── Zusammenbruch der Sowjetunion ───────────────────────────────────── */
   {
-    id: "PP-6310fd",
+    id: "PP-dea58d",
     anker: "scheiterte in Moskau ein Putsch der alten Garde",
     url: "https://de.wikipedia.org/wiki/Zerfall_der_Sowjetunion",
     titel: "Zerfall der Sowjetunion (Wikipedia)",
@@ -1729,7 +1729,7 @@ export const BELEGE: Beleg[] = [
 
   /* ── Die Evolution, Vertiefung ───────────────────────────────────────── */
   {
-    id: "PP-8df5c4",
+    id: "PP-a0320e",
     anker: "war am ersten Tag vergriffen",
     url: "https://de.wikipedia.org/wiki/%C3%9Cber_die_Entstehung_der_Arten",
     titel: "Über die Entstehung der Arten (Wikipedia)",
@@ -1778,7 +1778,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-11",
   },
   {
-    id: "PP-ff6ef2",
+    id: "PP-0ca4a1",
     /* Nicht «Hier arbeitete al-Chwarizmi»: «al-Chwarizmi» trägt den
        Glossar-Hover und kommt im Block nur dort frei vor. */
     anker: "der Algebra den Namen gab",
@@ -1789,7 +1789,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-11",
   },
   {
-    id: "PP-ff6ef2",
+    id: "PP-0ca4a1",
     /* Ohne «die Mongolen» im Anker: Der Begriff trägt den Glossar-Hover und
        kommt im Block nur an dieser Stelle vor. */
     anker: "Bagdad 1258 eroberten",
@@ -1890,7 +1890,7 @@ export const OHNE_BELEG: KeinBeleg[] = [
     betrifft:
       "«die Kosten für das Verladen einer Tonne Fracht sanken dadurch auf einen Bruchteil» (gleichlautend in PP-08cebe: «senkte die Verladekosten auf einen Bruchteil»)",
     grund:
-      "Die Zahl hinter dieser Aussage (rund 5.83 Dollar je Tonne im Stückgutbetrieb gegen etwa 16 Cent auf der Ideal X) geht auf Marc Levinsons «The Box» (2006) zurück. Weder die deutsche noch die englische Wikipedia führt sie, und eine frei zugängliche deutschsprachige Darstellung mit dieser Angabe haben wir am 2026-08-05 nicht gefunden. Das Buch selbst liegt uns nicht vor, und aus dem Gedächtnis wird hier nichts belegt. Die Aussage bleibt darum unbelegt stehen, statt sie in eine unscharfe Formulierung umzubauen: Belegt ist der Anlass (McLean ärgerte sich über die Wartezeiten beim Entladen), nicht die Höhe der Ersparnis.",
+      "Die Zahl hinter dieser Aussage (rund 5.83 Dollar je Tonne im Stückgutbetrieb gegen etwa 16 Cent auf der Ideal X) geht auf Marc Levinsons «The Box» (2006) zurück. Weder die deutsche noch die englische Wikipedia führt sie und eine frei zugängliche deutschsprachige Darstellung mit dieser Angabe haben wir am 2026-08-05 nicht gefunden. Das Buch selbst liegt uns nicht vor und aus dem Gedächtnis wird hier nichts belegt. Die Aussage bleibt darum unbelegt stehen, statt sie in eine unscharfe Formulierung umzubauen: Belegt ist der Anlass (McLean ärgerte sich über die Wartezeiten beim Entladen), nicht die Höhe der Ersparnis.",
     notiert: "2026-08-05",
   },
   {
@@ -1909,7 +1909,7 @@ export const OHNE_BELEG: KeinBeleg[] = [
     notiert: "2026-07-26",
   },
   {
-    id: "VA-03d91c",
+    id: "VA-af83af",
     betrifft: "Geopolitik: «Seit Januar 2026 werden bestimmte Ausfuhren wieder fallweise geprüft»",
     grund:
       "Die US-Behörde BIS veröffentlicht solche Kurswechsel als Pressemitteilungen, deren Adressen sich ändern. Wir haben keine dauerhaft stabile, frei zugängliche Seite gefunden, die den Stand von Januar 2026 belegt. Statt einen Link zu setzen, der bald ins Leere führt, bleibt die Stelle unbelegt und trägt im Text ihr Standdatum.",
@@ -1927,7 +1927,7 @@ export const OHNE_BELEG: KeinBeleg[] = [
     betrifft:
       "«Der Philosoph Ernst Bloch sah in der alchemistischen Werkstatt eine frühe, bewusst auf Veränderung gerichtete Form der Technik.»",
     grund:
-      "Der Gedanke steht bei Bloch im «Prinzip Hoffnung», wo die Alchemie als vorwegnehmende, auf Verwandlung zielende Praxis erscheint. Belegen können wir das am 2026-08-10 nicht: Der Wikipedia-Artikel zu Ernst Bloch erwähnt die Alchemie nicht, der Artikel «Alchemie» erwähnt Bloch nicht, und eine frei zugängliche deutschsprachige Seite mit dieser Aussage haben wir nicht gefunden. Das Werk selbst liegt uns nicht vor, und aus dem Gedächtnis wird hier nichts belegt. Die frühere Fassung enthielt sogar ein wörtliches Zitat («älteste gewollte Form von Technik»); die Kontrolle hat es zur Paraphrase entschärft, was ohne Quelle die richtige Wahl ist. Ein Zitat verlangt eine Fundstelle, eine Paraphrase trägt sich als Deutung selbst.",
+      "Der Gedanke steht bei Bloch im «Prinzip Hoffnung», wo die Alchemie als vorwegnehmende, auf Verwandlung zielende Praxis erscheint. Belegen können wir das am 2026-08-10 nicht: Der Wikipedia-Artikel zu Ernst Bloch erwähnt die Alchemie nicht, der Artikel «Alchemie» erwähnt Bloch nicht und eine frei zugängliche deutschsprachige Seite mit dieser Aussage haben wir nicht gefunden. Das Werk selbst liegt uns nicht vor und aus dem Gedächtnis wird hier nichts belegt. Die frühere Fassung enthielt sogar ein wörtliches Zitat («älteste gewollte Form von Technik»); die Kontrolle hat es zur Paraphrase entschärft, was ohne Quelle die richtige Wahl ist. Ein Zitat verlangt eine Fundstelle, eine Paraphrase trägt sich als Deutung selbst.",
     notiert: "2026-08-10",
   },
 ];

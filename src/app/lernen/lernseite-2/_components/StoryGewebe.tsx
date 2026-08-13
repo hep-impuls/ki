@@ -1006,7 +1006,7 @@ export default function StoryGewebe({
             onPointerLeave={onUp}
             className="block w-full select-none aspect-[720/400] sm:aspect-[720/300]"
             role="img"
-            aria-label="Teil-Gewebe der gewählten KI-Stationen. Punkte lassen sich ziehen und antippen, und zwischen hervorgehobenen Punkten entstehen gefüllte Flächen."
+            aria-label="Teil-Gewebe der gewählten KI-Stationen. Punkte lassen sich ziehen und antippen und zwischen hervorgehobenen Punkten entstehen gefüllte Flächen."
           >
             {/* Gefüllte Flächen (Maschen): erscheinen, sobald alle drei Ecken
                 hervorgehoben sind — leuchtend wie die Perlen der Story */}
@@ -1166,7 +1166,7 @@ export default function StoryGewebe({
               <span className="material-symbols-outlined text-[20px] text-tertiary">explore</span>
               So geht es: Das ganze Gewebe ist sichtbar, drei Punkte sind
               schon hervorgehoben. Über die Stichworte oben hebst du weitere
-              Punkte fett hervor, und ihre Verbindungen färben sich ein. Tippe
+              Punkte fett hervor und ihre Verbindungen färben sich ein. Tippe
               einen Punkt an, seine Geschichte erscheint hier und bleibt
               stehen. Im Gewebe lassen sich die Punkte auch ziehen; «Zeitlich»
               reiht die hervorgehobenen Stationen als Perlenschnur von früher

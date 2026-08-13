@@ -59,8 +59,8 @@ Michel Foucault war ein französischer Philosoph, der untersuchte, wie Macht und
 **[DW-9a56e8]** *(Zur Philosophie · Lebenskunst)*
 Wilhelm Schmid ist ein freier Philosoph in Berlin und hat die «Philosophie der Lebenskunst» im deutschsprachigen Raum bekannt gemacht. Sein Thema: Aus einer Einsicht folgt noch keine Tat, das kennt jeder von den guten Vorsätzen. Was hilft, ist Übung in kleinsten Schritten, täglich, fast beiläufig, aber regelmässig, nicht das ganze Buch auf einmal, sondern jeden Tag eine Seite. Weil Freude stärker wirkt als Zwang, soll man sich am Schönen orientieren, zu dem man Ja sagen kann. So werden neue Gewohnheiten gebildet. Wie lange das dauert, hat die Psychologie untersucht, nicht die Philosophie: Eine oft zitierte Studie fand einen Mittelwert von 66 Tagen, mit sehr grossen Unterschieden je nach Person und Gewohnheit. Werk: «Philosophie der Lebenskunst» (1998).
 
-**[DW-38ffda]** *(Zur Philosophie · Lebenskunst)*
-Martha Nussbaum ist eine der bekanntesten US-amerikanischen Philosophinnen und verbindet antike Ethik (besonders Aristoteles und die Stoa) mit heutigen Fragen. Sie zeigt, dass Gefühle keine blosse Störung der Vernunft sind, sondern zu einem guten Urteil und einem gelingenden Leben dazugehören. Mit dem «Fähigkeiten-Ansatz» fragt sie konkret, was Menschen wirklich können müssen, um gut zu leben (etwa Gesundheit, Bildung, Bindung, Spiel), und wie eine Gesellschaft das ermöglichen soll. Lebenskunst heisst darum auch, die eigenen Gefühle ernst zu nehmen und gute Bedingungen zu schaffen. Werk: «Fähigkeiten schaffen» (2011).
+**[DW-246e50]** *(Zur Philosophie · Lebenskunst)*
+Martha Nussbaum ist eine der bekanntesten US-amerikanischen Philosophinnen und verbindet antike Ethik (besonders Aristoteles und die Stoa) mit heutigen Fragen. Sie zeigt, dass Gefühle keine blosse Störung der Vernunft sind, sondern zu einem guten Urteil und einem gelingenden Leben dazugehören. Mit dem «Fähigkeiten-Ansatz» fragt sie konkret, was Menschen wirklich können müssen, um gut zu leben (etwa Gesundheit, Bildung, Bindung, Spiel) und wie eine Gesellschaft das ermöglichen soll. Lebenskunst heisst darum auch, die eigenen Gefühle ernst zu nehmen und gute Bedingungen zu schaffen. Werk: «Fähigkeiten schaffen» (2011).
 
 **[DW-890f29]** *(Zur Philosophie · Lebenskunst)*
 Maurice Merleau-Ponty war ein französischer Philosoph der Phänomenologie. Sein Thema ist der Leib: Wir erfahren die Welt nicht zuerst mit dem Kopf, sondern leiblich, durch Wahrnehmung, Bewegung, Berührung und Gefühl. Der Körper ist kein Ding, das wir bloss «haben», sondern die Art, wie wir zur Welt gehören. Verstehen und ein gutes Leben sind darum verkörpert, nicht rein rechnerisch. Genau das kann eine körperlose KI nicht: Sie verarbeitet Zeichen, aber sie spürt und erlebt nicht. Werk: «Phänomenologie der Wahrnehmung» (1945).
@@ -105,17 +105,17 @@ Punkte sind die Belohnung. Über viele Partien hinweg richtet die KI ihr Verhalt
 **[VA-9fc8c7]** *(Kartentext · Versuch und Irrtum)*
 Ohne Anleitung lernt sie erstaunliche Strategien und übertraf bei manchen Spielen den Menschen. Gelernt wird allein durch Wiederholung, über sehr viele Partien hinweg, ohne dass ihr jemand die Regeln erklärt.
 
-**[VA-c04e13]** *(Kartentext · Einfach reden)*
-Man tippt eine Frage in ganz normaler Sprache, und die KI antwortet flüssig. Es braucht keine Fachkenntnis, keinen Befehl und keine Schulung, und genau das erklärt, warum es so schnell so viele erreichte.
+**[VA-6a24f5]** *(Kartentext · Einfach reden)*
+Man tippt eine Frage in ganz normaler Sprache und die KI antwortet flüssig. Es braucht keine Fachkenntnis, keinen Befehl und keine Schulung und genau das erklärt, warum es so schnell so viele erreichte.
 
-**[VA-d18bcf]** *(Kartentext · Der Durchbruch)*
-Innert weniger Wochen nutzten Millionen ChatGPT. Es war der Moment, in dem KI im Alltag vieler Menschen ankam, und der Moment, in dem Schulen und Betriebe plötzlich Regeln brauchten.
+**[VA-5dbc1a]** *(Kartentext · Der Durchbruch)*
+Innert weniger Wochen nutzten Millionen ChatGPT. Es war der Moment, in dem KI im Alltag vieler Menschen ankam und der Moment, in dem Schulen und Betriebe plötzlich Regeln brauchten.
 
-**[VA-79e7f6]** *(Kartentext · Yan Shi's Automat)*
-Der Traum vom künstlichen Menschen ist nicht nur europäisch, sondern kehrt in vielen Kulturen wieder. Auch in China erzählte man früh von einer täuschend lebendigen Figur. Ein Handwerker führt sie dem König vor, und niemand erkennt zuerst, dass sie gebaut ist. Schon hier klingt die Frage an, wo die Grenze zwischen echtem und nachgeahmtem Leben verläuft.
+**[VA-a3de04]** *(Kartentext · Yan Shi's Automat)*
+Der Traum vom künstlichen Menschen ist nicht nur europäisch, sondern kehrt in vielen Kulturen wieder. Auch in China erzählte man früh von einer täuschend lebendigen Figur. Ein Handwerker führt sie dem König vor und niemand erkennt zuerst, dass sie gebaut ist. Schon hier klingt die Frage an, wo die Grenze zwischen echtem und nachgeahmtem Leben verläuft.
 
-**[VA-fdc491]** *(Vertiefung «Mehr lesen» · Yan Shi's Automat)*
-Im «Liezi» wird die Figur bis ins Innere beschrieben, denn der Handwerker hatte ihr nachgebildete Organe wie Herz, Lunge, Leber, Nieren, Muskeln und Knochen gegeben. Erstaunlich ist, dass jedes Organ eine eigene Aufgabe trug. Entfernte man das künstliche Herz, verstummte die Figur, nahm man die Leber weg, konnte sie nicht mehr sehen, und ohne die Nieren versagten die Beine. Damit erzählt der Text nicht bloss von einer Puppe, sondern von einem durchdachten künstlichen Körper mit inneren Teilen. Die Episode steht im Kapitel «Tang Wen» und spielt am Hof von König Mu, der von weiten Reisen zurückkehrt. Am Ende zeigt sich der König überzeugt, dass menschliche Geschicklichkeit fast an die Werke der Natur heranreicht. So verhandelt die Erzählung schon vor vielen Jahrhunderten, ob ein Gemachtes dem Gewachsenen gleichkommen kann.
+**[VA-6b2709]** *(Vertiefung «Mehr lesen» · Yan Shi's Automat)*
+Im «Liezi» wird die Figur bis ins Innere beschrieben, denn der Handwerker hatte ihr nachgebildete Organe wie Herz, Lunge, Leber, Nieren, Muskeln und Knochen gegeben. Erstaunlich ist, dass jedes Organ eine eigene Aufgabe trug. Entfernte man das künstliche Herz, verstummte die Figur, nahm man die Leber weg, konnte sie nicht mehr sehen und ohne die Nieren versagten die Beine. Damit erzählt der Text nicht bloss von einer Puppe, sondern von einem durchdachten künstlichen Körper mit inneren Teilen. Die Episode steht im Kapitel «Tang Wen» und spielt am Hof von König Mu, der von weiten Reisen zurückkehrt. Am Ende zeigt sich der König überzeugt, dass menschliche Geschicklichkeit fast an die Werke der Natur heranreicht. So verhandelt die Erzählung schon vor vielen Jahrhunderten, ob ein Gemachtes dem Gewachsenen gleichkommen kann.
 
 **[VA-47b959]** *(Bildgeschichte · Expertensysteme)*
 Systeme wie MYCIN gossen das Wissen von Fachleuten in tausende Wenn-dann-Regeln, etwa für die Diagnose von Infektionen. In ihrem engen Gebiet waren sie nützlich. Doch sie blieben teuer im Unterhalt. Und sie waren starr gegenüber allem, was in keiner Regel stand.
@@ -155,14 +155,14 @@ Schreibst du locker und mit Emojis, antwortet die KI oft ebenso locker. Sie pass
 **[VA-02ccbc]** *(Kartentext · Rechen- und Speicherkapazität)*
 Leistungsfähige KI braucht sehr viele spezielle Computerchips, Server und Speicher. Diese Anlagen sind teuer und stehen nur wenigen grossen Unternehmen und Staaten zur Verfügung. Wer diese Rechenkraft besitzt, hat einen grossen Vorsprung. So entsteht eine Abhängigkeit von einigen wenigen Anbietern.
 
-**[VA-921987]** *(Kartentext · Arbeitsmarkt)*
-KI verändert die Arbeitswelt spürbar. Sie übernimmt vor allem einzelne Aufgaben, selten gleich einen ganzen Beruf. Manche Tätigkeiten fallen weg, andere verändern sich, und neue kommen dazu. Für viele Berufe bedeutet das neue Anforderungen und neues Lernen.
+**[VA-62c30a]** *(Kartentext · Arbeitsmarkt)*
+KI verändert die Arbeitswelt spürbar. Sie übernimmt vor allem einzelne Aufgaben, selten gleich einen ganzen Beruf. Manche Tätigkeiten fallen weg, andere verändern sich und neue kommen dazu. Für viele Berufe bedeutet das neue Anforderungen und neues Lernen.
 
 **[VA-225dcb]** *(Kartentext · Kultureller Bias und Technikverständnis)*
 KI lernt aus Texten, die oft aus dem englischsprachigen und westlichen Raum stammen. Darum gibt sie häufig westliche Sprachen, Werte und Sichtweisen wieder. Andere Kulturen verstehen Technik, Gemeinschaft und Privatsphäre aber teils ganz anders. «West» und «Ost» sind dabei keine festen Blöcke, sondern grobe Vereinfachungen.
 
-**[VA-f6cfae]** *(Fallbeispiel · Wissensmacht)*
-Die Trainingsdaten der grossen Modelle bestehen zu einem sehr grossen Teil aus englischen Texten. Wissen aus kleineren Sprachen, etwa vielen afrikanischen, ist kaum vertreten, und dort antwortet die KI schwächer oder erfindet mehr. So entscheidet die Datenmenge mit, wessen Wissen sichtbar bleibt.
+**[VA-2717c6]** *(Fallbeispiel · Wissensmacht)*
+Die Trainingsdaten der grossen Modelle bestehen zu einem sehr grossen Teil aus englischen Texten. Wissen aus kleineren Sprachen, etwa vielen afrikanischen, ist kaum vertreten und dort antwortet die KI schwächer oder erfindet mehr. So entscheidet die Datenmenge mit, wessen Wissen sichtbar bleibt.
 
 ### Thema 02 · Philosophische Perspektive
 

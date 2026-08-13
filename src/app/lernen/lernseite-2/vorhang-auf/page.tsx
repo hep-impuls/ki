@@ -105,7 +105,7 @@ const BILDER_STORY: AnschauBild[] = [
        drei Bildpunkten, wo man sie an der Sache selbst sieht: der Turban bei
        Punkt 1, der versteckte Mann bei Punkt 2, das offene Fach bei Punkt 3. */
     geschichte:
-      "Der «Schachtürke» war ein Schach spielender Automat, den Wolfgang von Kempelen 1770 am Wiener Hof vorführte. Jahrzehntelang schlug er prominente Gegner, der Legende nach auch Napoleon und Benjamin Franklin, und liess ganz Europa rätseln, ob eine Maschine denken könne. In Wahrheit sass im Innern ein versteckter Schachmeister. Nach Kempelens Tod tourte Johann Nepomuk Mälzel den Automaten um die Welt, bis er 1854 bei einem Brand zerstört wurde. Der Schachtürke ist bis heute das Sinnbild dafür, wie bereitwillig wir Maschinen Intelligenz zuschreiben und wie oft «automatische» Leistung in Wahrheit versteckte menschliche Arbeit ist. Nicht zufällig heisst Amazons Klickarbeiter-Plattform «Mechanical Turk».",
+      "Der «Schachtürke» war ein Schach spielender Automat, den Wolfgang von Kempelen 1770 am Wiener Hof vorführte. Jahrzehntelang schlug er prominente Gegner, der Legende nach auch Napoleon und Benjamin Franklin und liess ganz Europa rätseln, ob eine Maschine denken könne. In Wahrheit sass im Innern ein versteckter Schachmeister. Nach Kempelens Tod tourte Johann Nepomuk Mälzel den Automaten um die Welt, bis er 1854 bei einem Brand zerstört wurde. Der Schachtürke ist bis heute das Sinnbild dafür, wie bereitwillig wir Maschinen Intelligenz zuschreiben und wie oft «automatische» Leistung in Wahrheit versteckte menschliche Arbeit ist. Nicht zufällig heisst Amazons Klickarbeiter-Plattform «Mechanical Turk».",
     hotspots: [
       {
         x: 44,
@@ -136,13 +136,13 @@ const BILDER_STORY: AnschauBild[] = [
     quelle:
       "Frontispiz der Frankenstein-Ausgabe, Theodor von Holst, 1831 · Wikimedia Commons · gemeinfrei",
     geschichte:
-      "Mary Shelley schrieb «Frankenstein oder der moderne Prometheus» mit achtzehn Jahren, und der Roman erschien 1818. Victor Frankenstein erschafft aus toter Materie ein lebendes Wesen und flieht im Augenblick des Gelingens entsetzt vor seinem Werk. Bis heute steht «Frankenstein» für die Angst vor Technik, die sich der Kontrolle entzieht, und für die Frage, wer für das Gemachte einsteht.",
+      "Mary Shelley schrieb «Frankenstein oder der moderne Prometheus» mit achtzehn Jahren und der Roman erschien 1818. Victor Frankenstein erschafft aus toter Materie ein lebendes Wesen und flieht im Augenblick des Gelingens entsetzt vor seinem Werk. Bis heute steht «Frankenstein» für die Angst vor Technik, die sich der Kontrolle entzieht, und für die Frage, wer für das Gemachte einsteht.",
     hotspots: [
       {
         x: 32,
         y: 62,
         titel: "Das erschaffene Wesen",
-        text: "Eben belebt, betrachtet die Kreatur sich selbst. Ein neues Wesen ist in der Welt, und niemand hat es gefragt. Böse geboren ist es nicht, es lernt durch blosses Zuhören sprechen und liest Milton, Plutarch und Goethes Werther. Was es fordert, ist Gemeinschaft, und erst Zurückweisung und Einsamkeit machen es zum Rächer.",
+        text: "Eben belebt, betrachtet die Kreatur sich selbst. Ein neues Wesen ist in der Welt und niemand hat es gefragt. Böse geboren ist es nicht, es lernt durch blosses Zuhören sprechen und liest Milton, Plutarch und Goethes Werther. Was es fordert, ist Gemeinschaft und erst Zurückweisung und Einsamkeit machen es zum Rächer.",
       },
       {
         x: 72,
@@ -154,7 +154,7 @@ const BILDER_STORY: AnschauBild[] = [
         x: 24,
         y: 90,
         titel: "Wissen und sein Preis",
-        text: "Zu Füssen liegen Buch und Schädel. Sie stehen für das Wissen, das belebt, und für den Tod, der ihm folgt. Das Blatt ist das Frontispiz der Ausgabe von 1831, ein Stich nach Theodor von Holst, und zeigt den Moment der Flucht.",
+        text: "Zu Füssen liegen Buch und Schädel. Sie stehen für das Wissen, das belebt, und für den Tod, der ihm folgt. Das Blatt ist das Frontispiz der Ausgabe von 1831, ein Stich nach Theodor von Holst und zeigt den Moment der Flucht.",
       },
     ],
   },
@@ -247,7 +247,7 @@ const BILDER_STORY: AnschauBild[] = [
         x: 30,
         y: 82,
         titel: "Der ELIZA-Effekt",
-        text: "Menschen vertrauten sich dem Programm an wie einem Menschen. Weizenbaum erschrak darüber, wie weit das ging, und wurde später zu einem frühen Kritiker der KI. Bis heute überschätzen wir gern, was Maschinen «verstehen».",
+        text: "Menschen vertrauten sich dem Programm an wie einem Menschen. Weizenbaum erschrak darüber, wie weit das ging und wurde später zu einem frühen Kritiker der KI. Bis heute überschätzen wir gern, was Maschinen «verstehen».",
       },
     ],
   },
@@ -296,7 +296,7 @@ const BILDER_STORY: AnschauBild[] = [
         x: 53,
         y: 42,
         titel: "Gefühle für Pixel",
-        text: "Auf dem kleinen Schirm lebte ein wenige Bildpunkte grosses Wesen. Millionen banden sich emotional daran, und an Schulen wurden die piepsenden Geräte zeitweise verboten, weil sie mitten im Unterricht Aufmerksamkeit forderten. Wir behandeln Maschinen erstaunlich leicht wie Lebewesen.",
+        text: "Auf dem kleinen Schirm lebte ein wenige Bildpunkte grosses Wesen. Millionen banden sich emotional daran und an Schulen wurden die piepsenden Geräte zeitweise verboten, weil sie mitten im Unterricht Aufmerksamkeit forderten. Wir behandeln Maschinen erstaunlich leicht wie Lebewesen.",
       },
       {
         x: 70,
@@ -352,14 +352,14 @@ const BILDER_STORY: AnschauBild[] = [
     quelle:
       "Von DALL·E 2 erzeugtes Bild (2022) · Wikimedia Commons · KI-generiert; ob urheberrechtlicher Schutz besteht, hängt vom menschlichen Gestaltungsbeitrag und vom anwendbaren Recht ab",
     geschichte:
-      "DALL·E von OpenAI erzeugt Bilder aus Textbeschreibungen. DALL·E 1 kam im Januar 2021, das deutlich stärkere DALL·E 2 im April 2022, also rund ein halbes Jahr vor ChatGPT. Man gibt einen Satz ein, und das Modell «malt» ein Bild, das so nie fotografiert wurde. Damit wurde generative KI erstmals einem breiten Publikum sichtbar.",
+      "DALL·E von OpenAI erzeugt Bilder aus Textbeschreibungen. DALL·E 1 kam im Januar 2021, das deutlich stärkere DALL·E 2 im April 2022, also rund ein halbes Jahr vor ChatGPT. Man gibt einen Satz ein und das Modell «malt» ein Bild, das so nie fotografiert wurde. Damit wurde generative KI erstmals einem breiten Publikum sichtbar.",
     ki: true,
     hotspots: [
       {
         x: 55,
         y: 20,
         titel: "Sprache als Pinsel",
-        text: "Ein Satz genügt als Auftrag, und die Maschine «zeichnet». Mit DALL·E 2 im April 2022 entstand zu jeder Beschreibung ein neues Bild, ohne Pinsel, ohne Kamera und ohne Vorlage.",
+        text: "Ein Satz genügt als Auftrag und die Maschine «zeichnet». Mit DALL·E 2 im April 2022 entstand zu jeder Beschreibung ein neues Bild, ohne Pinsel, ohne Kamera und ohne Vorlage.",
       },
       {
         x: 24,
@@ -390,7 +390,7 @@ const BILDER_STORY: AnschauBild[] = [
         x: 61,
         y: 29,
         titel: "Einfach reden",
-        text: "Man tippt eine Frage in ganz normaler Sprache, und die KI antwortet flüssig. Es braucht keine Fachkenntnis, keinen Befehl und keine Schulung, und genau das erklärt, warum es so schnell so viele erreichte.",
+        text: "Man tippt eine Frage in ganz normaler Sprache und die KI antwortet flüssig. Es braucht keine Fachkenntnis, keinen Befehl und keine Schulung und genau das erklärt, warum es so schnell so viele erreichte.",
       },
       {
         x: 40,
@@ -402,7 +402,7 @@ const BILDER_STORY: AnschauBild[] = [
         x: 50,
         y: 88,
         titel: "Der Durchbruch",
-        text: "Innert weniger Wochen nutzten Millionen ChatGPT. Es war der Moment, in dem KI im Alltag vieler Menschen ankam, und der Moment, in dem Schulen und Betriebe plötzlich Regeln brauchten.",
+        text: "Innert weniger Wochen nutzten Millionen ChatGPT. Es war der Moment, in dem KI im Alltag vieler Menschen ankam und der Moment, in dem Schulen und Betriebe plötzlich Regeln brauchten.",
       },
     ],
   },
@@ -579,9 +579,9 @@ export default function Lernseite2VorhangAuf() {
               jahr: "~8. bis 3. Jh. v. Chr.",
               text: "Am Anfang steht ein Traum, so alt wie die ältesten Erzählungen des Abendlandes. Schon in der griechischen Antike stellte man sich künstliche Wesen aus Metall vor, die denken und dienen. Der Schmiedegott Hephaistos schuf sich goldene Helferinnen, und der bronzene Riese Talos bewachte eine ganze Insel. Der Wunsch, Verstand in totes Material zu giessen, ist also uralt.",
               geschichte:
-                "Hier laufen zwei Erzählungen zusammen, und sie stammen aus verschiedenen Zeiten. Das ist wichtig, weil sie oft in einen Topf geworfen werden. Die goldenen Mägde stehen in Homers «Ilias», dem rund 2800 Jahre alten Heldengedicht. Der Schmiedegott Hephaistos hat sie sich selbst gebaut. Sie haben Verstand, Stimme und Kraft, und dazu fertigt er selbstfahrende Dreifüsse. Talos dagegen kommt in der «Ilias» nicht vor. Der bronzene Riese wird erst Jahrhunderte später ausführlich erzählt. Die bekannte Fassung steht in der «Argonautika» des Apollonios von Rhodos aus dem 3. Jahrhundert vor Christus, kürzer auch bei anderen antiken Autoren. Zwei Quellen also, mehrere Jahrhunderte auseinander. Gemeinsam ist ihnen der Gedanke: Menschen erzählten von Automaten, lange bevor es das Wort dafür gab.",
+                "Hier laufen zwei Erzählungen zusammen und sie stammen aus verschiedenen Zeiten. Das ist wichtig, weil sie oft in einen Topf geworfen werden. Die goldenen Mägde stehen in Homers «Ilias», dem rund 2800 Jahre alten Heldengedicht. Der Schmiedegott Hephaistos hat sie sich selbst gebaut. Sie haben Verstand, Stimme und Kraft und dazu fertigt er selbstfahrende Dreifüsse. Talos dagegen kommt in der «Ilias» nicht vor. Der bronzene Riese wird erst Jahrhunderte später ausführlich erzählt. Die bekannte Fassung steht in der «Argonautika» des Apollonios von Rhodos aus dem 3. Jahrhundert vor Christus, kürzer auch bei anderen antiken Autoren. Zwei Quellen also, mehrere Jahrhunderte auseinander. Gemeinsam ist ihnen der Gedanke: Menschen erzählten von Automaten, lange bevor es das Wort dafür gab.",
               mehr:
-                "Talos war unverwundbar, bis auf eine einzige Stelle. Durch seinen Körper lief ein Blutkanal vom Kopf bis zur Ferse, und ein Nagel hielt ihn verschlossen. Dieses Blut hielt den Riesen lebendig. Auf der Heimfahrt der Argonauten brachte ihn die Zauberin Medea zu Fall. Sie betörte ihn mit dem Versprechen der Unsterblichkeit und zog ihm dann den Nagel aus der Ferse. Das Blut floss aus, und der Wächter starb. Andere Fassungen erzählen es anders: Dort verletzt er sich selbst am Knöchel, oder ein Pfeil trifft ihn an der Ferse. Seinen Dienst tat er gründlich. Er umkreiste Kreta dreimal am Tag und warf Steine auf Schiffe, die sich näherten. Bemerkenswert ist das Verhältnis von Macht und Schwachstelle. Die ganze Kraft des Wächters liess sich an einem winzigen Punkt aufheben. Schon dieser früheste Mythos verbindet also die künstliche Kraft mit der Frage, wie man sie im Notfall stoppt. Dieselbe Sorge um einen sicheren Ausschalter begleitet die Technik bis in heutige Debatten.",
+                "Talos war unverwundbar, bis auf eine einzige Stelle. Durch seinen Körper lief ein Blutkanal vom Kopf bis zur Ferse und ein Nagel hielt ihn verschlossen. Dieses Blut hielt den Riesen lebendig. Auf der Heimfahrt der Argonauten brachte ihn die Zauberin Medea zu Fall. Sie betörte ihn mit dem Versprechen der Unsterblichkeit und zog ihm dann den Nagel aus der Ferse. Das Blut floss aus und der Wächter starb. Andere Fassungen erzählen es anders: Dort verletzt er sich selbst am Knöchel, oder ein Pfeil trifft ihn an der Ferse. Seinen Dienst tat er gründlich. Er umkreiste Kreta dreimal am Tag und warf Steine auf Schiffe, die sich näherten. Bemerkenswert ist das Verhältnis von Macht und Schwachstelle. Die ganze Kraft des Wächters liess sich an einem winzigen Punkt aufheben. Schon dieser früheste Mythos verbindet also die künstliche Kraft mit der Frage, wie man sie im Notfall stoppt. Dieselbe Sorge um einen sicheren Ausschalter begleitet die Technik bis in heutige Debatten.",
             },
             {
               titel: "Yan Shi's Automat",
@@ -589,11 +589,11 @@ export default function Lernseite2VorhangAuf() {
               kat: "erzaehlung",
               mmf: "fiktion",
               jahr: "~4. Jh. n. Chr.",
-              text: "Der Traum vom künstlichen Menschen ist nicht nur europäisch, sondern kehrt in vielen Kulturen wieder. Auch in China erzählte man früh von einer täuschend lebendigen Figur. Ein Handwerker führt sie dem König vor, und niemand erkennt zuerst, dass sie gebaut ist. Schon hier klingt die Frage an, wo die Grenze zwischen echtem und nachgeahmtem Leben verläuft.",
+              text: "Der Traum vom künstlichen Menschen ist nicht nur europäisch, sondern kehrt in vielen Kulturen wieder. Auch in China erzählte man früh von einer täuschend lebendigen Figur. Ein Handwerker führt sie dem König vor und niemand erkennt zuerst, dass sie gebaut ist. Schon hier klingt die Frage an, wo die Grenze zwischen echtem und nachgeahmtem Leben verläuft.",
               geschichte:
                 "Die Geschichte steht im daoistischen Text «Liezi», der um das 4. Jahrhundert entstand, während die Erzählung selbst viel früher spielt. Der Mechaniker Yan Shi präsentiert dem König Mu von Zhou einen künstlichen Menschen. Die Figur geht, singt und zwinkert den Hofdamen zu. Als der König einen Betrug vermutet, zerlegt Yan Shi sie und zeigt, dass sie nur aus Leder, Holz, Leim und Lack besteht.",
               mehr:
-                "Im «Liezi» wird die Figur bis ins Innere beschrieben, denn der Handwerker hatte ihr nachgebildete Organe wie Herz, Lunge, Leber, Nieren, Muskeln und Knochen gegeben. Erstaunlich ist, dass jedes Organ eine eigene Aufgabe trug. Entfernte man das künstliche Herz, verstummte die Figur, nahm man die Leber weg, konnte sie nicht mehr sehen, und ohne die Nieren versagten die Beine. Damit erzählt der Text nicht bloss von einer Puppe, sondern von einem durchdachten künstlichen Körper mit inneren Teilen. Die Episode steht im Kapitel «Tang Wen» und spielt am Hof von König Mu, der von weiten Reisen zurückkehrt. Am Ende zeigt sich der König überzeugt, dass menschliche Geschicklichkeit fast an die Werke der Natur heranreicht. So verhandelt die Erzählung schon vor vielen Jahrhunderten, ob ein Gemachtes dem Gewachsenen gleichkommen kann.",
+                "Im «Liezi» wird die Figur bis ins Innere beschrieben, denn der Handwerker hatte ihr nachgebildete Organe wie Herz, Lunge, Leber, Nieren, Muskeln und Knochen gegeben. Erstaunlich ist, dass jedes Organ eine eigene Aufgabe trug. Entfernte man das künstliche Herz, verstummte die Figur, nahm man die Leber weg, konnte sie nicht mehr sehen und ohne die Nieren versagten die Beine. Damit erzählt der Text nicht bloss von einer Puppe, sondern von einem durchdachten künstlichen Körper mit inneren Teilen. Die Episode steht im Kapitel «Tang Wen» und spielt am Hof von König Mu, der von weiten Reisen zurückkehrt. Am Ende zeigt sich der König überzeugt, dass menschliche Geschicklichkeit fast an die Werke der Natur heranreicht. So verhandelt die Erzählung schon vor vielen Jahrhunderten, ob ein Gemachtes dem Gewachsenen gleichkommen kann.",
             },
             {
               titel: "Der Golem",
@@ -605,7 +605,7 @@ export default function Lernseite2VorhangAuf() {
               geschichte:
                 "Die Prager Sage schreibt Rabbi Löw, genannt der Maharal, einen Golem zu. Er formt ihn aus Lehm und erweckt ihn durch das Wort «emet», das Wahrheit bedeutet, auf der Stirn. Löscht man einen Buchstaben, so erlischt die Figur wieder. Als der Golem ihm entgleitet, muss der Rabbi ihn stilllegen.",
               mehr:
-                "Der Kniff mit dem Wort ist genau überliefert, denn «emet» heisst Wahrheit, und streicht man den ersten Buchstaben, bleibt «met» stehen, das hebräische Wort für tot. So genügt ein einziges Zeichen, um zwischen Leben und Tod der Figur umzuschalten. In der Prager Erzählung soll der Golem die jüdische Gemeinde vor Angriffen und falschen Beschuldigungen schützen. Weltberühmt wurde der Stoff aber erst spät, durch Gustav Meyrinks Roman «Der Golem» von 1915 und den Stummfilm von Paul Wegener aus dem Jahr 1920. Auffällig ist, wie nah das an heutige Technik rückt, denn auch hier steckt die ganze Macht in einer winzigen sprachlichen Anweisung. Das Gleichnis fragt, ob der Schöpfer sein Werk noch beherrscht, sobald es einmal in Bewegung geraten ist.",
+                "Der Kniff mit dem Wort ist genau überliefert, denn «emet» heisst Wahrheit und streicht man den ersten Buchstaben, bleibt «met» stehen, das hebräische Wort für tot. So genügt ein einziges Zeichen, um zwischen Leben und Tod der Figur umzuschalten. In der Prager Erzählung soll der Golem die jüdische Gemeinde vor Angriffen und falschen Beschuldigungen schützen. Weltberühmt wurde der Stoff aber erst spät, durch Gustav Meyrinks Roman «Der Golem» von 1915 und den Stummfilm von Paul Wegener aus dem Jahr 1920. Auffällig ist, wie nah das an heutige Technik rückt, denn auch hier steckt die ganze Macht in einer winzigen sprachlichen Anweisung. Das Gleichnis fragt, ob der Schöpfer sein Werk noch beherrscht, sobald es einmal in Bewegung geraten ist.",
             },
             {
               titel: "Der Homunkulus",
@@ -625,7 +625,7 @@ export default function Lernseite2VorhangAuf() {
               kat: "mechanik",
               mmf: "maschine",
               jahr: "1770",
-              text: "Im 18. Jahrhundert staunte Europa über kunstvolle Maschinen, die Menschen und Tiere nachahmten. Der berühmte «Schachtürke» schien sogar zu denken und schlug reihenweise seine Gegner. In Wahrheit sass ein Mensch versteckt im Inneren des Kastens. Zum ersten Mal entstand breit der Verdacht, eine Maschine könnte klug sein, und man sieht daran, wie leicht wir das glauben.",
+              text: "Im 18. Jahrhundert staunte Europa über kunstvolle Maschinen, die Menschen und Tiere nachahmten. Der berühmte «Schachtürke» schien sogar zu denken und schlug reihenweise seine Gegner. In Wahrheit sass ein Mensch versteckt im Inneren des Kastens. Zum ersten Mal entstand breit der Verdacht, eine Maschine könnte klug sein und man sieht daran, wie leicht wir das glauben.",
               geschichte:
                 "Wolfgang von Kempelens Schach spielender «Türke» schlug ab 1770 Fürsten und Kaiser. Im Innern des Kastens sass jedoch ein verborgener Mensch und lenkte die Figur. Europa stritt trotzdem jahrzehntelang darüber, ob eine Maschine denken könne. Die Täuschung bewies vor allem, wie bereitwillig wir Maschinen einen Verstand zutrauen.",
               mehr:
@@ -641,7 +641,7 @@ export default function Lernseite2VorhangAuf() {
               geschichte:
                 "Mary Shelleys Roman von 1818 lässt Victor Frankenstein ein Wesen aus toter Materie erschaffen. Kaum lebt es, verstösst er es aus Ekel und Angst. Das Wesen wird erst durch diese Zurückweisung und die Einsamkeit zum Rächer. Die Geschichte fragt also nicht, ob man Leben schaffen darf, sondern wer für das Geschaffene einsteht.",
               mehr:
-                "Die Geschichte entstand im Sommer 1816 am Genfersee, wo Mary Shelley zusammen mit dem Dichter Lord Byron und weiteren Gästen die Villa Diodati bewohnte. Weil ein Vulkanausbruch das Wetter verdüstert hatte, schlug Byron einen Wettbewerb vor, wer die unheimlichste Geschichte schreibe, und aus Marys Beitrag wurde der Roman. Auch im Buch spielt die Schweiz eine grosse Rolle, denn Victor Frankenstein ist Genfer, und er begegnet seinem Geschöpf hoch oben auf dem Eismeer bei Chamonix. Anders als in vielen späteren Verfilmungen ist das Wesen dort nicht sprachlos, sondern klagt in wohlgesetzten Worten sein Elend. Bemerkenswert ist, dass es sich seine Bildung selbst aneignet, indem es heimlich einer Familie zuhört und Bücher liest. Gerade dieses selbstständige Lernen eines künstlichen Wesens macht den alten Stoff für die Frage nach der KI so anschlussfähig.",
+                "Die Geschichte entstand im Sommer 1816 am Genfersee, wo Mary Shelley zusammen mit dem Dichter Lord Byron und weiteren Gästen die Villa Diodati bewohnte. Weil ein Vulkanausbruch das Wetter verdüstert hatte, schlug Byron einen Wettbewerb vor, wer die unheimlichste Geschichte schreibe und aus Marys Beitrag wurde der Roman. Auch im Buch spielt die Schweiz eine grosse Rolle, denn Victor Frankenstein ist Genfer und er begegnet seinem Geschöpf hoch oben auf dem Eismeer bei Chamonix. Anders als in vielen späteren Verfilmungen ist das Wesen dort nicht sprachlos, sondern klagt in wohlgesetzten Worten sein Elend. Bemerkenswert ist, dass es sich seine Bildung selbst aneignet, indem es heimlich einer Familie zuhört und Bücher liest. Gerade dieses selbstständige Lernen eines künstlichen Wesens macht den alten Stoff für die Frage nach der KI so anschlussfähig.",
             },
             {
               titel: "Rechenmaschinen",
@@ -651,9 +651,9 @@ export default function Lernseite2VorhangAuf() {
               jahr: "1673–1843",
               text: "Neben dem Traum vom künstlichen Wesen läuft eine zweite Linie, die des Rechnens. Im 17. und 19. Jahrhundert bauten Gelehrte Maschinen, die selbständig rechnen sollten. Von Leibniz' Rechenrad bis zu Babbages programmierbarem Entwurf wird die Idee greifbar, dass sich Denken in klare Schritte zerlegen lässt. Damit wird zum ersten Mal vorstellbar, dass eine Maschine Aufgaben des Geistes übernimmt.",
               geschichte:
-                "Der Gelehrte Gottfried Wilhelm Leibniz stellte 1673 der Royal Society eine Maschine für alle vier Grundrechenarten vor; ganz gebrauchsfähig wurde sie nie. Er träumte davon, Streitfragen künftig durch Rechnen zu entscheiden. Charles Babbage entwarf ab den 1830er-Jahren die «Analytical Engine», eine frei programmierbare Rechenmaschine, gebaut wurde sie zu seinen Lebzeiten nicht. Ada Lovelace übersetzte 1843 einen Aufsatz darüber und hängte Anmerkungen an, doppelt so lang wie der Text selbst. Darin führte sie vor, wie die Maschine die Bernoulli-Zahlen berechnen würde, und hielt fest, dass sie nichts von sich aus hervorbringt.",
+                "Der Gelehrte Gottfried Wilhelm Leibniz stellte 1673 der Royal Society eine Maschine für alle vier Grundrechenarten vor; ganz gebrauchsfähig wurde sie nie. Er träumte davon, Streitfragen künftig durch Rechnen zu entscheiden. Charles Babbage entwarf ab den 1830er-Jahren die «Analytical Engine», eine frei programmierbare Rechenmaschine, gebaut wurde sie zu seinen Lebzeiten nicht. Ada Lovelace übersetzte 1843 einen Aufsatz darüber und hängte Anmerkungen an, doppelt so lang wie der Text selbst. Darin führte sie vor, wie die Maschine die Bernoulli-Zahlen berechnen würde und hielt fest, dass sie nichts von sich aus hervorbringt.",
               mehr:
-                "Ein oft übersehener Beitrag von Leibniz ist das Zweiersystem, das er 1703 ausführlich beschrieb und das mit den Ziffern null und eins auskommt. Genau dieses Binärsystem bildet heute die Grundlage jedes Computers, seine eigene Rechenmaschine baute er allerdings dezimal, weil die Feinmechanik der Zeit nicht weiter reichte. Babbages Maschine sollte ihre Anweisungen von Lochkarten ablesen, eine Idee aus dem Weberhandwerk. Jacquards Webstuhl steuerte ab 1805 mit je einer Lochkarte pro Schuss die Musterung. Ada Lovelace war die Tochter des Dichters Lord Byron, der schon in der Entstehung von Frankenstein vorkommt. Ob ihre Bernoulli-Rechnung das erste Programm der Geschichte war, ist umstritten, denn Babbage selbst hatte Jahre zuvor Programmtabellen aufgeschrieben, ein Satz von 1837/38 ist erhalten. Lovelaces Leistung liegt ohnehin anderswo, im Blick über das Rechnen hinaus. Sie ahnte, dass eine solche Maschine eines Tages sogar Musik verarbeiten könnte, sofern man Töne in Zahlen fasst. Wie sehr das nachwirkt, zeigt ein später Gruss. 1980 wurde eine Programmiersprache nach Ada Lovelace benannt, und ihre Normnummer MIL-STD-1815 nennt ihr Geburtsjahr.",
+                "Ein oft übersehener Beitrag von Leibniz ist das Zweiersystem, das er 1703 ausführlich beschrieb und das mit den Ziffern null und eins auskommt. Genau dieses Binärsystem bildet heute die Grundlage jedes Computers, seine eigene Rechenmaschine baute er allerdings dezimal, weil die Feinmechanik der Zeit nicht weiter reichte. Babbages Maschine sollte ihre Anweisungen von Lochkarten ablesen, eine Idee aus dem Weberhandwerk. Jacquards Webstuhl steuerte ab 1805 mit je einer Lochkarte pro Schuss die Musterung. Ada Lovelace war die Tochter des Dichters Lord Byron, der schon in der Entstehung von Frankenstein vorkommt. Ob ihre Bernoulli-Rechnung das erste Programm der Geschichte war, ist umstritten, denn Babbage selbst hatte Jahre zuvor Programmtabellen aufgeschrieben, ein Satz von 1837/38 ist erhalten. Lovelaces Leistung liegt ohnehin anderswo, im Blick über das Rechnen hinaus. Sie ahnte, dass eine solche Maschine eines Tages sogar Musik verarbeiten könnte, sofern man Töne in Zahlen fasst. Wie sehr das nachwirkt, zeigt ein später Gruss. 1980 wurde eine Programmiersprache nach Ada Lovelace benannt und ihre Normnummer MIL-STD-1815 nennt ihr Geburtsjahr.",
             },
             {
               titel: "Der Algorithmus wird ausführbar",
@@ -689,7 +689,7 @@ export default function Lernseite2VorhangAuf() {
               geschichte:
                 "Die Idee war einfach. Man schreibt Wissen auf und setzt Regeln dafür. Der Computer zieht daraus Schlüsse. So wollte man Intelligenz nachbauen. 1956 schien der Plan zu gelingen. Allen Newell und Herbert Simon schrieben das Programm Logic Theorist. Es bewies 38 Theoreme aus einem berühmten Mathematikbuch, den «Principia Mathematica». Ein Programm schaffte also etwas, wofür ein Mensch Verstand braucht. Es gab aber noch einen zweiten Weg. Er wollte keine Regeln aufschreiben, sondern aus Beispielen lernen. Dafür stand Frank Rosenblatts Perzeptron von 1957, ein sehr einfaches künstliches Nervennetz. Zuerst verlor dieser zweite Weg. 1969 fanden Marvin Minsky und Seymour Papert eine Schwäche. Sie zeigten, dass ein Perzeptron mit nur einer Schicht das ausschliessende Oder nicht lösen kann. Gemeint ist die Frage, ob genau eine von zwei Bedingungen zutrifft. Ein Beispiel dafür ist die Wechselschaltung im Flur: zwei Schalter, eine Lampe. Ob das Licht brennt, verrät kein einzelner Schalter. Es kommt darauf an, ob die beiden gleich oder unterschiedlich stehen. Genau solche Aufgaben konnte das einfache Netz nicht lernen. Danach arbeitete kaum noch jemand an solchen Netzen. Zwei Jahrzehnte lang bestimmte die symbolische KI das Feld.",
               mehr:
-                "Ein berühmtes Beispiel ist ELIZA, das Joseph Weizenbaum 1966 am MIT schrieb und das ein Gespräch mit einem Psychotherapeuten nachahmte. Das Programm verstand nichts, sondern spiegelte die Eingaben nach festen Mustern zurück, indem es aus einer Aussage geschickt eine Rückfrage formte. Weizenbaum erschrak selbst, wie schnell Menschen ELIZA für einfühlsam hielten und ihm Persönliches anvertrauten. Ebenfalls bekannt wurde SHRDLU von Terry Winograd, entstanden Anfang der 1970er-Jahre, das in einer erfundenen Welt aus farbigen Klötzen sprachliche Befehle wie «stelle den roten Würfel auf den grünen» ausführte. In dieser eng begrenzten Welt wirkte das Programm klug, doch ausserhalb davon war es hilflos. Daran zeigte sich die Grenze des Ansatzes. Wer Wissen aufschreiben will, muss es zuerst vollständig kennen, und gerade das Selbstverständliche des Alltags liess sich nicht in Regeln fassen. Je offener die Welt, desto mehr Regeln brauchte es, und desto häufiger widersprachen sie sich. Die Wende kam Jahrzehnte später mit genau dem Weg, den Minsky und Papert einst ausgebremst hatten: Heutige Systeme schreiben keine Regeln auf, sondern lernen aus Beispielen. Dafür ist bei ihnen nicht mehr nachvollziehbar, warum eine Antwort so ausfällt und nicht anders.",
+                "Ein berühmtes Beispiel ist ELIZA, das Joseph Weizenbaum 1966 am MIT schrieb und das ein Gespräch mit einem Psychotherapeuten nachahmte. Das Programm verstand nichts, sondern spiegelte die Eingaben nach festen Mustern zurück, indem es aus einer Aussage geschickt eine Rückfrage formte. Weizenbaum erschrak selbst, wie schnell Menschen ELIZA für einfühlsam hielten und ihm Persönliches anvertrauten. Ebenfalls bekannt wurde SHRDLU von Terry Winograd, entstanden Anfang der 1970er-Jahre, das in einer erfundenen Welt aus farbigen Klötzen sprachliche Befehle wie «stelle den roten Würfel auf den grünen» ausführte. In dieser eng begrenzten Welt wirkte das Programm klug, doch ausserhalb davon war es hilflos. Daran zeigte sich die Grenze des Ansatzes. Wer Wissen aufschreiben will, muss es zuerst vollständig kennen und gerade das Selbstverständliche des Alltags liess sich nicht in Regeln fassen. Je offener die Welt, desto mehr Regeln brauchte es und desto häufiger widersprachen sie sich. Die Wende kam Jahrzehnte später mit genau dem Weg, den Minsky und Papert einst ausgebremst hatten: Heutige Systeme schreiben keine Regeln auf, sondern lernen aus Beispielen. Dafür ist bei ihnen nicht mehr nachvollziehbar, warum eine Antwort so ausfällt und nicht anders.",
             },
             {
               titel: "Expertensysteme",
@@ -713,7 +713,7 @@ export default function Lernseite2VorhangAuf() {
               geschichte:
                 "Als die versprochenen Durchbrüche ausblieben, froren die Forschungsgelder ein. Kritische Berichte und gescheiterte Projekte liessen den Glauben an die KI abkühlen. Der Begriff war zeitweise so belastet, dass Forschende ihre Arbeit lieber anders nannten. Aus «Künstlicher Intelligenz» wurde dann zum Beispiel schlicht «Datenanalyse».",
               mehr:
-                "Der Ausdruck «KI-Winter» wurde 1984 an einer Fachtagung geprägt, in bewusster Anlehnung an den damals viel diskutierten «nuklearen Winter». In den USA strich die Forschungsagentur DARPA schon in den 1970er-Jahren Gelder, nachdem hoch gesteckte Ziele wie das automatische Verstehen gesprochener Sprache nicht erreicht wurden. Besonders folgenreich war das Buch «Perceptrons» von Marvin Minsky und Seymour Papert aus dem Jahr 1969, das die Grenzen einfacher neuronaler Netze aufzeigte. Danach galt die Forschung an solchen Netzen lange als Sackgasse, und die Mittel flossen in andere Ansätze. Erst viele Jahre später sollten neuronale Netze eine glänzende Rückkehr feiern. Rückblickend zeigen die Winter ein Muster, denn jedes Mal folgten auf überzogene Versprechen zuerst Enttäuschung und Geldentzug. Und jedes Mal kehrte die KI danach mit einer neuen Grundidee stärker zurück.",
+                "Der Ausdruck «KI-Winter» wurde 1984 an einer Fachtagung geprägt, in bewusster Anlehnung an den damals viel diskutierten «nuklearen Winter». In den USA strich die Forschungsagentur DARPA schon in den 1970er-Jahren Gelder, nachdem hoch gesteckte Ziele wie das automatische Verstehen gesprochener Sprache nicht erreicht wurden. Besonders folgenreich war das Buch «Perceptrons» von Marvin Minsky und Seymour Papert aus dem Jahr 1969, das die Grenzen einfacher neuronaler Netze aufzeigte. Danach galt die Forschung an solchen Netzen lange als Sackgasse und die Mittel flossen in andere Ansätze. Erst viele Jahre später sollten neuronale Netze eine glänzende Rückkehr feiern. Rückblickend zeigen die Winter ein Muster, denn jedes Mal folgten auf überzogene Versprechen zuerst Enttäuschung und Geldentzug. Und jedes Mal kehrte die KI danach mit einer neuen Grundidee stärker zurück.",
             },
             {
               titel: "Statistische KI",
@@ -819,7 +819,7 @@ export default function Lernseite2VorhangAuf() {
               jahr: "ab 2023",
               text: "Nach ChatGPT begann ein weltweiter Wettlauf um die besten Modelle. Neben den US-Modellen wie GPT, Claude, Gemini und Llama traten Modelle aus China, Europa und sogar der Schweiz an. Wer eigene Modelle baut, macht sich unabhängiger von anderen. So bekam die KI auch eine politische und eine sprachliche Bedeutung.",
               geschichte:
-                "Ab 2023 rangen viele Anbieter um die besten Modelle. Aus den USA kommen GPT von OpenAI, Claude von Anthropic, Gemini von Google und Llama von Meta. Die Gewichte von Llama – also die trainierten Parameter des Modells – können heruntergeladen werden, allerdings unter Metas eigener Lizenz und nicht als Open Source. Anfang 2025 sorgte das chinesische DeepSeek für Aufsehen, weil es mit wenig Aufwand mithielt, und auch Alibabas Qwen zählt dazu. Aus Europa stammt Mistral aus Frankreich, und aus der Schweiz das vollständig offene Modell «Apertus» von ETH Zürich, EPFL und dem Rechenzentrum CSCS.",
+                "Ab 2023 rangen viele Anbieter um die besten Modelle. Aus den USA kommen GPT von OpenAI, Claude von Anthropic, Gemini von Google und Llama von Meta. Die Gewichte von Llama – also die trainierten Parameter des Modells – können heruntergeladen werden, allerdings unter Metas eigener Lizenz und nicht als Open Source. Anfang 2025 sorgte das chinesische DeepSeek für Aufsehen, weil es mit wenig Aufwand mithielt, und auch Alibabas Qwen zählt dazu. Aus Europa stammt Mistral aus Frankreich und aus der Schweiz das vollständig offene Modell «Apertus» von ETH Zürich, EPFL und dem Rechenzentrum CSCS.",
               mehr:
                 "Wie umkämpft das Feld ist, zeigte sich Anfang 2025, als das chinesische Modell DeepSeek für Aufsehen sorgte, weil es mit deutlich geringerem Aufwand trainiert worden sein soll als die US-Konkurrenz. Die Nachricht liess kurzzeitig sogar die Börsenkurse grosser Chiphersteller einbrechen, weil Anleger an den bisherigen Milliardenkosten zu zweifeln begannen. Der praktische Reiz offener Modelle liegt darin, dass man sie auf eigenen Rechnern betreiben kann, ohne Daten an einen fremden Anbieter zu schicken. Für Behörden, Spitäler oder Schulen bedeutet das einen Gewinn an Datenschutz und Unabhängigkeit. Ein Schweizer Modell wie «Apertus» ist gerade deshalb bedeutsam, weil sich damit Anwendungen bauen lassen, die nicht von einzelnen US-Konzernen abhängen. Verglichen werden die vielen Modelle auf öffentlichen Ranglisten, auf denen Menschen die Antworten bewerten. So ist ein rascher Wettlauf entstanden, in dem sich die Rangfolge fast monatlich verschiebt.",
             },
@@ -829,9 +829,9 @@ export default function Lernseite2VorhangAuf() {
               kat: "daten",
               mmf: "maschine",
               jahr: "2023–2024",
-              text: "Zuletzt lernte die KI, mehrere Arten von Eingaben zu verbinden. Die Modelle bleiben nicht mehr beim Text, sondern verarbeiten auch Bilder, Sprache und teils Videos. Sinne sind das nicht. Sehen und Hören sind bei uns Vorgänge im Körper: Auge und Ohr sind lebendige Organe, Nerven leiten den Reiz weiter, und wir empfinden dabei etwas. Die KI hat eine Kamera und ein Mikrofon, und was diese aufnehmen, wird für sie zu Zahlenreihen. Aus dem reinen Textautomaten wird so ein Gegenüber, das verschiedene Eingaben zusammenführt.",
+              text: "Zuletzt lernte die KI, mehrere Arten von Eingaben zu verbinden. Die Modelle bleiben nicht mehr beim Text, sondern verarbeiten auch Bilder, Sprache und teils Videos. Sinne sind das nicht. Sehen und Hören sind bei uns Vorgänge im Körper: Auge und Ohr sind lebendige Organe, Nerven leiten den Reiz weiter und wir empfinden dabei etwas. Die KI hat eine Kamera und ein Mikrofon, und was diese aufnehmen, wird für sie zu Zahlenreihen. Aus dem reinen Textautomaten wird so ein Gegenüber, das verschiedene Eingaben zusammenführt.",
               geschichte:
-                "Ab 2023 und 2024 wurden führende Systeme multimodal, verstanden also mehrere Arten von Eingaben. Claude 3 aus dem Jahr 2024 konnte Bilder verstehen und beschreiben. GPT-4o aus demselben Jahr nahm Text, Bild und Ton in einem Modell entgegen und antwortete in Echtzeit gesprochen. Wenn man sagt, die KI sehe und höre, ist das ein Bild: Kamera und Mikrofon liefern Daten, und das Modell verarbeitet sie im selben Zahlenraum wie Text. Ein Sinnesorgan ist das nicht, und ein Empfinden entsteht dabei nicht.",
+                "Ab 2023 und 2024 wurden führende Systeme multimodal, verstanden also mehrere Arten von Eingaben. Claude 3 aus dem Jahr 2024 konnte Bilder verstehen und beschreiben. GPT-4o aus demselben Jahr nahm Text, Bild und Ton in einem Modell entgegen und antwortete in Echtzeit gesprochen. Wenn man sagt, die KI sehe und höre, ist das ein Bild: Kamera und Mikrofon liefern Daten und das Modell verarbeitet sie im selben Zahlenraum wie Text. Ein Sinnesorgan ist das nicht und ein Empfinden entsteht dabei nicht.",
               mehr:
                 "Besonders sichtbar wurde die erzeugende Seite ab 2022, als Programme wie DALL-E, Midjourney und das offene Stable Diffusion aus einer blossen Textbeschreibung fertige Bilder malten. Kurz darauf folgte die Videoerzeugung, etwa als OpenAI 2024 sein System Sora vorstellte, das aus wenigen Sätzen kurze Filmszenen erzeugt. Umgekehrt kann eine multimodale KI auch Bestehendes deuten, also ein Foto beschreiben, eine Grafik erklären oder eine handschriftliche Notiz entziffern. Ein Beispiel dafür ist Be My Eyes, eine App für blinde Menschen: Seit 2023 beschreibt ein solches Modell dort Gegenstände, die die Handykamera aufnimmt. Grundlage ist, dass die Systeme Bild, Text und Ton in derselben inneren Sprache aus Zahlen darstellen. Dadurch lassen sich die verschiedenen Kanäle in einem einzigen Modell verbinden, statt für jede Aufgabe ein eigenes Programm zu brauchen.",
             },
@@ -951,13 +951,13 @@ export default function Lernseite2VorhangAuf() {
               titel: "generalisierend",
               text: "Hat eine KI tausende Katzenfotos gesehen, erkennt sie auch eine Katze auf einem Bild, das ihr völlig neu ist. Sie überträgt Gelerntes auf Neues. Aus vielen einzelnen Beispielen zieht sie eine allgemeine Regel. So kann sie sogar Sätze sinnvoll fortsetzen, die noch nie jemand geschrieben hat. Genau das unterscheidet echtes Lernen vom reinen Auswendiglernen.",
               mehr:
-                "Dieses Verallgemeinern ist das Herzstück des maschinellen Lernens. Eine KI, die nur ihre Trainingsbeispiele nachplappert, wäre nutzlos, denn im Alltag begegnet ihr ständig Neues. Lernt sie die Beispiele zu genau auswendig, spricht man von Überanpassung, und bei einer neuen Aufgabe versagt sie dann. Gelingt das Verallgemeinern gut, wirkt die KI klug und beweglich. Übertreibt sie es, entstehen plumpe Klischees. Ein Beispiel: Hat sie fast nur männliche Chefs in den Daten gesehen, hält sie das Chefsein fälschlich für eine Männersache.",
+                "Dieses Verallgemeinern ist das Herzstück des maschinellen Lernens. Eine KI, die nur ihre Trainingsbeispiele nachplappert, wäre nutzlos, denn im Alltag begegnet ihr ständig Neues. Lernt sie die Beispiele zu genau auswendig, spricht man von Überanpassung und bei einer neuen Aufgabe versagt sie dann. Gelingt das Verallgemeinern gut, wirkt die KI klug und beweglich. Übertreibt sie es, entstehen plumpe Klischees. Ein Beispiel: Hat sie fast nur männliche Chefs in den Daten gesehen, hält sie das Chefsein fälschlich für eine Männersache.",
             },
             {
               titel: "kontextsensitiv",
               text: "Das Wort «Bank» kann eine Sitzbank oder eine Geldbank sein. Was gemeint ist, verrät erst der Zusammenhang. Die KI achtet genau darauf. Sie bezieht ein, was vorher gesagt wurde, welche Rolle sie übernehmen soll und welche Unterlagen du ihr mitgibst. Dieselbe Frage kann darum je nach Umfeld eine andere Antwort ergeben.",
               mehr:
-                "Fachleute nennen das, was die KI gerade vor sich hat, das Kontextfenster. Dazu gehören deine Anweisung, das bisherige Gespräch und alle Texte, die du mitgeschickt hast. Ein Beispiel: Sagst du am Anfang «Erkläre es wie für ein Kind», bleibt dieser Auftrag im Fenster und färbt alle weiteren Antworten. Die zugrunde liegende Technik, der Transformer, gewichtet dabei laufend, welche Wörter füreinander wichtig sind. Diesen Kniff nennt man Attention, auf Deutsch Aufmerksamkeit. Wer den Kontext geschickt setzt, steuert die Antwort, und deshalb ist gutes Fragen eine kleine Kunst.",
+                "Fachleute nennen das, was die KI gerade vor sich hat, das Kontextfenster. Dazu gehören deine Anweisung, das bisherige Gespräch und alle Texte, die du mitgeschickt hast. Ein Beispiel: Sagst du am Anfang «Erkläre es wie für ein Kind», bleibt dieser Auftrag im Fenster und färbt alle weiteren Antworten. Die zugrunde liegende Technik, der Transformer, gewichtet dabei laufend, welche Wörter füreinander wichtig sind. Diesen Kniff nennt man Attention, auf Deutsch Aufmerksamkeit. Wer den Kontext geschickt setzt, steuert die Antwort und deshalb ist gutes Fragen eine kleine Kunst.",
             },
             {
               titel: "adaptiv",
@@ -973,25 +973,25 @@ export default function Lernseite2VorhangAuf() {
             },
             {
               titel: "interaktiv",
-              text: "Ein Getränkeautomat gibt dir genau das, was du drückst, und damit ist Schluss. Die KI arbeitet anders, nämlich in Runden. Sie macht einen Vorschlag, du gibst Rückmeldung, und sie macht einen besseren. So formt ihr das Ergebnis gemeinsam, Schritt für Schritt. Aus dem Bedienen wird ein Zusammenarbeiten.",
+              text: "Ein Getränkeautomat gibt dir genau das, was du drückst, und damit ist Schluss. Die KI arbeitet anders, nämlich in Runden. Sie macht einen Vorschlag, du gibst Rückmeldung und sie macht einen besseren. So formt ihr das Ergebnis gemeinsam, Schritt für Schritt. Aus dem Bedienen wird ein Zusammenarbeiten.",
               mehr:
-                "Genau diese Schleife unterscheidet die KI vom klassischen Programm. Dort gibt es eine Eingabe und eine Ausgabe, dann ist alles vorbei. Bei der KI entsteht ein Hin und Her aus Versuchen und Verfeinern. Ein Beispiel: Du lässt dir einen Brief schreiben, findest ihn zu förmlich, bittest um einen wärmeren Ton, und der nächste Versuch trifft es besser. Damit verändert sich auch die Rolle des Menschen. Aus dem, der nur ausführt, wird jemand, der anleitet, prüft und am Ende für das Ergebnis geradesteht.",
+                "Genau diese Schleife unterscheidet die KI vom klassischen Programm. Dort gibt es eine Eingabe und eine Ausgabe, dann ist alles vorbei. Bei der KI entsteht ein Hin und Her aus Versuchen und Verfeinern. Ein Beispiel: Du lässt dir einen Brief schreiben, findest ihn zu förmlich, bittest um einen wärmeren Ton und der nächste Versuch trifft es besser. Damit verändert sich auch die Rolle des Menschen. Aus dem, der nur ausführt, wird jemand, der anleitet, prüft und am Ende für das Ergebnis geradesteht.",
             },
             {
               titel: "generativ",
-              text: "Eine Suchmaschine findet Vorhandenes, und eine Bibliothek reicht dir ein fertiges Buch. Die KI dagegen schreibt selbst, Wort für Wort. Sie erzeugt Neues, also Text, Bild oder Programmcode, statt es nur abzurufen. Bittest du um ein Bild einer Katze im Raumanzug, malt sie eines, das es so noch nie gab. Dasselbe Können bringt aber auch frei Erfundenes hervor.",
+              text: "Eine Suchmaschine findet Vorhandenes und eine Bibliothek reicht dir ein fertiges Buch. Die KI dagegen schreibt selbst, Wort für Wort. Sie erzeugt Neues, also Text, Bild oder Programmcode, statt es nur abzurufen. Bittest du um ein Bild einer Katze im Raumanzug, malt sie eines, das es so noch nie gab. Dasselbe Können bringt aber auch frei Erfundenes hervor.",
               mehr:
-                "Generativ heisst herstellend, denn die KI stellt Neues her, statt Fertiges nachzuschlagen. Sie setzt immer das nächste wahrscheinliche Wort, und so wächst Satz um Satz etwas Neues. Dieselbe Fähigkeit, die Brillantes schafft, erzeugt auch überzeugend klingenden Unsinn. Fragst du nach einer Buchquelle, erfindet sie notfalls einen Titel, der täuschend echt aussieht. Die Informatikerin Katharina Zweig schlägt dafür statt «Halluzination» das Wort «Konfabulation» vor. Gemeint ist flüssiges Reden ohne echtes Wissen dahinter.",
+                "Generativ heisst herstellend, denn die KI stellt Neues her, statt Fertiges nachzuschlagen. Sie setzt immer das nächste wahrscheinliche Wort und so wächst Satz um Satz etwas Neues. Dieselbe Fähigkeit, die Brillantes schafft, erzeugt auch überzeugend klingenden Unsinn. Fragst du nach einer Buchquelle, erfindet sie notfalls einen Titel, der täuschend echt aussieht. Die Informatikerin Katharina Zweig schlägt dafür statt «Halluzination» das Wort «Konfabulation» vor. Gemeint ist flüssiges Reden ohne echtes Wissen dahinter.",
             },
             {
               titel: "multimodal",
               text: "Du kannst der KI ein Foto deines Kühlschranks zeigen und nach einem Rezept fragen. Bei manchen Systemen laufen Text, Bild und Ton in einem einzigen Modell zusammen, bei anderen arbeiten dafür mehrere Bausteine zusammen. Sie liest, sieht und hört und antwortet wahlweise in Wort, Bild oder Stimme. Auch eine Skizze oder ein gesprochener Satz sind für sie eine Eingabe. Lesen, Sehen und Hören sind dabei nur Vergleiche. Es sind Kanäle und keine Sinne, denn ein Körper, der empfindet, ist nicht im Spiel.",
               mehr:
-                "Frühe Programme konnten nur eines, entweder Text oder Bild oder Ton. Multimodale Modelle verbinden diese Kanäle in einem einzigen Netz. Das erinnert an uns Menschen, die auch nicht in getrennten Sinnen denken. Der Vergleich hat aber eine harte Grenze: Unsere Sinne sind Organe eines lebendigen Körpers, und wir empfinden mit ihnen. Das Modell rechnet. Bild und Ton werden für es zu Zahlenreihen, und in denen sucht es Muster. Ein Beispiel: Du fotografierst eine Mathe-Aufgabe, und die KI liest sie, rechnet und erklärt den Lösungsweg. Oder du zeigst ihr ein Diagramm, und sie fasst es in Worten zusammen. So wird die Grenze zwischen Lesen, Sehen und Hören für die Maschine durchlässig.",
+                "Frühe Programme konnten nur eines, entweder Text oder Bild oder Ton. Multimodale Modelle verbinden diese Kanäle in einem einzigen Netz. Das erinnert an uns Menschen, die auch nicht in getrennten Sinnen denken. Der Vergleich hat aber eine harte Grenze: Unsere Sinne sind Organe eines lebendigen Körpers und wir empfinden mit ihnen. Das Modell rechnet. Bild und Ton werden für es zu Zahlenreihen, und in denen sucht es Muster. Ein Beispiel: Du fotografierst eine Mathe-Aufgabe und die KI liest sie, rechnet und erklärt den Lösungsweg. Oder du zeigst ihr ein Diagramm und sie fasst es in Worten zusammen. So wird die Grenze zwischen Lesen, Sehen und Hören für die Maschine durchlässig.",
             },
             {
               titel: "agentenfähig",
-              text: "Frag einen Menschen nach dem Weg, und er beschreibt ihn dir. Bitte ihn, dich hinzubringen, und er handelt. Moderne KI kann beides. Sie bleibt nicht beim Antworten stehen, sondern zerlegt ein Ziel in Schritte und nutzt selbständig Werkzeuge wie Websuche, Programme und Code. Aus dem Antwortgeber wird so ein Akteur, der Dinge wirklich erledigt.",
+              text: "Frag einen Menschen nach dem Weg und er beschreibt ihn dir. Bitte ihn, dich hinzubringen und er handelt. Moderne KI kann beides. Sie bleibt nicht beim Antworten stehen, sondern zerlegt ein Ziel in Schritte und nutzt selbständig Werkzeuge wie Websuche, Programme und Code. Aus dem Antwortgeber wird so ein Akteur, der Dinge wirklich erledigt.",
               mehr:
                 "Fachleute nennen so ein System einen Agenten. Ein Agent ist mehr als ein Antwortgeber, denn er hat ein Gedächtnis, kann ein Ziel in Teilschritte zerlegen und auf Werkzeuge zugreifen. Ein Beispiel: Statt nur zu erklären, wie man eine Tabelle auswertet, öffnet er die Datei, rechnet und schickt dir das fertige Ergebnis. Damit handelt die KI eigenständig in der Welt und nicht mehr nur im Chatfenster. Das ist mächtig und hilfreich, wenn es gelingt. Und es ist heikel, weil hier die alte Grenze zwischen Werkzeug und Gegenüber endgültig verschwimmt.",
             },
@@ -1131,7 +1131,7 @@ export default function Lernseite2VorhangAuf() {
                 },
                 {
                   titel: "Arbeitsmarkt",
-                  text: "KI verändert die Arbeitswelt spürbar. Sie übernimmt vor allem einzelne Aufgaben, selten gleich einen ganzen Beruf. Manche Tätigkeiten fallen weg, andere verändern sich, und neue kommen dazu. Für viele Berufe bedeutet das neue Anforderungen und neues Lernen.",
+                  text: "KI verändert die Arbeitswelt spürbar. Sie übernimmt vor allem einzelne Aufgaben, selten gleich einen ganzen Beruf. Manche Tätigkeiten fallen weg, andere verändern sich und neue kommen dazu. Für viele Berufe bedeutet das neue Anforderungen und neues Lernen.",
                   beispiel:
                     "Die Bezahlfirma Klarna gab 2024 selbst bekannt, ihr KI-Assistent leiste die Arbeit von rund 700 Vollzeitstellen im Kundendienst. Kurz darauf investierte sie wieder stärker in menschlichen Service, weil die Qualität nicht überall reichte. Diese Abfolge zeigt, wie schnell und zugleich unsicher dieser Wandel verläuft.",
                 },
@@ -1151,7 +1151,7 @@ export default function Lernseite2VorhangAuf() {
               punkte: [
                 {
                   titel: "Regulierung",
-                  text: "Der Staat versucht, KI mit Gesetzen zu lenken. Solche Regeln sollen Grundrechte, Sicherheit, Datenschutz und Urheberrecht schützen. Zugleich sollen sie Forschung und Innovation nicht unnötig behindern. Diese Balance ist schwierig, und die Regeln entstehen erst nach und nach.",
+                  text: "Der Staat versucht, KI mit Gesetzen zu lenken. Solche Regeln sollen Grundrechte, Sicherheit, Datenschutz und Urheberrecht schützen. Zugleich sollen sie Forschung und Innovation nicht unnötig behindern. Diese Balance ist schwierig und die Regeln entstehen erst nach und nach.",
                   beispiel:
                     "Die Europäische Union hat 2024 den AI Act beschlossen, das weltweit erste umfassende KI-Gesetz; in Kraft ist er seit dem 1. August 2024, seine Pflichten greifen aber gestaffelt über mehrere Jahre. Er teilt Anwendungen nach ihrem Risiko in Stufen ein, von frei erlaubt bis ganz verboten. Dazu kommen eigene Regeln für grosse Allzweckmodelle wie GPT oder Claude sowie Transparenzpflichten, etwa die Kennzeichnung von KI-Inhalten.",
                 },
@@ -1159,7 +1159,7 @@ export default function Lernseite2VorhangAuf() {
                   titel: "Geopolitik",
                   text: "Um KI ist ein weltweiter Wettbewerb entbrannt. Staaten und Unternehmen ringen um Chips, Daten, Fachkräfte und Energie. Auch technische Standards und Unabhängigkeit stehen auf dem Spiel. Wer hier vorne liegt, gewinnt wirtschaftliche und politische Macht.",
                   beispiel:
-                    "Ab 2022 verschärften die USA die Ausfuhrregeln für ihre stärksten KI-Chips nach China. Der Hersteller Nvidia baute daraufhin absichtlich langsamere Chips, nur um weiter liefern zu dürfen. Seit Januar 2026 werden bestimmte Ausfuhren wieder von Fall zu Fall geprüft und unter Bedingungen erlaubt. Die Regeln kippen also mit der Politik, und genau daran sieht man, dass KI längst ein Machtthema zwischen Staaten ist.",
+                    "Ab 2022 verschärften die USA die Ausfuhrregeln für ihre stärksten KI-Chips nach China. Der Hersteller Nvidia baute daraufhin absichtlich langsamere Chips, nur um weiter liefern zu dürfen. Seit Januar 2026 werden bestimmte Ausfuhren wieder von Fall zu Fall geprüft und unter Bedingungen erlaubt. Die Regeln kippen also mit der Politik und genau daran sieht man, dass KI längst ein Machtthema zwischen Staaten ist.",
                 },
               ],
             },
@@ -1179,13 +1179,13 @@ export default function Lernseite2VorhangAuf() {
                   titel: "Text- und Archivkompetenz",
                   text: "KI hilft, grosse Textmengen zu durchsuchen und zusammenzufassen. Sie ersetzt aber nicht das kritische Prüfen von Quellen. Wichtig bleiben die Herkunft, der Zusammenhang und der Blick ins Original. Ohne dieses Prüfen sitzt man leicht Fehlern und Erfindungen auf.",
                   beispiel:
-                    "2023 reichte ein New Yorker Anwalt einen Schriftsatz ein, für den er ChatGPT genutzt hatte. Die KI hatte sechs Gerichtsurteile frei erfunden, die es nie gab, und der Anwalt bekam eine Geldstrafe. Ohne Prüfen an der Quelle wird aus flüssigem Text schnell ein teurer Fehler.",
+                    "2023 reichte ein New Yorker Anwalt einen Schriftsatz ein, für den er ChatGPT genutzt hatte. Die KI hatte sechs Gerichtsurteile frei erfunden, die es nie gab und der Anwalt bekam eine Geldstrafe. Ohne Prüfen an der Quelle wird aus flüssigem Text schnell ein teurer Fehler.",
                 },
                 {
                   titel: "Wissensmacht",
                   text: "Sichtbar wird vor allem, was digital vorliegt und in den Trainingsdaten steckt. Was fehlt oder nie digitalisiert wurde, gerät leichter in Vergessenheit. So entscheidet die Auswahl der Daten mit, welches Wissen zählt. Das ist eine Form von Macht über das Wissen.",
                   beispiel:
-                    "Die Trainingsdaten der grossen Modelle bestehen zu einem sehr grossen Teil aus englischen Texten. Wissen aus kleineren Sprachen, etwa vielen afrikanischen, ist kaum vertreten, und dort antwortet die KI schwächer oder erfindet mehr. So entscheidet die Datenmenge mit, wessen Wissen sichtbar bleibt.",
+                    "Die Trainingsdaten der grossen Modelle bestehen zu einem sehr grossen Teil aus englischen Texten. Wissen aus kleineren Sprachen, etwa vielen afrikanischen, ist kaum vertreten und dort antwortet die KI schwächer oder erfindet mehr. So entscheidet die Datenmenge mit, wessen Wissen sichtbar bleibt.",
                 },
               ],
             },

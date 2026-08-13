@@ -591,7 +591,7 @@ export default function HistorienTeppich({
               So geht es: Im Teppich liegen vier Fäden verborgen, nämlich
               Technologie, Entdeckungen, gesellschaftliche Ereignisse und
               kulturelle Praxen.
-              Tippe einen Punkt an: Seine Geschichte erscheint hier, und sobald
+              Tippe einen Punkt an: Seine Geschichte erscheint hier und sobald
               zwei benachbarte Punkte desselben Fadens besucht sind, wird das
               Fadenstück dazwischen sichtbar. Über die Legende oben wählst du
               einen ganzen Faden auf einmal an, dann gelten alle seine Punkte

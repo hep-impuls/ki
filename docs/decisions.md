@@ -10,6 +10,33 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-11 — Kein Komma vor «und», wo es freigestellt ist (Christof)
+
+**Die Regel:** Zwischen zwei Hauptsätzen, die mit «und» verbunden sind, ist das
+Komma **freigestellt** (amtliche Regelung § 72 E1). Genau diese Kommas wurden
+gesetzt, aus Gewohnheit, 147-mal. Sie sind weg.
+
+**Pflicht bleibt das Komma**, wenn es einen Nebensatz, eine Infinitivgruppe oder
+einen Einschub **abschliesst**, der direkt vor dem «und» endet: «Er sagte, dass
+er komme, und ging.» Ohne Komma fehlt dem Nebensatz die Klammer. 53 solche
+Stellen sind unangetastet.
+
+**Dritter Fall, bewusst behalten:** 22-mal steht das Komma, obwohl es nicht
+Pflicht ist, weil der Satz nach dem «und» mit einem Nebensatz weitergeht. Die
+Regelung erlaubt es ausdrücklich «zur Verdeutlichung der Gliederung», und ohne
+Komma stolpert man: «… sondern eine Versammlung von Menschen und wer etwas
+erreichen will, muss es begründen.»
+
+**Fürs nächste Mal:** neue Texte ohne dieses Komma schreiben. Zur Kontrolle
+zeigt `grep -c ", und "` den Bestand; jeder Treffer sollte einer der beiden
+Ausnahmen entsprechen.
+
+Nebenwirkung dieser Runde: 68 Beleg-Kennungen wurden ungültig, weil sie den
+Textinhalt hashen. Automatisch nachgezogen über die Anker, die eindeutig zu
+je einem Block gehören (0 Lecks) — geprüft, alle 164 Anker sitzen wieder.
+
+---
+
 ## 2026-08-11 — «Wege der Orientierung» bleibt vorerst ohne Belege (Christof)
 
 Beim Ergänzen der Hegel-Karte kam heraus: Die Denker-Karten **und** die

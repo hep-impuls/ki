@@ -430,7 +430,7 @@ const STATIONS: Station[] = [
       {
         src: "/art/wanderer.jpg",
         contextNote:
-          "Friedrichs einsamer Wanderer ist das Sinnbild der Antwort, die Kant der Aufklärung gab. Zuvor hatten mehrere Erschütterungen die alten Gewissheiten weggerissen: Der Buchdruck hatte die Glaubensspaltung befeuert, Kopernikus und das Teleskop hatten der Erde die Mitte des Kosmos genommen, und das Erdbeben von Lissabon 1755 hatte den Glauben an einen gütigen Weltplan zerstört (die Verunsicherung). Wenn aber weder Kirche noch überlieferte Autorität mehr sicheren Halt geben, dann bleibt nur eines: Der Mensch muss die Welt selbst deuten und aus eigenem Verstand urteilen. Friedrich malt genau diesen mündigen, auf sich gestellten Einzelnen, Jahrzehnte nach Kant, aber ganz in seinem Geist.",
+          "Friedrichs einsamer Wanderer ist das Sinnbild der Antwort, die Kant der Aufklärung gab. Zuvor hatten mehrere Erschütterungen die alten Gewissheiten weggerissen: Der Buchdruck hatte die Glaubensspaltung befeuert, Kopernikus und das Teleskop hatten der Erde die Mitte des Kosmos genommen und das Erdbeben von Lissabon 1755 hatte den Glauben an einen gütigen Weltplan zerstört (die Verunsicherung). Wenn aber weder Kirche noch überlieferte Autorität mehr sicheren Halt geben, dann bleibt nur eines: Der Mensch muss die Welt selbst deuten und aus eigenem Verstand urteilen. Friedrich malt genau diesen mündigen, auf sich gestellten Einzelnen, Jahrzehnte nach Kant, aber ganz in seinem Geist.",
         tour: [
           {
             x: 50,
@@ -444,7 +444,7 @@ const STATIONS: Station[] = [
             y: 38,
             zoom: 2.2,
             title: "Der Blick über die Schulter",
-            text: "Wir sehen den Wanderer nur von hinten, sein Gesicht bleibt verborgen. Dadurch blickt er gleichsam stellvertretend für uns in die Landschaft, und wir treten an seine Stelle. Der Einzelne stellt sich der Welt und muss sie selbst deuten; niemand nimmt ihm dieses Sehen und Urteilen ab.",
+            text: "Wir sehen den Wanderer nur von hinten, sein Gesicht bleibt verborgen. Dadurch blickt er gleichsam stellvertretend für uns in die Landschaft und wir treten an seine Stelle. Der Einzelne stellt sich der Welt und muss sie selbst deuten; niemand nimmt ihm dieses Sehen und Urteilen ab.",
           },
           {
             x: 50,
@@ -637,7 +637,7 @@ const STATIONS: Station[] = [
             y: 33,
             zoom: 2.2,
             title: "Das Räderwerk im Hintergrund",
-            text: "Hinter allem drehen sich Schwungräder, Wellen und Transmissionsriemen, die die Dampfkraft in die ganze Halle verteilen. Sie sind der eigentliche Herrscher dieses Ortes. Nicht ein Meister oder Besitzer bestimmt den Rhythmus, sondern die Maschine, und alle Menschen im Bild ordnen sich ihr unter.",
+            text: "Hinter allem drehen sich Schwungräder, Wellen und Transmissionsriemen, die die Dampfkraft in die ganze Halle verteilen. Sie sind der eigentliche Herrscher dieses Ortes. Nicht ein Meister oder Besitzer bestimmt den Rhythmus, sondern die Maschine und alle Menschen im Bild ordnen sich ihr unter.",
           },
         ],
       },
@@ -698,7 +698,7 @@ const STATIONS: Station[] = [
             y: 22,
             zoom: 2.2,
             title: "Der Zug darüber",
-            text: "Oben rauscht auf dem Viadukt eine Eisenbahn vorbei und stösst Rauch aus. Das Bild verdichtet daraus ein Sinnbild: Der Fortschritt fährt buchstäblich über die Köpfe der Ärmsten hinweg, nah genug, um ihren Alltag zu verdunkeln, und doch für sie unerreichbar.",
+            text: "Oben rauscht auf dem Viadukt eine Eisenbahn vorbei und stösst Rauch aus. Das Bild verdichtet daraus ein Sinnbild: Der Fortschritt fährt buchstäblich über die Köpfe der Ärmsten hinweg, nah genug, um ihren Alltag zu verdunkeln und doch für sie unerreichbar.",
           },
         ],
         alt: "Stich „Over London – by Rail“ von Gustave Doré",
@@ -752,7 +752,7 @@ const STATIONS: Station[] = [
     schablone: "Den Umbruch begreifen und gestalten",
     quote: "„Alles Ständische und Stehende verdampft.“",
     orientation:
-      "Marx (1818–1883) begreift den Umbruch, während er geschieht: Im „Manifest der Kommunistischen Partei“ (1848, mit Friedrich Engels) beschreibt er, wie der Kapitalismus „alles Ständische und Stehende verdampfen“ lässt, und zieht daraus den Schluss, dass gesellschaftliche Verhältnisse nicht Natur oder Schicksal sind, sondern gemacht und darum veränderbar. Weltweite Wirkung entfaltet diese Antwort erst Jahrzehnte später.",
+      "Marx (1818–1883) begreift den Umbruch, während er geschieht: Im „Manifest der Kommunistischen Partei“ (1848, mit Friedrich Engels) beschreibt er, wie der Kapitalismus „alles Ständische und Stehende verdampfen“ lässt und zieht daraus den Schluss, dass gesellschaftliche Verhältnisse nicht Natur oder Schicksal sind, sondern gemacht und darum veränderbar. Weltweite Wirkung entfaltet diese Antwort erst Jahrzehnte später.",
     orientSources: [
       {
         label: "Karl Marx (Wikipedia)",
@@ -774,7 +774,7 @@ const STATIONS: Station[] = [
       {
         src: "/art/wir-netz.png",
         contextNote:
-          "Das Netz-Werk führt die beiden Fäden dieser Epoche zusammen. Die technische Seite: Rechner, Kabel, Datencentren und KI, die eine simple Bildersuche überhaupt erst möglich machen. Und die Verunsicherung: In diesem dichten Geflecht ist kaum noch zu sagen, wer eigentlich handelt und was echt ist. Mensch und Maschine ziehen an denselben Fäden. Anders als in den früheren Epochen gibt es hier noch keine fertige philosophische Antwort. Die Schablone, die uns in dieser vernetzten Welt Orientierung geben könnte, wird gerade erst gesucht, und genau daran arbeitet dieses Submodul mit Denkern wie Latour, Haraway und Gabriel.",
+          "Das Netz-Werk führt die beiden Fäden dieser Epoche zusammen. Die technische Seite: Rechner, Kabel, Datencentren und KI, die eine simple Bildersuche überhaupt erst möglich machen. Und die Verunsicherung: In diesem dichten Geflecht ist kaum noch zu sagen, wer eigentlich handelt und was echt ist. Mensch und Maschine ziehen an denselben Fäden. Anders als in den früheren Epochen gibt es hier noch keine fertige philosophische Antwort. Die Schablone, die uns in dieser vernetzten Welt Orientierung geben könnte, wird gerade erst gesucht und genau daran arbeitet dieses Submodul mit Denkern wie Latour, Haraway und Gabriel.",
         alt: "Installation „Suche nach Bildern“ von Klaus Christ: ein Netz aus Fäden verbindet Figuren und Objekte rund um einen alten Computer.",
         credit: "Klaus Christ, „Suche nach Bildern“, 2024",
         caption:
@@ -859,7 +859,7 @@ const STATIONS: Station[] = [
       {
         src: "/art/erde_tag.jpg",
         contextNote:
-          "Der „Blue Marble“ ist das Bild vom einen, gemeinsamen „Wir“: die Erde als ein einziger, grenzenloser Planet, von aussen gesehen. Es wurde zur Ikone der Umwelt- und Menschheitsbewegung, weil es eine Idee anschaulich macht: dass wir alle im selben Boot sitzen. Doch dieses „Wir“ steht heute unter Druck: Eine Technik, die alles miteinander vernetzt, verunsichert zugleich (Deepfakes, Beschleunigung, Zerfall gemeinsamer Wirklichkeit). Wie sich aus lauter vernetzten Einzelnen wieder ein tragfähiges gemeinsames „Wir“ bilden lässt, ist die grosse offene Frage, und die philosophische Orientierung dazu entsteht gerade erst.",
+          "Der „Blue Marble“ ist das Bild vom einen, gemeinsamen „Wir“: die Erde als ein einziger, grenzenloser Planet, von aussen gesehen. Es wurde zur Ikone der Umwelt- und Menschheitsbewegung, weil es eine Idee anschaulich macht: dass wir alle im selben Boot sitzen. Doch dieses „Wir“ steht heute unter Druck: Eine Technik, die alles miteinander vernetzt, verunsichert zugleich (Deepfakes, Beschleunigung, Zerfall gemeinsamer Wirklichkeit). Wie sich aus lauter vernetzten Einzelnen wieder ein tragfähiges gemeinsames „Wir“ bilden lässt, ist die grosse offene Frage und die philosophische Orientierung dazu entsteht gerade erst.",
         tour: [
           {
             x: 50,
@@ -923,7 +923,7 @@ const STATIONS: Station[] = [
     ],
     unrestLead: "Was ist noch echt? Das „Wir“ zerfällt.",
     unrest:
-      "Die Verunsicherung ist neuer Art: Bilder, Stimmen und Videos lassen sich täuschend echt fälschen (Deepfakes), Suchergebnisse und Texte sind womöglich maschinell erzeugt. Was ist noch echt, worauf kann man sich verlassen, welche Fähigkeiten lohnen sich noch, und wer hat etwas gemacht: ich, die Maschine, beide? Alles ist vernetzt und beschleunigt sich; viele erleben sich als getrieben, und das gemeinsame „Wir“ droht zu zerfallen.",
+      "Die Verunsicherung ist neuer Art: Bilder, Stimmen und Videos lassen sich täuschend echt fälschen (Deepfakes), Suchergebnisse und Texte sind womöglich maschinell erzeugt. Was ist noch echt, worauf kann man sich verlassen, welche Fähigkeiten lohnen sich noch, und wer hat etwas gemacht: ich, die Maschine, beide? Alles ist vernetzt und beschleunigt sich; viele erleben sich als getrieben und das gemeinsame „Wir“ droht zu zerfallen.",
     unrestSources: [
       {
         label: "Deepfake (Wikipedia)",

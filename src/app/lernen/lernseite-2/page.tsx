@@ -56,7 +56,7 @@ export default function Lernseite2Hub() {
           <p>
             Diese Gestalt zeigt sich nicht, wenn man die KI isoliert betrachtet.
             KI steht nie für sich: Sie baut auf kulturellen, technischen und
-            wirtschaftlichen Überlegungen auf, und erst wenn man dieses Netz
+            wirtschaftlichen Überlegungen auf und erst wenn man dieses Netz
             mitzeichnet, wird erkennbar, was da eigentlich auftritt. Darum folgt
             das Design dieses Lernsets einer Idee: Um das Phänomen zu verstehen,
             muss man das <strong className="text-on-surface">Netzwerk abbilden</strong>,
@@ -136,7 +136,7 @@ export default function Lernseite2Hub() {
             <span>
               <strong className="text-on-surface">Die Abschnitte einer Seite</strong>{" "}
               musst du nicht scrollend suchen. Jede Seite hat oben eine Liste
-              ihrer Abschnitte, und das Klammersymbol oben rechts öffnet
+              ihrer Abschnitte und das Klammersymbol oben rechts öffnet
               dieselbe Liste jederzeit, mit einem Häkchen bei allem, wo du schon
               tätig warst. Ein Klick springt hin.
             </span>
@@ -169,7 +169,7 @@ export default function Lernseite2Hub() {
           <h2 className="text-headline-md text-on-surface">Der Faden durch das Modul</h2>
           <p className="mt-xs max-w-3xl text-body-sm text-on-surface-variant">
             Ein Zusammenhang: Zuerst tritt die neue Akteurin auf, dann ordnet
-            die philosophische Perspektive ein, und am Ende spiegelt das
+            die philosophische Perspektive ein und am Ende spiegelt das
             Orakel deinen eigenen Weg durchs Modul.
           </p>
         </div>

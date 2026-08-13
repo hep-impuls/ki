@@ -6,12 +6,12 @@
   "stufe": "mittel",
   "text": "Kaum ein Thema ist so präsent wie die Künstliche Intelligenz (KI) und kaum eines so schwer zu fassen. Es wird viel über sie gesagt, doch vieles bleibt schemenhaft, ein Reden über etwas, das man selten wirklich vor Augen hat. Dieses Lernset will die KI sichtbarer und verständlicher machen, indem es ihr eine Gestalt gibt."
  },
- "HUB-19a97d": {
+ "HUB-db55f7": {
   "datei": "page.tsx",
   "ort": "(ohne Abschnitt)",
   "feld": "Fliesstext",
   "stufe": "tief",
-  "text": "Diese Gestalt zeigt sich nicht, wenn man die KI isoliert betrachtet. KI steht nie für sich: Sie baut auf kulturellen, technischen und wirtschaftlichen Überlegungen auf, und erst wenn man dieses Netz mitzeichnet, wird erkennbar, was da eigentlich auftritt. Darum folgt das Design dieses Lernsets einer Idee: Um das Phänomen zu verstehen, muss man das Netzwerk abbilden, in dem es steckt."
+  "text": "Diese Gestalt zeigt sich nicht, wenn man die KI isoliert betrachtet. KI steht nie für sich: Sie baut auf kulturellen, technischen und wirtschaftlichen Überlegungen auf und erst wenn man dieses Netz mitzeichnet, wird erkennbar, was da eigentlich auftritt. Darum folgt das Design dieses Lernsets einer Idee: Um das Phänomen zu verstehen, muss man das Netzwerk abbilden, in dem es steckt."
  },
  "HUB-71da1a": {
   "datei": "page.tsx",
@@ -34,12 +34,12 @@
   "stufe": "tief",
   "text": "In diesem Lernset tritt die Philosophie deshalb in den Vordergrund. Wir werden sehen, dass Menschen seit Menschengedenken von ihren eigenen Entwicklungen fasziniert, aber auch besorgt und verunsichert waren. Die Fragen der Philosophie lösen diese Unsicherheit nicht einfach auf. Sie können jedoch Orientierung geben und helfen, den Geschehnissen der eigenen Zeit klarer und gelassener zu begegnen."
  },
- "HUB-58475f": {
+ "HUB-3f6d60": {
   "datei": "page.tsx",
   "ort": "Der Faden durch das Modul",
   "feld": "Fliesstext",
   "stufe": "tief",
-  "text": "Ein Zusammenhang: Zuerst tritt die neue Akteurin auf, dann ordnet die philosophische Perspektive ein, und am Ende spiegelt das Orakel deinen eigenen Weg durchs Modul."
+  "text": "Ein Zusammenhang: Zuerst tritt die neue Akteurin auf, dann ordnet die philosophische Perspektive ein und am Ende spiegelt das Orakel deinen eigenen Weg durchs Modul."
  },
  "VA-a17773": {
   "datei": "vorhang-auf/page.tsx",
@@ -69,12 +69,12 @@
   "stufe": "tief",
   "text": "Dutzende herabhängende Schnüre, teils weiter verzweigt, ergeben eine ganze Datenbank aus Textil. Auch Farbe und Drehrichtung der Fäden trugen Bedeutung. Die Zahlen-Quipus können wir heute lesen, ein zweites, erzählendes System ist bis heute nicht entziffert. Ein Teil dieser Daten bleibt für uns stumm."
  },
- "VA-e2fb52": {
+ "VA-f9780e": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Der Schachtürke",
   "feld": "Bildgeschichte",
   "stufe": "hoch",
-  "text": "Der «Schachtürke» war ein Schach spielender Automat, den Wolfgang von Kempelen 1770 am Wiener Hof vorführte. Jahrzehntelang schlug er prominente Gegner, der Legende nach auch Napoleon und Benjamin Franklin, und liess ganz Europa rätseln, ob eine Maschine denken könne. In Wahrheit sass im Innern ein versteckter Schachmeister. Nach Kempelens Tod tourte Johann Nepomuk Mälzel den Automaten um die Welt, bis er 1854 bei einem Brand zerstört wurde. Der Schachtürke ist bis heute das Sinnbild dafür, wie bereitwillig wir Maschinen Intelligenz zuschreiben und wie oft «automatische» Leistung in Wahrheit versteckte menschliche Arbeit ist. Nicht zufällig heisst Amazons Klickarbeiter-Plattform «Mechanical Turk»."
+  "text": "Der «Schachtürke» war ein Schach spielender Automat, den Wolfgang von Kempelen 1770 am Wiener Hof vorführte. Jahrzehntelang schlug er prominente Gegner, der Legende nach auch Napoleon und Benjamin Franklin und liess ganz Europa rätseln, ob eine Maschine denken könne. In Wahrheit sass im Innern ein versteckter Schachmeister. Nach Kempelens Tod tourte Johann Nepomuk Mälzel den Automaten um die Welt, bis er 1854 bei einem Brand zerstört wurde. Der Schachtürke ist bis heute das Sinnbild dafür, wie bereitwillig wir Maschinen Intelligenz zuschreiben und wie oft «automatische» Leistung in Wahrheit versteckte menschliche Arbeit ist. Nicht zufällig heisst Amazons Klickarbeiter-Plattform «Mechanical Turk»."
  },
  "VA-c4ea88": {
   "datei": "vorhang-auf/page.tsx",
@@ -97,19 +97,19 @@
   "stufe": "hoch",
   "text": "Öffnete Kempelen die linke Tür, sah das Publikum Zahnräder und Uhrwerk, bei zusätzlich offenen Hintertüren sogar durch die ganze Maschine hindurch. Gerade der Beweis der Leere gehörte zur Täuschung, denn der Bediener rückte auf einem verschiebbaren Sitz jeweils dorthin, wo niemand hinsah. Auch dieser Stich rät bloss. Joseph Friedrich zu Racknitz versuchte 1789 den verborgenen Bediener zu erklären. Seine Rekonstruktion gilt als unmöglich, weil die Masse nicht zum wirklichen Apparat passen. Selbst die Erklärung kann also falsch sein."
  },
- "VA-80fee9": {
+ "VA-2bf32e": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Frankenstein",
   "feld": "Bildgeschichte",
   "stufe": "hoch",
-  "text": "Mary Shelley schrieb «Frankenstein oder der moderne Prometheus» mit achtzehn Jahren, und der Roman erschien 1818. Victor Frankenstein erschafft aus toter Materie ein lebendes Wesen und flieht im Augenblick des Gelingens entsetzt vor seinem Werk. Bis heute steht «Frankenstein» für die Angst vor Technik, die sich der Kontrolle entzieht, und für die Frage, wer für das Gemachte einsteht."
+  "text": "Mary Shelley schrieb «Frankenstein oder der moderne Prometheus» mit achtzehn Jahren und der Roman erschien 1818. Victor Frankenstein erschafft aus toter Materie ein lebendes Wesen und flieht im Augenblick des Gelingens entsetzt vor seinem Werk. Bis heute steht «Frankenstein» für die Angst vor Technik, die sich der Kontrolle entzieht, und für die Frage, wer für das Gemachte einsteht."
  },
- "VA-4b9944": {
+ "VA-f8feb4": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Das erschaffene Wesen",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Eben belebt, betrachtet die Kreatur sich selbst. Ein neues Wesen ist in der Welt, und niemand hat es gefragt. Böse geboren ist es nicht, es lernt durch blosses Zuhören sprechen und liest Milton, Plutarch und Goethes Werther. Was es fordert, ist Gemeinschaft, und erst Zurückweisung und Einsamkeit machen es zum Rächer."
+  "text": "Eben belebt, betrachtet die Kreatur sich selbst. Ein neues Wesen ist in der Welt und niemand hat es gefragt. Böse geboren ist es nicht, es lernt durch blosses Zuhören sprechen und liest Milton, Plutarch und Goethes Werther. Was es fordert, ist Gemeinschaft und erst Zurückweisung und Einsamkeit machen es zum Rächer."
  },
  "VA-ec8745": {
   "datei": "vorhang-auf/page.tsx",
@@ -118,12 +118,12 @@
   "stufe": "tief",
   "text": "Victor Frankenstein flieht entsetzt vor seinem Werk, statt für es zu sorgen. Das eigentliche Unheil ist damit nicht die Schöpfung, sondern die verweigerte Verantwortung. Darum lenkt schon der Untertitel den Blick auf den Schöpfer, nicht auf das Geschöpf."
  },
- "VA-18dd0f": {
+ "VA-345327": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Wissen und sein Preis",
   "feld": "Kartentext",
   "stufe": "hoch",
-  "text": "Zu Füssen liegen Buch und Schädel. Sie stehen für das Wissen, das belebt, und für den Tod, der ihm folgt. Das Blatt ist das Frontispiz der Ausgabe von 1831, ein Stich nach Theodor von Holst, und zeigt den Moment der Flucht."
+  "text": "Zu Füssen liegen Buch und Schädel. Sie stehen für das Wissen, das belebt, und für den Tod, der ihm folgt. Das Blatt ist das Frontispiz der Ausgabe von 1831, ein Stich nach Theodor von Holst und zeigt den Moment der Flucht."
  },
  "VA-0d55ae": {
   "datei": "vorhang-auf/page.tsx",
@@ -202,12 +202,12 @@
   "stufe": "tief",
   "text": "ELIZA folgte einfachen Mustern und spiegelte Sätze zurück, Wort für Wort umgestellt. Sie verstand nichts und wirkte doch verblüffend menschlich. Kein Modell, kein Lernen, keine Daten, nur Regeln, die ein Mensch geschrieben hatte."
  },
- "VA-b1514c": {
+ "VA-b124dc": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Der ELIZA-Effekt",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Menschen vertrauten sich dem Programm an wie einem Menschen. Weizenbaum erschrak darüber, wie weit das ging, und wurde später zu einem frühen Kritiker der KI. Bis heute überschätzen wir gern, was Maschinen «verstehen»."
+  "text": "Menschen vertrauten sich dem Programm an wie einem Menschen. Weizenbaum erschrak darüber, wie weit das ging und wurde später zu einem frühen Kritiker der KI. Bis heute überschätzen wir gern, was Maschinen «verstehen»."
  },
  "VA-59f729": {
   "datei": "vorhang-auf/page.tsx",
@@ -244,12 +244,12 @@
   "stufe": "hoch",
   "text": "Das Tamagotchi kam 1996 in Japan von der Firma Bandai auf den Markt, ein eiförmiges Taschengerät mit einem digitalen Wesen darin. Tamagotchis zeigen, wie leicht wir Maschinen wie Lebewesen behandeln. Sie sind selbst virtuelle Haustiere und Vorläufer der heutigen KI-Begleiterinnen."
  },
- "VA-847a76": {
+ "VA-222a23": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Gefühle für Pixel",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Auf dem kleinen Schirm lebte ein wenige Bildpunkte grosses Wesen. Millionen banden sich emotional daran, und an Schulen wurden die piepsenden Geräte zeitweise verboten, weil sie mitten im Unterricht Aufmerksamkeit forderten. Wir behandeln Maschinen erstaunlich leicht wie Lebewesen."
+  "text": "Auf dem kleinen Schirm lebte ein wenige Bildpunkte grosses Wesen. Millionen banden sich emotional daran und an Schulen wurden die piepsenden Geräte zeitweise verboten, weil sie mitten im Unterricht Aufmerksamkeit forderten. Wir behandeln Maschinen erstaunlich leicht wie Lebewesen."
  },
  "VA-89e606": {
   "datei": "vorhang-auf/page.tsx",
@@ -293,19 +293,19 @@
   "stufe": "mittel",
   "text": "Ohne Anleitung lernt sie erstaunliche Strategien und übertraf bei manchen Spielen den Menschen. Gelernt wird allein durch Wiederholung, über sehr viele Partien hinweg, ohne dass ihr jemand die Regeln erklärt."
  },
- "VA-94521b": {
+ "VA-0cf221": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "DALL·E: Bilder aus Worten",
   "feld": "Bildgeschichte",
   "stufe": "hoch",
-  "text": "DALL·E von OpenAI erzeugt Bilder aus Textbeschreibungen. DALL·E 1 kam im Januar 2021, das deutlich stärkere DALL·E 2 im April 2022, also rund ein halbes Jahr vor ChatGPT. Man gibt einen Satz ein, und das Modell «malt» ein Bild, das so nie fotografiert wurde. Damit wurde generative KI erstmals einem breiten Publikum sichtbar."
+  "text": "DALL·E von OpenAI erzeugt Bilder aus Textbeschreibungen. DALL·E 1 kam im Januar 2021, das deutlich stärkere DALL·E 2 im April 2022, also rund ein halbes Jahr vor ChatGPT. Man gibt einen Satz ein und das Modell «malt» ein Bild, das so nie fotografiert wurde. Damit wurde generative KI erstmals einem breiten Publikum sichtbar."
  },
- "VA-d48e9b": {
+ "VA-99aaec": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Sprache als Pinsel",
   "feld": "Kartentext",
   "stufe": "hoch",
-  "text": "Ein Satz genügt als Auftrag, und die Maschine «zeichnet». Mit DALL·E 2 im April 2022 entstand zu jeder Beschreibung ein neues Bild, ohne Pinsel, ohne Kamera und ohne Vorlage."
+  "text": "Ein Satz genügt als Auftrag und die Maschine «zeichnet». Mit DALL·E 2 im April 2022 entstand zu jeder Beschreibung ein neues Bild, ohne Pinsel, ohne Kamera und ohne Vorlage."
  },
  "VA-4f1563": {
   "datei": "vorhang-auf/page.tsx",
@@ -328,12 +328,12 @@
   "stufe": "hoch",
   "text": "ChatGPT von OpenAI erschien im November 2022 und macht KI für alle bedienbar, ein Chatfenster mit normaler Sprache, sofort nutzbar. Das war der Moment, in dem KI im Alltag ankam, nicht der Moment, in dem sie erfunden wurde. Was darunter arbeitet, ist ein Sprachmodell, das Text fortsetzt."
  },
- "VA-c04e13": {
+ "VA-6a24f5": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Einfach reden",
   "feld": "Kartentext",
   "stufe": "mittel",
-  "text": "Man tippt eine Frage in ganz normaler Sprache, und die KI antwortet flüssig. Es braucht keine Fachkenntnis, keinen Befehl und keine Schulung, und genau das erklärt, warum es so schnell so viele erreichte."
+  "text": "Man tippt eine Frage in ganz normaler Sprache und die KI antwortet flüssig. Es braucht keine Fachkenntnis, keinen Befehl und keine Schulung und genau das erklärt, warum es so schnell so viele erreichte."
  },
  "VA-0bbcca": {
   "datei": "vorhang-auf/page.tsx",
@@ -342,12 +342,12 @@
   "stufe": "tief",
   "text": "Das Modell setzt immer den wahrscheinlich nächsten Textbaustein. Das ist verblüffend gut, aber ohne echtes Wissen, es kann auch überzeugend irren. Zusätzlich wurde es mit menschlichem Feedback trainiert, um hilfreicher und harmloser zu antworten."
  },
- "VA-d18bcf": {
+ "VA-5dbc1a": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Der Durchbruch",
   "feld": "Kartentext",
   "stufe": "mittel",
-  "text": "Innert weniger Wochen nutzten Millionen ChatGPT. Es war der Moment, in dem KI im Alltag vieler Menschen ankam, und der Moment, in dem Schulen und Betriebe plötzlich Regeln brauchten."
+  "text": "Innert weniger Wochen nutzten Millionen ChatGPT. Es war der Moment, in dem KI im Alltag vieler Menschen ankam und der Moment, in dem Schulen und Betriebe plötzlich Regeln brauchten."
  },
  "VA-207abd": {
   "datei": "vorhang-auf/page.tsx",
@@ -405,26 +405,26 @@
   "stufe": "tief",
   "text": "Am Anfang steht ein Traum, so alt wie die ältesten Erzählungen des Abendlandes. Schon in der griechischen Antike stellte man sich künstliche Wesen aus Metall vor, die denken und dienen. Der Schmiedegott Hephaistos schuf sich goldene Helferinnen, und der bronzene Riese Talos bewachte eine ganze Insel. Der Wunsch, Verstand in totes Material zu giessen, ist also uralt."
  },
- "VA-0b0ee9": {
+ "VA-1169fe": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Hephaistos & Talos",
   "feld": "Bildgeschichte",
   "stufe": "hoch",
-  "text": "Hier laufen zwei Erzählungen zusammen, und sie stammen aus verschiedenen Zeiten. Das ist wichtig, weil sie oft in einen Topf geworfen werden. Die goldenen Mägde stehen in Homers «Ilias», dem rund 2800 Jahre alten Heldengedicht. Der Schmiedegott Hephaistos hat sie sich selbst gebaut. Sie haben Verstand, Stimme und Kraft, und dazu fertigt er selbstfahrende Dreifüsse. Talos dagegen kommt in der «Ilias» nicht vor. Der bronzene Riese wird erst Jahrhunderte später ausführlich erzählt. Die bekannte Fassung steht in der «Argonautika» des Apollonios von Rhodos aus dem 3. Jahrhundert vor Christus, kürzer auch bei anderen antiken Autoren. Zwei Quellen also, mehrere Jahrhunderte auseinander. Gemeinsam ist ihnen der Gedanke: Menschen erzählten von Automaten, lange bevor es das Wort dafür gab."
+  "text": "Hier laufen zwei Erzählungen zusammen und sie stammen aus verschiedenen Zeiten. Das ist wichtig, weil sie oft in einen Topf geworfen werden. Die goldenen Mägde stehen in Homers «Ilias», dem rund 2800 Jahre alten Heldengedicht. Der Schmiedegott Hephaistos hat sie sich selbst gebaut. Sie haben Verstand, Stimme und Kraft und dazu fertigt er selbstfahrende Dreifüsse. Talos dagegen kommt in der «Ilias» nicht vor. Der bronzene Riese wird erst Jahrhunderte später ausführlich erzählt. Die bekannte Fassung steht in der «Argonautika» des Apollonios von Rhodos aus dem 3. Jahrhundert vor Christus, kürzer auch bei anderen antiken Autoren. Zwei Quellen also, mehrere Jahrhunderte auseinander. Gemeinsam ist ihnen der Gedanke: Menschen erzählten von Automaten, lange bevor es das Wort dafür gab."
  },
- "VA-f81579": {
+ "VA-3e6316": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Hephaistos & Talos",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Talos war unverwundbar, bis auf eine einzige Stelle. Durch seinen Körper lief ein Blutkanal vom Kopf bis zur Ferse, und ein Nagel hielt ihn verschlossen. Dieses Blut hielt den Riesen lebendig. Auf der Heimfahrt der Argonauten brachte ihn die Zauberin Medea zu Fall. Sie betörte ihn mit dem Versprechen der Unsterblichkeit und zog ihm dann den Nagel aus der Ferse. Das Blut floss aus, und der Wächter starb. Andere Fassungen erzählen es anders: Dort verletzt er sich selbst am Knöchel, oder ein Pfeil trifft ihn an der Ferse. Seinen Dienst tat er gründlich. Er umkreiste Kreta dreimal am Tag und warf Steine auf Schiffe, die sich näherten. Bemerkenswert ist das Verhältnis von Macht und Schwachstelle. Die ganze Kraft des Wächters liess sich an einem winzigen Punkt aufheben. Schon dieser früheste Mythos verbindet also die künstliche Kraft mit der Frage, wie man sie im Notfall stoppt. Dieselbe Sorge um einen sicheren Ausschalter begleitet die Technik bis in heutige Debatten."
+  "text": "Talos war unverwundbar, bis auf eine einzige Stelle. Durch seinen Körper lief ein Blutkanal vom Kopf bis zur Ferse und ein Nagel hielt ihn verschlossen. Dieses Blut hielt den Riesen lebendig. Auf der Heimfahrt der Argonauten brachte ihn die Zauberin Medea zu Fall. Sie betörte ihn mit dem Versprechen der Unsterblichkeit und zog ihm dann den Nagel aus der Ferse. Das Blut floss aus und der Wächter starb. Andere Fassungen erzählen es anders: Dort verletzt er sich selbst am Knöchel, oder ein Pfeil trifft ihn an der Ferse. Seinen Dienst tat er gründlich. Er umkreiste Kreta dreimal am Tag und warf Steine auf Schiffe, die sich näherten. Bemerkenswert ist das Verhältnis von Macht und Schwachstelle. Die ganze Kraft des Wächters liess sich an einem winzigen Punkt aufheben. Schon dieser früheste Mythos verbindet also die künstliche Kraft mit der Frage, wie man sie im Notfall stoppt. Dieselbe Sorge um einen sicheren Ausschalter begleitet die Technik bis in heutige Debatten."
  },
- "VA-79e7f6": {
+ "VA-a3de04": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Yan Shi's Automat",
   "feld": "Kartentext",
   "stufe": "mittel",
-  "text": "Der Traum vom künstlichen Menschen ist nicht nur europäisch, sondern kehrt in vielen Kulturen wieder. Auch in China erzählte man früh von einer täuschend lebendigen Figur. Ein Handwerker führt sie dem König vor, und niemand erkennt zuerst, dass sie gebaut ist. Schon hier klingt die Frage an, wo die Grenze zwischen echtem und nachgeahmtem Leben verläuft."
+  "text": "Der Traum vom künstlichen Menschen ist nicht nur europäisch, sondern kehrt in vielen Kulturen wieder. Auch in China erzählte man früh von einer täuschend lebendigen Figur. Ein Handwerker führt sie dem König vor und niemand erkennt zuerst, dass sie gebaut ist. Schon hier klingt die Frage an, wo die Grenze zwischen echtem und nachgeahmtem Leben verläuft."
  },
  "VA-e38838": {
   "datei": "vorhang-auf/page.tsx",
@@ -433,12 +433,12 @@
   "stufe": "tief",
   "text": "Die Geschichte steht im daoistischen Text «Liezi», der um das 4. Jahrhundert entstand, während die Erzählung selbst viel früher spielt. Der Mechaniker Yan Shi präsentiert dem König Mu von Zhou einen künstlichen Menschen. Die Figur geht, singt und zwinkert den Hofdamen zu. Als der König einen Betrug vermutet, zerlegt Yan Shi sie und zeigt, dass sie nur aus Leder, Holz, Leim und Lack besteht."
  },
- "VA-fdc491": {
+ "VA-6b2709": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Yan Shi's Automat",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "mittel",
-  "text": "Im «Liezi» wird die Figur bis ins Innere beschrieben, denn der Handwerker hatte ihr nachgebildete Organe wie Herz, Lunge, Leber, Nieren, Muskeln und Knochen gegeben. Erstaunlich ist, dass jedes Organ eine eigene Aufgabe trug. Entfernte man das künstliche Herz, verstummte die Figur, nahm man die Leber weg, konnte sie nicht mehr sehen, und ohne die Nieren versagten die Beine. Damit erzählt der Text nicht bloss von einer Puppe, sondern von einem durchdachten künstlichen Körper mit inneren Teilen. Die Episode steht im Kapitel «Tang Wen» und spielt am Hof von König Mu, der von weiten Reisen zurückkehrt. Am Ende zeigt sich der König überzeugt, dass menschliche Geschicklichkeit fast an die Werke der Natur heranreicht. So verhandelt die Erzählung schon vor vielen Jahrhunderten, ob ein Gemachtes dem Gewachsenen gleichkommen kann."
+  "text": "Im «Liezi» wird die Figur bis ins Innere beschrieben, denn der Handwerker hatte ihr nachgebildete Organe wie Herz, Lunge, Leber, Nieren, Muskeln und Knochen gegeben. Erstaunlich ist, dass jedes Organ eine eigene Aufgabe trug. Entfernte man das künstliche Herz, verstummte die Figur, nahm man die Leber weg, konnte sie nicht mehr sehen und ohne die Nieren versagten die Beine. Damit erzählt der Text nicht bloss von einer Puppe, sondern von einem durchdachten künstlichen Körper mit inneren Teilen. Die Episode steht im Kapitel «Tang Wen» und spielt am Hof von König Mu, der von weiten Reisen zurückkehrt. Am Ende zeigt sich der König überzeugt, dass menschliche Geschicklichkeit fast an die Werke der Natur heranreicht. So verhandelt die Erzählung schon vor vielen Jahrhunderten, ob ein Gemachtes dem Gewachsenen gleichkommen kann."
  },
  "VA-d45b62": {
   "datei": "vorhang-auf/page.tsx",
@@ -454,12 +454,12 @@
   "stufe": "tief",
   "text": "Die Prager Sage schreibt Rabbi Löw, genannt der Maharal, einen Golem zu. Er formt ihn aus Lehm und erweckt ihn durch das Wort «emet», das Wahrheit bedeutet, auf der Stirn. Löscht man einen Buchstaben, so erlischt die Figur wieder. Als der Golem ihm entgleitet, muss der Rabbi ihn stilllegen."
  },
- "VA-30db5b": {
+ "VA-cf4d12": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Der Golem",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Der Kniff mit dem Wort ist genau überliefert, denn «emet» heisst Wahrheit, und streicht man den ersten Buchstaben, bleibt «met» stehen, das hebräische Wort für tot. So genügt ein einziges Zeichen, um zwischen Leben und Tod der Figur umzuschalten. In der Prager Erzählung soll der Golem die jüdische Gemeinde vor Angriffen und falschen Beschuldigungen schützen. Weltberühmt wurde der Stoff aber erst spät, durch Gustav Meyrinks Roman «Der Golem» von 1915 und den Stummfilm von Paul Wegener aus dem Jahr 1920. Auffällig ist, wie nah das an heutige Technik rückt, denn auch hier steckt die ganze Macht in einer winzigen sprachlichen Anweisung. Das Gleichnis fragt, ob der Schöpfer sein Werk noch beherrscht, sobald es einmal in Bewegung geraten ist."
+  "text": "Der Kniff mit dem Wort ist genau überliefert, denn «emet» heisst Wahrheit und streicht man den ersten Buchstaben, bleibt «met» stehen, das hebräische Wort für tot. So genügt ein einziges Zeichen, um zwischen Leben und Tod der Figur umzuschalten. In der Prager Erzählung soll der Golem die jüdische Gemeinde vor Angriffen und falschen Beschuldigungen schützen. Weltberühmt wurde der Stoff aber erst spät, durch Gustav Meyrinks Roman «Der Golem» von 1915 und den Stummfilm von Paul Wegener aus dem Jahr 1920. Auffällig ist, wie nah das an heutige Technik rückt, denn auch hier steckt die ganze Macht in einer winzigen sprachlichen Anweisung. Das Gleichnis fragt, ob der Schöpfer sein Werk noch beherrscht, sobald es einmal in Bewegung geraten ist."
  },
  "VA-ea0099": {
   "datei": "vorhang-auf/page.tsx",
@@ -482,12 +482,12 @@
   "stufe": "hoch",
   "text": "Nach dieser Anleitung sollte menschlicher Samen zunächst vierzig Tage lang in einem verschlossenen Gefäss bei gleichmässiger Wärme reifen. Anschliessend sollte das entstehende Wesen vierzig Wochen lang mit dem sogenannten Arcanum des menschlichen Blutes ernährt werden. Am Ende, so die Vorstellung, sollte daraus ein winziger, aber vollständiger Mensch entstehen. Der Philosoph Ernst Bloch sah in der alchemistischen Werkstatt eine frühe, bewusst auf Veränderung gerichtete Form der Technik. Auch Goethe griff das Motiv auf: In «Faust II» ist es nicht Faust selbst, sondern sein ehemaliger Gehilfe Wagner, dem die Erschaffung des leuchtenden Homunkulus im Glas gelingt. Dieser sehnt sich danach, vollständig körperlich zu werden. Am Ende zerschellt seine Phiole am Muschelwagen der Meeresgöttin Galatee, worauf sich ihr Leuchten im Meer ausbreitet. Bei Goethe erscheint der Homunkulus als ausserordentlich kluges und hellsichtiges Wesen, als künstlicher Geist, der die Gedanken anderer durchschauen kann. Darin lässt sich eine Verbindung zur heutigen Diskussion über künstliche Intelligenz erkennen, denn in beiden Fällen geht es um die Vorstellung eines vom Menschen geschaffenen Verstandes, der die Fähigkeiten gewöhnlicher Menschen möglicherweise übertrifft."
  },
- "VA-bc74ae": {
+ "VA-5e9ab9": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Frühe Automaten",
   "feld": "Kartentext",
   "stufe": "hoch",
-  "text": "Im 18. Jahrhundert staunte Europa über kunstvolle Maschinen, die Menschen und Tiere nachahmten. Der berühmte «Schachtürke» schien sogar zu denken und schlug reihenweise seine Gegner. In Wahrheit sass ein Mensch versteckt im Inneren des Kastens. Zum ersten Mal entstand breit der Verdacht, eine Maschine könnte klug sein, und man sieht daran, wie leicht wir das glauben."
+  "text": "Im 18. Jahrhundert staunte Europa über kunstvolle Maschinen, die Menschen und Tiere nachahmten. Der berühmte «Schachtürke» schien sogar zu denken und schlug reihenweise seine Gegner. In Wahrheit sass ein Mensch versteckt im Inneren des Kastens. Zum ersten Mal entstand breit der Verdacht, eine Maschine könnte klug sein und man sieht daran, wie leicht wir das glauben."
  },
  "VA-ca68b4": {
   "datei": "vorhang-auf/page.tsx",
@@ -517,12 +517,12 @@
   "stufe": "hoch",
   "text": "Mary Shelleys Roman von 1818 lässt Victor Frankenstein ein Wesen aus toter Materie erschaffen. Kaum lebt es, verstösst er es aus Ekel und Angst. Das Wesen wird erst durch diese Zurückweisung und die Einsamkeit zum Rächer. Die Geschichte fragt also nicht, ob man Leben schaffen darf, sondern wer für das Geschaffene einsteht."
  },
- "VA-a2e33c": {
+ "VA-c40a1b": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Frankenstein",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Die Geschichte entstand im Sommer 1816 am Genfersee, wo Mary Shelley zusammen mit dem Dichter Lord Byron und weiteren Gästen die Villa Diodati bewohnte. Weil ein Vulkanausbruch das Wetter verdüstert hatte, schlug Byron einen Wettbewerb vor, wer die unheimlichste Geschichte schreibe, und aus Marys Beitrag wurde der Roman. Auch im Buch spielt die Schweiz eine grosse Rolle, denn Victor Frankenstein ist Genfer, und er begegnet seinem Geschöpf hoch oben auf dem Eismeer bei Chamonix. Anders als in vielen späteren Verfilmungen ist das Wesen dort nicht sprachlos, sondern klagt in wohlgesetzten Worten sein Elend. Bemerkenswert ist, dass es sich seine Bildung selbst aneignet, indem es heimlich einer Familie zuhört und Bücher liest. Gerade dieses selbstständige Lernen eines künstlichen Wesens macht den alten Stoff für die Frage nach der KI so anschlussfähig."
+  "text": "Die Geschichte entstand im Sommer 1816 am Genfersee, wo Mary Shelley zusammen mit dem Dichter Lord Byron und weiteren Gästen die Villa Diodati bewohnte. Weil ein Vulkanausbruch das Wetter verdüstert hatte, schlug Byron einen Wettbewerb vor, wer die unheimlichste Geschichte schreibe und aus Marys Beitrag wurde der Roman. Auch im Buch spielt die Schweiz eine grosse Rolle, denn Victor Frankenstein ist Genfer und er begegnet seinem Geschöpf hoch oben auf dem Eismeer bei Chamonix. Anders als in vielen späteren Verfilmungen ist das Wesen dort nicht sprachlos, sondern klagt in wohlgesetzten Worten sein Elend. Bemerkenswert ist, dass es sich seine Bildung selbst aneignet, indem es heimlich einer Familie zuhört und Bücher liest. Gerade dieses selbstständige Lernen eines künstlichen Wesens macht den alten Stoff für die Frage nach der KI so anschlussfähig."
  },
  "VA-bb959f": {
   "datei": "vorhang-auf/page.tsx",
@@ -531,19 +531,19 @@
   "stufe": "hoch",
   "text": "Neben dem Traum vom künstlichen Wesen läuft eine zweite Linie, die des Rechnens. Im 17. und 19. Jahrhundert bauten Gelehrte Maschinen, die selbständig rechnen sollten. Von Leibniz' Rechenrad bis zu Babbages programmierbarem Entwurf wird die Idee greifbar, dass sich Denken in klare Schritte zerlegen lässt. Damit wird zum ersten Mal vorstellbar, dass eine Maschine Aufgaben des Geistes übernimmt."
  },
- "VA-bf4fa3": {
+ "VA-282d51": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Rechenmaschinen",
   "feld": "Bildgeschichte",
   "stufe": "hoch",
-  "text": "Der Gelehrte Gottfried Wilhelm Leibniz stellte 1673 der Royal Society eine Maschine für alle vier Grundrechenarten vor; ganz gebrauchsfähig wurde sie nie. Er träumte davon, Streitfragen künftig durch Rechnen zu entscheiden. Charles Babbage entwarf ab den 1830er-Jahren die «Analytical Engine», eine frei programmierbare Rechenmaschine, gebaut wurde sie zu seinen Lebzeiten nicht. Ada Lovelace übersetzte 1843 einen Aufsatz darüber und hängte Anmerkungen an, doppelt so lang wie der Text selbst. Darin führte sie vor, wie die Maschine die Bernoulli-Zahlen berechnen würde, und hielt fest, dass sie nichts von sich aus hervorbringt."
+  "text": "Der Gelehrte Gottfried Wilhelm Leibniz stellte 1673 der Royal Society eine Maschine für alle vier Grundrechenarten vor; ganz gebrauchsfähig wurde sie nie. Er träumte davon, Streitfragen künftig durch Rechnen zu entscheiden. Charles Babbage entwarf ab den 1830er-Jahren die «Analytical Engine», eine frei programmierbare Rechenmaschine, gebaut wurde sie zu seinen Lebzeiten nicht. Ada Lovelace übersetzte 1843 einen Aufsatz darüber und hängte Anmerkungen an, doppelt so lang wie der Text selbst. Darin führte sie vor, wie die Maschine die Bernoulli-Zahlen berechnen würde und hielt fest, dass sie nichts von sich aus hervorbringt."
  },
- "VA-3e3b6a": {
+ "VA-803b94": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Rechenmaschinen",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Ein oft übersehener Beitrag von Leibniz ist das Zweiersystem, das er 1703 ausführlich beschrieb und das mit den Ziffern null und eins auskommt. Genau dieses Binärsystem bildet heute die Grundlage jedes Computers, seine eigene Rechenmaschine baute er allerdings dezimal, weil die Feinmechanik der Zeit nicht weiter reichte. Babbages Maschine sollte ihre Anweisungen von Lochkarten ablesen, eine Idee aus dem Weberhandwerk. Jacquards Webstuhl steuerte ab 1805 mit je einer Lochkarte pro Schuss die Musterung. Ada Lovelace war die Tochter des Dichters Lord Byron, der schon in der Entstehung von Frankenstein vorkommt. Ob ihre Bernoulli-Rechnung das erste Programm der Geschichte war, ist umstritten, denn Babbage selbst hatte Jahre zuvor Programmtabellen aufgeschrieben, ein Satz von 1837/38 ist erhalten. Lovelaces Leistung liegt ohnehin anderswo, im Blick über das Rechnen hinaus. Sie ahnte, dass eine solche Maschine eines Tages sogar Musik verarbeiten könnte, sofern man Töne in Zahlen fasst. Wie sehr das nachwirkt, zeigt ein später Gruss. 1980 wurde eine Programmiersprache nach Ada Lovelace benannt, und ihre Normnummer MIL-STD-1815 nennt ihr Geburtsjahr."
+  "text": "Ein oft übersehener Beitrag von Leibniz ist das Zweiersystem, das er 1703 ausführlich beschrieb und das mit den Ziffern null und eins auskommt. Genau dieses Binärsystem bildet heute die Grundlage jedes Computers, seine eigene Rechenmaschine baute er allerdings dezimal, weil die Feinmechanik der Zeit nicht weiter reichte. Babbages Maschine sollte ihre Anweisungen von Lochkarten ablesen, eine Idee aus dem Weberhandwerk. Jacquards Webstuhl steuerte ab 1805 mit je einer Lochkarte pro Schuss die Musterung. Ada Lovelace war die Tochter des Dichters Lord Byron, der schon in der Entstehung von Frankenstein vorkommt. Ob ihre Bernoulli-Rechnung das erste Programm der Geschichte war, ist umstritten, denn Babbage selbst hatte Jahre zuvor Programmtabellen aufgeschrieben, ein Satz von 1837/38 ist erhalten. Lovelaces Leistung liegt ohnehin anderswo, im Blick über das Rechnen hinaus. Sie ahnte, dass eine solche Maschine eines Tages sogar Musik verarbeiten könnte, sofern man Töne in Zahlen fasst. Wie sehr das nachwirkt, zeigt ein später Gruss. 1980 wurde eine Programmiersprache nach Ada Lovelace benannt und ihre Normnummer MIL-STD-1815 nennt ihr Geburtsjahr."
  },
  "VA-b719df": {
   "datei": "vorhang-auf/page.tsx",
@@ -601,12 +601,12 @@
   "stufe": "hoch",
   "text": "Die Idee war einfach. Man schreibt Wissen auf und setzt Regeln dafür. Der Computer zieht daraus Schlüsse. So wollte man Intelligenz nachbauen. 1956 schien der Plan zu gelingen. Allen Newell und Herbert Simon schrieben das Programm Logic Theorist. Es bewies 38 Theoreme aus einem berühmten Mathematikbuch, den «Principia Mathematica». Ein Programm schaffte also etwas, wofür ein Mensch Verstand braucht. Es gab aber noch einen zweiten Weg. Er wollte keine Regeln aufschreiben, sondern aus Beispielen lernen. Dafür stand Frank Rosenblatts Perzeptron von 1957, ein sehr einfaches künstliches Nervennetz. Zuerst verlor dieser zweite Weg. 1969 fanden Marvin Minsky und Seymour Papert eine Schwäche. Sie zeigten, dass ein Perzeptron mit nur einer Schicht das ausschliessende Oder nicht lösen kann. Gemeint ist die Frage, ob genau eine von zwei Bedingungen zutrifft. Ein Beispiel dafür ist die Wechselschaltung im Flur: zwei Schalter, eine Lampe. Ob das Licht brennt, verrät kein einzelner Schalter. Es kommt darauf an, ob die beiden gleich oder unterschiedlich stehen. Genau solche Aufgaben konnte das einfache Netz nicht lernen. Danach arbeitete kaum noch jemand an solchen Netzen. Zwei Jahrzehnte lang bestimmte die symbolische KI das Feld."
  },
- "VA-a93334": {
+ "VA-97a959": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Symbolische KI",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Ein berühmtes Beispiel ist ELIZA, das Joseph Weizenbaum 1966 am MIT schrieb und das ein Gespräch mit einem Psychotherapeuten nachahmte. Das Programm verstand nichts, sondern spiegelte die Eingaben nach festen Mustern zurück, indem es aus einer Aussage geschickt eine Rückfrage formte. Weizenbaum erschrak selbst, wie schnell Menschen ELIZA für einfühlsam hielten und ihm Persönliches anvertrauten. Ebenfalls bekannt wurde SHRDLU von Terry Winograd, entstanden Anfang der 1970er-Jahre, das in einer erfundenen Welt aus farbigen Klötzen sprachliche Befehle wie «stelle den roten Würfel auf den grünen» ausführte. In dieser eng begrenzten Welt wirkte das Programm klug, doch ausserhalb davon war es hilflos. Daran zeigte sich die Grenze des Ansatzes. Wer Wissen aufschreiben will, muss es zuerst vollständig kennen, und gerade das Selbstverständliche des Alltags liess sich nicht in Regeln fassen. Je offener die Welt, desto mehr Regeln brauchte es, und desto häufiger widersprachen sie sich. Die Wende kam Jahrzehnte später mit genau dem Weg, den Minsky und Papert einst ausgebremst hatten: Heutige Systeme schreiben keine Regeln auf, sondern lernen aus Beispielen. Dafür ist bei ihnen nicht mehr nachvollziehbar, warum eine Antwort so ausfällt und nicht anders."
+  "text": "Ein berühmtes Beispiel ist ELIZA, das Joseph Weizenbaum 1966 am MIT schrieb und das ein Gespräch mit einem Psychotherapeuten nachahmte. Das Programm verstand nichts, sondern spiegelte die Eingaben nach festen Mustern zurück, indem es aus einer Aussage geschickt eine Rückfrage formte. Weizenbaum erschrak selbst, wie schnell Menschen ELIZA für einfühlsam hielten und ihm Persönliches anvertrauten. Ebenfalls bekannt wurde SHRDLU von Terry Winograd, entstanden Anfang der 1970er-Jahre, das in einer erfundenen Welt aus farbigen Klötzen sprachliche Befehle wie «stelle den roten Würfel auf den grünen» ausführte. In dieser eng begrenzten Welt wirkte das Programm klug, doch ausserhalb davon war es hilflos. Daran zeigte sich die Grenze des Ansatzes. Wer Wissen aufschreiben will, muss es zuerst vollständig kennen und gerade das Selbstverständliche des Alltags liess sich nicht in Regeln fassen. Je offener die Welt, desto mehr Regeln brauchte es und desto häufiger widersprachen sie sich. Die Wende kam Jahrzehnte später mit genau dem Weg, den Minsky und Papert einst ausgebremst hatten: Heutige Systeme schreiben keine Regeln auf, sondern lernen aus Beispielen. Dafür ist bei ihnen nicht mehr nachvollziehbar, warum eine Antwort so ausfällt und nicht anders."
  },
  "VA-45d810": {
   "datei": "vorhang-auf/page.tsx",
@@ -643,12 +643,12 @@
   "stufe": "tief",
   "text": "Als die versprochenen Durchbrüche ausblieben, froren die Forschungsgelder ein. Kritische Berichte und gescheiterte Projekte liessen den Glauben an die KI abkühlen. Der Begriff war zeitweise so belastet, dass Forschende ihre Arbeit lieber anders nannten. Aus «Künstlicher Intelligenz» wurde dann zum Beispiel schlicht «Datenanalyse»."
  },
- "VA-1d359e": {
+ "VA-e53161": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "KI-Winter",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Der Ausdruck «KI-Winter» wurde 1984 an einer Fachtagung geprägt, in bewusster Anlehnung an den damals viel diskutierten «nuklearen Winter». In den USA strich die Forschungsagentur DARPA schon in den 1970er-Jahren Gelder, nachdem hoch gesteckte Ziele wie das automatische Verstehen gesprochener Sprache nicht erreicht wurden. Besonders folgenreich war das Buch «Perceptrons» von Marvin Minsky und Seymour Papert aus dem Jahr 1969, das die Grenzen einfacher neuronaler Netze aufzeigte. Danach galt die Forschung an solchen Netzen lange als Sackgasse, und die Mittel flossen in andere Ansätze. Erst viele Jahre später sollten neuronale Netze eine glänzende Rückkehr feiern. Rückblickend zeigen die Winter ein Muster, denn jedes Mal folgten auf überzogene Versprechen zuerst Enttäuschung und Geldentzug. Und jedes Mal kehrte die KI danach mit einer neuen Grundidee stärker zurück."
+  "text": "Der Ausdruck «KI-Winter» wurde 1984 an einer Fachtagung geprägt, in bewusster Anlehnung an den damals viel diskutierten «nuklearen Winter». In den USA strich die Forschungsagentur DARPA schon in den 1970er-Jahren Gelder, nachdem hoch gesteckte Ziele wie das automatische Verstehen gesprochener Sprache nicht erreicht wurden. Besonders folgenreich war das Buch «Perceptrons» von Marvin Minsky und Seymour Papert aus dem Jahr 1969, das die Grenzen einfacher neuronaler Netze aufzeigte. Danach galt die Forschung an solchen Netzen lange als Sackgasse und die Mittel flossen in andere Ansätze. Erst viele Jahre später sollten neuronale Netze eine glänzende Rückkehr feiern. Rückblickend zeigen die Winter ein Muster, denn jedes Mal folgten auf überzogene Versprechen zuerst Enttäuschung und Geldentzug. Und jedes Mal kehrte die KI danach mit einer neuen Grundidee stärker zurück."
  },
  "VA-744c71": {
   "datei": "vorhang-auf/page.tsx",
@@ -825,12 +825,12 @@
   "stufe": "tief",
   "text": "Nach ChatGPT begann ein weltweiter Wettlauf um die besten Modelle. Neben den US-Modellen wie GPT, Claude, Gemini und Llama traten Modelle aus China, Europa und sogar der Schweiz an. Wer eigene Modelle baut, macht sich unabhängiger von anderen. So bekam die KI auch eine politische und eine sprachliche Bedeutung."
  },
- "VA-570ab7": {
+ "VA-71e2f2": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Wettbewerb der KI-Modelle",
   "feld": "Bildgeschichte",
   "stufe": "hoch",
-  "text": "Ab 2023 rangen viele Anbieter um die besten Modelle. Aus den USA kommen GPT von OpenAI, Claude von Anthropic, Gemini von Google und Llama von Meta. Die Gewichte von Llama – also die trainierten Parameter des Modells – können heruntergeladen werden, allerdings unter Metas eigener Lizenz und nicht als Open Source. Anfang 2025 sorgte das chinesische DeepSeek für Aufsehen, weil es mit wenig Aufwand mithielt, und auch Alibabas Qwen zählt dazu. Aus Europa stammt Mistral aus Frankreich, und aus der Schweiz das vollständig offene Modell «Apertus» von ETH Zürich, EPFL und dem Rechenzentrum CSCS."
+  "text": "Ab 2023 rangen viele Anbieter um die besten Modelle. Aus den USA kommen GPT von OpenAI, Claude von Anthropic, Gemini von Google und Llama von Meta. Die Gewichte von Llama – also die trainierten Parameter des Modells – können heruntergeladen werden, allerdings unter Metas eigener Lizenz und nicht als Open Source. Anfang 2025 sorgte das chinesische DeepSeek für Aufsehen, weil es mit wenig Aufwand mithielt, und auch Alibabas Qwen zählt dazu. Aus Europa stammt Mistral aus Frankreich und aus der Schweiz das vollständig offene Modell «Apertus» von ETH Zürich, EPFL und dem Rechenzentrum CSCS."
  },
  "VA-2588b1": {
   "datei": "vorhang-auf/page.tsx",
@@ -839,19 +839,19 @@
   "stufe": "hoch",
   "text": "Wie umkämpft das Feld ist, zeigte sich Anfang 2025, als das chinesische Modell DeepSeek für Aufsehen sorgte, weil es mit deutlich geringerem Aufwand trainiert worden sein soll als die US-Konkurrenz. Die Nachricht liess kurzzeitig sogar die Börsenkurse grosser Chiphersteller einbrechen, weil Anleger an den bisherigen Milliardenkosten zu zweifeln begannen. Der praktische Reiz offener Modelle liegt darin, dass man sie auf eigenen Rechnern betreiben kann, ohne Daten an einen fremden Anbieter zu schicken. Für Behörden, Spitäler oder Schulen bedeutet das einen Gewinn an Datenschutz und Unabhängigkeit. Ein Schweizer Modell wie «Apertus» ist gerade deshalb bedeutsam, weil sich damit Anwendungen bauen lassen, die nicht von einzelnen US-Konzernen abhängen. Verglichen werden die vielen Modelle auf öffentlichen Ranglisten, auf denen Menschen die Antworten bewerten. So ist ein rascher Wettlauf entstanden, in dem sich die Rangfolge fast monatlich verschiebt."
  },
- "VA-88b995": {
+ "VA-4aade3": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Multimodalität: KI sieht und hört",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Zuletzt lernte die KI, mehrere Arten von Eingaben zu verbinden. Die Modelle bleiben nicht mehr beim Text, sondern verarbeiten auch Bilder, Sprache und teils Videos. Sinne sind das nicht. Sehen und Hören sind bei uns Vorgänge im Körper: Auge und Ohr sind lebendige Organe, Nerven leiten den Reiz weiter, und wir empfinden dabei etwas. Die KI hat eine Kamera und ein Mikrofon, und was diese aufnehmen, wird für sie zu Zahlenreihen. Aus dem reinen Textautomaten wird so ein Gegenüber, das verschiedene Eingaben zusammenführt."
+  "text": "Zuletzt lernte die KI, mehrere Arten von Eingaben zu verbinden. Die Modelle bleiben nicht mehr beim Text, sondern verarbeiten auch Bilder, Sprache und teils Videos. Sinne sind das nicht. Sehen und Hören sind bei uns Vorgänge im Körper: Auge und Ohr sind lebendige Organe, Nerven leiten den Reiz weiter und wir empfinden dabei etwas. Die KI hat eine Kamera und ein Mikrofon, und was diese aufnehmen, wird für sie zu Zahlenreihen. Aus dem reinen Textautomaten wird so ein Gegenüber, das verschiedene Eingaben zusammenführt."
  },
- "VA-b49823": {
+ "VA-e41918": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Multimodalität: KI sieht und hört",
   "feld": "Bildgeschichte",
   "stufe": "hoch",
-  "text": "Ab 2023 und 2024 wurden führende Systeme multimodal, verstanden also mehrere Arten von Eingaben. Claude 3 aus dem Jahr 2024 konnte Bilder verstehen und beschreiben. GPT-4o aus demselben Jahr nahm Text, Bild und Ton in einem Modell entgegen und antwortete in Echtzeit gesprochen. Wenn man sagt, die KI sehe und höre, ist das ein Bild: Kamera und Mikrofon liefern Daten, und das Modell verarbeitet sie im selben Zahlenraum wie Text. Ein Sinnesorgan ist das nicht, und ein Empfinden entsteht dabei nicht."
+  "text": "Ab 2023 und 2024 wurden führende Systeme multimodal, verstanden also mehrere Arten von Eingaben. Claude 3 aus dem Jahr 2024 konnte Bilder verstehen und beschreiben. GPT-4o aus demselben Jahr nahm Text, Bild und Ton in einem Modell entgegen und antwortete in Echtzeit gesprochen. Wenn man sagt, die KI sehe und höre, ist das ein Bild: Kamera und Mikrofon liefern Daten und das Modell verarbeitet sie im selben Zahlenraum wie Text. Ein Sinnesorgan ist das nicht und ein Empfinden entsteht dabei nicht."
  },
  "VA-3986c2": {
   "datei": "vorhang-auf/page.tsx",
@@ -951,12 +951,12 @@
   "stufe": "mittel",
   "text": "Hat eine KI tausende Katzenfotos gesehen, erkennt sie auch eine Katze auf einem Bild, das ihr völlig neu ist. Sie überträgt Gelerntes auf Neues. Aus vielen einzelnen Beispielen zieht sie eine allgemeine Regel. So kann sie sogar Sätze sinnvoll fortsetzen, die noch nie jemand geschrieben hat. Genau das unterscheidet echtes Lernen vom reinen Auswendiglernen."
  },
- "VA-591d24": {
+ "VA-7a2711": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "generalisierend",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "tief",
-  "text": "Dieses Verallgemeinern ist das Herzstück des maschinellen Lernens. Eine KI, die nur ihre Trainingsbeispiele nachplappert, wäre nutzlos, denn im Alltag begegnet ihr ständig Neues. Lernt sie die Beispiele zu genau auswendig, spricht man von Überanpassung, und bei einer neuen Aufgabe versagt sie dann. Gelingt das Verallgemeinern gut, wirkt die KI klug und beweglich. Übertreibt sie es, entstehen plumpe Klischees. Ein Beispiel: Hat sie fast nur männliche Chefs in den Daten gesehen, hält sie das Chefsein fälschlich für eine Männersache."
+  "text": "Dieses Verallgemeinern ist das Herzstück des maschinellen Lernens. Eine KI, die nur ihre Trainingsbeispiele nachplappert, wäre nutzlos, denn im Alltag begegnet ihr ständig Neues. Lernt sie die Beispiele zu genau auswendig, spricht man von Überanpassung und bei einer neuen Aufgabe versagt sie dann. Gelingt das Verallgemeinern gut, wirkt die KI klug und beweglich. Übertreibt sie es, entstehen plumpe Klischees. Ein Beispiel: Hat sie fast nur männliche Chefs in den Daten gesehen, hält sie das Chefsein fälschlich für eine Männersache."
  },
  "VA-f4651b": {
   "datei": "vorhang-auf/page.tsx",
@@ -965,12 +965,12 @@
   "stufe": "hoch",
   "text": "Das Wort «Bank» kann eine Sitzbank oder eine Geldbank sein. Was gemeint ist, verrät erst der Zusammenhang. Die KI achtet genau darauf. Sie bezieht ein, was vorher gesagt wurde, welche Rolle sie übernehmen soll und welche Unterlagen du ihr mitgibst. Dieselbe Frage kann darum je nach Umfeld eine andere Antwort ergeben."
  },
- "VA-5b893b": {
+ "VA-4aeb21": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "kontextsensitiv",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "tief",
-  "text": "Fachleute nennen das, was die KI gerade vor sich hat, das Kontextfenster. Dazu gehören deine Anweisung, das bisherige Gespräch und alle Texte, die du mitgeschickt hast. Ein Beispiel: Sagst du am Anfang «Erkläre es wie für ein Kind», bleibt dieser Auftrag im Fenster und färbt alle weiteren Antworten. Die zugrunde liegende Technik, der Transformer, gewichtet dabei laufend, welche Wörter füreinander wichtig sind. Diesen Kniff nennt man Attention, auf Deutsch Aufmerksamkeit. Wer den Kontext geschickt setzt, steuert die Antwort, und deshalb ist gutes Fragen eine kleine Kunst."
+  "text": "Fachleute nennen das, was die KI gerade vor sich hat, das Kontextfenster. Dazu gehören deine Anweisung, das bisherige Gespräch und alle Texte, die du mitgeschickt hast. Ein Beispiel: Sagst du am Anfang «Erkläre es wie für ein Kind», bleibt dieser Auftrag im Fenster und färbt alle weiteren Antworten. Die zugrunde liegende Technik, der Transformer, gewichtet dabei laufend, welche Wörter füreinander wichtig sind. Diesen Kniff nennt man Attention, auf Deutsch Aufmerksamkeit. Wer den Kontext geschickt setzt, steuert die Antwort und deshalb ist gutes Fragen eine kleine Kunst."
  },
  "VA-251f64": {
   "datei": "vorhang-auf/page.tsx",
@@ -1000,33 +1000,33 @@
   "stufe": "hoch",
   "text": "Früher musste man einem Computer in einer eigenen Programmiersprache genau sagen, was er tun soll. Sprachmodelle drehen das um, denn die Anweisung ist jetzt einfach normaler Text. «Die heisseste neue Programmiersprache ist Englisch», sagt der KI-Forscher Andrej Karpathy und meint genau das. Ein Beispiel: Statt Programmcode zu schreiben, bittest du einfach «Fasse diesen Text in drei Sätzen zusammen». Das macht die Technik für alle bedienbar, auch ohne Vorwissen. Zugleich verwischt es die Grenze zwischen einem Befehl an eine Maschine und einem Gespräch mit einem Gegenüber."
  },
- "VA-e072be": {
+ "VA-2b4065": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "interaktiv",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Ein Getränkeautomat gibt dir genau das, was du drückst, und damit ist Schluss. Die KI arbeitet anders, nämlich in Runden. Sie macht einen Vorschlag, du gibst Rückmeldung, und sie macht einen besseren. So formt ihr das Ergebnis gemeinsam, Schritt für Schritt. Aus dem Bedienen wird ein Zusammenarbeiten."
+  "text": "Ein Getränkeautomat gibt dir genau das, was du drückst, und damit ist Schluss. Die KI arbeitet anders, nämlich in Runden. Sie macht einen Vorschlag, du gibst Rückmeldung und sie macht einen besseren. So formt ihr das Ergebnis gemeinsam, Schritt für Schritt. Aus dem Bedienen wird ein Zusammenarbeiten."
  },
- "VA-15d4cd": {
+ "VA-01d655": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "interaktiv",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "tief",
-  "text": "Genau diese Schleife unterscheidet die KI vom klassischen Programm. Dort gibt es eine Eingabe und eine Ausgabe, dann ist alles vorbei. Bei der KI entsteht ein Hin und Her aus Versuchen und Verfeinern. Ein Beispiel: Du lässt dir einen Brief schreiben, findest ihn zu förmlich, bittest um einen wärmeren Ton, und der nächste Versuch trifft es besser. Damit verändert sich auch die Rolle des Menschen. Aus dem, der nur ausführt, wird jemand, der anleitet, prüft und am Ende für das Ergebnis geradesteht."
+  "text": "Genau diese Schleife unterscheidet die KI vom klassischen Programm. Dort gibt es eine Eingabe und eine Ausgabe, dann ist alles vorbei. Bei der KI entsteht ein Hin und Her aus Versuchen und Verfeinern. Ein Beispiel: Du lässt dir einen Brief schreiben, findest ihn zu förmlich, bittest um einen wärmeren Ton und der nächste Versuch trifft es besser. Damit verändert sich auch die Rolle des Menschen. Aus dem, der nur ausführt, wird jemand, der anleitet, prüft und am Ende für das Ergebnis geradesteht."
  },
- "VA-cc14de": {
+ "VA-6c5f2a": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "generativ",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Eine Suchmaschine findet Vorhandenes, und eine Bibliothek reicht dir ein fertiges Buch. Die KI dagegen schreibt selbst, Wort für Wort. Sie erzeugt Neues, also Text, Bild oder Programmcode, statt es nur abzurufen. Bittest du um ein Bild einer Katze im Raumanzug, malt sie eines, das es so noch nie gab. Dasselbe Können bringt aber auch frei Erfundenes hervor."
+  "text": "Eine Suchmaschine findet Vorhandenes und eine Bibliothek reicht dir ein fertiges Buch. Die KI dagegen schreibt selbst, Wort für Wort. Sie erzeugt Neues, also Text, Bild oder Programmcode, statt es nur abzurufen. Bittest du um ein Bild einer Katze im Raumanzug, malt sie eines, das es so noch nie gab. Dasselbe Können bringt aber auch frei Erfundenes hervor."
  },
- "VA-012a8e": {
+ "VA-fdaa1c": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "generativ",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "tief",
-  "text": "Generativ heisst herstellend, denn die KI stellt Neues her, statt Fertiges nachzuschlagen. Sie setzt immer das nächste wahrscheinliche Wort, und so wächst Satz um Satz etwas Neues. Dieselbe Fähigkeit, die Brillantes schafft, erzeugt auch überzeugend klingenden Unsinn. Fragst du nach einer Buchquelle, erfindet sie notfalls einen Titel, der täuschend echt aussieht. Die Informatikerin Katharina Zweig schlägt dafür statt «Halluzination» das Wort «Konfabulation» vor. Gemeint ist flüssiges Reden ohne echtes Wissen dahinter."
+  "text": "Generativ heisst herstellend, denn die KI stellt Neues her, statt Fertiges nachzuschlagen. Sie setzt immer das nächste wahrscheinliche Wort und so wächst Satz um Satz etwas Neues. Dieselbe Fähigkeit, die Brillantes schafft, erzeugt auch überzeugend klingenden Unsinn. Fragst du nach einer Buchquelle, erfindet sie notfalls einen Titel, der täuschend echt aussieht. Die Informatikerin Katharina Zweig schlägt dafür statt «Halluzination» das Wort «Konfabulation» vor. Gemeint ist flüssiges Reden ohne echtes Wissen dahinter."
  },
  "VA-bedcc3": {
   "datei": "vorhang-auf/page.tsx",
@@ -1035,19 +1035,19 @@
   "stufe": "hoch",
   "text": "Du kannst der KI ein Foto deines Kühlschranks zeigen und nach einem Rezept fragen. Bei manchen Systemen laufen Text, Bild und Ton in einem einzigen Modell zusammen, bei anderen arbeiten dafür mehrere Bausteine zusammen. Sie liest, sieht und hört und antwortet wahlweise in Wort, Bild oder Stimme. Auch eine Skizze oder ein gesprochener Satz sind für sie eine Eingabe. Lesen, Sehen und Hören sind dabei nur Vergleiche. Es sind Kanäle und keine Sinne, denn ein Körper, der empfindet, ist nicht im Spiel."
  },
- "VA-a2fa07": {
+ "VA-ca080d": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "multimodal",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Frühe Programme konnten nur eines, entweder Text oder Bild oder Ton. Multimodale Modelle verbinden diese Kanäle in einem einzigen Netz. Das erinnert an uns Menschen, die auch nicht in getrennten Sinnen denken. Der Vergleich hat aber eine harte Grenze: Unsere Sinne sind Organe eines lebendigen Körpers, und wir empfinden mit ihnen. Das Modell rechnet. Bild und Ton werden für es zu Zahlenreihen, und in denen sucht es Muster. Ein Beispiel: Du fotografierst eine Mathe-Aufgabe, und die KI liest sie, rechnet und erklärt den Lösungsweg. Oder du zeigst ihr ein Diagramm, und sie fasst es in Worten zusammen. So wird die Grenze zwischen Lesen, Sehen und Hören für die Maschine durchlässig."
+  "text": "Frühe Programme konnten nur eines, entweder Text oder Bild oder Ton. Multimodale Modelle verbinden diese Kanäle in einem einzigen Netz. Das erinnert an uns Menschen, die auch nicht in getrennten Sinnen denken. Der Vergleich hat aber eine harte Grenze: Unsere Sinne sind Organe eines lebendigen Körpers und wir empfinden mit ihnen. Das Modell rechnet. Bild und Ton werden für es zu Zahlenreihen, und in denen sucht es Muster. Ein Beispiel: Du fotografierst eine Mathe-Aufgabe und die KI liest sie, rechnet und erklärt den Lösungsweg. Oder du zeigst ihr ein Diagramm und sie fasst es in Worten zusammen. So wird die Grenze zwischen Lesen, Sehen und Hören für die Maschine durchlässig."
  },
- "VA-da3bbb": {
+ "VA-8ac5d9": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "agentenfähig",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Frag einen Menschen nach dem Weg, und er beschreibt ihn dir. Bitte ihn, dich hinzubringen, und er handelt. Moderne KI kann beides. Sie bleibt nicht beim Antworten stehen, sondern zerlegt ein Ziel in Schritte und nutzt selbständig Werkzeuge wie Websuche, Programme und Code. Aus dem Antwortgeber wird so ein Akteur, der Dinge wirklich erledigt."
+  "text": "Frag einen Menschen nach dem Weg und er beschreibt ihn dir. Bitte ihn, dich hinzubringen und er handelt. Moderne KI kann beides. Sie bleibt nicht beim Antworten stehen, sondern zerlegt ein Ziel in Schritte und nutzt selbständig Werkzeuge wie Websuche, Programme und Code. Aus dem Antwortgeber wird so ein Akteur, der Dinge wirklich erledigt."
  },
  "VA-76edf2": {
   "datei": "vorhang-auf/page.tsx",
@@ -1140,12 +1140,12 @@
   "stufe": "hoch",
   "text": "Bei den grossen Chatbots ist die Gratisstufe begrenzt: weniger Anfragen, eingeschränkter Zugriff auf die neuesten Modelle und Werkzeuge. Ein Abo für rund 20 Dollar im Monat (Stand 2026) hebt vor allem diese Grenzen an. Wer zahlen kann, arbeitet also flüssiger und mit mehr Möglichkeiten. Schon beim Zugang entsteht so ein Unterschied zwischen Menschen. Was ein Abo kostet und wie viel gratis möglich ist, ändern die Anbieter ständig."
  },
- "VA-921987": {
+ "VA-62c30a": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Arbeitsmarkt",
   "feld": "Kartentext",
   "stufe": "mittel",
-  "text": "KI verändert die Arbeitswelt spürbar. Sie übernimmt vor allem einzelne Aufgaben, selten gleich einen ganzen Beruf. Manche Tätigkeiten fallen weg, andere verändern sich, und neue kommen dazu. Für viele Berufe bedeutet das neue Anforderungen und neues Lernen."
+  "text": "KI verändert die Arbeitswelt spürbar. Sie übernimmt vor allem einzelne Aufgaben, selten gleich einen ganzen Beruf. Manche Tätigkeiten fallen weg, andere verändern sich und neue kommen dazu. Für viele Berufe bedeutet das neue Anforderungen und neues Lernen."
  },
  "VA-aff821": {
   "datei": "vorhang-auf/page.tsx",
@@ -1168,12 +1168,12 @@
   "stufe": "hoch",
   "text": "Am deutlichsten zeigen das die KI-Agenten, die seit 2025 in die Arbeitswelt drängen. Ein Agent bekommt nicht mehr eine einzelne Frage, sondern einen Auftrag: recherchiere das, schreib den Code, buche die Reise. Er zerlegt ihn selbst in Schritte, ruft Werkzeuge auf und arbeitet minutenlang weiter, ohne Rückfrage. Beim Programmieren heisst das: Statt Zeile für Zeile zu tippen, beschreibt man die Aufgabe, lässt den Agenten arbeiten und prüft danach, was er angerichtet hat. Die Arbeit verschiebt sich vom Ausführen zum Auftrag-Formulieren und Kontrollieren. Und je länger ein Agent allein weiterläuft, desto schwerer wird das Prüfen, denn man war bei den Zwischenschritten nicht dabei. (Stand Mitte 2026)"
  },
- "VA-c7ea69": {
+ "VA-521757": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Regulierung",
   "feld": "Kartentext",
   "stufe": "hoch",
-  "text": "Der Staat versucht, KI mit Gesetzen zu lenken. Solche Regeln sollen Grundrechte, Sicherheit, Datenschutz und Urheberrecht schützen. Zugleich sollen sie Forschung und Innovation nicht unnötig behindern. Diese Balance ist schwierig, und die Regeln entstehen erst nach und nach."
+  "text": "Der Staat versucht, KI mit Gesetzen zu lenken. Solche Regeln sollen Grundrechte, Sicherheit, Datenschutz und Urheberrecht schützen. Zugleich sollen sie Forschung und Innovation nicht unnötig behindern. Diese Balance ist schwierig und die Regeln entstehen erst nach und nach."
  },
  "VA-eb3a6b": {
   "datei": "vorhang-auf/page.tsx",
@@ -1189,12 +1189,12 @@
   "stufe": "tief",
   "text": "Um KI ist ein weltweiter Wettbewerb entbrannt. Staaten und Unternehmen ringen um Chips, Daten, Fachkräfte und Energie. Auch technische Standards und Unabhängigkeit stehen auf dem Spiel. Wer hier vorne liegt, gewinnt wirtschaftliche und politische Macht."
  },
- "VA-03d91c": {
+ "VA-af83af": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Geopolitik",
   "feld": "Fallbeispiel",
   "stufe": "hoch",
-  "text": "Ab 2022 verschärften die USA die Ausfuhrregeln für ihre stärksten KI-Chips nach China. Der Hersteller Nvidia baute daraufhin absichtlich langsamere Chips, nur um weiter liefern zu dürfen. Seit Januar 2026 werden bestimmte Ausfuhren wieder von Fall zu Fall geprüft und unter Bedingungen erlaubt. Die Regeln kippen also mit der Politik, und genau daran sieht man, dass KI längst ein Machtthema zwischen Staaten ist."
+  "text": "Ab 2022 verschärften die USA die Ausfuhrregeln für ihre stärksten KI-Chips nach China. Der Hersteller Nvidia baute daraufhin absichtlich langsamere Chips, nur um weiter liefern zu dürfen. Seit Januar 2026 werden bestimmte Ausfuhren wieder von Fall zu Fall geprüft und unter Bedingungen erlaubt. Die Regeln kippen also mit der Politik und genau daran sieht man, dass KI längst ein Machtthema zwischen Staaten ist."
  },
  "VA-225dcb": {
   "datei": "vorhang-auf/page.tsx",
@@ -1217,12 +1217,12 @@
   "stufe": "tief",
   "text": "KI hilft, grosse Textmengen zu durchsuchen und zusammenzufassen. Sie ersetzt aber nicht das kritische Prüfen von Quellen. Wichtig bleiben die Herkunft, der Zusammenhang und der Blick ins Original. Ohne dieses Prüfen sitzt man leicht Fehlern und Erfindungen auf."
  },
- "VA-b3f295": {
+ "VA-73326b": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Text- und Archivkompetenz",
   "feld": "Fallbeispiel",
   "stufe": "hoch",
-  "text": "2023 reichte ein New Yorker Anwalt einen Schriftsatz ein, für den er ChatGPT genutzt hatte. Die KI hatte sechs Gerichtsurteile frei erfunden, die es nie gab, und der Anwalt bekam eine Geldstrafe. Ohne Prüfen an der Quelle wird aus flüssigem Text schnell ein teurer Fehler."
+  "text": "2023 reichte ein New Yorker Anwalt einen Schriftsatz ein, für den er ChatGPT genutzt hatte. Die KI hatte sechs Gerichtsurteile frei erfunden, die es nie gab und der Anwalt bekam eine Geldstrafe. Ohne Prüfen an der Quelle wird aus flüssigem Text schnell ein teurer Fehler."
  },
  "VA-b5b609": {
   "datei": "vorhang-auf/page.tsx",
@@ -1231,19 +1231,19 @@
   "stufe": "tief",
   "text": "Sichtbar wird vor allem, was digital vorliegt und in den Trainingsdaten steckt. Was fehlt oder nie digitalisiert wurde, gerät leichter in Vergessenheit. So entscheidet die Auswahl der Daten mit, welches Wissen zählt. Das ist eine Form von Macht über das Wissen."
  },
- "VA-f6cfae": {
+ "VA-2717c6": {
   "datei": "vorhang-auf/page.tsx",
   "ort": "Wissensmacht",
   "feld": "Fallbeispiel",
   "stufe": "mittel",
-  "text": "Die Trainingsdaten der grossen Modelle bestehen zu einem sehr grossen Teil aus englischen Texten. Wissen aus kleineren Sprachen, etwa vielen afrikanischen, ist kaum vertreten, und dort antwortet die KI schwächer oder erfindet mehr. So entscheidet die Datenmenge mit, wessen Wissen sichtbar bleibt."
+  "text": "Die Trainingsdaten der grossen Modelle bestehen zu einem sehr grossen Teil aus englischen Texten. Wissen aus kleineren Sprachen, etwa vielen afrikanischen, ist kaum vertreten und dort antwortet die KI schwächer oder erfindet mehr. So entscheidet die Datenmenge mit, wessen Wissen sichtbar bleibt."
  },
- "PP-e4244e": {
+ "PP-76dc6d": {
   "datei": "philosophische-perspektive/page.tsx",
   "ort": "Philosophische Perspektive",
   "feld": "Fliesstext",
   "stufe": "tief",
-  "text": "Seit Jahrzehnten verändert die Digitalisierung, wie wir leben und arbeiten. Mit der KI zieht dieser Wandel noch einmal an. Was sich lange bewährt hat, wird plötzlich hinterfragt. Neue Berufe entstehen, andere verschwinden, und vertraute Abläufe werden umgestellt. Auch soziale Strukturen und Rollenbilder verschieben sich."
+  "text": "Seit Jahrzehnten verändert die Digitalisierung, wie wir leben und arbeiten. Mit der KI zieht dieser Wandel noch einmal an. Was sich lange bewährt hat, wird plötzlich hinterfragt. Neue Berufe entstehen, andere verschwinden und vertraute Abläufe werden umgestellt. Auch soziale Strukturen und Rollenbilder verschieben sich."
  },
  "PP-20cf14": {
   "datei": "philosophische-perspektive/page.tsx",
@@ -1261,14 +1261,14 @@
  },
  "PP-788907": {
   "datei": "philosophische-perspektive/page.tsx",
-  "ort": "Was ist Philosophie, und warum jetzt?",
+  "ort": "Was ist Philosophie und warum jetzt?",
   "feld": "Fliesstext",
   "stufe": "tief",
   "text": "Was ist Philosophie überhaupt? Wörtlich heisst sie «Liebe zur Weisheit». Sie ist ein eigenes wissenschaftliches Fach, aber keine erfahrungswissenschaftliche Disziplin wie Physik oder Statistik, die mit Messdaten beweisen, wie etwas zusammenhängt. Philosophie prüft Grundbegriffe und Argumente und arbeitet dabei überwiegend nicht experimentell. Sie hilft uns, neu zu ordnen und zu verstehen, was der Wandel durcheinanderbringt."
  },
  "PP-5b3731": {
   "datei": "philosophische-perspektive/page.tsx",
-  "ort": "Was ist Philosophie, und warum jetzt?",
+  "ort": "Was ist Philosophie und warum jetzt?",
   "feld": "Fliesstext",
   "stufe": "tief",
   "text": "Deshalb geht es in diesem Modul vor allem um eine Frage, welche die KI neu aufwirft. Was ist der Mensch? Lange galt er als der, der Wissen schafft, weitergibt und Neues erdenkt. Wenn nun eine Maschine schreibt, erklärt und gestaltet, gerät genau diese Vorstellung ins Wanken, unser Denken und unsere Kreativität. Neu ist die Frage aber nicht. Sie wird in der Philosophie seit jeher gestellt. Immanuel Kant hat das prominent ausgesprochen und sie ins Zentrum gerückt."
@@ -1329,12 +1329,12 @@
   "stufe": "tief",
   "text": "Athen verurteilt seinen unbequemsten Frager zum Tod. Der Prozess zeigt eine Stadt in der Krise, hin- und hergerissen zwischen alter Ordnung und neuem Denken."
  },
- "PP-f38562": {
+ "PP-28bc86": {
   "datei": "philosophische-perspektive/page.tsx",
   "ort": "Der Prozess des Sokrates",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "tief",
-  "text": "Athen hatte gerade den langen Krieg gegen Sparta verloren, die Stadt war voller Misstrauen, als der siebzigjährige Sokrates vor gut fünfhundert Geschworene treten musste. Vorgeworfen wurde ihm, die Götter zu missachten und die Jugend zu verderben, dabei hatte er nur getan, was er immer tat, nämlich auf dem Marktplatz Feldherren, Handwerker und Politiker zu fragen, was Gerechtigkeit oder Tapferkeit eigentlich sei. Wer antwortete, verstrickte sich meist in Widersprüche, und genau das machte ihn gefährlich unbeliebt. Ein Fluchtplan seiner Freunde lag bereit, doch Sokrates blieb und trank den Giftbecher, weil er die Gesetze seiner Stadt nicht brechen wollte. Sein Schüler Platon schrieb die Verteidigungsrede nieder, und aus dem Skandalurteil wurde der Gründungsmoment der abendländischen Philosophie. Seither gehören beide zusammen, das beharrliche Fragen und der Mut, den es kostet."
+  "text": "Athen hatte gerade den langen Krieg gegen Sparta verloren, die Stadt war voller Misstrauen, als der siebzigjährige Sokrates vor gut fünfhundert Geschworene treten musste. Vorgeworfen wurde ihm, die Götter zu missachten und die Jugend zu verderben, dabei hatte er nur getan, was er immer tat, nämlich auf dem Marktplatz Feldherren, Handwerker und Politiker zu fragen, was Gerechtigkeit oder Tapferkeit eigentlich sei. Wer antwortete, verstrickte sich meist in Widersprüche und genau das machte ihn gefährlich unbeliebt. Ein Fluchtplan seiner Freunde lag bereit, doch Sokrates blieb und trank den Giftbecher, weil er die Gesetze seiner Stadt nicht brechen wollte. Sein Schüler Platon schrieb die Verteidigungsrede nieder und aus dem Skandalurteil wurde der Gründungsmoment der abendländischen Philosophie. Seither gehören beide zusammen, das beharrliche Fragen und der Mut, den es kostet."
  },
  "PP-633ad3": {
   "datei": "philosophische-perspektive/page.tsx",
@@ -1350,12 +1350,12 @@
   "stufe": "tief",
   "text": "Rom wird 410 geplündert, 476 endet das weströmische Reich. Für die Zeitgenossen wankt die Weltordnung selbst."
  },
- "PP-522494": {
+ "PP-52d713": {
   "datei": "philosophische-perspektive/page.tsx",
   "ort": "Der Fall Roms",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "mittel",
-  "text": "Rom galt als die ewige Stadt, seit rund achthundert Jahren hatte kein Feind sie eingenommen, dann plünderten 410 die Westgoten unter Alarich drei Tage lang in ihren Strassen. Die Nachricht lief durch das ganze Reich, der Gelehrte Hieronymus schrieb aus Bethlehem, eingenommen sei die Stadt, die zuvor die ganze Welt besiegt hatte. Der eigentliche Schlusspunkt kam leise: 476 setzte der Heerführer Odoaker den letzten weströmischen Kaiser ab, einen Jungen namens Romulus Augustulus, und schickte die Kaiserinsignien nach Konstantinopel. Viele Menschen merkten zunächst kaum einen Unterschied, doch über die Jahrzehnte zerfielen Strassen, Wasserleitungen und Verwaltung, Städte schrumpften, Wissen ging verloren. Der Fall Roms zeigt, dass grosse Ordnungen selten mit einem Knall enden, sondern in einem langen Ausfransen, das die Menschen erst im Rückblick als Epochenbruch erkennen."
+  "text": "Rom galt als die ewige Stadt, seit rund achthundert Jahren hatte kein Feind sie eingenommen, dann plünderten 410 die Westgoten unter Alarich drei Tage lang in ihren Strassen. Die Nachricht lief durch das ganze Reich, der Gelehrte Hieronymus schrieb aus Bethlehem, eingenommen sei die Stadt, die zuvor die ganze Welt besiegt hatte. Der eigentliche Schlusspunkt kam leise: 476 setzte der Heerführer Odoaker den letzten weströmischen Kaiser ab, einen Jungen namens Romulus Augustulus und schickte die Kaiserinsignien nach Konstantinopel. Viele Menschen merkten zunächst kaum einen Unterschied, doch über die Jahrzehnte zerfielen Strassen, Wasserleitungen und Verwaltung, Städte schrumpften, Wissen ging verloren. Der Fall Roms zeigt, dass grosse Ordnungen selten mit einem Knall enden, sondern in einem langen Ausfransen, das die Menschen erst im Rückblick als Epochenbruch erkennen."
  },
  "PP-17da5c": {
   "datei": "philosophische-perspektive/page.tsx",
@@ -1371,12 +1371,12 @@
   "stufe": "tief",
   "text": "Mit den neuen Schiffen dehnen europäische Mächte ihren Einfluss über die Ozeane aus: Eroberung, Handel, Sklaverei verbreiten sich. Der Reichtum Europas und das Leid ganzer Kontinente hängen am selben Faden."
  },
- "PP-28a11e": {
+ "PP-815d58": {
   "datei": "philosophische-perspektive/page.tsx",
   "ort": "Kolonialisierung",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Schon 1494 zogen Spanien und Portugal im Vertrag von Tordesillas eine Linie über den Atlantik und teilten die aussereuropäische Welt unter sich auf, gefragt wurde dort niemand. Eroberer wie Cortés und Pizarro stürzten die Reiche der Azteken und Inka, und das gelang nicht mit wenigen hundert Soldaten allein: Entscheidend waren zehntausende indigene Verbündete, die mit den Herrschern ihre eigenen Rechnungen offen hatten, Vermittlerinnen wie La Malinche, innere Machtkämpfe und die eingeschleppten Pocken, die mehr Menschen töteten als jede Waffe. Auf den Plantagen der Kolonien arbeiteten bald Millionen verschleppte Afrikanerinnen und Afrikaner, der transatlantische Sklavenhandel wurde zu einem Fundament des europäischen Reichtums. Es gab auch Widerspruch: Der Mönch Bartolomé de Las Casas beschrieb die Gräuel und stritt vor dem spanischen Hof für die Rechte der Ureinwohner, durchgesetzt hat er sich nicht. So entstand eine Weltordnung, in der Europa jahrhundertelang bestimmte, wessen Sprache, Religion und Wissen zählt. Viele Länder tragen bis heute Grenzen, Sprachen und Ungleichheiten aus dieser Zeit."
+  "text": "Schon 1494 zogen Spanien und Portugal im Vertrag von Tordesillas eine Linie über den Atlantik und teilten die aussereuropäische Welt unter sich auf, gefragt wurde dort niemand. Eroberer wie Cortés und Pizarro stürzten die Reiche der Azteken und Inka und das gelang nicht mit wenigen hundert Soldaten allein: Entscheidend waren zehntausende indigene Verbündete, die mit den Herrschern ihre eigenen Rechnungen offen hatten, Vermittlerinnen wie La Malinche, innere Machtkämpfe und die eingeschleppten Pocken, die mehr Menschen töteten als jede Waffe. Auf den Plantagen der Kolonien arbeiteten bald Millionen verschleppte Afrikanerinnen und Afrikaner, der transatlantische Sklavenhandel wurde zu einem Fundament des europäischen Reichtums. Es gab auch Widerspruch: Der Mönch Bartolomé de Las Casas beschrieb die Gräuel und stritt vor dem spanischen Hof für die Rechte der Ureinwohner, durchgesetzt hat er sich nicht. So entstand eine Weltordnung, in der Europa jahrhundertelang bestimmte, wessen Sprache, Religion und Wissen zählt. Viele Länder tragen bis heute Grenzen, Sprachen und Ungleichheiten aus dieser Zeit."
  },
  "PP-cdb8c5": {
   "datei": "philosophische-perspektive/page.tsx",
@@ -1385,12 +1385,12 @@
   "stufe": "tief",
   "text": "Luthers Thesen spalten die Kirche. Der Buchdruck verbreitet sie in Windeseile. Eine neue Technologie und ein gesellschaftlicher Umbruch greifen ineinander."
  },
- "PP-bcd011": {
+ "PP-b6b641": {
   "datei": "philosophische-perspektive/page.tsx",
   "ort": "Reformation",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Auslöser war ein Geschäftsmodell. Die Kirche verkaufte Ablassbriefe und finanzierte damit unter anderem den Petersdom in Rom. Nach kirchlicher Lehre erliessen sie nicht die Schuld, dafür blieb die Beichte zuständig, sondern die zeitliche Strafe für bereits vergebene Sünden. In der Verkaufspraxis verschwamm dieser Unterschied, und viele verstanden es schlicht als gekaufte Vergebung. Der Mönch und Professor Martin Luther wollte 1517 mit seinen 95 Thesen zunächst eine Gelehrtendebatte anstossen, doch Drucker vervielfältigten sie ohne sein Zutun, und innert Wochen kannte man sie im ganzen Reich. Als er 1521 vor Kaiser und Reichstag den Widerruf verweigerte, war aus dem Streit eine Bewegung geworden, die Fürsten, Städte und Bauern erfasste. In Zürich predigte fast gleichzeitig Huldrych Zwingli gegen die alten Bräuche. Die Schweiz wurde zu einem Zentrum der Reformation und zugleich konfessionell gespalten. Aus der Frage, wer die Heilige Schrift auslegen darf, wurden Kriege, aber auch Schulen, Bibelübersetzungen und das Lesen in der Volkssprache. Wer heute fragt, wem man beim Deuten der Welt trauen soll, steht in einer sehr alten Debatte."
+  "text": "Auslöser war ein Geschäftsmodell. Die Kirche verkaufte Ablassbriefe und finanzierte damit unter anderem den Petersdom in Rom. Nach kirchlicher Lehre erliessen sie nicht die Schuld, dafür blieb die Beichte zuständig, sondern die zeitliche Strafe für bereits vergebene Sünden. In der Verkaufspraxis verschwamm dieser Unterschied und viele verstanden es schlicht als gekaufte Vergebung. Der Mönch und Professor Martin Luther wollte 1517 mit seinen 95 Thesen zunächst eine Gelehrtendebatte anstossen, doch Drucker vervielfältigten sie ohne sein Zutun und innert Wochen kannte man sie im ganzen Reich. Als er 1521 vor Kaiser und Reichstag den Widerruf verweigerte, war aus dem Streit eine Bewegung geworden, die Fürsten, Städte und Bauern erfasste. In Zürich predigte fast gleichzeitig Huldrych Zwingli gegen die alten Bräuche. Die Schweiz wurde zu einem Zentrum der Reformation und zugleich konfessionell gespalten. Aus der Frage, wer die Heilige Schrift auslegen darf, wurden Kriege, aber auch Schulen, Bibelübersetzungen und das Lesen in der Volkssprache. Wer heute fragt, wem man beim Deuten der Welt trauen soll, steht in einer sehr alten Debatte."
  },
  "PP-f5589e": {
   "datei": "philosophische-perspektive/page.tsx",
@@ -1434,12 +1434,12 @@
   "stufe": "mittel",
   "text": "Der industrialisierte Krieg und die Schoah erschüttern den Glauben an den Fortschritt im Kern. Zugleich treibt der Krieg Technologien voran, etwa Radar, Rakete und Computer."
  },
- "PP-70817b": {
+ "PP-72d801": {
   "datei": "philosophische-perspektive/page.tsx",
   "ort": "Zweiter Weltkrieg",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Dieser Krieg unterschied sich von allen früheren. Er wurde mit Fabriken, Fahrplänen und Formularen geführt, und die Mehrheit seiner weit über fünfzig Millionen Toten waren Zivilistinnen und Zivilisten. Die Schoah, der organisierte Mord an sechs Millionen europäischen Jüdinnen und Juden, geschah nicht in einem Rückfall in wilde Vorzeiten, sondern mitten im Land der Dichter, Ingenieure und Beamten, mit Aktenzeichen und Zugfahrplänen. Genau das machte die Erschütterung so tief. Bildung und Technik hatten die Barbarei nicht verhindert, sie hatten sie effizienter gemacht. Nach 1945 versuchte die Welt, Lehren zu ziehen, in Nürnberg stand erstmals die Führungsriege eines Staates für «Verbrechen gegen die Menschlichkeit» vor einem internationalen Gericht, und die neu gegründete UNO beschloss 1948 die Allgemeine Erklärung der Menschenrechte. Die Philosophin Hannah Arendt, selbst vor den Nazis geflohen, beschrieb später, wie gewöhnlich und pflichtbewusst viele Täter wirkten, und prägte dafür das Wort von der «Banalität des Bösen». Seither weiss man, dass Fortschritt keine Richtung kennt und Verantwortung sich nicht an Systeme delegieren lässt."
+  "text": "Dieser Krieg unterschied sich von allen früheren. Er wurde mit Fabriken, Fahrplänen und Formularen geführt und die Mehrheit seiner weit über fünfzig Millionen Toten waren Zivilistinnen und Zivilisten. Die Schoah, der organisierte Mord an sechs Millionen europäischen Jüdinnen und Juden, geschah nicht in einem Rückfall in wilde Vorzeiten, sondern mitten im Land der Dichter, Ingenieure und Beamten, mit Aktenzeichen und Zugfahrplänen. Genau das machte die Erschütterung so tief. Bildung und Technik hatten die Barbarei nicht verhindert, sie hatten sie effizienter gemacht. Nach 1945 versuchte die Welt, Lehren zu ziehen, in Nürnberg stand erstmals die Führungsriege eines Staates für «Verbrechen gegen die Menschlichkeit» vor einem internationalen Gericht und die neu gegründete UNO beschloss 1948 die Allgemeine Erklärung der Menschenrechte. Die Philosophin Hannah Arendt, selbst vor den Nazis geflohen, beschrieb später, wie gewöhnlich und pflichtbewusst viele Täter wirkten, und prägte dafür das Wort von der «Banalität des Bösen». Seither weiss man, dass Fortschritt keine Richtung kennt und Verantwortung sich nicht an Systeme delegieren lässt."
  },
  "PP-e0f7be": {
   "datei": "philosophische-perspektive/page.tsx",
@@ -1462,12 +1462,12 @@
   "stufe": "hoch",
   "text": "Der Ostblock zerfällt, der Kalte Krieg endet. Im selben Jahr geht die erste Website der Welt online. Die vernetzte, globalisierte Welt beginnt."
  },
- "PP-6310fd": {
+ "PP-dea58d": {
   "datei": "philosophische-perspektive/page.tsx",
   "ort": "Zusammenbruch der Sowjetunion",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Jahrzehntelang war die Welt in zwei bewaffnete Lager geteilt, mit Zehntausenden Atomsprengköpfen, geteilten Städten und Stellvertreterkriegen. Dann reformierte Michail Gorbatschow die Sowjetunion mit «Glasnost» und «Perestroika», also Offenheit und Umbau, und löste damit mehr aus, als er wollte. Im November 1989 genügte eine missverständliche Pressekonferenz in Ost-Berlin, und noch in derselben Nacht tanzten Menschen auf der Mauer, die 28 Jahre lang eine tödliche Grenze gewesen war. Zwei Jahre später scheiterte in Moskau ein Putsch der alten Garde, die Teilrepubliken erklärten sich unabhängig, und am 25. Dezember 1991 wurde die rote Fahne über dem Kreml eingeholt. Eine Supermacht verschwand ohne Krieg, einfach durch Auflösung, das hatte kaum jemand für möglich gehalten. Wer damals jung war, erlebte, wie schnell eine scheinbar ewige Weltordnung enden kann."
+  "text": "Jahrzehntelang war die Welt in zwei bewaffnete Lager geteilt, mit Zehntausenden Atomsprengköpfen, geteilten Städten und Stellvertreterkriegen. Dann reformierte Michail Gorbatschow die Sowjetunion mit «Glasnost» und «Perestroika», also Offenheit und Umbau und löste damit mehr aus, als er wollte. Im November 1989 genügte eine missverständliche Pressekonferenz in Ost-Berlin und noch in derselben Nacht tanzten Menschen auf der Mauer, die 28 Jahre lang eine tödliche Grenze gewesen war. Zwei Jahre später scheiterte in Moskau ein Putsch der alten Garde, die Teilrepubliken erklärten sich unabhängig und am 25. Dezember 1991 wurde die rote Fahne über dem Kreml eingeholt. Eine Supermacht verschwand ohne Krieg, einfach durch Auflösung, das hatte kaum jemand für möglich gehalten. Wer damals jung war, erlebte, wie schnell eine scheinbar ewige Weltordnung enden kann."
  },
  "PP-070b05": {
   "datei": "philosophische-perspektive/page.tsx",
@@ -1476,12 +1476,12 @@
   "stufe": "tief",
   "text": "Der Pflug vervielfacht, was ein Feld hergibt. Mit ihm werden Überschüsse möglich und damit auch Städte, Arbeitsteilung und Herrschaft."
  },
- "PP-d1646c": {
+ "PP-0294b1": {
   "datei": "philosophische-perspektive/page.tsx",
   "ort": "Der Pflug",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Wer mit dem Grabstock arbeitete, lockerte den Boden Loch für Loch, ein Gespann mit Pflug zog dagegen in derselben Zeit ganze Furchenreihen durchs Feld. Erst diese Kraftverstärkung durch Ochsen machte Felder gross genug, um deutlich mehr zu ernten, als die eigene Familie ass. Von diesem Überschuss lebten die ersten Menschen, die selbst nicht mehr säten, Priester, Schreiber, Händler und Soldaten in den frühen Städten Mesopotamiens. Zugleich begann eine neue Ungleichheit, denn wer Zugtiere und gutes Land besass, wurde reicher als die anderen, und Besitz liess sich vererben. Jahrtausende später erschloss der schwere Räderpflug mit eiserner Schar die nassen Böden Nordeuropas und liess dort Dörfer und Städte wachsen. Am Pflug lässt sich darum ablesen, dass ein Werkzeug nie nur Arbeit erspart, sondern auch mitbestimmt, wem die Erträge gehören."
+  "text": "Wer mit dem Grabstock arbeitete, lockerte den Boden Loch für Loch, ein Gespann mit Pflug zog dagegen in derselben Zeit ganze Furchenreihen durchs Feld. Erst diese Kraftverstärkung durch Ochsen machte Felder gross genug, um deutlich mehr zu ernten, als die eigene Familie ass. Von diesem Überschuss lebten die ersten Menschen, die selbst nicht mehr säten, Priester, Schreiber, Händler und Soldaten in den frühen Städten Mesopotamiens. Zugleich begann eine neue Ungleichheit, denn wer Zugtiere und gutes Land besass, wurde reicher als die anderen und Besitz liess sich vererben. Jahrtausende später erschloss der schwere Räderpflug mit eiserner Schar die nassen Böden Nordeuropas und liess dort Dörfer und Städte wachsen. Am Pflug lässt sich darum ablesen, dass ein Werkzeug nie nur Arbeit erspart, sondern auch mitbestimmt, wem die Erträge gehören."
  },
  "PP-92d587": {
   "datei": "philosophische-perspektive/page.tsx",
@@ -1504,12 +1504,12 @@
   "stufe": "tief",
   "text": "In Mesopotamien entsteht die Schrift, zuerst für Buchhaltung und Vorräte. Gedanken und Erinnerungen werden erstmals ausserhalb des Kopfes gespeichert."
  },
- "PP-2b090e": {
+ "PP-4d58a4": {
   "datei": "philosophische-perspektive/page.tsx",
   "ort": "Die Schrift",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "mittel",
-  "text": "Am Anfang standen Zählsteine und Ritzzeichen, mit denen Tempelverwalter in Uruk festhielten, wer wie viel Gerste oder wie viele Schafe abgeliefert hatte. Aus den Bildzeichen wurde die Keilschrift, in feuchten Ton gedrückt, und mit ihr entstand ein neuer Beruf, der Schreiber, der seine Kunst in jahrelanger Schule lernte und damit zu einer kleinen Elite gehörte. Bald speicherte die Schrift nicht mehr nur Vorräte, sondern Verträge, Gesetze wie die Stele des Hammurabi und Geschichten wie das Gilgamesch-Epos, das älteste grosse Erzählwerk der Menschheit. Interessant ist, dass schon damals gewarnt wurde: Platon überliefert die Sorge, wer schreibe, verlasse sich auf tote Zeichen und übe sein Gedächtnis nicht mehr. Die Klage klingt vertraut, sie begleitet seither jede Technik, die dem Kopf Arbeit abnimmt, vom Taschenrechner bis zur KI."
+  "text": "Am Anfang standen Zählsteine und Ritzzeichen, mit denen Tempelverwalter in Uruk festhielten, wer wie viel Gerste oder wie viele Schafe abgeliefert hatte. Aus den Bildzeichen wurde die Keilschrift, in feuchten Ton gedrückt und mit ihr entstand ein neuer Beruf, der Schreiber, der seine Kunst in jahrelanger Schule lernte und damit zu einer kleinen Elite gehörte. Bald speicherte die Schrift nicht mehr nur Vorräte, sondern Verträge, Gesetze wie die Stele des Hammurabi und Geschichten wie das Gilgamesch-Epos, das älteste grosse Erzählwerk der Menschheit. Interessant ist, dass schon damals gewarnt wurde: Platon überliefert die Sorge, wer schreibe, verlasse sich auf tote Zeichen und übe sein Gedächtnis nicht mehr. Die Klage klingt vertraut, sie begleitet seither jede Technik, die dem Kopf Arbeit abnimmt, vom Taschenrechner bis zur KI."
  },
  "PP-e4db8c": {
   "datei": "philosophische-perspektive/page.tsx",
@@ -1518,12 +1518,12 @@
   "stufe": "tief",
   "text": "In Ägypten wird aus Schilf Papyrus (~3000 v. Chr.), in China erfindet Cai Lun das Papier (105 n. Chr.): leichte, billige Schreibflächen. Wissen wird tragbar."
  },
- "PP-af6b03": {
+ "PP-002f10": {
   "datei": "philosophische-perspektive/page.tsx",
   "ort": "Papyrus und Papier",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Der Beamte Cai Lun am chinesischen Kaiserhof soll Rinde, Hanf, Lumpen und alte Fischernetze zerstampft und daraus einen glatten, billigen Beschreibstoff geschöpft haben. China hütete das Verfahren lange, der Überlieferung nach gelangte es nach einer verlorenen Schlacht im Jahr 751 mit gefangenen Papiermachern nach Samarkand und von dort in die islamische Welt. In Europa schrieb man derweil auf Pergament aus Tierhaut, für eine einzige grosse Bibel brauchte es die Häute einer ganzen Herde, Bücher waren entsprechend Schätze. Erst ab dem Spätmittelalter klapperten auch hier Papiermühlen, in Basel etwa ab dem 15. Jahrhundert, und der Preis des geschriebenen Worts sank Stufe um Stufe. Jede dieser Stufen entschied mit, wer sich Wissen leisten konnte. Billiges Speichermaterial war die stille Voraussetzung jeder Medienrevolution, vom Papier bis zu den Datenspeichern der Gegenwart."
+  "text": "Der Beamte Cai Lun am chinesischen Kaiserhof soll Rinde, Hanf, Lumpen und alte Fischernetze zerstampft und daraus einen glatten, billigen Beschreibstoff geschöpft haben. China hütete das Verfahren lange, der Überlieferung nach gelangte es nach einer verlorenen Schlacht im Jahr 751 mit gefangenen Papiermachern nach Samarkand und von dort in die islamische Welt. In Europa schrieb man derweil auf Pergament aus Tierhaut, für eine einzige grosse Bibel brauchte es die Häute einer ganzen Herde, Bücher waren entsprechend Schätze. Erst ab dem Spätmittelalter klapperten auch hier Papiermühlen, in Basel etwa ab dem 15. Jahrhundert und der Preis des geschriebenen Worts sank Stufe um Stufe. Jede dieser Stufen entschied mit, wer sich Wissen leisten konnte. Billiges Speichermaterial war die stille Voraussetzung jeder Medienrevolution, vom Papier bis zu den Datenspeichern der Gegenwart."
  },
  "PP-769283": {
   "datei": "philosophische-perspektive/page.tsx",
@@ -1574,12 +1574,12 @@
   "stufe": "tief",
   "text": "Watts Dampfmaschine liefert Antriebskraft, die nicht von Muskeln, Wind oder Wasser stammt. Fabriken, Eisenbahnen und Städte wachsen. Die Industrialisierung pflügt die Gesellschaft um."
  },
- "PP-40ef79": {
+ "PP-0c7324": {
   "datei": "philosophische-perspektive/page.tsx",
   "ort": "Die Dampfmaschine",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "James Watt war Instrumentenmacher in Glasgow und sollte 1764 ein Modell der alten Newcomen-Pumpe reparieren, dabei erkannte er, wie viel Energie sie verschwendete, und fand mit dem separaten Kondensator den entscheidenden Verbesserungstrick. Mit dem Unternehmer Matthew Boulton machte er daraus ein Geschäft. Boulton soll einem Besucher gesagt haben, er verkaufe hier, was alle Welt begehre, nämlich Kraft. Um Kunden zu überzeugen, rechnete Watt die Leistung seiner Maschinen in ersetzte Pferde um, daher stammt die Masseinheit Pferdestärke. Fabriken mussten nun nicht mehr an Bächen liegen, sie rückten in die Städte, und ab 1830 zogen Dampflokomotiven Menschen und Waren in einem Tempo übers Land, das kein Pferdegespann durchhielt. Kraft war damit zur Ware geworden, messbar, kaufbar und beliebig vermehrbar. Hier beginnt die Geschichte, in der Maschinen Schritt für Schritt Arbeit übernehmen, deren jüngstes Kapitel die KI schreibt."
+  "text": "James Watt war Instrumentenmacher in Glasgow und sollte 1764 ein Modell der alten Newcomen-Pumpe reparieren, dabei erkannte er, wie viel Energie sie verschwendete, und fand mit dem separaten Kondensator den entscheidenden Verbesserungstrick. Mit dem Unternehmer Matthew Boulton machte er daraus ein Geschäft. Boulton soll einem Besucher gesagt haben, er verkaufe hier, was alle Welt begehre, nämlich Kraft. Um Kunden zu überzeugen, rechnete Watt die Leistung seiner Maschinen in ersetzte Pferde um, daher stammt die Masseinheit Pferdestärke. Fabriken mussten nun nicht mehr an Bächen liegen, sie rückten in die Städte und ab 1830 zogen Dampflokomotiven Menschen und Waren in einem Tempo übers Land, das kein Pferdegespann durchhielt. Kraft war damit zur Ware geworden, messbar, kaufbar und beliebig vermehrbar. Hier beginnt die Geschichte, in der Maschinen Schritt für Schritt Arbeit übernehmen, deren jüngstes Kapitel die KI schreibt."
  },
  "PP-fa84ba": {
   "datei": "philosophische-perspektive/page.tsx",
@@ -1623,12 +1623,12 @@
   "stufe": "hoch",
   "text": "Aus dem militärischen ARPANET (1969) wird das World Wide Web: 1989 als Vorschlag, 1991 als erste Website, 1993 vom CERN zur freien Nutzung freigegeben. Information fliesst plötzlich weltweit, sofort und für alle. Das ist das grösste Medienereignis seit dem Buchdruck."
  },
- "PP-67bb7f": {
+ "PP-74bda0": {
   "datei": "philosophische-perspektive/page.tsx",
   "ort": "Internet & World Wide Web",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Die erste Nachricht im ARPANET wurde am 29. Oktober 1969 von Los Angeles nach Stanford geschickt. Geplant war das Wort «LOGIN», nach zwei Buchstaben stürzte die Verbindung ab, übertragen wurde nur «LO». Aus dem Forschungsnetz weniger Universitäten wuchs über zwei Jahrzehnte ein weltweiter Verbund, doch er blieb ein Werkzeug für Fachleute. Den entscheidenden Schritt machte Tim Berners-Lee am CERN. Sein Vorschlag von 1989 für ein Netz aus verknüpften Seiten wurde von seinem Vorgesetzten als vage, aber aufregend bezeichnet. So lief die erste Website der Welt auf einem Rechner bei Genf. Entscheidend war schliesslich, dass das CERN 1993 den Web-Standard zur freien Nutzung freigab, niemand musste Lizenzgebühren zahlen, und genau deshalb konnte das Netz explodieren. Offenheit war hier keine Nebensache, sondern der Bauplan des Erfolgs."
+  "text": "Die erste Nachricht im ARPANET wurde am 29. Oktober 1969 von Los Angeles nach Stanford geschickt. Geplant war das Wort «LOGIN», nach zwei Buchstaben stürzte die Verbindung ab, übertragen wurde nur «LO». Aus dem Forschungsnetz weniger Universitäten wuchs über zwei Jahrzehnte ein weltweiter Verbund, doch er blieb ein Werkzeug für Fachleute. Den entscheidenden Schritt machte Tim Berners-Lee am CERN. Sein Vorschlag von 1989 für ein Netz aus verknüpften Seiten wurde von seinem Vorgesetzten als vage, aber aufregend bezeichnet. So lief die erste Website der Welt auf einem Rechner bei Genf. Entscheidend war schliesslich, dass das CERN 1993 den Web-Standard zur freien Nutzung freigab, niemand musste Lizenzgebühren zahlen und genau deshalb konnte das Netz explodieren. Offenheit war hier keine Nebensache, sondern der Bauplan des Erfolgs."
  },
  "PP-aadb5f": {
   "datei": "philosophische-perspektive/page.tsx",
@@ -1658,12 +1658,12 @@
   "stufe": "tief",
   "text": "Eratosthenes berechnet den Erdumfang mit Schatten, Brunnen und Geometrie, erstaunlich genau. Die Welt wird messbar."
  },
- "PP-adee46": {
+ "PP-dca913": {
   "datei": "philosophische-perspektive/page.tsx",
   "ort": "Die Erde wird vermessen",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "mittel",
-  "text": "Eratosthenes leitete die berühmte Bibliothek von Alexandria und trug den Spitznamen «Beta», weil er in vielen Fächern der Zweitbeste war, in keinem der Erste. Er wusste aus Berichten, dass die Mittagssonne im südlichen Syene zur Sommersonnenwende senkrecht steht, während sie in Alexandria zur selben Stunde um ein Fünfzigstel eines Vollkreises schräg einfällt. Also brauchte er nur noch die Distanz zwischen beiden Städten, die geschulte Schrittzähler abgemessen hatten, und multiplizierte sie mit fünfzig. Je nach angenommener Länge des antiken Längenmasses lag sein Ergebnis nur wenige Prozent neben dem heutigen Wert. Ausgerechnet Kolumbus rechnete anderthalb Jahrtausende später mit einem viel zu kleinen Erdumfang, sonst hätte er die Fahrt nach Westen wohl nie gewagt. Gute Messungen können Weltbilder tragen, und falsche können Weltgeschichte machen."
+  "text": "Eratosthenes leitete die berühmte Bibliothek von Alexandria und trug den Spitznamen «Beta», weil er in vielen Fächern der Zweitbeste war, in keinem der Erste. Er wusste aus Berichten, dass die Mittagssonne im südlichen Syene zur Sommersonnenwende senkrecht steht, während sie in Alexandria zur selben Stunde um ein Fünfzigstel eines Vollkreises schräg einfällt. Also brauchte er nur noch die Distanz zwischen beiden Städten, die geschulte Schrittzähler abgemessen hatten, und multiplizierte sie mit fünfzig. Je nach angenommener Länge des antiken Längenmasses lag sein Ergebnis nur wenige Prozent neben dem heutigen Wert. Ausgerechnet Kolumbus rechnete anderthalb Jahrtausende später mit einem viel zu kleinen Erdumfang, sonst hätte er die Fahrt nach Westen wohl nie gewagt. Gute Messungen können Weltbilder tragen und falsche können Weltgeschichte machen."
  },
  "PP-e898ee": {
   "datei": "philosophische-perspektive/page.tsx",
@@ -1714,12 +1714,12 @@
   "stufe": "tief",
   "text": "Darwins «Entstehung der Arten» reiht den Menschen in die Naturgeschichte ein. Nicht Krone der Schöpfung, sondern Ergebnis von Variation und Auslese."
  },
- "PP-8df5c4": {
+ "PP-a0320e": {
   "datei": "philosophische-perspektive/page.tsx",
   "ort": "Die Evolution",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Als junger Mann segelte Charles Darwin fünf Jahre lang auf der «Beagle» um die Welt und sammelte Käfer, Fossilien und Finken, deren Schnäbel sich von Insel zu Insel unterschieden. Die Erklärung dafür trug er danach über zwanzig Jahre mit sich herum, ohne sie zu veröffentlichen, denn er wusste, wie sehr sie das fromme England treffen würde. Erst als der jüngere Forscher Alfred Russel Wallace ihm 1858 dieselbe Idee in einem Brief schickte, ging Darwin an die Öffentlichkeit, und die Erstauflage der «Entstehung der Arten» war am ersten Tag vergriffen. Im Buch selbst kam der Mensch fast nicht vor, nur ein einziger Satz deutete an, dass auch auf seine Herkunft Licht fallen werde. Gestritten wurde trotzdem sofort über den Affen im Stammbaum. Berühmt wurde die Spottfrage an Darwins Verteidiger, ob er denn väterlicherseits oder mütterlicherseits vom Affen abstamme. Eine Idee ohne jede Maschine hatte genügt, um das Selbstbild einer Epoche zu erschüttern."
+  "text": "Als junger Mann segelte Charles Darwin fünf Jahre lang auf der «Beagle» um die Welt und sammelte Käfer, Fossilien und Finken, deren Schnäbel sich von Insel zu Insel unterschieden. Die Erklärung dafür trug er danach über zwanzig Jahre mit sich herum, ohne sie zu veröffentlichen, denn er wusste, wie sehr sie das fromme England treffen würde. Erst als der jüngere Forscher Alfred Russel Wallace ihm 1858 dieselbe Idee in einem Brief schickte, ging Darwin an die Öffentlichkeit und die Erstauflage der «Entstehung der Arten» war am ersten Tag vergriffen. Im Buch selbst kam der Mensch fast nicht vor, nur ein einziger Satz deutete an, dass auch auf seine Herkunft Licht fallen werde. Gestritten wurde trotzdem sofort über den Affen im Stammbaum. Berühmt wurde die Spottfrage an Darwins Verteidiger, ob er denn väterlicherseits oder mütterlicherseits vom Affen abstamme. Eine Idee ohne jede Maschine hatte genügt, um das Selbstbild einer Epoche zu erschüttern."
  },
  "PP-0c8b04": {
   "datei": "philosophische-perspektive/page.tsx",
@@ -1742,12 +1742,12 @@
   "stufe": "tief",
   "text": "Menschen werden sesshaft, säen, ernten, lagern. Mit dem Ackerbau entstehen Dorf, Eigentum und Vorratshaltung. Das ist die Praxis, von der alle weiteren Fäden ausgehen."
  },
- "PP-656bce": {
+ "PP-3c0394": {
   "datei": "philosophische-perspektive/page.tsx",
   "ort": "Ackerbau & Sesshaftigkeit",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Die Jungsteinzeit begann nicht überall gleichzeitig. Die ältesten Bauerndörfer entstanden um 9500 v. Chr. im sogenannten Fruchtbaren Halbmond im Nahen Osten, wo verschiedene Wildgetreide wuchsen, die sich kultivieren liessen; in Mitteleuropa setzte die Wende erst zwischen 5800 und 4000 v. Chr. ein. In Siedlungen wie Çatalhöyük lebten Tausende Menschen Wand an Wand, man stieg über die Dächer in die Häuser. Bemerkenswert ist, was Skelettfunde zeigen: Die ersten Bauern waren oft kleiner und kränker als die jagenden und sammelnden Menschen vor ihnen, sesshaftes Leben bedeutete zunächst mehr Arbeit, einseitigere Nahrung und ansteckende Krankheiten in der Enge. Geblieben sind die Menschen trotzdem, denn wer ein volles Kornlager hatte, konnte schlechte Jahre überstehen, und musste zugleich bleiben, um es zu verteidigen. Auch in der Schweiz lässt sich diese Wende besichtigen, die Pfahlbaudörfer am Zürichsee und Bodensee gehören heute zum UNESCO-Welterbe. Mit dem Vorrat kam das Planen, und mit dem Planen eine neue Art, an morgen zu denken."
+  "text": "Die Jungsteinzeit begann nicht überall gleichzeitig. Die ältesten Bauerndörfer entstanden um 9500 v. Chr. im sogenannten Fruchtbaren Halbmond im Nahen Osten, wo verschiedene Wildgetreide wuchsen, die sich kultivieren liessen; in Mitteleuropa setzte die Wende erst zwischen 5800 und 4000 v. Chr. ein. In Siedlungen wie Çatalhöyük lebten Tausende Menschen Wand an Wand, man stieg über die Dächer in die Häuser. Bemerkenswert ist, was Skelettfunde zeigen: Die ersten Bauern waren oft kleiner und kränker als die jagenden und sammelnden Menschen vor ihnen, sesshaftes Leben bedeutete zunächst mehr Arbeit, einseitigere Nahrung und ansteckende Krankheiten in der Enge. Geblieben sind die Menschen trotzdem, denn wer ein volles Kornlager hatte, konnte schlechte Jahre überstehen und musste zugleich bleiben, um es zu verteidigen. Auch in der Schweiz lässt sich diese Wende besichtigen, die Pfahlbaudörfer am Zürichsee und Bodensee gehören heute zum UNESCO-Welterbe. Mit dem Vorrat kam das Planen und mit dem Planen eine neue Art, an morgen zu denken."
  },
  "PP-a26884": {
   "datei": "philosophische-perspektive/page.tsx",
@@ -1770,12 +1770,12 @@
   "stufe": "tief",
   "text": "Im Bagdader «Haus der Weisheit» übersetzen, sammeln und erweitern Gelehrte das Wissen Griechenlands, Persiens und Indiens. Das ist Wissenschaft als organisierte Praxis, Jahrhunderte vor Europas Universitäten."
  },
- "PP-ff6ef2": {
+ "PP-0ca4a1": {
   "datei": "philosophische-perspektive/page.tsx",
   "ort": "Das Haus der Weisheit",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Bagdad war um das Jahr 800 eine der grössten und reichsten Städte der Welt, und seine Kalifen sammelten Bücher mit demselben Ehrgeiz wie Gold. Gesandte reisten bis nach Byzanz, um griechische Handschriften zu holen, und berühmte Übersetzer sollen für ihre Arbeit mit dem Gewicht der Bücher in Gold entlohnt worden sein. Hier arbeitete al-Chwarizmi, dessen Lehrbuch über das «al-dschabr» genannte Umformen von Gleichungen der Algebra den Namen gab, und aus seinem eigenen Namen wurde später das Wort «Algorithmus». Möglich machte den Betrieb auch das Papier, das über Samarkand in die Stadt gekommen war und Bücher erschwinglich machte. Als die Mongolen Bagdad 1258 eroberten, sollen die hineingeworfenen Bücher den Tigris dunkel gefärbt haben, so erzählten es die Chronisten. Wissenszentren sind kostbar und verletzlich zugleich, beides gehört zu ihrer Geschichte."
+  "text": "Bagdad war um das Jahr 800 eine der grössten und reichsten Städte der Welt und seine Kalifen sammelten Bücher mit demselben Ehrgeiz wie Gold. Gesandte reisten bis nach Byzanz, um griechische Handschriften zu holen, und berühmte Übersetzer sollen für ihre Arbeit mit dem Gewicht der Bücher in Gold entlohnt worden sein. Hier arbeitete al-Chwarizmi, dessen Lehrbuch über das «al-dschabr» genannte Umformen von Gleichungen der Algebra den Namen gab und aus seinem eigenen Namen wurde später das Wort «Algorithmus». Möglich machte den Betrieb auch das Papier, das über Samarkand in die Stadt gekommen war und Bücher erschwinglich machte. Als die Mongolen Bagdad 1258 eroberten, sollen die hineingeworfenen Bücher den Tigris dunkel gefärbt haben, so erzählten es die Chronisten. Wissenszentren sind kostbar und verletzlich zugleich, beides gehört zu ihrer Geschichte."
  },
  "PP-d94a91": {
   "datei": "philosophische-perspektive/page.tsx",
@@ -1833,19 +1833,19 @@
   "stufe": "tief",
   "text": "Auffällig ist, dass in der westlichen Geschichte dieselben Züge der Verunsicherung immer wiederkehren, nur anders gewichtet. Dazu gehören die Beschleunigung durch Technik, die Verstädterung, die Automatisierung der Arbeit und die Kapitalisierung des Lebens (was bezahlbar ist, wird aneigenbar). Dazu kommen die Individualisierung, die Naturzerstörung, die verschobene Deutungsmacht durch neue Medien und die Entwertung von Wissen und Können. Je nach Epoche trifft es andere Menschen besonders hart."
  },
- "PP-f46bf7": {
+ "PP-93ee3a": {
   "datei": "philosophische-perspektive/page.tsx",
   "ort": "Wege der Orientierung",
   "feld": "Fliesstext",
   "stufe": "tief",
-  "text": "Die Epochen haben gezeigt, dass die Philosophie in unsicheren Zeiten Orientierung gibt. Sie liefert keine schnellen, bunten Antworten, sondern eine nüchterne Klärung. Peter Sloterdijk nennt sie eine Orientierungsdisziplin, die Verwirrung auf sichere Grundlagen zurückführt, und er spricht von der Farbe Grau, der Farbe des ruhigen, abwägenden Denkens. Genau das brauchen wir bei der KI, also Reflexion statt Aufregung und Zwischentöne statt Schwarz-Weiss."
+  "text": "Die Epochen haben gezeigt, dass die Philosophie in unsicheren Zeiten Orientierung gibt. Sie liefert keine schnellen, bunten Antworten, sondern eine nüchterne Klärung. Peter Sloterdijk nennt sie eine Orientierungsdisziplin, die Verwirrung auf sichere Grundlagen zurückführt und er spricht von der Farbe Grau, der Farbe des ruhigen, abwägenden Denkens. Genau das brauchen wir bei der KI, also Reflexion statt Aufregung und Zwischentöne statt Schwarz-Weiss."
  },
- "PP-eadf19": {
+ "PP-6dbe48": {
   "datei": "philosophische-perspektive/page.tsx",
   "ort": "Wege der Orientierung",
   "feld": "Fliesstext",
   "stufe": "tief",
-  "text": "Zum Schluss kommen wir in die Gegenwart. Die Philosophie hilft hier nicht mit fertigen Rezepten, sondern mit Einordnung. Wir bündeln sie in vier Bereiche, und bei jedem steht am Ende dieselbe Frage: Was hilft mir diese Einordnung jetzt?"
+  "text": "Zum Schluss kommen wir in die Gegenwart. Die Philosophie hilft hier nicht mit fertigen Rezepten, sondern mit Einordnung. Wir bündeln sie in vier Bereiche und bei jedem steht am Ende dieselbe Frage: Was hilft mir diese Einordnung jetzt?"
  },
  "PP-66f41a": {
   "datei": "philosophische-perspektive/page.tsx",
@@ -1966,19 +1966,19 @@
   "stufe": "tief",
   "text": "Gefasst, in sich gekehrt sitzt am Fussende der greise Platon, obwohl er an jenem Tag historisch gar nicht anwesend war. David setzt ihn bewusst dazu: Er wird das Gespräch aufschreiben und über zwei Jahrtausende weitertragen. Ohne diese Überlieferung wüssten wir von Sokrates fast nichts."
  },
- "EP-8b588b": {
+ "EP-f0377d": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Antike",
   "feld": "Kartentext",
   "stufe": "hoch",
-  "text": "Zwei Erfindungen treiben den Wandel. Um 800 v. Chr. übernehmen die Griechen von den Phöniziern die Buchstabenschrift, rund zwei Dutzend Zeichen. Geschrieben wurde hier schon früher: Die Paläste der mykenischen Zeit führten ihre Listen in einer Silbenschrift mit etwa 90 Lautzeichen, dazu 160 Bildzeichen für Waren. Um 1200 v. Chr. gingen die Paläste unter und die Schrift mit ihnen; vierhundert Jahre lang wird in Griechenland nicht geschrieben. Das Alphabet ist darum kein vereinfachtes Erbe, sondern ein Neuanfang. Lernen kann es trotzdem nicht jeder: Es gibt keine Schulpflicht und keine Schulhäuser, unterrichtet wird beim Lehrer zuhause. Dazu kommen Münzen, in Lydien um 650, in griechischen Städten wie Aigina um 550 v. Chr. Vorher bezahlte man mit abgewogenem Silber: Barren, Schmuck, Bruchstücke, von denen man je nach Warenwert ein Stück abtrennte und auf die Waage legte. Eine Münze muss man nicht wiegen, man zählt sie, und sie gilt gleich viel, egal in wessen Hand sie liegt. So werden Werte zählbar, teilbar und weitergebbar. Durchgesetzt hat sich beides, weil eine Welt voller Häfen und Händler Verträge, Notizen und ein zuverlässiges Zahlungsmittel brauchte."
+  "text": "Zwei Erfindungen treiben den Wandel. Um 800 v. Chr. übernehmen die Griechen von den Phöniziern die Buchstabenschrift, rund zwei Dutzend Zeichen. Geschrieben wurde hier schon früher: Die Paläste der mykenischen Zeit führten ihre Listen in einer Silbenschrift mit etwa 90 Lautzeichen, dazu 160 Bildzeichen für Waren. Um 1200 v. Chr. gingen die Paläste unter und die Schrift mit ihnen; vierhundert Jahre lang wird in Griechenland nicht geschrieben. Das Alphabet ist darum kein vereinfachtes Erbe, sondern ein Neuanfang. Lernen kann es trotzdem nicht jeder: Es gibt keine Schulpflicht und keine Schulhäuser, unterrichtet wird beim Lehrer zuhause. Dazu kommen Münzen, in Lydien um 650, in griechischen Städten wie Aigina um 550 v. Chr. Vorher bezahlte man mit abgewogenem Silber: Barren, Schmuck, Bruchstücke, von denen man je nach Warenwert ein Stück abtrennte und auf die Waage legte. Eine Münze muss man nicht wiegen, man zählt sie und sie gilt gleich viel, egal in wessen Hand sie liegt. So werden Werte zählbar, teilbar und weitergebbar. Durchgesetzt hat sich beides, weil eine Welt voller Häfen und Händler Verträge, Notizen und ein zuverlässiges Zahlungsmittel brauchte."
  },
- "EP-a6e85e": {
+ "EP-d33896": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Antike",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "mittel",
-  "text": "Wie das im Alltag aussah, zeigt Athen. Solons Gesetze standen auf hölzernen Tafeln, die drehbar an Pflöcken befestigt waren, etwa wie ein Kartenständer, und jeder konnte sie einsehen. Wer lesen konnte, war nicht mehr darauf angewiesen, dass ihm jemand vorlas und dabei die Wahrheit sagte, sondern konnte selber nachschauen, was gilt. Auf der Agora wurde dann darüber gestritten. Im Hafen Piräus prüften Händler Verträge und zahlten mit den silbernen «Eulen», wie man Athens Münzen nach ihrem Münzbild nannte. Das Silber dafür kam aus den Bergwerken von Laurion. Als dort ab 483 v. Chr. mehr Silber anfiel, wollten die Athener den Überschuss unter sich aufteilen. Themistokles überzeugte sie, davon Kriegsschiffe zu bauen. Wenige Jahre später retteten genau diese Schiffe die Stadt gegen die Perser. Und noch etwas verschob sich: Wer schreiben und rechnen konnte, kam voran, auch ohne vornehme Familie. Nicht mehr nur die Herkunft zählte, sondern das Können."
+  "text": "Wie das im Alltag aussah, zeigt Athen. Solons Gesetze standen auf hölzernen Tafeln, die drehbar an Pflöcken befestigt waren, etwa wie ein Kartenständer und jeder konnte sie einsehen. Wer lesen konnte, war nicht mehr darauf angewiesen, dass ihm jemand vorlas und dabei die Wahrheit sagte, sondern konnte selber nachschauen, was gilt. Auf der Agora wurde dann darüber gestritten. Im Hafen Piräus prüften Händler Verträge und zahlten mit den silbernen «Eulen», wie man Athens Münzen nach ihrem Münzbild nannte. Das Silber dafür kam aus den Bergwerken von Laurion. Als dort ab 483 v. Chr. mehr Silber anfiel, wollten die Athener den Überschuss unter sich aufteilen. Themistokles überzeugte sie, davon Kriegsschiffe zu bauen. Wenige Jahre später retteten genau diese Schiffe die Stadt gegen die Perser. Und noch etwas verschob sich: Wer schreiben und rechnen konnte, kam voran, auch ohne vornehme Familie. Nicht mehr nur die Herkunft zählte, sondern das Können."
  },
  "EP-94e98f": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -1987,12 +1987,12 @@
   "stufe": "mittel",
   "text": "Wer seine Stellung von Geburt hatte, verliert den Boden. In Athen (ab etwa 500 v. Chr.) und in Rom entscheiden Abstimmungen, Ämter und öffentliche Reden, nicht mehr allein die Familie. Wer gut reden kann, kommt nach oben. Genau da setzen die Sophisten an. Sie ziehen von Stadt zu Stadt und bringen jungen Männern gegen Bezahlung bei, wie man eine Rede aufbaut und ein Publikum überzeugt. Ihre Kernbotschaft ist heikel: Zu jeder Sache lässt sich genauso gut das Gegenteil begründen. Damit steht eine unangenehme Frage im Raum: Wenn sich alles begründen lässt, gilt dann überhaupt noch etwas? Der Prozess gegen Sokrates (399 v. Chr.), der mit dem Todesurteil endet, zeigt, wie nervös eine verunsicherte Stadt reagiert."
  },
- "EP-9ad93c": {
+ "EP-ba3edc": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Antike",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Der Redelehrer Protagoras brachte die neue Lage auf einen Satz: Der Mensch sei «das Mass aller Dinge». Gemeint ist, dass nicht die Götter festlegen, was wahr und richtig ist, sondern die Menschen selbst. Protagoras war ein gefragter Lehrer und nahm hohe Honorare. Für viele Athener klang das nach Freiheit, für andere so, als würde der Boden unter ihren Füssen weich. Wie gereizt die Stimmung war, zeigt der Prozess von 399 v. Chr. Rund 500 ausgeloste Bürger sassen als Gericht zusammen, und vor ihnen verteidigte sich der siebzigjährige Sokrates. Als er nach dem Schuldspruch selber eine Strafe vorschlagen sollte, schlug er zuerst allen Ernstes eine Belohnung vor, Gratisessen auf Staatskosten, und liess sich dann nur zu einer Geldbusse herab. Das Gericht entschied auf den Giftbecher. Dazu muss man wissen, dass Athen kurz zuvor einen langen Krieg verloren und die Gewaltherrschaft der Dreissig Tyrannen erlebt hatte. Eine erschöpfte Stadt erträgt es schlecht, wenn jemand ihre letzten Gewissheiten in Frage stellt. Diese Angst, dass am Ende gar nichts mehr sicher ist, kehrt in jeder Umbruchszeit wieder."
+  "text": "Der Redelehrer Protagoras brachte die neue Lage auf einen Satz: Der Mensch sei «das Mass aller Dinge». Gemeint ist, dass nicht die Götter festlegen, was wahr und richtig ist, sondern die Menschen selbst. Protagoras war ein gefragter Lehrer und nahm hohe Honorare. Für viele Athener klang das nach Freiheit, für andere so, als würde der Boden unter ihren Füssen weich. Wie gereizt die Stimmung war, zeigt der Prozess von 399 v. Chr. Rund 500 ausgeloste Bürger sassen als Gericht zusammen und vor ihnen verteidigte sich der siebzigjährige Sokrates. Als er nach dem Schuldspruch selber eine Strafe vorschlagen sollte, schlug er zuerst allen Ernstes eine Belohnung vor, Gratisessen auf Staatskosten und liess sich dann nur zu einer Geldbusse herab. Das Gericht entschied auf den Giftbecher. Dazu muss man wissen, dass Athen kurz zuvor einen langen Krieg verloren und die Gewaltherrschaft der Dreissig Tyrannen erlebt hatte. Eine erschöpfte Stadt erträgt es schlecht, wenn jemand ihre letzten Gewissheiten in Frage stellt. Diese Angst, dass am Ende gar nichts mehr sicher ist, kehrt in jeder Umbruchszeit wieder."
  },
  "EP-8c3a46": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2008,12 +2008,12 @@
   "stufe": "mittel",
   "text": "Aristoteles sammelte zuerst und ordnete dann. In einer Lagune auf der Insel Lesbos untersuchte er Fische, Kraken und Seeigel und beschrieb, wie sie gebaut sind. Seine Schule trug die Verfassungen von 158 griechischen Städten zusammen. In Athen unterrichtete er im Lykeion; nach dessen Wandelhalle, dem «Peripatos», wurde seine Schule später benannt. Aus dem vielen Material zog er Regeln des Schliessens. Ein Beispiel: Alle Menschen sind sterblich. Sokrates ist ein Mensch. Also ist Sokrates sterblich. Das stimmt, egal wer es sagt, egal wie sympathisch oder mächtig diese Person ist. Genau das war die Antwort an die Redekünstler: Ein Schluss stimmt oder stimmt nicht, geschicktes Reden ändert daran nichts. Über arabische Gelehrte und mittelalterliche Klosterschulen kam diese Haltung bis in unsere Schulzimmer."
  },
- "EP-2b8e48": {
+ "EP-beb06f": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Zerbrechen der Ordnung",
   "feld": "Einleitung",
   "stufe": "tief",
-  "text": "Rom zerfällt, und mit den Strassen, Städten und Gesetzen wankt die ganze Weltordnung. Was tausend Jahre selbstverständlich schien, löst sich auf: Handel schrumpft, Städte leeren sich, Wissen zieht sich in die Klöster zurück. Die Menschen suchen einen neuen Halt und finden ihn nicht mehr im Reich, sondern im Glauben."
+  "text": "Rom zerfällt und mit den Strassen, Städten und Gesetzen wankt die ganze Weltordnung. Was tausend Jahre selbstverständlich schien, löst sich auf: Handel schrumpft, Städte leeren sich, Wissen zieht sich in die Klöster zurück. Die Menschen suchen einen neuen Halt und finden ihn nicht mehr im Reich, sondern im Glauben."
  },
  "EP-2d4b34": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2092,19 +2092,19 @@
   "stufe": "tief",
   "text": "Von oben fällt ein heller Strahl auf Augustinus, dem sein Blick entgegengeht. Er verkörpert Augustins Überzeugung, dass wahre Erkenntnis eine Art göttliche «Erleuchtung» ist: Der Mensch findet die Wahrheit, indem er sich nach innen und nach oben wendet."
  },
- "EP-fbded4": {
+ "EP-9b7189": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Zerbrechen der Ordnung",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Hier verunsichert nicht neue, sondern verlorene Technik. Mit dem Weströmischen Reich (476 n. Chr.) verfallen Fernstrassen, Aquädukte, das Münzwesen und die staatliche Verwaltung. Fähigkeiten wie Betonbau in römischer Qualität gehen für Jahrhunderte verloren. Die Welt wird kleiner, langsamer und unsicherer. Verloren gingen diese technischen und organisatorischen Fähigkeiten, weil ihre Grundlage wegbrach: Ohne Zentralmacht, Steuern und Fernhandel unterhielt niemand mehr die Strassen, und die Münzprägung schrumpfte auf einen Bruchteil. Technik überlebt nur mit ihrer wirtschaftlichen und politischen Basis."
+  "text": "Hier verunsichert nicht neue, sondern verlorene Technik. Mit dem Weströmischen Reich (476 n. Chr.) verfallen Fernstrassen, Aquädukte, das Münzwesen und die staatliche Verwaltung. Fähigkeiten wie Betonbau in römischer Qualität gehen für Jahrhunderte verloren. Die Welt wird kleiner, langsamer und unsicherer. Verloren gingen diese technischen und organisatorischen Fähigkeiten, weil ihre Grundlage wegbrach: Ohne Zentralmacht, Steuern und Fernhandel unterhielt niemand mehr die Strassen und die Münzprägung schrumpfte auf einen Bruchteil. Technik überlebt nur mit ihrer wirtschaftlichen und politischen Basis."
  },
- "EP-c167d2": {
+ "EP-112f69": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Zerbrechen der Ordnung",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "mittel",
-  "text": "Rom selbst zeigt den Absturz in Zahlen: Die Stadt zählte auf ihrem Höhepunkt gegen eine Million Einwohnerinnen und Einwohner und schrumpfte nach Kriegen und Plünderungen auf wenige Zehntausend. Als die Ostgoten die Stadt 537 belagerten, zerstörten sie die Wasserleitungen. Brunnen und Thermen versiegten, und das Leben zog sich auf Dauer ans Ufer des Tibers zurück, wo man Wasser holen konnte. Die gewaltige Betonkuppel des Pantheons blieb über tausend Jahre unübertroffen: Niemand hätte sie mehr bauen können. Zur gleichen Zeit begann die Rettung im Kleinen. Der Gelehrte Cassiodorus gründete um 550 in Süditalien das Kloster Vivarium, in dem Mönche antike Handschriften abschrieben, und bald gehörte dieses Kopieren in vielen Klöstern zum Tagewerk. Was wir heute von Cicero oder Vergil lesen, ist fast ausnahmslos durch solche Schreibstuben gegangen. Eine Zivilisation kann eben nicht nur Neues erfinden, sie kann Können auch wieder verlieren."
+  "text": "Rom selbst zeigt den Absturz in Zahlen: Die Stadt zählte auf ihrem Höhepunkt gegen eine Million Einwohnerinnen und Einwohner und schrumpfte nach Kriegen und Plünderungen auf wenige Zehntausend. Als die Ostgoten die Stadt 537 belagerten, zerstörten sie die Wasserleitungen. Brunnen und Thermen versiegten und das Leben zog sich auf Dauer ans Ufer des Tibers zurück, wo man Wasser holen konnte. Die gewaltige Betonkuppel des Pantheons blieb über tausend Jahre unübertroffen: Niemand hätte sie mehr bauen können. Zur gleichen Zeit begann die Rettung im Kleinen. Der Gelehrte Cassiodorus gründete um 550 in Süditalien das Kloster Vivarium, in dem Mönche antike Handschriften abschrieben und bald gehörte dieses Kopieren in vielen Klöstern zum Tagewerk. Was wir heute von Cicero oder Vergil lesen, ist fast ausnahmslos durch solche Schreibstuben gegangen. Eine Zivilisation kann eben nicht nur Neues erfinden, sie kann Können auch wieder verlieren."
  },
  "EP-9d34d6": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2113,12 +2113,12 @@
   "stufe": "mittel",
   "text": "Betroffen sind alle, besonders die städtischen Eliten: Wer sich auf Rom und seine Ordnung verlassen hatte, steht plötzlich ohne Schutz da. Nach der Plünderung Roms 410 durch die Westgoten geben viele den Christen die Schuld. Sie hätten mit dem Abfall von den alten Göttern das Unglück heraufbeschworen."
  },
- "EP-fb7e60": {
+ "EP-ddde72": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Zerbrechen der Ordnung",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "mittel",
-  "text": "Wie tief der Schock sass, zeigt der Gelehrte Hieronymus, der fern in Bethlehem an seiner Bibelübersetzung arbeitete: Als ihn die Nachricht erreichte, schrieb er, die Stimme stocke ihm und vor Schluchzen könne er nicht weiterdiktieren: Eingenommen sei die Stadt, die zuvor die ganze Welt besiegt hatte. Übers Meer flohen ausgeplünderte Senatorenfamilien nach Nordafrika, wo manche als Bittsteller in Hippo ankamen, der Bischofsstadt des Augustinus. Dort hörte er beide Vorwürfe: Die Anhänger der alten Götter gaben dem Christengott die Schuld, und die Christen fragten, warum er sie nicht geschützt hatte. Augustinus antwortete nicht mit einer schnellen Streitschrift, sondern arbeitete von 413 bis 426 an den zweiundzwanzig Büchern seines «Gottesstaats». Dass eine Katastrophe sofort einen Schuldigen braucht, hat sich seither kaum geändert, es wechseln nur die Adressaten."
+  "text": "Wie tief der Schock sass, zeigt der Gelehrte Hieronymus, der fern in Bethlehem an seiner Bibelübersetzung arbeitete: Als ihn die Nachricht erreichte, schrieb er, die Stimme stocke ihm und vor Schluchzen könne er nicht weiterdiktieren: Eingenommen sei die Stadt, die zuvor die ganze Welt besiegt hatte. Übers Meer flohen ausgeplünderte Senatorenfamilien nach Nordafrika, wo manche als Bittsteller in Hippo ankamen, der Bischofsstadt des Augustinus. Dort hörte er beide Vorwürfe: Die Anhänger der alten Götter gaben dem Christengott die Schuld und die Christen fragten, warum er sie nicht geschützt hatte. Augustinus antwortete nicht mit einer schnellen Streitschrift, sondern arbeitete von 413 bis 426 an den zweiundzwanzig Büchern seines «Gottesstaats». Dass eine Katastrophe sofort einen Schuldigen braucht, hat sich seither kaum geändert, es wechseln nur die Adressaten."
  },
  "EP-8c45bf": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2169,12 +2169,12 @@
   "stufe": "tief",
   "text": "Der Turm füllt das Bild wie ein Gebirge: unten fertig und bewohnt, oben rohes Gestein, eine Baustelle, die in die Wolken wächst. Bruegel malt die biblische Geschichte als Panorama seiner eigenen Zeit, mit Hunderten winziger Arbeiter."
  },
- "EP-c2af79": {
+ "EP-3ed82e": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Renaissance & Aufbruch",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Die obersten Stockwerke stossen buchstäblich in die Wolke, und schon zeigt sich die Schieflage: Die Ebenen stehen schräg, das rote Mauerwerk bleibt roh. Der Ehrgeiz wächst schneller, als das Fundament trägt. Das ist ein Bild für Technik-Hybris."
+  "text": "Die obersten Stockwerke stossen buchstäblich in die Wolke und schon zeigt sich die Schieflage: Die Ebenen stehen schräg, das rote Mauerwerk bleibt roh. Der Ehrgeiz wächst schneller, als das Fundament trägt. Das ist ein Bild für Technik-Hybris."
  },
  "EP-c328dc": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2218,12 +2218,12 @@
   "stufe": "tief",
   "text": "Himmelsglobus, Sonnenuhren, Quadrant: Instrumente zur Vermessung von Himmel und Zeit, das neue Wissen der Epoche. Wer Himmel und Stunde berechnen kann, kann navigieren und handeln: Wissenschaft und Welthandel gehören zusammen."
  },
- "EP-09bb46": {
+ "EP-3e27db": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Renaissance & Aufbruch",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Erdglobus, Rechenbuch, Laute und Gesangbuch: die irdischen Künste. Doch genau hier zeigt sich ein Riss. An der Laute ist eine Saite gerissen, und das aufgeschlagene Gesangbuch zeigt Luther-Lieder: die zerbrochene Harmonie der Glaubensspaltung."
+  "text": "Erdglobus, Rechenbuch, Laute und Gesangbuch: die irdischen Künste. Doch genau hier zeigt sich ein Riss. An der Laute ist eine Saite gerissen und das aufgeschlagene Gesangbuch zeigt Luther-Lieder: die zerbrochene Harmonie der Glaubensspaltung."
  },
  "EP-289292": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2253,12 +2253,12 @@
   "stufe": "hoch",
   "text": "Getroffen werden mehrere Gruppen zugleich. Die Deutungshüter (Klerus und Handschriften-Kopisten) verlieren ihr Wissensmonopol. Die Bauern erheben sich im Deutschen Bauernkrieg (1525). Und die Völker Amerikas werden nach 1492 erobert und dezimiert. Zugleich nimmt Kopernikus (1543) der Erde die Mitte des Kosmos."
  },
- "EP-9d10fe": {
+ "EP-b390cc": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Renaissance & Aufbruch",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Im Frühjahr 1525 beschlossen aufständische Bauern in Memmingen zwölf Artikel und beriefen sich darin auf das Evangelium, das nun jeder gedruckt lesen konnte: Wenn Christus alle Menschen erlöst habe, warum seien sie dann Leibeigene? Die Fürsten antworteten mit Heeren, Zehntausende Bauern starben, der Prediger Thomas Müntzer wurde nach der Schlacht bei Frankenhausen hingerichtet. Jenseits des Atlantiks war vier Jahre zuvor Tenochtitlan gefallen, eine Stadt, grösser als die meisten Städte Europas, und eingeschleppte Seuchen töteten dort mehr Menschen als alle Waffen. 1543 schliesslich soll der sterbende Kopernikus das erste gedruckte Exemplar seines Buches noch in Händen gehalten haben, des Buches, das die Erde zu einem Planeten unter Planeten machte. Aufstieg für die einen bedeutete Enteignung, Eroberung oder Kränkung für die anderen. Verunsicherung ist selten gerecht verteilt, damals so wenig wie heute."
+  "text": "Im Frühjahr 1525 beschlossen aufständische Bauern in Memmingen zwölf Artikel und beriefen sich darin auf das Evangelium, das nun jeder gedruckt lesen konnte: Wenn Christus alle Menschen erlöst habe, warum seien sie dann Leibeigene? Die Fürsten antworteten mit Heeren, Zehntausende Bauern starben, der Prediger Thomas Müntzer wurde nach der Schlacht bei Frankenhausen hingerichtet. Jenseits des Atlantiks war vier Jahre zuvor Tenochtitlan gefallen, eine Stadt, grösser als die meisten Städte Europas und eingeschleppte Seuchen töteten dort mehr Menschen als alle Waffen. 1543 schliesslich soll der sterbende Kopernikus das erste gedruckte Exemplar seines Buches noch in Händen gehalten haben, des Buches, das die Erde zu einem Planeten unter Planeten machte. Aufstieg für die einen bedeutete Enteignung, Eroberung oder Kränkung für die anderen. Verunsicherung ist selten gerecht verteilt, damals so wenig wie heute."
  },
  "EP-2e7bfd": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2274,12 +2274,12 @@
   "stufe": "hoch",
   "text": "Pico war dreiundzwanzig, als er 1486 die Gelehrten Europas nach Rom einlud, um mit ihnen über 900 Thesen zu streiten, und die «Rede über die Würde des Menschen» sollte die Eröffnung dieses Wettstreits werden. Der Papst verbot die Veranstaltung, ein Teil der Thesen galt als ketzerisch, doch der Text überlebte und wurde zum Manifest des neuen Selbstbewusstseins. Ein Menschenalter später zog sich Montaigne, Richter in Bordeaux, auf den Turm seines Schlosses zurück, während draussen Katholiken und Protestanten einander in Glaubenskriegen abschlachteten. Auf die Deckenbalken seiner Bibliothek liess er Sprüche antiker Skeptiker malen und erfand beim Schreiben nebenbei eine neue Gattung: den «Essai», wörtlich den Versuch, das Ausprobieren eines Gedankens. Grösse und Zweifel gehören seither zusammen, und wer heute angesichts der KI fragt, was der Mensch eigentlich ist, führt genau dieses Gespräch weiter."
  },
- "EP-7e9865": {
+ "EP-dbb1c4": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Aufklärung",
   "feld": "Einleitung",
   "stufe": "tief",
-  "text": "Die Naturwissenschaft entziffert den Himmel, und die Vernunft klopft bei jeder Autorität an: Warum eigentlich? Immer mehr Menschen wollen nichts mehr einfach glauben, sondern selbst prüfen, in Wissenschaft, Religion und Politik. Aus diesem Selbstdenken erwachsen die Ideen von Menschenrechten, Gewaltenteilung und Fortschritt, die bis heute unsere Demokratien tragen."
+  "text": "Die Naturwissenschaft entziffert den Himmel und die Vernunft klopft bei jeder Autorität an: Warum eigentlich? Immer mehr Menschen wollen nichts mehr einfach glauben, sondern selbst prüfen, in Wissenschaft, Religion und Politik. Aus diesem Selbstdenken erwachsen die Ideen von Menschenrechten, Gewaltenteilung und Fortschritt, die bis heute unsere Demokratien tragen."
  },
  "EP-d0019d": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2365,12 +2365,12 @@
   "stufe": "hoch",
   "text": "Neue Messinstrumente ordnen die Welt. Teleskop und Mikroskop (ab ~1600) erweitern das Sichtbare nach aussen und innen. Die Pendeluhr (Huygens, 1657) macht die Zeit genau messbar. Newtons «Principia» (1687) erklären Himmel und Erde mit denselben Gesetzen. Die Welt erscheint als berechenbares Uhrwerk. Möglich wurden diese Instrumente durch das Schleifhandwerk der Linsen (in den Niederlanden), den Buchdruck zur raschen Verbreitung der Funde und handfeste Bedürfnisse wie die Navigation auf See. Newton selbst baute auf Kopernikus, Galilei und Kepler auf."
  },
- "EP-5f3939": {
+ "EP-830bd6": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Aufklärung",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Als Galilei im Winter 1610 sein Fernrohr auf Jupiter richtete, sah er vier Lichtpunkte, die den Planeten umkreisten: Monde, die in keinem alten Weltbild vorgesehen waren. In Delft entdeckte der Tuchhändler Antoni van Leeuwenhoek mit selbstgeschliffenen Linsen in einem Wassertropfen wimmelnde «Tierchen», die erste Ahnung von der unsichtbaren Welt der Mikroben. Newtons Rechnungen bestanden schliesslich die härteste aller Proben: Sein Freund Edmond Halley sagte mit ihnen voraus, der Komet von 1682 werde um 1758 wiederkehren, und der Himmelskörper erschien pünktlich, sechzehn Jahre nach Halleys Tod. Ein Komet war damit kein Schreckenszeichen mehr, sondern ein Termin im Kalender. Wo der Himmel berechenbar wird, verliert das Schicksal seine Zuständigkeit, und dieses Versprechen der Berechenbarkeit kehrt heute in den Modellen und Prognosen der KI wieder."
+  "text": "Als Galilei im Winter 1610 sein Fernrohr auf Jupiter richtete, sah er vier Lichtpunkte, die den Planeten umkreisten: Monde, die in keinem alten Weltbild vorgesehen waren. In Delft entdeckte der Tuchhändler Antoni van Leeuwenhoek mit selbstgeschliffenen Linsen in einem Wassertropfen wimmelnde «Tierchen», die erste Ahnung von der unsichtbaren Welt der Mikroben. Newtons Rechnungen bestanden schliesslich die härteste aller Proben: Sein Freund Edmond Halley sagte mit ihnen voraus, der Komet von 1682 werde um 1758 wiederkehren, und der Himmelskörper erschien pünktlich, sechzehn Jahre nach Halleys Tod. Ein Komet war damit kein Schreckenszeichen mehr, sondern ein Termin im Kalender. Wo der Himmel berechenbar wird, verliert das Schicksal seine Zuständigkeit und dieses Versprechen der Berechenbarkeit kehrt heute in den Modellen und Prognosen der KI wieder."
  },
  "EP-1d7201": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2379,12 +2379,12 @@
   "stufe": "hoch",
   "text": "Die Autoritäten wanken: Kirche und Adel verlieren ihr Monopol auf Wahrheit und Ordnung. Besonders trifft es die fromme Bevölkerung, als am 1. November 1755 ein Erdbeben mit Feuer und Flutwelle Lissabon zerstört, mitten im Gottesdienst, am Allerheiligentag. Wie passt solches Leid zu einem gütigen Gott?"
  },
- "EP-47882a": {
+ "EP-9764be": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Aufklärung",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Lissabon zählte damals zu den grössten und reichsten Städten Europas, genährt vom Gold Brasiliens, und binnen Stunden lagen Zehntausende unter den Trümmern. Der Minister Pombal, selbst knapp davongekommen, soll die Losung ausgegeben haben, man müsse jetzt die Toten begraben und für die Lebenden sorgen, und er liess die Stadt nach neuen, erdbebensicheren Plänen wieder aufbauen. Zugleich stritten die berühmtesten Köpfe des Kontinents öffentlich über den Sinn des Unglücks: Voltaire klagte in einem Gedicht den frommen Optimismus an, Rousseau hielt ihm entgegen, nicht Gott habe die engen, hohen Häuser in die Stadt gestellt, sondern der Mensch. Aus der Frage nach der Schuld des Himmels wurde so die Frage nach der Verantwortung der Menschen, nach Bauweise, Stadtplanung und Vorsorge. Es ist der Moment, in dem die Katastrophe aufhört, blosse Strafe zu sein, und anfängt, eine Aufgabe zu werden."
+  "text": "Lissabon zählte damals zu den grössten und reichsten Städten Europas, genährt vom Gold Brasiliens und binnen Stunden lagen Zehntausende unter den Trümmern. Der Minister Pombal, selbst knapp davongekommen, soll die Losung ausgegeben haben, man müsse jetzt die Toten begraben und für die Lebenden sorgen und er liess die Stadt nach neuen, erdbebensicheren Plänen wieder aufbauen. Zugleich stritten die berühmtesten Köpfe des Kontinents öffentlich über den Sinn des Unglücks: Voltaire klagte in einem Gedicht den frommen Optimismus an, Rousseau hielt ihm entgegen, nicht Gott habe die engen, hohen Häuser in die Stadt gestellt, sondern der Mensch. Aus der Frage nach der Schuld des Himmels wurde so die Frage nach der Verantwortung der Menschen, nach Bauweise, Stadtplanung und Vorsorge. Es ist der Moment, in dem die Katastrophe aufhört, blosse Strafe zu sein und anfängt, eine Aufgabe zu werden."
  },
  "EP-8833b8": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2393,19 +2393,19 @@
   "stufe": "hoch",
   "text": "Kant (1724–1804) fasst die Aufklärung in einem Satz: «Habe Mut, dich deines eigenen Verstandes zu bedienen.» Aufklärung sei der «Ausgang des Menschen aus seiner selbstverschuldeten Unmündigkeit». Verlass dich nicht auf Autoritäten, urteile selbst und trage die Verantwortung. Alltagssprachlich: «das musst du selbst entscheiden», «sei mündig»."
  },
- "EP-f04382": {
+ "EP-f9ae19": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Aufklärung",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Kant verbrachte fast sein ganzes Leben in Königsberg, und der Anekdote nach stellten die Nachbarn ihre Uhren nach seinem täglichen Spaziergang: Ausgerechnet dieser unauffälligste aller Professoren schrieb die Sätze, die Europas Autoritäten herausforderten. Sein berühmter Aufsatz von 1784 war eine Antwort: Ein Berliner Geistlicher hatte in einer Zeitschrift gefragt, was diese Aufklärung eigentlich sei. So lief das damals, denn gedacht wurde öffentlich, in Zeitschriften und in Lesegesellschaften, wo man sich zum Vorlesen und Diskutieren traf. Unmündigkeit nannte Kant «selbstverschuldet», wenn einer nicht zu wenig Verstand hat, sondern zu wenig Mut, ihn zu benutzen. Den Gegenwind bekam er selbst zu spüren: 1794 untersagte ihm der preussische König weitere Schriften zur Religion, und Kant fügte sich, solange dieser König lebte, danach schrieb er weiter. Mündigkeit heisst seither nicht, alles besser zu wissen, sondern für das eigene Urteil einzustehen, eine Zumutung, die im Zeitalter der Suchmaschinen und Sprachmodelle nichts von ihrer Schärfe verloren hat."
+  "text": "Kant verbrachte fast sein ganzes Leben in Königsberg und der Anekdote nach stellten die Nachbarn ihre Uhren nach seinem täglichen Spaziergang: Ausgerechnet dieser unauffälligste aller Professoren schrieb die Sätze, die Europas Autoritäten herausforderten. Sein berühmter Aufsatz von 1784 war eine Antwort: Ein Berliner Geistlicher hatte in einer Zeitschrift gefragt, was diese Aufklärung eigentlich sei. So lief das damals, denn gedacht wurde öffentlich, in Zeitschriften und in Lesegesellschaften, wo man sich zum Vorlesen und Diskutieren traf. Unmündigkeit nannte Kant «selbstverschuldet», wenn einer nicht zu wenig Verstand hat, sondern zu wenig Mut, ihn zu benutzen. Den Gegenwind bekam er selbst zu spüren: 1794 untersagte ihm der preussische König weitere Schriften zur Religion und Kant fügte sich, solange dieser König lebte, danach schrieb er weiter. Mündigkeit heisst seither nicht, alles besser zu wissen, sondern für das eigene Urteil einzustehen, eine Zumutung, die im Zeitalter der Suchmaschinen und Sprachmodelle nichts von ihrer Schärfe verloren hat."
  },
- "EP-4caa6f": {
+ "EP-77623b": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Industriemoderne",
   "feld": "Einleitung",
   "stufe": "tief",
-  "text": "Die Dampfmaschine pflügt die Gesellschaft um: Millionen ziehen in die Fabrikstädte, Fortschritt und Elend wachsen zusammen. Innerhalb weniger Generationen verändert sich das Leben radikaler als in tausend Jahren zuvor. Arbeit, Wohnen, Zeit und Familie werden neu geordnet. Der Wohlstand wächst, und mit ihm eine neue Klasse von Lohnarbeitern, die kaum daran teilhat."
+  "text": "Die Dampfmaschine pflügt die Gesellschaft um: Millionen ziehen in die Fabrikstädte, Fortschritt und Elend wachsen zusammen. Innerhalb weniger Generationen verändert sich das Leben radikaler als in tausend Jahren zuvor. Arbeit, Wohnen, Zeit und Familie werden neu geordnet. Der Wohlstand wächst und mit ihm eine neue Klasse von Lohnarbeitern, die kaum daran teilhat."
  },
  "EP-a2aacb": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2484,12 +2484,12 @@
   "stufe": "tief",
   "text": "Reihe an Reihe stehen dicht gedrängte Arbeiterhäuser, dazwischen winzige Höfe mit Wäscheleinen. So sah die Wohnwirklichkeit der Arbeiterfamilien aus: eng, russgeschwärzt, ohne Privatheit. Der Stich lässt die Enge fast körperlich spüren."
  },
- "EP-18ff31": {
+ "EP-005dbc": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Industriemoderne",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Oben rauscht auf dem Viadukt eine Eisenbahn vorbei. Das Bild verdichtet daraus ein Sinnbild: Der Fortschritt fährt buchstäblich über die Köpfe der Ärmsten hinweg, nah genug, um ihren Alltag zu verdunkeln, und doch für sie unerreichbar."
+  "text": "Oben rauscht auf dem Viadukt eine Eisenbahn vorbei. Das Bild verdichtet daraus ein Sinnbild: Der Fortschritt fährt buchstäblich über die Köpfe der Ärmsten hinweg, nah genug, um ihren Alltag zu verdunkeln und doch für sie unerreichbar."
  },
  "EP-cc0c87": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2498,12 +2498,12 @@
   "stufe": "hoch",
   "text": "Die verbesserte Dampfmaschine (James Watt, 1769) setzt Kraft frei, die nicht von Muskel, Wind oder Wasser stammt. Sie treibt Fabriken, Eisenbahnen und Dampfschiffe. Der elektrische Telegraf (ab 1837) trennt die Nachricht vom Boten. Die Fabrikuhr taktet die Arbeit in Schichten. Durchgesetzt hat sich die Dampfmaschine, weil sie ein konkretes Problem löste (das Abpumpen von Wasser aus Kohlebergwerken) und weil in Grossbritannien Kohle, Eisen und Kapital aus dem Kolonialhandel reichlich vorhanden waren. Sie verbesserte die ältere Newcomen-Maschine."
  },
- "EP-9309b8": {
+ "EP-cada84": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Industriemoderne",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Bei der Eröffnung der Eisenbahn zwischen Liverpool und Manchester 1830 geriet der Parlamentsabgeordnete William Huskisson vor eine heranfahrende Lokomotive und starb noch am selben Abend: Das neue Tempo forderte sein Opfer schon am ersten Tag. Die Faszination war trotzdem gewaltig, denn erstmals reiste man stundenlang schneller, als ein Pferd es durchhält. Damals hatte noch jede Stadt ihre eigene Sonnenzeit, in Bremen gingen die Uhren gut eine Viertelstunde hinter Berlin nach, und erst der Fahrplan erzwang die gemeinsame Stunde, in Deutschland gesetzlich ab 1893. Der Telegraf trennte unterdessen die Nachricht vom Boten: 1858 tauschten die britische Königin und der amerikanische Präsident Grussbotschaften durch ein Kabel am Grund des Atlantiks. Raum und Zeit, bis dahin Grössen der Natur, wurden zu Grössen der Technik. Wer heute über das Tempo der KI staunt oder erschrickt, macht dieselbe Erfahrung wie die Menschen der Industrialisierung."
+  "text": "Bei der Eröffnung der Eisenbahn zwischen Liverpool und Manchester 1830 geriet der Parlamentsabgeordnete William Huskisson vor eine heranfahrende Lokomotive und starb noch am selben Abend: Das neue Tempo forderte sein Opfer schon am ersten Tag. Die Faszination war trotzdem gewaltig, denn erstmals reiste man stundenlang schneller, als ein Pferd es durchhält. Damals hatte noch jede Stadt ihre eigene Sonnenzeit, in Bremen gingen die Uhren gut eine Viertelstunde hinter Berlin nach und erst der Fahrplan erzwang die gemeinsame Stunde, in Deutschland gesetzlich ab 1893. Der Telegraf trennte unterdessen die Nachricht vom Boten: 1858 tauschten die britische Königin und der amerikanische Präsident Grussbotschaften durch ein Kabel am Grund des Atlantiks. Raum und Zeit, bis dahin Grössen der Natur, wurden zu Grössen der Technik. Wer heute über das Tempo der KI staunt oder erschrickt, macht dieselbe Erfahrung wie die Menschen der Industrialisierung."
  },
  "EP-b8a47b": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2512,12 +2512,12 @@
   "stufe": "hoch",
   "text": "Besonders getroffen werden Handwerker und Weber, deren Können die Maschine entwertet, und die Landbevölkerung, die in Elendsquartieren der Städte landet. Kinder arbeiten in Fabriken und Bergwerken. In England zerschlagen Textilarbeiter ab 1811 in einer Protestbewegung die Maschinen, die sie arbeitslos machen (die «Ludditen»). 1848 entlädt sich die Spannung in einer Revolutionswelle quer durch Europa."
  },
- "EP-991c07": {
+ "EP-c6ae89": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Industriemoderne",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Die nächtlichen Maschinenstürmer beriefen sich auf einen «General Ludd», den es nie gab, eine erfundene Führerfigur, die den Behörden das Zugreifen erschwerte. Das Parlament in London stellte das Zerstören von Maschinen 1812 unter die Todesstrafe, und zeitweise standen in den englischen Fabrikbezirken 12'000 Soldaten gegen die eigenen Leute im Einsatz, mehr als Wellington 1808 gegen Napoleon nach Portugal geführt hatte. Dabei waren es keine Feinde der Technik, die da zuschlugen, sondern Familienväter, deren Können über Nacht wertlos geworden war. Wählen durften sie nicht, Zusammenschlüsse von Arbeitern waren verboten, also sprachen die Hämmer. Erst Jahrzehnte später eröffneten Gewerkschaften, Streikrecht und Sozialgesetze andere Wege, den Wandel zu verhandeln. Die Frage der Maschinenstürmer aber ist geblieben: Wer fängt jene auf, deren Fähigkeiten eine neue Technik entwertet?"
+  "text": "Die nächtlichen Maschinenstürmer beriefen sich auf einen «General Ludd», den es nie gab, eine erfundene Führerfigur, die den Behörden das Zugreifen erschwerte. Das Parlament in London stellte das Zerstören von Maschinen 1812 unter die Todesstrafe und zeitweise standen in den englischen Fabrikbezirken 12'000 Soldaten gegen die eigenen Leute im Einsatz, mehr als Wellington 1808 gegen Napoleon nach Portugal geführt hatte. Dabei waren es keine Feinde der Technik, die da zuschlugen, sondern Familienväter, deren Können über Nacht wertlos geworden war. Wählen durften sie nicht, Zusammenschlüsse von Arbeitern waren verboten, also sprachen die Hämmer. Erst Jahrzehnte später eröffneten Gewerkschaften, Streikrecht und Sozialgesetze andere Wege, den Wandel zu verhandeln. Die Frage der Maschinenstürmer aber ist geblieben: Wer fängt jene auf, deren Fähigkeiten eine neue Technik entwertet?"
  },
  "EP-22661c": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2638,12 +2638,12 @@
   "stufe": "hoch",
   "text": "Technik automatisiert das Töten. Im Ersten Weltkrieg schaffen Maschinengewehr, Artillerie und Giftgas die anonyme Materialschlacht mit Millionen Toten. Der Rundfunk (ab den 1920ern) wird zum Massenmedium und zum Propaganda-Werkzeug der Diktaturen. 1945 zeigt die Atombombe, dass Menschen die Welt vernichten können. Möglich wurde diese Zerstörungskraft durch die industrielle Massenfertigung und die organisierte Wissenschaft: Der Staat der «totalen Kriege» lenkte Forschung, Fabriken und Rohstoffe auf ein einziges Ziel. Die Atombombe entstand im gigantischen «Manhattan-Projekt»."
  },
- "EP-e07817": {
+ "EP-30fb42": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Zeitalter der Katastrophen",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Kaum eine Figur verkörpert das Doppelgesicht dieser Epoche so wie der Chemiker Fritz Haber: Seine Ammoniaksynthese machte künstlichen Dünger möglich und hilft bis heute, Milliarden zu ernähren. Derselbe Mann überwachte 1915 bei Ypern persönlich den ersten grossen Giftgasangriff der Geschichte. Seine Frau Clara Immerwahr, selbst promovierte Chemikerin, nahm sich zehn Tage danach das Leben. Dreissig Jahre später, am 16. Juli 1945, erhellte in der Wüste von New Mexico der erste Atomtest den Nachthimmel, und Robert Oppenheimer, der wissenschaftliche Leiter, erinnerte sich später an einen Vers aus einer indischen Schrift über den «Zerstörer der Welten». Zwischen diesen beiden Daten liegt die bittere Einsicht, dass Wissen nicht danach fragt, wozu man es braucht. Seither gehört zu jeder mächtigen Technik die Frage, die damals zu spät kam: nicht nur, ob man etwas bauen kann, sondern ob man es bauen soll."
+  "text": "Kaum eine Figur verkörpert das Doppelgesicht dieser Epoche so wie der Chemiker Fritz Haber: Seine Ammoniaksynthese machte künstlichen Dünger möglich und hilft bis heute, Milliarden zu ernähren. Derselbe Mann überwachte 1915 bei Ypern persönlich den ersten grossen Giftgasangriff der Geschichte. Seine Frau Clara Immerwahr, selbst promovierte Chemikerin, nahm sich zehn Tage danach das Leben. Dreissig Jahre später, am 16. Juli 1945, erhellte in der Wüste von New Mexico der erste Atomtest den Nachthimmel und Robert Oppenheimer, der wissenschaftliche Leiter, erinnerte sich später an einen Vers aus einer indischen Schrift über den «Zerstörer der Welten». Zwischen diesen beiden Daten liegt die bittere Einsicht, dass Wissen nicht danach fragt, wozu man es braucht. Seither gehört zu jeder mächtigen Technik die Frage, die damals zu spät kam: nicht nur, ob man etwas bauen kann, sondern ob man es bauen soll."
  },
  "EP-323ab3": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2652,12 +2652,12 @@
   "stufe": "tief",
   "text": "Betroffen sind zuerst die Soldaten der Materialschlachten und die von den Nationalsozialisten Verfolgten und Ermordeten. Das geschah im Völkermord an den europäischen Juden (Schoah) und weiteren Gruppen. Mit der Atombombe wird die Bedrohung schliesslich universell: Erstmals kann die Menschheit sich selbst auslöschen."
  },
- "EP-3732ce": {
+ "EP-24cdb7": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Zeitalter der Katastrophen",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Vor Verdun standen sich 1916 zwei Armeen fast ein Jahr lang gegenüber, Hunderttausende starben um wenige Kilometer Boden, und viele Überlebende brachten ein Leiden mit nach Hause, für das die Medizin erst Worte suchen musste: das unkontrollierbare Zittern der sogenannten «Kriegszitterer». Eine Generation später organisierten Ministerien, Ämter und Bahnverwaltungen den Massenmord an den europäischen Juden mit Fahrplänen und Formularen. Das Verbrechen wurde bürokratisch erfasst und erhielt Aktenzeichen. Am 6. August 1945 zerstörte eine einzige Bombe Hiroshima, und bis zum Jahresende zählte man in dieser einen Stadt gegen 140 000 Tote. Danach übten Schulkinder in Ost und West, sich bei Atomalarm unter die Pulte zu ducken, die Angst vor dem Ende war Teil des Alltags geworden. Wer nach 1945 vom Fortschritt sprach, sprach mit Vorbehalt. Diese geerbte Skepsis meldet sich bis heute, sobald eine neue, mächtige Technik auftritt."
+  "text": "Vor Verdun standen sich 1916 zwei Armeen fast ein Jahr lang gegenüber, Hunderttausende starben um wenige Kilometer Boden und viele Überlebende brachten ein Leiden mit nach Hause, für das die Medizin erst Worte suchen musste: das unkontrollierbare Zittern der sogenannten «Kriegszitterer». Eine Generation später organisierten Ministerien, Ämter und Bahnverwaltungen den Massenmord an den europäischen Juden mit Fahrplänen und Formularen. Das Verbrechen wurde bürokratisch erfasst und erhielt Aktenzeichen. Am 6. August 1945 zerstörte eine einzige Bombe Hiroshima und bis zum Jahresende zählte man in dieser einen Stadt gegen 140 000 Tote. Danach übten Schulkinder in Ost und West, sich bei Atomalarm unter die Pulte zu ducken, die Angst vor dem Ende war Teil des Alltags geworden. Wer nach 1945 vom Fortschritt sprach, sprach mit Vorbehalt. Diese geerbte Skepsis meldet sich bis heute, sobald eine neue, mächtige Technik auftritt."
  },
  "EP-43f56f": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2778,19 +2778,19 @@
   "stufe": "hoch",
   "text": "Der Container hat einen Erfinder mit Namen: Der amerikanische Spediteur Malcom McLean liess 1956 einen umgebauten Tanker mit 58 Stahlkisten von Newark nach Houston fahren, weil ihn das teure Umladen von Hand ärgerte, und die Kosten für das Verladen einer Tonne Fracht sanken dadurch auf einen Bruchteil. Drei Jahrzehnte später reichte der Physiker Tim Berners-Lee am Forschungszentrum CERN einen Vorschlag für ein Hypertext-System ein, sein Vorgesetzter notierte darauf «vage, aber aufregend». 1993 gab das CERN diese Technik zur freien Nutzung frei, ohne Patent und ohne Gebühren, einer der folgenreichsten Verzichte der Wirtschaftsgeschichte. So senkten eine Blechkiste und ein Stück verschenkter Software gemeinsam die Kosten der Distanz: die eine für Waren, die andere für Informationen. Fabriken konnten dorthin wandern, wo die Löhne am tiefsten waren, und Nachrichten überallhin, wo ein Bildschirm stand. Die Welt wurde kleiner. Was das für Arbeit und Zusammenhalt bedeutet, verhandeln wir bis heute."
  },
- "EP-9758bd": {
+ "EP-b85d2e": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "«Ende der Geschichte»",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Besonders betroffen sind die Industriearbeiter des Westens, deren Fabriken in Billiglohnländer abwandern (Deindustrialisierung), und die Menschen des früheren Ostblocks, deren gesamtes politisches und wirtschaftliches System über Nacht verschwindet. Sicher geglaubte Biografien werden entwertet."
+  "text": "Besonders betroffen sind die Industriearbeiter des Westens, deren Fabriken in Billiglohnländer abwandern (Deindustrialisierung) und die Menschen des früheren Ostblocks, deren gesamtes politisches und wirtschaftliches System über Nacht verschwindet. Sicher geglaubte Biografien werden entwertet."
  },
- "EP-1ebb85": {
+ "EP-be13e7": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "«Ende der Geschichte»",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "In Detroit, einst die stolzeste Autostadt der Welt, halbierte sich die Einwohnerzahl innert weniger Jahrzehnte, ganze Strassenzüge standen leer. Im Ruhrgebiet schloss eine Zeche nach der anderen, 2018 fuhr auf Prosper-Haniel die letzte Schicht ein, und mit den Fördertürmen verschwand eine ganze Lebensform aus Werkssiedlungen, Schichtplänen und Vereinsleben. Im Osten Deutschlands wickelte nach 1990 die Treuhandanstalt Tausende von Staatsbetrieben ab, Millionen Stellen gingen verloren, und was gestern als Lebensleistung galt, zählte auf dem neuen Arbeitsmarkt oft wenig. Ingenieurinnen sattelten um, Facharbeiter pendelten westwärts oder blieben zurück. Der Umbruch kam als Freiheit und als Entwertung zugleich, je nachdem, wo man stand. Solche Erfahrungen wirken lange nach, in Familien, in Wahlergebnissen und im Misstrauen gegen jedes neue Versprechen von Fortschritt."
+  "text": "In Detroit, einst die stolzeste Autostadt der Welt, halbierte sich die Einwohnerzahl innert weniger Jahrzehnte, ganze Strassenzüge standen leer. Im Ruhrgebiet schloss eine Zeche nach der anderen, 2018 fuhr auf Prosper-Haniel die letzte Schicht ein und mit den Fördertürmen verschwand eine ganze Lebensform aus Werkssiedlungen, Schichtplänen und Vereinsleben. Im Osten Deutschlands wickelte nach 1990 die Treuhandanstalt Tausende von Staatsbetrieben ab, Millionen Stellen gingen verloren, und was gestern als Lebensleistung galt, zählte auf dem neuen Arbeitsmarkt oft wenig. Ingenieurinnen sattelten um, Facharbeiter pendelten westwärts oder blieben zurück. Der Umbruch kam als Freiheit und als Entwertung zugleich, je nachdem, wo man stand. Solche Erfahrungen wirken lange nach, in Familien, in Wahlergebnissen und im Misstrauen gegen jedes neue Versprechen von Fortschritt."
  },
  "EP-5d7d80": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2799,12 +2799,12 @@
   "stufe": "hoch",
   "text": "Die Postmoderne beschreibt diese Lage. Jean-François Lyotard erklärt 1979 das «Ende der grossen Erzählungen»: Es gibt nicht mehr die eine verbindliche Geschichte von Fortschritt oder Heil, sondern viele kleine, nebeneinander. Michel Foucault fragt zugleich, wer die Macht hat zu bestimmen, was als «normal» und «wahr» gilt."
  },
- "EP-637f2f": {
+ "EP-cc3ee1": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "«Ende der Geschichte»",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Lyotards berühmte Diagnose entstand als Auftragsarbeit: Der Universitätsrat der kanadischen Provinz Québec bestellte 1979 einen Bericht über das Wissen im Computerzeitalter, und der Philosoph lieferte statt Verwaltungsprosa die These, die grossen Heilsgeschichten von Fortschritt und Befreiung hätten ihre Glaubwürdigkeit verbraucht. Foucault wiederum sass jahrelang in Archiven über Akten von Gefängnissen, Kliniken und Irrenhäusern. Er zeigte, wie unscheinbare Instrumente wie Register, Prüfungen und Statistiken festlegen, wer als krank, kriminell oder normal gilt: Macht verbietet nicht nur, sie vermisst, sortiert und benotet. Foucault starb 1984, lange bevor das Internet den Alltag erreichte, doch seine Fragen passen verblüffend gut auf Feeds, Rankings und Empfehlungsalgorithmen. Wer legt heute fest, was als normal angezeigt wird, und nach welchen Massstäben? Die Postmoderne hat vor allem diese Wachsamkeit hinterlassen, auch wenn ihr Name inzwischen historisch klingt."
+  "text": "Lyotards berühmte Diagnose entstand als Auftragsarbeit: Der Universitätsrat der kanadischen Provinz Québec bestellte 1979 einen Bericht über das Wissen im Computerzeitalter und der Philosoph lieferte statt Verwaltungsprosa die These, die grossen Heilsgeschichten von Fortschritt und Befreiung hätten ihre Glaubwürdigkeit verbraucht. Foucault wiederum sass jahrelang in Archiven über Akten von Gefängnissen, Kliniken und Irrenhäusern. Er zeigte, wie unscheinbare Instrumente wie Register, Prüfungen und Statistiken festlegen, wer als krank, kriminell oder normal gilt: Macht verbietet nicht nur, sie vermisst, sortiert und benotet. Foucault starb 1984, lange bevor das Internet den Alltag erreichte, doch seine Fragen passen verblüffend gut auf Feeds, Rankings und Empfehlungsalgorithmen. Wer legt heute fest, was als normal angezeigt wird, und nach welchen Massstäben? Die Postmoderne hat vor allem diese Wachsamkeit hinterlassen, auch wenn ihr Name inzwischen historisch klingt."
  },
  "EP-3a8d9d": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2904,12 +2904,12 @@
   "stufe": "hoch",
   "text": "Künstliche Intelligenz (mit ChatGPT ab 2022 alltäglich), das Smartphone und globale, digital gesteuerte Lieferketten laufen auf einer noch immer fossilen Infrastruktur. Die Automatisierung erreicht nun Sprache und Kopfarbeit. Die Naturzerstörung erreicht mit der Klimakrise erstmals eine überlebensbedrohende Grössenordnung. Den grössten Anteil daran hat der Energieverbrauch: Jede Technik, die läuft, braucht Energie, und solange die aus Kohle, Öl und Gas kommt, heizt jede Nutzung mit. Dazu kommen Quellen ohne Stecker, das Methan der Viehhaltung und die Rodung der Wälder. Die KI setzte sich nicht wegen einer neuen Idee durch (die ist alt), sondern weil drei Grundlagen zusammenkamen: riesige Datenmengen aus dem Internet, billige Parallel-Rechenleistung (Grafikchips) und die Transformer-Architektur von 2017, dazu enormes privates Kapital."
  },
- "EP-eb0b26": {
+ "EP-588f72": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Jetzt: Umwelt & KI",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Der Traum hinter dieser Technik ist uralt: Die griechische Sage erzählt vom Bronzeriesen Talos, der Kretas Küste bewachte, die Prager Legende vom Golem aus Lehm, und 1818 liess Mary Shelley ihren Doktor Frankenstein ein künstliches Wesen erschaffen, das seinem Schöpfer entglitt. Der Fachbegriff stand 1955 erstmals im Antrag für eine Sommer-Werkstatt über «artificial intelligence» am Dartmouth College; der Antrag hielt grosse Fortschritte binnen weniger Monate für möglich, und 1956 kam die kleine Forschergruppe dort zusammen. Stattdessen folgten Jahrzehnte, in denen die Erwartungen mehrfach zusammenbrachen, man spricht von «KI-Wintern». Umso abrupter kam der Durchbruch im Alltag: ChatGPT erreichte nach dem Start Ende 2022 innert rund zwei Monaten gegen hundert Millionen Nutzerinnen und Nutzer, schneller als jede Verbraucher-Anwendung zuvor. Hinter der mühelosen Oberfläche stehen allerdings sehr irdische Anlagen, Rechenzentren, deren Strom- und Wasserbedarf mit dem ganzer Städte verglichen wird. Dass diese Technik als körperloses Gegenüber erscheint, ist vielleicht ihre grösste Täuschung. Ähnlich unsichtbar bleibt, was unser Verbrauch kostet. Der Erdüberlastungstag benennt den Tag, an dem die Menschheit aufgebraucht hat, was die Erde in einem Jahr nachliefern kann: 1971 fiel er auf den 20. Dezember, 2025 auf den 24. Juli. Dass er 2026 wieder etwas später lag, am 30. Juli, kam allerdings nicht von sparsamerem Leben, sondern von neu berechneten Daten. Wie es aussieht, wenn die Rechnung nicht aufgeht, lässt sich vor der Haustür ablesen: Das Volumen der Schweizer Gletscher hat sich zwischen 1931 und 2016 halbiert, und von 2016 bis 2022 kamen weitere zwölf Prozent Verlust dazu."
+  "text": "Der Traum hinter dieser Technik ist uralt: Die griechische Sage erzählt vom Bronzeriesen Talos, der Kretas Küste bewachte, die Prager Legende vom Golem aus Lehm und 1818 liess Mary Shelley ihren Doktor Frankenstein ein künstliches Wesen erschaffen, das seinem Schöpfer entglitt. Der Fachbegriff stand 1955 erstmals im Antrag für eine Sommer-Werkstatt über «artificial intelligence» am Dartmouth College; der Antrag hielt grosse Fortschritte binnen weniger Monate für möglich und 1956 kam die kleine Forschergruppe dort zusammen. Stattdessen folgten Jahrzehnte, in denen die Erwartungen mehrfach zusammenbrachen, man spricht von «KI-Wintern». Umso abrupter kam der Durchbruch im Alltag: ChatGPT erreichte nach dem Start Ende 2022 innert rund zwei Monaten gegen hundert Millionen Nutzerinnen und Nutzer, schneller als jede Verbraucher-Anwendung zuvor. Hinter der mühelosen Oberfläche stehen allerdings sehr irdische Anlagen, Rechenzentren, deren Strom- und Wasserbedarf mit dem ganzer Städte verglichen wird. Dass diese Technik als körperloses Gegenüber erscheint, ist vielleicht ihre grösste Täuschung. Ähnlich unsichtbar bleibt, was unser Verbrauch kostet. Der Erdüberlastungstag benennt den Tag, an dem die Menschheit aufgebraucht hat, was die Erde in einem Jahr nachliefern kann: 1971 fiel er auf den 20. Dezember, 2025 auf den 24. Juli. Dass er 2026 wieder etwas später lag, am 30. Juli, kam allerdings nicht von sparsamerem Leben, sondern von neu berechneten Daten. Wie es aussieht, wenn die Rechnung nicht aufgeht, lässt sich vor der Haustür ablesen: Das Volumen der Schweizer Gletscher hat sich zwischen 1931 und 2016 halbiert, und von 2016 bis 2022 kamen weitere zwölf Prozent Verlust dazu."
  },
  "EP-260142": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2918,12 +2918,12 @@
   "stufe": "tief",
   "text": "Betroffen sind die junge Generation (ihre Klimazukunft), die Wissens- und Kreativberufe (durch KI) und der globale Süden, der die Folgen der Erwärmung am härtesten trägt. Eine Verunsicherung trifft dabei alle: Bei Text, Bild und Stimme lässt sich immer schwerer unterscheiden, was echt ist. Und erstmals stehen ausdrücklich auch nicht-menschliche Akteure im Blick: Arten, das Klima und Ökosysteme, die nicht mitreden können."
  },
- "EP-fde45c": {
+ "EP-5b7d88": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Jetzt: Umwelt & KI",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Im August 2018 setzte sich eine Fünfzehnjährige mit einem handgemalten Schild vor das schwedische Parlament, ein Jahr später folgten Millionen Jugendliche weltweit ihrem Schulstreik fürs Klima: Die Betroffenen der Zukunft meldeten sich als politische Kraft. 2021 hielt der Aussenminister des Inselstaats Tuvalu seine Videobotschaft an die Weltklimakonferenz im Anzug am Rednerpult, das knietief im Meer stand, um zu zeigen, was der steigende Meeresspiegel für sein Land bedeutet. Und 2023 streikten in Hollywood die Drehbuchautorinnen und Drehbuchautoren 148 Tage lang, erstmals war der Umgang mit KI ein zentraler Streitpunkt eines grossen Arbeitskampfs; am Ende standen Regeln dazu im Vertrag, und die Schauspielgewerkschaft erreichte im selben Jahr Ähnliches. Zugleich verschob sich der Boden im Alltag: Seit 2023 lassen sich Stimmen mit geringem Aufwand täuschend echt klonen, und vor der Europawahl 2024 kursierten KI-Fälschungen als Propaganda. Wer bei einer Aufnahme nicht mehr weiss, ob sie echt ist, verliert etwas, das vorher niemand eigens prüfen musste. Vier Szenen, ein Muster: Die Verunsicherung hat Gesichter, aber keinen einzelnen Verursacher, und sie verteilt sich ungleich über Generationen, Berufe und Weltgegenden. Wer sie aushalten will, ohne zu erstarren oder abzustumpfen, braucht mehr als private Zuversicht. Genau darum kreist die Suche nach einem neuen, tragfähigen Wir."
+  "text": "Im August 2018 setzte sich eine Fünfzehnjährige mit einem handgemalten Schild vor das schwedische Parlament, ein Jahr später folgten Millionen Jugendliche weltweit ihrem Schulstreik fürs Klima: Die Betroffenen der Zukunft meldeten sich als politische Kraft. 2021 hielt der Aussenminister des Inselstaats Tuvalu seine Videobotschaft an die Weltklimakonferenz im Anzug am Rednerpult, das knietief im Meer stand, um zu zeigen, was der steigende Meeresspiegel für sein Land bedeutet. Und 2023 streikten in Hollywood die Drehbuchautorinnen und Drehbuchautoren 148 Tage lang, erstmals war der Umgang mit KI ein zentraler Streitpunkt eines grossen Arbeitskampfs; am Ende standen Regeln dazu im Vertrag und die Schauspielgewerkschaft erreichte im selben Jahr Ähnliches. Zugleich verschob sich der Boden im Alltag: Seit 2023 lassen sich Stimmen mit geringem Aufwand täuschend echt klonen, und vor der Europawahl 2024 kursierten KI-Fälschungen als Propaganda. Wer bei einer Aufnahme nicht mehr weiss, ob sie echt ist, verliert etwas, das vorher niemand eigens prüfen musste. Vier Szenen, ein Muster: Die Verunsicherung hat Gesichter, aber keinen einzelnen Verursacher und sie verteilt sich ungleich über Generationen, Berufe und Weltgegenden. Wer sie aushalten will, ohne zu erstarren oder abzustumpfen, braucht mehr als private Zuversicht. Genau darum kreist die Suche nach einem neuen, tragfähigen Wir."
  },
  "EP-69317d": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2932,19 +2932,19 @@
   "stufe": "hoch",
   "text": "Bruno Latour (1947–2022) liefert mit der Akteur-Netzwerk-Theorie eine neue Sichtweise: Kein Akteur handelt allein. Wirkung entsteht im Geflecht von Menschen UND Dingen. Um die Krisen zu verstehen, müsse man die Abhängigkeiten ernst nehmen, auch die von dem, was nicht Mensch ist: Klima, Viren, Technik, KI."
  },
- "EP-b4107d": {
+ "EP-bf8bae": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Jetzt: Umwelt & KI",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Latour begann als eine Art Feldforscher unter Wissenschaftlern: In den 1970er-Jahren beobachtete er zwei Jahre lang ein kalifornisches Labor, so wie Ethnologen ein fremdes Dorf beobachten, und beschrieb, wie Fakten nicht einfach gefunden, sondern in einem Geflecht aus Menschen, Geräten und Texten hergestellt werden. Später schlug er ein «Parlament der Dinge» vor, eine Politik, in der auch Flüsse, Klima und Techniken vertreten wären, weil sie längst mithandeln. Was einst exzentrisch klang, liest sich heute fast wie eine Alltagsbeschreibung: Ein Virus legt den Planeten still, ein Algorithmus entscheidet über Kredite mit, ein Fluss erhält in Neuseeland eine Rechtspersönlichkeit. Latour starb im Oktober 2022, wenige Wochen bevor ChatGPT erschien, die Debatte darüber, wie viel «Akteur» in einer solchen Maschine steckt, erlebte er nicht mehr. Seine Denkfigur aber liegt bereit: Verantwortung verschwindet nicht, wenn viele mithandeln, sie muss neu verteilt und benannt werden. Diese Linie führt weiter: Der Kyotoer Philosoph Yasuo Deguchi verschiebt das Handeln vom «Ich» auf ein «Wir», das Menschen, andere Lebewesen und Artefakte einschliesst, und schlägt vor, KI als Gefährtin zu behandeln statt als Dienerin. Gegen diese Ausweitung lässt sich Hannah Arendt stellen: Sie führte 1958 die Natalität in ihre Theorie des Handelns ein, weil dem Neuankömmling «die Fähigkeit zukommt, selbst einen neuen Anfang zu machen». Arendt schrieb lange vor der KI, doch genau hier liegt die offene Frage dieser Epoche: Heisst Handeln, in einem Geflecht mitzuwirken, oder heisst es, von selbst anzufangen? Vielleicht beginnt genau hier die Schablone, die dieser Epoche noch fehlt."
+  "text": "Latour begann als eine Art Feldforscher unter Wissenschaftlern: In den 1970er-Jahren beobachtete er zwei Jahre lang ein kalifornisches Labor, so wie Ethnologen ein fremdes Dorf beobachten und beschrieb, wie Fakten nicht einfach gefunden, sondern in einem Geflecht aus Menschen, Geräten und Texten hergestellt werden. Später schlug er ein «Parlament der Dinge» vor, eine Politik, in der auch Flüsse, Klima und Techniken vertreten wären, weil sie längst mithandeln. Was einst exzentrisch klang, liest sich heute fast wie eine Alltagsbeschreibung: Ein Virus legt den Planeten still, ein Algorithmus entscheidet über Kredite mit, ein Fluss erhält in Neuseeland eine Rechtspersönlichkeit. Latour starb im Oktober 2022, wenige Wochen bevor ChatGPT erschien, die Debatte darüber, wie viel «Akteur» in einer solchen Maschine steckt, erlebte er nicht mehr. Seine Denkfigur aber liegt bereit: Verantwortung verschwindet nicht, wenn viele mithandeln, sie muss neu verteilt und benannt werden. Diese Linie führt weiter: Der Kyotoer Philosoph Yasuo Deguchi verschiebt das Handeln vom «Ich» auf ein «Wir», das Menschen, andere Lebewesen und Artefakte einschliesst und schlägt vor, KI als Gefährtin zu behandeln statt als Dienerin. Gegen diese Ausweitung lässt sich Hannah Arendt stellen: Sie führte 1958 die Natalität in ihre Theorie des Handelns ein, weil dem Neuankömmling «die Fähigkeit zukommt, selbst einen neuen Anfang zu machen». Arendt schrieb lange vor der KI, doch genau hier liegt die offene Frage dieser Epoche: Heisst Handeln, in einem Geflecht mitzuwirken, oder heisst es, von selbst anzufangen? Vielleicht beginnt genau hier die Schablone, die dieser Epoche noch fehlt."
  },
- "DW-dd2295": {
+ "DW-57707a": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
   "ort": "Was ist der Mensch?",
   "feld": "Zur Philosophie",
   "stufe": "tief",
-  "text": "Aristoteles stammte aus Stagira, war Schüler Platons und Lehrer Alexanders des Grossen. Er ordnete das Wissen seiner Zeit über fast alle Gebiete, von Logik und Naturkunde bis Ethik und Politik, und machte die Beobachtung zur Methode. Seine «Metaphysik» beginnt mit dem Satz, alle Menschen strebten von Natur aus nach Wissen: Neugier ist für ihn kein Zufall, sondern ein Wesenszug. Der Mensch will die Ursachen verstehen, das Warum, nicht nur Fakten sammeln. Für den Umgang mit KI heisst das: Wissen ist mehr als Datenausgabe, es ist verstehen wollen."
+  "text": "Aristoteles stammte aus Stagira, war Schüler Platons und Lehrer Alexanders des Grossen. Er ordnete das Wissen seiner Zeit über fast alle Gebiete, von Logik und Naturkunde bis Ethik und Politik und machte die Beobachtung zur Methode. Seine «Metaphysik» beginnt mit dem Satz, alle Menschen strebten von Natur aus nach Wissen: Neugier ist für ihn kein Zufall, sondern ein Wesenszug. Der Mensch will die Ursachen verstehen, das Warum, nicht nur Fakten sammeln. Für den Umgang mit KI heisst das: Wissen ist mehr als Datenausgabe, es ist verstehen wollen."
  },
  "DW-6777bf": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
@@ -2953,12 +2953,12 @@
   "stufe": "tief",
   "text": "Immanuel Kant lebte sein ganzes Leben in Königsberg und löste mit der «Kritik der reinen Vernunft» eine Wende in der Philosophie aus. Er bündelte sie in vier Fragen, deren letzte, «Was ist der Mensch?», alle anderen zusammenfasst. Seine Antwort: Der Mensch ist vernunftbegabt und frei, er kann aus eigener Einsicht handeln, nicht bloss Trieben oder Befehlen folgen. Aus dieser Freiheit folgen Verantwortung und Würde, für sein Tun kann der Mensch einstehen. Entscheidend ist ihm dabei der Unterschied zwischen Befolgen und Einsehen: Wer eine Regel nur befolgt, weil sie befohlen ist, handelt für Kant noch nicht frei. Frei handelt, wer die Regel selbst als richtig erkennt und ihr darum folgt."
  },
- "DW-14a70e": {
+ "DW-2a9f61": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
   "ort": "Was ist der Mensch?",
   "feld": "Zur Philosophie",
   "stufe": "hoch",
-  "text": "Hegel war der Hauptvertreter des deutschen Idealismus und dachte die Wirklichkeit als Entfaltung des «Geistes». Stark verkürzt lässt sich seine Dialektik als Bewegung beschreiben, in der ein Begriff an seinen eigenen inneren Spannungen weiterbestimmt wird. Die berühmte Formel «These, Antithese, Synthese» stammt übrigens nicht von Hegel und trifft sein Verfahren nicht durchgehend, als erste Merkhilfe taugt sie aber. So kommt das Unterscheiden ins Spiel: Ein Gedanke wird nicht dadurch weitergebracht, dass man ihn ganz verwirft, sondern dadurch, dass man an ihm unterscheidet, was hält und was nicht. Hegel nennt das die bestimmte Negation. Was etwas ist, steht darum nicht ein für alle Mal fest, es klärt sich in einem geschichtlichen Gang. Marx baute darauf seine Kritik des Kapitalismus auf, und für Adorno wurde dieser Gedanke zum Schlüsselbegriff der Gesellschaftskritik. Später wurde er gegen die Grenzen selbst gewendet: Wenn eine Grenze gezogen wird, dann ist sie gemacht, und dann könnte sie auch anders verlaufen. Was selbstverständlich wirkt, hat oft nur eine Geschichte, und darum darf man darüber streiten. Das trifft die Grenze zwischen Mensch und Maschine mit. Donna Haraway, weiter unten im Kapitel, hält sie nicht für gefunden, sondern für gezogen, und ihr Bild des Cyborgs sprengt die starre Trennung. Erst indem der Mensch auseinanderhält, was ist und was sein soll, kann er urteilen und sich entscheiden. Von hier aus gelesen ist Unterscheiden etwas anderes als Rechnen: Ein Modell lernt aus vielen Beispielen, was gewöhnlich zusammen auftritt. Eine Bestimmung dagegen zieht eine Grenze mit Gründen, und genau darum lässt sie sich auch bestreiten. Hauptwerk: «Phänomenologie des Geistes» (1807)."
+  "text": "Hegel war der Hauptvertreter des deutschen Idealismus und dachte die Wirklichkeit als Entfaltung des «Geistes». Stark verkürzt lässt sich seine Dialektik als Bewegung beschreiben, in der ein Begriff an seinen eigenen inneren Spannungen weiterbestimmt wird. Die berühmte Formel «These, Antithese, Synthese» stammt übrigens nicht von Hegel und trifft sein Verfahren nicht durchgehend, als erste Merkhilfe taugt sie aber. So kommt das Unterscheiden ins Spiel: Ein Gedanke wird nicht dadurch weitergebracht, dass man ihn ganz verwirft, sondern dadurch, dass man an ihm unterscheidet, was hält und was nicht. Hegel nennt das die bestimmte Negation. Was etwas ist, steht darum nicht ein für alle Mal fest, es klärt sich in einem geschichtlichen Gang. Marx baute darauf seine Kritik des Kapitalismus auf und für Adorno wurde dieser Gedanke zum Schlüsselbegriff der Gesellschaftskritik. Später wurde er gegen die Grenzen selbst gewendet: Wenn eine Grenze gezogen wird, dann ist sie gemacht und dann könnte sie auch anders verlaufen. Was selbstverständlich wirkt, hat oft nur eine Geschichte und darum darf man darüber streiten. Das trifft die Grenze zwischen Mensch und Maschine mit. Donna Haraway, weiter unten im Kapitel, hält sie nicht für gefunden, sondern für gezogen und ihr Bild des Cyborgs sprengt die starre Trennung. Erst indem der Mensch auseinanderhält, was ist und was sein soll, kann er urteilen und sich entscheiden. Von hier aus gelesen ist Unterscheiden etwas anderes als Rechnen: Ein Modell lernt aus vielen Beispielen, was gewöhnlich zusammen auftritt. Eine Bestimmung dagegen zieht eine Grenze mit Gründen und genau darum lässt sie sich auch bestreiten. Hauptwerk: «Phänomenologie des Geistes» (1807)."
  },
  "DW-9cb029": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
@@ -2967,12 +2967,12 @@
   "stufe": "tief",
   "text": "Hannah Arendt, jüdische politische Denkerin, floh vor den Nazis über Frankreich in die USA. Aus der Erfahrung des Totalitarismus fragte sie, was Handeln und Freiheit ausmacht. Ihr Schlüsselbegriff ist die «Natalität»: Weil jeder Mensch geboren wird, kann er etwas Neues anfangen, das aus dem Bisherigen nicht ableitbar ist. Dazu kommt das Urteilen, das eigenständige Prüfen, auch aus der Sicht anderer. Von Arendt her gelesen setzt eine KI Wahrscheinliches fort und wiederholt Muster; anfangen und urteilen in ihrem Sinn kann sie nicht. Hauptwerk: «Vita activa»."
  },
- "DW-b27bae": {
+ "DW-156d9b": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
   "ort": "Was ist der Mensch?",
   "feld": "Zur Philosophie",
   "stufe": "hoch",
-  "text": "Martin Heidegger gehört zu den einflussreichsten Philosophen des 20. Jahrhunderts und ist zugleich schwer belastet. Er trat am 1. Mai 1933 in die NSDAP ein, war als Rektor an der Gleichschaltung der Universität Freiburg beteiligt und blieb bis 1945 Parteimitglied; in seinen «Schwarzen Heften» stehen antisemitische Äusserungen. Umstritten ist nicht, ob das geschah, sondern wie stark es sein Werk prägt. In «Sein und Zeit» fragte er neu nach dem Sinn von Sein. Den Menschen nennt er «Dasein», seinen Grundzug die «Sorge». Das Wort führt leicht in die Irre, gemeint ist nicht Kummer: Wir sind nie unbeteiligte Zuschauer einer Welt, die uns gegenübersteht, sondern immer schon in ihr beschäftigt. Wir hantieren mit Dingen und haben es mit anderen Menschen zu tun. Ein Hammer zeigt sich als Hammer beim Hämmern, nicht beim Betrachten. Erst in diesem Umgang bekommen die Dinge ihre Bedeutung, und erst so entsteht Sinn. Von hier aus argumentieren viele, eine Maschine habe keine solche Welt: Sie verarbeitet Zeichen, ohne mit etwas zu tun zu haben. Hauptwerk: «Sein und Zeit» (1927)."
+  "text": "Martin Heidegger gehört zu den einflussreichsten Philosophen des 20. Jahrhunderts und ist zugleich schwer belastet. Er trat am 1. Mai 1933 in die NSDAP ein, war als Rektor an der Gleichschaltung der Universität Freiburg beteiligt und blieb bis 1945 Parteimitglied; in seinen «Schwarzen Heften» stehen antisemitische Äusserungen. Umstritten ist nicht, ob das geschah, sondern wie stark es sein Werk prägt. In «Sein und Zeit» fragte er neu nach dem Sinn von Sein. Den Menschen nennt er «Dasein», seinen Grundzug die «Sorge». Das Wort führt leicht in die Irre, gemeint ist nicht Kummer: Wir sind nie unbeteiligte Zuschauer einer Welt, die uns gegenübersteht, sondern immer schon in ihr beschäftigt. Wir hantieren mit Dingen und haben es mit anderen Menschen zu tun. Ein Hammer zeigt sich als Hammer beim Hämmern, nicht beim Betrachten. Erst in diesem Umgang bekommen die Dinge ihre Bedeutung und erst so entsteht Sinn. Von hier aus argumentieren viele, eine Maschine habe keine solche Welt: Sie verarbeitet Zeichen, ohne mit etwas zu tun zu haben. Hauptwerk: «Sein und Zeit» (1927)."
  },
  "DW-ec680f": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
@@ -2988,26 +2988,26 @@
   "stufe": "hoch",
   "text": "Siri Hustvedt ist US-amerikanische Schriftstellerin und Essayistin, die Literatur mit Hirnforschung und Philosophie verbindet. In «Die Illusion der Gewissheit» wendet sie sich gegen das Bild, das Gehirn sei ein Computer. Denken und Fühlen hängen für sie am lebendigen Körper und an gelebter Erfahrung, sie spricht vom «verkörperten Geist». Ihr Argument: Eine KI kann Sprache und Gefühle täuschend echt nachahmen, aber sie erlebt nichts und macht keine Erfahrung. Ihr «produktiver Zweifel» hilft, das flüssige Modell nicht mit der Wirklichkeit zu verwechseln. Hauptwerk: «Die Illusion der Gewissheit» (2018)."
  },
- "DW-0c7d46": {
+ "DW-fecfd5": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
   "ort": "Was ist der Mensch?",
   "feld": "Fliesstext",
   "stufe": "hoch",
-  "text": "«Was ist der Mensch?» Diese Frage ist so alt wie die Philosophie selbst. Schon Aristoteles sah den Menschen als Wesen, das von Natur aus nach Wissen strebt, neugierig, fragend, nie ganz fertig. Immanuel Kant machte die Frage zur Kernfrage überhaupt und gab eine Richtung vor: Der Mensch ist frei, er kann aus eigener Einsicht handeln, und darum trägt er Verantwortung. Georg Wilhelm Friedrich Hegel fügt hinzu, dass der Mensch ein Wesen ist, das unterscheidet. Erst indem wir Gegensätze auseinanderhalten, was ist und was sein soll, können wir urteilen und uns frei entscheiden. Und was etwas ist, steht für ihn nicht ein für alle Mal fest, es klärt sich in einem geschichtlichen Gang. So bekommt gerade das Unterscheiden und Entscheiden eine zutiefst menschliche Seite."
+  "text": "«Was ist der Mensch?» Diese Frage ist so alt wie die Philosophie selbst. Schon Aristoteles sah den Menschen als Wesen, das von Natur aus nach Wissen strebt, neugierig, fragend, nie ganz fertig. Immanuel Kant machte die Frage zur Kernfrage überhaupt und gab eine Richtung vor: Der Mensch ist frei, er kann aus eigener Einsicht handeln und darum trägt er Verantwortung. Georg Wilhelm Friedrich Hegel fügt hinzu, dass der Mensch ein Wesen ist, das unterscheidet. Erst indem wir Gegensätze auseinanderhalten, was ist und was sein soll, können wir urteilen und uns frei entscheiden. Und was etwas ist, steht für ihn nicht ein für alle Mal fest, es klärt sich in einem geschichtlichen Gang. So bekommt gerade das Unterscheiden und Entscheiden eine zutiefst menschliche Seite."
  },
- "DW-975d48": {
+ "DW-4f39e8": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
   "ort": "Was ist der Mensch?",
   "feld": "Fliesstext",
   "stufe": "tief",
-  "text": "Hannah Arendt nennt einen weiteren Wesenszug: das Anfangen. Mit jedem Menschen kommt etwas Neues in die Welt, das aus dem Bisherigen nicht ableitbar ist. Und der Mensch urteilt, er hält inne und entscheidet selbst. Martin Heidegger fügt die «Sorge» hinzu, und damit meint er nicht Kummer oder Bekümmerung. Er meint: Wir stehen der Welt nie unbeteiligt gegenüber, sondern sind immer schon mit Dingen und Menschen beschäftigt. Erst in diesem Umgang bekommen die Dinge überhaupt eine Bedeutung, und erst darin entsteht Sinn."
+  "text": "Hannah Arendt nennt einen weiteren Wesenszug: das Anfangen. Mit jedem Menschen kommt etwas Neues in die Welt, das aus dem Bisherigen nicht ableitbar ist. Und der Mensch urteilt, er hält inne und entscheidet selbst. Martin Heidegger fügt die «Sorge» hinzu, und damit meint er nicht Kummer oder Bekümmerung. Er meint: Wir stehen der Welt nie unbeteiligt gegenüber, sondern sind immer schon mit Dingen und Menschen beschäftigt. Erst in diesem Umgang bekommen die Dinge überhaupt eine Bedeutung und erst darin entsteht Sinn."
  },
- "DW-b16463": {
+ "DW-d1a060": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
   "ort": "Was ist der Mensch?",
   "feld": "Fliesstext",
   "stufe": "tief",
-  "text": "Peter Sloterdijk beschreibt den Menschen als übendes Wesen. Wir werden, wer wir sind, durch Übung und Wiederholung, und niemand kann für uns üben. Siri Hustvedt hält dagegen, der Geist sei kein Computer: Denken und Fühlen hängen für sie am lebendigen Körper und an gelebter Erfahrung. Eine Maschine könne Sprache und Gefühle täuschend echt nachahmen, erlebe dabei aber nichts."
+  "text": "Peter Sloterdijk beschreibt den Menschen als übendes Wesen. Wir werden, wer wir sind, durch Übung und Wiederholung und niemand kann für uns üben. Siri Hustvedt hält dagegen, der Geist sei kein Computer: Denken und Fühlen hängen für sie am lebendigen Körper und an gelebter Erfahrung. Eine Maschine könne Sprache und Gefühle täuschend echt nachahmen, erlebe dabei aber nichts."
  },
  "DW-70b48a": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
@@ -3114,12 +3114,12 @@
   "stufe": "mittel",
   "text": "Der japanische Philosoph Yasuo Deguchi treibt diesen Gedanken weiter. Seine «We-Turn»-Philosophie verlegt das Handeln vom einzelnen «Ich» auf ein «Wir». Niemand kann etwas ganz allein, jede Handlung wird von vielen anderen getragen, von Menschen, Dingen und heute auch von Maschinen. Der eigentliche Handelnde ist deshalb kein einsames Ich, sondern ein «Wir», zu dem die KI dazugehört. Er stützt sich dabei auf den buddhistischen Gedanken des «abhängigen Entstehens», dass nichts für sich allein besteht, sondern alles miteinander verbunden entsteht."
  },
- "DW-6dc062": {
+ "DW-a2f346": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
   "ort": "Transformation von Mensch und Maschine",
   "feld": "Fliesstext",
   "stufe": "tief",
-  "text": "Was folgt daraus? Donna Haraway sagt, wir sind längst «verwoben», in gewissem Sinn schon Mischwesen aus Mensch und Maschine, und sollten das verantwortlich gestalten. Yuval Noah Harari mahnt, dass diese Verschmelzung gewaltige Macht freisetzt und darum klare Regeln braucht. Markus Gabriel setzt auf «ethische Intelligenz», das kluge, moralische Mitgestalten. Zwei Wege zeichnen sich ab: sich auf die Zusammenarbeit einlassen oder den eigenen Weg umso deutlicher markieren, beides gestützt durch Regulation und Ethik."
+  "text": "Was folgt daraus? Donna Haraway sagt, wir sind längst «verwoben», in gewissem Sinn schon Mischwesen aus Mensch und Maschine und sollten das verantwortlich gestalten. Yuval Noah Harari mahnt, dass diese Verschmelzung gewaltige Macht freisetzt und darum klare Regeln braucht. Markus Gabriel setzt auf «ethische Intelligenz», das kluge, moralische Mitgestalten. Zwei Wege zeichnen sich ab: sich auf die Zusammenarbeit einlassen oder den eigenen Weg umso deutlicher markieren, beides gestützt durch Regulation und Ethik."
  },
  "DW-90c840": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
@@ -3135,12 +3135,12 @@
   "stufe": "tief",
   "text": "Du musst dich nicht zwischen Verschmelzung und Verweigerung entscheiden. Es hilft schon, die eigenen Abhängigkeiten zu kennen und zu sehen, dass du immer in einem «Wir» handelst. Zwischen dem Heilsversprechen «Technik rettet uns» und dem Untergang «KI zerstört uns» liegt der nüchterne Alltag, den Regeln und Ethik gestaltbar machen."
  },
- "DW-71701e": {
+ "DW-897a90": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
   "ort": "Lebenskunst",
   "feld": "Zur Philosophie",
   "stufe": "tief",
-  "text": "Die Stoa war eine der grossen Schulen der Antike; bekannte Vertreter sind der Sklave Epiktet, der Staatsmann Seneca und der Kaiser Mark Aurel. Für sie ist Philosophie kein blosses Wissen, sondern tägliche Übung («Askesis», ursprünglich Übung, nicht Verzicht). Ihr Kern ist die Unterscheidung zwischen dem, was in unserer Macht steht (unser Urteil, unser Handeln), und dem, was nicht (Ereignisse, Meinungen anderer). Gelassenheit entsteht, wenn man seine Kraft auf das Erste richtet. Ein gutes Leben wächst so aus beständiger kleiner Übung, nicht aus einer einmaligen Einsicht."
+  "text": "Die Stoa war eine der grossen Schulen der Antike; bekannte Vertreter sind der Sklave Epiktet, der Staatsmann Seneca und der Kaiser Mark Aurel. Für sie ist Philosophie kein blosses Wissen, sondern tägliche Übung («Askesis», ursprünglich Übung, nicht Verzicht). Ihr Kern ist die Unterscheidung zwischen dem, was in unserer Macht steht (unser Urteil, unser Handeln) und dem, was nicht (Ereignisse, Meinungen anderer). Gelassenheit entsteht, wenn man seine Kraft auf das Erste richtet. Ein gutes Leben wächst so aus beständiger kleiner Übung, nicht aus einer einmaligen Einsicht."
  },
  "DW-15ffd8": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
@@ -3156,12 +3156,12 @@
   "stufe": "hoch",
   "text": "Wilhelm Schmid ist ein freier Philosoph in Berlin und hat die «Philosophie der Lebenskunst» im deutschsprachigen Raum bekannt gemacht. Sein Thema: Aus einer Einsicht folgt noch keine Tat, das kennt jeder von den guten Vorsätzen. Was hilft, ist Übung in kleinsten Schritten, täglich, fast beiläufig, aber regelmässig, nicht das ganze Buch auf einmal, sondern jeden Tag eine Seite. Weil Freude stärker wirkt als Zwang, soll man sich am Schönen orientieren, zu dem man Ja sagen kann. So werden neue Gewohnheiten gebildet. Wie lange das dauert, hat die Psychologie untersucht, nicht die Philosophie: Eine oft zitierte Studie fand einen Mittelwert von 66 Tagen, mit sehr grossen Unterschieden je nach Person und Gewohnheit. Werk: «Philosophie der Lebenskunst» (1998)."
  },
- "DW-38ffda": {
+ "DW-246e50": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
   "ort": "Lebenskunst",
   "feld": "Zur Philosophie",
   "stufe": "hoch",
-  "text": "Martha Nussbaum ist eine der bekanntesten US-amerikanischen Philosophinnen und verbindet antike Ethik (besonders Aristoteles und die Stoa) mit heutigen Fragen. Sie zeigt, dass Gefühle keine blosse Störung der Vernunft sind, sondern zu einem guten Urteil und einem gelingenden Leben dazugehören. Mit dem «Fähigkeiten-Ansatz» fragt sie konkret, was Menschen wirklich können müssen, um gut zu leben (etwa Gesundheit, Bildung, Bindung, Spiel), und wie eine Gesellschaft das ermöglichen soll. Lebenskunst heisst darum auch, die eigenen Gefühle ernst zu nehmen und gute Bedingungen zu schaffen. Werk: «Fähigkeiten schaffen» (2011)."
+  "text": "Martha Nussbaum ist eine der bekanntesten US-amerikanischen Philosophinnen und verbindet antike Ethik (besonders Aristoteles und die Stoa) mit heutigen Fragen. Sie zeigt, dass Gefühle keine blosse Störung der Vernunft sind, sondern zu einem guten Urteil und einem gelingenden Leben dazugehören. Mit dem «Fähigkeiten-Ansatz» fragt sie konkret, was Menschen wirklich können müssen, um gut zu leben (etwa Gesundheit, Bildung, Bindung, Spiel) und wie eine Gesellschaft das ermöglichen soll. Lebenskunst heisst darum auch, die eigenen Gefühle ernst zu nehmen und gute Bedingungen zu schaffen. Werk: «Fähigkeiten schaffen» (2011)."
  },
  "DW-890f29": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
@@ -3198,19 +3198,19 @@
   "stufe": "tief",
   "text": "Dabei zählt nicht nur der Kopf. Martha Nussbaum erinnert daran, dass Gefühle zum guten Leben gehören, und Maurice Merleau-Ponty, dass wir die Welt leiblich verstehen, durch Körper und Wahrnehmung. Genau darum wirkt Schönes stärker als Zwang: Wer sich an etwas orientiert, zu dem er Ja sagen kann, verändert sich lieber. Hartmut Rosa nennt dieses lebendige Verhältnis zur Welt «Resonanz»."
  },
- "DW-83a1e9": {
+ "DW-28eb58": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
   "ort": "Lebenskunst",
   "feld": "Fliesstext",
   "stufe": "mittel",
-  "text": "Und die KI? Sie kann bei der Umsetzung helfen, etwa eine App, die an die kleinen Übungen erinnert und Fortschritte zeigt. Aber gehen muss man den Weg selbst. Kein Werkzeug übt für dich, und ein eingeübtes, selbst gestaltetes Leben lässt sich nicht abkürzen. Lebenskunst bleibt Menschensache."
+  "text": "Und die KI? Sie kann bei der Umsetzung helfen, etwa eine App, die an die kleinen Übungen erinnert und Fortschritte zeigt. Aber gehen muss man den Weg selbst. Kein Werkzeug übt für dich und ein eingeübtes, selbst gestaltetes Leben lässt sich nicht abkürzen. Lebenskunst bleibt Menschensache."
  },
- "DW-de8f76": {
+ "DW-f2a425": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
   "ort": "Lebenskunst",
   "feld": "Was dir das jetzt hilft",
   "stufe": "tief",
-  "text": "Wenn du etwas ändern willst, warte nicht auf den grossen Ruck. Nimm dir den kleinstmöglichen Schritt vor, jeden Tag einen, und knüpfe ihn an etwas Schönes, zu dem du Ja sagst. Die KI darf dich erinnern und begleiten, aber die Übung, und damit dein Leben, gestaltest du selbst."
+  "text": "Wenn du etwas ändern willst, warte nicht auf den grossen Ruck. Nimm dir den kleinstmöglichen Schritt vor, jeden Tag einen und knüpfe ihn an etwas Schönes, zu dem du Ja sagst. Die KI darf dich erinnern und begleiten, aber die Übung, und damit dein Leben, gestaltest du selbst."
  },
  "OR-e41fe5": {
   "datei": "das-orakel/_components/OrakelDashboard.tsx",
