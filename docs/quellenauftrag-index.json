@@ -2953,12 +2953,12 @@
   "stufe": "tief",
   "text": "Immanuel Kant lebte sein ganzes Leben in Königsberg und löste mit der «Kritik der reinen Vernunft» eine Wende in der Philosophie aus. Er bündelte sie in vier Fragen, deren letzte, «Was ist der Mensch?», alle anderen zusammenfasst. Seine Antwort: Der Mensch ist vernunftbegabt und frei, er kann aus eigener Einsicht handeln, nicht bloss Trieben oder Befehlen folgen. Aus dieser Freiheit folgen Verantwortung und Würde, für sein Tun kann der Mensch einstehen. Entscheidend ist ihm dabei der Unterschied zwischen Befolgen und Einsehen: Wer eine Regel nur befolgt, weil sie befohlen ist, handelt für Kant noch nicht frei. Frei handelt, wer die Regel selbst als richtig erkennt und ihr darum folgt."
  },
- "DW-5a3c49": {
+ "DW-980ea3": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
   "ort": "Was ist der Mensch?",
   "feld": "Zur Philosophie",
   "stufe": "hoch",
-  "text": "Hegel war der Hauptvertreter des deutschen Idealismus und dachte die Wirklichkeit als Entfaltung des «Geistes». Stark verkürzt lässt sich seine Dialektik als Bewegung beschreiben, in der ein Begriff an seinen eigenen inneren Spannungen weiterbestimmt wird. Die berühmte Formel «These, Antithese, Synthese» stammt übrigens nicht von Hegel und trifft sein Verfahren nicht durchgehend, als erste Merkhilfe taugt sie aber. Erst indem der Mensch auseinanderhält, was ist und was sein soll, kann er urteilen und sich entscheiden. So wird das Unterscheiden zu mehr als blossem Rechnen. Es ist ein bewusster, freier Akt. Hauptwerk: «Phänomenologie des Geistes» (1807)."
+  "text": "Hegel war der Hauptvertreter des deutschen Idealismus und dachte die Wirklichkeit als Entfaltung des «Geistes». Stark verkürzt lässt sich seine Dialektik als Bewegung beschreiben, in der ein Begriff an seinen eigenen inneren Spannungen weiterbestimmt wird. Die berühmte Formel «These, Antithese, Synthese» stammt übrigens nicht von Hegel und trifft sein Verfahren nicht durchgehend, als erste Merkhilfe taugt sie aber. So kommt das Unterscheiden ins Spiel: Ein Gedanke wird nicht dadurch weitergebracht, dass man ihn ganz verwirft, sondern dadurch, dass man an ihm unterscheidet, was hält und was nicht. Hegel nennt das die bestimmte Negation. Was etwas ist, steht darum nicht ein für alle Mal fest, es klärt sich in einem geschichtlichen Gang, und Hegel deutet die Wirklichkeit ausdrücklich samt ihrer geschichtlichen Entwicklung. Diese Sicht wurde weitergetragen: Marx baute seine Kritik des Kapitalismus darauf auf, und für Adorno wurde sie zum Schlüsselbegriff der Gesellschaftskritik. Erst indem der Mensch auseinanderhält, was ist und was sein soll, kann er urteilen und sich entscheiden. Von hier aus gelesen ist Unterscheiden etwas anderes als Rechnen: Ein Modell lernt aus vielen Beispielen, was gewöhnlich zusammen auftritt. Eine Bestimmung in Hegels Sinn dagegen zieht eine Grenze mit Gründen, und darum lässt sie sich auch bestreiten. Hauptwerk: «Phänomenologie des Geistes» (1807)."
  },
  "DW-9cb029": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
@@ -2988,12 +2988,12 @@
   "stufe": "hoch",
   "text": "Siri Hustvedt ist US-amerikanische Schriftstellerin und Essayistin, die Literatur mit Hirnforschung und Philosophie verbindet. In «Die Illusion der Gewissheit» wendet sie sich gegen das Bild, das Gehirn sei ein Computer. Denken und Fühlen hängen für sie am lebendigen Körper und an gelebter Erfahrung, sie spricht vom «verkörperten Geist». Ihr Argument: Eine KI kann Sprache und Gefühle täuschend echt nachahmen, aber sie erlebt nichts und macht keine Erfahrung. Ihr «produktiver Zweifel» hilft, das flüssige Modell nicht mit der Wirklichkeit zu verwechseln. Hauptwerk: «Die Illusion der Gewissheit» (2018)."
  },
- "DW-ac769d": {
+ "DW-0c7d46": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
   "ort": "Was ist der Mensch?",
   "feld": "Fliesstext",
   "stufe": "hoch",
-  "text": "«Was ist der Mensch?» Diese Frage ist so alt wie die Philosophie selbst. Schon Aristoteles sah den Menschen als Wesen, das von Natur aus nach Wissen strebt, neugierig, fragend, nie ganz fertig. Immanuel Kant machte die Frage zur Kernfrage überhaupt und gab eine Richtung vor: Der Mensch ist frei, er kann aus eigener Einsicht handeln, und darum trägt er Verantwortung. Georg Wilhelm Friedrich Hegel fügt hinzu, dass der Mensch ein Wesen ist, das unterscheidet. Erst indem wir Gegensätze auseinanderhalten, was ist und was sein soll, können wir urteilen und uns frei entscheiden. So bekommt gerade das Unterscheiden und Entscheiden eine zutiefst menschliche Seite."
+  "text": "«Was ist der Mensch?» Diese Frage ist so alt wie die Philosophie selbst. Schon Aristoteles sah den Menschen als Wesen, das von Natur aus nach Wissen strebt, neugierig, fragend, nie ganz fertig. Immanuel Kant machte die Frage zur Kernfrage überhaupt und gab eine Richtung vor: Der Mensch ist frei, er kann aus eigener Einsicht handeln, und darum trägt er Verantwortung. Georg Wilhelm Friedrich Hegel fügt hinzu, dass der Mensch ein Wesen ist, das unterscheidet. Erst indem wir Gegensätze auseinanderhalten, was ist und was sein soll, können wir urteilen und uns frei entscheiden. Und was etwas ist, steht für ihn nicht ein für alle Mal fest, es klärt sich in einem geschichtlichen Gang. So bekommt gerade das Unterscheiden und Entscheiden eine zutiefst menschliche Seite."
  },
  "DW-975d48": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
