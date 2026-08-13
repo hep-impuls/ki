@@ -2946,6 +2946,13 @@
   "stufe": "tief",
   "text": "Aristoteles stammte aus Stagira, war Schüler Platons und Lehrer Alexanders des Grossen. Er ordnete das Wissen seiner Zeit über fast alle Gebiete, von Logik und Naturkunde bis Ethik und Politik und machte die Beobachtung zur Methode. Seine «Metaphysik» beginnt mit dem Satz, alle Menschen strebten von Natur aus nach Wissen: Neugier ist für ihn kein Zufall, sondern ein Wesenszug. Der Mensch will die Ursachen verstehen, das Warum, nicht nur Fakten sammeln. Für den Umgang mit KI heisst das: Wissen ist mehr als Datenausgabe, es ist verstehen wollen."
  },
+ "DW-40f16b": {
+  "datei": "philosophische-perspektive/_components/Denkwege.tsx",
+  "ort": "Was ist der Mensch?",
+  "feld": "Fallbeispiel",
+  "stufe": "hoch",
+  "text": "Am 12. August 2026 wurde in der Schweiz die Sonne zu über 90 Prozent verdeckt. Schon Tage vorher waren die Schutzbrillen ausverkauft. Ein Optiker in Basel hatte hundert Stück bestellt und alle verkauft, auf Verkaufsplattformen schnellten die Preise für eine Brille hoch, die im Laden fünf bis sechs Franken kostete.\n\nMan kann bezweifeln, dass das Streben nach Wissen wirklich in unserer Natur liegt. Vielleicht wollen wir nur wissen, was nützlich ist, und alles andere lernen wir, weil jemand es verlangt. Dieser Abend spricht dagegen. Es gab keine Note dafür und keinen Nutzen, niemand musste die Leute auffordern. Sie bezahlten von sich aus dafür, etwas sehen zu dürfen, das nichts einbringt.\n\nGenau das nennt Aristoteles das Staunen: Etwas fällt dir auf und du willst wissen, warum. Die erste Antwort findet man heute in Sekunden, der Mond schiebt sich zwischen Erde und Sonne. Interessant wird es danach. Warum passiert das nicht jeden Monat? Weil die Mondbahn gegen die Bahnebene der Erde geneigt ist, um etwa fünf Grad, und der Schatten uns darum selten trifft. Warum bleibt manchmal ein Ring stehen? Weil der Mond dann zu weit weg ist, um die Sonne ganz zu decken. Wann ist in der Schweiz wieder eine totale Finsternis zu sehen? Erst 2081. Jede Antwort öffnet die nächste Frage. Dass eine KI dir diese erste Antwort sofort gibt, nimmt dir nichts weg, sie bringt dich schneller an die Stelle, wo es dich wirklich interessiert."
+ },
  "DW-6777bf": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
   "ort": "Was ist der Mensch?",

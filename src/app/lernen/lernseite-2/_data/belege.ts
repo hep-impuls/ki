@@ -1868,6 +1868,66 @@ export const BELEGE: Beleg[] = [
       "Die Ever Given wurde bekannt, als sie «am 23. März 2021 im Suezkanal bei starkem Wind an einer Uferböschung des Kanals auf Grund lief, sich schräg stellte und dadurch die Schifffahrtsrinne des Kanals sechs Tage lang blockierte.»",
     geprueft: "2026-08-11",
   },
+
+  /* ── Aristoteles, Fallbeispiel: die Sonnenfinsternis vom 12. August 2026 ────
+   * Das erste Fallbeispiel überhaupt und darum die Probe darauf, ob Belege in
+   * diesen Texten tragen. Bewusst zwei Schweizer Medien und zwei
+   * Nachschlagewerke: Die Medien halten den Andrang von damals fest, der in
+   * einem Jahr nirgends mehr nachzulesen wäre, die Nachschlagewerke die
+   * Astronomie, die sich nicht ändert.
+   *
+   * Zwei Angaben aus einem früheren Entwurf sind hier **nicht** belegbar
+   * gewesen und darum aus dem Text verschwunden: ein zweites Geschäft in Bern,
+   * das «nonstop» gefragt worden sei (der 20-Minuten-Artikel sagt vom
+   * befragten Berner Laden das Gegenteil), und ein Wiederverkaufspreis von
+   * «über hundert Franken» (der Artikel schreibt, die Preise auf Ricardo
+   * «explodieren», nennt aber keine Zahl). Der Text sagt jetzt nur, dass die
+   * Preise hochschnellten.                                                   */
+  {
+    id: "DW-40f16b",
+    anker: "zu über 90 Prozent verdeckt",
+    url: "https://de.wikipedia.org/wiki/Sonnenfinsternis_vom_12._August_2026",
+    titel: "Sonnenfinsternis vom 12. August 2026 (Wikipedia)",
+    stelle:
+      "Zur Schweiz: In der Region Genf wurde mit 93 Prozent der grösste Bedeckungsgrad erreicht, in Bern und Basel je 91 Prozent. Total war die Finsternis nur über Grönland, Island, Spanien und dem Nordatlantik. «Über 90 Prozent» deckt beide Zahlen; die Vorschau von 20 Minuten hatte «bis zu 91 Prozent» genannt.",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-40f16b",
+    anker: "Schutzbrillen ausverkauft",
+    url: "https://www.srf.ch/wissen/gesundheit/risiko-fuers-augenlicht-sonnenfinsternis-nur-schutzbrillen-mit-ce-zeichen-schuetzen",
+    titel: "SRF Wissen, 10. August 2026: «Ausverkaufte Schutzbrillen»",
+    stelle:
+      "Zwei Tage vor der Finsternis im Titel «Ausverkaufte Schutzbrillen» und im Text der Rat für die, die zu spät kommen: «Falls Sie keine Brille mehr ergattern konnten, ein Tipp vorneweg: Fragen Sie bei Freunden nach». Dazu «Am 12. August verdeckt der Mond bei uns 90 Prozent der Sonne».",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-40f16b",
+    anker: "hundert Stück bestellt und alle verkauft",
+    url: "https://www.20min.ch/story/sonnenfinsternis-am-12-august-schweizer-optikern-gehen-schutzbrillen-aus-103613845",
+    titel: "20 Minuten, 7. August 2026: «Schweizer Optikern gehen Schutzbrillen aus»",
+    stelle:
+      "Ramstein Optik in Basel: «Wir haben 100 Stück bestellt und die sind leider alle verkauft». Im Laden kostet eine Brille fünf bis sechs Franken, auf der Verkaufsplattform Ricardo «explodieren» die Preise (ohne Zahl). Bedeckung «bis zu 91 Prozent».",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-40f16b",
+    anker: "um etwa fünf Grad",
+    url: "https://de.wikipedia.org/wiki/Sonnenfinsternis",
+    titel: "Sonnenfinsternis (Wikipedia)",
+    stelle:
+      "«Da die Mondbahn gegen die Ekliptikebene geneigt ist (um etwa 5°), tritt dies nicht jedes Mal zu Neumond ein, sondern nur, wenn der Mond sich dann auch nahe einem der zwei Schnittpunkte von Mondbahn und Ekliptikebene befindet.» Der Ring im Text steht dort so: Übertrifft der scheinbare Durchmesser der Sonne den des Mondes, «bleibt der äussere Rand der Sonne bei einer Finsternis sichtbar».",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-40f16b",
+    anker: "Erst 2081",
+    url: "https://de.wikipedia.org/wiki/Sonnenfinsternis",
+    titel: "Sonnenfinsternis (Wikipedia)",
+    stelle:
+      "«Deutschland, die Schweiz und Österreich werden erst wieder am 3. September 2081 von einer totalen Finsternis getroffen.»",
+    geprueft: "2026-08-13",
+  },
 ];
 
 /**

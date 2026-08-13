@@ -13,7 +13,8 @@ import { merkeVertiefung } from "../../_lib/vertiefung";
 import Ausklapptext from "../../_components/Ausklapptext";
 import GewichtungWahl from "../../_components/GewichtungWahl";
 import KartenAktion from "../../_components/KartenAktion";
-import { Begriff } from "../../_components/Glossar";
+import { Begriff, BelegStelle } from "../../_components/Glossar";
+import { BELEG_NACH_ANKER, type Beleg } from "../../_data/belege";
 
 /**
  * Denkwege — «Wege der Orientierung»: vier Bereiche, in denen die Philosophie
@@ -62,7 +63,7 @@ interface Denker {
    * erscheint darum im Rhizom, in der Knotenkarte und im Orakel — dieselbe
    * Handlung wie das Aufklappen einer Vertiefung im Teppich.
    */
-  fallbeispiel?: string;
+  beispiel?: string;
 }
 
 interface Bereich {
@@ -111,8 +112,8 @@ const BEREICHE: Bereich[] = [
           { wort: "Alexanders des Grossen", erklaerung: "Alexander der Grosse (356 bis 323 v. Chr.), makedonischer König, der ein Weltreich bis nach Indien eroberte; als Jugendlicher von Aristoteles unterrichtet." },
           { wort: "Staunen", erklaerung: "Bei Aristoteles der Anfang aller Philosophie: Etwas fällt dir auf und du kannst es dir nicht erklären. Aus diesem Zustand entsteht die Frage." },
         ],
-        fallbeispiel:
-          "Am 12. August 2026 standen überall Menschen draussen und schauten mit Schutzbrillen nach oben. In der Region Genf war die Sonne zu 93 Prozent bedeckt, das Licht wurde kühl und seltsam scharf. Man könnte bezweifeln, dass das Streben nach Wissen wirklich in unserer Natur liegt. Vielleicht wollen wir bloss wissen, was nützlich ist, und alles andere lernen wir nur, weil jemand es verlangt. Dieser Nachmittag spricht dagegen. Niemand musste die Leute auffordern. Es gab keine Note dafür und keinen Nutzen, trotzdem wollten Millionen wissen, was da oben geschieht. Genau das nennt Aristoteles das Staunen: Etwas fällt dir auf und du willst wissen, warum. Die erste Antwort ist heute in Sekunden da, der Mond schiebt sich zwischen Erde und Sonne. Schön ist, was danach kommt. Warum passiert das nicht jeden Monat? Weil die Bahn des Mondes um etwa fünf Grad geneigt ist und der Schatten uns darum selten trifft. Warum bleibt manchmal ein Ring stehen? Weil der Mond dann zu weit weg ist, um die Sonne ganz zu decken. Und wann sieht man in der Schweiz wieder eine totale? Erst am 3. September 2081. Jede Antwort öffnet die nächste Frage. Dass eine KI dir die erste in Sekunden gibt, nimmt dir nichts weg, sie bringt dich schneller zu der Frage, die dich wirklich beschäftigt.",
+        beispiel:
+          "Am 12. August 2026 wurde in der Schweiz die Sonne zu über 90 Prozent verdeckt. Schon Tage vorher waren die Schutzbrillen ausverkauft. Ein Optiker in Basel hatte hundert Stück bestellt und alle verkauft, auf Verkaufsplattformen schnellten die Preise für eine Brille hoch, die im Laden fünf bis sechs Franken kostete.\n\nMan kann bezweifeln, dass das Streben nach Wissen wirklich in unserer Natur liegt. Vielleicht wollen wir nur wissen, was nützlich ist, und alles andere lernen wir, weil jemand es verlangt. Dieser Abend spricht dagegen. Es gab keine Note dafür und keinen Nutzen, niemand musste die Leute auffordern. Sie bezahlten von sich aus dafür, etwas sehen zu dürfen, das nichts einbringt.\n\nGenau das nennt Aristoteles das Staunen: Etwas fällt dir auf und du willst wissen, warum. Die erste Antwort findet man heute in Sekunden, der Mond schiebt sich zwischen Erde und Sonne. Interessant wird es danach. Warum passiert das nicht jeden Monat? Weil die Mondbahn gegen die Bahnebene der Erde geneigt ist, um etwa fünf Grad, und der Schatten uns darum selten trifft. Warum bleibt manchmal ein Ring stehen? Weil der Mond dann zu weit weg ist, um die Sonne ganz zu decken. Wann ist in der Schweiz wieder eine totale Finsternis zu sehen? Erst 2081. Jede Antwort öffnet die nächste Frage. Dass eine KI dir diese erste Antwort sofort gibt, nimmt dir nichts weg, sie bringt dich schneller an die Stelle, wo es dich wirklich interessiert.",
       },
       {
         slug: "kant",
@@ -409,29 +410,83 @@ function escapeRegExp(s: string): string {
  * Info-Text mit Hover-Erklärungen: Das ERSTE Vorkommen jedes angegebenen
  * Begriffs wird als <Begriff> mit Tooltip gerendert (gleiche Optik wie das
  * Glossar). Ohne `begriffe` einfacher Text.
+ *
+ * Mit `belege` kommt eine zweite Schicht dazu: wörtliche Beleg-Anker aus
+ * `_data/belege.ts` werden zu Quellen-Verweisen. Gedacht für die Fallbeispiele,
+ * die anders als die Einordnungen konkrete Tatsachen behaupten (Zahlen, Daten,
+ * Ereignisse) und darum eine Quelle brauchen.
+ *
+ * Bewusst nur die Belege und nicht das ganze Glossar: `GlossarText` würde alle
+ * 239 Glossarbegriffe in diese Texte ziehen, die karteneigenen Begriffe
+ * überlagern und eine eigene Kollisionsrunde nötig machen. So bleibt der
+ * Eingriff auf die Fallbeispiele beschränkt (Entscheid 2026-08-11).
+ *
+ * Reihenfolge wie in `GlossarText`: Belege haben Vorrang, danach die Begriffe,
+ * Überlappungen fallen weg. Ein Beleg-Anker, der einen Kartenbegriff
+ * überdeckt, nimmt ihm also den Hover — darum die Anker so wählen, dass sie
+ * die Begriffswörter nicht enthalten.
  */
 function InfoText({
   text,
   begriffe,
+  belege = false,
 }: {
   text: string;
   begriffe?: Begriffserklaerung[];
+  /** Zusätzlich Beleg-Anker als Quellen-Verweise auszeichnen. */
+  belege?: boolean;
 }) {
-  if (!begriffe || begriffe.length === 0) return <>{text}</>;
-  const map = new Map(begriffe.map((b) => [b.wort, b.erklaerung]));
-  const terme = [...map.keys()].sort((a, b) => b.length - a.length);
-  const re = new RegExp(`(${terme.map(escapeRegExp).join("|")})`, "g");
+  const map = new Map((begriffe ?? []).map((b) => [b.wort, b.erklaerung]));
+  type Marke = { von: number; bis: number; wort: string; beleg?: Beleg; erklaerung?: string };
+  const marken: Marke[] = [];
+
+  if (belege) {
+    for (const [anker, beleg] of BELEG_NACH_ANKER) {
+      const i = text.indexOf(anker);
+      if (i >= 0) marken.push({ von: i, bis: i + anker.length, wort: anker, beleg });
+    }
+  }
+  if (map.size > 0) {
+    const terme = [...map.keys()].sort((a, b) => b.length - a.length);
+    const re = new RegExp(`(${terme.map(escapeRegExp).join("|")})`, "g");
+    let m: RegExpExecArray | null;
+    while ((m = re.exec(text)) !== null) {
+      marken.push({
+        von: m.index,
+        bis: m.index + m[1].length,
+        wort: m[1],
+        erklaerung: map.get(m[1])!,
+      });
+    }
+  }
+  if (marken.length === 0) return <>{text}</>;
+
+  // Nach Position; bei gleichem Start zuerst der Beleg, dann der längere Treffer.
+  marken.sort(
+    (a, b) =>
+      a.von - b.von ||
+      Number(Boolean(b.beleg)) - Number(Boolean(a.beleg)) ||
+      b.bis - b.von - (a.bis - a.von),
+  );
+
   const teile: React.ReactNode[] = [];
   const verwendet = new Set<string>();
   let last = 0;
-  let m: RegExpExecArray | null;
-  while ((m = re.exec(text)) !== null) {
-    const wort = m[1];
-    if (verwendet.has(wort)) continue;
-    verwendet.add(wort);
-    if (m.index > last) teile.push(text.slice(last, m.index));
-    teile.push(<Begriff key={m.index} wort={wort} erklaerung={map.get(wort)!} />);
-    last = m.index + wort.length;
+  for (const k of marken) {
+    if (k.von < last) continue; // überlappt einen schon gesetzten Treffer
+    if (!k.beleg) {
+      if (verwendet.has(k.wort)) continue; // jeder Begriff nur einmal
+      verwendet.add(k.wort);
+    }
+    if (k.von > last) teile.push(text.slice(last, k.von));
+    teile.push(
+      k.beleg ? (
+        <BelegStelle key={k.von} wort={k.wort} beleg={k.beleg} />
+      ) : (
+        <Begriff key={k.von} wort={k.wort} erklaerung={k.erklaerung!} />
+      ),
+    );
+    last = k.bis;
   }
   if (last < text.length) teile.push(text.slice(last));
   return (
@@ -682,7 +737,7 @@ export default function Denkwege({
                       <p className="text-body-sm leading-relaxed text-on-surface-variant">
                         <InfoText text={p.info} begriffe={p.begriffe} />
                       </p>
-                      {p.fallbeispiel && (
+                      {p.beispiel && (
                         /* Der Knopf trägt die gleiche Spur-Basis wie das
                            Weiterverfolgen darunter, nur mit «mehr:» statt
                            «wunsch:» — so zählt das Aufklappen als Vertiefung,
@@ -693,9 +748,16 @@ export default function Denkwege({
                           spurId={`mehr:philosophische-perspektive:denker:${idx}:${p.slug}`}
                           spurTitel={`${p.name}: Fallbeispiel`}
                         >
-                          <p className="leading-relaxed">
-                            <InfoText text={p.fallbeispiel} begriffe={p.begriffe} />
-                          </p>
+                          {/* `belege` nur hier: Fallbeispiele behaupten
+                              Tatsachen (Zahlen, Daten, Ereignisse), die
+                              Einordnungen darüber referieren Positionen.
+                              Absätze aus `\n\n` — länger als eine Einordnung,
+                              darum in Abschnitte gegliedert. */}
+                          {p.beispiel.split("\n\n").map((absatz, i) => (
+                            <p key={i} className={`leading-relaxed${i > 0 ? " mt-sm" : ""}`}>
+                              <InfoText text={absatz} begriffe={p.begriffe} belege />
+                            </p>
+                          ))}
                         </Ausklapptext>
                       )}
                       <KartenAktion

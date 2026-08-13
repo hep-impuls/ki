@@ -10,6 +10,42 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-13 — Fallbeispiele belegen, und zwar mit Schweizer Tageszeitungen
+
+Die Fallbeispiele hinter dem Knopf «Fallbeispiel» behaupten anders als die
+theoretischen Einordnungen **konkrete Tatsachen** — Zahlen, Daten, Ereignisse.
+Darum tragen sie Quellen. Umgesetzt am ersten, bei Aristoteles: die
+Sonnenfinsternis vom 12. August 2026 mit fünf Belegen.
+
+**Zwei Vorräte, nicht einer.** `InfoText` in den Denkwegen kennt das Glossar
+nicht, sondern nur die `begriffe` seiner eigenen Karte. Es bekommt darum eine
+zweite Schicht `belege` statt eine Umstellung auf `GlossarText` — sonst zögen
+alle 239 Glossarbegriffe in diese Texte und überlagerten die karteneigenen.
+
+**Feldname `beispiel`, nicht `fallbeispiel`.** Das Feld hiess zuerst
+`fallbeispiel` und war damit für `docs/quellenauftrag.js` unsichtbar: Dessen
+`FELDER`-Liste ist eine **Erlaubnisliste**, kein Ausschluss wie `SKIP_KEYS` im
+Korrektorat. Ein Text in einem unbekannten Feld erscheint in keinem
+Arbeitspaket, hat keine Kennung und kann darum nicht belegt werden. Wer ein
+neues Textfeld einführt, trägt es dort ein oder benutzt einen bestehenden Namen.
+
+**Belegt wird nur, was in der Quelle steht.** Ein früherer Entwurf nannte ein
+zweites Geschäft in Bern, das «nonstop» nach Brillen gefragt worden sei, und
+einen Wiederverkaufspreis von «über hundert Franken». Der 20-Minuten-Artikel
+sagt vom befragten Berner Laden das Gegenteil und nennt beim Preis keine Zahl.
+Beides ist aus dem Text verschwunden, statt mit einer Quelle geschmückt zu
+werden, die es nicht deckt. Ebenso wurde eine SRF-Meldung über ausverkaufte
+Brillen verworfen: Sie ist von 2015 und betrifft eine andere Finsternis — der
+zweite Fall dieser Art in dieser Runde, weshalb bei jedem Medienbeleg zuerst das
+Publikationsdatum geprüft wird.
+
+**`docs/anker-kollision.mjs` prüft jetzt beide Vorräte.** Bisher verglich es
+Beleg-Anker nur mit dem Glossar. Ein Anker, der «Staunen» schluckt, hätte dem
+Kartenbegriff still den Hover genommen — dieselbe Fehlerklasse wie beim
+Glossar, nur unbeobachtet. Kartenbegriffe werden über den Wortlaut des
+`beispiel`-Feldes ihrem Block zugeordnet, nicht global geprüft, sonst meldete
+das Skript Anker fremder Karten falsch.
+
 ## 2026-08-11 — Kein Komma vor «und», wo es freigestellt ist (Christof)
 
 **Die Regel:** Zwischen zwei Hauptsätzen, die mit «und» verbunden sind, ist das

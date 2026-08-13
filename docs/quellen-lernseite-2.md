@@ -13,8 +13,8 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 164 |
-| Belegte Textblöcke | 95 |
+| Belege | 169 |
+| Belegte Textblöcke | 96 |
 | Begründete Nicht-Belege | 6 |
 | Aussagen mit Standdatum | 3 |
 
@@ -1505,6 +1505,75 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 - **Geprüft:** 2026-08-05
 
 > Der Container hat einen Erfinder mit Namen: Der amerikanische Spediteur Malcom McLean liess 1956 einen umgebauten Tanker mit 58 Stahlkisten von Newark nach Houston fahren, weil ihn das teure Umladen von Hand ärgerte, und die Kosten für das Verladen einer Tonne Fracht sanken dadurch auf einen Bruchteil. Drei Jahrzehnte später reichte der Physiker Tim Berners-Lee am Forschungszentrum CERN einen Vorschlag für ein Hypertext-System ein, sein Vorgesetzter notierte darauf «vage, aber aufregend». 1993 gab das CERN diese Technik zur freien Nutzung frei, ohne Patent und ohne Gebühren, einer der folgenreichsten Verzichte der Wirtschaftsgeschichte. So senkten eine Blechkiste und ein Stück verschenkter Software gemeinsam die Kosten der Distanz: die eine für Waren, die andere für Informationen. Fabriken konnten dorthin wandern, wo die Löhne am tiefsten waren, und Nachrichten überallhin, wo ein Bildschirm stand. Die Welt wurde kleiner. Was das für Arbeit und Zusammenhalt bedeutet, verhandeln wir bis heute.
+
+---
+
+## Thema 02 · Wege der Orientierung
+
+### Was ist der Mensch? · zu über 90 Prozent verdeckt
+
+- **Kennung:** `DW-40f16b` (Fallbeispiel)
+- **Quelle:** [Sonnenfinsternis vom 12. August 2026 (Wikipedia)](https://de.wikipedia.org/wiki/Sonnenfinsternis_vom_12._August_2026)
+- **Fundstelle:** Zur Schweiz: In der Region Genf wurde mit 93 Prozent der grösste Bedeckungsgrad erreicht, in Bern und Basel je 91 Prozent. Total war die Finsternis nur über Grönland, Island, Spanien und dem Nordatlantik. «Über 90 Prozent» deckt beide Zahlen; die Vorschau von 20 Minuten hatte «bis zu 91 Prozent» genannt.
+- **Geprüft:** 2026-08-13
+
+> Am 12. August 2026 wurde in der Schweiz die Sonne zu über 90 Prozent verdeckt. Schon Tage vorher waren die Schutzbrillen ausverkauft. Ein Optiker in Basel hatte hundert Stück bestellt und alle verkauft, auf Verkaufsplattformen schnellten die Preise für eine Brille hoch, die im Laden fünf bis sechs Franken kostete.
+
+Man kann bezweifeln, dass das Streben nach Wissen wirklich in unserer Natur liegt. Vielleicht wollen wir nur wissen, was nützlich ist, und alles andere lernen wir, weil jemand es verlangt. Dieser Abend spricht dagegen. Es gab keine Note dafür und keinen Nutzen, niemand musste die Leute auffordern. Sie bezahlten von sich aus dafür, etwas sehen zu dürfen, das nichts einbringt.
+
+Genau das nennt Aristoteles das Staunen: Etwas fällt dir auf und du willst wissen, warum. Die erste Antwort findet man heute in Sekunden, der Mond schiebt sich zwischen Erde und Sonne. Interessant wird es danach. Warum passiert das nicht jeden Monat? Weil die Mondbahn gegen die Bahnebene der Erde geneigt ist, um etwa fünf Grad, und der Schatten uns darum selten trifft. Warum bleibt manchmal ein Ring stehen? Weil der Mond dann zu weit weg ist, um die Sonne ganz zu decken. Wann ist in der Schweiz wieder eine totale Finsternis zu sehen? Erst 2081. Jede Antwort öffnet die nächste Frage. Dass eine KI dir diese erste Antwort sofort gibt, nimmt dir nichts weg, sie bringt dich schneller an die Stelle, wo es dich wirklich interessiert.
+
+### Was ist der Mensch? · Schutzbrillen ausverkauft
+
+- **Kennung:** `DW-40f16b` (Fallbeispiel)
+- **Quelle:** [SRF Wissen, 10. August 2026: «Ausverkaufte Schutzbrillen»](https://www.srf.ch/wissen/gesundheit/risiko-fuers-augenlicht-sonnenfinsternis-nur-schutzbrillen-mit-ce-zeichen-schuetzen)
+- **Fundstelle:** Zwei Tage vor der Finsternis im Titel «Ausverkaufte Schutzbrillen» und im Text der Rat für die, die zu spät kommen: «Falls Sie keine Brille mehr ergattern konnten, ein Tipp vorneweg: Fragen Sie bei Freunden nach». Dazu «Am 12. August verdeckt der Mond bei uns 90 Prozent der Sonne».
+- **Geprüft:** 2026-08-13
+
+> Am 12. August 2026 wurde in der Schweiz die Sonne zu über 90 Prozent verdeckt. Schon Tage vorher waren die Schutzbrillen ausverkauft. Ein Optiker in Basel hatte hundert Stück bestellt und alle verkauft, auf Verkaufsplattformen schnellten die Preise für eine Brille hoch, die im Laden fünf bis sechs Franken kostete.
+
+Man kann bezweifeln, dass das Streben nach Wissen wirklich in unserer Natur liegt. Vielleicht wollen wir nur wissen, was nützlich ist, und alles andere lernen wir, weil jemand es verlangt. Dieser Abend spricht dagegen. Es gab keine Note dafür und keinen Nutzen, niemand musste die Leute auffordern. Sie bezahlten von sich aus dafür, etwas sehen zu dürfen, das nichts einbringt.
+
+Genau das nennt Aristoteles das Staunen: Etwas fällt dir auf und du willst wissen, warum. Die erste Antwort findet man heute in Sekunden, der Mond schiebt sich zwischen Erde und Sonne. Interessant wird es danach. Warum passiert das nicht jeden Monat? Weil die Mondbahn gegen die Bahnebene der Erde geneigt ist, um etwa fünf Grad, und der Schatten uns darum selten trifft. Warum bleibt manchmal ein Ring stehen? Weil der Mond dann zu weit weg ist, um die Sonne ganz zu decken. Wann ist in der Schweiz wieder eine totale Finsternis zu sehen? Erst 2081. Jede Antwort öffnet die nächste Frage. Dass eine KI dir diese erste Antwort sofort gibt, nimmt dir nichts weg, sie bringt dich schneller an die Stelle, wo es dich wirklich interessiert.
+
+### Was ist der Mensch? · hundert Stück bestellt und alle verkauft
+
+- **Kennung:** `DW-40f16b` (Fallbeispiel)
+- **Quelle:** [20 Minuten, 7. August 2026: «Schweizer Optikern gehen Schutzbrillen aus»](https://www.20min.ch/story/sonnenfinsternis-am-12-august-schweizer-optikern-gehen-schutzbrillen-aus-103613845)
+- **Fundstelle:** Ramstein Optik in Basel: «Wir haben 100 Stück bestellt und die sind leider alle verkauft». Im Laden kostet eine Brille fünf bis sechs Franken, auf der Verkaufsplattform Ricardo «explodieren» die Preise (ohne Zahl). Bedeckung «bis zu 91 Prozent».
+- **Geprüft:** 2026-08-13
+
+> Am 12. August 2026 wurde in der Schweiz die Sonne zu über 90 Prozent verdeckt. Schon Tage vorher waren die Schutzbrillen ausverkauft. Ein Optiker in Basel hatte hundert Stück bestellt und alle verkauft, auf Verkaufsplattformen schnellten die Preise für eine Brille hoch, die im Laden fünf bis sechs Franken kostete.
+
+Man kann bezweifeln, dass das Streben nach Wissen wirklich in unserer Natur liegt. Vielleicht wollen wir nur wissen, was nützlich ist, und alles andere lernen wir, weil jemand es verlangt. Dieser Abend spricht dagegen. Es gab keine Note dafür und keinen Nutzen, niemand musste die Leute auffordern. Sie bezahlten von sich aus dafür, etwas sehen zu dürfen, das nichts einbringt.
+
+Genau das nennt Aristoteles das Staunen: Etwas fällt dir auf und du willst wissen, warum. Die erste Antwort findet man heute in Sekunden, der Mond schiebt sich zwischen Erde und Sonne. Interessant wird es danach. Warum passiert das nicht jeden Monat? Weil die Mondbahn gegen die Bahnebene der Erde geneigt ist, um etwa fünf Grad, und der Schatten uns darum selten trifft. Warum bleibt manchmal ein Ring stehen? Weil der Mond dann zu weit weg ist, um die Sonne ganz zu decken. Wann ist in der Schweiz wieder eine totale Finsternis zu sehen? Erst 2081. Jede Antwort öffnet die nächste Frage. Dass eine KI dir diese erste Antwort sofort gibt, nimmt dir nichts weg, sie bringt dich schneller an die Stelle, wo es dich wirklich interessiert.
+
+### Was ist der Mensch? · um etwa fünf Grad
+
+- **Kennung:** `DW-40f16b` (Fallbeispiel)
+- **Quelle:** [Sonnenfinsternis (Wikipedia)](https://de.wikipedia.org/wiki/Sonnenfinsternis)
+- **Fundstelle:** «Da die Mondbahn gegen die Ekliptikebene geneigt ist (um etwa 5°), tritt dies nicht jedes Mal zu Neumond ein, sondern nur, wenn der Mond sich dann auch nahe einem der zwei Schnittpunkte von Mondbahn und Ekliptikebene befindet.» Der Ring im Text steht dort so: Übertrifft der scheinbare Durchmesser der Sonne den des Mondes, «bleibt der äussere Rand der Sonne bei einer Finsternis sichtbar».
+- **Geprüft:** 2026-08-13
+
+> Am 12. August 2026 wurde in der Schweiz die Sonne zu über 90 Prozent verdeckt. Schon Tage vorher waren die Schutzbrillen ausverkauft. Ein Optiker in Basel hatte hundert Stück bestellt und alle verkauft, auf Verkaufsplattformen schnellten die Preise für eine Brille hoch, die im Laden fünf bis sechs Franken kostete.
+
+Man kann bezweifeln, dass das Streben nach Wissen wirklich in unserer Natur liegt. Vielleicht wollen wir nur wissen, was nützlich ist, und alles andere lernen wir, weil jemand es verlangt. Dieser Abend spricht dagegen. Es gab keine Note dafür und keinen Nutzen, niemand musste die Leute auffordern. Sie bezahlten von sich aus dafür, etwas sehen zu dürfen, das nichts einbringt.
+
+Genau das nennt Aristoteles das Staunen: Etwas fällt dir auf und du willst wissen, warum. Die erste Antwort findet man heute in Sekunden, der Mond schiebt sich zwischen Erde und Sonne. Interessant wird es danach. Warum passiert das nicht jeden Monat? Weil die Mondbahn gegen die Bahnebene der Erde geneigt ist, um etwa fünf Grad, und der Schatten uns darum selten trifft. Warum bleibt manchmal ein Ring stehen? Weil der Mond dann zu weit weg ist, um die Sonne ganz zu decken. Wann ist in der Schweiz wieder eine totale Finsternis zu sehen? Erst 2081. Jede Antwort öffnet die nächste Frage. Dass eine KI dir diese erste Antwort sofort gibt, nimmt dir nichts weg, sie bringt dich schneller an die Stelle, wo es dich wirklich interessiert.
+
+### Was ist der Mensch? · Erst 2081
+
+- **Kennung:** `DW-40f16b` (Fallbeispiel)
+- **Quelle:** [Sonnenfinsternis (Wikipedia)](https://de.wikipedia.org/wiki/Sonnenfinsternis)
+- **Fundstelle:** «Deutschland, die Schweiz und Österreich werden erst wieder am 3. September 2081 von einer totalen Finsternis getroffen.»
+- **Geprüft:** 2026-08-13
+
+> Am 12. August 2026 wurde in der Schweiz die Sonne zu über 90 Prozent verdeckt. Schon Tage vorher waren die Schutzbrillen ausverkauft. Ein Optiker in Basel hatte hundert Stück bestellt und alle verkauft, auf Verkaufsplattformen schnellten die Preise für eine Brille hoch, die im Laden fünf bis sechs Franken kostete.
+
+Man kann bezweifeln, dass das Streben nach Wissen wirklich in unserer Natur liegt. Vielleicht wollen wir nur wissen, was nützlich ist, und alles andere lernen wir, weil jemand es verlangt. Dieser Abend spricht dagegen. Es gab keine Note dafür und keinen Nutzen, niemand musste die Leute auffordern. Sie bezahlten von sich aus dafür, etwas sehen zu dürfen, das nichts einbringt.
+
+Genau das nennt Aristoteles das Staunen: Etwas fällt dir auf und du willst wissen, warum. Die erste Antwort findet man heute in Sekunden, der Mond schiebt sich zwischen Erde und Sonne. Interessant wird es danach. Warum passiert das nicht jeden Monat? Weil die Mondbahn gegen die Bahnebene der Erde geneigt ist, um etwa fünf Grad, und der Schatten uns darum selten trifft. Warum bleibt manchmal ein Ring stehen? Weil der Mond dann zu weit weg ist, um die Sonne ganz zu decken. Wann ist in der Schweiz wieder eine totale Finsternis zu sehen? Erst 2081. Jede Antwort öffnet die nächste Frage. Dass eine KI dir diese erste Antwort sofort gibt, nimmt dir nichts weg, sie bringt dich schneller an die Stelle, wo es dich wirklich interessiert.
 
 ---
 

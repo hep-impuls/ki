@@ -13,6 +13,16 @@
  * Darum jetzt in zwei Stufen:
  *   · verdeckt und im Block sonst nirgends frei  → KOLLISION (Erklärung ist weg)
  *   · verdeckt, aber im Block noch frei vorhanden → harmlos, nur gemeldet
+ *
+ * Seit dem 2026-08-13 werden zwei Begriffsvorräte geprüft, nicht mehr einer:
+ * das globale Glossar UND die karteneigenen `begriffe` der Denkwege. Die
+ * Fallbeispiele tragen Belege und Kartenbegriffe im gleichen Text, und ein
+ * Anker, der einen Kartenbegriff schluckt, nimmt ihm den Hover genauso still
+ * wie beim Glossar. Kartenbegriffe gelten nur für die Blöcke ihrer eigenen
+ * Karte, darum werden sie über den Text des `beispiel`-Feldes zugeordnet und
+ * nicht global geprüft: Sonst meldete das Skript einen Anker in einer fremden
+ * Karte als Kollision, und ein Prüfer, der falsch meldet, verdeckt bald die
+ * echten Fälle.
  */
 import fs from "node:fs";
 
@@ -64,6 +74,58 @@ try {
   );
 }
 
+/* ── Karteneigene Begriffe der Denkwege, je Block ──────────────────────────────
+ *
+ * `InfoText` kennt das Glossar nicht, sondern nur die `begriffe` seiner Karte.
+ * Zugeordnet wird über den Wortlaut des `beispiel`-Feldes: Er steht so auch im
+ * Quellen-Index, und Textgleichheit ist eindeutig, während ein Abschnittsname
+ * es nicht bliebe, sobald eine zweite Karte ein Fallbeispiel bekommt. */
+const dw = fs.readFileSync(
+  `${REPO}/src/app/lernen/lernseite-2/philosophische-perspektive/_components/Denkwege.tsx`,
+  "utf8",
+);
+
+/** Liest ein doppelt gequotetes JS-Stringliteral ab `i` und gibt seinen Wert. */
+function literalAb(quelle, i) {
+  const a = quelle.indexOf('"', i);
+  if (a < 0) return null;
+  let j = a + 1;
+  for (let esc = false; j < quelle.length; j++) {
+    const c = quelle[j];
+    if (esc) esc = false;
+    else if (c === "\\") esc = true;
+    else if (c === '"') break;
+  }
+  try {
+    return JSON.parse(quelle.slice(a, j + 1));
+  } catch {
+    return null;
+  }
+}
+
+const kartenBegriffe = new Map(); // Block-Kennung → Begriffswörter
+const ohneBlock = [];
+const karten = [...dw.matchAll(/slug:\s*"([^"]+)"/g)];
+for (let i = 0; i < karten.length; i++) {
+  const von = karten[i].index;
+  const bis = i + 1 < karten.length ? karten[i + 1].index : dw.length;
+  const teil = dw.slice(von, bis);
+  const bsp = /\bbeispiel:\s*"/.exec(teil);
+  if (!bsp) continue;
+  const text = literalAb(teil, bsp.index + bsp[0].length - 1);
+  const woerter = [...teil.matchAll(/\bwort:\s*"([^"]+)"/g)].map((m) => m[1]);
+  if (!text || woerter.length === 0) continue;
+  const treffer = Object.entries(bloecke).find(([, v]) => v.text === text);
+  if (treffer) kartenBegriffe.set(treffer[0], woerter);
+  else ohneBlock.push(karten[i][1]);
+}
+if (ohneBlock.length) {
+  console.log(
+    `WARNUNG: Fallbeispiel von ${ohneBlock.map((s) => `«${s}»`).join(", ")} nicht im Quellen-Index gefunden. ` +
+      "Karteneigene Begriffe dieser Karte werden nicht geprüft — erst `node docs/quellenauftrag.js` laufen lassen.",
+  );
+}
+
 const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 /**
@@ -90,15 +152,19 @@ function nochFrei(id, term) {
 
 let echte = 0;
 const harmlos = [];
+let kartenPruefungen = 0;
 for (const { id, anker: a } of belege) {
-  for (const t of terme) {
+  const eigene = kartenBegriffe.get(id) ?? [];
+  kartenPruefungen += eigene.length;
+  for (const t of [...terme, ...eigene]) {
+    const art = eigene.includes(t) ? "Kartenbegriff" : "Glossarbegriff";
     if (!grenze(t).test(a)) continue;
     const frei = nochFrei(id, t);
     if (frei === true) {
       harmlos.push(`Anker «${a}» verdeckt «${t}», der Begriff kommt im Block aber frei vor`);
     } else {
       console.log(
-        `KOLLISION: Anker «${a}» verdeckt Glossarbegriff «${t}»` +
+        `KOLLISION: Anker «${a}» verdeckt ${art} «${t}»` +
           (frei === null ? " (Blocktext unbekannt)" : " und kommt sonst nicht frei vor"),
       );
       echte++;
@@ -113,4 +179,9 @@ if (harmlos.length) {
 }
 console.log(
   `${terme.length} Glossarbegriffe · ${anker.length} Anker · ${echte} Kollisionen · ${harmlos.length} harmlos verdeckt`,
+);
+console.log(
+  kartenBegriffe.size
+    ? `Dazu ${kartenPruefungen} Prüfungen gegen karteneigene Begriffe in ${kartenBegriffe.size} Fallbeispiel-Block/Blöcken.`
+    : "Keine Fallbeispiel-Blöcke mit karteneigenen Begriffen gefunden.",
 );

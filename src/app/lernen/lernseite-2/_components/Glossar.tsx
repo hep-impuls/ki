@@ -563,7 +563,12 @@ function datum(iso: string): string {
   return `${Number(m[3])}.${Number(m[2])}.${m[1]}`;
 }
 
-function BelegStelle({ wort, beleg }: { wort: string; beleg: Beleg }) {
+/**
+ * Exportiert, weil auch `InfoText` in den Denkwegen Belege setzen soll. Dort
+ * läuft die Auszeichnung über die karteneigenen Begriffe statt über das
+ * Glossar; die Quellen-Darstellung soll aber überall dieselbe sein.
+ */
+export function BelegStelle({ wort, beleg }: { wort: string; beleg: Beleg }) {
   /* Buchbelege haben keine URL. Dann wird das Wort ein Knopf statt eines Links,
      und der Hinweis nennt das Werk statt eines Prüfdatums: Ein Buch ruft man
      nicht ab, man schlägt darin nach. */
