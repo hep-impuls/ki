@@ -46,6 +46,23 @@ Glossar, nur unbeobachtet. Kartenbegriffe werden über den Wortlaut des
 `beispiel`-Feldes ihrem Block zugeordnet, nicht global geprüft, sonst meldete
 das Skript Anker fremder Karten falsch.
 
+**Nicht nur Schweizer Fakten** (Christof, am selben Tag). Ein Fallbeispiel soll
+die Erlebniswelt heutiger Jugendlicher treffen, und dazu gehört kulturelle
+Vielfalt: globale Tatsachen sind ausdrücklich willkommen. Bei Kant steht darum
+neben der Glarner Landsgemeinde, ab wann man in Österreich, auf Malta, in
+Brasilien und in Indonesien mitentscheiden darf. Das Schweizer Beispiel bleibt
+der Einstieg, wenn es konkret ist, aber es bleibt nicht allein.
+
+**Absätze gehören in `InfoText`, nicht in den Aufrufer.** Der erste Versuch
+teilte den Text an der Aufrufstelle in Absätze und gab allen ein gemeinsames Set
+schon erklärter Begriffe mit, damit «jeder Begriff einmal» über die
+Absatzgrenze hält. Das ist falsch: React ruft Komponenten im
+Entwicklungsmodus doppelt auf, der verworfene erste Durchgang füllte das Set, und
+der zweite zeichnete keinen Begriff mehr aus — sichtbar waren null Hover statt
+zwei. Auszeichnen bleibt darum **ein** Durchgang über den ganzen Text, die
+Absätze entstehen daraus. Merksatz: Was während des Renderns mutiert wird, darf
+den Aufruf nicht überleben.
+
 ## 2026-08-11 — Kein Komma vor «und», wo es freigestellt ist (Christof)
 
 **Die Regel:** Zwischen zwei Hauptsätzen, die mit «und» verbunden sind, ist das

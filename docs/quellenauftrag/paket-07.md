@@ -50,6 +50,9 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 02 · Wege der Orientierung
 
+**[DW-a58b9f]** *(Zur Philosophie · Netzwerke und Systeme)*
+Bruno Latour war ein weltweit einflussreicher französischer Soziologe und Philosoph, Mitbegründer der Akteur-Netzwerk-Theorie. Danach entsteht Wirkung nie allein, sondern im Netz aus Menschen und Dingen: Ein Türschliesser, ein Formular oder ein Algorithmus wirken im Verbund mit. Er untersuchte, wie Wissenschaft und Gesellschaft ihre Wahrheiten Schritt für Schritt herstellen. Orientierung heisst darum nicht, alles zu überblicken, sondern das eigene Netz zu kennen: Wovon hänge ich ab, was wirkt mit mir zusammen? Werk: «Existenzweisen» (2012).
+
 **[DW-201ed5]** *(Zur Philosophie · Transformation von Mensch und Maschine)*
 Donna Haraway ist US-amerikanische Wissenschaftshistorikerin und feministische Denkerin, ihr «Manifest für Cyborgs» (1985) wurde weltberühmt. Sie denkt Mensch, Tier und Maschine als verwoben: Wir sind in gewissem Sinn schon «Cyborgs», Mischwesen. Statt der Technik als fremder Macht gegenüberzustehen, sollen wir lernen, verantwortlich mit ihr zu leben, sie spricht von «Mit dem Schlamassel bleiben», also die Probleme aushalten und antworten statt fliehen. Damit steht sie Bruno Latour nahe, ergänzt ihn aber um Fürsorge und Verantwortung. Werk: «Unruhig bleiben» (2016).
 
@@ -163,6 +166,3 @@ KI verändert die Arbeitswelt spürbar. Sie übernimmt vor allem einzelne Aufgab
 
 **[VA-225dcb]** *(Kartentext · Kultureller Bias und Technikverständnis)*
 KI lernt aus Texten, die oft aus dem englischsprachigen und westlichen Raum stammen. Darum gibt sie häufig westliche Sprachen, Werte und Sichtweisen wieder. Andere Kulturen verstehen Technik, Gemeinschaft und Privatsphäre aber teils ganz anders. «West» und «Ost» sind dabei keine festen Blöcke, sondern grobe Vereinfachungen.
-
-**[VA-2717c6]** *(Fallbeispiel · Wissensmacht)*
-Die Trainingsdaten der grossen Modelle bestehen zu einem sehr grossen Teil aus englischen Texten. Wissen aus kleineren Sprachen, etwa vielen afrikanischen, ist kaum vertreten und dort antwortet die KI schwächer oder erfindet mehr. So entscheidet die Datenmenge mit, wessen Wissen sichtbar bleibt.

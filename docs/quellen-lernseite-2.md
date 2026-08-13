@@ -13,8 +13,8 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 169 |
-| Belegte Textblöcke | 96 |
+| Belege | 174 |
+| Belegte Textblöcke | 97 |
 | Begründete Nicht-Belege | 6 |
 | Aussagen mit Standdatum | 3 |
 
@@ -1574,6 +1574,71 @@ Genau das nennt Aristoteles das Staunen: Etwas fällt dir auf und du willst wiss
 Man kann bezweifeln, dass das Streben nach Wissen wirklich in unserer Natur liegt. Vielleicht wollen wir nur wissen, was nützlich ist, und alles andere lernen wir, weil jemand es verlangt. Dieser Abend spricht dagegen. Es gab keine Note dafür und keinen Nutzen, niemand musste die Leute auffordern. Sie bezahlten von sich aus dafür, etwas sehen zu dürfen, das nichts einbringt.
 
 Genau das nennt Aristoteles das Staunen: Etwas fällt dir auf und du willst wissen, warum. Die erste Antwort findet man heute in Sekunden, der Mond schiebt sich zwischen Erde und Sonne. Interessant wird es danach. Warum passiert das nicht jeden Monat? Weil die Mondbahn gegen die Bahnebene der Erde geneigt ist, um etwa fünf Grad, und der Schatten uns darum selten trifft. Warum bleibt manchmal ein Ring stehen? Weil der Mond dann zu weit weg ist, um die Sonne ganz zu decken. Wann ist in der Schweiz wieder eine totale Finsternis zu sehen? Erst 2081. Jede Antwort öffnet die nächste Frage. Dass eine KI dir diese erste Antwort sofort gibt, nimmt dir nichts weg, sie bringt dich schneller an die Stelle, wo es dich wirklich interessiert.
+
+### Was ist der Mensch? · regnete es in Glarus aus Kübeln
+
+- **Kennung:** `DW-11d03b` (Fallbeispiel)
+- **Quelle:** [Kanton Glarus, 6. August 2020: «Als die Jungen die Alten überzeugten»](https://www.gl.ch/public-newsroom.html/31/news/16108)
+- **Fundstelle:** «Es regnete aus Kübeln, an diesem Landsgemeindesonntag des 6. Mai 2007.» Zur Person: «der 20 jährige Oberurner Mitinitiant Michael Pesaballe», und «Pesaballe hatte seine Maturaarbeit dem Stimmrechtsalter 16 gewidmet». Zum Ausgang: «Es war ein knapper Entscheid. Nach dreimaligem Ausmehren aber stand fest: Die Glarnerinnen und Glarner stimmen der Einführung des akiven Stimmrechtsalters 16 zu» (Tippfehler im Original). Der Regierungsrat bot «Ja zum aktiven Stimm- und Wahlrecht (bei einer Wahl wählen können), aber Nein zum passiven Wahlrecht (bei einer Wahl gewählt werden können)» — daher stimmen ab 16, gewählt werden ab 18.
+- **Geprüft:** 2026-08-13
+
+> Am 6. Mai 2007 regnete es in Glarus aus Kübeln. Michael Pesaballe, damals 20 und aus Oberurnen, hatte seine Maturaarbeit dem Stimmrechtsalter 16 gewidmet und stand nun an der Landsgemeinde, um für den Antrag zu reden. Der Entscheid war knapp, dreimal musste ausgemehrt werden, dann stand fest: In Glarus stimmt und wählt man ab 16. Gewählt werden darf man weiterhin erst ab 18. Bis heute ist Glarus der einzige Kanton, der das eingeführt hat. Im Aargau sagten die Stimmenden 2024 mit knapp 80 Prozent Nein.
+
+Ab wann jemand mitentscheiden darf, ist überall anders festgelegt: in Österreich, auf Malta und in Brasilien ab 16, in Indonesien ab 17, in den meisten Ländern ab 18. Die Zahl wird gesetzt, nicht gefunden. Kant hat für die Sache ein anderes Wort, Mündigkeit, und er meint damit nichts, was ein Gesetz festlegen könnte. Unmündig ist für ihn, wer seinen Verstand nicht ohne die Leitung eines anderen gebraucht, und schuld daran ist nach ihm meist nicht fehlender Verstand, sondern fehlender Mut. Man kann also abstimmen dürfen und trotzdem andere entscheiden lassen. Und man kann mit 16 Gründe haben.
+
+Genau darum geht es Kant: eine Regel befolgen oder sie einsehen. An einer Landsgemeinde hebt man die Hand offen, alle sehen es und jemand kann fragen, warum. «Weil es alle so machen» ist dann keine Antwort. Pesaballe hat Leute überzeugt, die ihn hätten überstimmen können. Für die bequeme Seite hat Kant ein Bild, das heute verblüffend nah klingt: ein Buch, das für mich Verstand hat, ein Arzt, der für mich die Diät beurteilt, dann muss ich mich nicht selbst bemühen. Eine KI, die dir die Begründung schreibt, ist nicht verboten und oft nützlich. Der Unterschied zeigt sich erst, wenn jemand nachfragt, denn verteidigen kannst du nur einen Grund, den du selbst verstanden hast.
+
+### Was ist der Mensch? · knapp 80 Prozent Nein
+
+- **Kennung:** `DW-11d03b` (Fallbeispiel)
+- **Quelle:** [SRF, 22. November 2024: Abstimmung im Kanton Aargau](https://www.srf.ch/news/schweiz/abstimmungen-24-november-2024/abstimmung-kanton-aargau-stimmrechtsalter-16-nach-glarus-auch-der-aargau)
+- **Fundstelle:** Ergebnis der Volksabstimmung vom 24. November 2024: «JA: 20.3% (35'992 Stimmen), NEIN: 79.7% (141'669 Stimmen)». Und zur Sonderstellung: «Einzige Ausnahme bleibt der Kanton Glarus. Dort können sich 16-Jährige seit 2007 aktiv an der Landsgemeinde beteiligen.»
+- **Geprüft:** 2026-08-13
+
+> Am 6. Mai 2007 regnete es in Glarus aus Kübeln. Michael Pesaballe, damals 20 und aus Oberurnen, hatte seine Maturaarbeit dem Stimmrechtsalter 16 gewidmet und stand nun an der Landsgemeinde, um für den Antrag zu reden. Der Entscheid war knapp, dreimal musste ausgemehrt werden, dann stand fest: In Glarus stimmt und wählt man ab 16. Gewählt werden darf man weiterhin erst ab 18. Bis heute ist Glarus der einzige Kanton, der das eingeführt hat. Im Aargau sagten die Stimmenden 2024 mit knapp 80 Prozent Nein.
+
+Ab wann jemand mitentscheiden darf, ist überall anders festgelegt: in Österreich, auf Malta und in Brasilien ab 16, in Indonesien ab 17, in den meisten Ländern ab 18. Die Zahl wird gesetzt, nicht gefunden. Kant hat für die Sache ein anderes Wort, Mündigkeit, und er meint damit nichts, was ein Gesetz festlegen könnte. Unmündig ist für ihn, wer seinen Verstand nicht ohne die Leitung eines anderen gebraucht, und schuld daran ist nach ihm meist nicht fehlender Verstand, sondern fehlender Mut. Man kann also abstimmen dürfen und trotzdem andere entscheiden lassen. Und man kann mit 16 Gründe haben.
+
+Genau darum geht es Kant: eine Regel befolgen oder sie einsehen. An einer Landsgemeinde hebt man die Hand offen, alle sehen es und jemand kann fragen, warum. «Weil es alle so machen» ist dann keine Antwort. Pesaballe hat Leute überzeugt, die ihn hätten überstimmen können. Für die bequeme Seite hat Kant ein Bild, das heute verblüffend nah klingt: ein Buch, das für mich Verstand hat, ein Arzt, der für mich die Diät beurteilt, dann muss ich mich nicht selbst bemühen. Eine KI, die dir die Begründung schreibt, ist nicht verboten und oft nützlich. Der Unterschied zeigt sich erst, wenn jemand nachfragt, denn verteidigen kannst du nur einen Grund, den du selbst verstanden hast.
+
+### Was ist der Mensch? · in Indonesien ab 17
+
+- **Kennung:** `DW-11d03b` (Fallbeispiel)
+- **Quelle:** [Wahlalter (Wikipedia)](https://de.wikipedia.org/wiki/Wahlalter)
+- **Fundstelle:** «In Österreich und Malta beträgt das Mindestalter 16 Jahre», dazu «Österreich hat dieses Wahlalter (auch für die Wahlen zum EU-Parlament) als erstes Land der Europäischen Union eingeführt» (2007). Zu den weiteren Ländern: «z. B. Indonesien (17 Jahre) und Brasilien (16 Jahre)».
+- **Geprüft:** 2026-08-13
+
+> Am 6. Mai 2007 regnete es in Glarus aus Kübeln. Michael Pesaballe, damals 20 und aus Oberurnen, hatte seine Maturaarbeit dem Stimmrechtsalter 16 gewidmet und stand nun an der Landsgemeinde, um für den Antrag zu reden. Der Entscheid war knapp, dreimal musste ausgemehrt werden, dann stand fest: In Glarus stimmt und wählt man ab 16. Gewählt werden darf man weiterhin erst ab 18. Bis heute ist Glarus der einzige Kanton, der das eingeführt hat. Im Aargau sagten die Stimmenden 2024 mit knapp 80 Prozent Nein.
+
+Ab wann jemand mitentscheiden darf, ist überall anders festgelegt: in Österreich, auf Malta und in Brasilien ab 16, in Indonesien ab 17, in den meisten Ländern ab 18. Die Zahl wird gesetzt, nicht gefunden. Kant hat für die Sache ein anderes Wort, Mündigkeit, und er meint damit nichts, was ein Gesetz festlegen könnte. Unmündig ist für ihn, wer seinen Verstand nicht ohne die Leitung eines anderen gebraucht, und schuld daran ist nach ihm meist nicht fehlender Verstand, sondern fehlender Mut. Man kann also abstimmen dürfen und trotzdem andere entscheiden lassen. Und man kann mit 16 Gründe haben.
+
+Genau darum geht es Kant: eine Regel befolgen oder sie einsehen. An einer Landsgemeinde hebt man die Hand offen, alle sehen es und jemand kann fragen, warum. «Weil es alle so machen» ist dann keine Antwort. Pesaballe hat Leute überzeugt, die ihn hätten überstimmen können. Für die bequeme Seite hat Kant ein Bild, das heute verblüffend nah klingt: ein Buch, das für mich Verstand hat, ein Arzt, der für mich die Diät beurteilt, dann muss ich mich nicht selbst bemühen. Eine KI, die dir die Begründung schreibt, ist nicht verboten und oft nützlich. Der Unterschied zeigt sich erst, wenn jemand nachfragt, denn verteidigen kannst du nur einen Grund, den du selbst verstanden hast.
+
+### Was ist der Mensch? · fehlender Mut
+
+- **Kennung:** `DW-11d03b` (Fallbeispiel)
+- **Quelle:** [Kant, «Beantwortung der Frage: Was ist Aufklärung?» (1784)](https://de.wikisource.org/wiki/Beantwortung_der_Frage:_Was_ist_Aufkl%C3%A4rung%3F)
+- **Fundstelle:** Erster Absatz: «Aufklärung ist der Ausgang des Menschen aus seiner selbst verschuldeten Unmündigkeit.» Unmündigkeit heisst dort «das Unvermögen, sich seines Verstandes ohne Leitung eines anderen zu bedienen»; selbst verschuldet ist sie, weil die Ursache nicht im fehlenden Verstand liegt, sondern im fehlenden Entschluss. Daher der Wahlspruch «Sapere aude! Habe Muth dich deines eigenen Verstandes zu bedienen!»
+- **Geprüft:** 2026-08-13
+
+> Am 6. Mai 2007 regnete es in Glarus aus Kübeln. Michael Pesaballe, damals 20 und aus Oberurnen, hatte seine Maturaarbeit dem Stimmrechtsalter 16 gewidmet und stand nun an der Landsgemeinde, um für den Antrag zu reden. Der Entscheid war knapp, dreimal musste ausgemehrt werden, dann stand fest: In Glarus stimmt und wählt man ab 16. Gewählt werden darf man weiterhin erst ab 18. Bis heute ist Glarus der einzige Kanton, der das eingeführt hat. Im Aargau sagten die Stimmenden 2024 mit knapp 80 Prozent Nein.
+
+Ab wann jemand mitentscheiden darf, ist überall anders festgelegt: in Österreich, auf Malta und in Brasilien ab 16, in Indonesien ab 17, in den meisten Ländern ab 18. Die Zahl wird gesetzt, nicht gefunden. Kant hat für die Sache ein anderes Wort, Mündigkeit, und er meint damit nichts, was ein Gesetz festlegen könnte. Unmündig ist für ihn, wer seinen Verstand nicht ohne die Leitung eines anderen gebraucht, und schuld daran ist nach ihm meist nicht fehlender Verstand, sondern fehlender Mut. Man kann also abstimmen dürfen und trotzdem andere entscheiden lassen. Und man kann mit 16 Gründe haben.
+
+Genau darum geht es Kant: eine Regel befolgen oder sie einsehen. An einer Landsgemeinde hebt man die Hand offen, alle sehen es und jemand kann fragen, warum. «Weil es alle so machen» ist dann keine Antwort. Pesaballe hat Leute überzeugt, die ihn hätten überstimmen können. Für die bequeme Seite hat Kant ein Bild, das heute verblüffend nah klingt: ein Buch, das für mich Verstand hat, ein Arzt, der für mich die Diät beurteilt, dann muss ich mich nicht selbst bemühen. Eine KI, die dir die Begründung schreibt, ist nicht verboten und oft nützlich. Der Unterschied zeigt sich erst, wenn jemand nachfragt, denn verteidigen kannst du nur einen Grund, den du selbst verstanden hast.
+
+### Was ist der Mensch? · ein Buch, das für mich Verstand hat
+
+- **Kennung:** `DW-11d03b` (Fallbeispiel)
+- **Quelle:** [Kant, «Beantwortung der Frage: Was ist Aufklärung?» (1784)](https://de.wikisource.org/wiki/Beantwortung_der_Frage:_Was_ist_Aufkl%C3%A4rung%3F)
+- **Fundstelle:** Wörtlich: «Habe ich ein Buch, das für mich Verstand hat, einen Seelsorger, der für mich Gewissen hat, einen Arzt der für mich die Diät beurtheilt …» — dann muss man sich nicht selbst bemühen, sondern kann zahlen und andere die verdriessliche Arbeit übernehmen lassen. Der Lerntext verkürzt auf Buch und Arzt.
+- **Geprüft:** 2026-08-13
+
+> Am 6. Mai 2007 regnete es in Glarus aus Kübeln. Michael Pesaballe, damals 20 und aus Oberurnen, hatte seine Maturaarbeit dem Stimmrechtsalter 16 gewidmet und stand nun an der Landsgemeinde, um für den Antrag zu reden. Der Entscheid war knapp, dreimal musste ausgemehrt werden, dann stand fest: In Glarus stimmt und wählt man ab 16. Gewählt werden darf man weiterhin erst ab 18. Bis heute ist Glarus der einzige Kanton, der das eingeführt hat. Im Aargau sagten die Stimmenden 2024 mit knapp 80 Prozent Nein.
+
+Ab wann jemand mitentscheiden darf, ist überall anders festgelegt: in Österreich, auf Malta und in Brasilien ab 16, in Indonesien ab 17, in den meisten Ländern ab 18. Die Zahl wird gesetzt, nicht gefunden. Kant hat für die Sache ein anderes Wort, Mündigkeit, und er meint damit nichts, was ein Gesetz festlegen könnte. Unmündig ist für ihn, wer seinen Verstand nicht ohne die Leitung eines anderen gebraucht, und schuld daran ist nach ihm meist nicht fehlender Verstand, sondern fehlender Mut. Man kann also abstimmen dürfen und trotzdem andere entscheiden lassen. Und man kann mit 16 Gründe haben.
+
+Genau darum geht es Kant: eine Regel befolgen oder sie einsehen. An einer Landsgemeinde hebt man die Hand offen, alle sehen es und jemand kann fragen, warum. «Weil es alle so machen» ist dann keine Antwort. Pesaballe hat Leute überzeugt, die ihn hätten überstimmen können. Für die bequeme Seite hat Kant ein Bild, das heute verblüffend nah klingt: ein Buch, das für mich Verstand hat, ein Arzt, der für mich die Diät beurteilt, dann muss ich mich nicht selbst bemühen. Eine KI, die dir die Begründung schreibt, ist nicht verboten und oft nützlich. Der Unterschied zeigt sich erst, wenn jemand nachfragt, denn verteidigen kannst du nur einen Grund, den du selbst verstanden hast.
 
 ---
 

@@ -1928,6 +1928,63 @@ export const BELEGE: Beleg[] = [
       "«Deutschland, die Schweiz und Österreich werden erst wieder am 3. September 2081 von einer totalen Finsternis getroffen.»",
     geprueft: "2026-08-13",
   },
+
+  /* ── Kant, Fallbeispiel: Stimmrechtsalter 16 an der Glarner Landsgemeinde ───
+   * Die Karte dreht um Befolgen gegen Einsehen und die Landsgemeinde macht
+   * genau das sichtbar: Man hebt die Hand offen und kann gefragt werden. Die
+   * beiden Kant-Belege zeigen auf dieselbe Schrift, weil beide Aussagen des
+   * Textes dort stehen; getrennt aufgeführt, damit jede Stelle ihren eigenen
+   * Wortlaut nennt.
+   *
+   * Bewusst keine Zahl für «wie viele Kantone haben abgelehnt»: Die SRF-Liste
+   * vom März 2024 nennt sechs, seither ist der Aargau dazugekommen, und eine
+   * Zahl, die mit jeder Abstimmung falsch wird, gehört nicht in einen Lerntext.
+   * Stattdessen ein datiertes Einzelergebnis.                                */
+  {
+    id: "DW-11d03b",
+    anker: "regnete es in Glarus aus Kübeln",
+    url: "https://www.gl.ch/public-newsroom.html/31/news/16108",
+    titel: "Kanton Glarus, 6. August 2020: «Als die Jungen die Alten überzeugten»",
+    stelle:
+      "«Es regnete aus Kübeln, an diesem Landsgemeindesonntag des 6. Mai 2007.» Zur Person: «der 20 jährige Oberurner Mitinitiant Michael Pesaballe», und «Pesaballe hatte seine Maturaarbeit dem Stimmrechtsalter 16 gewidmet». Zum Ausgang: «Es war ein knapper Entscheid. Nach dreimaligem Ausmehren aber stand fest: Die Glarnerinnen und Glarner stimmen der Einführung des akiven Stimmrechtsalters 16 zu» (Tippfehler im Original). Der Regierungsrat bot «Ja zum aktiven Stimm- und Wahlrecht (bei einer Wahl wählen können), aber Nein zum passiven Wahlrecht (bei einer Wahl gewählt werden können)» — daher stimmen ab 16, gewählt werden ab 18.",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-11d03b",
+    anker: "knapp 80 Prozent Nein",
+    url: "https://www.srf.ch/news/schweiz/abstimmungen-24-november-2024/abstimmung-kanton-aargau-stimmrechtsalter-16-nach-glarus-auch-der-aargau",
+    titel: "SRF, 22. November 2024: Abstimmung im Kanton Aargau",
+    stelle:
+      "Ergebnis der Volksabstimmung vom 24. November 2024: «JA: 20.3% (35'992 Stimmen), NEIN: 79.7% (141'669 Stimmen)». Und zur Sonderstellung: «Einzige Ausnahme bleibt der Kanton Glarus. Dort können sich 16-Jährige seit 2007 aktiv an der Landsgemeinde beteiligen.»",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-11d03b",
+    anker: "in Indonesien ab 17",
+    url: "https://de.wikipedia.org/wiki/Wahlalter",
+    titel: "Wahlalter (Wikipedia)",
+    stelle:
+      "«In Österreich und Malta beträgt das Mindestalter 16 Jahre», dazu «Österreich hat dieses Wahlalter (auch für die Wahlen zum EU-Parlament) als erstes Land der Europäischen Union eingeführt» (2007). Zu den weiteren Ländern: «z. B. Indonesien (17 Jahre) und Brasilien (16 Jahre)».",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-11d03b",
+    anker: "fehlender Mut",
+    url: "https://de.wikisource.org/wiki/Beantwortung_der_Frage:_Was_ist_Aufkl%C3%A4rung%3F",
+    titel: "Kant, «Beantwortung der Frage: Was ist Aufklärung?» (1784)",
+    stelle:
+      "Erster Absatz: «Aufklärung ist der Ausgang des Menschen aus seiner selbst verschuldeten Unmündigkeit.» Unmündigkeit heisst dort «das Unvermögen, sich seines Verstandes ohne Leitung eines anderen zu bedienen»; selbst verschuldet ist sie, weil die Ursache nicht im fehlenden Verstand liegt, sondern im fehlenden Entschluss. Daher der Wahlspruch «Sapere aude! Habe Muth dich deines eigenen Verstandes zu bedienen!»",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-11d03b",
+    anker: "ein Buch, das für mich Verstand hat",
+    url: "https://de.wikisource.org/wiki/Beantwortung_der_Frage:_Was_ist_Aufkl%C3%A4rung%3F",
+    titel: "Kant, «Beantwortung der Frage: Was ist Aufklärung?» (1784)",
+    stelle:
+      "Wörtlich: «Habe ich ein Buch, das für mich Verstand hat, einen Seelsorger, der für mich Gewissen hat, einen Arzt der für mich die Diät beurtheilt …» — dann muss man sich nicht selbst bemühen, sondern kann zahlen und andere die verdriessliche Arbeit übernehmen lassen. Der Lerntext verkürzt auf Buch und Arzt.",
+    geprueft: "2026-08-13",
+  },
 ];
 
 /**

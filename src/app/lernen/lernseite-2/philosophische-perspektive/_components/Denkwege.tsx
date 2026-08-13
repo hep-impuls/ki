@@ -122,9 +122,21 @@ const BEREICHE: Bereich[] = [
         these: "Frei und darum verantwortlich.",
         info: "Immanuel Kant lebte sein ganzes Leben in Königsberg und löste mit der «Kritik der reinen Vernunft» eine Wende in der Philosophie aus. Er bündelte sie in vier Fragen, deren letzte, «Was ist der Mensch?», alle anderen zusammenfasst. Seine Antwort: Der Mensch ist vernunftbegabt und frei, er kann aus eigener Einsicht handeln, nicht bloss Trieben oder Befehlen folgen. Aus dieser Freiheit folgen Verantwortung und Würde, für sein Tun kann der Mensch einstehen. Entscheidend ist ihm dabei der Unterschied zwischen Befolgen und Einsehen: Wer eine Regel nur befolgt, weil sie befohlen ist, handelt für Kant noch nicht frei. Frei handelt, wer die Regel selbst als richtig erkennt und ihr darum folgt.",
         begriffe: [
+          {
+            wort: "Landsgemeinde",
+            erklaerung:
+              "Versammlung aller Stimmberechtigten unter freiem Himmel, in Glarus am ersten Sonntag im Mai. Abgestimmt wird im offenen Handmehr und jede stimmberechtigte Person darf das Wort verlangen, einen Antrag ändern oder ablehnen.",
+          },
+          {
+            wort: "ausgemehrt",
+            erklaerung:
+              "An der Landsgemeinde werden keine Zettel gezählt. Die Leitung schätzt vom Podium aus, auf welcher Seite die erhobenen Hände in der Mehrheit sind. Ist das nicht klar, wird noch einmal gemehrt, 2007 dreimal.",
+          },
           { wort: "Königsberg", erklaerung: "Damals ostpreussische Stadt (heute Kaliningrad, Russland); Kant verliess sie zeitlebens fast nie." },
           { wort: "Kritik der reinen Vernunft", erklaerung: "Kants Hauptwerk (1781): Es untersucht, was der Mensch überhaupt erkennen kann und wo die Grenzen des Wissens liegen." },
         ],
+        beispiel:
+          "Am 6. Mai 2007 regnete es in Glarus aus Kübeln. Michael Pesaballe, damals 20 und aus Oberurnen, hatte seine Maturaarbeit dem Stimmrechtsalter 16 gewidmet und stand nun an der Landsgemeinde, um für den Antrag zu reden. Der Entscheid war knapp, dreimal musste ausgemehrt werden, dann stand fest: In Glarus stimmt und wählt man ab 16. Gewählt werden darf man weiterhin erst ab 18. Bis heute ist Glarus der einzige Kanton, der das eingeführt hat. Im Aargau sagten die Stimmenden 2024 mit knapp 80 Prozent Nein.\n\nAb wann jemand mitentscheiden darf, ist überall anders festgelegt: in Österreich, auf Malta und in Brasilien ab 16, in Indonesien ab 17, in den meisten Ländern ab 18. Die Zahl wird gesetzt, nicht gefunden. Kant hat für die Sache ein anderes Wort, Mündigkeit, und er meint damit nichts, was ein Gesetz festlegen könnte. Unmündig ist für ihn, wer seinen Verstand nicht ohne die Leitung eines anderen gebraucht, und schuld daran ist nach ihm meist nicht fehlender Verstand, sondern fehlender Mut. Man kann also abstimmen dürfen und trotzdem andere entscheiden lassen. Und man kann mit 16 Gründe haben.\n\nGenau darum geht es Kant: eine Regel befolgen oder sie einsehen. An einer Landsgemeinde hebt man die Hand offen, alle sehen es und jemand kann fragen, warum. «Weil es alle so machen» ist dann keine Antwort. Pesaballe hat Leute überzeugt, die ihn hätten überstimmen können. Für die bequeme Seite hat Kant ein Bild, das heute verblüffend nah klingt: ein Buch, das für mich Verstand hat, ein Arzt, der für mich die Diät beurteilt, dann muss ich mich nicht selbst bemühen. Eine KI, die dir die Begründung schreibt, ist nicht verboten und oft nützlich. Der Unterschied zeigt sich erst, wenn jemand nachfragt, denn verteidigen kannst du nur einen Grund, den du selbst verstanden hast.",
       },
       {
         slug: "hegel",
@@ -459,8 +471,6 @@ function InfoText({
       });
     }
   }
-  if (marken.length === 0) return <>{text}</>;
-
   // Nach Position; bei gleichem Start zuerst der Beleg, dann der längere Treffer.
   marken.sort(
     (a, b) =>
@@ -470,13 +480,13 @@ function InfoText({
   );
 
   const teile: React.ReactNode[] = [];
-  const verwendet = new Set<string>();
+  const schonErklaert = new Set<string>();
   let last = 0;
   for (const k of marken) {
     if (k.von < last) continue; // überlappt einen schon gesetzten Treffer
     if (!k.beleg) {
-      if (verwendet.has(k.wort)) continue; // jeder Begriff nur einmal
-      verwendet.add(k.wort);
+      if (schonErklaert.has(k.wort)) continue; // jeder Begriff nur einmal
+      schonErklaert.add(k.wort);
     }
     if (k.von > last) teile.push(text.slice(last, k.von));
     teile.push(
@@ -489,10 +499,35 @@ function InfoText({
     last = k.bis;
   }
   if (last < text.length) teile.push(text.slice(last));
+
+  /* Absätze an der Leerzeile. Kein Treffer läuft über eine Leerzeile hinweg
+   * (weder Anker noch Begriff enthalten Zeilenumbrüche), darum genügt es, die
+   * reinen Textstücke aufzuteilen. */
+  const absaetze: React.ReactNode[][] = [[]];
+  for (const teil of teile) {
+    if (typeof teil === "string" && teil.includes("\n\n")) {
+      teil.split("\n\n").forEach((stueck, i) => {
+        if (i > 0) absaetze.push([]);
+        if (stueck) absaetze[absaetze.length - 1].push(stueck);
+      });
+    } else {
+      absaetze[absaetze.length - 1].push(teil);
+    }
+  }
+
+  const gesetzt = (knoten: React.ReactNode[]) =>
+    knoten.map((t, i) => <Fragment key={i}>{t}</Fragment>);
+
+  /* Ein Absatz: nur die Auszeichnung zurückgeben, der Aufrufer hat sein eigenes
+   * `<p>` (so benutzen es die Einordnungen). Mehrere Absätze: hier die `<p>`
+   * setzen, weil ein `<p>` im `<p>` ungültiges HTML wäre. */
+  if (absaetze.length === 1) return <>{gesetzt(absaetze[0])}</>;
   return (
     <>
-      {teile.map((t, i) => (
-        <Fragment key={i}>{t}</Fragment>
+      {absaetze.map((knoten, i) => (
+        <p key={i} className={`leading-relaxed${i > 0 ? " mt-sm" : ""}`}>
+          {gesetzt(knoten)}
+        </p>
       ))}
     </>
   );
@@ -751,13 +786,18 @@ export default function Denkwege({
                           {/* `belege` nur hier: Fallbeispiele behaupten
                               Tatsachen (Zahlen, Daten, Ereignisse), die
                               Einordnungen darüber referieren Positionen.
-                              Absätze aus `\n\n` — länger als eine Einordnung,
-                              darum in Abschnitte gegliedert. */}
-                          {p.beispiel.split("\n\n").map((absatz, i) => (
-                            <p key={i} className={`leading-relaxed${i > 0 ? " mt-sm" : ""}`}>
-                              <InfoText text={absatz} begriffe={p.begriffe} belege />
-                            </p>
-                          ))}
+
+                              Kein `<p>` um den Aufruf: Bei einem Text mit
+                              Leerzeilen setzt `InfoText` die Absätze selbst.
+                              Ein erster Versuch teilte hier auf und gab allen
+                              Absätzen ein gemeinsames Set schon erklärter
+                              Begriffe mit — das überlebt den doppelten Aufruf
+                              im Entwicklungsmodus nicht, der verworfene erste
+                              Durchgang verbraucht die Begriffe und der zweite
+                              zeichnet keinen mehr aus. Darum bleibt die
+                              Auszeichnung ein Durchgang über den ganzen Text
+                              und die Absätze entstehen daraus. */}
+                          <InfoText text={p.beispiel} begriffe={p.begriffe} belege />
                         </Ausklapptext>
                       )}
                       <KartenAktion
