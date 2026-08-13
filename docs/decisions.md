@@ -10,6 +10,52 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-11 — «Wege der Orientierung» bleibt vorerst ohne Belege (Christof)
+
+Beim Ergänzen der Hegel-Karte kam heraus: Die Denker-Karten **und** die
+Abschnitts-Absätze in `philosophische-perspektive/_components/Denkwege.tsx`
+laufen über `InfoText`, nicht über `GlossarText`. `InfoText` zeichnet
+ausschliesslich die mitgegebenen Karten-Begriffe aus (`begriffe`,
+`absatzBegriffe`) und kennt weder das globale Glossar noch die Belege.
+
+**Folge:** In diesem Abschnitt kann keine Quelle erscheinen, und es gibt dort
+auch keine — null Belege mit `DW`-Kennung, während der Teppich des Wandels 164
+trägt. Das ist kein Versehen und soll nicht «repariert» werden.
+
+**Entscheid:** So lassen. Ein Umbau auf `GlossarText` würde das ganze Glossar
+(239 Begriffe) in diese Texte hineinziehen, bräuchte eine eigene
+Kollisionsrunde und würde die feiner gesetzten Karten-Begriffe überlagern. Der
+Nutzen wäre gering, weil die Philosophie-Texte Positionen referieren und keine
+prüfbaren Einzelfakten behaupten.
+
+**Woran sich der Inhalt trotzdem hält:** Die Aussagen der Hegel-Karte sind an
+der deutschen Wikipedia geprüft («Bestimmte Negation» belegt Hegels Prägung des
+Begriffs und die Aufnahme durch Marx' Ideologiekritik und die Kritische
+Theorie), nur eben nicht sichtbar verlinkt.
+
+Betroffen: `Denkwege.tsx` (`InfoText`, Zeile ~395), alle sechs Abschnitte von
+«Wege der Orientierung».
+
+---
+
+## 2026-08-11 — Keine Maschinen-Aussagen in den Mund der Denker (Christof)
+
+Auf der Kant-Karte stand «Nach Kant führt eine Maschine Regeln aus, ist aber
+nicht frei und verantwortet nichts». Kant starb 1804; der Satz gab eine
+Folgerung von uns als seine Lehre aus.
+
+**Regel ab jetzt:** Der Brückenschlag zur KI wird sprachlich als *unsere*
+Lesart markiert, nie als Aussage der Person. Die bewährten Formeln stehen schon
+im Bestand: «Für den Umgang mit KI heisst das» (Aristoteles), «Von Arendt her
+gelesen», «Von hier aus argumentieren viele» (Heidegger), «Übertragen auf die
+KI» (Sloterdijk), «Von hier aus gelesen» (Hegel). Wer selbst über Computer und
+Maschinen geschrieben hat, darf direkt zitiert werden (Hustvedt, Haraway).
+
+Kants Karte endet nun beim Menschen, mit dem Unterschied zwischen Befolgen und
+Einsehen.
+
+---
+
 ## 2026-08-11 — Kein Secret mehr in der Adresszeile (Pietro)
 
 Bis heute reichte der Lehrer-Hub die Zugangsdaten als Query-Parameter weiter:
