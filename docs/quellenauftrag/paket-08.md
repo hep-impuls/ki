@@ -50,9 +50,6 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 01 · Vorhang auf
 
-**[VA-a3de04]** *(Kartentext · Yan Shi's Automat)*
-Der Traum vom künstlichen Menschen ist nicht nur europäisch, sondern kehrt in vielen Kulturen wieder. Auch in China erzählte man früh von einer täuschend lebendigen Figur. Ein Handwerker führt sie dem König vor und niemand erkennt zuerst, dass sie gebaut ist. Schon hier klingt die Frage an, wo die Grenze zwischen echtem und nachgeahmtem Leben verläuft.
-
 **[VA-6b2709]** *(Vertiefung «Mehr lesen» · Yan Shi's Automat)*
 Im «Liezi» wird die Figur bis ins Innere beschrieben, denn der Handwerker hatte ihr nachgebildete Organe wie Herz, Lunge, Leber, Nieren, Muskeln und Knochen gegeben. Erstaunlich ist, dass jedes Organ eine eigene Aufgabe trug. Entfernte man das künstliche Herz, verstummte die Figur, nahm man die Leber weg, konnte sie nicht mehr sehen und ohne die Nieren versagten die Beine. Damit erzählt der Text nicht bloss von einer Puppe, sondern von einem durchdachten künstlichen Körper mit inneren Teilen. Die Episode steht im Kapitel «Tang Wen» und spielt am Hof von König Mu, der von weiten Reisen zurückkehrt. Am Ende zeigt sich der König überzeugt, dass menschliche Geschicklichkeit fast an die Werke der Natur heranreicht. So verhandelt die Erzählung schon vor vielen Jahrhunderten, ob ein Gemachtes dem Gewachsenen gleichkommen kann.
 
@@ -190,3 +187,6 @@ Wie tief der Schock sass, zeigt der Gelehrte Hieronymus, der fern in Bethlehem a
 > **Belegt** («die Stimme stocke ihm»): [Plünderung Roms (410) (Wikipedia)](https://de.wikipedia.org/wiki/Pl%C3%BCnderung_Roms_(410)) — Wörtlich zu Hieronymus' Reaktion: «Die Stimme stockt mir und vor Schluchzen kann ich nicht weiterdiktieren: Die Stadt Rom ist eingenommen, die zuvor die ganze Welt besiegt hatte.» Der Artikel weist die Stelle als Briefe 127,12 nach. *(geprüft 2026-08-05)*
 
 > **Belegt** («fern in Bethlehem an seiner Bibelübersetzung arbeitete»): [Vulgata (Wikipedia)](https://de.wikipedia.org/wiki/Vulgata) — «Nach dem Tod des Papstes 384 siedelte Hieronymus nach Bethlehem über und wandte sich der Übersetzung des Alten Testaments zu.» Der Artikel «Hieronymus (Kirchenvater)» ergänzt, dass die von ihm geleitete Gruppe sich in Bethlehem niederliess, wo Paula ein Kloster finanzierte: «Hier konnte sich Hieronymus seiner bibelwissenschaftlichen Arbeit widmen.» *(geprüft 2026-08-05)*
+
+**[EP-5455c7]** *(Kartentext · Aufklärung)*
+Im Vordergrund kentern Schiffe in der heranrollenden Welle. Wer dem Beben und dem Feuer entkam, den holte oft das Wasser. Das Bild bündelt die Erfahrung, dass keine menschliche Ordnung und kein Gebet vor der blinden Gewalt der Natur schützt.

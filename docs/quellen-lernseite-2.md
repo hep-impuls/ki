@@ -13,7 +13,7 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 197 |
+| Belege | 201 |
 | Belegte Textblöcke | 115 |
 | Begründete Nicht-Belege | 6 |
 | Aussagen mit Standdatum | 3 |
@@ -1741,25 +1741,25 @@ Ein Becher, ein Strohhalm. Und daran hängen eine Teekultur aus Taiwan, ein süd
 
 ### Transformation von Mensch und Maschine · 36,84
 
-- **Kennung:** `DW-538e23` (Fallbeispiel)
+- **Kennung:** `DW-a980b8` (Fallbeispiel)
 - **Quelle:** [4-mal-100-Meter-Staffel (Wikipedia)](https://de.wikipedia.org/wiki/4-mal-100-Meter-Staffel)
 - **Fundstelle:** Weltrekord der Männer: 36,84 Sekunden, Jamaika, London 2012 (Nesta Carter, Michael Frater, Yohan Blake, Usain Bolt); bei der Prüfung weiterhin als Weltrekord geführt.
 - **Geprüft:** 2026-08-13
 
 > Seit London 2012 steht der Weltrekord der 4-mal-100-Meter-Staffel bei 36,84 Sekunden, gelaufen von Jamaika. Möglich macht solche Zeiten der fliegende Wechsel. Wer den Stab übernimmt, startet, bevor er da ist, und übernimmt ihn in vollem Lauf. Eine Staffel ist darum schneller, als ihre vier Läufer einzeln zusammen wären.
 
-Wem gehört diese Zeit? Keinem der vier allein. Sie entsteht zwischen ihnen, in den Trainingsjahren, in drei Übergaben. Und der Stab läuft mit. Deguchi verlegt das Handeln genau dorthin. Nicht «ich» handelt, sondern «wir», ein Geflecht aus Menschen und Dingen, zu dem heute auch Maschinen gehören. Das nimmt dir nichts weg. Wer ehrlich sagen kann, wer und was alles mitgelaufen ist, versteht die eigene Leistung nur besser.
+Wem gehört diese Zeit? Keinem der vier allein. Sie entsteht zwischen ihnen, in den Trainingsjahren, in drei Übergaben. Und der Stab läuft mit. Die Staffel ist unser Beispiel, Deguchis eigenes ist noch alltäglicher. In die Pedale trete ich selbst, aber Velofahren kann kein Ich allein, es braucht das Rad, die Strasse, sogar die Schwerkraft. So verlegt er das Handeln vom «ich» zum «wir», einem Geflecht aus Menschen und Dingen, zu dem heute auch Maschinen gehören. Das nimmt dir nichts weg. Wer ehrlich sagen kann, wer und was alles mitgelaufen ist, versteht die eigene Leistung nur besser.
 
 ### Transformation von Mensch und Maschine · fliegende Wechsel
 
-- **Kennung:** `DW-538e23` (Fallbeispiel)
+- **Kennung:** `DW-a980b8` (Fallbeispiel)
 - **Quelle:** [4-mal-100-Meter-Staffel (Wikipedia)](https://de.wikipedia.org/wiki/4-mal-100-Meter-Staffel)
 - **Fundstelle:** «Der Läufer, der jeweils den Stab übernimmt, startet schon, bevor ihn der übergebende Läufer erreicht hat, und übernimmt den Stab im Laufen.» Das ermöglicht erheblich höhere Durchschnittsgeschwindigkeiten als im Einzelrennen.
 - **Geprüft:** 2026-08-13
 
 > Seit London 2012 steht der Weltrekord der 4-mal-100-Meter-Staffel bei 36,84 Sekunden, gelaufen von Jamaika. Möglich macht solche Zeiten der fliegende Wechsel. Wer den Stab übernimmt, startet, bevor er da ist, und übernimmt ihn in vollem Lauf. Eine Staffel ist darum schneller, als ihre vier Läufer einzeln zusammen wären.
 
-Wem gehört diese Zeit? Keinem der vier allein. Sie entsteht zwischen ihnen, in den Trainingsjahren, in drei Übergaben. Und der Stab läuft mit. Deguchi verlegt das Handeln genau dorthin. Nicht «ich» handelt, sondern «wir», ein Geflecht aus Menschen und Dingen, zu dem heute auch Maschinen gehören. Das nimmt dir nichts weg. Wer ehrlich sagen kann, wer und was alles mitgelaufen ist, versteht die eigene Leistung nur besser.
+Wem gehört diese Zeit? Keinem der vier allein. Sie entsteht zwischen ihnen, in den Trainingsjahren, in drei Übergaben. Und der Stab läuft mit. Die Staffel ist unser Beispiel, Deguchis eigenes ist noch alltäglicher. In die Pedale trete ich selbst, aber Velofahren kann kein Ich allein, es braucht das Rad, die Strasse, sogar die Schwerkraft. So verlegt er das Handeln vom «ich» zum «wir», einem Geflecht aus Menschen und Dingen, zu dem heute auch Maschinen gehören. Das nimmt dir nichts weg. Wer ehrlich sagen kann, wer und was alles mitgelaufen ist, versteht die eigene Leistung nur besser.
 
 ### Transformation von Mensch und Maschine · 18. November 2015
 
@@ -1774,14 +1774,14 @@ Das ganz unabhängige Individuum, das aus dem Nichts handelt, gibt es für Latou
 
 ### Transformation von Mensch und Maschine · Prothese am linken Ellbogen
 
-- **Kennung:** `DW-20c3ea` (Fallbeispiel)
+- **Kennung:** `DW-d433a2` (Fallbeispiel)
 - **Quelle:** [Beatrice Vio (Wikipedia)](https://de.wikipedia.org/wiki/Beatrice_Vio)
 - **Fundstelle:** Mit elf erkrankte sie an Meningitis, «aufgrund von Nekrosen» wurden Unterarme und Unterschenkel amputiert. «Während die anderen Fechterinnen das Florett in der Hand halten, wird ihr Florett mit einer Prothese an ihrem linken Ellenbogen befestigt»; sie ist «die einzige Fechterin im Rollstuhlfechten, die ohne Hände, Unterarme und Beine antritt». Paralympics-Gold im Einzel-Florett in Rio am 14. September 2016 (mit 19) und erneut in Tokio am 28. August 2021.
 - **Geprüft:** 2026-08-13
 
 > Beatrice Vio war elf, als ihr nach einer Meningitis Unterarme und Unterschenkel amputiert wurden. Sie focht weiter. Ihr Florett ist mit einer Prothese am linken Ellbogen befestigt und sie ist die Einzige im Rollstuhlfechten, die ohne Hände und Beine antritt. An den Paralympics in Rio gewann sie mit 19 Gold, in Tokio verteidigte sie den Titel.
 
-Wo endet hier der Mensch, wo beginnt das Gerät? Beim Zuschauen wird die Frage sinnlos, denn die Klinge antwortet ihr wie eine Hand. Haraway sagt, so verwoben sind wir alle längst, mit Brille, Impfung und dem Handy als Gedächtnis. Und die spannende Frage ist nicht, wie wir die Grenze rein halten, sondern wie wir mit unserer Technik verantwortlich leben. Vio zeigt, wie viel Freiheit in dieser Verwobenheit stecken kann.
+Wo endet hier der Mensch, wo beginnt das Gerät? Beim Zuschauen wird die Frage sinnlos, denn die Klinge antwortet ihr wie eine Hand. Vio ist unser Beispiel, nicht Haraways eigenes, ihr Punkt aber ist derselbe. So verwoben sind wir alle längst, mit Brille, Impfung und dem Handy als Gedächtnis. Ihre Losung dafür heisst im Original «staying with the trouble», mit dem Schlamassel bleiben, die deutsche Ausgabe trägt den Titel «Unruhig bleiben». Gemeint ist, nicht auf die saubere Lösung zu warten und nicht zu fliehen, sondern in der unübersichtlichen Lage zu antworten und Verantwortung zu übernehmen. Vio zeigt, wie viel Freiheit in dieser Verwobenheit stecken kann.
 
 ### Transformation von Mensch und Maschine · Mindestalter von 16 Jahren
 
@@ -1804,17 +1804,6 @@ Harari erzählt Geschichte als Geschichte wachsender Macht. Werkzeuge, die ganze
 > Seit dem 10. Dezember 2025 gilt in Australien als erstem Land der Welt ein Mindestalter von 16 Jahren für Konten auf grossen Plattformen, von Instagram über TikTok bis YouTube. Die Erwachsenen waren in Umfragen deutlich dafür, 77 Prozent. Von 17'000 befragten Jugendlichen sagten 70 Prozent Nein.
 
 Harari erzählt Geschichte als Geschichte wachsender Macht. Werkzeuge, die ganze Gesellschaften umbauen, brauchen Regeln, und zwar bevor alle Folgen bekannt sind. Nur fallen Regeln nicht vom Himmel. Sie werden ausgehandelt, zwischen Generationen, Ländern und Interessen, mit offenem Ausgang. Und andere Länder schauen gerade genau hin. An den zwei Zahlen oben ist darum nicht interessant, wer recht hat, sondern was hier verhandelt wird, die Sorge der einen gegen den Alltag der anderen. Was wäre deine Regel und wie würdest du sie begründen?
-
-### Transformation von Mensch und Maschine · über 100 Millionen
-
-- **Kennung:** `DW-d891f1` (Fallbeispiel)
-- **Quelle:** [ChatGPT (Wikipedia)](https://de.wikipedia.org/wiki/ChatGPT)
-- **Fundstelle:** Veröffentlicht «am 30. November 2022»; innerhalb von fünf Tagen registrierten sich weltweit eine Million Nutzer, «im Januar 2023 erreichte ChatGPT über 100 Millionen Nutzer». Zum Vergleich nennt der Artikel für die erste Million: TikTok etwa neun Monate, Instagram zweieinhalb Jahre.
-- **Geprüft:** 2026-08-13
-
-> ChatGPT wurde am 30. November 2022 veröffentlicht. Nach fünf Tagen hatten sich eine Million Menschen registriert, im Januar 2023 waren es über 100 Millionen. TikTok hatte für die erste Million rund neun Monate gebraucht, Instagram zweieinhalb Jahre.
-
-Warum nennt Gabriel so etwas einen Spiegel? Trainiert wurde das Werkzeug an menschlichem Schreiben. Was es dir zeigt, sind Muster von uns und im Kleinen Muster von dir, deine Formulierungen, deine Abkürzungen, deine Wünsche. Lässt du dir drei Fassungen einer heiklen Nachricht vorschlagen, hast du drei Spiegelbilder, aber senden musst du eine, und diese Wahl zeigt, wer du bist. Die eigentliche Prüfung läuft darum nicht im Rechenzentrum. Sie läuft bei dir.
 
 ### Lebenskunst · aus Rücksicht auf ihre mentale Gesundheit
 
@@ -1892,6 +1881,61 @@ Versuch, einen Headspin aus einer Beschreibung zu lernen. Du kannst jede Anweisu
 > In der Nacht auf den 11. Mai 2024 traf der erste Sonnensturm der höchsten Kategorie seit 2003 die Erde, und für einmal waren Polarlichter bis in die Schweiz zu sehen. Wer zufällig draussen war oder geweckt wurde, stand plötzlich unter einem leuchtenden Himmel.
 
 Es liess sich nicht buchen. Kein Ticket, kein Abo, keine Wiederholung auf Abruf, nicht einmal eine verlässliche Vorhersage. Rosa nennt Resonanz, was uns gerade deshalb berührt, weil es nicht verfügbar ist. Die Welt antwortet, aber nicht auf Bestellung. In einem Alltag, in dem fast alles sofort lieferbar ist, der Song, die Serie, die Antwort, sind solche Momente kleine Übungsplätze. Hinstehen, warten dürfen, sich berühren lassen. Mehr Kontrolle würde genau das zerstören, was diesen Abend besonders gemacht hat.
+
+### Transformation von Mensch und Maschine · Velofahren kann kein Ich allein
+
+- **Kennung:** `DW-a980b8` (Fallbeispiel)
+- **Quelle:** [NTT Insights: Yasuo Deguchi über «Self-as-We»](https://www.global.ntt/insights-hub/the-concept-behind-ntts-sustainability-strategy-self-as-we/)
+- **Fundstelle:** Deguchis eigenes Beispiel, wörtlich: «Think of riding a bicycle. Certainly, it is ‹I› as an individual who is pedaling on the saddle. But this ‹I› alone cannot achieve the act of riding a bicycle.» Nötig seien unzählige Menschen, Organismen und Dinge, das funktionierende Rad, gepflegte Strassen, sogar Luftdruck und Schwerkraft. Dazu: «All actions are done not by an individual ‹I› but by ‹We› as a system of various and numerous agents.» Die 4-mal-100-Meter-Staffel dagegen ist unser Beispiel, nicht seines, und der Text sagt das jetzt auch.
+- **Geprüft:** 2026-08-14
+
+> Seit London 2012 steht der Weltrekord der 4-mal-100-Meter-Staffel bei 36,84 Sekunden, gelaufen von Jamaika. Möglich macht solche Zeiten der fliegende Wechsel. Wer den Stab übernimmt, startet, bevor er da ist, und übernimmt ihn in vollem Lauf. Eine Staffel ist darum schneller, als ihre vier Läufer einzeln zusammen wären.
+
+Wem gehört diese Zeit? Keinem der vier allein. Sie entsteht zwischen ihnen, in den Trainingsjahren, in drei Übergaben. Und der Stab läuft mit. Die Staffel ist unser Beispiel, Deguchis eigenes ist noch alltäglicher. In die Pedale trete ich selbst, aber Velofahren kann kein Ich allein, es braucht das Rad, die Strasse, sogar die Schwerkraft. So verlegt er das Handeln vom «ich» zum «wir», einem Geflecht aus Menschen und Dingen, zu dem heute auch Maschinen gehören. Das nimmt dir nichts weg. Wer ehrlich sagen kann, wer und was alles mitgelaufen ist, versteht die eigene Leistung nur besser.
+
+### Transformation von Mensch und Maschine · mit dem Schlamassel bleiben
+
+- **Kennung:** `DW-d433a2` (Fallbeispiel)
+- **Quelle:** [Donna Haraway (Wikipedia)](https://de.wikipedia.org/wiki/Donna_Haraway)
+- **Fundstelle:** Die Werkliste führt das Original «Staying with the Trouble. Making Kin in the Chthulucene» und die deutsche Ausgabe «Unruhig bleiben. Die Verwandtschaft der Arten im Chthuluzän», übersetzt von Karin Harrasser, Campus 2018. «Mit dem Schlamassel bleiben» ist die wörtlichere Übersetzung von «staying with the trouble»; die deutsche Ausgabe hat sich für «unruhig bleiben» entschieden, darum nennt der Text beide. Beatrice Vio ist unser Beispiel, nicht Haraways, auch das steht jetzt im Text.
+- **Geprüft:** 2026-08-14
+
+> Beatrice Vio war elf, als ihr nach einer Meningitis Unterarme und Unterschenkel amputiert wurden. Sie focht weiter. Ihr Florett ist mit einer Prothese am linken Ellbogen befestigt und sie ist die Einzige im Rollstuhlfechten, die ohne Hände und Beine antritt. An den Paralympics in Rio gewann sie mit 19 Gold, in Tokio verteidigte sie den Titel.
+
+Wo endet hier der Mensch, wo beginnt das Gerät? Beim Zuschauen wird die Frage sinnlos, denn die Klinge antwortet ihr wie eine Hand. Vio ist unser Beispiel, nicht Haraways eigenes, ihr Punkt aber ist derselbe. So verwoben sind wir alle längst, mit Brille, Impfung und dem Handy als Gedächtnis. Ihre Losung dafür heisst im Original «staying with the trouble», mit dem Schlamassel bleiben, die deutsche Ausgabe trägt den Titel «Unruhig bleiben». Gemeint ist, nicht auf die saubere Lösung zu warten und nicht zu fliehen, sondern in der unübersichtlichen Lage zu antworten und Verantwortung zu übernehmen. Vio zeigt, wie viel Freiheit in dieser Verwobenheit stecken kann.
+
+### Transformation von Mensch und Maschine · an der Stimme in der Audiofunktion
+
+- **Kennung:** `DW-623e01` (Fallbeispiel)
+- **Quelle:** [Hotel Matze: «Markus Gabriel, wann beginnt KI, uns zu manipulieren?»](https://hotelmatze.podigee.io/488-markus-gabriel)
+- **Fundstelle:** Gabriel im Gespräch, wörtlich aus den Shownotes: Das System erkennt, «wer in der Stimmung ist, so schnell scrollt, so tippt, mit der Stimme spricht in der Audiofunktion». Dazu «Die KI kann jedes Muster, das überhaupt irgendwo in einem Datensatz ist, im Grunde genommen erkennen» und «In dem Spiegel der KI sehen wir, wie wir wirklich sind. Wie wir wirklich sind und die KI vermisst uns.»
+- **Geprüft:** 2026-08-14
+
+> Ein Abend auf TikTok. Du wischst schneller, wenn dich etwas langweilt, bleibst hängen, wenn dich etwas trifft, tippst anders, wenn du müde bist. Genau daran liest dich die Maschine, sagt Gabriel, am Tempo des Scrollens, am Tippen, an der Stimme in der Audiofunktion. Aus Verhalten werden Muster und aus den Mustern wird eine Vermutung über deine Gemütslage.
+
+Darum nennt er die KI einen magischen Spiegel, und der spiegelt nicht nur Wissen. Trainiert an menschlichem Ausdruck erkennt sie affektive Muster, also den Zusammenhang zwischen Gefühl und Formulierung, und liest so zwischen den Zeilen. Im Spiegel der KI sehen wir, wie wir wirklich sind, «und die KI vermisst uns». Niemand kennt uns so gut wie diese Systeme, sagt er, jetzt schon. Umso wichtiger ist, was bei dir bleibt. Was du dem Spiegel zeigst und was du aus seinem Bild machst, rechnet er nicht aus. Das entscheidest du.
+
+### Transformation von Mensch und Maschine · affektive Muster
+
+- **Kennung:** `DW-623e01` (Fallbeispiel)
+- **Quelle:** [Markus Gabriel, Vortrag «Emotionale KI: Was bedeutet sie für unser Menschsein?»](https://markus-gabriel.com/neues/emotionale-ki-was-bedeutet-sie-fr-unser-menschsein)
+- **Fundstelle:** KI-Systeme beginnen, «Sprache nicht mehr primär als Medium von Wissen, Argumentation und Wirklichkeitsbeschreibung zu behandeln», sie erkennen «affektive Muster» und lesen «zwischen den Zeilen». Gabriel spricht von einer emotionalen Wende und davon, unser Menschsein im «magischen Spiegel» der conversational AI neu verstehen zu lernen.
+- **Geprüft:** 2026-08-14
+
+> Ein Abend auf TikTok. Du wischst schneller, wenn dich etwas langweilt, bleibst hängen, wenn dich etwas trifft, tippst anders, wenn du müde bist. Genau daran liest dich die Maschine, sagt Gabriel, am Tempo des Scrollens, am Tippen, an der Stimme in der Audiofunktion. Aus Verhalten werden Muster und aus den Mustern wird eine Vermutung über deine Gemütslage.
+
+Darum nennt er die KI einen magischen Spiegel, und der spiegelt nicht nur Wissen. Trainiert an menschlichem Ausdruck erkennt sie affektive Muster, also den Zusammenhang zwischen Gefühl und Formulierung, und liest so zwischen den Zeilen. Im Spiegel der KI sehen wir, wie wir wirklich sind, «und die KI vermisst uns». Niemand kennt uns so gut wie diese Systeme, sagt er, jetzt schon. Umso wichtiger ist, was bei dir bleibt. Was du dem Spiegel zeigst und was du aus seinem Bild machst, rechnet er nicht aus. Das entscheidest du.
+
+### Transformation von Mensch und Maschine · Niemand kennt uns so gut
+
+- **Kennung:** `DW-623e01` (Fallbeispiel)
+- **Quelle:** [Unsere Zeitung, 9. Oktober 2025: «Lebe so, dass die KI verwirrt ist»](https://www.unsere-zeitung.at/2025/10/09/lebe-so-dass-die-ki-verwirrt-ist/)
+- **Fundstelle:** Bericht über das Hotel-Matze-Gespräch. Gabriel beschreibt KI-Systeme als «magische Spiegel», «die uns zeigen, wie wir wirklich sind, ohne unsere Selbsttäuschungen», und wörtlich: «Niemand kennt uns so gut wie die KI-Systeme. Jetzt schon längst.»
+- **Geprüft:** 2026-08-14
+
+> Ein Abend auf TikTok. Du wischst schneller, wenn dich etwas langweilt, bleibst hängen, wenn dich etwas trifft, tippst anders, wenn du müde bist. Genau daran liest dich die Maschine, sagt Gabriel, am Tempo des Scrollens, am Tippen, an der Stimme in der Audiofunktion. Aus Verhalten werden Muster und aus den Mustern wird eine Vermutung über deine Gemütslage.
+
+Darum nennt er die KI einen magischen Spiegel, und der spiegelt nicht nur Wissen. Trainiert an menschlichem Ausdruck erkennt sie affektive Muster, also den Zusammenhang zwischen Gefühl und Formulierung, und liest so zwischen den Zeilen. Im Spiegel der KI sehen wir, wie wir wirklich sind, «und die KI vermisst uns». Niemand kennt uns so gut wie diese Systeme, sagt er, jetzt schon. Umso wichtiger ist, was bei dir bleibt. Was du dem Spiegel zeigst und was du aus seinem Bild machst, rechnet er nicht aus. Das entscheidest du.
 
 ---
 

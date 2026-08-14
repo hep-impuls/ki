@@ -3149,12 +3149,12 @@
   "stufe": "mittel",
   "text": "Yasuo Deguchi ist Philosophieprofessor an der Universität Kyoto und verbindet westliches mit ostasiatischem Denken. Mit seiner «We-Turn»-Philosophie verlegt er das Handeln vom einzelnen «Ich» auf ein «Wir». Niemand kann etwas ganz allein, jede Handlung wird von vielen getragen, von Menschen, Dingen und heute auch von Maschinen. Der eigentliche Handelnde ist deshalb kein einsames Ich, sondern ein «Selbst als Wir», zu dem die KI dazugehört. Er stützt sich dabei auf einen alten buddhistischen Gedanken, das «abhängige Entstehen». Nichts besteht für sich allein, alles entsteht wechselseitig. Das entlastet, denn Verantwortung verteilt sich auf ein «Wir» mit verschiedenen Rollen, statt ganz auf den Schultern eines einzelnen Ich zu liegen."
  },
- "DW-538e23": {
+ "DW-a980b8": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
   "ort": "Transformation von Mensch und Maschine",
   "feld": "Fallbeispiel",
   "stufe": "hoch",
-  "text": "Seit London 2012 steht der Weltrekord der 4-mal-100-Meter-Staffel bei 36,84 Sekunden, gelaufen von Jamaika. Möglich macht solche Zeiten der fliegende Wechsel. Wer den Stab übernimmt, startet, bevor er da ist, und übernimmt ihn in vollem Lauf. Eine Staffel ist darum schneller, als ihre vier Läufer einzeln zusammen wären.\n\nWem gehört diese Zeit? Keinem der vier allein. Sie entsteht zwischen ihnen, in den Trainingsjahren, in drei Übergaben. Und der Stab läuft mit. Deguchi verlegt das Handeln genau dorthin. Nicht «ich» handelt, sondern «wir», ein Geflecht aus Menschen und Dingen, zu dem heute auch Maschinen gehören. Das nimmt dir nichts weg. Wer ehrlich sagen kann, wer und was alles mitgelaufen ist, versteht die eigene Leistung nur besser."
+  "text": "Seit London 2012 steht der Weltrekord der 4-mal-100-Meter-Staffel bei 36,84 Sekunden, gelaufen von Jamaika. Möglich macht solche Zeiten der fliegende Wechsel. Wer den Stab übernimmt, startet, bevor er da ist, und übernimmt ihn in vollem Lauf. Eine Staffel ist darum schneller, als ihre vier Läufer einzeln zusammen wären.\n\nWem gehört diese Zeit? Keinem der vier allein. Sie entsteht zwischen ihnen, in den Trainingsjahren, in drei Übergaben. Und der Stab läuft mit. Die Staffel ist unser Beispiel, Deguchis eigenes ist noch alltäglicher. In die Pedale trete ich selbst, aber Velofahren kann kein Ich allein, es braucht das Rad, die Strasse, sogar die Schwerkraft. So verlegt er das Handeln vom «ich» zum «wir», einem Geflecht aus Menschen und Dingen, zu dem heute auch Maschinen gehören. Das nimmt dir nichts weg. Wer ehrlich sagen kann, wer und was alles mitgelaufen ist, versteht die eigene Leistung nur besser."
  },
  "DW-b7abda": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
@@ -3163,12 +3163,12 @@
   "stufe": "hoch",
   "text": "Donna Haraway ist US-amerikanische Wissenschaftshistorikerin und feministische Denkerin, ihr «Manifest für Cyborgs» (1985) wurde weltberühmt. Sie denkt Mensch, Tier und Maschine als verwoben. Wir sind in gewissem Sinn schon «Cyborgs», Mischwesen. Statt der Technik als fremder Macht gegenüberzustehen, sollen wir lernen, verantwortlich mit ihr zu leben, sie spricht von «Mit dem Schlamassel bleiben», also die Probleme aushalten und antworten statt fliehen. Damit steht sie Bruno Latour nahe, ergänzt ihn aber um Fürsorge und Verantwortung. Werk: «Unruhig bleiben» (2016)."
  },
- "DW-20c3ea": {
+ "DW-d433a2": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
   "ort": "Transformation von Mensch und Maschine",
   "feld": "Fallbeispiel",
   "stufe": "tief",
-  "text": "Beatrice Vio war elf, als ihr nach einer Meningitis Unterarme und Unterschenkel amputiert wurden. Sie focht weiter. Ihr Florett ist mit einer Prothese am linken Ellbogen befestigt und sie ist die Einzige im Rollstuhlfechten, die ohne Hände und Beine antritt. An den Paralympics in Rio gewann sie mit 19 Gold, in Tokio verteidigte sie den Titel.\n\nWo endet hier der Mensch, wo beginnt das Gerät? Beim Zuschauen wird die Frage sinnlos, denn die Klinge antwortet ihr wie eine Hand. Haraway sagt, so verwoben sind wir alle längst, mit Brille, Impfung und dem Handy als Gedächtnis. Und die spannende Frage ist nicht, wie wir die Grenze rein halten, sondern wie wir mit unserer Technik verantwortlich leben. Vio zeigt, wie viel Freiheit in dieser Verwobenheit stecken kann."
+  "text": "Beatrice Vio war elf, als ihr nach einer Meningitis Unterarme und Unterschenkel amputiert wurden. Sie focht weiter. Ihr Florett ist mit einer Prothese am linken Ellbogen befestigt und sie ist die Einzige im Rollstuhlfechten, die ohne Hände und Beine antritt. An den Paralympics in Rio gewann sie mit 19 Gold, in Tokio verteidigte sie den Titel.\n\nWo endet hier der Mensch, wo beginnt das Gerät? Beim Zuschauen wird die Frage sinnlos, denn die Klinge antwortet ihr wie eine Hand. Vio ist unser Beispiel, nicht Haraways eigenes, ihr Punkt aber ist derselbe. So verwoben sind wir alle längst, mit Brille, Impfung und dem Handy als Gedächtnis. Ihre Losung dafür heisst im Original «staying with the trouble», mit dem Schlamassel bleiben, die deutsche Ausgabe trägt den Titel «Unruhig bleiben». Gemeint ist, nicht auf die saubere Lösung zu warten und nicht zu fliehen, sondern in der unübersichtlichen Lage zu antworten und Verantwortung zu übernehmen. Vio zeigt, wie viel Freiheit in dieser Verwobenheit stecken kann."
  },
  "DW-6a2736": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
@@ -3191,12 +3191,12 @@
   "stufe": "tief",
   "text": "Markus Gabriel wurde sehr jung Philosophieprofessor in Bonn und ist ein Hauptvertreter des «Neuen Realismus». Er nennt die KI einen «magischen Spiegel». Sie erkennt in unseren Daten Muster, auch unsere Werte und Gewohnheiten, manchmal genauer, als wir uns selbst kennen. Die eigentliche Revolution ist für ihn darum nicht technisch, sondern ethisch. Sein Vorschlag ist ein «dritter Weg» zwischen Alles-verbieten und Alles-erlauben, die «ethische Intelligenz», also klug und moralisch mitzugestalten. Nicht die Maschine steht auf dem Prüfstand, sondern wir. Werk: «Ethische Intelligenz»."
  },
- "DW-d891f1": {
+ "DW-623e01": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
   "ort": "Transformation von Mensch und Maschine",
   "feld": "Fallbeispiel",
-  "stufe": "hoch",
-  "text": "ChatGPT wurde am 30. November 2022 veröffentlicht. Nach fünf Tagen hatten sich eine Million Menschen registriert, im Januar 2023 waren es über 100 Millionen. TikTok hatte für die erste Million rund neun Monate gebraucht, Instagram zweieinhalb Jahre.\n\nWarum nennt Gabriel so etwas einen Spiegel? Trainiert wurde das Werkzeug an menschlichem Schreiben. Was es dir zeigt, sind Muster von uns und im Kleinen Muster von dir, deine Formulierungen, deine Abkürzungen, deine Wünsche. Lässt du dir drei Fassungen einer heiklen Nachricht vorschlagen, hast du drei Spiegelbilder, aber senden musst du eine, und diese Wahl zeigt, wer du bist. Die eigentliche Prüfung läuft darum nicht im Rechenzentrum. Sie läuft bei dir."
+  "stufe": "tief",
+  "text": "Ein Abend auf TikTok. Du wischst schneller, wenn dich etwas langweilt, bleibst hängen, wenn dich etwas trifft, tippst anders, wenn du müde bist. Genau daran liest dich die Maschine, sagt Gabriel, am Tempo des Scrollens, am Tippen, an der Stimme in der Audiofunktion. Aus Verhalten werden Muster und aus den Mustern wird eine Vermutung über deine Gemütslage.\n\nDarum nennt er die KI einen magischen Spiegel, und der spiegelt nicht nur Wissen. Trainiert an menschlichem Ausdruck erkennt sie affektive Muster, also den Zusammenhang zwischen Gefühl und Formulierung, und liest so zwischen den Zeilen. Im Spiegel der KI sehen wir, wie wir wirklich sind, «und die KI vermisst uns». Niemand kennt uns so gut wie diese Systeme, sagt er, jetzt schon. Umso wichtiger ist, was bei dir bleibt. Was du dem Spiegel zeigst und was du aus seinem Bild machst, rechnet er nicht aus. Das entscheidest du."
  },
  "DW-731f7b": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",

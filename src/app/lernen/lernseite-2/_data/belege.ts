@@ -2076,7 +2076,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-538e23",
+    id: "DW-a980b8",
     anker: "36,84",
     url: "https://de.wikipedia.org/wiki/4-mal-100-Meter-Staffel",
     titel: "4-mal-100-Meter-Staffel (Wikipedia)",
@@ -2085,7 +2085,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-538e23",
+    id: "DW-a980b8",
     anker: "fliegende Wechsel",
     url: "https://de.wikipedia.org/wiki/4-mal-100-Meter-Staffel",
     titel: "4-mal-100-Meter-Staffel (Wikipedia)",
@@ -2103,7 +2103,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-20c3ea",
+    id: "DW-d433a2",
     anker: "Prothese am linken Ellbogen",
     url: "https://de.wikipedia.org/wiki/Beatrice_Vio",
     titel: "Beatrice Vio (Wikipedia)",
@@ -2127,15 +2127,6 @@ export const BELEGE: Beleg[] = [
     titel: "Online Safety Amendment (Social Media Minimum Age) Act 2024 (Wikipedia, englisch)",
     stelle:
       "YouGov im November 2024: «77% of Australians supported the age limit». In einer ABC-Umfrage unter 17'000 Jugendlichen antworteten auf die Frage, ob das Verbot eine gute Idee sei, «70% (...) No».",
-    geprueft: "2026-08-13",
-  },
-  {
-    id: "DW-d891f1",
-    anker: "über 100 Millionen",
-    url: "https://de.wikipedia.org/wiki/ChatGPT",
-    titel: "ChatGPT (Wikipedia)",
-    stelle:
-      "Veröffentlicht «am 30. November 2022»; innerhalb von fünf Tagen registrierten sich weltweit eine Million Nutzer, «im Januar 2023 erreichte ChatGPT über 100 Millionen Nutzer». Zum Vergleich nennt der Artikel für die erste Million: TikTok etwa neun Monate, Instagram zweieinhalb Jahre.",
     geprueft: "2026-08-13",
   },
   {
@@ -2200,6 +2191,65 @@ export const BELEGE: Beleg[] = [
     stelle:
       "«Der erste ‹extreme› Sonnensturm seit 2003»: Die Kategorie fünf war laut NOAA zuletzt im Oktober 2003 bei den Halloween-Stürmen erreicht worden. «Aufgrund des starken geomagnetischen Sturms waren Polarlichter bis in die Schweizer Breitengrade sichtbar», festgehalten etwa von einer Wetterkamera in Ravoire bei Martigny am Abend des 10. Mai 2024.",
     geprueft: "2026-08-13",
+  },
+
+  /* ── Nachträge vom 2026-08-14: Wessen Beispiel ist das? ─────────────────────
+   * Christofs Rückfrage zur Staffel hat einen wunden Punkt getroffen. Bei
+   * toten Philosophen ist offensichtlich, dass die Fallbeispiele unsere sind;
+   * bei Zeitgenossen liest es sich schnell, als stammten sie von ihnen. Darum
+   * sagen Deguchi- und Haraway-Beispiel jetzt ausdrücklich, was von uns kommt,
+   * und nennen daneben das echte Beispiel bzw. die echte Losung der Person,
+   * belegt. */
+  {
+    id: "DW-a980b8",
+    anker: "Velofahren kann kein Ich allein",
+    url: "https://www.global.ntt/insights-hub/the-concept-behind-ntts-sustainability-strategy-self-as-we/",
+    titel: "NTT Insights: Yasuo Deguchi über «Self-as-We»",
+    stelle:
+      "Deguchis eigenes Beispiel, wörtlich: «Think of riding a bicycle. Certainly, it is ‹I› as an individual who is pedaling on the saddle. But this ‹I› alone cannot achieve the act of riding a bicycle.» Nötig seien unzählige Menschen, Organismen und Dinge, das funktionierende Rad, gepflegte Strassen, sogar Luftdruck und Schwerkraft. Dazu: «All actions are done not by an individual ‹I› but by ‹We› as a system of various and numerous agents.» Die 4-mal-100-Meter-Staffel dagegen ist unser Beispiel, nicht seines, und der Text sagt das jetzt auch.",
+    geprueft: "2026-08-14",
+  },
+  {
+    id: "DW-d433a2",
+    anker: "mit dem Schlamassel bleiben",
+    url: "https://de.wikipedia.org/wiki/Donna_Haraway",
+    titel: "Donna Haraway (Wikipedia)",
+    stelle:
+      "Die Werkliste führt das Original «Staying with the Trouble. Making Kin in the Chthulucene» und die deutsche Ausgabe «Unruhig bleiben. Die Verwandtschaft der Arten im Chthuluzän», übersetzt von Karin Harrasser, Campus 2018. «Mit dem Schlamassel bleiben» ist die wörtlichere Übersetzung von «staying with the trouble»; die deutsche Ausgabe hat sich für «unruhig bleiben» entschieden, darum nennt der Text beide. Beatrice Vio ist unser Beispiel, nicht Haraways, auch das steht jetzt im Text.",
+    geprueft: "2026-08-14",
+  },
+
+  /* ── Gabriel, Fallbeispiel neu: die emotionale Wende statt Wachstumszahlen ──
+   * Die ChatGPT-Verbreitungszahlen waren Christof zu allgemein. Jetzt trägt
+   * das Beispiel Gabriels eigene Beobachtung, woran uns KI-Systeme lesen.
+   * TikTok nennt er in den geprüften Quellen nicht namentlich, darum ist der
+   * TikTok-Abend unsere Szene und die Erfassungs-Aussage seine. */
+  {
+    id: "DW-623e01",
+    anker: "an der Stimme in der Audiofunktion",
+    url: "https://hotelmatze.podigee.io/488-markus-gabriel",
+    titel: "Hotel Matze: «Markus Gabriel, wann beginnt KI, uns zu manipulieren?»",
+    stelle:
+      "Gabriel im Gespräch, wörtlich aus den Shownotes: Das System erkennt, «wer in der Stimmung ist, so schnell scrollt, so tippt, mit der Stimme spricht in der Audiofunktion». Dazu «Die KI kann jedes Muster, das überhaupt irgendwo in einem Datensatz ist, im Grunde genommen erkennen» und «In dem Spiegel der KI sehen wir, wie wir wirklich sind. Wie wir wirklich sind und die KI vermisst uns.»",
+    geprueft: "2026-08-14",
+  },
+  {
+    id: "DW-623e01",
+    anker: "affektive Muster",
+    url: "https://markus-gabriel.com/neues/emotionale-ki-was-bedeutet-sie-fr-unser-menschsein",
+    titel: "Markus Gabriel, Vortrag «Emotionale KI: Was bedeutet sie für unser Menschsein?»",
+    stelle:
+      "KI-Systeme beginnen, «Sprache nicht mehr primär als Medium von Wissen, Argumentation und Wirklichkeitsbeschreibung zu behandeln», sie erkennen «affektive Muster» und lesen «zwischen den Zeilen». Gabriel spricht von einer emotionalen Wende und davon, unser Menschsein im «magischen Spiegel» der conversational AI neu verstehen zu lernen.",
+    geprueft: "2026-08-14",
+  },
+  {
+    id: "DW-623e01",
+    anker: "Niemand kennt uns so gut",
+    url: "https://www.unsere-zeitung.at/2025/10/09/lebe-so-dass-die-ki-verwirrt-ist/",
+    titel: "Unsere Zeitung, 9. Oktober 2025: «Lebe so, dass die KI verwirrt ist»",
+    stelle:
+      "Bericht über das Hotel-Matze-Gespräch. Gabriel beschreibt KI-Systeme als «magische Spiegel», «die uns zeigen, wie wir wirklich sind, ohne unsere Selbsttäuschungen», und wörtlich: «Niemand kennt uns so gut wie die KI-Systeme. Jetzt schon längst.»",
+    geprueft: "2026-08-14",
   },
 ];
 

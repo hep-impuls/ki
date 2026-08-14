@@ -1,6 +1,6 @@
 # Quellenauftrag · Lernseite 2 «Eine ganz neue Partnerschaft»
 
-**Paket 09 von 9.** Dieses Dokument enthält 10 Textblöcke eines Lernsets zu
+**Paket 09 von 9.** Dieses Dokument enthält 9 Textblöcke eines Lernsets zu
 Künstlicher Intelligenz und Philosophie (Berufsfachschule, Deutschschweiz).
 Jeder Block hat eine **Kennung** in eckigen Klammern, z.B. `[VA-a1b2c3]`.
 
@@ -46,12 +46,9 @@ und die Quelle ihn nur bestätigt.
 
 Jeder Block hier enthält eine prüfbare Behauptung (Zahl, Datum,
 Superlativ oder eine Aussage, die jemandem zugeschrieben wird). Deutende
-Passagen sind bewusst nicht dabei. Geh die 10 Blöcke einzeln durch.
+Passagen sind bewusst nicht dabei. Geh die 9 Blöcke einzeln durch.
 
 ### Thema 02 · Die acht Epochen
-
-**[EP-5455c7]** *(Kartentext · Aufklärung)*
-Im Vordergrund kentern Schiffe in der heranrollenden Welle. Wer dem Beben und dem Feuer entkam, den holte oft das Wasser. Das Bild bündelt die Erfahrung, dass keine menschliche Ordnung und kein Gebet vor der blinden Gewalt der Natur schützt.
 
 **[EP-269c62]** *(Einleitung · «Ende der Geschichte»)*
 Der Kalte Krieg endet, der Markt scheint zu siegen, und im Überfluss der Möglichkeiten geht die Orientierung gerade dann verloren. Mit dem Fall der Mauer glauben viele, die grossen Konflikte seien vorbei und die liberale Demokratie habe endgültig gewonnen. Doch statt Ruhe kommen Beschleunigung, Vereinzelung und das Gefühl, in lauter Möglichkeiten den Halt zu verlieren.
