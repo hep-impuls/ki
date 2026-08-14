@@ -173,7 +173,7 @@ const BEREICHE: Bereich[] = [
         name: "Martin Heidegger",
         leben: "1889 bis 1976",
         these: "Wir sind immer schon mit der Welt beschäftigt.",
-        info: "Martin Heidegger gehört zu den einflussreichsten Philosophen des 20. Jahrhunderts und ist zugleich schwer belastet. Er trat am 1. Mai 1933 in die NSDAP ein, war als Rektor an der Gleichschaltung der Universität Freiburg beteiligt und blieb bis 1945 Parteimitglied; in seinen «Schwarzen Heften» stehen antisemitische Äusserungen. Umstritten ist nicht, ob das geschah, sondern wie stark es sein Werk prägt. In «Sein und Zeit» fragte er neu nach dem Sinn von Sein. Den Menschen nennt er «Dasein», seinen Grundzug die «Sorge». Das Wort führt leicht in die Irre, gemeint ist nicht Kummer. Wir sind nie unbeteiligte Zuschauer einer Welt, die uns gegenübersteht, sondern immer schon in ihr beschäftigt. Wir hantieren mit Dingen und haben es mit anderen Menschen zu tun. Ein Hammer zeigt sich als Hammer beim Hämmern, nicht beim Betrachten. Erst in diesem Umgang bekommen die Dinge ihre Bedeutung und erst so entsteht Sinn. Von hier aus argumentieren viele, eine Maschine habe keine solche Welt, sie verarbeite Zeichen, ohne mit etwas zu tun zu haben. Hauptwerk: «Sein und Zeit» (1927).",
+        info: "Martin Heidegger gehört zu den einflussreichsten Philosophen des 20. Jahrhunderts und ist zugleich schwer belastet. Er trat am 1. Mai 1933 in die NSDAP ein, war als Rektor an der Gleichschaltung der Universität Freiburg beteiligt und blieb bis 1945 Parteimitglied; in seinen «Schwarzen Heften» stehen antisemitische Äusserungen. Umstritten ist nicht, ob das geschah, sondern wie stark es sein Werk prägt. In «Sein und Zeit» fragte er neu nach dem Sinn von Sein. Den Menschen nennt er «Dasein», seinen Grundzug die «Sorge». Das Wort führt leicht in die Irre, gemeint ist nicht Kummer. Wir sind nie unbeteiligte Zuschauer einer Welt, die uns gegenübersteht, sondern immer schon in ihr beschäftigt. Wir hantieren mit Dingen und haben es mit anderen Menschen zu tun. Ein Hammer zeigt sich als Hammer beim Hämmern, nicht beim Betrachten. Erst in diesem Umgang bekommen die Dinge ihre Bedeutung und erst so entsteht Sinn. Das gilt dann auch für die KI. Sie hat von sich aus keine solche Welt, ihre Bedeutung bekommt sie erst in unserem Umgang mit ihr. Ob sie Werkzeug ist, Gegenüber oder Störung, entscheidet sich nicht in ihrem Innern, sondern in dem, was wir mit ihr tun. Hauptwerk: «Sein und Zeit» (1927).",
         begriffe: [
           { wort: "Gleichschaltung", erklaerung: "Die erzwungene Ausrichtung von Ämtern, Schulen und Vereinen auf die NS-Herrschaft ab 1933; Andersdenkende wurden entfernt." },
           { wort: "«Schwarzen Heften»", erklaerung: "Heideggers private Notizhefte, erst ab 2014 veröffentlicht; sie enthalten antisemitische Passagen und lösten eine neue Debatte über sein Werk aus." },
@@ -225,6 +225,16 @@ const BEREICHE: Bereich[] = [
     absatzBegriffe: [
       { wort: "Armin Nassehi", erklaerung: "Deutscher Soziologe, geboren 1960; deutet die Gesellschaft mit der Systemtheorie." },
       { wort: "Bruno Latour", erklaerung: "Französischer Soziologe und Philosoph, 1947 bis 2022; Akteur-Netzwerk-Theorie." },
+      {
+        wort: "Systemtheorie",
+        erklaerung:
+          "Soziologische Denkschule, bei Nassehi in der Nachfolge von Niklas Luhmann. Die Gesellschaft besteht danach aus Teilsystemen wie Recht, Wirtschaft oder Wissenschaft, die nach je eigener Logik arbeiten, nicht aus der Summe einzelner Absichten.",
+      },
+      {
+        wort: "Akteur-Netzwerk-Theorie",
+        erklaerung:
+          "Von Latour mitentwickelter Ansatz. Handeln entsteht in Netzwerken aus Menschen und Dingen, auch Geräte, Regeln und Formulare wirken mit, darum zählen sie alle als «Akteure».",
+      },
     ],
     denker: [
       {
@@ -254,8 +264,8 @@ const BEREICHE: Bereich[] = [
     ],
     absaetze: [
       "Moderne Gesellschaften sind unübersichtlich geworden. Niemand überblickt mehr das Ganze, nicht die Wirtschaft, nicht die Verwaltung, nicht die Technik. Aus dem Gefühl, den Überblick verloren zu haben, entsteht schnell Überforderung. Und doch funktioniert erstaunlich vieles. Der Zug fährt, der Lohn kommt, das Spital behandelt. Wie geht das zusammen? Hier helfen zwei Denker, die die Gesellschaft nicht bewerten, sondern erklären.",
-      "Für Armin Nassehi ist unsere Gesellschaft längst in «Mustern» aufgebaut, in Zahlen, Statistiken und Abläufen, die auch ohne einen einzelnen Überblick funktionieren. Kein Mensch muss das Ganze verstehen, damit es läuft, das System trägt sich über seine Muster. Die KI passt genau in diese Welt, denn sie erkennt Muster hervorragend, ohne ihren Sinn zu verstehen. Wer das begreift, sieht die KI nüchterner und weniger bedrohlich.",
-      "Bruno Latour ergänzt, nichts wirke allein. Jede Handlung hängt an einem Netz aus Menschen, Geräten, Regeln und Gewohnheiten, er nennt es ein Netzwerk von «Akteuren», zu denen auch die Dinge gehören. Orientierung gewinnt man darum nicht, indem man alles überblickt, sondern indem man das eigene Netz kennt. Wovon hänge ich ab, wer und was wirkt hier mit mir zusammen?",
+      "Armin Nassehi denkt in der Tradition der Systemtheorie, Bruno Latour hat die Akteur-Netzwerk-Theorie mitbegründet. So verschieden die beiden Schulen sind, eines teilen sie. Sie verabschieden ein altes Bild der Philosophie, in dem ein Subjekt, der einzelne denkende Mensch, den Objekten gegenübersteht, also der Welt der Dinge, die er erkennt, benutzt und beherrscht.",
+      "An die Stelle dieses Gegenübers tritt ein anderes Bild. Der Mensch handelt nie als autonomes Einzelwesen, das von aussen in die Welt eingreift, er ist immer schon eingebunden, in Systeme wie Recht, Wirtschaft oder Schule und in Netzwerke aus Menschen, Geräten, Regeln und Gewohnheiten. Wichtig wird damit weniger, was ein Einzelner will, und mehr, was zwischen allen Beteiligten geschieht. Wie die beiden das im Einzelnen fassen, zeigen ihre zwei Stimmen unten.",
     ],
     hilft:
       "Wenn dich die Komplexität überfordert, musst du nicht das Ganze verstehen. Es reicht, dein Stück des Netzes zu kennen und zu sehen, welche Muster gerade wirken. Das gibt Boden unter den Füssen, auch wenn niemand mehr alles überblickt. Die Gesellschaft funktioniert nicht trotz, sondern wegen dieser verteilten Muster.",
