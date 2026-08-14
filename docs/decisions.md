@@ -10,6 +10,26 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-14 — Doppelpunkte nur noch, wo sie nötig sind (Christof)
+
+**Die Regel:** Der Doppelpunkt als Stilfigur («Sein Thema: …», «Die Antwort:
+…», «Das Besondere daran: …») ist draussen, gleich wie das freigestellte Komma
+vor «und». In den sichtbaren Feldern der Denkwege standen 107, davon waren 88
+reiner Stil; dazu 13 in den Fliesstexten. Alle umgebaut auf Punkt,
+Komma-Apposition, «denn» oder indirekte Rede.
+
+**Bleiben dürfen:** Wortlaut-Ankündigungen (das Schild «Skolstrejk för
+klimatet», Kants Bild vom Buch, Nassehis Fragen-Paar, Nussbaums gedachtes
+Urteil «Das hier betrifft mich»), die Werkangaben-Labels am Kartenende
+(«Hauptwerk: …», 15 Stück) und Stellen, die ausdrücklich gewünscht sind — der
+Doppelpunkt vor «das Anfangen» bei Arendt war Christofs eigene Korrektur vom
+2026-08-12 und steht.
+
+**Noch offen:** Der Teppich des Wandels hält 161 Doppelpunkte in belegten
+Textblöcken, «Vorhang auf» 36, die übrige Philosophie-Seite ~20, das Orakel 12.
+Das ist eine eigene Runde, weil jede Umformulierung von Hand entschieden werden
+muss und die Beleg-Kennungen der geänderten Blöcke mitziehen.
+
 ## 2026-08-13 — Fallbeispiele belegen, und zwar mit Schweizer Tageszeitungen
 
 Die Fallbeispiele hinter dem Knopf «Fallbeispiel» behaupten anders als die

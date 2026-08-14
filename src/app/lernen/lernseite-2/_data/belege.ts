@@ -1884,7 +1884,7 @@ export const BELEGE: Beleg[] = [
    * «explodieren», nennt aber keine Zahl). Der Text sagt jetzt nur, dass die
    * Preise hochschnellten.                                                   */
   {
-    id: "DW-40f16b",
+    id: "DW-cec7c7",
     anker: "zu über 90 Prozent verdeckt",
     url: "https://de.wikipedia.org/wiki/Sonnenfinsternis_vom_12._August_2026",
     titel: "Sonnenfinsternis vom 12. August 2026 (Wikipedia)",
@@ -1893,7 +1893,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-40f16b",
+    id: "DW-cec7c7",
     anker: "Schutzbrillen ausverkauft",
     url: "https://www.srf.ch/wissen/gesundheit/risiko-fuers-augenlicht-sonnenfinsternis-nur-schutzbrillen-mit-ce-zeichen-schuetzen",
     titel: "SRF Wissen, 10. August 2026: «Ausverkaufte Schutzbrillen»",
@@ -1902,7 +1902,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-40f16b",
+    id: "DW-cec7c7",
     anker: "hundert Stück bestellt und alle verkauft",
     url: "https://www.20min.ch/story/sonnenfinsternis-am-12-august-schweizer-optikern-gehen-schutzbrillen-aus-103613845",
     titel: "20 Minuten, 7. August 2026: «Schweizer Optikern gehen Schutzbrillen aus»",
@@ -1911,7 +1911,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-40f16b",
+    id: "DW-cec7c7",
     anker: "um etwa fünf Grad",
     url: "https://de.wikipedia.org/wiki/Sonnenfinsternis",
     titel: "Sonnenfinsternis (Wikipedia)",
@@ -1920,7 +1920,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-40f16b",
+    id: "DW-cec7c7",
     anker: "Erst 2081",
     url: "https://de.wikipedia.org/wiki/Sonnenfinsternis",
     titel: "Sonnenfinsternis (Wikipedia)",
@@ -1941,7 +1941,7 @@ export const BELEGE: Beleg[] = [
    * Zahl, die mit jeder Abstimmung falsch wird, gehört nicht in einen Lerntext.
    * Stattdessen ein datiertes Einzelergebnis.                                */
   {
-    id: "DW-11d03b",
+    id: "DW-843cd1",
     anker: "regnete es in Glarus aus Kübeln",
     url: "https://www.gl.ch/public-newsroom.html/31/news/16108",
     titel: "Kanton Glarus, 6. August 2020: «Als die Jungen die Alten überzeugten»",
@@ -1950,7 +1950,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-11d03b",
+    id: "DW-843cd1",
     anker: "knapp 80 Prozent Nein",
     url: "https://www.srf.ch/news/schweiz/abstimmungen-24-november-2024/abstimmung-kanton-aargau-stimmrechtsalter-16-nach-glarus-auch-der-aargau",
     titel: "SRF, 22. November 2024: Abstimmung im Kanton Aargau",
@@ -1959,7 +1959,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-11d03b",
+    id: "DW-843cd1",
     anker: "in Indonesien ab 17",
     url: "https://de.wikipedia.org/wiki/Wahlalter",
     titel: "Wahlalter (Wikipedia)",
@@ -1968,7 +1968,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-11d03b",
+    id: "DW-843cd1",
     anker: "fehlender Mut",
     url: "https://de.wikisource.org/wiki/Beantwortung_der_Frage:_Was_ist_Aufkl%C3%A4rung%3F",
     titel: "Kant, «Beantwortung der Frage: Was ist Aufklärung?» (1784)",
@@ -1977,7 +1977,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-11d03b",
+    id: "DW-843cd1",
     anker: "ein Buch, das für mich Verstand hat",
     url: "https://de.wikisource.org/wiki/Beantwortung_der_Frage:_Was_ist_Aufkl%C3%A4rung%3F",
     titel: "Kant, «Beantwortung der Frage: Was ist Aufklärung?» (1784)",
@@ -1995,7 +1995,7 @@ export const BELEGE: Beleg[] = [
    * Summe: Zahlen, die der nächste Rekord oder die nächste Abstimmung
    * überholt, gehören nicht in den Lerntext, sondern in die Belegstelle.   */
   {
-    id: "DW-5d8b84",
+    id: "DW-3f2dc9",
     anker: "Jugendwort des Jahres",
     url: "https://de.wikipedia.org/wiki/Jugendwort_des_Jahres_(Deutschland)",
     titel: "Jugendwort des Jahres (Wikipedia)",
@@ -2004,7 +2004,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-26672a",
+    id: "DW-12c6e0",
     anker: "Skolstrejk för klimatet",
     url: "https://de.wikipedia.org/wiki/Fridays_for_Future",
     titel: "Fridays for Future (Wikipedia)",
@@ -2013,7 +2013,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-26672a",
+    id: "DW-12c6e0",
     anker: "fast 1,8 Millionen Menschen",
     url: "https://de.wikipedia.org/wiki/Fridays_for_Future",
     titel: "Fridays for Future (Wikipedia)",
@@ -2022,7 +2022,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-2b8995",
+    id: "DW-59de49",
     anker: "Momiji Nishiya",
     url: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2020/Skateboard",
     titel: "Skateboard an den Sommerspielen 2020 (Wikipedia)",
@@ -2031,7 +2031,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-0ee6ed",
+    id: "DW-0a1fd3",
     anker: "unter drei Sekunden",
     url: "https://de.wikipedia.org/wiki/Speedcubing",
     titel: "Speedcubing (Wikipedia)",
@@ -2040,7 +2040,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-74e0f5",
+    id: "DW-2ed77c",
     anker: "Tetris-Effekt",
     url: "https://de.wikipedia.org/wiki/Tetris-Effekt",
     titel: "Tetris-Effekt (Wikipedia)",
@@ -2049,7 +2049,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-b54a5e",
+    id: "DW-085483",
     anker: "Spotify Wrapped",
     url: "https://en.wikipedia.org/wiki/Spotify_Wrapped",
     titel: "Spotify Wrapped (Wikipedia, englisch)",
@@ -2058,7 +2058,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-20ecfe",
+    id: "DW-8501de",
     anker: "1987 kamen die Tapiokaperlen dazu",
     url: "https://de.wikipedia.org/wiki/Bubble_Tea",
     titel: "Bubble Tea (Wikipedia)",
@@ -2067,7 +2067,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-20ecfe",
+    id: "DW-8501de",
     anker: "grösster Produzent heute Nigeria",
     url: "https://de.wikipedia.org/wiki/Maniok",
     titel: "Maniok (Wikipedia)",
@@ -2076,7 +2076,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-fa222c",
+    id: "DW-538e23",
     anker: "36,84",
     url: "https://de.wikipedia.org/wiki/4-mal-100-Meter-Staffel",
     titel: "4-mal-100-Meter-Staffel (Wikipedia)",
@@ -2085,7 +2085,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-fa222c",
+    id: "DW-538e23",
     anker: "fliegende Wechsel",
     url: "https://de.wikipedia.org/wiki/4-mal-100-Meter-Staffel",
     titel: "4-mal-100-Meter-Staffel (Wikipedia)",
@@ -2094,7 +2094,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-90fa9a",
+    id: "DW-1e220e",
     anker: "18. November 2015",
     url: "https://de.wikipedia.org/wiki/Ocean_Eyes",
     titel: "Ocean Eyes (Wikipedia)",
@@ -2103,7 +2103,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-504602",
+    id: "DW-20c3ea",
     anker: "Prothese am linken Ellbogen",
     url: "https://de.wikipedia.org/wiki/Beatrice_Vio",
     titel: "Beatrice Vio (Wikipedia)",
@@ -2112,7 +2112,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-21bd79",
+    id: "DW-137ba2",
     anker: "Mindestalter von 16 Jahren",
     url: "https://en.wikipedia.org/wiki/Online_Safety_Amendment_(Social_Media_Minimum_Age)_Act_2024",
     titel: "Online Safety Amendment (Social Media Minimum Age) Act 2024 (Wikipedia, englisch)",
@@ -2121,7 +2121,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-21bd79",
+    id: "DW-137ba2",
     anker: "sagten 70 Prozent Nein",
     url: "https://en.wikipedia.org/wiki/Online_Safety_Amendment_(Social_Media_Minimum_Age)_Act_2024",
     titel: "Online Safety Amendment (Social Media Minimum Age) Act 2024 (Wikipedia, englisch)",
@@ -2130,7 +2130,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-86eeb7",
+    id: "DW-d891f1",
     anker: "über 100 Millionen",
     url: "https://de.wikipedia.org/wiki/ChatGPT",
     titel: "ChatGPT (Wikipedia)",
@@ -2139,7 +2139,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-83d626",
+    id: "DW-4bf5f6",
     anker: "aus Rücksicht auf ihre mentale Gesundheit",
     url: "https://de.wikipedia.org/wiki/Simone_Biles",
     titel: "Simone Biles (Wikipedia)",
@@ -2148,7 +2148,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-e18429",
+    id: "DW-cba17f",
     anker: "Bullet Journal",
     url: "https://de.wikipedia.org/wiki/Bullet_Journal",
     titel: "Bullet Journal (Wikipedia)",
@@ -2157,7 +2157,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-11c6a9",
+    id: "DW-9bd2d0",
     anker: "2008 in Litauen",
     url: "https://de.wikipedia.org/wiki/Vinted",
     titel: "Vinted (Wikipedia)",
@@ -2166,7 +2166,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-f79364",
+    id: "DW-826203",
     anker: "registrierten Seismographen in Seattle",
     url: "https://de.wikipedia.org/wiki/The_Eras_Tour",
     titel: "The Eras Tour (Wikipedia)",
@@ -2175,7 +2175,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-f79364",
+    id: "DW-826203",
     anker: "kommerziell erfolgreichste",
     url: "https://de.wikipedia.org/wiki/The_Eras_Tour",
     titel: "The Eras Tour (Wikipedia)",
@@ -2184,7 +2184,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-76be7d",
+    id: "DW-f1e3d0",
     anker: "Ami Yuasa",
     url: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2024/Breaking",
     titel: "Breaking an den Sommerspielen 2024 (Wikipedia)",
@@ -2193,7 +2193,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-8f9895",
+    id: "DW-187919",
     anker: "Polarlichter bis in die Schweiz",
     url: "https://www.swissinfo.ch/ger/st%C3%A4rkster-sonnensturm-seit-2003-f%C3%BChrt-zu-schweizer-polarlichtern/77308421",
     titel: "Swissinfo, 11. Mai 2024: «Stärkster Sonnensturm seit 2003»",
