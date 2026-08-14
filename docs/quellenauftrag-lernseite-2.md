@@ -2001,17 +2001,48 @@ Genau darum geht es Kant: eine Regel befolgen oder sie einsehen. An einer Landsg
 **[DW-2a9f61]** *(Zur Philosophie)*
 Hegel war der Hauptvertreter des deutschen Idealismus und dachte die Wirklichkeit als Entfaltung des «Geistes». Stark verkürzt lässt sich seine Dialektik als Bewegung beschreiben, in der ein Begriff an seinen eigenen inneren Spannungen weiterbestimmt wird. Die berühmte Formel «These, Antithese, Synthese» stammt übrigens nicht von Hegel und trifft sein Verfahren nicht durchgehend, als erste Merkhilfe taugt sie aber. So kommt das Unterscheiden ins Spiel: Ein Gedanke wird nicht dadurch weitergebracht, dass man ihn ganz verwirft, sondern dadurch, dass man an ihm unterscheidet, was hält und was nicht. Hegel nennt das die bestimmte Negation. Was etwas ist, steht darum nicht ein für alle Mal fest, es klärt sich in einem geschichtlichen Gang. Marx baute darauf seine Kritik des Kapitalismus auf und für Adorno wurde dieser Gedanke zum Schlüsselbegriff der Gesellschaftskritik. Später wurde er gegen die Grenzen selbst gewendet: Wenn eine Grenze gezogen wird, dann ist sie gemacht und dann könnte sie auch anders verlaufen. Was selbstverständlich wirkt, hat oft nur eine Geschichte und darum darf man darüber streiten. Das trifft die Grenze zwischen Mensch und Maschine mit. Donna Haraway, weiter unten im Kapitel, hält sie nicht für gefunden, sondern für gezogen und ihr Bild des Cyborgs sprengt die starre Trennung. Erst indem der Mensch auseinanderhält, was ist und was sein soll, kann er urteilen und sich entscheiden. Von hier aus gelesen ist Unterscheiden etwas anderes als Rechnen: Ein Modell lernt aus vielen Beispielen, was gewöhnlich zusammen auftritt. Eine Bestimmung dagegen zieht eine Grenze mit Gründen und genau darum lässt sie sich auch bestreiten. Hauptwerk: «Phänomenologie des Geistes» (1807).
 
+**[DW-5d8b84]** *(Fallbeispiel)*
+Jedes Jahr wird im deutschsprachigen Raum das Jugendwort des Jahres gekürt, seit 2008, heute per offener Abstimmung. 2024 gewann «Aura»: die Ausstrahlung, das Charisma, der Status einer Person, oft scherzhaft gebraucht. 2025 folgte «das crazy», ein Füllwort für Momente, in denen jemand freundlich bleiben, aber nichts sagen möchte.
+
+Woher hat ein Wort seine Bedeutung? Sie wird nicht ausgerechnet, sie wird im Gebrauch festgesetzt, indem ihr unterscheidet: Aura ist nicht Leistung und nicht Beliebtheit, eher Wirkung ohne Anstrengung. Genau das heisst bei Hegel Unterscheiden: Was etwas ist, zeigt sich an dem, wovon es sich abhebt, und diese Grenzen werden gezogen, nicht gefunden. Darum wandern sie auch. Nächstes Jahr gewinnt ein anderes Wort und deine Sprache bekommt neue Kanten, die niemand aus den alten errechnen konnte.
+
+> **Belegt** («Jugendwort des Jahres»): [Jugendwort des Jahres (Wikipedia)](https://de.wikipedia.org/wiki/Jugendwort_des_Jahres_(Deutschland)) — Gewählt «ab 2008 jährlich von einer Jury unter der Leitung des Langenscheidt-Verlags», seit 2020 offen für alle. Siegerwort 2024: «Aura», es «bezieht sich (oft scherzhaft) auf die Ausstrahlung, das Charisma oder den Status einer Person». 2025 gewann «das crazy», «ein Füllwort, wenn jemand nichts zum Thema sagen, aber freundlich bleiben möchte». *(geprüft 2026-08-13)*
+
 **[DW-9cb029]** *(Zur Philosophie)*
 Hannah Arendt, jüdische politische Denkerin, floh vor den Nazis über Frankreich in die USA. Aus der Erfahrung des Totalitarismus fragte sie, was Handeln und Freiheit ausmacht. Ihr Schlüsselbegriff ist die «Natalität»: Weil jeder Mensch geboren wird, kann er etwas Neues anfangen, das aus dem Bisherigen nicht ableitbar ist. Dazu kommt das Urteilen, das eigenständige Prüfen, auch aus der Sicht anderer. Von Arendt her gelesen setzt eine KI Wahrscheinliches fort und wiederholt Muster; anfangen und urteilen in ihrem Sinn kann sie nicht. Hauptwerk: «Vita activa».
+
+**[DW-6951c9]** *(Fallbeispiel)*
+Am 20. August 2018 setzte sich eine 15-jährige Schülerin mit einem Schild vor das Parlament in Stockholm: «Skolstrejk för klimatet», Schulstreik fürs Klima. Drei Wochen lang sass sie dort jeden Schultag, danach jeden Freitag. Ein halbes Jahr später, am 15. März 2019, streikten nach Angaben der Bewegung weltweit fast 1,8 Millionen Menschen.
+
+Niemand hätte das aus dem Vortag ableiten können. Ein Mädchen, ein Karton, ein Gehsteig: Alles daran war unscheinbar, nur neu war es. Arendt nennt diese Fähigkeit Natalität: Weil du geboren wurdest und nicht das Ergebnis des Bisherigen bist, kannst du etwas anfangen, das vorher nicht in der Welt war. Anfangen ist darum immer unwahrscheinlich und immer riskant. Und es bleibt dein Teil: Fortsetzen, hochrechnen und wiederholen lässt sich vieles, anfangen nicht.
+
+> **Belegt** («Skolstrejk för klimatet»): [Fridays for Future (Wikipedia)](https://de.wikipedia.org/wiki/Fridays_for_Future) — Greta Thunberg begann den Schulstreik am 20. August 2018 mit 15 Jahren und sass «zunächst für einen Zeitraum von drei Wochen, täglich während der Unterrichtszeit vor dem schwedischen Reichstagsgebäude in Stockholm», mit einem Schild «Skolstrejk för klimatet» (Schulstreik fürs Klima); ab dem 8. September jeden Freitag. *(geprüft 2026-08-13)*
+
+> **Belegt** («fast 1,8 Millionen Menschen»): [Fridays for Future (Wikipedia)](https://de.wikipedia.org/wiki/Fridays_for_Future) — Zum globalen Klimastreik vom 15. März 2019: Es «sollen nach Angaben der Bewegung beispielsweise fast 1,8 Mio. Menschen an den Demonstrationen von FFF teilgenommen haben». Darum steht im Text «nach Angaben der Bewegung». *(geprüft 2026-08-13)*
 
 **[DW-156d9b]** *(Zur Philosophie)*
 Martin Heidegger gehört zu den einflussreichsten Philosophen des 20. Jahrhunderts und ist zugleich schwer belastet. Er trat am 1. Mai 1933 in die NSDAP ein, war als Rektor an der Gleichschaltung der Universität Freiburg beteiligt und blieb bis 1945 Parteimitglied; in seinen «Schwarzen Heften» stehen antisemitische Äusserungen. Umstritten ist nicht, ob das geschah, sondern wie stark es sein Werk prägt. In «Sein und Zeit» fragte er neu nach dem Sinn von Sein. Den Menschen nennt er «Dasein», seinen Grundzug die «Sorge». Das Wort führt leicht in die Irre, gemeint ist nicht Kummer: Wir sind nie unbeteiligte Zuschauer einer Welt, die uns gegenübersteht, sondern immer schon in ihr beschäftigt. Wir hantieren mit Dingen und haben es mit anderen Menschen zu tun. Ein Hammer zeigt sich als Hammer beim Hämmern, nicht beim Betrachten. Erst in diesem Umgang bekommen die Dinge ihre Bedeutung und erst so entsteht Sinn. Von hier aus argumentieren viele, eine Maschine habe keine solche Welt: Sie verarbeitet Zeichen, ohne mit etwas zu tun zu haben. Hauptwerk: «Sein und Zeit» (1927).
 
+**[DW-2b8995]** *(Fallbeispiel)*
+In Tokio standen 2021 zum ersten Mal Skateboards im olympischen Programm. Im Street-Wettbewerb der Frauen gewann die 13-jährige Momiji Nishiya aus Japan Gold, Silber ging an die ebenfalls 13-jährige Rayssa Leal aus Brasilien.
+
+Frag die beiden nicht, wo beim Absprung ihr Gewicht liegt. Beim Fahren ist das Brett kein Gegenstand, über den man nachdenkt: Es verschwindet ins Können, gedacht wird in Linien und Landungen. Erst wenn etwas klemmt, ein Trick misslingt, eine Achse bricht, liegt da wieder ein Ding mit Schrauben. Heidegger meint mit Sorge genau dieses Eingelassensein: Du bist nicht zuerst Zuschauerin der Welt, du bist mit ihr beschäftigt und im Umgang entsteht Verstehen. Ein Erklärvideo hilft, aber gekonnt wird es unter deinen Füssen.
+
 **[DW-ec680f]** *(Zur Philosophie)*
 Peter Sloterdijk ist einer der bekanntesten deutschsprachigen Gegenwartsphilosophen, bekannt für die «Sphären»-Trilogie und einen essayistischen, oft provokanten Stil. In «Du musst dein Leben ändern» beschreibt er den Menschen als übendes Wesen: Wir werden, wer wir sind, durch Übung, Wiederholung und Selbstformung. Er nennt das «Anthropotechnik». Der Satz ist kein Befehl, sondern der Grundton eines Lebens, das sich immer wieder in Form bringt. Übertragen auf die KI: Eine Maschine kann eine Aufgabe erledigen, aber nicht für uns üben, wer weiter übt, bleibt fähig und urteilsfähig. Hauptwerk: «Du musst dein Leben ändern» (2009).
 
+**[DW-0ee6ed]** *(Fallbeispiel)*
+Der Weltrekord im Lösen des Zauberwürfels liegt unter drei Sekunden, aufgestellt im Februar 2026. Wer das sieht, sagt Talent. Wer hinschaut, sieht Übung: eingeschliffene Fingerabläufe, tausendfach wiederholt, bis die Hände schneller sind als das bewusste Denken.
+
+Sloterdijk nennt den Menschen ein übendes Wesen: Du wirst, was du wiederholst, im Sport, in einer Sprache, in der Geduld, auch in dem, was du täglich nebenbei tust. Deine Gewohnheiten sind Übungen, ob du sie so nennst oder nicht. Das Entlastende daran: Können ist kein Besitz, sondern ein Weg und der steht allen offen, in kleinen Wiederholungen. Abkürzungen gibt es fürs Ergebnis. Fürs Können gibt es keine.
+
 **[DW-dadd17]** *(Zur Philosophie)*
 Siri Hustvedt ist US-amerikanische Schriftstellerin und Essayistin, die Literatur mit Hirnforschung und Philosophie verbindet. In «Die Illusion der Gewissheit» wendet sie sich gegen das Bild, das Gehirn sei ein Computer. Denken und Fühlen hängen für sie am lebendigen Körper und an gelebter Erfahrung, sie spricht vom «verkörperten Geist». Ihr Argument: Eine KI kann Sprache und Gefühle täuschend echt nachahmen, aber sie erlebt nichts und macht keine Erfahrung. Ihr «produktiver Zweifel» hilft, das flüssige Modell nicht mit der Wirklichkeit zu verwechseln. Hauptwerk: «Die Illusion der Gewissheit» (2018).
+
+**[DW-74e0f5]** *(Fallbeispiel)*
+Wer lange Tetris spielt, kennt den Effekt: Beim Einschlafen fallen hinter den Augenlidern weiter Blöcke und im Supermarkt ordnet der Kopf die Schachteln im Regal zu Reihen. Das Phänomen heisst tatsächlich Tetris-Effekt und tritt auch bei anderem auf, das man stundenlang tut.
+
+Ein Programm ist beendet, wenn man es schliesst. Dein Denken nicht: Es spielt weiter, in Bildern, im Halbschlaf, im Blick auf die Welt. Was du tust, färbt, wie dir alles erscheint, und gefragt hat dich dabei niemand. Hustvedt sagt darum, der Geist sei kein Computer: Er ist verkörpert, durchzogen von Erfahrung und Gefühl, er lässt sich nicht sauber in Eingabe und Ausgabe zerlegen. Eine Maschine gibt Antworten aus. Erleben, wie eine Antwort in dir weiterarbeitet, kannst nur du.
 
 **[DW-fecfd5]** *(Fliesstext)*
 «Was ist der Mensch?» Diese Frage ist so alt wie die Philosophie selbst. Schon Aristoteles sah den Menschen als Wesen, das von Natur aus nach Wissen strebt, neugierig, fragend, nie ganz fertig. Immanuel Kant machte die Frage zur Kernfrage überhaupt und gab eine Richtung vor: Der Mensch ist frei, er kann aus eigener Einsicht handeln und darum trägt er Verantwortung. Georg Wilhelm Friedrich Hegel fügt hinzu, dass der Mensch ein Wesen ist, das unterscheidet. Erst indem wir Gegensätze auseinanderhalten, was ist und was sein soll, können wir urteilen und uns frei entscheiden. Und was etwas ist, steht für ihn nicht ein für alle Mal fest, es klärt sich in einem geschichtlichen Gang. So bekommt gerade das Unterscheiden und Entscheiden eine zutiefst menschliche Seite.
@@ -2033,8 +2064,20 @@ Wenn dich die schnelle, kluge KI verunsichert, kehr zur Frage zurück, was dich 
 **[DW-c5d0eb]** *(Zur Philosophie)*
 Armin Nassehi ist ein führender deutscher Soziologe (München) und deutet die Gesellschaft mit der Systemtheorie. In «Muster» dreht er die übliche Frage um: nicht «Was macht die Digitalisierung mit uns?», sondern «Für welches Problem ist sie eine Lösung?». Seine Antwort: Die moderne Gesellschaft ist längst in «Mustern» organisiert, in Statistiken, Zählungen und Abläufen, die auch ohne Gesamtüberblick funktionieren. Genau darin ist die KI stark, sie erkennt Muster hervorragend, versteht aber keinen Sinn. Wer das begreift, sieht die KI nüchterner und weniger bedrohlich. Werk: «Muster» (2019).
 
+**[DW-b54a5e]** *(Fallbeispiel)*
+Anfang Dezember zeigt dir Spotify Wrapped dein Jahr in Zahlen: die meistgehörten Songs, Künstlerinnen und Genres, aufbereitet zum Teilen, und Millionen stellen es dann in ihre Storys. Das gibt es seit 2016, und der seltsame Moment ist jedes Jahr derselbe: Eine Statistik kennt dich.
+
+Nassehi würde sagen: kein Wunder. Die Gesellschaft ist längst in Mustern gebaut, in Zählungen und Abläufen; die Digitalisierung erfindet sie nicht, sie macht sie sichtbar. Dein Musikjahr war immer schon ein Muster, neu ist nur der Spiegel. Sehen kann er allerdings nur Wiederholungen. Warum dich ein einziger Song durch den Sommer getragen hat, steht in keiner Liste, denn das Muster kennt deine Klicks und nicht deine Gründe.
+
+> **Belegt** («Spotify Wrapped»): [Spotify Wrapped (Wikipedia, englisch)](https://en.wikipedia.org/wiki/Spotify_Wrapped) — Gestartet im Dezember 2016, erscheint «typically released in late November or early December» und zeigt die meistgehörten Künstler, Songs und Genres des Jahres; die Bildschirmserie lädt ausdrücklich zum Teilen ein, Millionen posteten sie. Einen deutschen Wikipedia-Artikel gab es bei der Prüfung nicht. *(geprüft 2026-08-13)*
+
 **[DW-a58b9f]** *(Zur Philosophie)*
 Bruno Latour war ein weltweit einflussreicher französischer Soziologe und Philosoph, Mitbegründer der Akteur-Netzwerk-Theorie. Danach entsteht Wirkung nie allein, sondern im Netz aus Menschen und Dingen: Ein Türschliesser, ein Formular oder ein Algorithmus wirken im Verbund mit. Er untersuchte, wie Wissenschaft und Gesellschaft ihre Wahrheiten Schritt für Schritt herstellen. Orientierung heisst darum nicht, alles zu überblicken, sondern das eigene Netz zu kennen: Wovon hänge ich ab, was wirkt mit mir zusammen? Werk: «Existenzweisen» (2012).
+
+**[DW-20ecfe]** *(Fallbeispiel)*
+Bubble Tea entstand in den 1980er Jahren in Taiwan, 1987 kamen die Tapiokaperlen dazu; in der Schweiz gibt es ihn seit 2012. Die Perlen bestehen aus der Stärke des Maniok, einer Pflanze aus Südamerika, deren grösster Produzent heute Nigeria ist.
+
+Ein Becher, ein Strohhalm. Und daran hängen: eine Teekultur aus Taiwan, ein südamerikanisches Wurzelgemüse, Felder in Nigeria, ein Laden an deiner Ecke, ein Trend in deinem Feed. Nichts davon hat den Bubble Tea allein gemacht, gewirkt hat der Verbund. So schaut Latour auf die Welt: Wer verstehen will, was ein Ding ist, fragt, was alles mitwirkt. Die Übung funktioniert bei fast allem, beim Pausenbrot, beim Handy und bei jeder Antwort einer KI. Hinter jedem Einzelnen steht ein Netz.
 
 **[DW-8c01fb]** *(Fliesstext)*
 Moderne Gesellschaften sind unübersichtlich geworden. Niemand überblickt mehr das Ganze, nicht die Wirtschaft, nicht die Verwaltung, nicht die Technik. Aus dem Gefühl, den Überblick verloren zu haben, entsteht schnell Überforderung. Und doch funktioniert erstaunlich vieles: Der Zug fährt, der Lohn kommt, das Spital behandelt. Wie geht das zusammen? Hier helfen zwei Denker, die die Gesellschaft nicht bewerten, sondern erklären.
@@ -2053,17 +2096,42 @@ Wenn dich die Komplexität überfordert, musst du nicht das Ganze verstehen. Es 
 **[DW-f860ae]** *(Zur Philosophie)*
 Mit der Akteur-Netzwerk-Theorie stellt Latour auch das Bild vom ganz freien, unabhängigen Individuum in Frage. Wir handeln nie aus dem Nichts, sondern immer eingebettet in Beziehungen zu Menschen, Werkzeugen, Institutionen und Techniken. Das ist keine Einschränkung, sondern die normale Bedingung des Handelns. Je bewusster man sich die eigenen Abhängigkeiten macht, desto klarer und souveräner wird das eigene Tun, gerade auch im Umgang mit KI.
 
+**[DW-90fa9a]** *(Fallbeispiel)*
+«Ocean Eyes» klingt nach einem Alleingang: ein Mädchen, ein Zimmer, ein Welthit. Tatsächlich hatte ihr Bruder Finneas den Song geschrieben, die 13-jährige Billie Eilish sang ihn und hochgeladen wurde er am 18. November 2015 auf SoundCloud, damit ihr Tanzlehrer ihn für eine Choreografie herunterladen konnte. Über Nacht teilten ihn Fremde, dann meldete sich ein Label.
+
+Das ganz unabhängige Individuum, das aus dem Nichts handelt, gibt es für Latour nicht, auch nicht im Schlafzimmerstudio. Da sind ein Bruder, ein Lehrer mit einem Auftrag, eine Plattform, tausende Teilende. Das macht die Leistung nicht kleiner, es macht sie verständlicher. Und wer das eigene Geflecht kennt, wird dadurch nicht abhängiger, sondern souveräner: Du weisst, was dich trägt, und kannst es pflegen.
+
 **[DW-3c0f3b]** *(Zur Philosophie)*
 Yasuo Deguchi ist Philosophieprofessor an der Universität Kyoto und verbindet westliches mit ostasiatischem Denken. Mit seiner «We-Turn»-Philosophie verlegt er das Handeln vom einzelnen «Ich» auf ein «Wir»: Niemand kann etwas ganz allein, jede Handlung wird von vielen getragen, von Menschen, Dingen und heute auch von Maschinen. Der eigentliche Handelnde ist deshalb kein einsames Ich, sondern ein «Selbst als Wir», zu dem die KI dazugehört. Er stützt sich dabei auf einen alten buddhistischen Gedanken, das «abhängige Entstehen»: Nichts besteht für sich allein, alles entsteht wechselseitig. Das entlastet: Verantwortung verteilt sich auf ein «Wir» mit verschiedenen Rollen, statt ganz auf den Schultern eines einzelnen Ich zu liegen.
+
+**[DW-fa222c]** *(Fallbeispiel)*
+Seit London 2012 steht der Weltrekord der 4-mal-100-Meter-Staffel bei 36,84 Sekunden, gelaufen von Jamaika. Möglich macht solche Zeiten der fliegende Wechsel: Wer den Stab übernimmt, startet, bevor er da ist, und übernimmt ihn in vollem Lauf. Eine Staffel ist darum schneller, als ihre vier Läufer einzeln zusammen wären.
+
+Wem gehört diese Zeit? Keinem der vier allein. Sie entsteht zwischen ihnen, in den Trainingsjahren, in drei Übergaben. Und der Stab läuft mit. Deguchi verlegt das Handeln genau dorthin: Nicht «ich» handelt, sondern «wir», ein Geflecht aus Menschen und Dingen, zu dem heute auch Maschinen gehören. Das nimmt dir nichts weg. Es heisst nur: Wer ehrlich sagen kann, wer und was alles mitgelaufen ist, versteht die eigene Leistung besser.
 
 **[DW-201ed5]** *(Zur Philosophie)*
 Donna Haraway ist US-amerikanische Wissenschaftshistorikerin und feministische Denkerin, ihr «Manifest für Cyborgs» (1985) wurde weltberühmt. Sie denkt Mensch, Tier und Maschine als verwoben: Wir sind in gewissem Sinn schon «Cyborgs», Mischwesen. Statt der Technik als fremder Macht gegenüberzustehen, sollen wir lernen, verantwortlich mit ihr zu leben, sie spricht von «Mit dem Schlamassel bleiben», also die Probleme aushalten und antworten statt fliehen. Damit steht sie Bruno Latour nahe, ergänzt ihn aber um Fürsorge und Verantwortung. Werk: «Unruhig bleiben» (2016).
 
+**[DW-504602]** *(Fallbeispiel)*
+Beatrice Vio war elf, als ihr nach einer Meningitis Unterarme und Unterschenkel amputiert wurden. Sie focht weiter: Ihr Florett ist mit einer Prothese am linken Ellbogen befestigt und sie ist die Einzige im Rollstuhlfechten, die ohne Hände und Beine antritt. An den Paralympics in Rio gewann sie mit 19 Gold, in Tokio verteidigte sie den Titel.
+
+Wo endet hier der Mensch, wo beginnt das Gerät? Beim Zuschauen wird die Frage sinnlos: Die Klinge antwortet ihr wie eine Hand. Haraway sagt, so verwoben sind wir alle längst, mit Brille, Impfung und dem Handy als Gedächtnis. Und die spannende Frage ist nicht, wie wir die Grenze rein halten, sondern wie wir mit unserer Technik verantwortlich leben. Vio zeigt, wie viel Freiheit in dieser Verwobenheit stecken kann.
+
 **[DW-036df9]** *(Zur Philosophie)*
 Yuval Noah Harari ist ein israelischer Historiker, der mit «Eine kurze Geschichte der Menschheit» und «Homo Deus» weltbekannt wurde. Er erzählt die grossen Linien: wie der Mensch durch gemeinsame Geschichten (Geld, Staaten, Religionen) mächtig wurde und wie Biotechnik und KI ihn nun selbst verändern könnten. Diese Verschmelzung von Mensch und Maschine setzt gewaltige Macht frei, weshalb er eindringlich vor blindem Fortschrittsglauben warnt und klare Regeln fordert. Sein Blick ist weit und mahnend zugleich. Werk: «Homo Deus».
 
+**[DW-21bd79]** *(Fallbeispiel)*
+Seit dem 10. Dezember 2025 gilt in Australien als erstem Land der Welt ein Mindestalter von 16 Jahren für Konten auf grossen Plattformen, von Instagram über TikTok bis YouTube. Die Erwachsenen waren in Umfragen deutlich dafür, 77 Prozent. Von 17'000 befragten Jugendlichen sagten 70 Prozent Nein.
+
+Harari erzählt Geschichte als Geschichte wachsender Macht: Werkzeuge, die ganze Gesellschaften umbauen, brauchen Regeln, und zwar bevor alle Folgen bekannt sind. Nur fallen Regeln nicht vom Himmel. Sie werden ausgehandelt, zwischen Generationen, Ländern und Interessen, mit offenem Ausgang. Und andere Länder schauen gerade genau hin. An den zwei Zahlen oben ist darum nicht interessant, wer recht hat, sondern was hier verhandelt wird: die Sorge der einen gegen den Alltag der anderen. Was wäre deine Regel und wie würdest du sie begründen?
+
 **[DW-85d273]** *(Zur Philosophie)*
 Markus Gabriel wurde sehr jung Philosophieprofessor in Bonn und ist ein Hauptvertreter des «Neuen Realismus». Er nennt die KI einen «magischen Spiegel»: Sie erkennt in unseren Daten Muster, auch unsere Werte und Gewohnheiten, manchmal genauer, als wir uns selbst kennen. Die eigentliche Revolution ist für ihn darum nicht technisch, sondern ethisch. Sein Vorschlag ist ein «dritter Weg» zwischen Alles-verbieten und Alles-erlauben, die «ethische Intelligenz», also klug und moralisch mitzugestalten. Nicht die Maschine steht auf dem Prüfstand, sondern wir. Werk: «Ethische Intelligenz».
+
+**[DW-86eeb7]** *(Fallbeispiel)*
+ChatGPT wurde am 30. November 2022 veröffentlicht. Nach fünf Tagen hatten sich eine Million Menschen registriert, im Januar 2023 waren es über 100 Millionen. TikTok hatte für die erste Million rund neun Monate gebraucht, Instagram zweieinhalb Jahre.
+
+Warum nennt Gabriel so etwas einen Spiegel? Trainiert wurde das Werkzeug an menschlichem Schreiben. Was es dir zeigt, sind Muster von uns und im Kleinen Muster von dir: deine Formulierungen, deine Abkürzungen, deine Wünsche. Lässt du dir drei Fassungen einer heiklen Nachricht vorschlagen, hast du drei Spiegelbilder, aber senden musst du eine, und diese Wahl zeigt, wer du bist. Die eigentliche Prüfung läuft darum nicht im Rechenzentrum. Sie läuft bei dir.
 
 **[DW-d91001]** *(Fliesstext)*
 Mensch und Maschine lassen sich nicht mehr sauber auseinanderdividieren. Wir tippen, suchen, planen und entscheiden längst mit Geräten zusammen. Schon Bruno Latour zeigt, warum das kein neuer Sonderfall ist. Nach seiner Lesart hat es das ganz freie Individuum, das egoistisch nur tut, was es will, nie gegeben: Wir stecken immer in Abhängigkeiten, von Menschen, Werkzeugen, Institutionen. Je klarer man sich diese Abhängigkeiten bewusst macht, desto verständlicher wird das eigene Tun.
@@ -2085,20 +2153,64 @@ Du musst dich nicht zwischen Verschmelzung und Verweigerung entscheiden. Es hilf
 **[DW-897a90]** *(Zur Philosophie)*
 Die Stoa war eine der grossen Schulen der Antike; bekannte Vertreter sind der Sklave Epiktet, der Staatsmann Seneca und der Kaiser Mark Aurel. Für sie ist Philosophie kein blosses Wissen, sondern tägliche Übung («Askesis», ursprünglich Übung, nicht Verzicht). Ihr Kern ist die Unterscheidung zwischen dem, was in unserer Macht steht (unser Urteil, unser Handeln) und dem, was nicht (Ereignisse, Meinungen anderer). Gelassenheit entsteht, wenn man seine Kraft auf das Erste richtet. Ein gutes Leben wächst so aus beständiger kleiner Übung, nicht aus einer einmaligen Einsicht.
 
+**[DW-83d626]** *(Fallbeispiel)*
+Im Teamfinal von Tokio 2021 zog sich die US-Turnerin Simone Biles nach einem Sprung zurück, aus Rücksicht auf ihre mentale Gesundheit, nicht wegen einer Verletzung. Drei Jahre später in Paris gewann sie drei Mal Gold und ein Mal Silber.
+
+Die Stoiker unterscheiden zwischen dem, was in deiner Macht steht, und dem, was nicht. Nicht in Biles' Macht: die Erwartungen eines Weltpublikums, die Schlagzeilen, der Medaillenspiegel. In ihrer Macht: das eigene Urteil darüber, was jetzt richtig ist, und das Handeln danach, gegen den Druck. Genau das ist die stoische Übung, die eigene Kraft dorthin zu legen, wo sie wirkt. Das ist kein Rückzug aus der Welt: Wer so unterscheidet, kommt zurück, sobald es wieder die eigene Entscheidung ist.
+
+> **Belegt** («aus Rücksicht auf ihre mentale Gesundheit»): [Simone Biles (Wikipedia)](https://de.wikipedia.org/wiki/Simone_Biles) — Im Teamfinal von Tokio am 27. Juli 2021 zog sie sich nach dem Sprung zurück, «aus Rücksicht auf ihre mentale Gesundheit, nicht wegen einer körperlichen Verletzung». In Paris 2024 gewann sie Gold mit dem Team, im Mehrkampf und am Sprung sowie Silber am Boden. *(geprüft 2026-08-13)*
+
 **[DW-15ffd8]** *(Zur Philosophie)*
 Michel Foucault war ein französischer Philosoph, der untersuchte, wie Macht und Wissen unser Leben prägen (in Gefängnis, Klinik, Sexualität). In seinem Spätwerk entdeckte er die antike «Sorge um sich selbst» wieder: sich um das eigene Leben kümmern und es bewusst gestalten. Er nennt das eine «Ästhetik der Existenz», das Leben formen wie ein Kunstwerk. Es geht nicht darum, fremden Normen zu gehorchen, sondern die eigene Lebensform aktiv zu wählen und einzuüben. Werk: «Die Sorge um sich» (1984).
+
+**[DW-e18429]** *(Fallbeispiel)*
+Ein Bullet Journal ist ein Notizbuch mit Punkteraster, das Terminplanung, To-do-Listen, Tagebuch und Brainstorming in einem einzigen Heft verbindet. Entwickelt hat es 2013 der Designer Ryder Carroll.
+
+Neu ist die Idee nicht, und das ist das Schöne daran. Foucault hat in seinem Spätwerk die antike Sorge um sich selbst wieder ausgegraben: Schon damals führten Menschen Notizhefte, um ihr Leben zu ordnen und an sich zu arbeiten. Ein Leben formen wie ein Kunstwerk heisst nicht, sich für fremde Massstäbe zu optimieren, für Noten, Follower und Bestenlisten. Es heisst, selbst zu wählen, woran du arbeitest. Dafür ist ein Heft, das niemand liken kann, ein ziemlich gutes Werkzeug: Es gehört nur dir.
+
+> **Belegt** («Bullet Journal»): [Bullet Journal (Wikipedia)](https://de.wikipedia.org/wiki/Bullet_Journal) — «Ein Bullet Journal (auch als BuJo bekannt) ist ein individuelles Organisationssystem, das 2013 von dem digitalen Produktdesigner Ryder Carroll entwickelt wurde.» Es verbindet «Terminplanung, To-Do-Listen, Tagebuch und Brainstorming in einem einzigen Notizbuch», üblich sind Notizbücher mit Punkteraster. *(geprüft 2026-08-13)*
 
 **[DW-9a56e8]** *(Zur Philosophie)*
 Wilhelm Schmid ist ein freier Philosoph in Berlin und hat die «Philosophie der Lebenskunst» im deutschsprachigen Raum bekannt gemacht. Sein Thema: Aus einer Einsicht folgt noch keine Tat, das kennt jeder von den guten Vorsätzen. Was hilft, ist Übung in kleinsten Schritten, täglich, fast beiläufig, aber regelmässig, nicht das ganze Buch auf einmal, sondern jeden Tag eine Seite. Weil Freude stärker wirkt als Zwang, soll man sich am Schönen orientieren, zu dem man Ja sagen kann. So werden neue Gewohnheiten gebildet. Wie lange das dauert, hat die Psychologie untersucht, nicht die Philosophie: Eine oft zitierte Studie fand einen Mittelwert von 66 Tagen, mit sehr grossen Unterschieden je nach Person und Gewohnheit. Werk: «Philosophie der Lebenskunst» (1998).
 
+**[DW-11c6a9]** *(Fallbeispiel)*
+Vinted wurde 2008 in Litauen gegründet und ist heute mit über 65 Millionen Mitgliedern eine der grössten Plattformen für Secondhandkleidung: kaufen und verkaufen per App, quer durch Europa und Nordamerika.
+
+«Nachhaltiger leben» ist als Vorsatz so gross, dass er oft schon am Sonntagabend endet. Schmid setzt deshalb auf kleinste Schritte: täglich, fast beiläufig, aber regelmässig, und möglichst am Schönen orientiert statt am Verzicht. Eine einzige neue Gewohnheit reicht für den Anfang, zum Beispiel zuerst secondhand schauen und erst dann neu kaufen. Das kostet wenig Überwindung, es macht sogar Spass, das Lieblingsteil für wenige Franken zu finden, und es summiert sich. Nicht das ganze Leben ändern. Eine Gewohnheit.
+
+> **Belegt** («2008 in Litauen»): [Vinted (Wikipedia)](https://de.wikipedia.org/wiki/Vinted) — «Vinted wurde 2008 unter dem Namen Miju Projects von Justas Janauskas und Milda Mitkute in Litauen gegründet.» 2022 «über 65 Millionen Mitglieder», vertreten «in 16 Ländern in Europa und Nordamerika»; gehandelt werden Secondhandkleidung, Accessoires und mehr. *(geprüft 2026-08-13)*
+
 **[DW-246e50]** *(Zur Philosophie)*
 Martha Nussbaum ist eine der bekanntesten US-amerikanischen Philosophinnen und verbindet antike Ethik (besonders Aristoteles und die Stoa) mit heutigen Fragen. Sie zeigt, dass Gefühle keine blosse Störung der Vernunft sind, sondern zu einem guten Urteil und einem gelingenden Leben dazugehören. Mit dem «Fähigkeiten-Ansatz» fragt sie konkret, was Menschen wirklich können müssen, um gut zu leben (etwa Gesundheit, Bildung, Bindung, Spiel) und wie eine Gesellschaft das ermöglichen soll. Lebenskunst heisst darum auch, die eigenen Gefühle ernst zu nehmen und gute Bedingungen zu schaffen. Werk: «Fähigkeiten schaffen» (2011).
+
+**[DW-f79364]** *(Fallbeispiel)*
+Im Juli 2023 registrierten Seismographen in Seattle Erschütterungen, ausgelöst von zehntausenden tanzenden Fans an einem Konzert von Taylor Swift, über Stunden hinweg. Dieselbe Tournee wurde später von Guinness World Records als die kommerziell erfolgreichste der Welt anerkannt.
+
+Man kann darüber spotten: so viel Gefühl für ein Popkonzert. Nussbaum widerspricht dem alten Verdacht, Gefühle seien Störungen der Vernunft. Ein starkes Gefühl ist für sie ein Urteil: Es sagt dir, was dir wichtig ist, lange bevor du es begründen kannst. Wer bei einem Lied weint, denkt nicht zu wenig, sondern erkennt etwas: Das hier betrifft mich. Gefühle ernst zu nehmen heisst, solche Urteile lesen zu lernen, die eigenen und die der anderen, statt sie sich auszureden. Freude, die den Boden zum Zittern bringt, ist eine Auskunft darüber, was zählt.
+
+> **Belegt** («registrierten Seismographen in Seattle»): [The Eras Tour (Wikipedia)](https://de.wikipedia.org/wiki/The_Eras_Tour) — Beim Konzert im Lumen Field in Seattle im Juli 2023 «registrierten lokale Seismographen für Menschen nicht wahrnehmbare Erschütterungen der Erde», ausgelöst von den Fans, über mehrere Stunden. Eine Magnitude nennt der Artikel nicht, darum steht auch im Text keine. *(geprüft 2026-08-13)*
+
+> **Belegt** («kommerziell erfolgreichste»): [The Eras Tour (Wikipedia)](https://de.wikipedia.org/wiki/The_Eras_Tour) — Die Tournee wurde «im Dezember 2023 von Guinness World Records als kommerziell erfolgreichste Tournee weltweit anerkannt»; nach rund 60 Konzerten lag der Umsatz bei 1,04 Milliarden Dollar. *(geprüft 2026-08-13)*
 
 **[DW-890f29]** *(Zur Philosophie)*
 Maurice Merleau-Ponty war ein französischer Philosoph der Phänomenologie. Sein Thema ist der Leib: Wir erfahren die Welt nicht zuerst mit dem Kopf, sondern leiblich, durch Wahrnehmung, Bewegung, Berührung und Gefühl. Der Körper ist kein Ding, das wir bloss «haben», sondern die Art, wie wir zur Welt gehören. Verstehen und ein gutes Leben sind darum verkörpert, nicht rein rechnerisch. Genau das kann eine körperlose KI nicht: Sie verarbeitet Zeichen, aber sie spürt und erlebt nicht. Werk: «Phänomenologie der Wahrnehmung» (1945).
 
+**[DW-76be7d]** *(Fallbeispiel)*
+In Paris war 2024 Breaking zum ersten Mal olympische Disziplin, ausgetragen mitten in der Stadt auf der Place de la Concorde. Das erste Gold der B-Girls gewann Ami Yuasa aus Japan, bei den B-Boys siegte der Kanadier Philip Kim.
+
+Versuch, einen Headspin aus einer Beschreibung zu lernen. Du kannst jede Anweisung auswendig aufsagen und fällst trotzdem. Irgendwann, nach vielen Anläufen, «hat» es der Körper: Schwung, Druck und Balance sind dann kein Wissen im Kopf, sondern ein Können im Leib. Merleau-Ponty sagt: So verstehen wir die Welt überhaupt, zuerst leiblich, dann in Begriffen. Der Körper ist kein Werkzeug, das du benutzt, er ist deine Art, da zu sein. Ein Video zeigt dir jeden Move in Zeitlupe. Verstehen wird ihn dein Rücken.
+
+> **Belegt** («Ami Yuasa»): [Breaking an den Sommerspielen 2024 (Wikipedia)](https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2024/Breaking) — Breaking war in Paris «erstmals Teil des olympischen Programms», ausgetragen am 9. und 10. August 2024 auf der Place de la Concorde. Gold der B-Girls: Ami Yuasa (Japan); Gold der B-Boys: Philip Kim (Kanada). *(geprüft 2026-08-13)*
+
 **[DW-cfa60f]** *(Zur Philosophie)*
 Hartmut Rosa ist ein deutscher Soziologe, bekannt für die Diagnose der gesellschaftlichen «Beschleunigung». Dagegen setzt er den Begriff «Resonanz»: Ein gelingendes Leben entsteht nicht durch mehr Kontrolle, mehr Tempo und mehr Verfügbarkeit, sondern durch ein lebendiges, wechselseitiges Antworten zwischen Mensch und Welt, ein Berührtwerden. Vieles, was zählt, lässt sich gerade nicht erzwingen oder verfügbar machen, es muss einem begegnen. In einer Welt schneller KI erinnert er daran, das Sich-berühren-Lassen nicht zu verlernen. Werke: «Resonanz» (2016), «Unverfügbarkeit» (2018).
+
+**[DW-8f9895]** *(Fallbeispiel)*
+In der Nacht auf den 11. Mai 2024 traf der erste Sonnensturm der höchsten Kategorie seit 2003 die Erde, und für einmal waren Polarlichter bis in die Schweiz zu sehen. Wer zufällig draussen war oder geweckt wurde, stand plötzlich unter einem leuchtenden Himmel.
+
+Das Besondere daran: Es liess sich nicht buchen. Kein Ticket, kein Abo, keine Wiederholung auf Abruf, nicht einmal eine verlässliche Vorhersage. Rosa nennt Resonanz, was uns gerade deshalb berührt, weil es nicht verfügbar ist: Die Welt antwortet, aber nicht auf Bestellung. In einem Alltag, in dem fast alles sofort lieferbar ist, der Song, die Serie, die Antwort, sind solche Momente kleine Übungsplätze. Hinstehen, warten dürfen, sich berühren lassen. Mehr Kontrolle würde genau das zerstören, was diesen Abend besonders gemacht hat.
+
+> **Belegt** («Polarlichter bis in die Schweiz»): [Swissinfo, 11. Mai 2024: «Stärkster Sonnensturm seit 2003»](https://www.swissinfo.ch/ger/st%C3%A4rkster-sonnensturm-seit-2003-f%C3%BChrt-zu-schweizer-polarlichtern/77308421) — «Der erste ‹extreme› Sonnensturm seit 2003»: Die Kategorie fünf war laut NOAA zuletzt im Oktober 2003 bei den Halloween-Stürmen erreicht worden. «Aufgrund des starken geomagnetischen Sturms waren Polarlichter bis in die Schweizer Breitengrade sichtbar», festgehalten etwa von einer Wetterkamera in Ravoire bei Martigny am Abend des 10. Mai 2024. *(geprüft 2026-08-13)*
 
 **[DW-2c33b8]** *(Fliesstext)*
 «Du musst dein Leben ändern», heisst es in einem berühmten Gedicht von Rainer Maria Rilke. Ja, aber wie? Das ist die Grundfrage der Lebenskunst. Denn aus einer Einsicht folgt noch lange keine Tat, jeder kennt das von den guten Vorsätzen an Silvester, die am Neujahrsmorgen schon wieder verblasst sind. Dieser Bereich fragt nicht, was der Mensch ist, sondern wie er sein Leben tatsächlich gestalten und ändern kann.

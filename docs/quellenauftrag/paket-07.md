@@ -1,6 +1,6 @@
 # Quellenauftrag · Lernseite 2 «Eine ganz neue Partnerschaft»
 
-**Paket 07 von 8.** Dieses Dokument enthält 35 Textblöcke eines Lernsets zu
+**Paket 07 von 9.** Dieses Dokument enthält 35 Textblöcke eines Lernsets zu
 Künstlicher Intelligenz und Philosophie (Berufsfachschule, Deutschschweiz).
 Jeder Block hat eine **Kennung** in eckigen Klammern, z.B. `[VA-a1b2c3]`.
 
@@ -42,7 +42,7 @@ und die Quelle ihn nur bestätigt.
 ---
 
 
-## Paket 07 von 8
+## Paket 07 von 9
 
 Jeder Block hier enthält eine prüfbare Behauptung (Zahl, Datum,
 Superlativ oder eine Aussage, die jemandem zugeschrieben wird). Deutende
@@ -50,29 +50,119 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 02 · Wege der Orientierung
 
+**[DW-0ee6ed]** *(Fallbeispiel · Was ist der Mensch?)*
+Der Weltrekord im Lösen des Zauberwürfels liegt unter drei Sekunden, aufgestellt im Februar 2026. Wer das sieht, sagt Talent. Wer hinschaut, sieht Übung: eingeschliffene Fingerabläufe, tausendfach wiederholt, bis die Hände schneller sind als das bewusste Denken.
+
+Sloterdijk nennt den Menschen ein übendes Wesen: Du wirst, was du wiederholst, im Sport, in einer Sprache, in der Geduld, auch in dem, was du täglich nebenbei tust. Deine Gewohnheiten sind Übungen, ob du sie so nennst oder nicht. Das Entlastende daran: Können ist kein Besitz, sondern ein Weg und der steht allen offen, in kleinen Wiederholungen. Abkürzungen gibt es fürs Ergebnis. Fürs Können gibt es keine.
+
+**[DW-dadd17]** *(Zur Philosophie · Was ist der Mensch?)*
+Siri Hustvedt ist US-amerikanische Schriftstellerin und Essayistin, die Literatur mit Hirnforschung und Philosophie verbindet. In «Die Illusion der Gewissheit» wendet sie sich gegen das Bild, das Gehirn sei ein Computer. Denken und Fühlen hängen für sie am lebendigen Körper und an gelebter Erfahrung, sie spricht vom «verkörperten Geist». Ihr Argument: Eine KI kann Sprache und Gefühle täuschend echt nachahmen, aber sie erlebt nichts und macht keine Erfahrung. Ihr «produktiver Zweifel» hilft, das flüssige Modell nicht mit der Wirklichkeit zu verwechseln. Hauptwerk: «Die Illusion der Gewissheit» (2018).
+
+**[DW-fecfd5]** *(Fliesstext · Was ist der Mensch?)*
+«Was ist der Mensch?» Diese Frage ist so alt wie die Philosophie selbst. Schon Aristoteles sah den Menschen als Wesen, das von Natur aus nach Wissen strebt, neugierig, fragend, nie ganz fertig. Immanuel Kant machte die Frage zur Kernfrage überhaupt und gab eine Richtung vor: Der Mensch ist frei, er kann aus eigener Einsicht handeln und darum trägt er Verantwortung. Georg Wilhelm Friedrich Hegel fügt hinzu, dass der Mensch ein Wesen ist, das unterscheidet. Erst indem wir Gegensätze auseinanderhalten, was ist und was sein soll, können wir urteilen und uns frei entscheiden. Und was etwas ist, steht für ihn nicht ein für alle Mal fest, es klärt sich in einem geschichtlichen Gang. So bekommt gerade das Unterscheiden und Entscheiden eine zutiefst menschliche Seite.
+
+**[DW-c5d0eb]** *(Zur Philosophie · Netzwerke und Systeme)*
+Armin Nassehi ist ein führender deutscher Soziologe (München) und deutet die Gesellschaft mit der Systemtheorie. In «Muster» dreht er die übliche Frage um: nicht «Was macht die Digitalisierung mit uns?», sondern «Für welches Problem ist sie eine Lösung?». Seine Antwort: Die moderne Gesellschaft ist längst in «Mustern» organisiert, in Statistiken, Zählungen und Abläufen, die auch ohne Gesamtüberblick funktionieren. Genau darin ist die KI stark, sie erkennt Muster hervorragend, versteht aber keinen Sinn. Wer das begreift, sieht die KI nüchterner und weniger bedrohlich. Werk: «Muster» (2019).
+
+**[DW-b54a5e]** *(Fallbeispiel · Netzwerke und Systeme)*
+Anfang Dezember zeigt dir Spotify Wrapped dein Jahr in Zahlen: die meistgehörten Songs, Künstlerinnen und Genres, aufbereitet zum Teilen, und Millionen stellen es dann in ihre Storys. Das gibt es seit 2016, und der seltsame Moment ist jedes Jahr derselbe: Eine Statistik kennt dich.
+
+Nassehi würde sagen: kein Wunder. Die Gesellschaft ist längst in Mustern gebaut, in Zählungen und Abläufen; die Digitalisierung erfindet sie nicht, sie macht sie sichtbar. Dein Musikjahr war immer schon ein Muster, neu ist nur der Spiegel. Sehen kann er allerdings nur Wiederholungen. Warum dich ein einziger Song durch den Sommer getragen hat, steht in keiner Liste, denn das Muster kennt deine Klicks und nicht deine Gründe.
+
+> **Belegt** («Spotify Wrapped»): [Spotify Wrapped (Wikipedia, englisch)](https://en.wikipedia.org/wiki/Spotify_Wrapped) — Gestartet im Dezember 2016, erscheint «typically released in late November or early December» und zeigt die meistgehörten Künstler, Songs und Genres des Jahres; die Bildschirmserie lädt ausdrücklich zum Teilen ein, Millionen posteten sie. Einen deutschen Wikipedia-Artikel gab es bei der Prüfung nicht. *(geprüft 2026-08-13)*
+
 **[DW-a58b9f]** *(Zur Philosophie · Netzwerke und Systeme)*
 Bruno Latour war ein weltweit einflussreicher französischer Soziologe und Philosoph, Mitbegründer der Akteur-Netzwerk-Theorie. Danach entsteht Wirkung nie allein, sondern im Netz aus Menschen und Dingen: Ein Türschliesser, ein Formular oder ein Algorithmus wirken im Verbund mit. Er untersuchte, wie Wissenschaft und Gesellschaft ihre Wahrheiten Schritt für Schritt herstellen. Orientierung heisst darum nicht, alles zu überblicken, sondern das eigene Netz zu kennen: Wovon hänge ich ab, was wirkt mit mir zusammen? Werk: «Existenzweisen» (2012).
+
+**[DW-20ecfe]** *(Fallbeispiel · Netzwerke und Systeme)*
+Bubble Tea entstand in den 1980er Jahren in Taiwan, 1987 kamen die Tapiokaperlen dazu; in der Schweiz gibt es ihn seit 2012. Die Perlen bestehen aus der Stärke des Maniok, einer Pflanze aus Südamerika, deren grösster Produzent heute Nigeria ist.
+
+Ein Becher, ein Strohhalm. Und daran hängen: eine Teekultur aus Taiwan, ein südamerikanisches Wurzelgemüse, Felder in Nigeria, ein Laden an deiner Ecke, ein Trend in deinem Feed. Nichts davon hat den Bubble Tea allein gemacht, gewirkt hat der Verbund. So schaut Latour auf die Welt: Wer verstehen will, was ein Ding ist, fragt, was alles mitwirkt. Die Übung funktioniert bei fast allem, beim Pausenbrot, beim Handy und bei jeder Antwort einer KI. Hinter jedem Einzelnen steht ein Netz.
+
+**[DW-90fa9a]** *(Fallbeispiel · Transformation von Mensch und Maschine)*
+«Ocean Eyes» klingt nach einem Alleingang: ein Mädchen, ein Zimmer, ein Welthit. Tatsächlich hatte ihr Bruder Finneas den Song geschrieben, die 13-jährige Billie Eilish sang ihn und hochgeladen wurde er am 18. November 2015 auf SoundCloud, damit ihr Tanzlehrer ihn für eine Choreografie herunterladen konnte. Über Nacht teilten ihn Fremde, dann meldete sich ein Label.
+
+Das ganz unabhängige Individuum, das aus dem Nichts handelt, gibt es für Latour nicht, auch nicht im Schlafzimmerstudio. Da sind ein Bruder, ein Lehrer mit einem Auftrag, eine Plattform, tausende Teilende. Das macht die Leistung nicht kleiner, es macht sie verständlicher. Und wer das eigene Geflecht kennt, wird dadurch nicht abhängiger, sondern souveräner: Du weisst, was dich trägt, und kannst es pflegen.
+
+**[DW-fa222c]** *(Fallbeispiel · Transformation von Mensch und Maschine)*
+Seit London 2012 steht der Weltrekord der 4-mal-100-Meter-Staffel bei 36,84 Sekunden, gelaufen von Jamaika. Möglich macht solche Zeiten der fliegende Wechsel: Wer den Stab übernimmt, startet, bevor er da ist, und übernimmt ihn in vollem Lauf. Eine Staffel ist darum schneller, als ihre vier Läufer einzeln zusammen wären.
+
+Wem gehört diese Zeit? Keinem der vier allein. Sie entsteht zwischen ihnen, in den Trainingsjahren, in drei Übergaben. Und der Stab läuft mit. Deguchi verlegt das Handeln genau dorthin: Nicht «ich» handelt, sondern «wir», ein Geflecht aus Menschen und Dingen, zu dem heute auch Maschinen gehören. Das nimmt dir nichts weg. Es heisst nur: Wer ehrlich sagen kann, wer und was alles mitgelaufen ist, versteht die eigene Leistung besser.
 
 **[DW-201ed5]** *(Zur Philosophie · Transformation von Mensch und Maschine)*
 Donna Haraway ist US-amerikanische Wissenschaftshistorikerin und feministische Denkerin, ihr «Manifest für Cyborgs» (1985) wurde weltberühmt. Sie denkt Mensch, Tier und Maschine als verwoben: Wir sind in gewissem Sinn schon «Cyborgs», Mischwesen. Statt der Technik als fremder Macht gegenüberzustehen, sollen wir lernen, verantwortlich mit ihr zu leben, sie spricht von «Mit dem Schlamassel bleiben», also die Probleme aushalten und antworten statt fliehen. Damit steht sie Bruno Latour nahe, ergänzt ihn aber um Fürsorge und Verantwortung. Werk: «Unruhig bleiben» (2016).
 
+**[DW-21bd79]** *(Fallbeispiel · Transformation von Mensch und Maschine)*
+Seit dem 10. Dezember 2025 gilt in Australien als erstem Land der Welt ein Mindestalter von 16 Jahren für Konten auf grossen Plattformen, von Instagram über TikTok bis YouTube. Die Erwachsenen waren in Umfragen deutlich dafür, 77 Prozent. Von 17'000 befragten Jugendlichen sagten 70 Prozent Nein.
+
+Harari erzählt Geschichte als Geschichte wachsender Macht: Werkzeuge, die ganze Gesellschaften umbauen, brauchen Regeln, und zwar bevor alle Folgen bekannt sind. Nur fallen Regeln nicht vom Himmel. Sie werden ausgehandelt, zwischen Generationen, Ländern und Interessen, mit offenem Ausgang. Und andere Länder schauen gerade genau hin. An den zwei Zahlen oben ist darum nicht interessant, wer recht hat, sondern was hier verhandelt wird: die Sorge der einen gegen den Alltag der anderen. Was wäre deine Regel und wie würdest du sie begründen?
+
+**[DW-86eeb7]** *(Fallbeispiel · Transformation von Mensch und Maschine)*
+ChatGPT wurde am 30. November 2022 veröffentlicht. Nach fünf Tagen hatten sich eine Million Menschen registriert, im Januar 2023 waren es über 100 Millionen. TikTok hatte für die erste Million rund neun Monate gebraucht, Instagram zweieinhalb Jahre.
+
+Warum nennt Gabriel so etwas einen Spiegel? Trainiert wurde das Werkzeug an menschlichem Schreiben. Was es dir zeigt, sind Muster von uns und im Kleinen Muster von dir: deine Formulierungen, deine Abkürzungen, deine Wünsche. Lässt du dir drei Fassungen einer heiklen Nachricht vorschlagen, hast du drei Spiegelbilder, aber senden musst du eine, und diese Wahl zeigt, wer du bist. Die eigentliche Prüfung läuft darum nicht im Rechenzentrum. Sie läuft bei dir.
+
 **[DW-90c840]** *(Fliesstext · Transformation von Mensch und Maschine)*
 Am äussersten Rand steht der «Transhumanismus», die Idee, den Menschen durch Technik grenzenlos zu steigern, vielleicht sogar den Tod zu überwinden. Zum Einordnen helfen zwei ältere Muster als Gegenschablone. Zum einen die religiösen Heilsversprechen, denen der Transhumanismus verblüffend ähnelt, nur dass hier die Technik die Erlösung bringen soll. Zum anderen die endzeitlichen Untergangserzählungen, in denen die KI alles auslöscht. Beides, Erlösung wie Weltuntergang, sind grosse, alte Geschichten. Wer sie erkennt, fällt weder auf den Hype noch auf die Panik herein.
+
+**[DW-83d626]** *(Fallbeispiel · Lebenskunst)*
+Im Teamfinal von Tokio 2021 zog sich die US-Turnerin Simone Biles nach einem Sprung zurück, aus Rücksicht auf ihre mentale Gesundheit, nicht wegen einer Verletzung. Drei Jahre später in Paris gewann sie drei Mal Gold und ein Mal Silber.
+
+Die Stoiker unterscheiden zwischen dem, was in deiner Macht steht, und dem, was nicht. Nicht in Biles' Macht: die Erwartungen eines Weltpublikums, die Schlagzeilen, der Medaillenspiegel. In ihrer Macht: das eigene Urteil darüber, was jetzt richtig ist, und das Handeln danach, gegen den Druck. Genau das ist die stoische Übung, die eigene Kraft dorthin zu legen, wo sie wirkt. Das ist kein Rückzug aus der Welt: Wer so unterscheidet, kommt zurück, sobald es wieder die eigene Entscheidung ist.
+
+> **Belegt** («aus Rücksicht auf ihre mentale Gesundheit»): [Simone Biles (Wikipedia)](https://de.wikipedia.org/wiki/Simone_Biles) — Im Teamfinal von Tokio am 27. Juli 2021 zog sie sich nach dem Sprung zurück, «aus Rücksicht auf ihre mentale Gesundheit, nicht wegen einer körperlichen Verletzung». In Paris 2024 gewann sie Gold mit dem Team, im Mehrkampf und am Sprung sowie Silber am Boden. *(geprüft 2026-08-13)*
 
 **[DW-15ffd8]** *(Zur Philosophie · Lebenskunst)*
 Michel Foucault war ein französischer Philosoph, der untersuchte, wie Macht und Wissen unser Leben prägen (in Gefängnis, Klinik, Sexualität). In seinem Spätwerk entdeckte er die antike «Sorge um sich selbst» wieder: sich um das eigene Leben kümmern und es bewusst gestalten. Er nennt das eine «Ästhetik der Existenz», das Leben formen wie ein Kunstwerk. Es geht nicht darum, fremden Normen zu gehorchen, sondern die eigene Lebensform aktiv zu wählen und einzuüben. Werk: «Die Sorge um sich» (1984).
 
+**[DW-e18429]** *(Fallbeispiel · Lebenskunst)*
+Ein Bullet Journal ist ein Notizbuch mit Punkteraster, das Terminplanung, To-do-Listen, Tagebuch und Brainstorming in einem einzigen Heft verbindet. Entwickelt hat es 2013 der Designer Ryder Carroll.
+
+Neu ist die Idee nicht, und das ist das Schöne daran. Foucault hat in seinem Spätwerk die antike Sorge um sich selbst wieder ausgegraben: Schon damals führten Menschen Notizhefte, um ihr Leben zu ordnen und an sich zu arbeiten. Ein Leben formen wie ein Kunstwerk heisst nicht, sich für fremde Massstäbe zu optimieren, für Noten, Follower und Bestenlisten. Es heisst, selbst zu wählen, woran du arbeitest. Dafür ist ein Heft, das niemand liken kann, ein ziemlich gutes Werkzeug: Es gehört nur dir.
+
+> **Belegt** («Bullet Journal»): [Bullet Journal (Wikipedia)](https://de.wikipedia.org/wiki/Bullet_Journal) — «Ein Bullet Journal (auch als BuJo bekannt) ist ein individuelles Organisationssystem, das 2013 von dem digitalen Produktdesigner Ryder Carroll entwickelt wurde.» Es verbindet «Terminplanung, To-Do-Listen, Tagebuch und Brainstorming in einem einzigen Notizbuch», üblich sind Notizbücher mit Punkteraster. *(geprüft 2026-08-13)*
+
 **[DW-9a56e8]** *(Zur Philosophie · Lebenskunst)*
 Wilhelm Schmid ist ein freier Philosoph in Berlin und hat die «Philosophie der Lebenskunst» im deutschsprachigen Raum bekannt gemacht. Sein Thema: Aus einer Einsicht folgt noch keine Tat, das kennt jeder von den guten Vorsätzen. Was hilft, ist Übung in kleinsten Schritten, täglich, fast beiläufig, aber regelmässig, nicht das ganze Buch auf einmal, sondern jeden Tag eine Seite. Weil Freude stärker wirkt als Zwang, soll man sich am Schönen orientieren, zu dem man Ja sagen kann. So werden neue Gewohnheiten gebildet. Wie lange das dauert, hat die Psychologie untersucht, nicht die Philosophie: Eine oft zitierte Studie fand einen Mittelwert von 66 Tagen, mit sehr grossen Unterschieden je nach Person und Gewohnheit. Werk: «Philosophie der Lebenskunst» (1998).
+
+**[DW-11c6a9]** *(Fallbeispiel · Lebenskunst)*
+Vinted wurde 2008 in Litauen gegründet und ist heute mit über 65 Millionen Mitgliedern eine der grössten Plattformen für Secondhandkleidung: kaufen und verkaufen per App, quer durch Europa und Nordamerika.
+
+«Nachhaltiger leben» ist als Vorsatz so gross, dass er oft schon am Sonntagabend endet. Schmid setzt deshalb auf kleinste Schritte: täglich, fast beiläufig, aber regelmässig, und möglichst am Schönen orientiert statt am Verzicht. Eine einzige neue Gewohnheit reicht für den Anfang, zum Beispiel zuerst secondhand schauen und erst dann neu kaufen. Das kostet wenig Überwindung, es macht sogar Spass, das Lieblingsteil für wenige Franken zu finden, und es summiert sich. Nicht das ganze Leben ändern. Eine Gewohnheit.
+
+> **Belegt** («2008 in Litauen»): [Vinted (Wikipedia)](https://de.wikipedia.org/wiki/Vinted) — «Vinted wurde 2008 unter dem Namen Miju Projects von Justas Janauskas und Milda Mitkute in Litauen gegründet.» 2022 «über 65 Millionen Mitglieder», vertreten «in 16 Ländern in Europa und Nordamerika»; gehandelt werden Secondhandkleidung, Accessoires und mehr. *(geprüft 2026-08-13)*
 
 **[DW-246e50]** *(Zur Philosophie · Lebenskunst)*
 Martha Nussbaum ist eine der bekanntesten US-amerikanischen Philosophinnen und verbindet antike Ethik (besonders Aristoteles und die Stoa) mit heutigen Fragen. Sie zeigt, dass Gefühle keine blosse Störung der Vernunft sind, sondern zu einem guten Urteil und einem gelingenden Leben dazugehören. Mit dem «Fähigkeiten-Ansatz» fragt sie konkret, was Menschen wirklich können müssen, um gut zu leben (etwa Gesundheit, Bildung, Bindung, Spiel) und wie eine Gesellschaft das ermöglichen soll. Lebenskunst heisst darum auch, die eigenen Gefühle ernst zu nehmen und gute Bedingungen zu schaffen. Werk: «Fähigkeiten schaffen» (2011).
 
+**[DW-f79364]** *(Fallbeispiel · Lebenskunst)*
+Im Juli 2023 registrierten Seismographen in Seattle Erschütterungen, ausgelöst von zehntausenden tanzenden Fans an einem Konzert von Taylor Swift, über Stunden hinweg. Dieselbe Tournee wurde später von Guinness World Records als die kommerziell erfolgreichste der Welt anerkannt.
+
+Man kann darüber spotten: so viel Gefühl für ein Popkonzert. Nussbaum widerspricht dem alten Verdacht, Gefühle seien Störungen der Vernunft. Ein starkes Gefühl ist für sie ein Urteil: Es sagt dir, was dir wichtig ist, lange bevor du es begründen kannst. Wer bei einem Lied weint, denkt nicht zu wenig, sondern erkennt etwas: Das hier betrifft mich. Gefühle ernst zu nehmen heisst, solche Urteile lesen zu lernen, die eigenen und die der anderen, statt sie sich auszureden. Freude, die den Boden zum Zittern bringt, ist eine Auskunft darüber, was zählt.
+
+> **Belegt** («registrierten Seismographen in Seattle»): [The Eras Tour (Wikipedia)](https://de.wikipedia.org/wiki/The_Eras_Tour) — Beim Konzert im Lumen Field in Seattle im Juli 2023 «registrierten lokale Seismographen für Menschen nicht wahrnehmbare Erschütterungen der Erde», ausgelöst von den Fans, über mehrere Stunden. Eine Magnitude nennt der Artikel nicht, darum steht auch im Text keine. *(geprüft 2026-08-13)*
+
+> **Belegt** («kommerziell erfolgreichste»): [The Eras Tour (Wikipedia)](https://de.wikipedia.org/wiki/The_Eras_Tour) — Die Tournee wurde «im Dezember 2023 von Guinness World Records als kommerziell erfolgreichste Tournee weltweit anerkannt»; nach rund 60 Konzerten lag der Umsatz bei 1,04 Milliarden Dollar. *(geprüft 2026-08-13)*
+
 **[DW-890f29]** *(Zur Philosophie · Lebenskunst)*
 Maurice Merleau-Ponty war ein französischer Philosoph der Phänomenologie. Sein Thema ist der Leib: Wir erfahren die Welt nicht zuerst mit dem Kopf, sondern leiblich, durch Wahrnehmung, Bewegung, Berührung und Gefühl. Der Körper ist kein Ding, das wir bloss «haben», sondern die Art, wie wir zur Welt gehören. Verstehen und ein gutes Leben sind darum verkörpert, nicht rein rechnerisch. Genau das kann eine körperlose KI nicht: Sie verarbeitet Zeichen, aber sie spürt und erlebt nicht. Werk: «Phänomenologie der Wahrnehmung» (1945).
 
+**[DW-76be7d]** *(Fallbeispiel · Lebenskunst)*
+In Paris war 2024 Breaking zum ersten Mal olympische Disziplin, ausgetragen mitten in der Stadt auf der Place de la Concorde. Das erste Gold der B-Girls gewann Ami Yuasa aus Japan, bei den B-Boys siegte der Kanadier Philip Kim.
+
+Versuch, einen Headspin aus einer Beschreibung zu lernen. Du kannst jede Anweisung auswendig aufsagen und fällst trotzdem. Irgendwann, nach vielen Anläufen, «hat» es der Körper: Schwung, Druck und Balance sind dann kein Wissen im Kopf, sondern ein Können im Leib. Merleau-Ponty sagt: So verstehen wir die Welt überhaupt, zuerst leiblich, dann in Begriffen. Der Körper ist kein Werkzeug, das du benutzt, er ist deine Art, da zu sein. Ein Video zeigt dir jeden Move in Zeitlupe. Verstehen wird ihn dein Rücken.
+
+> **Belegt** («Ami Yuasa»): [Breaking an den Sommerspielen 2024 (Wikipedia)](https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2024/Breaking) — Breaking war in Paris «erstmals Teil des olympischen Programms», ausgetragen am 9. und 10. August 2024 auf der Place de la Concorde. Gold der B-Girls: Ami Yuasa (Japan); Gold der B-Boys: Philip Kim (Kanada). *(geprüft 2026-08-13)*
+
 **[DW-cfa60f]** *(Zur Philosophie · Lebenskunst)*
 Hartmut Rosa ist ein deutscher Soziologe, bekannt für die Diagnose der gesellschaftlichen «Beschleunigung». Dagegen setzt er den Begriff «Resonanz»: Ein gelingendes Leben entsteht nicht durch mehr Kontrolle, mehr Tempo und mehr Verfügbarkeit, sondern durch ein lebendiges, wechselseitiges Antworten zwischen Mensch und Welt, ein Berührtwerden. Vieles, was zählt, lässt sich gerade nicht erzwingen oder verfügbar machen, es muss einem begegnen. In einer Welt schneller KI erinnert er daran, das Sich-berühren-Lassen nicht zu verlernen. Werke: «Resonanz» (2016), «Unverfügbarkeit» (2018).
+
+**[DW-8f9895]** *(Fallbeispiel · Lebenskunst)*
+In der Nacht auf den 11. Mai 2024 traf der erste Sonnensturm der höchsten Kategorie seit 2003 die Erde, und für einmal waren Polarlichter bis in die Schweiz zu sehen. Wer zufällig draussen war oder geweckt wurde, stand plötzlich unter einem leuchtenden Himmel.
+
+Das Besondere daran: Es liess sich nicht buchen. Kein Ticket, kein Abo, keine Wiederholung auf Abruf, nicht einmal eine verlässliche Vorhersage. Rosa nennt Resonanz, was uns gerade deshalb berührt, weil es nicht verfügbar ist: Die Welt antwortet, aber nicht auf Bestellung. In einem Alltag, in dem fast alles sofort lieferbar ist, der Song, die Serie, die Antwort, sind solche Momente kleine Übungsplätze. Hinstehen, warten dürfen, sich berühren lassen. Mehr Kontrolle würde genau das zerstören, was diesen Abend besonders gemacht hat.
+
+> **Belegt** («Polarlichter bis in die Schweiz»): [Swissinfo, 11. Mai 2024: «Stärkster Sonnensturm seit 2003»](https://www.swissinfo.ch/ger/st%C3%A4rkster-sonnensturm-seit-2003-f%C3%BChrt-zu-schweizer-polarlichtern/77308421) — «Der erste ‹extreme› Sonnensturm seit 2003»: Die Kategorie fünf war laut NOAA zuletzt im Oktober 2003 bei den Halloween-Stürmen erreicht worden. «Aufgrund des starken geomagnetischen Sturms waren Polarlichter bis in die Schweizer Breitengrade sichtbar», festgehalten etwa von einer Wetterkamera in Ravoire bei Martigny am Abend des 10. Mai 2024. *(geprüft 2026-08-13)*
 
 ### Thema 03 · Das Orakel
 
@@ -116,53 +206,3 @@ Man tippt eine Frage in ganz normaler Sprache und die KI antwortet flüssig. Es 
 
 **[VA-5dbc1a]** *(Kartentext · Der Durchbruch)*
 Innert weniger Wochen nutzten Millionen ChatGPT. Es war der Moment, in dem KI im Alltag vieler Menschen ankam und der Moment, in dem Schulen und Betriebe plötzlich Regeln brauchten.
-
-**[VA-a3de04]** *(Kartentext · Yan Shi's Automat)*
-Der Traum vom künstlichen Menschen ist nicht nur europäisch, sondern kehrt in vielen Kulturen wieder. Auch in China erzählte man früh von einer täuschend lebendigen Figur. Ein Handwerker führt sie dem König vor und niemand erkennt zuerst, dass sie gebaut ist. Schon hier klingt die Frage an, wo die Grenze zwischen echtem und nachgeahmtem Leben verläuft.
-
-**[VA-6b2709]** *(Vertiefung «Mehr lesen» · Yan Shi's Automat)*
-Im «Liezi» wird die Figur bis ins Innere beschrieben, denn der Handwerker hatte ihr nachgebildete Organe wie Herz, Lunge, Leber, Nieren, Muskeln und Knochen gegeben. Erstaunlich ist, dass jedes Organ eine eigene Aufgabe trug. Entfernte man das künstliche Herz, verstummte die Figur, nahm man die Leber weg, konnte sie nicht mehr sehen und ohne die Nieren versagten die Beine. Damit erzählt der Text nicht bloss von einer Puppe, sondern von einem durchdachten künstlichen Körper mit inneren Teilen. Die Episode steht im Kapitel «Tang Wen» und spielt am Hof von König Mu, der von weiten Reisen zurückkehrt. Am Ende zeigt sich der König überzeugt, dass menschliche Geschicklichkeit fast an die Werke der Natur heranreicht. So verhandelt die Erzählung schon vor vielen Jahrhunderten, ob ein Gemachtes dem Gewachsenen gleichkommen kann.
-
-**[VA-47b959]** *(Bildgeschichte · Expertensysteme)*
-Systeme wie MYCIN gossen das Wissen von Fachleuten in tausende Wenn-dann-Regeln, etwa für die Diagnose von Infektionen. In ihrem engen Gebiet waren sie nützlich. Doch sie blieben teuer im Unterhalt. Und sie waren starr gegenüber allem, was in keiner Regel stand.
-
-> **Belegt** («für die Diagnose von Infektionen»): [Mycin, Expertensystem (Wikipedia)](https://de.wikipedia.org/wiki/Mycin_(Expertensystem)) — «Mycin ist ein seit 1972 an der Stanford University in der Programmiersprache Lisp entwickeltes Expertensystem, das zur Diagnose und Therapie von Infektionskrankheiten durch Antibiotika eingesetzt wurde.» *(geprüft 2026-08-10)*
-
-**[VA-744c71]** *(Kartentext · Statistische KI)*
-In den 1990er-Jahren kam die grosse Wende. Statt Regeln von Hand zu schreiben, liess man Maschinen aus vielen Beispielen selbst lernen. Damit wurden die Daten wichtiger als die aufgeschriebene Logik. Die KI begann, Muster zu erraten, statt starre Vorschriften zu befolgen.
-
-**[VA-67c82e]** *(Bildgeschichte · Statistische KI)*
-Ab den 1990er-Jahren lernten Maschinen Muster aus Beispielen, etwa um Spam zu erkennen, Handschrift zu lesen oder Sprache zu erraten. Nicht mehr das aufgeschriebene Wissen der Fachleute war entscheidend, sondern die Menge und die Qualität der Daten. Das war ein tiefer Bruch mit der regelbasierten KI. Der Erfolg gab dem neuen Weg recht.
-
-**[VA-22ca4c]** *(Vertiefung «Mehr lesen» · Algorithmen filtern das Internet)*
-Der Name PageRank spielt auf Larry Page an, der das Verfahren zusammen mit Sergey Brin an der Universität Stanford entwickelte, wo ihre Suchmaschine anfangs noch «BackRub» hiess. Die Grundidee lehnten die beiden an die Wissenschaft an, denn dort gilt ein Aufsatz als bedeutend, wenn viele andere ihn zitieren. Übertragen aufs Web heisst das, eine Seite ist wichtig, wenn viele wichtige Seiten auf sie verweisen. Fast zeitgleich brachte der Onlinehändler Amazon Ende der 1990er-Jahre Empfehlungen der Art «Kunden, die dies kauften, kauften auch jenes» gross heraus. Beide Ansätze eint, dass nicht mehr ein Mensch, sondern eine Formel über Sichtbarkeit und Reihenfolge entscheidet. Wer weit oben steht, wird gefunden, der Rest verschwindet in der Masse. So wurde der Rang zur eigentlichen Währung im Netz.
-
-**[VA-6d5b0a]** *(Vertiefung «Mehr lesen» · datenbasiert)*
-«Die Lernalgorithmen sind die Samen, die Daten der Boden», sagt der Forscher Pedro Domingos. Ohne guten Boden wächst auch aus dem besten Samen nichts. Ein Beispiel: Wurde eine KI fast nur mit englischen Texten trainiert, antwortet sie auf Deutsch oft schwächer. Zeigten die Bilddaten kaum Menschen mit dunkler Haut, erkennt sie diese schlechter. So werden Lücken und Einseitigkeiten der Daten zu Lücken und Einseitigkeiten der KI. Darum ist die Frage, woher die Daten stammen, keine Nebensache, sondern der Kern.
-
-**[VA-9e5c9f]** *(Kartentext · mustererkennend)*
-Tippst du auf dem Handy «Salz und», schlägt die Tastatur «Pfeffer» vor. Die KI macht im Grossen dasselbe. Sie hat in Unmengen von Texten gesehen, was häufig zusammen vorkommt, und hält es darum für zusammengehörig. Warum Salz und Pfeffer zusammenpassen, weiss sie nicht. Sie erkennt das Muster verlässlich, ohne es zu verstehen.
-
-**[VA-ad6512]** *(Vertiefung «Mehr lesen» · mustererkennend)*
-Die Informatikerin Katharina Zweig bringt es nüchtern auf den Punkt. Das System hat bestimmte Wörter einfach oft in bestimmten Zusammenhängen gelesen und leitet daraus statistische Muster ab. Ein Beispiel: Es weiss, dass nach «Es war einmal» meist ein Märchen folgt, weil das millionenfach so dastand. Ein echtes Verständnis von Märchen hat es deswegen nicht. Zweigs Fazit ist deutlich, dass solche Systeme noch gar nicht wirklich intelligent sind. Sie erkennen sehr gut, aber sie begreifen nichts.
-
-**[VA-9f6b84]** *(Kartentext · wahrscheinlichkeitsbasiert)*
-Welches Wort folgt auf «Hochmut kommt vor dem …»? Da fällt allen dasselbe ein. Genau so arbeitet die KI: Sie sagt aus dem Bisherigen das nächste Wort voraus. Meist ist die Fortsetzung aber nicht eindeutig. Nach «Nach der Vorlesung gehe ich in die …» ist «Mensa» wahrscheinlich, «Stadt» auch möglich, «Schule» kaum. Die KI berechnet für viele Möglichkeiten eine Wahrscheinlichkeit und greift dann zu. Ihre Antwort ist darum eine Wette mit sehr guten Quoten, aber eben eine Wette.
-
-**[VA-e41f4b]** *(Vertiefung «Mehr lesen» · wahrscheinlichkeitsbasiert)*
-Damit die KI überhaupt rechnen kann, wird jedes Wort, genauer jeder Wortteil, in eine lange Zahlenreihe übersetzt. Solche Zahlenreihen heissen Vektoren. Man darf sich einen Vektor als Ort in einem Raum vorstellen: «Hund» und «Katze» liegen dort nah beieinander, «Hund» und «Schraube» weit auseinander. Dieser Raum hat allerdings nicht drei Richtungen wie unserer, sondern sehr viele. Die Informatikerin Katharina Zweig nennt Hunderte bis über zehntausend Richtungen. Was eine einzelne davon bedeutet, kann niemand ablesen; erst ihr Zusammenspiel ergibt die Lage eines Wortteils. Der Philosoph Markus Gabriel nennt dieses Übersetzen in Mathematik «vektorisieren». Am Ende bleibt es ein Rechnen mit Lagen und Abständen, kein Verstehen. Wie «mutig» die KI beim Auswählen würfelt, regelt eine Einstellung namens Temperatur. Ein hoher Wert macht die Antworten kreativer und unberechenbarer, ein niedriger vorhersehbarer. Darum kann dieselbe Frage zweimal ganz verschieden beantwortet werden.
-
-**[VA-3dbf88]** *(Kartentext · generalisierend)*
-Hat eine KI tausende Katzenfotos gesehen, erkennt sie auch eine Katze auf einem Bild, das ihr völlig neu ist. Sie überträgt Gelerntes auf Neues. Aus vielen einzelnen Beispielen zieht sie eine allgemeine Regel. So kann sie sogar Sätze sinnvoll fortsetzen, die noch nie jemand geschrieben hat. Genau das unterscheidet echtes Lernen vom reinen Auswendiglernen.
-
-**[VA-251f64]** *(Kartentext · adaptiv)*
-Schreibst du locker und mit Emojis, antwortet die KI oft ebenso locker. Sie passt sich an, an deinen Ton, deine Beispiele und deine Korrekturen. Sagst du «bitte kürzer», wird die nächste Antwort kürzer. Wichtig ist dabei ein Unterschied: Im laufenden Gespräch stellt sie sich auf dich ein, dazulernen tut sie dabei nicht. Ob deine Eingaben später ins Training einfliessen, hängt vom Anbieter, vom Produkt und von deinen Einstellungen ab.
-
-**[VA-02ccbc]** *(Kartentext · Rechen- und Speicherkapazität)*
-Leistungsfähige KI braucht sehr viele spezielle Computerchips, Server und Speicher. Diese Anlagen sind teuer und stehen nur wenigen grossen Unternehmen und Staaten zur Verfügung. Wer diese Rechenkraft besitzt, hat einen grossen Vorsprung. So entsteht eine Abhängigkeit von einigen wenigen Anbietern.
-
-**[VA-62c30a]** *(Kartentext · Arbeitsmarkt)*
-KI verändert die Arbeitswelt spürbar. Sie übernimmt vor allem einzelne Aufgaben, selten gleich einen ganzen Beruf. Manche Tätigkeiten fallen weg, andere verändern sich und neue kommen dazu. Für viele Berufe bedeutet das neue Anforderungen und neues Lernen.
-
-**[VA-225dcb]** *(Kartentext · Kultureller Bias und Technikverständnis)*
-KI lernt aus Texten, die oft aus dem englischsprachigen und westlichen Raum stammen. Darum gibt sie häufig westliche Sprachen, Werte und Sichtweisen wieder. Andere Kulturen verstehen Technik, Gemeinschaft und Privatsphäre aber teils ganz anders. «West» und «Ost» sind dabei keine festen Blöcke, sondern grobe Vereinfachungen.

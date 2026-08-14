@@ -13,8 +13,8 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 174 |
-| Belegte Textblöcke | 97 |
+| Belege | 197 |
+| Belegte Textblöcke | 115 |
 | Begründete Nicht-Belege | 6 |
 | Aussagen mit Standdatum | 3 |
 
@@ -1639,6 +1639,259 @@ Genau darum geht es Kant: eine Regel befolgen oder sie einsehen. An einer Landsg
 Ab wann jemand mitentscheiden darf, ist überall anders festgelegt: in Österreich, auf Malta und in Brasilien ab 16, in Indonesien ab 17, in den meisten Ländern ab 18. Die Zahl wird gesetzt, nicht gefunden. Kant hat für die Sache ein anderes Wort, Mündigkeit, und er meint damit nichts, was ein Gesetz festlegen könnte. Unmündig ist für ihn, wer seinen Verstand nicht ohne die Leitung eines anderen gebraucht, und schuld daran ist nach ihm meist nicht fehlender Verstand, sondern fehlender Mut. Man kann also abstimmen dürfen und trotzdem andere entscheiden lassen. Und man kann mit 16 Gründe haben.
 
 Genau darum geht es Kant: eine Regel befolgen oder sie einsehen. An einer Landsgemeinde hebt man die Hand offen, alle sehen es und jemand kann fragen, warum. «Weil es alle so machen» ist dann keine Antwort. Pesaballe hat Leute überzeugt, die ihn hätten überstimmen können. Für die bequeme Seite hat Kant ein Bild, das heute verblüffend nah klingt: ein Buch, das für mich Verstand hat, ein Arzt, der für mich die Diät beurteilt, dann muss ich mich nicht selbst bemühen. Eine KI, die dir die Begründung schreibt, ist nicht verboten und oft nützlich. Der Unterschied zeigt sich erst, wenn jemand nachfragt, denn verteidigen kannst du nur einen Grund, den du selbst verstanden hast.
+
+### Was ist der Mensch? · Jugendwort des Jahres
+
+- **Kennung:** `DW-5d8b84` (Fallbeispiel)
+- **Quelle:** [Jugendwort des Jahres (Wikipedia)](https://de.wikipedia.org/wiki/Jugendwort_des_Jahres_(Deutschland))
+- **Fundstelle:** Gewählt «ab 2008 jährlich von einer Jury unter der Leitung des Langenscheidt-Verlags», seit 2020 offen für alle. Siegerwort 2024: «Aura», es «bezieht sich (oft scherzhaft) auf die Ausstrahlung, das Charisma oder den Status einer Person». 2025 gewann «das crazy», «ein Füllwort, wenn jemand nichts zum Thema sagen, aber freundlich bleiben möchte».
+- **Geprüft:** 2026-08-13
+
+> Jedes Jahr wird im deutschsprachigen Raum das Jugendwort des Jahres gekürt, seit 2008, heute per offener Abstimmung. 2024 gewann «Aura»: die Ausstrahlung, das Charisma, der Status einer Person, oft scherzhaft gebraucht. 2025 folgte «das crazy», ein Füllwort für Momente, in denen jemand freundlich bleiben, aber nichts sagen möchte.
+
+Woher hat ein Wort seine Bedeutung? Sie wird nicht ausgerechnet, sie wird im Gebrauch festgesetzt, indem ihr unterscheidet: Aura ist nicht Leistung und nicht Beliebtheit, eher Wirkung ohne Anstrengung. Genau das heisst bei Hegel Unterscheiden: Was etwas ist, zeigt sich an dem, wovon es sich abhebt, und diese Grenzen werden gezogen, nicht gefunden. Darum wandern sie auch. Nächstes Jahr gewinnt ein anderes Wort und deine Sprache bekommt neue Kanten, die niemand aus den alten errechnen konnte.
+
+### Was ist der Mensch? · Skolstrejk för klimatet
+
+- **Kennung:** `DW-6951c9` (Fallbeispiel)
+- **Quelle:** [Fridays for Future (Wikipedia)](https://de.wikipedia.org/wiki/Fridays_for_Future)
+- **Fundstelle:** Greta Thunberg begann den Schulstreik am 20. August 2018 mit 15 Jahren und sass «zunächst für einen Zeitraum von drei Wochen, täglich während der Unterrichtszeit vor dem schwedischen Reichstagsgebäude in Stockholm», mit einem Schild «Skolstrejk för klimatet» (Schulstreik fürs Klima); ab dem 8. September jeden Freitag.
+- **Geprüft:** 2026-08-13
+
+> Am 20. August 2018 setzte sich eine 15-jährige Schülerin mit einem Schild vor das Parlament in Stockholm: «Skolstrejk för klimatet», Schulstreik fürs Klima. Drei Wochen lang sass sie dort jeden Schultag, danach jeden Freitag. Ein halbes Jahr später, am 15. März 2019, streikten nach Angaben der Bewegung weltweit fast 1,8 Millionen Menschen.
+
+Niemand hätte das aus dem Vortag ableiten können. Ein Mädchen, ein Karton, ein Gehsteig: Alles daran war unscheinbar, nur neu war es. Arendt nennt diese Fähigkeit Natalität: Weil du geboren wurdest und nicht das Ergebnis des Bisherigen bist, kannst du etwas anfangen, das vorher nicht in der Welt war. Anfangen ist darum immer unwahrscheinlich und immer riskant. Und es bleibt dein Teil: Fortsetzen, hochrechnen und wiederholen lässt sich vieles, anfangen nicht.
+
+### Was ist der Mensch? · fast 1,8 Millionen Menschen
+
+- **Kennung:** `DW-6951c9` (Fallbeispiel)
+- **Quelle:** [Fridays for Future (Wikipedia)](https://de.wikipedia.org/wiki/Fridays_for_Future)
+- **Fundstelle:** Zum globalen Klimastreik vom 15. März 2019: Es «sollen nach Angaben der Bewegung beispielsweise fast 1,8 Mio. Menschen an den Demonstrationen von FFF teilgenommen haben». Darum steht im Text «nach Angaben der Bewegung».
+- **Geprüft:** 2026-08-13
+
+> Am 20. August 2018 setzte sich eine 15-jährige Schülerin mit einem Schild vor das Parlament in Stockholm: «Skolstrejk för klimatet», Schulstreik fürs Klima. Drei Wochen lang sass sie dort jeden Schultag, danach jeden Freitag. Ein halbes Jahr später, am 15. März 2019, streikten nach Angaben der Bewegung weltweit fast 1,8 Millionen Menschen.
+
+Niemand hätte das aus dem Vortag ableiten können. Ein Mädchen, ein Karton, ein Gehsteig: Alles daran war unscheinbar, nur neu war es. Arendt nennt diese Fähigkeit Natalität: Weil du geboren wurdest und nicht das Ergebnis des Bisherigen bist, kannst du etwas anfangen, das vorher nicht in der Welt war. Anfangen ist darum immer unwahrscheinlich und immer riskant. Und es bleibt dein Teil: Fortsetzen, hochrechnen und wiederholen lässt sich vieles, anfangen nicht.
+
+### Was ist der Mensch? · Momiji Nishiya
+
+- **Kennung:** `DW-2b8995` (Fallbeispiel)
+- **Quelle:** [Skateboard an den Sommerspielen 2020 (Wikipedia)](https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2020/Skateboard)
+- **Fundstelle:** «Erstmals waren bei den Olympischen Spielen 2020 in Tokio Wettbewerbe im Skateboard Teil des olympischen Programms.» Street der Frauen: Gold an die 13-jährige Momiji Nishiya (Japan), «zur jüngsten Olympiasiegerin Japans»; Silber an die ebenfalls 13-jährige Rayssa Leal (Brasilien). Die Spiele fanden wegen der Pandemie 2021 statt.
+- **Geprüft:** 2026-08-13
+
+> In Tokio standen 2021 zum ersten Mal Skateboards im olympischen Programm. Im Street-Wettbewerb der Frauen gewann die 13-jährige Momiji Nishiya aus Japan Gold, Silber ging an die ebenfalls 13-jährige Rayssa Leal aus Brasilien.
+
+Frag die beiden nicht, wo beim Absprung ihr Gewicht liegt. Beim Fahren ist das Brett kein Gegenstand, über den man nachdenkt: Es verschwindet ins Können, gedacht wird in Linien und Landungen. Erst wenn etwas klemmt, ein Trick misslingt, eine Achse bricht, liegt da wieder ein Ding mit Schrauben. Heidegger meint mit Sorge genau dieses Eingelassensein: Du bist nicht zuerst Zuschauerin der Welt, du bist mit ihr beschäftigt und im Umgang entsteht Verstehen. Ein Erklärvideo hilft, aber gekonnt wird es unter deinen Füssen.
+
+### Was ist der Mensch? · unter drei Sekunden
+
+- **Kennung:** `DW-0ee6ed` (Fallbeispiel)
+- **Quelle:** [Speedcubing (Wikipedia)](https://de.wikipedia.org/wiki/Speedcubing)
+- **Fundstelle:** Die Rekordtabelle nennt als Weltrekord im Einzellösen des 3×3×3 2,76 Sekunden, aufgestellt von Teodor Zajder am 7. Februar 2026. Zu den Methoden: Bei den schnellsten müssen «sehr viele Algorithmen und Spezialfälle auswendig gelernt werden». Der Text sagt bewusst nur «unter drei Sekunden», damit er nicht mit jedem neuen Rekord falsch wird.
+- **Geprüft:** 2026-08-13
+
+> Der Weltrekord im Lösen des Zauberwürfels liegt unter drei Sekunden, aufgestellt im Februar 2026. Wer das sieht, sagt Talent. Wer hinschaut, sieht Übung: eingeschliffene Fingerabläufe, tausendfach wiederholt, bis die Hände schneller sind als das bewusste Denken.
+
+Sloterdijk nennt den Menschen ein übendes Wesen: Du wirst, was du wiederholst, im Sport, in einer Sprache, in der Geduld, auch in dem, was du täglich nebenbei tust. Deine Gewohnheiten sind Übungen, ob du sie so nennst oder nicht. Das Entlastende daran: Können ist kein Besitz, sondern ein Weg und der steht allen offen, in kleinen Wiederholungen. Abkürzungen gibt es fürs Ergebnis. Fürs Können gibt es keine.
+
+### Was ist der Mensch? · Tetris-Effekt
+
+- **Kennung:** `DW-74e0f5` (Fallbeispiel)
+- **Quelle:** [Tetris-Effekt (Wikipedia)](https://de.wikipedia.org/wiki/Tetris-Effekt)
+- **Fundstelle:** Der Effekt tritt auf, «wenn Personen so viel Zeit in eine Aktivität stecken, dass diese anfängt, deren Denken, bildliche Vorstellung und Träume zu gestalten». Betroffene «träumen beim Einschlafen vielleicht auch von fallenden Tetrominos» und überlegen im Alltag, wie Schachteln im Supermarktregal zusammenpassen.
+- **Geprüft:** 2026-08-13
+
+> Wer lange Tetris spielt, kennt den Effekt: Beim Einschlafen fallen hinter den Augenlidern weiter Blöcke und im Supermarkt ordnet der Kopf die Schachteln im Regal zu Reihen. Das Phänomen heisst tatsächlich Tetris-Effekt und tritt auch bei anderem auf, das man stundenlang tut.
+
+Ein Programm ist beendet, wenn man es schliesst. Dein Denken nicht: Es spielt weiter, in Bildern, im Halbschlaf, im Blick auf die Welt. Was du tust, färbt, wie dir alles erscheint, und gefragt hat dich dabei niemand. Hustvedt sagt darum, der Geist sei kein Computer: Er ist verkörpert, durchzogen von Erfahrung und Gefühl, er lässt sich nicht sauber in Eingabe und Ausgabe zerlegen. Eine Maschine gibt Antworten aus. Erleben, wie eine Antwort in dir weiterarbeitet, kannst nur du.
+
+### Netzwerke und Systeme · Spotify Wrapped
+
+- **Kennung:** `DW-b54a5e` (Fallbeispiel)
+- **Quelle:** [Spotify Wrapped (Wikipedia, englisch)](https://en.wikipedia.org/wiki/Spotify_Wrapped)
+- **Fundstelle:** Gestartet im Dezember 2016, erscheint «typically released in late November or early December» und zeigt die meistgehörten Künstler, Songs und Genres des Jahres; die Bildschirmserie lädt ausdrücklich zum Teilen ein, Millionen posteten sie. Einen deutschen Wikipedia-Artikel gab es bei der Prüfung nicht.
+- **Geprüft:** 2026-08-13
+
+> Anfang Dezember zeigt dir Spotify Wrapped dein Jahr in Zahlen: die meistgehörten Songs, Künstlerinnen und Genres, aufbereitet zum Teilen, und Millionen stellen es dann in ihre Storys. Das gibt es seit 2016, und der seltsame Moment ist jedes Jahr derselbe: Eine Statistik kennt dich.
+
+Nassehi würde sagen: kein Wunder. Die Gesellschaft ist längst in Mustern gebaut, in Zählungen und Abläufen; die Digitalisierung erfindet sie nicht, sie macht sie sichtbar. Dein Musikjahr war immer schon ein Muster, neu ist nur der Spiegel. Sehen kann er allerdings nur Wiederholungen. Warum dich ein einziger Song durch den Sommer getragen hat, steht in keiner Liste, denn das Muster kennt deine Klicks und nicht deine Gründe.
+
+### Netzwerke und Systeme · 1987 kamen die Tapiokaperlen dazu
+
+- **Kennung:** `DW-20ecfe` (Fallbeispiel)
+- **Quelle:** [Bubble Tea (Wikipedia)](https://de.wikipedia.org/wiki/Bubble_Tea)
+- **Fundstelle:** Entstanden in Taiwan in den frühen 1980er Jahren, als eine Teehauskette kalten Tee mit Kondensmilch und Sirup ausschenkte; das heutige Getränk entstand, als 1987 die Tapiokaperlen dazukamen. Nach Europa kam es später, in die Schweiz 2012.
+- **Geprüft:** 2026-08-13
+
+> Bubble Tea entstand in den 1980er Jahren in Taiwan, 1987 kamen die Tapiokaperlen dazu; in der Schweiz gibt es ihn seit 2012. Die Perlen bestehen aus der Stärke des Maniok, einer Pflanze aus Südamerika, deren grösster Produzent heute Nigeria ist.
+
+Ein Becher, ein Strohhalm. Und daran hängen: eine Teekultur aus Taiwan, ein südamerikanisches Wurzelgemüse, Felder in Nigeria, ein Laden an deiner Ecke, ein Trend in deinem Feed. Nichts davon hat den Bubble Tea allein gemacht, gewirkt hat der Verbund. So schaut Latour auf die Welt: Wer verstehen will, was ein Ding ist, fragt, was alles mitwirkt. Die Übung funktioniert bei fast allem, beim Pausenbrot, beim Handy und bei jeder Antwort einer KI. Hinter jedem Einzelnen steht ein Netz.
+
+### Netzwerke und Systeme · grösster Produzent heute Nigeria
+
+- **Kennung:** `DW-20ecfe` (Fallbeispiel)
+- **Quelle:** [Maniok (Wikipedia)](https://de.wikipedia.org/wiki/Maniok)
+- **Fundstelle:** Maniok ist «wahrscheinlich als allotetraploide Pflanze aus südamerikanischen Manihot-Arten entstanden» (genannt werden Goiás, das Hinterland Bahias und die Amazonasregion). Grösster Produzent ist Nigeria mit rund 62,7 Millionen Tonnen (2023). «Die verarbeitete Stärke wird Tapioka genannt.»
+- **Geprüft:** 2026-08-13
+
+> Bubble Tea entstand in den 1980er Jahren in Taiwan, 1987 kamen die Tapiokaperlen dazu; in der Schweiz gibt es ihn seit 2012. Die Perlen bestehen aus der Stärke des Maniok, einer Pflanze aus Südamerika, deren grösster Produzent heute Nigeria ist.
+
+Ein Becher, ein Strohhalm. Und daran hängen: eine Teekultur aus Taiwan, ein südamerikanisches Wurzelgemüse, Felder in Nigeria, ein Laden an deiner Ecke, ein Trend in deinem Feed. Nichts davon hat den Bubble Tea allein gemacht, gewirkt hat der Verbund. So schaut Latour auf die Welt: Wer verstehen will, was ein Ding ist, fragt, was alles mitwirkt. Die Übung funktioniert bei fast allem, beim Pausenbrot, beim Handy und bei jeder Antwort einer KI. Hinter jedem Einzelnen steht ein Netz.
+
+### Transformation von Mensch und Maschine · 36,84
+
+- **Kennung:** `DW-fa222c` (Fallbeispiel)
+- **Quelle:** [4-mal-100-Meter-Staffel (Wikipedia)](https://de.wikipedia.org/wiki/4-mal-100-Meter-Staffel)
+- **Fundstelle:** Weltrekord der Männer: 36,84 Sekunden, Jamaika, London 2012 (Nesta Carter, Michael Frater, Yohan Blake, Usain Bolt); bei der Prüfung weiterhin als Weltrekord geführt.
+- **Geprüft:** 2026-08-13
+
+> Seit London 2012 steht der Weltrekord der 4-mal-100-Meter-Staffel bei 36,84 Sekunden, gelaufen von Jamaika. Möglich macht solche Zeiten der fliegende Wechsel: Wer den Stab übernimmt, startet, bevor er da ist, und übernimmt ihn in vollem Lauf. Eine Staffel ist darum schneller, als ihre vier Läufer einzeln zusammen wären.
+
+Wem gehört diese Zeit? Keinem der vier allein. Sie entsteht zwischen ihnen, in den Trainingsjahren, in drei Übergaben. Und der Stab läuft mit. Deguchi verlegt das Handeln genau dorthin: Nicht «ich» handelt, sondern «wir», ein Geflecht aus Menschen und Dingen, zu dem heute auch Maschinen gehören. Das nimmt dir nichts weg. Es heisst nur: Wer ehrlich sagen kann, wer und was alles mitgelaufen ist, versteht die eigene Leistung besser.
+
+### Transformation von Mensch und Maschine · fliegende Wechsel
+
+- **Kennung:** `DW-fa222c` (Fallbeispiel)
+- **Quelle:** [4-mal-100-Meter-Staffel (Wikipedia)](https://de.wikipedia.org/wiki/4-mal-100-Meter-Staffel)
+- **Fundstelle:** «Der Läufer, der jeweils den Stab übernimmt, startet schon, bevor ihn der übergebende Läufer erreicht hat, und übernimmt den Stab im Laufen.» Das ermöglicht erheblich höhere Durchschnittsgeschwindigkeiten als im Einzelrennen.
+- **Geprüft:** 2026-08-13
+
+> Seit London 2012 steht der Weltrekord der 4-mal-100-Meter-Staffel bei 36,84 Sekunden, gelaufen von Jamaika. Möglich macht solche Zeiten der fliegende Wechsel: Wer den Stab übernimmt, startet, bevor er da ist, und übernimmt ihn in vollem Lauf. Eine Staffel ist darum schneller, als ihre vier Läufer einzeln zusammen wären.
+
+Wem gehört diese Zeit? Keinem der vier allein. Sie entsteht zwischen ihnen, in den Trainingsjahren, in drei Übergaben. Und der Stab läuft mit. Deguchi verlegt das Handeln genau dorthin: Nicht «ich» handelt, sondern «wir», ein Geflecht aus Menschen und Dingen, zu dem heute auch Maschinen gehören. Das nimmt dir nichts weg. Es heisst nur: Wer ehrlich sagen kann, wer und was alles mitgelaufen ist, versteht die eigene Leistung besser.
+
+### Transformation von Mensch und Maschine · 18. November 2015
+
+- **Kennung:** `DW-90fa9a` (Fallbeispiel)
+- **Quelle:** [Ocean Eyes (Wikipedia)](https://de.wikipedia.org/wiki/Ocean_Eyes)
+- **Fundstelle:** Finneas O'Connell schrieb und produzierte den Song, ursprünglich für seine eigene Band; Billie Eilish war 13, als er ihn ihr gab. Der Tanzlehrer Fred Diaz hatte einen Song für eine Tanzübung erbeten; die Aufnahme wurde am 18. November 2015 mit kostenlosem Download-Link auf SoundCloud gestellt, «damit ihr Lehrer darauf zugreifen konnte». «Über Nacht hörten es etliche Menschen», danach meldete sich Interscope Records.
+- **Geprüft:** 2026-08-13
+
+> «Ocean Eyes» klingt nach einem Alleingang: ein Mädchen, ein Zimmer, ein Welthit. Tatsächlich hatte ihr Bruder Finneas den Song geschrieben, die 13-jährige Billie Eilish sang ihn und hochgeladen wurde er am 18. November 2015 auf SoundCloud, damit ihr Tanzlehrer ihn für eine Choreografie herunterladen konnte. Über Nacht teilten ihn Fremde, dann meldete sich ein Label.
+
+Das ganz unabhängige Individuum, das aus dem Nichts handelt, gibt es für Latour nicht, auch nicht im Schlafzimmerstudio. Da sind ein Bruder, ein Lehrer mit einem Auftrag, eine Plattform, tausende Teilende. Das macht die Leistung nicht kleiner, es macht sie verständlicher. Und wer das eigene Geflecht kennt, wird dadurch nicht abhängiger, sondern souveräner: Du weisst, was dich trägt, und kannst es pflegen.
+
+### Transformation von Mensch und Maschine · Prothese am linken Ellbogen
+
+- **Kennung:** `DW-504602` (Fallbeispiel)
+- **Quelle:** [Beatrice Vio (Wikipedia)](https://de.wikipedia.org/wiki/Beatrice_Vio)
+- **Fundstelle:** Mit elf erkrankte sie an Meningitis, «aufgrund von Nekrosen» wurden Unterarme und Unterschenkel amputiert. «Während die anderen Fechterinnen das Florett in der Hand halten, wird ihr Florett mit einer Prothese an ihrem linken Ellenbogen befestigt»; sie ist «die einzige Fechterin im Rollstuhlfechten, die ohne Hände, Unterarme und Beine antritt». Paralympics-Gold im Einzel-Florett in Rio am 14. September 2016 (mit 19) und erneut in Tokio am 28. August 2021.
+- **Geprüft:** 2026-08-13
+
+> Beatrice Vio war elf, als ihr nach einer Meningitis Unterarme und Unterschenkel amputiert wurden. Sie focht weiter: Ihr Florett ist mit einer Prothese am linken Ellbogen befestigt und sie ist die Einzige im Rollstuhlfechten, die ohne Hände und Beine antritt. An den Paralympics in Rio gewann sie mit 19 Gold, in Tokio verteidigte sie den Titel.
+
+Wo endet hier der Mensch, wo beginnt das Gerät? Beim Zuschauen wird die Frage sinnlos: Die Klinge antwortet ihr wie eine Hand. Haraway sagt, so verwoben sind wir alle längst, mit Brille, Impfung und dem Handy als Gedächtnis. Und die spannende Frage ist nicht, wie wir die Grenze rein halten, sondern wie wir mit unserer Technik verantwortlich leben. Vio zeigt, wie viel Freiheit in dieser Verwobenheit stecken kann.
+
+### Transformation von Mensch und Maschine · Mindestalter von 16 Jahren
+
+- **Kennung:** `DW-21bd79` (Fallbeispiel)
+- **Quelle:** [Online Safety Amendment (Social Media Minimum Age) Act 2024 (Wikipedia, englisch)](https://en.wikipedia.org/wiki/Online_Safety_Amendment_(Social_Media_Minimum_Age)_Act_2024)
+- **Fundstelle:** Das australische Gesetz («world-first law») wurde am 29. November 2024 verabschiedet; die Plattformen hatten bis zum 10. Dezember 2025 Zeit zur Umsetzung. Reguliert werden zehn Plattformen, darunter Facebook, Instagram, TikTok, Snapchat, YouTube und X. Einen deutschen Wikipedia-Artikel gab es bei der Prüfung nicht.
+- **Geprüft:** 2026-08-13
+
+> Seit dem 10. Dezember 2025 gilt in Australien als erstem Land der Welt ein Mindestalter von 16 Jahren für Konten auf grossen Plattformen, von Instagram über TikTok bis YouTube. Die Erwachsenen waren in Umfragen deutlich dafür, 77 Prozent. Von 17'000 befragten Jugendlichen sagten 70 Prozent Nein.
+
+Harari erzählt Geschichte als Geschichte wachsender Macht: Werkzeuge, die ganze Gesellschaften umbauen, brauchen Regeln, und zwar bevor alle Folgen bekannt sind. Nur fallen Regeln nicht vom Himmel. Sie werden ausgehandelt, zwischen Generationen, Ländern und Interessen, mit offenem Ausgang. Und andere Länder schauen gerade genau hin. An den zwei Zahlen oben ist darum nicht interessant, wer recht hat, sondern was hier verhandelt wird: die Sorge der einen gegen den Alltag der anderen. Was wäre deine Regel und wie würdest du sie begründen?
+
+### Transformation von Mensch und Maschine · sagten 70 Prozent Nein
+
+- **Kennung:** `DW-21bd79` (Fallbeispiel)
+- **Quelle:** [Online Safety Amendment (Social Media Minimum Age) Act 2024 (Wikipedia, englisch)](https://en.wikipedia.org/wiki/Online_Safety_Amendment_(Social_Media_Minimum_Age)_Act_2024)
+- **Fundstelle:** YouGov im November 2024: «77% of Australians supported the age limit». In einer ABC-Umfrage unter 17'000 Jugendlichen antworteten auf die Frage, ob das Verbot eine gute Idee sei, «70% (...) No».
+- **Geprüft:** 2026-08-13
+
+> Seit dem 10. Dezember 2025 gilt in Australien als erstem Land der Welt ein Mindestalter von 16 Jahren für Konten auf grossen Plattformen, von Instagram über TikTok bis YouTube. Die Erwachsenen waren in Umfragen deutlich dafür, 77 Prozent. Von 17'000 befragten Jugendlichen sagten 70 Prozent Nein.
+
+Harari erzählt Geschichte als Geschichte wachsender Macht: Werkzeuge, die ganze Gesellschaften umbauen, brauchen Regeln, und zwar bevor alle Folgen bekannt sind. Nur fallen Regeln nicht vom Himmel. Sie werden ausgehandelt, zwischen Generationen, Ländern und Interessen, mit offenem Ausgang. Und andere Länder schauen gerade genau hin. An den zwei Zahlen oben ist darum nicht interessant, wer recht hat, sondern was hier verhandelt wird: die Sorge der einen gegen den Alltag der anderen. Was wäre deine Regel und wie würdest du sie begründen?
+
+### Transformation von Mensch und Maschine · über 100 Millionen
+
+- **Kennung:** `DW-86eeb7` (Fallbeispiel)
+- **Quelle:** [ChatGPT (Wikipedia)](https://de.wikipedia.org/wiki/ChatGPT)
+- **Fundstelle:** Veröffentlicht «am 30. November 2022»; innerhalb von fünf Tagen registrierten sich weltweit eine Million Nutzer, «im Januar 2023 erreichte ChatGPT über 100 Millionen Nutzer». Zum Vergleich nennt der Artikel für die erste Million: TikTok etwa neun Monate, Instagram zweieinhalb Jahre.
+- **Geprüft:** 2026-08-13
+
+> ChatGPT wurde am 30. November 2022 veröffentlicht. Nach fünf Tagen hatten sich eine Million Menschen registriert, im Januar 2023 waren es über 100 Millionen. TikTok hatte für die erste Million rund neun Monate gebraucht, Instagram zweieinhalb Jahre.
+
+Warum nennt Gabriel so etwas einen Spiegel? Trainiert wurde das Werkzeug an menschlichem Schreiben. Was es dir zeigt, sind Muster von uns und im Kleinen Muster von dir: deine Formulierungen, deine Abkürzungen, deine Wünsche. Lässt du dir drei Fassungen einer heiklen Nachricht vorschlagen, hast du drei Spiegelbilder, aber senden musst du eine, und diese Wahl zeigt, wer du bist. Die eigentliche Prüfung läuft darum nicht im Rechenzentrum. Sie läuft bei dir.
+
+### Lebenskunst · aus Rücksicht auf ihre mentale Gesundheit
+
+- **Kennung:** `DW-83d626` (Fallbeispiel)
+- **Quelle:** [Simone Biles (Wikipedia)](https://de.wikipedia.org/wiki/Simone_Biles)
+- **Fundstelle:** Im Teamfinal von Tokio am 27. Juli 2021 zog sie sich nach dem Sprung zurück, «aus Rücksicht auf ihre mentale Gesundheit, nicht wegen einer körperlichen Verletzung». In Paris 2024 gewann sie Gold mit dem Team, im Mehrkampf und am Sprung sowie Silber am Boden.
+- **Geprüft:** 2026-08-13
+
+> Im Teamfinal von Tokio 2021 zog sich die US-Turnerin Simone Biles nach einem Sprung zurück, aus Rücksicht auf ihre mentale Gesundheit, nicht wegen einer Verletzung. Drei Jahre später in Paris gewann sie drei Mal Gold und ein Mal Silber.
+
+Die Stoiker unterscheiden zwischen dem, was in deiner Macht steht, und dem, was nicht. Nicht in Biles' Macht: die Erwartungen eines Weltpublikums, die Schlagzeilen, der Medaillenspiegel. In ihrer Macht: das eigene Urteil darüber, was jetzt richtig ist, und das Handeln danach, gegen den Druck. Genau das ist die stoische Übung, die eigene Kraft dorthin zu legen, wo sie wirkt. Das ist kein Rückzug aus der Welt: Wer so unterscheidet, kommt zurück, sobald es wieder die eigene Entscheidung ist.
+
+### Lebenskunst · Bullet Journal
+
+- **Kennung:** `DW-e18429` (Fallbeispiel)
+- **Quelle:** [Bullet Journal (Wikipedia)](https://de.wikipedia.org/wiki/Bullet_Journal)
+- **Fundstelle:** «Ein Bullet Journal (auch als BuJo bekannt) ist ein individuelles Organisationssystem, das 2013 von dem digitalen Produktdesigner Ryder Carroll entwickelt wurde.» Es verbindet «Terminplanung, To-Do-Listen, Tagebuch und Brainstorming in einem einzigen Notizbuch», üblich sind Notizbücher mit Punkteraster.
+- **Geprüft:** 2026-08-13
+
+> Ein Bullet Journal ist ein Notizbuch mit Punkteraster, das Terminplanung, To-do-Listen, Tagebuch und Brainstorming in einem einzigen Heft verbindet. Entwickelt hat es 2013 der Designer Ryder Carroll.
+
+Neu ist die Idee nicht, und das ist das Schöne daran. Foucault hat in seinem Spätwerk die antike Sorge um sich selbst wieder ausgegraben: Schon damals führten Menschen Notizhefte, um ihr Leben zu ordnen und an sich zu arbeiten. Ein Leben formen wie ein Kunstwerk heisst nicht, sich für fremde Massstäbe zu optimieren, für Noten, Follower und Bestenlisten. Es heisst, selbst zu wählen, woran du arbeitest. Dafür ist ein Heft, das niemand liken kann, ein ziemlich gutes Werkzeug: Es gehört nur dir.
+
+### Lebenskunst · 2008 in Litauen
+
+- **Kennung:** `DW-11c6a9` (Fallbeispiel)
+- **Quelle:** [Vinted (Wikipedia)](https://de.wikipedia.org/wiki/Vinted)
+- **Fundstelle:** «Vinted wurde 2008 unter dem Namen Miju Projects von Justas Janauskas und Milda Mitkute in Litauen gegründet.» 2022 «über 65 Millionen Mitglieder», vertreten «in 16 Ländern in Europa und Nordamerika»; gehandelt werden Secondhandkleidung, Accessoires und mehr.
+- **Geprüft:** 2026-08-13
+
+> Vinted wurde 2008 in Litauen gegründet und ist heute mit über 65 Millionen Mitgliedern eine der grössten Plattformen für Secondhandkleidung: kaufen und verkaufen per App, quer durch Europa und Nordamerika.
+
+«Nachhaltiger leben» ist als Vorsatz so gross, dass er oft schon am Sonntagabend endet. Schmid setzt deshalb auf kleinste Schritte: täglich, fast beiläufig, aber regelmässig, und möglichst am Schönen orientiert statt am Verzicht. Eine einzige neue Gewohnheit reicht für den Anfang, zum Beispiel zuerst secondhand schauen und erst dann neu kaufen. Das kostet wenig Überwindung, es macht sogar Spass, das Lieblingsteil für wenige Franken zu finden, und es summiert sich. Nicht das ganze Leben ändern. Eine Gewohnheit.
+
+### Lebenskunst · registrierten Seismographen in Seattle
+
+- **Kennung:** `DW-f79364` (Fallbeispiel)
+- **Quelle:** [The Eras Tour (Wikipedia)](https://de.wikipedia.org/wiki/The_Eras_Tour)
+- **Fundstelle:** Beim Konzert im Lumen Field in Seattle im Juli 2023 «registrierten lokale Seismographen für Menschen nicht wahrnehmbare Erschütterungen der Erde», ausgelöst von den Fans, über mehrere Stunden. Eine Magnitude nennt der Artikel nicht, darum steht auch im Text keine.
+- **Geprüft:** 2026-08-13
+
+> Im Juli 2023 registrierten Seismographen in Seattle Erschütterungen, ausgelöst von zehntausenden tanzenden Fans an einem Konzert von Taylor Swift, über Stunden hinweg. Dieselbe Tournee wurde später von Guinness World Records als die kommerziell erfolgreichste der Welt anerkannt.
+
+Man kann darüber spotten: so viel Gefühl für ein Popkonzert. Nussbaum widerspricht dem alten Verdacht, Gefühle seien Störungen der Vernunft. Ein starkes Gefühl ist für sie ein Urteil: Es sagt dir, was dir wichtig ist, lange bevor du es begründen kannst. Wer bei einem Lied weint, denkt nicht zu wenig, sondern erkennt etwas: Das hier betrifft mich. Gefühle ernst zu nehmen heisst, solche Urteile lesen zu lernen, die eigenen und die der anderen, statt sie sich auszureden. Freude, die den Boden zum Zittern bringt, ist eine Auskunft darüber, was zählt.
+
+### Lebenskunst · kommerziell erfolgreichste
+
+- **Kennung:** `DW-f79364` (Fallbeispiel)
+- **Quelle:** [The Eras Tour (Wikipedia)](https://de.wikipedia.org/wiki/The_Eras_Tour)
+- **Fundstelle:** Die Tournee wurde «im Dezember 2023 von Guinness World Records als kommerziell erfolgreichste Tournee weltweit anerkannt»; nach rund 60 Konzerten lag der Umsatz bei 1,04 Milliarden Dollar.
+- **Geprüft:** 2026-08-13
+
+> Im Juli 2023 registrierten Seismographen in Seattle Erschütterungen, ausgelöst von zehntausenden tanzenden Fans an einem Konzert von Taylor Swift, über Stunden hinweg. Dieselbe Tournee wurde später von Guinness World Records als die kommerziell erfolgreichste der Welt anerkannt.
+
+Man kann darüber spotten: so viel Gefühl für ein Popkonzert. Nussbaum widerspricht dem alten Verdacht, Gefühle seien Störungen der Vernunft. Ein starkes Gefühl ist für sie ein Urteil: Es sagt dir, was dir wichtig ist, lange bevor du es begründen kannst. Wer bei einem Lied weint, denkt nicht zu wenig, sondern erkennt etwas: Das hier betrifft mich. Gefühle ernst zu nehmen heisst, solche Urteile lesen zu lernen, die eigenen und die der anderen, statt sie sich auszureden. Freude, die den Boden zum Zittern bringt, ist eine Auskunft darüber, was zählt.
+
+### Lebenskunst · Ami Yuasa
+
+- **Kennung:** `DW-76be7d` (Fallbeispiel)
+- **Quelle:** [Breaking an den Sommerspielen 2024 (Wikipedia)](https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2024/Breaking)
+- **Fundstelle:** Breaking war in Paris «erstmals Teil des olympischen Programms», ausgetragen am 9. und 10. August 2024 auf der Place de la Concorde. Gold der B-Girls: Ami Yuasa (Japan); Gold der B-Boys: Philip Kim (Kanada).
+- **Geprüft:** 2026-08-13
+
+> In Paris war 2024 Breaking zum ersten Mal olympische Disziplin, ausgetragen mitten in der Stadt auf der Place de la Concorde. Das erste Gold der B-Girls gewann Ami Yuasa aus Japan, bei den B-Boys siegte der Kanadier Philip Kim.
+
+Versuch, einen Headspin aus einer Beschreibung zu lernen. Du kannst jede Anweisung auswendig aufsagen und fällst trotzdem. Irgendwann, nach vielen Anläufen, «hat» es der Körper: Schwung, Druck und Balance sind dann kein Wissen im Kopf, sondern ein Können im Leib. Merleau-Ponty sagt: So verstehen wir die Welt überhaupt, zuerst leiblich, dann in Begriffen. Der Körper ist kein Werkzeug, das du benutzt, er ist deine Art, da zu sein. Ein Video zeigt dir jeden Move in Zeitlupe. Verstehen wird ihn dein Rücken.
+
+### Lebenskunst · Polarlichter bis in die Schweiz
+
+- **Kennung:** `DW-8f9895` (Fallbeispiel)
+- **Quelle:** [Swissinfo, 11. Mai 2024: «Stärkster Sonnensturm seit 2003»](https://www.swissinfo.ch/ger/st%C3%A4rkster-sonnensturm-seit-2003-f%C3%BChrt-zu-schweizer-polarlichtern/77308421)
+- **Fundstelle:** «Der erste ‹extreme› Sonnensturm seit 2003»: Die Kategorie fünf war laut NOAA zuletzt im Oktober 2003 bei den Halloween-Stürmen erreicht worden. «Aufgrund des starken geomagnetischen Sturms waren Polarlichter bis in die Schweizer Breitengrade sichtbar», festgehalten etwa von einer Wetterkamera in Ravoire bei Martigny am Abend des 10. Mai 2024.
+- **Geprüft:** 2026-08-13
+
+> In der Nacht auf den 11. Mai 2024 traf der erste Sonnensturm der höchsten Kategorie seit 2003 die Erde, und für einmal waren Polarlichter bis in die Schweiz zu sehen. Wer zufällig draussen war oder geweckt wurde, stand plötzlich unter einem leuchtenden Himmel.
+
+Das Besondere daran: Es liess sich nicht buchen. Kein Ticket, kein Abo, keine Wiederholung auf Abruf, nicht einmal eine verlässliche Vorhersage. Rosa nennt Resonanz, was uns gerade deshalb berührt, weil es nicht verfügbar ist: Die Welt antwortet, aber nicht auf Bestellung. In einem Alltag, in dem fast alles sofort lieferbar ist, der Song, die Serie, die Antwort, sind solche Momente kleine Übungsplätze. Hinstehen, warten dürfen, sich berühren lassen. Mehr Kontrolle würde genau das zerstören, was diesen Abend besonders gemacht hat.
 
 ---
 

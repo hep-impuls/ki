@@ -1,6 +1,6 @@
 # Quellenauftrag · Lernseite 2 «Eine ganz neue Partnerschaft»
 
-**Paket 06 von 8.** Dieses Dokument enthält 35 Textblöcke eines Lernsets zu
+**Paket 06 von 9.** Dieses Dokument enthält 35 Textblöcke eines Lernsets zu
 Künstlicher Intelligenz und Philosophie (Berufsfachschule, Deutschschweiz).
 Jeder Block hat eine **Kennung** in eckigen Klammern, z.B. `[VA-a1b2c3]`.
 
@@ -42,7 +42,7 @@ und die Quelle ihn nur bestätigt.
 ---
 
 
-## Paket 06 von 8
+## Paket 06 von 9
 
 Jeder Block hier enthält eine prüfbare Behauptung (Zahl, Datum,
 Superlativ oder eine Aussage, die jemandem zugeschrieben wird). Deutende
@@ -214,17 +214,29 @@ Genau darum geht es Kant: eine Regel befolgen oder sie einsehen. An einer Landsg
 **[DW-2a9f61]** *(Zur Philosophie · Was ist der Mensch?)*
 Hegel war der Hauptvertreter des deutschen Idealismus und dachte die Wirklichkeit als Entfaltung des «Geistes». Stark verkürzt lässt sich seine Dialektik als Bewegung beschreiben, in der ein Begriff an seinen eigenen inneren Spannungen weiterbestimmt wird. Die berühmte Formel «These, Antithese, Synthese» stammt übrigens nicht von Hegel und trifft sein Verfahren nicht durchgehend, als erste Merkhilfe taugt sie aber. So kommt das Unterscheiden ins Spiel: Ein Gedanke wird nicht dadurch weitergebracht, dass man ihn ganz verwirft, sondern dadurch, dass man an ihm unterscheidet, was hält und was nicht. Hegel nennt das die bestimmte Negation. Was etwas ist, steht darum nicht ein für alle Mal fest, es klärt sich in einem geschichtlichen Gang. Marx baute darauf seine Kritik des Kapitalismus auf und für Adorno wurde dieser Gedanke zum Schlüsselbegriff der Gesellschaftskritik. Später wurde er gegen die Grenzen selbst gewendet: Wenn eine Grenze gezogen wird, dann ist sie gemacht und dann könnte sie auch anders verlaufen. Was selbstverständlich wirkt, hat oft nur eine Geschichte und darum darf man darüber streiten. Das trifft die Grenze zwischen Mensch und Maschine mit. Donna Haraway, weiter unten im Kapitel, hält sie nicht für gefunden, sondern für gezogen und ihr Bild des Cyborgs sprengt die starre Trennung. Erst indem der Mensch auseinanderhält, was ist und was sein soll, kann er urteilen und sich entscheiden. Von hier aus gelesen ist Unterscheiden etwas anderes als Rechnen: Ein Modell lernt aus vielen Beispielen, was gewöhnlich zusammen auftritt. Eine Bestimmung dagegen zieht eine Grenze mit Gründen und genau darum lässt sie sich auch bestreiten. Hauptwerk: «Phänomenologie des Geistes» (1807).
 
+**[DW-5d8b84]** *(Fallbeispiel · Was ist der Mensch?)*
+Jedes Jahr wird im deutschsprachigen Raum das Jugendwort des Jahres gekürt, seit 2008, heute per offener Abstimmung. 2024 gewann «Aura»: die Ausstrahlung, das Charisma, der Status einer Person, oft scherzhaft gebraucht. 2025 folgte «das crazy», ein Füllwort für Momente, in denen jemand freundlich bleiben, aber nichts sagen möchte.
+
+Woher hat ein Wort seine Bedeutung? Sie wird nicht ausgerechnet, sie wird im Gebrauch festgesetzt, indem ihr unterscheidet: Aura ist nicht Leistung und nicht Beliebtheit, eher Wirkung ohne Anstrengung. Genau das heisst bei Hegel Unterscheiden: Was etwas ist, zeigt sich an dem, wovon es sich abhebt, und diese Grenzen werden gezogen, nicht gefunden. Darum wandern sie auch. Nächstes Jahr gewinnt ein anderes Wort und deine Sprache bekommt neue Kanten, die niemand aus den alten errechnen konnte.
+
+> **Belegt** («Jugendwort des Jahres»): [Jugendwort des Jahres (Wikipedia)](https://de.wikipedia.org/wiki/Jugendwort_des_Jahres_(Deutschland)) — Gewählt «ab 2008 jährlich von einer Jury unter der Leitung des Langenscheidt-Verlags», seit 2020 offen für alle. Siegerwort 2024: «Aura», es «bezieht sich (oft scherzhaft) auf die Ausstrahlung, das Charisma oder den Status einer Person». 2025 gewann «das crazy», «ein Füllwort, wenn jemand nichts zum Thema sagen, aber freundlich bleiben möchte». *(geprüft 2026-08-13)*
+
+**[DW-6951c9]** *(Fallbeispiel · Was ist der Mensch?)*
+Am 20. August 2018 setzte sich eine 15-jährige Schülerin mit einem Schild vor das Parlament in Stockholm: «Skolstrejk för klimatet», Schulstreik fürs Klima. Drei Wochen lang sass sie dort jeden Schultag, danach jeden Freitag. Ein halbes Jahr später, am 15. März 2019, streikten nach Angaben der Bewegung weltweit fast 1,8 Millionen Menschen.
+
+Niemand hätte das aus dem Vortag ableiten können. Ein Mädchen, ein Karton, ein Gehsteig: Alles daran war unscheinbar, nur neu war es. Arendt nennt diese Fähigkeit Natalität: Weil du geboren wurdest und nicht das Ergebnis des Bisherigen bist, kannst du etwas anfangen, das vorher nicht in der Welt war. Anfangen ist darum immer unwahrscheinlich und immer riskant. Und es bleibt dein Teil: Fortsetzen, hochrechnen und wiederholen lässt sich vieles, anfangen nicht.
+
+> **Belegt** («Skolstrejk för klimatet»): [Fridays for Future (Wikipedia)](https://de.wikipedia.org/wiki/Fridays_for_Future) — Greta Thunberg begann den Schulstreik am 20. August 2018 mit 15 Jahren und sass «zunächst für einen Zeitraum von drei Wochen, täglich während der Unterrichtszeit vor dem schwedischen Reichstagsgebäude in Stockholm», mit einem Schild «Skolstrejk för klimatet» (Schulstreik fürs Klima); ab dem 8. September jeden Freitag. *(geprüft 2026-08-13)*
+
+> **Belegt** («fast 1,8 Millionen Menschen»): [Fridays for Future (Wikipedia)](https://de.wikipedia.org/wiki/Fridays_for_Future) — Zum globalen Klimastreik vom 15. März 2019: Es «sollen nach Angaben der Bewegung beispielsweise fast 1,8 Mio. Menschen an den Demonstrationen von FFF teilgenommen haben». Darum steht im Text «nach Angaben der Bewegung». *(geprüft 2026-08-13)*
+
 **[DW-156d9b]** *(Zur Philosophie · Was ist der Mensch?)*
 Martin Heidegger gehört zu den einflussreichsten Philosophen des 20. Jahrhunderts und ist zugleich schwer belastet. Er trat am 1. Mai 1933 in die NSDAP ein, war als Rektor an der Gleichschaltung der Universität Freiburg beteiligt und blieb bis 1945 Parteimitglied; in seinen «Schwarzen Heften» stehen antisemitische Äusserungen. Umstritten ist nicht, ob das geschah, sondern wie stark es sein Werk prägt. In «Sein und Zeit» fragte er neu nach dem Sinn von Sein. Den Menschen nennt er «Dasein», seinen Grundzug die «Sorge». Das Wort führt leicht in die Irre, gemeint ist nicht Kummer: Wir sind nie unbeteiligte Zuschauer einer Welt, die uns gegenübersteht, sondern immer schon in ihr beschäftigt. Wir hantieren mit Dingen und haben es mit anderen Menschen zu tun. Ein Hammer zeigt sich als Hammer beim Hämmern, nicht beim Betrachten. Erst in diesem Umgang bekommen die Dinge ihre Bedeutung und erst so entsteht Sinn. Von hier aus argumentieren viele, eine Maschine habe keine solche Welt: Sie verarbeitet Zeichen, ohne mit etwas zu tun zu haben. Hauptwerk: «Sein und Zeit» (1927).
 
+**[DW-2b8995]** *(Fallbeispiel · Was ist der Mensch?)*
+In Tokio standen 2021 zum ersten Mal Skateboards im olympischen Programm. Im Street-Wettbewerb der Frauen gewann die 13-jährige Momiji Nishiya aus Japan Gold, Silber ging an die ebenfalls 13-jährige Rayssa Leal aus Brasilien.
+
+Frag die beiden nicht, wo beim Absprung ihr Gewicht liegt. Beim Fahren ist das Brett kein Gegenstand, über den man nachdenkt: Es verschwindet ins Können, gedacht wird in Linien und Landungen. Erst wenn etwas klemmt, ein Trick misslingt, eine Achse bricht, liegt da wieder ein Ding mit Schrauben. Heidegger meint mit Sorge genau dieses Eingelassensein: Du bist nicht zuerst Zuschauerin der Welt, du bist mit ihr beschäftigt und im Umgang entsteht Verstehen. Ein Erklärvideo hilft, aber gekonnt wird es unter deinen Füssen.
+
 **[DW-ec680f]** *(Zur Philosophie · Was ist der Mensch?)*
 Peter Sloterdijk ist einer der bekanntesten deutschsprachigen Gegenwartsphilosophen, bekannt für die «Sphären»-Trilogie und einen essayistischen, oft provokanten Stil. In «Du musst dein Leben ändern» beschreibt er den Menschen als übendes Wesen: Wir werden, wer wir sind, durch Übung, Wiederholung und Selbstformung. Er nennt das «Anthropotechnik». Der Satz ist kein Befehl, sondern der Grundton eines Lebens, das sich immer wieder in Form bringt. Übertragen auf die KI: Eine Maschine kann eine Aufgabe erledigen, aber nicht für uns üben, wer weiter übt, bleibt fähig und urteilsfähig. Hauptwerk: «Du musst dein Leben ändern» (2009).
-
-**[DW-dadd17]** *(Zur Philosophie · Was ist der Mensch?)*
-Siri Hustvedt ist US-amerikanische Schriftstellerin und Essayistin, die Literatur mit Hirnforschung und Philosophie verbindet. In «Die Illusion der Gewissheit» wendet sie sich gegen das Bild, das Gehirn sei ein Computer. Denken und Fühlen hängen für sie am lebendigen Körper und an gelebter Erfahrung, sie spricht vom «verkörperten Geist». Ihr Argument: Eine KI kann Sprache und Gefühle täuschend echt nachahmen, aber sie erlebt nichts und macht keine Erfahrung. Ihr «produktiver Zweifel» hilft, das flüssige Modell nicht mit der Wirklichkeit zu verwechseln. Hauptwerk: «Die Illusion der Gewissheit» (2018).
-
-**[DW-fecfd5]** *(Fliesstext · Was ist der Mensch?)*
-«Was ist der Mensch?» Diese Frage ist so alt wie die Philosophie selbst. Schon Aristoteles sah den Menschen als Wesen, das von Natur aus nach Wissen strebt, neugierig, fragend, nie ganz fertig. Immanuel Kant machte die Frage zur Kernfrage überhaupt und gab eine Richtung vor: Der Mensch ist frei, er kann aus eigener Einsicht handeln und darum trägt er Verantwortung. Georg Wilhelm Friedrich Hegel fügt hinzu, dass der Mensch ein Wesen ist, das unterscheidet. Erst indem wir Gegensätze auseinanderhalten, was ist und was sein soll, können wir urteilen und uns frei entscheiden. Und was etwas ist, steht für ihn nicht ein für alle Mal fest, es klärt sich in einem geschichtlichen Gang. So bekommt gerade das Unterscheiden und Entscheiden eine zutiefst menschliche Seite.
-
-**[DW-c5d0eb]** *(Zur Philosophie · Netzwerke und Systeme)*
-Armin Nassehi ist ein führender deutscher Soziologe (München) und deutet die Gesellschaft mit der Systemtheorie. In «Muster» dreht er die übliche Frage um: nicht «Was macht die Digitalisierung mit uns?», sondern «Für welches Problem ist sie eine Lösung?». Seine Antwort: Die moderne Gesellschaft ist längst in «Mustern» organisiert, in Statistiken, Zählungen und Abläufen, die auch ohne Gesamtüberblick funktionieren. Genau darin ist die KI stark, sie erkennt Muster hervorragend, versteht aber keinen Sinn. Wer das begreift, sieht die KI nüchterner und weniger bedrohlich. Werk: «Muster» (2019).

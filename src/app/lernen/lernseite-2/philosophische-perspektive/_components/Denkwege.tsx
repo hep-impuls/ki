@@ -152,6 +152,8 @@ const BEREICHE: Bereich[] = [
           { wort: "Adorno", erklaerung: "Theodor W. Adorno, 1903 bis 1969, Frankfurter Schule. Für ihn war die bestimmte Negation das Werkzeug der Kritik: nicht alles verwerfen, sondern genau zeigen, was falsch läuft." },
           { wort: "Donna Haraway", erklaerung: "US-amerikanische Wissenschaftshistorikerin und feministische Denkerin, geboren 1944. Ihr «Manifest für Cyborgs» (1985) beschreibt Mensch, Tier und Maschine als verwoben; sie hat im Kapitel eine eigene Stimme." },
         ],
+        beispiel:
+          "Jedes Jahr wird im deutschsprachigen Raum das Jugendwort des Jahres gekürt, seit 2008, heute per offener Abstimmung. 2024 gewann «Aura»: die Ausstrahlung, das Charisma, der Status einer Person, oft scherzhaft gebraucht. 2025 folgte «das crazy», ein Füllwort für Momente, in denen jemand freundlich bleiben, aber nichts sagen möchte.\n\nWoher hat ein Wort seine Bedeutung? Sie wird nicht ausgerechnet, sie wird im Gebrauch festgesetzt, indem ihr unterscheidet: Aura ist nicht Leistung und nicht Beliebtheit, eher Wirkung ohne Anstrengung. Genau das heisst bei Hegel Unterscheiden: Was etwas ist, zeigt sich an dem, wovon es sich abhebt, und diese Grenzen werden gezogen, nicht gefunden. Darum wandern sie auch. Nächstes Jahr gewinnt ein anderes Wort und deine Sprache bekommt neue Kanten, die niemand aus den alten errechnen konnte.",
       },
       {
         slug: "arendt",
@@ -163,6 +165,8 @@ const BEREICHE: Bereich[] = [
           { wort: "Totalitarismus", erklaerung: "Herrschaftsform, die das ganze Leben kontrollieren will und keine Freiheit zulässt, etwa NS-Diktatur und Stalinismus." },
           { wort: "«Natalität»", erklaerung: "Arendts Begriff für die Gebürtlichkeit: Weil jeder Mensch neu geboren wird, kann er Neues in die Welt bringen." },
         ],
+        beispiel:
+          "Am 20. August 2018 setzte sich eine 15-jährige Schülerin mit einem Schild vor das Parlament in Stockholm: «Skolstrejk för klimatet», Schulstreik fürs Klima. Drei Wochen lang sass sie dort jeden Schultag, danach jeden Freitag. Ein halbes Jahr später, am 15. März 2019, streikten nach Angaben der Bewegung weltweit fast 1,8 Millionen Menschen.\n\nNiemand hätte das aus dem Vortag ableiten können. Ein Mädchen, ein Karton, ein Gehsteig: Alles daran war unscheinbar, nur neu war es. Arendt nennt diese Fähigkeit Natalität: Weil du geboren wurdest und nicht das Ergebnis des Bisherigen bist, kannst du etwas anfangen, das vorher nicht in der Welt war. Anfangen ist darum immer unwahrscheinlich und immer riskant. Und es bleibt dein Teil: Fortsetzen, hochrechnen und wiederholen lässt sich vieles, anfangen nicht.",
       },
       {
         slug: "heidegger",
@@ -176,6 +180,8 @@ const BEREICHE: Bereich[] = [
           { wort: "«Dasein»", erklaerung: "Heideggers Wort für den Menschen: das Wesen, dem es um sein eigenes Sein überhaupt geht." },
           { wort: "«Sorge»", erklaerung: "Nicht Kummer, sondern Heideggers Wort für unsere Grundverfassung: dass wir stets mit Dingen umgehen und mit anderen zu tun haben, statt die Welt bloss zu betrachten." },
         ],
+        beispiel:
+          "In Tokio standen 2021 zum ersten Mal Skateboards im olympischen Programm. Im Street-Wettbewerb der Frauen gewann die 13-jährige Momiji Nishiya aus Japan Gold, Silber ging an die ebenfalls 13-jährige Rayssa Leal aus Brasilien.\n\nFrag die beiden nicht, wo beim Absprung ihr Gewicht liegt. Beim Fahren ist das Brett kein Gegenstand, über den man nachdenkt: Es verschwindet ins Können, gedacht wird in Linien und Landungen. Erst wenn etwas klemmt, ein Trick misslingt, eine Achse bricht, liegt da wieder ein Ding mit Schrauben. Heidegger meint mit Sorge genau dieses Eingelassensein: Du bist nicht zuerst Zuschauerin der Welt, du bist mit ihr beschäftigt und im Umgang entsteht Verstehen. Ein Erklärvideo hilft, aber gekonnt wird es unter deinen Füssen.",
       },
       {
         slug: "sloterdijk",
@@ -186,6 +192,8 @@ const BEREICHE: Bereich[] = [
         begriffe: [
           { wort: "«Anthropotechnik»", erklaerung: "Sloterdijks Wort für die Techniken, mit denen der Mensch an sich selbst arbeitet und sich formt (Üben, Trainieren, Gewohnheiten)." },
         ],
+        beispiel:
+          "Der Weltrekord im Lösen des Zauberwürfels liegt unter drei Sekunden, aufgestellt im Februar 2026. Wer das sieht, sagt Talent. Wer hinschaut, sieht Übung: eingeschliffene Fingerabläufe, tausendfach wiederholt, bis die Hände schneller sind als das bewusste Denken.\n\nSloterdijk nennt den Menschen ein übendes Wesen: Du wirst, was du wiederholst, im Sport, in einer Sprache, in der Geduld, auch in dem, was du täglich nebenbei tust. Deine Gewohnheiten sind Übungen, ob du sie so nennst oder nicht. Das Entlastende daran: Können ist kein Besitz, sondern ein Weg und der steht allen offen, in kleinen Wiederholungen. Abkürzungen gibt es fürs Ergebnis. Fürs Können gibt es keine.",
       },
       {
         slug: "hustvedt",
@@ -196,6 +204,8 @@ const BEREICHE: Bereich[] = [
         begriffe: [
           { wort: "«verkörperten Geist»", erklaerung: "Die Idee, dass Denken und Fühlen untrennbar an den lebendigen Körper gebunden sind, nicht bloss ein Rechnen im Kopf." },
         ],
+        beispiel:
+          "Wer lange Tetris spielt, kennt den Effekt: Beim Einschlafen fallen hinter den Augenlidern weiter Blöcke und im Supermarkt ordnet der Kopf die Schachteln im Regal zu Reihen. Das Phänomen heisst tatsächlich Tetris-Effekt und tritt auch bei anderem auf, das man stundenlang tut.\n\nEin Programm ist beendet, wenn man es schliesst. Dein Denken nicht: Es spielt weiter, in Bildern, im Halbschlaf, im Blick auf die Welt. Was du tust, färbt, wie dir alles erscheint, und gefragt hat dich dabei niemand. Hustvedt sagt darum, der Geist sei kein Computer: Er ist verkörpert, durchzogen von Erfahrung und Gefühl, er lässt sich nicht sauber in Eingabe und Ausgabe zerlegen. Eine Maschine gibt Antworten aus. Erleben, wie eine Antwort in dir weiterarbeitet, kannst nur du.",
       },
     ],
     absaetze: [
@@ -226,6 +236,8 @@ const BEREICHE: Bereich[] = [
         begriffe: [
           { wort: "Systemtheorie", erklaerung: "Soziologische Theorie, die die Gesellschaft aus dem Zusammenspiel von Teilbereichen wie Wirtschaft, Recht und Politik erklärt." },
         ],
+        beispiel:
+          "Anfang Dezember zeigt dir Spotify Wrapped dein Jahr in Zahlen: die meistgehörten Songs, Künstlerinnen und Genres, aufbereitet zum Teilen, und Millionen stellen es dann in ihre Storys. Das gibt es seit 2016, und der seltsame Moment ist jedes Jahr derselbe: Eine Statistik kennt dich.\n\nNassehi würde sagen: kein Wunder. Die Gesellschaft ist längst in Mustern gebaut, in Zählungen und Abläufen; die Digitalisierung erfindet sie nicht, sie macht sie sichtbar. Dein Musikjahr war immer schon ein Muster, neu ist nur der Spiegel. Sehen kann er allerdings nur Wiederholungen. Warum dich ein einziger Song durch den Sommer getragen hat, steht in keiner Liste, denn das Muster kennt deine Klicks und nicht deine Gründe.",
       },
       {
         slug: "latour",
@@ -236,6 +248,8 @@ const BEREICHE: Bereich[] = [
         begriffe: [
           { wort: "Akteur-Netzwerk-Theorie", erklaerung: "Latours Ansatz: Wirkung entsteht im Netz aus Menschen und Dingen, nichts handelt für sich allein." },
         ],
+        beispiel:
+          "Bubble Tea entstand in den 1980er Jahren in Taiwan, 1987 kamen die Tapiokaperlen dazu; in der Schweiz gibt es ihn seit 2012. Die Perlen bestehen aus der Stärke des Maniok, einer Pflanze aus Südamerika, deren grösster Produzent heute Nigeria ist.\n\nEin Becher, ein Strohhalm. Und daran hängen: eine Teekultur aus Taiwan, ein südamerikanisches Wurzelgemüse, Felder in Nigeria, ein Laden an deiner Ecke, ein Trend in deinem Feed. Nichts davon hat den Bubble Tea allein gemacht, gewirkt hat der Verbund. So schaut Latour auf die Welt: Wer verstehen will, was ein Ding ist, fragt, was alles mitwirkt. Die Übung funktioniert bei fast allem, beim Pausenbrot, beim Handy und bei jeder Antwort einer KI. Hinter jedem Einzelnen steht ein Netz.",
       },
     ],
     absaetze: [
@@ -268,6 +282,8 @@ const BEREICHE: Bereich[] = [
         begriffe: [
           { wort: "Akteur-Netzwerk-Theorie", erklaerung: "Latours Ansatz: Wirkung entsteht im Netz aus Menschen und Dingen, nichts handelt für sich allein." },
         ],
+        beispiel:
+          "«Ocean Eyes» klingt nach einem Alleingang: ein Mädchen, ein Zimmer, ein Welthit. Tatsächlich hatte ihr Bruder Finneas den Song geschrieben, die 13-jährige Billie Eilish sang ihn und hochgeladen wurde er am 18. November 2015 auf SoundCloud, damit ihr Tanzlehrer ihn für eine Choreografie herunterladen konnte. Über Nacht teilten ihn Fremde, dann meldete sich ein Label.\n\nDas ganz unabhängige Individuum, das aus dem Nichts handelt, gibt es für Latour nicht, auch nicht im Schlafzimmerstudio. Da sind ein Bruder, ein Lehrer mit einem Auftrag, eine Plattform, tausende Teilende. Das macht die Leistung nicht kleiner, es macht sie verständlicher. Und wer das eigene Geflecht kennt, wird dadurch nicht abhängiger, sondern souveräner: Du weisst, was dich trägt, und kannst es pflegen.",
       },
       {
         slug: "deguchi",
@@ -279,6 +295,8 @@ const BEREICHE: Bereich[] = [
           { wort: "Kyoto", erklaerung: "Alte Kaiserstadt in Japan, bekannt für ihre Universität und eine eigene philosophische Schule." },
           { wort: "«We-Turn»", erklaerung: "Deguchis Wendung vom «Ich» zum «Wir»: Der eigentliche Handelnde ist ein Wir aus Menschen und Dingen, nicht das einzelne Ich." },
         ],
+        beispiel:
+          "Seit London 2012 steht der Weltrekord der 4-mal-100-Meter-Staffel bei 36,84 Sekunden, gelaufen von Jamaika. Möglich macht solche Zeiten der fliegende Wechsel: Wer den Stab übernimmt, startet, bevor er da ist, und übernimmt ihn in vollem Lauf. Eine Staffel ist darum schneller, als ihre vier Läufer einzeln zusammen wären.\n\nWem gehört diese Zeit? Keinem der vier allein. Sie entsteht zwischen ihnen, in den Trainingsjahren, in drei Übergaben. Und der Stab läuft mit. Deguchi verlegt das Handeln genau dorthin: Nicht «ich» handelt, sondern «wir», ein Geflecht aus Menschen und Dingen, zu dem heute auch Maschinen gehören. Das nimmt dir nichts weg. Es heisst nur: Wer ehrlich sagen kann, wer und was alles mitgelaufen ist, versteht die eigene Leistung besser.",
       },
       {
         slug: "haraway",
@@ -289,6 +307,8 @@ const BEREICHE: Bereich[] = [
         begriffe: [
           { wort: "«Manifest für Cyborgs»", erklaerung: "Haraways berühmter Essay von 1985; das Bild des Cyborgs, eines Mischwesens aus Mensch und Maschine, sprengt die starre Grenze zwischen Mensch, Tier und Technik." },
         ],
+        beispiel:
+          "Beatrice Vio war elf, als ihr nach einer Meningitis Unterarme und Unterschenkel amputiert wurden. Sie focht weiter: Ihr Florett ist mit einer Prothese am linken Ellbogen befestigt und sie ist die Einzige im Rollstuhlfechten, die ohne Hände und Beine antritt. An den Paralympics in Rio gewann sie mit 19 Gold, in Tokio verteidigte sie den Titel.\n\nWo endet hier der Mensch, wo beginnt das Gerät? Beim Zuschauen wird die Frage sinnlos: Die Klinge antwortet ihr wie eine Hand. Haraway sagt, so verwoben sind wir alle längst, mit Brille, Impfung und dem Handy als Gedächtnis. Und die spannende Frage ist nicht, wie wir die Grenze rein halten, sondern wie wir mit unserer Technik verantwortlich leben. Vio zeigt, wie viel Freiheit in dieser Verwobenheit stecken kann.",
       },
       {
         slug: "harari",
@@ -300,6 +320,8 @@ const BEREICHE: Bereich[] = [
           { wort: "Biotechnik", erklaerung: "Technik, die in Lebendiges eingreift, etwa in Gene, Körper und Gehirn." },
           { wort: "«Homo Deus»", erklaerung: "Hararis Bestseller (2015): Ausblick, wie Biotechnik und KI den Menschen selbst umbauen könnten (wörtlich «Gott-Mensch»)." },
         ],
+        beispiel:
+          "Seit dem 10. Dezember 2025 gilt in Australien als erstem Land der Welt ein Mindestalter von 16 Jahren für Konten auf grossen Plattformen, von Instagram über TikTok bis YouTube. Die Erwachsenen waren in Umfragen deutlich dafür, 77 Prozent. Von 17'000 befragten Jugendlichen sagten 70 Prozent Nein.\n\nHarari erzählt Geschichte als Geschichte wachsender Macht: Werkzeuge, die ganze Gesellschaften umbauen, brauchen Regeln, und zwar bevor alle Folgen bekannt sind. Nur fallen Regeln nicht vom Himmel. Sie werden ausgehandelt, zwischen Generationen, Ländern und Interessen, mit offenem Ausgang. Und andere Länder schauen gerade genau hin. An den zwei Zahlen oben ist darum nicht interessant, wer recht hat, sondern was hier verhandelt wird: die Sorge der einen gegen den Alltag der anderen. Was wäre deine Regel und wie würdest du sie begründen?",
       },
       {
         slug: "gabriel",
@@ -310,6 +332,8 @@ const BEREICHE: Bereich[] = [
         begriffe: [
           { wort: "«Neuen Realismus»", erklaerung: "Von Markus Gabriel mitbegründete Richtung: Die Welt und auch Werte sind wirklich, nicht bloss Ansichtssache." },
         ],
+        beispiel:
+          "ChatGPT wurde am 30. November 2022 veröffentlicht. Nach fünf Tagen hatten sich eine Million Menschen registriert, im Januar 2023 waren es über 100 Millionen. TikTok hatte für die erste Million rund neun Monate gebraucht, Instagram zweieinhalb Jahre.\n\nWarum nennt Gabriel so etwas einen Spiegel? Trainiert wurde das Werkzeug an menschlichem Schreiben. Was es dir zeigt, sind Muster von uns und im Kleinen Muster von dir: deine Formulierungen, deine Abkürzungen, deine Wünsche. Lässt du dir drei Fassungen einer heiklen Nachricht vorschlagen, hast du drei Spiegelbilder, aber senden musst du eine, und diese Wahl zeigt, wer du bist. Die eigentliche Prüfung läuft darum nicht im Rechenzentrum. Sie läuft bei dir.",
       },
     ],
     absaetze: [
@@ -349,6 +373,8 @@ const BEREICHE: Bereich[] = [
           { wort: "Mark Aurel", erklaerung: "Römischer Kaiser (121 bis 180 n. Chr.) und Stoiker; seine «Selbstbetrachtungen» sind bis heute berühmt." },
           { wort: "«Askesis»", erklaerung: "Griechisch für Übung, Training, nicht Verzicht: Philosophie als tägliche Praxis." },
         ],
+        beispiel:
+          "Im Teamfinal von Tokio 2021 zog sich die US-Turnerin Simone Biles nach einem Sprung zurück, aus Rücksicht auf ihre mentale Gesundheit, nicht wegen einer Verletzung. Drei Jahre später in Paris gewann sie drei Mal Gold und ein Mal Silber.\n\nDie Stoiker unterscheiden zwischen dem, was in deiner Macht steht, und dem, was nicht. Nicht in Biles' Macht: die Erwartungen eines Weltpublikums, die Schlagzeilen, der Medaillenspiegel. In ihrer Macht: das eigene Urteil darüber, was jetzt richtig ist, und das Handeln danach, gegen den Druck. Genau das ist die stoische Übung, die eigene Kraft dorthin zu legen, wo sie wirkt. Das ist kein Rückzug aus der Welt: Wer so unterscheidet, kommt zurück, sobald es wieder die eigene Entscheidung ist.",
       },
       {
         slug: "foucault",
@@ -359,6 +385,8 @@ const BEREICHE: Bereich[] = [
         begriffe: [
           { wort: "«Ästhetik der Existenz»", erklaerung: "Foucaults Idee, das eigene Leben bewusst zu gestalten wie ein Kunstwerk, statt bloss Regeln zu befolgen." },
         ],
+        beispiel:
+          "Ein Bullet Journal ist ein Notizbuch mit Punkteraster, das Terminplanung, To-do-Listen, Tagebuch und Brainstorming in einem einzigen Heft verbindet. Entwickelt hat es 2013 der Designer Ryder Carroll.\n\nNeu ist die Idee nicht, und das ist das Schöne daran. Foucault hat in seinem Spätwerk die antike Sorge um sich selbst wieder ausgegraben: Schon damals führten Menschen Notizhefte, um ihr Leben zu ordnen und an sich zu arbeiten. Ein Leben formen wie ein Kunstwerk heisst nicht, sich für fremde Massstäbe zu optimieren, für Noten, Follower und Bestenlisten. Es heisst, selbst zu wählen, woran du arbeitest. Dafür ist ein Heft, das niemand liken kann, ein ziemlich gutes Werkzeug: Es gehört nur dir.",
       },
       {
         slug: "schmid",
@@ -366,6 +394,8 @@ const BEREICHE: Bereich[] = [
         leben: "geboren 1953",
         these: "Das Leben ändern, aber wie? In kleinen Schritten.",
         info: "Wilhelm Schmid ist ein freier Philosoph in Berlin und hat die «Philosophie der Lebenskunst» im deutschsprachigen Raum bekannt gemacht. Sein Thema: Aus einer Einsicht folgt noch keine Tat, das kennt jeder von den guten Vorsätzen. Was hilft, ist Übung in kleinsten Schritten, täglich, fast beiläufig, aber regelmässig, nicht das ganze Buch auf einmal, sondern jeden Tag eine Seite. Weil Freude stärker wirkt als Zwang, soll man sich am Schönen orientieren, zu dem man Ja sagen kann. So werden neue Gewohnheiten gebildet. Wie lange das dauert, hat die Psychologie untersucht, nicht die Philosophie: Eine oft zitierte Studie fand einen Mittelwert von 66 Tagen, mit sehr grossen Unterschieden je nach Person und Gewohnheit. Werk: «Philosophie der Lebenskunst» (1998).",
+        beispiel:
+          "Vinted wurde 2008 in Litauen gegründet und ist heute mit über 65 Millionen Mitgliedern eine der grössten Plattformen für Secondhandkleidung: kaufen und verkaufen per App, quer durch Europa und Nordamerika.\n\n«Nachhaltiger leben» ist als Vorsatz so gross, dass er oft schon am Sonntagabend endet. Schmid setzt deshalb auf kleinste Schritte: täglich, fast beiläufig, aber regelmässig, und möglichst am Schönen orientiert statt am Verzicht. Eine einzige neue Gewohnheit reicht für den Anfang, zum Beispiel zuerst secondhand schauen und erst dann neu kaufen. Das kostet wenig Überwindung, es macht sogar Spass, das Lieblingsteil für wenige Franken zu finden, und es summiert sich. Nicht das ganze Leben ändern. Eine Gewohnheit.",
       },
       {
         slug: "nussbaum",
@@ -376,6 +406,8 @@ const BEREICHE: Bereich[] = [
         begriffe: [
           { wort: "«Fähigkeiten-Ansatz»", erklaerung: "Nussbaums Frage, was Menschen konkret können müssen, um gut zu leben (Gesundheit, Bildung, Bindung, Spiel), und was eine Gesellschaft ihnen dafür schulden." },
         ],
+        beispiel:
+          "Im Juli 2023 registrierten Seismographen in Seattle Erschütterungen, ausgelöst von zehntausenden tanzenden Fans an einem Konzert von Taylor Swift, über Stunden hinweg. Dieselbe Tournee wurde später von Guinness World Records als die kommerziell erfolgreichste der Welt anerkannt.\n\nMan kann darüber spotten: so viel Gefühl für ein Popkonzert. Nussbaum widerspricht dem alten Verdacht, Gefühle seien Störungen der Vernunft. Ein starkes Gefühl ist für sie ein Urteil: Es sagt dir, was dir wichtig ist, lange bevor du es begründen kannst. Wer bei einem Lied weint, denkt nicht zu wenig, sondern erkennt etwas: Das hier betrifft mich. Gefühle ernst zu nehmen heisst, solche Urteile lesen zu lernen, die eigenen und die der anderen, statt sie sich auszureden. Freude, die den Boden zum Zittern bringt, ist eine Auskunft darüber, was zählt.",
       },
       {
         slug: "merleau-ponty",
@@ -386,6 +418,8 @@ const BEREICHE: Bereich[] = [
         begriffe: [
           { wort: "Phänomenologie", erklaerung: "Philosophische Richtung, die genau beschreibt, wie uns die Dinge erscheinen und wie wir sie leiblich erleben." },
         ],
+        beispiel:
+          "In Paris war 2024 Breaking zum ersten Mal olympische Disziplin, ausgetragen mitten in der Stadt auf der Place de la Concorde. Das erste Gold der B-Girls gewann Ami Yuasa aus Japan, bei den B-Boys siegte der Kanadier Philip Kim.\n\nVersuch, einen Headspin aus einer Beschreibung zu lernen. Du kannst jede Anweisung auswendig aufsagen und fällst trotzdem. Irgendwann, nach vielen Anläufen, «hat» es der Körper: Schwung, Druck und Balance sind dann kein Wissen im Kopf, sondern ein Können im Leib. Merleau-Ponty sagt: So verstehen wir die Welt überhaupt, zuerst leiblich, dann in Begriffen. Der Körper ist kein Werkzeug, das du benutzt, er ist deine Art, da zu sein. Ein Video zeigt dir jeden Move in Zeitlupe. Verstehen wird ihn dein Rücken.",
       },
       {
         slug: "rosa",
@@ -397,6 +431,8 @@ const BEREICHE: Bereich[] = [
           { wort: "«Beschleunigung»", erklaerung: "Rosas Diagnose, dass in der Moderne alles immer schneller wird: Technik, Arbeit, Lebenstempo." },
           { wort: "«Resonanz»", erklaerung: "Bei Rosa ein antwortendes, lebendiges Verhältnis zur Welt, das sich nicht erzwingen lässt, Gegenbegriff zur blossen Beschleunigung." },
         ],
+        beispiel:
+          "In der Nacht auf den 11. Mai 2024 traf der erste Sonnensturm der höchsten Kategorie seit 2003 die Erde, und für einmal waren Polarlichter bis in die Schweiz zu sehen. Wer zufällig draussen war oder geweckt wurde, stand plötzlich unter einem leuchtenden Himmel.\n\nDas Besondere daran: Es liess sich nicht buchen. Kein Ticket, kein Abo, keine Wiederholung auf Abruf, nicht einmal eine verlässliche Vorhersage. Rosa nennt Resonanz, was uns gerade deshalb berührt, weil es nicht verfügbar ist: Die Welt antwortet, aber nicht auf Bestellung. In einem Alltag, in dem fast alles sofort lieferbar ist, der Song, die Serie, die Antwort, sind solche Momente kleine Übungsplätze. Hinstehen, warten dürfen, sich berühren lassen. Mehr Kontrolle würde genau das zerstören, was diesen Abend besonders gemacht hat.",
       },
     ],
     absaetze: [

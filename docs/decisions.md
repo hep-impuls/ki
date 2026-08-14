@@ -53,6 +53,15 @@ neben der Glarner Landsgemeinde, ab wann man in Österreich, auf Malta, in
 Brasilien und in Indonesien mitentscheiden darf. Das Schweizer Beispiel bleibt
 der Einstieg, wenn es konkret ist, aber es bleibt nicht allein.
 
+**Alle 20 Karten haben ein Fallbeispiel, Zielmass zwei Absätze** (Christof:
+«nicht zu lang»). Die ersten beiden (Aristoteles 1432, Kant 1786 Zeichen)
+bleiben als Langformen stehen, die 18 nachgezogenen liegen bei 670 bis 840
+Zeichen: ein konkretes, datiertes Ereignis, dann die Wendung zur These. Wer
+ein weiteres schreibt, hält dieses Mass. Die Schauplätze sind bewusst
+gestreut (Schweden, Japan, Brasilien, Jamaika, Taiwan, Nigeria, Litauen,
+Australien, Italien, Kanada, USA), und die vorkommenden Frauen handeln als
+Athletinnen, Musikerinnen und Aktivistinnen, nicht in Nebenrollen.
+
 **Absätze gehören in `InfoText`, nicht in den Aufrufer.** Der erste Versuch
 teilte den Text an der Aufrufstelle in Absätze und gab allen ein gemeinsames Set
 schon erklärter Begriffe mit, damit «jeder Begriff einmal» über die

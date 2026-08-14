@@ -1,6 +1,6 @@
 # Quellenauftrag · Lernseite 2 «Eine ganz neue Partnerschaft»
 
-**Paket 01 von 8.** Dieses Dokument enthält 35 Textblöcke eines Lernsets zu
+**Paket 01 von 9.** Dieses Dokument enthält 35 Textblöcke eines Lernsets zu
 Künstlicher Intelligenz und Philosophie (Berufsfachschule, Deutschschweiz).
 Jeder Block hat eine **Kennung** in eckigen Klammern, z.B. `[VA-a1b2c3]`.
 
@@ -42,7 +42,7 @@ und die Quelle ihn nur bestätigt.
 ---
 
 
-## Paket 01 von 8
+## Paket 01 von 9
 
 Jeder Block hier enthält eine prüfbare Behauptung (Zahl, Datum,
 Superlativ oder eine Aussage, die jemandem zugeschrieben wird). Deutende

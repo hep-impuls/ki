@@ -1985,6 +1985,222 @@ export const BELEGE: Beleg[] = [
       "Wörtlich: «Habe ich ein Buch, das für mich Verstand hat, einen Seelsorger, der für mich Gewissen hat, einen Arzt der für mich die Diät beurtheilt …» — dann muss man sich nicht selbst bemühen, sondern kann zahlen und andere die verdriessliche Arbeit übernehmen lassen. Der Lerntext verkürzt auf Buch und Arzt.",
     geprueft: "2026-08-13",
   },
+
+  /* ── Fallbeispiele der übrigen 18 Denkerinnen und Denker (2026-08-13) ───────
+   * Kürzer als bei Aristoteles und Kant, darum meist ein Beleg pro Karte, zwei
+   * nur dort, wo ein Block zwei getrennte Behauptungen trägt. Zwei englische
+   * Wikipedia-Artikel (Spotify Wrapped, das australische Gesetz), weil es bei
+   * der Prüfung keine deutschen gab. Bei Speedcubing sagt der Text bewusst nur
+   * «unter drei Sekunden» und bei den Kantonen der Kant-Karte steht keine
+   * Summe: Zahlen, die der nächste Rekord oder die nächste Abstimmung
+   * überholt, gehören nicht in den Lerntext, sondern in die Belegstelle.   */
+  {
+    id: "DW-5d8b84",
+    anker: "Jugendwort des Jahres",
+    url: "https://de.wikipedia.org/wiki/Jugendwort_des_Jahres_(Deutschland)",
+    titel: "Jugendwort des Jahres (Wikipedia)",
+    stelle:
+      "Gewählt «ab 2008 jährlich von einer Jury unter der Leitung des Langenscheidt-Verlags», seit 2020 offen für alle. Siegerwort 2024: «Aura», es «bezieht sich (oft scherzhaft) auf die Ausstrahlung, das Charisma oder den Status einer Person». 2025 gewann «das crazy», «ein Füllwort, wenn jemand nichts zum Thema sagen, aber freundlich bleiben möchte».",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-6951c9",
+    anker: "Skolstrejk för klimatet",
+    url: "https://de.wikipedia.org/wiki/Fridays_for_Future",
+    titel: "Fridays for Future (Wikipedia)",
+    stelle:
+      "Greta Thunberg begann den Schulstreik am 20. August 2018 mit 15 Jahren und sass «zunächst für einen Zeitraum von drei Wochen, täglich während der Unterrichtszeit vor dem schwedischen Reichstagsgebäude in Stockholm», mit einem Schild «Skolstrejk för klimatet» (Schulstreik fürs Klima); ab dem 8. September jeden Freitag.",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-6951c9",
+    anker: "fast 1,8 Millionen Menschen",
+    url: "https://de.wikipedia.org/wiki/Fridays_for_Future",
+    titel: "Fridays for Future (Wikipedia)",
+    stelle:
+      "Zum globalen Klimastreik vom 15. März 2019: Es «sollen nach Angaben der Bewegung beispielsweise fast 1,8 Mio. Menschen an den Demonstrationen von FFF teilgenommen haben». Darum steht im Text «nach Angaben der Bewegung».",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-2b8995",
+    anker: "Momiji Nishiya",
+    url: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2020/Skateboard",
+    titel: "Skateboard an den Sommerspielen 2020 (Wikipedia)",
+    stelle:
+      "«Erstmals waren bei den Olympischen Spielen 2020 in Tokio Wettbewerbe im Skateboard Teil des olympischen Programms.» Street der Frauen: Gold an die 13-jährige Momiji Nishiya (Japan), «zur jüngsten Olympiasiegerin Japans»; Silber an die ebenfalls 13-jährige Rayssa Leal (Brasilien). Die Spiele fanden wegen der Pandemie 2021 statt.",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-0ee6ed",
+    anker: "unter drei Sekunden",
+    url: "https://de.wikipedia.org/wiki/Speedcubing",
+    titel: "Speedcubing (Wikipedia)",
+    stelle:
+      "Die Rekordtabelle nennt als Weltrekord im Einzellösen des 3×3×3 2,76 Sekunden, aufgestellt von Teodor Zajder am 7. Februar 2026. Zu den Methoden: Bei den schnellsten müssen «sehr viele Algorithmen und Spezialfälle auswendig gelernt werden». Der Text sagt bewusst nur «unter drei Sekunden», damit er nicht mit jedem neuen Rekord falsch wird.",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-74e0f5",
+    anker: "Tetris-Effekt",
+    url: "https://de.wikipedia.org/wiki/Tetris-Effekt",
+    titel: "Tetris-Effekt (Wikipedia)",
+    stelle:
+      "Der Effekt tritt auf, «wenn Personen so viel Zeit in eine Aktivität stecken, dass diese anfängt, deren Denken, bildliche Vorstellung und Träume zu gestalten». Betroffene «träumen beim Einschlafen vielleicht auch von fallenden Tetrominos» und überlegen im Alltag, wie Schachteln im Supermarktregal zusammenpassen.",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-b54a5e",
+    anker: "Spotify Wrapped",
+    url: "https://en.wikipedia.org/wiki/Spotify_Wrapped",
+    titel: "Spotify Wrapped (Wikipedia, englisch)",
+    stelle:
+      "Gestartet im Dezember 2016, erscheint «typically released in late November or early December» und zeigt die meistgehörten Künstler, Songs und Genres des Jahres; die Bildschirmserie lädt ausdrücklich zum Teilen ein, Millionen posteten sie. Einen deutschen Wikipedia-Artikel gab es bei der Prüfung nicht.",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-20ecfe",
+    anker: "1987 kamen die Tapiokaperlen dazu",
+    url: "https://de.wikipedia.org/wiki/Bubble_Tea",
+    titel: "Bubble Tea (Wikipedia)",
+    stelle:
+      "Entstanden in Taiwan in den frühen 1980er Jahren, als eine Teehauskette kalten Tee mit Kondensmilch und Sirup ausschenkte; das heutige Getränk entstand, als 1987 die Tapiokaperlen dazukamen. Nach Europa kam es später, in die Schweiz 2012.",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-20ecfe",
+    anker: "grösster Produzent heute Nigeria",
+    url: "https://de.wikipedia.org/wiki/Maniok",
+    titel: "Maniok (Wikipedia)",
+    stelle:
+      "Maniok ist «wahrscheinlich als allotetraploide Pflanze aus südamerikanischen Manihot-Arten entstanden» (genannt werden Goiás, das Hinterland Bahias und die Amazonasregion). Grösster Produzent ist Nigeria mit rund 62,7 Millionen Tonnen (2023). «Die verarbeitete Stärke wird Tapioka genannt.»",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-fa222c",
+    anker: "36,84",
+    url: "https://de.wikipedia.org/wiki/4-mal-100-Meter-Staffel",
+    titel: "4-mal-100-Meter-Staffel (Wikipedia)",
+    stelle:
+      "Weltrekord der Männer: 36,84 Sekunden, Jamaika, London 2012 (Nesta Carter, Michael Frater, Yohan Blake, Usain Bolt); bei der Prüfung weiterhin als Weltrekord geführt.",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-fa222c",
+    anker: "fliegende Wechsel",
+    url: "https://de.wikipedia.org/wiki/4-mal-100-Meter-Staffel",
+    titel: "4-mal-100-Meter-Staffel (Wikipedia)",
+    stelle:
+      "«Der Läufer, der jeweils den Stab übernimmt, startet schon, bevor ihn der übergebende Läufer erreicht hat, und übernimmt den Stab im Laufen.» Das ermöglicht erheblich höhere Durchschnittsgeschwindigkeiten als im Einzelrennen.",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-90fa9a",
+    anker: "18. November 2015",
+    url: "https://de.wikipedia.org/wiki/Ocean_Eyes",
+    titel: "Ocean Eyes (Wikipedia)",
+    stelle:
+      "Finneas O'Connell schrieb und produzierte den Song, ursprünglich für seine eigene Band; Billie Eilish war 13, als er ihn ihr gab. Der Tanzlehrer Fred Diaz hatte einen Song für eine Tanzübung erbeten; die Aufnahme wurde am 18. November 2015 mit kostenlosem Download-Link auf SoundCloud gestellt, «damit ihr Lehrer darauf zugreifen konnte». «Über Nacht hörten es etliche Menschen», danach meldete sich Interscope Records.",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-504602",
+    anker: "Prothese am linken Ellbogen",
+    url: "https://de.wikipedia.org/wiki/Beatrice_Vio",
+    titel: "Beatrice Vio (Wikipedia)",
+    stelle:
+      "Mit elf erkrankte sie an Meningitis, «aufgrund von Nekrosen» wurden Unterarme und Unterschenkel amputiert. «Während die anderen Fechterinnen das Florett in der Hand halten, wird ihr Florett mit einer Prothese an ihrem linken Ellenbogen befestigt»; sie ist «die einzige Fechterin im Rollstuhlfechten, die ohne Hände, Unterarme und Beine antritt». Paralympics-Gold im Einzel-Florett in Rio am 14. September 2016 (mit 19) und erneut in Tokio am 28. August 2021.",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-21bd79",
+    anker: "Mindestalter von 16 Jahren",
+    url: "https://en.wikipedia.org/wiki/Online_Safety_Amendment_(Social_Media_Minimum_Age)_Act_2024",
+    titel: "Online Safety Amendment (Social Media Minimum Age) Act 2024 (Wikipedia, englisch)",
+    stelle:
+      "Das australische Gesetz («world-first law») wurde am 29. November 2024 verabschiedet; die Plattformen hatten bis zum 10. Dezember 2025 Zeit zur Umsetzung. Reguliert werden zehn Plattformen, darunter Facebook, Instagram, TikTok, Snapchat, YouTube und X. Einen deutschen Wikipedia-Artikel gab es bei der Prüfung nicht.",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-21bd79",
+    anker: "sagten 70 Prozent Nein",
+    url: "https://en.wikipedia.org/wiki/Online_Safety_Amendment_(Social_Media_Minimum_Age)_Act_2024",
+    titel: "Online Safety Amendment (Social Media Minimum Age) Act 2024 (Wikipedia, englisch)",
+    stelle:
+      "YouGov im November 2024: «77% of Australians supported the age limit». In einer ABC-Umfrage unter 17'000 Jugendlichen antworteten auf die Frage, ob das Verbot eine gute Idee sei, «70% (...) No».",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-86eeb7",
+    anker: "über 100 Millionen",
+    url: "https://de.wikipedia.org/wiki/ChatGPT",
+    titel: "ChatGPT (Wikipedia)",
+    stelle:
+      "Veröffentlicht «am 30. November 2022»; innerhalb von fünf Tagen registrierten sich weltweit eine Million Nutzer, «im Januar 2023 erreichte ChatGPT über 100 Millionen Nutzer». Zum Vergleich nennt der Artikel für die erste Million: TikTok etwa neun Monate, Instagram zweieinhalb Jahre.",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-83d626",
+    anker: "aus Rücksicht auf ihre mentale Gesundheit",
+    url: "https://de.wikipedia.org/wiki/Simone_Biles",
+    titel: "Simone Biles (Wikipedia)",
+    stelle:
+      "Im Teamfinal von Tokio am 27. Juli 2021 zog sie sich nach dem Sprung zurück, «aus Rücksicht auf ihre mentale Gesundheit, nicht wegen einer körperlichen Verletzung». In Paris 2024 gewann sie Gold mit dem Team, im Mehrkampf und am Sprung sowie Silber am Boden.",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-e18429",
+    anker: "Bullet Journal",
+    url: "https://de.wikipedia.org/wiki/Bullet_Journal",
+    titel: "Bullet Journal (Wikipedia)",
+    stelle:
+      "«Ein Bullet Journal (auch als BuJo bekannt) ist ein individuelles Organisationssystem, das 2013 von dem digitalen Produktdesigner Ryder Carroll entwickelt wurde.» Es verbindet «Terminplanung, To-Do-Listen, Tagebuch und Brainstorming in einem einzigen Notizbuch», üblich sind Notizbücher mit Punkteraster.",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-11c6a9",
+    anker: "2008 in Litauen",
+    url: "https://de.wikipedia.org/wiki/Vinted",
+    titel: "Vinted (Wikipedia)",
+    stelle:
+      "«Vinted wurde 2008 unter dem Namen Miju Projects von Justas Janauskas und Milda Mitkute in Litauen gegründet.» 2022 «über 65 Millionen Mitglieder», vertreten «in 16 Ländern in Europa und Nordamerika»; gehandelt werden Secondhandkleidung, Accessoires und mehr.",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-f79364",
+    anker: "registrierten Seismographen in Seattle",
+    url: "https://de.wikipedia.org/wiki/The_Eras_Tour",
+    titel: "The Eras Tour (Wikipedia)",
+    stelle:
+      "Beim Konzert im Lumen Field in Seattle im Juli 2023 «registrierten lokale Seismographen für Menschen nicht wahrnehmbare Erschütterungen der Erde», ausgelöst von den Fans, über mehrere Stunden. Eine Magnitude nennt der Artikel nicht, darum steht auch im Text keine.",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-f79364",
+    anker: "kommerziell erfolgreichste",
+    url: "https://de.wikipedia.org/wiki/The_Eras_Tour",
+    titel: "The Eras Tour (Wikipedia)",
+    stelle:
+      "Die Tournee wurde «im Dezember 2023 von Guinness World Records als kommerziell erfolgreichste Tournee weltweit anerkannt»; nach rund 60 Konzerten lag der Umsatz bei 1,04 Milliarden Dollar.",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-76be7d",
+    anker: "Ami Yuasa",
+    url: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2024/Breaking",
+    titel: "Breaking an den Sommerspielen 2024 (Wikipedia)",
+    stelle:
+      "Breaking war in Paris «erstmals Teil des olympischen Programms», ausgetragen am 9. und 10. August 2024 auf der Place de la Concorde. Gold der B-Girls: Ami Yuasa (Japan); Gold der B-Boys: Philip Kim (Kanada).",
+    geprueft: "2026-08-13",
+  },
+  {
+    id: "DW-8f9895",
+    anker: "Polarlichter bis in die Schweiz",
+    url: "https://www.swissinfo.ch/ger/st%C3%A4rkster-sonnensturm-seit-2003-f%C3%BChrt-zu-schweizer-polarlichtern/77308421",
+    titel: "Swissinfo, 11. Mai 2024: «Stärkster Sonnensturm seit 2003»",
+    stelle:
+      "«Der erste ‹extreme› Sonnensturm seit 2003»: Die Kategorie fünf war laut NOAA zuletzt im Oktober 2003 bei den Halloween-Stürmen erreicht worden. «Aufgrund des starken geomagnetischen Sturms waren Polarlichter bis in die Schweizer Breitengrade sichtbar», festgehalten etwa von einer Wetterkamera in Ravoire bei Martigny am Abend des 10. Mai 2024.",
+    geprueft: "2026-08-13",
+  },
 ];
 
 /**
@@ -2047,6 +2263,7 @@ export const OHNE_BELEG: KeinBeleg[] = [
       "Der Gedanke steht bei Bloch im «Prinzip Hoffnung», wo die Alchemie als vorwegnehmende, auf Verwandlung zielende Praxis erscheint. Belegen können wir das am 2026-08-10 nicht: Der Wikipedia-Artikel zu Ernst Bloch erwähnt die Alchemie nicht, der Artikel «Alchemie» erwähnt Bloch nicht und eine frei zugängliche deutschsprachige Seite mit dieser Aussage haben wir nicht gefunden. Das Werk selbst liegt uns nicht vor und aus dem Gedächtnis wird hier nichts belegt. Die frühere Fassung enthielt sogar ein wörtliches Zitat («älteste gewollte Form von Technik»); die Kontrolle hat es zur Paraphrase entschärft, was ohne Quelle die richtige Wahl ist. Ein Zitat verlangt eine Fundstelle, eine Paraphrase trägt sich als Deutung selbst.",
     notiert: "2026-08-10",
   },
+
 ];
 
 /** Alle Belege eines Textblocks. */
