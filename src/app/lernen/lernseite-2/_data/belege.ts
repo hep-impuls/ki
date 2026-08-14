@@ -2004,7 +2004,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-6951c9",
+    id: "DW-26672a",
     anker: "Skolstrejk för klimatet",
     url: "https://de.wikipedia.org/wiki/Fridays_for_Future",
     titel: "Fridays for Future (Wikipedia)",
@@ -2013,7 +2013,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-6951c9",
+    id: "DW-26672a",
     anker: "fast 1,8 Millionen Menschen",
     url: "https://de.wikipedia.org/wiki/Fridays_for_Future",
     titel: "Fridays for Future (Wikipedia)",

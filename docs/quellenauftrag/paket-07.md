@@ -55,6 +55,8 @@ Der Weltrekord im Lösen des Zauberwürfels liegt unter drei Sekunden, aufgestel
 
 Sloterdijk nennt den Menschen ein übendes Wesen: Du wirst, was du wiederholst, im Sport, in einer Sprache, in der Geduld, auch in dem, was du täglich nebenbei tust. Deine Gewohnheiten sind Übungen, ob du sie so nennst oder nicht. Das Entlastende daran: Können ist kein Besitz, sondern ein Weg und der steht allen offen, in kleinen Wiederholungen. Abkürzungen gibt es fürs Ergebnis. Fürs Können gibt es keine.
 
+> **Belegt** («unter drei Sekunden»): [Speedcubing (Wikipedia)](https://de.wikipedia.org/wiki/Speedcubing) — Die Rekordtabelle nennt als Weltrekord im Einzellösen des 3×3×3 2,76 Sekunden, aufgestellt von Teodor Zajder am 7. Februar 2026. Zu den Methoden: Bei den schnellsten müssen «sehr viele Algorithmen und Spezialfälle auswendig gelernt werden». Der Text sagt bewusst nur «unter drei Sekunden», damit er nicht mit jedem neuen Rekord falsch wird. *(geprüft 2026-08-13)*
+
 **[DW-dadd17]** *(Zur Philosophie · Was ist der Mensch?)*
 Siri Hustvedt ist US-amerikanische Schriftstellerin und Essayistin, die Literatur mit Hirnforschung und Philosophie verbindet. In «Die Illusion der Gewissheit» wendet sie sich gegen das Bild, das Gehirn sei ein Computer. Denken und Fühlen hängen für sie am lebendigen Körper und an gelebter Erfahrung, sie spricht vom «verkörperten Geist». Ihr Argument: Eine KI kann Sprache und Gefühle täuschend echt nachahmen, aber sie erlebt nichts und macht keine Erfahrung. Ihr «produktiver Zweifel» hilft, das flüssige Modell nicht mit der Wirklichkeit zu verwechseln. Hauptwerk: «Die Illusion der Gewissheit» (2018).
 
@@ -79,15 +81,25 @@ Bubble Tea entstand in den 1980er Jahren in Taiwan, 1987 kamen die Tapiokaperlen
 
 Ein Becher, ein Strohhalm. Und daran hängen: eine Teekultur aus Taiwan, ein südamerikanisches Wurzelgemüse, Felder in Nigeria, ein Laden an deiner Ecke, ein Trend in deinem Feed. Nichts davon hat den Bubble Tea allein gemacht, gewirkt hat der Verbund. So schaut Latour auf die Welt: Wer verstehen will, was ein Ding ist, fragt, was alles mitwirkt. Die Übung funktioniert bei fast allem, beim Pausenbrot, beim Handy und bei jeder Antwort einer KI. Hinter jedem Einzelnen steht ein Netz.
 
+> **Belegt** («1987 kamen die Tapiokaperlen dazu»): [Bubble Tea (Wikipedia)](https://de.wikipedia.org/wiki/Bubble_Tea) — Entstanden in Taiwan in den frühen 1980er Jahren, als eine Teehauskette kalten Tee mit Kondensmilch und Sirup ausschenkte; das heutige Getränk entstand, als 1987 die Tapiokaperlen dazukamen. Nach Europa kam es später, in die Schweiz 2012. *(geprüft 2026-08-13)*
+
+> **Belegt** («grösster Produzent heute Nigeria»): [Maniok (Wikipedia)](https://de.wikipedia.org/wiki/Maniok) — Maniok ist «wahrscheinlich als allotetraploide Pflanze aus südamerikanischen Manihot-Arten entstanden» (genannt werden Goiás, das Hinterland Bahias und die Amazonasregion). Grösster Produzent ist Nigeria mit rund 62,7 Millionen Tonnen (2023). «Die verarbeitete Stärke wird Tapioka genannt.» *(geprüft 2026-08-13)*
+
 **[DW-90fa9a]** *(Fallbeispiel · Transformation von Mensch und Maschine)*
 «Ocean Eyes» klingt nach einem Alleingang: ein Mädchen, ein Zimmer, ein Welthit. Tatsächlich hatte ihr Bruder Finneas den Song geschrieben, die 13-jährige Billie Eilish sang ihn und hochgeladen wurde er am 18. November 2015 auf SoundCloud, damit ihr Tanzlehrer ihn für eine Choreografie herunterladen konnte. Über Nacht teilten ihn Fremde, dann meldete sich ein Label.
 
 Das ganz unabhängige Individuum, das aus dem Nichts handelt, gibt es für Latour nicht, auch nicht im Schlafzimmerstudio. Da sind ein Bruder, ein Lehrer mit einem Auftrag, eine Plattform, tausende Teilende. Das macht die Leistung nicht kleiner, es macht sie verständlicher. Und wer das eigene Geflecht kennt, wird dadurch nicht abhängiger, sondern souveräner: Du weisst, was dich trägt, und kannst es pflegen.
 
+> **Belegt** («18. November 2015»): [Ocean Eyes (Wikipedia)](https://de.wikipedia.org/wiki/Ocean_Eyes) — Finneas O'Connell schrieb und produzierte den Song, ursprünglich für seine eigene Band; Billie Eilish war 13, als er ihn ihr gab. Der Tanzlehrer Fred Diaz hatte einen Song für eine Tanzübung erbeten; die Aufnahme wurde am 18. November 2015 mit kostenlosem Download-Link auf SoundCloud gestellt, «damit ihr Lehrer darauf zugreifen konnte». «Über Nacht hörten es etliche Menschen», danach meldete sich Interscope Records. *(geprüft 2026-08-13)*
+
 **[DW-fa222c]** *(Fallbeispiel · Transformation von Mensch und Maschine)*
 Seit London 2012 steht der Weltrekord der 4-mal-100-Meter-Staffel bei 36,84 Sekunden, gelaufen von Jamaika. Möglich macht solche Zeiten der fliegende Wechsel: Wer den Stab übernimmt, startet, bevor er da ist, und übernimmt ihn in vollem Lauf. Eine Staffel ist darum schneller, als ihre vier Läufer einzeln zusammen wären.
 
 Wem gehört diese Zeit? Keinem der vier allein. Sie entsteht zwischen ihnen, in den Trainingsjahren, in drei Übergaben. Und der Stab läuft mit. Deguchi verlegt das Handeln genau dorthin: Nicht «ich» handelt, sondern «wir», ein Geflecht aus Menschen und Dingen, zu dem heute auch Maschinen gehören. Das nimmt dir nichts weg. Es heisst nur: Wer ehrlich sagen kann, wer und was alles mitgelaufen ist, versteht die eigene Leistung besser.
+
+> **Belegt** («36,84»): [4-mal-100-Meter-Staffel (Wikipedia)](https://de.wikipedia.org/wiki/4-mal-100-Meter-Staffel) — Weltrekord der Männer: 36,84 Sekunden, Jamaika, London 2012 (Nesta Carter, Michael Frater, Yohan Blake, Usain Bolt); bei der Prüfung weiterhin als Weltrekord geführt. *(geprüft 2026-08-13)*
+
+> **Belegt** («fliegende Wechsel»): [4-mal-100-Meter-Staffel (Wikipedia)](https://de.wikipedia.org/wiki/4-mal-100-Meter-Staffel) — «Der Läufer, der jeweils den Stab übernimmt, startet schon, bevor ihn der übergebende Läufer erreicht hat, und übernimmt den Stab im Laufen.» Das ermöglicht erheblich höhere Durchschnittsgeschwindigkeiten als im Einzelrennen. *(geprüft 2026-08-13)*
 
 **[DW-201ed5]** *(Zur Philosophie · Transformation von Mensch und Maschine)*
 Donna Haraway ist US-amerikanische Wissenschaftshistorikerin und feministische Denkerin, ihr «Manifest für Cyborgs» (1985) wurde weltberühmt. Sie denkt Mensch, Tier und Maschine als verwoben: Wir sind in gewissem Sinn schon «Cyborgs», Mischwesen. Statt der Technik als fremder Macht gegenüberzustehen, sollen wir lernen, verantwortlich mit ihr zu leben, sie spricht von «Mit dem Schlamassel bleiben», also die Probleme aushalten und antworten statt fliehen. Damit steht sie Bruno Latour nahe, ergänzt ihn aber um Fürsorge und Verantwortung. Werk: «Unruhig bleiben» (2016).
@@ -97,10 +109,16 @@ Seit dem 10. Dezember 2025 gilt in Australien als erstem Land der Welt ein Minde
 
 Harari erzählt Geschichte als Geschichte wachsender Macht: Werkzeuge, die ganze Gesellschaften umbauen, brauchen Regeln, und zwar bevor alle Folgen bekannt sind. Nur fallen Regeln nicht vom Himmel. Sie werden ausgehandelt, zwischen Generationen, Ländern und Interessen, mit offenem Ausgang. Und andere Länder schauen gerade genau hin. An den zwei Zahlen oben ist darum nicht interessant, wer recht hat, sondern was hier verhandelt wird: die Sorge der einen gegen den Alltag der anderen. Was wäre deine Regel und wie würdest du sie begründen?
 
+> **Belegt** («Mindestalter von 16 Jahren»): [Online Safety Amendment (Social Media Minimum Age) Act 2024 (Wikipedia, englisch)](https://en.wikipedia.org/wiki/Online_Safety_Amendment_(Social_Media_Minimum_Age)_Act_2024) — Das australische Gesetz («world-first law») wurde am 29. November 2024 verabschiedet; die Plattformen hatten bis zum 10. Dezember 2025 Zeit zur Umsetzung. Reguliert werden zehn Plattformen, darunter Facebook, Instagram, TikTok, Snapchat, YouTube und X. Einen deutschen Wikipedia-Artikel gab es bei der Prüfung nicht. *(geprüft 2026-08-13)*
+
+> **Belegt** («sagten 70 Prozent Nein»): [Online Safety Amendment (Social Media Minimum Age) Act 2024 (Wikipedia, englisch)](https://en.wikipedia.org/wiki/Online_Safety_Amendment_(Social_Media_Minimum_Age)_Act_2024) — YouGov im November 2024: «77% of Australians supported the age limit». In einer ABC-Umfrage unter 17'000 Jugendlichen antworteten auf die Frage, ob das Verbot eine gute Idee sei, «70% (...) No». *(geprüft 2026-08-13)*
+
 **[DW-86eeb7]** *(Fallbeispiel · Transformation von Mensch und Maschine)*
 ChatGPT wurde am 30. November 2022 veröffentlicht. Nach fünf Tagen hatten sich eine Million Menschen registriert, im Januar 2023 waren es über 100 Millionen. TikTok hatte für die erste Million rund neun Monate gebraucht, Instagram zweieinhalb Jahre.
 
 Warum nennt Gabriel so etwas einen Spiegel? Trainiert wurde das Werkzeug an menschlichem Schreiben. Was es dir zeigt, sind Muster von uns und im Kleinen Muster von dir: deine Formulierungen, deine Abkürzungen, deine Wünsche. Lässt du dir drei Fassungen einer heiklen Nachricht vorschlagen, hast du drei Spiegelbilder, aber senden musst du eine, und diese Wahl zeigt, wer du bist. Die eigentliche Prüfung läuft darum nicht im Rechenzentrum. Sie läuft bei dir.
+
+> **Belegt** («über 100 Millionen»): [ChatGPT (Wikipedia)](https://de.wikipedia.org/wiki/ChatGPT) — Veröffentlicht «am 30. November 2022»; innerhalb von fünf Tagen registrierten sich weltweit eine Million Nutzer, «im Januar 2023 erreichte ChatGPT über 100 Millionen Nutzer». Zum Vergleich nennt der Artikel für die erste Million: TikTok etwa neun Monate, Instagram zweieinhalb Jahre. *(geprüft 2026-08-13)*
 
 **[DW-90c840]** *(Fliesstext · Transformation von Mensch und Maschine)*
 Am äussersten Rand steht der «Transhumanismus», die Idee, den Menschen durch Technik grenzenlos zu steigern, vielleicht sogar den Tod zu überwinden. Zum Einordnen helfen zwei ältere Muster als Gegenschablone. Zum einen die religiösen Heilsversprechen, denen der Transhumanismus verblüffend ähnelt, nur dass hier die Technik die Erlösung bringen soll. Zum anderen die endzeitlichen Untergangserzählungen, in denen die KI alles auslöscht. Beides, Erlösung wie Weltuntergang, sind grosse, alte Geschichten. Wer sie erkennt, fällt weder auf den Hype noch auf die Panik herein.

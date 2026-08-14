@@ -1653,25 +1653,25 @@ Woher hat ein Wort seine Bedeutung? Sie wird nicht ausgerechnet, sie wird im Geb
 
 ### Was ist der Mensch? · Skolstrejk för klimatet
 
-- **Kennung:** `DW-6951c9` (Fallbeispiel)
+- **Kennung:** `DW-26672a` (Fallbeispiel)
 - **Quelle:** [Fridays for Future (Wikipedia)](https://de.wikipedia.org/wiki/Fridays_for_Future)
 - **Fundstelle:** Greta Thunberg begann den Schulstreik am 20. August 2018 mit 15 Jahren und sass «zunächst für einen Zeitraum von drei Wochen, täglich während der Unterrichtszeit vor dem schwedischen Reichstagsgebäude in Stockholm», mit einem Schild «Skolstrejk för klimatet» (Schulstreik fürs Klima); ab dem 8. September jeden Freitag.
 - **Geprüft:** 2026-08-13
 
 > Am 20. August 2018 setzte sich eine 15-jährige Schülerin mit einem Schild vor das Parlament in Stockholm: «Skolstrejk för klimatet», Schulstreik fürs Klima. Drei Wochen lang sass sie dort jeden Schultag, danach jeden Freitag. Ein halbes Jahr später, am 15. März 2019, streikten nach Angaben der Bewegung weltweit fast 1,8 Millionen Menschen.
 
-Niemand hätte das aus dem Vortag ableiten können. Ein Mädchen, ein Karton, ein Gehsteig: Alles daran war unscheinbar, nur neu war es. Arendt nennt diese Fähigkeit Natalität: Weil du geboren wurdest und nicht das Ergebnis des Bisherigen bist, kannst du etwas anfangen, das vorher nicht in der Welt war. Anfangen ist darum immer unwahrscheinlich und immer riskant. Und es bleibt dein Teil: Fortsetzen, hochrechnen und wiederholen lässt sich vieles, anfangen nicht.
+Niemand hätte das aus dem Vortag ableiten können. Ein Mädchen, ein Karton, ein Gehsteig: Alles daran war unscheinbar, nur neu war es. Arendt beschreibt diesen Wesenszug mit dem Bild der Geburt und nennt ihn Natalität: Wie jeder Mensch als jemand zur Welt kommt, den es so noch nie gab, so kann er auch später Anfänge setzen, die in keiner Fortsetzung des Bisherigen lagen. Anfangen ist darum immer unwahrscheinlich und immer riskant. Und es bleibt dein Teil: Fortsetzen, hochrechnen und wiederholen lässt sich vieles, anfangen nicht.
 
 ### Was ist der Mensch? · fast 1,8 Millionen Menschen
 
-- **Kennung:** `DW-6951c9` (Fallbeispiel)
+- **Kennung:** `DW-26672a` (Fallbeispiel)
 - **Quelle:** [Fridays for Future (Wikipedia)](https://de.wikipedia.org/wiki/Fridays_for_Future)
 - **Fundstelle:** Zum globalen Klimastreik vom 15. März 2019: Es «sollen nach Angaben der Bewegung beispielsweise fast 1,8 Mio. Menschen an den Demonstrationen von FFF teilgenommen haben». Darum steht im Text «nach Angaben der Bewegung».
 - **Geprüft:** 2026-08-13
 
 > Am 20. August 2018 setzte sich eine 15-jährige Schülerin mit einem Schild vor das Parlament in Stockholm: «Skolstrejk för klimatet», Schulstreik fürs Klima. Drei Wochen lang sass sie dort jeden Schultag, danach jeden Freitag. Ein halbes Jahr später, am 15. März 2019, streikten nach Angaben der Bewegung weltweit fast 1,8 Millionen Menschen.
 
-Niemand hätte das aus dem Vortag ableiten können. Ein Mädchen, ein Karton, ein Gehsteig: Alles daran war unscheinbar, nur neu war es. Arendt nennt diese Fähigkeit Natalität: Weil du geboren wurdest und nicht das Ergebnis des Bisherigen bist, kannst du etwas anfangen, das vorher nicht in der Welt war. Anfangen ist darum immer unwahrscheinlich und immer riskant. Und es bleibt dein Teil: Fortsetzen, hochrechnen und wiederholen lässt sich vieles, anfangen nicht.
+Niemand hätte das aus dem Vortag ableiten können. Ein Mädchen, ein Karton, ein Gehsteig: Alles daran war unscheinbar, nur neu war es. Arendt beschreibt diesen Wesenszug mit dem Bild der Geburt und nennt ihn Natalität: Wie jeder Mensch als jemand zur Welt kommt, den es so noch nie gab, so kann er auch später Anfänge setzen, die in keiner Fortsetzung des Bisherigen lagen. Anfangen ist darum immer unwahrscheinlich und immer riskant. Und es bleibt dein Teil: Fortsetzen, hochrechnen und wiederholen lässt sich vieles, anfangen nicht.
 
 ### Was ist der Mensch? · Momiji Nishiya
 

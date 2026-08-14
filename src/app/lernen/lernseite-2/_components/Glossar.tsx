@@ -247,7 +247,7 @@ export const GLOSSAR: Record<string, string> = {
   Programmiersprache:
     "Eine künstliche Sprache, in der Menschen einem Computer Anweisungen aufschreiben.",
   Natalität:
-    "Bei Hannah Arendt: Jeder Mensch kommt als Neuer zur Welt und kann darum etwas anfangen, das vorher nicht abzusehen war.",
+    "Arendts Wort für die Gebürtlichkeit, einen Wesenszug des Menschen, nicht die blosse Geburt, denn geboren werden auch andere Wesen: Jeder Mensch kommt als jemand Neues zur Welt, und dieses Neusein hört nicht auf, Menschen können ihr Leben lang Anfänge setzen, die aus dem Bisherigen nicht ableitbar sind.",
   "Manhattan-Projekt":
     "Das geheime US-Grossprojekt (1942–45), das die erste Atombombe baute.",
   Transformer:
