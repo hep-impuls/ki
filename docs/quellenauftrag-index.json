@@ -3240,12 +3240,12 @@
   "stufe": "tief",
   "text": "Die Stoa war eine der grossen Schulen der Antike; bekannte Vertreter sind der Sklave Epiktet, der Staatsmann Seneca und der Kaiser Mark Aurel. Für sie ist Philosophie kein blosses Wissen, sondern tägliche Übung («Askesis», ursprünglich Übung, nicht Verzicht). Ihr Kern ist die Unterscheidung zwischen dem, was in unserer Macht steht (unser Urteil, unser Handeln) und dem, was nicht (Ereignisse, Meinungen anderer). Gelassenheit entsteht, wenn man seine Kraft auf das Erste richtet. Ein gutes Leben wächst so aus beständiger kleiner Übung, nicht aus einer einmaligen Einsicht."
  },
- "DW-4bf5f6": {
+ "DW-8b3194": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
   "ort": "Lebenskunst",
   "feld": "Fallbeispiel",
   "stufe": "hoch",
-  "text": "Im Teamfinal von Tokio 2021 zog sich die US-Turnerin Simone Biles nach einem Sprung zurück, aus Rücksicht auf ihre mentale Gesundheit, nicht wegen einer Verletzung. Drei Jahre später in Paris gewann sie drei Mal Gold und ein Mal Silber.\n\nDie Stoiker unterscheiden zwischen dem, was in deiner Macht steht, und dem, was nicht. Nicht in Biles' Macht standen die Erwartungen eines Weltpublikums, die Schlagzeilen, der Medaillenspiegel. In ihrer Macht standen das eigene Urteil darüber, was jetzt richtig ist, und das Handeln danach, gegen den Druck. Genau das ist die stoische Übung, die eigene Kraft dorthin zu legen, wo sie wirkt. Das ist kein Rückzug aus der Welt. Wer so unterscheidet, kommt zurück, sobald es wieder die eigene Entscheidung ist."
+  "text": "Im Teamfinal von Tokio 2021 zog sich die US-Turnerin Simone Biles nach einem Sprung zurück, aus Rücksicht auf ihre mentale Gesundheit, nicht wegen einer Verletzung. Drei Jahre später in Paris gewann sie drei Mal Gold und ein Mal Silber.\n\nDie Stoiker unterscheiden zwischen dem, was in deiner Macht steht, und dem, was nicht. Nicht in Biles' Macht standen die Erwartungen eines Weltpublikums, die Schlagzeilen, der Medaillenspiegel. In ihrer Macht standen das eigene Urteil darüber, was jetzt richtig ist, und das Handeln danach, gegen den Druck. Genau das ist die stoische «Askesis», das tägliche Einüben dieser Unterscheidung, bis die eigene Kraft dorthin geht, wo sie wirkt. Das ist kein Rückzug aus der Welt. Wer so unterscheidet, kommt zurück, sobald es wieder die eigene Entscheidung ist."
  },
  "DW-ce2a11": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
@@ -3254,12 +3254,12 @@
   "stufe": "hoch",
   "text": "Michel Foucault war ein französischer Philosoph, der untersuchte, wie Macht und Wissen unser Leben prägen (in Gefängnis, Klinik, Sexualität). In seinem Spätwerk entdeckte er die antike «Sorge um sich selbst» wieder, das Kümmern um das eigene Leben und sein bewusstes Gestalten. Er nennt das eine «Ästhetik der Existenz», das Leben formen wie ein Kunstwerk. Es geht nicht darum, fremden Normen zu gehorchen, sondern die eigene Lebensform aktiv zu wählen und einzuüben. Werk: «Die Sorge um sich» (1984)."
  },
- "DW-cba17f": {
+ "DW-f47a63": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
   "ort": "Lebenskunst",
   "feld": "Fallbeispiel",
   "stufe": "hoch",
-  "text": "Ein Bullet Journal ist ein Notizbuch mit Punkteraster, das Terminplanung, To-do-Listen, Tagebuch und Brainstorming in einem einzigen Heft verbindet. Entwickelt hat es 2013 der Designer Ryder Carroll.\n\nNeu ist die Idee nicht, und das ist das Schöne daran. Foucault hat in seinem Spätwerk die antike Sorge um sich selbst wieder ausgegraben. Schon damals führten Menschen Notizhefte, um ihr Leben zu ordnen und an sich zu arbeiten. Ein Leben formen wie ein Kunstwerk heisst nicht, sich für fremde Massstäbe zu optimieren, für Noten, Follower und Bestenlisten. Es heisst, selbst zu wählen, woran du arbeitest. Dafür ist ein Heft, das niemand liken kann, ein ziemlich gutes Werkzeug, denn es gehört nur dir."
+  "text": "Ein Bullet Journal ist ein Notizbuch mit Punkteraster, das Terminplanung, To-do-Listen, Tagebuch und Brainstorming in einem einzigen Heft verbindet. Entwickelt hat es 2013 der Designer Ryder Carroll.\n\nNeu ist die Idee nicht, und das ist das Schöne daran. Foucault hat in seinem Spätwerk die antike Sorge um sich selbst wieder ausgegraben. Solche Hefte gab es nämlich schon damals, sie hiessen Hypomnemata und man sammelte darin Zitate, Gedanken und Vorsätze. Foucault las sie als Werkzeuge der Selbstsorge, Schreiben als Arbeit an sich selbst. Genau das meint seine «Ästhetik der Existenz», ein Leben formen wie ein Kunstwerk. Gemeint ist nicht, sich für fremde Massstäbe zu optimieren, für Noten, Follower und Bestenlisten. Es heisst, selbst zu wählen, woran du arbeitest. Dafür ist ein Heft, das niemand liken kann, ein ziemlich gutes Werkzeug, denn es gehört nur dir."
  },
  "DW-83b1c5": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
@@ -3268,12 +3268,12 @@
   "stufe": "hoch",
   "text": "Wilhelm Schmid ist ein freier Philosoph in Berlin und hat die «Philosophie der Lebenskunst» im deutschsprachigen Raum bekannt gemacht. Sein Thema ist der Abstand zwischen Einsicht und Tat, den jeder von den guten Vorsätzen kennt. Was hilft, ist Übung in kleinsten Schritten, täglich, fast beiläufig, aber regelmässig, nicht das ganze Buch auf einmal, sondern jeden Tag eine Seite. Weil Freude stärker wirkt als Zwang, soll man sich am Schönen orientieren, zu dem man Ja sagen kann. So werden neue Gewohnheiten gebildet. Wie lange das dauert, hat die Psychologie untersucht, nicht die Philosophie. Eine oft zitierte Studie fand einen Mittelwert von 66 Tagen, mit sehr grossen Unterschieden je nach Person und Gewohnheit. Werk: «Philosophie der Lebenskunst» (1998)."
  },
- "DW-9bd2d0": {
+ "DW-02b06c": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
   "ort": "Lebenskunst",
   "feld": "Fallbeispiel",
   "stufe": "hoch",
-  "text": "Vinted wurde 2008 in Litauen gegründet und ist heute mit über 65 Millionen Mitgliedern eine der grössten Plattformen für Secondhandkleidung, kaufen und verkaufen per App, quer durch Europa und Nordamerika.\n\n«Nachhaltiger leben» ist als Vorsatz so gross, dass er oft schon am Sonntagabend endet. Schmid setzt deshalb auf kleinste Schritte, täglich, fast beiläufig, aber regelmässig und möglichst am Schönen orientiert statt am Verzicht. Eine einzige neue Gewohnheit reicht für den Anfang, zum Beispiel zuerst secondhand schauen und erst dann neu kaufen. Das kostet wenig Überwindung, es macht sogar Spass, das Lieblingsteil für wenige Franken zu finden, und es summiert sich. Nicht das ganze Leben ändern. Eine Gewohnheit."
+  "text": "Vinted wurde 2008 in Litauen gegründet und ist heute mit über 65 Millionen Mitgliedern eine der grössten Plattformen für Secondhandkleidung, kaufen und verkaufen per App, quer durch Europa und Nordamerika.\n\n«Nachhaltiger leben» ist als Vorsatz so gross, dass er oft schon am Sonntagabend endet. Schmids Philosophie der Lebenskunst fragt darum nicht, was man einsehen, sondern was man einüben kann, und setzt auf kleinste Schritte, täglich, fast beiläufig, aber regelmässig und möglichst am Schönen orientiert statt am Verzicht. Das Ziel nennt er Selbstfreundschaft, mit sich so freundlich umgehen wie mit jemandem, den man gern hat. Eine einzige neue Gewohnheit reicht für den Anfang, zum Beispiel zuerst secondhand schauen und erst dann neu kaufen. Das kostet wenig Überwindung, es macht sogar Spass, das Lieblingsteil für wenige Franken zu finden, und es summiert sich. Nicht das ganze Leben ändern. Eine Gewohnheit."
  },
  "DW-246e50": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
@@ -3282,12 +3282,12 @@
   "stufe": "hoch",
   "text": "Martha Nussbaum ist eine der bekanntesten US-amerikanischen Philosophinnen und verbindet antike Ethik (besonders Aristoteles und die Stoa) mit heutigen Fragen. Sie zeigt, dass Gefühle keine blosse Störung der Vernunft sind, sondern zu einem guten Urteil und einem gelingenden Leben dazugehören. Mit dem «Fähigkeiten-Ansatz» fragt sie konkret, was Menschen wirklich können müssen, um gut zu leben (etwa Gesundheit, Bildung, Bindung, Spiel) und wie eine Gesellschaft das ermöglichen soll. Lebenskunst heisst darum auch, die eigenen Gefühle ernst zu nehmen und gute Bedingungen zu schaffen. Werk: «Fähigkeiten schaffen» (2011)."
  },
- "DW-826203": {
+ "DW-ed7ed3": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
   "ort": "Lebenskunst",
   "feld": "Fallbeispiel",
   "stufe": "hoch",
-  "text": "Im Juli 2023 registrierten Seismographen in Seattle Erschütterungen, ausgelöst von zehntausenden tanzenden Fans an einem Konzert von Taylor Swift, über Stunden hinweg. Dieselbe Tournee wurde später von Guinness World Records als die kommerziell erfolgreichste der Welt anerkannt.\n\nMan kann darüber spotten, so viel Gefühl für ein Popkonzert. Nussbaum widerspricht dem alten Verdacht, Gefühle seien Störungen der Vernunft. Ein starkes Gefühl ist für sie ein Urteil. Es sagt dir, was dir wichtig ist, lange bevor du es begründen kannst. Wer bei einem Lied weint, denkt nicht zu wenig, sondern erkennt etwas: Das hier betrifft mich. Gefühle ernst zu nehmen heisst, solche Urteile lesen zu lernen, die eigenen und die der anderen, statt sie sich auszureden. Freude, die den Boden zum Zittern bringt, ist eine Auskunft darüber, was zählt."
+  "text": "Im Juli 2023 registrierten Seismographen in Seattle Erschütterungen, ausgelöst von zehntausenden tanzenden Fans an einem Konzert von Taylor Swift, über Stunden hinweg. Dieselbe Tournee wurde später von Guinness World Records als die kommerziell erfolgreichste der Welt anerkannt.\n\nMan kann darüber spotten, so viel Gefühl für ein Popkonzert. Nussbaum widerspricht dem alten Verdacht, Gefühle seien Störungen der Vernunft. Ein starkes Gefühl ist für sie ein Werturteil. Es sagt dir, was dir wichtig ist, lange bevor du es begründen kannst. Wer bei einem Lied weint, denkt nicht zu wenig, sondern erkennt etwas: Das hier betrifft mich. Gefühle ernst zu nehmen heisst, solche Urteile lesen zu lernen, die eigenen und die der anderen, statt sie sich auszureden. Freude, die den Boden zum Zittern bringt, ist eine Auskunft darüber, was zählt. Zu ihrem «Fähigkeiten-Ansatz», der Liste dessen, was Menschen für ein gutes Leben brauchen, gehören neben Gesundheit und Bildung auch Bindung und Spiel. Ein Konzert ist beides."
  },
  "DW-f69109": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
@@ -3296,12 +3296,12 @@
   "stufe": "hoch",
   "text": "Maurice Merleau-Ponty war ein französischer Philosoph der Phänomenologie. Sein Thema ist der Leib. Wir erfahren die Welt nicht zuerst mit dem Kopf, sondern leiblich, durch Wahrnehmung, Bewegung, Berührung und Gefühl. Der Körper ist kein Ding, das wir bloss «haben», sondern die Art, wie wir zur Welt gehören. Verstehen und ein gutes Leben sind darum verkörpert, nicht rein rechnerisch. Genau das kann eine körperlose KI nicht, sie verarbeitet Zeichen, aber sie spürt und erlebt nicht. Werk: «Phänomenologie der Wahrnehmung» (1945)."
  },
- "DW-f1e3d0": {
+ "DW-616d13": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
   "ort": "Lebenskunst",
   "feld": "Fallbeispiel",
   "stufe": "hoch",
-  "text": "In Paris war 2024 Breaking zum ersten Mal olympische Disziplin, ausgetragen mitten in der Stadt auf der Place de la Concorde. Das erste Gold der B-Girls gewann Ami Yuasa aus Japan, bei den B-Boys siegte der Kanadier Philip Kim.\n\nVersuch, einen Headspin aus einer Beschreibung zu lernen. Du kannst jede Anweisung auswendig aufsagen und fällst trotzdem. Irgendwann, nach vielen Anläufen, «hat» es der Körper. Schwung, Druck und Balance sind dann kein Wissen im Kopf, sondern ein Können im Leib. Für Merleau-Ponty verstehen wir so die Welt überhaupt, zuerst leiblich, dann in Begriffen. Der Körper ist kein Werkzeug, das du benutzt, er ist deine Art, da zu sein. Ein Video zeigt dir jeden Move in Zeitlupe. Verstehen wird ihn dein Rücken."
+  "text": "In Paris war 2024 Breaking zum ersten Mal olympische Disziplin, ausgetragen mitten in der Stadt auf der Place de la Concorde. Das erste Gold der B-Girls gewann Ami Yuasa aus Japan, bei den B-Boys siegte der Kanadier Philip Kim.\n\nVersuch, einen Headspin aus einer Beschreibung zu lernen. Du kannst jede Anweisung auswendig aufsagen und fällst trotzdem. Irgendwann, nach vielen Anläufen, «hat» es der Körper. Schwung, Druck und Balance sind dann kein Wissen im Kopf, sondern ein Können im Leib. Für Merleau-Ponty verstehen wir so die Welt überhaupt, zuerst leiblich, dann in Begriffen. Merleau-Ponty unterscheidet darum zwischen Körper und Leib. Den Körper kann man von aussen betrachten und vermessen, der Leib ist der, der du bist, deine Art, zur Welt zu sein. Ein Video zeigt dir jeden Move in Zeitlupe. Verstehen wird ihn dein Rücken."
  },
  "DW-db463f": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
@@ -3310,12 +3310,12 @@
   "stufe": "hoch",
   "text": "Hartmut Rosa ist ein deutscher Soziologe, bekannt für die Diagnose der gesellschaftlichen «Beschleunigung». Dagegen setzt er den Begriff «Resonanz». Ein gelingendes Leben entsteht nicht durch mehr Kontrolle, mehr Tempo und mehr Verfügbarkeit, sondern durch ein lebendiges, wechselseitiges Antworten zwischen Mensch und Welt, ein Berührtwerden. Vieles, was zählt, lässt sich gerade nicht erzwingen oder verfügbar machen, es muss einem begegnen. In einer Welt schneller KI erinnert er daran, das Sich-berühren-Lassen nicht zu verlernen. Werke: «Resonanz» (2016), «Unverfügbarkeit» (2018)."
  },
- "DW-187919": {
+ "DW-fa92a5": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
   "ort": "Lebenskunst",
   "feld": "Fallbeispiel",
   "stufe": "hoch",
-  "text": "In der Nacht auf den 11. Mai 2024 traf der erste Sonnensturm der höchsten Kategorie seit 2003 die Erde, und für einmal waren Polarlichter bis in die Schweiz zu sehen. Wer zufällig draussen war oder geweckt wurde, stand plötzlich unter einem leuchtenden Himmel.\n\nEs liess sich nicht buchen. Kein Ticket, kein Abo, keine Wiederholung auf Abruf, nicht einmal eine verlässliche Vorhersage. Rosa nennt Resonanz, was uns gerade deshalb berührt, weil es nicht verfügbar ist. Die Welt antwortet, aber nicht auf Bestellung. In einem Alltag, in dem fast alles sofort lieferbar ist, der Song, die Serie, die Antwort, sind solche Momente kleine Übungsplätze. Hinstehen, warten dürfen, sich berühren lassen. Mehr Kontrolle würde genau das zerstören, was diesen Abend besonders gemacht hat."
+  "text": "In der Nacht auf den 11. Mai 2024 traf der erste Sonnensturm der höchsten Kategorie seit 2003 die Erde, und für einmal waren Polarlichter bis in die Schweiz zu sehen. Wer zufällig draussen war oder geweckt wurde, stand plötzlich unter einem leuchtenden Himmel.\n\nEs liess sich nicht buchen. Kein Ticket, kein Abo, keine Wiederholung auf Abruf, nicht einmal eine verlässliche Vorhersage. Rosa nennt «Resonanz», was uns gerade deshalb berührt, weil es nicht verfügbar ist, sein Wort dafür ist die Unverfügbarkeit. Die Welt antwortet, aber nicht auf Bestellung. In einem Alltag, in dem fast alles sofort lieferbar ist, der Song, die Serie, die Antwort, sind solche Momente kleine Übungsplätze. Hinstehen, warten dürfen, sich berühren lassen. Mehr Kontrolle würde genau das zerstören, was diesen Abend besonders gemacht hat."
  },
  "DW-2c33b8": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",

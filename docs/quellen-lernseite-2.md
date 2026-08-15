@@ -13,7 +13,7 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 201 |
+| Belege | 202 |
 | Belegte Textblöcke | 115 |
 | Begründete Nicht-Belege | 6 |
 | Aussagen mit Standdatum | 3 |
@@ -1807,80 +1807,80 @@ Harari erzählt Geschichte als Geschichte wachsender Macht. Werkzeuge, die ganze
 
 ### Lebenskunst · aus Rücksicht auf ihre mentale Gesundheit
 
-- **Kennung:** `DW-4bf5f6` (Fallbeispiel)
+- **Kennung:** `DW-8b3194` (Fallbeispiel)
 - **Quelle:** [Simone Biles (Wikipedia)](https://de.wikipedia.org/wiki/Simone_Biles)
 - **Fundstelle:** Im Teamfinal von Tokio am 27. Juli 2021 zog sie sich nach dem Sprung zurück, «aus Rücksicht auf ihre mentale Gesundheit, nicht wegen einer körperlichen Verletzung». In Paris 2024 gewann sie Gold mit dem Team, im Mehrkampf und am Sprung sowie Silber am Boden.
 - **Geprüft:** 2026-08-13
 
 > Im Teamfinal von Tokio 2021 zog sich die US-Turnerin Simone Biles nach einem Sprung zurück, aus Rücksicht auf ihre mentale Gesundheit, nicht wegen einer Verletzung. Drei Jahre später in Paris gewann sie drei Mal Gold und ein Mal Silber.
 
-Die Stoiker unterscheiden zwischen dem, was in deiner Macht steht, und dem, was nicht. Nicht in Biles' Macht standen die Erwartungen eines Weltpublikums, die Schlagzeilen, der Medaillenspiegel. In ihrer Macht standen das eigene Urteil darüber, was jetzt richtig ist, und das Handeln danach, gegen den Druck. Genau das ist die stoische Übung, die eigene Kraft dorthin zu legen, wo sie wirkt. Das ist kein Rückzug aus der Welt. Wer so unterscheidet, kommt zurück, sobald es wieder die eigene Entscheidung ist.
+Die Stoiker unterscheiden zwischen dem, was in deiner Macht steht, und dem, was nicht. Nicht in Biles' Macht standen die Erwartungen eines Weltpublikums, die Schlagzeilen, der Medaillenspiegel. In ihrer Macht standen das eigene Urteil darüber, was jetzt richtig ist, und das Handeln danach, gegen den Druck. Genau das ist die stoische «Askesis», das tägliche Einüben dieser Unterscheidung, bis die eigene Kraft dorthin geht, wo sie wirkt. Das ist kein Rückzug aus der Welt. Wer so unterscheidet, kommt zurück, sobald es wieder die eigene Entscheidung ist.
 
 ### Lebenskunst · Bullet Journal
 
-- **Kennung:** `DW-cba17f` (Fallbeispiel)
+- **Kennung:** `DW-519fca` (Fallbeispiel)
 - **Quelle:** [Bullet Journal (Wikipedia)](https://de.wikipedia.org/wiki/Bullet_Journal)
 - **Fundstelle:** «Ein Bullet Journal (auch als BuJo bekannt) ist ein individuelles Organisationssystem, das 2013 von dem digitalen Produktdesigner Ryder Carroll entwickelt wurde.» Es verbindet «Terminplanung, To-Do-Listen, Tagebuch und Brainstorming in einem einzigen Notizbuch», üblich sind Notizbücher mit Punkteraster.
 - **Geprüft:** 2026-08-13
 
 > Ein Bullet Journal ist ein Notizbuch mit Punkteraster, das Terminplanung, To-do-Listen, Tagebuch und Brainstorming in einem einzigen Heft verbindet. Entwickelt hat es 2013 der Designer Ryder Carroll.
 
-Neu ist die Idee nicht, und das ist das Schöne daran. Foucault hat in seinem Spätwerk die antike Sorge um sich selbst wieder ausgegraben. Schon damals führten Menschen Notizhefte, um ihr Leben zu ordnen und an sich zu arbeiten. Ein Leben formen wie ein Kunstwerk heisst nicht, sich für fremde Massstäbe zu optimieren, für Noten, Follower und Bestenlisten. Es heisst, selbst zu wählen, woran du arbeitest. Dafür ist ein Heft, das niemand liken kann, ein ziemlich gutes Werkzeug, denn es gehört nur dir.
+Neu ist die Idee nicht, und das ist das Schöne daran. Foucault hat in seinem Spätwerk die antike Sorge um sich selbst wieder ausgegraben. Solche Hefte gab es nämlich schon damals, sie hiessen Hypomnemata, und man sammelte darin Zitate, Gedanken und Vorsätze. Foucault las sie als Werkzeuge der Selbstsorge, Schreiben als Arbeit an sich selbst. Genau das meint seine «Ästhetik der Existenz», ein Leben formen wie ein Kunstwerk. Gemeint ist nicht, sich für fremde Massstäbe zu optimieren, für Noten, Follower und Bestenlisten. Es heisst, selbst zu wählen, woran du arbeitest. Dafür ist ein Heft, das niemand liken kann, ein ziemlich gutes Werkzeug, denn es gehört nur dir.
 
 ### Lebenskunst · 2008 in Litauen
 
-- **Kennung:** `DW-9bd2d0` (Fallbeispiel)
+- **Kennung:** `DW-02b06c` (Fallbeispiel)
 - **Quelle:** [Vinted (Wikipedia)](https://de.wikipedia.org/wiki/Vinted)
 - **Fundstelle:** «Vinted wurde 2008 unter dem Namen Miju Projects von Justas Janauskas und Milda Mitkute in Litauen gegründet.» 2022 «über 65 Millionen Mitglieder», vertreten «in 16 Ländern in Europa und Nordamerika»; gehandelt werden Secondhandkleidung, Accessoires und mehr.
 - **Geprüft:** 2026-08-13
 
 > Vinted wurde 2008 in Litauen gegründet und ist heute mit über 65 Millionen Mitgliedern eine der grössten Plattformen für Secondhandkleidung, kaufen und verkaufen per App, quer durch Europa und Nordamerika.
 
-«Nachhaltiger leben» ist als Vorsatz so gross, dass er oft schon am Sonntagabend endet. Schmid setzt deshalb auf kleinste Schritte, täglich, fast beiläufig, aber regelmässig und möglichst am Schönen orientiert statt am Verzicht. Eine einzige neue Gewohnheit reicht für den Anfang, zum Beispiel zuerst secondhand schauen und erst dann neu kaufen. Das kostet wenig Überwindung, es macht sogar Spass, das Lieblingsteil für wenige Franken zu finden, und es summiert sich. Nicht das ganze Leben ändern. Eine Gewohnheit.
+«Nachhaltiger leben» ist als Vorsatz so gross, dass er oft schon am Sonntagabend endet. Schmids Philosophie der Lebenskunst fragt darum nicht, was man einsehen, sondern was man einüben kann, und setzt auf kleinste Schritte, täglich, fast beiläufig, aber regelmässig und möglichst am Schönen orientiert statt am Verzicht. Das Ziel nennt er Selbstfreundschaft, mit sich so freundlich umgehen wie mit jemandem, den man gern hat. Eine einzige neue Gewohnheit reicht für den Anfang, zum Beispiel zuerst secondhand schauen und erst dann neu kaufen. Das kostet wenig Überwindung, es macht sogar Spass, das Lieblingsteil für wenige Franken zu finden, und es summiert sich. Nicht das ganze Leben ändern. Eine Gewohnheit.
 
 ### Lebenskunst · registrierten Seismographen in Seattle
 
-- **Kennung:** `DW-826203` (Fallbeispiel)
+- **Kennung:** `DW-ed7ed3` (Fallbeispiel)
 - **Quelle:** [The Eras Tour (Wikipedia)](https://de.wikipedia.org/wiki/The_Eras_Tour)
 - **Fundstelle:** Beim Konzert im Lumen Field in Seattle im Juli 2023 «registrierten lokale Seismographen für Menschen nicht wahrnehmbare Erschütterungen der Erde», ausgelöst von den Fans, über mehrere Stunden. Eine Magnitude nennt der Artikel nicht, darum steht auch im Text keine.
 - **Geprüft:** 2026-08-13
 
 > Im Juli 2023 registrierten Seismographen in Seattle Erschütterungen, ausgelöst von zehntausenden tanzenden Fans an einem Konzert von Taylor Swift, über Stunden hinweg. Dieselbe Tournee wurde später von Guinness World Records als die kommerziell erfolgreichste der Welt anerkannt.
 
-Man kann darüber spotten, so viel Gefühl für ein Popkonzert. Nussbaum widerspricht dem alten Verdacht, Gefühle seien Störungen der Vernunft. Ein starkes Gefühl ist für sie ein Urteil. Es sagt dir, was dir wichtig ist, lange bevor du es begründen kannst. Wer bei einem Lied weint, denkt nicht zu wenig, sondern erkennt etwas: Das hier betrifft mich. Gefühle ernst zu nehmen heisst, solche Urteile lesen zu lernen, die eigenen und die der anderen, statt sie sich auszureden. Freude, die den Boden zum Zittern bringt, ist eine Auskunft darüber, was zählt.
+Man kann darüber spotten, so viel Gefühl für ein Popkonzert. Nussbaum widerspricht dem alten Verdacht, Gefühle seien Störungen der Vernunft. Ein starkes Gefühl ist für sie ein Werturteil. Es sagt dir, was dir wichtig ist, lange bevor du es begründen kannst. Wer bei einem Lied weint, denkt nicht zu wenig, sondern erkennt etwas: Das hier betrifft mich. Gefühle ernst zu nehmen heisst, solche Urteile lesen zu lernen, die eigenen und die der anderen, statt sie sich auszureden. Freude, die den Boden zum Zittern bringt, ist eine Auskunft darüber, was zählt. Zu ihrem «Fähigkeiten-Ansatz», der Liste dessen, was Menschen für ein gutes Leben brauchen, gehören neben Gesundheit und Bildung auch Bindung und Spiel. Ein Konzert ist beides.
 
 ### Lebenskunst · kommerziell erfolgreichste
 
-- **Kennung:** `DW-826203` (Fallbeispiel)
+- **Kennung:** `DW-ed7ed3` (Fallbeispiel)
 - **Quelle:** [The Eras Tour (Wikipedia)](https://de.wikipedia.org/wiki/The_Eras_Tour)
 - **Fundstelle:** Die Tournee wurde «im Dezember 2023 von Guinness World Records als kommerziell erfolgreichste Tournee weltweit anerkannt»; nach rund 60 Konzerten lag der Umsatz bei 1,04 Milliarden Dollar.
 - **Geprüft:** 2026-08-13
 
 > Im Juli 2023 registrierten Seismographen in Seattle Erschütterungen, ausgelöst von zehntausenden tanzenden Fans an einem Konzert von Taylor Swift, über Stunden hinweg. Dieselbe Tournee wurde später von Guinness World Records als die kommerziell erfolgreichste der Welt anerkannt.
 
-Man kann darüber spotten, so viel Gefühl für ein Popkonzert. Nussbaum widerspricht dem alten Verdacht, Gefühle seien Störungen der Vernunft. Ein starkes Gefühl ist für sie ein Urteil. Es sagt dir, was dir wichtig ist, lange bevor du es begründen kannst. Wer bei einem Lied weint, denkt nicht zu wenig, sondern erkennt etwas: Das hier betrifft mich. Gefühle ernst zu nehmen heisst, solche Urteile lesen zu lernen, die eigenen und die der anderen, statt sie sich auszureden. Freude, die den Boden zum Zittern bringt, ist eine Auskunft darüber, was zählt.
+Man kann darüber spotten, so viel Gefühl für ein Popkonzert. Nussbaum widerspricht dem alten Verdacht, Gefühle seien Störungen der Vernunft. Ein starkes Gefühl ist für sie ein Werturteil. Es sagt dir, was dir wichtig ist, lange bevor du es begründen kannst. Wer bei einem Lied weint, denkt nicht zu wenig, sondern erkennt etwas: Das hier betrifft mich. Gefühle ernst zu nehmen heisst, solche Urteile lesen zu lernen, die eigenen und die der anderen, statt sie sich auszureden. Freude, die den Boden zum Zittern bringt, ist eine Auskunft darüber, was zählt. Zu ihrem «Fähigkeiten-Ansatz», der Liste dessen, was Menschen für ein gutes Leben brauchen, gehören neben Gesundheit und Bildung auch Bindung und Spiel. Ein Konzert ist beides.
 
 ### Lebenskunst · Ami Yuasa
 
-- **Kennung:** `DW-f1e3d0` (Fallbeispiel)
+- **Kennung:** `DW-616d13` (Fallbeispiel)
 - **Quelle:** [Breaking an den Sommerspielen 2024 (Wikipedia)](https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2024/Breaking)
 - **Fundstelle:** Breaking war in Paris «erstmals Teil des olympischen Programms», ausgetragen am 9. und 10. August 2024 auf der Place de la Concorde. Gold der B-Girls: Ami Yuasa (Japan); Gold der B-Boys: Philip Kim (Kanada).
 - **Geprüft:** 2026-08-13
 
 > In Paris war 2024 Breaking zum ersten Mal olympische Disziplin, ausgetragen mitten in der Stadt auf der Place de la Concorde. Das erste Gold der B-Girls gewann Ami Yuasa aus Japan, bei den B-Boys siegte der Kanadier Philip Kim.
 
-Versuch, einen Headspin aus einer Beschreibung zu lernen. Du kannst jede Anweisung auswendig aufsagen und fällst trotzdem. Irgendwann, nach vielen Anläufen, «hat» es der Körper. Schwung, Druck und Balance sind dann kein Wissen im Kopf, sondern ein Können im Leib. Für Merleau-Ponty verstehen wir so die Welt überhaupt, zuerst leiblich, dann in Begriffen. Der Körper ist kein Werkzeug, das du benutzt, er ist deine Art, da zu sein. Ein Video zeigt dir jeden Move in Zeitlupe. Verstehen wird ihn dein Rücken.
+Versuch, einen Headspin aus einer Beschreibung zu lernen. Du kannst jede Anweisung auswendig aufsagen und fällst trotzdem. Irgendwann, nach vielen Anläufen, «hat» es der Körper. Schwung, Druck und Balance sind dann kein Wissen im Kopf, sondern ein Können im Leib. Für Merleau-Ponty verstehen wir so die Welt überhaupt, zuerst leiblich, dann in Begriffen. Merleau-Ponty unterscheidet darum zwischen Körper und Leib. Den Körper kann man von aussen betrachten und vermessen, der Leib ist der, der du bist, deine Art, zur Welt zu sein. Ein Video zeigt dir jeden Move in Zeitlupe. Verstehen wird ihn dein Rücken.
 
 ### Lebenskunst · Polarlichter bis in die Schweiz
 
-- **Kennung:** `DW-187919` (Fallbeispiel)
+- **Kennung:** `DW-fa92a5` (Fallbeispiel)
 - **Quelle:** [Swissinfo, 11. Mai 2024: «Stärkster Sonnensturm seit 2003»](https://www.swissinfo.ch/ger/st%C3%A4rkster-sonnensturm-seit-2003-f%C3%BChrt-zu-schweizer-polarlichtern/77308421)
 - **Fundstelle:** «Der erste ‹extreme› Sonnensturm seit 2003»: Die Kategorie fünf war laut NOAA zuletzt im Oktober 2003 bei den Halloween-Stürmen erreicht worden. «Aufgrund des starken geomagnetischen Sturms waren Polarlichter bis in die Schweizer Breitengrade sichtbar», festgehalten etwa von einer Wetterkamera in Ravoire bei Martigny am Abend des 10. Mai 2024.
 - **Geprüft:** 2026-08-13
 
 > In der Nacht auf den 11. Mai 2024 traf der erste Sonnensturm der höchsten Kategorie seit 2003 die Erde, und für einmal waren Polarlichter bis in die Schweiz zu sehen. Wer zufällig draussen war oder geweckt wurde, stand plötzlich unter einem leuchtenden Himmel.
 
-Es liess sich nicht buchen. Kein Ticket, kein Abo, keine Wiederholung auf Abruf, nicht einmal eine verlässliche Vorhersage. Rosa nennt Resonanz, was uns gerade deshalb berührt, weil es nicht verfügbar ist. Die Welt antwortet, aber nicht auf Bestellung. In einem Alltag, in dem fast alles sofort lieferbar ist, der Song, die Serie, die Antwort, sind solche Momente kleine Übungsplätze. Hinstehen, warten dürfen, sich berühren lassen. Mehr Kontrolle würde genau das zerstören, was diesen Abend besonders gemacht hat.
+Es liess sich nicht buchen. Kein Ticket, kein Abo, keine Wiederholung auf Abruf, nicht einmal eine verlässliche Vorhersage. Rosa nennt «Resonanz», was uns gerade deshalb berührt, weil es nicht verfügbar ist, sein Wort dafür ist die Unverfügbarkeit. Die Welt antwortet, aber nicht auf Bestellung. In einem Alltag, in dem fast alles sofort lieferbar ist, der Song, die Serie, die Antwort, sind solche Momente kleine Übungsplätze. Hinstehen, warten dürfen, sich berühren lassen. Mehr Kontrolle würde genau das zerstören, was diesen Abend besonders gemacht hat.
 
 ### Transformation von Mensch und Maschine · Velofahren kann kein Ich allein
 
@@ -1936,6 +1936,17 @@ Darum nennt er die KI einen magischen Spiegel, und der spiegelt nicht nur Wissen
 > Ein Abend auf TikTok. Du wischst schneller, wenn dich etwas langweilt, bleibst hängen, wenn dich etwas trifft, tippst anders, wenn du müde bist. Genau daran liest dich die Maschine, sagt Gabriel, am Tempo des Scrollens, am Tippen, an der Stimme in der Audiofunktion. Aus Verhalten werden Muster und aus den Mustern wird eine Vermutung über deine Gemütslage.
 
 Darum nennt er die KI einen magischen Spiegel, und der spiegelt nicht nur Wissen. Trainiert an menschlichem Ausdruck erkennt sie affektive Muster, also den Zusammenhang zwischen Gefühl und Formulierung, und liest so zwischen den Zeilen. Im Spiegel der KI sehen wir, wie wir wirklich sind, «und die KI vermisst uns». Niemand kennt uns so gut wie diese Systeme, sagt er, jetzt schon. Umso wichtiger ist, was bei dir bleibt. Was du dem Spiegel zeigst und was du aus seinem Bild machst, rechnet er nicht aus. Das entscheidest du.
+
+### Lebenskunst · Hypomnemata
+
+- **Kennung:** `DW-519fca` (Fallbeispiel)
+- **Quelle:** [Hypomnema (Wikipedia)](https://de.wikipedia.org/wiki/Hypomnema)
+- **Fundstelle:** Antike persönliche Schreibhefte, in die «Zitate, Teile von Arbeiten, Aphorismen und Beispiele» sowie Gehörtes und eigene Überlegungen eingetragen wurden, ein «materielles Gedächtnis gelesener, gehörter und gedachter Dinge». Der Artikel referiert auch Foucaults Deutung: Teil einer «Kultur des persönlichen Schreibens», Instrument der Selbstsorge und der «Selbstkonstituierung», gerade bei den Stoikern.
+- **Geprüft:** 2026-08-14
+
+> Ein Bullet Journal ist ein Notizbuch mit Punkteraster, das Terminplanung, To-do-Listen, Tagebuch und Brainstorming in einem einzigen Heft verbindet. Entwickelt hat es 2013 der Designer Ryder Carroll.
+
+Neu ist die Idee nicht, und das ist das Schöne daran. Foucault hat in seinem Spätwerk die antike Sorge um sich selbst wieder ausgegraben. Solche Hefte gab es nämlich schon damals, sie hiessen Hypomnemata, und man sammelte darin Zitate, Gedanken und Vorsätze. Foucault las sie als Werkzeuge der Selbstsorge, Schreiben als Arbeit an sich selbst. Genau das meint seine «Ästhetik der Existenz», ein Leben formen wie ein Kunstwerk. Gemeint ist nicht, sich für fremde Massstäbe zu optimieren, für Noten, Follower und Bestenlisten. Es heisst, selbst zu wählen, woran du arbeitest. Dafür ist ein Heft, das niemand liken kann, ein ziemlich gutes Werkzeug, denn es gehört nur dir.
 
 ---
 

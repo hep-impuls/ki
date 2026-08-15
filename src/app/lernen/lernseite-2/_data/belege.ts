@@ -2130,7 +2130,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-4bf5f6",
+    id: "DW-8b3194",
     anker: "aus Rücksicht auf ihre mentale Gesundheit",
     url: "https://de.wikipedia.org/wiki/Simone_Biles",
     titel: "Simone Biles (Wikipedia)",
@@ -2139,7 +2139,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-cba17f",
+    id: "DW-f47a63",
     anker: "Bullet Journal",
     url: "https://de.wikipedia.org/wiki/Bullet_Journal",
     titel: "Bullet Journal (Wikipedia)",
@@ -2148,7 +2148,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-9bd2d0",
+    id: "DW-02b06c",
     anker: "2008 in Litauen",
     url: "https://de.wikipedia.org/wiki/Vinted",
     titel: "Vinted (Wikipedia)",
@@ -2157,7 +2157,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-826203",
+    id: "DW-ed7ed3",
     anker: "registrierten Seismographen in Seattle",
     url: "https://de.wikipedia.org/wiki/The_Eras_Tour",
     titel: "The Eras Tour (Wikipedia)",
@@ -2166,7 +2166,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-826203",
+    id: "DW-ed7ed3",
     anker: "kommerziell erfolgreichste",
     url: "https://de.wikipedia.org/wiki/The_Eras_Tour",
     titel: "The Eras Tour (Wikipedia)",
@@ -2175,7 +2175,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-f1e3d0",
+    id: "DW-616d13",
     anker: "Ami Yuasa",
     url: "https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2024/Breaking",
     titel: "Breaking an den Sommerspielen 2024 (Wikipedia)",
@@ -2184,7 +2184,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-13",
   },
   {
-    id: "DW-187919",
+    id: "DW-fa92a5",
     anker: "Polarlichter bis in die Schweiz",
     url: "https://www.swissinfo.ch/ger/st%C3%A4rkster-sonnensturm-seit-2003-f%C3%BChrt-zu-schweizer-polarlichtern/77308421",
     titel: "Swissinfo, 11. Mai 2024: «Stärkster Sonnensturm seit 2003»",
@@ -2249,6 +2249,15 @@ export const BELEGE: Beleg[] = [
     titel: "Unsere Zeitung, 9. Oktober 2025: «Lebe so, dass die KI verwirrt ist»",
     stelle:
       "Bericht über das Hotel-Matze-Gespräch. Gabriel beschreibt KI-Systeme als «magische Spiegel», «die uns zeigen, wie wir wirklich sind, ohne unsere Selbsttäuschungen», und wörtlich: «Niemand kennt uns so gut wie die KI-Systeme. Jetzt schon längst.»",
+    geprueft: "2026-08-14",
+  },
+  {
+    id: "DW-f47a63",
+    anker: "Hypomnemata",
+    url: "https://de.wikipedia.org/wiki/Hypomnema",
+    titel: "Hypomnema (Wikipedia)",
+    stelle:
+      "Antike persönliche Schreibhefte, in die «Zitate, Teile von Arbeiten, Aphorismen und Beispiele» sowie Gehörtes und eigene Überlegungen eingetragen wurden, ein «materielles Gedächtnis gelesener, gehörter und gedachter Dinge». Der Artikel referiert auch Foucaults Deutung: Teil einer «Kultur des persönlichen Schreibens», Instrument der Selbstsorge und der «Selbstkonstituierung», gerade bei den Stoikern.",
     geprueft: "2026-08-14",
   },
 ];
