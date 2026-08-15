@@ -246,6 +246,11 @@ export const GLOSSAR: Record<string, string> = {
     "Das Rechenbeispiel in Lovelaces Anmerkungen; sie zeigte Schritt für Schritt, wie die Maschine die Bernoulli-Zahlen ermitteln würde, eine Zahlenfolge aus der Mathematik.",
   Programmiersprache:
     "Eine künstliche Sprache, in der Menschen einem Computer Anweisungen aufschreiben.",
+  /* Vierte Form neben «Kalter Krieg», «Kalten Krieg» und «Kalten Kriegs»
+     weiter unten, weil die Auszeichnung wörtlich sucht und der Epochen-Lead
+     mit «Der Kalte Krieg endet» beginnt. */
+  "Kalte Krieg":
+    "Machtkampf zwischen USA und Sowjetunion (1947 bis 1991), ausgetragen ohne direkten Krieg, mit Wettrüsten und Stellvertreterkriegen.",
   "Fall der Mauer":
     "Am 9. November 1989 öffnete die DDR unter dem Druck der eigenen Bevölkerung die Berliner Mauer, die die Stadt seit 1961 geteilt hatte. Knapp ein Jahr später trat die DDR der Bundesrepublik bei, bald darauf zerfiel der ganze Ostblock.",
   Nimrod:
