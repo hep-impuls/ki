@@ -246,6 +246,8 @@ export const GLOSSAR: Record<string, string> = {
     "Das Rechenbeispiel in Lovelaces Anmerkungen; sie zeigte Schritt für Schritt, wie die Maschine die Bernoulli-Zahlen ermitteln würde, eine Zahlenfolge aus der Mathematik.",
   Programmiersprache:
     "Eine künstliche Sprache, in der Menschen einem Computer Anweisungen aufschreiben.",
+  "Fall der Mauer":
+    "Am 9. November 1989 öffnete die DDR unter dem Druck der eigenen Bevölkerung die Berliner Mauer, die die Stadt seit 1961 geteilt hatte. Knapp ein Jahr später trat die DDR der Bundesrepublik bei, bald darauf zerfiel der ganze Ostblock.",
   Nimrod:
     "In der biblischen Überlieferung ein gewaltiger Jäger und König in Babel. Zum Bauherrn des Turms machten ihn erst spätere Erzählungen ausserhalb der Bibel, im Buch Genesis selbst hat der Turmbau keinen namentlichen Bauherrn.",
   Natalität:

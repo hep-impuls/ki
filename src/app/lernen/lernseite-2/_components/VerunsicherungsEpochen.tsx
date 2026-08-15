@@ -476,7 +476,7 @@ const EPOCHEN: Epoche[] = [
             y: 52,
             zoom: 2.2,
             title: "Eine Lampe als Sonne",
-            text: "Im Zentrum des Modells steht eine Lampe, die die Sonne darstellt. Ihr warmes Licht fällt auf die andächtigen Gesichter ringsum. Wright inszeniert die Wissenschaft mit einer Ehrfurcht, die man sonst aus Bildern der Anbetung kennt. Die Erkenntnis rückt an die Stelle des Heiligen.",
+            text: "Im Zentrum des Modells steht eine Lampe, die die Sonne darstellt. Ihr warmes Licht fällt auf die andächtigen Gesichter ringsum. Die dramatische Lichtregie verleiht der wissenschaftlichen Vorführung eine beinahe religiöse Feierlichkeit, als rücke die Erkenntnis an die Stelle des Heiligen.",
           },
           {
             x: 36,
@@ -1116,7 +1116,11 @@ export default function VerunsicherungsEpochen({ className = "" }: { className?:
             <div className="border-b border-outline-variant bg-surface-container-low p-md sm:p-lg">
               <p className="text-label-sm uppercase tracking-wider text-tertiary">{e.span}</p>
               <h3 className="mt-xs text-headline-sm text-on-surface">{e.epoche}</h3>
-              <p className="mt-xs max-w-3xl text-body-md text-on-surface-variant">{e.lead}</p>
+              <p className="mt-xs max-w-3xl text-body-md text-on-surface-variant">
+                {/* Wie `leadMehr` durchs Glossar, damit Wendungen wie «Fall der
+                    Mauer» ihre Erklärung tragen. */}
+                <GlossarText text={e.lead} />
+              </p>
               <button
                 type="button"
                 onClick={() => {
