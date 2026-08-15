@@ -672,8 +672,8 @@ const EPOCHEN: Epoche[] = [
           "Kirchners Selbstbildnis zeigt die Verunsicherung des Katastrophenzeitalters von innen. Der industrialisierte Krieg beschädigt Menschen auch dort, wo keine Granate sie trifft. Auf diesen Verlust aller Geländer antwortet später der Existenzialismus, mit der Zumutung, trotzdem zu wählen und zu verantworten.",
         tour: [
           {
-            x: 50,
-            y: 50,
+            x: 32,
+            y: 36,
             zoom: 1,
             title: "Kirchner, 1915",
             text: "Der Maler zeigt sich in der Uniform seines Artillerie-Regiments, Zigarette im Mund, im Atelier. Die Farben schreien, die Formen splittern. Der Expressionismus malt nicht, wie es aussieht, sondern wie es sich anfühlt.",
