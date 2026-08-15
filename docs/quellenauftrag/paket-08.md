@@ -170,11 +170,11 @@ Aristoteles sammelte zuerst und ordnete dann. In einer Lagune auf der Insel Lesb
 
 > **Belegt** («nach dessen Wandelhalle»): [Peripatos (Wikipedia)](https://de.wikipedia.org/wiki/Peripatos) — Der Schulname kommt vom Ort: «leitet sich ihr Name von dem Ort ab, an dem der Unterricht stattfand, in diesem Fall vom Peripatos (Wandelhalle)». Die Herleitung vom Herumwandeln beim Lehren, die vorher hier stand, nennt der Artikel eine populäre Etymologie, die «daher nicht zu[trifft]». *(geprüft 2026-08-05)*
 
-**[EP-8cc8f0]** *(Kartentext · Zerbrechen der Ordnung)*
-Unten ziehen zahlreiche Krieger gemeinsam an einem Seil, um das Standbild zu Fall zu bringen. Die alte Weltordnung stürzt nicht von selbst. Sie wird von vielen Händen aktiv niedergerissen: Geschichte als Werk von Menschen, nicht von Schicksal.
+**[EP-4db7fe]** *(Kartentext · Zerbrechen der Ordnung)*
+Unten ziehen zahlreiche Krieger gemeinsam an einem Seil, um das Standbild zu Fall zu bringen. Die alte Weltordnung stürzt nicht von selbst. Sie wird von vielen Händen aktiv niedergerissen, Geschichte als Werk von Menschen, nicht von Schicksal.
 
-**[EP-cc795b]** *(Im Kontext der Zeit · Zerbrechen der Ordnung)*
-Champaignes Augustinus verkörpert die Antwort auf einen epochalen Schock. Als Rom 410 fiel und mit dem Reich für viele die Weltordnung selbst zusammenbrach, verlegte Augustinus den Halt vom äusseren Reich ins Innere des Menschen und in den Glauben: Wahrheit und Orientierung findet man nicht mehr in der vergänglichen Macht, sondern in Gewissen, Erinnerung und Zuwendung zu Gott. Diese nach innen gewandte Ordnung prägte das Abendland ein Jahrtausend lang.
+**[EP-086f10]** *(Im Kontext der Zeit · Zerbrechen der Ordnung)*
+Champaignes Augustinus verkörpert die Antwort auf einen epochalen Schock. Als Rom 410 fiel und mit dem Reich für viele die Weltordnung selbst zusammenbrach, verlegte Augustinus den Halt vom äusseren Reich ins Innere des Menschen und in den Glauben. Wahrheit und Orientierung findet man nicht mehr in der vergänglichen Macht, sondern in Gewissen, Erinnerung und Zuwendung zu Gott. Diese nach innen gewandte Ordnung prägte das Abendland ein Jahrtausend lang.
 
 **[EP-112f69]** *(Vertiefung «Mehr lesen» · Zerbrechen der Ordnung)*
 Rom selbst zeigt den Absturz in Zahlen: Die Stadt zählte auf ihrem Höhepunkt gegen eine Million Einwohnerinnen und Einwohner und schrumpfte nach Kriegen und Plünderungen auf wenige Zehntausend. Als die Ostgoten die Stadt 537 belagerten, zerstörten sie die Wasserleitungen. Brunnen und Thermen versiegten und das Leben zog sich auf Dauer ans Ufer des Tibers zurück, wo man Wasser holen konnte. Die gewaltige Betonkuppel des Pantheons blieb über tausend Jahre unübertroffen: Niemand hätte sie mehr bauen können. Zur gleichen Zeit begann die Rettung im Kleinen. Der Gelehrte Cassiodorus gründete um 550 in Süditalien das Kloster Vivarium, in dem Mönche antike Handschriften abschrieben und bald gehörte dieses Kopieren in vielen Klöstern zum Tagewerk. Was wir heute von Cicero oder Vergil lesen, ist fast ausnahmslos durch solche Schreibstuben gegangen. Eine Zivilisation kann eben nicht nur Neues erfinden, sie kann Können auch wieder verlieren.

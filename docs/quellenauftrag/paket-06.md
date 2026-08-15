@@ -78,8 +78,8 @@ Bekannt machte den Ausdruck «Ende der Geschichte» Francis Fukuyama, 1989 in ei
 **[EP-37f2ac]** *(Hintergrund zum Bild · «Ende der Geschichte»)*
 Dieses Bild ist kein Gemälde, sondern eine Pressefotografie vom 22. Dezember 1989. Aufgenommen hat sie ein Fotograf des DDR-Nachrichtendienstes ADN, heute liegt sie im Bundesarchiv. Zu sehen ist der Moment, in dem am Brandenburger Tor ein Kran ein Mauersegment heraushebt, um den neuen Grenzübergang zu öffnen. Es geschah sechs Wochen nach der Maueröffnung vom 9. November 1989. Unter dem schwebenden Betonstück stehen Grenzsoldaten, Arbeiter und Schaulustige dicht beieinander. Das nächtliche Foto wurde zu einem Sinnbild für das friedliche Ende der deutschen Teilung.
 
-**[EP-f31e12]** *(Kartentext · «Ende der Geschichte»)*
-Ein Betonsegment hängt am Haken, die «unüberwindbare» Grenze als Bauteil, das man herausheben kann. 28 Jahre teilte diese Wand die Stadt. Jetzt zeigt sich: Auch sie war gemacht, nicht Schicksal.
+**[EP-7d6f58]** *(Kartentext · «Ende der Geschichte»)*
+Ein Betonsegment hängt am Haken, die «unüberwindbare» Grenze als Bauteil, das man herausheben kann. 28 Jahre teilte diese Wand die Stadt. Jetzt zeigt sich, auch sie war gemacht, nicht Schicksal.
 
 **[EP-f1ce65]** *(Hintergrund zum Bild · «Ende der Geschichte»)*
 Dieses Bild ist keine gemalte Kunst, sondern eine wissenschaftliche Aufnahme der US-Behörden NASA und NOAA aus dem Jahr 2012. Es ist eine Montage aus Hunderten Aufnahmen des Satelliten Suomi NPP, denn es ist nie überall auf der Erde gleichzeitig Nacht. So hat der Planet in Wirklichkeit nie ausgesehen. Zu sehen ist die nächtliche Erde, auf der jedes Lichtpünktchen für menschliche Besiedlung und für Strom steht. Grell leuchten Europa, Ostasien und die US-Küsten, während weite Teile Afrikas, Südamerikas und Zentralasiens fast dunkel bleiben. Gerade als Konstruktion führt das Bild vor Augen, wie ungleich die vernetzte Welt verteilt ist.
@@ -124,8 +124,8 @@ Dieses Bild ist kein Gemälde, sondern eine Fotografie, die am 7. Dezember 1972 
 
 > **Belegt** («letzten bemannten Mondlandung»): [Apollo 17 (Wikipedia)](https://de.wikipedia.org/wiki/Apollo_17) — «Mit Apollo 17 landeten zum sechsten und vorerst letzten Mal Menschen auf dem Mond.» Als letzte bemannte MondMISSION gilt sie seit April 2026 nicht mehr: «Apollo 17 blieb bis zur Mission Artemis 2 im Jahr 2026 der letzte bemannte Mondflug». Artemis 2 umrundete den Mond, landete aber nicht. *(geprüft 2026-08-05)*
 
-**[EP-f59add]** *(Im Kontext der Zeit · Jetzt: Umwelt & KI)*
-Der «Blue Marble» ist das Bild vom einen, gemeinsamen «Wir»: die Erde als ein einziger, grenzenloser Planet. Genau dieses «Wir» steht heute unter doppeltem Druck: Klimakrise und eine Technik, die Wirklichkeit täuschend echt erzeugen kann. Wie sich aus lauter vernetzten Individuen wieder ein tragfähiges Wir bildet, ist die offene Frage, an der die Philosophie der Gegenwart arbeitet.
+**[EP-4a11f9]** *(Im Kontext der Zeit · Jetzt: Umwelt & KI)*
+Der «Blue Marble» ist das Bild vom einen, gemeinsamen «Wir», die Erde als ein einziger, grenzenloser Planet. Genau dieses «Wir» steht heute unter doppeltem Druck, Klimakrise und eine Technik, die Wirklichkeit täuschend echt erzeugen kann. Wie sich aus lauter vernetzten Individuen wieder ein tragfähiges Wir bildet, ist die offene Frage, an der die Philosophie der Gegenwart arbeitet.
 
 **[EP-48cd10]** *(Kartentext · Jetzt: Umwelt & KI)*
 Von hier oben sind keine Nationen, keine Grenzen, keine Konflikte zu sehen, nur ein einziger, verletzlicher Planet im schwarzen All. Genau dieser Anblick machte das Bild zu einer Ikone der Umwelt- und Friedensbewegung.
@@ -136,8 +136,8 @@ Wolkenwirbel, Ozeane und Landmassen liegen in einem einzigen Blick beieinander, 
 **[EP-1c7ed2]** *(Hintergrund zum Bild · Jetzt: Umwelt & KI)*
 Dieses Werk ist kein Gemälde, sondern eine Installation der Gegenwartskunst, die der Künstler Klaus Christ 2024 schuf und die hier mit seiner Genehmigung gezeigt wird. Der Titel lautet «Suche nach Bildern». Dutzende Figuren und Objekte hängen an Fäden, die in einem alten Röhrencomputer in der Mitte zusammenlaufen. So macht das Werk sichtbar, was an einer scheinbar einfachen Bildersuche im Internet alles beteiligt ist. Auf der einen Seite hängen Rohstoffe, Bergbau und Elektronikmüll, auf der anderen Seite die vielen Menschen vom Programmierer bis zur Nutzerin. Das Netz aus Fäden steht für ein «Wir», das keine einzelne Person ist, sondern ein Geflecht aus vielen Beteiligten.
 
-**[EP-86432f]** *(Kartentext · Jetzt: Umwelt & KI)*
-«Suche nach Bildern» (2024) ist eine Installation über eine alltägliche Handlung: die Bildersuche im Internet. Dutzende Figuren und Objekte sind mit Fäden verbunden, die im Zentrum zusammenlaufen. Was mit einem Klick einfach aussieht, ist das Ergebnis eines riesigen, unsichtbaren Netzwerks.
+**[EP-b5429d]** *(Kartentext · Jetzt: Umwelt & KI)*
+«Suche nach Bildern» (2024) ist eine Installation über eine alltägliche Handlung, die Bildersuche im Internet. Dutzende Figuren und Objekte sind mit Fäden verbunden, die im Zentrum zusammenlaufen. Was mit einem Klick einfach aussieht, ist das Ergebnis eines riesigen, unsichtbaren Netzwerks.
 
 **[EP-2f2626]** *(Kartentext · Jetzt: Umwelt & KI)*
 Künstliche Intelligenz (mit ChatGPT ab 2022 alltäglich), das Smartphone und globale, digital gesteuerte Lieferketten laufen auf einer noch immer fossilen Infrastruktur. Die Automatisierung erreicht nun Sprache und Kopfarbeit. Die Naturzerstörung erreicht mit der Klimakrise erstmals eine überlebensbedrohende Grössenordnung. Den grössten Anteil daran hat der Energieverbrauch: Jede Technik, die läuft, braucht Energie, und solange die aus Kohle, Öl und Gas kommt, heizt jede Nutzung mit. Dazu kommen Quellen ohne Stecker, das Methan der Viehhaltung und die Rodung der Wälder. Die KI setzte sich nicht wegen einer neuen Idee durch (die ist alt), sondern weil drei Grundlagen zusammenkamen: riesige Datenmengen aus dem Internet, billige Parallel-Rechenleistung (Grafikchips) und die Transformer-Architektur von 2017, dazu enormes privates Kapital.

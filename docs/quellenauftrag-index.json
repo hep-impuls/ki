@@ -1889,12 +1889,12 @@
   "stufe": "hoch",
   "text": "Raffael (1483–1520) gehört zu den bedeutendsten Malern der italienischen Hochrenaissance und schuf dieses Fresko zwischen 1509 und 1511 für die Bibliothek von Papst Julius II. im Vatikan. Es zeigt keine reale Szene, sondern versammelt in einer idealen Halle über fünfzig Denker der Antike. Im Zentrum stehen Platon und Aristoteles, umgeben von Figuren, die traditionell als Sokrates, Pythagoras, Euklid, Ptolemäus und Diogenes gedeutet werden. Viele weitere Zuordnungen sind in der Forschung allerdings unsicher oder umstritten. Am rechten Rand hat sich Raffael selbst ins Bild gemalt."
  },
- "EP-3cc187": {
+ "EP-d3f2c5": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Antike",
   "feld": "Im Kontext der Zeit",
   "stufe": "tief",
-  "text": "Raffaels Halle der Denker ist ein Rückblick der Renaissance auf die Antike und ein Bild ihrer Antwort auf eine tiefe Verunsicherung. Als in Athen der Mythos seine bindende Kraft verlor und die Sophisten lehrten, dass sich jede Behauptung gegen Bezahlung überzeugend vertreten lässt, drohte Wahrheit zur blossen Rhetorik zu werden. Aristoteles bündelte die Gegenkraft zu einer Methode: beobachten, ordnen, begründen. Genau diese Schablone feiert Raffael, indem er die Denker aller Zeiten in einer Halle versammelt."
+  "text": "Raffaels Halle der Denker ist ein Rückblick der Renaissance auf die Antike und ein Bild ihrer Antwort auf eine tiefe Verunsicherung. Als in Athen der Mythos seine bindende Kraft verlor und die Sophisten lehrten, dass sich jede Behauptung gegen Bezahlung überzeugend vertreten lässt, drohte Wahrheit zur blossen Rhetorik zu werden. Aristoteles bündelte die Gegenkraft zu einer Methode, beobachten, ordnen, begründen. Genau diese Schablone feiert Raffael, indem er die Denker aller Zeiten in einer Halle versammelt."
  },
  "EP-678087": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -1903,12 +1903,12 @@
   "stufe": "hoch",
   "text": "Raffael malt 1509–1511 im Vatikan eine ideale Halle, in der sich die Denker aller Zeiten begegnen. Es ist kein realer Ort und keine reale Szene, sondern ein Bild des Denkens selbst. Es ist die Antike, wie die Renaissance sie als ihr eigenes Fundament verehrte."
  },
- "EP-f43d25": {
+ "EP-1bb104": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Antike",
   "feld": "Kartentext",
   "stufe": "hoch",
-  "text": "Im Zentrum steht der Grundkonflikt der Erkenntnis in einer einzigen Geste: Platon zeigt mit dem Finger nach oben, in die Welt der ewigen Ideen. Aristoteles hält die Hand flach über den Boden, zur beobachtbaren Wirklichkeit. Genau hier beginnt die Schablone, die später die gesamte Wissenschaft trägt."
+  "text": "Im Zentrum steht der Grundkonflikt der Erkenntnis in einer einzigen Geste. Platon zeigt mit dem Finger nach oben, in die Welt der ewigen Ideen. Aristoteles hält die Hand flach über den Boden, zur beobachtbaren Wirklichkeit. Genau hier beginnt die Schablone, die später die gesamte Wissenschaft trägt."
  },
  "EP-4b2cab": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -1917,12 +1917,12 @@
   "stufe": "hoch",
   "text": "Die Figur links im olivgrünen Gewand gilt als Sokrates. Umringt von Zuhörern zählt er an den Fingern seine Argumente ab und führt sein Frage-und-Antwort-Spiel vor. Diese Methode, alles so lange zu hinterfragen, bis scheinbare Gewissheiten zerbrechen, machte ihn zur unbequemsten Figur Athens und kostete ihn das Leben."
  },
- "EP-eef7c1": {
+ "EP-5a5b9a": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Antike",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Rechts beugt sich ein Gelehrter mit dem Zirkel über eine Tafel und führt Jugendlichen einen geometrischen Beweis vor, meist als Euklid gedeutet, manchmal als Archimedes. Die Szene feiert ein neues Ideal: Wissen, das nicht behauptet, sondern Schritt für Schritt bewiesen und darum von jedem nachvollzogen werden kann."
+  "text": "Rechts beugt sich ein Gelehrter mit dem Zirkel über eine Tafel und führt Jugendlichen einen geometrischen Beweis vor, meist als Euklid gedeutet, manchmal als Archimedes. Die Szene feiert ein neues Ideal, Wissen, das nicht behauptet, sondern Schritt für Schritt bewiesen und darum von jedem nachvollzogen werden kann."
  },
  "EP-68478f": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -1931,40 +1931,40 @@
   "stufe": "hoch",
   "text": "Jacques-Louis David (1748–1825) war der führende Maler des französischen Klassizismus und malte dieses Werk 1787 in Paris, zwei Jahre vor der Französischen Revolution. Der klare und strenge Aufbau ist typisch für den Klassizismus, der sich die Antike zum Vorbild nahm. Dargestellt ist die letzte Stunde des griechischen Philosophen Sokrates im Jahr 399 v. Chr., als er in Athen zum Tod durch den Schierlingsbecher verurteilt ist. Aufrecht und gefasst greift er nach dem Becher und belehrt zugleich seine erschütterten Schüler. Am Fussende des Bettes sitzt der greise Platon, der das Gespräch später überlieferte. David nutzt die Szene als Lehrstück über Standhaftigkeit gegenüber ungerechter Macht."
  },
- "EP-e966ed": {
+ "EP-1ceb9e": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Antike",
   "feld": "Im Kontext der Zeit",
   "stufe": "hoch",
-  "text": "Der Tod des Sokrates zeigt die Verunsicherung der Antike in einem einzigen Bild: eine Stadt, die ihren klügsten und unbequemsten Frager zum Tode verurteilt, weil der alte Mythos nicht mehr trägt und jede Gewissheit wankt. Die Antwort der Epoche war nicht, das Fragen zu verbieten, sondern es zu ordnen: Aus der sokratischen Methode und der Systematik des Aristoteles entstand das Fundament der Wissenschaft."
+  "text": "Der Tod des Sokrates zeigt die Verunsicherung der Antike in einem einzigen Bild, eine Stadt, die ihren klügsten und unbequemsten Frager zum Tode verurteilt, weil der alte Mythos nicht mehr trägt und jede Gewissheit wankt. Die Antwort der Epoche war nicht, das Fragen zu verbieten, sondern es zu ordnen. Aus der sokratischen Methode und der Systematik des Aristoteles entstand das Fundament der Wissenschaft."
  },
- "EP-d8d563": {
+ "EP-17a9f3": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Antike",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "399 v. Chr., eine Gefängniszelle in Athen: David malt den Moment, kurz bevor Sokrates den Giftbecher trinkt. Es ist ein Lehrstück über Standhaftigkeit. Der klare, gefasste Held ist von erschütterten Freunden umgeben. Die strenge Komposition zeigt: Hier geht es um Haltung, nicht um Rührung."
+  "text": "399 v. Chr., eine Gefängniszelle in Athen. David malt den Moment, kurz bevor Sokrates den Giftbecher trinkt. Es ist ein Lehrstück über Standhaftigkeit. Der klare, gefasste Held ist von erschütterten Freunden umgeben. Die strenge Komposition zeigt, dass es um Haltung geht, nicht um Rührung."
  },
- "EP-216484": {
+ "EP-c6a28b": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Antike",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Noch im Sterben unterrichtet Sokrates weiter: Mit der einen Hand greift er nach dem Becher, mit der anderen hebt er den Finger nach oben, zu dem, was grösser ist als der eigene Tod: das Argument, die Wahrheit. Selbst die Hinrichtung wird zur letzten philosophischen Lektion."
+  "text": "Noch im Sterben unterrichtet Sokrates weiter. Mit der einen Hand greift er nach dem Becher, mit der anderen hebt er den Finger nach oben, zu dem, was grösser ist als der eigene Tod, das Argument, die Wahrheit. Selbst die Hinrichtung wird zur letzten philosophischen Lektion."
  },
- "EP-8ac327": {
+ "EP-a6ca7a": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Antike",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Fast beiläufig, ohne hinzusehen, greift Sokrates nach dem Schierlingsbecher. Der Vollstrecker im roten Gewand wendet das Gesicht ab und fasst sich an den Kopf: Er kann nicht mit ansehen, was er tun muss. Der Kontrast macht die Fassung des Verurteilten umso grösser."
+  "text": "Fast beiläufig, ohne hinzusehen, greift Sokrates nach dem Schierlingsbecher. Der Vollstrecker im roten Gewand wendet das Gesicht ab und fasst sich an den Kopf. Er kann nicht mit ansehen, was er tun muss. Der Kontrast macht die Fassung des Verurteilten umso grösser."
  },
- "EP-88194b": {
+ "EP-d83539": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Antike",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Gefasst, in sich gekehrt sitzt am Fussende der greise Platon, obwohl er an jenem Tag historisch gar nicht anwesend war. David setzt ihn bewusst dazu: Er wird das Gespräch aufschreiben und über zwei Jahrtausende weitertragen. Ohne diese Überlieferung wüssten wir von Sokrates fast nichts."
+  "text": "Gefasst, in sich gekehrt sitzt am Fussende der greise Platon, obwohl er an jenem Tag historisch gar nicht anwesend war. David setzt ihn bewusst dazu, denn er wird das Gespräch aufschreiben und über zwei Jahrtausende weitertragen. Ohne diese Überlieferung wüssten wir von Sokrates fast nichts."
  },
  "EP-f0377d": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2029,19 +2029,19 @@
   "stufe": "hoch",
   "text": "Joseph-Noël Sylvestre (1847–1926) war ein französischer Maler des akademischen Historismus, der sich auf grosse Szenen aus der Antike spezialisierte. Er malte dieses Historiengemälde 1890, also fast 1500 Jahre nach dem dargestellten Ereignis. Zu sehen ist die Plünderung Roms im Jahr 410, als die Westgoten die Stadt eroberten. Im Zentrum reisst ein Krieger die Marmorstatue eines römischen Kaisers vom Sockel, ein Sinnbild für den Sturz der alten Ordnung. Weil das Werk so spät entstand, sagt es mehr über die Untergangsängste des 19. Jahrhunderts aus als über das Jahr 410."
  },
- "EP-3f0ba7": {
+ "EP-0e805e": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Zerbrechen der Ordnung",
   "feld": "Im Kontext der Zeit",
   "stufe": "tief",
-  "text": "Der Fall Roms ist die Verunsicherung dieser Epoche in Reinform: Als die Westgoten 410 die «ewige Stadt» plünderten, brach für die Zeitgenossen nicht nur eine Hauptstadt, sondern eine ganze Weltordnung zusammen. Man rang um Schuld und Sinn, Heiden wie Christen. Augustinus gab darauf mit dem «Gottesstaat» die Orientierung: Nicht das irdische Reich trägt, sondern eine unsichtbare, geistige Ordnung."
+  "text": "Der Fall Roms ist die Verunsicherung dieser Epoche in Reinform. Als die Westgoten 410 die «ewige Stadt» plünderten, brach für die Zeitgenossen nicht nur eine Hauptstadt, sondern eine ganze Weltordnung zusammen. Man rang um Schuld und Sinn, Heiden wie Christen. Augustinus gab darauf mit dem «Gottesstaat» die Orientierung. Nicht das irdische Reich trägt, sondern eine unsichtbare, geistige Ordnung."
  },
- "EP-17209e": {
+ "EP-9a019c": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Zerbrechen der Ordnung",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Ein grosses Historiengemälde des 19. Jahrhunderts inszeniert die Plünderung Roms im Jahr 410. Vor brennender Kulisse stürmen die Westgoten die Stadt. Der Maler trifft damit ein Gefühl, das seine eigene, umbruchsreiche Zeit umtrieb: die Angst vor dem Ende einer Zivilisation."
+  "text": "Ein grosses Historiengemälde des 19. Jahrhunderts inszeniert die Plünderung Roms im Jahr 410. Vor brennender Kulisse stürmen die Westgoten die Stadt. Der Maler trifft damit ein Gefühl, das seine eigene, umbruchsreiche Zeit umtrieb, die Angst vor dem Ende einer Zivilisation."
  },
  "EP-89a912": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2050,12 +2050,12 @@
   "stufe": "hoch",
   "text": "Ein Krieger klettert an der weissen Marmorstatue eines römischen Kaisers hoch und holt zum Schlag aus. Nicht ein Mensch wird gestürzt, sondern das Sinnbild der Macht selbst, buchstäblich vom Sockel gerissen. So sichtbar zerbricht eine Ordnung, die 800 Jahre unantastbar schien."
  },
- "EP-8cc8f0": {
+ "EP-4db7fe": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Zerbrechen der Ordnung",
   "feld": "Kartentext",
   "stufe": "mittel",
-  "text": "Unten ziehen zahlreiche Krieger gemeinsam an einem Seil, um das Standbild zu Fall zu bringen. Die alte Weltordnung stürzt nicht von selbst. Sie wird von vielen Händen aktiv niedergerissen: Geschichte als Werk von Menschen, nicht von Schicksal."
+  "text": "Unten ziehen zahlreiche Krieger gemeinsam an einem Seil, um das Standbild zu Fall zu bringen. Die alte Weltordnung stürzt nicht von selbst. Sie wird von vielen Händen aktiv niedergerissen, Geschichte als Werk von Menschen, nicht von Schicksal."
  },
  "EP-5dc268": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2064,19 +2064,19 @@
   "stufe": "hoch",
   "text": "Philippe de Champaigne (1602–1674) war ein aus Brüssel stammender Maler, der zu den wichtigsten Vertretern des französischen Barock zählte. Er malte den heiligen Augustinus um 1645. Dargestellt ist der Kirchenvater Augustinus von Hippo (354–430), einer der einflussreichsten Denker des frühen Christentums, hier am Schreibpult in bischöflicher Kleidung. Seine klassischen Attribute sind das Buch, das flammende Herz und der Lichtstrahl von oben. Das ganze Bild ist auf eine Aussage hin gebaut, nämlich dass die Wahrheit von innen und von oben kommt und nicht aus der äusseren Welt."
  },
- "EP-cc795b": {
+ "EP-086f10": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Zerbrechen der Ordnung",
   "feld": "Im Kontext der Zeit",
   "stufe": "mittel",
-  "text": "Champaignes Augustinus verkörpert die Antwort auf einen epochalen Schock. Als Rom 410 fiel und mit dem Reich für viele die Weltordnung selbst zusammenbrach, verlegte Augustinus den Halt vom äusseren Reich ins Innere des Menschen und in den Glauben: Wahrheit und Orientierung findet man nicht mehr in der vergänglichen Macht, sondern in Gewissen, Erinnerung und Zuwendung zu Gott. Diese nach innen gewandte Ordnung prägte das Abendland ein Jahrtausend lang."
+  "text": "Champaignes Augustinus verkörpert die Antwort auf einen epochalen Schock. Als Rom 410 fiel und mit dem Reich für viele die Weltordnung selbst zusammenbrach, verlegte Augustinus den Halt vom äusseren Reich ins Innere des Menschen und in den Glauben. Wahrheit und Orientierung findet man nicht mehr in der vergänglichen Macht, sondern in Gewissen, Erinnerung und Zuwendung zu Gott. Diese nach innen gewandte Ordnung prägte das Abendland ein Jahrtausend lang."
  },
- "EP-7355ca": {
+ "EP-797187": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Zerbrechen der Ordnung",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Der barocke Maler zeigt Augustinus als Bischof am Schreibpult, umgeben von seinen Sinnbildern: dem Buch, dem brennenden Herzen und einem Lichtstrahl von oben. Das ganze Bild ist um eine Frage gebaut: Woher kommt die Wahrheit?"
+  "text": "Der barocke Maler zeigt Augustinus als Bischof am Schreibpult, umgeben von seinen Sinnbildern, dem Buch, dem brennenden Herzen und einem Lichtstrahl von oben. Das ganze Bild ist um eine Frage gebaut: Woher kommt die Wahrheit?"
  },
  "EP-63ddce": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2085,12 +2085,12 @@
   "stufe": "tief",
   "text": "In seiner Hand hält Augustinus ein flammendes Herz, sein bekanntestes Attribut. Es steht für eine leidenschaftliche Suche nach Wahrheit, die nicht im kühlen Verstand, sondern im Innersten des Menschen brennt. Die Wahrheit kommt für ihn nicht von aussen, sondern von innen."
  },
- "EP-0225ba": {
+ "EP-0de7cf": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Zerbrechen der Ordnung",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Von oben fällt ein heller Strahl auf Augustinus, dem sein Blick entgegengeht. Er verkörpert Augustins Überzeugung, dass wahre Erkenntnis eine Art göttliche «Erleuchtung» ist: Der Mensch findet die Wahrheit, indem er sich nach innen und nach oben wendet."
+  "text": "Von oben fällt ein heller Strahl auf Augustinus, dem sein Blick entgegengeht. Er verkörpert Augustins Überzeugung, dass wahre Erkenntnis eine Art göttliche «Erleuchtung» ist. Der Mensch findet die Wahrheit, indem er sich nach innen und nach oben wendet."
  },
  "EP-9b7189": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2155,26 +2155,26 @@
   "stufe": "hoch",
   "text": "Pieter Bruegel der Ältere war einer der bedeutendsten niederländischen Maler des 16. Jahrhunderts und schuf dieses Bild 1563, zur Zeit der niederländischen Renaissance. Er malte die biblische Geschichte vom Turmbau als Panorama seiner eigenen Gegenwart, denn Baustelle, Hafen und Stadt sind flämisch und nicht babylonisch gestaltet. Der gewaltige Turm erinnert mit seinen Rundbögen an das römische Kolosseum und steht bereits sichtbar schief. Vorne links besucht eine königliche Gruppe die Baustelle, vor der die Steinmetze niederknien. Diese Figur wird meist als der biblische König Nimrod gedeutet. Das Original hängt heute im Kunsthistorischen Museum in Wien."
  },
- "EP-18a323": {
+ "EP-9bd6f4": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Renaissance & Aufbruch",
   "feld": "Im Kontext der Zeit",
   "stufe": "tief",
-  "text": "Der Turmbau zu Babel ist das Bild der Renaissance-Verunsicherung: Eine Epoche, die mit Buchdruck, Seefahrt und Kapital alles zu können scheint und gleichzeitig ahnt, dass der Ehrgeiz das Fundament überfordern könnte. Die biblische Strafe für den Turm war die Sprachverwirrung. Bruegels Zeit erlebte ihre eigene: die Glaubensspaltung, die Europa in Lager teilte."
+  "text": "Der Turmbau zu Babel ist das Bild der Renaissance-Verunsicherung. Eine Epoche, die mit Buchdruck, Seefahrt und Kapital alles zu können scheint und gleichzeitig ahnt, dass der Ehrgeiz das Fundament überfordern könnte. Die biblische Strafe für den Turm war die Sprachverwirrung. Bruegels Zeit erlebte ihre eigene, die Glaubensspaltung, die Europa in Lager teilte."
  },
- "EP-b30978": {
+ "EP-91bdce": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Renaissance & Aufbruch",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Der Turm füllt das Bild wie ein Gebirge: unten fertig und bewohnt, oben rohes Gestein, eine Baustelle, die in die Wolken wächst. Bruegel malt die biblische Geschichte als Panorama seiner eigenen Zeit, mit Hunderten winziger Arbeiter."
+  "text": "Der Turm füllt das Bild wie ein Gebirge, unten fertig und bewohnt, oben rohes Gestein, eine Baustelle, die in die Wolken wächst. Bruegel malt die biblische Geschichte als Panorama seiner eigenen Zeit, mit Hunderten winziger Arbeiter."
  },
- "EP-3ed82e": {
+ "EP-b805da": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Renaissance & Aufbruch",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Die obersten Stockwerke stossen buchstäblich in die Wolke und schon zeigt sich die Schieflage: Die Ebenen stehen schräg, das rote Mauerwerk bleibt roh. Der Ehrgeiz wächst schneller, als das Fundament trägt. Das ist ein Bild für Technik-Hybris."
+  "text": "Die obersten Stockwerke stossen buchstäblich in die Wolke und schon zeigt sich die Schieflage. Die Ebenen stehen schräg, das rote Mauerwerk bleibt roh. Der Ehrgeiz wächst schneller, als das Fundament trägt. Das ist ein Bild für Technik-Hybris."
  },
  "EP-7bb810": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2183,12 +2183,12 @@
   "stufe": "tief",
   "text": "Vorne links besucht ein Herrscher die Baustelle und die Steinmetze fallen vor ihm auf die Knie. Die Tradition nennt ihn Nimrod, die Bibel selbst gibt dem Bauherrn keinen Namen. Macht, Geld und Technik gehören zusammen: Ohne Herrscher und Kapital kein Turm. Bruegels Zeitgenossen konnten darin die Grossbaustellen und Handelsherren der eigenen Städte wiedererkennen."
  },
- "EP-b6d416": {
+ "EP-025a1a": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Renaissance & Aufbruch",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Rechts liegen Schiffe und Flösse am Kai: Der Nachschub kommt übers Wasser. Bruegel malt den Turm nicht in Babylon, sondern an einem flämischen Hafen, die Handelswelt seiner Gegenwart, in der Antwerpen zur Weltstadt aufstieg."
+  "text": "Rechts liegen Schiffe und Flösse am Kai. Der Nachschub kommt übers Wasser. Bruegel malt den Turm nicht in Babylon, sondern an einem flämischen Hafen, die Handelswelt seiner Gegenwart, in der Antwerpen zur Weltstadt aufstieg."
  },
  "EP-98e975": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2197,40 +2197,40 @@
   "stufe": "hoch",
   "text": "Hans Holbein der Jüngere (um 1497 bis 1543) war ein deutscher Maler der Renaissance, der lange am englischen Königshof wirkte. Er malte dieses Doppelporträt 1533 in London. Dargestellt sind zwei junge Männer auf der Höhe ihrer Macht, links der französische Gesandte Jean de Dinteville und rechts sein Freund Georges de Selve, Bischof von Lavaur. Zwischen ihnen steht ein Regal mit Instrumenten und Büchern, ein Inventar des neuen Wissens ihrer Zeit. Quer im Vordergrund liegt ein stark verzerrter Totenschädel, der erst aus einem schrägen Blickwinkel erkennbar wird und an die Vergänglichkeit mahnt. Heute hängt das Werk in der National Gallery in London."
  },
- "EP-375d8a": {
+ "EP-974e55": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Renaissance & Aufbruch",
   "feld": "Im Kontext der Zeit",
   "stufe": "tief",
-  "text": "Die «Gesandten» bündeln die Renaissance in einem Bild: das neue Wissen (Instrumente), der neue Reichtum (Pelz, Teppich) und die Verunsicherung als Riss im Bild: gerissene Saite, Luther-Gesangbuch, verzerrter Schädel. Fortschritt und doppelter Boden gehören in dieser Epoche zusammen."
+  "text": "Die «Gesandten» bündeln die Renaissance in einem Bild. Da sind das neue Wissen (Instrumente), der neue Reichtum (Pelz, Teppich) und die Verunsicherung als Riss im Bild, gerissene Saite, Luther-Gesangbuch, verzerrter Schädel. Fortschritt und doppelter Boden gehören in dieser Epoche zusammen."
  },
- "EP-ad7c4a": {
+ "EP-86d1b6": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Renaissance & Aufbruch",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Zwei junge Männer auf dem Gipfel ihrer Möglichkeiten: der französische Gesandte Jean de Dinteville (links) und sein Freund, Bischof Georges de Selve. Zwischen ihnen ein Regal voller Instrumente, ein Inventar dessen, was ihre Epoche kann und weiss."
+  "text": "Zwei einflussreiche, gebildete Vertreter der französischen Elite, der Gesandte Jean de Dinteville (links) und sein Freund, Bischof Georges de Selve. Zwischen ihnen ein Regal voller Instrumente, wie eine kleine Ausstellung dessen, was ihre Epoche kann und weiss, Geräte für Himmel und Zeit, Bücher und Musik."
  },
- "EP-513957": {
+ "EP-47cf64": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Renaissance & Aufbruch",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Himmelsglobus, Sonnenuhren, Quadrant: Instrumente zur Vermessung von Himmel und Zeit, das neue Wissen der Epoche. Wer Himmel und Stunde berechnen kann, kann navigieren und handeln: Wissenschaft und Welthandel gehören zusammen."
+  "text": "Himmelsglobus, Sonnenuhren und Quadrant sind Instrumente zur Vermessung von Himmel und Zeit, das neue Wissen der Epoche. Wer Himmel und Stunde berechnen kann, kann navigieren und handeln, Wissenschaft und Welthandel gehören zusammen."
  },
- "EP-3e27db": {
+ "EP-23868f": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Renaissance & Aufbruch",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Erdglobus, Rechenbuch, Laute und Gesangbuch: die irdischen Künste. Doch genau hier zeigt sich ein Riss. An der Laute ist eine Saite gerissen und das aufgeschlagene Gesangbuch zeigt Luther-Lieder: die zerbrochene Harmonie der Glaubensspaltung."
+  "text": "Erdglobus, Rechenbuch, Laute und Gesangbuch stehen für die irdischen Künste. Doch genau hier zeigt sich ein Riss. An der Laute ist eine Saite gerissen und das aufgeschlagene Gesangbuch zeigt Luther-Lieder, die zerbrochene Harmonie der Glaubensspaltung."
  },
- "EP-289292": {
+ "EP-1ea07b": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Renaissance & Aufbruch",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Der graue Schrägbalken unten wird erst aus spitzem Winkel lesbar: ein Totenschädel (eine Anamorphose). Mitten im Triumph von Reichtum und Wissen erinnert Holbein an die Vergänglichkeit. Das ist der doppelte Boden der ganzen Epoche."
+  "text": "Der graue Schrägbalken unten wird erst aus spitzem Winkel lesbar, ein Totenschädel, eine sogenannte Anamorphose. Mitten im Triumph von Reichtum und Wissen erinnert Holbein an die Vergänglichkeit. Das ist der doppelte Boden der ganzen Epoche."
  },
  "EP-cb210c": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2295,19 +2295,19 @@
   "stufe": "hoch",
   "text": "Joseph Wright of Derby (1734–1797) war ein englischer Maler der Aufklärung, der für seine dramatische Verwendung von Licht und Schatten bekannt wurde. Er malte diese Szene um 1766 im England der frühen Industrialisierung. Dargestellt ist ein Vortragender, der einer Gruppe von Zuhörern ein Orrery erklärt, ein mechanisches Tischmodell des Sonnensystems. Eine Lampe in der Mitte stellt die Sonne dar und beleuchtet die staunenden Gesichter ringsum. Wright gibt der Wissenschaft damit eine Feierlichkeit, wie man sie sonst nur aus religiösen Bildern kennt. Das Gemälde hängt heute im Museum von Derby in England."
  },
- "EP-450c1d": {
+ "EP-8501cf": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Aufklärung",
   "feld": "Im Kontext der Zeit",
   "stufe": "tief",
-  "text": "Das Orrery zeigt die technisch-wissenschaftliche Seite des Umbruchs: In einem mechanischen Modell lässt sich der ganze Kosmos vorführen und erklären. Doch derselbe Fortschritt hatte eine erschütternde Kehrseite. Mit Kopernikus und dem Teleskop verlor die Erde (und mit ihr der Mensch) den angestammten Platz im Zentrum. Kant machte aus dem Verlust ein Programm: Wenn der Mensch nicht mehr Mittelpunkt eines gottgegebenen Kosmos ist, muss er den Mut haben, mit dem eigenen Verstand Orientierung zu schaffen."
+  "text": "Das Orrery zeigt die technisch-wissenschaftliche Seite des Umbruchs. In einem mechanischen Modell lässt sich der ganze Kosmos vorführen und erklären. Doch derselbe Fortschritt hatte eine erschütternde Kehrseite. Mit Kopernikus und dem Teleskop verlor die Erde (und mit ihr der Mensch) den angestammten Platz im Zentrum. Kant machte aus dem Verlust ein Programm. Wenn der Mensch nicht mehr Mittelpunkt eines gottgegebenen Kosmos ist, muss er den Mut haben, mit dem eigenen Verstand Orientierung zu schaffen."
  },
- "EP-848708": {
+ "EP-b2317b": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Aufklärung",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Eine Gruppe von Menschen drängt sich im Dunkeln um ein Orrery, ein mechanisches Tischmodell des Sonnensystems mit kreisenden Planeten. Statt Heiliger oder Herrscher zeigt das Bild gewöhnliche Zuhörer beim wissenschaftlichen Vortrag: ein neues, bürgerliches Bildthema."
+  "text": "Eine Gruppe von Menschen drängt sich im Dunkeln um ein Orrery, ein mechanisches Tischmodell des Sonnensystems mit kreisenden Planeten. Statt Heiliger oder Herrscher zeigt das Bild gewöhnliche Zuhörer beim wissenschaftlichen Vortrag, ein neues, bürgerliches Bildthema."
  },
  "EP-93d79e": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2316,12 +2316,12 @@
   "stufe": "tief",
   "text": "Im Zentrum des Modells steht eine Lampe, die die Sonne darstellt. Ihr warmes Licht fällt auf die andächtigen Gesichter ringsum. Wright inszeniert die Wissenschaft mit einer Ehrfurcht, die man sonst aus Bildern der Anbetung kennt. Die Erkenntnis rückt an die Stelle des Heiligen."
  },
- "EP-50be61": {
+ "EP-61588a": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Aufklärung",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Zwei Kinder beugen sich nah ans Modell, die Gesichter hell erleuchtet und voller Staunen. Sie machen das eigentliche Thema sichtbar: das Lernen selbst als erhebendes Erlebnis, die Freude, eine erklärbare Welt zu entdecken."
+  "text": "Zwei Kinder beugen sich nah ans Modell, die Gesichter hell erleuchtet und voller Staunen. Sie machen das eigentliche Thema sichtbar, das Lernen selbst als erhebendes Erlebnis, die Freude, eine erklärbare Welt zu entdecken."
  },
  "EP-207a6e": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2330,19 +2330,19 @@
   "stufe": "hoch",
   "text": "Dieses Blatt ist kein Gemälde, sondern ein Kupferstich, der noch im Katastrophenjahr 1755 als Flugblatt entstand. Ein einzelner Urheber ist nicht überliefert, denn solche Stiche wurden rasch und in grosser Zahl gedruckt. Dargestellt ist das Erdbeben von Lissabon vom 1. November 1755 mit seinen drei Verheerungen, dem bebenden Boden, der brennenden Stadt und der Flutwelle im Hafen. Im Vordergrund kentern Schiffe in der heranrollenden Welle, im Hintergrund stehen Kirchen und Paläste in Flammen. Als eines der ersten europaweiten Medienereignisse verbreiteten solche Stiche Bild und Schrecken innert Wochen über den ganzen Kontinent."
  },
- "EP-a30a29": {
+ "EP-8d3a7b": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Aufklärung",
   "feld": "Im Kontext der Zeit",
   "stufe": "hoch",
-  "text": "Lissabon 1755 ist die Verunsicherung dieser Epoche schlechthin: An Allerheiligen zerstörten Erdbeben, Feuer und Flutwelle innerhalb von Stunden eine der reichsten Städte Europas. Viele starben beim Gottesdienst. Der Glaube an einen gütigen, vernünftigen Weltplan zerbrach. Ganz Europa stritt, wie ein guter Gott so etwas zulassen könne, am schärfsten Voltaire gegen Rousseau. Der junge Kant schrieb 1756 drei nüchterne Abhandlungen über die Ursachen von Erdbeben und suchte die Erklärung damit in der Natur statt im Ratschluss Gottes. Sein berühmter Aufruf, sich des eigenen Verstandes zu bedienen, kam erst 1784 und galt der ganzen Epoche, nicht diesem einen Beben. Beides weist in dieselbe Richtung: keine neue Beruhigung, sondern eine Zumutung."
+  "text": "Lissabon 1755 ist die Verunsicherung dieser Epoche schlechthin. An Allerheiligen zerstörten Erdbeben, Feuer und Flutwelle innerhalb von Stunden eine der reichsten Städte Europas. Viele starben beim Gottesdienst. Der Glaube an einen gütigen, vernünftigen Weltplan zerbrach. Ganz Europa stritt, wie ein guter Gott so etwas zulassen könne, am schärfsten Voltaire gegen Rousseau. Der junge Kant schrieb 1756 drei nüchterne Abhandlungen über die Ursachen von Erdbeben und suchte die Erklärung damit in der Natur statt im Ratschluss Gottes. Sein berühmter Aufruf, sich des eigenen Verstandes zu bedienen, kam erst 1784 und galt der ganzen Epoche, nicht diesem einen Beben. Beides weist in dieselbe Richtung, keine neue Beruhigung, sondern eine Zumutung."
  },
- "EP-bac45d": {
+ "EP-fe3603": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Aufklärung",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Ein zeitgenössisches Flugblatt zeigt Lissabon im Moment der dreifachen Katastrophe: Die Erde bebt, die Stadt brennt, aus dem Hafen türmt sich die Flutwelle. Solche Stiche verbreiteten die Nachricht in Windeseile durch Europa."
+  "text": "Ein zeitgenössisches Flugblatt zeigt Lissabon im Moment der dreifachen Katastrophe. Die Erde bebt, die Stadt brennt, aus dem Hafen türmt sich die Flutwelle. Solche Stiche verbreiteten die Nachricht in Windeseile durch Europa."
  },
  "EP-683de2": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2421,19 +2421,19 @@
   "stufe": "hoch",
   "text": "Adolph Menzel (1815–1905) war ein deutscher Maler des Realismus, der genaue Beobachtung mit gesellschaftlichem Blick verband. Für dieses Werk studierte er 1872 wochenlang eine echte Fabrik in Königshütte in Oberschlesien und füllte Skizzenbücher mit Details. Das Bild entstand zwischen 1872 und 1875 und zeigt das Innere einer Eisenfabrik mit über vierzig Arbeitern. Im Zentrum wird ein glühender Eisenblock unter die Walzen geschoben, während rechts eine Schicht hastig isst und links Männer sich waschen. Es gilt als erstes bedeutendes Industriegemälde der deutschen Kunst und hängt heute in der Alten Nationalgalerie in Berlin."
  },
- "EP-e1d5d3": {
+ "EP-313685": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Industriemoderne",
   "feld": "Im Kontext der Zeit",
   "stufe": "hoch",
-  "text": "Menzels Fabrik zeigt beide Seiten des Umbruchs in einem Bild: die technische Wucht der Dampfmaschine, die glühendes Eisen und Menschenkraft zu einem einzigen Getriebe verbindet, und die soziale Verunsicherung einer Arbeit, die im Schichtbetrieb niemals stillsteht. Genau diesen Umbruch versuchte Marx zu begreifen: Die Verhältnisse, in denen diese Menschen arbeiten, sind kein Naturgesetz, sondern gemacht und darum veränderbar."
+  "text": "Menzels Fabrik zeigt beide Seiten des Umbruchs in einem Bild. Auf der einen Seite steht die technische Wucht der Dampfmaschine, die glühendes Eisen und Menschenkraft zu einem einzigen Getriebe verbindet, auf der anderen die soziale Verunsicherung einer Arbeit, die im Schichtbetrieb niemals stillsteht. Genau diesen Umbruch versuchte Marx zu begreifen. Die Verhältnisse, in denen diese Menschen arbeiten, sind kein Naturgesetz, sondern gemacht und darum veränderbar."
  },
- "EP-8e299b": {
+ "EP-a70bf0": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Industriemoderne",
   "feld": "Kartentext",
   "stufe": "hoch",
-  "text": "Adolph Menzel malt 1872–1875 nach genauen Studien das Innere einer echten Fabrik. Das war neu: Als eines der ersten grossen Gemälde überhaupt nimmt es die Industriearbeit ernst. Nicht Götter oder Herrscher, sondern schwitzende Arbeiter zwischen Maschinen füllen die riesige Leinwand."
+  "text": "Adolph Menzel malt 1872–1875 nach genauen Studien das Innere einer echten Fabrik. Das war neu. Als eines der ersten grossen Gemälde überhaupt nimmt es die Industriearbeit ernst. Nicht Götter oder Herrscher, sondern schwitzende Arbeiter zwischen Maschinen füllen die riesige Leinwand."
  },
  "EP-f27edf": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2463,12 +2463,12 @@
   "stufe": "hoch",
   "text": "Gustave Doré (1832–1883) war ein französischer Illustrator und Grafiker, der für seine kontrastreichen Bilder aus Licht und Schatten berühmt ist. Dieses Blatt ist kein Gemälde, sondern ein Holzstich aus dem Bildband «London: A Pilgrimage» von 1872. Für das Buch durchstreifte Doré vier Jahre lang die Metropole, von den Docks bis zu den Salons. Der Stich blickt über die dicht gedrängten Hinterhöfe der Arbeiterviertel, die vom Bogen eines Eisenbahnviadukts gerahmt werden. Oben rauscht ein Zug vorbei, während unten die engen, russgeschwärzten Häuser der armen Familien stehen. So hielt Doré das Elend und die Wucht des viktorianischen London eindringlicher fest als jede Statistik."
  },
- "EP-78a1b1": {
+ "EP-8b3cbc": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Industriemoderne",
   "feld": "Im Kontext der Zeit",
   "stufe": "tief",
-  "text": "Dorés Blick über die Londoner Hinterhöfe zeigt die Verunsicherung der Industriemoderne von unten: entwurzelte Massen, zusammengepfercht im Schatten der Eisenbahn. Die Technik trieb den Wandel mit ungeheurer Wucht voran, doch der Fortschritt fuhr im Wortsinn über die Köpfe der Ärmsten hinweg. Marx lieferte die Deutung: Dieses Elend ist kein Naturzustand, sondern Ergebnis gesellschaftlicher Verhältnisse und damit gestaltbar."
+  "text": "Dorés Blick über die Londoner Hinterhöfe zeigt die Verunsicherung der Industriemoderne von unten, entwurzelte Massen, zusammengepfercht im Schatten der Eisenbahn. Die Technik trieb den Wandel mit ungeheurer Wucht voran, doch der Fortschritt fuhr im Wortsinn über die Köpfe der Ärmsten hinweg. Marx lieferte die Deutung. Dieses Elend ist kein Naturzustand, sondern Ergebnis gesellschaftlicher Verhältnisse und damit gestaltbar."
  },
  "EP-485669": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2484,12 +2484,12 @@
   "stufe": "tief",
   "text": "Reihe an Reihe stehen dicht gedrängte Arbeiterhäuser, dazwischen winzige Höfe mit Wäscheleinen. So sah die Wohnwirklichkeit der Arbeiterfamilien aus: eng, russgeschwärzt, ohne Privatheit. Der Stich lässt die Enge fast körperlich spüren."
  },
- "EP-005dbc": {
+ "EP-fce777": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Industriemoderne",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Oben rauscht auf dem Viadukt eine Eisenbahn vorbei. Das Bild verdichtet daraus ein Sinnbild: Der Fortschritt fährt buchstäblich über die Köpfe der Ärmsten hinweg, nah genug, um ihren Alltag zu verdunkeln und doch für sie unerreichbar."
+  "text": "Oben rauscht auf dem Viadukt eine Eisenbahn vorbei. Das Bild verdichtet daraus ein Sinnbild. Der Fortschritt fährt buchstäblich über die Köpfe der Ärmsten hinweg, nah genug, um ihren Alltag zu verdunkeln und doch für sie unerreichbar."
  },
  "EP-cc0c87": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2547,19 +2547,19 @@
   "stufe": "hoch",
   "text": "Der Historiker Eric Hobsbawm nannte die Jahre 1914–1991 das «kurze 20. Jahrhundert» und «Zeitalter der Extreme». In wenigen Jahrzehnten drängen sich Erster Weltkrieg, Weltwirtschaftskrise, Faschismus und Stalinismus, Zweiter Weltkrieg, Schoah und Hiroshima. Danach folgt der Kalte Krieg mit der ständigen Drohung atomarer Vernichtung. Aus dem Erschrecken über diese Abgründe entstehen die Vereinten Nationen, die Allgemeine Erklärung der Menschenrechte (1948) und der Gedanke, dass es Grenzen geben muss, die keine Macht überschreiten darf."
  },
- "EP-bfa260": {
+ "EP-52a7ec": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Zeitalter der Katastrophen",
   "feld": "Hintergrund zum Bild",
   "stufe": "hoch",
-  "text": "Ernst Ludwig Kirchner (1880–1938) war ein führender Vertreter des deutschen Expressionismus und Mitgründer der Künstlergruppe «Brücke». Der Expressionismus malt nicht, wie die Welt aussieht, sondern wie sie sich anfühlt, mit grellen Farben und kantigen Formen. Kirchner meldete sich 1914 freiwillig zum Kriegsdienst und zerbrach innert Monaten am Militär. 1915 malte er sich in Uniform mit abgeschnittener rechter Malhand, obwohl die Hand in Wirklichkeit unversehrt war, denn das Bild zeigt eine innere und keine körperliche Wunde. Hinter ihm steht ein Aktmodell als Zeichen der verlorenen Welt der Kunst. Die Nationalsozialisten diffamierten sein Werk 1937 als «entartet», und 1938 nahm er sich das Leben."
+  "text": "Ernst Ludwig Kirchner (1880–1938) war ein führender Vertreter des deutschen Expressionismus und Mitgründer der Künstlergruppe «Brücke». Der Expressionismus malt nicht, wie die Welt aussieht, sondern wie sie sich anfühlt, mit grellen Farben und kantigen Formen. Kirchner meldete sich 1914 freiwillig zum Kriegsdienst und zerbrach innert Monaten am Militär. 1915 malte er sich in Uniform mit abgeschnittener rechter Malhand, obwohl die Hand in Wirklichkeit unversehrt war, denn das Bild zeigt eine innere und keine körperliche Wunde. Hinter ihm steht ein Aktmodell als Zeichen der verlorenen Welt der Kunst. Die Nationalsozialisten diffamierten sein Werk 1937 als «entartet» und 1938 nahm er sich das Leben."
  },
- "EP-73558e": {
+ "EP-d65628": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Zeitalter der Katastrophen",
   "feld": "Im Kontext der Zeit",
   "stufe": "tief",
-  "text": "Kirchners Selbstbildnis zeigt die Verunsicherung des Katastrophenzeitalters von innen: Der industrialisierte Krieg beschädigt Menschen auch dort, wo keine Granate sie trifft. Auf diesen Verlust aller Geländer antwortet später der Existenzialismus, mit der Zumutung, trotzdem zu wählen und zu verantworten."
+  "text": "Kirchners Selbstbildnis zeigt die Verunsicherung des Katastrophenzeitalters von innen. Der industrialisierte Krieg beschädigt Menschen auch dort, wo keine Granate sie trifft. Auf diesen Verlust aller Geländer antwortet später der Existenzialismus, mit der Zumutung, trotzdem zu wählen und zu verantworten."
  },
  "EP-861673": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2568,19 +2568,19 @@
   "stufe": "tief",
   "text": "Der Maler zeigt sich in der Uniform seines Artillerie-Regiments, Zigarette im Mund, im Atelier. Die Farben schreien, die Formen splittern. Der Expressionismus malt nicht, wie es aussieht, sondern wie es sich anfühlt."
  },
- "EP-edf173": {
+ "EP-efdfc3": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Zeitalter der Katastrophen",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Die rechte Hand (die Malhand) ist abgeschnitten, der Stumpf ragt ins Bild. In Wirklichkeit war Kirchners Hand unversehrt: Der Verlust ist innerlich. Der Krieg, so das Bild, amputiert das Schöpferische am Menschen."
+  "text": "Die rechte Hand (die Malhand) ist abgeschnitten, der Stumpf ragt ins Bild. In Wirklichkeit war Kirchners Hand unversehrt, der Verlust ist innerlich. Der Krieg, so das Bild, amputiert das Schöpferische am Menschen."
  },
- "EP-c3eb89": {
+ "EP-65a32f": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Zeitalter der Katastrophen",
   "feld": "Kartentext",
   "stufe": "hoch",
-  "text": "Fahles Gelb, leere Augen ohne Pupillen: Kirchner malt sich als Ausgebrannten. Er hatte sich 1914 freiwillig gemeldet und zerbrach binnen Monaten am Drill. Das Porträt entstand nach seiner Entlassung als «dienstuntauglich»."
+  "text": "Fahles Gelb, leere Augen ohne Pupillen. Kirchner malt sich als Ausgebrannten. Er hatte sich 1914 freiwillig gemeldet und zerbrach binnen Monaten am Drill. Das Porträt entstand nach seiner Entlassung als «dienstuntauglich»."
  },
  "EP-d9b4a8": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2596,19 +2596,19 @@
   "stufe": "hoch",
   "text": "Felix Nussbaum (1904–1944) war ein jüdischer Maler aus Osnabrück, dessen Werk der Neuen Sachlichkeit zugerechnet wird. Ab 1942 lebte er im Brüsseler Versteck, wo dieses Bild um 1943 entstand. Er malt sich mit hochgeschlagenem Kragen, dem gelben Judenstern und dem Ausweis mit dem roten Stempel «JUIF-JOOD», also Jude. Das Werk hält den Moment fest, in dem einem Menschen durch einen amtlichen Stempel das Menschsein aberkannt wird. 1944 wurde Nussbaum denunziert, deportiert und in Auschwitz ermordet, während seine Bilder im Versteck überdauerten. Heute sind sie im Felix-Nussbaum-Haus in Osnabrück zu sehen."
  },
- "EP-0b6b79": {
+ "EP-0f3a52": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Zeitalter der Katastrophen",
   "feld": "Im Kontext der Zeit",
   "stufe": "tief",
-  "text": "Das Selbstbildnis mit Judenpass ist das Dokument einer Verunsicherung, die keinen Vergleich hat: Einem Menschen wird per Stempel das Menschsein aberkannt. Hannah Arendts spätere Mahnung, selbst zu urteilen statt mitzulaufen, antwortet genau auf diese Erfahrung. Verwaltung und Gehorsam können zum Werkzeug des Verbrechens werden."
+  "text": "Das Selbstbildnis mit Judenpass ist das Dokument einer Verunsicherung, die keinen Vergleich hat. Einem Menschen wird per Stempel das Menschsein aberkannt. Hannah Arendts spätere Mahnung, selbst zu urteilen statt mitzulaufen, antwortet genau auf diese Erfahrung. Verwaltung und Gehorsam können zum Werkzeug des Verbrechens werden."
  },
- "EP-481115": {
+ "EP-42e6ae": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Zeitalter der Katastrophen",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Ein Mann im Versteck: Mauerecke, kahler Baum, tiefer Himmel. Felix Nussbaum malt sich in Brüssel, wo er sich vor der Deportation verbirgt, auf engstem Raum, aber als Maler, der Zeugnis ablegt."
+  "text": "Ein Mann im Versteck. Mauerecke, kahler Baum, tiefer Himmel. Felix Nussbaum malt sich in Brüssel, wo er sich vor der Deportation verbirgt, auf engstem Raum, aber als Maler, der Zeugnis ablegt."
  },
  "EP-7ec585": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2617,12 +2617,12 @@
   "stufe": "tief",
   "text": "Die Hand hält den belgischen Fremdenpass mit dem roten Stempel «JUIF-JOOD» (Jude). Name: Nussbaum, Felix. Ein amtliches Dokument, das einen Menschen zur Zielscheibe erklärt, der Verwaltungsakt der Verfolgung, ins Bild gehoben."
  },
- "EP-61a2e9": {
+ "EP-920359": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Zeitalter der Katastrophen",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Am Mantelkragen der Judenstern, den die Besatzer zu tragen zwangen. Nussbaum schlägt den Kragen hoch, halb verbergend, halb zeigend. Das ist die Zwangslage der Verfolgten: gesehen werden heisst gefasst werden."
+  "text": "Am Mantelkragen der Judenstern, den die Besatzer zu tragen zwangen. Nussbaum schlägt den Kragen hoch, halb verbergend, halb zeigend. Das ist die Zwangslage der Verfolgten, gesehen werden heisst gefasst werden."
  },
  "EP-d4b7a6": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2694,33 +2694,33 @@
   "stufe": "hoch",
   "text": "Dieses Bild ist kein Gemälde, sondern eine Pressefotografie vom 22. Dezember 1989. Aufgenommen hat sie ein Fotograf des DDR-Nachrichtendienstes ADN, heute liegt sie im Bundesarchiv. Zu sehen ist der Moment, in dem am Brandenburger Tor ein Kran ein Mauersegment heraushebt, um den neuen Grenzübergang zu öffnen. Es geschah sechs Wochen nach der Maueröffnung vom 9. November 1989. Unter dem schwebenden Betonstück stehen Grenzsoldaten, Arbeiter und Schaulustige dicht beieinander. Das nächtliche Foto wurde zu einem Sinnbild für das friedliche Ende der deutschen Teilung."
  },
- "EP-6db558": {
+ "EP-d1fa13": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "«Ende der Geschichte»",
   "feld": "Im Kontext der Zeit",
   "stufe": "mittel",
-  "text": "Das Foto zeigt den Kipp-Punkt der Epoche «Ende der Geschichte»: Ein ganzes System verschwindet friedlich, fast über Nacht. Was als Triumph der Freiheit gefeiert wurde, war für viele Biografien im Osten zugleich ein Boden-Verlust. Beides gehört zur Verunsicherung dieser Jahre."
+  "text": "Das Foto zeigt den Kipp-Punkt der Epoche «Ende der Geschichte». Ein ganzes System verschwindet friedlich, fast über Nacht. Was als Triumph der Freiheit gefeiert wurde, war für viele Biografien im Osten zugleich ein Boden-Verlust. Beides gehört zur Verunsicherung dieser Jahre."
  },
- "EP-48dd84": {
+ "EP-c4c30c": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "«Ende der Geschichte»",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Nachtaufnahme am Brandenburger Tor: Ein Kran hebt ein Segment aus der Berliner Mauer, Arbeiter und Schaulustige stehen darunter. Sechs Wochen nach dem 9. November wird hier der Übergang am Tor geöffnet, das Symbolbild des Systemwechsels."
+  "text": "Nachtaufnahme am Brandenburger Tor. Ein Kran hebt ein Segment aus der Berliner Mauer, Arbeiter und Schaulustige stehen darunter. Sechs Wochen nach dem 9. November wird hier der Übergang am Tor geöffnet, das Symbolbild des Systemwechsels."
  },
- "EP-f31e12": {
+ "EP-7d6f58": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "«Ende der Geschichte»",
   "feld": "Kartentext",
   "stufe": "hoch",
-  "text": "Ein Betonsegment hängt am Haken, die «unüberwindbare» Grenze als Bauteil, das man herausheben kann. 28 Jahre teilte diese Wand die Stadt. Jetzt zeigt sich: Auch sie war gemacht, nicht Schicksal."
+  "text": "Ein Betonsegment hängt am Haken, die «unüberwindbare» Grenze als Bauteil, das man herausheben kann. 28 Jahre teilte diese Wand die Stadt. Jetzt zeigt sich, auch sie war gemacht, nicht Schicksal."
  },
- "EP-5ac093": {
+ "EP-87c315": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "«Ende der Geschichte»",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Dahinter die Säulen des Brandenburger Tors, jahrzehntelang im Sperrgebiet zwischen Ost und West. Dass ausgerechnet hier geöffnet wird, macht das Foto historisch: Das eingemauerte Wahrzeichen wird wieder ein Durchgang."
+  "text": "Dahinter die Säulen des Brandenburger Tors, jahrzehntelang im Sperrgebiet zwischen Ost und West. Dass ausgerechnet hier geöffnet wird, macht das Foto historisch. Das eingemauerte Wahrzeichen wird wieder ein Durchgang."
  },
  "EP-44ac87": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2736,12 +2736,12 @@
   "stufe": "hoch",
   "text": "Dieses Bild ist keine gemalte Kunst, sondern eine wissenschaftliche Aufnahme der US-Behörden NASA und NOAA aus dem Jahr 2012. Es ist eine Montage aus Hunderten Aufnahmen des Satelliten Suomi NPP, denn es ist nie überall auf der Erde gleichzeitig Nacht. So hat der Planet in Wirklichkeit nie ausgesehen. Zu sehen ist die nächtliche Erde, auf der jedes Lichtpünktchen für menschliche Besiedlung und für Strom steht. Grell leuchten Europa, Ostasien und die US-Küsten, während weite Teile Afrikas, Südamerikas und Zentralasiens fast dunkel bleiben. Gerade als Konstruktion führt das Bild vor Augen, wie ungleich die vernetzte Welt verteilt ist."
  },
- "EP-17534a": {
+ "EP-6e8a14": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "«Ende der Geschichte»",
   "feld": "Im Kontext der Zeit",
   "stufe": "tief",
-  "text": "Die nächtliche Erde macht die technische Seite der Epoche in einem Bild sichtbar: eine elektrifizierte, vernetzte Welt, deren Städte und Verkehrsachsen den Planeten in Lichtadern überziehen. Zugleich zeigt sie die Kehrseite. Die grellen Lichtbänder und die weiten dunklen Flächen führen die tiefe Ungleichheit dieser Vernetzung vor Augen."
+  "text": "Die nächtliche Erde macht die technische Seite der Epoche in einem Bild sichtbar, eine elektrifizierte, vernetzte Welt, deren Städte und Verkehrsachsen den Planeten in Lichtadern überziehen. Zugleich zeigt sie die Kehrseite. Die grellen Lichtbänder und die weiten dunklen Flächen führen die tiefe Ungleichheit dieser Vernetzung vor Augen."
  },
  "EP-a4a7da": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2757,12 +2757,12 @@
   "stufe": "tief",
   "text": "Grell leuchten Europa, das nördliche Indien, Ostasien und die US-Küsten. Wo Strom fliesst, ist auch das digitale Netz dicht. Die hellen Adern zeichnen die Landkarte der vernetzten, industrialisierten Welt nach."
  },
- "EP-8a126d": {
+ "EP-1c1b47": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "«Ende der Geschichte»",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Weite Teile Afrikas, Südamerikas und Zentralasiens bleiben nahezu dunkel. Diese Schatten erzählen die andere Hälfte der Geschichte: Die Vernetzung ist höchst ungleich verteilt. Das globale «Wir» umfasst längst nicht alle in gleicher Weise."
+  "text": "Weite Teile Afrikas, Südamerikas und Zentralasiens bleiben nahezu dunkel. Diese Schatten erzählen die andere Hälfte der Geschichte. Die Vernetzung ist höchst ungleich verteilt. Das globale «Wir» umfasst längst nicht alle in gleicher Weise."
  },
  "EP-58e437": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2827,19 +2827,19 @@
   "stufe": "hoch",
   "text": "Dieses Bild ist kein Gemälde, sondern eine Fotografie, die am 7. Dezember 1972 aus rund 29 000 km Entfernung entstand. Aufgenommen hat sie die Besatzung von Apollo 17, der bislang letzten bemannten Mondlandung. Zu sehen ist die Erde als ganze, runde Kugel, mit Wolkenwirbeln, Ozeanen und Kontinenten in einem einzigen Blick. Von hier oben sind keine Nationen und keine Grenzen erkennbar, nur ein einziger, verletzlicher Planet im schwarzen All. «Blue Marble» wurde zu einem der meistreproduzierten Fotos der Geschichte und zu einer Ikone der Umweltbewegung."
  },
- "EP-f59add": {
+ "EP-4a11f9": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Jetzt: Umwelt & KI",
   "feld": "Im Kontext der Zeit",
   "stufe": "hoch",
-  "text": "Der «Blue Marble» ist das Bild vom einen, gemeinsamen «Wir»: die Erde als ein einziger, grenzenloser Planet. Genau dieses «Wir» steht heute unter doppeltem Druck: Klimakrise und eine Technik, die Wirklichkeit täuschend echt erzeugen kann. Wie sich aus lauter vernetzten Individuen wieder ein tragfähiges Wir bildet, ist die offene Frage, an der die Philosophie der Gegenwart arbeitet."
+  "text": "Der «Blue Marble» ist das Bild vom einen, gemeinsamen «Wir», die Erde als ein einziger, grenzenloser Planet. Genau dieses «Wir» steht heute unter doppeltem Druck, Klimakrise und eine Technik, die Wirklichkeit täuschend echt erzeugen kann. Wie sich aus lauter vernetzten Individuen wieder ein tragfähiges Wir bildet, ist die offene Frage, an der die Philosophie der Gegenwart arbeitet."
  },
- "EP-3bafb1": {
+ "EP-d6dfdd": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Jetzt: Umwelt & KI",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Aufgenommen von der Besatzung der Apollo-17-Mission auf dem Weg zum Mond: die Erde als ganze, runde Kugel. Das Bild ging um die Welt und veränderte, wie die Menschheit sich selbst und ihren Planeten sieht."
+  "text": "Aufgenommen von der Besatzung der Apollo-17-Mission auf dem Weg zum Mond, die Erde als ganze, runde Kugel. Das Bild ging um die Welt und veränderte, wie die Menschheit sich selbst und ihren Planeten sieht."
  },
  "EP-48cd10": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2862,19 +2862,19 @@
   "stufe": "hoch",
   "text": "Dieses Werk ist kein Gemälde, sondern eine Installation der Gegenwartskunst, die der Künstler Klaus Christ 2024 schuf und die hier mit seiner Genehmigung gezeigt wird. Der Titel lautet «Suche nach Bildern». Dutzende Figuren und Objekte hängen an Fäden, die in einem alten Röhrencomputer in der Mitte zusammenlaufen. So macht das Werk sichtbar, was an einer scheinbar einfachen Bildersuche im Internet alles beteiligt ist. Auf der einen Seite hängen Rohstoffe, Bergbau und Elektronikmüll, auf der anderen Seite die vielen Menschen vom Programmierer bis zur Nutzerin. Das Netz aus Fäden steht für ein «Wir», das keine einzelne Person ist, sondern ein Geflecht aus vielen Beteiligten."
  },
- "EP-06c798": {
+ "EP-455f64": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Jetzt: Umwelt & KI",
   "feld": "Im Kontext der Zeit",
   "stufe": "tief",
-  "text": "Das Netz-Werk führt die Fäden der Gegenwart zusammen: Rechner, Kabel, Datencentren und KI, die eine simple Bildersuche möglich machen, und die Verunsicherung, dass in diesem Geflecht kaum noch zu sagen ist, wer eigentlich handelt. Anders als in früheren Epochen gibt es noch keine fertige philosophische Antwort: Die Schablone wird gerade gesucht, bei Latour, Haraway, Rosa und anderen."
+  "text": "Das Netz-Werk führt die Fäden der Gegenwart zusammen, Rechner, Kabel, Datencentren und KI, die eine simple Bildersuche möglich machen, und die Verunsicherung, dass in diesem Geflecht kaum noch zu sagen ist, wer eigentlich handelt. Anders als in früheren Epochen gibt es noch keine fertige philosophische Antwort. Die Schablone wird gerade gesucht, bei Latour, Haraway, Rosa und anderen."
  },
- "EP-86432f": {
+ "EP-b5429d": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Jetzt: Umwelt & KI",
   "feld": "Kartentext",
   "stufe": "hoch",
-  "text": "«Suche nach Bildern» (2024) ist eine Installation über eine alltägliche Handlung: die Bildersuche im Internet. Dutzende Figuren und Objekte sind mit Fäden verbunden, die im Zentrum zusammenlaufen. Was mit einem Klick einfach aussieht, ist das Ergebnis eines riesigen, unsichtbaren Netzwerks."
+  "text": "«Suche nach Bildern» (2024) ist eine Installation über eine alltägliche Handlung, die Bildersuche im Internet. Dutzende Figuren und Objekte sind mit Fäden verbunden, die im Zentrum zusammenlaufen. Was mit einem Klick einfach aussieht, ist das Ergebnis eines riesigen, unsichtbaren Netzwerks."
  },
  "EP-f0493d": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2883,19 +2883,19 @@
   "stufe": "tief",
   "text": "Im Zentrum steht ein alter Röhrenmonitor mit einer Weltkarte, darunter Tastatur und Maus, der Ort der Bildersuche selbst. Von hier laufen die Fäden nach allen Seiten."
  },
- "EP-2bca97": {
+ "EP-0a4c24": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Jetzt: Umwelt & KI",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Auf der einen Seite hängt die materielle Grundlage der digitalen Welt: Rohstoffe, Bergbau, Transport, Elektronikmüll. Jede Suche hat ein physisches Gewicht. Das «Digitale» ist alles andere als körperlos."
+  "text": "Auf der einen Seite hängt die materielle Grundlage der digitalen Welt, Rohstoffe, Bergbau, Transport, Elektronikmüll. Jede Suche hat ein physisches Gewicht. Das «Digitale» ist alles andere als körperlos."
  },
- "EP-ba374a": {
+ "EP-4c1bc7": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Jetzt: Umwelt & KI",
   "feld": "Kartentext",
   "stufe": "mittel",
-  "text": "Oben und an den Rändern hängen die Menschen: Programmiererinnen, Künstler, Kabelhersteller, Nutzerinnen. Viele Hände ziehen an denselben Fäden. Das «Wir» von heute ist keine Person, sondern ein Geflecht aus vielen, oft einander unbekannten Beteiligten."
+  "text": "Oben und an den Rändern hängen die Menschen, Programmiererinnen, Künstler, Kabelhersteller, Nutzerinnen. Viele Hände ziehen an denselben Fäden. Das «Wir» von heute ist keine Person, sondern ein Geflecht aus vielen, oft einander unbekannten Beteiligten."
  },
  "EP-2f2626": {
   "datei": "_components/VerunsicherungsEpochen.tsx",

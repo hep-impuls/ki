@@ -121,7 +121,7 @@ const EPOCHEN: Epoche[] = [
         hintergrund:
           "Raffael (1483–1520) gehört zu den bedeutendsten Malern der italienischen Hochrenaissance und schuf dieses Fresko zwischen 1509 und 1511 für die Bibliothek von Papst Julius II. im Vatikan. Es zeigt keine reale Szene, sondern versammelt in einer idealen Halle über fünfzig Denker der Antike. Im Zentrum stehen Platon und Aristoteles, umgeben von Figuren, die traditionell als Sokrates, Pythagoras, Euklid, Ptolemäus und Diogenes gedeutet werden. Viele weitere Zuordnungen sind in der Forschung allerdings unsicher oder umstritten. Am rechten Rand hat sich Raffael selbst ins Bild gemalt.",
         contextNote:
-          "Raffaels Halle der Denker ist ein Rückblick der Renaissance auf die Antike und ein Bild ihrer Antwort auf eine tiefe Verunsicherung. Als in Athen der Mythos seine bindende Kraft verlor und die Sophisten lehrten, dass sich jede Behauptung gegen Bezahlung überzeugend vertreten lässt, drohte Wahrheit zur blossen Rhetorik zu werden. Aristoteles bündelte die Gegenkraft zu einer Methode: beobachten, ordnen, begründen. Genau diese Schablone feiert Raffael, indem er die Denker aller Zeiten in einer Halle versammelt.",
+          "Raffaels Halle der Denker ist ein Rückblick der Renaissance auf die Antike und ein Bild ihrer Antwort auf eine tiefe Verunsicherung. Als in Athen der Mythos seine bindende Kraft verlor und die Sophisten lehrten, dass sich jede Behauptung gegen Bezahlung überzeugend vertreten lässt, drohte Wahrheit zur blossen Rhetorik zu werden. Aristoteles bündelte die Gegenkraft zu einer Methode, beobachten, ordnen, begründen. Genau diese Schablone feiert Raffael, indem er die Denker aller Zeiten in einer Halle versammelt.",
         tour: [
           {
             x: 50,
@@ -138,7 +138,7 @@ const EPOCHEN: Epoche[] = [
             y: 47.5,
             zoom: 2.6,
             title: "Platon und Aristoteles",
-            text: "Im Zentrum steht der Grundkonflikt der Erkenntnis in einer einzigen Geste: Platon zeigt mit dem Finger nach oben, in die Welt der ewigen Ideen. Aristoteles hält die Hand flach über den Boden, zur beobachtbaren Wirklichkeit. Genau hier beginnt die Schablone, die später die gesamte Wissenschaft trägt.",
+            text: "Im Zentrum steht der Grundkonflikt der Erkenntnis in einer einzigen Geste. Platon zeigt mit dem Finger nach oben, in die Welt der ewigen Ideen. Aristoteles hält die Hand flach über den Boden, zur beobachtbaren Wirklichkeit. Genau hier beginnt die Schablone, die später die gesamte Wissenschaft trägt.",
           },
           {
             /* Sass auf dem Wandrelief über der Gruppe. Jetzt auf Sokrates'
@@ -156,7 +156,7 @@ const EPOCHEN: Epoche[] = [
             y: 75,
             zoom: 2.8,
             title: "Der Geometer an der Tafel",
-            text: "Rechts beugt sich ein Gelehrter mit dem Zirkel über eine Tafel und führt Jugendlichen einen geometrischen Beweis vor, meist als Euklid gedeutet, manchmal als Archimedes. Die Szene feiert ein neues Ideal: Wissen, das nicht behauptet, sondern Schritt für Schritt bewiesen und darum von jedem nachvollzogen werden kann.",
+            text: "Rechts beugt sich ein Gelehrter mit dem Zirkel über eine Tafel und führt Jugendlichen einen geometrischen Beweis vor, meist als Euklid gedeutet, manchmal als Archimedes. Die Szene feiert ein neues Ideal, Wissen, das nicht behauptet, sondern Schritt für Schritt bewiesen und darum von jedem nachvollzogen werden kann.",
           },
         ],
       },
@@ -168,35 +168,35 @@ const EPOCHEN: Epoche[] = [
         hintergrund:
           "Jacques-Louis David (1748–1825) war der führende Maler des französischen Klassizismus und malte dieses Werk 1787 in Paris, zwei Jahre vor der Französischen Revolution. Der klare und strenge Aufbau ist typisch für den Klassizismus, der sich die Antike zum Vorbild nahm. Dargestellt ist die letzte Stunde des griechischen Philosophen Sokrates im Jahr 399 v. Chr., als er in Athen zum Tod durch den Schierlingsbecher verurteilt ist. Aufrecht und gefasst greift er nach dem Becher und belehrt zugleich seine erschütterten Schüler. Am Fussende des Bettes sitzt der greise Platon, der das Gespräch später überlieferte. David nutzt die Szene als Lehrstück über Standhaftigkeit gegenüber ungerechter Macht.",
         contextNote:
-          "Der Tod des Sokrates zeigt die Verunsicherung der Antike in einem einzigen Bild: eine Stadt, die ihren klügsten und unbequemsten Frager zum Tode verurteilt, weil der alte Mythos nicht mehr trägt und jede Gewissheit wankt. Die Antwort der Epoche war nicht, das Fragen zu verbieten, sondern es zu ordnen: Aus der sokratischen Methode und der Systematik des Aristoteles entstand das Fundament der Wissenschaft.",
+          "Der Tod des Sokrates zeigt die Verunsicherung der Antike in einem einzigen Bild, eine Stadt, die ihren klügsten und unbequemsten Frager zum Tode verurteilt, weil der alte Mythos nicht mehr trägt und jede Gewissheit wankt. Die Antwort der Epoche war nicht, das Fragen zu verbieten, sondern es zu ordnen. Aus der sokratischen Methode und der Systematik des Aristoteles entstand das Fundament der Wissenschaft.",
         tour: [
           {
             x: 50,
             y: 50,
             zoom: 1,
             title: "Die letzte Stunde",
-            text: "399 v. Chr., eine Gefängniszelle in Athen: David malt den Moment, kurz bevor Sokrates den Giftbecher trinkt. Es ist ein Lehrstück über Standhaftigkeit. Der klare, gefasste Held ist von erschütterten Freunden umgeben. Die strenge Komposition zeigt: Hier geht es um Haltung, nicht um Rührung.",
+            text: "399 v. Chr., eine Gefängniszelle in Athen. David malt den Moment, kurz bevor Sokrates den Giftbecher trinkt. Es ist ein Lehrstück über Standhaftigkeit. Der klare, gefasste Held ist von erschütterten Freunden umgeben. Die strenge Komposition zeigt, dass es um Haltung geht, nicht um Rührung.",
           },
           {
             x: 62,
             y: 32,
             zoom: 2.6,
             title: "Der Finger nach oben",
-            text: "Noch im Sterben unterrichtet Sokrates weiter: Mit der einen Hand greift er nach dem Becher, mit der anderen hebt er den Finger nach oben, zu dem, was grösser ist als der eigene Tod: das Argument, die Wahrheit. Selbst die Hinrichtung wird zur letzten philosophischen Lektion.",
+            text: "Noch im Sterben unterrichtet Sokrates weiter. Mit der einen Hand greift er nach dem Becher, mit der anderen hebt er den Finger nach oben, zu dem, was grösser ist als der eigene Tod, das Argument, die Wahrheit. Selbst die Hinrichtung wird zur letzten philosophischen Lektion.",
           },
           {
             x: 47,
             y: 47,
             zoom: 2.8,
             title: "Der Becher",
-            text: "Fast beiläufig, ohne hinzusehen, greift Sokrates nach dem Schierlingsbecher. Der Vollstrecker im roten Gewand wendet das Gesicht ab und fasst sich an den Kopf: Er kann nicht mit ansehen, was er tun muss. Der Kontrast macht die Fassung des Verurteilten umso grösser.",
+            text: "Fast beiläufig, ohne hinzusehen, greift Sokrates nach dem Schierlingsbecher. Der Vollstrecker im roten Gewand wendet das Gesicht ab und fasst sich an den Kopf. Er kann nicht mit ansehen, was er tun muss. Der Kontrast macht die Fassung des Verurteilten umso grösser.",
           },
           {
             x: 18,
             y: 56,
             zoom: 2.6,
             title: "Platon am Fussende",
-            text: "Gefasst, in sich gekehrt sitzt am Fussende der greise Platon, obwohl er an jenem Tag historisch gar nicht anwesend war. David setzt ihn bewusst dazu: Er wird das Gespräch aufschreiben und über zwei Jahrtausende weitertragen. Ohne diese Überlieferung wüssten wir von Sokrates fast nichts.",
+            text: "Gefasst, in sich gekehrt sitzt am Fussende der greise Platon, obwohl er an jenem Tag historisch gar nicht anwesend war. David setzt ihn bewusst dazu, denn er wird das Gespräch aufschreiben und über zwei Jahrtausende weitertragen. Ohne diese Überlieferung wüssten wir von Sokrates fast nichts.",
           },
         ],
       },
@@ -241,19 +241,19 @@ const EPOCHEN: Epoche[] = [
       {
         src: "/art/rom.jpg",
         alt: "Die Plünderung Roms durch die Barbaren",
-        caption: "410: Rom wird geplündert und für viele bricht die Welt zusammen",
+        caption: "Im Jahr 410 wird Rom geplündert und für viele bricht die Welt zusammen",
         credit: "Joseph-Noël Sylvestre, «Die Plünderung Roms», 1890 · gemeinfrei",
         hintergrund:
           "Joseph-Noël Sylvestre (1847–1926) war ein französischer Maler des akademischen Historismus, der sich auf grosse Szenen aus der Antike spezialisierte. Er malte dieses Historiengemälde 1890, also fast 1500 Jahre nach dem dargestellten Ereignis. Zu sehen ist die Plünderung Roms im Jahr 410, als die Westgoten die Stadt eroberten. Im Zentrum reisst ein Krieger die Marmorstatue eines römischen Kaisers vom Sockel, ein Sinnbild für den Sturz der alten Ordnung. Weil das Werk so spät entstand, sagt es mehr über die Untergangsängste des 19. Jahrhunderts aus als über das Jahr 410.",
         contextNote:
-          "Der Fall Roms ist die Verunsicherung dieser Epoche in Reinform: Als die Westgoten 410 die «ewige Stadt» plünderten, brach für die Zeitgenossen nicht nur eine Hauptstadt, sondern eine ganze Weltordnung zusammen. Man rang um Schuld und Sinn, Heiden wie Christen. Augustinus gab darauf mit dem «Gottesstaat» die Orientierung: Nicht das irdische Reich trägt, sondern eine unsichtbare, geistige Ordnung.",
+          "Der Fall Roms ist die Verunsicherung dieser Epoche in Reinform. Als die Westgoten 410 die «ewige Stadt» plünderten, brach für die Zeitgenossen nicht nur eine Hauptstadt, sondern eine ganze Weltordnung zusammen. Man rang um Schuld und Sinn, Heiden wie Christen. Augustinus gab darauf mit dem «Gottesstaat» die Orientierung. Nicht das irdische Reich trägt, sondern eine unsichtbare, geistige Ordnung.",
         tour: [
           {
             x: 50,
             y: 50,
             zoom: 1,
             title: "Sylvestre, 1890",
-            text: "Ein grosses Historiengemälde des 19. Jahrhunderts inszeniert die Plünderung Roms im Jahr 410. Vor brennender Kulisse stürmen die Westgoten die Stadt. Der Maler trifft damit ein Gefühl, das seine eigene, umbruchsreiche Zeit umtrieb: die Angst vor dem Ende einer Zivilisation.",
+            text: "Ein grosses Historiengemälde des 19. Jahrhunderts inszeniert die Plünderung Roms im Jahr 410. Vor brennender Kulisse stürmen die Westgoten die Stadt. Der Maler trifft damit ein Gefühl, das seine eigene, umbruchsreiche Zeit umtrieb, die Angst vor dem Ende einer Zivilisation.",
           },
           {
             x: 52,
@@ -267,7 +267,7 @@ const EPOCHEN: Epoche[] = [
             y: 84,
             zoom: 2.2,
             title: "Viele Hände am Seil",
-            text: "Unten ziehen zahlreiche Krieger gemeinsam an einem Seil, um das Standbild zu Fall zu bringen. Die alte Weltordnung stürzt nicht von selbst. Sie wird von vielen Händen aktiv niedergerissen: Geschichte als Werk von Menschen, nicht von Schicksal.",
+            text: "Unten ziehen zahlreiche Krieger gemeinsam an einem Seil, um das Standbild zu Fall zu bringen. Die alte Weltordnung stürzt nicht von selbst. Sie wird von vielen Händen aktiv niedergerissen, Geschichte als Werk von Menschen, nicht von Schicksal.",
           },
         ],
       },
@@ -279,14 +279,14 @@ const EPOCHEN: Epoche[] = [
         hintergrund:
           "Philippe de Champaigne (1602–1674) war ein aus Brüssel stammender Maler, der zu den wichtigsten Vertretern des französischen Barock zählte. Er malte den heiligen Augustinus um 1645. Dargestellt ist der Kirchenvater Augustinus von Hippo (354–430), einer der einflussreichsten Denker des frühen Christentums, hier am Schreibpult in bischöflicher Kleidung. Seine klassischen Attribute sind das Buch, das flammende Herz und der Lichtstrahl von oben. Das ganze Bild ist auf eine Aussage hin gebaut, nämlich dass die Wahrheit von innen und von oben kommt und nicht aus der äusseren Welt.",
         contextNote:
-          "Champaignes Augustinus verkörpert die Antwort auf einen epochalen Schock. Als Rom 410 fiel und mit dem Reich für viele die Weltordnung selbst zusammenbrach, verlegte Augustinus den Halt vom äusseren Reich ins Innere des Menschen und in den Glauben: Wahrheit und Orientierung findet man nicht mehr in der vergänglichen Macht, sondern in Gewissen, Erinnerung und Zuwendung zu Gott. Diese nach innen gewandte Ordnung prägte das Abendland ein Jahrtausend lang.",
+          "Champaignes Augustinus verkörpert die Antwort auf einen epochalen Schock. Als Rom 410 fiel und mit dem Reich für viele die Weltordnung selbst zusammenbrach, verlegte Augustinus den Halt vom äusseren Reich ins Innere des Menschen und in den Glauben. Wahrheit und Orientierung findet man nicht mehr in der vergänglichen Macht, sondern in Gewissen, Erinnerung und Zuwendung zu Gott. Diese nach innen gewandte Ordnung prägte das Abendland ein Jahrtausend lang.",
         tour: [
           {
             x: 50,
             y: 40,
             zoom: 1,
             title: "Champaigne, um 1645",
-            text: "Der barocke Maler zeigt Augustinus als Bischof am Schreibpult, umgeben von seinen Sinnbildern: dem Buch, dem brennenden Herzen und einem Lichtstrahl von oben. Das ganze Bild ist um eine Frage gebaut: Woher kommt die Wahrheit?",
+            text: "Der barocke Maler zeigt Augustinus als Bischof am Schreibpult, umgeben von seinen Sinnbildern, dem Buch, dem brennenden Herzen und einem Lichtstrahl von oben. Das ganze Bild ist um eine Frage gebaut: Woher kommt die Wahrheit?",
           },
           {
             // Flamme, Herz und Hand liegen rechts oben; am Bild ausgemessen
@@ -302,7 +302,7 @@ const EPOCHEN: Epoche[] = [
             y: 18,
             zoom: 2.2,
             title: "Der Strahl der Wahrheit",
-            text: "Von oben fällt ein heller Strahl auf Augustinus, dem sein Blick entgegengeht. Er verkörpert Augustins Überzeugung, dass wahre Erkenntnis eine Art göttliche «Erleuchtung» ist: Der Mensch findet die Wahrheit, indem er sich nach innen und nach oben wendet.",
+            text: "Von oben fällt ein heller Strahl auf Augustinus, dem sein Blick entgegengeht. Er verkörpert Augustins Überzeugung, dass wahre Erkenntnis eine Art göttliche «Erleuchtung» ist. Der Mensch findet die Wahrheit, indem er sich nach innen und nach oben wendet.",
           },
         ],
       },
@@ -343,26 +343,26 @@ const EPOCHEN: Epoche[] = [
       {
         src: "/art/bruegel-babel.jpg",
         alt: "Pieter Bruegel, «Der Turmbau zu Babel»",
-        caption: "Der Turmbau zu Babel: menschlicher Ehrgeiz, der ins Wanken gerät",
+        caption: "Der Turmbau zu Babel, menschlicher Ehrgeiz, der ins Wanken gerät",
         credit: "Pieter Bruegel d. Ä., «Der Turmbau zu Babel», 1563 · gemeinfrei",
         hintergrund:
           "Pieter Bruegel der Ältere war einer der bedeutendsten niederländischen Maler des 16. Jahrhunderts und schuf dieses Bild 1563, zur Zeit der niederländischen Renaissance. Er malte die biblische Geschichte vom Turmbau als Panorama seiner eigenen Gegenwart, denn Baustelle, Hafen und Stadt sind flämisch und nicht babylonisch gestaltet. Der gewaltige Turm erinnert mit seinen Rundbögen an das römische Kolosseum und steht bereits sichtbar schief. Vorne links besucht eine königliche Gruppe die Baustelle, vor der die Steinmetze niederknien. Diese Figur wird meist als der biblische König Nimrod gedeutet. Das Original hängt heute im Kunsthistorischen Museum in Wien.",
         contextNote:
-          "Der Turmbau zu Babel ist das Bild der Renaissance-Verunsicherung: Eine Epoche, die mit Buchdruck, Seefahrt und Kapital alles zu können scheint und gleichzeitig ahnt, dass der Ehrgeiz das Fundament überfordern könnte. Die biblische Strafe für den Turm war die Sprachverwirrung. Bruegels Zeit erlebte ihre eigene: die Glaubensspaltung, die Europa in Lager teilte.",
+          "Der Turmbau zu Babel ist das Bild der Renaissance-Verunsicherung. Eine Epoche, die mit Buchdruck, Seefahrt und Kapital alles zu können scheint und gleichzeitig ahnt, dass der Ehrgeiz das Fundament überfordern könnte. Die biblische Strafe für den Turm war die Sprachverwirrung. Bruegels Zeit erlebte ihre eigene, die Glaubensspaltung, die Europa in Lager teilte.",
         tour: [
           {
             x: 50,
             y: 45,
             zoom: 1,
             title: "Bruegel, 1563",
-            text: "Der Turm füllt das Bild wie ein Gebirge: unten fertig und bewohnt, oben rohes Gestein, eine Baustelle, die in die Wolken wächst. Bruegel malt die biblische Geschichte als Panorama seiner eigenen Zeit, mit Hunderten winziger Arbeiter.",
+            text: "Der Turm füllt das Bild wie ein Gebirge, unten fertig und bewohnt, oben rohes Gestein, eine Baustelle, die in die Wolken wächst. Bruegel malt die biblische Geschichte als Panorama seiner eigenen Zeit, mit Hunderten winziger Arbeiter.",
           },
           {
             x: 57,
             y: 14,
             zoom: 2.4,
             title: "Die Spitze in den Wolken",
-            text: "Die obersten Stockwerke stossen buchstäblich in die Wolke und schon zeigt sich die Schieflage: Die Ebenen stehen schräg, das rote Mauerwerk bleibt roh. Der Ehrgeiz wächst schneller, als das Fundament trägt. Das ist ein Bild für Technik-Hybris.",
+            text: "Die obersten Stockwerke stossen buchstäblich in die Wolke und schon zeigt sich die Schieflage. Die Ebenen stehen schräg, das rote Mauerwerk bleibt roh. Der Ehrgeiz wächst schneller, als das Fundament trägt. Das ist ein Bild für Technik-Hybris.",
           },
           {
             x: 15,
@@ -376,7 +376,7 @@ const EPOCHEN: Epoche[] = [
             y: 62,
             zoom: 2.2,
             title: "Der Hafen",
-            text: "Rechts liegen Schiffe und Flösse am Kai: Der Nachschub kommt übers Wasser. Bruegel malt den Turm nicht in Babylon, sondern an einem flämischen Hafen, die Handelswelt seiner Gegenwart, in der Antwerpen zur Weltstadt aufstieg.",
+            text: "Rechts liegen Schiffe und Flösse am Kai. Der Nachschub kommt übers Wasser. Bruegel malt den Turm nicht in Babylon, sondern an einem flämischen Hafen, die Handelswelt seiner Gegenwart, in der Antwerpen zur Weltstadt aufstieg.",
           },
         ],
       },
@@ -388,35 +388,35 @@ const EPOCHEN: Epoche[] = [
         hintergrund:
           "Hans Holbein der Jüngere (um 1497 bis 1543) war ein deutscher Maler der Renaissance, der lange am englischen Königshof wirkte. Er malte dieses Doppelporträt 1533 in London. Dargestellt sind zwei junge Männer auf der Höhe ihrer Macht, links der französische Gesandte Jean de Dinteville und rechts sein Freund Georges de Selve, Bischof von Lavaur. Zwischen ihnen steht ein Regal mit Instrumenten und Büchern, ein Inventar des neuen Wissens ihrer Zeit. Quer im Vordergrund liegt ein stark verzerrter Totenschädel, der erst aus einem schrägen Blickwinkel erkennbar wird und an die Vergänglichkeit mahnt. Heute hängt das Werk in der National Gallery in London.",
         contextNote:
-          "Die «Gesandten» bündeln die Renaissance in einem Bild: das neue Wissen (Instrumente), der neue Reichtum (Pelz, Teppich) und die Verunsicherung als Riss im Bild: gerissene Saite, Luther-Gesangbuch, verzerrter Schädel. Fortschritt und doppelter Boden gehören in dieser Epoche zusammen.",
+          "Die «Gesandten» bündeln die Renaissance in einem Bild. Da sind das neue Wissen (Instrumente), der neue Reichtum (Pelz, Teppich) und die Verunsicherung als Riss im Bild, gerissene Saite, Luther-Gesangbuch, verzerrter Schädel. Fortschritt und doppelter Boden gehören in dieser Epoche zusammen.",
         tour: [
           {
             x: 50,
             y: 45,
             zoom: 1,
             title: "Holbein, 1533",
-            text: "Zwei junge Männer auf dem Gipfel ihrer Möglichkeiten: der französische Gesandte Jean de Dinteville (links) und sein Freund, Bischof Georges de Selve. Zwischen ihnen ein Regal voller Instrumente, ein Inventar dessen, was ihre Epoche kann und weiss.",
+            text: "Zwei einflussreiche, gebildete Vertreter der französischen Elite, der Gesandte Jean de Dinteville (links) und sein Freund, Bischof Georges de Selve. Zwischen ihnen ein Regal voller Instrumente, wie eine kleine Ausstellung dessen, was ihre Epoche kann und weiss, Geräte für Himmel und Zeit, Bücher und Musik.",
           },
           {
             x: 55,
             y: 27,
             zoom: 2.4,
             title: "Das obere Regal: der Himmel",
-            text: "Himmelsglobus, Sonnenuhren, Quadrant: Instrumente zur Vermessung von Himmel und Zeit, das neue Wissen der Epoche. Wer Himmel und Stunde berechnen kann, kann navigieren und handeln: Wissenschaft und Welthandel gehören zusammen.",
+            text: "Himmelsglobus, Sonnenuhren und Quadrant sind Instrumente zur Vermessung von Himmel und Zeit, das neue Wissen der Epoche. Wer Himmel und Stunde berechnen kann, kann navigieren und handeln, Wissenschaft und Welthandel gehören zusammen.",
           },
           {
             x: 55,
             y: 62,
             zoom: 2.4,
             title: "Das untere Regal: die Erde",
-            text: "Erdglobus, Rechenbuch, Laute und Gesangbuch: die irdischen Künste. Doch genau hier zeigt sich ein Riss. An der Laute ist eine Saite gerissen und das aufgeschlagene Gesangbuch zeigt Luther-Lieder: die zerbrochene Harmonie der Glaubensspaltung.",
+            text: "Erdglobus, Rechenbuch, Laute und Gesangbuch stehen für die irdischen Künste. Doch genau hier zeigt sich ein Riss. An der Laute ist eine Saite gerissen und das aufgeschlagene Gesangbuch zeigt Luther-Lieder, die zerbrochene Harmonie der Glaubensspaltung.",
           },
           {
             x: 48,
             y: 86,
             zoom: 2.2,
             title: "Der verzerrte Totenkopf",
-            text: "Der graue Schrägbalken unten wird erst aus spitzem Winkel lesbar: ein Totenschädel (eine Anamorphose). Mitten im Triumph von Reichtum und Wissen erinnert Holbein an die Vergänglichkeit. Das ist der doppelte Boden der ganzen Epoche.",
+            text: "Der graue Schrägbalken unten wird erst aus spitzem Winkel lesbar, ein Totenschädel, eine sogenannte Anamorphose. Mitten im Triumph von Reichtum und Wissen erinnert Holbein an die Vergänglichkeit. Das ist der doppelte Boden der ganzen Epoche.",
           },
         ],
       },
@@ -457,19 +457,19 @@ const EPOCHEN: Epoche[] = [
       {
         src: "/art/orrery.jpg",
         alt: "Joseph Wright of Derby, Vortrag am Planetenmodell",
-        caption: "Wissenschaft als Schauspiel: das Weltall im Modell erklärt",
+        caption: "Wissenschaft als Schauspiel, das Weltall im Modell erklärt",
         credit: "Joseph Wright of Derby, «A Philosopher Lecturing on the Orrery», um 1766 · gemeinfrei",
         hintergrund:
           "Joseph Wright of Derby (1734–1797) war ein englischer Maler der Aufklärung, der für seine dramatische Verwendung von Licht und Schatten bekannt wurde. Er malte diese Szene um 1766 im England der frühen Industrialisierung. Dargestellt ist ein Vortragender, der einer Gruppe von Zuhörern ein Orrery erklärt, ein mechanisches Tischmodell des Sonnensystems. Eine Lampe in der Mitte stellt die Sonne dar und beleuchtet die staunenden Gesichter ringsum. Wright gibt der Wissenschaft damit eine Feierlichkeit, wie man sie sonst nur aus religiösen Bildern kennt. Das Gemälde hängt heute im Museum von Derby in England.",
         contextNote:
-          "Das Orrery zeigt die technisch-wissenschaftliche Seite des Umbruchs: In einem mechanischen Modell lässt sich der ganze Kosmos vorführen und erklären. Doch derselbe Fortschritt hatte eine erschütternde Kehrseite. Mit Kopernikus und dem Teleskop verlor die Erde (und mit ihr der Mensch) den angestammten Platz im Zentrum. Kant machte aus dem Verlust ein Programm: Wenn der Mensch nicht mehr Mittelpunkt eines gottgegebenen Kosmos ist, muss er den Mut haben, mit dem eigenen Verstand Orientierung zu schaffen.",
+          "Das Orrery zeigt die technisch-wissenschaftliche Seite des Umbruchs. In einem mechanischen Modell lässt sich der ganze Kosmos vorführen und erklären. Doch derselbe Fortschritt hatte eine erschütternde Kehrseite. Mit Kopernikus und dem Teleskop verlor die Erde (und mit ihr der Mensch) den angestammten Platz im Zentrum. Kant machte aus dem Verlust ein Programm. Wenn der Mensch nicht mehr Mittelpunkt eines gottgegebenen Kosmos ist, muss er den Mut haben, mit dem eigenen Verstand Orientierung zu schaffen.",
         tour: [
           {
             x: 50,
             y: 50,
             zoom: 1,
             title: "Wright of Derby, um 1766",
-            text: "Eine Gruppe von Menschen drängt sich im Dunkeln um ein Orrery, ein mechanisches Tischmodell des Sonnensystems mit kreisenden Planeten. Statt Heiliger oder Herrscher zeigt das Bild gewöhnliche Zuhörer beim wissenschaftlichen Vortrag: ein neues, bürgerliches Bildthema.",
+            text: "Eine Gruppe von Menschen drängt sich im Dunkeln um ein Orrery, ein mechanisches Tischmodell des Sonnensystems mit kreisenden Planeten. Statt Heiliger oder Herrscher zeigt das Bild gewöhnliche Zuhörer beim wissenschaftlichen Vortrag, ein neues, bürgerliches Bildthema.",
           },
           {
             x: 50,
@@ -483,7 +483,7 @@ const EPOCHEN: Epoche[] = [
             y: 44,
             zoom: 2.2,
             title: "Staunende Kinder",
-            text: "Zwei Kinder beugen sich nah ans Modell, die Gesichter hell erleuchtet und voller Staunen. Sie machen das eigentliche Thema sichtbar: das Lernen selbst als erhebendes Erlebnis, die Freude, eine erklärbare Welt zu entdecken.",
+            text: "Zwei Kinder beugen sich nah ans Modell, die Gesichter hell erleuchtet und voller Staunen. Sie machen das eigentliche Thema sichtbar, das Lernen selbst als erhebendes Erlebnis, die Freude, eine erklärbare Welt zu entdecken.",
           },
         ],
       },
@@ -495,14 +495,14 @@ const EPOCHEN: Epoche[] = [
         hintergrund:
           "Dieses Blatt ist kein Gemälde, sondern ein Kupferstich, der noch im Katastrophenjahr 1755 als Flugblatt entstand. Ein einzelner Urheber ist nicht überliefert, denn solche Stiche wurden rasch und in grosser Zahl gedruckt. Dargestellt ist das Erdbeben von Lissabon vom 1. November 1755 mit seinen drei Verheerungen, dem bebenden Boden, der brennenden Stadt und der Flutwelle im Hafen. Im Vordergrund kentern Schiffe in der heranrollenden Welle, im Hintergrund stehen Kirchen und Paläste in Flammen. Als eines der ersten europaweiten Medienereignisse verbreiteten solche Stiche Bild und Schrecken innert Wochen über den ganzen Kontinent.",
         contextNote:
-          "Lissabon 1755 ist die Verunsicherung dieser Epoche schlechthin: An Allerheiligen zerstörten Erdbeben, Feuer und Flutwelle innerhalb von Stunden eine der reichsten Städte Europas. Viele starben beim Gottesdienst. Der Glaube an einen gütigen, vernünftigen Weltplan zerbrach. Ganz Europa stritt, wie ein guter Gott so etwas zulassen könne, am schärfsten Voltaire gegen Rousseau. Der junge Kant schrieb 1756 drei nüchterne Abhandlungen über die Ursachen von Erdbeben und suchte die Erklärung damit in der Natur statt im Ratschluss Gottes. Sein berühmter Aufruf, sich des eigenen Verstandes zu bedienen, kam erst 1784 und galt der ganzen Epoche, nicht diesem einen Beben. Beides weist in dieselbe Richtung: keine neue Beruhigung, sondern eine Zumutung.",
+          "Lissabon 1755 ist die Verunsicherung dieser Epoche schlechthin. An Allerheiligen zerstörten Erdbeben, Feuer und Flutwelle innerhalb von Stunden eine der reichsten Städte Europas. Viele starben beim Gottesdienst. Der Glaube an einen gütigen, vernünftigen Weltplan zerbrach. Ganz Europa stritt, wie ein guter Gott so etwas zulassen könne, am schärfsten Voltaire gegen Rousseau. Der junge Kant schrieb 1756 drei nüchterne Abhandlungen über die Ursachen von Erdbeben und suchte die Erklärung damit in der Natur statt im Ratschluss Gottes. Sein berühmter Aufruf, sich des eigenen Verstandes zu bedienen, kam erst 1784 und galt der ganzen Epoche, nicht diesem einen Beben. Beides weist in dieselbe Richtung, keine neue Beruhigung, sondern eine Zumutung.",
         tour: [
           {
             x: 50,
             y: 50,
             zoom: 1,
             title: "Kupferstich, 1755",
-            text: "Ein zeitgenössisches Flugblatt zeigt Lissabon im Moment der dreifachen Katastrophe: Die Erde bebt, die Stadt brennt, aus dem Hafen türmt sich die Flutwelle. Solche Stiche verbreiteten die Nachricht in Windeseile durch Europa.",
+            text: "Ein zeitgenössisches Flugblatt zeigt Lissabon im Moment der dreifachen Katastrophe. Die Erde bebt, die Stadt brennt, aus dem Hafen türmt sich die Flutwelle. Solche Stiche verbreiteten die Nachricht in Windeseile durch Europa.",
           },
           {
             x: 50,
@@ -558,19 +558,19 @@ const EPOCHEN: Epoche[] = [
       {
         src: "/art/eisenwalzwerk.jpg",
         alt: "Adolph Menzel, «Das Eisenwalzwerk»",
-        caption: "Die neue Arbeitswelt der Fabrik: Hitze, Lärm, Schichtbetrieb",
+        caption: "Die neue Arbeitswelt der Fabrik mit Hitze, Lärm und Schichtbetrieb",
         credit: "Adolph Menzel, «Das Eisenwalzwerk», 1872–75 · gemeinfrei",
         hintergrund:
           "Adolph Menzel (1815–1905) war ein deutscher Maler des Realismus, der genaue Beobachtung mit gesellschaftlichem Blick verband. Für dieses Werk studierte er 1872 wochenlang eine echte Fabrik in Königshütte in Oberschlesien und füllte Skizzenbücher mit Details. Das Bild entstand zwischen 1872 und 1875 und zeigt das Innere einer Eisenfabrik mit über vierzig Arbeitern. Im Zentrum wird ein glühender Eisenblock unter die Walzen geschoben, während rechts eine Schicht hastig isst und links Männer sich waschen. Es gilt als erstes bedeutendes Industriegemälde der deutschen Kunst und hängt heute in der Alten Nationalgalerie in Berlin.",
         contextNote:
-          "Menzels Fabrik zeigt beide Seiten des Umbruchs in einem Bild: die technische Wucht der Dampfmaschine, die glühendes Eisen und Menschenkraft zu einem einzigen Getriebe verbindet, und die soziale Verunsicherung einer Arbeit, die im Schichtbetrieb niemals stillsteht. Genau diesen Umbruch versuchte Marx zu begreifen: Die Verhältnisse, in denen diese Menschen arbeiten, sind kein Naturgesetz, sondern gemacht und darum veränderbar.",
+          "Menzels Fabrik zeigt beide Seiten des Umbruchs in einem Bild. Auf der einen Seite steht die technische Wucht der Dampfmaschine, die glühendes Eisen und Menschenkraft zu einem einzigen Getriebe verbindet, auf der anderen die soziale Verunsicherung einer Arbeit, die im Schichtbetrieb niemals stillsteht. Genau diesen Umbruch versuchte Marx zu begreifen. Die Verhältnisse, in denen diese Menschen arbeiten, sind kein Naturgesetz, sondern gemacht und darum veränderbar.",
         tour: [
           {
             x: 50,
             y: 50,
             zoom: 1,
             title: "Das erste grosse Fabrikbild",
-            text: "Adolph Menzel malt 1872–1875 nach genauen Studien das Innere einer echten Fabrik. Das war neu: Als eines der ersten grossen Gemälde überhaupt nimmt es die Industriearbeit ernst. Nicht Götter oder Herrscher, sondern schwitzende Arbeiter zwischen Maschinen füllen die riesige Leinwand.",
+            text: "Adolph Menzel malt 1872–1875 nach genauen Studien das Innere einer echten Fabrik. Das war neu. Als eines der ersten grossen Gemälde überhaupt nimmt es die Industriearbeit ernst. Nicht Götter oder Herrscher, sondern schwitzende Arbeiter zwischen Maschinen füllen die riesige Leinwand.",
           },
           {
             x: 55,
@@ -598,12 +598,12 @@ const EPOCHEN: Epoche[] = [
       {
         src: "/art/london.jpg",
         alt: "Gustave Doré, Londoner Elendsquartiere an der Bahn",
-        caption: "Die Kehrseite: Elendsquartiere im Schatten der Viadukte",
+        caption: "Die Kehrseite, Elendsquartiere im Schatten der Viadukte",
         credit: "Gustave Doré, «Over London – by Rail», 1872 · gemeinfrei",
         hintergrund:
           "Gustave Doré (1832–1883) war ein französischer Illustrator und Grafiker, der für seine kontrastreichen Bilder aus Licht und Schatten berühmt ist. Dieses Blatt ist kein Gemälde, sondern ein Holzstich aus dem Bildband «London: A Pilgrimage» von 1872. Für das Buch durchstreifte Doré vier Jahre lang die Metropole, von den Docks bis zu den Salons. Der Stich blickt über die dicht gedrängten Hinterhöfe der Arbeiterviertel, die vom Bogen eines Eisenbahnviadukts gerahmt werden. Oben rauscht ein Zug vorbei, während unten die engen, russgeschwärzten Häuser der armen Familien stehen. So hielt Doré das Elend und die Wucht des viktorianischen London eindringlicher fest als jede Statistik.",
         contextNote:
-          "Dorés Blick über die Londoner Hinterhöfe zeigt die Verunsicherung der Industriemoderne von unten: entwurzelte Massen, zusammengepfercht im Schatten der Eisenbahn. Die Technik trieb den Wandel mit ungeheurer Wucht voran, doch der Fortschritt fuhr im Wortsinn über die Köpfe der Ärmsten hinweg. Marx lieferte die Deutung: Dieses Elend ist kein Naturzustand, sondern Ergebnis gesellschaftlicher Verhältnisse und damit gestaltbar.",
+          "Dorés Blick über die Londoner Hinterhöfe zeigt die Verunsicherung der Industriemoderne von unten, entwurzelte Massen, zusammengepfercht im Schatten der Eisenbahn. Die Technik trieb den Wandel mit ungeheurer Wucht voran, doch der Fortschritt fuhr im Wortsinn über die Köpfe der Ärmsten hinweg. Marx lieferte die Deutung. Dieses Elend ist kein Naturzustand, sondern Ergebnis gesellschaftlicher Verhältnisse und damit gestaltbar.",
         tour: [
           {
             x: 50,
@@ -624,7 +624,7 @@ const EPOCHEN: Epoche[] = [
             y: 22,
             zoom: 2.2,
             title: "Der Zug darüber",
-            text: "Oben rauscht auf dem Viadukt eine Eisenbahn vorbei. Das Bild verdichtet daraus ein Sinnbild: Der Fortschritt fährt buchstäblich über die Köpfe der Ärmsten hinweg, nah genug, um ihren Alltag zu verdunkeln und doch für sie unerreichbar.",
+            text: "Oben rauscht auf dem Viadukt eine Eisenbahn vorbei. Das Bild verdichtet daraus ein Sinnbild. Der Fortschritt fährt buchstäblich über die Köpfe der Ärmsten hinweg, nah genug, um ihren Alltag zu verdunkeln und doch für sie unerreichbar.",
           },
         ],
       },
@@ -667,9 +667,9 @@ const EPOCHEN: Epoche[] = [
         caption: "Der Künstler als Soldat, mit abgeschnittener Hand, seelisch versehrt",
         credit: "Ernst Ludwig Kirchner, «Selbstbildnis als Soldat», 1915 · gemeinfrei",
         hintergrund:
-          "Ernst Ludwig Kirchner (1880–1938) war ein führender Vertreter des deutschen Expressionismus und Mitgründer der Künstlergruppe «Brücke». Der Expressionismus malt nicht, wie die Welt aussieht, sondern wie sie sich anfühlt, mit grellen Farben und kantigen Formen. Kirchner meldete sich 1914 freiwillig zum Kriegsdienst und zerbrach innert Monaten am Militär. 1915 malte er sich in Uniform mit abgeschnittener rechter Malhand, obwohl die Hand in Wirklichkeit unversehrt war, denn das Bild zeigt eine innere und keine körperliche Wunde. Hinter ihm steht ein Aktmodell als Zeichen der verlorenen Welt der Kunst. Die Nationalsozialisten diffamierten sein Werk 1937 als «entartet», und 1938 nahm er sich das Leben.",
+          "Ernst Ludwig Kirchner (1880–1938) war ein führender Vertreter des deutschen Expressionismus und Mitgründer der Künstlergruppe «Brücke». Der Expressionismus malt nicht, wie die Welt aussieht, sondern wie sie sich anfühlt, mit grellen Farben und kantigen Formen. Kirchner meldete sich 1914 freiwillig zum Kriegsdienst und zerbrach innert Monaten am Militär. 1915 malte er sich in Uniform mit abgeschnittener rechter Malhand, obwohl die Hand in Wirklichkeit unversehrt war, denn das Bild zeigt eine innere und keine körperliche Wunde. Hinter ihm steht ein Aktmodell als Zeichen der verlorenen Welt der Kunst. Die Nationalsozialisten diffamierten sein Werk 1937 als «entartet» und 1938 nahm er sich das Leben.",
         contextNote:
-          "Kirchners Selbstbildnis zeigt die Verunsicherung des Katastrophenzeitalters von innen: Der industrialisierte Krieg beschädigt Menschen auch dort, wo keine Granate sie trifft. Auf diesen Verlust aller Geländer antwortet später der Existenzialismus, mit der Zumutung, trotzdem zu wählen und zu verantworten.",
+          "Kirchners Selbstbildnis zeigt die Verunsicherung des Katastrophenzeitalters von innen. Der industrialisierte Krieg beschädigt Menschen auch dort, wo keine Granate sie trifft. Auf diesen Verlust aller Geländer antwortet später der Existenzialismus, mit der Zumutung, trotzdem zu wählen und zu verantworten.",
         tour: [
           {
             x: 50,
@@ -685,14 +685,14 @@ const EPOCHEN: Epoche[] = [
             y: 82,
             zoom: 2.2,
             title: "Der Armstumpf",
-            text: "Die rechte Hand (die Malhand) ist abgeschnitten, der Stumpf ragt ins Bild. In Wirklichkeit war Kirchners Hand unversehrt: Der Verlust ist innerlich. Der Krieg, so das Bild, amputiert das Schöpferische am Menschen.",
+            text: "Die rechte Hand (die Malhand) ist abgeschnitten, der Stumpf ragt ins Bild. In Wirklichkeit war Kirchners Hand unversehrt, der Verlust ist innerlich. Der Krieg, so das Bild, amputiert das Schöpferische am Menschen.",
           },
           {
             x: 33,
             y: 27,
             zoom: 2.2,
             title: "Das ausgehöhlte Gesicht",
-            text: "Fahles Gelb, leere Augen ohne Pupillen: Kirchner malt sich als Ausgebrannten. Er hatte sich 1914 freiwillig gemeldet und zerbrach binnen Monaten am Drill. Das Porträt entstand nach seiner Entlassung als «dienstuntauglich».",
+            text: "Fahles Gelb, leere Augen ohne Pupillen. Kirchner malt sich als Ausgebrannten. Er hatte sich 1914 freiwillig gemeldet und zerbrach binnen Monaten am Drill. Das Porträt entstand nach seiner Entlassung als «dienstuntauglich».",
           },
           {
             x: 60,
@@ -711,14 +711,14 @@ const EPOCHEN: Epoche[] = [
         hintergrund:
           "Felix Nussbaum (1904–1944) war ein jüdischer Maler aus Osnabrück, dessen Werk der Neuen Sachlichkeit zugerechnet wird. Ab 1942 lebte er im Brüsseler Versteck, wo dieses Bild um 1943 entstand. Er malt sich mit hochgeschlagenem Kragen, dem gelben Judenstern und dem Ausweis mit dem roten Stempel «JUIF-JOOD», also Jude. Das Werk hält den Moment fest, in dem einem Menschen durch einen amtlichen Stempel das Menschsein aberkannt wird. 1944 wurde Nussbaum denunziert, deportiert und in Auschwitz ermordet, während seine Bilder im Versteck überdauerten. Heute sind sie im Felix-Nussbaum-Haus in Osnabrück zu sehen.",
         contextNote:
-          "Das Selbstbildnis mit Judenpass ist das Dokument einer Verunsicherung, die keinen Vergleich hat: Einem Menschen wird per Stempel das Menschsein aberkannt. Hannah Arendts spätere Mahnung, selbst zu urteilen statt mitzulaufen, antwortet genau auf diese Erfahrung. Verwaltung und Gehorsam können zum Werkzeug des Verbrechens werden.",
+          "Das Selbstbildnis mit Judenpass ist das Dokument einer Verunsicherung, die keinen Vergleich hat. Einem Menschen wird per Stempel das Menschsein aberkannt. Hannah Arendts spätere Mahnung, selbst zu urteilen statt mitzulaufen, antwortet genau auf diese Erfahrung. Verwaltung und Gehorsam können zum Werkzeug des Verbrechens werden.",
         tour: [
           {
             x: 50,
             y: 55,
             zoom: 1,
             title: "Nussbaum, um 1943",
-            text: "Ein Mann im Versteck: Mauerecke, kahler Baum, tiefer Himmel. Felix Nussbaum malt sich in Brüssel, wo er sich vor der Deportation verbirgt, auf engstem Raum, aber als Maler, der Zeugnis ablegt.",
+            text: "Ein Mann im Versteck. Mauerecke, kahler Baum, tiefer Himmel. Felix Nussbaum malt sich in Brüssel, wo er sich vor der Deportation verbirgt, auf engstem Raum, aber als Maler, der Zeugnis ablegt.",
           },
           {
             x: 63,
@@ -732,7 +732,7 @@ const EPOCHEN: Epoche[] = [
             y: 82,
             zoom: 2.4,
             title: "Der gelbe Stern",
-            text: "Am Mantelkragen der Judenstern, den die Besatzer zu tragen zwangen. Nussbaum schlägt den Kragen hoch, halb verbergend, halb zeigend. Das ist die Zwangslage der Verfolgten: gesehen werden heisst gefasst werden.",
+            text: "Am Mantelkragen der Judenstern, den die Besatzer zu tragen zwangen. Nussbaum schlägt den Kragen hoch, halb verbergend, halb zeigend. Das ist die Zwangslage der Verfolgten, gesehen werden heisst gefasst werden.",
           },
           {
             x: 68,
@@ -779,26 +779,26 @@ const EPOCHEN: Epoche[] = [
       {
         src: "/art/mauerfall.jpg",
         alt: "Grenzöffnung am Brandenburger Tor 1989",
-        caption: "Mauerfall 1989: der Osten öffnet sich, ein System verschwindet über Nacht",
+        caption: "Mauerfall 1989, der Osten öffnet sich, ein System verschwindet über Nacht",
         credit: "Grenzöffnung am Brandenburger Tor, 22.12.1989 · Bundesarchiv Bild 183-1989-1222-016 · CC BY-SA 3.0 de",
         hintergrund:
           "Dieses Bild ist kein Gemälde, sondern eine Pressefotografie vom 22. Dezember 1989. Aufgenommen hat sie ein Fotograf des DDR-Nachrichtendienstes ADN, heute liegt sie im Bundesarchiv. Zu sehen ist der Moment, in dem am Brandenburger Tor ein Kran ein Mauersegment heraushebt, um den neuen Grenzübergang zu öffnen. Es geschah sechs Wochen nach der Maueröffnung vom 9. November 1989. Unter dem schwebenden Betonstück stehen Grenzsoldaten, Arbeiter und Schaulustige dicht beieinander. Das nächtliche Foto wurde zu einem Sinnbild für das friedliche Ende der deutschen Teilung.",
         contextNote:
-          "Das Foto zeigt den Kipp-Punkt der Epoche «Ende der Geschichte»: Ein ganzes System verschwindet friedlich, fast über Nacht. Was als Triumph der Freiheit gefeiert wurde, war für viele Biografien im Osten zugleich ein Boden-Verlust. Beides gehört zur Verunsicherung dieser Jahre.",
+          "Das Foto zeigt den Kipp-Punkt der Epoche «Ende der Geschichte». Ein ganzes System verschwindet friedlich, fast über Nacht. Was als Triumph der Freiheit gefeiert wurde, war für viele Biografien im Osten zugleich ein Boden-Verlust. Beides gehört zur Verunsicherung dieser Jahre.",
         tour: [
           {
             x: 50,
             y: 50,
             zoom: 1,
             title: "22. Dezember 1989",
-            text: "Nachtaufnahme am Brandenburger Tor: Ein Kran hebt ein Segment aus der Berliner Mauer, Arbeiter und Schaulustige stehen darunter. Sechs Wochen nach dem 9. November wird hier der Übergang am Tor geöffnet, das Symbolbild des Systemwechsels.",
+            text: "Nachtaufnahme am Brandenburger Tor. Ein Kran hebt ein Segment aus der Berliner Mauer, Arbeiter und Schaulustige stehen darunter. Sechs Wochen nach dem 9. November wird hier der Übergang am Tor geöffnet, das Symbolbild des Systemwechsels.",
           },
           {
             x: 68,
             y: 42,
             zoom: 2,
             title: "Das schwebende Mauerstück",
-            text: "Ein Betonsegment hängt am Haken, die «unüberwindbare» Grenze als Bauteil, das man herausheben kann. 28 Jahre teilte diese Wand die Stadt. Jetzt zeigt sich: Auch sie war gemacht, nicht Schicksal.",
+            text: "Ein Betonsegment hängt am Haken, die «unüberwindbare» Grenze als Bauteil, das man herausheben kann. 28 Jahre teilte diese Wand die Stadt. Jetzt zeigt sich, auch sie war gemacht, nicht Schicksal.",
           },
           {
             /* Sass mitten auf dem Kranausleger. Jetzt auf der Säulenreihe des
@@ -807,7 +807,7 @@ const EPOCHEN: Epoche[] = [
             y: 56,
             zoom: 1.9,
             title: "Das Brandenburger Tor",
-            text: "Dahinter die Säulen des Brandenburger Tors, jahrzehntelang im Sperrgebiet zwischen Ost und West. Dass ausgerechnet hier geöffnet wird, macht das Foto historisch: Das eingemauerte Wahrzeichen wird wieder ein Durchgang.",
+            text: "Dahinter die Säulen des Brandenburger Tors, jahrzehntelang im Sperrgebiet zwischen Ost und West. Dass ausgerechnet hier geöffnet wird, macht das Foto historisch. Das eingemauerte Wahrzeichen wird wieder ein Durchgang.",
           },
           {
             x: 55,
@@ -826,7 +826,7 @@ const EPOCHEN: Epoche[] = [
         hintergrund:
           "Dieses Bild ist keine gemalte Kunst, sondern eine wissenschaftliche Aufnahme der US-Behörden NASA und NOAA aus dem Jahr 2012. Es ist eine Montage aus Hunderten Aufnahmen des Satelliten Suomi NPP, denn es ist nie überall auf der Erde gleichzeitig Nacht. So hat der Planet in Wirklichkeit nie ausgesehen. Zu sehen ist die nächtliche Erde, auf der jedes Lichtpünktchen für menschliche Besiedlung und für Strom steht. Grell leuchten Europa, Ostasien und die US-Küsten, während weite Teile Afrikas, Südamerikas und Zentralasiens fast dunkel bleiben. Gerade als Konstruktion führt das Bild vor Augen, wie ungleich die vernetzte Welt verteilt ist.",
         contextNote:
-          "Die nächtliche Erde macht die technische Seite der Epoche in einem Bild sichtbar: eine elektrifizierte, vernetzte Welt, deren Städte und Verkehrsachsen den Planeten in Lichtadern überziehen. Zugleich zeigt sie die Kehrseite. Die grellen Lichtbänder und die weiten dunklen Flächen führen die tiefe Ungleichheit dieser Vernetzung vor Augen.",
+          "Die nächtliche Erde macht die technische Seite der Epoche in einem Bild sichtbar, eine elektrifizierte, vernetzte Welt, deren Städte und Verkehrsachsen den Planeten in Lichtadern überziehen. Zugleich zeigt sie die Kehrseite. Die grellen Lichtbänder und die weiten dunklen Flächen führen die tiefe Ungleichheit dieser Vernetzung vor Augen.",
         tour: [
           {
             x: 50,
@@ -851,7 +851,7 @@ const EPOCHEN: Epoche[] = [
             y: 60,
             zoom: 2.2,
             title: "Die dunklen Flächen",
-            text: "Weite Teile Afrikas, Südamerikas und Zentralasiens bleiben nahezu dunkel. Diese Schatten erzählen die andere Hälfte der Geschichte: Die Vernetzung ist höchst ungleich verteilt. Das globale «Wir» umfasst längst nicht alle in gleicher Weise.",
+            text: "Weite Teile Afrikas, Südamerikas und Zentralasiens bleiben nahezu dunkel. Diese Schatten erzählen die andere Hälfte der Geschichte. Die Vernetzung ist höchst ungleich verteilt. Das globale «Wir» umfasst längst nicht alle in gleicher Weise.",
           },
         ],
       },
@@ -891,19 +891,19 @@ const EPOCHEN: Epoche[] = [
       {
         src: "/art/erde_tag.jpg",
         alt: "«Blue Marble», die Erde aus dem All",
-        caption: "Der eine Planet: verletzlich, geteilt, ohne Ersatz",
+        caption: "Der eine Planet, verletzlich, geteilt, ohne Ersatz",
         credit: "«Blue Marble» · NASA (Apollo 17), 1972 · gemeinfrei",
         hintergrund:
           "Dieses Bild ist kein Gemälde, sondern eine Fotografie, die am 7. Dezember 1972 aus rund 29 000 km Entfernung entstand. Aufgenommen hat sie die Besatzung von Apollo 17, der bislang letzten bemannten Mondlandung. Zu sehen ist die Erde als ganze, runde Kugel, mit Wolkenwirbeln, Ozeanen und Kontinenten in einem einzigen Blick. Von hier oben sind keine Nationen und keine Grenzen erkennbar, nur ein einziger, verletzlicher Planet im schwarzen All. «Blue Marble» wurde zu einem der meistreproduzierten Fotos der Geschichte und zu einer Ikone der Umweltbewegung.",
         contextNote:
-          "Der «Blue Marble» ist das Bild vom einen, gemeinsamen «Wir»: die Erde als ein einziger, grenzenloser Planet. Genau dieses «Wir» steht heute unter doppeltem Druck: Klimakrise und eine Technik, die Wirklichkeit täuschend echt erzeugen kann. Wie sich aus lauter vernetzten Individuen wieder ein tragfähiges Wir bildet, ist die offene Frage, an der die Philosophie der Gegenwart arbeitet.",
+          "Der «Blue Marble» ist das Bild vom einen, gemeinsamen «Wir», die Erde als ein einziger, grenzenloser Planet. Genau dieses «Wir» steht heute unter doppeltem Druck, Klimakrise und eine Technik, die Wirklichkeit täuschend echt erzeugen kann. Wie sich aus lauter vernetzten Individuen wieder ein tragfähiges Wir bildet, ist die offene Frage, an der die Philosophie der Gegenwart arbeitet.",
         tour: [
           {
             x: 50,
             y: 50,
             zoom: 1,
             title: "«Blue Marble» (NASA, 1972)",
-            text: "Aufgenommen von der Besatzung der Apollo-17-Mission auf dem Weg zum Mond: die Erde als ganze, runde Kugel. Das Bild ging um die Welt und veränderte, wie die Menschheit sich selbst und ihren Planeten sieht.",
+            text: "Aufgenommen von der Besatzung der Apollo-17-Mission auf dem Weg zum Mond, die Erde als ganze, runde Kugel. Das Bild ging um die Welt und veränderte, wie die Menschheit sich selbst und ihren Planeten sieht.",
           },
           {
             x: 50,
@@ -929,14 +929,14 @@ const EPOCHEN: Epoche[] = [
         hintergrund:
           "Dieses Werk ist kein Gemälde, sondern eine Installation der Gegenwartskunst, die der Künstler Klaus Christ 2024 schuf und die hier mit seiner Genehmigung gezeigt wird. Der Titel lautet «Suche nach Bildern». Dutzende Figuren und Objekte hängen an Fäden, die in einem alten Röhrencomputer in der Mitte zusammenlaufen. So macht das Werk sichtbar, was an einer scheinbar einfachen Bildersuche im Internet alles beteiligt ist. Auf der einen Seite hängen Rohstoffe, Bergbau und Elektronikmüll, auf der anderen Seite die vielen Menschen vom Programmierer bis zur Nutzerin. Das Netz aus Fäden steht für ein «Wir», das keine einzelne Person ist, sondern ein Geflecht aus vielen Beteiligten.",
         contextNote:
-          "Das Netz-Werk führt die Fäden der Gegenwart zusammen: Rechner, Kabel, Datencentren und KI, die eine simple Bildersuche möglich machen, und die Verunsicherung, dass in diesem Geflecht kaum noch zu sagen ist, wer eigentlich handelt. Anders als in früheren Epochen gibt es noch keine fertige philosophische Antwort: Die Schablone wird gerade gesucht, bei Latour, Haraway, Rosa und anderen.",
+          "Das Netz-Werk führt die Fäden der Gegenwart zusammen, Rechner, Kabel, Datencentren und KI, die eine simple Bildersuche möglich machen, und die Verunsicherung, dass in diesem Geflecht kaum noch zu sagen ist, wer eigentlich handelt. Anders als in früheren Epochen gibt es noch keine fertige philosophische Antwort. Die Schablone wird gerade gesucht, bei Latour, Haraway, Rosa und anderen.",
         tour: [
           {
             x: 50,
             y: 48,
             zoom: 1,
             title: "Ein Netz an der Museumswand",
-            text: "«Suche nach Bildern» (2024) ist eine Installation über eine alltägliche Handlung: die Bildersuche im Internet. Dutzende Figuren und Objekte sind mit Fäden verbunden, die im Zentrum zusammenlaufen. Was mit einem Klick einfach aussieht, ist das Ergebnis eines riesigen, unsichtbaren Netzwerks.",
+            text: "«Suche nach Bildern» (2024) ist eine Installation über eine alltägliche Handlung, die Bildersuche im Internet. Dutzende Figuren und Objekte sind mit Fäden verbunden, die im Zentrum zusammenlaufen. Was mit einem Klick einfach aussieht, ist das Ergebnis eines riesigen, unsichtbaren Netzwerks.",
           },
           {
             x: 47,
@@ -950,14 +950,14 @@ const EPOCHEN: Epoche[] = [
             y: 26,
             zoom: 2.4,
             title: "Rohstoffe, Bergbau, Recycling",
-            text: "Auf der einen Seite hängt die materielle Grundlage der digitalen Welt: Rohstoffe, Bergbau, Transport, Elektronikmüll. Jede Suche hat ein physisches Gewicht. Das «Digitale» ist alles andere als körperlos.",
+            text: "Auf der einen Seite hängt die materielle Grundlage der digitalen Welt, Rohstoffe, Bergbau, Transport, Elektronikmüll. Jede Suche hat ein physisches Gewicht. Das «Digitale» ist alles andere als körperlos.",
           },
           {
             x: 55,
             y: 14,
             zoom: 2.4,
             title: "Die Menschen im Netz",
-            text: "Oben und an den Rändern hängen die Menschen: Programmiererinnen, Künstler, Kabelhersteller, Nutzerinnen. Viele Hände ziehen an denselben Fäden. Das «Wir» von heute ist keine Person, sondern ein Geflecht aus vielen, oft einander unbekannten Beteiligten.",
+            text: "Oben und an den Rändern hängen die Menschen, Programmiererinnen, Künstler, Kabelhersteller, Nutzerinnen. Viele Hände ziehen an denselben Fäden. Das «Wir» von heute ist keine Person, sondern ein Geflecht aus vielen, oft einander unbekannten Beteiligten.",
           },
         ],
       },

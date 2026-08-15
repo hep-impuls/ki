@@ -56,11 +56,11 @@ Im Vordergrund kentern Schiffe in der heranrollenden Welle. Wer dem Beben und de
 **[EP-269c62]** *(Einleitung · «Ende der Geschichte»)*
 Der Kalte Krieg endet, der Markt scheint zu siegen, und im Überfluss der Möglichkeiten geht die Orientierung gerade dann verloren. Mit dem Fall der Mauer glauben viele, die grossen Konflikte seien vorbei und die liberale Demokratie habe endgültig gewonnen. Doch statt Ruhe kommen Beschleunigung, Vereinzelung und das Gefühl, in lauter Möglichkeiten den Halt zu verlieren.
 
-**[EP-6db558]** *(Im Kontext der Zeit · «Ende der Geschichte»)*
-Das Foto zeigt den Kipp-Punkt der Epoche «Ende der Geschichte»: Ein ganzes System verschwindet friedlich, fast über Nacht. Was als Triumph der Freiheit gefeiert wurde, war für viele Biografien im Osten zugleich ein Boden-Verlust. Beides gehört zur Verunsicherung dieser Jahre.
+**[EP-d1fa13]** *(Im Kontext der Zeit · «Ende der Geschichte»)*
+Das Foto zeigt den Kipp-Punkt der Epoche «Ende der Geschichte». Ein ganzes System verschwindet friedlich, fast über Nacht. Was als Triumph der Freiheit gefeiert wurde, war für viele Biografien im Osten zugleich ein Boden-Verlust. Beides gehört zur Verunsicherung dieser Jahre.
 
-**[EP-ba374a]** *(Kartentext · Jetzt: Umwelt & KI)*
-Oben und an den Rändern hängen die Menschen: Programmiererinnen, Künstler, Kabelhersteller, Nutzerinnen. Viele Hände ziehen an denselben Fäden. Das «Wir» von heute ist keine Person, sondern ein Geflecht aus vielen, oft einander unbekannten Beteiligten.
+**[EP-4c1bc7]** *(Kartentext · Jetzt: Umwelt & KI)*
+Oben und an den Rändern hängen die Menschen, Programmiererinnen, Künstler, Kabelhersteller, Nutzerinnen. Viele Hände ziehen an denselben Fäden. Das «Wir» von heute ist keine Person, sondern ein Geflecht aus vielen, oft einander unbekannten Beteiligten.
 
 ### Thema 02 · Wege der Orientierung
 

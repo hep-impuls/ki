@@ -246,6 +246,8 @@ export const GLOSSAR: Record<string, string> = {
     "Das Rechenbeispiel in Lovelaces Anmerkungen; sie zeigte Schritt für Schritt, wie die Maschine die Bernoulli-Zahlen ermitteln würde, eine Zahlenfolge aus der Mathematik.",
   Programmiersprache:
     "Eine künstliche Sprache, in der Menschen einem Computer Anweisungen aufschreiben.",
+  Nimrod:
+    "In der biblischen Überlieferung ein gewaltiger Jäger und König in Babel. Zum Bauherrn des Turms machten ihn erst spätere Erzählungen ausserhalb der Bibel, im Buch Genesis selbst hat der Turmbau keinen namentlichen Bauherrn.",
   Natalität:
     "Arendts Wort für die Gebürtlichkeit, einen Wesenszug des Menschen, nicht die blosse Geburt, denn geboren werden auch andere Wesen. Jeder Mensch kommt als jemand Neues zur Welt und dieses Neusein hört nicht auf, Menschen können ihr Leben lang Anfänge setzen, die aus dem Bisherigen nicht ableitbar sind.",
   "Manhattan-Projekt":
