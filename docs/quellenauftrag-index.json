@@ -1910,19 +1910,19 @@
   "stufe": "hoch",
   "text": "Im Zentrum steht der Grundkonflikt der Erkenntnis in einer einzigen Geste: Platon zeigt mit dem Finger nach oben, in die Welt der ewigen Ideen. Aristoteles hält die Hand flach über den Boden, zur beobachtbaren Wirklichkeit. Genau hier beginnt die Schablone, die später die gesamte Wissenschaft trägt."
  },
- "EP-ce2244": {
+ "EP-4b2cab": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Antike",
   "feld": "Kartentext",
-  "stufe": "tief",
-  "text": "Links, im olivgrünen Gewand, zählt Sokrates an den Fingern seine Argumente ab und führt umringt von Zuhörern sein Frage-und-Antwort-Spiel vor. Diese Methode, alles so lange zu hinterfragen, bis scheinbare Gewissheiten zerbrechen, machte ihn zur unbequemsten Figur Athens und kostete ihn das Leben."
+  "stufe": "hoch",
+  "text": "Die Figur links im olivgrünen Gewand gilt als Sokrates. Umringt von Zuhörern zählt er an den Fingern seine Argumente ab und führt sein Frage-und-Antwort-Spiel vor. Diese Methode, alles so lange zu hinterfragen, bis scheinbare Gewissheiten zerbrechen, machte ihn zur unbequemsten Figur Athens und kostete ihn das Leben."
  },
- "EP-2579b9": {
+ "EP-eef7c1": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Antike",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Rechts beugt sich Euklid mit einem Zirkel über eine Tafel und führt Jugendlichen einen geometrischen Beweis vor. Die Szene feiert ein neues Ideal: Wissen, das nicht behauptet, sondern Schritt für Schritt bewiesen und darum von jedem nachvollzogen werden kann."
+  "text": "Rechts beugt sich ein Gelehrter mit dem Zirkel über eine Tafel und führt Jugendlichen einen geometrischen Beweis vor, meist als Euklid gedeutet, manchmal als Archimedes. Die Szene feiert ein neues Ideal: Wissen, das nicht behauptet, sondern Schritt für Schritt bewiesen und darum von jedem nachvollzogen werden kann."
  },
  "EP-68478f": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
@@ -2176,12 +2176,12 @@
   "stufe": "tief",
   "text": "Die obersten Stockwerke stossen buchstäblich in die Wolke und schon zeigt sich die Schieflage: Die Ebenen stehen schräg, das rote Mauerwerk bleibt roh. Der Ehrgeiz wächst schneller, als das Fundament trägt. Das ist ein Bild für Technik-Hybris."
  },
- "EP-c328dc": {
+ "EP-7bb810": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Renaissance & Aufbruch",
   "feld": "Kartentext",
   "stufe": "tief",
-  "text": "Vorne links besucht König Nimrod die Baustelle. Die Steinmetze fallen auf die Knie. Macht, Geld und Technik gehören zusammen: Ohne Herrscher und Kapital kein Turm. Bruegels Zeitgenossen erkannten darin die Grossbaustellen und Handelsherren der eigenen Städte."
+  "text": "Vorne links besucht ein Herrscher die Baustelle und die Steinmetze fallen vor ihm auf die Knie. Die Tradition nennt ihn Nimrod, die Bibel selbst gibt dem Bauherrn keinen Namen. Macht, Geld und Technik gehören zusammen: Ohne Herrscher und Kapital kein Turm. Bruegels Zeitgenossen konnten darin die Grossbaustellen und Handelsherren der eigenen Städte wiedererkennen."
  },
  "EP-b6d416": {
   "datei": "_components/VerunsicherungsEpochen.tsx",

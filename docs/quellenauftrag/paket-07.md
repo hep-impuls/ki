@@ -50,6 +50,9 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 02 · Wege der Orientierung
 
+**[DW-616961]** *(Zur Philosophie · Was ist der Mensch?)*
+Peter Sloterdijk ist einer der bekanntesten deutschsprachigen Gegenwartsphilosophen, bekannt für die «Sphären»-Trilogie und einen essayistischen, oft provokanten Stil. In «Du musst dein Leben ändern» beschreibt er den Menschen als übendes Wesen. Wir werden, wer wir sind, durch Übung, Wiederholung und Selbstformung. Er nennt das «Anthropotechnik». Der Satz ist kein Befehl, sondern der Grundton eines Lebens, das sich immer wieder in Form bringt. Darum kann eine Maschine eine Aufgabe erledigen, aber nicht für uns üben, wer weiter übt, bleibt fähig und urteilsfähig. Hauptwerk: «Du musst dein Leben ändern» (2009).
+
 **[DW-0a1fd3]** *(Fallbeispiel · Was ist der Mensch?)*
 Der Weltrekord im Lösen des Zauberwürfels liegt unter drei Sekunden, aufgestellt im Februar 2026. Wer das sieht, sagt Talent. Wer hinschaut, sieht Übung, eingeschliffene Fingerabläufe, tausendfach wiederholt, bis die Hände schneller sind als das bewusste Denken.
 
@@ -132,6 +135,10 @@ Michel Foucault war ein französischer Philosoph, der untersuchte, wie Macht und
 Ein Bullet Journal ist ein Notizbuch mit Punkteraster, das Terminplanung, To-do-Listen, Tagebuch und Brainstorming in einem einzigen Heft verbindet. Entwickelt hat es 2013 der Designer Ryder Carroll.
 
 Neu ist die Idee nicht, und das ist das Schöne daran. Foucault hat in seinem Spätwerk die antike Sorge um sich selbst wieder ausgegraben. Solche Hefte gab es nämlich schon damals, sie hiessen Hypomnemata und man sammelte darin Zitate, Gedanken und Vorsätze. Foucault las sie als Werkzeuge der Selbstsorge, Schreiben als Arbeit an sich selbst. Genau das meint seine «Ästhetik der Existenz», ein Leben formen wie ein Kunstwerk. Gemeint ist nicht, sich für fremde Massstäbe zu optimieren, für Noten, Follower und Bestenlisten. Es heisst, selbst zu wählen, woran du arbeitest. Dafür ist ein Heft, das niemand liken kann, ein ziemlich gutes Werkzeug, denn es gehört nur dir.
+
+> **Belegt** («Bullet Journal»): [Bullet Journal (Wikipedia)](https://de.wikipedia.org/wiki/Bullet_Journal) — «Ein Bullet Journal (auch als BuJo bekannt) ist ein individuelles Organisationssystem, das 2013 von dem digitalen Produktdesigner Ryder Carroll entwickelt wurde.» Es verbindet «Terminplanung, To-Do-Listen, Tagebuch und Brainstorming in einem einzigen Notizbuch», üblich sind Notizbücher mit Punkteraster. *(geprüft 2026-08-13)*
+
+> **Belegt** («Hypomnemata»): [Hypomnema (Wikipedia)](https://de.wikipedia.org/wiki/Hypomnema) — Antike persönliche Schreibhefte, in die «Zitate, Teile von Arbeiten, Aphorismen und Beispiele» sowie Gehörtes und eigene Überlegungen eingetragen wurden, ein «materielles Gedächtnis gelesener, gehörter und gedachter Dinge». Der Artikel referiert auch Foucaults Deutung: Teil einer «Kultur des persönlichen Schreibens», Instrument der Selbstsorge und der «Selbstkonstituierung», gerade bei den Stoikern. *(geprüft 2026-08-14)*
 
 **[DW-83b1c5]** *(Zur Philosophie · Lebenskunst)*
 Wilhelm Schmid ist ein freier Philosoph in Berlin und hat die «Philosophie der Lebenskunst» im deutschsprachigen Raum bekannt gemacht. Sein Thema ist der Abstand zwischen Einsicht und Tat, den jeder von den guten Vorsätzen kennt. Was hilft, ist Übung in kleinsten Schritten, täglich, fast beiläufig, aber regelmässig, nicht das ganze Buch auf einmal, sondern jeden Tag eine Seite. Weil Freude stärker wirkt als Zwang, soll man sich am Schönen orientieren, zu dem man Ja sagen kann. So werden neue Gewohnheiten gebildet. Wie lange das dauert, hat die Psychologie untersucht, nicht die Philosophie. Eine oft zitierte Studie fand einen Mittelwert von 66 Tagen, mit sehr grossen Unterschieden je nach Person und Gewohnheit. Werk: «Philosophie der Lebenskunst» (1998).
@@ -217,6 +224,3 @@ Man tippt eine Frage in ganz normaler Sprache und die KI antwortet flüssig. Es 
 
 **[VA-5dbc1a]** *(Kartentext · Der Durchbruch)*
 Innert weniger Wochen nutzten Millionen ChatGPT. Es war der Moment, in dem KI im Alltag vieler Menschen ankam und der Moment, in dem Schulen und Betriebe plötzlich Regeln brauchten.
-
-**[VA-a3de04]** *(Kartentext · Yan Shi's Automat)*
-Der Traum vom künstlichen Menschen ist nicht nur europäisch, sondern kehrt in vielen Kulturen wieder. Auch in China erzählte man früh von einer täuschend lebendigen Figur. Ein Handwerker führt sie dem König vor und niemand erkennt zuerst, dass sie gebaut ist. Schon hier klingt die Frage an, wo die Grenze zwischen echtem und nachgeahmtem Leben verläuft.

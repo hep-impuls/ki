@@ -10,6 +10,20 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-14 — Bilddeutungen sind keine Bildbefunde (Christof)
+
+In den Bild-Führungen stand Kunsthistoriker-Deutung als Tatsache, am
+auffälligsten bei Bruegels Turmbau: «Vorne links besucht König Nimrod die
+Baustelle.» Die Bibel gibt dem Bauherrn keinen Namen, Nimrod ist die
+Zuschreibung der Tradition, und genau so steht es jetzt im Text. Gleiches
+Muster an drei weiteren Stellen der Führungen korrigiert (Rezeption als
+«konnten wiedererkennen», die Sokrates-Figur der Schule von Athen «gilt als»,
+der Geometer mit dem Zirkel «meist als Euklid gedeutet, manchmal als
+Archimedes»). Regel für alle Bildtexte: Was man sieht, wird beschrieben; wer
+oder was es bedeutet, wird als Deutung gekennzeichnet, wo die Fachwelt deutet.
+Gesicherte Identifikationen (Holbeins Gesandte, Davids Bildprogramm) bleiben
+bestimmt formuliert, sonst wird es unnötig weich.
+
 ## 2026-08-14 — Doppelpunkte nur noch, wo sie nötig sind (Christof)
 
 **Die Regel:** Der Doppelpunkt als Stilfigur («Sein Thema: …», «Die Antwort:

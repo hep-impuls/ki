@@ -1409,11 +1409,11 @@ Raffael malt 1509–1511 im Vatikan eine ideale Halle, in der sich die Denker al
 **[EP-f43d25]** *(Kartentext)*
 Im Zentrum steht der Grundkonflikt der Erkenntnis in einer einzigen Geste: Platon zeigt mit dem Finger nach oben, in die Welt der ewigen Ideen. Aristoteles hält die Hand flach über den Boden, zur beobachtbaren Wirklichkeit. Genau hier beginnt die Schablone, die später die gesamte Wissenschaft trägt.
 
-**[EP-ce2244]** *(Kartentext)*
-Links, im olivgrünen Gewand, zählt Sokrates an den Fingern seine Argumente ab und führt umringt von Zuhörern sein Frage-und-Antwort-Spiel vor. Diese Methode, alles so lange zu hinterfragen, bis scheinbare Gewissheiten zerbrechen, machte ihn zur unbequemsten Figur Athens und kostete ihn das Leben.
+**[EP-4b2cab]** *(Kartentext)*
+Die Figur links im olivgrünen Gewand gilt als Sokrates. Umringt von Zuhörern zählt er an den Fingern seine Argumente ab und führt sein Frage-und-Antwort-Spiel vor. Diese Methode, alles so lange zu hinterfragen, bis scheinbare Gewissheiten zerbrechen, machte ihn zur unbequemsten Figur Athens und kostete ihn das Leben.
 
-**[EP-2579b9]** *(Kartentext)*
-Rechts beugt sich Euklid mit einem Zirkel über eine Tafel und führt Jugendlichen einen geometrischen Beweis vor. Die Szene feiert ein neues Ideal: Wissen, das nicht behauptet, sondern Schritt für Schritt bewiesen und darum von jedem nachvollzogen werden kann.
+**[EP-eef7c1]** *(Kartentext)*
+Rechts beugt sich ein Gelehrter mit dem Zirkel über eine Tafel und führt Jugendlichen einen geometrischen Beweis vor, meist als Euklid gedeutet, manchmal als Archimedes. Die Szene feiert ein neues Ideal: Wissen, das nicht behauptet, sondern Schritt für Schritt bewiesen und darum von jedem nachvollzogen werden kann.
 
 **[EP-68478f]** *(Hintergrund zum Bild)*
 Jacques-Louis David (1748–1825) war der führende Maler des französischen Klassizismus und malte dieses Werk 1787 in Paris, zwei Jahre vor der Französischen Revolution. Der klare und strenge Aufbau ist typisch für den Klassizismus, der sich die Antike zum Vorbild nahm. Dargestellt ist die letzte Stunde des griechischen Philosophen Sokrates im Jahr 399 v. Chr., als er in Athen zum Tod durch den Schierlingsbecher verurteilt ist. Aufrecht und gefasst greift er nach dem Becher und belehrt zugleich seine erschütterten Schüler. Am Fussende des Bettes sitzt der greise Platon, der das Gespräch später überlieferte. David nutzt die Szene als Lehrstück über Standhaftigkeit gegenüber ungerechter Macht.
@@ -1559,8 +1559,8 @@ Der Turm füllt das Bild wie ein Gebirge: unten fertig und bewohnt, oben rohes G
 **[EP-3ed82e]** *(Kartentext)*
 Die obersten Stockwerke stossen buchstäblich in die Wolke und schon zeigt sich die Schieflage: Die Ebenen stehen schräg, das rote Mauerwerk bleibt roh. Der Ehrgeiz wächst schneller, als das Fundament trägt. Das ist ein Bild für Technik-Hybris.
 
-**[EP-c328dc]** *(Kartentext)*
-Vorne links besucht König Nimrod die Baustelle. Die Steinmetze fallen auf die Knie. Macht, Geld und Technik gehören zusammen: Ohne Herrscher und Kapital kein Turm. Bruegels Zeitgenossen erkannten darin die Grossbaustellen und Handelsherren der eigenen Städte.
+**[EP-7bb810]** *(Kartentext)*
+Vorne links besucht ein Herrscher die Baustelle und die Steinmetze fallen vor ihm auf die Knie. Die Tradition nennt ihn Nimrod, die Bibel selbst gibt dem Bauherrn keinen Namen. Macht, Geld und Technik gehören zusammen: Ohne Herrscher und Kapital kein Turm. Bruegels Zeitgenossen konnten darin die Grossbaustellen und Handelsherren der eigenen Städte wiedererkennen.
 
 **[EP-b6d416]** *(Kartentext)*
 Rechts liegen Schiffe und Flösse am Kai: Der Nachschub kommt übers Wasser. Bruegel malt den Turm nicht in Babylon, sondern an einem flämischen Hafen, die Handelswelt seiner Gegenwart, in der Antwerpen zur Weltstadt aufstieg.
@@ -2199,6 +2199,10 @@ Michel Foucault war ein französischer Philosoph, der untersuchte, wie Macht und
 Ein Bullet Journal ist ein Notizbuch mit Punkteraster, das Terminplanung, To-do-Listen, Tagebuch und Brainstorming in einem einzigen Heft verbindet. Entwickelt hat es 2013 der Designer Ryder Carroll.
 
 Neu ist die Idee nicht, und das ist das Schöne daran. Foucault hat in seinem Spätwerk die antike Sorge um sich selbst wieder ausgegraben. Solche Hefte gab es nämlich schon damals, sie hiessen Hypomnemata und man sammelte darin Zitate, Gedanken und Vorsätze. Foucault las sie als Werkzeuge der Selbstsorge, Schreiben als Arbeit an sich selbst. Genau das meint seine «Ästhetik der Existenz», ein Leben formen wie ein Kunstwerk. Gemeint ist nicht, sich für fremde Massstäbe zu optimieren, für Noten, Follower und Bestenlisten. Es heisst, selbst zu wählen, woran du arbeitest. Dafür ist ein Heft, das niemand liken kann, ein ziemlich gutes Werkzeug, denn es gehört nur dir.
+
+> **Belegt** («Bullet Journal»): [Bullet Journal (Wikipedia)](https://de.wikipedia.org/wiki/Bullet_Journal) — «Ein Bullet Journal (auch als BuJo bekannt) ist ein individuelles Organisationssystem, das 2013 von dem digitalen Produktdesigner Ryder Carroll entwickelt wurde.» Es verbindet «Terminplanung, To-Do-Listen, Tagebuch und Brainstorming in einem einzigen Notizbuch», üblich sind Notizbücher mit Punkteraster. *(geprüft 2026-08-13)*
+
+> **Belegt** («Hypomnemata»): [Hypomnema (Wikipedia)](https://de.wikipedia.org/wiki/Hypomnema) — Antike persönliche Schreibhefte, in die «Zitate, Teile von Arbeiten, Aphorismen und Beispiele» sowie Gehörtes und eigene Überlegungen eingetragen wurden, ein «materielles Gedächtnis gelesener, gehörter und gedachter Dinge». Der Artikel referiert auch Foucaults Deutung: Teil einer «Kultur des persönlichen Schreibens», Instrument der Selbstsorge und der «Selbstkonstituierung», gerade bei den Stoikern. *(geprüft 2026-08-14)*
 
 **[DW-83b1c5]** *(Zur Philosophie)*
 Wilhelm Schmid ist ein freier Philosoph in Berlin und hat die «Philosophie der Lebenskunst» im deutschsprachigen Raum bekannt gemacht. Sein Thema ist der Abstand zwischen Einsicht und Tat, den jeder von den guten Vorsätzen kennt. Was hilft, ist Übung in kleinsten Schritten, täglich, fast beiläufig, aber regelmässig, nicht das ganze Buch auf einmal, sondern jeden Tag eine Seite. Weil Freude stärker wirkt als Zwang, soll man sich am Schönen orientieren, zu dem man Ja sagen kann. So werden neue Gewohnheiten gebildet. Wie lange das dauert, hat die Psychologie untersucht, nicht die Philosophie. Eine oft zitierte Studie fand einen Mittelwert von 66 Tagen, mit sehr grossen Unterschieden je nach Person und Gewohnheit. Werk: «Philosophie der Lebenskunst» (1998).

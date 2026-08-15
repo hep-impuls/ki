@@ -147,7 +147,7 @@ const EPOCHEN: Epoche[] = [
             y: 47,
             zoom: 2.8,
             title: "Sokrates im Gespräch",
-            text: "Links, im olivgrünen Gewand, zählt Sokrates an den Fingern seine Argumente ab und führt umringt von Zuhörern sein Frage-und-Antwort-Spiel vor. Diese Methode, alles so lange zu hinterfragen, bis scheinbare Gewissheiten zerbrechen, machte ihn zur unbequemsten Figur Athens und kostete ihn das Leben.",
+            text: "Die Figur links im olivgrünen Gewand gilt als Sokrates. Umringt von Zuhörern zählt er an den Fingern seine Argumente ab und führt sein Frage-und-Antwort-Spiel vor. Diese Methode, alles so lange zu hinterfragen, bis scheinbare Gewissheiten zerbrechen, machte ihn zur unbequemsten Figur Athens und kostete ihn das Leben.",
           },
           {
             /* Sass auf dem Rücken eines zuschauenden Jugendlichen. Jetzt auf
@@ -155,8 +155,8 @@ const EPOCHEN: Epoche[] = [
             x: 79,
             y: 75,
             zoom: 2.8,
-            title: "Euklid an der Tafel",
-            text: "Rechts beugt sich Euklid mit einem Zirkel über eine Tafel und führt Jugendlichen einen geometrischen Beweis vor. Die Szene feiert ein neues Ideal: Wissen, das nicht behauptet, sondern Schritt für Schritt bewiesen und darum von jedem nachvollzogen werden kann.",
+            title: "Der Geometer an der Tafel",
+            text: "Rechts beugt sich ein Gelehrter mit dem Zirkel über eine Tafel und führt Jugendlichen einen geometrischen Beweis vor, meist als Euklid gedeutet, manchmal als Archimedes. Die Szene feiert ein neues Ideal: Wissen, das nicht behauptet, sondern Schritt für Schritt bewiesen und darum von jedem nachvollzogen werden kann.",
           },
         ],
       },
@@ -369,7 +369,7 @@ const EPOCHEN: Epoche[] = [
             y: 80,
             zoom: 2.4,
             title: "Der Bauherr und die Steinmetze",
-            text: "Vorne links besucht König Nimrod die Baustelle. Die Steinmetze fallen auf die Knie. Macht, Geld und Technik gehören zusammen: Ohne Herrscher und Kapital kein Turm. Bruegels Zeitgenossen erkannten darin die Grossbaustellen und Handelsherren der eigenen Städte.",
+            text: "Vorne links besucht ein Herrscher die Baustelle und die Steinmetze fallen vor ihm auf die Knie. Die Tradition nennt ihn Nimrod, die Bibel selbst gibt dem Bauherrn keinen Namen. Macht, Geld und Technik gehören zusammen: Ohne Herrscher und Kapital kein Turm. Bruegels Zeitgenossen konnten darin die Grossbaustellen und Handelsherren der eigenen Städte wiedererkennen.",
           },
           {
             x: 88,

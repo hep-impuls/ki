@@ -50,6 +50,9 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 02 · Die acht Epochen
 
+**[EP-6b91b8]** *(Hintergrund zum Bild · Renaissance & Aufbruch)*
+Pieter Bruegel der Ältere war einer der bedeutendsten niederländischen Maler des 16. Jahrhunderts und schuf dieses Bild 1563, zur Zeit der niederländischen Renaissance. Er malte die biblische Geschichte vom Turmbau als Panorama seiner eigenen Gegenwart, denn Baustelle, Hafen und Stadt sind flämisch und nicht babylonisch gestaltet. Der gewaltige Turm erinnert mit seinen Rundbögen an das römische Kolosseum und steht bereits sichtbar schief. Vorne links besucht eine königliche Gruppe die Baustelle, vor der die Steinmetze niederknien. Diese Figur wird meist als der biblische König Nimrod gedeutet. Das Original hängt heute im Kunsthistorischen Museum in Wien.
+
 **[EP-98e975]** *(Hintergrund zum Bild · Renaissance & Aufbruch)*
 Hans Holbein der Jüngere (um 1497 bis 1543) war ein deutscher Maler der Renaissance, der lange am englischen Königshof wirkte. Er malte dieses Doppelporträt 1533 in London. Dargestellt sind zwei junge Männer auf der Höhe ihrer Macht, links der französische Gesandte Jean de Dinteville und rechts sein Freund Georges de Selve, Bischof von Lavaur. Zwischen ihnen steht ein Regal mit Instrumenten und Büchern, ein Inventar des neuen Wissens ihrer Zeit. Quer im Vordergrund liegt ein stark verzerrter Totenschädel, der erst aus einem schrägen Blickwinkel erkennbar wird und an die Vergänglichkeit mahnt. Heute hängt das Werk in der National Gallery in London.
 
@@ -165,6 +168,3 @@ Fahles Gelb, leere Augen ohne Pupillen: Kirchner malt sich als Ausgebrannten. Er
 
 **[EP-c1d969]** *(Hintergrund zum Bild · Zeitalter der Katastrophen)*
 Felix Nussbaum (1904–1944) war ein jüdischer Maler aus Osnabrück, dessen Werk der Neuen Sachlichkeit zugerechnet wird. Ab 1942 lebte er im Brüsseler Versteck, wo dieses Bild um 1943 entstand. Er malt sich mit hochgeschlagenem Kragen, dem gelben Judenstern und dem Ausweis mit dem roten Stempel «JUIF-JOOD», also Jude. Das Werk hält den Moment fest, in dem einem Menschen durch einen amtlichen Stempel das Menschsein aberkannt wird. 1944 wurde Nussbaum denunziert, deportiert und in Auschwitz ermordet, während seine Bilder im Versteck überdauerten. Heute sind sie im Felix-Nussbaum-Haus in Osnabrück zu sehen.
-
-**[EP-d4b7a6]** *(Kartentext · Zeitalter der Katastrophen)*
-Über der Mauer ein gekappter Baum, an dem ein Zweig blüht. Mitten im Grau ein winziges Zeichen von Leben, oder von einer Welt, die draussen einfach weitergeht. 1944 wurde Nussbaum deportiert und in Auschwitz ermordet.
