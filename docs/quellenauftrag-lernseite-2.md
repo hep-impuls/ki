@@ -1622,8 +1622,8 @@ Das Orrery zeigt die technisch-wissenschaftliche Seite des Umbruchs. In einem me
 **[EP-b2317b]** *(Kartentext)*
 Eine Gruppe von Menschen drängt sich im Dunkeln um ein Orrery, ein mechanisches Tischmodell des Sonnensystems mit kreisenden Planeten. Statt Heiliger oder Herrscher zeigt das Bild gewöhnliche Zuhörer beim wissenschaftlichen Vortrag, ein neues, bürgerliches Bildthema.
 
-**[EP-93d79e]** *(Kartentext)*
-Im Zentrum des Modells steht eine Lampe, die die Sonne darstellt. Ihr warmes Licht fällt auf die andächtigen Gesichter ringsum. Wright inszeniert die Wissenschaft mit einer Ehrfurcht, die man sonst aus Bildern der Anbetung kennt. Die Erkenntnis rückt an die Stelle des Heiligen.
+**[EP-d992bd]** *(Kartentext)*
+Im Zentrum des Modells steht eine Lampe, die die Sonne darstellt. Ihr warmes Licht fällt auf die andächtigen Gesichter ringsum. Die dramatische Lichtregie verleiht der wissenschaftlichen Vorführung eine beinahe religiöse Feierlichkeit, als rücke die Erkenntnis an die Stelle des Heiligen.
 
 **[EP-61588a]** *(Kartentext)*
 Zwei Kinder beugen sich nah ans Modell, die Gesichter hell erleuchtet und voller Staunen. Sie machen das eigentliche Thema sichtbar, das Lernen selbst als erhebendes Erlebnis, die Freude, eine erklärbare Welt zu entdecken.
