@@ -50,8 +50,8 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 02 · Die acht Epochen
 
-**[EP-d4b7a6]** *(Kartentext · Zeitalter der Katastrophen)*
-Über der Mauer ein gekappter Baum, an dem ein Zweig blüht. Mitten im Grau ein winziges Zeichen von Leben, oder von einer Welt, die draussen einfach weitergeht. 1944 wurde Nussbaum deportiert und in Auschwitz ermordet.
+**[EP-f06110]** *(Kartentext · Zeitalter der Katastrophen)*
+Über der Mauer ein gekappter Baum, an dem ein Zweig blüht. Mitten im Grau ein winziges Zeichen von Leben, oder von einer Welt, die draussen einfach weitergeht. Im Sommer 1944 wurde Nussbaum deportiert und in Auschwitz ermordet.
 
 **[EP-3f56d0]** *(Kartentext · Zeitalter der Katastrophen)*
 Technik automatisiert das Töten. Im Ersten Weltkrieg schaffen Maschinengewehr, Artillerie und Giftgas die anonyme Materialschlacht mit Millionen Toten. Der Rundfunk (ab den 1920ern) wird zum Massenmedium und zum Propaganda-Werkzeug der Diktaturen. 1945 zeigt die Atombombe, dass Menschen die Welt vernichten können. Möglich wurde diese Zerstörungskraft durch die industrielle Massenfertigung und die organisierte Wissenschaft: Der Staat der «totalen Kriege» lenkte Forschung, Fabriken und Rohstoffe auf ein einziges Ziel. Die Atombombe entstand im gigantischen «Manhattan-Projekt».

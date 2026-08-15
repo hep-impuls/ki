@@ -667,7 +667,7 @@ const EPOCHEN: Epoche[] = [
         caption: "Der Künstler als Soldat, mit abgeschnittener Hand, seelisch versehrt",
         credit: "Ernst Ludwig Kirchner, «Selbstbildnis als Soldat», 1915 · gemeinfrei",
         hintergrund:
-          "Ernst Ludwig Kirchner (1880–1938) war ein führender Vertreter des deutschen Expressionismus und Mitgründer der Künstlergruppe «Brücke». Der Expressionismus malt nicht, wie die Welt aussieht, sondern wie sie sich anfühlt, mit grellen Farben und kantigen Formen. Kirchner meldete sich 1914 freiwillig zum Kriegsdienst und zerbrach innert Monaten am Militär. 1915 malte er sich in Uniform mit abgeschnittener rechter Malhand, obwohl die Hand in Wirklichkeit unversehrt war, denn das Bild zeigt eine innere und keine körperliche Wunde. Hinter ihm steht ein Aktmodell als Zeichen der verlorenen Welt der Kunst. Die Nationalsozialisten diffamierten sein Werk 1937 als «entartet» und 1938 nahm er sich das Leben.",
+          "Ernst Ludwig Kirchner (1880–1938) war ein führender Vertreter des deutschen Expressionismus und Mitgründer der Künstlergruppe «Brücke». Der Expressionismus malt nicht, wie die Welt aussieht, sondern wie sie sich anfühlt, mit grellen Farben und kantigen Formen. Kirchner meldete sich 1914 freiwillig zum Kriegsdienst, trat 1915 als Fahrer bei der Artillerie an und zerbrach innert Monaten am Militär. Noch im selben Jahr malte er sich in Uniform mit abgeschnittener rechter Hand, obwohl die Hand in Wirklichkeit unversehrt war, denn das Bild zeigt eine innere und keine körperliche Wunde. Der Stumpf wird meist als Angst gedeutet, der Krieg könnte ihm die Kunst nehmen, und das Aktmodell hinter ihm als die Welt des Ateliers, der er den Rücken zukehrt. Die Nationalsozialisten diffamierten sein Werk 1937 als «entartet» und 1938 nahm er sich das Leben.",
         contextNote:
           "Kirchners Selbstbildnis zeigt die Verunsicherung des Katastrophenzeitalters von innen. Der industrialisierte Krieg beschädigt Menschen auch dort, wo keine Granate sie trifft. Auf diesen Verlust aller Geländer antwortet später der Existenzialismus, mit der Zumutung, trotzdem zu wählen und zu verantworten.",
         tour: [
@@ -685,21 +685,21 @@ const EPOCHEN: Epoche[] = [
             y: 82,
             zoom: 2.2,
             title: "Der Armstumpf",
-            text: "Die rechte Hand (die Malhand) ist abgeschnitten, der Stumpf ragt ins Bild. In Wirklichkeit war Kirchners Hand unversehrt, der Verlust ist innerlich. Der Krieg, so das Bild, amputiert das Schöpferische am Menschen.",
+            text: "Die rechte Hand ist abgeschnitten, der Stumpf ragt ins Bild. In Wirklichkeit war Kirchners Hand unversehrt, der Verlust ist innerlich. Der Krieg, so das Bild, amputiert das Schöpferische am Menschen.",
           },
           {
             x: 33,
             y: 27,
             zoom: 2.2,
             title: "Das ausgehöhlte Gesicht",
-            text: "Fahles Gelb, leere Augen ohne Pupillen. Kirchner malt sich als Ausgebrannten. Er hatte sich 1914 freiwillig gemeldet und zerbrach binnen Monaten am Drill. Das Porträt entstand nach seiner Entlassung als «dienstuntauglich».",
+            text: "Fahles Gelb, leere Augen ohne Pupillen. Kirchner malt sich als Ausgebrannten. Er hatte sich 1914 freiwillig gemeldet, trat 1915 den Dienst an und zerbrach binnen Monaten am Drill. Das Porträt entstand, als er vom Dienst beurlaubt war.",
           },
           {
             x: 60,
             y: 35,
             zoom: 1.9,
             title: "Der Akt im Rücken",
-            text: "Hinter dem Soldaten steht ein Aktmodell, das an die Welt des Ateliers, der Kunst, des früheren Lebens erinnert. Sie ist noch da, aber der Maler hat ihr den Rücken zugekehrt: Zwischen Kunst und Krieg ist er nicht mehr Herr über sein Leben.",
+            text: "Hinter dem Soldaten steht ein Aktmodell, das an die Welt des Ateliers, der Kunst, des früheren Lebens erinnert. Sie ist noch da, aber der Maler hat ihr den Rücken zugekehrt, als wäre er zwischen Kunst und Krieg nicht mehr Herr über sein Leben.",
           },
         ],
       },
@@ -709,9 +709,9 @@ const EPOCHEN: Epoche[] = [
         caption: "Nussbaum zeigt seinen Judenpass, kurz darauf in Auschwitz ermordet",
         credit: "Felix Nussbaum, «Selbstbildnis mit Judenpass», um 1943 · gemeinfrei",
         hintergrund:
-          "Felix Nussbaum (1904–1944) war ein jüdischer Maler aus Osnabrück, dessen Werk der Neuen Sachlichkeit zugerechnet wird. Ab 1942 lebte er im Brüsseler Versteck, wo dieses Bild um 1943 entstand. Er malt sich mit hochgeschlagenem Kragen, dem gelben Judenstern und dem Ausweis mit dem roten Stempel «JUIF-JOOD», also Jude. Das Werk hält den Moment fest, in dem einem Menschen durch einen amtlichen Stempel das Menschsein aberkannt wird. 1944 wurde Nussbaum denunziert, deportiert und in Auschwitz ermordet, während seine Bilder im Versteck überdauerten. Heute sind sie im Felix-Nussbaum-Haus in Osnabrück zu sehen.",
+          "Felix Nussbaum (1904–1944) war ein jüdischer Maler aus Osnabrück, dessen Werk der Neuen Sachlichkeit zugerechnet wird. Nach Flucht und Internierung versteckte er sich ab 1940 in Brüssel, zuletzt in einer Mansarde, und dort entstand um 1943 dieses Bild. Er malt sich mit hochgeschlagenem Kragen, dem gelben Judenstern und dem Ausweis mit dem roten Stempel «JUIF-JOOD», also Jude. Im Juni 1944 wurde Nussbaum denunziert und verhaftet, nach Auschwitz deportiert und dort ermordet, während seine Bilder im Versteck überdauerten. Viele davon sind heute im Felix-Nussbaum-Haus in Osnabrück zu sehen, der weltweit grössten Sammlung seiner Werke.",
         contextNote:
-          "Das Selbstbildnis mit Judenpass ist das Dokument einer Verunsicherung, die keinen Vergleich hat. Einem Menschen wird per Stempel das Menschsein aberkannt. Hannah Arendts spätere Mahnung, selbst zu urteilen statt mitzulaufen, antwortet genau auf diese Erfahrung. Verwaltung und Gehorsam können zum Werkzeug des Verbrechens werden.",
+          "Das Selbstbildnis mit Judenpass ist das Dokument einer Verunsicherung, die keinen Vergleich hat. Es führt vor, wie einem Menschen per Stempel das Menschsein aberkannt wird. Hannah Arendts spätere Mahnung, selbst zu urteilen statt mitzulaufen, antwortet genau auf diese Erfahrung. Verwaltung und Gehorsam können zum Werkzeug des Verbrechens werden.",
         tour: [
           {
             x: 50,
@@ -739,7 +739,7 @@ const EPOCHEN: Epoche[] = [
             y: 27,
             zoom: 2,
             title: "Der blühende Baum",
-            text: "Über der Mauer ein gekappter Baum, an dem ein Zweig blüht. Mitten im Grau ein winziges Zeichen von Leben, oder von einer Welt, die draussen einfach weitergeht. 1944 wurde Nussbaum deportiert und in Auschwitz ermordet.",
+            text: "Über der Mauer ein gekappter Baum, an dem ein Zweig blüht. Mitten im Grau ein winziges Zeichen von Leben, oder von einer Welt, die draussen einfach weitergeht. Im Sommer 1944 wurde Nussbaum deportiert und in Auschwitz ermordet.",
           },
         ],
       },

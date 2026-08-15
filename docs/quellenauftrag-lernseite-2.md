@@ -1738,8 +1738,8 @@ Zwei Weltkriege, Völkermord und die Atombombe zertrümmern den Fortschrittsglau
 **[EP-ed5f76]** *(Einleitung, Vertiefung)*
 Der Historiker Eric Hobsbawm nannte die Jahre 1914–1991 das «kurze 20. Jahrhundert» und «Zeitalter der Extreme». In wenigen Jahrzehnten drängen sich Erster Weltkrieg, Weltwirtschaftskrise, Faschismus und Stalinismus, Zweiter Weltkrieg, Schoah und Hiroshima. Danach folgt der Kalte Krieg mit der ständigen Drohung atomarer Vernichtung. Aus dem Erschrecken über diese Abgründe entstehen die Vereinten Nationen, die Allgemeine Erklärung der Menschenrechte (1948) und der Gedanke, dass es Grenzen geben muss, die keine Macht überschreiten darf.
 
-**[EP-52a7ec]** *(Hintergrund zum Bild)*
-Ernst Ludwig Kirchner (1880–1938) war ein führender Vertreter des deutschen Expressionismus und Mitgründer der Künstlergruppe «Brücke». Der Expressionismus malt nicht, wie die Welt aussieht, sondern wie sie sich anfühlt, mit grellen Farben und kantigen Formen. Kirchner meldete sich 1914 freiwillig zum Kriegsdienst und zerbrach innert Monaten am Militär. 1915 malte er sich in Uniform mit abgeschnittener rechter Malhand, obwohl die Hand in Wirklichkeit unversehrt war, denn das Bild zeigt eine innere und keine körperliche Wunde. Hinter ihm steht ein Aktmodell als Zeichen der verlorenen Welt der Kunst. Die Nationalsozialisten diffamierten sein Werk 1937 als «entartet» und 1938 nahm er sich das Leben.
+**[EP-12858b]** *(Hintergrund zum Bild)*
+Ernst Ludwig Kirchner (1880–1938) war ein führender Vertreter des deutschen Expressionismus und Mitgründer der Künstlergruppe «Brücke». Der Expressionismus malt nicht, wie die Welt aussieht, sondern wie sie sich anfühlt, mit grellen Farben und kantigen Formen. Kirchner meldete sich 1914 freiwillig zum Kriegsdienst, trat 1915 als Fahrer bei der Artillerie an und zerbrach innert Monaten am Militär. Noch im selben Jahr malte er sich in Uniform mit abgeschnittener rechter Hand, obwohl die Hand in Wirklichkeit unversehrt war, denn das Bild zeigt eine innere und keine körperliche Wunde. Der Stumpf wird meist als Angst gedeutet, der Krieg könnte ihm die Kunst nehmen, und das Aktmodell hinter ihm als die Welt des Ateliers, der er den Rücken zukehrt. Die Nationalsozialisten diffamierten sein Werk 1937 als «entartet» und 1938 nahm er sich das Leben.
 
 **[EP-d65628]** *(Im Kontext der Zeit)*
 Kirchners Selbstbildnis zeigt die Verunsicherung des Katastrophenzeitalters von innen. Der industrialisierte Krieg beschädigt Menschen auch dort, wo keine Granate sie trifft. Auf diesen Verlust aller Geländer antwortet später der Existenzialismus, mit der Zumutung, trotzdem zu wählen und zu verantworten.
@@ -1747,20 +1747,20 @@ Kirchners Selbstbildnis zeigt die Verunsicherung des Katastrophenzeitalters von 
 **[EP-861673]** *(Kartentext)*
 Der Maler zeigt sich in der Uniform seines Artillerie-Regiments, Zigarette im Mund, im Atelier. Die Farben schreien, die Formen splittern. Der Expressionismus malt nicht, wie es aussieht, sondern wie es sich anfühlt.
 
-**[EP-efdfc3]** *(Kartentext)*
-Die rechte Hand (die Malhand) ist abgeschnitten, der Stumpf ragt ins Bild. In Wirklichkeit war Kirchners Hand unversehrt, der Verlust ist innerlich. Der Krieg, so das Bild, amputiert das Schöpferische am Menschen.
+**[EP-8054b4]** *(Kartentext)*
+Die rechte Hand ist abgeschnitten, der Stumpf ragt ins Bild. In Wirklichkeit war Kirchners Hand unversehrt, der Verlust ist innerlich. Der Krieg, so das Bild, amputiert das Schöpferische am Menschen.
 
-**[EP-65a32f]** *(Kartentext)*
-Fahles Gelb, leere Augen ohne Pupillen. Kirchner malt sich als Ausgebrannten. Er hatte sich 1914 freiwillig gemeldet und zerbrach binnen Monaten am Drill. Das Porträt entstand nach seiner Entlassung als «dienstuntauglich».
+**[EP-29b663]** *(Kartentext)*
+Fahles Gelb, leere Augen ohne Pupillen. Kirchner malt sich als Ausgebrannten. Er hatte sich 1914 freiwillig gemeldet, trat 1915 den Dienst an und zerbrach binnen Monaten am Drill. Das Porträt entstand, als er vom Dienst beurlaubt war.
 
-**[EP-d9b4a8]** *(Kartentext)*
-Hinter dem Soldaten steht ein Aktmodell, das an die Welt des Ateliers, der Kunst, des früheren Lebens erinnert. Sie ist noch da, aber der Maler hat ihr den Rücken zugekehrt: Zwischen Kunst und Krieg ist er nicht mehr Herr über sein Leben.
+**[EP-009c40]** *(Kartentext)*
+Hinter dem Soldaten steht ein Aktmodell, das an die Welt des Ateliers, der Kunst, des früheren Lebens erinnert. Sie ist noch da, aber der Maler hat ihr den Rücken zugekehrt, als wäre er zwischen Kunst und Krieg nicht mehr Herr über sein Leben.
 
-**[EP-c1d969]** *(Hintergrund zum Bild)*
-Felix Nussbaum (1904–1944) war ein jüdischer Maler aus Osnabrück, dessen Werk der Neuen Sachlichkeit zugerechnet wird. Ab 1942 lebte er im Brüsseler Versteck, wo dieses Bild um 1943 entstand. Er malt sich mit hochgeschlagenem Kragen, dem gelben Judenstern und dem Ausweis mit dem roten Stempel «JUIF-JOOD», also Jude. Das Werk hält den Moment fest, in dem einem Menschen durch einen amtlichen Stempel das Menschsein aberkannt wird. 1944 wurde Nussbaum denunziert, deportiert und in Auschwitz ermordet, während seine Bilder im Versteck überdauerten. Heute sind sie im Felix-Nussbaum-Haus in Osnabrück zu sehen.
+**[EP-23100d]** *(Hintergrund zum Bild)*
+Felix Nussbaum (1904–1944) war ein jüdischer Maler aus Osnabrück, dessen Werk der Neuen Sachlichkeit zugerechnet wird. Nach Flucht und Internierung versteckte er sich ab 1940 in Brüssel, zuletzt in einer Mansarde, und dort entstand um 1943 dieses Bild. Er malt sich mit hochgeschlagenem Kragen, dem gelben Judenstern und dem Ausweis mit dem roten Stempel «JUIF-JOOD», also Jude. Im Juni 1944 wurde Nussbaum denunziert und verhaftet, nach Auschwitz deportiert und dort ermordet, während seine Bilder im Versteck überdauerten. Viele davon sind heute im Felix-Nussbaum-Haus in Osnabrück zu sehen, der weltweit grössten Sammlung seiner Werke.
 
-**[EP-0f3a52]** *(Im Kontext der Zeit)*
-Das Selbstbildnis mit Judenpass ist das Dokument einer Verunsicherung, die keinen Vergleich hat. Einem Menschen wird per Stempel das Menschsein aberkannt. Hannah Arendts spätere Mahnung, selbst zu urteilen statt mitzulaufen, antwortet genau auf diese Erfahrung. Verwaltung und Gehorsam können zum Werkzeug des Verbrechens werden.
+**[EP-95e10a]** *(Im Kontext der Zeit)*
+Das Selbstbildnis mit Judenpass ist das Dokument einer Verunsicherung, die keinen Vergleich hat. Es führt vor, wie einem Menschen per Stempel das Menschsein aberkannt wird. Hannah Arendts spätere Mahnung, selbst zu urteilen statt mitzulaufen, antwortet genau auf diese Erfahrung. Verwaltung und Gehorsam können zum Werkzeug des Verbrechens werden.
 
 **[EP-42e6ae]** *(Kartentext)*
 Ein Mann im Versteck. Mauerecke, kahler Baum, tiefer Himmel. Felix Nussbaum malt sich in Brüssel, wo er sich vor der Deportation verbirgt, auf engstem Raum, aber als Maler, der Zeugnis ablegt.
@@ -1771,8 +1771,8 @@ Die Hand hält den belgischen Fremdenpass mit dem roten Stempel «JUIF-JOOD» (J
 **[EP-920359]** *(Kartentext)*
 Am Mantelkragen der Judenstern, den die Besatzer zu tragen zwangen. Nussbaum schlägt den Kragen hoch, halb verbergend, halb zeigend. Das ist die Zwangslage der Verfolgten, gesehen werden heisst gefasst werden.
 
-**[EP-d4b7a6]** *(Kartentext)*
-Über der Mauer ein gekappter Baum, an dem ein Zweig blüht. Mitten im Grau ein winziges Zeichen von Leben, oder von einer Welt, die draussen einfach weitergeht. 1944 wurde Nussbaum deportiert und in Auschwitz ermordet.
+**[EP-f06110]** *(Kartentext)*
+Über der Mauer ein gekappter Baum, an dem ein Zweig blüht. Mitten im Grau ein winziges Zeichen von Leben, oder von einer Welt, die draussen einfach weitergeht. Im Sommer 1944 wurde Nussbaum deportiert und in Auschwitz ermordet.
 
 **[EP-3f56d0]** *(Kartentext)*
 Technik automatisiert das Töten. Im Ersten Weltkrieg schaffen Maschinengewehr, Artillerie und Giftgas die anonyme Materialschlacht mit Millionen Toten. Der Rundfunk (ab den 1920ern) wird zum Massenmedium und zum Propaganda-Werkzeug der Diktaturen. 1945 zeigt die Atombombe, dass Menschen die Welt vernichten können. Möglich wurde diese Zerstörungskraft durch die industrielle Massenfertigung und die organisierte Wissenschaft: Der Staat der «totalen Kriege» lenkte Forschung, Fabriken und Rohstoffe auf ein einziges Ziel. Die Atombombe entstand im gigantischen «Manhattan-Projekt».
