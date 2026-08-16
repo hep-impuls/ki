@@ -1,6 +1,6 @@
 # Quellenauftrag · Lernseite 2 «Eine ganz neue Partnerschaft»
 
-**Paket 09 von 9.** Dieses Dokument enthält 28 Textblöcke eines Lernsets zu
+**Paket 09 von 9.** Dieses Dokument enthält 29 Textblöcke eines Lernsets zu
 Künstlicher Intelligenz und Philosophie (Berufsfachschule, Deutschschweiz).
 Jeder Block hat eine **Kennung** in eckigen Klammern, z.B. `[VA-a1b2c3]`.
 
@@ -46,9 +46,12 @@ und die Quelle ihn nur bestätigt.
 
 Jeder Block hier enthält eine prüfbare Behauptung (Zahl, Datum,
 Superlativ oder eine Aussage, die jemandem zugeschrieben wird). Deutende
-Passagen sind bewusst nicht dabei. Geh die 28 Blöcke einzeln durch.
+Passagen sind bewusst nicht dabei. Geh die 29 Blöcke einzeln durch.
 
 ### Thema 02 · Philosophische Perspektive
+
+**[PP-ff5fc3]** *(Kartentext · Die KI stellt diese Frage neu und dringlich)*
+Wörtlich wird «Was ist der Mensch?» laut Google Trends kaum häufiger gesucht als früher. Aber in unzähligen Reden und Texten über KI kehrt die Frage in konkreter Form wieder. Müssen wir überhaupt noch selbst denken und schreiben? Wie verändert uns die tägliche Nutzung? Und welche Rolle bekommen wir neben der Maschine, eher anleitend, prüfend und verantwortend statt ausführend? So taucht die alte philosophische Frage nach dem Menschen mitten im Alltag neu auf.
 
 **[PP-f89d1d]** *(Kartentext · Sie gibt keine Rezepte, sondern Orientierung)*
 Philosophie liefert keine Bedienungsanleitung und keine Prognose. Sie ordnet Begriffe, deckt verborgene Annahmen auf und wägt Gründe ab. So hilft sie zu klären, worüber wir eigentlich streiten. Hegels Bild der «Eule der Minerva» oben sagt, dass Verstehen oft erst im Rückblick kommt. Genau dieses Begreifen brauchen wir aber, um die Gegenwart zu gestalten.

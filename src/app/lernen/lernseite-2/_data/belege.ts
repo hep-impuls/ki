@@ -2556,8 +2556,10 @@ export const BELEGE: Beleg[] = [
       "Für die Schweiz nennt der Artikel den 1. Juli 2022 als Datum, seit dem gleichgeschlechtliche Paare heiraten können. Die Abstimmung vom 26. September 2021 steht damit nicht ohne ihr Inkrafttreten da.",
     geprueft: "2026-08-16",
   },
-  /* Levinas-Karte, Block «Zur Philosophie». Diese sieben Einträge sichern die
-     Herkunft der biografischen Angaben und der Werktitel. ACHTUNG, sie
+  /* Levinas-Karte, Block «Zur Philosophie». Diese sechs Einträge sichern die
+     Herkunft der biografischen Angaben und der Werktitel; der siebte, das
+     Asymmetrie-Zitat, hängt seit dem Kürzen vom 2026-08-16 am Fallbeispiel und
+     ist als einziger sichtbar. ACHTUNG, die sechs hier
      erscheinen NICHT als Links im Lernset: Die Info-Texte der Denkwege werden
      ohne `belege`-Schalter gesetzt, weil sie Positionen referieren und keine
      Tatsachen behaupten (Begründung in Denkwege.tsx beim Fallbeispiel-Aufruf).
@@ -2571,16 +2573,16 @@ export const BELEGE: Beleg[] = [
      Nebenwirkung. Ob sie kommt, ist offen: Christof überlegt es sich noch
      (2026-08-16), bis dahin bleibt es aus. Siehe docs/decisions.md. */
   {
-    id: "DW-7dc3ec",
-    anker: "12. Januar 1906",
+    id: "DW-1687ff",
+    anker: "1906 in Kaunas",
     url: "https://de.wikipedia.org/wiki/Emmanuel_Levinas",
     titel: "Emmanuel Levinas (Wikipedia)",
     stelle:
-      "Die Datumszeile lautet wörtlich «* 30. Dezember 1905[jul.] / 12. Januar 1906[greg.] in Kaunas, Gouvernement Kowno, Russisches Kaiserreich; † 25. Dezember 1995 in Paris, Frankreich». Die Karte nennt darum beide Daten und führt in den Lebensdaten das gregorianische Jahr 1906.",
+      "Die Datumszeile lautet wörtlich «* 30. Dezember 1905[jul.] / 12. Januar 1906[greg.] in Kaunas, Gouvernement Kowno, Russisches Kaiserreich; † 25. Dezember 1995 in Paris, Frankreich». Die Karte nennt nur das Jahr 1906, weil überall nach dem gregorianischen Kalender gerechnet wird; wer in einem anderen Nachschlagewerk 1905 liest, findet hier den Grund.",
     geprueft: "2026-08-16",
   },
   {
-    id: "DW-7dc3ec",
+    id: "DW-1687ff",
     anker: "von 1927 bis 1928 in Freiburg",
     url: "https://de.wikipedia.org/wiki/Emmanuel_Levinas",
     titel: "Emmanuel Levinas (Wikipedia)",
@@ -2589,7 +2591,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "DW-7dc3ec",
+    id: "DW-1687ff",
     anker: "in deutsche Kriegsgefangenschaft",
     url: "https://de.wikipedia.org/wiki/Emmanuel_Levinas",
     titel: "Emmanuel Levinas (Wikipedia)",
@@ -2598,7 +2600,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "DW-7dc3ec",
+    id: "DW-1687ff",
     anker: "nie wieder deutschen Boden",
     url: "https://de.wikipedia.org/wiki/Emmanuel_Levinas",
     titel: "Emmanuel Levinas (Wikipedia)",
@@ -2607,7 +2609,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "DW-7dc3ec",
+    id: "DW-1687ff",
     anker: "dass die Ethik vorher kommt",
     url: "https://de.wikipedia.org/wiki/Emmanuel_Levinas",
     titel: "Emmanuel Levinas (Wikipedia)",
@@ -2616,7 +2618,11 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "DW-7dc3ec",
+    /* Dieser eine sitzt am FALLBEISPIEL, nicht am Info-Text, denn dorthin ist
+       die Asymmetrie beim Kürzen gewandert (Christofs Rückmeldung, die Karten
+       waren zu lang und erklärten zweimal dasselbe). Als einziger der sieben
+       Levinas-Belege erscheint er darum als Link. */
+    id: "DW-782b47",
     anker: "wenn sie nicht erwidert wird",
     url: "https://de.wikipedia.org/wiki/Emmanuel_Levinas",
     titel: "Emmanuel Levinas (Wikipedia)",
@@ -2625,7 +2631,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "DW-7dc3ec",
+    id: "DW-1687ff",
     anker: "Jenseits des Seins oder anders als Sein geschieht",
     url: "https://de.wikipedia.org/wiki/Emmanuel_Levinas",
     titel: "Emmanuel Levinas (Wikipedia)",
@@ -2634,7 +2640,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "DW-7e3b31",
+    id: "DW-29cb30",
     anker: "gleiche Freiheiten für alle",
     url: "https://de.wikipedia.org/wiki/John_Rawls",
     titel: "John Rawls (Wikipedia)",
@@ -2643,7 +2649,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "DW-7e3b31",
+    id: "DW-29cb30",
     anker: "jede aus eigenen Gründen",
     url: "https://en.wikipedia.org/wiki/Overlapping_consensus",
     titel: "Overlapping consensus (englische Wikipedia)",

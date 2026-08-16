@@ -50,6 +50,13 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 02 · Wege der Orientierung
 
+**[DW-02b06c]** *(Fallbeispiel · Lebenskunst)*
+Vinted wurde 2008 in Litauen gegründet und ist heute mit über 65 Millionen Mitgliedern eine der grössten Plattformen für Secondhandkleidung, kaufen und verkaufen per App, quer durch Europa und Nordamerika.
+
+«Nachhaltiger leben» ist als Vorsatz so gross, dass er oft schon am Sonntagabend endet. Schmids Philosophie der Lebenskunst fragt darum nicht, was man einsehen, sondern was man einüben kann, und setzt auf kleinste Schritte, täglich, fast beiläufig, aber regelmässig und möglichst am Schönen orientiert statt am Verzicht. Das Ziel nennt er Selbstfreundschaft, mit sich so freundlich umgehen wie mit jemandem, den man gern hat. Eine einzige neue Gewohnheit reicht für den Anfang, zum Beispiel zuerst secondhand schauen und erst dann neu kaufen. Das kostet wenig Überwindung, es macht sogar Spass, das Lieblingsteil für wenige Franken zu finden, und es summiert sich. Nicht das ganze Leben ändern. Eine Gewohnheit.
+
+> **Belegt** («2008 in Litauen»): [Vinted (Wikipedia)](https://de.wikipedia.org/wiki/Vinted) — «Vinted wurde 2008 unter dem Namen Miju Projects von Justas Janauskas und Milda Mitkute in Litauen gegründet.» 2022 «über 65 Millionen Mitglieder», vertreten «in 16 Ländern in Europa und Nordamerika»; gehandelt werden Secondhandkleidung, Accessoires und mehr. *(geprüft 2026-08-13)*
+
 **[DW-246e50]** *(Zur Philosophie · Lebenskunst)*
 Martha Nussbaum ist eine der bekanntesten US-amerikanischen Philosophinnen und verbindet antike Ethik (besonders Aristoteles und die Stoa) mit heutigen Fragen. Sie zeigt, dass Gefühle keine blosse Störung der Vernunft sind, sondern zu einem guten Urteil und einem gelingenden Leben dazugehören. Mit dem «Fähigkeiten-Ansatz» fragt sie konkret, was Menschen wirklich können müssen, um gut zu leben (etwa Gesundheit, Bildung, Bindung, Spiel) und wie eine Gesellschaft das ermöglichen soll. Lebenskunst heisst darum auch, die eigenen Gefühle ernst zu nehmen und gute Bedingungen zu schaffen. Werk: «Fähigkeiten schaffen» (2011).
 
@@ -177,8 +184,3 @@ KI lernt aus Texten, die oft aus dem englischsprachigen und westlichen Raum stam
 
 **[VA-2717c6]** *(Fallbeispiel · Wissensmacht)*
 Die Trainingsdaten der grossen Modelle bestehen zu einem sehr grossen Teil aus englischen Texten. Wissen aus kleineren Sprachen, etwa vielen afrikanischen, ist kaum vertreten und dort antwortet die KI schwächer oder erfindet mehr. So entscheidet die Datenmenge mit, wessen Wissen sichtbar bleibt.
-
-### Thema 02 · Philosophische Perspektive
-
-**[PP-ff5fc3]** *(Kartentext · Die KI stellt diese Frage neu und dringlich)*
-Wörtlich wird «Was ist der Mensch?» laut Google Trends kaum häufiger gesucht als früher. Aber in unzähligen Reden und Texten über KI kehrt die Frage in konkreter Form wieder. Müssen wir überhaupt noch selbst denken und schreiben? Wie verändert uns die tägliche Nutzung? Und welche Rolle bekommen wir neben der Maschine, eher anleitend, prüfend und verantwortend statt ausführend? So taucht die alte philosophische Frage nach dem Menschen mitten im Alltag neu auf.

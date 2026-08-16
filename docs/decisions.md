@@ -10,6 +10,34 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-16 — Die Einordnung erklärt nicht, was das Fallbeispiel zeigt (Christof)
+
+**Der Befund.** Rawls und Levinas waren mit 1457 und 2549 Zeichen die längsten
+Einordnungen von 22 Karten, bei einem Median von 595 und einer typischen Spanne
+von 445 bis 780. Beide erklärten dieselbe Mechanik zweimal, einmal abstrakt in
+der Einordnung und einmal anschaulich im Fallbeispiel gleich darunter. «Schleier
+des Nichtwissens», «Differenzprinzip», «übergreifender Konsens», «Antlitz»,
+«der Andere» und «der Dritte» standen doppelt da.
+
+**Die Regel, die daraus folgt.** Die Einordnung nennt die Frage, die Position
+und das Werk. Die Mechanik gehört ins Fallbeispiel, weil sie dort an einer
+Situation hängt und nicht an einer Definition. Wo beides möglich ist, gewinnt
+das Fallbeispiel. Die Karten liegen jetzt bei 737 und 814 Zeichen Einordnung,
+die Fallbeispiele bei 979 und 1095, also im Band der übrigen Karten. Bei Rawls
+sind Urzustand, Zitat, die zwei Grundsätze und der Waffenstillstand-Satz aus der
+Einordnung verschwunden; geblieben ist der Kern, dass man sich nicht auf eine
+Moral einigen muss, sondern Grundbedingungen braucht und dass Recht und Moral
+zweierlei sind. Bei Levinas sind die theoretische Gewalt des Begriffs, die
+Asymmetrie, der Dritte und die KI-Lesart ins Fallbeispiel gewandert.
+
+**Zwei Nebenwirkungen, die man kennen muss.** Erstens verschieben solche
+Kürzungen die Block-Kennungen, alle vier waren betroffen und wurden erneuert.
+Zweitens wandern Beleg-Anker mit dem Satz, an dem sie hängen. Das
+Asymmetrie-Zitat sitzt darum jetzt am Fallbeispiel statt an der Einordnung und
+ist als einziger Levinas-Beleg sichtbar. Der Anker «12. Januar 1906» ist
+entfallen, weil im Text nur noch «1906 in Kaunas» steht; die Doppeldatierung
+julianisch und gregorianisch erklärt jetzt die Belegstelle, dort gehört sie hin.
+
 ## 2026-08-16 — Levinas nach Heidegger und wo ein Beleg unsichtbar bleibt
 
 **Levinas steht direkt nach Heidegger, das ist die Aussage.** Heidegger fragt
@@ -42,8 +70,9 @@ Info-Texte der Denkwege werden ohne `belege`-Schalter gesetzt, begründet am
 2026-08-11 damit, dass Fallbeispiele Tatsachen behaupten und Einordnungen
 Positionen referieren. Die Levinas-Karte zeigt die Grenze dieser Begründung,
 denn ihre Einordnung nennt Lebensdaten, Studienjahre und Werke, also sehr wohl
-Prüfbares. Ihre sieben Belege sind darum vorhanden, aber im Lernset unsichtbar,
-sie wirken nur für Prüfskript und Quellen-Export.
+Prüfbares. Sechs ihrer sieben Belege sind darum vorhanden, aber im Lernset
+unsichtbar, sie wirken nur für Prüfskript und Quellen-Export. Der siebte, das
+Asymmetrie-Zitat, ist beim Kürzen ins Fallbeispiel gewandert und darum sichtbar.
 
 Gemessen am 2026-08-16, ein Einschalten hätte keine Nebenwirkung: Keiner der 226
 Anker trifft in einen der 22 Info-Blöcke, und keiner würde einen karteneigenen
