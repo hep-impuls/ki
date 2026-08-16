@@ -50,6 +50,24 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 02 · Die acht Epochen
 
+**[EP-ea7ebd]** *(Einleitung · Antike)*
+Lange war klar, wer bestimmt: Wer in eine vornehme Familie geboren wurde, hatte das Sagen. Und was die alten Göttergeschichten erzählten, glaubte man einfach. In den griechischen Städten und in Rom bricht das auf. Regeln macht jetzt nicht mehr der Himmel, sondern eine Versammlung von Menschen, und wer etwas erreichen will, muss es begründen. Das ist eine grosse Freiheit. Und es ist unbequem: Wenn man alles begründen kann, kann man auch alles anzweifeln. Wem soll man dann noch glauben?
+
+**[EP-559324]** *(Hintergrund zum Bild · Antike)*
+Raffael (1483–1520) gehört zu den bedeutendsten Malern der italienischen Hochrenaissance und schuf dieses Fresko zwischen 1509 und 1511 für die Bibliothek von Papst Julius II. im Vatikan. Es zeigt keine reale Szene, sondern versammelt in einer idealen Halle über fünfzig Denker der Antike. Im Zentrum stehen Platon und Aristoteles, umgeben von Figuren, die traditionell als Sokrates, Pythagoras, Euklid, Ptolemäus und Diogenes gedeutet werden. Viele weitere Zuordnungen sind in der Forschung allerdings unsicher oder umstritten. Am rechten Rand hat sich Raffael selbst ins Bild gemalt.
+
+**[EP-678087]** *(Kartentext · Antike)*
+Raffael malt 1509–1511 im Vatikan eine ideale Halle, in der sich die Denker aller Zeiten begegnen. Es ist kein realer Ort und keine reale Szene, sondern ein Bild des Denkens selbst. Es ist die Antike, wie die Renaissance sie als ihr eigenes Fundament verehrte.
+
+**[EP-1bb104]** *(Kartentext · Antike)*
+Im Zentrum steht der Grundkonflikt der Erkenntnis in einer einzigen Geste. Platon zeigt mit dem Finger nach oben, in die Welt der ewigen Ideen. Aristoteles hält die Hand flach über den Boden, zur beobachtbaren Wirklichkeit. Genau hier beginnt die Schablone, die später die gesamte Wissenschaft trägt.
+
+**[EP-4b2cab]** *(Kartentext · Antike)*
+Die Figur links im olivgrünen Gewand gilt als Sokrates. Umringt von Zuhörern zählt er an den Fingern seine Argumente ab und führt sein Frage-und-Antwort-Spiel vor. Diese Methode, alles so lange zu hinterfragen, bis scheinbare Gewissheiten zerbrechen, machte ihn zur unbequemsten Figur Athens und kostete ihn das Leben.
+
+**[EP-68478f]** *(Hintergrund zum Bild · Antike)*
+Jacques-Louis David (1748–1825) war der führende Maler des französischen Klassizismus und malte dieses Werk 1787 in Paris, zwei Jahre vor der Französischen Revolution. Der klare und strenge Aufbau ist typisch für den Klassizismus, der sich die Antike zum Vorbild nahm. Dargestellt ist die letzte Stunde des griechischen Philosophen Sokrates im Jahr 399 v. Chr., als er in Athen zum Tod durch den Schierlingsbecher verurteilt ist. Aufrecht und gefasst greift er nach dem Becher und belehrt zugleich seine erschütterten Schüler. Am Fussende des Bettes sitzt der greise Platon, der das Gespräch später überlieferte. David nutzt die Szene als Lehrstück über Standhaftigkeit gegenüber ungerechter Macht.
+
 **[EP-1ceb9e]** *(Im Kontext der Zeit · Antike)*
 Der Tod des Sokrates zeigt die Verunsicherung der Antike in einem einzigen Bild, eine Stadt, die ihren klügsten und unbequemsten Frager zum Tode verurteilt, weil der alte Mythos nicht mehr trägt und jede Gewissheit wankt. Die Antwort der Epoche war nicht, das Fragen zu verbieten, sondern es zu ordnen. Aus der sokratischen Methode und der Systematik des Aristoteles entstand das Fundament der Wissenschaft.
 
@@ -156,23 +174,3 @@ Adolph Menzel (1815–1905) war ein deutscher Maler des Realismus, der genaue Be
 
 **[EP-313685]** *(Im Kontext der Zeit · Industriemoderne)*
 Menzels Fabrik zeigt beide Seiten des Umbruchs in einem Bild. Auf der einen Seite steht die technische Wucht der Dampfmaschine, die glühendes Eisen und Menschenkraft zu einem einzigen Getriebe verbindet, auf der anderen die soziale Verunsicherung einer Arbeit, die im Schichtbetrieb niemals stillsteht. Genau diesen Umbruch versuchte Marx zu begreifen. Die Verhältnisse, in denen diese Menschen arbeiten, sind kein Naturgesetz, sondern gemacht und darum veränderbar.
-
-**[EP-a70bf0]** *(Kartentext · Industriemoderne)*
-Adolph Menzel malt 1872–1875 nach genauen Studien das Innere einer echten Fabrik. Das war neu. Als eines der ersten grossen Gemälde überhaupt nimmt es die Industriearbeit ernst. Nicht Götter oder Herrscher, sondern schwitzende Arbeiter zwischen Maschinen füllen die riesige Leinwand.
-
-**[EP-f27edf]** *(Kartentext · Industriemoderne)*
-In der Bildmitte wird ein glühender Eisenblock unter die Walzen geschoben. Sein oranges Leuchten ist die einzige «Sonne» dieser dunklen Halle. Nicht der Mensch, sondern Material und Maschine geben hier Takt, Licht und Richtung vor.
-
-**[EP-78dc93]** *(Hintergrund zum Bild · Industriemoderne)*
-Gustave Doré (1832–1883) war ein französischer Illustrator und Grafiker, der für seine kontrastreichen Bilder aus Licht und Schatten berühmt ist. Dieses Blatt ist kein Gemälde, sondern ein Holzstich aus dem Bildband «London: A Pilgrimage» von 1872. Für das Buch durchstreifte Doré vier Jahre lang die Metropole, von den Docks bis zu den Salons. Der Stich blickt über die dicht gedrängten Hinterhöfe der Arbeiterviertel, die vom Bogen eines Eisenbahnviadukts gerahmt werden. Oben rauscht ein Zug vorbei, während unten die engen, russgeschwärzten Häuser der armen Familien stehen. So hielt Doré das Elend und die Wucht des viktorianischen London eindringlicher fest als jede Statistik.
-
-**[EP-485669]** *(Kartentext · Industriemoderne)*
-Der Blick geht über die dicht gedrängten Hinterhöfe des industriellen London, gerahmt vom Bogen eines Eisenbahnviadukts. Doré hielt das Elend und die Wucht der grössten Stadt der Welt fest, eindringlicher als jede Statistik.
-
-**[EP-cc0c87]** *(Kartentext · Industriemoderne)*
-Die verbesserte Dampfmaschine (James Watt, 1769) setzt Kraft frei, die nicht von Muskel, Wind oder Wasser stammt. Sie treibt Fabriken, Eisenbahnen und Dampfschiffe. Der elektrische Telegraf (ab 1837) trennt die Nachricht vom Boten. Die Fabrikuhr taktet die Arbeit in Schichten. Durchgesetzt hat sich die Dampfmaschine, weil sie ein konkretes Problem löste (das Abpumpen von Wasser aus Kohlebergwerken) und weil in Grossbritannien Kohle, Eisen und Kapital aus dem Kolonialhandel reichlich vorhanden waren. Sie verbesserte die ältere Newcomen-Maschine.
-
-**[EP-cada84]** *(Vertiefung «Mehr lesen» · Industriemoderne)*
-Bei der Eröffnung der Eisenbahn zwischen Liverpool und Manchester 1830 geriet der Parlamentsabgeordnete William Huskisson vor eine heranfahrende Lokomotive und starb noch am selben Abend: Das neue Tempo forderte sein Opfer schon am ersten Tag. Die Faszination war trotzdem gewaltig, denn erstmals reiste man stundenlang schneller, als ein Pferd es durchhält. Damals hatte noch jede Stadt ihre eigene Sonnenzeit, in Bremen gingen die Uhren gut eine Viertelstunde hinter Berlin nach und erst der Fahrplan erzwang die gemeinsame Stunde, in Deutschland gesetzlich ab 1893. Der Telegraf trennte unterdessen die Nachricht vom Boten: 1858 tauschten die britische Königin und der amerikanische Präsident Grussbotschaften durch ein Kabel am Grund des Atlantiks. Raum und Zeit, bis dahin Grössen der Natur, wurden zu Grössen der Technik. Wer heute über das Tempo der KI staunt oder erschrickt, macht dieselbe Erfahrung wie die Menschen der Industrialisierung.
-
-> **Belegt** («als ein Pferd es durchhält»): [Rocket (Lokomotive) (Wikipedia)](https://de.wikipedia.org/wiki/Rocket_(Lokomotive)) — Die Rocket erreichte 47 km/h Höchstgeschwindigkeit; ein Englisches Vollblut läuft laut dem Artikel «Hauspferd» bis zu 70 km/h. Neu war also nicht die Spitze, sondern das Durchhalten; vorher behauptete der Text «schneller, als je ein Pferd gelaufen war». *(geprüft 2026-08-05)*

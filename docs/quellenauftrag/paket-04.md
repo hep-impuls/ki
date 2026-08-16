@@ -56,29 +56,63 @@ Die Industrialisierung reisst die alte Gesellschaft auseinander: Landflucht, Kin
 **[PP-c8bf43]** *(Kartentext · Elektrizität verbindet die Welt)*
 Ein Kabel am Meeresgrund verbindet 1866 Europa und Amerika, Nachrichten brauchen Minuten statt Tage. Dazu kommen Telefon und elektrisches Licht. Strom wird zum Nervensystem der Welt und Entfernung verliert ihre Macht über die Information.
 
+> **Belegt** («verbindet 1866 Europa und Amerika»): [Transatlantisches Telegrafenkabel (Wikipedia)](https://de.wikipedia.org/wiki/Transatlantisches_Telegrafenkabel) — Die Great Eastern verlegte das dauerhafte Kabel von Valentia Island (Irland) nach Heart's Content (Neufundland), Start am 13. Juli 1866, Ankunft am 27. Juli, erstes offizielles Telegramm am 28. Juli 1866. Vorher brauchte eine Nachricht per Dampfschiff etwa zehn Tage, per Kabel Minuten. *(geprüft 2026-08-16)*
+
 **[PP-cb4419]** *(Vertiefung «Mehr lesen» · Elektrizität verbindet die Welt)*
 Der erste Versuch von 1858 hielt nur rund drei Wochen, das Glückwunsch-Telegramm der Queen brauchte fast 16 Stunden für 98 Wörter, dann verstummte das Kabel. 1866 verlegte die Great Eastern, das damals grösste Schiff der Welt, das dauerhafte Kabel von Irland nach Neufundland. Vorher war eine Nachricht per Dampfschiff etwa zehn Tage unterwegs gewesen. 1956 folgte mit TAT-1 das erste Telefonkabel durch den Atlantik, 36 Gespräche gleichzeitig. Heute liegen Glasfaserkabel auf demselben Meeresgrund, 2014 liefen 95 Prozent des Internetverkehrs zwischen den Weltregionen durch Seekabel und neueste Faserpaare übertragen gut ein Terabit pro Sekunde. Auch jede Antwort einer KI nimmt diesen Weg unter dem Meer.
+
+> **Belegt** («fast 16 Stunden für 98 Wörter»): [Transatlantisches Telegrafenkabel (Wikipedia)](https://de.wikipedia.org/wiki/Transatlantisches_Telegrafenkabel) — Das erste Kabel von 1858 funktionierte nur rund drei Wochen, insgesamt 732 Telegramme. Das Grusstelegramm von Queen Victoria an Präsident Buchanan brauchte fast 16 Stunden für 98 Wörter, am 1. September 1858 verschwanden die Signale. *(geprüft 2026-08-16)*
+
+> **Belegt** («TAT-1»): [Transatlantisches Telefonkabel (Wikipedia)](https://de.wikipedia.org/wiki/Transatlantisches_Telefonkabel) — «Das 3600 km lange TAT-1 wurde am 25. September 1956 zwischen Oban (Schottland) und Clarenville (Neufundland) in Betrieb genommen», das erste transatlantische Telefonkabel mit 36 Fernsprechkanälen. *(geprüft 2026-08-16)*
+
+> **Belegt** («95 Prozent des Internetverkehrs»): [Seekabel (Wikipedia)](https://de.wikipedia.org/wiki/Seekabel) — «2014 wurden 95 Prozent des Internetverkehrs zwischen Weltregionen via Unterseekabel übertragen.» Moderne Seekabel sind Glasfaserkabel, «neueste Faserpaare können gut ein Terabit Daten pro Sekunde übertragen». *(geprüft 2026-08-16)*
 
 **[PP-488988]** *(Kartentext · Radio und Fernsehen)*
 Zum ersten Mal hören Millionen dasselbe im selben Moment. Ab 1920 wird Rundfunk zur Alltagspraxis, das Wohnzimmer wird zum Weltempfänger und später kommt das Fernsehbild dazu.
 
+> **Belegt** («das Wohnzimmer wird zum Weltempfänger»): [Geschichte des Hörfunks (Wikipedia)](https://de.wikipedia.org/wiki/Geschichte_des_H%C3%B6rfunks) — Der Sender KDKA in Pittsburgh startete am 2. November 1920 den regelmässigen Sendebetrieb mit einer Liveübertragung der Ergebnisse der amerikanischen Präsidentschaftswahl. *(geprüft 2026-08-16)*
+
 **[PP-e673ea]** *(Vertiefung «Mehr lesen» · Radio und Fernsehen)*
 Den Anfang macht der Sender KDKA in Pittsburgh, der am 2. November 1920 die Ergebnisse der Präsidentschaftswahl überträgt. In der Schweiz sendet 1921 ein Sender beim Basler Zeughaus Signale bis nach Neuenburg, Deutschland folgt 1923. Wie schnell die Praxis sich ausbreitet, zeigen die britischen Radiolizenzen, von 1923 bis 1927 wachsen sie von 100'000 auf 2,4 Millionen. Den Höhepunkt der gemeinsamen Live-Welt erlebt das Fernsehen, die Mondlandung von 1969 verfolgen rund 600 Millionen Menschen gleichzeitig. Der heutige Feed ist der Enkel dieser Praxis, nur wählt jetzt ein Algorithmus mit, was du zu sehen bekommst.
+
+> **Belegt** («2. November 1920»): [Geschichte des Hörfunks (Wikipedia)](https://de.wikipedia.org/wiki/Geschichte_des_H%C3%B6rfunks) — KDKA startete am 2. November 1920 mit den Wahlergebnissen. Zur Schweiz: 1921 sandte ein Sender beim Basler Zeughaus St. Jakob Signale aus, «die in Neuenburg empfangen werden konnten»; der 29. Oktober 1923 gilt als Geburtsstunde des deutschen Rundfunks. Die BBC-Radiolizenzen wuchsen von 1923 bis 1927 von 100'000 auf 2,4 Millionen. *(geprüft 2026-08-16)*
+
+> **Belegt** («verfolgen rund 600 Millionen Menschen gleichzeitig»): [Apollo 11 (Wikipedia)](https://de.wikipedia.org/wiki/Apollo_11) — «Weltweit verfolgten rund 600 Millionen Menschen die Fernsehübertragung der Mondlandung 1969.» *(geprüft 2026-08-16)*
 
 **[PP-966d30]** *(Kartentext · Das Ende der Sklaverei)*
 In Haiti erheben sich 1791 die Versklavten und erkämpfen bis 1804 den ersten Staat, den ehemals Versklavte gründen. Es folgt ein Jahrhundert der Verbote, bis 1888 auch das letzte Land Amerikas die Sklaverei beendet.
 
+> **Belegt** («erheben sich 1791»): [Haitianische Revolution (Wikipedia)](https://de.wikipedia.org/wiki/Haitianische_Revolution) — Die Revolution begann mit dem Sklavenaufstand in der Nacht vom 22. auf den 23. August 1791 und endete mit der Unabhängigkeitserklärung am 1. Januar 1804. Haiti war der erste unabhängige Staat Lateinamerikas und der erste, der von ehemals Versklavten geformt wurde. *(geprüft 2026-08-16)*
+
 **[PP-030a9d]** *(Vertiefung «Mehr lesen» · Das Ende der Sklaverei)*
 Der Aufstand beginnt in der Nacht auf den 23. August 1791, am 1. Januar 1804 erklärt Haiti als erster Staat Lateinamerikas die Unabhängigkeit. Das Britische Empire erklärt mit dem Slavery Abolition Act von 1833 die Versklavten seiner Kolonien ab dem 1. August 1834 für frei, die USA schaffen die Sklaverei 1865 mit dem 13. Verfassungszusatz ab und in Brasilien erklärt die Lei Áurea am 13. Mai 1888 nach Massenfluchten der Versklavten die Sklaverei für erloschen. Eine Ordnung, die Jahrhunderte als selbstverständlich galt, erweist sich als gemacht und wird beendet, erkämpft zuerst von denen, die sie am härtesten traf.
+
+> **Belegt** («1. Januar 1804»): [Haitianische Revolution (Wikipedia)](https://de.wikipedia.org/wiki/Haitianische_Revolution) — Unabhängigkeitserklärung am 1. Januar 1804, «den ersten unabhängigen Staat in Lateinamerika und den ersten, der durch ehemalige Sklaven geformt wurde». *(geprüft 2026-08-16)*
+
+> **Belegt** («Slavery Abolition Act»): [Abolitionismus (Wikipedia)](https://de.wikipedia.org/wiki/Abolitionismus) — «Am 28. August 1833 wurde der Slavery Abolition Act verabschiedet, mit dem vom 1. August 1834 alle Sklaven im britischen Kolonialreich für frei erklärt wurden.» Die USA schafften die Sklaverei «erst mit dem 13. Verfassungszusatz» von 1865 endgültig ab. *(geprüft 2026-08-16)*
+
+> **Belegt** («Lei Áurea»): [Abolitionismus (Wikipedia)](https://de.wikipedia.org/wiki/Abolitionismus) — «Vor dem Hintergrund von Massenfluchten von Sklaven von ihren Plantagen nahm der brasilianische Senat am 13. Mai 1888 die Lei Áurea an, das die Institution der Sklaverei für erloschen erklärte.» Brasilien war damit das letzte Land Amerikas. *(geprüft 2026-08-16)*
 
 **[PP-fde1f8]** *(Kartentext · Stimmrecht für alle)*
 Neuseeland führt 1893 als erstes das allgemeine Frauenwahlrecht ein, Land um Land folgt, die Schweiz erst 1971. Wer mitentscheiden darf, ist keine Naturtatsache, der Kreis wurde immer dann weiter, wenn Menschen es erkämpft haben.
 
+> **Belegt** («Neuseeland führt 1893 als erstes»): [Frauenwahlrecht (Wikipedia)](https://de.wikipedia.org/wiki/Frauenwahlrecht) — «Neuseeland führte bereits 1893 als erste selbstregierte Kolonie das universelle aktive Frauenwahlrecht ein.» Der SRF-Beitrag zum Jubiläum formuliert, Neuseeland sei «1893 das erste selbstverwaltete Land der Welt» gewesen, «das allen Frauen das Wahlrecht ermöglichte». *(geprüft 2026-08-16)*
+
 **[PP-3a11c2]** *(Vertiefung «Mehr lesen» · Stimmrecht für alle)*
 Finnland lässt 1906 als erstes Land Europas Frauen wählen und auch gewählt werden. In der Schweiz sagen die stimmberechtigten Männer am 7. Februar 1971 mit 65,7 Prozent Ja, als eines der letzten Länder Europas. In Appenzell Innerrhoden führt erst 1991 ein Bundesgerichtsentscheid das Frauenstimmrecht ein, gegen den Mehrheitsentscheid der Landsgemeinde vom April 1990. Im selben Jahrhundert kämpfen andere um volle Zugehörigkeit, der Civil Rights Act verbietet 1964 in den USA die Diskriminierung nach Hautfarbe, Religion, Geschlecht und Herkunft. Im Afrikanischen Jahr 1960 werden achtzehn Kolonien unabhängig. Der Bogen zur Landsgemeinde von Glarus im Kant-Fallbeispiel liegt nahe, wo die Grenze des Mitentscheidens verläuft, wird gesetzt und bleibt verhandelbar.
 
+> **Belegt** («65,7 Prozent»): [SRF, 29. Januar 2021: «15 Fakten zur Gleichstellung in der Schweiz»](https://www.srf.ch/radio-srf-3/50-jahre-frauenstimmrecht-15-fakten-zur-gleichstellung-in-der-schweiz) — «Am 7. Februar 1971 stimmten die Schweizer Männer an der Urne mit 65,7 Prozent einer Verfassungsänderung zu», die Schweiz als eines der letzten Länder Europas. Und «1991 im Kanton Appenzell Innerrhoden per Bundesgerichtsentscheid das Frauenstimmrecht eingeführt. Dies entgegen einem Mehrheitsentscheid der Männer an der Landsgemeinde im April 1990.» *(geprüft 2026-08-16)*
+
+> **Belegt** («Finnland lässt 1906»): [Frauenwahlrecht (Wikipedia)](https://de.wikipedia.org/wiki/Frauenwahlrecht) — Finnland war 1906 das erste Land Europas, in dem Frauen wählen durften und auch tatsächlich ins Parlament gewählt wurden. *(geprüft 2026-08-16)*
+
+> **Belegt** («Civil Rights Act»): [Civil Rights Act von 1964 (Wikipedia)](https://de.wikipedia.org/wiki/Civil_Rights_Act_von_1964) — Das Gesetz verbietet «Diskriminierung aufgrund von Rasse, Hautfarbe, Religion, Geschlecht oder nationaler Herkunft», unterzeichnet am 2. Juli 1964 nach den Protesten der Bürgerrechtsbewegung. *(geprüft 2026-08-16)*
+
+> **Belegt** («Afrikanischen Jahr 1960»): [Afrikanisches Jahr (Wikipedia)](https://de.wikipedia.org/wiki/Afrikanisches_Jahr) — 1960 erlangten 18 Kolonien in Afrika die Unabhängigkeit (14 französische, 2 britische, 1 belgische, 1 italienische); weil sich die beiden Somaliland-Gebiete sofort vereinigten, ist oft von 17 neuen Staaten die Rede. Darum heisst 1960 das «Afrikanische Jahr». *(geprüft 2026-08-16)*
+
 **[PP-3c741b]** *(Verunsicherungs-Stopp · Stimmrecht für alle)*
 Bis 1971 war die Hälfte der Schweizer Bevölkerung vom eidgenössischen Entscheiden ausgeschlossen und den meisten galt das als selbstverständlich. Verunsichernd ist im Rückblick weniger der Wandel als die Frage, welcher heutige Ausschluss uns einmal genauso unverständlich sein wird.
+
+> **Belegt** («vom eidgenössischen Entscheiden ausgeschlossen»): [SRF, 29. Januar 2021: «15 Fakten zur Gleichstellung in der Schweiz»](https://www.srf.ch/radio-srf-3/50-jahre-frauenstimmrecht-15-fakten-zur-gleichstellung-in-der-schweiz) — Bis zur Abstimmung vom 7. Februar 1971 hatten Frauen in der Schweiz auf Bundesebene weder Stimm- noch Wahlrecht; die Männer nahmen die Verfassungsänderung mit 65,7 Prozent an. *(geprüft 2026-08-16)*
 
 **[PP-d13f6a]** *(Kartentext · Der Computer)*
 Im Schatten des Kriegs entstehen die ersten programmierbaren Rechner, etwa Zuses Z3, Colossus und ENIAC. Turings Idee der universellen Maschine wird Wirklichkeit.
@@ -194,25 +228,47 @@ Den Anstoss gab ein amerikanischer Spediteur. Malcom McLean liess 1956 erstmals 
 
 > **Belegt** («quer stehendes Containerschiff im Suezkanal»): [Ever Given (Wikipedia)](https://de.wikipedia.org/wiki/Ever_Given) — Die Ever Given wurde bekannt, als sie «am 23. März 2021 im Suezkanal bei starkem Wind an einer Uferböschung des Kanals auf Grund lief, sich schräg stellte und dadurch die Schifffahrtsrinne des Kanals sechs Tage lang blockierte.» *(geprüft 2026-08-11)*
 
+**[PP-50ab9e]** *(Kartentext · Die moderne Demokratie)*
+Am 4. Juli 1776 erklären die amerikanischen Kolonien ihre Unabhängigkeit, mit einem Satz, der seither um die Welt geht, «all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness». Hier beginnt die moderne Demokratie. Die Rechte galten allerdings zunächst nur frei geborenen, weissen Männern in vollem Umfang, nicht aber Frauen, Sklaven und freien Schwarzen. Jeffersons Verurteilung der Sklaverei wurde aus dem Entwurf gestrichen, um die sklavenhaltenden Kolonien für die gemeinsame Sache zu gewinnen.
+
+> **Belegt** («4. Juli 1776»): [Unabhängigkeitserklärung der Vereinigten Staaten (Wikipedia)](https://de.wikipedia.org/wiki/Unabh%C3%A4ngigkeitserkl%C3%A4rung_der_Vereinigten_Staaten) — Angenommen am 4. Juli 1776. Der zitierte Satz lautet im Original «all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness». *(geprüft 2026-08-16)*
+
+> **Belegt** («frei geborenen, weissen Männern»): [Unabhängigkeitserklärung der Vereinigten Staaten (Wikipedia)](https://de.wikipedia.org/wiki/Unabh%C3%A4ngigkeitserkl%C3%A4rung_der_Vereinigten_Staaten) — Die verkündeten Rechte kamen «zunächst nur frei geborenen, weissen Männern in vollem Umfang» zu, «nicht aber Frauen, Sklaven und freien Schwarzen». *(geprüft 2026-08-16)*
+
+> **Belegt** («Verurteilung der Sklaverei»): [Unabhängigkeitserklärung der Vereinigten Staaten (Wikipedia)](https://de.wikipedia.org/wiki/Unabh%C3%A4ngigkeitserkl%C3%A4rung_der_Vereinigten_Staaten) — Jeffersons Entwurf enthielt eine Verurteilung der Sklaverei, die gestrichen wurde, um die Zustimmung der sklavenhaltenden Kolonien zu gewinnen. *(geprüft 2026-08-16)*
+
+**[PP-b7e910]** *(Vertiefung «Mehr lesen» · Die moderne Demokratie)*
+Graeber und Wengrow argumentieren, die Ideale seien nicht allein in europäischen Studierstuben entstanden. Der Wendat-Staatsmann Kondiaronk (1649–1701) kritisierte die europäischen Verhältnisse scharf und über die Dialoge des Baron de Lahontan (1666–1716) erreichte diese «indigene Kritik» die Salons der Aufklärung. Auf das europäische Publikum habe sie «wie ein Systemschock» gewirkt, sie «eröffnete … Möglichkeiten der menschlichen Emanzipation, die sich, einmal dargelegt, kaum mehr ignorieren liessen». Kritiker halten die Dialoge für erfunden. Die beiden Autoren entgegnen, in Europa sei die Kritik ernst genommen worden und genau darin liege ihre Wirkung. So gelesen ist die Demokratie ein Gewebe aus mehreren Welten und keine rein westliche Erfindung.
+
+**[PP-fa5294]** *(Kartentext · Afrikas Bibliotheken)*
+Wissen sammeln, ordnen und weitergeben ist eine Praxis, die in Afrika lange vor der europäischen Universität blühte. In Alexandria stand die bedeutendste antike Bibliothek, sie sollte alle Wissensgebiete abdecken. Fast zwei Jahrtausende später lehrten Gelehrte in Timbuktu an der Sankoré-Moschee Sprache, Rhetorik, Astrologie und Rechtsprechung. Das Bild vom schriftlosen Afrika war immer falsch.
+
+> **Belegt** («bedeutendste antike Bibliothek»): [Bibliothek von Alexandria (Wikipedia)](https://de.wikipedia.org/wiki/Bibliothek_von_Alexandria) — Die Bibliothek von Alexandria war «die bedeutendste antike Bibliothek»; ihr Bestand sollte «alle Wissensgebiete» abdecken. *(geprüft 2026-08-16)*
+
+> **Belegt** («Rhetorik, Astrologie und Rechtsprechung»): [Timbuktu (Wikipedia)](https://de.wikipedia.org/wiki/Timbuktu) — An der Sankoré-Moschee bestand «eine Madrasa, vergleichbar einer mittelalterlichen Universität, an der die arabische Sprache, Rhetorik, Astrologie, die Rechtsprechung und die Schriften des Korans gelehrt wurden». *(geprüft 2026-08-16)*
+
+**[PP-15e88f]** *(Vertiefung «Mehr lesen» · Afrikas Bibliotheken)*
+Ptolemaios I. errichtete die Bibliothek von Alexandria vermutlich zwischen 290 und 282 v. Chr. und sie sollte alle Wissensgebiete umfassen; moderne Schätzungen sprechen von 400'000 bis 500'000 Rollen, umstritten sind diese Zahlen bis heute. In Timbuktu, das seine Blütezeit unter der Herrschaft der Songhai erlebte, stand an der Sankoré-Moschee «eine Madrasa, vergleichbar einer mittelalterlichen Universität, an der die arabische Sprache, Rhetorik, Astrologie, die Rechtsprechung und die Schriften des Korans gelehrt wurden», dazu kamen 150 bis 180 Koranschulen. Seit 1988 gehört die Stadt zum UNESCO-Welterbe. Der Traum, alles Wissen an einem Ort zu haben, ist also alt und er lebt in den Datensammlungen weiter, aus denen eine KI heute lernt.
+
+> **Belegt** («zwischen 290 und 282 v. Chr.»): [Bibliothek von Alexandria (Wikipedia)](https://de.wikipedia.org/wiki/Bibliothek_von_Alexandria) — Ptolemaios I. liess die Bibliothek «vermutlich zwischen 290 und 282 v. Chr.» errichten. *(geprüft 2026-08-16)*
+
+> **Belegt** («400'000 bis 500'000 Rollen»): [Bibliothek von Alexandria (Wikipedia)](https://de.wikipedia.org/wiki/Bibliothek_von_Alexandria) — Moderne Schätzungen des Bestands reichen von 400'000 bis 500'000 Rollen; die überlieferten Zahlen sind in der Forschung umstritten. Darum steht die Einschränkung im Text. *(geprüft 2026-08-16)*
+
+> **Belegt** («150 bis 180 Koranschulen»): [Timbuktu (Wikipedia)](https://de.wikipedia.org/wiki/Timbuktu) — Neben der Madrasa an der Sankoré-Moschee gab es in der Stadt «150 bis 180 Koranschulen». Die Blütezeit fällt in die Herrschaft der Songhai. Eine Gesamtzahl der erhaltenen Handschriften nennt der Artikel nicht, darum steht im Text keine. *(geprüft 2026-08-16)*
+
+> **Belegt** («Seit 1988»): [Timbuktu (Wikipedia)](https://de.wikipedia.org/wiki/Timbuktu) — Timbuktu gehört seit 1988 zum UNESCO-Welterbe. *(geprüft 2026-08-16)*
+
+**[PP-b9ee81]** *(Kartentext · Selbstbestimmte Liebe)*
+In der Nacht vom 27. auf den 28. Juni 1969 wehrten sich die Gäste des Stonewall Inn in der Christopher Street in New York gegen eine Polizeirazzia. Der LGBT-Bewegung gilt das Ereignis weltweit als Wendepunkt im Kampf für Gleichbehandlung und Anerkennung. Im Jahr darauf zog der erste Gedenkmarsch durch dieselben Strassen, daraus wurde der Christopher Street Day. Nach dem Ende der Sklaverei und dem Stimmrecht für alle ist das die dritte Welle in diesem Teppich, in der Menschen sich holen, was ihnen verwehrt war.
+
+> **Belegt** («Stonewall Inn»): [Stonewall (Wikipedia)](https://de.wikipedia.org/wiki/Stonewall) — In der Nacht vom 27. auf den 28. Juni 1969 wehrten sich die Gäste der Bar Stonewall Inn in der Christopher Street in New York gegen eine Polizeirazzia. *(geprüft 2026-08-16)*
+
+> **Belegt** («Christopher Street Day»): [Stonewall (Wikipedia)](https://de.wikipedia.org/wiki/Stonewall) — Das Ereignis gilt der LGBT-Bewegung weltweit «als Wendepunkt im Kampf für Gleichbehandlung und Anerkennung»; der Gedenkmarsch im Jahr darauf wurde zum Christopher Street Day. *(geprüft 2026-08-16)*
+
+**[PP-570085]** *(Vertiefung «Mehr lesen» · Selbstbestimmte Liebe)*
+Die Niederlande öffneten 2001 als erstes Land der Welt die Ehe für gleichgeschlechtliche Paare. In der Schweiz sagten die Stimmenden am 26. September 2021 mit 64,1 Prozent Ja zur Ehe für alle und kein einziger Kanton lehnte ab. Zwischen jener Nacht in der Christopher Street und diesem Abstimmungssonntag liegen zweiundfünfzig Jahre, ungefähr ein Menschenleben.
+
+> **Belegt** («64,1 Prozent»): [SRF, 26. September 2021: Ja zur Ehe für alle](https://www.srf.ch/news/abstimmungen/ehe-fuer-alle/ehe-fuer-alle-srg-hochrechnung-64-sagen-ja-zu-gleichgeschlechtlichen-ehen) — Die Vorlage «Ehe für alle» wurde am 26. September 2021 mit 64,1 Prozent Ja angenommen, kein Kanton lehnte sie ab. *(geprüft 2026-08-16)*
+
 **[PP-66f41a]** *(Fliesstext · Wege der Orientierung)*
 Der erste Bereich fragt, was den Menschen im Kern ausmacht, unabhängig davon, ob eine KI es auch könnte, mit Aristoteles, Kant, Hegel, Arendt, Heidegger, Sloterdijk und Hustvedt. Der zweite erklärt, wie wir in komplexen Gesellschaften Orientierung finden, obwohl niemand mehr das Ganze überblickt, mit Latour und Nassehi. Der dritte zeigt, dass sich Mensch und Maschine nicht trennen lassen, und fragt nach Wegen der Zusammenarbeit oder der bewussten Abgrenzung, mit Latour, Haraway, Harari, Gabriel und dem japanischen «We-Turn» von Yasuo Deguchi. Der vierte fragt nach der Lebenskunst, wie man sein Leben tatsächlich ändern kann, mit den Stoikern, Foucault, Wilhelm Schmid, Nussbaum, Merleau-Ponty und Rosa.
-
-### Thema 02 · Die acht Epochen
-
-**[EP-ea7ebd]** *(Einleitung · Antike)*
-Lange war klar, wer bestimmt: Wer in eine vornehme Familie geboren wurde, hatte das Sagen. Und was die alten Göttergeschichten erzählten, glaubte man einfach. In den griechischen Städten und in Rom bricht das auf. Regeln macht jetzt nicht mehr der Himmel, sondern eine Versammlung von Menschen, und wer etwas erreichen will, muss es begründen. Das ist eine grosse Freiheit. Und es ist unbequem: Wenn man alles begründen kann, kann man auch alles anzweifeln. Wem soll man dann noch glauben?
-
-**[EP-559324]** *(Hintergrund zum Bild · Antike)*
-Raffael (1483–1520) gehört zu den bedeutendsten Malern der italienischen Hochrenaissance und schuf dieses Fresko zwischen 1509 und 1511 für die Bibliothek von Papst Julius II. im Vatikan. Es zeigt keine reale Szene, sondern versammelt in einer idealen Halle über fünfzig Denker der Antike. Im Zentrum stehen Platon und Aristoteles, umgeben von Figuren, die traditionell als Sokrates, Pythagoras, Euklid, Ptolemäus und Diogenes gedeutet werden. Viele weitere Zuordnungen sind in der Forschung allerdings unsicher oder umstritten. Am rechten Rand hat sich Raffael selbst ins Bild gemalt.
-
-**[EP-678087]** *(Kartentext · Antike)*
-Raffael malt 1509–1511 im Vatikan eine ideale Halle, in der sich die Denker aller Zeiten begegnen. Es ist kein realer Ort und keine reale Szene, sondern ein Bild des Denkens selbst. Es ist die Antike, wie die Renaissance sie als ihr eigenes Fundament verehrte.
-
-**[EP-1bb104]** *(Kartentext · Antike)*
-Im Zentrum steht der Grundkonflikt der Erkenntnis in einer einzigen Geste. Platon zeigt mit dem Finger nach oben, in die Welt der ewigen Ideen. Aristoteles hält die Hand flach über den Boden, zur beobachtbaren Wirklichkeit. Genau hier beginnt die Schablone, die später die gesamte Wissenschaft trägt.
-
-**[EP-4b2cab]** *(Kartentext · Antike)*
-Die Figur links im olivgrünen Gewand gilt als Sokrates. Umringt von Zuhörern zählt er an den Fingern seine Argumente ab und führt sein Frage-und-Antwort-Spiel vor. Diese Methode, alles so lange zu hinterfragen, bis scheinbare Gewissheiten zerbrechen, machte ihn zur unbequemsten Figur Athens und kostete ihn das Leben.
-
-**[EP-68478f]** *(Hintergrund zum Bild · Antike)*
-Jacques-Louis David (1748–1825) war der führende Maler des französischen Klassizismus und malte dieses Werk 1787 in Paris, zwei Jahre vor der Französischen Revolution. Der klare und strenge Aufbau ist typisch für den Klassizismus, der sich die Antike zum Vorbild nahm. Dargestellt ist die letzte Stunde des griechischen Philosophen Sokrates im Jahr 399 v. Chr., als er in Athen zum Tod durch den Schierlingsbecher verurteilt ist. Aufrecht und gefasst greift er nach dem Becher und belehrt zugleich seine erschütterten Schüler. Am Fussende des Bettes sitzt der greise Platon, der das Gespräch später überlieferte. David nutzt die Szene als Lehrstück über Standhaftigkeit gegenüber ungerechter Macht.

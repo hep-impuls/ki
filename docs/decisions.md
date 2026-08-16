@@ -10,6 +10,45 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-16 — Demokratie, Afrikas Bibliotheken, selbstbestimmte Liebe, Rawls
+
+**Die Demokratie wird mit der indigenen Kritik erzählt.** Die Karte «Die
+moderne Demokratie» beginnt beim 4. Juli 1776 und beim Satz über die gleich
+geborenen Menschen, sie sagt aber im gleichen Atemzug, für wen er zunächst
+nicht galt (nicht für Frauen, Sklaven und freie Schwarze; Jeffersons
+Verurteilung der Sklaverei wurde gestrichen). Die Vertiefung führt Graeber und
+Wengrow ein, den Wendat-Staatsmann Kondiaronk und den Weg der Kritik über
+Lahontans Dialoge in die Salons der Aufklärung. Das steht ausdrücklich als
+deren Position («Graeber und Wengrow argumentieren…»), samt dem Einwand, die
+Dialoge seien erfunden. Grund für diese Anlage: Eine Demokratie, die nur als
+westliche Erfindung erscheint, lässt sich weder gegen ihre eigene Geschichte
+noch gegen ihre heutigen Ausschlüsse befragen. Als Gewebe mehrerer Welten
+gelesen, passt sie zum Teppich und lädt zum Weiterfragen ein.
+
+**Afrikas Bibliotheken sind eine Karte, nicht zwei.** Alexandria (ab ~280
+v. Chr.) und Timbuktu (bis ins 16. Jh.) liegen zweitausend Jahre auseinander,
+gemeinsam ist ihnen die *Praxis*, nämlich Wissen sammeln, ordnen und
+weitergeben, lange vor der europäischen Universität. Zwei Karten hätten daraus zwei Orte gemacht;
+eine Karte macht daraus einen Faden, der beim Kaffeehaus und beim Haus der
+Weisheit weiterläuft und im Traum von der einen Datensammlung endet, aus der
+KI heute lernt. Bewusst **keine Manuskript-Gesamtzahl** für Timbuktu, die
+Quelle nennt keine, und die im Netz kursierenden Zahlen sind nicht prüfbar.
+
+**Rawls gehört zu den Klassikern der Frage nach dem Menschen.** Er steht neu
+zwischen Arendt und Heidegger, weil seine Frage auch ohne KI besteht. Wie leben
+Menschen mit unvereinbaren Vorstellungen vom guten Leben zusammen? Seine
+Antwort trennt Recht von Moral. Nötig ist nicht eine Moral für alle, sondern
+faire Regeln, unter denen verschiedene Vorstellungen lebbar bleiben. Der
+Schleier des Nichtwissens ist dafür das Werkzeug, der übergreifende Konsens das
+Ziel, und beides trägt das Fallbeispiel, ohne Rawls Aussagen über Maschinen in
+den Mund zu legen. Es endet mit einer Frage, nicht mit einer These von ihm.
+
+**Nachträge im Teppich kommen ans Ende des Arrays.** Die Spuren merken sich den
+Index (`philosophische-perspektive:teppich:12`), ein Einschub in der Mitte
+verschiebt alle folgenden Punkte und wer die Seite schon besucht hat, findet
+fremde Karten angewählt. Für das Bild ist die Reihenfolge gleichgültig, die
+Fäden sortieren selbst nach x. Der Kommentar dazu steht bei den Punkten.
+
 ## 2026-08-14 — Bilddeutungen sind keine Bildbefunde (Christof)
 
 In den Bild-Führungen stand Kunsthistoriker-Deutung als Tatsache, am

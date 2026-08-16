@@ -1162,24 +1162,46 @@ Die Industrialisierung reisst die alte Gesellschaft auseinander: Landflucht, Kin
 **[PP-c8bf43]** *(Kartentext)*
 Ein Kabel am Meeresgrund verbindet 1866 Europa und Amerika, Nachrichten brauchen Minuten statt Tage. Dazu kommen Telefon und elektrisches Licht. Strom wird zum Nervensystem der Welt und Entfernung verliert ihre Macht über die Information.
 
+> **Belegt** («verbindet 1866 Europa und Amerika»): [Transatlantisches Telegrafenkabel (Wikipedia)](https://de.wikipedia.org/wiki/Transatlantisches_Telegrafenkabel) — Die Great Eastern verlegte das dauerhafte Kabel von Valentia Island (Irland) nach Heart's Content (Neufundland), Start am 13. Juli 1866, Ankunft am 27. Juli, erstes offizielles Telegramm am 28. Juli 1866. Vorher brauchte eine Nachricht per Dampfschiff etwa zehn Tage, per Kabel Minuten. *(geprüft 2026-08-16)*
+
 **[PP-cb4419]** *(Vertiefung «Mehr lesen»)*
 Der erste Versuch von 1858 hielt nur rund drei Wochen, das Glückwunsch-Telegramm der Queen brauchte fast 16 Stunden für 98 Wörter, dann verstummte das Kabel. 1866 verlegte die Great Eastern, das damals grösste Schiff der Welt, das dauerhafte Kabel von Irland nach Neufundland. Vorher war eine Nachricht per Dampfschiff etwa zehn Tage unterwegs gewesen. 1956 folgte mit TAT-1 das erste Telefonkabel durch den Atlantik, 36 Gespräche gleichzeitig. Heute liegen Glasfaserkabel auf demselben Meeresgrund, 2014 liefen 95 Prozent des Internetverkehrs zwischen den Weltregionen durch Seekabel und neueste Faserpaare übertragen gut ein Terabit pro Sekunde. Auch jede Antwort einer KI nimmt diesen Weg unter dem Meer.
+
+> **Belegt** («fast 16 Stunden für 98 Wörter»): [Transatlantisches Telegrafenkabel (Wikipedia)](https://de.wikipedia.org/wiki/Transatlantisches_Telegrafenkabel) — Das erste Kabel von 1858 funktionierte nur rund drei Wochen, insgesamt 732 Telegramme. Das Grusstelegramm von Queen Victoria an Präsident Buchanan brauchte fast 16 Stunden für 98 Wörter, am 1. September 1858 verschwanden die Signale. *(geprüft 2026-08-16)*
+
+> **Belegt** («TAT-1»): [Transatlantisches Telefonkabel (Wikipedia)](https://de.wikipedia.org/wiki/Transatlantisches_Telefonkabel) — «Das 3600 km lange TAT-1 wurde am 25. September 1956 zwischen Oban (Schottland) und Clarenville (Neufundland) in Betrieb genommen», das erste transatlantische Telefonkabel mit 36 Fernsprechkanälen. *(geprüft 2026-08-16)*
+
+> **Belegt** («95 Prozent des Internetverkehrs»): [Seekabel (Wikipedia)](https://de.wikipedia.org/wiki/Seekabel) — «2014 wurden 95 Prozent des Internetverkehrs zwischen Weltregionen via Unterseekabel übertragen.» Moderne Seekabel sind Glasfaserkabel, «neueste Faserpaare können gut ein Terabit Daten pro Sekunde übertragen». *(geprüft 2026-08-16)*
 
 ### Radio und Fernsehen
 
 **[PP-488988]** *(Kartentext)*
 Zum ersten Mal hören Millionen dasselbe im selben Moment. Ab 1920 wird Rundfunk zur Alltagspraxis, das Wohnzimmer wird zum Weltempfänger und später kommt das Fernsehbild dazu.
 
+> **Belegt** («das Wohnzimmer wird zum Weltempfänger»): [Geschichte des Hörfunks (Wikipedia)](https://de.wikipedia.org/wiki/Geschichte_des_H%C3%B6rfunks) — Der Sender KDKA in Pittsburgh startete am 2. November 1920 den regelmässigen Sendebetrieb mit einer Liveübertragung der Ergebnisse der amerikanischen Präsidentschaftswahl. *(geprüft 2026-08-16)*
+
 **[PP-e673ea]** *(Vertiefung «Mehr lesen»)*
 Den Anfang macht der Sender KDKA in Pittsburgh, der am 2. November 1920 die Ergebnisse der Präsidentschaftswahl überträgt. In der Schweiz sendet 1921 ein Sender beim Basler Zeughaus Signale bis nach Neuenburg, Deutschland folgt 1923. Wie schnell die Praxis sich ausbreitet, zeigen die britischen Radiolizenzen, von 1923 bis 1927 wachsen sie von 100'000 auf 2,4 Millionen. Den Höhepunkt der gemeinsamen Live-Welt erlebt das Fernsehen, die Mondlandung von 1969 verfolgen rund 600 Millionen Menschen gleichzeitig. Der heutige Feed ist der Enkel dieser Praxis, nur wählt jetzt ein Algorithmus mit, was du zu sehen bekommst.
+
+> **Belegt** («2. November 1920»): [Geschichte des Hörfunks (Wikipedia)](https://de.wikipedia.org/wiki/Geschichte_des_H%C3%B6rfunks) — KDKA startete am 2. November 1920 mit den Wahlergebnissen. Zur Schweiz: 1921 sandte ein Sender beim Basler Zeughaus St. Jakob Signale aus, «die in Neuenburg empfangen werden konnten»; der 29. Oktober 1923 gilt als Geburtsstunde des deutschen Rundfunks. Die BBC-Radiolizenzen wuchsen von 1923 bis 1927 von 100'000 auf 2,4 Millionen. *(geprüft 2026-08-16)*
+
+> **Belegt** («verfolgen rund 600 Millionen Menschen gleichzeitig»): [Apollo 11 (Wikipedia)](https://de.wikipedia.org/wiki/Apollo_11) — «Weltweit verfolgten rund 600 Millionen Menschen die Fernsehübertragung der Mondlandung 1969.» *(geprüft 2026-08-16)*
 
 ### Das Ende der Sklaverei
 
 **[PP-966d30]** *(Kartentext)*
 In Haiti erheben sich 1791 die Versklavten und erkämpfen bis 1804 den ersten Staat, den ehemals Versklavte gründen. Es folgt ein Jahrhundert der Verbote, bis 1888 auch das letzte Land Amerikas die Sklaverei beendet.
 
+> **Belegt** («erheben sich 1791»): [Haitianische Revolution (Wikipedia)](https://de.wikipedia.org/wiki/Haitianische_Revolution) — Die Revolution begann mit dem Sklavenaufstand in der Nacht vom 22. auf den 23. August 1791 und endete mit der Unabhängigkeitserklärung am 1. Januar 1804. Haiti war der erste unabhängige Staat Lateinamerikas und der erste, der von ehemals Versklavten geformt wurde. *(geprüft 2026-08-16)*
+
 **[PP-030a9d]** *(Vertiefung «Mehr lesen»)*
 Der Aufstand beginnt in der Nacht auf den 23. August 1791, am 1. Januar 1804 erklärt Haiti als erster Staat Lateinamerikas die Unabhängigkeit. Das Britische Empire erklärt mit dem Slavery Abolition Act von 1833 die Versklavten seiner Kolonien ab dem 1. August 1834 für frei, die USA schaffen die Sklaverei 1865 mit dem 13. Verfassungszusatz ab und in Brasilien erklärt die Lei Áurea am 13. Mai 1888 nach Massenfluchten der Versklavten die Sklaverei für erloschen. Eine Ordnung, die Jahrhunderte als selbstverständlich galt, erweist sich als gemacht und wird beendet, erkämpft zuerst von denen, die sie am härtesten traf.
+
+> **Belegt** («1. Januar 1804»): [Haitianische Revolution (Wikipedia)](https://de.wikipedia.org/wiki/Haitianische_Revolution) — Unabhängigkeitserklärung am 1. Januar 1804, «den ersten unabhängigen Staat in Lateinamerika und den ersten, der durch ehemalige Sklaven geformt wurde». *(geprüft 2026-08-16)*
+
+> **Belegt** («Slavery Abolition Act»): [Abolitionismus (Wikipedia)](https://de.wikipedia.org/wiki/Abolitionismus) — «Am 28. August 1833 wurde der Slavery Abolition Act verabschiedet, mit dem vom 1. August 1834 alle Sklaven im britischen Kolonialreich für frei erklärt wurden.» Die USA schafften die Sklaverei «erst mit dem 13. Verfassungszusatz» von 1865 endgültig ab. *(geprüft 2026-08-16)*
+
+> **Belegt** («Lei Áurea»): [Abolitionismus (Wikipedia)](https://de.wikipedia.org/wiki/Abolitionismus) — «Vor dem Hintergrund von Massenfluchten von Sklaven von ihren Plantagen nahm der brasilianische Senat am 13. Mai 1888 die Lei Áurea an, das die Institution der Sklaverei für erloschen erklärte.» Brasilien war damit das letzte Land Amerikas. *(geprüft 2026-08-16)*
 
 **[PP-1657f6]** *(Verunsicherungs-Stopp)*
 Menschen zu besitzen galt Jahrhunderte als normal und bricht nun als Unrecht auf. Für die einen ist das die Befreiung, für die anderen stürzt eine ganze Wirtschaftsordnung ein. Die Folgen von Versklavung und Rassismus tragen bis in die Gegenwart.
@@ -1189,11 +1211,23 @@ Menschen zu besitzen galt Jahrhunderte als normal und bricht nun als Unrecht auf
 **[PP-fde1f8]** *(Kartentext)*
 Neuseeland führt 1893 als erstes das allgemeine Frauenwahlrecht ein, Land um Land folgt, die Schweiz erst 1971. Wer mitentscheiden darf, ist keine Naturtatsache, der Kreis wurde immer dann weiter, wenn Menschen es erkämpft haben.
 
+> **Belegt** («Neuseeland führt 1893 als erstes»): [Frauenwahlrecht (Wikipedia)](https://de.wikipedia.org/wiki/Frauenwahlrecht) — «Neuseeland führte bereits 1893 als erste selbstregierte Kolonie das universelle aktive Frauenwahlrecht ein.» Der SRF-Beitrag zum Jubiläum formuliert, Neuseeland sei «1893 das erste selbstverwaltete Land der Welt» gewesen, «das allen Frauen das Wahlrecht ermöglichte». *(geprüft 2026-08-16)*
+
 **[PP-3a11c2]** *(Vertiefung «Mehr lesen»)*
 Finnland lässt 1906 als erstes Land Europas Frauen wählen und auch gewählt werden. In der Schweiz sagen die stimmberechtigten Männer am 7. Februar 1971 mit 65,7 Prozent Ja, als eines der letzten Länder Europas. In Appenzell Innerrhoden führt erst 1991 ein Bundesgerichtsentscheid das Frauenstimmrecht ein, gegen den Mehrheitsentscheid der Landsgemeinde vom April 1990. Im selben Jahrhundert kämpfen andere um volle Zugehörigkeit, der Civil Rights Act verbietet 1964 in den USA die Diskriminierung nach Hautfarbe, Religion, Geschlecht und Herkunft. Im Afrikanischen Jahr 1960 werden achtzehn Kolonien unabhängig. Der Bogen zur Landsgemeinde von Glarus im Kant-Fallbeispiel liegt nahe, wo die Grenze des Mitentscheidens verläuft, wird gesetzt und bleibt verhandelbar.
 
+> **Belegt** («65,7 Prozent»): [SRF, 29. Januar 2021: «15 Fakten zur Gleichstellung in der Schweiz»](https://www.srf.ch/radio-srf-3/50-jahre-frauenstimmrecht-15-fakten-zur-gleichstellung-in-der-schweiz) — «Am 7. Februar 1971 stimmten die Schweizer Männer an der Urne mit 65,7 Prozent einer Verfassungsänderung zu», die Schweiz als eines der letzten Länder Europas. Und «1991 im Kanton Appenzell Innerrhoden per Bundesgerichtsentscheid das Frauenstimmrecht eingeführt. Dies entgegen einem Mehrheitsentscheid der Männer an der Landsgemeinde im April 1990.» *(geprüft 2026-08-16)*
+
+> **Belegt** («Finnland lässt 1906»): [Frauenwahlrecht (Wikipedia)](https://de.wikipedia.org/wiki/Frauenwahlrecht) — Finnland war 1906 das erste Land Europas, in dem Frauen wählen durften und auch tatsächlich ins Parlament gewählt wurden. *(geprüft 2026-08-16)*
+
+> **Belegt** («Civil Rights Act»): [Civil Rights Act von 1964 (Wikipedia)](https://de.wikipedia.org/wiki/Civil_Rights_Act_von_1964) — Das Gesetz verbietet «Diskriminierung aufgrund von Rasse, Hautfarbe, Religion, Geschlecht oder nationaler Herkunft», unterzeichnet am 2. Juli 1964 nach den Protesten der Bürgerrechtsbewegung. *(geprüft 2026-08-16)*
+
+> **Belegt** («Afrikanischen Jahr 1960»): [Afrikanisches Jahr (Wikipedia)](https://de.wikipedia.org/wiki/Afrikanisches_Jahr) — 1960 erlangten 18 Kolonien in Afrika die Unabhängigkeit (14 französische, 2 britische, 1 belgische, 1 italienische); weil sich die beiden Somaliland-Gebiete sofort vereinigten, ist oft von 17 neuen Staaten die Rede. Darum heisst 1960 das «Afrikanische Jahr». *(geprüft 2026-08-16)*
+
 **[PP-3c741b]** *(Verunsicherungs-Stopp)*
 Bis 1971 war die Hälfte der Schweizer Bevölkerung vom eidgenössischen Entscheiden ausgeschlossen und den meisten galt das als selbstverständlich. Verunsichernd ist im Rückblick weniger der Wandel als die Frage, welcher heutige Ausschluss uns einmal genauso unverständlich sein wird.
+
+> **Belegt** («vom eidgenössischen Entscheiden ausgeschlossen»): [SRF, 29. Januar 2021: «15 Fakten zur Gleichstellung in der Schweiz»](https://www.srf.ch/radio-srf-3/50-jahre-frauenstimmrecht-15-fakten-zur-gleichstellung-in-der-schweiz) — Bis zur Abstimmung vom 7. Februar 1971 hatten Frauen in der Schweiz auf Bundesebene weder Stimm- noch Wahlrecht; die Männer nahmen die Verfassungsänderung mit 65,7 Prozent an. *(geprüft 2026-08-16)*
 
 ### Der Computer
 
@@ -1397,6 +1431,57 @@ Den Anstoss gab ein amerikanischer Spediteur. Malcom McLean liess 1956 erstmals 
 > **Belegt** («China trat 2001 bei»): [China-Schock (Wikipedia)](https://de.wikipedia.org/wiki/China-Schock) — «… nach dem Beitritt Chinas zur Welthandelsorganisation (WTO) im Dezember 2001.» Und zur Folge: «Der erste China-Schock entstand aus der Verbindung von Chinas WTO-Beitritt 2001, niedrigen Produktionskosten, einer rasch wachsenden Exportindustrie und der Öffnung westlicher Märkte.» *(geprüft 2026-08-11)*
 
 > **Belegt** («quer stehendes Containerschiff im Suezkanal»): [Ever Given (Wikipedia)](https://de.wikipedia.org/wiki/Ever_Given) — Die Ever Given wurde bekannt, als sie «am 23. März 2021 im Suezkanal bei starkem Wind an einer Uferböschung des Kanals auf Grund lief, sich schräg stellte und dadurch die Schifffahrtsrinne des Kanals sechs Tage lang blockierte.» *(geprüft 2026-08-11)*
+
+### Die moderne Demokratie
+
+**[PP-50ab9e]** *(Kartentext)*
+Am 4. Juli 1776 erklären die amerikanischen Kolonien ihre Unabhängigkeit, mit einem Satz, der seither um die Welt geht, «all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness». Hier beginnt die moderne Demokratie. Die Rechte galten allerdings zunächst nur frei geborenen, weissen Männern in vollem Umfang, nicht aber Frauen, Sklaven und freien Schwarzen. Jeffersons Verurteilung der Sklaverei wurde aus dem Entwurf gestrichen, um die sklavenhaltenden Kolonien für die gemeinsame Sache zu gewinnen.
+
+> **Belegt** («4. Juli 1776»): [Unabhängigkeitserklärung der Vereinigten Staaten (Wikipedia)](https://de.wikipedia.org/wiki/Unabh%C3%A4ngigkeitserkl%C3%A4rung_der_Vereinigten_Staaten) — Angenommen am 4. Juli 1776. Der zitierte Satz lautet im Original «all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness». *(geprüft 2026-08-16)*
+
+> **Belegt** («frei geborenen, weissen Männern»): [Unabhängigkeitserklärung der Vereinigten Staaten (Wikipedia)](https://de.wikipedia.org/wiki/Unabh%C3%A4ngigkeitserkl%C3%A4rung_der_Vereinigten_Staaten) — Die verkündeten Rechte kamen «zunächst nur frei geborenen, weissen Männern in vollem Umfang» zu, «nicht aber Frauen, Sklaven und freien Schwarzen». *(geprüft 2026-08-16)*
+
+> **Belegt** («Verurteilung der Sklaverei»): [Unabhängigkeitserklärung der Vereinigten Staaten (Wikipedia)](https://de.wikipedia.org/wiki/Unabh%C3%A4ngigkeitserkl%C3%A4rung_der_Vereinigten_Staaten) — Jeffersons Entwurf enthielt eine Verurteilung der Sklaverei, die gestrichen wurde, um die Zustimmung der sklavenhaltenden Kolonien zu gewinnen. *(geprüft 2026-08-16)*
+
+**[PP-b7e910]** *(Vertiefung «Mehr lesen»)*
+Graeber und Wengrow argumentieren, die Ideale seien nicht allein in europäischen Studierstuben entstanden. Der Wendat-Staatsmann Kondiaronk (1649–1701) kritisierte die europäischen Verhältnisse scharf und über die Dialoge des Baron de Lahontan (1666–1716) erreichte diese «indigene Kritik» die Salons der Aufklärung. Auf das europäische Publikum habe sie «wie ein Systemschock» gewirkt, sie «eröffnete … Möglichkeiten der menschlichen Emanzipation, die sich, einmal dargelegt, kaum mehr ignorieren liessen». Kritiker halten die Dialoge für erfunden. Die beiden Autoren entgegnen, in Europa sei die Kritik ernst genommen worden und genau darin liege ihre Wirkung. So gelesen ist die Demokratie ein Gewebe aus mehreren Welten und keine rein westliche Erfindung.
+
+### Afrikas Bibliotheken
+
+**[PP-fa5294]** *(Kartentext)*
+Wissen sammeln, ordnen und weitergeben ist eine Praxis, die in Afrika lange vor der europäischen Universität blühte. In Alexandria stand die bedeutendste antike Bibliothek, sie sollte alle Wissensgebiete abdecken. Fast zwei Jahrtausende später lehrten Gelehrte in Timbuktu an der Sankoré-Moschee Sprache, Rhetorik, Astrologie und Rechtsprechung. Das Bild vom schriftlosen Afrika war immer falsch.
+
+> **Belegt** («bedeutendste antike Bibliothek»): [Bibliothek von Alexandria (Wikipedia)](https://de.wikipedia.org/wiki/Bibliothek_von_Alexandria) — Die Bibliothek von Alexandria war «die bedeutendste antike Bibliothek»; ihr Bestand sollte «alle Wissensgebiete» abdecken. *(geprüft 2026-08-16)*
+
+> **Belegt** («Rhetorik, Astrologie und Rechtsprechung»): [Timbuktu (Wikipedia)](https://de.wikipedia.org/wiki/Timbuktu) — An der Sankoré-Moschee bestand «eine Madrasa, vergleichbar einer mittelalterlichen Universität, an der die arabische Sprache, Rhetorik, Astrologie, die Rechtsprechung und die Schriften des Korans gelehrt wurden». *(geprüft 2026-08-16)*
+
+**[PP-15e88f]** *(Vertiefung «Mehr lesen»)*
+Ptolemaios I. errichtete die Bibliothek von Alexandria vermutlich zwischen 290 und 282 v. Chr. und sie sollte alle Wissensgebiete umfassen; moderne Schätzungen sprechen von 400'000 bis 500'000 Rollen, umstritten sind diese Zahlen bis heute. In Timbuktu, das seine Blütezeit unter der Herrschaft der Songhai erlebte, stand an der Sankoré-Moschee «eine Madrasa, vergleichbar einer mittelalterlichen Universität, an der die arabische Sprache, Rhetorik, Astrologie, die Rechtsprechung und die Schriften des Korans gelehrt wurden», dazu kamen 150 bis 180 Koranschulen. Seit 1988 gehört die Stadt zum UNESCO-Welterbe. Der Traum, alles Wissen an einem Ort zu haben, ist also alt und er lebt in den Datensammlungen weiter, aus denen eine KI heute lernt.
+
+> **Belegt** («zwischen 290 und 282 v. Chr.»): [Bibliothek von Alexandria (Wikipedia)](https://de.wikipedia.org/wiki/Bibliothek_von_Alexandria) — Ptolemaios I. liess die Bibliothek «vermutlich zwischen 290 und 282 v. Chr.» errichten. *(geprüft 2026-08-16)*
+
+> **Belegt** («400'000 bis 500'000 Rollen»): [Bibliothek von Alexandria (Wikipedia)](https://de.wikipedia.org/wiki/Bibliothek_von_Alexandria) — Moderne Schätzungen des Bestands reichen von 400'000 bis 500'000 Rollen; die überlieferten Zahlen sind in der Forschung umstritten. Darum steht die Einschränkung im Text. *(geprüft 2026-08-16)*
+
+> **Belegt** («150 bis 180 Koranschulen»): [Timbuktu (Wikipedia)](https://de.wikipedia.org/wiki/Timbuktu) — Neben der Madrasa an der Sankoré-Moschee gab es in der Stadt «150 bis 180 Koranschulen». Die Blütezeit fällt in die Herrschaft der Songhai. Eine Gesamtzahl der erhaltenen Handschriften nennt der Artikel nicht, darum steht im Text keine. *(geprüft 2026-08-16)*
+
+> **Belegt** («Seit 1988»): [Timbuktu (Wikipedia)](https://de.wikipedia.org/wiki/Timbuktu) — Timbuktu gehört seit 1988 zum UNESCO-Welterbe. *(geprüft 2026-08-16)*
+
+### Selbstbestimmte Liebe
+
+**[PP-b9ee81]** *(Kartentext)*
+In der Nacht vom 27. auf den 28. Juni 1969 wehrten sich die Gäste des Stonewall Inn in der Christopher Street in New York gegen eine Polizeirazzia. Der LGBT-Bewegung gilt das Ereignis weltweit als Wendepunkt im Kampf für Gleichbehandlung und Anerkennung. Im Jahr darauf zog der erste Gedenkmarsch durch dieselben Strassen, daraus wurde der Christopher Street Day. Nach dem Ende der Sklaverei und dem Stimmrecht für alle ist das die dritte Welle in diesem Teppich, in der Menschen sich holen, was ihnen verwehrt war.
+
+> **Belegt** («Stonewall Inn»): [Stonewall (Wikipedia)](https://de.wikipedia.org/wiki/Stonewall) — In der Nacht vom 27. auf den 28. Juni 1969 wehrten sich die Gäste der Bar Stonewall Inn in der Christopher Street in New York gegen eine Polizeirazzia. *(geprüft 2026-08-16)*
+
+> **Belegt** («Christopher Street Day»): [Stonewall (Wikipedia)](https://de.wikipedia.org/wiki/Stonewall) — Das Ereignis gilt der LGBT-Bewegung weltweit «als Wendepunkt im Kampf für Gleichbehandlung und Anerkennung»; der Gedenkmarsch im Jahr darauf wurde zum Christopher Street Day. *(geprüft 2026-08-16)*
+
+**[PP-570085]** *(Vertiefung «Mehr lesen»)*
+Die Niederlande öffneten 2001 als erstes Land der Welt die Ehe für gleichgeschlechtliche Paare. In der Schweiz sagten die Stimmenden am 26. September 2021 mit 64,1 Prozent Ja zur Ehe für alle und kein einziger Kanton lehnte ab. Zwischen jener Nacht in der Christopher Street und diesem Abstimmungssonntag liegen zweiundfünfzig Jahre, ungefähr ein Menschenleben.
+
+> **Belegt** («64,1 Prozent»): [SRF, 26. September 2021: Ja zur Ehe für alle](https://www.srf.ch/news/abstimmungen/ehe-fuer-alle/ehe-fuer-alle-srg-hochrechnung-64-sagen-ja-zu-gleichgeschlechtlichen-ehen) — Die Vorlage «Ehe für alle» wurde am 26. September 2021 mit 64,1 Prozent Ja angenommen, kein Kanton lehnte sie ab. *(geprüft 2026-08-16)*
+
+**[PP-f8bb6e]** *(Verunsicherungs-Stopp)*
+Die Karte «Stimmrecht für alle» fragt, welcher heutige Ausschluss im Rückblick unverständlich wirken wird. Hier läuft dieselbe Frage weiter. Wem wurde verwehrt, selbst zu entscheiden, mit wem er leben will? Und wie lange hielten die meisten das für die natürliche Ordnung?
 
 ### Philosophie in Zeiten der Verunsicherung
 
@@ -2058,6 +2143,18 @@ Niemand hätte das aus dem Vortag ableiten können. Ein Mädchen, ein Karton, ei
 
 > **Belegt** («fast 1,8 Millionen Menschen»): [Fridays for Future (Wikipedia)](https://de.wikipedia.org/wiki/Fridays_for_Future) — Zum globalen Klimastreik vom 15. März 2019: Es «sollen nach Angaben der Bewegung beispielsweise fast 1,8 Mio. Menschen an den Demonstrationen von FFF teilgenommen haben». Darum steht im Text «nach Angaben der Bewegung». *(geprüft 2026-08-13)*
 
+**[DW-7f942b]** *(Zur Philosophie)*
+Sein Hauptwerk «Eine Theorie der Gerechtigkeit» von 1971 gilt als eines der einflussreichsten Werke der politischen Philosophie des 20. Jahrhunderts. Für dieses Kapitel zählt vor allem ein Gedanke daraus. In einer Gesellschaft, in der viele Vorstellungen vom guten Leben nebeneinander bestehen, muss man sich nicht auf eine Moral einigen. Nötig sind Grundbedingungen, unter denen verschiedene Vorstellungen lebbar bleiben. Recht und Moral sind darum zweierlei, das eine regelt das Zusammenleben, das andere bleibt Sache jeder Person. Sein Werkzeug dafür ist der Urzustand. Dort legen Personen die Grundsätze ihrer Gesellschaft fest, haben dabei aber «kein Wissen über sich selbst, ihre eigene soziale Stellung, ihre Interessen, Kenntnisse, Talente usw.», sie stehen also hinter einem «Schleier des Nichtwissens». So kommen zwei Grundsätze heraus. Erstens gleiche Grundfreiheiten für alle. Zweitens sind Ungleichheiten nur erlaubt, wenn faire Chancengleichheit besteht und wenn sie den Schlechtestgestellten nützen, das ist das «Differenzprinzip». Später kam dazu, was Rawls «übergreifender Konsens» nennt. Menschen mit verschiedenen religiösen oder moralischen Lehren können dieselben politischen Grundsätze bejahen, jede Gruppe aus ihren eigenen Gründen. Das ist mehr als ein Waffenstillstand aus Bequemlichkeit, denn getragen wird die Ordnung dann von Überzeugungen und nicht bloss vom Kräfteverhältnis. Hauptwerk: «Eine Theorie der Gerechtigkeit» (1971).
+
+**[DW-7e3b31]** *(Fallbeispiel)*
+Eine Klasse legt die Regeln für ihren Gruppenchat fest, bevor klar ist, wer darin viel schreibt und wer still mitliest. Beim Kuchen machen es Kinder ähnlich. Eine schneidet, die andere wählt zuerst, denn wer schneidet, weiss nicht, welches Stück ihr bleibt.
+
+Rawls macht daraus ein Werkzeug. Hinter dem «Schleier des Nichtwissens» legst du Regeln fest, ohne zu wissen, welchen Platz du bekommst. Dann wählst du gleiche Freiheiten für alle und erlaubst Ungleichheit nur, wenn sie den Schwächsten nützt, das «Differenzprinzip». So bejahen eine streng gläubige und eine wirtschaftsliberale Person dieselben Regeln, jede aus eigenen Gründen. Rawls nennt das «übergreifender Konsens». Die Regeln lassen jedem Raum, statt ihm sein Leben vorzuschreiben. Welche Regel gäbest du einer Software, die Bewerbungen sortiert, ohne zu wissen, ob du darunter bist?
+
+> **Belegt** («gleiche Freiheiten für alle»): [John Rawls (Wikipedia)](https://de.wikipedia.org/wiki/John_Rawls) — John Rawls (1921 bis 2002), Hauptwerk «Eine Theorie der Gerechtigkeit» (1971). Im Urzustand haben die Personen «kein Wissen über sich selbst, ihre eigene soziale Stellung, ihre Interessen, Kenntnisse, Talente usw.» (Schleier des Nichtwissens). Der erste Grundsatz gibt allen gleiche Grundfreiheiten, der zweite erlaubt Ungleichheiten nur bei fairer Chancengleichheit und wenn sie den Schlechtestgestellten nützen (Differenzprinzip). *(geprüft 2026-08-16)*
+
+> **Belegt** («jede aus eigenen Gründen»): [Overlapping consensus (englische Wikipedia)](https://en.wikipedia.org/wiki/Overlapping_consensus) — Rawls entwickelt den übergreifenden Konsens in «Political Liberalism» (1993). Menschen mit gegensätzlichen religiösen, moralischen oder philosophischen Lehren stimmen denselben politischen Grundsätzen zu, jede Gruppe aus ihren eigenen Gründen. Abgegrenzt wird das ausdrücklich vom modus vivendi, dem blossen Interessenausgleich, der zerfällt, sobald sich die Kräfteverhältnisse ändern. *(geprüft 2026-08-16)*
+
 **[DW-7d65cf]** *(Zur Philosophie)*
 Martin Heidegger gehört zu den einflussreichsten Philosophen des 20. Jahrhunderts und ist zugleich schwer belastet. Er trat am 1. Mai 1933 in die NSDAP ein, war als Rektor an der Gleichschaltung der Universität Freiburg beteiligt und blieb bis 1945 Parteimitglied; in seinen «Schwarzen Heften» stehen antisemitische Äusserungen. Umstritten ist nicht, ob das geschah, sondern wie stark es sein Werk prägt. In «Sein und Zeit» fragte er neu nach dem Sinn von Sein. Den Menschen nennt er «Dasein», seinen Grundzug die «Sorge». Das Wort führt leicht in die Irre, gemeint ist nicht Kummer. Wir sind nie unbeteiligte Zuschauer einer Welt, die uns gegenübersteht, sondern immer schon in ihr beschäftigt. Wir hantieren mit Dingen und haben es mit anderen Menschen zu tun. Ein Hammer zeigt sich als Hammer beim Hämmern, nicht beim Betrachten. Erst in diesem Umgang bekommen die Dinge ihre Bedeutung und erst so entsteht Sinn. Das gilt dann auch für die KI. Sie hat von sich aus keine solche Welt, ihre Bedeutung bekommt sie erst in unserem Umgang mit ihr. Ob sie Werkzeug ist, Gegenüber oder Störung, entscheidet sich nicht in ihrem Innern, sondern in dem, was wir mit ihr tun. Hauptwerk: «Sein und Zeit» (1927).
 
@@ -2091,8 +2188,8 @@ Ein Programm ist beendet, wenn man es schliesst. Dein Denken nicht. Es spielt we
 **[DW-f2cbf8]** *(Fliesstext)*
 «Was ist der Mensch?» Diese Frage ist so alt wie die Philosophie selbst. Schon Aristoteles sah den Menschen als Wesen, das von Natur aus nach Wissen strebt, neugierig, fragend, nie ganz fertig. Immanuel Kant machte die Frage zur Kernfrage überhaupt und gab eine Richtung vor. Der Mensch ist frei, er kann aus eigener Einsicht handeln und darum trägt er Verantwortung. Georg Wilhelm Friedrich Hegel fügt hinzu, dass der Mensch ein Wesen ist, das unterscheidet. Erst indem wir Gegensätze auseinanderhalten, was ist und was sein soll, können wir urteilen und uns frei entscheiden. Und was etwas ist, steht für ihn nicht ein für alle Mal fest, es klärt sich in einem geschichtlichen Gang. So bekommt gerade das Unterscheiden und Entscheiden eine zutiefst menschliche Seite.
 
-**[DW-166fb9]** *(Fliesstext)*
-Hannah Arendt nennt einen weiteren Wesenszug: das Anfangen. Mit jedem Menschen kommt etwas Neues in die Welt, das aus dem Bisherigen nicht ableitbar ist. Und der Mensch urteilt, er hält inne und entscheidet selbst. Martin Heidegger fügt die «Sorge» hinzu, und damit meint er nicht Kummer oder Bekümmerung. Er meint, wir stehen der Welt nie unbeteiligt gegenüber, sondern sind immer schon mit Dingen und Menschen beschäftigt. Erst in diesem Umgang bekommen die Dinge überhaupt eine Bedeutung und erst darin entsteht Sinn.
+**[DW-9d91e8]** *(Fliesstext)*
+Hannah Arendt nennt einen weiteren Wesenszug: das Anfangen. Mit jedem Menschen kommt etwas Neues in die Welt, das aus dem Bisherigen nicht ableitbar ist. Und der Mensch urteilt, er hält inne und entscheidet selbst. John Rawls verschiebt die Frage ins Zusammenleben. Wo viele Vorstellungen vom guten Leben nebeneinander bestehen, braucht es keine Moral für alle, sondern faire Regeln, unter denen jede dieser Vorstellungen lebbar bleibt. Martin Heidegger fügt die «Sorge» hinzu, und damit meint er nicht Kummer oder Bekümmerung. Er meint, wir stehen der Welt nie unbeteiligt gegenüber, sondern sind immer schon mit Dingen und Menschen beschäftigt. Erst in diesem Umgang bekommen die Dinge überhaupt eine Bedeutung und erst darin entsteht Sinn.
 
 **[DW-43ee4a]** *(Fliesstext)*
 Peter Sloterdijk beschreibt den Menschen als übendes Wesen. Wir werden, wer wir sind, durch Übung und Wiederholung und niemand kann für uns üben. Siri Hustvedt hält dagegen, der Geist sei kein Computer. Denken und Fühlen hängen für sie am lebendigen Körper und an gelebter Erfahrung. Eine Maschine könne Sprache und Gefühle täuschend echt nachahmen, erlebe dabei aber nichts.

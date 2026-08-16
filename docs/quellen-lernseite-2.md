@@ -13,8 +13,8 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 219 |
-| Belegte Textblöcke | 124 |
+| Belege | 234 |
+| Belegte Textblöcke | 131 |
 | Begründete Nicht-Belege | 6 |
 | Aussagen mit Standdatum | 3 |
 
@@ -804,6 +804,123 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 - **Geprüft:** 2026-08-16
 
 > Bis 1971 war die Hälfte der Schweizer Bevölkerung vom eidgenössischen Entscheiden ausgeschlossen und den meisten galt das als selbstverständlich. Verunsichernd ist im Rückblick weniger der Wandel als die Frage, welcher heutige Ausschluss uns einmal genauso unverständlich sein wird.
+
+### Die moderne Demokratie · 4. Juli 1776
+
+- **Kennung:** `PP-50ab9e` (Kartentext)
+- **Quelle:** [Unabhängigkeitserklärung der Vereinigten Staaten (Wikipedia)](https://de.wikipedia.org/wiki/Unabh%C3%A4ngigkeitserkl%C3%A4rung_der_Vereinigten_Staaten)
+- **Fundstelle:** Angenommen am 4. Juli 1776. Der zitierte Satz lautet im Original «all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness».
+- **Geprüft:** 2026-08-16
+
+> Am 4. Juli 1776 erklären die amerikanischen Kolonien ihre Unabhängigkeit, mit einem Satz, der seither um die Welt geht, «all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness». Hier beginnt die moderne Demokratie. Die Rechte galten allerdings zunächst nur frei geborenen, weissen Männern in vollem Umfang, nicht aber Frauen, Sklaven und freien Schwarzen. Jeffersons Verurteilung der Sklaverei wurde aus dem Entwurf gestrichen, um die sklavenhaltenden Kolonien für die gemeinsame Sache zu gewinnen.
+
+### Die moderne Demokratie · frei geborenen, weissen Männern
+
+- **Kennung:** `PP-50ab9e` (Kartentext)
+- **Quelle:** [Unabhängigkeitserklärung der Vereinigten Staaten (Wikipedia)](https://de.wikipedia.org/wiki/Unabh%C3%A4ngigkeitserkl%C3%A4rung_der_Vereinigten_Staaten)
+- **Fundstelle:** Die verkündeten Rechte kamen «zunächst nur frei geborenen, weissen Männern in vollem Umfang» zu, «nicht aber Frauen, Sklaven und freien Schwarzen».
+- **Geprüft:** 2026-08-16
+
+> Am 4. Juli 1776 erklären die amerikanischen Kolonien ihre Unabhängigkeit, mit einem Satz, der seither um die Welt geht, «all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness». Hier beginnt die moderne Demokratie. Die Rechte galten allerdings zunächst nur frei geborenen, weissen Männern in vollem Umfang, nicht aber Frauen, Sklaven und freien Schwarzen. Jeffersons Verurteilung der Sklaverei wurde aus dem Entwurf gestrichen, um die sklavenhaltenden Kolonien für die gemeinsame Sache zu gewinnen.
+
+### Die moderne Demokratie · Verurteilung der Sklaverei
+
+- **Kennung:** `PP-50ab9e` (Kartentext)
+- **Quelle:** [Unabhängigkeitserklärung der Vereinigten Staaten (Wikipedia)](https://de.wikipedia.org/wiki/Unabh%C3%A4ngigkeitserkl%C3%A4rung_der_Vereinigten_Staaten)
+- **Fundstelle:** Jeffersons Entwurf enthielt eine Verurteilung der Sklaverei, die gestrichen wurde, um die Zustimmung der sklavenhaltenden Kolonien zu gewinnen.
+- **Geprüft:** 2026-08-16
+
+> Am 4. Juli 1776 erklären die amerikanischen Kolonien ihre Unabhängigkeit, mit einem Satz, der seither um die Welt geht, «all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness». Hier beginnt die moderne Demokratie. Die Rechte galten allerdings zunächst nur frei geborenen, weissen Männern in vollem Umfang, nicht aber Frauen, Sklaven und freien Schwarzen. Jeffersons Verurteilung der Sklaverei wurde aus dem Entwurf gestrichen, um die sklavenhaltenden Kolonien für die gemeinsame Sache zu gewinnen.
+
+### Die moderne Demokratie · Kondiaronk
+
+- **Kennung:** `PP-b7e910` (Vertiefung «Mehr lesen»)
+- **Quelle (Buch):** David Graeber und David Wengrow, «Anfänge» (Klett-Cotta 2022)
+- **Fundstelle:** Kapitel Zwei «Sündhafte Freiheit». Der Wendat-Staatsmann Kondiaronk (1649 bis 1701) kritisiert die europäischen Verhältnisse; über die Dialoge des Baron de Lahontan (1666 bis 1716) erreicht diese «indigene Kritik» die Salons der Aufklärung. Auf das europäische Publikum wirkte sie «wie ein Systemschock», sie «eröffnete … Möglichkeiten der menschlichen Emanzipation, die sich, einmal dargelegt, kaum mehr ignorieren liessen». Dass die indigene Kritik die Aufklärung mitgeprägt hat, ist die Deutung Graeber/Wengrows, nicht der Forschungskonsens; Kritiker halten die Dialoge für erfunden, die Autoren halten dem die belegte Wirkung in Europa entgegen.
+- **Geprüft:** 2026-08-16
+
+> Graeber und Wengrow argumentieren, die Ideale seien nicht allein in europäischen Studierstuben entstanden. Der Wendat-Staatsmann Kondiaronk (1649–1701) kritisierte die europäischen Verhältnisse scharf und über die Dialoge des Baron de Lahontan (1666–1716) erreichte diese «indigene Kritik» die Salons der Aufklärung. Auf das europäische Publikum habe sie «wie ein Systemschock» gewirkt, sie «eröffnete … Möglichkeiten der menschlichen Emanzipation, die sich, einmal dargelegt, kaum mehr ignorieren liessen». Kritiker halten die Dialoge für erfunden. Die beiden Autoren entgegnen, in Europa sei die Kritik ernst genommen worden und genau darin liege ihre Wirkung. So gelesen ist die Demokratie ein Gewebe aus mehreren Welten und keine rein westliche Erfindung.
+
+### Afrikas Bibliotheken · bedeutendste antike Bibliothek
+
+- **Kennung:** `PP-fa5294` (Kartentext)
+- **Quelle:** [Bibliothek von Alexandria (Wikipedia)](https://de.wikipedia.org/wiki/Bibliothek_von_Alexandria)
+- **Fundstelle:** Die Bibliothek von Alexandria war «die bedeutendste antike Bibliothek»; ihr Bestand sollte «alle Wissensgebiete» abdecken.
+- **Geprüft:** 2026-08-16
+
+> Wissen sammeln, ordnen und weitergeben ist eine Praxis, die in Afrika lange vor der europäischen Universität blühte. In Alexandria stand die bedeutendste antike Bibliothek, sie sollte alle Wissensgebiete abdecken. Fast zwei Jahrtausende später lehrten Gelehrte in Timbuktu an der Sankoré-Moschee Sprache, Rhetorik, Astrologie und Rechtsprechung. Das Bild vom schriftlosen Afrika war immer falsch.
+
+### Afrikas Bibliotheken · Rhetorik, Astrologie und Rechtsprechung
+
+- **Kennung:** `PP-fa5294` (Kartentext)
+- **Quelle:** [Timbuktu (Wikipedia)](https://de.wikipedia.org/wiki/Timbuktu)
+- **Fundstelle:** An der Sankoré-Moschee bestand «eine Madrasa, vergleichbar einer mittelalterlichen Universität, an der die arabische Sprache, Rhetorik, Astrologie, die Rechtsprechung und die Schriften des Korans gelehrt wurden».
+- **Geprüft:** 2026-08-16
+
+> Wissen sammeln, ordnen und weitergeben ist eine Praxis, die in Afrika lange vor der europäischen Universität blühte. In Alexandria stand die bedeutendste antike Bibliothek, sie sollte alle Wissensgebiete abdecken. Fast zwei Jahrtausende später lehrten Gelehrte in Timbuktu an der Sankoré-Moschee Sprache, Rhetorik, Astrologie und Rechtsprechung. Das Bild vom schriftlosen Afrika war immer falsch.
+
+### Afrikas Bibliotheken · zwischen 290 und 282 v. Chr.
+
+- **Kennung:** `PP-15e88f` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Bibliothek von Alexandria (Wikipedia)](https://de.wikipedia.org/wiki/Bibliothek_von_Alexandria)
+- **Fundstelle:** Ptolemaios I. liess die Bibliothek «vermutlich zwischen 290 und 282 v. Chr.» errichten.
+- **Geprüft:** 2026-08-16
+
+> Ptolemaios I. errichtete die Bibliothek von Alexandria vermutlich zwischen 290 und 282 v. Chr. und sie sollte alle Wissensgebiete umfassen; moderne Schätzungen sprechen von 400'000 bis 500'000 Rollen, umstritten sind diese Zahlen bis heute. In Timbuktu, das seine Blütezeit unter der Herrschaft der Songhai erlebte, stand an der Sankoré-Moschee «eine Madrasa, vergleichbar einer mittelalterlichen Universität, an der die arabische Sprache, Rhetorik, Astrologie, die Rechtsprechung und die Schriften des Korans gelehrt wurden», dazu kamen 150 bis 180 Koranschulen. Seit 1988 gehört die Stadt zum UNESCO-Welterbe. Der Traum, alles Wissen an einem Ort zu haben, ist also alt und er lebt in den Datensammlungen weiter, aus denen eine KI heute lernt.
+
+### Afrikas Bibliotheken · 400'000 bis 500'000 Rollen
+
+- **Kennung:** `PP-15e88f` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Bibliothek von Alexandria (Wikipedia)](https://de.wikipedia.org/wiki/Bibliothek_von_Alexandria)
+- **Fundstelle:** Moderne Schätzungen des Bestands reichen von 400'000 bis 500'000 Rollen; die überlieferten Zahlen sind in der Forschung umstritten. Darum steht die Einschränkung im Text.
+- **Geprüft:** 2026-08-16
+
+> Ptolemaios I. errichtete die Bibliothek von Alexandria vermutlich zwischen 290 und 282 v. Chr. und sie sollte alle Wissensgebiete umfassen; moderne Schätzungen sprechen von 400'000 bis 500'000 Rollen, umstritten sind diese Zahlen bis heute. In Timbuktu, das seine Blütezeit unter der Herrschaft der Songhai erlebte, stand an der Sankoré-Moschee «eine Madrasa, vergleichbar einer mittelalterlichen Universität, an der die arabische Sprache, Rhetorik, Astrologie, die Rechtsprechung und die Schriften des Korans gelehrt wurden», dazu kamen 150 bis 180 Koranschulen. Seit 1988 gehört die Stadt zum UNESCO-Welterbe. Der Traum, alles Wissen an einem Ort zu haben, ist also alt und er lebt in den Datensammlungen weiter, aus denen eine KI heute lernt.
+
+### Afrikas Bibliotheken · 150 bis 180 Koranschulen
+
+- **Kennung:** `PP-15e88f` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Timbuktu (Wikipedia)](https://de.wikipedia.org/wiki/Timbuktu)
+- **Fundstelle:** Neben der Madrasa an der Sankoré-Moschee gab es in der Stadt «150 bis 180 Koranschulen». Die Blütezeit fällt in die Herrschaft der Songhai. Eine Gesamtzahl der erhaltenen Handschriften nennt der Artikel nicht, darum steht im Text keine.
+- **Geprüft:** 2026-08-16
+
+> Ptolemaios I. errichtete die Bibliothek von Alexandria vermutlich zwischen 290 und 282 v. Chr. und sie sollte alle Wissensgebiete umfassen; moderne Schätzungen sprechen von 400'000 bis 500'000 Rollen, umstritten sind diese Zahlen bis heute. In Timbuktu, das seine Blütezeit unter der Herrschaft der Songhai erlebte, stand an der Sankoré-Moschee «eine Madrasa, vergleichbar einer mittelalterlichen Universität, an der die arabische Sprache, Rhetorik, Astrologie, die Rechtsprechung und die Schriften des Korans gelehrt wurden», dazu kamen 150 bis 180 Koranschulen. Seit 1988 gehört die Stadt zum UNESCO-Welterbe. Der Traum, alles Wissen an einem Ort zu haben, ist also alt und er lebt in den Datensammlungen weiter, aus denen eine KI heute lernt.
+
+### Afrikas Bibliotheken · Seit 1988
+
+- **Kennung:** `PP-15e88f` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Timbuktu (Wikipedia)](https://de.wikipedia.org/wiki/Timbuktu)
+- **Fundstelle:** Timbuktu gehört seit 1988 zum UNESCO-Welterbe.
+- **Geprüft:** 2026-08-16
+
+> Ptolemaios I. errichtete die Bibliothek von Alexandria vermutlich zwischen 290 und 282 v. Chr. und sie sollte alle Wissensgebiete umfassen; moderne Schätzungen sprechen von 400'000 bis 500'000 Rollen, umstritten sind diese Zahlen bis heute. In Timbuktu, das seine Blütezeit unter der Herrschaft der Songhai erlebte, stand an der Sankoré-Moschee «eine Madrasa, vergleichbar einer mittelalterlichen Universität, an der die arabische Sprache, Rhetorik, Astrologie, die Rechtsprechung und die Schriften des Korans gelehrt wurden», dazu kamen 150 bis 180 Koranschulen. Seit 1988 gehört die Stadt zum UNESCO-Welterbe. Der Traum, alles Wissen an einem Ort zu haben, ist also alt und er lebt in den Datensammlungen weiter, aus denen eine KI heute lernt.
+
+### Selbstbestimmte Liebe · Stonewall Inn
+
+- **Kennung:** `PP-b9ee81` (Kartentext)
+- **Quelle:** [Stonewall (Wikipedia)](https://de.wikipedia.org/wiki/Stonewall)
+- **Fundstelle:** In der Nacht vom 27. auf den 28. Juni 1969 wehrten sich die Gäste der Bar Stonewall Inn in der Christopher Street in New York gegen eine Polizeirazzia.
+- **Geprüft:** 2026-08-16
+
+> In der Nacht vom 27. auf den 28. Juni 1969 wehrten sich die Gäste des Stonewall Inn in der Christopher Street in New York gegen eine Polizeirazzia. Der LGBT-Bewegung gilt das Ereignis weltweit als Wendepunkt im Kampf für Gleichbehandlung und Anerkennung. Im Jahr darauf zog der erste Gedenkmarsch durch dieselben Strassen, daraus wurde der Christopher Street Day. Nach dem Ende der Sklaverei und dem Stimmrecht für alle ist das die dritte Welle in diesem Teppich, in der Menschen sich holen, was ihnen verwehrt war.
+
+### Selbstbestimmte Liebe · Christopher Street Day
+
+- **Kennung:** `PP-b9ee81` (Kartentext)
+- **Quelle:** [Stonewall (Wikipedia)](https://de.wikipedia.org/wiki/Stonewall)
+- **Fundstelle:** Das Ereignis gilt der LGBT-Bewegung weltweit «als Wendepunkt im Kampf für Gleichbehandlung und Anerkennung»; der Gedenkmarsch im Jahr darauf wurde zum Christopher Street Day.
+- **Geprüft:** 2026-08-16
+
+> In der Nacht vom 27. auf den 28. Juni 1969 wehrten sich die Gäste des Stonewall Inn in der Christopher Street in New York gegen eine Polizeirazzia. Der LGBT-Bewegung gilt das Ereignis weltweit als Wendepunkt im Kampf für Gleichbehandlung und Anerkennung. Im Jahr darauf zog der erste Gedenkmarsch durch dieselben Strassen, daraus wurde der Christopher Street Day. Nach dem Ende der Sklaverei und dem Stimmrecht für alle ist das die dritte Welle in diesem Teppich, in der Menschen sich holen, was ihnen verwehrt war.
+
+### Selbstbestimmte Liebe · 64,1 Prozent
+
+- **Kennung:** `PP-570085` (Vertiefung «Mehr lesen»)
+- **Quelle:** [SRF, 26. September 2021: Ja zur Ehe für alle](https://www.srf.ch/news/abstimmungen/ehe-fuer-alle/ehe-fuer-alle-srg-hochrechnung-64-sagen-ja-zu-gleichgeschlechtlichen-ehen)
+- **Fundstelle:** Die Vorlage «Ehe für alle» wurde am 26. September 2021 mit 64,1 Prozent Ja angenommen, kein Kanton lehnte sie ab.
+- **Geprüft:** 2026-08-16
+
+> Die Niederlande öffneten 2001 als erstes Land der Welt die Ehe für gleichgeschlechtliche Paare. In der Schweiz sagten die Stimmenden am 26. September 2021 mit 64,1 Prozent Ja zur Ehe für alle und kein einziger Kanton lehnte ab. Zwischen jener Nacht in der Christopher Street und diesem Abstimmungssonntag liegen zweiundfünfzig Jahre, ungefähr ein Menschenleben.
 
 ---
 
@@ -2100,6 +2217,28 @@ Darum nennt er die KI einen magischen Spiegel, und der spiegelt nicht nur Wissen
 > Ein Bullet Journal ist ein Notizbuch mit Punkteraster, das Terminplanung, To-do-Listen, Tagebuch und Brainstorming in einem einzigen Heft verbindet. Entwickelt hat es 2013 der Designer Ryder Carroll.
 
 Neu ist die Idee nicht, und das ist das Schöne daran. Foucault hat in seinem Spätwerk die antike Sorge um sich selbst wieder ausgegraben. Solche Hefte gab es nämlich schon damals, sie hiessen Hypomnemata und man sammelte darin Zitate, Gedanken und Vorsätze. Foucault las sie als Werkzeuge der Selbstsorge, Schreiben als Arbeit an sich selbst. Genau das meint seine «Ästhetik der Existenz», ein Leben formen wie ein Kunstwerk. Gemeint ist nicht, sich für fremde Massstäbe zu optimieren, für Noten, Follower und Bestenlisten. Es heisst, selbst zu wählen, woran du arbeitest. Dafür ist ein Heft, das niemand liken kann, ein ziemlich gutes Werkzeug, denn es gehört nur dir.
+
+### Was ist der Mensch? · gleiche Freiheiten für alle
+
+- **Kennung:** `DW-7e3b31` (Fallbeispiel)
+- **Quelle:** [John Rawls (Wikipedia)](https://de.wikipedia.org/wiki/John_Rawls)
+- **Fundstelle:** John Rawls (1921 bis 2002), Hauptwerk «Eine Theorie der Gerechtigkeit» (1971). Im Urzustand haben die Personen «kein Wissen über sich selbst, ihre eigene soziale Stellung, ihre Interessen, Kenntnisse, Talente usw.» (Schleier des Nichtwissens). Der erste Grundsatz gibt allen gleiche Grundfreiheiten, der zweite erlaubt Ungleichheiten nur bei fairer Chancengleichheit und wenn sie den Schlechtestgestellten nützen (Differenzprinzip).
+- **Geprüft:** 2026-08-16
+
+> Eine Klasse legt die Regeln für ihren Gruppenchat fest, bevor klar ist, wer darin viel schreibt und wer still mitliest. Beim Kuchen machen es Kinder ähnlich. Eine schneidet, die andere wählt zuerst, denn wer schneidet, weiss nicht, welches Stück ihr bleibt.
+
+Rawls macht daraus ein Werkzeug. Hinter dem «Schleier des Nichtwissens» legst du Regeln fest, ohne zu wissen, welchen Platz du bekommst. Dann wählst du gleiche Freiheiten für alle und erlaubst Ungleichheit nur, wenn sie den Schwächsten nützt, das «Differenzprinzip». So bejahen eine streng gläubige und eine wirtschaftsliberale Person dieselben Regeln, jede aus eigenen Gründen. Rawls nennt das «übergreifender Konsens». Die Regeln lassen jedem Raum, statt ihm sein Leben vorzuschreiben. Welche Regel gäbest du einer Software, die Bewerbungen sortiert, ohne zu wissen, ob du darunter bist?
+
+### Was ist der Mensch? · jede aus eigenen Gründen
+
+- **Kennung:** `DW-7e3b31` (Fallbeispiel)
+- **Quelle:** [Overlapping consensus (englische Wikipedia)](https://en.wikipedia.org/wiki/Overlapping_consensus)
+- **Fundstelle:** Rawls entwickelt den übergreifenden Konsens in «Political Liberalism» (1993). Menschen mit gegensätzlichen religiösen, moralischen oder philosophischen Lehren stimmen denselben politischen Grundsätzen zu, jede Gruppe aus ihren eigenen Gründen. Abgegrenzt wird das ausdrücklich vom modus vivendi, dem blossen Interessenausgleich, der zerfällt, sobald sich die Kräfteverhältnisse ändern.
+- **Geprüft:** 2026-08-16
+
+> Eine Klasse legt die Regeln für ihren Gruppenchat fest, bevor klar ist, wer darin viel schreibt und wer still mitliest. Beim Kuchen machen es Kinder ähnlich. Eine schneidet, die andere wählt zuerst, denn wer schneidet, weiss nicht, welches Stück ihr bleibt.
+
+Rawls macht daraus ein Werkzeug. Hinter dem «Schleier des Nichtwissens» legst du Regeln fest, ohne zu wissen, welchen Platz du bekommst. Dann wählst du gleiche Freiheiten für alle und erlaubst Ungleichheit nur, wenn sie den Schwächsten nützt, das «Differenzprinzip». So bejahen eine streng gläubige und eine wirtschaftsliberale Person dieselben Regeln, jede aus eigenen Gründen. Rawls nennt das «übergreifender Konsens». Die Regeln lassen jedem Raum, statt ihm sein Leben vorzuschreiben. Welche Regel gäbest du einer Software, die Bewerbungen sortiert, ohne zu wissen, ob du darunter bist?
 
 ---
 

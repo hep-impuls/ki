@@ -48,6 +48,47 @@ Jeder Block hier enthält eine prüfbare Behauptung (Zahl, Datum,
 Superlativ oder eine Aussage, die jemandem zugeschrieben wird). Deutende
 Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
+### Thema 02 · Wege der Orientierung
+
+**[DW-ed7ed3]** *(Fallbeispiel · Lebenskunst)*
+Im Juli 2023 registrierten Seismographen in Seattle Erschütterungen, ausgelöst von zehntausenden tanzenden Fans an einem Konzert von Taylor Swift, über Stunden hinweg. Dieselbe Tournee wurde später von Guinness World Records als die kommerziell erfolgreichste der Welt anerkannt.
+
+Man kann darüber spotten, so viel Gefühl für ein Popkonzert. Nussbaum widerspricht dem alten Verdacht, Gefühle seien Störungen der Vernunft. Ein starkes Gefühl ist für sie ein Werturteil. Es sagt dir, was dir wichtig ist, lange bevor du es begründen kannst. Wer bei einem Lied weint, denkt nicht zu wenig, sondern erkennt etwas: Das hier betrifft mich. Gefühle ernst zu nehmen heisst, solche Urteile lesen zu lernen, die eigenen und die der anderen, statt sie sich auszureden. Freude, die den Boden zum Zittern bringt, ist eine Auskunft darüber, was zählt. Zu ihrem «Fähigkeiten-Ansatz», der Liste dessen, was Menschen für ein gutes Leben brauchen, gehören neben Gesundheit und Bildung auch Bindung und Spiel. Ein Konzert ist beides.
+
+> **Belegt** («registrierten Seismographen in Seattle»): [The Eras Tour (Wikipedia)](https://de.wikipedia.org/wiki/The_Eras_Tour) — Beim Konzert im Lumen Field in Seattle im Juli 2023 «registrierten lokale Seismographen für Menschen nicht wahrnehmbare Erschütterungen der Erde», ausgelöst von den Fans, über mehrere Stunden. Eine Magnitude nennt der Artikel nicht, darum steht auch im Text keine. *(geprüft 2026-08-13)*
+
+> **Belegt** («kommerziell erfolgreichste»): [The Eras Tour (Wikipedia)](https://de.wikipedia.org/wiki/The_Eras_Tour) — Die Tournee wurde «im Dezember 2023 von Guinness World Records als kommerziell erfolgreichste Tournee weltweit anerkannt»; nach rund 60 Konzerten lag der Umsatz bei 1,04 Milliarden Dollar. *(geprüft 2026-08-13)*
+
+**[DW-f69109]** *(Zur Philosophie · Lebenskunst)*
+Maurice Merleau-Ponty war ein französischer Philosoph der Phänomenologie. Sein Thema ist der Leib. Wir erfahren die Welt nicht zuerst mit dem Kopf, sondern leiblich, durch Wahrnehmung, Bewegung, Berührung und Gefühl. Der Körper ist kein Ding, das wir bloss «haben», sondern die Art, wie wir zur Welt gehören. Verstehen und ein gutes Leben sind darum verkörpert, nicht rein rechnerisch. Genau das kann eine körperlose KI nicht, sie verarbeitet Zeichen, aber sie spürt und erlebt nicht. Werk: «Phänomenologie der Wahrnehmung» (1945).
+
+**[DW-616d13]** *(Fallbeispiel · Lebenskunst)*
+In Paris war 2024 Breaking zum ersten Mal olympische Disziplin, ausgetragen mitten in der Stadt auf der Place de la Concorde. Das erste Gold der B-Girls gewann Ami Yuasa aus Japan, bei den B-Boys siegte der Kanadier Philip Kim.
+
+Versuch, einen Headspin aus einer Beschreibung zu lernen. Du kannst jede Anweisung auswendig aufsagen und fällst trotzdem. Irgendwann, nach vielen Anläufen, «hat» es der Körper. Schwung, Druck und Balance sind dann kein Wissen im Kopf, sondern ein Können im Leib. Für Merleau-Ponty verstehen wir so die Welt überhaupt, zuerst leiblich, dann in Begriffen. Merleau-Ponty unterscheidet darum zwischen Körper und Leib. Den Körper kann man von aussen betrachten und vermessen, der Leib ist der, der du bist, deine Art, zur Welt zu sein. Ein Video zeigt dir jeden Move in Zeitlupe. Verstehen wird ihn dein Rücken.
+
+> **Belegt** («Ami Yuasa»): [Breaking an den Sommerspielen 2024 (Wikipedia)](https://de.wikipedia.org/wiki/Olympische_Sommerspiele_2024/Breaking) — Breaking war in Paris «erstmals Teil des olympischen Programms», ausgetragen am 9. und 10. August 2024 auf der Place de la Concorde. Gold der B-Girls: Ami Yuasa (Japan); Gold der B-Boys: Philip Kim (Kanada). *(geprüft 2026-08-13)*
+
+**[DW-db463f]** *(Zur Philosophie · Lebenskunst)*
+Hartmut Rosa ist ein deutscher Soziologe, bekannt für die Diagnose der gesellschaftlichen «Beschleunigung». Dagegen setzt er den Begriff «Resonanz». Ein gelingendes Leben entsteht nicht durch mehr Kontrolle, mehr Tempo und mehr Verfügbarkeit, sondern durch ein lebendiges, wechselseitiges Antworten zwischen Mensch und Welt, ein Berührtwerden. Vieles, was zählt, lässt sich gerade nicht erzwingen oder verfügbar machen, es muss einem begegnen. In einer Welt schneller KI erinnert er daran, das Sich-berühren-Lassen nicht zu verlernen. Werke: «Resonanz» (2016), «Unverfügbarkeit» (2018).
+
+**[DW-fa92a5]** *(Fallbeispiel · Lebenskunst)*
+In der Nacht auf den 11. Mai 2024 traf der erste Sonnensturm der höchsten Kategorie seit 2003 die Erde, und für einmal waren Polarlichter bis in die Schweiz zu sehen. Wer zufällig draussen war oder geweckt wurde, stand plötzlich unter einem leuchtenden Himmel.
+
+Es liess sich nicht buchen. Kein Ticket, kein Abo, keine Wiederholung auf Abruf, nicht einmal eine verlässliche Vorhersage. Rosa nennt «Resonanz», was uns gerade deshalb berührt, weil es nicht verfügbar ist, sein Wort dafür ist die Unverfügbarkeit. Die Welt antwortet, aber nicht auf Bestellung. In einem Alltag, in dem fast alles sofort lieferbar ist, der Song, die Serie, die Antwort, sind solche Momente kleine Übungsplätze. Hinstehen, warten dürfen, sich berühren lassen. Mehr Kontrolle würde genau das zerstören, was diesen Abend besonders gemacht hat.
+
+> **Belegt** («Polarlichter bis in die Schweiz»): [Swissinfo, 11. Mai 2024: «Stärkster Sonnensturm seit 2003»](https://www.swissinfo.ch/ger/st%C3%A4rkster-sonnensturm-seit-2003-f%C3%BChrt-zu-schweizer-polarlichtern/77308421) — «Der erste ‹extreme› Sonnensturm seit 2003»: Die Kategorie fünf war laut NOAA zuletzt im Oktober 2003 bei den Halloween-Stürmen erreicht worden. «Aufgrund des starken geomagnetischen Sturms waren Polarlichter bis in die Schweizer Breitengrade sichtbar», festgehalten etwa von einer Wetterkamera in Ravoire bei Martigny am Abend des 10. Mai 2024. *(geprüft 2026-08-13)*
+
+### Thema 03 · Das Orakel
+
+**[OR-e41fe5]** *(Fliesstext · Verunsichert dich noch)*
+Vor über zweieinhalbtausend Jahren stiegen Menschen aus der ganzen griechischen Welt nach Delphi hinauf, um das berühmteste Orakel der Antike zu befragen. Dort sass die Priesterin Pythia auf einem Dreifuss über einer Erdspalte und gab, oft in dunklen, deutbaren Worten, Antwort. Ganze Städte fragten sie, bevor sie in den Krieg zogen oder eine Kolonie gründeten. Dem lydischen König Krösus soll sie gesagt haben, wenn er über den Grenzfluss ziehe, werde er ein grosses Reich zerstören. Er zog los, verlor und zerstörte sein eigenes. Das Orakel war ein Ort, an dem eine unübersichtliche Welt gedeutet wurde, lange bevor es Wissenschaft gab.
+
+### Übersicht (Hub)
+
+**[HUB-c31f2e]** *(Fliesstext · (ohne Abschnitt))*
+Kaum ein Thema ist so präsent wie die Künstliche Intelligenz (KI) und kaum eines so schwer zu fassen. Es wird viel über sie gesagt, doch vieles bleibt schemenhaft, ein Reden über etwas, das man selten wirklich vor Augen hat. Dieses Lernset will die KI sichtbarer und verständlicher machen, indem es ihr eine Gestalt gibt.
+
 ### Thema 01 · Vorhang auf
 
 **[VA-0fb159]** *(Kartentext · Der versteckte Mensch)*
@@ -141,38 +182,3 @@ Wörtlich wird «Was ist der Mensch?» laut Google Trends kaum häufiger gesucht
 
 **[PP-f89d1d]** *(Kartentext · Sie gibt keine Rezepte, sondern Orientierung)*
 Philosophie liefert keine Bedienungsanleitung und keine Prognose. Sie ordnet Begriffe, deckt verborgene Annahmen auf und wägt Gründe ab. So hilft sie zu klären, worüber wir eigentlich streiten. Hegels Bild der «Eule der Minerva» oben sagt, dass Verstehen oft erst im Rückblick kommt. Genau dieses Begreifen brauchen wir aber, um die Gegenwart zu gestalten.
-
-**[PP-d95ea2]** *(Fliesstext · Der Teppich des Wandels)*
-Der Teppich zeigt Ereignisse, die technologisch, gesellschaftlich, kulturell oder erfinderisch sind. Sie bilden vier Fäden, die nebeneinander durch die Zeit laufen, von Pflug, Rad und Schrift bis zur KI. Das Entscheidende ist ihre Wechselwirkung, denn sie hängen voneinander ab. Eisenbahn und Schifffahrt etwa hätten sich nie so verbreitet, wenn nicht auch kulturell das Interesse bestanden hätte, zu reisen, Handel zu treiben und neue Länder zu besitzen.
-
-**[PP-52d713]** *(Vertiefung «Mehr lesen» · Der Fall Roms)*
-Rom galt als die ewige Stadt, seit rund achthundert Jahren hatte kein Feind sie eingenommen, dann plünderten 410 die Westgoten unter Alarich drei Tage lang in ihren Strassen. Die Nachricht lief durch das ganze Reich, der Gelehrte Hieronymus schrieb aus Bethlehem, eingenommen sei die Stadt, die zuvor die ganze Welt besiegt hatte. Der eigentliche Schlusspunkt kam leise: 476 setzte der Heerführer Odoaker den letzten weströmischen Kaiser ab, einen Jungen namens Romulus Augustulus und schickte die Kaiserinsignien nach Konstantinopel. Viele Menschen merkten zunächst kaum einen Unterschied, doch über die Jahrzehnte zerfielen Strassen, Wasserleitungen und Verwaltung, Städte schrumpften, Wissen ging verloren. Der Fall Roms zeigt, dass grosse Ordnungen selten mit einem Knall enden, sondern in einem langen Ausfransen, das die Menschen erst im Rückblick als Epochenbruch erkennen.
-
-> **Belegt** («seit rund achthundert Jahren hatte kein Feind sie eingenommen»): [Plünderung Roms (410) (Wikipedia)](https://de.wikipedia.org/wiki/Pl%C3%BCnderung_Roms_(410)) — «Dies war die erste Einnahme Roms seit dem Einfall der Kelten rund 800 Jahre zuvor.» Die Plünderung selbst datiert der Artikel auf den 24. bis 27. August 410. Dort steht auch das Hieronymus-Zitat aus Brief 127,12, dem der Schlusssatz dieses Blocks folgt. *(geprüft 2026-08-05)*
-
-**[PP-a89d23]** *(Kartentext · Zweiter Weltkrieg)*
-Der industrialisierte Krieg und die Schoah erschüttern den Glauben an den Fortschritt im Kern. Zugleich treibt der Krieg Technologien voran, etwa Radar, Rakete und Computer.
-
-**[PP-4d58a4]** *(Vertiefung «Mehr lesen» · Die Schrift)*
-Am Anfang standen Zählsteine und Ritzzeichen, mit denen Tempelverwalter in Uruk festhielten, wer wie viel Gerste oder wie viele Schafe abgeliefert hatte. Aus den Bildzeichen wurde die Keilschrift, in feuchten Ton gedrückt und mit ihr entstand ein neuer Beruf, der Schreiber, der seine Kunst in jahrelanger Schule lernte und damit zu einer kleinen Elite gehörte. Bald speicherte die Schrift nicht mehr nur Vorräte, sondern Verträge, Gesetze wie die Stele des Hammurabi und Geschichten wie das Gilgamesch-Epos, das älteste grosse Erzählwerk der Menschheit. Interessant ist, dass schon damals gewarnt wurde: Platon überliefert die Sorge, wer schreibe, verlasse sich auf tote Zeichen und übe sein Gedächtnis nicht mehr. Die Klage klingt vertraut, sie begleitet seither jede Technik, die dem Kopf Arbeit abnimmt, vom Taschenrechner bis zur KI.
-
-> **Belegt** («die Stele des Hammurabi»): [Codex Hammurapi (Wikipedia)](https://de.wikipedia.org/wiki/Codex_Hammurapi) — «Als Codex Hammurapi … bezeichnet man eine babylonische Sammlung von Rechtssprüchen aus dem 18. Jahrhundert v. Chr. Sie gilt zugleich als eines der wichtigsten und bekanntesten literarischen Werke des antiken Mesopotamiens und als bedeutende Quelle keilschriftlich überlieferter Rechtsordnungen.» *(geprüft 2026-08-10)*
-
-> **Belegt** («das Gilgamesch-Epos, das älteste grosse Erzählwerk»): [Gilgamesch-Epos (Wikipedia)](https://de.wikipedia.org/wiki/Gilgamesch-Epos) — «Das Gilgamesch-Epos … ist der Inhalt einer Gruppe literarischer Werke, die vor allem aus dem babylonischen Raum stammt und eine der ältesten überlieferten, schriftlich fixierten Dichtungen enthält.» Die Quelle sagt «eine der ältesten», nicht «das älteste»; im Text steht darum «das älteste grosse Erzählwerk», bezogen auf den Umfang. *(geprüft 2026-08-10)*
-
-**[PP-312b05]** *(Vertiefung «Mehr lesen» · Ozeantaugliche Schiffe)*
-Der portugiesische Prinz Heinrich der Seefahrer liess im 15. Jahrhundert systematisch Küsten erkunden, Karten sammeln und Schiffe verbessern. So entstand die Karavelle, die mit ihren dreieckigen Segeln auch gegen den Wind kreuzen konnte. Damit wagten sich Seeleute erstmals planmässig auf offene Ozeanrouten, auf denen man wochenlang kein Land sah und nach Sternen und Kompass steuerte. Dabei war Europa spät dran. Die chinesischen Flotten des Admirals Zheng He waren schon Jahrzehnte zuvor mit Schiffen bis Ostafrika gesegelt, gegen die eine Karavelle winzig wirkte. Doch der Kaiserhof brach die teuren Fahrten ab und verbot die Hochseefahrt. In Europa dagegen konkurrierten viele Königreiche. Wer eine neue Route fand, wurde reich, also rüsteten alle weiter. So entschied nicht das beste Schiff über den Lauf der Geschichte, sondern die Frage, welche Gesellschaft ihre Schiffe wohin schickte und wozu.
-
-> **Belegt** («Prinz Heinrich der Seefahrer»): [Heinrich der Seefahrer (Wikipedia)](https://de.wikipedia.org/wiki/Heinrich_der_Seefahrer) — «Heinrich der Seefahrer … war Initiator, Schirmherr und Auftraggeber der portugiesischen Entdeckungsreisen in der ersten Hälfte des 15. Jahrhunderts. Die von ihm initiierten Entdeckungsfahrten entlang der westafrikanischen Küste begründeten» den portugiesischen Seeweg nach Süden. *(geprüft 2026-08-10)*
-
-> **Belegt** («Flotten des Admirals Zheng He»): [Zheng He (Wikipedia)](https://de.wikipedia.org/wiki/Zheng_He) — «Zheng He … war ein chinesischer Admiral. Zheng He unternahm mit grossen Flotten zwischen 1405 und 1433 von der ostchinesischen Stadt Nanjing aus sieben grosse Expeditionen in den Pazifik und den Indischen Ozean.» Die Jahre 1405 bis 1433 liegen vor Heinrichs Fahrten, was das «Jahrzehnte zuvor» im Text stützt. *(geprüft 2026-08-10)*
-
-**[PP-dca913]** *(Vertiefung «Mehr lesen» · Die Erde wird vermessen)*
-Eratosthenes leitete die berühmte Bibliothek von Alexandria und trug den Spitznamen «Beta», weil er in vielen Fächern der Zweitbeste war, in keinem der Erste. Er wusste aus Berichten, dass die Mittagssonne im südlichen Syene zur Sommersonnenwende senkrecht steht, während sie in Alexandria zur selben Stunde um ein Fünfzigstel eines Vollkreises schräg einfällt. Also brauchte er nur noch die Distanz zwischen beiden Städten, die geschulte Schrittzähler abgemessen hatten, und multiplizierte sie mit fünfzig. Je nach angenommener Länge des antiken Längenmasses lag sein Ergebnis nur wenige Prozent neben dem heutigen Wert. Ausgerechnet Kolumbus rechnete anderthalb Jahrtausende später mit einem viel zu kleinen Erdumfang, sonst hätte er die Fahrt nach Westen wohl nie gewagt. Gute Messungen können Weltbilder tragen und falsche können Weltgeschichte machen.
-
-> **Belegt** («leitete die berühmte Bibliothek von Alexandria und trug den Spitznamen»): [Eratosthenes (Wikipedia)](https://de.wikipedia.org/wiki/Eratosthenes) — «Im Auftrag der ägyptischen Könige aus der Dynastie der Ptolemäer leitete er rund ein halbes Jahrhundert lang die Bibliothek von Alexandria, die bedeutendste Bibliothek der Antike.» Und zum Spitznamen: «Auch der Spitzname Beta – ‹der Zweite› im Sinne von ‹zweitrangig› – war gebräuchlich.» Die Begründung «in vielen Fächern der Zweitbeste, in keinem der Erste» gehört bei der Quelle genau genommen zum zweiten Spitznamen «Fünfkämpfer»; beide standen für dasselbe Urteil. *(geprüft 2026-08-11)*
-
-> **Belegt** («rechnete anderthalb Jahrtausende später mit einem viel zu kleinen Erdumfang»): [Christoph Kolumbus (Wikipedia)](https://de.wikipedia.org/wiki/Christoph_Kolumbus) — «Da er zudem für die Entfernung zwischen den Längengraden eine zu kleine Zahl annahm, erhielt er einen Abstand von unter 4.500 km zwischen den Kanaren und Japan. Der wirkliche Abstand beträgt fast 20.000 km, doch aufgrund seiner falschen Zahlen hielt Kolumbus die von ihm später entdeckten Inseln in der Karibik für dem chinesischen Festland nahe.» *(geprüft 2026-08-11)*
-
-**[PP-7c7442]** *(Kartentext · Grenzenloser Welthandel)*
-Container, Freihandelsabkommen und das Internet verflechten die Weltwirtschaft fast grenzenlos: Waren, Kapital und Daten zirkulieren rund um den Planeten. Es ist die jüngste und dichteste Form der Globalisierung.

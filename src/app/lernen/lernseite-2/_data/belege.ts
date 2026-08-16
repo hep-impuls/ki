@@ -2420,6 +2420,142 @@ export const BELEGE: Beleg[] = [
       "Bis zur Abstimmung vom 7. Februar 1971 hatten Frauen in der Schweiz auf Bundesebene weder Stimm- noch Wahlrecht; die Männer nahmen die Verfassungsänderung mit 65,7 Prozent an.",
     geprueft: "2026-08-16",
   },
+  {
+    id: "PP-50ab9e",
+    anker: "4. Juli 1776",
+    url: "https://de.wikipedia.org/wiki/Unabh%C3%A4ngigkeitserkl%C3%A4rung_der_Vereinigten_Staaten",
+    titel: "Unabhängigkeitserklärung der Vereinigten Staaten (Wikipedia)",
+    stelle:
+      "Angenommen am 4. Juli 1776. Der zitierte Satz lautet im Original «all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness».",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-50ab9e",
+    anker: "frei geborenen, weissen Männern",
+    url: "https://de.wikipedia.org/wiki/Unabh%C3%A4ngigkeitserkl%C3%A4rung_der_Vereinigten_Staaten",
+    titel: "Unabhängigkeitserklärung der Vereinigten Staaten (Wikipedia)",
+    stelle:
+      "Die verkündeten Rechte kamen «zunächst nur frei geborenen, weissen Männern in vollem Umfang» zu, «nicht aber Frauen, Sklaven und freien Schwarzen».",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-50ab9e",
+    anker: "Verurteilung der Sklaverei",
+    url: "https://de.wikipedia.org/wiki/Unabh%C3%A4ngigkeitserkl%C3%A4rung_der_Vereinigten_Staaten",
+    titel: "Unabhängigkeitserklärung der Vereinigten Staaten (Wikipedia)",
+    stelle:
+      "Jeffersons Entwurf enthielt eine Verurteilung der Sklaverei, die gestrichen wurde, um die Zustimmung der sklavenhaltenden Kolonien zu gewinnen.",
+    geprueft: "2026-08-16",
+  },
+  {
+    /* Buchbeleg, darum ohne `url`: Das Wort wird ein Hinweis-Knopf statt eines
+       Links. Die Deutung ist ausdrücklich die der beiden Autoren, der Text
+       nennt sie darum beim Namen. */
+    id: "PP-b7e910",
+    anker: "Kondiaronk",
+    titel: "David Graeber und David Wengrow, «Anfänge» (Klett-Cotta 2022)",
+    stelle:
+      "Kapitel Zwei «Sündhafte Freiheit». Der Wendat-Staatsmann Kondiaronk (1649 bis 1701) kritisiert die europäischen Verhältnisse; über die Dialoge des Baron de Lahontan (1666 bis 1716) erreicht diese «indigene Kritik» die Salons der Aufklärung. Auf das europäische Publikum wirkte sie «wie ein Systemschock», sie «eröffnete … Möglichkeiten der menschlichen Emanzipation, die sich, einmal dargelegt, kaum mehr ignorieren liessen». Dass die indigene Kritik die Aufklärung mitgeprägt hat, ist die Deutung Graeber/Wengrows, nicht der Forschungskonsens; Kritiker halten die Dialoge für erfunden, die Autoren halten dem die belegte Wirkung in Europa entgegen.",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-fa5294",
+    anker: "bedeutendste antike Bibliothek",
+    url: "https://de.wikipedia.org/wiki/Bibliothek_von_Alexandria",
+    titel: "Bibliothek von Alexandria (Wikipedia)",
+    stelle:
+      "Die Bibliothek von Alexandria war «die bedeutendste antike Bibliothek»; ihr Bestand sollte «alle Wissensgebiete» abdecken.",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-fa5294",
+    anker: "Rhetorik, Astrologie und Rechtsprechung",
+    url: "https://de.wikipedia.org/wiki/Timbuktu",
+    titel: "Timbuktu (Wikipedia)",
+    stelle:
+      "An der Sankoré-Moschee bestand «eine Madrasa, vergleichbar einer mittelalterlichen Universität, an der die arabische Sprache, Rhetorik, Astrologie, die Rechtsprechung und die Schriften des Korans gelehrt wurden».",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-15e88f",
+    anker: "zwischen 290 und 282 v. Chr.",
+    url: "https://de.wikipedia.org/wiki/Bibliothek_von_Alexandria",
+    titel: "Bibliothek von Alexandria (Wikipedia)",
+    stelle:
+      "Ptolemaios I. liess die Bibliothek «vermutlich zwischen 290 und 282 v. Chr.» errichten.",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-15e88f",
+    anker: "400'000 bis 500'000 Rollen",
+    url: "https://de.wikipedia.org/wiki/Bibliothek_von_Alexandria",
+    titel: "Bibliothek von Alexandria (Wikipedia)",
+    stelle:
+      "Moderne Schätzungen des Bestands reichen von 400'000 bis 500'000 Rollen; die überlieferten Zahlen sind in der Forschung umstritten. Darum steht die Einschränkung im Text.",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-15e88f",
+    anker: "150 bis 180 Koranschulen",
+    url: "https://de.wikipedia.org/wiki/Timbuktu",
+    titel: "Timbuktu (Wikipedia)",
+    stelle:
+      "Neben der Madrasa an der Sankoré-Moschee gab es in der Stadt «150 bis 180 Koranschulen». Die Blütezeit fällt in die Herrschaft der Songhai. Eine Gesamtzahl der erhaltenen Handschriften nennt der Artikel nicht, darum steht im Text keine.",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-15e88f",
+    anker: "Seit 1988",
+    url: "https://de.wikipedia.org/wiki/Timbuktu",
+    titel: "Timbuktu (Wikipedia)",
+    stelle: "Timbuktu gehört seit 1988 zum UNESCO-Welterbe.",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-b9ee81",
+    anker: "Stonewall Inn",
+    url: "https://de.wikipedia.org/wiki/Stonewall",
+    titel: "Stonewall (Wikipedia)",
+    stelle:
+      "In der Nacht vom 27. auf den 28. Juni 1969 wehrten sich die Gäste der Bar Stonewall Inn in der Christopher Street in New York gegen eine Polizeirazzia.",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-b9ee81",
+    anker: "Christopher Street Day",
+    url: "https://de.wikipedia.org/wiki/Stonewall",
+    titel: "Stonewall (Wikipedia)",
+    stelle:
+      "Das Ereignis gilt der LGBT-Bewegung weltweit «als Wendepunkt im Kampf für Gleichbehandlung und Anerkennung»; der Gedenkmarsch im Jahr darauf wurde zum Christopher Street Day.",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-570085",
+    anker: "64,1 Prozent",
+    url: "https://www.srf.ch/news/abstimmungen/ehe-fuer-alle/ehe-fuer-alle-srg-hochrechnung-64-sagen-ja-zu-gleichgeschlechtlichen-ehen",
+    titel: "SRF, 26. September 2021: Ja zur Ehe für alle",
+    stelle:
+      "Die Vorlage «Ehe für alle» wurde am 26. September 2021 mit 64,1 Prozent Ja angenommen, kein Kanton lehnte sie ab.",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "DW-7e3b31",
+    anker: "gleiche Freiheiten für alle",
+    url: "https://de.wikipedia.org/wiki/John_Rawls",
+    titel: "John Rawls (Wikipedia)",
+    stelle:
+      "John Rawls (1921 bis 2002), Hauptwerk «Eine Theorie der Gerechtigkeit» (1971). Im Urzustand haben die Personen «kein Wissen über sich selbst, ihre eigene soziale Stellung, ihre Interessen, Kenntnisse, Talente usw.» (Schleier des Nichtwissens). Der erste Grundsatz gibt allen gleiche Grundfreiheiten, der zweite erlaubt Ungleichheiten nur bei fairer Chancengleichheit und wenn sie den Schlechtestgestellten nützen (Differenzprinzip).",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "DW-7e3b31",
+    anker: "jede aus eigenen Gründen",
+    url: "https://en.wikipedia.org/wiki/Overlapping_consensus",
+    titel: "Overlapping consensus (englische Wikipedia)",
+    stelle:
+      "Rawls entwickelt den übergreifenden Konsens in «Political Liberalism» (1993). Menschen mit gegensätzlichen religiösen, moralischen oder philosophischen Lehren stimmen denselben politischen Grundsätzen zu, jede Gruppe aus ihren eigenen Gründen. Abgegrenzt wird das ausdrücklich vom modus vivendi, dem blossen Interessenausgleich, der zerfällt, sobald sich die Kräfteverhältnisse ändern.",
+    geprueft: "2026-08-16",
+  },
 ];
 
 /**

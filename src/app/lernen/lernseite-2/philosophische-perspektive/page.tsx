@@ -674,6 +674,49 @@ neu auf: die Frage nach dem Menschen selbst.
               text: "Container, Freihandelsabkommen und das Internet verflechten die Weltwirtschaft fast grenzenlos: Waren, Kapital und Daten zirkulieren rund um den Planeten. Es ist die jüngste und dichteste Form der Globalisierung.",
               mehr: "Den Anstoss gab ein amerikanischer Spediteur. Malcom McLean liess 1956 erstmals genormte Stahlkisten auf ein umgebautes Schiff heben, weil ihn das ewige Umladen von Hand ärgerte. Der Container senkte die Verladekosten auf einen Bruchteil, ganze Berufe am Hafen verschwanden, dafür wurde es plötzlich rentabel, auch billige Waren um die halbe Welt zu schicken. Nach dem Ende des Kalten Kriegs kam die Politik dazu, die Welthandelsorganisation entstand 1995, China trat 2001 bei und wurde zur «Fabrik der Welt». Seither steckt in einem einzigen Smartphone Arbeit aus Dutzenden Ländern, vom Kobalt aus dem Kongo über Chips aus Taiwan bis zur Software aus Amerika und Europa. Wie verletzlich das fein getaktete System ist, zeigte sich 2021, als ein einziges quer stehendes Containerschiff im Suezkanal tagelang einen Teil des Welthandels aufhielt. Grenzenlos heisst eben auch, dass eine Störung an einem Ort überall spürbar wird.",
             },
+            /* ── Nachträge, hinten angehängt ──────────────────────────────
+               Neue Punkte kommen ans Ende der Liste, nicht in den Faden, zu
+               dem sie gehören. Die Spuren merken sich den INDEX
+               («philosophische-perspektive:teppich:12»), ein Einschub in der
+               Mitte verschiebt also alle folgenden Punkte, und wer die Seite
+               schon besucht hat, findet fremde Karten angewählt. Fürs Bild
+               ist die Reihenfolge gleichgültig, die Fäden sortieren selbst
+               nach x. */
+            {
+              faden: "ereignisse",
+              x: 452,
+              y: 210,
+              labelOben: true,
+              titel: "Die moderne Demokratie",
+              kurz: "Demokratie",
+              jahr: "1776",
+              text: "Am 4. Juli 1776 erklären die amerikanischen Kolonien ihre Unabhängigkeit, mit einem Satz, der seither um die Welt geht, «all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness». Hier beginnt die moderne Demokratie. Die Rechte galten allerdings zunächst nur frei geborenen, weissen Männern in vollem Umfang, nicht aber Frauen, Sklaven und freien Schwarzen. Jeffersons Verurteilung der Sklaverei wurde aus dem Entwurf gestrichen, um die sklavenhaltenden Kolonien für die gemeinsame Sache zu gewinnen.",
+              mehr: "Graeber und Wengrow argumentieren, die Ideale seien nicht allein in europäischen Studierstuben entstanden. Der Wendat-Staatsmann Kondiaronk (1649–1701) kritisierte die europäischen Verhältnisse scharf und über die Dialoge des Baron de Lahontan (1666–1716) erreichte diese «indigene Kritik» die Salons der Aufklärung. Auf das europäische Publikum habe sie «wie ein Systemschock» gewirkt, sie «eröffnete … Möglichkeiten der menschlichen Emanzipation, die sich, einmal dargelegt, kaum mehr ignorieren liessen». Kritiker halten die Dialoge für erfunden. Die beiden Autoren entgegnen, in Europa sei die Kritik ernst genommen worden und genau darin liege ihre Wirkung. So gelesen ist die Demokratie ein Gewebe aus mehreren Welten und keine rein westliche Erfindung.",
+            },
+            {
+              faden: "praxen",
+              x: 308,
+              y: 300,
+              labelOben: true,
+              titel: "Afrikas Bibliotheken",
+              kurz: "Afrikas Bibliotheken",
+              jahr: "~280 v. Chr. bis 16. Jh.",
+              text: "Wissen sammeln, ordnen und weitergeben ist eine Praxis, die in Afrika lange vor der europäischen Universität blühte. In Alexandria stand die bedeutendste antike Bibliothek, sie sollte alle Wissensgebiete abdecken. Fast zwei Jahrtausende später lehrten Gelehrte in Timbuktu an der Sankoré-Moschee Sprache, Rhetorik, Astrologie und Rechtsprechung. Das Bild vom schriftlosen Afrika war immer falsch.",
+              mehr: "Ptolemaios I. errichtete die Bibliothek von Alexandria vermutlich zwischen 290 und 282 v. Chr. und sie sollte alle Wissensgebiete umfassen; moderne Schätzungen sprechen von 400'000 bis 500'000 Rollen, umstritten sind diese Zahlen bis heute. In Timbuktu, das seine Blütezeit unter der Herrschaft der Songhai erlebte, stand an der Sankoré-Moschee «eine Madrasa, vergleichbar einer mittelalterlichen Universität, an der die arabische Sprache, Rhetorik, Astrologie, die Rechtsprechung und die Schriften des Korans gelehrt wurden», dazu kamen 150 bis 180 Koranschulen. Seit 1988 gehört die Stadt zum UNESCO-Welterbe. Der Traum, alles Wissen an einem Ort zu haben, ist also alt und er lebt in den Datensammlungen weiter, aus denen eine KI heute lernt.",
+            },
+            {
+              faden: "ereignisse",
+              x: 634,
+              y: 286,
+              labelOben: true,
+              titel: "Selbstbestimmte Liebe",
+              kurz: "Selbstbestimmte Liebe",
+              jahr: "ab 1969",
+              text: "In der Nacht vom 27. auf den 28. Juni 1969 wehrten sich die Gäste des Stonewall Inn in der Christopher Street in New York gegen eine Polizeirazzia. Der LGBT-Bewegung gilt das Ereignis weltweit als Wendepunkt im Kampf für Gleichbehandlung und Anerkennung. Im Jahr darauf zog der erste Gedenkmarsch durch dieselben Strassen, daraus wurde der Christopher Street Day. Nach dem Ende der Sklaverei und dem Stimmrecht für alle ist das die dritte Welle in diesem Teppich, in der Menschen sich holen, was ihnen verwehrt war.",
+              mehr: "Die Niederlande öffneten 2001 als erstes Land der Welt die Ehe für gleichgeschlechtliche Paare. In der Schweiz sagten die Stimmenden am 26. September 2021 mit 64,1 Prozent Ja zur Ehe für alle und kein einziger Kanton lehnte ab. Zwischen jener Nacht in der Christopher Street und diesem Abstimmungssonntag liegen zweiundfünfzig Jahre, ungefähr ein Menschenleben.",
+              verunsicherung:
+                "Die Karte «Stimmrecht für alle» fragt, welcher heutige Ausschluss im Rückblick unverständlich wirken wird. Hier läuft dieselbe Frage weiter. Wem wurde verwehrt, selbst zu entscheiden, mit wem er leben will? Und wie lange hielten die meisten das für die natürliche Ordnung?",
+            },
           ]}
         />
       </Abschnitt>
