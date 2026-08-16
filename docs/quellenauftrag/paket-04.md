@@ -53,6 +53,33 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 **[PP-fa84ba]** *(Verunsicherungs-Stopp · Die Dampfmaschine)*
 Die Industrialisierung reisst die alte Gesellschaft auseinander: Landflucht, Kinderarbeit, Elendsquartiere im Schatten der Fabriken. 1848 entlädt sich die Spannung in Revolutionen quer durch Europa. In den Epochen unten zeigt die Industriemoderne, wie Marx den Umbruch begreift.
 
+**[PP-c8bf43]** *(Kartentext · Elektrizität verbindet die Welt)*
+Ein Kabel am Meeresgrund verbindet 1866 Europa und Amerika, Nachrichten brauchen Minuten statt Tage. Dazu kommen Telefon und elektrisches Licht. Strom wird zum Nervensystem der Welt und Entfernung verliert ihre Macht über die Information.
+
+**[PP-cb4419]** *(Vertiefung «Mehr lesen» · Elektrizität verbindet die Welt)*
+Der erste Versuch von 1858 hielt nur rund drei Wochen, das Glückwunsch-Telegramm der Queen brauchte fast 16 Stunden für 98 Wörter, dann verstummte das Kabel. 1866 verlegte die Great Eastern, das damals grösste Schiff der Welt, das dauerhafte Kabel von Irland nach Neufundland. Vorher war eine Nachricht per Dampfschiff etwa zehn Tage unterwegs gewesen. 1956 folgte mit TAT-1 das erste Telefonkabel durch den Atlantik, 36 Gespräche gleichzeitig. Heute liegen Glasfaserkabel auf demselben Meeresgrund, 2014 liefen 95 Prozent des Internetverkehrs zwischen den Weltregionen durch Seekabel und neueste Faserpaare übertragen gut ein Terabit pro Sekunde. Auch jede Antwort einer KI nimmt diesen Weg unter dem Meer.
+
+**[PP-488988]** *(Kartentext · Radio und Fernsehen)*
+Zum ersten Mal hören Millionen dasselbe im selben Moment. Ab 1920 wird Rundfunk zur Alltagspraxis, das Wohnzimmer wird zum Weltempfänger und später kommt das Fernsehbild dazu.
+
+**[PP-e673ea]** *(Vertiefung «Mehr lesen» · Radio und Fernsehen)*
+Den Anfang macht der Sender KDKA in Pittsburgh, der am 2. November 1920 die Ergebnisse der Präsidentschaftswahl überträgt. In der Schweiz sendet 1921 ein Sender beim Basler Zeughaus Signale bis nach Neuenburg, Deutschland folgt 1923. Wie schnell die Praxis sich ausbreitet, zeigen die britischen Radiolizenzen, von 1923 bis 1927 wachsen sie von 100'000 auf 2,4 Millionen. Den Höhepunkt der gemeinsamen Live-Welt erlebt das Fernsehen, die Mondlandung von 1969 verfolgen rund 600 Millionen Menschen gleichzeitig. Der heutige Feed ist der Enkel dieser Praxis, nur wählt jetzt ein Algorithmus mit, was du zu sehen bekommst.
+
+**[PP-966d30]** *(Kartentext · Das Ende der Sklaverei)*
+In Haiti erheben sich 1791 die Versklavten und erkämpfen bis 1804 den ersten Staat, den ehemals Versklavte gründen. Es folgt ein Jahrhundert der Verbote, bis 1888 auch das letzte Land Amerikas die Sklaverei beendet.
+
+**[PP-030a9d]** *(Vertiefung «Mehr lesen» · Das Ende der Sklaverei)*
+Der Aufstand beginnt in der Nacht auf den 23. August 1791, am 1. Januar 1804 erklärt Haiti als erster Staat Lateinamerikas die Unabhängigkeit. Das Britische Empire erklärt mit dem Slavery Abolition Act von 1833 die Versklavten seiner Kolonien ab dem 1. August 1834 für frei, die USA schaffen die Sklaverei 1865 mit dem 13. Verfassungszusatz ab und in Brasilien erklärt die Lei Áurea am 13. Mai 1888 nach Massenfluchten der Versklavten die Sklaverei für erloschen. Eine Ordnung, die Jahrhunderte als selbstverständlich galt, erweist sich als gemacht und wird beendet, erkämpft zuerst von denen, die sie am härtesten traf.
+
+**[PP-fde1f8]** *(Kartentext · Stimmrecht für alle)*
+Neuseeland führt 1893 als erstes das allgemeine Frauenwahlrecht ein, Land um Land folgt, die Schweiz erst 1971. Wer mitentscheiden darf, ist keine Naturtatsache, der Kreis wurde immer dann weiter, wenn Menschen es erkämpft haben.
+
+**[PP-3a11c2]** *(Vertiefung «Mehr lesen» · Stimmrecht für alle)*
+Finnland lässt 1906 als erstes Land Europas Frauen wählen und auch gewählt werden. In der Schweiz sagen die stimmberechtigten Männer am 7. Februar 1971 mit 65,7 Prozent Ja, als eines der letzten Länder Europas. In Appenzell Innerrhoden führt erst 1991 ein Bundesgerichtsentscheid das Frauenstimmrecht ein, gegen den Mehrheitsentscheid der Landsgemeinde vom April 1990. Im selben Jahrhundert kämpfen andere um volle Zugehörigkeit, der Civil Rights Act verbietet 1964 in den USA die Diskriminierung nach Hautfarbe, Religion, Geschlecht und Herkunft. Im Afrikanischen Jahr 1960 werden achtzehn Kolonien unabhängig. Der Bogen zur Landsgemeinde von Glarus im Kant-Fallbeispiel liegt nahe, wo die Grenze des Mitentscheidens verläuft, wird gesetzt und bleibt verhandelbar.
+
+**[PP-3c741b]** *(Verunsicherungs-Stopp · Stimmrecht für alle)*
+Bis 1971 war die Hälfte der Schweizer Bevölkerung vom eidgenössischen Entscheiden ausgeschlossen und den meisten galt das als selbstverständlich. Verunsichernd ist im Rückblick weniger der Wandel als die Frage, welcher heutige Ausschluss uns einmal genauso unverständlich sein wird.
+
 **[PP-d13f6a]** *(Kartentext · Der Computer)*
 Im Schatten des Kriegs entstehen die ersten programmierbaren Rechner, etwa Zuses Z3, Colossus und ENIAC. Turings Idee der universellen Maschine wird Wirklichkeit.
 
@@ -189,44 +216,3 @@ Die Figur links im olivgrünen Gewand gilt als Sokrates. Umringt von Zuhörern z
 
 **[EP-68478f]** *(Hintergrund zum Bild · Antike)*
 Jacques-Louis David (1748–1825) war der führende Maler des französischen Klassizismus und malte dieses Werk 1787 in Paris, zwei Jahre vor der Französischen Revolution. Der klare und strenge Aufbau ist typisch für den Klassizismus, der sich die Antike zum Vorbild nahm. Dargestellt ist die letzte Stunde des griechischen Philosophen Sokrates im Jahr 399 v. Chr., als er in Athen zum Tod durch den Schierlingsbecher verurteilt ist. Aufrecht und gefasst greift er nach dem Becher und belehrt zugleich seine erschütterten Schüler. Am Fussende des Bettes sitzt der greise Platon, der das Gespräch später überlieferte. David nutzt die Szene als Lehrstück über Standhaftigkeit gegenüber ungerechter Macht.
-
-**[EP-1ceb9e]** *(Im Kontext der Zeit · Antike)*
-Der Tod des Sokrates zeigt die Verunsicherung der Antike in einem einzigen Bild, eine Stadt, die ihren klügsten und unbequemsten Frager zum Tode verurteilt, weil der alte Mythos nicht mehr trägt und jede Gewissheit wankt. Die Antwort der Epoche war nicht, das Fragen zu verbieten, sondern es zu ordnen. Aus der sokratischen Methode und der Systematik des Aristoteles entstand das Fundament der Wissenschaft.
-
-**[EP-f0377d]** *(Kartentext · Antike)*
-Zwei Erfindungen treiben den Wandel. Um 800 v. Chr. übernehmen die Griechen von den Phöniziern die Buchstabenschrift, rund zwei Dutzend Zeichen. Geschrieben wurde hier schon früher: Die Paläste der mykenischen Zeit führten ihre Listen in einer Silbenschrift mit etwa 90 Lautzeichen, dazu 160 Bildzeichen für Waren. Um 1200 v. Chr. gingen die Paläste unter und die Schrift mit ihnen; vierhundert Jahre lang wird in Griechenland nicht geschrieben. Das Alphabet ist darum kein vereinfachtes Erbe, sondern ein Neuanfang. Lernen kann es trotzdem nicht jeder: Es gibt keine Schulpflicht und keine Schulhäuser, unterrichtet wird beim Lehrer zuhause. Dazu kommen Münzen, in Lydien um 650, in griechischen Städten wie Aigina um 550 v. Chr. Vorher bezahlte man mit abgewogenem Silber: Barren, Schmuck, Bruchstücke, von denen man je nach Warenwert ein Stück abtrennte und auf die Waage legte. Eine Münze muss man nicht wiegen, man zählt sie und sie gilt gleich viel, egal in wessen Hand sie liegt. So werden Werte zählbar, teilbar und weitergebbar. Durchgesetzt hat sich beides, weil eine Welt voller Häfen und Händler Verträge, Notizen und ein zuverlässiges Zahlungsmittel brauchte.
-
-> **Belegt** («etwa 90 Lautzeichen»): [Linearschrift B (Wikipedia)](https://de.wikipedia.org/wiki/Linearschrift_B) — «Bekannt sind etwa 90 Silbenzeichen, 160 Zeichen mit Wortbedeutung sowie diverse Zahlzeichen.» Zum Gebrauch: «Die Funde sind keine literarischen Texte, sondern hauptsächlich Notizen zu wirtschaftlichen und Verwaltungszwecken.» *(geprüft 2026-08-04)*
-
-> **Belegt** («vierhundert Jahre lang wird in Griechenland nicht geschrieben»): [Dunkle Jahrhunderte (Antike) (Wikipedia)](https://de.wikipedia.org/wiki/Dunkle_Jahrhunderte_(Antike)) — «Die Bezeichnung ‹Dunkles Zeitalter› für die Zeit von ca. 1200 bis 750 v. Chr. lässt sich allerdings weiterhin mit der Schriftlosigkeit dieser Periode begründen.» Der Zeitraum beginnt «ab ca. 1200 v. Chr., dem Ende der sogenannten Mykenischen Palastzeit». *(geprüft 2026-08-04)*
-
-> **Belegt** («keine Schulpflicht und keine Schulhäuser»): [Schule (Wikipedia), Abschnitt zur Antike](https://de.wikipedia.org/wiki/Schule) — «Dennoch gab es auch in Athen weder eine Schulpflicht noch öffentliche Schulgebäude, sondern die Kinder wurden beim Lehrer zuhause unterrichtet.» Davor: «konnten die Kinder wohlhabender Familien Athens allgemein bildende Schulen besuchen». *(geprüft 2026-08-04)*
-
-> **Belegt** («Dazu kommen Münzen»): [Altgriechische Münzen (Wikipedia)](https://de.wikipedia.org/wiki/Altgriechische_M%C3%BCnzen) — «Die ersten Münzen wurden von den Lydern im Westen der heutigen Türkei zwischen 650 und ca. 620 v. Chr. als Zahlungsmittel geprägt.» Und: «Die ersten Silbermünzen wurden um 550 v. Chr. in Kleinasien und auf der Insel Aigina geprägt.» *(geprüft 2026-08-04)*
-
-> **Belegt** («man zählt sie»): [Altgriechische Münzen (Wikipedia)](https://de.wikipedia.org/wiki/Altgriechische_M%C3%BCnzen) — Der entscheidende Gegensatz, wörtlich: Münzen «hatten den Vorteil, immer gleiche Größe, gleiches Gewicht und gleiches Aussehen zu besitzen und statt gewogen abgezählt werden zu können». *(geprüft 2026-08-04)*
-
-> **Belegt** («auf die Waage legte»): [Hacksilber (Wikipedia)](https://de.wikipedia.org/wiki/Hacksilber) — Zum Bezahlen vor der Münze: «Der Handelswert wurde entsprechend dem Metallwert zerkleinert, abgewogen und eingetauscht. Zu diesem Zweck wurden zum Teil auch künstlerisch wertvolle Arbeiten zerkleinert und auf ihren reinen Metallwert reduziert.» *(geprüft 2026-08-04)*
-
-**[EP-ba3edc]** *(Vertiefung «Mehr lesen» · Antike)*
-Der Redelehrer Protagoras brachte die neue Lage auf einen Satz: Der Mensch sei «das Mass aller Dinge». Gemeint ist, dass nicht die Götter festlegen, was wahr und richtig ist, sondern die Menschen selbst. Protagoras war ein gefragter Lehrer und nahm hohe Honorare. Für viele Athener klang das nach Freiheit, für andere so, als würde der Boden unter ihren Füssen weich. Wie gereizt die Stimmung war, zeigt der Prozess von 399 v. Chr. Rund 500 ausgeloste Bürger sassen als Gericht zusammen und vor ihnen verteidigte sich der siebzigjährige Sokrates. Als er nach dem Schuldspruch selber eine Strafe vorschlagen sollte, schlug er zuerst allen Ernstes eine Belohnung vor, Gratisessen auf Staatskosten und liess sich dann nur zu einer Geldbusse herab. Das Gericht entschied auf den Giftbecher. Dazu muss man wissen, dass Athen kurz zuvor einen langen Krieg verloren und die Gewaltherrschaft der Dreissig Tyrannen erlebt hatte. Eine erschöpfte Stadt erträgt es schlecht, wenn jemand ihre letzten Gewissheiten in Frage stellt. Diese Angst, dass am Ende gar nichts mehr sicher ist, kehrt in jeder Umbruchszeit wieder.
-
-> **Belegt** («nur zu einer Geldbusse herab»): [Sokrates (Wikipedia)](https://de.wikipedia.org/wiki/Sokrates) — Nach dem Vorschlag der Speisung im Prytaneion nannte Sokrates laut Platons Apologie doch noch eine Geldstrafe (eine Mine, von Freunden auf dreissig aufgestockt); im «Phaidon»-Artikel: «bot Kriton vergeblich an, sich bei Verhängung einer Geldstrafe für deren Zahlung zu verbürgen». Vorher fehlte dieser Zwischenschritt. *(geprüft 2026-08-05)*
-
-**[EP-8c3a46]** *(Kartentext · Antike)*
-Aristoteles (384–322 v. Chr.) setzt dem etwas anderes entgegen: genau hinschauen, unterscheiden, ordnen und dann Schritt für Schritt weiterdenken. Wer den ersten Satz annimmt, muss auch den nächsten annehmen, sonst widerspricht er sich selbst. Diese Kunst des sauberen Schliessens heisst Logik. Nicht wer am besten redet, soll recht haben, sondern wer am besten begründet. Davon lebt die Schule heute noch: Jedes «beweis es» und jede Aufgabe, die eine Begründung verlangt, kommt von hier. Auch dass ein Widerspruch ein Fehler ist und nicht Geschmackssache, ist diese Idee.
-
-**[EP-2d4b34]** *(Einleitung, Vertiefung · Zerbrechen der Ordnung)*
-Der Übergang von der Spätantike ins Mittelalter dauert Jahrhunderte und verläuft nicht überall gleich: Während im Westen die römische Ordnung zerfällt, blühen das oströmische (byzantinische) Reich und wenig später die islamische Welt kulturell auf und bewahren viel antikes Wissen. Im lateinischen Europa wird die Kirche zur wichtigsten Klammer. Sie bietet Schrift, Recht, Zeitrechnung und Trost. «Mittelalter» ist ein Sammelbegriff für verschiedene Jahrhunderte, nicht für die pauschal «dunkle Zeit», als die es oft dargestellt wird.
-
-**[EP-5fb218]** *(Hintergrund zum Bild · Zerbrechen der Ordnung)*
-Joseph-Noël Sylvestre (1847–1926) war ein französischer Maler des akademischen Historismus, der sich auf grosse Szenen aus der Antike spezialisierte. Er malte dieses Historiengemälde 1890, also fast 1500 Jahre nach dem dargestellten Ereignis. Zu sehen ist die Plünderung Roms im Jahr 410, als die Westgoten die Stadt eroberten. Im Zentrum reisst ein Krieger die Marmorstatue eines römischen Kaisers vom Sockel, ein Sinnbild für den Sturz der alten Ordnung. Weil das Werk so spät entstand, sagt es mehr über die Untergangsängste des 19. Jahrhunderts aus als über das Jahr 410.
-
-**[EP-89a912]** *(Kartentext · Zerbrechen der Ordnung)*
-Ein Krieger klettert an der weissen Marmorstatue eines römischen Kaisers hoch und holt zum Schlag aus. Nicht ein Mensch wird gestürzt, sondern das Sinnbild der Macht selbst, buchstäblich vom Sockel gerissen. So sichtbar zerbricht eine Ordnung, die 800 Jahre unantastbar schien.
-
-**[EP-5dc268]** *(Hintergrund zum Bild · Zerbrechen der Ordnung)*
-Philippe de Champaigne (1602–1674) war ein aus Brüssel stammender Maler, der zu den wichtigsten Vertretern des französischen Barock zählte. Er malte den heiligen Augustinus um 1645. Dargestellt ist der Kirchenvater Augustinus von Hippo (354–430), einer der einflussreichsten Denker des frühen Christentums, hier am Schreibpult in bischöflicher Kleidung. Seine klassischen Attribute sind das Buch, das flammende Herz und der Lichtstrahl von oben. Das ganze Bild ist auf eine Aussage hin gebaut, nämlich dass die Wahrheit von innen und von oben kommt und nicht aus der äusseren Welt.
-
-**[EP-1fcad7]** *(Vertiefung «Mehr lesen» · Zerbrechen der Ordnung)*
-Augustinus wusste, wovon er sprach, denn sein eigenes Leben war ein einziger Umweg: aufgewachsen in einer nordafrikanischen Kleinstadt, dann ehrgeiziger Rhetorikprofessor in Mailand, lange Anhänger der Lehre der Manichäer und Vater eines unehelichen Sohnes. In seinen «Confessiones» erzählt er, wie er im Jahr 386 in einem Mailänder Garten eine Kinderstimme «nimm und lies» rufen hörte, die Bibel aufschlug und sein Leben wendete. Neu daran war der Blick nach innen: Er untersuchte Erinnerung, Zeit und Gewissen so genau, wie andere Länder vermessen. Aus eigener Erfahrung wusste er: Sicherheit gibt nicht das Amt und nicht die Stadtmauer, sondern das, was einen von innen hält. Er starb 430 in Hippo, während die Vandalen die Stadt belagerten. Das äussere Reich zerfiel also bis zu seinem letzten Tag. Seine Ausrichtung nach innen aber wurde zum Erbstück Europas, bis hin zur heutigen Überzeugung, dass jeder Mensch ein Gewissen hat, dem er folgen darf.

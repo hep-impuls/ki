@@ -13,8 +13,8 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 202 |
-| Belegte Textblöcke | 115 |
+| Belege | 219 |
+| Belegte Textblöcke | 124 |
 | Begründete Nicht-Belege | 6 |
 | Aussagen mit Standdatum | 3 |
 
@@ -651,6 +651,159 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 - **Geprüft:** 2026-08-11
 
 > Den Anstoss gab ein amerikanischer Spediteur. Malcom McLean liess 1956 erstmals genormte Stahlkisten auf ein umgebautes Schiff heben, weil ihn das ewige Umladen von Hand ärgerte. Der Container senkte die Verladekosten auf einen Bruchteil, ganze Berufe am Hafen verschwanden, dafür wurde es plötzlich rentabel, auch billige Waren um die halbe Welt zu schicken. Nach dem Ende des Kalten Kriegs kam die Politik dazu, die Welthandelsorganisation entstand 1995, China trat 2001 bei und wurde zur «Fabrik der Welt». Seither steckt in einem einzigen Smartphone Arbeit aus Dutzenden Ländern, vom Kobalt aus dem Kongo über Chips aus Taiwan bis zur Software aus Amerika und Europa. Wie verletzlich das fein getaktete System ist, zeigte sich 2021, als ein einziges quer stehendes Containerschiff im Suezkanal tagelang einen Teil des Welthandels aufhielt. Grenzenlos heisst eben auch, dass eine Störung an einem Ort überall spürbar wird.
+
+### Elektrizität verbindet die Welt · verbindet 1866 Europa und Amerika
+
+- **Kennung:** `PP-c8bf43` (Kartentext)
+- **Quelle:** [Transatlantisches Telegrafenkabel (Wikipedia)](https://de.wikipedia.org/wiki/Transatlantisches_Telegrafenkabel)
+- **Fundstelle:** Die Great Eastern verlegte das dauerhafte Kabel von Valentia Island (Irland) nach Heart's Content (Neufundland), Start am 13. Juli 1866, Ankunft am 27. Juli, erstes offizielles Telegramm am 28. Juli 1866. Vorher brauchte eine Nachricht per Dampfschiff etwa zehn Tage, per Kabel Minuten.
+- **Geprüft:** 2026-08-16
+
+> Ein Kabel am Meeresgrund verbindet 1866 Europa und Amerika, Nachrichten brauchen Minuten statt Tage. Dazu kommen Telefon und elektrisches Licht. Strom wird zum Nervensystem der Welt und Entfernung verliert ihre Macht über die Information.
+
+### Elektrizität verbindet die Welt · fast 16 Stunden für 98 Wörter
+
+- **Kennung:** `PP-cb4419` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Transatlantisches Telegrafenkabel (Wikipedia)](https://de.wikipedia.org/wiki/Transatlantisches_Telegrafenkabel)
+- **Fundstelle:** Das erste Kabel von 1858 funktionierte nur rund drei Wochen, insgesamt 732 Telegramme. Das Grusstelegramm von Queen Victoria an Präsident Buchanan brauchte fast 16 Stunden für 98 Wörter, am 1. September 1858 verschwanden die Signale.
+- **Geprüft:** 2026-08-16
+
+> Der erste Versuch von 1858 hielt nur rund drei Wochen, das Glückwunsch-Telegramm der Queen brauchte fast 16 Stunden für 98 Wörter, dann verstummte das Kabel. 1866 verlegte die Great Eastern, das damals grösste Schiff der Welt, das dauerhafte Kabel von Irland nach Neufundland. Vorher war eine Nachricht per Dampfschiff etwa zehn Tage unterwegs gewesen. 1956 folgte mit TAT-1 das erste Telefonkabel durch den Atlantik, 36 Gespräche gleichzeitig. Heute liegen Glasfaserkabel auf demselben Meeresgrund, 2014 liefen 95 Prozent des Internetverkehrs zwischen den Weltregionen durch Seekabel und neueste Faserpaare übertragen gut ein Terabit pro Sekunde. Auch jede Antwort einer KI nimmt diesen Weg unter dem Meer.
+
+### Elektrizität verbindet die Welt · TAT-1
+
+- **Kennung:** `PP-cb4419` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Transatlantisches Telefonkabel (Wikipedia)](https://de.wikipedia.org/wiki/Transatlantisches_Telefonkabel)
+- **Fundstelle:** «Das 3600 km lange TAT-1 wurde am 25. September 1956 zwischen Oban (Schottland) und Clarenville (Neufundland) in Betrieb genommen», das erste transatlantische Telefonkabel mit 36 Fernsprechkanälen.
+- **Geprüft:** 2026-08-16
+
+> Der erste Versuch von 1858 hielt nur rund drei Wochen, das Glückwunsch-Telegramm der Queen brauchte fast 16 Stunden für 98 Wörter, dann verstummte das Kabel. 1866 verlegte die Great Eastern, das damals grösste Schiff der Welt, das dauerhafte Kabel von Irland nach Neufundland. Vorher war eine Nachricht per Dampfschiff etwa zehn Tage unterwegs gewesen. 1956 folgte mit TAT-1 das erste Telefonkabel durch den Atlantik, 36 Gespräche gleichzeitig. Heute liegen Glasfaserkabel auf demselben Meeresgrund, 2014 liefen 95 Prozent des Internetverkehrs zwischen den Weltregionen durch Seekabel und neueste Faserpaare übertragen gut ein Terabit pro Sekunde. Auch jede Antwort einer KI nimmt diesen Weg unter dem Meer.
+
+### Elektrizität verbindet die Welt · 95 Prozent des Internetverkehrs
+
+- **Kennung:** `PP-cb4419` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Seekabel (Wikipedia)](https://de.wikipedia.org/wiki/Seekabel)
+- **Fundstelle:** «2014 wurden 95 Prozent des Internetverkehrs zwischen Weltregionen via Unterseekabel übertragen.» Moderne Seekabel sind Glasfaserkabel, «neueste Faserpaare können gut ein Terabit Daten pro Sekunde übertragen».
+- **Geprüft:** 2026-08-16
+
+> Der erste Versuch von 1858 hielt nur rund drei Wochen, das Glückwunsch-Telegramm der Queen brauchte fast 16 Stunden für 98 Wörter, dann verstummte das Kabel. 1866 verlegte die Great Eastern, das damals grösste Schiff der Welt, das dauerhafte Kabel von Irland nach Neufundland. Vorher war eine Nachricht per Dampfschiff etwa zehn Tage unterwegs gewesen. 1956 folgte mit TAT-1 das erste Telefonkabel durch den Atlantik, 36 Gespräche gleichzeitig. Heute liegen Glasfaserkabel auf demselben Meeresgrund, 2014 liefen 95 Prozent des Internetverkehrs zwischen den Weltregionen durch Seekabel und neueste Faserpaare übertragen gut ein Terabit pro Sekunde. Auch jede Antwort einer KI nimmt diesen Weg unter dem Meer.
+
+### Radio und Fernsehen · das Wohnzimmer wird zum Weltempfänger
+
+- **Kennung:** `PP-488988` (Kartentext)
+- **Quelle:** [Geschichte des Hörfunks (Wikipedia)](https://de.wikipedia.org/wiki/Geschichte_des_H%C3%B6rfunks)
+- **Fundstelle:** Der Sender KDKA in Pittsburgh startete am 2. November 1920 den regelmässigen Sendebetrieb mit einer Liveübertragung der Ergebnisse der amerikanischen Präsidentschaftswahl.
+- **Geprüft:** 2026-08-16
+
+> Zum ersten Mal hören Millionen dasselbe im selben Moment. Ab 1920 wird Rundfunk zur Alltagspraxis, das Wohnzimmer wird zum Weltempfänger und später kommt das Fernsehbild dazu.
+
+### Radio und Fernsehen · 2. November 1920
+
+- **Kennung:** `PP-e673ea` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Geschichte des Hörfunks (Wikipedia)](https://de.wikipedia.org/wiki/Geschichte_des_H%C3%B6rfunks)
+- **Fundstelle:** KDKA startete am 2. November 1920 mit den Wahlergebnissen. Zur Schweiz: 1921 sandte ein Sender beim Basler Zeughaus St. Jakob Signale aus, «die in Neuenburg empfangen werden konnten»; der 29. Oktober 1923 gilt als Geburtsstunde des deutschen Rundfunks. Die BBC-Radiolizenzen wuchsen von 1923 bis 1927 von 100'000 auf 2,4 Millionen.
+- **Geprüft:** 2026-08-16
+
+> Den Anfang macht der Sender KDKA in Pittsburgh, der am 2. November 1920 die Ergebnisse der Präsidentschaftswahl überträgt. In der Schweiz sendet 1921 ein Sender beim Basler Zeughaus Signale bis nach Neuenburg, Deutschland folgt 1923. Wie schnell die Praxis sich ausbreitet, zeigen die britischen Radiolizenzen, von 1923 bis 1927 wachsen sie von 100'000 auf 2,4 Millionen. Den Höhepunkt der gemeinsamen Live-Welt erlebt das Fernsehen, die Mondlandung von 1969 verfolgen rund 600 Millionen Menschen gleichzeitig. Der heutige Feed ist der Enkel dieser Praxis, nur wählt jetzt ein Algorithmus mit, was du zu sehen bekommst.
+
+### Radio und Fernsehen · verfolgen rund 600 Millionen Menschen gleichzeitig
+
+- **Kennung:** `PP-e673ea` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Apollo 11 (Wikipedia)](https://de.wikipedia.org/wiki/Apollo_11)
+- **Fundstelle:** «Weltweit verfolgten rund 600 Millionen Menschen die Fernsehübertragung der Mondlandung 1969.»
+- **Geprüft:** 2026-08-16
+
+> Den Anfang macht der Sender KDKA in Pittsburgh, der am 2. November 1920 die Ergebnisse der Präsidentschaftswahl überträgt. In der Schweiz sendet 1921 ein Sender beim Basler Zeughaus Signale bis nach Neuenburg, Deutschland folgt 1923. Wie schnell die Praxis sich ausbreitet, zeigen die britischen Radiolizenzen, von 1923 bis 1927 wachsen sie von 100'000 auf 2,4 Millionen. Den Höhepunkt der gemeinsamen Live-Welt erlebt das Fernsehen, die Mondlandung von 1969 verfolgen rund 600 Millionen Menschen gleichzeitig. Der heutige Feed ist der Enkel dieser Praxis, nur wählt jetzt ein Algorithmus mit, was du zu sehen bekommst.
+
+### Das Ende der Sklaverei · erheben sich 1791
+
+- **Kennung:** `PP-966d30` (Kartentext)
+- **Quelle:** [Haitianische Revolution (Wikipedia)](https://de.wikipedia.org/wiki/Haitianische_Revolution)
+- **Fundstelle:** Die Revolution begann mit dem Sklavenaufstand in der Nacht vom 22. auf den 23. August 1791 und endete mit der Unabhängigkeitserklärung am 1. Januar 1804. Haiti war der erste unabhängige Staat Lateinamerikas und der erste, der von ehemals Versklavten geformt wurde.
+- **Geprüft:** 2026-08-16
+
+> In Haiti erheben sich 1791 die Versklavten und erkämpfen bis 1804 den ersten Staat, den ehemals Versklavte gründen. Es folgt ein Jahrhundert der Verbote, bis 1888 auch das letzte Land Amerikas die Sklaverei beendet.
+
+### Das Ende der Sklaverei · 1. Januar 1804
+
+- **Kennung:** `PP-030a9d` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Haitianische Revolution (Wikipedia)](https://de.wikipedia.org/wiki/Haitianische_Revolution)
+- **Fundstelle:** Unabhängigkeitserklärung am 1. Januar 1804, «den ersten unabhängigen Staat in Lateinamerika und den ersten, der durch ehemalige Sklaven geformt wurde».
+- **Geprüft:** 2026-08-16
+
+> Der Aufstand beginnt in der Nacht auf den 23. August 1791, am 1. Januar 1804 erklärt Haiti als erster Staat Lateinamerikas die Unabhängigkeit. Das Britische Empire erklärt mit dem Slavery Abolition Act von 1833 die Versklavten seiner Kolonien ab dem 1. August 1834 für frei, die USA schaffen die Sklaverei 1865 mit dem 13. Verfassungszusatz ab und in Brasilien erklärt die Lei Áurea am 13. Mai 1888 nach Massenfluchten der Versklavten die Sklaverei für erloschen. Eine Ordnung, die Jahrhunderte als selbstverständlich galt, erweist sich als gemacht und wird beendet, erkämpft zuerst von denen, die sie am härtesten traf.
+
+### Das Ende der Sklaverei · Slavery Abolition Act
+
+- **Kennung:** `PP-030a9d` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Abolitionismus (Wikipedia)](https://de.wikipedia.org/wiki/Abolitionismus)
+- **Fundstelle:** «Am 28. August 1833 wurde der Slavery Abolition Act verabschiedet, mit dem vom 1. August 1834 alle Sklaven im britischen Kolonialreich für frei erklärt wurden.» Die USA schafften die Sklaverei «erst mit dem 13. Verfassungszusatz» von 1865 endgültig ab.
+- **Geprüft:** 2026-08-16
+
+> Der Aufstand beginnt in der Nacht auf den 23. August 1791, am 1. Januar 1804 erklärt Haiti als erster Staat Lateinamerikas die Unabhängigkeit. Das Britische Empire erklärt mit dem Slavery Abolition Act von 1833 die Versklavten seiner Kolonien ab dem 1. August 1834 für frei, die USA schaffen die Sklaverei 1865 mit dem 13. Verfassungszusatz ab und in Brasilien erklärt die Lei Áurea am 13. Mai 1888 nach Massenfluchten der Versklavten die Sklaverei für erloschen. Eine Ordnung, die Jahrhunderte als selbstverständlich galt, erweist sich als gemacht und wird beendet, erkämpft zuerst von denen, die sie am härtesten traf.
+
+### Das Ende der Sklaverei · Lei Áurea
+
+- **Kennung:** `PP-030a9d` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Abolitionismus (Wikipedia)](https://de.wikipedia.org/wiki/Abolitionismus)
+- **Fundstelle:** «Vor dem Hintergrund von Massenfluchten von Sklaven von ihren Plantagen nahm der brasilianische Senat am 13. Mai 1888 die Lei Áurea an, das die Institution der Sklaverei für erloschen erklärte.» Brasilien war damit das letzte Land Amerikas.
+- **Geprüft:** 2026-08-16
+
+> Der Aufstand beginnt in der Nacht auf den 23. August 1791, am 1. Januar 1804 erklärt Haiti als erster Staat Lateinamerikas die Unabhängigkeit. Das Britische Empire erklärt mit dem Slavery Abolition Act von 1833 die Versklavten seiner Kolonien ab dem 1. August 1834 für frei, die USA schaffen die Sklaverei 1865 mit dem 13. Verfassungszusatz ab und in Brasilien erklärt die Lei Áurea am 13. Mai 1888 nach Massenfluchten der Versklavten die Sklaverei für erloschen. Eine Ordnung, die Jahrhunderte als selbstverständlich galt, erweist sich als gemacht und wird beendet, erkämpft zuerst von denen, die sie am härtesten traf.
+
+### Stimmrecht für alle · Neuseeland führt 1893 als erstes
+
+- **Kennung:** `PP-fde1f8` (Kartentext)
+- **Quelle:** [Frauenwahlrecht (Wikipedia)](https://de.wikipedia.org/wiki/Frauenwahlrecht)
+- **Fundstelle:** «Neuseeland führte bereits 1893 als erste selbstregierte Kolonie das universelle aktive Frauenwahlrecht ein.» Der SRF-Beitrag zum Jubiläum formuliert, Neuseeland sei «1893 das erste selbstverwaltete Land der Welt» gewesen, «das allen Frauen das Wahlrecht ermöglichte».
+- **Geprüft:** 2026-08-16
+
+> Neuseeland führt 1893 als erstes das allgemeine Frauenwahlrecht ein, Land um Land folgt, die Schweiz erst 1971. Wer mitentscheiden darf, ist keine Naturtatsache, der Kreis wurde immer dann weiter, wenn Menschen es erkämpft haben.
+
+### Stimmrecht für alle · 65,7 Prozent
+
+- **Kennung:** `PP-3a11c2` (Vertiefung «Mehr lesen»)
+- **Quelle:** [SRF, 29. Januar 2021: «15 Fakten zur Gleichstellung in der Schweiz»](https://www.srf.ch/radio-srf-3/50-jahre-frauenstimmrecht-15-fakten-zur-gleichstellung-in-der-schweiz)
+- **Fundstelle:** «Am 7. Februar 1971 stimmten die Schweizer Männer an der Urne mit 65,7 Prozent einer Verfassungsänderung zu», die Schweiz als eines der letzten Länder Europas. Und «1991 im Kanton Appenzell Innerrhoden per Bundesgerichtsentscheid das Frauenstimmrecht eingeführt. Dies entgegen einem Mehrheitsentscheid der Männer an der Landsgemeinde im April 1990.»
+- **Geprüft:** 2026-08-16
+
+> Finnland lässt 1906 als erstes Land Europas Frauen wählen und auch gewählt werden. In der Schweiz sagen die stimmberechtigten Männer am 7. Februar 1971 mit 65,7 Prozent Ja, als eines der letzten Länder Europas. In Appenzell Innerrhoden führt erst 1991 ein Bundesgerichtsentscheid das Frauenstimmrecht ein, gegen den Mehrheitsentscheid der Landsgemeinde vom April 1990. Im selben Jahrhundert kämpfen andere um volle Zugehörigkeit, der Civil Rights Act verbietet 1964 in den USA die Diskriminierung nach Hautfarbe, Religion, Geschlecht und Herkunft. Im Afrikanischen Jahr 1960 werden achtzehn Kolonien unabhängig. Der Bogen zur Landsgemeinde von Glarus im Kant-Fallbeispiel liegt nahe, wo die Grenze des Mitentscheidens verläuft, wird gesetzt und bleibt verhandelbar.
+
+### Stimmrecht für alle · Finnland lässt 1906
+
+- **Kennung:** `PP-3a11c2` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Frauenwahlrecht (Wikipedia)](https://de.wikipedia.org/wiki/Frauenwahlrecht)
+- **Fundstelle:** Finnland war 1906 das erste Land Europas, in dem Frauen wählen durften und auch tatsächlich ins Parlament gewählt wurden.
+- **Geprüft:** 2026-08-16
+
+> Finnland lässt 1906 als erstes Land Europas Frauen wählen und auch gewählt werden. In der Schweiz sagen die stimmberechtigten Männer am 7. Februar 1971 mit 65,7 Prozent Ja, als eines der letzten Länder Europas. In Appenzell Innerrhoden führt erst 1991 ein Bundesgerichtsentscheid das Frauenstimmrecht ein, gegen den Mehrheitsentscheid der Landsgemeinde vom April 1990. Im selben Jahrhundert kämpfen andere um volle Zugehörigkeit, der Civil Rights Act verbietet 1964 in den USA die Diskriminierung nach Hautfarbe, Religion, Geschlecht und Herkunft. Im Afrikanischen Jahr 1960 werden achtzehn Kolonien unabhängig. Der Bogen zur Landsgemeinde von Glarus im Kant-Fallbeispiel liegt nahe, wo die Grenze des Mitentscheidens verläuft, wird gesetzt und bleibt verhandelbar.
+
+### Stimmrecht für alle · Civil Rights Act
+
+- **Kennung:** `PP-3a11c2` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Civil Rights Act von 1964 (Wikipedia)](https://de.wikipedia.org/wiki/Civil_Rights_Act_von_1964)
+- **Fundstelle:** Das Gesetz verbietet «Diskriminierung aufgrund von Rasse, Hautfarbe, Religion, Geschlecht oder nationaler Herkunft», unterzeichnet am 2. Juli 1964 nach den Protesten der Bürgerrechtsbewegung.
+- **Geprüft:** 2026-08-16
+
+> Finnland lässt 1906 als erstes Land Europas Frauen wählen und auch gewählt werden. In der Schweiz sagen die stimmberechtigten Männer am 7. Februar 1971 mit 65,7 Prozent Ja, als eines der letzten Länder Europas. In Appenzell Innerrhoden führt erst 1991 ein Bundesgerichtsentscheid das Frauenstimmrecht ein, gegen den Mehrheitsentscheid der Landsgemeinde vom April 1990. Im selben Jahrhundert kämpfen andere um volle Zugehörigkeit, der Civil Rights Act verbietet 1964 in den USA die Diskriminierung nach Hautfarbe, Religion, Geschlecht und Herkunft. Im Afrikanischen Jahr 1960 werden achtzehn Kolonien unabhängig. Der Bogen zur Landsgemeinde von Glarus im Kant-Fallbeispiel liegt nahe, wo die Grenze des Mitentscheidens verläuft, wird gesetzt und bleibt verhandelbar.
+
+### Stimmrecht für alle · Afrikanischen Jahr 1960
+
+- **Kennung:** `PP-3a11c2` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Afrikanisches Jahr (Wikipedia)](https://de.wikipedia.org/wiki/Afrikanisches_Jahr)
+- **Fundstelle:** 1960 erlangten 18 Kolonien in Afrika die Unabhängigkeit (14 französische, 2 britische, 1 belgische, 1 italienische); weil sich die beiden Somaliland-Gebiete sofort vereinigten, ist oft von 17 neuen Staaten die Rede. Darum heisst 1960 das «Afrikanische Jahr».
+- **Geprüft:** 2026-08-16
+
+> Finnland lässt 1906 als erstes Land Europas Frauen wählen und auch gewählt werden. In der Schweiz sagen die stimmberechtigten Männer am 7. Februar 1971 mit 65,7 Prozent Ja, als eines der letzten Länder Europas. In Appenzell Innerrhoden führt erst 1991 ein Bundesgerichtsentscheid das Frauenstimmrecht ein, gegen den Mehrheitsentscheid der Landsgemeinde vom April 1990. Im selben Jahrhundert kämpfen andere um volle Zugehörigkeit, der Civil Rights Act verbietet 1964 in den USA die Diskriminierung nach Hautfarbe, Religion, Geschlecht und Herkunft. Im Afrikanischen Jahr 1960 werden achtzehn Kolonien unabhängig. Der Bogen zur Landsgemeinde von Glarus im Kant-Fallbeispiel liegt nahe, wo die Grenze des Mitentscheidens verläuft, wird gesetzt und bleibt verhandelbar.
+
+### Stimmrecht für alle · vom eidgenössischen Entscheiden ausgeschlossen
+
+- **Kennung:** `PP-3c741b` (Verunsicherungs-Stopp)
+- **Quelle:** [SRF, 29. Januar 2021: «15 Fakten zur Gleichstellung in der Schweiz»](https://www.srf.ch/radio-srf-3/50-jahre-frauenstimmrecht-15-fakten-zur-gleichstellung-in-der-schweiz)
+- **Fundstelle:** Bis zur Abstimmung vom 7. Februar 1971 hatten Frauen in der Schweiz auf Bundesebene weder Stimm- noch Wahlrecht; die Männer nahmen die Verfassungsänderung mit 65,7 Prozent an.
+- **Geprüft:** 2026-08-16
+
+> Bis 1971 war die Hälfte der Schweizer Bevölkerung vom eidgenössischen Entscheiden ausgeschlossen und den meisten galt das als selbstverständlich. Verunsichernd ist im Rückblick weniger der Wandel als die Frage, welcher heutige Ausschluss uns einmal genauso unverständlich sein wird.
 
 ---
 

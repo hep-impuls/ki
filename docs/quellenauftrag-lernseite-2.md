@@ -1157,6 +1157,44 @@ James Watt war Instrumentenmacher in Glasgow und sollte 1764 ein Modell der alte
 **[PP-fa84ba]** *(Verunsicherungs-Stopp)*
 Die Industrialisierung reisst die alte Gesellschaft auseinander: Landflucht, Kinderarbeit, Elendsquartiere im Schatten der Fabriken. 1848 entlädt sich die Spannung in Revolutionen quer durch Europa. In den Epochen unten zeigt die Industriemoderne, wie Marx den Umbruch begreift.
 
+### Elektrizität verbindet die Welt
+
+**[PP-c8bf43]** *(Kartentext)*
+Ein Kabel am Meeresgrund verbindet 1866 Europa und Amerika, Nachrichten brauchen Minuten statt Tage. Dazu kommen Telefon und elektrisches Licht. Strom wird zum Nervensystem der Welt und Entfernung verliert ihre Macht über die Information.
+
+**[PP-cb4419]** *(Vertiefung «Mehr lesen»)*
+Der erste Versuch von 1858 hielt nur rund drei Wochen, das Glückwunsch-Telegramm der Queen brauchte fast 16 Stunden für 98 Wörter, dann verstummte das Kabel. 1866 verlegte die Great Eastern, das damals grösste Schiff der Welt, das dauerhafte Kabel von Irland nach Neufundland. Vorher war eine Nachricht per Dampfschiff etwa zehn Tage unterwegs gewesen. 1956 folgte mit TAT-1 das erste Telefonkabel durch den Atlantik, 36 Gespräche gleichzeitig. Heute liegen Glasfaserkabel auf demselben Meeresgrund, 2014 liefen 95 Prozent des Internetverkehrs zwischen den Weltregionen durch Seekabel und neueste Faserpaare übertragen gut ein Terabit pro Sekunde. Auch jede Antwort einer KI nimmt diesen Weg unter dem Meer.
+
+### Radio und Fernsehen
+
+**[PP-488988]** *(Kartentext)*
+Zum ersten Mal hören Millionen dasselbe im selben Moment. Ab 1920 wird Rundfunk zur Alltagspraxis, das Wohnzimmer wird zum Weltempfänger und später kommt das Fernsehbild dazu.
+
+**[PP-e673ea]** *(Vertiefung «Mehr lesen»)*
+Den Anfang macht der Sender KDKA in Pittsburgh, der am 2. November 1920 die Ergebnisse der Präsidentschaftswahl überträgt. In der Schweiz sendet 1921 ein Sender beim Basler Zeughaus Signale bis nach Neuenburg, Deutschland folgt 1923. Wie schnell die Praxis sich ausbreitet, zeigen die britischen Radiolizenzen, von 1923 bis 1927 wachsen sie von 100'000 auf 2,4 Millionen. Den Höhepunkt der gemeinsamen Live-Welt erlebt das Fernsehen, die Mondlandung von 1969 verfolgen rund 600 Millionen Menschen gleichzeitig. Der heutige Feed ist der Enkel dieser Praxis, nur wählt jetzt ein Algorithmus mit, was du zu sehen bekommst.
+
+### Das Ende der Sklaverei
+
+**[PP-966d30]** *(Kartentext)*
+In Haiti erheben sich 1791 die Versklavten und erkämpfen bis 1804 den ersten Staat, den ehemals Versklavte gründen. Es folgt ein Jahrhundert der Verbote, bis 1888 auch das letzte Land Amerikas die Sklaverei beendet.
+
+**[PP-030a9d]** *(Vertiefung «Mehr lesen»)*
+Der Aufstand beginnt in der Nacht auf den 23. August 1791, am 1. Januar 1804 erklärt Haiti als erster Staat Lateinamerikas die Unabhängigkeit. Das Britische Empire erklärt mit dem Slavery Abolition Act von 1833 die Versklavten seiner Kolonien ab dem 1. August 1834 für frei, die USA schaffen die Sklaverei 1865 mit dem 13. Verfassungszusatz ab und in Brasilien erklärt die Lei Áurea am 13. Mai 1888 nach Massenfluchten der Versklavten die Sklaverei für erloschen. Eine Ordnung, die Jahrhunderte als selbstverständlich galt, erweist sich als gemacht und wird beendet, erkämpft zuerst von denen, die sie am härtesten traf.
+
+**[PP-1657f6]** *(Verunsicherungs-Stopp)*
+Menschen zu besitzen galt Jahrhunderte als normal und bricht nun als Unrecht auf. Für die einen ist das die Befreiung, für die anderen stürzt eine ganze Wirtschaftsordnung ein. Die Folgen von Versklavung und Rassismus tragen bis in die Gegenwart.
+
+### Stimmrecht für alle
+
+**[PP-fde1f8]** *(Kartentext)*
+Neuseeland führt 1893 als erstes das allgemeine Frauenwahlrecht ein, Land um Land folgt, die Schweiz erst 1971. Wer mitentscheiden darf, ist keine Naturtatsache, der Kreis wurde immer dann weiter, wenn Menschen es erkämpft haben.
+
+**[PP-3a11c2]** *(Vertiefung «Mehr lesen»)*
+Finnland lässt 1906 als erstes Land Europas Frauen wählen und auch gewählt werden. In der Schweiz sagen die stimmberechtigten Männer am 7. Februar 1971 mit 65,7 Prozent Ja, als eines der letzten Länder Europas. In Appenzell Innerrhoden führt erst 1991 ein Bundesgerichtsentscheid das Frauenstimmrecht ein, gegen den Mehrheitsentscheid der Landsgemeinde vom April 1990. Im selben Jahrhundert kämpfen andere um volle Zugehörigkeit, der Civil Rights Act verbietet 1964 in den USA die Diskriminierung nach Hautfarbe, Religion, Geschlecht und Herkunft. Im Afrikanischen Jahr 1960 werden achtzehn Kolonien unabhängig. Der Bogen zur Landsgemeinde von Glarus im Kant-Fallbeispiel liegt nahe, wo die Grenze des Mitentscheidens verläuft, wird gesetzt und bleibt verhandelbar.
+
+**[PP-3c741b]** *(Verunsicherungs-Stopp)*
+Bis 1971 war die Hälfte der Schweizer Bevölkerung vom eidgenössischen Entscheiden ausgeschlossen und den meisten galt das als selbstverständlich. Verunsichernd ist im Rückblick weniger der Wandel als die Frage, welcher heutige Ausschluss uns einmal genauso unverständlich sein wird.
+
 ### Der Computer
 
 **[PP-d13f6a]** *(Kartentext)*

@@ -2260,6 +2260,166 @@ export const BELEGE: Beleg[] = [
       "Antike persönliche Schreibhefte, in die «Zitate, Teile von Arbeiten, Aphorismen und Beispiele» sowie Gehörtes und eigene Überlegungen eingetragen wurden, ein «materielles Gedächtnis gelesener, gehörter und gedachter Dinge». Der Artikel referiert auch Foucaults Deutung: Teil einer «Kultur des persönlichen Schreibens», Instrument der Selbstsorge und der «Selbstkonstituierung», gerade bei den Stoikern.",
     geprueft: "2026-08-14",
   },
+
+  /* ── Vier neue Teppich-Punkte (2026-08-16): Elektrizität und Seekabel,
+   * Radio und Fernsehen, Ende der Sklaverei, Stimmrecht für alle. Auf
+   * Christofs Wunsch mit öffentlich-rechtlichen Quellen, wo es sie gibt,
+   * darum stützt SRF die Schweizer Stimmrechts-Fakten. Der SRF-Beitrag hat
+   * auch den Entwurf korrigiert, Appenzell Innerrhoden kam 1991 per
+   * Bundesgerichtsentscheid, nicht 1990 freiwillig.                       */
+  {
+    id: "PP-c8bf43",
+    anker: "verbindet 1866 Europa und Amerika",
+    url: "https://de.wikipedia.org/wiki/Transatlantisches_Telegrafenkabel",
+    titel: "Transatlantisches Telegrafenkabel (Wikipedia)",
+    stelle:
+      "Die Great Eastern verlegte das dauerhafte Kabel von Valentia Island (Irland) nach Heart's Content (Neufundland), Start am 13. Juli 1866, Ankunft am 27. Juli, erstes offizielles Telegramm am 28. Juli 1866. Vorher brauchte eine Nachricht per Dampfschiff etwa zehn Tage, per Kabel Minuten.",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-cb4419",
+    anker: "fast 16 Stunden für 98 Wörter",
+    url: "https://de.wikipedia.org/wiki/Transatlantisches_Telegrafenkabel",
+    titel: "Transatlantisches Telegrafenkabel (Wikipedia)",
+    stelle:
+      "Das erste Kabel von 1858 funktionierte nur rund drei Wochen, insgesamt 732 Telegramme. Das Grusstelegramm von Queen Victoria an Präsident Buchanan brauchte fast 16 Stunden für 98 Wörter, am 1. September 1858 verschwanden die Signale.",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-cb4419",
+    anker: "TAT-1",
+    url: "https://de.wikipedia.org/wiki/Transatlantisches_Telefonkabel",
+    titel: "Transatlantisches Telefonkabel (Wikipedia)",
+    stelle:
+      "«Das 3600 km lange TAT-1 wurde am 25. September 1956 zwischen Oban (Schottland) und Clarenville (Neufundland) in Betrieb genommen», das erste transatlantische Telefonkabel mit 36 Fernsprechkanälen.",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-cb4419",
+    anker: "95 Prozent des Internetverkehrs",
+    url: "https://de.wikipedia.org/wiki/Seekabel",
+    titel: "Seekabel (Wikipedia)",
+    stelle:
+      "«2014 wurden 95 Prozent des Internetverkehrs zwischen Weltregionen via Unterseekabel übertragen.» Moderne Seekabel sind Glasfaserkabel, «neueste Faserpaare können gut ein Terabit Daten pro Sekunde übertragen».",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-488988",
+    anker: "das Wohnzimmer wird zum Weltempfänger",
+    url: "https://de.wikipedia.org/wiki/Geschichte_des_H%C3%B6rfunks",
+    titel: "Geschichte des Hörfunks (Wikipedia)",
+    stelle:
+      "Der Sender KDKA in Pittsburgh startete am 2. November 1920 den regelmässigen Sendebetrieb mit einer Liveübertragung der Ergebnisse der amerikanischen Präsidentschaftswahl.",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-e673ea",
+    anker: "2. November 1920",
+    url: "https://de.wikipedia.org/wiki/Geschichte_des_H%C3%B6rfunks",
+    titel: "Geschichte des Hörfunks (Wikipedia)",
+    stelle:
+      "KDKA startete am 2. November 1920 mit den Wahlergebnissen. Zur Schweiz: 1921 sandte ein Sender beim Basler Zeughaus St. Jakob Signale aus, «die in Neuenburg empfangen werden konnten»; der 29. Oktober 1923 gilt als Geburtsstunde des deutschen Rundfunks. Die BBC-Radiolizenzen wuchsen von 1923 bis 1927 von 100'000 auf 2,4 Millionen.",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-e673ea",
+    anker: "verfolgen rund 600 Millionen Menschen gleichzeitig",
+    url: "https://de.wikipedia.org/wiki/Apollo_11",
+    titel: "Apollo 11 (Wikipedia)",
+    stelle:
+      "«Weltweit verfolgten rund 600 Millionen Menschen die Fernsehübertragung der Mondlandung 1969.»",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-966d30",
+    anker: "erheben sich 1791",
+    url: "https://de.wikipedia.org/wiki/Haitianische_Revolution",
+    titel: "Haitianische Revolution (Wikipedia)",
+    stelle:
+      "Die Revolution begann mit dem Sklavenaufstand in der Nacht vom 22. auf den 23. August 1791 und endete mit der Unabhängigkeitserklärung am 1. Januar 1804. Haiti war der erste unabhängige Staat Lateinamerikas und der erste, der von ehemals Versklavten geformt wurde.",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-030a9d",
+    anker: "1. Januar 1804",
+    url: "https://de.wikipedia.org/wiki/Haitianische_Revolution",
+    titel: "Haitianische Revolution (Wikipedia)",
+    stelle:
+      "Unabhängigkeitserklärung am 1. Januar 1804, «den ersten unabhängigen Staat in Lateinamerika und den ersten, der durch ehemalige Sklaven geformt wurde».",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-030a9d",
+    anker: "Slavery Abolition Act",
+    url: "https://de.wikipedia.org/wiki/Abolitionismus",
+    titel: "Abolitionismus (Wikipedia)",
+    stelle:
+      "«Am 28. August 1833 wurde der Slavery Abolition Act verabschiedet, mit dem vom 1. August 1834 alle Sklaven im britischen Kolonialreich für frei erklärt wurden.» Die USA schafften die Sklaverei «erst mit dem 13. Verfassungszusatz» von 1865 endgültig ab.",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-030a9d",
+    anker: "Lei Áurea",
+    url: "https://de.wikipedia.org/wiki/Abolitionismus",
+    titel: "Abolitionismus (Wikipedia)",
+    stelle:
+      "«Vor dem Hintergrund von Massenfluchten von Sklaven von ihren Plantagen nahm der brasilianische Senat am 13. Mai 1888 die Lei Áurea an, das die Institution der Sklaverei für erloschen erklärte.» Brasilien war damit das letzte Land Amerikas.",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-fde1f8",
+    anker: "Neuseeland führt 1893 als erstes",
+    url: "https://de.wikipedia.org/wiki/Frauenwahlrecht",
+    titel: "Frauenwahlrecht (Wikipedia)",
+    stelle:
+      "«Neuseeland führte bereits 1893 als erste selbstregierte Kolonie das universelle aktive Frauenwahlrecht ein.» Der SRF-Beitrag zum Jubiläum formuliert, Neuseeland sei «1893 das erste selbstverwaltete Land der Welt» gewesen, «das allen Frauen das Wahlrecht ermöglichte».",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-3a11c2",
+    anker: "65,7 Prozent",
+    url: "https://www.srf.ch/radio-srf-3/50-jahre-frauenstimmrecht-15-fakten-zur-gleichstellung-in-der-schweiz",
+    titel: "SRF, 29. Januar 2021: «15 Fakten zur Gleichstellung in der Schweiz»",
+    stelle:
+      "«Am 7. Februar 1971 stimmten die Schweizer Männer an der Urne mit 65,7 Prozent einer Verfassungsänderung zu», die Schweiz als eines der letzten Länder Europas. Und «1991 im Kanton Appenzell Innerrhoden per Bundesgerichtsentscheid das Frauenstimmrecht eingeführt. Dies entgegen einem Mehrheitsentscheid der Männer an der Landsgemeinde im April 1990.»",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-3a11c2",
+    anker: "Finnland lässt 1906",
+    url: "https://de.wikipedia.org/wiki/Frauenwahlrecht",
+    titel: "Frauenwahlrecht (Wikipedia)",
+    stelle:
+      "Finnland war 1906 das erste Land Europas, in dem Frauen wählen durften und auch tatsächlich ins Parlament gewählt wurden.",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-3a11c2",
+    anker: "Civil Rights Act",
+    url: "https://de.wikipedia.org/wiki/Civil_Rights_Act_von_1964",
+    titel: "Civil Rights Act von 1964 (Wikipedia)",
+    stelle:
+      "Das Gesetz verbietet «Diskriminierung aufgrund von Rasse, Hautfarbe, Religion, Geschlecht oder nationaler Herkunft», unterzeichnet am 2. Juli 1964 nach den Protesten der Bürgerrechtsbewegung.",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-3a11c2",
+    anker: "Afrikanischen Jahr 1960",
+    url: "https://de.wikipedia.org/wiki/Afrikanisches_Jahr",
+    titel: "Afrikanisches Jahr (Wikipedia)",
+    stelle:
+      "1960 erlangten 18 Kolonien in Afrika die Unabhängigkeit (14 französische, 2 britische, 1 belgische, 1 italienische); weil sich die beiden Somaliland-Gebiete sofort vereinigten, ist oft von 17 neuen Staaten die Rede. Darum heisst 1960 das «Afrikanische Jahr».",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-3c741b",
+    anker: "vom eidgenössischen Entscheiden ausgeschlossen",
+    url: "https://www.srf.ch/radio-srf-3/50-jahre-frauenstimmrecht-15-fakten-zur-gleichstellung-in-der-schweiz",
+    titel: "SRF, 29. Januar 2021: «15 Fakten zur Gleichstellung in der Schweiz»",
+    stelle:
+      "Bis zur Abstimmung vom 7. Februar 1971 hatten Frauen in der Schweiz auf Bundesebene weder Stimm- noch Wahlrecht; die Männer nahmen die Verfassungsänderung mit 65,7 Prozent an.",
+    geprueft: "2026-08-16",
+  },
 ];
 
 /**
