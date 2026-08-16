@@ -10,6 +10,43 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-16 — Levinas nach Heidegger und wo ein Beleg unsichtbar bleibt
+
+**Levinas steht direkt nach Heidegger, das ist die Aussage.** Heidegger fragt
+zuerst, was Sein heisst; Levinas hält dagegen, dass die Ethik vorher kommt. Der
+Widerspruch steht darum ausdrücklich im Text, in einfachen Worten. Dazu gehört
+die Biografie, denn Levinas hörte 1927/28 in Freiburg bei Husserl und
+Heidegger, geriet 1940 in deutsche Kriegsgefangenschaft, verlor Eltern und
+Brüder im Massenmord und schwor danach, nie wieder deutschen Boden zu betreten.
+Die Karte nennt das nüchtern und ohne Pathos, weil die Heidegger-Karte davor
+die Belastung schon offengelegt hat und beides zusammengehört, die Bewunderung
+für ein Denken und das Entsetzen über eine Politik.
+
+**Lebensdaten 1906 bis 1995.** Die Datumszeile der Quelle ist doppelt datiert,
+30. Dezember 1905 julianisch und 12. Januar 1906 gregorianisch. Im
+Kartenkopf steht das gregorianische Jahr, weil danach überall gerechnet wird,
+und der Info-Text nennt beide Daten samt Grund. So muss niemand rätseln, warum
+andere Nachschlagewerke 1905 schreiben.
+
+**Was die Quelle nicht deckt, beruft sich nicht auf sie.** Im deutschen
+Wikipedia-Artikel kommen «Verantwortung», «der Dritte», «Gerechtigkeit»,
+«Politik» und «Alterität» nicht vor und das Antlitz erscheint nur
+religionsphilosophisch. Belegt sind darum nur Biografie, Werktitel, die Ethik
+an der Stelle der Ersten Philosophie und die Asymmetrie zum Anderen. Die
+übrigen Sätze referieren Levinas' Position, wie es alle Info-Texte der Denkwege
+tun, und der Beleg zur Asymmetrie hält ausdrücklich fest, was nicht in der
+Quelle steht.
+
+**Ein Beleg auf einem Info-Block erscheint nicht als Link.** Die Info-Texte der
+Denkwege werden ohne `belege`-Schalter gesetzt (Entscheid im Code, Fallbeispiele
+behaupten Tatsachen, Einordnungen referieren Positionen). Die Levinas-Karte ist
+der erste Info-Block mit harten Daten, ihre sieben Belege sind darum
+Herkunftsnachweise für Prüfskript und Quellen-Export, keine Links im Lernset.
+Am 2026-08-16 gemessen trifft keiner der 234 bestehenden Anker in einen der 22
+Info-Blöcke; sichtbar machen liesse sich das also ohne Nebenwirkung, es braucht
+`belege` am Info-Aufruf und eine Erweiterung von `docs/anker-kollision.mjs` auf
+die Info-Blöcke. Bis dahin steht die Lage als Kommentar in `belege.ts`.
+
 ## 2026-08-16 — Demokratie, Afrikas Bibliotheken, selbstbestimmte Liebe, Rawls
 
 **Die Demokratie wird mit der indigenen Kritik erzählt.** Die Karte «Die

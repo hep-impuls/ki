@@ -129,7 +129,7 @@ const VIDEO_TOTAL = 3;
  * jede Abweichung — bei neuen Bildern, Stationen oder Denkerinnen also dort
  * nachsehen, nicht hier raten.
  */
-const WUNSCH_TOTAL = 146;
+const WUNSCH_TOTAL = 147;
 
 
 /* ── Bewertungs-Präfixe (lokal, aus gewichtung.ts) ────────────────────────── */

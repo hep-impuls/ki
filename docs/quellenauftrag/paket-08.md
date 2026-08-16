@@ -50,6 +50,9 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 02 · Wege der Orientierung
 
+**[DW-246e50]** *(Zur Philosophie · Lebenskunst)*
+Martha Nussbaum ist eine der bekanntesten US-amerikanischen Philosophinnen und verbindet antike Ethik (besonders Aristoteles und die Stoa) mit heutigen Fragen. Sie zeigt, dass Gefühle keine blosse Störung der Vernunft sind, sondern zu einem guten Urteil und einem gelingenden Leben dazugehören. Mit dem «Fähigkeiten-Ansatz» fragt sie konkret, was Menschen wirklich können müssen, um gut zu leben (etwa Gesundheit, Bildung, Bindung, Spiel) und wie eine Gesellschaft das ermöglichen soll. Lebenskunst heisst darum auch, die eigenen Gefühle ernst zu nehmen und gute Bedingungen zu schaffen. Werk: «Fähigkeiten schaffen» (2011).
+
 **[DW-ed7ed3]** *(Fallbeispiel · Lebenskunst)*
 Im Juli 2023 registrierten Seismographen in Seattle Erschütterungen, ausgelöst von zehntausenden tanzenden Fans an einem Konzert von Taylor Swift, über Stunden hinweg. Dieselbe Tournee wurde später von Guinness World Records als die kommerziell erfolgreichste der Welt anerkannt.
 
@@ -179,6 +182,3 @@ Die Trainingsdaten der grossen Modelle bestehen zu einem sehr grossen Teil aus e
 
 **[PP-ff5fc3]** *(Kartentext · Die KI stellt diese Frage neu und dringlich)*
 Wörtlich wird «Was ist der Mensch?» laut Google Trends kaum häufiger gesucht als früher. Aber in unzähligen Reden und Texten über KI kehrt die Frage in konkreter Form wieder. Müssen wir überhaupt noch selbst denken und schreiben? Wie verändert uns die tägliche Nutzung? Und welche Rolle bekommen wir neben der Maschine, eher anleitend, prüfend und verantwortend statt ausführend? So taucht die alte philosophische Frage nach dem Menschen mitten im Alltag neu auf.
-
-**[PP-f89d1d]** *(Kartentext · Sie gibt keine Rezepte, sondern Orientierung)*
-Philosophie liefert keine Bedienungsanleitung und keine Prognose. Sie ordnet Begriffe, deckt verborgene Annahmen auf und wägt Gründe ab. So hilft sie zu klären, worüber wir eigentlich streiten. Hegels Bild der «Eule der Minerva» oben sagt, dass Verstehen oft erst im Rückblick kommt. Genau dieses Begreifen brauchen wir aber, um die Gegenwart zu gestalten.

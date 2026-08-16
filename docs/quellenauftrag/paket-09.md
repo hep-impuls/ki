@@ -1,6 +1,6 @@
 # Quellenauftrag · Lernseite 2 «Eine ganz neue Partnerschaft»
 
-**Paket 09 von 9.** Dieses Dokument enthält 27 Textblöcke eines Lernsets zu
+**Paket 09 von 9.** Dieses Dokument enthält 28 Textblöcke eines Lernsets zu
 Künstlicher Intelligenz und Philosophie (Berufsfachschule, Deutschschweiz).
 Jeder Block hat eine **Kennung** in eckigen Klammern, z.B. `[VA-a1b2c3]`.
 
@@ -46,9 +46,12 @@ und die Quelle ihn nur bestätigt.
 
 Jeder Block hier enthält eine prüfbare Behauptung (Zahl, Datum,
 Superlativ oder eine Aussage, die jemandem zugeschrieben wird). Deutende
-Passagen sind bewusst nicht dabei. Geh die 27 Blöcke einzeln durch.
+Passagen sind bewusst nicht dabei. Geh die 28 Blöcke einzeln durch.
 
 ### Thema 02 · Philosophische Perspektive
+
+**[PP-f89d1d]** *(Kartentext · Sie gibt keine Rezepte, sondern Orientierung)*
+Philosophie liefert keine Bedienungsanleitung und keine Prognose. Sie ordnet Begriffe, deckt verborgene Annahmen auf und wägt Gründe ab. So hilft sie zu klären, worüber wir eigentlich streiten. Hegels Bild der «Eule der Minerva» oben sagt, dass Verstehen oft erst im Rückblick kommt. Genau dieses Begreifen brauchen wir aber, um die Gegenwart zu gestalten.
 
 **[PP-d95ea2]** *(Fliesstext · Der Teppich des Wandels)*
 Der Teppich zeigt Ereignisse, die technologisch, gesellschaftlich, kulturell oder erfinderisch sind. Sie bilden vier Fäden, die nebeneinander durch die Zeit laufen, von Pflug, Rad und Schrift bis zur KI. Das Entscheidende ist ihre Wechselwirkung, denn sie hängen voneinander ab. Eisenbahn und Schifffahrt etwa hätten sich nie so verbreitet, wenn nicht auch kulturell das Interesse bestanden hätte, zu reisen, Handel zu treiben und neue Länder zu besitzen.
@@ -144,8 +147,8 @@ Oben und an den Rändern hängen die Menschen, Programmiererinnen, Künstler, Ka
 
 ### Thema 02 · Wege der Orientierung
 
-**[DW-9d91e8]** *(Fliesstext · Was ist der Mensch?)*
-Hannah Arendt nennt einen weiteren Wesenszug: das Anfangen. Mit jedem Menschen kommt etwas Neues in die Welt, das aus dem Bisherigen nicht ableitbar ist. Und der Mensch urteilt, er hält inne und entscheidet selbst. John Rawls verschiebt die Frage ins Zusammenleben. Wo viele Vorstellungen vom guten Leben nebeneinander bestehen, braucht es keine Moral für alle, sondern faire Regeln, unter denen jede dieser Vorstellungen lebbar bleibt. Martin Heidegger fügt die «Sorge» hinzu, und damit meint er nicht Kummer oder Bekümmerung. Er meint, wir stehen der Welt nie unbeteiligt gegenüber, sondern sind immer schon mit Dingen und Menschen beschäftigt. Erst in diesem Umgang bekommen die Dinge überhaupt eine Bedeutung und erst darin entsteht Sinn.
+**[DW-3c39b8]** *(Fliesstext · Was ist der Mensch?)*
+Hannah Arendt nennt einen weiteren Wesenszug: das Anfangen. Mit jedem Menschen kommt etwas Neues in die Welt, das aus dem Bisherigen nicht ableitbar ist. Und der Mensch urteilt, er hält inne und entscheidet selbst. John Rawls verschiebt die Frage ins Zusammenleben. Wo viele Vorstellungen vom guten Leben nebeneinander bestehen, braucht es keine Moral für alle, sondern faire Regeln, unter denen jede dieser Vorstellungen lebbar bleibt. Martin Heidegger fügt die «Sorge» hinzu und damit meint er nicht Kummer oder Bekümmerung. Er meint, wir stehen der Welt nie unbeteiligt gegenüber, sondern sind immer schon mit Dingen und Menschen beschäftigt. Erst in diesem Umgang bekommen die Dinge überhaupt eine Bedeutung und erst darin entsteht Sinn. Emmanuel Levinas widerspricht ihm an einem Punkt. Vor der Frage, was Sein heisst, steht für ihn die Ethik. Ein anderer Mensch nimmt mich in Anspruch, noch bevor ich mich dafür entscheide, und daraus entsteht Verantwortung.
 
 **[DW-d85e1d]** *(Fliesstext · Netzwerke und Systeme)*
 Moderne Gesellschaften sind unübersichtlich geworden. Niemand überblickt mehr das Ganze, nicht die Wirtschaft, nicht die Verwaltung, nicht die Technik. Aus dem Gefühl, den Überblick verloren zu haben, entsteht schnell Überforderung. Und doch funktioniert erstaunlich vieles. Der Zug fährt, der Lohn kommt, das Spital behandelt. Wie geht das zusammen? Hier helfen zwei Denker, die die Gesellschaft nicht bewerten, sondern erklären.

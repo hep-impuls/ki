@@ -265,10 +265,14 @@ In der Nacht vom 27. auf den 28. Juni 1969 wehrten sich die Gäste des Stonewall
 
 > **Belegt** («Christopher Street Day»): [Stonewall (Wikipedia)](https://de.wikipedia.org/wiki/Stonewall) — Das Ereignis gilt der LGBT-Bewegung weltweit «als Wendepunkt im Kampf für Gleichbehandlung und Anerkennung»; der Gedenkmarsch im Jahr darauf wurde zum Christopher Street Day. *(geprüft 2026-08-16)*
 
-**[PP-570085]** *(Vertiefung «Mehr lesen» · Selbstbestimmte Liebe)*
-Die Niederlande öffneten 2001 als erstes Land der Welt die Ehe für gleichgeschlechtliche Paare. In der Schweiz sagten die Stimmenden am 26. September 2021 mit 64,1 Prozent Ja zur Ehe für alle und kein einziger Kanton lehnte ab. Zwischen jener Nacht in der Christopher Street und diesem Abstimmungssonntag liegen zweiundfünfzig Jahre, ungefähr ein Menschenleben.
+**[PP-d7e5e9]** *(Vertiefung «Mehr lesen» · Selbstbestimmte Liebe)*
+Die Niederlande öffneten am 1. April 2001 als erstes Land der Welt die Ehe für gleichgeschlechtliche Paare. In der Schweiz sagten die Stimmenden am 26. September 2021 mit 64,1 Prozent Ja zur Ehe für alle und kein einziger Kanton lehnte ab; heiraten können gleichgeschlechtliche Paare hier seit dem 1. Juli 2022. Zwischen jener Nacht in der Christopher Street und diesem Abstimmungssonntag liegen zweiundfünfzig Jahre, ungefähr ein Menschenleben.
 
 > **Belegt** («64,1 Prozent»): [SRF, 26. September 2021: Ja zur Ehe für alle](https://www.srf.ch/news/abstimmungen/ehe-fuer-alle/ehe-fuer-alle-srg-hochrechnung-64-sagen-ja-zu-gleichgeschlechtlichen-ehen) — Die Vorlage «Ehe für alle» wurde am 26. September 2021 mit 64,1 Prozent Ja angenommen, kein Kanton lehnte sie ab. *(geprüft 2026-08-16)*
+
+> **Belegt** («Die Niederlande öffneten»): [Gleichgeschlechtliche Ehe (Wikipedia)](https://de.wikipedia.org/wiki/Gleichgeschlechtliche_Ehe) — Die Niederlande stehen als erstes Land in der Länderliste, Datum «1. Apr. 2001». Der Artikel führt derzeit 39 Staaten mit geöffneter Ehe. Diese Zahl steht bewusst nicht im Lernset-Text, sie veraltet mit jedem weiteren Land. *(geprüft 2026-08-16)*
+
+> **Belegt** («seit dem 1. Juli 2022»): [Gleichgeschlechtliche Ehe (Wikipedia)](https://de.wikipedia.org/wiki/Gleichgeschlechtliche_Ehe) — Für die Schweiz nennt der Artikel den 1. Juli 2022 als Datum, seit dem gleichgeschlechtliche Paare heiraten können. Die Abstimmung vom 26. September 2021 steht damit nicht ohne ihr Inkrafttreten da. *(geprüft 2026-08-16)*
 
 **[PP-66f41a]** *(Fliesstext · Wege der Orientierung)*
 Der erste Bereich fragt, was den Menschen im Kern ausmacht, unabhängig davon, ob eine KI es auch könnte, mit Aristoteles, Kant, Hegel, Arendt, Heidegger, Sloterdijk und Hustvedt. Der zweite erklärt, wie wir in komplexen Gesellschaften Orientierung finden, obwohl niemand mehr das Ganze überblickt, mit Latour und Nassehi. Der dritte zeigt, dass sich Mensch und Maschine nicht trennen lassen, und fragt nach Wegen der Zusammenarbeit oder der bewussten Abgrenzung, mit Latour, Haraway, Harari, Gabriel und dem japanischen «We-Turn» von Yasuo Deguchi. Der vierte fragt nach der Lebenskunst, wie man sein Leben tatsächlich ändern kann, mit den Stoikern, Foucault, Wilhelm Schmid, Nussbaum, Merleau-Ponty und Rosa.

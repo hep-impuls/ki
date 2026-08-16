@@ -1924,12 +1924,12 @@
   "stufe": "hoch",
   "text": "In der Nacht vom 27. auf den 28. Juni 1969 wehrten sich die Gäste des Stonewall Inn in der Christopher Street in New York gegen eine Polizeirazzia. Der LGBT-Bewegung gilt das Ereignis weltweit als Wendepunkt im Kampf für Gleichbehandlung und Anerkennung. Im Jahr darauf zog der erste Gedenkmarsch durch dieselben Strassen, daraus wurde der Christopher Street Day. Nach dem Ende der Sklaverei und dem Stimmrecht für alle ist das die dritte Welle in diesem Teppich, in der Menschen sich holen, was ihnen verwehrt war."
  },
- "PP-570085": {
+ "PP-d7e5e9": {
   "datei": "philosophische-perspektive/page.tsx",
   "ort": "Selbstbestimmte Liebe",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Die Niederlande öffneten 2001 als erstes Land der Welt die Ehe für gleichgeschlechtliche Paare. In der Schweiz sagten die Stimmenden am 26. September 2021 mit 64,1 Prozent Ja zur Ehe für alle und kein einziger Kanton lehnte ab. Zwischen jener Nacht in der Christopher Street und diesem Abstimmungssonntag liegen zweiundfünfzig Jahre, ungefähr ein Menschenleben."
+  "text": "Die Niederlande öffneten am 1. April 2001 als erstes Land der Welt die Ehe für gleichgeschlechtliche Paare. In der Schweiz sagten die Stimmenden am 26. September 2021 mit 64,1 Prozent Ja zur Ehe für alle und kein einziger Kanton lehnte ab; heiraten können gleichgeschlechtliche Paare hier seit dem 1. Juli 2022. Zwischen jener Nacht in der Christopher Street und diesem Abstimmungssonntag liegen zweiundfünfzig Jahre, ungefähr ein Menschenleben."
  },
  "PP-f8bb6e": {
   "datei": "philosophische-perspektive/page.tsx",
@@ -3142,6 +3142,20 @@
   "stufe": "hoch",
   "text": "In Tokio standen 2021 zum ersten Mal Skateboards im olympischen Programm. Im Street-Wettbewerb der Frauen gewann die 13-jährige Momiji Nishiya aus Japan Gold, Silber ging an die ebenfalls 13-jährige Rayssa Leal aus Brasilien.\n\nFrag die beiden nicht, wo beim Absprung ihr Gewicht liegt. Beim Fahren ist das Brett kein Gegenstand, über den man nachdenkt. Es verschwindet ins Können, gedacht wird in Linien und Landungen. Erst wenn etwas klemmt, ein Trick misslingt, eine Achse bricht, liegt da wieder ein Ding mit Schrauben. Heidegger meint mit Sorge genau dieses Eingelassensein. Du bist nicht zuerst Zuschauerin der Welt, du bist mit ihr beschäftigt und im Umgang entsteht Verstehen. Ein Erklärvideo hilft, aber gekonnt wird es unter deinen Füssen."
  },
+ "DW-7dc3ec": {
+  "datei": "philosophische-perspektive/_components/Denkwege.tsx",
+  "ort": "Was ist der Mensch?",
+  "feld": "Zur Philosophie",
+  "stufe": "hoch",
+  "text": "Emmanuel Levinas hörte von 1927 bis 1928 in Freiburg bei Edmund Husserl und Martin Heidegger. Geboren wurde er in Kaunas, nach dem damals in Russland geltenden Kalender am 30. Dezember 1905, nach unserem am 12. Januar 1906. 1940 geriet er in deutsche Kriegsgefangenschaft und 1945 erfuhr er, dass seine Eltern und Brüder in Litauen ermordet worden waren. Danach schwor er, nie wieder deutschen Boden zu betreten. Die Bewunderung für ein Denken und das Entsetzen über eine Politik standen bei ihm nebeneinander. Sein Widerspruch zu Heidegger lässt sich einfach sagen. Heidegger fragt zuerst, was Sein heisst, Levinas hält dagegen, dass die Ethik vorher kommt. Sie ist für ihn die «erste Philosophie». Das Ich ist nicht zuerst ein freies Subjekt, das sich selbst begründet. Es wird zum moralischen Subjekt, weil ein anderer Mensch es anspricht und in Anspruch nimmt, und das vor jeder eigenen Entscheidung, vor der Freiheit und vor allem Erkennen. Erkennen genügt darum nicht. Begriffe und Systeme ordnen das Begegnende in die eigene Ordnung ein, das wirklich Fremde wird auf Bekanntes zurückgeführt und verliert seine Fremdheit. Levinas sieht darin eine Gewalt, die im Denken selbst steckt. Sein Gegenwort heisst «Antlitz». Gemeint sind nicht die sichtbaren Gesichtszüge, sondern die Weise, in der «der Andere» sich verletzlich zeigt und meiner Macht ausgesetzt ist. Genau diese Verletzlichkeit stellt einen Anspruch, den niemand ausspricht, und begrenzt meine Macht, bevor ich mich entscheide. Verantwortung kommt also vor der Freiheit und nicht umgekehrt und sie gilt auch dann, wenn sie nicht erwidert wird. Sie ist kein Tausch und kein Vertrag. Levinas denkt weiter, denn neben dem einen Anderen steht immer «der Dritte». Damit stellt sich die Frage, wie verschiedene Ansprüche gegeneinander abzuwägen sind, und daraus erwachsen Recht und Politik. Institutionen bleiben nötig, dürfen den Einzelnen aber nicht auf eine Nummer, eine Funktion oder einen Typus verkürzen. Von Levinas her gelesen hat eine Maschine kein Antlitz in diesem Sinn. Sie ist nicht verletzlich, also stellt sie keinen Anspruch. Umgekehrt lässt sich fragen, was es mit uns macht, wenn wir uns an ein Gegenüber gewöhnen, das nichts von uns verlangt. Neben der Karte von Rawls gelesen ergänzen sich die beiden. Rawls fragt, welche Regeln fair sind, wenn keine gemeinsame Moral vorausgesetzt werden kann, Levinas fragt, woher der moralische Anspruch überhaupt kommt. Hauptwerke: «Totalität und Unendlichkeit» (1961) und «Jenseits des Seins oder anders als Sein geschieht» (1974)."
+ },
+ "DW-b02e4f": {
+  "datei": "philosophische-perspektive/_components/Denkwege.tsx",
+  "ort": "Was ist der Mensch?",
+  "feld": "Fallbeispiel",
+  "stufe": "tief",
+  "text": "Im Bus sitzt jemand schräg gegenüber und weint. Nicht laut, nur Tränen. Du hast nicht beschlossen, dass dich das angeht. Es geht dich schon an, bevor du nachdenkst, und du merkst es daran, dass du nach einer Begründung suchst, wenn du wegschaust.\n\nGenau diese Reihenfolge meint Levinas. Nicht «ich bin frei, also übernehme ich Verantwortung», sondern umgekehrt. Was dich in Anspruch nimmt, nennt er das «Antlitz». Gemeint sind nicht die Gesichtszüge, sondern dass «der Andere» sich verletzlich zeigt. Darum musst du dich rechtfertigen, wenn du wegschaust, nicht wenn du hinschaust. Sitzt daneben noch jemand, der etwas braucht, kommt «der Dritte» ins Spiel und mit ihm das Abwägen. Ein Chatfenster stellt diesen Anspruch nicht, es ist nicht verletzlich. Was macht es mit dir, wenn du dich an ein Gegenüber gewöhnst, das nie etwas von dir will?"
+ },
  "DW-616961": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
   "ort": "Was ist der Mensch?",
@@ -3177,12 +3191,12 @@
   "stufe": "hoch",
   "text": "«Was ist der Mensch?» Diese Frage ist so alt wie die Philosophie selbst. Schon Aristoteles sah den Menschen als Wesen, das von Natur aus nach Wissen strebt, neugierig, fragend, nie ganz fertig. Immanuel Kant machte die Frage zur Kernfrage überhaupt und gab eine Richtung vor. Der Mensch ist frei, er kann aus eigener Einsicht handeln und darum trägt er Verantwortung. Georg Wilhelm Friedrich Hegel fügt hinzu, dass der Mensch ein Wesen ist, das unterscheidet. Erst indem wir Gegensätze auseinanderhalten, was ist und was sein soll, können wir urteilen und uns frei entscheiden. Und was etwas ist, steht für ihn nicht ein für alle Mal fest, es klärt sich in einem geschichtlichen Gang. So bekommt gerade das Unterscheiden und Entscheiden eine zutiefst menschliche Seite."
  },
- "DW-9d91e8": {
+ "DW-3c39b8": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",
   "ort": "Was ist der Mensch?",
   "feld": "Fliesstext",
   "stufe": "mittel",
-  "text": "Hannah Arendt nennt einen weiteren Wesenszug: das Anfangen. Mit jedem Menschen kommt etwas Neues in die Welt, das aus dem Bisherigen nicht ableitbar ist. Und der Mensch urteilt, er hält inne und entscheidet selbst. John Rawls verschiebt die Frage ins Zusammenleben. Wo viele Vorstellungen vom guten Leben nebeneinander bestehen, braucht es keine Moral für alle, sondern faire Regeln, unter denen jede dieser Vorstellungen lebbar bleibt. Martin Heidegger fügt die «Sorge» hinzu, und damit meint er nicht Kummer oder Bekümmerung. Er meint, wir stehen der Welt nie unbeteiligt gegenüber, sondern sind immer schon mit Dingen und Menschen beschäftigt. Erst in diesem Umgang bekommen die Dinge überhaupt eine Bedeutung und erst darin entsteht Sinn."
+  "text": "Hannah Arendt nennt einen weiteren Wesenszug: das Anfangen. Mit jedem Menschen kommt etwas Neues in die Welt, das aus dem Bisherigen nicht ableitbar ist. Und der Mensch urteilt, er hält inne und entscheidet selbst. John Rawls verschiebt die Frage ins Zusammenleben. Wo viele Vorstellungen vom guten Leben nebeneinander bestehen, braucht es keine Moral für alle, sondern faire Regeln, unter denen jede dieser Vorstellungen lebbar bleibt. Martin Heidegger fügt die «Sorge» hinzu und damit meint er nicht Kummer oder Bekümmerung. Er meint, wir stehen der Welt nie unbeteiligt gegenüber, sondern sind immer schon mit Dingen und Menschen beschäftigt. Erst in diesem Umgang bekommen die Dinge überhaupt eine Bedeutung und erst darin entsteht Sinn. Emmanuel Levinas widerspricht ihm an einem Punkt. Vor der Frage, was Sein heisst, steht für ihn die Ethik. Ein anderer Mensch nimmt mich in Anspruch, noch bevor ich mich dafür entscheide, und daraus entsteht Verantwortung."
  },
  "DW-43ee4a": {
   "datei": "philosophische-perspektive/_components/Denkwege.tsx",

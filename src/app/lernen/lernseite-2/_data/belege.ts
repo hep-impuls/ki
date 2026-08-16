@@ -2530,12 +2530,105 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "PP-570085",
+    id: "PP-d7e5e9",
     anker: "64,1 Prozent",
     url: "https://www.srf.ch/news/abstimmungen/ehe-fuer-alle/ehe-fuer-alle-srg-hochrechnung-64-sagen-ja-zu-gleichgeschlechtlichen-ehen",
     titel: "SRF, 26. September 2021: Ja zur Ehe für alle",
     stelle:
       "Die Vorlage «Ehe für alle» wurde am 26. September 2021 mit 64,1 Prozent Ja angenommen, kein Kanton lehnte sie ab.",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-d7e5e9",
+    anker: "Die Niederlande öffneten",
+    url: "https://de.wikipedia.org/wiki/Gleichgeschlechtliche_Ehe",
+    titel: "Gleichgeschlechtliche Ehe (Wikipedia)",
+    stelle:
+      "Die Niederlande stehen als erstes Land in der Länderliste, Datum «1. Apr. 2001». Der Artikel führt derzeit 39 Staaten mit geöffneter Ehe. Diese Zahl steht bewusst nicht im Lernset-Text, sie veraltet mit jedem weiteren Land.",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "PP-d7e5e9",
+    anker: "seit dem 1. Juli 2022",
+    url: "https://de.wikipedia.org/wiki/Gleichgeschlechtliche_Ehe",
+    titel: "Gleichgeschlechtliche Ehe (Wikipedia)",
+    stelle:
+      "Für die Schweiz nennt der Artikel den 1. Juli 2022 als Datum, seit dem gleichgeschlechtliche Paare heiraten können. Die Abstimmung vom 26. September 2021 steht damit nicht ohne ihr Inkrafttreten da.",
+    geprueft: "2026-08-16",
+  },
+  /* Levinas-Karte, Block «Zur Philosophie». Diese sieben Einträge sichern die
+     Herkunft der biografischen Angaben und der Werktitel. ACHTUNG, sie
+     erscheinen NICHT als Links im Lernset: Die Info-Texte der Denkwege werden
+     ohne `belege`-Schalter gesetzt, weil sie Positionen referieren und keine
+     Tatsachen behaupten (Begründung in Denkwege.tsx beim Fallbeispiel-Aufruf).
+     Die Levinas-Karte ist der erste Info-Block, der harte Daten nennt, darum
+     stehen die Belege hier. Sie werden von `belege-pruefen.js` mitgeprüft und
+     stehen im Quellen-Export, ein Wortlaut-Wechsel im Text fällt also auf. Wer
+     sie sichtbar machen will, gibt dem Info-Aufruf `belege` mit und erweitert
+     `docs/anker-kollision.mjs` auf die Info-Blöcke; am 2026-08-16 gemessen
+     trifft keiner der 234 bestehenden Anker in einen der 22 Info-Blöcke, die
+     Umstellung wäre also ohne Nebenwirkung. */
+  {
+    id: "DW-7dc3ec",
+    anker: "12. Januar 1906",
+    url: "https://de.wikipedia.org/wiki/Emmanuel_Levinas",
+    titel: "Emmanuel Levinas (Wikipedia)",
+    stelle:
+      "Die Datumszeile lautet wörtlich «* 30. Dezember 1905[jul.] / 12. Januar 1906[greg.] in Kaunas, Gouvernement Kowno, Russisches Kaiserreich; † 25. Dezember 1995 in Paris, Frankreich». Die Karte nennt darum beide Daten und führt in den Lebensdaten das gregorianische Jahr 1906.",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "DW-7dc3ec",
+    anker: "von 1927 bis 1928 in Freiburg",
+    url: "https://de.wikipedia.org/wiki/Emmanuel_Levinas",
+    titel: "Emmanuel Levinas (Wikipedia)",
+    stelle:
+      "«Von 1927 bis 1928 setzte er sein phänomenologisches Studium an der Albert-Ludwigs-Universität Freiburg fort, wo er bei Edmund Husserl und Martin Heidegger studierte.»",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "DW-7dc3ec",
+    anker: "in deutsche Kriegsgefangenschaft",
+    url: "https://de.wikipedia.org/wiki/Emmanuel_Levinas",
+    titel: "Emmanuel Levinas (Wikipedia)",
+    stelle:
+      "«1940 geriet er in deutsche Kriegsgefangenschaft.» Und weiter, er habe 1945 erfahren, «dass seine Eltern und Brüder in Litauen der nationalsozialistischen Ausrottungspolitik zum Opfer gefallen waren».",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "DW-7dc3ec",
+    anker: "nie wieder deutschen Boden",
+    url: "https://de.wikipedia.org/wiki/Emmanuel_Levinas",
+    titel: "Emmanuel Levinas (Wikipedia)",
+    stelle:
+      "Nach der Nachricht vom Tod der Familie «schwor er, nie wieder deutschen Boden zu betreten».",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "DW-7dc3ec",
+    anker: "dass die Ethik vorher kommt",
+    url: "https://de.wikipedia.org/wiki/Emmanuel_Levinas",
+    titel: "Emmanuel Levinas (Wikipedia)",
+    stelle:
+      "«Während in vielen klassischen Systementwürfen die Erkenntnistheorie und Metaphysik eine Grundlage bilden – bezeichnet als Erste Philosophie –, ersetzt Levinas deren Rolle durch die Analyse einer grundlegenden Verpflichtetheit: Sie differenziert sich zu einer Ethik aus.»",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "DW-7dc3ec",
+    anker: "wenn sie nicht erwidert wird",
+    url: "https://de.wikipedia.org/wiki/Emmanuel_Levinas",
+    titel: "Emmanuel Levinas (Wikipedia)",
+    stelle:
+      "«Stattdessen spricht Levinas von einer uneinholbaren, sich durch jeden Vermittlungsversuch letztlich ausweitenden Asymmetrie zum Anderen.» Das stützt die Aussage, die Verantwortung sei kein Tausch. Die Wörter «Antlitz» als unendlicher Anspruch, «der Dritte», «Gerechtigkeit», «Recht» und «Politik» kommen in diesem Artikel NICHT vor; die entsprechenden Sätze der Karte referieren Levinas' Position und berufen sich nicht auf diese Quelle.",
+    geprueft: "2026-08-16",
+  },
+  {
+    id: "DW-7dc3ec",
+    anker: "Jenseits des Seins oder anders als Sein geschieht",
+    url: "https://de.wikipedia.org/wiki/Emmanuel_Levinas",
+    titel: "Emmanuel Levinas (Wikipedia)",
+    stelle:
+      "Werkverzeichnis: «Totalité et Infini: essai sur l'extériorité, 1961», deutsch «Totalität und Unendlichkeit», sowie «Autrement qu'être ou au-delà de l'essence, 1974», deutsch «Jenseits des Seins oder anders als Sein geschieht».",
     geprueft: "2026-08-16",
   },
   {
