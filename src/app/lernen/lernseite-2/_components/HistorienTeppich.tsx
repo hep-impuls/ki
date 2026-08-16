@@ -56,8 +56,9 @@ export interface TeppichPunkt {
  *
  * Warum das Seitenverhältnis mitwächst: `preserveAspectRatio="none"` streckt
  * den viewBox auf die Box, die das Seitenverhältnis vorgibt. Stimmen die beiden
- * nicht überein, werden Schrift und Punkte verzerrt. Darum stehen `W`, `H` und
- * die Klasse `aspect-[1020/380]` immer im gleichen Verhältnis.
+ * nicht überein, werden Schrift und Punkte verzerrt. Darum stehen `W`, die
+ * viewBox-Höhe `H + RAND_UNTEN` und die Klasse `aspect-[1020/392]` immer im
+ * gleichen Verhältnis (siehe `RAND_UNTEN` unten).
  *
  * Und warum die Breite nicht allein genügte: Ein grösserer viewBox in derselben
  * Box ist nur ein Verkleinern, die Beschriftungen schrumpfen mit und die Enge
@@ -72,6 +73,27 @@ const W = 1020;
 const H = 380;
 const X_STRECKUNG = W / 720;
 const Y_STRECKUNG = H / 300;
+
+/**
+ * Luft unter dem Gewebe. `H` ist die Fläche, auf die die Punkte gerechnet
+ * werden, ein Punkt bei `y: 300` landet also genau auf 380 und damit auf der
+ * Kante. Sein Punkt hat aber einen Radius von 5 bis 6,5 und einen Ring von 9
+ * bis 10, die untere Hälfte lag darum ausserhalb und war abgeschnitten
+ * (Christofs Rückmeldung 2026-08-16, betroffen waren «Afrikas Bibliotheken»
+ * und «Radio und Fernsehen»).
+ *
+ * Darum wächst der viewBox nach unten, ohne dass sich ein Punkt bewegt und
+ * ohne dass etwas neu skaliert wird: `Y_STRECKUNG` bleibt an `H` hängen, die
+ * Zeichenfläche ist `H + RAND_UNTEN` hoch. Ein Punkt auf der Kante hat damit
+ * 12 Einheiten Platz und liegt ganz im Bild.
+ *
+ * ACHTUNG, drei Zahlen müssen zusammenpassen: `W`, `H + RAND_UNTEN` und die
+ * Klasse `aspect-[1020/392]` weiter unten. Die Klasse muss wörtlich im Code
+ * stehen, weil Tailwind die Namen im Quelltext sucht und einen zusammengesetzten
+ * String nicht findet. Wer `H` oder `RAND_UNTEN` ändert, ändert sie mit, sonst
+ * streckt `preserveAspectRatio="none"` die Zeichnung.
+ */
+const RAND_UNTEN = 12;
 
 /**
  * Wie breit die Zeichnung mindestens liegt. 1320 Pixel bei einem viewBox von
@@ -428,9 +450,9 @@ export default function HistorienTeppich({
         className="overflow-x-auto overflow-y-hidden overscroll-x-contain rounded-xl border border-outline-variant bg-surface-container-low/60 p-sm sm:p-md print:overflow-visible"
       >
         <svg
-          viewBox={`0 0 ${W} ${H}`}
+          viewBox={`0 0 ${W} ${H + RAND_UNTEN}`}
           preserveAspectRatio="none"
-          className={`block w-full select-none aspect-[1020/380] ${MIN_BREITE} print:min-w-0`}
+          className={`block w-full select-none aspect-[1020/392] ${MIN_BREITE} print:min-w-0`}
           role="img"
           aria-label="Teppich des Wandels: vier Fäden (Technologie, Entdeckungen, gesellschaftliche Ereignisse und kulturelle Praxen) weben sich durchs Antippen der Punkte ein; zwischen besuchten Punkten füllen sich gemusterte Maschen."
         >
