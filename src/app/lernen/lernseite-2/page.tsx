@@ -13,6 +13,7 @@ import VideoImpuls from "./_components/VideoImpuls";
 import AktivitaetsNetzFloat from "./_components/AktivitaetsNetzFloat";
 import Ausklapptext from "./_components/Ausklapptext";
 import ModulMiniNav from "./_components/ModulMiniNav";
+import Inhaltsverzeichnis from "./_components/Inhaltsverzeichnis";
 
 /**
  * Hub von Lernseite 2 («Eine ganz neue Partnerschaft»).
@@ -155,16 +156,33 @@ export default function Lernseite2Hub() {
         </ul>
       </section>
 
-      {/* Video-Impuls zum Einstieg */}
-      <VideoImpuls
-        className="mt-xl"
-        spurId="video:hub"
-        videoId="d8w2hVHH7Xo"
-        titel="Eine ganz neue Partnerschaft: worum es geht"
-        beschreibung="Ein kurzer Einstieg ins Modul: Was ist da aufgetreten, und warum lohnt es sich, genauer hinzuschauen?"
+      {/* Inhaltsverzeichnis + Klammersymbol (oben rechts) — die Startseite hat
+          nur zwei Abschnitte, trägt das Symbol aber trotzdem: Es wird gleich
+          darüber beschrieben, also soll es hier auch zu sehen sein. */}
+      <Inhaltsverzeichnis
+        className="mt-xl max-w-3xl"
+        eintraege={[
+          { id: "video-hub", label: "Video: worum es geht", prefixe: ["video:hub"] },
+          {
+            id: "themen",
+            label: "Der Faden durch das Modul",
+            prefixe: ["vorhang-auf:", "philosophische-perspektive:", "video:philosophie"],
+          },
+        ]}
       />
 
-      <section className="mt-xl" aria-label="Themen des Moduls">
+      {/* Video-Impuls zum Einstieg */}
+      <div id="video-hub" className="scroll-mt-24">
+        <VideoImpuls
+          className="mt-xl"
+          spurId="video:hub"
+          videoId="d8w2hVHH7Xo"
+          titel="Eine ganz neue Partnerschaft: worum es geht"
+          beschreibung="Ein kurzer Einstieg ins Modul: Was ist da aufgetreten, und warum lohnt es sich, genauer hinzuschauen?"
+        />
+      </div>
+
+      <section id="themen" className="mt-xl scroll-mt-24" aria-label="Themen des Moduls">
         <div className="mb-lg">
           <h2 className="text-headline-md text-on-surface">Der Faden durch das Modul</h2>
           <p className="mt-xs max-w-3xl text-body-sm text-on-surface-variant">
