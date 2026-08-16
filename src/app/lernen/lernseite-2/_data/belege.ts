@@ -2566,8 +2566,10 @@ export const BELEGE: Beleg[] = [
      stehen im Quellen-Export, ein Wortlaut-Wechsel im Text fällt also auf. Wer
      sie sichtbar machen will, gibt dem Info-Aufruf `belege` mit und erweitert
      `docs/anker-kollision.mjs` auf die Info-Blöcke; am 2026-08-16 gemessen
-     trifft keiner der 234 bestehenden Anker in einen der 22 Info-Blöcke, die
-     Umstellung wäre also ohne Nebenwirkung. */
+     trifft keiner der 226 Anker in einen der 22 Info-Blöcke und keiner
+     verschluckt einen karteneigenen Hover, die Umstellung wäre also ohne
+     Nebenwirkung. Ob sie kommt, ist offen: Christof überlegt es sich noch
+     (2026-08-16), bis dahin bleibt es aus. Siehe docs/decisions.md. */
   {
     id: "DW-7dc3ec",
     anker: "12. Januar 1906",

@@ -37,15 +37,23 @@ an der Stelle der Ersten Philosophie und die Asymmetrie zum Anderen. Die
 tun, und der Beleg zur Asymmetrie hält ausdrücklich fest, was nicht in der
 Quelle steht.
 
-**Ein Beleg auf einem Info-Block erscheint nicht als Link.** Die Info-Texte der
-Denkwege werden ohne `belege`-Schalter gesetzt (Entscheid im Code, Fallbeispiele
-behaupten Tatsachen, Einordnungen referieren Positionen). Die Levinas-Karte ist
-der erste Info-Block mit harten Daten, ihre sieben Belege sind darum
-Herkunftsnachweise für Prüfskript und Quellen-Export, keine Links im Lernset.
-Am 2026-08-16 gemessen trifft keiner der 234 bestehenden Anker in einen der 22
-Info-Blöcke; sichtbar machen liesse sich das also ohne Nebenwirkung, es braucht
-`belege` am Info-Aufruf und eine Erweiterung von `docs/anker-kollision.mjs` auf
-die Info-Blöcke. Bis dahin steht die Lage als Kommentar in `belege.ts`.
+**Offen, bewusst offen: Sollen die Einordnungen Quellenlinks tragen?** Die
+Info-Texte der Denkwege werden ohne `belege`-Schalter gesetzt, begründet am
+2026-08-11 damit, dass Fallbeispiele Tatsachen behaupten und Einordnungen
+Positionen referieren. Die Levinas-Karte zeigt die Grenze dieser Begründung,
+denn ihre Einordnung nennt Lebensdaten, Studienjahre und Werke, also sehr wohl
+Prüfbares. Ihre sieben Belege sind darum vorhanden, aber im Lernset unsichtbar,
+sie wirken nur für Prüfskript und Quellen-Export.
+
+Gemessen am 2026-08-16, ein Einschalten hätte keine Nebenwirkung: Keiner der 226
+Anker trifft in einen der 22 Info-Blöcke, und keiner würde einen karteneigenen
+Hover verschlucken. Nötig wären `belege` am Info-Aufruf in `Denkwege.tsx` und
+eine Erweiterung von `docs/anker-kollision.mjs` auf die Info-Blöcke, damit der
+Schutz auch dort greift.
+
+**Entschieden ist nichts.** Christof will es sich überlegen (2026-08-16), bis
+dahin bleibt es aus. Wer das aufgreift, findet die Lage auch als Kommentar in
+`belege.ts` und sollte hier den Entscheid nachtragen, in beide Richtungen.
 
 ## 2026-08-16 — Demokratie, Afrikas Bibliotheken, selbstbestimmte Liebe, Rawls
 
