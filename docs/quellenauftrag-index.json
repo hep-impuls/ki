@@ -1609,12 +1609,12 @@
   "stufe": "hoch",
   "text": "Der Telegraf verwandelt ab 1844 Nachrichten in Stromstösse, ein Kabel am Meeresgrund verbindet 1866 Europa und Amerika, Nachrichten brauchen Minuten statt Tage. Dann kommen Telefonleitungen dazu, später Glasfasern. Was wir heute Wolke nennen, ist zu einem grossen Teil Glas am Meeresgrund. Entfernung verliert ihre Macht über die Information und wer an der Leitung liegt, spricht mit der ganzen Welt."
  },
- "PP-e2f88d": {
+ "PP-3e54ff": {
   "datei": "philosophische-perspektive/page.tsx",
   "ort": "Kabel verbinden die Kontinente",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Am 24. Mai 1844 übertrug Samuel Morse zwischen Washington und Baltimore die Worte «What hath God wrought?», das erste Telegramm der USA. Der erste Versuch, den Atlantik zu überbrücken, hielt 1858 nur rund drei Wochen, das Glückwunsch-Telegramm der Queen brauchte fast 16 Stunden für 98 Wörter, dann verstummte das Kabel. 1866 verlegte die Great Eastern, das damals grösste Schiff der Welt, das dauerhafte Kabel von Irland nach Neufundland. Vorher war eine Nachricht per Dampfschiff etwa zehn Tage unterwegs gewesen. Sprechen liess sich über solche Leitungen noch nicht, das begann 1876 in Boston mit Alexander Graham Bell. 1956 folgte mit TAT-1 das erste Telefonkabel durch den Atlantik, 36 Gespräche gleichzeitig, 1988 brachte TAT-8 als erstes Glasfaserkabel 40'000 Gespräche unter. Heute liegen Glasfaserkabel auf demselben Meeresgrund, 2014 liefen 95 Prozent des Internetverkehrs zwischen den Weltregionen durch Seekabel. Ein einzelnes Kabel bündelt viele Faserpaare, das 2020 in Betrieb genommene Kabel Dunant schafft mit zwölf Paaren rund 250 Terabit pro Sekunde. Wenn du eine KI fragst, deren Rechenzentrum auf einem anderen Kontinent steht, nimmt deine Frage diesen Weg unter dem Meer."
+  "text": "Erfunden wurde die Technik 1837 doppelt, von Samuel Morse in den USA und von William Cooke und Charles Wheatstone in England. Bis zur ersten langen Linie dauerte es dann sieben Jahre. Am 24. Mai 1844 übertrug Morse zwischen Washington und Baltimore die Worte «What hath God wrought?», das erste Telegramm der USA. Der erste Versuch, den Atlantik zu überbrücken, hielt 1858 nur rund drei Wochen, das Glückwunsch-Telegramm der Queen brauchte fast 16 Stunden für 98 Wörter, dann verstummte das Kabel. 1866 verlegte die Great Eastern, das damals grösste Schiff der Welt, das dauerhafte Kabel von Irland nach Neufundland. Vorher war eine Nachricht per Dampfschiff etwa zehn Tage unterwegs gewesen. Sprechen liess sich über solche Leitungen noch nicht, das begann 1876 in Boston mit Alexander Graham Bell. 1956 folgte mit TAT-1 das erste Telefonkabel durch den Atlantik, 36 Gespräche gleichzeitig, 1988 brachte TAT-8 als erstes Glasfaserkabel 40'000 Gespräche unter. Heute liegen Glasfaserkabel auf demselben Meeresgrund, 2014 liefen 95 Prozent des Internetverkehrs zwischen den Weltregionen durch Seekabel. Ein einzelnes Kabel bündelt viele Faserpaare, das 2020 in Betrieb genommene Kabel Dunant schafft mit zwölf Paaren rund 250 Terabit pro Sekunde. Wenn du eine KI fragst, deren Rechenzentrum auf einem anderen Kontinent steht, nimmt deine Frage diesen Weg unter dem Meer."
  },
  "PP-dfdba5": {
   "datei": "philosophische-perspektive/page.tsx",
@@ -2624,12 +2624,12 @@
   "stufe": "tief",
   "text": "Oben rauscht auf dem Viadukt eine Eisenbahn vorbei. Das Bild verdichtet daraus ein Sinnbild. Der Fortschritt fährt buchstäblich über die Köpfe der Ärmsten hinweg, nah genug, um ihren Alltag zu verdunkeln und doch für sie unerreichbar."
  },
- "EP-cc0c87": {
+ "EP-379430": {
   "datei": "_components/VerunsicherungsEpochen.tsx",
   "ort": "Industriemoderne",
   "feld": "Kartentext",
   "stufe": "hoch",
-  "text": "Die verbesserte Dampfmaschine (James Watt, 1769) setzt Kraft frei, die nicht von Muskel, Wind oder Wasser stammt. Sie treibt Fabriken, Eisenbahnen und Dampfschiffe. Der elektrische Telegraf (ab 1837) trennt die Nachricht vom Boten. Die Fabrikuhr taktet die Arbeit in Schichten. Durchgesetzt hat sich die Dampfmaschine, weil sie ein konkretes Problem löste (das Abpumpen von Wasser aus Kohlebergwerken) und weil in Grossbritannien Kohle, Eisen und Kapital aus dem Kolonialhandel reichlich vorhanden waren. Sie verbesserte die ältere Newcomen-Maschine."
+  "text": "Die verbesserte Dampfmaschine (James Watt, 1769) setzt Kraft frei, die nicht von Muskel, Wind oder Wasser stammt. Sie treibt Fabriken, Eisenbahnen und Dampfschiffe. Der elektrische Telegraf, 1837 erfunden und ab 1844 auf langen Linien in Betrieb, trennt die Nachricht vom Boten. Ab 1882 kommt der Strom aus zentralen Kraftwerken, elektrisches Licht dehnt den Arbeitstag in die Nacht. Die Fabrikuhr taktet die Arbeit in Schichten. Durchgesetzt hat sich die Dampfmaschine, weil sie ein konkretes Problem löste (das Abpumpen von Wasser aus Kohlebergwerken) und weil in Grossbritannien Kohle, Eisen und Kapital aus dem Kolonialhandel reichlich vorhanden waren. Sie verbesserte die ältere Newcomen-Maschine."
  },
  "EP-cada84": {
   "datei": "_components/VerunsicherungsEpochen.tsx",

@@ -2277,7 +2277,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "PP-e2f88d",
+    id: "PP-3e54ff",
     anker: "fast 16 Stunden für 98 Wörter",
     url: "https://de.wikipedia.org/wiki/Transatlantisches_Telegrafenkabel",
     titel: "Transatlantisches Telegrafenkabel (Wikipedia)",
@@ -2286,7 +2286,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "PP-e2f88d",
+    id: "PP-3e54ff",
     anker: "TAT-1",
     url: "https://de.wikipedia.org/wiki/Transatlantisches_Telefonkabel",
     titel: "Transatlantisches Telefonkabel (Wikipedia)",
@@ -2295,7 +2295,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "PP-e2f88d",
+    id: "PP-3e54ff",
     anker: "rund 250 Terabit pro Sekunde",
     url: "https://de.wikipedia.org/wiki/Dunant_(Seekabel)",
     titel: "Dunant (Seekabel) (Wikipedia)",
@@ -2304,7 +2304,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-e2f88d",
+    id: "PP-3e54ff",
     anker: "95 Prozent des Internetverkehrs",
     url: "https://de.wikipedia.org/wiki/Seekabel",
     titel: "Seekabel (Wikipedia)",
@@ -2782,7 +2782,7 @@ export const BELEGE: Beleg[] = [
    * ein SRF-Artikel. TAT-8 nur englisch, ein deutscher Artikel existiert
    * nicht.                                                                 */
   {
-    id: "PP-e2f88d",
+    id: "PP-3e54ff",
     anker: "What hath God wrought?",
     url: "https://de.wikipedia.org/wiki/Elektrischer_Telegraf",
     titel: "Elektrischer Telegraf (Wikipedia)",
@@ -2791,7 +2791,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-e2f88d",
+    id: "PP-3e54ff",
     anker: "1876 in Boston",
     url: "https://de.wikipedia.org/wiki/Geschichte_des_Telefons",
     titel: "Geschichte des Telefons (Wikipedia)",
@@ -2800,7 +2800,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-e2f88d",
+    id: "PP-3e54ff",
     anker: "40'000 Gespräche",
     url: "https://en.wikipedia.org/wiki/TAT-8",
     titel: "TAT-8 (Wikipedia, englisch)",
@@ -2896,6 +2896,38 @@ export const BELEGE: Beleg[] = [
     titel: "Google Cloud Blog, 21. August 2025: «Measuring the environmental impact of AI inference» (englisch)",
     stelle:
       "«We estimate the median Gemini Apps text prompt uses 0.24 watt-hours (Wh) of energy», «equivalent to watching TV for less than nine seconds». Datengrundlage Mai 2025, eingerechnet sind auch Kühlung und Rechenzentrums-Overhead. Der Konzern misst sich selbst, darum steht die Zahl im Text ausdrücklich als Googles Schätzung. «Median» heisst, die Hälfte der Anfragen brauchte mehr.",
+    geprueft: "2026-08-17",
+  },
+
+  /* ── Nachtrag 2026-08-17: Telegraf-Datierung zwischen Epochen-Baustein und
+   * Teppich-Punkt harmonisiert (1837 Erfindung, 1844 erste Linie) und die
+   * Elektrifizierung in der Industriemoderne ergänzt. Der Epochen-Block trug
+   * vorher gar keine Belege, seine 1837er-Angabe stand unbelegt da.      */
+  {
+    id: "EP-379430",
+    anker: "1837 erfunden und ab 1844 auf langen Linien in Betrieb",
+    url: "https://de.wikipedia.org/wiki/Elektrischer_Telegraf",
+    titel: "Elektrischer Telegraf (Wikipedia)",
+    stelle:
+      "Morse «hatte im Jahr 1837 einen elektromagnetischen Schreibtelegrafen erfunden», im selben Jahr entwickelten Cooke und Wheatstone in England einen Nadeltelegrafen. Die Linie Washington–Baltimore ging 1844 in Betrieb, «am 24. Mai 1844 wurde hiermit das erste Telegramm der USA übertragen». Beide Zahlen stehen jetzt hier und im Teppich-Punkt «Kabel verbinden die Kontinente», vorher nannte diese Stelle nur 1837 und der Teppich nur 1844.",
+    geprueft: "2026-08-17",
+  },
+  {
+    id: "EP-379430",
+    anker: "Ab 1882 kommt der Strom aus zentralen Kraftwerken",
+    url: "https://de.wikipedia.org/wiki/Thomas_Alva_Edison",
+    titel: "Thomas Alva Edison (Wikipedia)",
+    stelle:
+      "«Am 4. September 1882 wurde mit der Pearl Street Station das erste Zentralkraftwerk der USA in der New Yorker Pearl Street eröffnet», zunächst mit 59 Abnehmern. Der Teppich-Punkt «Elektrizität wird nutzbar» erzählt das ausführlich, hier steht nur die Jahreszahl als Marke der Epoche.",
+    geprueft: "2026-08-17",
+  },
+  {
+    id: "PP-3e54ff",
+    anker: "1837 doppelt",
+    url: "https://de.wikipedia.org/wiki/Elektrischer_Telegraf",
+    titel: "Elektrischer Telegraf (Wikipedia)",
+    stelle:
+      "«Die beiden englischen Erfinder William Cooke (1806–1879) und Charles Wheatstone (1802–1875) entwickelten im Jahr 1837 einen Nadeltelegrafen», und Morse «hatte im Jahr 1837 einen elektromagnetischen Schreibtelegrafen erfunden». Zwei unabhängige Erfindungen im selben Jahr, darum «doppelt». Zur englischen Bahnlinie von 1839 sagt der Artikel nichts, sie bleibt darum draussen.",
     geprueft: "2026-08-17",
   },
 ];
