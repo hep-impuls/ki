@@ -1175,17 +1175,11 @@ Der erste Versuch von 1858 hielt nur rund drei Wochen, das Glückwunsch-Telegram
 
 ### Radio und Fernsehen
 
-**[PP-488988]** *(Kartentext)*
-Zum ersten Mal hören Millionen dasselbe im selben Moment. Ab 1920 wird Rundfunk zur Alltagspraxis, das Wohnzimmer wird zum Weltempfänger und später kommt das Fernsehbild dazu.
+**[PP-9a1089]** *(Kartentext)*
+Zum ersten Mal hören Millionen dasselbe im selben Moment. 1920 beginnt in Pittsburgh der regelmässige Rundfunk, das Wohnzimmer wird zum Weltempfänger. 1935 startet in Berlin der weltweit erste reguläre Fernsehsender, die Schweiz beginnt 1953 in Zürich. Wer sendet, erreicht ein ganzes Land auf einmal, das macht die neuen Medien zur gemeinsamen Bühne und zur Propagandamaschine.
 
-> **Belegt** («das Wohnzimmer wird zum Weltempfänger»): [Geschichte des Hörfunks (Wikipedia)](https://de.wikipedia.org/wiki/Geschichte_des_H%C3%B6rfunks) — Der Sender KDKA in Pittsburgh startete am 2. November 1920 den regelmässigen Sendebetrieb mit einer Liveübertragung der Ergebnisse der amerikanischen Präsidentschaftswahl. *(geprüft 2026-08-16)*
-
-**[PP-e673ea]** *(Vertiefung «Mehr lesen»)*
-Den Anfang macht der Sender KDKA in Pittsburgh, der am 2. November 1920 die Ergebnisse der Präsidentschaftswahl überträgt. In der Schweiz sendet 1921 ein Sender beim Basler Zeughaus Signale bis nach Neuenburg, Deutschland folgt 1923. Wie schnell die Praxis sich ausbreitet, zeigen die britischen Radiolizenzen, von 1923 bis 1927 wachsen sie von 100'000 auf 2,4 Millionen. Den Höhepunkt der gemeinsamen Live-Welt erlebt das Fernsehen, die Mondlandung von 1969 verfolgen rund 600 Millionen Menschen gleichzeitig. Der heutige Feed ist der Enkel dieser Praxis, nur wählt jetzt ein Algorithmus mit, was du zu sehen bekommst.
-
-> **Belegt** («2. November 1920»): [Geschichte des Hörfunks (Wikipedia)](https://de.wikipedia.org/wiki/Geschichte_des_H%C3%B6rfunks) — KDKA startete am 2. November 1920 mit den Wahlergebnissen. Zur Schweiz: 1921 sandte ein Sender beim Basler Zeughaus St. Jakob Signale aus, «die in Neuenburg empfangen werden konnten»; der 29. Oktober 1923 gilt als Geburtsstunde des deutschen Rundfunks. Die BBC-Radiolizenzen wuchsen von 1923 bis 1927 von 100'000 auf 2,4 Millionen. *(geprüft 2026-08-16)*
-
-> **Belegt** («verfolgen rund 600 Millionen Menschen gleichzeitig»): [Apollo 11 (Wikipedia)](https://de.wikipedia.org/wiki/Apollo_11) — «Weltweit verfolgten rund 600 Millionen Menschen die Fernsehübertragung der Mondlandung 1969.» *(geprüft 2026-08-16)*
+**[PP-c75163]** *(Vertiefung «Mehr lesen»)*
+Den Anfang macht der Sender KDKA in Pittsburgh, der am 2. November 1920 die Ergebnisse der Präsidentschaftswahl überträgt. In der Schweiz sendet 1921 ein Sender beim Basler Zeughaus Signale bis nach Neuenburg, Deutschland folgt 1923 und die britischen Radiolizenzen wachsen von 1923 bis 1927 von 100'000 auf 2,4 Millionen. Die Macht des Kanals bleibt niemandem verborgen. Ab 1933 lässt Goebbels den billigen Volksempfänger bauen, das Radio wird zu einem der wichtigsten Instrumente der NS-Propaganda und die deutsche Hörerschaft steigt von vier Millionen Anfang 1932 auf über zwölf Millionen Mitte 1939. Das Fernsehen beginnt am 22. März 1935 in Berlin, zuerst in öffentlichen Fernsehstuben, die SRG sendet ab dem 20. Juli 1953 aus dem Studio Bellerive in Zürich an fünf Abenden pro Woche rund eine Stunde, regulär ab 1958. Den Höhepunkt der gemeinsamen Live-Welt erlebt das Fernsehen, die Mondlandung von 1969 verfolgen rund 600 Millionen Menschen gleichzeitig. Der heutige Feed ist der Enkel dieser Praxis, nur wählt jetzt ein Algorithmus mit, was du zu sehen bekommst.
 
 ### Das Ende der Sklaverei
 
@@ -1448,23 +1442,11 @@ Graeber und Wengrow argumentieren, die Ideale seien nicht allein in europäische
 
 ### Afrikas Bibliotheken
 
-**[PP-fa5294]** *(Kartentext)*
-Wissen sammeln, ordnen und weitergeben ist eine Praxis, die in Afrika lange vor der europäischen Universität blühte. In Alexandria stand die bedeutendste antike Bibliothek, sie sollte alle Wissensgebiete abdecken. Fast zwei Jahrtausende später lehrten Gelehrte in Timbuktu an der Sankoré-Moschee Sprache, Rhetorik, Astrologie und Rechtsprechung. Das Bild vom schriftlosen Afrika war immer falsch.
+**[PP-664b4c]** *(Kartentext)*
+Wissen sammeln, ordnen und weitergeben ist eine Praxis, die in Afrika lange vor der europäischen Universität blühte. In Alexandria stand die bedeutendste antike Bibliothek, sie sollte alle Wissensgebiete abdecken. Timbuktu, vor 1100 gegründet, wurde ab dem 14. Jahrhundert zur Gelehrtenstadt, an der Sankoré-Moschee lehrte man Sprache, Rhetorik, Astrologie und Rechtsprechung. Gesammelt wurde aus Gelehrsamkeit, als Familienerbe und als Geschäft. Das Bild vom schriftlosen Afrika war immer falsch.
 
-> **Belegt** («bedeutendste antike Bibliothek»): [Bibliothek von Alexandria (Wikipedia)](https://de.wikipedia.org/wiki/Bibliothek_von_Alexandria) — Die Bibliothek von Alexandria war «die bedeutendste antike Bibliothek»; ihr Bestand sollte «alle Wissensgebiete» abdecken. *(geprüft 2026-08-16)*
-
-> **Belegt** («Rhetorik, Astrologie und Rechtsprechung»): [Timbuktu (Wikipedia)](https://de.wikipedia.org/wiki/Timbuktu) — An der Sankoré-Moschee bestand «eine Madrasa, vergleichbar einer mittelalterlichen Universität, an der die arabische Sprache, Rhetorik, Astrologie, die Rechtsprechung und die Schriften des Korans gelehrt wurden». *(geprüft 2026-08-16)*
-
-**[PP-15e88f]** *(Vertiefung «Mehr lesen»)*
-Ptolemaios I. errichtete die Bibliothek von Alexandria vermutlich zwischen 290 und 282 v. Chr. und sie sollte alle Wissensgebiete umfassen; moderne Schätzungen sprechen von 400'000 bis 500'000 Rollen, umstritten sind diese Zahlen bis heute. In Timbuktu, das seine Blütezeit unter der Herrschaft der Songhai erlebte, stand an der Sankoré-Moschee «eine Madrasa, vergleichbar einer mittelalterlichen Universität, an der die arabische Sprache, Rhetorik, Astrologie, die Rechtsprechung und die Schriften des Korans gelehrt wurden», dazu kamen 150 bis 180 Koranschulen. Seit 1988 gehört die Stadt zum UNESCO-Welterbe. Der Traum, alles Wissen an einem Ort zu haben, ist also alt und er lebt in den Datensammlungen weiter, aus denen eine KI heute lernt.
-
-> **Belegt** («zwischen 290 und 282 v. Chr.»): [Bibliothek von Alexandria (Wikipedia)](https://de.wikipedia.org/wiki/Bibliothek_von_Alexandria) — Ptolemaios I. liess die Bibliothek «vermutlich zwischen 290 und 282 v. Chr.» errichten. *(geprüft 2026-08-16)*
-
-> **Belegt** («400'000 bis 500'000 Rollen»): [Bibliothek von Alexandria (Wikipedia)](https://de.wikipedia.org/wiki/Bibliothek_von_Alexandria) — Moderne Schätzungen des Bestands reichen von 400'000 bis 500'000 Rollen; die überlieferten Zahlen sind in der Forschung umstritten. Darum steht die Einschränkung im Text. *(geprüft 2026-08-16)*
-
-> **Belegt** («150 bis 180 Koranschulen»): [Timbuktu (Wikipedia)](https://de.wikipedia.org/wiki/Timbuktu) — Neben der Madrasa an der Sankoré-Moschee gab es in der Stadt «150 bis 180 Koranschulen». Die Blütezeit fällt in die Herrschaft der Songhai. Eine Gesamtzahl der erhaltenen Handschriften nennt der Artikel nicht, darum steht im Text keine. *(geprüft 2026-08-16)*
-
-> **Belegt** («Seit 1988»): [Timbuktu (Wikipedia)](https://de.wikipedia.org/wiki/Timbuktu) — Timbuktu gehört seit 1988 zum UNESCO-Welterbe. *(geprüft 2026-08-16)*
+**[PP-31331c]** *(Vertiefung «Mehr lesen»)*
+Ptolemaios I. errichtete die Bibliothek von Alexandria vermutlich zwischen 290 und 282 v. Chr. und sie sollte alle Wissensgebiete umfassen; moderne Schätzungen sprechen von 400'000 bis 500'000 Rollen, umstritten sind diese Zahlen bis heute. Timbuktu wurde vor dem Jahr 1100 an einer Wasserstelle gegründet, der Aufschwung kam mit dem Handel im 14. und 15. Jahrhundert und unter der Herrschaft der Songhai lebten 15'000 bis 25'000 Menschen in der Stadt. An der Sankoré-Moschee stand «eine Madrasa, vergleichbar einer mittelalterlichen Universität», dazu kamen 150 bis 180 Koranschulen. Eigene Bibliotheken galten als Zeichen der Gelehrtenelite, Familien bewahrten die Bände über Jahrhunderte zu Hause auf und der Buchhandel blühte, Leo Africanus rühmte ihn nach seinem Besuch Anfang des 16. Jahrhunderts. Die Handschriften reichen vom späten 13. bis ins 20. Jahrhundert und handeln von Astronomie, Medizin, Recht und Poesie. Als 2012 Islamisten die Stadt besetzten, schmuggelten Bibliothekare die über 20'000 Manuskripte des Ahmed-Baba-Zentrums und zigtausende aus Privatbibliotheken ausser Landes, rund 350'000 wurden in Sicherheit gebracht. Seit 1988 gehört die Stadt zum UNESCO-Welterbe. Der Traum, alles Wissen an einem Ort zu haben, ist also alt und er lebt in den Datensammlungen weiter, aus denen eine KI heute lernt.
 
 ### Selbstbestimmte Liebe
 

@@ -2304,7 +2304,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "PP-488988",
+    id: "PP-9a1089",
     anker: "das Wohnzimmer wird zum Weltempfänger",
     url: "https://de.wikipedia.org/wiki/Geschichte_des_H%C3%B6rfunks",
     titel: "Geschichte des Hörfunks (Wikipedia)",
@@ -2313,7 +2313,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "PP-e673ea",
+    id: "PP-c75163",
     anker: "2. November 1920",
     url: "https://de.wikipedia.org/wiki/Geschichte_des_H%C3%B6rfunks",
     titel: "Geschichte des Hörfunks (Wikipedia)",
@@ -2322,7 +2322,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "PP-e673ea",
+    id: "PP-c75163",
     anker: "verfolgen rund 600 Millionen Menschen gleichzeitig",
     url: "https://de.wikipedia.org/wiki/Apollo_11",
     titel: "Apollo 11 (Wikipedia)",
@@ -2459,7 +2459,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "PP-fa5294",
+    id: "PP-664b4c",
     anker: "bedeutendste antike Bibliothek",
     url: "https://de.wikipedia.org/wiki/Bibliothek_von_Alexandria",
     titel: "Bibliothek von Alexandria (Wikipedia)",
@@ -2468,7 +2468,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "PP-fa5294",
+    id: "PP-664b4c",
     anker: "Rhetorik, Astrologie und Rechtsprechung",
     url: "https://de.wikipedia.org/wiki/Timbuktu",
     titel: "Timbuktu (Wikipedia)",
@@ -2477,7 +2477,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "PP-15e88f",
+    id: "PP-31331c",
     anker: "zwischen 290 und 282 v. Chr.",
     url: "https://de.wikipedia.org/wiki/Bibliothek_von_Alexandria",
     titel: "Bibliothek von Alexandria (Wikipedia)",
@@ -2486,7 +2486,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "PP-15e88f",
+    id: "PP-31331c",
     anker: "400'000 bis 500'000 Rollen",
     url: "https://de.wikipedia.org/wiki/Bibliothek_von_Alexandria",
     titel: "Bibliothek von Alexandria (Wikipedia)",
@@ -2495,7 +2495,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "PP-15e88f",
+    id: "PP-31331c",
     anker: "150 bis 180 Koranschulen",
     url: "https://de.wikipedia.org/wiki/Timbuktu",
     titel: "Timbuktu (Wikipedia)",
@@ -2504,7 +2504,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "PP-15e88f",
+    id: "PP-31331c",
     anker: "Seit 1988",
     url: "https://de.wikipedia.org/wiki/Timbuktu",
     titel: "Timbuktu (Wikipedia)",
@@ -2656,6 +2656,104 @@ export const BELEGE: Beleg[] = [
     stelle:
       "Rawls entwickelt den übergreifenden Konsens in «Political Liberalism» (1993). Menschen mit gegensätzlichen religiösen, moralischen oder philosophischen Lehren stimmen denselben politischen Grundsätzen zu, jede Gruppe aus ihren eigenen Gründen. Abgegrenzt wird das ausdrücklich vom modus vivendi, dem blossen Interessenausgleich, der zerfällt, sobald sich die Kräfteverhältnisse ändern.",
     geprueft: "2026-08-16",
+  },
+
+  /* ── Nachträge vom 2026-08-17: Timbuktu mit Zahlen und Motivation, das
+   * Fernsehen mit Anfangsdaten und Folgen. Auf Christofs Wunsch mit
+   * öffentlich-rechtlichen Quellen, SRF trägt die Manuskript-Rettung und
+   * den Schweizer Fernsehstart. Für Leo Africanus fand sich keine freie
+   * deutschsprachige Quelle, darum die Projektseite der Universität
+   * Kapstadt; sein berühmtes Gewinn-Zitat bleibt bewusst draussen, weil
+   * wir nur die Paraphrase geprüft haben.                                */
+  {
+    id: "PP-664b4c",
+    anker: "vor 1100 gegründet",
+    url: "https://de.wikipedia.org/wiki/Timbuktu",
+    titel: "Timbuktu (Wikipedia)",
+    stelle:
+      "Nach den Chroniken von Timbuktu wurde die Stadt «vor dem Jahr 1100 n. Chr. von nomadisierenden Massufa-Tuareg an einer Wasserstelle gegründet», vermutlich gehen die Ursprünge bis ins 9. oder 10. Jahrhundert zurück. Der wirtschaftliche Aufschwung und die kulturelle Blüte fallen ins 14. und 15. Jahrhundert.",
+    geprueft: "2026-08-17",
+  },
+  {
+    id: "PP-31331c",
+    anker: "vor dem Jahr 1100",
+    url: "https://de.wikipedia.org/wiki/Timbuktu",
+    titel: "Timbuktu (Wikipedia)",
+    stelle:
+      "Gründung «vor dem Jahr 1100 n. Chr.» an einer Wasserstelle; unter der Herrschaft der Songhai hatte die Stadt «geschätzte 15.000 bis 25.000 Einwohner». Der Aufschwung kam mit dem Handel im 14. und 15. Jahrhundert.",
+    geprueft: "2026-08-17",
+  },
+  {
+    id: "PP-31331c",
+    anker: "Leo Africanus",
+    url: "https://tombouctoumanuscripts.uct.ac.za/overview/timbuktus-history",
+    titel: "Tombouctou Manuscripts Project, Universität Kapstadt (englisch)",
+    stelle:
+      "Das Forschungsprojekt hält fest, Leo Africanus habe bei seinem Besuch Anfang des 16. Jahrhunderts ein glänzendes Bild des Buchhandels gezeichnet («a glowing account of the book trade»), und eigene Bibliotheken seien ein Kennzeichen der Gelehrtenelite gewesen. Eine deutschsprachige freie Quelle mit dieser Aussage haben wir nicht gefunden.",
+    geprueft: "2026-08-17",
+  },
+  {
+    id: "PP-31331c",
+    anker: "über 20'000 Manuskripte",
+    url: "https://www.srf.ch/kultur/gesellschaft-religion/wahrer-thriller-wie-drei-bibliothekare-die-manuskripte-von-timbuktu-retteten",
+    titel: "SRF, 23. Mai 2018: «Wie drei Bibliothekare die Manuskripte von Timbuktu retteten»",
+    stelle:
+      "Im Ahmed-Baba-Zentrum lagerten «über 20'000 Manuskripte», dazu kamen «zigtausende weitere aus privaten Bibliotheken». Als Islamisten die Stadt besetzten, schafften Bibliothekare die Bestände in Metallkisten heimlich nach Bamako.",
+    geprueft: "2026-08-17",
+  },
+  {
+    id: "PP-31331c",
+    anker: "rund 350'000",
+    url: "https://en.wikipedia.org/wiki/Timbuktu_Manuscripts",
+    titel: "Timbuktu Manuscripts (Wikipedia, englisch)",
+    stelle:
+      "«Some 350,000 manuscripts were transported to safety» (2012/2013). Die Handschriften wurden über Jahrhunderte in Privathäusern bewahrt («preserved in the homes of Timbuktu locals»), datieren «between the late 13th and the early 20th centuries» und behandeln unter anderem Medizin, Astronomie, Recht, Philosophie und Poesie. Einen deutschen Artikel gab es bei der Prüfung nicht.",
+    geprueft: "2026-08-17",
+  },
+  {
+    id: "PP-9a1089",
+    anker: "weltweit erste reguläre Fernsehsender",
+    url: "https://de.wikipedia.org/wiki/Fernsehsender_Paul_Nipkow",
+    titel: "Fernsehsender Paul Nipkow (Wikipedia)",
+    stelle:
+      "Der Sender nahm am 22. März 1935 in Berlin den Betrieb auf und war «der weltweit erste reguläre Fernsehsender».",
+    geprueft: "2026-08-17",
+  },
+  {
+    id: "PP-9a1089",
+    anker: "1953 in Zürich",
+    url: "https://www.srf.ch/unternehmen/mit-jubilaeumsprogramm-70-jahre-fernsehen-in-der-schweiz",
+    titel: "SRF, 19. Juli 2023: «70 Jahre Fernsehen in der Schweiz»",
+    stelle:
+      "«Als Fernseh-Versuchsbetrieb sendete die SRG ab 20. Juli 1953 an fünf Abenden pro Woche ein rund einstündiges Programm aus dem Studio Bellerive im Zürcher Seefeld-Quartier.»",
+    geprueft: "2026-08-17",
+  },
+  {
+    id: "PP-c75163",
+    anker: "Volksempfänger",
+    url: "https://de.wikipedia.org/wiki/Volksempf%C3%A4nger",
+    titel: "Volksempfänger (Wikipedia)",
+    stelle:
+      "Im August 1933 vorgestellt, «im Auftrag von Reichspropagandaleiter Joseph Goebbels entwickelt», das Gerät «gilt als eines der wichtigsten Instrumente der NS-Propaganda». Die Zahl der Rundfunkhörer stieg «von vier Millionen Anfang 1932 auf über zwölf Millionen Mitte 1939».",
+    geprueft: "2026-08-17",
+  },
+  {
+    id: "PP-c75163",
+    anker: "22. März 1935",
+    url: "https://de.wikipedia.org/wiki/Fernsehsender_Paul_Nipkow",
+    titel: "Fernsehsender Paul Nipkow (Wikipedia)",
+    stelle:
+      "Start «22. März 1935» in Berlin als weltweit erster regulärer Fernsehsender. Private Geräte waren mit 2500 bis 3600 Reichsmark kaum erschwinglich, darum richtete die Reichspost öffentliche «Fernsehstuben» ein, die erste am 9. April 1935.",
+    geprueft: "2026-08-17",
+  },
+  {
+    id: "PP-c75163",
+    anker: "Studio Bellerive",
+    url: "https://www.srf.ch/unternehmen/mit-jubilaeumsprogramm-70-jahre-fernsehen-in-der-schweiz",
+    titel: "SRF, 19. Juli 2023: «70 Jahre Fernsehen in der Schweiz»",
+    stelle:
+      "Versuchsbetrieb «ab 20. Juli 1953 an fünf Abenden pro Woche ein rund einstündiges Programm aus dem Studio Bellerive im Zürcher Seefeld-Quartier»; «der reguläre Sendebetrieb startete am 1. Januar 1958 in deutscher und französischer Sprache».",
+    geprueft: "2026-08-17",
   },
 ];
 
