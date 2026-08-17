@@ -13,7 +13,7 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 253 |
+| Belege | 254 |
 | Belegte Textblöcke | 133 |
 | Begründete Nicht-Belege | 6 |
 | Aussagen mit Standdatum | 3 |
@@ -690,30 +690,30 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 ### Radio und Fernsehen · das Wohnzimmer wird zum Weltempfänger
 
-- **Kennung:** `PP-9a1089` (Kartentext)
+- **Kennung:** `PP-dfdba5` (Kartentext)
 - **Quelle:** [Geschichte des Hörfunks (Wikipedia)](https://de.wikipedia.org/wiki/Geschichte_des_H%C3%B6rfunks)
 - **Fundstelle:** Der Sender KDKA in Pittsburgh startete am 2. November 1920 den regelmässigen Sendebetrieb mit einer Liveübertragung der Ergebnisse der amerikanischen Präsidentschaftswahl.
 - **Geprüft:** 2026-08-16
 
-> Zum ersten Mal hören Millionen dasselbe im selben Moment. 1920 beginnt in Pittsburgh der regelmässige Rundfunk, das Wohnzimmer wird zum Weltempfänger. 1935 startet in Berlin der weltweit erste reguläre Fernsehsender, die Schweiz beginnt 1953 in Zürich. Wer sendet, erreicht ein ganzes Land auf einmal, das macht die neuen Medien zur gemeinsamen Bühne und zur Propagandamaschine.
+> Rundfunk wird ab 1920 zum regelmässigen Massenmedium, viele Menschen hören dieselbe Sendung im selben Moment, das Wohnzimmer wird zum Weltempfänger. In Pittsburgh startet einer der ersten regelmässigen Sender, 1935 folgt in Berlin der weltweit erste reguläre Fernsehsender und das Schweizer Fernsehen startet 1953 in Zürich als Versuchsbetrieb. Wer sendet, erreicht ein ganzes Land auf einmal, das macht die neuen Medien zur gemeinsamen Bühne und zur Propagandamaschine.
 
 ### Radio und Fernsehen · 2. November 1920
 
-- **Kennung:** `PP-c75163` (Vertiefung «Mehr lesen»)
+- **Kennung:** `PP-b42d5b` (Vertiefung «Mehr lesen»)
 - **Quelle:** [Geschichte des Hörfunks (Wikipedia)](https://de.wikipedia.org/wiki/Geschichte_des_H%C3%B6rfunks)
-- **Fundstelle:** KDKA startete am 2. November 1920 mit den Wahlergebnissen. Zur Schweiz: 1921 sandte ein Sender beim Basler Zeughaus St. Jakob Signale aus, «die in Neuenburg empfangen werden konnten»; der 29. Oktober 1923 gilt als Geburtsstunde des deutschen Rundfunks. Die BBC-Radiolizenzen wuchsen von 1923 bis 1927 von 100'000 auf 2,4 Millionen.
+- **Fundstelle:** KDKA startete am 2. November 1920 mit den Wahlergebnissen; der 29. Oktober 1923 gilt als «Geburtsstunde des deutschen Rundfunks» (Vox-Haus, Berlin). Die BBC-Radiolizenzen wuchsen von 1923 bis 1927 von 100'000 auf 2,4 Millionen, im Text steht darum «von rund 100'000 auf etwa 2,4 Millionen», andere Darstellungen nennen tiefere Startwerte. Der frühere Satz zum Basler Zeughaus von 1921 ist raus, die SRG-Chronik kennt ihn nicht und externe Angaben streiten zwischen 1920 und 1921.
 - **Geprüft:** 2026-08-16
 
-> Den Anfang macht der Sender KDKA in Pittsburgh, der am 2. November 1920 die Ergebnisse der Präsidentschaftswahl überträgt. In der Schweiz sendet 1921 ein Sender beim Basler Zeughaus Signale bis nach Neuenburg, Deutschland folgt 1923 und die britischen Radiolizenzen wachsen von 1923 bis 1927 von 100'000 auf 2,4 Millionen. Die Macht des Kanals bleibt niemandem verborgen. Ab 1933 lässt Goebbels den billigen Volksempfänger bauen, das Radio wird zu einem der wichtigsten Instrumente der NS-Propaganda und die deutsche Hörerschaft steigt von vier Millionen Anfang 1932 auf über zwölf Millionen Mitte 1939. Das Fernsehen beginnt am 22. März 1935 in Berlin, zuerst in öffentlichen Fernsehstuben, die SRG sendet ab dem 20. Juli 1953 aus dem Studio Bellerive in Zürich an fünf Abenden pro Woche rund eine Stunde, regulär ab 1958. Den Höhepunkt der gemeinsamen Live-Welt erlebt das Fernsehen, die Mondlandung von 1969 verfolgen rund 600 Millionen Menschen gleichzeitig. Der heutige Feed ist der Enkel dieser Praxis, nur wählt jetzt ein Algorithmus mit, was du zu sehen bekommst.
+> Den Anfang macht der Sender KDKA in Pittsburgh, der am 2. November 1920 die Ergebnisse der Präsidentschaftswahl überträgt. Deutschlands offizieller Unterhaltungsrundfunk startet 1923 in Berlin und in der Schweiz bewilligen die Bundesbehörden im selben Jahr Versuche für Lokalradios. Wie schnell die Praxis wächst, zeigen die britischen Empfangslizenzen, von 1923 bis 1927 steigen sie von rund 100'000 auf etwa 2,4 Millionen. Die Macht des Kanals bleibt niemandem verborgen. Ab 1933 lässt Goebbels den billigen Volksempfänger bauen, das Radio wird zu einem der wichtigsten Instrumente der NS-Propaganda und die deutsche Hörerschaft steigt von vier Millionen Anfang 1932 auf über zwölf Millionen Mitte 1939. Das Fernsehen beginnt am 22. März 1935 in Berlin, zuerst in öffentlichen Fernsehstuben, die SRG sendet ab dem 20. Juli 1953 aus dem Studio Bellerive in Zürich an fünf Abenden pro Woche rund eine Stunde, regulär ab 1958. Den Höhepunkt der gemeinsamen Live-Welt erlebt das Fernsehen, die ersten Schritte auf dem Mond verfolgen 1969 schätzungsweise rund 600 Millionen Menschen live. Der heutige Feed ist der Enkel dieser Praxis, nur wählt jetzt ein Algorithmus mit, was du zu sehen bekommst.
 
-### Radio und Fernsehen · verfolgen rund 600 Millionen Menschen gleichzeitig
+### Radio und Fernsehen · schätzungsweise rund 600 Millionen Menschen live
 
-- **Kennung:** `PP-c75163` (Vertiefung «Mehr lesen»)
+- **Kennung:** `PP-b42d5b` (Vertiefung «Mehr lesen»)
 - **Quelle:** [Apollo 11 (Wikipedia)](https://de.wikipedia.org/wiki/Apollo_11)
-- **Fundstelle:** «Weltweit verfolgten rund 600 Millionen Menschen die Fernsehübertragung der Mondlandung 1969.»
+- **Fundstelle:** «Weltweit verfolgten rund 600 Millionen Menschen die Fernsehübertragung der Mondlandung 1969», beim Mondspaziergang «erlebten» sie «die Live-Übertragung». Das frühere «gleichzeitig» im Text war unsere Zuspitzung und ist raus, die Quelle sagt es nicht.
 - **Geprüft:** 2026-08-16
 
-> Den Anfang macht der Sender KDKA in Pittsburgh, der am 2. November 1920 die Ergebnisse der Präsidentschaftswahl überträgt. In der Schweiz sendet 1921 ein Sender beim Basler Zeughaus Signale bis nach Neuenburg, Deutschland folgt 1923 und die britischen Radiolizenzen wachsen von 1923 bis 1927 von 100'000 auf 2,4 Millionen. Die Macht des Kanals bleibt niemandem verborgen. Ab 1933 lässt Goebbels den billigen Volksempfänger bauen, das Radio wird zu einem der wichtigsten Instrumente der NS-Propaganda und die deutsche Hörerschaft steigt von vier Millionen Anfang 1932 auf über zwölf Millionen Mitte 1939. Das Fernsehen beginnt am 22. März 1935 in Berlin, zuerst in öffentlichen Fernsehstuben, die SRG sendet ab dem 20. Juli 1953 aus dem Studio Bellerive in Zürich an fünf Abenden pro Woche rund eine Stunde, regulär ab 1958. Den Höhepunkt der gemeinsamen Live-Welt erlebt das Fernsehen, die Mondlandung von 1969 verfolgen rund 600 Millionen Menschen gleichzeitig. Der heutige Feed ist der Enkel dieser Praxis, nur wählt jetzt ein Algorithmus mit, was du zu sehen bekommst.
+> Den Anfang macht der Sender KDKA in Pittsburgh, der am 2. November 1920 die Ergebnisse der Präsidentschaftswahl überträgt. Deutschlands offizieller Unterhaltungsrundfunk startet 1923 in Berlin und in der Schweiz bewilligen die Bundesbehörden im selben Jahr Versuche für Lokalradios. Wie schnell die Praxis wächst, zeigen die britischen Empfangslizenzen, von 1923 bis 1927 steigen sie von rund 100'000 auf etwa 2,4 Millionen. Die Macht des Kanals bleibt niemandem verborgen. Ab 1933 lässt Goebbels den billigen Volksempfänger bauen, das Radio wird zu einem der wichtigsten Instrumente der NS-Propaganda und die deutsche Hörerschaft steigt von vier Millionen Anfang 1932 auf über zwölf Millionen Mitte 1939. Das Fernsehen beginnt am 22. März 1935 in Berlin, zuerst in öffentlichen Fernsehstuben, die SRG sendet ab dem 20. Juli 1953 aus dem Studio Bellerive in Zürich an fünf Abenden pro Woche rund eine Stunde, regulär ab 1958. Den Höhepunkt der gemeinsamen Live-Welt erlebt das Fernsehen, die ersten Schritte auf dem Mond verfolgen 1969 schätzungsweise rund 600 Millionen Menschen live. Der heutige Feed ist der Enkel dieser Praxis, nur wählt jetzt ein Algorithmus mit, was du zu sehen bekommst.
 
 ### Das Ende der Sklaverei · erheben sich 1791
 
@@ -987,48 +987,57 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 ### Radio und Fernsehen · weltweit erste reguläre Fernsehsender
 
-- **Kennung:** `PP-9a1089` (Kartentext)
+- **Kennung:** `PP-dfdba5` (Kartentext)
 - **Quelle:** [Fernsehsender Paul Nipkow (Wikipedia)](https://de.wikipedia.org/wiki/Fernsehsender_Paul_Nipkow)
 - **Fundstelle:** Der Sender nahm am 22. März 1935 in Berlin den Betrieb auf und war «der weltweit erste reguläre Fernsehsender».
 - **Geprüft:** 2026-08-17
 
-> Zum ersten Mal hören Millionen dasselbe im selben Moment. 1920 beginnt in Pittsburgh der regelmässige Rundfunk, das Wohnzimmer wird zum Weltempfänger. 1935 startet in Berlin der weltweit erste reguläre Fernsehsender, die Schweiz beginnt 1953 in Zürich. Wer sendet, erreicht ein ganzes Land auf einmal, das macht die neuen Medien zur gemeinsamen Bühne und zur Propagandamaschine.
+> Rundfunk wird ab 1920 zum regelmässigen Massenmedium, viele Menschen hören dieselbe Sendung im selben Moment, das Wohnzimmer wird zum Weltempfänger. In Pittsburgh startet einer der ersten regelmässigen Sender, 1935 folgt in Berlin der weltweit erste reguläre Fernsehsender und das Schweizer Fernsehen startet 1953 in Zürich als Versuchsbetrieb. Wer sendet, erreicht ein ganzes Land auf einmal, das macht die neuen Medien zur gemeinsamen Bühne und zur Propagandamaschine.
 
 ### Radio und Fernsehen · 1953 in Zürich
 
-- **Kennung:** `PP-9a1089` (Kartentext)
+- **Kennung:** `PP-dfdba5` (Kartentext)
 - **Quelle:** [SRF, 19. Juli 2023: «70 Jahre Fernsehen in der Schweiz»](https://www.srf.ch/unternehmen/mit-jubilaeumsprogramm-70-jahre-fernsehen-in-der-schweiz)
 - **Fundstelle:** «Als Fernseh-Versuchsbetrieb sendete die SRG ab 20. Juli 1953 an fünf Abenden pro Woche ein rund einstündiges Programm aus dem Studio Bellerive im Zürcher Seefeld-Quartier.»
 - **Geprüft:** 2026-08-17
 
-> Zum ersten Mal hören Millionen dasselbe im selben Moment. 1920 beginnt in Pittsburgh der regelmässige Rundfunk, das Wohnzimmer wird zum Weltempfänger. 1935 startet in Berlin der weltweit erste reguläre Fernsehsender, die Schweiz beginnt 1953 in Zürich. Wer sendet, erreicht ein ganzes Land auf einmal, das macht die neuen Medien zur gemeinsamen Bühne und zur Propagandamaschine.
+> Rundfunk wird ab 1920 zum regelmässigen Massenmedium, viele Menschen hören dieselbe Sendung im selben Moment, das Wohnzimmer wird zum Weltempfänger. In Pittsburgh startet einer der ersten regelmässigen Sender, 1935 folgt in Berlin der weltweit erste reguläre Fernsehsender und das Schweizer Fernsehen startet 1953 in Zürich als Versuchsbetrieb. Wer sendet, erreicht ein ganzes Land auf einmal, das macht die neuen Medien zur gemeinsamen Bühne und zur Propagandamaschine.
 
 ### Radio und Fernsehen · Volksempfänger
 
-- **Kennung:** `PP-c75163` (Vertiefung «Mehr lesen»)
+- **Kennung:** `PP-b42d5b` (Vertiefung «Mehr lesen»)
 - **Quelle:** [Volksempfänger (Wikipedia)](https://de.wikipedia.org/wiki/Volksempf%C3%A4nger)
 - **Fundstelle:** Im August 1933 vorgestellt, «im Auftrag von Reichspropagandaleiter Joseph Goebbels entwickelt», das Gerät «gilt als eines der wichtigsten Instrumente der NS-Propaganda». Die Zahl der Rundfunkhörer stieg «von vier Millionen Anfang 1932 auf über zwölf Millionen Mitte 1939».
 - **Geprüft:** 2026-08-17
 
-> Den Anfang macht der Sender KDKA in Pittsburgh, der am 2. November 1920 die Ergebnisse der Präsidentschaftswahl überträgt. In der Schweiz sendet 1921 ein Sender beim Basler Zeughaus Signale bis nach Neuenburg, Deutschland folgt 1923 und die britischen Radiolizenzen wachsen von 1923 bis 1927 von 100'000 auf 2,4 Millionen. Die Macht des Kanals bleibt niemandem verborgen. Ab 1933 lässt Goebbels den billigen Volksempfänger bauen, das Radio wird zu einem der wichtigsten Instrumente der NS-Propaganda und die deutsche Hörerschaft steigt von vier Millionen Anfang 1932 auf über zwölf Millionen Mitte 1939. Das Fernsehen beginnt am 22. März 1935 in Berlin, zuerst in öffentlichen Fernsehstuben, die SRG sendet ab dem 20. Juli 1953 aus dem Studio Bellerive in Zürich an fünf Abenden pro Woche rund eine Stunde, regulär ab 1958. Den Höhepunkt der gemeinsamen Live-Welt erlebt das Fernsehen, die Mondlandung von 1969 verfolgen rund 600 Millionen Menschen gleichzeitig. Der heutige Feed ist der Enkel dieser Praxis, nur wählt jetzt ein Algorithmus mit, was du zu sehen bekommst.
+> Den Anfang macht der Sender KDKA in Pittsburgh, der am 2. November 1920 die Ergebnisse der Präsidentschaftswahl überträgt. Deutschlands offizieller Unterhaltungsrundfunk startet 1923 in Berlin und in der Schweiz bewilligen die Bundesbehörden im selben Jahr Versuche für Lokalradios. Wie schnell die Praxis wächst, zeigen die britischen Empfangslizenzen, von 1923 bis 1927 steigen sie von rund 100'000 auf etwa 2,4 Millionen. Die Macht des Kanals bleibt niemandem verborgen. Ab 1933 lässt Goebbels den billigen Volksempfänger bauen, das Radio wird zu einem der wichtigsten Instrumente der NS-Propaganda und die deutsche Hörerschaft steigt von vier Millionen Anfang 1932 auf über zwölf Millionen Mitte 1939. Das Fernsehen beginnt am 22. März 1935 in Berlin, zuerst in öffentlichen Fernsehstuben, die SRG sendet ab dem 20. Juli 1953 aus dem Studio Bellerive in Zürich an fünf Abenden pro Woche rund eine Stunde, regulär ab 1958. Den Höhepunkt der gemeinsamen Live-Welt erlebt das Fernsehen, die ersten Schritte auf dem Mond verfolgen 1969 schätzungsweise rund 600 Millionen Menschen live. Der heutige Feed ist der Enkel dieser Praxis, nur wählt jetzt ein Algorithmus mit, was du zu sehen bekommst.
 
 ### Radio und Fernsehen · 22. März 1935
 
-- **Kennung:** `PP-c75163` (Vertiefung «Mehr lesen»)
+- **Kennung:** `PP-b42d5b` (Vertiefung «Mehr lesen»)
 - **Quelle:** [Fernsehsender Paul Nipkow (Wikipedia)](https://de.wikipedia.org/wiki/Fernsehsender_Paul_Nipkow)
 - **Fundstelle:** Start «22. März 1935» in Berlin als weltweit erster regulärer Fernsehsender. Private Geräte waren mit 2500 bis 3600 Reichsmark kaum erschwinglich, darum richtete die Reichspost öffentliche «Fernsehstuben» ein, die erste am 9. April 1935.
 - **Geprüft:** 2026-08-17
 
-> Den Anfang macht der Sender KDKA in Pittsburgh, der am 2. November 1920 die Ergebnisse der Präsidentschaftswahl überträgt. In der Schweiz sendet 1921 ein Sender beim Basler Zeughaus Signale bis nach Neuenburg, Deutschland folgt 1923 und die britischen Radiolizenzen wachsen von 1923 bis 1927 von 100'000 auf 2,4 Millionen. Die Macht des Kanals bleibt niemandem verborgen. Ab 1933 lässt Goebbels den billigen Volksempfänger bauen, das Radio wird zu einem der wichtigsten Instrumente der NS-Propaganda und die deutsche Hörerschaft steigt von vier Millionen Anfang 1932 auf über zwölf Millionen Mitte 1939. Das Fernsehen beginnt am 22. März 1935 in Berlin, zuerst in öffentlichen Fernsehstuben, die SRG sendet ab dem 20. Juli 1953 aus dem Studio Bellerive in Zürich an fünf Abenden pro Woche rund eine Stunde, regulär ab 1958. Den Höhepunkt der gemeinsamen Live-Welt erlebt das Fernsehen, die Mondlandung von 1969 verfolgen rund 600 Millionen Menschen gleichzeitig. Der heutige Feed ist der Enkel dieser Praxis, nur wählt jetzt ein Algorithmus mit, was du zu sehen bekommst.
+> Den Anfang macht der Sender KDKA in Pittsburgh, der am 2. November 1920 die Ergebnisse der Präsidentschaftswahl überträgt. Deutschlands offizieller Unterhaltungsrundfunk startet 1923 in Berlin und in der Schweiz bewilligen die Bundesbehörden im selben Jahr Versuche für Lokalradios. Wie schnell die Praxis wächst, zeigen die britischen Empfangslizenzen, von 1923 bis 1927 steigen sie von rund 100'000 auf etwa 2,4 Millionen. Die Macht des Kanals bleibt niemandem verborgen. Ab 1933 lässt Goebbels den billigen Volksempfänger bauen, das Radio wird zu einem der wichtigsten Instrumente der NS-Propaganda und die deutsche Hörerschaft steigt von vier Millionen Anfang 1932 auf über zwölf Millionen Mitte 1939. Das Fernsehen beginnt am 22. März 1935 in Berlin, zuerst in öffentlichen Fernsehstuben, die SRG sendet ab dem 20. Juli 1953 aus dem Studio Bellerive in Zürich an fünf Abenden pro Woche rund eine Stunde, regulär ab 1958. Den Höhepunkt der gemeinsamen Live-Welt erlebt das Fernsehen, die ersten Schritte auf dem Mond verfolgen 1969 schätzungsweise rund 600 Millionen Menschen live. Der heutige Feed ist der Enkel dieser Praxis, nur wählt jetzt ein Algorithmus mit, was du zu sehen bekommst.
+
+### Radio und Fernsehen · Versuche für Lokalradios
+
+- **Kennung:** `PP-b42d5b` (Vertiefung «Mehr lesen»)
+- **Quelle:** [SRF-Chronik: «Aus der Geschichte von Radio und TV in der Deutschschweiz»](https://www.srf.ch/unternehmen/unternehmen/chronik-und-archiv-aus-der-geschichte-von-radio-und-fernsehen-in-der-deutschschweiz)
+- **Fundstelle:** «Die erste kommerzielle Nutzung des Radios in der Schweiz erfolgte jedoch erst ab 1922 im Rahmen des internationalen Radiotelegrammverkehrs. 1923 bewilligten die Bundesbehörden Versuche für Lokalradios.» Erprobt wurde die drahtlose Telegrafie und Telefonie in der Schweiz schon ab 1911.
+- **Geprüft:** 2026-08-17
+
+> Den Anfang macht der Sender KDKA in Pittsburgh, der am 2. November 1920 die Ergebnisse der Präsidentschaftswahl überträgt. Deutschlands offizieller Unterhaltungsrundfunk startet 1923 in Berlin und in der Schweiz bewilligen die Bundesbehörden im selben Jahr Versuche für Lokalradios. Wie schnell die Praxis wächst, zeigen die britischen Empfangslizenzen, von 1923 bis 1927 steigen sie von rund 100'000 auf etwa 2,4 Millionen. Die Macht des Kanals bleibt niemandem verborgen. Ab 1933 lässt Goebbels den billigen Volksempfänger bauen, das Radio wird zu einem der wichtigsten Instrumente der NS-Propaganda und die deutsche Hörerschaft steigt von vier Millionen Anfang 1932 auf über zwölf Millionen Mitte 1939. Das Fernsehen beginnt am 22. März 1935 in Berlin, zuerst in öffentlichen Fernsehstuben, die SRG sendet ab dem 20. Juli 1953 aus dem Studio Bellerive in Zürich an fünf Abenden pro Woche rund eine Stunde, regulär ab 1958. Den Höhepunkt der gemeinsamen Live-Welt erlebt das Fernsehen, die ersten Schritte auf dem Mond verfolgen 1969 schätzungsweise rund 600 Millionen Menschen live. Der heutige Feed ist der Enkel dieser Praxis, nur wählt jetzt ein Algorithmus mit, was du zu sehen bekommst.
 
 ### Radio und Fernsehen · Studio Bellerive
 
-- **Kennung:** `PP-c75163` (Vertiefung «Mehr lesen»)
+- **Kennung:** `PP-b42d5b` (Vertiefung «Mehr lesen»)
 - **Quelle:** [SRF, 19. Juli 2023: «70 Jahre Fernsehen in der Schweiz»](https://www.srf.ch/unternehmen/mit-jubilaeumsprogramm-70-jahre-fernsehen-in-der-schweiz)
 - **Fundstelle:** Versuchsbetrieb «ab 20. Juli 1953 an fünf Abenden pro Woche ein rund einstündiges Programm aus dem Studio Bellerive im Zürcher Seefeld-Quartier»; «der reguläre Sendebetrieb startete am 1. Januar 1958 in deutscher und französischer Sprache».
 - **Geprüft:** 2026-08-17
 
-> Den Anfang macht der Sender KDKA in Pittsburgh, der am 2. November 1920 die Ergebnisse der Präsidentschaftswahl überträgt. In der Schweiz sendet 1921 ein Sender beim Basler Zeughaus Signale bis nach Neuenburg, Deutschland folgt 1923 und die britischen Radiolizenzen wachsen von 1923 bis 1927 von 100'000 auf 2,4 Millionen. Die Macht des Kanals bleibt niemandem verborgen. Ab 1933 lässt Goebbels den billigen Volksempfänger bauen, das Radio wird zu einem der wichtigsten Instrumente der NS-Propaganda und die deutsche Hörerschaft steigt von vier Millionen Anfang 1932 auf über zwölf Millionen Mitte 1939. Das Fernsehen beginnt am 22. März 1935 in Berlin, zuerst in öffentlichen Fernsehstuben, die SRG sendet ab dem 20. Juli 1953 aus dem Studio Bellerive in Zürich an fünf Abenden pro Woche rund eine Stunde, regulär ab 1958. Den Höhepunkt der gemeinsamen Live-Welt erlebt das Fernsehen, die Mondlandung von 1969 verfolgen rund 600 Millionen Menschen gleichzeitig. Der heutige Feed ist der Enkel dieser Praxis, nur wählt jetzt ein Algorithmus mit, was du zu sehen bekommst.
+> Den Anfang macht der Sender KDKA in Pittsburgh, der am 2. November 1920 die Ergebnisse der Präsidentschaftswahl überträgt. Deutschlands offizieller Unterhaltungsrundfunk startet 1923 in Berlin und in der Schweiz bewilligen die Bundesbehörden im selben Jahr Versuche für Lokalradios. Wie schnell die Praxis wächst, zeigen die britischen Empfangslizenzen, von 1923 bis 1927 steigen sie von rund 100'000 auf etwa 2,4 Millionen. Die Macht des Kanals bleibt niemandem verborgen. Ab 1933 lässt Goebbels den billigen Volksempfänger bauen, das Radio wird zu einem der wichtigsten Instrumente der NS-Propaganda und die deutsche Hörerschaft steigt von vier Millionen Anfang 1932 auf über zwölf Millionen Mitte 1939. Das Fernsehen beginnt am 22. März 1935 in Berlin, zuerst in öffentlichen Fernsehstuben, die SRG sendet ab dem 20. Juli 1953 aus dem Studio Bellerive in Zürich an fünf Abenden pro Woche rund eine Stunde, regulär ab 1958. Den Höhepunkt der gemeinsamen Live-Welt erlebt das Fernsehen, die ersten Schritte auf dem Mond verfolgen 1969 schätzungsweise rund 600 Millionen Menschen live. Der heutige Feed ist der Enkel dieser Praxis, nur wählt jetzt ein Algorithmus mit, was du zu sehen bekommst.
 
 ---
 

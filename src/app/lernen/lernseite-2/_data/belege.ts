@@ -2304,7 +2304,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "PP-9a1089",
+    id: "PP-dfdba5",
     anker: "das Wohnzimmer wird zum Weltempfänger",
     url: "https://de.wikipedia.org/wiki/Geschichte_des_H%C3%B6rfunks",
     titel: "Geschichte des Hörfunks (Wikipedia)",
@@ -2313,21 +2313,21 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "PP-c75163",
+    id: "PP-b42d5b",
     anker: "2. November 1920",
     url: "https://de.wikipedia.org/wiki/Geschichte_des_H%C3%B6rfunks",
     titel: "Geschichte des Hörfunks (Wikipedia)",
     stelle:
-      "KDKA startete am 2. November 1920 mit den Wahlergebnissen. Zur Schweiz: 1921 sandte ein Sender beim Basler Zeughaus St. Jakob Signale aus, «die in Neuenburg empfangen werden konnten»; der 29. Oktober 1923 gilt als Geburtsstunde des deutschen Rundfunks. Die BBC-Radiolizenzen wuchsen von 1923 bis 1927 von 100'000 auf 2,4 Millionen.",
+      "KDKA startete am 2. November 1920 mit den Wahlergebnissen; der 29. Oktober 1923 gilt als «Geburtsstunde des deutschen Rundfunks» (Vox-Haus, Berlin). Die BBC-Radiolizenzen wuchsen von 1923 bis 1927 von 100'000 auf 2,4 Millionen, im Text steht darum «von rund 100'000 auf etwa 2,4 Millionen», andere Darstellungen nennen tiefere Startwerte. Der frühere Satz zum Basler Zeughaus von 1921 ist raus, die SRG-Chronik kennt ihn nicht und externe Angaben streiten zwischen 1920 und 1921.",
     geprueft: "2026-08-16",
   },
   {
-    id: "PP-c75163",
-    anker: "verfolgen rund 600 Millionen Menschen gleichzeitig",
+    id: "PP-b42d5b",
+    anker: "schätzungsweise rund 600 Millionen Menschen live",
     url: "https://de.wikipedia.org/wiki/Apollo_11",
     titel: "Apollo 11 (Wikipedia)",
     stelle:
-      "«Weltweit verfolgten rund 600 Millionen Menschen die Fernsehübertragung der Mondlandung 1969.»",
+      "«Weltweit verfolgten rund 600 Millionen Menschen die Fernsehübertragung der Mondlandung 1969», beim Mondspaziergang «erlebten» sie «die Live-Übertragung». Das frühere «gleichzeitig» im Text war unsere Zuspitzung und ist raus, die Quelle sagt es nicht.",
     geprueft: "2026-08-16",
   },
   {
@@ -2711,7 +2711,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-9a1089",
+    id: "PP-dfdba5",
     anker: "weltweit erste reguläre Fernsehsender",
     url: "https://de.wikipedia.org/wiki/Fernsehsender_Paul_Nipkow",
     titel: "Fernsehsender Paul Nipkow (Wikipedia)",
@@ -2720,7 +2720,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-9a1089",
+    id: "PP-dfdba5",
     anker: "1953 in Zürich",
     url: "https://www.srf.ch/unternehmen/mit-jubilaeumsprogramm-70-jahre-fernsehen-in-der-schweiz",
     titel: "SRF, 19. Juli 2023: «70 Jahre Fernsehen in der Schweiz»",
@@ -2729,7 +2729,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-c75163",
+    id: "PP-b42d5b",
     anker: "Volksempfänger",
     url: "https://de.wikipedia.org/wiki/Volksempf%C3%A4nger",
     titel: "Volksempfänger (Wikipedia)",
@@ -2738,7 +2738,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-c75163",
+    id: "PP-b42d5b",
     anker: "22. März 1935",
     url: "https://de.wikipedia.org/wiki/Fernsehsender_Paul_Nipkow",
     titel: "Fernsehsender Paul Nipkow (Wikipedia)",
@@ -2747,7 +2747,16 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-c75163",
+    id: "PP-b42d5b",
+    anker: "Versuche für Lokalradios",
+    url: "https://www.srf.ch/unternehmen/unternehmen/chronik-und-archiv-aus-der-geschichte-von-radio-und-fernsehen-in-der-deutschschweiz",
+    titel: "SRF-Chronik: «Aus der Geschichte von Radio und TV in der Deutschschweiz»",
+    stelle:
+      "«Die erste kommerzielle Nutzung des Radios in der Schweiz erfolgte jedoch erst ab 1922 im Rahmen des internationalen Radiotelegrammverkehrs. 1923 bewilligten die Bundesbehörden Versuche für Lokalradios.» Erprobt wurde die drahtlose Telegrafie und Telefonie in der Schweiz schon ab 1911.",
+    geprueft: "2026-08-17",
+  },
+  {
+    id: "PP-b42d5b",
     anker: "Studio Bellerive",
     url: "https://www.srf.ch/unternehmen/mit-jubilaeumsprogramm-70-jahre-fernsehen-in-der-schweiz",
     titel: "SRF, 19. Juli 2023: «70 Jahre Fernsehen in der Schweiz»",
