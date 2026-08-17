@@ -1,6 +1,6 @@
 # Quellenauftrag · Lernseite 2 «Eine ganz neue Partnerschaft»
 
-**Paket 09 von 9.** Dieses Dokument enthält 29 Textblöcke eines Lernsets zu
+**Paket 09 von 9.** Dieses Dokument enthält 31 Textblöcke eines Lernsets zu
 Künstlicher Intelligenz und Philosophie (Berufsfachschule, Deutschschweiz).
 Jeder Block hat eine **Kennung** in eckigen Klammern, z.B. `[VA-a1b2c3]`.
 
@@ -46,7 +46,15 @@ und die Quelle ihn nur bestätigt.
 
 Jeder Block hier enthält eine prüfbare Behauptung (Zahl, Datum,
 Superlativ oder eine Aussage, die jemandem zugeschrieben wird). Deutende
-Passagen sind bewusst nicht dabei. Geh die 29 Blöcke einzeln durch.
+Passagen sind bewusst nicht dabei. Geh die 31 Blöcke einzeln durch.
+
+### Thema 01 · Vorhang auf
+
+**[VA-225dcb]** *(Kartentext · Kultureller Bias und Technikverständnis)*
+KI lernt aus Texten, die oft aus dem englischsprachigen und westlichen Raum stammen. Darum gibt sie häufig westliche Sprachen, Werte und Sichtweisen wieder. Andere Kulturen verstehen Technik, Gemeinschaft und Privatsphäre aber teils ganz anders. «West» und «Ost» sind dabei keine festen Blöcke, sondern grobe Vereinfachungen.
+
+**[VA-2717c6]** *(Fallbeispiel · Wissensmacht)*
+Die Trainingsdaten der grossen Modelle bestehen zu einem sehr grossen Teil aus englischen Texten. Wissen aus kleineren Sprachen, etwa vielen afrikanischen, ist kaum vertreten und dort antwortet die KI schwächer oder erfindet mehr. So entscheidet die Datenmenge mit, wessen Wissen sichtbar bleibt.
 
 ### Thema 02 · Philosophische Perspektive
 

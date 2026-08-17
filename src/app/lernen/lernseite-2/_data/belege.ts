@@ -2268,7 +2268,7 @@ export const BELEGE: Beleg[] = [
    * auch den Entwurf korrigiert, Appenzell Innerrhoden kam 1991 per
    * Bundesgerichtsentscheid, nicht 1990 freiwillig.                       */
   {
-    id: "PP-c8bf43",
+    id: "PP-b94968",
     anker: "verbindet 1866 Europa und Amerika",
     url: "https://de.wikipedia.org/wiki/Transatlantisches_Telegrafenkabel",
     titel: "Transatlantisches Telegrafenkabel (Wikipedia)",
@@ -2277,7 +2277,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "PP-cb4419",
+    id: "PP-1d4234",
     anker: "fast 16 Stunden für 98 Wörter",
     url: "https://de.wikipedia.org/wiki/Transatlantisches_Telegrafenkabel",
     titel: "Transatlantisches Telegrafenkabel (Wikipedia)",
@@ -2286,7 +2286,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "PP-cb4419",
+    id: "PP-1d4234",
     anker: "TAT-1",
     url: "https://de.wikipedia.org/wiki/Transatlantisches_Telefonkabel",
     titel: "Transatlantisches Telefonkabel (Wikipedia)",
@@ -2295,7 +2295,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "PP-cb4419",
+    id: "PP-1d4234",
     anker: "95 Prozent des Internetverkehrs",
     url: "https://de.wikipedia.org/wiki/Seekabel",
     titel: "Seekabel (Wikipedia)",
@@ -2762,6 +2762,104 @@ export const BELEGE: Beleg[] = [
     titel: "SRF, 19. Juli 2023: «70 Jahre Fernsehen in der Schweiz»",
     stelle:
       "Versuchsbetrieb «ab 20. Juli 1953 an fünf Abenden pro Woche ein rund einstündiges Programm aus dem Studio Bellerive im Zürcher Seefeld-Quartier»; «der reguläre Sendebetrieb startete am 1. Januar 1958 in deutscher und französischer Sprache».",
+    geprueft: "2026-08-17",
+  },
+
+  /* ── Nachträge vom 2026-08-17: Der Punkt «Elektrizität verbindet die Welt»
+   * hiess nach der Energie und erzählte die Kommunikation. Er ist jetzt der
+   * Kabel-Punkt (Telegraf, Seekabel, Telefon, Glasfaser), Elektrizität steht
+   * als eigener Punkt daneben. Für die Schweiz trägt SWI swissinfo.ch die
+   * Zahlen (SRG SSR, also öffentlich-rechtlich), für den Strombedarf der KI
+   * ein SRF-Artikel. TAT-8 nur englisch, ein deutscher Artikel existiert
+   * nicht.                                                                 */
+  {
+    id: "PP-1d4234",
+    anker: "What hath God wrought?",
+    url: "https://de.wikipedia.org/wiki/Elektrischer_Telegraf",
+    titel: "Elektrischer Telegraf (Wikipedia)",
+    stelle:
+      "Die Telegrafenlinie zwischen Washington und Baltimore ging 1844 in Betrieb, die erste Nachricht wurde am 24. Mai 1844 übertragen und lautete «What hath God wrought?». Den Wortlaut hatte Annie Ellsworth vorgeschlagen, es gilt als erstes Telegramm der USA. Eine Streckenlänge nennt der Artikel nicht, darum steht im Text keine.",
+    geprueft: "2026-08-17",
+  },
+  {
+    id: "PP-1d4234",
+    anker: "1876 in Boston",
+    url: "https://de.wikipedia.org/wiki/Geschichte_des_Telefons",
+    titel: "Geschichte des Telefons (Wikipedia)",
+    stelle:
+      "«So brachte Bell 1876 in Boston das Telefon erstmals zur praktischen Anwendung.» Zur Schweiz sagt der Artikel nichts, darum nennt der Text keine Schweizer Zentrale.",
+    geprueft: "2026-08-17",
+  },
+  {
+    id: "PP-1d4234",
+    anker: "40'000 Gespräche",
+    url: "https://en.wikipedia.org/wiki/TAT-8",
+    titel: "TAT-8 (Wikipedia, englisch)",
+    stelle:
+      "«TAT-8 was the 8th transatlantic communications cable and first transatlantic fiber-optic cable», gebaut und in Betrieb genommen 1988, mit 280 Mbit/s entsprechend «40,000 telephone circuits». Einen deutschen Artikel gab es bei der Prüfung nicht (404).",
+    geprueft: "2026-08-17",
+  },
+  {
+    id: "PP-2359df",
+    anker: "1882 versorgt in New York das erste Zentralkraftwerk",
+    url: "https://de.wikipedia.org/wiki/Thomas_Alva_Edison",
+    titel: "Thomas Alva Edison (Wikipedia)",
+    stelle:
+      "«Am 4. September 1882 wurde mit der Pearl Street Station das erste Zentralkraftwerk der USA in der New Yorker Pearl Street eröffnet.» Die Anlage lief mit Gleichstrom und versorgte zunächst 59 Abnehmer.",
+    geprueft: "2026-08-17",
+  },
+  {
+    id: "PP-048563",
+    anker: "1800 der Royal Society",
+    url: "https://de.wikipedia.org/wiki/Voltasche_S%C3%A4ule",
+    titel: "Voltasche Säule (Wikipedia)",
+    stelle:
+      "Die Säule wurde «von Alessandro Volta um 1799 entwickelt und der Royal Society im Jahr 1800 in London vorgestellt». Sie war «die erste elektrische Batterie, die eine praktische Bedeutung als Stromquelle erlangte», und solche Batterien dienten der Elektroindustrie als Stromquellen «bis zur Erfindung des elektrischen Generators in den 1870er Jahren».",
+    geprueft: "2026-08-17",
+  },
+  {
+    id: "PP-048563",
+    anker: "4. September 1882",
+    url: "https://de.wikipedia.org/wiki/Thomas_Alva_Edison",
+    titel: "Thomas Alva Edison (Wikipedia)",
+    stelle:
+      "Eröffnung der Pearl Street Station am «4. September 1882» als «erstes Zentralkraftwerk der USA», sechs Dampfmaschinen-Dynamos mit je 100 kW, zunächst 59 Abnehmer, «ein Jahr später waren es 513 Kunden».",
+    geprueft: "2026-08-17",
+  },
+  {
+    id: "PP-048563",
+    anker: "176 Kilometer nach Frankfurt",
+    url: "https://de.wikipedia.org/wiki/Internationale_Elektrotechnische_Ausstellung",
+    titel: "Internationale Elektrotechnische Ausstellung 1891 (Wikipedia)",
+    stelle:
+      "«Bei der Ausstellung wurde mit der Drehstromübertragung Lauffen–Frankfurt erstmals die leistungsstarke Fernübertragung von Strom demonstriert», übertragen wurde «über 176 Kilometer» mit «dem geringen Verlust von 25 Prozent». «Aufgrund dieses erfolgreichen Feldversuchs setzte sich die Drehstromtechnik für den Aufbau elektrischer Übertragungsnetze weltweit durch.» Darum steht im Text «den Ausschlag gab» und nicht, der Streit sei damit entschieden gewesen.",
+    geprueft: "2026-08-17",
+  },
+  {
+    id: "PP-048563",
+    anker: "Hotel Engadiner Kulm",
+    url: "https://www.swissinfo.ch/ger/geschichte_unter-strom---wie-die-schweiz-elektrifiziert-wurde/44217906",
+    titel: "SWI swissinfo.ch (SRG SSR), 8. Juli 2018: «Unter Strom, wie die Schweiz elektrifiziert wurde»",
+    stelle:
+      "«1879 nahm das Hotel Engadiner Kulm in St. Moritz erstmals in der Schweiz eine elektrische Beleuchtungsanlage in Betrieb.» Zur Wasserkraft hält der Artikel fest, ein Grund für den Vorsprung habe in der Topographie gelegen, sie «bot gute Voraussetzungen für den Bau von Flusskraftwerken».",
+    geprueft: "2026-08-17",
+  },
+  {
+    id: "PP-048563",
+    anker: "77 Prozent des Schienennetzes",
+    url: "https://www.swissinfo.ch/ger/geschichte_unter-strom---wie-die-schweiz-elektrifiziert-wurde/44217906",
+    titel: "SWI swissinfo.ch (SRG SSR), 8. Juli 2018: «Unter Strom, wie die Schweiz elektrifiziert wurde»",
+    stelle:
+      "«Bis etwa 1910 wies die Schweiz weltweit die höchste Stromproduktion pro Einwohner auf, mit sehr grossen jährlichen Zuwachsraten.» Und «1939 war in der Schweiz 77 Prozent des Schienennetzes elektrifiziert, in den andern europäischen Ländern lag der Durchschnitt erst bei 5 Prozent».",
+    geprueft: "2026-08-17",
+  },
+  {
+    id: "PP-048563",
+    anker: "neun Sekunden Fernsehen",
+    url: "https://www.srf.ch/news/wirtschaft/strom-fuer-rechenzentren-wie-viel-strom-braucht-kuenstliche-intelligenz",
+    titel: "SRF, 22. August 2025: «Wie viel Strom braucht Künstliche Intelligenz?»",
+    stelle:
+      "Google gibt für eine KI-Anfrage 0.24 Wattstunden an, «so viel Strom wie neun Sekunden Fernsehen», dazu rund fünf Tropfen Wasser zur Kühlung; OpenAI nennt 0.34 Wattstunden. Der Artikel schränkt ein, «der Stromverbrauch ist nur für die eigentliche Anfrage angegeben», das Training kommt dazu. Darum nennt der Text die Zahl als Angabe von Google und nicht als Gesamtbilanz.",
     geprueft: "2026-08-17",
   },
 ];

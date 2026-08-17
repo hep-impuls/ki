@@ -13,8 +13,8 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 254 |
-| Belegte Textblöcke | 133 |
+| Belege | 264 |
+| Belegte Textblöcke | 135 |
 | Begründete Nicht-Belege | 6 |
 | Aussagen mit Standdatum | 3 |
 
@@ -652,41 +652,41 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 > Den Anstoss gab ein amerikanischer Spediteur. Malcom McLean liess 1956 erstmals genormte Stahlkisten auf ein umgebautes Schiff heben, weil ihn das ewige Umladen von Hand ärgerte. Der Container senkte die Verladekosten auf einen Bruchteil, ganze Berufe am Hafen verschwanden, dafür wurde es plötzlich rentabel, auch billige Waren um die halbe Welt zu schicken. Nach dem Ende des Kalten Kriegs kam die Politik dazu, die Welthandelsorganisation entstand 1995, China trat 2001 bei und wurde zur «Fabrik der Welt». Seither steckt in einem einzigen Smartphone Arbeit aus Dutzenden Ländern, vom Kobalt aus dem Kongo über Chips aus Taiwan bis zur Software aus Amerika und Europa. Wie verletzlich das fein getaktete System ist, zeigte sich 2021, als ein einziges quer stehendes Containerschiff im Suezkanal tagelang einen Teil des Welthandels aufhielt. Grenzenlos heisst eben auch, dass eine Störung an einem Ort überall spürbar wird.
 
-### Elektrizität verbindet die Welt · verbindet 1866 Europa und Amerika
+### Kabel verbinden die Kontinente · verbindet 1866 Europa und Amerika
 
-- **Kennung:** `PP-c8bf43` (Kartentext)
+- **Kennung:** `PP-b94968` (Kartentext)
 - **Quelle:** [Transatlantisches Telegrafenkabel (Wikipedia)](https://de.wikipedia.org/wiki/Transatlantisches_Telegrafenkabel)
 - **Fundstelle:** Die Great Eastern verlegte das dauerhafte Kabel von Valentia Island (Irland) nach Heart's Content (Neufundland), Start am 13. Juli 1866, Ankunft am 27. Juli, erstes offizielles Telegramm am 28. Juli 1866. Vorher brauchte eine Nachricht per Dampfschiff etwa zehn Tage, per Kabel Minuten.
 - **Geprüft:** 2026-08-16
 
-> Ein Kabel am Meeresgrund verbindet 1866 Europa und Amerika, Nachrichten brauchen Minuten statt Tage. Dazu kommen Telefon und elektrisches Licht. Strom wird zum Nervensystem der Welt und Entfernung verliert ihre Macht über die Information.
+> Der Telegraf verwandelt ab 1844 Nachrichten in Stromstösse, ein Kabel am Meeresgrund verbindet 1866 Europa und Amerika, Nachrichten brauchen Minuten statt Tage. Dann kommen Telefonleitungen dazu, später Glasfasern. Was wir heute Wolke nennen, ist zu einem grossen Teil Glas am Meeresgrund. Entfernung verliert ihre Macht über die Information und wer an der Leitung liegt, spricht mit der ganzen Welt.
 
-### Elektrizität verbindet die Welt · fast 16 Stunden für 98 Wörter
+### Kabel verbinden die Kontinente · fast 16 Stunden für 98 Wörter
 
-- **Kennung:** `PP-cb4419` (Vertiefung «Mehr lesen»)
+- **Kennung:** `PP-1d4234` (Vertiefung «Mehr lesen»)
 - **Quelle:** [Transatlantisches Telegrafenkabel (Wikipedia)](https://de.wikipedia.org/wiki/Transatlantisches_Telegrafenkabel)
 - **Fundstelle:** Das erste Kabel von 1858 funktionierte nur rund drei Wochen, insgesamt 732 Telegramme. Das Grusstelegramm von Queen Victoria an Präsident Buchanan brauchte fast 16 Stunden für 98 Wörter, am 1. September 1858 verschwanden die Signale.
 - **Geprüft:** 2026-08-16
 
-> Der erste Versuch von 1858 hielt nur rund drei Wochen, das Glückwunsch-Telegramm der Queen brauchte fast 16 Stunden für 98 Wörter, dann verstummte das Kabel. 1866 verlegte die Great Eastern, das damals grösste Schiff der Welt, das dauerhafte Kabel von Irland nach Neufundland. Vorher war eine Nachricht per Dampfschiff etwa zehn Tage unterwegs gewesen. 1956 folgte mit TAT-1 das erste Telefonkabel durch den Atlantik, 36 Gespräche gleichzeitig. Heute liegen Glasfaserkabel auf demselben Meeresgrund, 2014 liefen 95 Prozent des Internetverkehrs zwischen den Weltregionen durch Seekabel und neueste Faserpaare übertragen gut ein Terabit pro Sekunde. Auch jede Antwort einer KI nimmt diesen Weg unter dem Meer.
+> Am 24. Mai 1844 übertrug Samuel Morse zwischen Washington und Baltimore die Worte «What hath God wrought?», das erste Telegramm der USA. Der erste Versuch, den Atlantik zu überbrücken, hielt 1858 nur rund drei Wochen, das Glückwunsch-Telegramm der Queen brauchte fast 16 Stunden für 98 Wörter, dann verstummte das Kabel. 1866 verlegte die Great Eastern, das damals grösste Schiff der Welt, das dauerhafte Kabel von Irland nach Neufundland. Vorher war eine Nachricht per Dampfschiff etwa zehn Tage unterwegs gewesen. Sprechen liess sich über solche Leitungen noch nicht, das begann 1876 in Boston mit Alexander Graham Bell. 1956 folgte mit TAT-1 das erste Telefonkabel durch den Atlantik, 36 Gespräche gleichzeitig, 1988 brachte TAT-8 als erstes Glasfaserkabel 40'000 Gespräche unter. Heute liegen Glasfaserkabel auf demselben Meeresgrund, 2014 liefen 95 Prozent des Internetverkehrs zwischen den Weltregionen durch Seekabel und neueste Faserpaare übertragen gut ein Terabit pro Sekunde. Auch jede Antwort einer KI nimmt diesen Weg unter dem Meer.
 
-### Elektrizität verbindet die Welt · TAT-1
+### Kabel verbinden die Kontinente · TAT-1
 
-- **Kennung:** `PP-cb4419` (Vertiefung «Mehr lesen»)
+- **Kennung:** `PP-1d4234` (Vertiefung «Mehr lesen»)
 - **Quelle:** [Transatlantisches Telefonkabel (Wikipedia)](https://de.wikipedia.org/wiki/Transatlantisches_Telefonkabel)
 - **Fundstelle:** «Das 3600 km lange TAT-1 wurde am 25. September 1956 zwischen Oban (Schottland) und Clarenville (Neufundland) in Betrieb genommen», das erste transatlantische Telefonkabel mit 36 Fernsprechkanälen.
 - **Geprüft:** 2026-08-16
 
-> Der erste Versuch von 1858 hielt nur rund drei Wochen, das Glückwunsch-Telegramm der Queen brauchte fast 16 Stunden für 98 Wörter, dann verstummte das Kabel. 1866 verlegte die Great Eastern, das damals grösste Schiff der Welt, das dauerhafte Kabel von Irland nach Neufundland. Vorher war eine Nachricht per Dampfschiff etwa zehn Tage unterwegs gewesen. 1956 folgte mit TAT-1 das erste Telefonkabel durch den Atlantik, 36 Gespräche gleichzeitig. Heute liegen Glasfaserkabel auf demselben Meeresgrund, 2014 liefen 95 Prozent des Internetverkehrs zwischen den Weltregionen durch Seekabel und neueste Faserpaare übertragen gut ein Terabit pro Sekunde. Auch jede Antwort einer KI nimmt diesen Weg unter dem Meer.
+> Am 24. Mai 1844 übertrug Samuel Morse zwischen Washington und Baltimore die Worte «What hath God wrought?», das erste Telegramm der USA. Der erste Versuch, den Atlantik zu überbrücken, hielt 1858 nur rund drei Wochen, das Glückwunsch-Telegramm der Queen brauchte fast 16 Stunden für 98 Wörter, dann verstummte das Kabel. 1866 verlegte die Great Eastern, das damals grösste Schiff der Welt, das dauerhafte Kabel von Irland nach Neufundland. Vorher war eine Nachricht per Dampfschiff etwa zehn Tage unterwegs gewesen. Sprechen liess sich über solche Leitungen noch nicht, das begann 1876 in Boston mit Alexander Graham Bell. 1956 folgte mit TAT-1 das erste Telefonkabel durch den Atlantik, 36 Gespräche gleichzeitig, 1988 brachte TAT-8 als erstes Glasfaserkabel 40'000 Gespräche unter. Heute liegen Glasfaserkabel auf demselben Meeresgrund, 2014 liefen 95 Prozent des Internetverkehrs zwischen den Weltregionen durch Seekabel und neueste Faserpaare übertragen gut ein Terabit pro Sekunde. Auch jede Antwort einer KI nimmt diesen Weg unter dem Meer.
 
-### Elektrizität verbindet die Welt · 95 Prozent des Internetverkehrs
+### Kabel verbinden die Kontinente · 95 Prozent des Internetverkehrs
 
-- **Kennung:** `PP-cb4419` (Vertiefung «Mehr lesen»)
+- **Kennung:** `PP-1d4234` (Vertiefung «Mehr lesen»)
 - **Quelle:** [Seekabel (Wikipedia)](https://de.wikipedia.org/wiki/Seekabel)
 - **Fundstelle:** «2014 wurden 95 Prozent des Internetverkehrs zwischen Weltregionen via Unterseekabel übertragen.» Moderne Seekabel sind Glasfaserkabel, «neueste Faserpaare können gut ein Terabit Daten pro Sekunde übertragen».
 - **Geprüft:** 2026-08-16
 
-> Der erste Versuch von 1858 hielt nur rund drei Wochen, das Glückwunsch-Telegramm der Queen brauchte fast 16 Stunden für 98 Wörter, dann verstummte das Kabel. 1866 verlegte die Great Eastern, das damals grösste Schiff der Welt, das dauerhafte Kabel von Irland nach Neufundland. Vorher war eine Nachricht per Dampfschiff etwa zehn Tage unterwegs gewesen. 1956 folgte mit TAT-1 das erste Telefonkabel durch den Atlantik, 36 Gespräche gleichzeitig. Heute liegen Glasfaserkabel auf demselben Meeresgrund, 2014 liefen 95 Prozent des Internetverkehrs zwischen den Weltregionen durch Seekabel und neueste Faserpaare übertragen gut ein Terabit pro Sekunde. Auch jede Antwort einer KI nimmt diesen Weg unter dem Meer.
+> Am 24. Mai 1844 übertrug Samuel Morse zwischen Washington und Baltimore die Worte «What hath God wrought?», das erste Telegramm der USA. Der erste Versuch, den Atlantik zu überbrücken, hielt 1858 nur rund drei Wochen, das Glückwunsch-Telegramm der Queen brauchte fast 16 Stunden für 98 Wörter, dann verstummte das Kabel. 1866 verlegte die Great Eastern, das damals grösste Schiff der Welt, das dauerhafte Kabel von Irland nach Neufundland. Vorher war eine Nachricht per Dampfschiff etwa zehn Tage unterwegs gewesen. Sprechen liess sich über solche Leitungen noch nicht, das begann 1876 in Boston mit Alexander Graham Bell. 1956 folgte mit TAT-1 das erste Telefonkabel durch den Atlantik, 36 Gespräche gleichzeitig, 1988 brachte TAT-8 als erstes Glasfaserkabel 40'000 Gespräche unter. Heute liegen Glasfaserkabel auf demselben Meeresgrund, 2014 liefen 95 Prozent des Internetverkehrs zwischen den Weltregionen durch Seekabel und neueste Faserpaare übertragen gut ein Terabit pro Sekunde. Auch jede Antwort einer KI nimmt diesen Weg unter dem Meer.
 
 ### Radio und Fernsehen · das Wohnzimmer wird zum Weltempfänger
 
@@ -1038,6 +1038,96 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 - **Geprüft:** 2026-08-17
 
 > Den Anfang macht der Sender KDKA in Pittsburgh, der am 2. November 1920 die Ergebnisse der amerikanischen Präsidentschaftswahl überträgt, die Warren G. Harding gewinnt. Deutschlands offizieller Unterhaltungsrundfunk startet 1923 in Berlin und in der Schweiz bewilligen die Bundesbehörden im selben Jahr Versuche für Lokalradios. Wie schnell die Praxis wächst, zeigen die britischen Empfangslizenzen, von 1923 bis 1927 steigen sie von rund 100'000 auf etwa 2,4 Millionen. Die Macht des Kanals bleibt niemandem verborgen. Ab 1933 lässt Propagandaminister Joseph Goebbels den billigen Volksempfänger bauen, das Radio wird zu einem der wichtigsten Instrumente der NS-Propaganda und die deutsche Hörerschaft steigt von vier Millionen Anfang 1932 auf über zwölf Millionen Mitte 1939. Das Fernsehen beginnt am 22. März 1935 in Berlin, zuerst in öffentlichen Fernsehstuben, die SRG sendet ab dem 20. Juli 1953 aus dem Studio Bellerive in Zürich an fünf Abenden pro Woche rund eine Stunde, regulär ab 1958. Den Höhepunkt der gemeinsamen Live-Welt erlebt das Fernsehen, die ersten Schritte auf dem Mond verfolgen 1969 schätzungsweise rund 600 Millionen Menschen live. Der heutige Feed ist der Enkel dieser Praxis, nur wählt jetzt ein Algorithmus mit, was du zu sehen bekommst.
+
+### Kabel verbinden die Kontinente · What hath God wrought?
+
+- **Kennung:** `PP-1d4234` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Elektrischer Telegraf (Wikipedia)](https://de.wikipedia.org/wiki/Elektrischer_Telegraf)
+- **Fundstelle:** Die Telegrafenlinie zwischen Washington und Baltimore ging 1844 in Betrieb, die erste Nachricht wurde am 24. Mai 1844 übertragen und lautete «What hath God wrought?». Den Wortlaut hatte Annie Ellsworth vorgeschlagen, es gilt als erstes Telegramm der USA. Eine Streckenlänge nennt der Artikel nicht, darum steht im Text keine.
+- **Geprüft:** 2026-08-17
+
+> Am 24. Mai 1844 übertrug Samuel Morse zwischen Washington und Baltimore die Worte «What hath God wrought?», das erste Telegramm der USA. Der erste Versuch, den Atlantik zu überbrücken, hielt 1858 nur rund drei Wochen, das Glückwunsch-Telegramm der Queen brauchte fast 16 Stunden für 98 Wörter, dann verstummte das Kabel. 1866 verlegte die Great Eastern, das damals grösste Schiff der Welt, das dauerhafte Kabel von Irland nach Neufundland. Vorher war eine Nachricht per Dampfschiff etwa zehn Tage unterwegs gewesen. Sprechen liess sich über solche Leitungen noch nicht, das begann 1876 in Boston mit Alexander Graham Bell. 1956 folgte mit TAT-1 das erste Telefonkabel durch den Atlantik, 36 Gespräche gleichzeitig, 1988 brachte TAT-8 als erstes Glasfaserkabel 40'000 Gespräche unter. Heute liegen Glasfaserkabel auf demselben Meeresgrund, 2014 liefen 95 Prozent des Internetverkehrs zwischen den Weltregionen durch Seekabel und neueste Faserpaare übertragen gut ein Terabit pro Sekunde. Auch jede Antwort einer KI nimmt diesen Weg unter dem Meer.
+
+### Kabel verbinden die Kontinente · 1876 in Boston
+
+- **Kennung:** `PP-1d4234` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Geschichte des Telefons (Wikipedia)](https://de.wikipedia.org/wiki/Geschichte_des_Telefons)
+- **Fundstelle:** «So brachte Bell 1876 in Boston das Telefon erstmals zur praktischen Anwendung.» Zur Schweiz sagt der Artikel nichts, darum nennt der Text keine Schweizer Zentrale.
+- **Geprüft:** 2026-08-17
+
+> Am 24. Mai 1844 übertrug Samuel Morse zwischen Washington und Baltimore die Worte «What hath God wrought?», das erste Telegramm der USA. Der erste Versuch, den Atlantik zu überbrücken, hielt 1858 nur rund drei Wochen, das Glückwunsch-Telegramm der Queen brauchte fast 16 Stunden für 98 Wörter, dann verstummte das Kabel. 1866 verlegte die Great Eastern, das damals grösste Schiff der Welt, das dauerhafte Kabel von Irland nach Neufundland. Vorher war eine Nachricht per Dampfschiff etwa zehn Tage unterwegs gewesen. Sprechen liess sich über solche Leitungen noch nicht, das begann 1876 in Boston mit Alexander Graham Bell. 1956 folgte mit TAT-1 das erste Telefonkabel durch den Atlantik, 36 Gespräche gleichzeitig, 1988 brachte TAT-8 als erstes Glasfaserkabel 40'000 Gespräche unter. Heute liegen Glasfaserkabel auf demselben Meeresgrund, 2014 liefen 95 Prozent des Internetverkehrs zwischen den Weltregionen durch Seekabel und neueste Faserpaare übertragen gut ein Terabit pro Sekunde. Auch jede Antwort einer KI nimmt diesen Weg unter dem Meer.
+
+### Kabel verbinden die Kontinente · 40'000 Gespräche
+
+- **Kennung:** `PP-1d4234` (Vertiefung «Mehr lesen»)
+- **Quelle:** [TAT-8 (Wikipedia, englisch)](https://en.wikipedia.org/wiki/TAT-8)
+- **Fundstelle:** «TAT-8 was the 8th transatlantic communications cable and first transatlantic fiber-optic cable», gebaut und in Betrieb genommen 1988, mit 280 Mbit/s entsprechend «40,000 telephone circuits». Einen deutschen Artikel gab es bei der Prüfung nicht (404).
+- **Geprüft:** 2026-08-17
+
+> Am 24. Mai 1844 übertrug Samuel Morse zwischen Washington und Baltimore die Worte «What hath God wrought?», das erste Telegramm der USA. Der erste Versuch, den Atlantik zu überbrücken, hielt 1858 nur rund drei Wochen, das Glückwunsch-Telegramm der Queen brauchte fast 16 Stunden für 98 Wörter, dann verstummte das Kabel. 1866 verlegte die Great Eastern, das damals grösste Schiff der Welt, das dauerhafte Kabel von Irland nach Neufundland. Vorher war eine Nachricht per Dampfschiff etwa zehn Tage unterwegs gewesen. Sprechen liess sich über solche Leitungen noch nicht, das begann 1876 in Boston mit Alexander Graham Bell. 1956 folgte mit TAT-1 das erste Telefonkabel durch den Atlantik, 36 Gespräche gleichzeitig, 1988 brachte TAT-8 als erstes Glasfaserkabel 40'000 Gespräche unter. Heute liegen Glasfaserkabel auf demselben Meeresgrund, 2014 liefen 95 Prozent des Internetverkehrs zwischen den Weltregionen durch Seekabel und neueste Faserpaare übertragen gut ein Terabit pro Sekunde. Auch jede Antwort einer KI nimmt diesen Weg unter dem Meer.
+
+### Elektrizität wird nutzbar · 1882 versorgt in New York das erste Zentralkraftwerk
+
+- **Kennung:** `PP-2359df` (Kartentext)
+- **Quelle:** [Thomas Alva Edison (Wikipedia)](https://de.wikipedia.org/wiki/Thomas_Alva_Edison)
+- **Fundstelle:** «Am 4. September 1882 wurde mit der Pearl Street Station das erste Zentralkraftwerk der USA in der New Yorker Pearl Street eröffnet.» Die Anlage lief mit Gleichstrom und versorgte zunächst 59 Abnehmer.
+- **Geprüft:** 2026-08-17
+
+> Alessandro Volta stellt 1800 die erste Batterie vor, die als Stromquelle wirklich taugt. Damit ist dauerhaft fliessender Strom erforschbar. Ab den 1870er Jahren liefern Generatoren ihn in Mengen, 1882 versorgt in New York das erste Zentralkraftwerk ein ganzes Stadtviertel. Die Nacht wird hell, Fabriken lösen sich vom Wasserrad und Strom wird zur unsichtbaren Grundlage von allem, was danach kommt, auch von jedem Rechenzentrum.
+
+### Elektrizität wird nutzbar · 1800 der Royal Society
+
+- **Kennung:** `PP-048563` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Voltasche Säule (Wikipedia)](https://de.wikipedia.org/wiki/Voltasche_S%C3%A4ule)
+- **Fundstelle:** Die Säule wurde «von Alessandro Volta um 1799 entwickelt und der Royal Society im Jahr 1800 in London vorgestellt». Sie war «die erste elektrische Batterie, die eine praktische Bedeutung als Stromquelle erlangte», und solche Batterien dienten der Elektroindustrie als Stromquellen «bis zur Erfindung des elektrischen Generators in den 1870er Jahren».
+- **Geprüft:** 2026-08-17
+
+> Volta entwickelte seine Säule um 1799 und stellte sie 1800 der Royal Society in London vor, bis zur Erfindung des Generators in den 1870er Jahren blieben solche Batterien die wichtigste Stromquelle. Am 4. September 1882 eröffnete Edison in New York die Pearl Street Station, das erste Zentralkraftwerk der USA, zuerst mit 59 Abnehmern, ein Jahr später waren es 513. Danach stritten Gleich- und Wechselstrom um die Zukunft. Den Ausschlag gab 1891 ein Versuch, bei dem Strom von Lauffen am Neckar über 176 Kilometer nach Frankfurt übertragen wurde, erst damit liess sich Energie dorthin bringen, wo die Menschen wohnen. Die Schweiz nutzte dafür ihr Wasser, 1879 nahm das Hotel Engadiner Kulm in St. Moritz die erste elektrische Beleuchtungsanlage des Landes in Betrieb. Bis etwa 1910 hatte das Land weltweit die höchste Stromproduktion pro Einwohner und 1939 waren 77 Prozent des Schienennetzes elektrifiziert, im übrigen Europa erst 5 Prozent. Auch KI ist Stromverbrauch, Google gab 2025 für eine Anfrage 0,24 Wattstunden an, so viel wie neun Sekunden Fernsehen.
+
+### Elektrizität wird nutzbar · 4. September 1882
+
+- **Kennung:** `PP-048563` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Thomas Alva Edison (Wikipedia)](https://de.wikipedia.org/wiki/Thomas_Alva_Edison)
+- **Fundstelle:** Eröffnung der Pearl Street Station am «4. September 1882» als «erstes Zentralkraftwerk der USA», sechs Dampfmaschinen-Dynamos mit je 100 kW, zunächst 59 Abnehmer, «ein Jahr später waren es 513 Kunden».
+- **Geprüft:** 2026-08-17
+
+> Volta entwickelte seine Säule um 1799 und stellte sie 1800 der Royal Society in London vor, bis zur Erfindung des Generators in den 1870er Jahren blieben solche Batterien die wichtigste Stromquelle. Am 4. September 1882 eröffnete Edison in New York die Pearl Street Station, das erste Zentralkraftwerk der USA, zuerst mit 59 Abnehmern, ein Jahr später waren es 513. Danach stritten Gleich- und Wechselstrom um die Zukunft. Den Ausschlag gab 1891 ein Versuch, bei dem Strom von Lauffen am Neckar über 176 Kilometer nach Frankfurt übertragen wurde, erst damit liess sich Energie dorthin bringen, wo die Menschen wohnen. Die Schweiz nutzte dafür ihr Wasser, 1879 nahm das Hotel Engadiner Kulm in St. Moritz die erste elektrische Beleuchtungsanlage des Landes in Betrieb. Bis etwa 1910 hatte das Land weltweit die höchste Stromproduktion pro Einwohner und 1939 waren 77 Prozent des Schienennetzes elektrifiziert, im übrigen Europa erst 5 Prozent. Auch KI ist Stromverbrauch, Google gab 2025 für eine Anfrage 0,24 Wattstunden an, so viel wie neun Sekunden Fernsehen.
+
+### Elektrizität wird nutzbar · 176 Kilometer nach Frankfurt
+
+- **Kennung:** `PP-048563` (Vertiefung «Mehr lesen»)
+- **Quelle:** [Internationale Elektrotechnische Ausstellung 1891 (Wikipedia)](https://de.wikipedia.org/wiki/Internationale_Elektrotechnische_Ausstellung)
+- **Fundstelle:** «Bei der Ausstellung wurde mit der Drehstromübertragung Lauffen–Frankfurt erstmals die leistungsstarke Fernübertragung von Strom demonstriert», übertragen wurde «über 176 Kilometer» mit «dem geringen Verlust von 25 Prozent». «Aufgrund dieses erfolgreichen Feldversuchs setzte sich die Drehstromtechnik für den Aufbau elektrischer Übertragungsnetze weltweit durch.» Darum steht im Text «den Ausschlag gab» und nicht, der Streit sei damit entschieden gewesen.
+- **Geprüft:** 2026-08-17
+
+> Volta entwickelte seine Säule um 1799 und stellte sie 1800 der Royal Society in London vor, bis zur Erfindung des Generators in den 1870er Jahren blieben solche Batterien die wichtigste Stromquelle. Am 4. September 1882 eröffnete Edison in New York die Pearl Street Station, das erste Zentralkraftwerk der USA, zuerst mit 59 Abnehmern, ein Jahr später waren es 513. Danach stritten Gleich- und Wechselstrom um die Zukunft. Den Ausschlag gab 1891 ein Versuch, bei dem Strom von Lauffen am Neckar über 176 Kilometer nach Frankfurt übertragen wurde, erst damit liess sich Energie dorthin bringen, wo die Menschen wohnen. Die Schweiz nutzte dafür ihr Wasser, 1879 nahm das Hotel Engadiner Kulm in St. Moritz die erste elektrische Beleuchtungsanlage des Landes in Betrieb. Bis etwa 1910 hatte das Land weltweit die höchste Stromproduktion pro Einwohner und 1939 waren 77 Prozent des Schienennetzes elektrifiziert, im übrigen Europa erst 5 Prozent. Auch KI ist Stromverbrauch, Google gab 2025 für eine Anfrage 0,24 Wattstunden an, so viel wie neun Sekunden Fernsehen.
+
+### Elektrizität wird nutzbar · Hotel Engadiner Kulm
+
+- **Kennung:** `PP-048563` (Vertiefung «Mehr lesen»)
+- **Quelle:** [SWI swissinfo.ch (SRG SSR), 8. Juli 2018: «Unter Strom, wie die Schweiz elektrifiziert wurde»](https://www.swissinfo.ch/ger/geschichte_unter-strom---wie-die-schweiz-elektrifiziert-wurde/44217906)
+- **Fundstelle:** «1879 nahm das Hotel Engadiner Kulm in St. Moritz erstmals in der Schweiz eine elektrische Beleuchtungsanlage in Betrieb.» Zur Wasserkraft hält der Artikel fest, ein Grund für den Vorsprung habe in der Topographie gelegen, sie «bot gute Voraussetzungen für den Bau von Flusskraftwerken».
+- **Geprüft:** 2026-08-17
+
+> Volta entwickelte seine Säule um 1799 und stellte sie 1800 der Royal Society in London vor, bis zur Erfindung des Generators in den 1870er Jahren blieben solche Batterien die wichtigste Stromquelle. Am 4. September 1882 eröffnete Edison in New York die Pearl Street Station, das erste Zentralkraftwerk der USA, zuerst mit 59 Abnehmern, ein Jahr später waren es 513. Danach stritten Gleich- und Wechselstrom um die Zukunft. Den Ausschlag gab 1891 ein Versuch, bei dem Strom von Lauffen am Neckar über 176 Kilometer nach Frankfurt übertragen wurde, erst damit liess sich Energie dorthin bringen, wo die Menschen wohnen. Die Schweiz nutzte dafür ihr Wasser, 1879 nahm das Hotel Engadiner Kulm in St. Moritz die erste elektrische Beleuchtungsanlage des Landes in Betrieb. Bis etwa 1910 hatte das Land weltweit die höchste Stromproduktion pro Einwohner und 1939 waren 77 Prozent des Schienennetzes elektrifiziert, im übrigen Europa erst 5 Prozent. Auch KI ist Stromverbrauch, Google gab 2025 für eine Anfrage 0,24 Wattstunden an, so viel wie neun Sekunden Fernsehen.
+
+### Elektrizität wird nutzbar · 77 Prozent des Schienennetzes
+
+- **Kennung:** `PP-048563` (Vertiefung «Mehr lesen»)
+- **Quelle:** [SWI swissinfo.ch (SRG SSR), 8. Juli 2018: «Unter Strom, wie die Schweiz elektrifiziert wurde»](https://www.swissinfo.ch/ger/geschichte_unter-strom---wie-die-schweiz-elektrifiziert-wurde/44217906)
+- **Fundstelle:** «Bis etwa 1910 wies die Schweiz weltweit die höchste Stromproduktion pro Einwohner auf, mit sehr grossen jährlichen Zuwachsraten.» Und «1939 war in der Schweiz 77 Prozent des Schienennetzes elektrifiziert, in den andern europäischen Ländern lag der Durchschnitt erst bei 5 Prozent».
+- **Geprüft:** 2026-08-17
+
+> Volta entwickelte seine Säule um 1799 und stellte sie 1800 der Royal Society in London vor, bis zur Erfindung des Generators in den 1870er Jahren blieben solche Batterien die wichtigste Stromquelle. Am 4. September 1882 eröffnete Edison in New York die Pearl Street Station, das erste Zentralkraftwerk der USA, zuerst mit 59 Abnehmern, ein Jahr später waren es 513. Danach stritten Gleich- und Wechselstrom um die Zukunft. Den Ausschlag gab 1891 ein Versuch, bei dem Strom von Lauffen am Neckar über 176 Kilometer nach Frankfurt übertragen wurde, erst damit liess sich Energie dorthin bringen, wo die Menschen wohnen. Die Schweiz nutzte dafür ihr Wasser, 1879 nahm das Hotel Engadiner Kulm in St. Moritz die erste elektrische Beleuchtungsanlage des Landes in Betrieb. Bis etwa 1910 hatte das Land weltweit die höchste Stromproduktion pro Einwohner und 1939 waren 77 Prozent des Schienennetzes elektrifiziert, im übrigen Europa erst 5 Prozent. Auch KI ist Stromverbrauch, Google gab 2025 für eine Anfrage 0,24 Wattstunden an, so viel wie neun Sekunden Fernsehen.
+
+### Elektrizität wird nutzbar · neun Sekunden Fernsehen
+
+- **Kennung:** `PP-048563` (Vertiefung «Mehr lesen»)
+- **Quelle:** [SRF, 22. August 2025: «Wie viel Strom braucht Künstliche Intelligenz?»](https://www.srf.ch/news/wirtschaft/strom-fuer-rechenzentren-wie-viel-strom-braucht-kuenstliche-intelligenz)
+- **Fundstelle:** Google gibt für eine KI-Anfrage 0.24 Wattstunden an, «so viel Strom wie neun Sekunden Fernsehen», dazu rund fünf Tropfen Wasser zur Kühlung; OpenAI nennt 0.34 Wattstunden. Der Artikel schränkt ein, «der Stromverbrauch ist nur für die eigentliche Anfrage angegeben», das Training kommt dazu. Darum nennt der Text die Zahl als Angabe von Google und nicht als Gesamtbilanz.
+- **Geprüft:** 2026-08-17
+
+> Volta entwickelte seine Säule um 1799 und stellte sie 1800 der Royal Society in London vor, bis zur Erfindung des Generators in den 1870er Jahren blieben solche Batterien die wichtigste Stromquelle. Am 4. September 1882 eröffnete Edison in New York die Pearl Street Station, das erste Zentralkraftwerk der USA, zuerst mit 59 Abnehmern, ein Jahr später waren es 513. Danach stritten Gleich- und Wechselstrom um die Zukunft. Den Ausschlag gab 1891 ein Versuch, bei dem Strom von Lauffen am Neckar über 176 Kilometer nach Frankfurt übertragen wurde, erst damit liess sich Energie dorthin bringen, wo die Menschen wohnen. Die Schweiz nutzte dafür ihr Wasser, 1879 nahm das Hotel Engadiner Kulm in St. Moritz die erste elektrische Beleuchtungsanlage des Landes in Betrieb. Bis etwa 1910 hatte das Land weltweit die höchste Stromproduktion pro Einwohner und 1939 waren 77 Prozent des Schienennetzes elektrifiziert, im übrigen Europa erst 5 Prozent. Auch KI ist Stromverbrauch, Google gab 2025 für eine Anfrage 0,24 Wattstunden an, so viel wie neun Sekunden Fernsehen.
 
 ---
 

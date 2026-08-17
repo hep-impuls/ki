@@ -50,6 +50,18 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 02 · Wege der Orientierung
 
+**[DW-f47a63]** *(Fallbeispiel · Lebenskunst)*
+Ein Bullet Journal ist ein Notizbuch mit Punkteraster, das Terminplanung, To-do-Listen, Tagebuch und Brainstorming in einem einzigen Heft verbindet. Entwickelt hat es 2013 der Designer Ryder Carroll.
+
+Neu ist die Idee nicht, und das ist das Schöne daran. Foucault hat in seinem Spätwerk die antike Sorge um sich selbst wieder ausgegraben. Solche Hefte gab es nämlich schon damals, sie hiessen Hypomnemata und man sammelte darin Zitate, Gedanken und Vorsätze. Foucault las sie als Werkzeuge der Selbstsorge, Schreiben als Arbeit an sich selbst. Genau das meint seine «Ästhetik der Existenz», ein Leben formen wie ein Kunstwerk. Gemeint ist nicht, sich für fremde Massstäbe zu optimieren, für Noten, Follower und Bestenlisten. Es heisst, selbst zu wählen, woran du arbeitest. Dafür ist ein Heft, das niemand liken kann, ein ziemlich gutes Werkzeug, denn es gehört nur dir.
+
+> **Belegt** («Bullet Journal»): [Bullet Journal (Wikipedia)](https://de.wikipedia.org/wiki/Bullet_Journal) — «Ein Bullet Journal (auch als BuJo bekannt) ist ein individuelles Organisationssystem, das 2013 von dem digitalen Produktdesigner Ryder Carroll entwickelt wurde.» Es verbindet «Terminplanung, To-Do-Listen, Tagebuch und Brainstorming in einem einzigen Notizbuch», üblich sind Notizbücher mit Punkteraster. *(geprüft 2026-08-13)*
+
+> **Belegt** («Hypomnemata»): [Hypomnema (Wikipedia)](https://de.wikipedia.org/wiki/Hypomnema) — Antike persönliche Schreibhefte, in die «Zitate, Teile von Arbeiten, Aphorismen und Beispiele» sowie Gehörtes und eigene Überlegungen eingetragen wurden, ein «materielles Gedächtnis gelesener, gehörter und gedachter Dinge». Der Artikel referiert auch Foucaults Deutung: Teil einer «Kultur des persönlichen Schreibens», Instrument der Selbstsorge und der «Selbstkonstituierung», gerade bei den Stoikern. *(geprüft 2026-08-14)*
+
+**[DW-83b1c5]** *(Zur Philosophie · Lebenskunst)*
+Wilhelm Schmid ist ein freier Philosoph in Berlin und hat die «Philosophie der Lebenskunst» im deutschsprachigen Raum bekannt gemacht. Sein Thema ist der Abstand zwischen Einsicht und Tat, den jeder von den guten Vorsätzen kennt. Was hilft, ist Übung in kleinsten Schritten, täglich, fast beiläufig, aber regelmässig, nicht das ganze Buch auf einmal, sondern jeden Tag eine Seite. Weil Freude stärker wirkt als Zwang, soll man sich am Schönen orientieren, zu dem man Ja sagen kann. So werden neue Gewohnheiten gebildet. Wie lange das dauert, hat die Psychologie untersucht, nicht die Philosophie. Eine oft zitierte Studie fand einen Mittelwert von 66 Tagen, mit sehr grossen Unterschieden je nach Person und Gewohnheit. Werk: «Philosophie der Lebenskunst» (1998).
+
 **[DW-02b06c]** *(Fallbeispiel · Lebenskunst)*
 Vinted wurde 2008 in Litauen gegründet und ist heute mit über 65 Millionen Mitgliedern eine der grössten Plattformen für Secondhandkleidung, kaufen und verkaufen per App, quer durch Europa und Nordamerika.
 
@@ -178,9 +190,3 @@ Leistungsfähige KI braucht sehr viele spezielle Computerchips, Server und Speic
 
 **[VA-62c30a]** *(Kartentext · Arbeitsmarkt)*
 KI verändert die Arbeitswelt spürbar. Sie übernimmt vor allem einzelne Aufgaben, selten gleich einen ganzen Beruf. Manche Tätigkeiten fallen weg, andere verändern sich und neue kommen dazu. Für viele Berufe bedeutet das neue Anforderungen und neues Lernen.
-
-**[VA-225dcb]** *(Kartentext · Kultureller Bias und Technikverständnis)*
-KI lernt aus Texten, die oft aus dem englischsprachigen und westlichen Raum stammen. Darum gibt sie häufig westliche Sprachen, Werte und Sichtweisen wieder. Andere Kulturen verstehen Technik, Gemeinschaft und Privatsphäre aber teils ganz anders. «West» und «Ost» sind dabei keine festen Blöcke, sondern grobe Vereinfachungen.
-
-**[VA-2717c6]** *(Fallbeispiel · Wissensmacht)*
-Die Trainingsdaten der grossen Modelle bestehen zu einem sehr grossen Teil aus englischen Texten. Wissen aus kleineren Sprachen, etwa vielen afrikanischen, ist kaum vertreten und dort antwortet die KI schwächer oder erfindet mehr. So entscheidet die Datenmenge mit, wessen Wissen sichtbar bleibt.

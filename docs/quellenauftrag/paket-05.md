@@ -48,6 +48,20 @@ Jeder Block hier enthält eine prüfbare Behauptung (Zahl, Datum,
 Superlativ oder eine Aussage, die jemandem zugeschrieben wird). Deutende
 Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
+### Thema 02 · Philosophische Perspektive
+
+**[PP-d7e5e9]** *(Vertiefung «Mehr lesen» · Selbstbestimmte Liebe)*
+Die Niederlande öffneten am 1. April 2001 als erstes Land der Welt die Ehe für gleichgeschlechtliche Paare. In der Schweiz sagten die Stimmenden am 26. September 2021 mit 64,1 Prozent Ja zur Ehe für alle und kein einziger Kanton lehnte ab; heiraten können gleichgeschlechtliche Paare hier seit dem 1. Juli 2022. Zwischen jener Nacht in der Christopher Street und diesem Abstimmungssonntag liegen zweiundfünfzig Jahre, ungefähr ein Menschenleben.
+
+> **Belegt** («64,1 Prozent»): [SRF, 26. September 2021: Ja zur Ehe für alle](https://www.srf.ch/news/abstimmungen/ehe-fuer-alle/ehe-fuer-alle-srg-hochrechnung-64-sagen-ja-zu-gleichgeschlechtlichen-ehen) — Die Vorlage «Ehe für alle» wurde am 26. September 2021 mit 64,1 Prozent Ja angenommen, kein Kanton lehnte sie ab. *(geprüft 2026-08-16)*
+
+> **Belegt** («Die Niederlande öffneten»): [Gleichgeschlechtliche Ehe (Wikipedia)](https://de.wikipedia.org/wiki/Gleichgeschlechtliche_Ehe) — Die Niederlande stehen als erstes Land in der Länderliste, Datum «1. Apr. 2001». Der Artikel führt derzeit 39 Staaten mit geöffneter Ehe. Diese Zahl steht bewusst nicht im Lernset-Text, sie veraltet mit jedem weiteren Land. *(geprüft 2026-08-16)*
+
+> **Belegt** («seit dem 1. Juli 2022»): [Gleichgeschlechtliche Ehe (Wikipedia)](https://de.wikipedia.org/wiki/Gleichgeschlechtliche_Ehe) — Für die Schweiz nennt der Artikel den 1. Juli 2022 als Datum, seit dem gleichgeschlechtliche Paare heiraten können. Die Abstimmung vom 26. September 2021 steht damit nicht ohne ihr Inkrafttreten da. *(geprüft 2026-08-16)*
+
+**[PP-66f41a]** *(Fliesstext · Wege der Orientierung)*
+Der erste Bereich fragt, was den Menschen im Kern ausmacht, unabhängig davon, ob eine KI es auch könnte, mit Aristoteles, Kant, Hegel, Arendt, Heidegger, Sloterdijk und Hustvedt. Der zweite erklärt, wie wir in komplexen Gesellschaften Orientierung finden, obwohl niemand mehr das Ganze überblickt, mit Latour und Nassehi. Der dritte zeigt, dass sich Mensch und Maschine nicht trennen lassen, und fragt nach Wegen der Zusammenarbeit oder der bewussten Abgrenzung, mit Latour, Haraway, Harari, Gabriel und dem japanischen «We-Turn» von Yasuo Deguchi. Der vierte fragt nach der Lebenskunst, wie man sein Leben tatsächlich ändern kann, mit den Stoikern, Foucault, Wilhelm Schmid, Nussbaum, Merleau-Ponty und Rosa.
+
 ### Thema 02 · Die acht Epochen
 
 **[EP-ea7ebd]** *(Einleitung · Antike)*
@@ -168,9 +182,3 @@ Kant verbrachte fast sein ganzes Leben in Königsberg und der Anekdote nach stel
 
 **[EP-a2aacb]** *(Einleitung, Vertiefung · Industriemoderne)*
 Die Industrialisierung begann um 1780 in England (Textil, Kohle, Eisen) und erfasste im 19. Jahrhundert Kontinentaleuropa und die USA. Sie brachte Eisenbahn, Grossstadt und Weltmarkt, dazu die «soziale Frage»: Wie geht man mit Massenarmut, Kinderarbeit und Ausbeutung um? Aus dieser Zeit stammen die Gewerkschaften, die ersten Sozialgesetze und die grossen politischen Strömungen (Liberalismus, Sozialismus, Konservatismus), die das 20. Jahrhundert prägten.
-
-**[EP-931efb]** *(Hintergrund zum Bild · Industriemoderne)*
-Adolph Menzel (1815–1905) war ein deutscher Maler des Realismus, der genaue Beobachtung mit gesellschaftlichem Blick verband. Für dieses Werk studierte er 1872 wochenlang eine echte Fabrik in Königshütte in Oberschlesien und füllte Skizzenbücher mit Details. Das Bild entstand zwischen 1872 und 1875 und zeigt das Innere einer Eisenfabrik mit über vierzig Arbeitern. Im Zentrum wird ein glühender Eisenblock unter die Walzen geschoben, während rechts eine Schicht hastig isst und links Männer sich waschen. Es gilt als erstes bedeutendes Industriegemälde der deutschen Kunst und hängt heute in der Alten Nationalgalerie in Berlin.
-
-**[EP-313685]** *(Im Kontext der Zeit · Industriemoderne)*
-Menzels Fabrik zeigt beide Seiten des Umbruchs in einem Bild. Auf der einen Seite steht die technische Wucht der Dampfmaschine, die glühendes Eisen und Menschenkraft zu einem einzigen Getriebe verbindet, auf der anderen die soziale Verunsicherung einer Arbeit, die im Schichtbetrieb niemals stillsteht. Genau diesen Umbruch versuchte Marx zu begreifen. Die Verhältnisse, in denen diese Menschen arbeiten, sind kein Naturgesetz, sondern gemacht und darum veränderbar.

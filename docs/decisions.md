@@ -10,6 +10,39 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-17 — Elektrizität und Kabel sind zwei Punkte, nicht einer (Christof)
+
+**Der Befund.** Der Teppich-Punkt hiess «Elektrizität verbindet die Welt» und
+erzählte dann Telegraf, Seekabel und Telefon. Das ist Kommunikation, nicht
+Energie. Christof hat den falschen Titel gemeldet und die Aufteilung gleich
+mitvorgeschlagen.
+
+**Die Aufteilung.** «Kabel verbinden die Kontinente» (ab 1844) nimmt die
+kabelgebundene Kommunikation, das Seekabel ist darin ein Teil und nicht die
+ganze Geschichte. Neu dazu kommen Morse 1844, Bell 1876 und das erste
+Glasfaserkabel TAT-8 von 1988. Ein Satz räumt ein verbreitetes Missverständnis
+weg, die Wolke ist zu einem grossen Teil Glas am Meeresgrund.
+
+**Der neue Punkt.** «Elektrizität wird nutzbar» (1800 bis 1891) erzählt den
+Strom als Energieform, von Voltas Batterie über das erste Zentralkraftwerk 1882
+bis zur Fernübertragung von 1891, mit der Energie überhaupt dorthin kam, wo
+Menschen wohnen. Für die Schweiz tragen SWI swissinfo.ch (SRG SSR) und SRF die
+Zahlen, dem Wunsch nach öffentlich-rechtlichen Quellen entsprechend.
+
+**Warum das didaktisch trägt.** Beide Punkte enden bei der KI, aber an
+verschiedenen Enden derselben Infrastruktur. Der Kabel-Punkt zeigt den Weg, den
+eine Antwort nimmt, der Strom-Punkt ihren Preis, eine Anfrage kostet nach
+Googles Angabe so viel Strom wie neun Sekunden Fernsehen. Wer beides sieht,
+begreift ein Rechenzentrum als Ort in der Welt und nicht als Wolke.
+
+**Warum der Punkt weit oben sitzt.** Bei y40 lagen die Beschriftungen von
+Elektrizität und Kabel nur 15 Bildpunkte auseinander, gemessen im Browser mit
+den echten Textbreiten. Auf y26 sind es 33. Die Koordinaten im Datenfile sind
+nicht die im Bild, x wird mit 1,4165 und y mit 1,2667 skaliert, das ist beim
+nächsten Setzen mitzudenken.
+
+---
+
 ## 2026-08-17 — Namen im Lerntext bekommen einen Hover, nicht mehr Text (Christof)
 
 **Der Anlass.** Im Teppich-Punkt «Radio und Fernsehen» standen «die Ergebnisse

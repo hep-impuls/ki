@@ -50,6 +50,12 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 02 · Die acht Epochen
 
+**[EP-931efb]** *(Hintergrund zum Bild · Industriemoderne)*
+Adolph Menzel (1815–1905) war ein deutscher Maler des Realismus, der genaue Beobachtung mit gesellschaftlichem Blick verband. Für dieses Werk studierte er 1872 wochenlang eine echte Fabrik in Königshütte in Oberschlesien und füllte Skizzenbücher mit Details. Das Bild entstand zwischen 1872 und 1875 und zeigt das Innere einer Eisenfabrik mit über vierzig Arbeitern. Im Zentrum wird ein glühender Eisenblock unter die Walzen geschoben, während rechts eine Schicht hastig isst und links Männer sich waschen. Es gilt als erstes bedeutendes Industriegemälde der deutschen Kunst und hängt heute in der Alten Nationalgalerie in Berlin.
+
+**[EP-313685]** *(Im Kontext der Zeit · Industriemoderne)*
+Menzels Fabrik zeigt beide Seiten des Umbruchs in einem Bild. Auf der einen Seite steht die technische Wucht der Dampfmaschine, die glühendes Eisen und Menschenkraft zu einem einzigen Getriebe verbindet, auf der anderen die soziale Verunsicherung einer Arbeit, die im Schichtbetrieb niemals stillsteht. Genau diesen Umbruch versuchte Marx zu begreifen. Die Verhältnisse, in denen diese Menschen arbeiten, sind kein Naturgesetz, sondern gemacht und darum veränderbar.
+
 **[EP-a70bf0]** *(Kartentext · Industriemoderne)*
 Adolph Menzel malt 1872–1875 nach genauen Studien das Innere einer echten Fabrik. Das war neu. Als eines der ersten grossen Gemälde überhaupt nimmt es die Industriearbeit ernst. Nicht Götter oder Herrscher, sondern schwitzende Arbeiter zwischen Maschinen füllen die riesige Leinwand.
 
@@ -176,9 +182,3 @@ Klimakrise und Künstliche Intelligenz zugleich: Der Individualismus allein trä
 Dieses Bild ist kein Gemälde, sondern eine Fotografie, die am 7. Dezember 1972 aus rund 29 000 km Entfernung entstand. Aufgenommen hat sie die Besatzung von Apollo 17, der bislang letzten bemannten Mondlandung. Zu sehen ist die Erde als ganze, runde Kugel, mit Wolkenwirbeln, Ozeanen und Kontinenten in einem einzigen Blick. Von hier oben sind keine Nationen und keine Grenzen erkennbar, nur ein einziger, verletzlicher Planet im schwarzen All. «Blue Marble» wurde zu einem der meistreproduzierten Fotos der Geschichte und zu einer Ikone der Umweltbewegung.
 
 > **Belegt** («letzten bemannten Mondlandung»): [Apollo 17 (Wikipedia)](https://de.wikipedia.org/wiki/Apollo_17) — «Mit Apollo 17 landeten zum sechsten und vorerst letzten Mal Menschen auf dem Mond.» Als letzte bemannte MondMISSION gilt sie seit April 2026 nicht mehr: «Apollo 17 blieb bis zur Mission Artemis 2 im Jahr 2026 der letzte bemannte Mondflug». Artemis 2 umrundete den Mond, landete aber nicht. *(geprüft 2026-08-05)*
-
-**[EP-4a11f9]** *(Im Kontext der Zeit · Jetzt: Umwelt & KI)*
-Der «Blue Marble» ist das Bild vom einen, gemeinsamen «Wir», die Erde als ein einziger, grenzenloser Planet. Genau dieses «Wir» steht heute unter doppeltem Druck, Klimakrise und eine Technik, die Wirklichkeit täuschend echt erzeugen kann. Wie sich aus lauter vernetzten Individuen wieder ein tragfähiges Wir bildet, ist die offene Frage, an der die Philosophie der Gegenwart arbeitet.
-
-**[EP-48cd10]** *(Kartentext · Jetzt: Umwelt & KI)*
-Von hier oben sind keine Nationen, keine Grenzen, keine Konflikte zu sehen, nur ein einziger, verletzlicher Planet im schwarzen All. Genau dieser Anblick machte das Bild zu einer Ikone der Umwelt- und Friedensbewegung.

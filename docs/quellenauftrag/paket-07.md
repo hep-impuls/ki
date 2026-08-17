@@ -50,6 +50,12 @@ Passagen sind bewusst nicht dabei. Geh die 35 Blöcke einzeln durch.
 
 ### Thema 02 · Die acht Epochen
 
+**[EP-4a11f9]** *(Im Kontext der Zeit · Jetzt: Umwelt & KI)*
+Der «Blue Marble» ist das Bild vom einen, gemeinsamen «Wir», die Erde als ein einziger, grenzenloser Planet. Genau dieses «Wir» steht heute unter doppeltem Druck, Klimakrise und eine Technik, die Wirklichkeit täuschend echt erzeugen kann. Wie sich aus lauter vernetzten Individuen wieder ein tragfähiges Wir bildet, ist die offene Frage, an der die Philosophie der Gegenwart arbeitet.
+
+**[EP-48cd10]** *(Kartentext · Jetzt: Umwelt & KI)*
+Von hier oben sind keine Nationen, keine Grenzen, keine Konflikte zu sehen, nur ein einziger, verletzlicher Planet im schwarzen All. Genau dieser Anblick machte das Bild zu einer Ikone der Umwelt- und Friedensbewegung.
+
 **[EP-5c035e]** *(Kartentext · Jetzt: Umwelt & KI)*
 Wolkenwirbel, Ozeane und Landmassen liegen in einem einzigen Blick beieinander, ein geschlossenes, zusammenhängendes System. Der «Blue Marble» wurde zum Bezugspunkt der Vorstellung eines globalen «Wir».
 
@@ -268,15 +274,3 @@ Die Stoiker unterscheiden zwischen dem, was in deiner Macht steht, und dem, was 
 
 **[DW-ce2a11]** *(Zur Philosophie · Lebenskunst)*
 Michel Foucault war ein französischer Philosoph, der untersuchte, wie Macht und Wissen unser Leben prägen (in Gefängnis, Klinik, Sexualität). In seinem Spätwerk entdeckte er die antike «Sorge um sich selbst» wieder, das Kümmern um das eigene Leben und sein bewusstes Gestalten. Er nennt das eine «Ästhetik der Existenz», das Leben formen wie ein Kunstwerk. Es geht nicht darum, fremden Normen zu gehorchen, sondern die eigene Lebensform aktiv zu wählen und einzuüben. Werk: «Die Sorge um sich» (1984).
-
-**[DW-f47a63]** *(Fallbeispiel · Lebenskunst)*
-Ein Bullet Journal ist ein Notizbuch mit Punkteraster, das Terminplanung, To-do-Listen, Tagebuch und Brainstorming in einem einzigen Heft verbindet. Entwickelt hat es 2013 der Designer Ryder Carroll.
-
-Neu ist die Idee nicht, und das ist das Schöne daran. Foucault hat in seinem Spätwerk die antike Sorge um sich selbst wieder ausgegraben. Solche Hefte gab es nämlich schon damals, sie hiessen Hypomnemata und man sammelte darin Zitate, Gedanken und Vorsätze. Foucault las sie als Werkzeuge der Selbstsorge, Schreiben als Arbeit an sich selbst. Genau das meint seine «Ästhetik der Existenz», ein Leben formen wie ein Kunstwerk. Gemeint ist nicht, sich für fremde Massstäbe zu optimieren, für Noten, Follower und Bestenlisten. Es heisst, selbst zu wählen, woran du arbeitest. Dafür ist ein Heft, das niemand liken kann, ein ziemlich gutes Werkzeug, denn es gehört nur dir.
-
-> **Belegt** («Bullet Journal»): [Bullet Journal (Wikipedia)](https://de.wikipedia.org/wiki/Bullet_Journal) — «Ein Bullet Journal (auch als BuJo bekannt) ist ein individuelles Organisationssystem, das 2013 von dem digitalen Produktdesigner Ryder Carroll entwickelt wurde.» Es verbindet «Terminplanung, To-Do-Listen, Tagebuch und Brainstorming in einem einzigen Notizbuch», üblich sind Notizbücher mit Punkteraster. *(geprüft 2026-08-13)*
-
-> **Belegt** («Hypomnemata»): [Hypomnema (Wikipedia)](https://de.wikipedia.org/wiki/Hypomnema) — Antike persönliche Schreibhefte, in die «Zitate, Teile von Arbeiten, Aphorismen und Beispiele» sowie Gehörtes und eigene Überlegungen eingetragen wurden, ein «materielles Gedächtnis gelesener, gehörter und gedachter Dinge». Der Artikel referiert auch Foucaults Deutung: Teil einer «Kultur des persönlichen Schreibens», Instrument der Selbstsorge und der «Selbstkonstituierung», gerade bei den Stoikern. *(geprüft 2026-08-14)*
-
-**[DW-83b1c5]** *(Zur Philosophie · Lebenskunst)*
-Wilhelm Schmid ist ein freier Philosoph in Berlin und hat die «Philosophie der Lebenskunst» im deutschsprachigen Raum bekannt gemacht. Sein Thema ist der Abstand zwischen Einsicht und Tat, den jeder von den guten Vorsätzen kennt. Was hilft, ist Übung in kleinsten Schritten, täglich, fast beiläufig, aber regelmässig, nicht das ganze Buch auf einmal, sondern jeden Tag eine Seite. Weil Freude stärker wirkt als Zwang, soll man sich am Schönen orientieren, zu dem man Ja sagen kann. So werden neue Gewohnheiten gebildet. Wie lange das dauert, hat die Psychologie untersucht, nicht die Philosophie. Eine oft zitierte Studie fand einen Mittelwert von 66 Tagen, mit sehr grossen Unterschieden je nach Person und Gewohnheit. Werk: «Philosophie der Lebenskunst» (1998).
