@@ -10,6 +10,33 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-17 — Namen im Lerntext bekommen einen Hover, nicht mehr Text (Christof)
+
+**Der Anlass.** Im Teppich-Punkt «Radio und Fernsehen» standen «die Ergebnisse
+der Präsidentschaftswahl» und «Goebbels» ohne Erklärung, im Punkt «Afrikas
+Bibliotheken» «Ptolemaios I.». Christof hat beides gemeldet und beim zweiten
+gleich dazugeschrieben, was fast alle denken: Alexandria habe Alexander der
+Grosse gegründet.
+
+**Was stimmt.** Beides. Alexander gründete 331 v. Chr. die Stadt, sein General
+Ptolemaios I. liess Jahrzehnte später die Bibliothek darin errichten. Unser Satz
+war richtig, nur eben missverständlich für alle, die diese Arbeitsteilung nicht
+kennen. Der Text bleibt deshalb, wie er ist.
+
+**Die Regel.** Ein Name, den ein Lernender nicht kennen muss, wird im Glossar
+erklärt und nicht im Lerntext ausgebreitet. Der Lerntext bekommt höchstens ein
+Wort mehr, wenn er sonst gar nicht verständlich ist, und «Propagandaminister
+Joseph Goebbels» ist so ein Fall. Neu im Glossar sind Alexandria, Ptolemaios I.,
+Warren G. Harding und Joseph Goebbels; die beiden ersten sagen ausdrücklich, wer
+die Stadt und wer die Bibliothek zu verantworten hat.
+
+**Nebenbei gefunden.** Der Kollisionsprüfer `docs/anker-kollision.mjs` liest die
+Glossarbegriffe mit einer Zeichenklasse ohne Punkt und hat Schlüssel wie
+«Karl II.» darum nie geprüft. Ein Beleg-Anker hätte solche Hover unbemerkt
+schlucken können. Der Punkt ist jetzt drin, die Prüfung deckt drei Begriffe mehr.
+
+---
+
 ## 2026-08-16 — Die Einordnung erklärt nicht, was das Fallbeispiel zeigt (Christof)
 
 **Der Befund.** Rawls und Levinas waren mit 1457 und 2549 Zeichen die längsten

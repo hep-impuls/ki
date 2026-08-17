@@ -129,6 +129,10 @@ export const GLOSSAR: Record<string, string> = {
     "Frühe KI der 1970er/80er, die Fachwissen in Wenn-dann-Regeln goss.",
   Eratosthenes:
     "Griechischer Gelehrter in Alexandria (~276–194 v. Chr.); berechnete den Erdumfang.",
+  Alexandria:
+    "Hafenstadt in Ägypten, 331 v. Chr. von Alexander dem Grossen an der Stelle der ägyptischen Siedlung Rhakotis gegründet. Die Stadt geht also auf Alexander zurück, die berühmte Bibliothek darin erst auf seine Nachfolger.",
+  "Ptolemaios I.":
+    "General und Freund Alexanders des Grossen (367/366 bis 283/282 v. Chr.), nach dessen Tod Herrscher über Ägypten, ab 305 v. Chr. als König, und Begründer der Ptolemäerdynastie. Er liess die Bibliothek errichten, nicht die Stadt.",
   Geometrie: "Mathematik der Formen, Flächen und Winkel.",
   Kolumbus:
     "Genuesischer Seefahrer in spanischem Dienst; erreichte 1492 Amerika.",
@@ -225,6 +229,10 @@ export const GLOSSAR: Record<string, string> = {
     "Englische Arbeiter, die ab 1811 Maschinen zerstörten, weil sie ihre Arbeit vernichteten.",
   Rundfunk:
     "Verbreitung von Ton (später Bild) an ein Massenpublikum über Funkwellen: Radio und Fernsehen.",
+  "Warren G. Harding":
+    "Gewann die amerikanische Präsidentschaftswahl vom 2. November 1920 und war von 1921 bis zu seinem Tod 1923 der 29. Präsident der USA. Seine Wahl wurde zur ersten, die das Radio begleitete.",
+  "Joseph Goebbels":
+    "Reichsminister für Volksaufklärung und Propaganda ab 1933. Er steuerte Presse, Rundfunk und Film im Nationalsozialismus; der billige Volksempfänger entstand in seinem Auftrag.",
   Existenzialismus:
     "Philosophie des 20. Jh.: Der Mensch hat kein festes Wesen, sondern macht sich durch seine Wahl.",
   "Banalität des Bösen":

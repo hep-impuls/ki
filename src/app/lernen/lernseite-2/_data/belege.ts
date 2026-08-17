@@ -2313,7 +2313,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "PP-b42d5b",
+    id: "PP-a07b95",
     anker: "2. November 1920",
     url: "https://de.wikipedia.org/wiki/Geschichte_des_H%C3%B6rfunks",
     titel: "Geschichte des Hörfunks (Wikipedia)",
@@ -2322,7 +2322,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "PP-b42d5b",
+    id: "PP-a07b95",
     anker: "schätzungsweise rund 600 Millionen Menschen live",
     url: "https://de.wikipedia.org/wiki/Apollo_11",
     titel: "Apollo 11 (Wikipedia)",
@@ -2729,7 +2729,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-b42d5b",
+    id: "PP-a07b95",
     anker: "Volksempfänger",
     url: "https://de.wikipedia.org/wiki/Volksempf%C3%A4nger",
     titel: "Volksempfänger (Wikipedia)",
@@ -2738,7 +2738,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-b42d5b",
+    id: "PP-a07b95",
     anker: "22. März 1935",
     url: "https://de.wikipedia.org/wiki/Fernsehsender_Paul_Nipkow",
     titel: "Fernsehsender Paul Nipkow (Wikipedia)",
@@ -2747,7 +2747,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-b42d5b",
+    id: "PP-a07b95",
     anker: "Versuche für Lokalradios",
     url: "https://www.srf.ch/unternehmen/unternehmen/chronik-und-archiv-aus-der-geschichte-von-radio-und-fernsehen-in-der-deutschschweiz",
     titel: "SRF-Chronik: «Aus der Geschichte von Radio und TV in der Deutschschweiz»",
@@ -2756,7 +2756,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-b42d5b",
+    id: "PP-a07b95",
     anker: "Studio Bellerive",
     url: "https://www.srf.ch/unternehmen/mit-jubilaeumsprogramm-70-jahre-fernsehen-in-der-schweiz",
     titel: "SRF, 19. Juli 2023: «70 Jahre Fernsehen in der Schweiz»",

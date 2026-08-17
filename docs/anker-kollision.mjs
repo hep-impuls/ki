@@ -32,9 +32,13 @@ const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const g = fs.readFileSync(`${REPO}/src/app/lernen/lernseite-2/_components/Glossar.tsx`, "utf8");
 const start = g.indexOf("export const GLOSSAR");
 const ende = g.indexOf("\n};", start);
-const terme = [...g.slice(start, ende).matchAll(/^ {2}"?([A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß -]*?)"?:\s/gm)].map(
-  (m) => m[1],
-);
+/* Der Punkt gehört in die Zeichenklasse, sonst fallen Schlüssel wie
+ * «Ptolemaios I.» oder «Karl II.» stumm aus der Prüfung: Sie wurden gar nicht
+ * erst als Begriff erkannt, und ein Anker hätte ihren Hover unbemerkt
+ * schlucken können. Gefunden am 2026-08-17 beim Anlegen von «Ptolemaios I.». */
+const terme = [
+  ...g.slice(start, ende).matchAll(/^ {2}"?([A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß .-]*?)"?:\s/gm),
+].map((m) => m[1]);
 
 const b = fs.readFileSync(`${REPO}/src/app/lernen/lernseite-2/_data/belege.ts`, "utf8");
 /* Anker mit ihrer Block-Kennung, damit sich «im selben Block» prüfen lässt.
