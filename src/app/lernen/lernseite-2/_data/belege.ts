@@ -2809,43 +2809,43 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-2359df",
-    anker: "1882 versorgt in New York das erste Zentralkraftwerk",
-    url: "https://de.wikipedia.org/wiki/Thomas_Alva_Edison",
-    titel: "Thomas Alva Edison (Wikipedia)",
+    id: "PP-9ebf3a",
+    anker: "eines der ersten kommerziellen Zentralkraftwerke",
+    url: "https://de.wikipedia.org/wiki/Pearl_Street_Station",
+    titel: "Pearl Street Station (Wikipedia)",
     stelle:
-      "«Am 4. September 1882 wurde mit der Pearl Street Station das erste Zentralkraftwerk der USA in der New Yorker Pearl Street eröffnet.» Die Anlage lief mit Gleichstrom und versorgte zunächst 59 Abnehmer.",
+      "Der Artikel nennt die Anlage «eines der ersten Kraftwerke der Welt», der Regelbetrieb begann am Nachmittag des 4. September 1882. Der Edison-Artikel nennt sie das «erste Zentralkraftwerk der USA», die englische Wikipedia vorsichtiger Edisons erstes kommerzielles Kraftwerk der USA und verweist auf eine kalifornische Bogenlicht-Zentrale von 1879. Weil die Einordnungen streiten, steht im Text «eines der ersten» und nicht «das erste». Sie stand im Financial District, das trägt das «Quartier in Manhattan».",
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-048563",
+    id: "PP-b90505",
     anker: "1800 der Royal Society",
     url: "https://de.wikipedia.org/wiki/Voltasche_S%C3%A4ule",
     titel: "Voltasche Säule (Wikipedia)",
     stelle:
-      "Die Säule wurde «von Alessandro Volta um 1799 entwickelt und der Royal Society im Jahr 1800 in London vorgestellt». Sie war «die erste elektrische Batterie, die eine praktische Bedeutung als Stromquelle erlangte», und solche Batterien dienten der Elektroindustrie als Stromquellen «bis zur Erfindung des elektrischen Generators in den 1870er Jahren».",
+      "Die Säule wurde «von Alessandro Volta um 1799 entwickelt und der Royal Society im Jahr 1800 in London vorgestellt». Sie war «die erste elektrische Batterie, die eine praktische Bedeutung als Stromquelle erlangte», und solche Batterien dienten der Elektroindustrie als Stromquellen «bis zur Erfindung des elektrischen Generators in den 1870er Jahren». Ein Review fand das zu pauschal und hat recht, Magnetmaschinen gab es ab 1832. Der Text sagt darum «jahrzehntelang» und erzählt die Generatoren eigens.",
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-048563",
+    id: "PP-b90505",
     anker: "4. September 1882",
     url: "https://de.wikipedia.org/wiki/Thomas_Alva_Edison",
     titel: "Thomas Alva Edison (Wikipedia)",
     stelle:
-      "Eröffnung der Pearl Street Station am «4. September 1882» als «erstes Zentralkraftwerk der USA», sechs Dampfmaschinen-Dynamos mit je 100 kW, zunächst 59 Abnehmer, «ein Jahr später waren es 513 Kunden».",
+      "Eröffnung der Pearl Street Station am «4. September 1882», sechs Dampfmaschinen-Dynamos mit je 100 kW, zunächst 59 Abnehmer, «ein Jahr später waren es 513 Kunden». Die englische Wikipedia zählt anders, 82 Kunden mit 400 Lampen zum Start und 508 Kunden bis 1884. Weil die Ausgaben streiten, steht im Text «einige Dutzend Kunden» und «binnen zwei Jahren über 500», das deckt beide.",
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-048563",
+    id: "PP-b90505",
     anker: "176 Kilometer nach Frankfurt",
     url: "https://de.wikipedia.org/wiki/Internationale_Elektrotechnische_Ausstellung",
     titel: "Internationale Elektrotechnische Ausstellung 1891 (Wikipedia)",
     stelle:
-      "«Bei der Ausstellung wurde mit der Drehstromübertragung Lauffen–Frankfurt erstmals die leistungsstarke Fernübertragung von Strom demonstriert», übertragen wurde «über 176 Kilometer» mit «dem geringen Verlust von 25 Prozent». «Aufgrund dieses erfolgreichen Feldversuchs setzte sich die Drehstromtechnik für den Aufbau elektrischer Übertragungsnetze weltweit durch.» Darum steht im Text «den Ausschlag gab» und nicht, der Streit sei damit entschieden gewesen.",
+      "«Bei der Ausstellung wurde mit der Drehstromübertragung Lauffen–Frankfurt erstmals die leistungsstarke Fernübertragung von Strom demonstriert», übertragen wurde «über 176 Kilometer» mit «dem geringen Verlust von 25 Prozent». «Aufgrund dieses erfolgreichen Feldversuchs setzte sich die Drehstromtechnik für den Aufbau elektrischer Übertragungsnetze weltweit durch.» Darum steht im Text «den Ausschlag gab» und nicht, der Streit sei damit entschieden gewesen. 25 Prozent Verlust heisst, drei Viertel der Energie kamen an. Das frühere «erst damit liess sich Energie dorthin bringen, wo die Menschen wohnen» war zu absolut, lokale Netze gab es schon, neu war die Trennung von Erzeugungs- und Verbrauchsort.",
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-048563",
+    id: "PP-b90505",
     anker: "Hotel Engadiner Kulm",
     url: "https://www.swissinfo.ch/ger/geschichte_unter-strom---wie-die-schweiz-elektrifiziert-wurde/44217906",
     titel: "SWI swissinfo.ch (SRG SSR), 8. Juli 2018: «Unter Strom, wie die Schweiz elektrifiziert wurde»",
@@ -2854,7 +2854,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-048563",
+    id: "PP-b90505",
     anker: "77 Prozent des Schienennetzes",
     url: "https://www.swissinfo.ch/ger/geschichte_unter-strom---wie-die-schweiz-elektrifiziert-wurde/44217906",
     titel: "SWI swissinfo.ch (SRG SSR), 8. Juli 2018: «Unter Strom, wie die Schweiz elektrifiziert wurde»",
@@ -2863,12 +2863,39 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-048563",
+    id: "PP-b90505",
     anker: "neun Sekunden Fernsehen",
     url: "https://www.srf.ch/news/wirtschaft/strom-fuer-rechenzentren-wie-viel-strom-braucht-kuenstliche-intelligenz",
     titel: "SRF, 22. August 2025: «Wie viel Strom braucht Künstliche Intelligenz?»",
     stelle:
-      "Google gibt für eine KI-Anfrage 0.24 Wattstunden an, «so viel Strom wie neun Sekunden Fernsehen», dazu rund fünf Tropfen Wasser zur Kühlung; OpenAI nennt 0.34 Wattstunden. Der Artikel schränkt ein, «der Stromverbrauch ist nur für die eigentliche Anfrage angegeben», das Training kommt dazu. Darum nennt der Text die Zahl als Angabe von Google und nicht als Gesamtbilanz.",
+      "Google gibt für eine KI-Anfrage 0.24 Wattstunden an, «so viel Strom wie neun Sekunden Fernsehen», dazu rund fünf Tropfen Wasser zur Kühlung; OpenAI nennt 0.34 Wattstunden. Der Artikel schränkt ein, «der Stromverbrauch ist nur für die eigentliche Anfrage angegeben», das Training kommt dazu. Darum nennt der Text die Zahl als Angabe von Google und nicht als Gesamtbilanz. SRF sagt pauschal «eine Anfrage an KI», dass es Googles Median für Textanfragen in den Gemini-Apps ist, steht in Googles eigenem Bericht (eigener Beleg am Satz).",
+    geprueft: "2026-08-17",
+  },
+  {
+    id: "PP-b90505",
+    anker: "erste Magnetmaschinen",
+    url: "https://de.wikipedia.org/wiki/Elektrischer_Generator",
+    titel: "Elektrischer Generator (Wikipedia)",
+    stelle:
+      "Hippolyte Pixii baute 1832 «den ersten bekannt gewordenen Wechselstromerzeuger» mit Hufeisenmagnet, ab 1849 fanden «Alliance»-Generatoren in der Industrie nennenswerten Einsatz.",
+    geprueft: "2026-08-17",
+  },
+  {
+    id: "PP-b90505",
+    anker: "dynamoelektrische Prinzip",
+    url: "https://de.wikipedia.org/wiki/Elektrischer_Generator",
+    titel: "Elektrischer Generator (Wikipedia)",
+    stelle:
+      "Werner von Siemens entdeckte 1866 das dynamoelektrische Prinzip; schon vor ihm hatten Ányos Jedlik 1851 und Søren Hjorth 1854 die Feldmagnete mit dem von der Maschine selbst erzeugten Strom gespeist.",
+    geprueft: "2026-08-17",
+  },
+  {
+    id: "PP-b90505",
+    anker: "mittlere Textanfrage an seine KI Gemini",
+    url: "https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference",
+    titel: "Google Cloud Blog, 21. August 2025: «Measuring the environmental impact of AI inference» (englisch)",
+    stelle:
+      "«We estimate the median Gemini Apps text prompt uses 0.24 watt-hours (Wh) of energy», «equivalent to watching TV for less than nine seconds». Datengrundlage Mai 2025, eingerechnet sind auch Kühlung und Rechenzentrums-Overhead. Der Konzern misst sich selbst, darum steht die Zahl im Text ausdrücklich als Googles Schätzung. «Median» heisst, die Hälfte der Anfragen brauchte mehr.",
     geprueft: "2026-08-17",
   },
 ];

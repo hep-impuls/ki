@@ -1588,19 +1588,19 @@
   "stufe": "hoch",
   "text": "Die Industrialisierung reisst die alte Gesellschaft auseinander: Landflucht, Kinderarbeit, Elendsquartiere im Schatten der Fabriken. 1848 entlädt sich die Spannung in Revolutionen quer durch Europa. In den Epochen unten zeigt die Industriemoderne, wie Marx den Umbruch begreift."
  },
- "PP-2359df": {
+ "PP-9ebf3a": {
   "datei": "philosophische-perspektive/page.tsx",
   "ort": "Elektrizität wird nutzbar",
   "feld": "Kartentext",
   "stufe": "hoch",
-  "text": "Alessandro Volta stellt 1800 die erste Batterie vor, die als Stromquelle wirklich taugt. Damit ist dauerhaft fliessender Strom erforschbar. Ab den 1870er Jahren liefern Generatoren ihn in Mengen, 1882 versorgt in New York das erste Zentralkraftwerk ein ganzes Stadtviertel. Die Nacht wird hell, Fabriken lösen sich vom Wasserrad und Strom wird zur unsichtbaren Grundlage von allem, was danach kommt, auch von jedem Rechenzentrum."
+  "text": "Alessandro Volta stellt 1800 die erste Batterie vor, die als Stromquelle wirklich taugt. Damit ist dauerhaft fliessender Strom erforschbar. Ab der zweiten Hälfte des 19. Jahrhunderts erzeugen Generatoren ihn in grossen Mengen, 1882 versorgt in New York eines der ersten kommerziellen Zentralkraftwerke ein Quartier in Manhattan. Die Nacht wird hell, Fabriken lösen sich vom Wasserrad und Strom wird zur unsichtbaren Grundlage von allem, was danach kommt, auch von jedem Rechenzentrum."
  },
- "PP-048563": {
+ "PP-b90505": {
   "datei": "philosophische-perspektive/page.tsx",
   "ort": "Elektrizität wird nutzbar",
   "feld": "Vertiefung «Mehr lesen»",
   "stufe": "hoch",
-  "text": "Volta entwickelte seine Säule um 1799 und stellte sie 1800 der Royal Society in London vor, bis zur Erfindung des Generators in den 1870er Jahren blieben solche Batterien die wichtigste Stromquelle. Am 4. September 1882 eröffnete Edison in New York die Pearl Street Station, das erste Zentralkraftwerk der USA, zuerst mit 59 Abnehmern, ein Jahr später waren es 513. Danach stritten Gleich- und Wechselstrom um die Zukunft. Den Ausschlag gab 1891 ein Versuch, bei dem Strom von Lauffen am Neckar über 176 Kilometer nach Frankfurt übertragen wurde, erst damit liess sich Energie dorthin bringen, wo die Menschen wohnen. Die Schweiz nutzte dafür ihr Wasser, 1879 nahm das Hotel Engadiner Kulm in St. Moritz die erste elektrische Beleuchtungsanlage des Landes in Betrieb. Bis etwa 1910 hatte das Land weltweit die höchste Stromproduktion pro Einwohner und 1939 waren 77 Prozent des Schienennetzes elektrifiziert, im übrigen Europa erst 5 Prozent. Auch KI ist Stromverbrauch, Google gab 2025 für eine Anfrage 0,24 Wattstunden an, so viel wie neun Sekunden Fernsehen."
+  "text": "Volta entwickelte seine Säule um 1799 und stellte sie 1800 der Royal Society in London vor, jahrzehntelang blieben solche Batterien die wichtigste Stromquelle für Forschung und Technik. Ab 1832 kamen erste Magnetmaschinen dazu und nachdem Werner von Siemens 1866 das dynamoelektrische Prinzip entdeckt hatte, lieferten Dynamos Strom in industriellen Mengen. Am 4. September 1882 eröffnete Edison in New York die Pearl Street Station, zuerst mit einigen Dutzend Kunden, binnen zwei Jahren waren es über 500. Danach stritten Gleich- und Wechselstrom um die Zukunft. Den Ausschlag gab 1891 ein Versuch, bei dem Drehstrom von Lauffen am Neckar über 176 Kilometer nach Frankfurt floss und drei Viertel der Energie ankamen. Kraftwerk und Verbraucher mussten von da an nicht mehr am selben Ort liegen. Die Schweiz nutzte ihr Wasser, 1879 nahm das Hotel Engadiner Kulm in St. Moritz die erste elektrische Beleuchtungsanlage des Landes in Betrieb. Bis etwa 1910 hatte das Land weltweit die höchste Stromproduktion pro Einwohner und 1939 waren 77 Prozent des Schienennetzes elektrifiziert, im übrigen Europa erst 5 Prozent. Google schätzte 2025 den Strom für eine mittlere Textanfrage an seine KI Gemini auf 0,24 Wattstunden, weniger als neun Sekunden Fernsehen. Gemessen hat das der Konzern selbst und das Training der Modelle kommt dazu."
  },
  "PP-b94968": {
   "datei": "philosophische-perspektive/page.tsx",
