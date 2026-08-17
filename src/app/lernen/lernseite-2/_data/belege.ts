@@ -2277,7 +2277,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "PP-1d4234",
+    id: "PP-e2f88d",
     anker: "fast 16 Stunden für 98 Wörter",
     url: "https://de.wikipedia.org/wiki/Transatlantisches_Telegrafenkabel",
     titel: "Transatlantisches Telegrafenkabel (Wikipedia)",
@@ -2286,7 +2286,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "PP-1d4234",
+    id: "PP-e2f88d",
     anker: "TAT-1",
     url: "https://de.wikipedia.org/wiki/Transatlantisches_Telefonkabel",
     titel: "Transatlantisches Telefonkabel (Wikipedia)",
@@ -2295,12 +2295,21 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "PP-1d4234",
+    id: "PP-e2f88d",
+    anker: "rund 250 Terabit pro Sekunde",
+    url: "https://de.wikipedia.org/wiki/Dunant_(Seekabel)",
+    titel: "Dunant (Seekabel) (Wikipedia)",
+    stelle:
+      "Das Kabel wurde «im September 2020 in Betrieb genommen», hat «zwölf Glasfaserpaare» und der Artikel nennt «knack 250 Terabit pro Sekunde» (so im Original, gemeint ist offenkundig knapp). Die englische Ausgabe schreibt «The design capacity is 250 terabits per second», darum steht im Text «rund 250 Terabit pro Sekunde». Pro Faserpaar sind das gut zwanzig Terabit, also ein Vielfaches der älteren Angabe im Seekabel-Artikel.",
+    geprueft: "2026-08-17",
+  },
+  {
+    id: "PP-e2f88d",
     anker: "95 Prozent des Internetverkehrs",
     url: "https://de.wikipedia.org/wiki/Seekabel",
     titel: "Seekabel (Wikipedia)",
     stelle:
-      "«2014 wurden 95 Prozent des Internetverkehrs zwischen Weltregionen via Unterseekabel übertragen.» Moderne Seekabel sind Glasfaserkabel, «neueste Faserpaare können gut ein Terabit Daten pro Sekunde übertragen».",
+      "«2014 wurden 95 Prozent des Internetverkehrs zwischen Weltregionen via Unterseekabel übertragen.» Der Artikel schreibt auch, «neueste Faserpaare können gut ein Terabit Daten pro Sekunde übertragen». Dieser Satz stand bis zum 17.8.2026 fast wörtlich im Text, ein Review hat ihn zu Recht als untertrieben gemeldet. Die Angabe gehört zum Stand der 2014er-Zahlen dieses Artikels, darum nennt der Text jetzt ein konkretes neueres Kabel.",
     geprueft: "2026-08-16",
   },
   {
@@ -2773,7 +2782,7 @@ export const BELEGE: Beleg[] = [
    * ein SRF-Artikel. TAT-8 nur englisch, ein deutscher Artikel existiert
    * nicht.                                                                 */
   {
-    id: "PP-1d4234",
+    id: "PP-e2f88d",
     anker: "What hath God wrought?",
     url: "https://de.wikipedia.org/wiki/Elektrischer_Telegraf",
     titel: "Elektrischer Telegraf (Wikipedia)",
@@ -2782,7 +2791,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-1d4234",
+    id: "PP-e2f88d",
     anker: "1876 in Boston",
     url: "https://de.wikipedia.org/wiki/Geschichte_des_Telefons",
     titel: "Geschichte des Telefons (Wikipedia)",
@@ -2791,7 +2800,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-1d4234",
+    id: "PP-e2f88d",
     anker: "40'000 Gespräche",
     url: "https://en.wikipedia.org/wiki/TAT-8",
     titel: "TAT-8 (Wikipedia, englisch)",
