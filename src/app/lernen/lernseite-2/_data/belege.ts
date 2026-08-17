@@ -2818,16 +2818,16 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-b90505",
+    id: "PP-3342ef",
     anker: "1800 der Royal Society",
     url: "https://de.wikipedia.org/wiki/Voltasche_S%C3%A4ule",
     titel: "Voltasche Säule (Wikipedia)",
     stelle:
-      "Die Säule wurde «von Alessandro Volta um 1799 entwickelt und der Royal Society im Jahr 1800 in London vorgestellt». Sie war «die erste elektrische Batterie, die eine praktische Bedeutung als Stromquelle erlangte», und solche Batterien dienten der Elektroindustrie als Stromquellen «bis zur Erfindung des elektrischen Generators in den 1870er Jahren». Ein Review fand das zu pauschal und hat recht, Magnetmaschinen gab es ab 1832. Der Text sagt darum «jahrzehntelang» und erzählt die Generatoren eigens.",
+      "Zum Aufbau: «Sie besteht aus vielen übereinander geschichteten Kupfer- und Zinkplättchen, zwischen denen sich in bestimmter regelmässiger Folge elektrolytgetränkte Papp- oder Lederstücke befinden.» Der Text sagt «leitende Flüssigkeit» statt Elektrolyt, weil ein Fachwort sonst nur durch ein anderes erklärt wäre. Die Säule wurde «von Alessandro Volta um 1799 entwickelt und der Royal Society im Jahr 1800 in London vorgestellt». Sie war «die erste elektrische Batterie, die eine praktische Bedeutung als Stromquelle erlangte», und solche Batterien dienten der Elektroindustrie als Stromquellen «bis zur Erfindung des elektrischen Generators in den 1870er Jahren». Ein Review fand das zu pauschal und hat recht, Magnetmaschinen gab es ab 1832. Der Text sagt darum «jahrzehntelang» und erzählt die Generatoren eigens.",
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-b90505",
+    id: "PP-3342ef",
     anker: "4. September 1882",
     url: "https://de.wikipedia.org/wiki/Thomas_Alva_Edison",
     titel: "Thomas Alva Edison (Wikipedia)",
@@ -2836,7 +2836,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-b90505",
+    id: "PP-3342ef",
     anker: "176 Kilometer nach Frankfurt",
     url: "https://de.wikipedia.org/wiki/Internationale_Elektrotechnische_Ausstellung",
     titel: "Internationale Elektrotechnische Ausstellung 1891 (Wikipedia)",
@@ -2845,7 +2845,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-b90505",
+    id: "PP-3342ef",
     anker: "Hotel Engadiner Kulm",
     url: "https://www.swissinfo.ch/ger/geschichte_unter-strom---wie-die-schweiz-elektrifiziert-wurde/44217906",
     titel: "SWI swissinfo.ch (SRG SSR), 8. Juli 2018: «Unter Strom, wie die Schweiz elektrifiziert wurde»",
@@ -2854,7 +2854,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-b90505",
+    id: "PP-3342ef",
     anker: "77 Prozent des Schienennetzes",
     url: "https://www.swissinfo.ch/ger/geschichte_unter-strom---wie-die-schweiz-elektrifiziert-wurde/44217906",
     titel: "SWI swissinfo.ch (SRG SSR), 8. Juli 2018: «Unter Strom, wie die Schweiz elektrifiziert wurde»",
@@ -2863,7 +2863,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-b90505",
+    id: "PP-3342ef",
     anker: "neun Sekunden Fernsehen",
     url: "https://www.srf.ch/news/wirtschaft/strom-fuer-rechenzentren-wie-viel-strom-braucht-kuenstliche-intelligenz",
     titel: "SRF, 22. August 2025: «Wie viel Strom braucht Künstliche Intelligenz?»",
@@ -2872,7 +2872,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-b90505",
+    id: "PP-3342ef",
     anker: "erste Magnetmaschinen",
     url: "https://de.wikipedia.org/wiki/Elektrischer_Generator",
     titel: "Elektrischer Generator (Wikipedia)",
@@ -2881,7 +2881,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-b90505",
+    id: "PP-3342ef",
     anker: "dynamoelektrische Prinzip",
     url: "https://de.wikipedia.org/wiki/Elektrischer_Generator",
     titel: "Elektrischer Generator (Wikipedia)",
@@ -2890,7 +2890,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-17",
   },
   {
-    id: "PP-b90505",
+    id: "PP-3342ef",
     anker: "mittlere Textanfrage an seine KI Gemini",
     url: "https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference",
     titel: "Google Cloud Blog, 21. August 2025: «Measuring the environmental impact of AI inference» (englisch)",
