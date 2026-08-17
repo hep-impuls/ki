@@ -10,6 +10,39 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-17 — Teppich-Spuren hängen am Slug, nie mehr am Index (Christof/Claude)
+
+**Der Anlass.** Christof meldete, das Rhizom zähle die neuen Teppich-Punkte
+nicht. Die Ursache sass tiefer als ein Zählfehler: Spur-, Wunsch-, Mehr- und
+Gewichtungs-Kennungen des Teppichs waren der **Array-Index** des Punkts. Jeder
+mitten ins Array eingefügte Punkt (16.–17.8. waren es neun) verschob damit die
+gespeicherten Kennungen aller Nutzer — alte Klicks leuchteten auf falschen
+Punkten und ein neuer Punkt an einem schon belegten Index zählte **nie**, weil
+`merkeSpur` je Kennung nur einmal schreibt.
+
+**Der Entscheid.** Jeder Teppich-Punkt trägt jetzt einen stabilen `slug`
+(Pflichtfeld, aus `kurz` abgeleitet, z.B. `elektrizitaet`), alle Kennungen
+bauen darauf. Alt-Daten migrieren beim ersten Laden pro Browser über die
+Identitäts-Abbildung (Index → Slug der heutigen Reihenfolge), einschliesslich
+Zähl-Register, Gewichtungen und Cloud-Spiegel. Für Klicks aus dem
+Verschiebungs-Fenster kann die Zuordnung daneben liegen, die Anzahl — und
+damit das Rhizom — bleibt exakt. Die anonymen Poll-Zähler behalten ihre
+historischen numerischen Schlüssel, neue Stimmen laufen unter Slugs.
+
+**Die Regel für alle künftigen Muster.** Wer eine neue klickbare Sammlung
+baut, gibt den Einträgen von Anfang an stabile Kennungen und benutzt nie den
+Array-Index (die Landschaften von «Vorhang auf» tragen noch Indizes — dort ist
+es haltbar, solange niemand mitten ins Array einfügt; wer das vorhat, zieht
+zuerst Slugs nach dem Teppich-Vorbild ein).
+
+**Belegt im Browser.** Alt-Spuren (`teppich:0/5`, `wunsch:…:3`,
+`bekanntheit:5`, Register) migrieren korrekt zu Slugs, fremde Präfixe bleiben
+unberührt, Klick auf den neuen Punkt legt `teppich:elektrizitaet` an und die
+Rhizom-Anzeige springt live von «82 aktiv» auf «85 aktiv»; Abwählen nimmt die
+Spur wieder heraus.
+
+---
+
 ## 2026-08-17 — Elektrizität und Kabel sind zwei Punkte, nicht einer (Christof)
 
 **Der Befund.** Der Teppich-Punkt hiess «Elektrizität verbindet die Welt» und

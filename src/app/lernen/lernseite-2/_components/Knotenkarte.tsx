@@ -156,7 +156,7 @@ export default function Knotenkarte({ className = "" }: { className?: string }) 
   /* Ebene: «alle» = Kollektiv (anonyme Zähler), «du» = nur die eigenen Punkte. */
   const [ebene, setEbene] = useState<"alle" | "du">("alle");
   const [counts, setCounts] = useState<PollCounts>({});
-  const [lokal, setLokal] = useState<{ spurIds: Set<string>; bekannt: Record<number, number> }>({
+  const [lokal, setLokal] = useState<{ spurIds: Set<string>; bekannt: Record<string, number> }>({
     spurIds: new Set(),
     bekannt: {},
   });

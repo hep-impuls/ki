@@ -2,13 +2,15 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
-  leseSpurenIndices,
+  leseSpuren,
   loescheSpur,
   loescheSpuren,
   merkeSpur,
+  migriereIndexSpuren,
   SPUR_EVENT,
   zieheSpurenAusCloud,
 } from "../_lib/spuren";
+import { migriereIndexGewichtungen } from "../_lib/gewichtung";
 import KartenAktion from "./KartenAktion";
 import GewichtungWahl from "./GewichtungWahl";
 import { GlossarText } from "./Glossar";
@@ -33,6 +35,13 @@ import { zieheGewichtungAusCloud } from "../_lib/gewichtung";
 export type FadenArt = "technologie" | "entdeckungen" | "ereignisse" | "praxen";
 
 export interface TeppichPunkt {
+  /** Stabile Spur-Kennung, NIE ändern und NIE durch den Array-Index ersetzen.
+   *  Als die Spuren noch am Index hingen, verschob jeder mitten im Array
+   *  eingefügte Punkt die gespeicherten Spuren aller Nutzer, und ein neuer
+   *  Punkt an einem belegten Index zählte nie (Rhizom-Meldung Christof,
+   *  2026-08-17). Wer einen Punkt entfernt, lässt dessen Slug für immer
+   *  unbenutzt. */
+  slug: string;
   faden: FadenArt;
   /** Position im 720×300-Gewebe. */
   x: number;
@@ -209,6 +218,12 @@ export default function HistorienTeppich({
     [punkteRoh],
   );
   const n = punkte.length;
+  /** Spur-Kennung eines Punkts — der Slug, nie der Index (siehe TeppichPunkt). */
+  const spurId = (i: number) => `${spurKey}:${punkte[i].slug}`;
+  const slugZuIndex = useMemo(
+    () => new Map(punkte.map((p, i) => [p.slug, i] as const)),
+    [punkte],
+  );
   /* Der Teppich liegt breiter als die Spalte. Ob er wirklich übersteht, hängt
      vom Fenster ab, darum wird gemessen statt geraten, und bei jeder
      Grössenänderung neu. */
@@ -239,8 +254,12 @@ export default function HistorienTeppich({
     (() => {
       if (!offenKey || typeof window === "undefined") return null;
       const v = window.localStorage.getItem(offenKey);
-      const num = v === null || v === "" ? NaN : Number(v);
-      return Number.isInteger(num) ? num : null;
+      if (v === null || v === "") return null;
+      // Gespeichert wird der Slug; ältere Stände trugen den Index.
+      const bySlug = slugZuIndex.get(v);
+      if (bySlug !== undefined) return bySlug;
+      const num = Number(v);
+      return Number.isInteger(num) && num >= 0 && num < n ? num : null;
     })(),
   );
   const ersterSave = useRef(true);
@@ -263,7 +282,10 @@ export default function HistorienTeppich({
     }
     if (!offenKey || typeof window === "undefined") return;
     try {
-      window.localStorage.setItem(offenKey, offeneKarte === null ? "" : String(offeneKarte));
+      window.localStorage.setItem(
+        offenKey,
+        offeneKarte === null ? "" : punkte[offeneKarte].slug,
+      );
     } catch {
       /* Privatmodus */
     }
@@ -273,9 +295,24 @@ export default function HistorienTeppich({
      nicht zurückbringen. Vorher stand hier ein `useRef`, der den Seitenwechsel
      nicht überstand, weshalb ausgeschaltete Fäden wieder auftauchten. */
 
+  /* Die Bewertungs-Präfixe für die Migration über einen Ref lesen: `bewertungen`
+     ist bei jedem Render ein neues Array-Literal und gehört darum nicht in die
+     Abhängigkeiten des Restore-Effekts. */
+  const bewertungenRef = useRef(bewertungen);
+  bewertungenRef.current = bewertungen;
+
   useEffect(() => {
+    const slugs = punkte.map((p) => p.slug);
     function restore() {
-      const idx = leseSpurenIndices(spurKey).filter((i) => i >= 0 && i < n);
+      // Alt-Spuren (Index-Kennungen) zuerst in die Slug-Form bringen — auch
+      // nach jedem Cloud-Nachzug, der numerische Kennungen zurückbringen kann.
+      migriereIndexSpuren(spurKey, slugs);
+      migriereIndexGewichtungen(bewertungenRef.current.map((b) => b.prefix), slugs);
+      const praefix = `${spurKey}:`;
+      const idx = leseSpuren()
+        .filter((s) => s.id.startsWith(praefix))
+        .map((s) => slugZuIndex.get(s.id.slice(praefix.length)))
+        .filter((i): i is number => i !== undefined);
       if (idx.length === 0) return;
       setBesucht((prev) => {
         const nx = new Set(prev);
@@ -289,16 +326,20 @@ export default function HistorienTeppich({
     }
     restore();
     void zieheSpurenAusCloud();
-    void zieheGewichtungAusCloud();
+    // Auch der Gewichtungs-Nachzug kann numerische Alt-Schlüssel bringen —
+    // er feuert nur GEWICHT_EVENT, darum hier ausdrücklich nachmigrieren.
+    void zieheGewichtungAusCloud().then(() =>
+      migriereIndexGewichtungen(bewertungenRef.current.map((b) => b.prefix), slugs),
+    );
     window.addEventListener(SPUR_EVENT, restore);
     return () => window.removeEventListener(SPUR_EVENT, restore);
-  }, [spurKey, n]);
+  }, [spurKey, n, punkte, slugZuIndex]);
 
   /** Antippen wählt an — erneutes Antippen wählt wieder ab. */
   function besuche(i: number) {
     if (besucht.has(i)) {
       // Abwählen nimmt die Spur zurück, der Punkt zählt also nicht mehr.
-      loescheSpur([`${spurKey}:${i}`]);
+      loescheSpur([spurId(i)]);
       setBesucht((prev) => {
         const nx = new Set(prev);
         nx.delete(i);
@@ -312,7 +353,7 @@ export default function HistorienTeppich({
     setReihenfolge((prev) => (prev.includes(i) ? prev : [...prev, i]));
     // Zuletzt angeklickter Punkt → sein Accordion ist offen.
     setOffeneKarte(i);
-    merkeSpur(`${spurKey}:${i}`);
+    merkeSpur(spurId(i));
   }
 
   /** Legende: ganzen Faden an- oder abwählen. */
@@ -321,7 +362,7 @@ export default function HistorienTeppich({
     const alleAn = idx.every((i) => besucht.has(i));
     if (alleAn) {
       // Faden herausnehmen nimmt auch alle seine Punkte aus der Zählung.
-      loescheSpur(idx.map((i) => `${spurKey}:${i}`));
+      loescheSpur(idx.map(spurId));
       setBesucht((prev) => {
         const nx = new Set(prev);
         idx.forEach((i) => nx.delete(i));
@@ -330,7 +371,7 @@ export default function HistorienTeppich({
       setReihenfolge((prev) => prev.filter((x) => !idx.includes(x)));
     } else {
       idx.forEach((i) => {
-        if (!besucht.has(i)) merkeSpur(`${spurKey}:${i}`);
+        if (!besucht.has(i)) merkeSpur(spurId(i));
       });
       setBesucht((prev) => {
         const nx = new Set(prev);
@@ -382,8 +423,8 @@ export default function HistorienTeppich({
 
   // Alle Titel registrieren (auch unbesuchte) — für die Sternenkarte im Orakel.
   useEffect(() => {
-    punkte.forEach((p, i) =>
-      merkeInhalt(`${wunschKey ?? spurKey}:${i}`, p.titel),
+    punkte.forEach((p) =>
+      merkeInhalt(`${wunschKey ?? spurKey}:${p.slug}`, p.titel),
     );
   }, [punkte, spurKey, wunschKey]);
 
@@ -661,7 +702,7 @@ export default function HistorienTeppich({
                       )}
                       <KartenAktion
                         mehr={p.mehr ? <GlossarText text={p.mehr} /> : undefined}
-                        wunschId={`wunsch:${wunschKey ?? spurKey}:${idx}`}
+                        wunschId={`wunsch:${wunschKey ?? spurKey}:${p.slug}`}
                         titel={p.titel}
                       />
                       {bewertungen.length > 0 && (
@@ -670,7 +711,7 @@ export default function HistorienTeppich({
                             <GewichtungWahl
                               key={b.prefix}
                               prefix={b.prefix}
-                              index={idx}
+                              index={p.slug}
                               frage={b.frage}
                               stufen={b.stufen}
                             />

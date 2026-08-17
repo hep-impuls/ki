@@ -18,7 +18,10 @@ export default function GewichtungWahl({
   className = "",
 }: {
   prefix: string;
-  index: number;
+  /** Kennung des bewerteten Eintrags — numerischer Index oder stabiler Slug
+   *  (der Teppich übergibt seit 2026-08-17 Slugs, weil Indizes bei
+   *  eingefügten Punkten verrutschen). */
+  index: number | string;
   /** Kurze Frage/Beschriftung vor dem Schalter. */
   frage: string;
   /** Genau drei Stufenbezeichnungen, aufsteigend (schwach → stark). */

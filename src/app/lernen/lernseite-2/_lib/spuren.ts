@@ -161,6 +161,74 @@ function schonGezaehlt(id: string): boolean {
   }
 }
 
+/**
+ * Migration 2026-08-17: Teppich-Spuren hingen am Array-Index. Jeder mitten im
+ * Array eingefügte Punkt verschob damit die gespeicherten Spuren aller Nutzer
+ * (falsche Punkte leuchteten) und ein neuer Punkt an einem schon belegten
+ * Index zählte NIE, weil `merkeSpur` je Kennung nur einmal schreibt — genau so
+ * ist es Christof am 17.8. aufgefallen. Seither tragen die Punkte stabile
+ * Slugs; diese Funktion wandelt `<spurKey>:<zahl>` samt den abgeleiteten
+ * Formen `wunsch:<spurKey>:<zahl>` und `mehr:<spurKey>:<zahl>` (KartenAktion
+ * baut beide aus derselben Basis) über die HEUTIGE Reihenfolge in die
+ * Slug-Form; Kennungen ausserhalb des Musters bleiben unberührt. Für Klicks aus der Zeit der Verschiebung
+ * (16.–17.8.) kann die Zuordnung daneben liegen, die ANZAHL der Spuren — und
+ * damit das Rhizom — bleibt exakt erhalten. Auch das anonyme Zähl-Register
+ * zieht mit, sonst würde erneutes Anwählen die Kollektiv-Zähler ein zweites
+ * Mal hochtreiben. Idempotent; feuert SPUR_EVENT nur bei echter Änderung
+ * (der Teppich ruft sie im SPUR_EVENT-Handler auf — beim zweiten Lauf ändert
+ * sich nichts mehr, also kein Ereignis-Kreisel).
+ */
+export function migriereIndexSpuren(spurKey: string, slugs: string[]): void {
+  if (typeof window === "undefined" || slugs.length === 0) return;
+  const kern = spurKey.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const re = new RegExp(`^((?:wunsch|mehr):)?${kern}:(\\d+)$`);
+  const wandle = (id: string): string | null => {
+    const m = re.exec(id);
+    if (!m) return id;
+    const i = Number(m[2]);
+    return i < slugs.length ? `${m[1] ?? ""}${spurKey}:${slugs[i]}` : null;
+  };
+
+  const alt = lesen();
+  const gesehen = new Set<string>();
+  const neu: Spur[] = [];
+  let geaendert = false;
+  for (const s of alt) {
+    const id = wandle(s.id);
+    if (id !== s.id) geaendert = true;
+    if (id === null || gesehen.has(id)) continue;
+    gesehen.add(id);
+    neu.push(id === s.id ? s : { id, t: s.t });
+  }
+
+  try {
+    const raw = window.localStorage.getItem(KEY_GEZAEHLT);
+    const arr = raw ? (JSON.parse(raw) as unknown) : [];
+    if (Array.isArray(arr)) {
+      let regGeaendert = false;
+      const reg = new Set<string>();
+      for (const x of arr) {
+        if (typeof x !== "string") continue;
+        const id = wandle(x);
+        if (id !== x) regGeaendert = true;
+        if (id) reg.add(id);
+      }
+      if (regGeaendert) {
+        window.localStorage.setItem(KEY_GEZAEHLT, JSON.stringify([...reg]));
+      }
+    }
+  } catch {
+    /* Privatmodus → still */
+  }
+
+  if (!geaendert) return;
+  schreiben(neu);
+  window.dispatchEvent(new CustomEvent(SPUR_EVENT, { detail: { migriert: spurKey } }));
+  // Cloud-Spiegel nachziehen: `ids` ist ein Array-Feld, setDoc ersetzt es als
+  // Ganzes — die numerischen Kennungen verschwinden also auch dort.
+  scheduleMirror();
+}
+
 /** Eine Spur setzen (idempotent). Lokal + anonymer Zähler + Cloud-Spiegel. */
 export function merkeSpur(id: string): void {
   if (typeof window === "undefined" || !id) return;

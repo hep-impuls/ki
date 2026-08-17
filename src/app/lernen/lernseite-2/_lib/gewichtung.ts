@@ -120,18 +120,60 @@ export async function zieheGewichtungAusCloud(): Promise<void> {
   }
 }
 
-/** Alle Gewichtungen eines Präfixes als {index: stufe}. */
-export function leseGewichtungen(prefix: string): Record<number, number> {
+/**
+ * Alle Gewichtungen eines Präfixes als {kennung: stufe}. Die Kennung ist der
+ * rohe Schlüsselrest — beim Teppich ein Slug (seit 2026-08-17), sonst weiter
+ * der numerische Index. Numerisch indexierende Leser funktionieren unverändert,
+ * JavaScript liest `m[3]` und `m["3"]` gleich.
+ */
+export function leseGewichtungen(prefix: string): Record<string, number> {
   const o = lesen();
   const p = `${prefix}:`;
-  const out: Record<number, number> = {};
+  const out: Record<string, number> = {};
   for (const k in o) {
-    if (k.startsWith(p)) {
-      const i = Number(k.slice(p.length));
-      if (Number.isInteger(i)) out[i] = o[k];
-    }
+    if (k.startsWith(p)) out[k.slice(p.length)] = o[k];
   }
   return out;
+}
+
+/**
+ * Migration 2026-08-17 (Gegenstück zu `migriereIndexSpuren` in spuren.ts):
+ * Teppich-Gewichtungen («Das war mir bekannt», Relevanz) hingen am Array-Index
+ * und verschoben sich mit jedem eingefügten Punkt. Wandelt `<prefix>:<zahl>`
+ * über die heutige Reihenfolge in die Slug-Form. Der Cloud-Spiegel wird OHNE
+ * merge voll überschrieben, wie beim Löschen — sonst blieben die numerischen
+ * Schlüssel im Doc stehen und kämen beim nächsten Abgleich zurück. Idempotent,
+ * feuert GEWICHT_EVENT nur bei echter Änderung.
+ */
+export function migriereIndexGewichtungen(prefixe: string[], slugs: string[]): void {
+  if (typeof window === "undefined" || prefixe.length === 0 || slugs.length === 0) return;
+  const o = lesen();
+  const neu: Record<string, number> = {};
+  let geaendert = false;
+  for (const k in o) {
+    let ziel = k;
+    for (const prefix of prefixe) {
+      const p = `${prefix}:`;
+      if (!k.startsWith(p)) continue;
+      const rest = k.slice(p.length);
+      if (!/^\d+$/.test(rest)) break;
+      const i = Number(rest);
+      ziel = i < slugs.length ? `${p}${slugs[i]}` : "";
+      break;
+    }
+    if (ziel !== k) geaendert = true;
+    if (ziel) neu[ziel] = o[k];
+  }
+  if (!geaendert) return;
+  schreiben(neu);
+  window.dispatchEvent(new CustomEvent(GEWICHT_EVENT, { detail: { migriert: true } }));
+  const code = getSession()?.studentCode;
+  if (!code) return;
+  const ref = gewichtDocRef(code);
+  if (!ref) return;
+  void setDoc(ref, { werte: neu, updatedAt: serverTimestamp() }).catch((err) =>
+    console.warn("[gewichtung] migration mirror failed", err),
+  );
 }
 
 /**
@@ -165,7 +207,7 @@ export async function loescheGewichtungenEnthaltend(teile: string[]): Promise<vo
 }
 
 /** Eine Gewichtung setzen (oder mit stufe=null löschen). Feuert GEWICHT_EVENT. */
-export function setzeGewichtung(prefix: string, index: number, stufe: number | null): void {
+export function setzeGewichtung(prefix: string, index: number | string, stufe: number | null): void {
   if (typeof window === "undefined") return;
   const o = lesen();
   const key = `${prefix}:${index}`;

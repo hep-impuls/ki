@@ -167,14 +167,16 @@ const BEWERTUNGEN: {
   /** Feld, in dem der Eintrag erscheint. */
   feld: "relevant" | "ohne";
   was: string;
-  inhaltsId: (index: number) => string;
+  /** Kennung aus `leseGewichtungen` ist der rohe Schlüsselrest — beim Teppich
+   *  ein Slug (seit 2026-08-17), bei den Epochen weiter der numerische Index. */
+  inhaltsId: (kennung: string) => string;
 }[] = [
-  { prefix: P_RELEVANZ, stufe: 2, feld: "relevant", was: "prägt mein Leben", inhaltsId: (i) => `philosophische-perspektive:teppich:${i}` },
-  { prefix: P_PHILO, stufe: 0, feld: "relevant", was: "hilft mir heute", inhaltsId: (i) => `philosophische-perspektive:epochen:${i * 3 + 2}` },
-  { prefix: P_TECHNIK, stufe: 0, feld: "relevant", was: "froh über diese Technik", inhaltsId: (i) => `philosophische-perspektive:epochen:${i * 3}` },
-  { prefix: P_RELEVANZ, stufe: 0, feld: "ohne", was: "kaum relevant", inhaltsId: (i) => `philosophische-perspektive:teppich:${i}` },
-  { prefix: P_PHILO, stufe: 2, feld: "ohne", was: "ergibt für mich keinen Sinn", inhaltsId: (i) => `philosophische-perspektive:epochen:${i * 3 + 2}` },
-  { prefix: P_TECHNIK, stufe: 2, feld: "ohne", was: "hätte es nie gebraucht", inhaltsId: (i) => `philosophische-perspektive:epochen:${i * 3}` },
+  { prefix: P_RELEVANZ, stufe: 2, feld: "relevant", was: "prägt mein Leben", inhaltsId: (k) => `philosophische-perspektive:teppich:${k}` },
+  { prefix: P_PHILO, stufe: 0, feld: "relevant", was: "hilft mir heute", inhaltsId: (k) => `philosophische-perspektive:epochen:${Number(k) * 3 + 2}` },
+  { prefix: P_TECHNIK, stufe: 0, feld: "relevant", was: "froh über diese Technik", inhaltsId: (k) => `philosophische-perspektive:epochen:${Number(k) * 3}` },
+  { prefix: P_RELEVANZ, stufe: 0, feld: "ohne", was: "kaum relevant", inhaltsId: (k) => `philosophische-perspektive:teppich:${k}` },
+  { prefix: P_PHILO, stufe: 2, feld: "ohne", was: "ergibt für mich keinen Sinn", inhaltsId: (k) => `philosophische-perspektive:epochen:${Number(k) * 3 + 2}` },
+  { prefix: P_TECHNIK, stufe: 2, feld: "ohne", was: "hätte es nie gebraucht", inhaltsId: (k) => `philosophische-perspektive:epochen:${Number(k) * 3}` },
 ];
 
 /* ── Blick-Umfrage ────────────────────────────────────────────────────────── */
@@ -343,9 +345,9 @@ export default function OrakelDashboard() {
     /* Die bewerteten Punkte für «Für dich relevant» und «Ohne Bedeutung». */
     const gesammelt: { relevant: Sprung[]; ohne: Sprung[] } = { relevant: [], ohne: [] };
     for (const b of BEWERTUNGEN) {
-      for (const [index, stufe] of Object.entries(leseGewichtungen(b.prefix))) {
+      for (const [kennung, stufe] of Object.entries(leseGewichtungen(b.prefix))) {
         if (stufe !== b.stufe) continue;
-        const id = b.inhaltsId(Number(index));
+        const id = b.inhaltsId(kennung);
         const titel = reg[id];
         const href = hrefFuer(id);
         if (!titel || !href) continue;
