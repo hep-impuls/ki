@@ -590,6 +590,13 @@ export function zaehleAlleAusPoll(counts: PollCounts): {
   for (const id in counts) {
     const n = Number(counts[id]) || 0;
     if (n <= 0) continue;
+    /* Gewebe-Muster sind laut Orakel-Regel «inhaltslose Muster» und bleiben
+       in `meistBesuchteAusPoll` schon immer draussen. Hier fehlte derselbe
+       Ausschluss, und weil `spurArt` für sie «punkt» sagt, zählte das
+       Autoren-Dashboard sie als berührte Inhaltspunkte mit — am 18.8.2026
+       zeigte es 852 statt der korrekten 748, die Differenz waren genau die
+       104 Gewebe-Klicks (Christofs Nachfrage «stimmt das wirklich?»). */
+    if (id.includes(":gewebe")) continue;
     switch (spurArt(id)) {
       case "video": videos += n; break;
       case "bildpunkt": bildpunkte += n; break;

@@ -29,6 +29,59 @@ import { zaehltAnonym } from "./spuren";
 /** Poll-Doc unter `abstimmungen/ki26/polls/nutzung-lernseite-2`. */
 export const NUTZUNG_POLL_ID = "nutzung-lernseite-2";
 
+/**
+ * Poll-Doc des Nutzungs-Verlaufs: `counts["<slug>:<JJJJ-MM-TT>"] += 1`,
+ * höchstens einmal je Browser und Tag, dazu `alle:<Tag>` für die Gesamtlinie.
+ *
+ * Das ist die Zeitachse, die Christof am 18.8.2026 fürs Autoren-Dashboard
+ * wollte («Verlaufsgrafik, zeitlich eingrenzbar»). Sie bleibt im Rahmen des
+ * Aggregat-Modells: Tagessummen über alle, kein Fortschritts-Code, keine
+ * Uhrzeit, keine Verweildauer, keine Reihenfolge — deutlich weniger als der
+ * abgeschaltete Engagement-Tracker (der schrieb pro Code und Aufruf). Der
+ * Verlauf beginnt mit dem Einbau; rückwirkend gibt es nichts, weil die alten
+ * Zähler bewusst ohne Zeit angelegt wurden.
+ */
+export const VERLAUF_POLL_ID = "verlauf-lernseite-2";
+
+/** Heutiges Datum als `JJJJ-MM-TT` in lokaler Zeit (Schweiz, nicht UTC). */
+export function heuteKey(): string {
+  const d = new Date();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const t = String(d.getDate()).padStart(2, "0");
+  return `${d.getFullYear()}-${m}-${t}`;
+}
+
+/**
+ * Tages-Register: kompakt nur der HEUTIGE Tag mit seinen gezählten Schlüsseln,
+ * ein Datumswechsel leert es von selbst. So wächst im localStorage nichts an.
+ */
+const KEY_TAG = "ki26-nutzung-tag";
+
+function heuteSchonGezaehlt(schluessel: string): boolean {
+  try {
+    const heute = heuteKey();
+    const raw = window.localStorage.getItem(KEY_TAG);
+    const o = raw ? (JSON.parse(raw) as { tag?: string; keys?: string[] }) : {};
+    const keys = o.tag === heute && Array.isArray(o.keys) ? o.keys : [];
+    if (keys.includes(schluessel)) return true;
+    window.localStorage.setItem(
+      KEY_TAG,
+      JSON.stringify({ tag: heute, keys: [...keys, schluessel] }),
+    );
+    return false;
+  } catch {
+    /* Privatmodus: lieber nicht zählen als doppelt zählen. */
+    return true;
+  }
+}
+
+/** Verlauf: zählt diesen Schlüssel höchstens einmal je Browser und Tag. */
+function einmalHeute(schluessel: string): void {
+  if (typeof window === "undefined" || !zaehltAnonym()) return;
+  if (heuteSchonGezaehlt(schluessel)) return;
+  void castVote(VERLAUF_POLL_ID, `${schluessel}:${heuteKey()}`);
+}
+
 /** Register der schon einmal gezählten Reichweiten-Schlüssel (pro Browser). */
 const KEY_EINMAL = "ki26-nutzung-einmal";
 
@@ -64,6 +117,9 @@ function einmal(key: string): void {
 export function merkeSeite(slug: string): void {
   einmal("browser");
   if (slug) einmal(`seite:${slug}`);
+  // Verlauf: dieselbe Handlung zusätzlich als Tagessumme (Gesamt + Thema).
+  einmalHeute("alle");
+  if (slug) einmalHeute(slug);
 }
 
 /** Ein PDF-Ausdruck wurde gestartet. Zählt jedes Mal. */
@@ -79,6 +135,28 @@ export interface NutzungsZahlen {
   seiten: Record<string, number>;
   /** Gestartete PDF-Ausdrucke (nicht dasselbe wie gespeicherte PDFs). */
   pdf: number;
+}
+
+/**
+ * Verlaufs-Zähler entpacken: Schlüssel → Datum → Browser an diesem Tag.
+ * Der Schlüssel ist «alle» oder ein Themen-Slug; getrennt wird am LETZTEN
+ * Doppelpunkt, weil Slugs Bindestriche tragen und das Datum immer hinten steht.
+ */
+export function leseVerlauf(
+  counts: PollCounts,
+): Record<string, Record<string, number>> {
+  const aus: Record<string, Record<string, number>> = {};
+  for (const key in counts) {
+    const n = Number(counts[key]) || 0;
+    if (n <= 0) continue;
+    const i = key.lastIndexOf(":");
+    if (i <= 0) continue;
+    const schluessel = key.slice(0, i);
+    const datum = key.slice(i + 1);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(datum)) continue;
+    (aus[schluessel] ??= {})[datum] = n;
+  }
+  return aus;
 }
 
 /** Die Zähler in eine lesbare Form bringen. */

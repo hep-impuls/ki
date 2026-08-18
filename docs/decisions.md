@@ -10,6 +10,33 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-18 — Das Autoren-Dashboard bekommt eine Zeitachse aus Tagessummen (Christof)
+
+**Die Prüfung zuerst.** Christof fragte, ob die Zahlen stimmen. Nachgerechnet
+direkt auf den Firestore-Rohdaten: Die Reichweiten (7 Browser, Themen-Zeilen)
+stimmen, die Kennzahl «berührte Inhaltspunkte» stimmte NICHT — 852 angezeigt,
+748 korrekt. Die Differenz von 104 waren die Gewebe-Muster-Klicks:
+`meistBesuchteAusPoll` schliesst `:gewebe` als «inhaltsloses Muster» aus,
+`zaehleAlleAusPoll` tat es nicht. Der Ausschluss sitzt jetzt in der Funktion
+selbst und repariert damit auch Orakel, Klassen-Report und Aktivitätsnetz
+(alle vier Konsumenten meinen Inhalts-Kennzahlen). Das lokale Rhizom der
+Lernenden zählt Gewebe-Klicks weiterhin als eigene Aktivität — das ist die
+Spiel-Fläche, kein Inhaltspunkt, und bleibt bewusst so.
+
+**Die Zeitachse.** Neu zählt `verlauf-lernseite-2` Browser pro Tag und Thema
+(`<slug>:<JJJJ-MM-TT>`, dazu `alle:<Tag>`), höchstens einmal je Browser und
+Tag, localhost nie. Das Dashboard zeichnet daraus eine Liniengrafik mit frei
+wählbarem Zeitraum (von/bis plus 7 Tage, 30 Tage, Alles) und zuschaltbaren
+Themen-Linien. Datenschutz-Einordnung: Tagessummen über alle, kein
+Fortschritts-Code, keine Uhrzeit, keine Verweildauer — deutlich weniger als
+der abgeschaltete Engagement-Tracker (der schrieb pro Code und Aufruf). Die
+Selbstbeschreibung der Seite ist entsprechend präzisiert («keine einzelnen
+Personen, nur Zähler auf Inhalten und Tagessummen je Thema»). Der Verlauf
+beginnt mit dem Deploy; rückwirkend gibt es nichts, die alten Zähler sind
+bewusst ohne Zeit angelegt.
+
+---
+
 ## 2026-08-17 — Was ein Punkt ist: jeder angewählte Inhalt (Christof)
 
 **Die Regel.** «Sobald ich einen Inhalt auswähle, ist es ein Punkt» — mit den
