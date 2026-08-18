@@ -13,7 +13,7 @@ ist ein Hash des Textes. Ändert sich der Text, passt der Beleg nicht mehr, und
 
 | | |
 | --- | --- |
-| Belege | 271 |
+| Belege | 270 |
 | Belegte Textblöcke | 136 |
 | Begründete Nicht-Belege | 6 |
 | Aussagen mit Standdatum | 3 |
@@ -2490,68 +2490,59 @@ Neu ist die Idee nicht, und das ist das Schöne daran. Foucault hat in seinem Sp
 
 ### Was ist der Mensch? · 1906 in Kaunas
 
-- **Kennung:** `DW-1687ff` (Zur Philosophie)
+- **Kennung:** `DW-155e53` (Zur Philosophie)
 - **Quelle:** [Emmanuel Levinas (Wikipedia)](https://de.wikipedia.org/wiki/Emmanuel_Levinas)
 - **Fundstelle:** Die Datumszeile lautet wörtlich «* 30. Dezember 1905[jul.] / 12. Januar 1906[greg.] in Kaunas, Gouvernement Kowno, Russisches Kaiserreich; † 25. Dezember 1995 in Paris, Frankreich». Die Karte nennt nur das Jahr 1906, weil überall nach dem gregorianischen Kalender gerechnet wird; wer in einem anderen Nachschlagewerk 1905 liest, findet hier den Grund.
 - **Geprüft:** 2026-08-16
 
-> Emmanuel Levinas wurde 1906 in Kaunas geboren und hörte von 1927 bis 1928 in Freiburg bei Edmund Husserl und Martin Heidegger. 1940 geriet er in deutsche Kriegsgefangenschaft, 1945 erfuhr er, dass seine Eltern und Brüder in Litauen ermordet worden waren, und schwor, nie wieder deutschen Boden zu betreten. Bewunderung für ein Denken und Entsetzen über eine Politik standen nebeneinander. Heidegger fragt zuerst, was Sein heisst, Levinas hält dagegen, dass die Ethik vorher kommt, sie ist für ihn die «erste Philosophie». Das Ich ist nicht zuerst ein freies Subjekt, das sich selbst begründet. Es wird zum moralischen Subjekt, weil ein anderer Mensch es anspricht, noch vor jeder eigenen Entscheidung. Hauptwerke: «Totalität und Unendlichkeit» (1961) und «Jenseits des Seins oder anders als Sein geschieht» (1974).
+> Emmanuel Levinas wurde 1906 in Kaunas geboren und hörte 1928/29 in Freiburg bei Edmund Husserl und Martin Heidegger. 1940 geriet er in deutsche Kriegsgefangenschaft, 1945 erfuhr er, dass seine Eltern und Brüder in Litauen ermordet worden waren. Bewunderung für ein Denken und Entsetzen über eine Politik standen nebeneinander. Heidegger fragt zuerst, was Sein heisst, Levinas hält dagegen, dass die Ethik vorher kommt, sie ist für ihn die «erste Philosophie». Das Ich ist nicht zuerst ein freies Subjekt, das sich selbst begründet. Es wird zum moralischen Subjekt, weil ein anderer Mensch es anspricht, noch vor jeder eigenen Entscheidung. Hauptwerke: «Totalität und Unendlichkeit» (1961) und «Jenseits des Seins oder anders als Sein geschieht» (1974).
 
-### Was ist der Mensch? · von 1927 bis 1928 in Freiburg
+### Was ist der Mensch? · 1928/29 in Freiburg
 
-- **Kennung:** `DW-1687ff` (Zur Philosophie)
-- **Quelle:** [Emmanuel Levinas (Wikipedia)](https://de.wikipedia.org/wiki/Emmanuel_Levinas)
-- **Fundstelle:** «Von 1927 bis 1928 setzte er sein phänomenologisches Studium an der Albert-Ludwigs-Universität Freiburg fort, wo er bei Edmund Husserl und Martin Heidegger studierte.»
-- **Geprüft:** 2026-08-16
+- **Kennung:** `DW-155e53` (Zur Philosophie)
+- **Quelle:** [Stanford Encyclopedia of Philosophy, «Emmanuel Levinas» (englisch)](https://plato.stanford.edu/entries/levinas/)
+- **Fundstelle:** Die Zeittafel nennt «1928–29: Levinas travels to Freiburg to study with Edmund Husserl; he attends Heidegger's seminar.» Die englische Wikipedia schreibt «In 1928, he went to the University of Freiburg for two semesters». Die deutsche Wikipedia datiert dagegen «von 1927 bis 1928», und das kann nicht stimmen: Heidegger lehrte bis 1927 in Marburg und wurde erst 1928 Husserls Nachfolger in Freiburg. Ein Review hat die Datierung gemeldet, die Prüfung gab ihm recht, im Text stand bis zum 17.8.2026 die deutsche Fassung.
+- **Geprüft:** 2026-08-17
 
-> Emmanuel Levinas wurde 1906 in Kaunas geboren und hörte von 1927 bis 1928 in Freiburg bei Edmund Husserl und Martin Heidegger. 1940 geriet er in deutsche Kriegsgefangenschaft, 1945 erfuhr er, dass seine Eltern und Brüder in Litauen ermordet worden waren, und schwor, nie wieder deutschen Boden zu betreten. Bewunderung für ein Denken und Entsetzen über eine Politik standen nebeneinander. Heidegger fragt zuerst, was Sein heisst, Levinas hält dagegen, dass die Ethik vorher kommt, sie ist für ihn die «erste Philosophie». Das Ich ist nicht zuerst ein freies Subjekt, das sich selbst begründet. Es wird zum moralischen Subjekt, weil ein anderer Mensch es anspricht, noch vor jeder eigenen Entscheidung. Hauptwerke: «Totalität und Unendlichkeit» (1961) und «Jenseits des Seins oder anders als Sein geschieht» (1974).
+> Emmanuel Levinas wurde 1906 in Kaunas geboren und hörte 1928/29 in Freiburg bei Edmund Husserl und Martin Heidegger. 1940 geriet er in deutsche Kriegsgefangenschaft, 1945 erfuhr er, dass seine Eltern und Brüder in Litauen ermordet worden waren. Bewunderung für ein Denken und Entsetzen über eine Politik standen nebeneinander. Heidegger fragt zuerst, was Sein heisst, Levinas hält dagegen, dass die Ethik vorher kommt, sie ist für ihn die «erste Philosophie». Das Ich ist nicht zuerst ein freies Subjekt, das sich selbst begründet. Es wird zum moralischen Subjekt, weil ein anderer Mensch es anspricht, noch vor jeder eigenen Entscheidung. Hauptwerke: «Totalität und Unendlichkeit» (1961) und «Jenseits des Seins oder anders als Sein geschieht» (1974).
 
 ### Was ist der Mensch? · in deutsche Kriegsgefangenschaft
 
-- **Kennung:** `DW-1687ff` (Zur Philosophie)
+- **Kennung:** `DW-155e53` (Zur Philosophie)
 - **Quelle:** [Emmanuel Levinas (Wikipedia)](https://de.wikipedia.org/wiki/Emmanuel_Levinas)
-- **Fundstelle:** «1940 geriet er in deutsche Kriegsgefangenschaft.» Und weiter, er habe 1945 erfahren, «dass seine Eltern und Brüder in Litauen der nationalsozialistischen Ausrottungspolitik zum Opfer gefallen waren».
+- **Fundstelle:** «1940 geriet er in deutsche Kriegsgefangenschaft.» Und weiter, er habe 1945 erfahren, «dass seine Eltern und Brüder in Litauen der nationalsozialistischen Ausrottungspolitik zum Opfer gefallen waren». Derselbe Satz endet dort mit «schwor er, nie wieder deutschen Boden zu betreten». Das stand bis zum 17.8.2026 auch in der Karte, ist aber nur hier belegt: Die Stanford Encyclopedia und die englische Wikipedia kennen den Schwur nicht. Ein Schwur ist eine starke Behauptung über einen Menschen, darum steht er nicht mehr im Text. Die Distanz zu Heidegger trägt jetzt der Satz über Bewunderung und Entsetzen.
 - **Geprüft:** 2026-08-16
 
-> Emmanuel Levinas wurde 1906 in Kaunas geboren und hörte von 1927 bis 1928 in Freiburg bei Edmund Husserl und Martin Heidegger. 1940 geriet er in deutsche Kriegsgefangenschaft, 1945 erfuhr er, dass seine Eltern und Brüder in Litauen ermordet worden waren, und schwor, nie wieder deutschen Boden zu betreten. Bewunderung für ein Denken und Entsetzen über eine Politik standen nebeneinander. Heidegger fragt zuerst, was Sein heisst, Levinas hält dagegen, dass die Ethik vorher kommt, sie ist für ihn die «erste Philosophie». Das Ich ist nicht zuerst ein freies Subjekt, das sich selbst begründet. Es wird zum moralischen Subjekt, weil ein anderer Mensch es anspricht, noch vor jeder eigenen Entscheidung. Hauptwerke: «Totalität und Unendlichkeit» (1961) und «Jenseits des Seins oder anders als Sein geschieht» (1974).
-
-### Was ist der Mensch? · nie wieder deutschen Boden
-
-- **Kennung:** `DW-1687ff` (Zur Philosophie)
-- **Quelle:** [Emmanuel Levinas (Wikipedia)](https://de.wikipedia.org/wiki/Emmanuel_Levinas)
-- **Fundstelle:** Nach der Nachricht vom Tod der Familie «schwor er, nie wieder deutschen Boden zu betreten».
-- **Geprüft:** 2026-08-16
-
-> Emmanuel Levinas wurde 1906 in Kaunas geboren und hörte von 1927 bis 1928 in Freiburg bei Edmund Husserl und Martin Heidegger. 1940 geriet er in deutsche Kriegsgefangenschaft, 1945 erfuhr er, dass seine Eltern und Brüder in Litauen ermordet worden waren, und schwor, nie wieder deutschen Boden zu betreten. Bewunderung für ein Denken und Entsetzen über eine Politik standen nebeneinander. Heidegger fragt zuerst, was Sein heisst, Levinas hält dagegen, dass die Ethik vorher kommt, sie ist für ihn die «erste Philosophie». Das Ich ist nicht zuerst ein freies Subjekt, das sich selbst begründet. Es wird zum moralischen Subjekt, weil ein anderer Mensch es anspricht, noch vor jeder eigenen Entscheidung. Hauptwerke: «Totalität und Unendlichkeit» (1961) und «Jenseits des Seins oder anders als Sein geschieht» (1974).
+> Emmanuel Levinas wurde 1906 in Kaunas geboren und hörte 1928/29 in Freiburg bei Edmund Husserl und Martin Heidegger. 1940 geriet er in deutsche Kriegsgefangenschaft, 1945 erfuhr er, dass seine Eltern und Brüder in Litauen ermordet worden waren. Bewunderung für ein Denken und Entsetzen über eine Politik standen nebeneinander. Heidegger fragt zuerst, was Sein heisst, Levinas hält dagegen, dass die Ethik vorher kommt, sie ist für ihn die «erste Philosophie». Das Ich ist nicht zuerst ein freies Subjekt, das sich selbst begründet. Es wird zum moralischen Subjekt, weil ein anderer Mensch es anspricht, noch vor jeder eigenen Entscheidung. Hauptwerke: «Totalität und Unendlichkeit» (1961) und «Jenseits des Seins oder anders als Sein geschieht» (1974).
 
 ### Was ist der Mensch? · dass die Ethik vorher kommt
 
-- **Kennung:** `DW-1687ff` (Zur Philosophie)
+- **Kennung:** `DW-155e53` (Zur Philosophie)
 - **Quelle:** [Emmanuel Levinas (Wikipedia)](https://de.wikipedia.org/wiki/Emmanuel_Levinas)
 - **Fundstelle:** «Während in vielen klassischen Systementwürfen die Erkenntnistheorie und Metaphysik eine Grundlage bilden – bezeichnet als Erste Philosophie –, ersetzt Levinas deren Rolle durch die Analyse einer grundlegenden Verpflichtetheit: Sie differenziert sich zu einer Ethik aus.»
 - **Geprüft:** 2026-08-16
 
-> Emmanuel Levinas wurde 1906 in Kaunas geboren und hörte von 1927 bis 1928 in Freiburg bei Edmund Husserl und Martin Heidegger. 1940 geriet er in deutsche Kriegsgefangenschaft, 1945 erfuhr er, dass seine Eltern und Brüder in Litauen ermordet worden waren, und schwor, nie wieder deutschen Boden zu betreten. Bewunderung für ein Denken und Entsetzen über eine Politik standen nebeneinander. Heidegger fragt zuerst, was Sein heisst, Levinas hält dagegen, dass die Ethik vorher kommt, sie ist für ihn die «erste Philosophie». Das Ich ist nicht zuerst ein freies Subjekt, das sich selbst begründet. Es wird zum moralischen Subjekt, weil ein anderer Mensch es anspricht, noch vor jeder eigenen Entscheidung. Hauptwerke: «Totalität und Unendlichkeit» (1961) und «Jenseits des Seins oder anders als Sein geschieht» (1974).
+> Emmanuel Levinas wurde 1906 in Kaunas geboren und hörte 1928/29 in Freiburg bei Edmund Husserl und Martin Heidegger. 1940 geriet er in deutsche Kriegsgefangenschaft, 1945 erfuhr er, dass seine Eltern und Brüder in Litauen ermordet worden waren. Bewunderung für ein Denken und Entsetzen über eine Politik standen nebeneinander. Heidegger fragt zuerst, was Sein heisst, Levinas hält dagegen, dass die Ethik vorher kommt, sie ist für ihn die «erste Philosophie». Das Ich ist nicht zuerst ein freies Subjekt, das sich selbst begründet. Es wird zum moralischen Subjekt, weil ein anderer Mensch es anspricht, noch vor jeder eigenen Entscheidung. Hauptwerke: «Totalität und Unendlichkeit» (1961) und «Jenseits des Seins oder anders als Sein geschieht» (1974).
 
 ### Was ist der Mensch? · wenn sie nicht erwidert wird
 
-- **Kennung:** `DW-782b47` (Fallbeispiel)
+- **Kennung:** `DW-314e65` (Fallbeispiel)
 - **Quelle:** [Emmanuel Levinas (Wikipedia)](https://de.wikipedia.org/wiki/Emmanuel_Levinas)
 - **Fundstelle:** «Stattdessen spricht Levinas von einer uneinholbaren, sich durch jeden Vermittlungsversuch letztlich ausweitenden Asymmetrie zum Anderen.» Das stützt die Aussage, die Verantwortung sei kein Tausch. Die Wörter «Antlitz» als unendlicher Anspruch, «der Dritte», «Gerechtigkeit», «Recht» und «Politik» kommen in diesem Artikel NICHT vor; die entsprechenden Sätze der Karte referieren Levinas' Position und berufen sich nicht auf diese Quelle.
 - **Geprüft:** 2026-08-16
 
 > Im Bus sitzt jemand schräg gegenüber und weint. Nicht laut, nur Tränen. Der erste Reflex ist, sich das zu erklären, einzusortieren und abzuhaken. Trotzdem geht es dich schon an, bevor du nachdenkst, und du merkst es daran, dass du dich rechtfertigst, wenn du wegschaust.
 
-Genau diese Reihenfolge meint Levinas. Nicht «ich bin frei, also übernehme ich Verantwortung», sondern umgekehrt. Das Einsortieren führt am Menschen vorbei, weil ein Begriff das Fremde in die eigene Ordnung holt und ihm nimmt, was fremd war. Was dich in Anspruch nimmt, nennt er das «Antlitz». Gemeint sind nicht die Gesichtszüge, sondern dass «der Andere» sich verletzlich zeigt. Diese Verantwortung gilt auch dann, wenn sie nicht erwidert wird, sie ist kein Tausch. Sitzt daneben noch jemand, der etwas braucht, kommt «der Dritte» ins Spiel und mit ihm das Abwägen. Daraus erwachsen Recht und Politik, die den Einzelnen nicht auf eine Nummer verkürzen dürfen. Ein Chatfenster stellt diesen Anspruch nicht, es ist nicht verletzlich. Was macht es mit dir, wenn du dich an ein Gegenüber gewöhnst, das nie etwas von dir will?
+Genau diese Reihenfolge meint Levinas. Nicht «ich bin frei, also übernehme ich Verantwortung», sondern umgekehrt. Das Einsortieren führt am Menschen vorbei, weil ein Begriff das Fremde in die eigene Ordnung holt und ihm nimmt, was fremd war. Was dich in Anspruch nimmt, nennt er das «Antlitz». Gemeint sind nicht die Gesichtszüge, sondern dass «der Andere» sich verletzlich zeigt. Diese Verantwortung gilt auch dann, wenn sie nicht erwidert wird, sie ist kein Tausch. Und es bleibt nie bei einem Menschen, im Bus sitzen weitere, die auch etwas brauchen. Für diese weiteren steht bei Levinas «der Dritte», mit ihm beginnt das Abwägen. Daraus erwachsen Recht und Politik, die den Einzelnen nicht auf eine Nummer verkürzen dürfen. Mit Levinas gelesen stellt ein Chatfenster diesen Anspruch nicht, es ist nicht verletzlich. Menschen stehen aber sehr wohl dahinter, die Trainingsdaten aufbereiten oder von einer Antwort getroffen werden. Was macht es mit dir, wenn du dich an ein Gegenüber gewöhnst, das nie etwas von dir will?
 
 ### Was ist der Mensch? · Jenseits des Seins oder anders als Sein geschieht
 
-- **Kennung:** `DW-1687ff` (Zur Philosophie)
+- **Kennung:** `DW-155e53` (Zur Philosophie)
 - **Quelle:** [Emmanuel Levinas (Wikipedia)](https://de.wikipedia.org/wiki/Emmanuel_Levinas)
 - **Fundstelle:** Werkverzeichnis: «Totalité et Infini: essai sur l'extériorité, 1961», deutsch «Totalität und Unendlichkeit», sowie «Autrement qu'être ou au-delà de l'essence, 1974», deutsch «Jenseits des Seins oder anders als Sein geschieht».
 - **Geprüft:** 2026-08-16
 
-> Emmanuel Levinas wurde 1906 in Kaunas geboren und hörte von 1927 bis 1928 in Freiburg bei Edmund Husserl und Martin Heidegger. 1940 geriet er in deutsche Kriegsgefangenschaft, 1945 erfuhr er, dass seine Eltern und Brüder in Litauen ermordet worden waren, und schwor, nie wieder deutschen Boden zu betreten. Bewunderung für ein Denken und Entsetzen über eine Politik standen nebeneinander. Heidegger fragt zuerst, was Sein heisst, Levinas hält dagegen, dass die Ethik vorher kommt, sie ist für ihn die «erste Philosophie». Das Ich ist nicht zuerst ein freies Subjekt, das sich selbst begründet. Es wird zum moralischen Subjekt, weil ein anderer Mensch es anspricht, noch vor jeder eigenen Entscheidung. Hauptwerke: «Totalität und Unendlichkeit» (1961) und «Jenseits des Seins oder anders als Sein geschieht» (1974).
+> Emmanuel Levinas wurde 1906 in Kaunas geboren und hörte 1928/29 in Freiburg bei Edmund Husserl und Martin Heidegger. 1940 geriet er in deutsche Kriegsgefangenschaft, 1945 erfuhr er, dass seine Eltern und Brüder in Litauen ermordet worden waren. Bewunderung für ein Denken und Entsetzen über eine Politik standen nebeneinander. Heidegger fragt zuerst, was Sein heisst, Levinas hält dagegen, dass die Ethik vorher kommt, sie ist für ihn die «erste Philosophie». Das Ich ist nicht zuerst ein freies Subjekt, das sich selbst begründet. Es wird zum moralischen Subjekt, weil ein anderer Mensch es anspricht, noch vor jeder eigenen Entscheidung. Hauptwerke: «Totalität und Unendlichkeit» (1961) und «Jenseits des Seins oder anders als Sein geschieht» (1974).
 
 ### Was ist der Mensch? · gleiche Freiheiten für alle
 

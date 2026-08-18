@@ -2582,7 +2582,7 @@ export const BELEGE: Beleg[] = [
      Nebenwirkung. Ob sie kommt, ist offen: Christof überlegt es sich noch
      (2026-08-16), bis dahin bleibt es aus. Siehe docs/decisions.md. */
   {
-    id: "DW-1687ff",
+    id: "DW-155e53",
     anker: "1906 in Kaunas",
     url: "https://de.wikipedia.org/wiki/Emmanuel_Levinas",
     titel: "Emmanuel Levinas (Wikipedia)",
@@ -2591,34 +2591,25 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "DW-1687ff",
-    anker: "von 1927 bis 1928 in Freiburg",
-    url: "https://de.wikipedia.org/wiki/Emmanuel_Levinas",
-    titel: "Emmanuel Levinas (Wikipedia)",
+    id: "DW-155e53",
+    anker: "1928/29 in Freiburg",
+    url: "https://plato.stanford.edu/entries/levinas/",
+    titel: "Stanford Encyclopedia of Philosophy, «Emmanuel Levinas» (englisch)",
     stelle:
-      "«Von 1927 bis 1928 setzte er sein phänomenologisches Studium an der Albert-Ludwigs-Universität Freiburg fort, wo er bei Edmund Husserl und Martin Heidegger studierte.»",
-    geprueft: "2026-08-16",
+      "Die Zeittafel nennt «1928–29: Levinas travels to Freiburg to study with Edmund Husserl; he attends Heidegger's seminar.» Die englische Wikipedia schreibt «In 1928, he went to the University of Freiburg for two semesters». Die deutsche Wikipedia datiert dagegen «von 1927 bis 1928», und das kann nicht stimmen: Heidegger lehrte bis 1927 in Marburg und wurde erst 1928 Husserls Nachfolger in Freiburg. Ein Review hat die Datierung gemeldet, die Prüfung gab ihm recht, im Text stand bis zum 17.8.2026 die deutsche Fassung.",
+    geprueft: "2026-08-17",
   },
   {
-    id: "DW-1687ff",
+    id: "DW-155e53",
     anker: "in deutsche Kriegsgefangenschaft",
     url: "https://de.wikipedia.org/wiki/Emmanuel_Levinas",
     titel: "Emmanuel Levinas (Wikipedia)",
     stelle:
-      "«1940 geriet er in deutsche Kriegsgefangenschaft.» Und weiter, er habe 1945 erfahren, «dass seine Eltern und Brüder in Litauen der nationalsozialistischen Ausrottungspolitik zum Opfer gefallen waren».",
+      "«1940 geriet er in deutsche Kriegsgefangenschaft.» Und weiter, er habe 1945 erfahren, «dass seine Eltern und Brüder in Litauen der nationalsozialistischen Ausrottungspolitik zum Opfer gefallen waren». Derselbe Satz endet dort mit «schwor er, nie wieder deutschen Boden zu betreten». Das stand bis zum 17.8.2026 auch in der Karte, ist aber nur hier belegt: Die Stanford Encyclopedia und die englische Wikipedia kennen den Schwur nicht. Ein Schwur ist eine starke Behauptung über einen Menschen, darum steht er nicht mehr im Text. Die Distanz zu Heidegger trägt jetzt der Satz über Bewunderung und Entsetzen.",
     geprueft: "2026-08-16",
   },
   {
-    id: "DW-1687ff",
-    anker: "nie wieder deutschen Boden",
-    url: "https://de.wikipedia.org/wiki/Emmanuel_Levinas",
-    titel: "Emmanuel Levinas (Wikipedia)",
-    stelle:
-      "Nach der Nachricht vom Tod der Familie «schwor er, nie wieder deutschen Boden zu betreten».",
-    geprueft: "2026-08-16",
-  },
-  {
-    id: "DW-1687ff",
+    id: "DW-155e53",
     anker: "dass die Ethik vorher kommt",
     url: "https://de.wikipedia.org/wiki/Emmanuel_Levinas",
     titel: "Emmanuel Levinas (Wikipedia)",
@@ -2631,7 +2622,7 @@ export const BELEGE: Beleg[] = [
        die Asymmetrie beim Kürzen gewandert (Christofs Rückmeldung, die Karten
        waren zu lang und erklärten zweimal dasselbe). Als einziger der sieben
        Levinas-Belege erscheint er darum als Link. */
-    id: "DW-782b47",
+    id: "DW-314e65",
     anker: "wenn sie nicht erwidert wird",
     url: "https://de.wikipedia.org/wiki/Emmanuel_Levinas",
     titel: "Emmanuel Levinas (Wikipedia)",
@@ -2640,7 +2631,7 @@ export const BELEGE: Beleg[] = [
     geprueft: "2026-08-16",
   },
   {
-    id: "DW-1687ff",
+    id: "DW-155e53",
     anker: "Jenseits des Seins oder anders als Sein geschieht",
     url: "https://de.wikipedia.org/wiki/Emmanuel_Levinas",
     titel: "Emmanuel Levinas (Wikipedia)",
