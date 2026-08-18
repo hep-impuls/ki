@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { GEWICHT_EVENT, leseGewichtungen } from "../_lib/gewichtung";
-import { leseInhalte } from "../_lib/inhalte";
+import { INHALTE_EVENT, leseInhalte } from "../_lib/inhalte";
 
 /**
  * KontextGewichtung — zeigt im Orakel die Achtsamkeits-Gewichtung der
@@ -156,9 +156,15 @@ export default function KontextGewichtung({ className = "" }: { className?: stri
     };
     lade();
     window.addEventListener(GEWICHT_EVENT, lade);
+    /* Auch auf neue Titel hören: Die Aspekt-Namen kommen aus der Registry, und
+       die füllt sich seit dem gemeinsamen Verzeichnis (2026-08-17) oft NACH dem
+       ersten Render — ohne diesen Hörer blieben die Ringe bis zum nächsten
+       Gewichtungs-Klick bei «Aspekt N» (Christofs Desktop-Meldung). */
+    window.addEventListener(INHALTE_EVENT, lade);
     window.addEventListener("storage", lade);
     return () => {
       window.removeEventListener(GEWICHT_EVENT, lade);
+      window.removeEventListener(INHALTE_EVENT, lade);
       window.removeEventListener("storage", lade);
     };
   }, []);

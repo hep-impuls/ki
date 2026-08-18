@@ -10,6 +10,35 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-17 — Titel liegen in einem gemeinsamen Verzeichnis (Christof/Claude)
+
+**Die Meldung, zum zweiten Mal.** Die Knotenkarte zeigte «Bilder KI-Story ·
+Punkt 7» statt der Bildtitel, und die Achtsamkeits-Ringe im Orakel nannten beim
+Antippen keinen Aspekt-Namen, aber nur am Desktop, am Handy schon. Dieselbe
+Klasse von Fehler hatte Christof schon am 8.8. gemeldet, damals kam der
+Pro-Nutzer-Spiegel.
+
+**Warum der Spiegel nicht reichte.** Er enthält nur, was DIESE Person je
+gerendert hat. Die Anzeigen zeigen aber Zähler ALLER, und für Bereiche, die man
+selbst nie geöffnet hat, blieb der Name unbekannt. Gemessen: 192 Titel im
+Browser, kein einziger aus «Vorhang auf». Das Handy kannte die Namen, weil dort
+die Abschnitte einmal offen waren.
+
+**Der Entscheid.** Zusätzlich zum Spiegel gibt es ein gemeinsames
+Titel-Verzeichnis (`abstimmungen/ki26/polls/titel-lernseite-2`), in das jeder
+Browser die Titel schiebt, die er gerendert hat, und aus dem jeder zieht, was
+ihm fehlt. Rangfolge beim Vereinen: lokal gewinnt vor eigenem Spiegel vor
+Verzeichnis. Titel sind reine Inhalts-Metadaten, für alle gleich und nichts
+Persönliches, darum dürfen sie in einem gemeinsamen Dokument liegen; der Pfad
+ist der eines Polls, weil die deployten Rules genau dort schreiben lassen.
+Anders als die Zähler wird das Verzeichnis nicht vor localhost geschützt, ein
+Dev-Render schiebt dieselben korrekten Titel wie die Produktion. Fremde
+Einträge werden beim Lesen auf nicht-leere Zeichenketten bis 200 Zeichen
+gefiltert. Belegt im Browser: Registry geleert, das Orakel holte 218 Titel aus
+dem Verzeichnis zurück, Ring-Klick zeigt den Aspekt-Namen.
+
+---
+
 ## 2026-08-17 — Teppich-Spuren hängen am Slug, nie mehr am Index (Christof/Claude)
 
 **Der Anlass.** Christof meldete, das Rhizom zähle die neuen Teppich-Punkte
