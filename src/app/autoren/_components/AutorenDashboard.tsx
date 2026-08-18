@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import Link from "next/link";
 import AppLayout from "@/components/layout/AppLayout";
 import { loadPollCounts, type PollCounts } from "@/lib/polls";
@@ -89,6 +89,89 @@ function Kennzahl({
   );
 }
 
+/**
+ * Klappe — ein einklappbarer Dashboard-Abschnitt. Christof fand die Seite am
+ * 18.8.2026 zu lang zum Scrollen; zugeklappt zeigt sie nur noch die sechs
+ * Titel mit ihrer Kernzahl. Der Zustand jeder Klappe bleibt pro Browser
+ * gemerkt, und anders als die Akkordeons der Lernseiten dürfen hier mehrere
+ * zugleich offen sein: Wer Zahlen vergleicht, braucht zwei Abschnitte
+ * nebeneinander. Der Inhalt wird erst beim Öffnen eingehängt.
+ */
+const KLAPPEN_KEY = "ki26-autoren-klappen";
+
+function Klappe({
+  id,
+  titel,
+  zusatz,
+  children,
+}: {
+  id: string;
+  titel: string;
+  /** Kernzahl rechts im Kopf, damit Zugeklapptes trotzdem informiert. */
+  zusatz?: string;
+  children: ReactNode;
+}) {
+  const [offen, setOffen] = useState<boolean>(() => {
+    if (typeof window === "undefined") return false;
+    try {
+      const o = JSON.parse(window.localStorage.getItem(KLAPPEN_KEY) ?? "{}");
+      return Boolean(o?.[id]);
+    } catch {
+      return false;
+    }
+  });
+
+  function umschalten() {
+    setOffen((prev) => {
+      const neu = !prev;
+      try {
+        const raw = window.localStorage.getItem(KLAPPEN_KEY);
+        const o = raw ? (JSON.parse(raw) as Record<string, boolean>) : {};
+        o[id] = neu;
+        window.localStorage.setItem(KLAPPEN_KEY, JSON.stringify(o));
+      } catch {
+        /* Privatmodus: dann merkt es sich eben nicht. */
+      }
+      return neu;
+    });
+  }
+
+  return (
+    <section id={id} className="mt-md rounded-xl border border-outline-variant bg-surface-bright">
+      <h2 className="m-0">
+        <button
+          type="button"
+          aria-expanded={offen}
+          aria-controls={`${id}-inhalt`}
+          onClick={umschalten}
+          className="flex w-full items-center justify-between gap-md rounded-xl px-lg py-md text-left transition hover:bg-surface-container-low"
+        >
+          <span className="text-title-lg text-on-surface">{titel}</span>
+          <span className="flex shrink-0 items-center gap-sm">
+            {zusatz && (
+              <span className="text-label-md tabular-nums text-on-surface-variant">{zusatz}</span>
+            )}
+            <span
+              aria-hidden="true"
+              className={
+                "material-symbols-outlined text-[22px] text-on-surface-variant transition-transform " +
+                (offen ? "rotate-180" : "")
+              }
+            >
+              expand_more
+            </span>
+          </span>
+        </button>
+      </h2>
+      {offen && (
+        <div id={`${id}-inhalt`} className="px-lg pb-lg">
+          {children}
+        </div>
+      )}
+    </section>
+  );
+}
+
 /** Datum «JJJJ-MM-TT» ↔ lokale Zeit, plus Tages-Arithmetik für den Zeitraum. */
 function tagPlus(datum: string, tage: number): string {
   const [j, m, d] = datum.split("-").map(Number);
@@ -171,8 +254,7 @@ function VerlaufsSektion({ counts }: { counts: PollCounts }) {
   const leer = alleTage.length === 0;
 
   return (
-    <section className="mt-xl">
-      <h2 className="text-headline-md text-on-surface">Verlauf</h2>
+    <div>
       <p className="mt-xs max-w-3xl text-body-md text-on-surface-variant">
         Browser pro Tag, je Thema und gesamt. Gezählt wird höchstens einmal je
         Browser und Tag; Uhrzeiten und Personen gibt es hier nicht.
@@ -324,7 +406,7 @@ function VerlaufsSektion({ counts }: { counts: PollCounts }) {
           </div>
         </>
       )}
-    </section>
+    </div>
   );
 }
 
@@ -489,8 +571,8 @@ export default function AutorenDashboard() {
       {geladen && nutzung && taten && (
         <>
           {/* ── 1. Reichweite ──────────────────────────────────────────── */}
-          <section className="mt-xl">
-            <h2 className="text-headline-md text-on-surface">Wie viele waren da</h2>
+          <Klappe id="reichweite" titel="Wie viele waren da" zusatz={`${nutzung.browser} Browser`}>
+
             {nutzung.browser === 0 && (
               /* Ohne diesen Hinweis liest man die beiden Nullen als Defekt. Die
                  Inhalts-Zähler laufen seit Monaten, die Reichweiten-Zähler sind
@@ -520,7 +602,6 @@ export default function AutorenDashboard() {
                 hinweis="Punkte, Bildpunkte und Videos zusammen."
               />
             </div>
-
             <h3 className="mt-lg text-title-md text-on-surface">Nach Thema</h3>
             <div className="mt-sm overflow-x-auto">
               <table className="w-full min-w-[32rem] text-body-md">
@@ -548,13 +629,16 @@ export default function AutorenDashboard() {
                 </tbody>
               </table>
             </div>
-          </section>
+          </Klappe>
 
-          {verlauf && <VerlaufsSektion counts={verlauf} />}
+          {verlauf && (
+            <Klappe id="verlauf" titel="Verlauf">
+              <VerlaufsSektion counts={verlauf} />
+            </Klappe>
+          )}
 
           {/* ── 2. Was getan wurde ─────────────────────────────────────── */}
-          <section className="mt-xl">
-            <h2 className="text-headline-md text-on-surface">Was sie getan haben</h2>
+          <Klappe id="taten" titel="Was sie getan haben" zusatz={`${taten.punkte} Punkte`}>
             <div className="mt-md grid gap-md sm:grid-cols-3 lg:grid-cols-5">
               <Kennzahl wert={taten.punkte} label="Punkte angeklickt" />
               <Kennzahl wert={taten.mehr} label="Vertiefungen geöffnet" />
@@ -572,11 +656,10 @@ export default function AutorenDashboard() {
               </strong>
               . Die Wünsche zeigen, wo Neugier offen blieb.
             </p>
-          </section>
+          </Klappe>
 
           {/* ── 3. Welche Inhalte laufen ───────────────────────────────── */}
-          <section className="mt-xl">
-            <h2 className="text-headline-md text-on-surface">Welche Inhalte laufen</h2>
+          <Klappe id="inhalte" titel="Welche Inhalte laufen" zusatz={`${posten.length} im Inventar`}>
             <p className="mt-xs max-w-3xl text-body-md text-on-surface-variant">
               Grundlage ist das Inventar aller Inhaltspunkte, nicht die Zählerliste.
               Nur so tauchen auch die auf, die niemand angeklickt hat. Das Inventar
@@ -663,11 +746,10 @@ export default function AutorenDashboard() {
                 </div>
               </div>
             ))}
-          </section>
+          </Klappe>
 
           {/* ── 4. Haltung ─────────────────────────────────────────────── */}
-          <section className="mt-xl">
-            <h2 className="text-headline-md text-on-surface">Wie sie auf KI blicken</h2>
+          <Klappe id="blick" titel="Wie sie auf KI blicken" zusatz={`${blickTotal} ${blickTotal === 1 ? "Stimme" : "Stimmen"}`}>
             <p className="mt-xs text-body-md text-on-surface-variant">
               Aus der Umfrage im Orakel, {blickTotal}{" "}
               {blickTotal === 1 ? "Stimme" : "Stimmen"}. Eine Stimme pro
@@ -686,10 +768,9 @@ export default function AutorenDashboard() {
                 );
               })}
             </div>
-          </section>
+          </Klappe>
 
-          <section className="mt-xl border-t border-outline-variant pt-lg">
-            <h2 className="text-title-md text-on-surface">Was diese Zahlen nicht sagen</h2>
+          <Klappe id="grenzen" titel="Was diese Zahlen nicht sagen">
             <ul className="mt-sm max-w-3xl list-disc space-y-xs pl-lg text-body-md text-on-surface-variant">
               <li>
                 Ein Zähler steigt pro Browser höchstens einmal. Die Zahlen sind
@@ -713,7 +794,7 @@ export default function AutorenDashboard() {
                 — die liest mit dem Service-Account die Codes selbst.
               </li>
             </ul>
-          </section>
+          </Klappe>
         </>
       )}
     </AppLayout>
