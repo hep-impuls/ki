@@ -10,6 +10,29 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-08-17 — Was ein Punkt ist: jeder angewählte Inhalt (Christof)
+
+**Die Regel.** «Sobald ich einen Inhalt auswähle, ist es ein Punkt» — mit den
+bekannten Ausnahmen, die eigene Kategorien bleiben: Bildpunkte (Hotspots),
+geöffnete Bilder, Videos, Kombinationen, Merkzeichen («Das verfolge ich
+weiter») und Vertiefungen. Eine Vertiefung ist der längere Text HINTER einem
+Inhalt (Fallbeispiel, «Mehr lesen», «Mehr dazu», Bild-Hintergrund,
+Epochen-Einordnung), nicht das Anwählen des Inhalts selbst.
+
+**Was dagegen verstiess.** Das Öffnen einer Denker-Box in den Denkwegen lief
+als Vertiefung (`mehr:`), obwohl es das Anwählen eines Inhalts ist — die
+einzige solche Stelle im Bestand. Seit heute ist es ein Punkt; Alt-Spuren
+wandern beim ersten Laden um (`migriereMehrZuPunkt`), die Häkchen bleiben. Die
+anonymen Kollektiv-Zähler behalten ihre historischen `mehr:`-Schlüssel, Zähler
+laufen nicht rückwärts — in der Knotenkarte können alte Denker-Öffnungen darum
+weiter unter «Vertieft (alle)» aufscheinen, neue zählen unter «Angeklickt».
+
+**Belegt im Browser.** Gesäte Alt-Vertiefung wird zum Punkt, Öffnen einer
+frischen Denker-Box legt eine Punkt-Spur an und das Rhizom springt live von
+104 auf 105.
+
+---
+
 ## 2026-08-17 — Titel liegen in einem gemeinsamen Verzeichnis (Christof/Claude)
 
 **Die Meldung, zum zweiten Mal.** Die Knotenkarte zeigte «Bilder KI-Story ·

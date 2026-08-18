@@ -229,6 +229,58 @@ export function migriereIndexSpuren(spurKey: string, slugs: string[]): void {
   scheduleMirror();
 }
 
+/**
+ * Migration 2026-08-17, zweiter Fall: Das Öffnen einer Denker-Box in den
+ * Denkwegen lief als Vertiefung (`mehr:`), obwohl es das Anwählen eines
+ * Inhalts ist — Christofs Regel: Inhalt ausgewählt heisst Punkt, Vertiefung
+ * ist der längere Text HINTER einem Inhalt (Fallbeispiel, «Mehr dazu»).
+ * Wandelt `mehr:<praefix>:rest` in `<praefix>:rest` um, im Spuren-Store und im
+ * Zähl-Register. Die anonymen Kollektiv-Zähler behalten ihre historischen
+ * `mehr:`-Schlüssel, Zähler laufen nicht rückwärts. Idempotent; Ereignis nur
+ * bei echter Änderung.
+ */
+export function migriereMehrZuPunkt(praefix: string): void {
+  if (typeof window === "undefined" || !praefix) return;
+  const von = `mehr:${praefix}:`;
+  const zu = `${praefix}:`;
+  const wandle = (id: string) => (id.startsWith(von) ? zu + id.slice(von.length) : id);
+
+  const alt = lesen();
+  const gesehen = new Set<string>();
+  const neu: Spur[] = [];
+  let geaendert = false;
+  for (const sp of alt) {
+    const id = wandle(sp.id);
+    if (id !== sp.id) geaendert = true;
+    if (gesehen.has(id)) continue;
+    gesehen.add(id);
+    neu.push(id === sp.id ? sp : { id, t: sp.t });
+  }
+
+  try {
+    const raw = window.localStorage.getItem(KEY_GEZAEHLT);
+    const arr = raw ? (JSON.parse(raw) as unknown) : [];
+    if (Array.isArray(arr)) {
+      let regGeaendert = false;
+      const reg = new Set<string>();
+      for (const x of arr) {
+        if (typeof x !== "string") continue;
+        const id = wandle(x);
+        if (id !== x) regGeaendert = true;
+        reg.add(id);
+      }
+      if (regGeaendert) window.localStorage.setItem(KEY_GEZAEHLT, JSON.stringify([...reg]));
+    }
+  } catch {
+    /* Privatmodus → still */
+  }
+
+  if (!geaendert) return;
+  schreiben(neu);
+  window.dispatchEvent(new CustomEvent(SPUR_EVENT, { detail: { migriert: praefix } }));
+  scheduleMirror();
+}
+
 /** Eine Spur setzen (idempotent). Lokal + anonymer Zähler + Cloud-Spiegel. */
 export function merkeSpur(id: string): void {
   if (typeof window === "undefined" || !id) return;

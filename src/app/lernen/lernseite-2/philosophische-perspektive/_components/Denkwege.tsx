@@ -5,11 +5,11 @@ import {
   leseSpuren,
   leseSpurenIndices,
   merkeSpur,
+  migriereMehrZuPunkt,
   SPUR_EVENT,
   zieheSpurenAusCloud,
 } from "../../_lib/spuren";
 import { merkeInhalt } from "../../_lib/inhalte";
-import { merkeVertiefung } from "../../_lib/vertiefung";
 import Ausklapptext from "../../_components/Ausklapptext";
 import GewichtungWahl from "../../_components/GewichtungWahl";
 import KartenAktion from "../../_components/KartenAktion";
@@ -667,8 +667,12 @@ export default function Denkwege({
           return nx;
         });
       }
-      // Aufgeklappte Denker aus den Vertiefungs-Spuren zurücklesen.
-      const praefix = `mehr:${spurKey}:denker:`;
+      // Alt-Spuren zuerst umziehen: Box-Öffnungen liefen bis zum 17.8.2026 als
+      // Vertiefung (`mehr:`), seither als Punkt (Christofs Regel: Inhalt
+      // ausgewählt heisst Punkt). Idempotent, feuert nur bei Änderung.
+      migriereMehrZuPunkt(`${spurKey}:denker`);
+      // Aufgeklappte Denker aus den Punkt-Spuren zurücklesen.
+      const praefix = `${spurKey}:denker:`;
       const offen = leseSpuren()
         .filter((s) => s.id.startsWith(praefix))
         .map((s) => s.id.slice(praefix.length));
@@ -748,11 +752,15 @@ export default function Denkwege({
   ) {
     const wirdGeoeffnet = offeneBox !== key;
     const merkKey = `${bereich}:${person.slug}`;
-    // Erst registrieren, dann den State setzen: `merkeVertiefung` feuert
-    // SPUR_EVENT, und ein Ereignis aus einem State-Updater heraus würde
-    // React die Folge-Aktualisierung anderer Komponenten verwerfen.
+    // Erst registrieren, dann den State setzen: `merkeSpur` feuert SPUR_EVENT,
+    // und ein Ereignis aus einem State-Updater heraus würde React die
+    // Folge-Aktualisierung anderer Komponenten verwerfen.
     if (wirdGeoeffnet && !gelesenDenker.has(merkKey)) {
-      merkeVertiefung(denkerSpur(bereich, person.slug), `${person.name}: ${person.these}`);
+      /* Als PUNKT, nicht als Vertiefung: Wer eine Denker-Box öffnet, wählt
+         einen Inhalt an (Christofs Regel, 2026-08-17). Die Vertiefung ist das
+         Fallbeispiel in der Box (KartenAktion). Der Titel ist oben im Effect
+         registriert. */
+      merkeSpur(denkerSpur(bereich, person.slug));
       setGelesenDenker((prev) => new Set(prev).add(merkKey));
     }
     // Single-open: dieselbe Box schliesst, eine andere öffnet (schliesst die
