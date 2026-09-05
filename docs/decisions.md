@@ -12,6 +12,18 @@ Verzicht auf Features) — hier festhalten.
 
 ## 2026-09-05 — Der Teppich übernimmt das Fenster-Muster des Ernährungs-Teppichs (Christof)
 
+**Nachtrag vom selben Tag.** Auch die KI-Story hat das Fenster, nach Christofs
+Regel: Hover auf einem AKTIVEN Punkt oder einer aktiven Pille öffnet es, Klick
+auf einen LEEREN Punkt oder eine leere Pille aktiviert und öffnet es; Klick
+auf Aktives behält sein bisheriges Abwählen. Der Rahmen ist dafür in den
+gemeinsamen Baustein `PunktFenster.tsx` gewandert (viewBox-Masse als Prop),
+Teppich und Story nutzen denselben. Die Position ist ein Schnappschuss beim
+Öffnen, die Physik-Simulation bewegt die Punkte weiter und ein mitwanderndes
+Fenster wäre unlesbar. In der Perlenschnur-Ansicht («Zeitlich») gibt es kein
+Fenster, dort führt der Klick wie bisher direkt zur Karte. Der
+Singular-Schnitzer des Vorbilds («1 weitere Punkte zählen jetzt») ist in
+beiden Projekten bereinigt, im Ernährungs-Teppich gleich mit.
+
 **Der Auftrag.** Christof hat den Teppich der Ernährungsinitiative
 weiterentwickelt und will das Muster zurück in der KI-Lernumgebung, für den
 Teppich des Wandels, die KI-Story und die Wege der Orientierung.

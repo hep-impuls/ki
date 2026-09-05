@@ -19,6 +19,7 @@ import { melde } from "../_lib/auswertung";
 import { merkeInhalt } from "../_lib/inhalte";
 import SammelAccordion from "./SammelAccordion";
 import SpurZeichen, { SpurZeichenLegende } from "./SpurZeichen";
+import FensterRahmen, { useBreit } from "./PunktFenster";
 import { zieheGewichtungAusCloud } from "../_lib/gewichtung";
 
 /**
@@ -166,133 +167,6 @@ const FADEN_META: Record<
   },
 };
 
-/** Halbe Breite des kleinen Fensters (px im Wrapper), fürs Einklemmen am Rand. */
-const FENSTER_HALB = 150;
-
-/** Ab dieser Breite hängt das Fenster am Punkt, darunter liegt es als Leiste unten. */
-const BREIT_AB = "(min-width: 640px)";
-
-function useBreit(): boolean {
-  const [breit, setBreit] = useState(true);
-  useEffect(() => {
-    const mq = window.matchMedia(BREIT_AB);
-    const setze = () => setBreit(mq.matches);
-    setze();
-    mq.addEventListener("change", setze);
-    return () => mq.removeEventListener("change", setze);
-  }, []);
-  return breit;
-}
-
-/** Was gerade im kleinen Fenster steht (Punkt-Index bzw. Faden + Klickstelle). */
-type Fenster =
-  | { art: "punkt"; i: number }
-  | { art: "faden"; faden: FadenArt; anker: { x: number; y: number } | null; neu: number };
-
-/**
- * Rahmen des kleinen Fensters — nach Christofs Ernährungs-Teppich (5.9.2026).
- * Mit Anker (Gewebe-Koordinaten) hängt es am Punkt, mit Pfeil, seitlich in den
- * sichtbaren Scroll-Ausschnitt eingeklemmt; ohne Anker steht es unter der
- * Legende. Auf schmalen Bildschirmen liegt es als Leiste über dem unteren Rand.
- */
-function FensterRahmen({
-  anker,
-  breit,
-  wrapperBreite,
-  sicht,
-  randKlasse,
-  beschriftung,
-  onClose,
-  children,
-}: {
-  anker: { x: number; y: number } | null;
-  breit: boolean;
-  wrapperBreite: number;
-  /** Sichtbarer Ausschnitt des seitlich scrollbaren Gewebes, in Wrapper-Pixeln. */
-  sicht: { links: number; rechts: number } | null;
-  randKlasse: string;
-  beschriftung: string;
-  onClose: () => void;
-  children: React.ReactNode;
-}) {
-  const inhalt = (
-    <>
-      <button
-        type="button"
-        onClick={onClose}
-        aria-label="Fenster schliessen"
-        className="absolute right-1.5 top-1.5 grid h-7 w-7 place-items-center rounded-full text-on-surface-variant transition-colors hover:bg-surface-container hover:text-on-surface"
-      >
-        <span className="material-symbols-outlined text-[18px]">close</span>
-      </button>
-      {children}
-    </>
-  );
-
-  if (!breit) {
-    return (
-      <div
-        role="dialog"
-        aria-label={beschriftung}
-        className={`fixed inset-x-2 bottom-20 z-[60] rounded-xl border bg-surface-bright p-md pr-10 shadow-xl animate-frame-in md:bottom-4 ${randKlasse}`}
-        onClick={(e) => e.stopPropagation()}
-      >
-        {inhalt}
-      </div>
-    );
-  }
-
-  if (!anker) {
-    return (
-      <div
-        role="dialog"
-        aria-label={beschriftung}
-        className={`relative mb-sm w-full max-w-md rounded-xl border bg-surface-bright p-md pr-10 shadow-lg animate-frame-in ${randKlasse}`}
-      >
-        {inhalt}
-      </div>
-    );
-  }
-
-  /* Am Punkt: unter dem Punkt öffnen, wenn er oben liegt, sonst darüber.
-     Seitlich bleibt das Fenster im sichtbaren Ausschnitt, sonst müsste man
-     erst scrollen, um es zu lesen. */
-  const px = (anker.x / W) * wrapperBreite;
-  const lo = Math.max(FENSTER_HALB, (sicht?.links ?? 0) + FENSTER_HALB);
-  const hi = Math.min(wrapperBreite - FENSTER_HALB, (sicht?.rechts ?? wrapperBreite) - FENSTER_HALB);
-  const mitte = hi < lo ? px : Math.max(lo, Math.min(hi, px));
-  // Linke Kante rechnerisch, kein translateX: animate-frame-in setzt transform.
-  const left = mitte - FENSTER_HALB;
-  const pfeilX = Math.max(14, Math.min(FENSTER_HALB * 2 - 14, px - left));
-  const obenProzent = (anker.y / (H + RAND_UNTEN)) * 100;
-  const darueber = anker.y > H / 2;
-  return (
-    <div
-      role="dialog"
-      aria-label={beschriftung}
-      className={`absolute z-30 w-[300px] rounded-xl border bg-surface-bright p-md pr-10 shadow-xl animate-frame-in ${randKlasse}`}
-      style={{
-        left,
-        ...(darueber
-          ? { bottom: `calc(${100 - obenProzent}% + 16px)` }
-          : { top: `calc(${obenProzent}% + 16px)` }),
-      }}
-      onClick={(e) => e.stopPropagation()}
-    >
-      {/* Pfeil zum Punkt — gleiche Randklasse wie der Rahmen */}
-      <span
-        aria-hidden
-        className={
-          `absolute h-3 w-3 rotate-45 bg-surface-bright ${randKlasse} ` +
-          (darueber ? "border-b border-r" : "border-l border-t")
-        }
-        style={{ left: pfeilX - 6, ...(darueber ? { bottom: -7 } : { top: -7 }) }}
-      />
-      {inhalt}
-    </div>
-  );
-}
-
 /** Weiches Fadensegment zwischen zwei Punkten (horizontal gespannte Kurve). */
 function segmentPfad(a: { x: number; y: number }, b: { x: number; y: number }) {
   const mx = (a.x + b.x) / 2;
@@ -339,6 +213,11 @@ function MaschenPattern({ id, farbe, variante }: { id: string; farbe: string; va
     </pattern>
   );
 }
+
+/** Was gerade im kleinen Fenster steht (Punkt-Index bzw. Faden + Klickstelle). */
+type Fenster =
+  | { art: "punkt"; i: number }
+  | { art: "faden"; faden: FadenArt; anker: { x: number; y: number } | null; neu: number };
 
 export default function HistorienTeppich({
   punkte: punkteRoh,
@@ -901,6 +780,7 @@ export default function HistorienTeppich({
       {fenster?.art === "faden" && !fenster.anker && breit && (
         <FensterRahmen
           anker={null}
+          gewebe={{ w: W, h: H + RAND_UNTEN }}
           breit={breit}
           wrapperBreite={wrapperBreite}
           sicht={sicht}
@@ -1117,6 +997,7 @@ export default function HistorienTeppich({
         {fenster && breit && (fenster.art === "punkt" || fenster.anker) && (
           <FensterRahmen
             anker={fenster.art === "punkt" ? { x: punkte[fenster.i].x, y: punkte[fenster.i].y } : fenster.anker}
+            gewebe={{ w: W, h: H + RAND_UNTEN }}
             breit={breit}
             wrapperBreite={wrapperBreite}
             sicht={sicht}
@@ -1134,6 +1015,7 @@ export default function HistorienTeppich({
       {fenster && !breit && (
         <FensterRahmen
           anker={null}
+          gewebe={{ w: W, h: H + RAND_UNTEN }}
           breit={false}
           wrapperBreite={wrapperBreite}
           sicht={sicht}

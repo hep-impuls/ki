@@ -16,6 +16,7 @@ import { melde } from "../_lib/auswertung";
 import { merkeInhalt } from "../_lib/inhalte";
 import SammelAccordion from "./SammelAccordion";
 import SpurZeichen, { SpurZeichenLegende } from "./SpurZeichen";
+import FensterRahmen, { useBreit } from "./PunktFenster";
 
 /**
  * StoryGewebe — die KI-Story als flexibles Teil-Gewebe (Vorbild: das
@@ -813,6 +814,42 @@ export default function StoryGewebe({
       if (drin) loescheSpuren(`${spurKey}:${i}`);
       else merkeSpur(`${spurKey}:${i}`);
     }
+    // Fenster-Regel (Christof, 5.9.2026): Klick auf einen LEEREN Punkt öffnet
+    // das kleine Fenster (Schnappschuss der Position); Klick auf einen aktiven
+    // wählt wie bisher ab, ein offenes Fenster dazu schliesst.
+    if (drin) {
+      setFenster((f) => (f?.i === i ? null : f));
+    } else {
+      const p = punktVon(i);
+      setFenster({ i, anker: { x: p.x, y: p.y } });
+    }
+  }
+
+  /** Hover auf einem AKTIVEN Punkt im Gewebe öffnet das Fenster. */
+  function punktHover(i: number) {
+    if (!gewaehlt.has(i)) return;
+    if (dragRef.current) return; // beim Ziehen nichts aufpoppen lassen
+    const p = punktVon(i);
+    setFenster((f) => (f?.i === i ? f : { i, anker: { x: p.x, y: p.y } }));
+  }
+
+  /** Merkzeichen im Fenster — dieselbe Kennung wie KartenAktion in der Karte. */
+  function wunschImFenster(i: number) {
+    const basis = wunschKey ?? spurKey ?? "story";
+    const id = `wunsch:${basis}:${i}`;
+    if (wunschIdx.has(i)) {
+      loescheSpuren(id);
+    } else {
+      merkeInhalt(`${basis}:${i}`, stationen[i].titel);
+      merkeSpur(id);
+    }
+  }
+
+  /** Fenster zu, Karte unten öffnen und hinscrollen. */
+  function springeZuKarte(i: number) {
+    setOffeneKarte(i);
+    setFenster(null);
+    setSprungKarte({ i, n: Date.now() });
   }
   function toggleWahl(i: number) {
     const neu = !gewaehlt.has(i);
@@ -829,6 +866,16 @@ export default function StoryGewebe({
       if (neu) merkeSpur(`${spurKey}:${i}`);
       else loescheSpuren(`${spurKey}:${i}`);
     }
+    // Fenster-Regel wie am Punkt: Aktivieren öffnet (unter den Pillen),
+    // Abwählen schliesst ein offenes Fenster dieser Station.
+    if (neu) setFenster({ i, anker: null });
+    else setFenster((f) => (f?.i === i ? null : f));
+  }
+
+  /** Hover auf einer AKTIVEN Pille öffnet das Fenster unter der Leiste. */
+  function pilleHover(i: number) {
+    if (!gewaehlt.has(i)) return;
+    setFenster((f) => (f?.i === i ? f : { i, anker: null }));
   }
   function zufall(k: number) {
     const ids = alle.slice();
@@ -848,6 +895,48 @@ export default function StoryGewebe({
      KartenAktion aus `wunsch:…:<index>` bzw. `mehr:…:<index>`. */
   const [mehrIdx, setMehrIdx] = useState<Set<number>>(new Set());
   const [wunschIdx, setWunschIdx] = useState<Set<number>>(new Set());
+  /** Das kleine Fenster: Station + Anker im Gewebe (null = unter den Pillen).
+      Die Position ist ein SCHNAPPSCHUSS beim Öffnen — die Simulation bewegt
+      die Punkte weiter, und ein mitwanderndes Fenster wäre unlesbar. */
+  const [fenster, setFenster] = useState<{ i: number; anker: { x: number; y: number } | null } | null>(null);
+  const [hervorKarte, setHervorKarte] = useState<number | null>(null);
+  const [sprungKarte, setSprungKarte] = useState<{ i: number; n: number } | null>(null);
+  const [wrapperBreite, setWrapperBreite] = useState(W);
+  const gewebeWrapperRef = useRef<HTMLDivElement | null>(null);
+  const hervorKarteTimer = useRef<number | null>(null);
+  const breit = useBreit();
+
+  useEffect(() => {
+    const el = gewebeWrapperRef.current;
+    if (!el) return;
+    const messe = () => setWrapperBreite(el.clientWidth || W);
+    messe();
+    const beobachter = new ResizeObserver(messe);
+    beobachter.observe(el);
+    return () => beobachter.disconnect();
+  }, []);
+
+  // Escape schliesst das kleine Fenster.
+  useEffect(() => {
+    if (!fenster) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setFenster(null);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [fenster]);
+
+  // «Zum Text»: zur Karte scrollen und sie kurz hervorheben.
+  useEffect(() => {
+    if (!sprungKarte) return;
+    const ruhig = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    document
+      .getElementById(`karte-story-${sprungKarte.i}`)
+      ?.scrollIntoView({ behavior: ruhig ? "auto" : "smooth", block: "start" });
+    setHervorKarte(sprungKarte.i);
+    if (hervorKarteTimer.current) window.clearTimeout(hervorKarteTimer.current);
+    hervorKarteTimer.current = window.setTimeout(() => setHervorKarte(null), 2600);
+  }, [sprungKarte]);
 
   useEffect(() => {
     if (!spurKey) return;
@@ -906,6 +995,50 @@ export default function StoryGewebe({
   }
 
   const started = gesammelt.length > 0;
+
+  /** Inhalt des kleinen Fensters: Titel, Jahr, Anriss, Sprung und Merkzeichen. */
+  function fensterInhalt(i: number) {
+    const st = stationen[i];
+    const wunsch = wunschIdx.has(i);
+    return (
+      <>
+        <p className="text-body-md font-semibold leading-snug text-on-surface">
+          {st.titel}{" "}
+          <span className="whitespace-nowrap font-normal text-on-surface-variant">{st.jahr}</span>
+        </p>
+        <p className="mt-[3px] line-clamp-3 text-body-sm leading-snug text-on-surface-variant">
+          {st.text}
+        </p>
+        <div className="mt-sm flex flex-wrap items-center gap-xs">
+          <button
+            type="button"
+            onClick={() => springeZuKarte(i)}
+            className="inline-flex items-center gap-xs rounded-full bg-primary px-md py-xs text-label-md font-semibold text-on-primary transition-colors hover:bg-primary/90"
+          >
+            <span className="material-symbols-outlined text-[16px]">arrow_downward</span>
+            Zum Text
+          </button>
+          <button
+            type="button"
+            onClick={() => wunschImFenster(i)}
+            aria-pressed={wunsch}
+            aria-label={wunsch ? "Wird weiterverfolgt" : "Das verfolge ich weiter"}
+            title={wunsch ? "Wird weiterverfolgt" : "Das verfolge ich weiter"}
+            className={
+              "grid h-8 w-8 place-items-center rounded-full border transition-colors " +
+              (wunsch
+                ? "border-tertiary bg-tertiary-container text-on-tertiary-container"
+                : "border-outline-variant text-on-surface-variant hover:border-tertiary hover:text-tertiary")
+            }
+          >
+            <span className="material-symbols-outlined text-[17px]">
+              {wunsch ? "bookmark_added" : "bookmark_add"}
+            </span>
+          </button>
+        </div>
+      </>
+    );
+  }
 
   return (
     <section aria-label="Knotenlandschaft: Die KI-Story" className={className}>
@@ -1005,6 +1138,7 @@ export default function StoryGewebe({
                 key={i}
                 type="button"
                 onClick={() => toggleWahl(i)}
+                onMouseEnter={() => pilleHover(i)}
                 aria-pressed={on}
                 className={
                   "rounded-full border px-sm py-xs text-label-md transition-colors " +
@@ -1020,6 +1154,22 @@ export default function StoryGewebe({
         </div>
       </div>
 
+      {/* Das kleine Fenster aus den Pillen (ohne Anker) steht unter der Leiste */}
+      {fenster && !fenster.anker && breit && (
+        <FensterRahmen
+          anker={null}
+          gewebe={{ w: W, h: H }}
+          breit={breit}
+          wrapperBreite={wrapperBreite}
+          sicht={null}
+          randKlasse="border-tertiary"
+          beschriftung={`Station: ${stationen[fenster.i].titel}`}
+          onClose={() => setFenster(null)}
+        >
+          {fensterInhalt(fenster.i)}
+        </FensterRahmen>
+      )}
+
       {/* Die Box */}
       <div
         className={
@@ -1027,6 +1177,7 @@ export default function StoryGewebe({
         }
       >
         {ansichtId === "gewebe" ? (
+          <div ref={gewebeWrapperRef} className="relative">
           <svg
             ref={svgRef}
             viewBox={`0 0 ${W} ${H}`}
@@ -1121,6 +1272,7 @@ export default function StoryGewebe({
                   tabIndex={0}
                   aria-label={`${st.titel} (${st.jahr}). Antippen zum Öffnen/Schliessen, ziehen zum Verschieben`}
                   aria-pressed={gelesen}
+                  onMouseEnter={() => punktHover(i)}
                   onPointerDown={(e) => onDown(e, i)}
                   onKeyDown={(e) => {
                     if (e.key === "Enter" || e.key === " ") {
@@ -1173,6 +1325,23 @@ export default function StoryGewebe({
               );
             })}
           </svg>
+
+          {/* Das kleine Fenster am Punkt (Schnappschuss der Position) */}
+          {fenster && fenster.anker && breit && (
+            <FensterRahmen
+              anker={fenster.anker}
+              gewebe={{ w: W, h: H }}
+              breit={breit}
+              wrapperBreite={wrapperBreite}
+              sicht={null}
+              randKlasse="border-tertiary"
+              beschriftung={`Station: ${stationen[fenster.i].titel}`}
+              onClose={() => setFenster(null)}
+            >
+              {fensterInhalt(fenster.i)}
+            </FensterRahmen>
+          )}
+          </div>
         ) : (
           <StoryPerlschnur
             stationen={stationen}
@@ -1184,9 +1353,25 @@ export default function StoryGewebe({
       </div>
       <p className="mt-xs text-label-sm text-on-surface-variant">
         {ansichtId === "gewebe"
-          ? "Das ganze Gewebe ist sichtbar · Stichworte oben heben Punkte hervor · Punkt antippen liest die Geschichte · ziehen verschiebt"
+          ? "Das ganze Gewebe ist sichtbar · Stichworte oben heben Punkte hervor · Punkt antippen öffnet ein kleines Fenster und liest die Geschichte · ziehen verschiebt"
           : "Zeiger durchs Muster bewegen lässt die Kette schwingen · Perle antippen für die Geschichte"}
       </p>
+
+      {/* Auf schmalen Bildschirmen liegt das Fenster als Leiste unten */}
+      {fenster && !breit && (
+        <FensterRahmen
+          anker={null}
+          gewebe={{ w: W, h: H }}
+          breit={false}
+          wrapperBreite={wrapperBreite}
+          sicht={null}
+          randKlasse="border-tertiary"
+          beschriftung={`Station: ${stationen[fenster.i].titel}`}
+          onClose={() => setFenster(null)}
+        >
+          {fensterInhalt(fenster.i)}
+        </FensterRahmen>
+      )}
 
       {/* Gelesene Stationen — bleiben stehen, in Lese-Reihenfolge */}
       <div aria-live="polite" className="mt-md">
@@ -1217,6 +1402,8 @@ export default function StoryGewebe({
                   titel={st.titel}
                   jahr={st.jahr}
                   neuste={neuste}
+                  id={`karte-story-${idx}`}
+                  hervor={hervorKarte === idx}
                   status={
                     <SpurZeichen
                       weitergelesen={mehrIdx.has(idx)}
