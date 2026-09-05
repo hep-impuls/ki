@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
+  leseSpuren,
   leseSpurenIndices,
   loescheSpuren,
   merkeSpur,
@@ -14,6 +15,7 @@ import { maschen as berechneMaschen, zaehleGefuellt } from "../_lib/flaechen";
 import { melde } from "../_lib/auswertung";
 import { merkeInhalt } from "../_lib/inhalte";
 import SammelAccordion from "./SammelAccordion";
+import SpurZeichen, { SpurZeichenLegende } from "./SpurZeichen";
 
 /**
  * StoryGewebe — die KI-Story als flexibles Teil-Gewebe (Vorbild: das
@@ -841,9 +843,37 @@ export default function StoryGewebe({
     if (spurKey) wahl.forEach((i) => merkeSpur(`${spurKey}:${i}`));
   }
 
+  /* Fallbeispiel gelesen / weiterverfolgt je Station — für die Drei-Zeichen-
+     Leiste am Kartenkopf (Ernährungs-Muster, 5.9.2026). Die Kennungen baut
+     KartenAktion aus `wunsch:…:<index>` bzw. `mehr:…:<index>`. */
+  const [mehrIdx, setMehrIdx] = useState<Set<number>>(new Set());
+  const [wunschIdx, setWunschIdx] = useState<Set<number>>(new Set());
+
   useEffect(() => {
     if (!spurKey) return;
     function restore() {
+      const basis = wunschKey ?? spurKey ?? "story";
+      const alle = leseSpuren();
+      const zahl = (id: string, praefix: string) => {
+        const v = Number(id.slice(praefix.length));
+        return Number.isInteger(v) ? v : null;
+      };
+      setMehrIdx(
+        new Set(
+          alle
+            .filter((s) => s.id.startsWith(`mehr:${basis}:`))
+            .map((s) => zahl(s.id, `mehr:${basis}:`))
+            .filter((v): v is number => v !== null),
+        ),
+      );
+      setWunschIdx(
+        new Set(
+          alle
+            .filter((s) => s.id.startsWith(`wunsch:${basis}:`))
+            .map((s) => zahl(s.id, `wunsch:${basis}:`))
+            .filter((v): v is number => v !== null),
+        ),
+      );
       const idx = leseSpurenIndices(spurKey!).filter((i) => i >= 0 && i < n);
       if (idx.length === 0) return;
       setGewaehlt((prev) => {
@@ -856,7 +886,7 @@ export default function StoryGewebe({
     void zieheSpurenAusCloud();
     window.addEventListener(SPUR_EVENT, restore);
     return () => window.removeEventListener(SPUR_EVENT, restore);
-  }, [spurKey, n]);
+  }, [spurKey, wunschKey, n]);
 
   function zuruecksetzen() {
     if (spurKey) loescheSpuren(spurKey);
@@ -1174,6 +1204,8 @@ export default function StoryGewebe({
             </p>
           </div>
         ) : (
+          <>
+          <SpurZeichenLegende className="mb-sm" />
           <ol className="flex flex-col gap-sm">
             {gesammelt.map((idx, pos) => {
               const st = stationen[idx];
@@ -1185,6 +1217,12 @@ export default function StoryGewebe({
                   titel={st.titel}
                   jahr={st.jahr}
                   neuste={neuste}
+                  status={
+                    <SpurZeichen
+                      weitergelesen={mehrIdx.has(idx)}
+                      weiterverfolgt={wunschIdx.has(idx)}
+                    />
+                  }
                   offen={offeneKarte === idx}
                   onToggle={() => setOffeneKarte((o) => (o === idx ? null : idx))}
                 >
@@ -1209,6 +1247,7 @@ export default function StoryGewebe({
               );
             })}
           </ol>
+          </>
         )}
       </div>
     </section>

@@ -10,6 +10,41 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-09-05 — Der Teppich übernimmt das Fenster-Muster des Ernährungs-Teppichs (Christof)
+
+**Der Auftrag.** Christof hat den Teppich der Ernährungsinitiative
+weiterentwickelt und will das Muster zurück in der KI-Lernumgebung, für den
+Teppich des Wandels, die KI-Story und die Wege der Orientierung.
+
+**Das neue Verhalten am Teppich.** Ein Punkt-Klick webt ein und öffnet ein
+kleines Fenster am Punkt (Faden-Badge, Titel, Textanriss) mit «Zum Text»
+(springt zur Karte unten und hebt sie kurz hervor), einem Merkzeichen-Knopf
+(dieselbe Wunsch-Spur wie der Knopf in der Karte) und «Abwählen». Die
+gestrichelten Fäden sind von Anfang an sichtbar und klickbar, ein Klick auf
+Linie oder Legende-Chip webt den ganzen Faden ein und öffnet das Faden-Fenster
+(«N Punkte, X bis Y», «Zum ersten Text», «Faden herausziehen»). Abwählen und
+Herausziehen gehen nur noch bewusst über diese Knöpfe — der frühere stille
+Zweitklick hat Punkte verloren, wenn jemand nur nochmals lesen wollte. Die
+Chips zählen anz/gesamt, die Statuszeile zählt Punkte und Maschen, die
+Sammelliste lässt sich nach Klick-Reihenfolge oder nach der Lage im Teppich
+sortieren (die Jahres-Angaben reichen von «Jungsteinzeit» bis «1956 → 2022»
+und taugen nicht als Zahl, die gelegte x-Reihenfolge IST die Chronologie).
+Auf schmalen Bildschirmen liegt jedes Fenster als Leiste über dem unteren
+Rand, Escape und ein Klick ins Gewebe schliessen es.
+
+**Die Drei-Zeichen-Leiste.** Auf den Karten von Teppich, KI-Story und den
+Denker-Zeilen der Wege der Orientierung stehen drei Zeichen — angeklickt
+(Fussspur), weitergelesen (Buch), weiterverfolgt (Merkzeichen); Blass heisst
+noch offen. Gemeinsame Bausteine: `SpurZeichen.tsx`, `SammelAccordion` kann
+neu `id`, `hervor` und `status` tragen.
+
+**Spur-Semantik unverändert.** Alle Interaktionen laufen über die bestehenden
+Slug-Spuren (punkt/wunsch/mehr), das Fenster-Merkzeichen und die KartenAktion
+teilen sich dieselbe Kennung und bleiben darum synchron. WUNSCH_TOTAL bleibt
+148, es kommen keine neuen Wunsch-Ziele dazu, nur ein zweiter Ort für dasselbe.
+
+---
+
 ## 2026-08-18 — Das Autoren-Dashboard bekommt eine Zeitachse aus Tagessummen (Christof)
 
 **Die Prüfung zuerst.** Christof fragte, ob die Zahlen stimmen. Nachgerechnet

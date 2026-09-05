@@ -23,6 +23,9 @@ export default function SammelAccordion({
   offen,
   onToggle,
   neuste = false,
+  id,
+  hervor = false,
+  status,
   children,
 }: {
   /** Anzeige-Nummer (1-basiert). */
@@ -33,6 +36,12 @@ export default function SammelAccordion({
   onToggle: () => void;
   /** Zuletzt eingesammelt — leichte Hervorhebung. */
   neuste?: boolean;
+  /** Anker fürs Hinspringen («Zum Text» aus dem Punkt-Fenster). */
+  id?: string;
+  /** Kurz hervorheben, nachdem hierher gesprungen wurde. */
+  hervor?: boolean;
+  /** Zeichenleiste rechts im Kopf (SpurZeichen), vor dem Pfeil. */
+  status?: ReactNode;
   children: ReactNode;
 }) {
   const liRef = useRef<HTMLLIElement>(null);
@@ -46,11 +55,14 @@ export default function SammelAccordion({
   return (
     <li
       ref={liRef}
+      id={id}
       className={
-        "scroll-mt-24 overflow-hidden rounded-xl border transition-colors " +
-        (neuste
-          ? "border-tertiary/50 bg-tertiary-container/25"
-          : "border-outline-variant bg-surface-bright")
+        "scroll-mt-24 overflow-hidden rounded-xl border transition-[border-color,box-shadow,background-color] duration-500 " +
+        (hervor
+          ? "border-tertiary shadow-lg ring-2 ring-tertiary/30 "
+          : neuste
+            ? "border-tertiary/50 bg-tertiary-container/25"
+            : "border-outline-variant bg-surface-bright")
       }
     >
       <button
@@ -68,6 +80,7 @@ export default function SammelAccordion({
             <span className="ml-sm text-label-md font-normal text-tertiary">{jahr}</span>
           )}
         </span>
+        {status}
         <span
           className={
             "material-symbols-outlined flex-shrink-0 text-[22px] text-on-surface-variant transition-transform duration-300 " +

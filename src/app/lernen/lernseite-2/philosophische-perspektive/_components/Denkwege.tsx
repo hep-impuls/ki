@@ -13,6 +13,7 @@ import { merkeInhalt } from "../../_lib/inhalte";
 import Ausklapptext from "../../_components/Ausklapptext";
 import GewichtungWahl from "../../_components/GewichtungWahl";
 import KartenAktion from "../../_components/KartenAktion";
+import SpurZeichen, { SpurZeichenLegende } from "../../_components/SpurZeichen";
 import { Begriff, BelegStelle } from "../../_components/Glossar";
 import { BELEG_NACH_ANKER, type Beleg } from "../../_data/belege";
 
@@ -652,6 +653,11 @@ export default function Denkwege({
   /* Welche Denker-Boxen schon aufgeklappt waren — für den Haken. Aus den Spuren
      wiederhergestellt, damit der Haken einen Neustart übersteht. */
   const [gelesenDenker, setGelesenDenker] = useState<Set<string>>(new Set());
+  /* Fallbeispiel geöffnet bzw. weiterverfolgt, je Denker (`bereich:slug`) —
+     für die Drei-Zeichen-Leiste am Kopf (Ernährungs-Muster, 5.9.2026). Die
+     Kennungen baut KartenAktion aus `wunsch:…:denker:<bereich>:<slug>`. */
+  const [mehrDenker, setMehrDenker] = useState<Set<string>>(new Set());
+  const [wunschDenker, setWunschDenker] = useState<Set<string>>(new Set());
 
   /** Spur-Id einer Denker-Box (ohne das «mehr:» der Vertiefung). */
   const denkerSpur = (bereich: number, slug: string) =>
@@ -673,9 +679,15 @@ export default function Denkwege({
       migriereMehrZuPunkt(`${spurKey}:denker`);
       // Aufgeklappte Denker aus den Punkt-Spuren zurücklesen.
       const praefix = `${spurKey}:denker:`;
-      const offen = leseSpuren()
+      const alleSpuren = leseSpuren();
+      const offen = alleSpuren
         .filter((s) => s.id.startsWith(praefix))
         .map((s) => s.id.slice(praefix.length));
+      // Zeichenleiste: Fallbeispiel gelesen / weiterverfolgt (KartenAktion-Ids).
+      const mehrPraefix = "mehr:philosophische-perspektive:denker:";
+      const wunschPraefix = "wunsch:philosophische-perspektive:denker:";
+      setMehrDenker(new Set(alleSpuren.filter((s) => s.id.startsWith(mehrPraefix)).map((s) => s.id.slice(mehrPraefix.length))));
+      setWunschDenker(new Set(alleSpuren.filter((s) => s.id.startsWith(wunschPraefix)).map((s) => s.id.slice(wunschPraefix.length))));
       if (offen.length > 0) {
         setGelesenDenker((prev) => {
           const nx = new Set(prev);
@@ -817,6 +829,7 @@ export default function Denkwege({
             <span className="material-symbols-outlined text-[16px]">groups</span>
             Die Stimmen, zum Nachgehen
           </p>
+          <SpurZeichenLegende className="mb-xs" />
           <div className="overflow-hidden rounded-xl border border-outline-variant">
             {b.denker.map((p, i) => {
               const key = `${idx}-${i}`;
@@ -830,8 +843,6 @@ export default function Denkwege({
                     aria-expanded={auf}
                     className="flex w-full items-center gap-sm px-sm py-sm text-left outline-none transition-colors hover:bg-surface-container focus-visible:bg-surface-container"
                   >
-                    {/* Nach dem Aufklappen ein Haken statt des Stimmen-Symbols,
-                        gleiches Muster wie bei den Epochen-Bausteinen. */}
                     <span className="material-symbols-outlined text-[20px] text-tertiary">
                       {schon ? "check" : "record_voice_over"}
                     </span>
@@ -843,6 +854,13 @@ export default function Denkwege({
                         {p.leben} · {p.these}
                       </span>
                     </span>
+                    {/* Drei Zeichen wie im Teppich: angeklickt, weitergelesen
+                        (Fallbeispiel), weiterverfolgt. Blass heisst noch offen. */}
+                    <SpurZeichen
+                      angeklickt={schon}
+                      weitergelesen={mehrDenker.has(`${idx}:${p.slug}`)}
+                      weiterverfolgt={wunschDenker.has(`${idx}:${p.slug}`)}
+                    />
                     <span
                       className={
                         "material-symbols-outlined flex-shrink-0 text-[22px] text-on-surface-variant transition-transform duration-300 " +
