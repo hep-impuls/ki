@@ -10,6 +10,31 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-10-09 — Suchmaschinen finden die öffentlichen Seiten (Christof)
+
+**Ziel.** Gefunden werden bei «KI Unterrichtsmaterial», «KI und Lernen», «KI
+Grundlagen» und «KI im Unterricht».
+
+**Umgesetzt.** Titel, Beschreibungen, Stichwörter und Vorschau-Daten (Open
+Graph) im Root-Layout, eigene Titel und Beschreibungen für Lehrpersonen-Hub,
+Anleitung und Leitfaden, kanonische Adressen pro Seite (bewusst nicht im
+Root-Layout, sonst zeigte jede Seite auf die Startseite), strukturierte Daten
+(schema.org `LearningResource`) unsichtbar auf der Titelseite, dazu
+`robots.ts` und `sitemap.ts`. Am sichtbaren Inhalt der Titelseite ändert sich
+nichts, wie es die Titelseiten-Regel verlangt.
+
+**Bewusst nicht.** Die Lernseiten unter `/lernen` bleiben für Suchmaschinen
+gesperrt: Hinter dem Login-Gate sieht ein Crawler ohne Fortschritts-Code nur
+eine leere Seite. Inhalte wie «Teppich des Wandels» werden erst auffindbar,
+wenn der Inhalt ohne Code lesbar wird; das wäre eine Kursänderung gegenüber
+dem Entscheid vom 2026-07-22 und braucht Pietros Einverständnis.
+
+**Geteilte Dateien.** `layout.tsx` und `page.tsx` sind laut CLAUDE.md
+gemeinsame Dateien; die Änderungen sind reine Metadaten. Pietro ist zu
+informieren.
+
+---
+
 ## 2026-09-05 — Der Teppich übernimmt das Fenster-Muster des Ernährungs-Teppichs (Christof)
 
 **Nachtrag vom selben Tag.** Auch die KI-Story hat das Fenster, nach Christofs

@@ -15,7 +15,10 @@ import DruckButton from "../_components/DruckButton";
  */
 
 export const metadata: Metadata = {
-  title: "Inhaltlicher Leitfaden für Lehrpersonen — Lernumgebung zu KI",
+  title: { absolute: "Leitfaden: KI-Grundlagen im Unterricht vermitteln · Lernumgebung zu KI" },
+  description:
+    "Didaktischer Leitfaden für Lehrpersonen: wie die Lernsets die Grundlagen der künstlichen Intelligenz aufbauen und wie man sie im Unterricht einsetzt.",
+  alternates: { canonical: "/lehrperson/leitfaden" },
 };
 
 const INHALT = [

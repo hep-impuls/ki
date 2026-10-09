@@ -2,10 +2,51 @@ import Link from "next/link";
 import ActivityTracker from "@/components/ActivityTracker";
 import HoverTipp from "@/app/lernen/lernseite-2/_components/HoverTipp";
 import { unit } from "@/config/unit";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
+
+/**
+ * Strukturierte Daten für Suchmaschinen (schema.org, 2026-10-09). Sie
+ * beschreiben die Lernumgebung als frei zugängliche Lernressource, damit sie
+ * bei Suchen wie «KI Unterrichtsmaterial» oder «KI im Unterricht» richtig
+ * eingeordnet wird. Unsichtbar, ändert am Inhalt der Titelseite nichts.
+ */
+const STRUKTURDATEN = {
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  name: "Lernumgebung zu KI",
+  description:
+    "Frei zugängliches Unterrichtsmaterial zur künstlichen Intelligenz: Grundlagen der KI interaktiv lernen und im Unterricht einsetzen, mit Anleitung und Leitfaden für Lehrpersonen.",
+  url: "https://hep-ki.vercel.app/",
+  inLanguage: "de-CH",
+  learningResourceType: "Interaktive Lernumgebung",
+  educationalLevel: "Sekundarstufe II, Berufsfachschule",
+  about: { "@type": "Thing", name: "Künstliche Intelligenz" },
+  keywords:
+    "KI Unterrichtsmaterial, KI im Unterricht, KI und Lernen, KI Grundlagen, künstliche Intelligenz, Lehrmittel",
+  audience: [
+    { "@type": "EducationalAudience", educationalRole: "student" },
+    { "@type": "EducationalAudience", educationalRole: "teacher" },
+  ],
+  isAccessibleForFree: true,
+  license: "https://creativecommons.org/licenses/by-nc/4.0/",
+  author: [
+    { "@type": "Person", name: "Pietro Rossi" },
+    { "@type": "Person", name: "Christof Glaus" },
+  ],
+  publisher: { "@type": "Organization", name: "hep Verlag" },
+};
 
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(STRUKTURDATEN) }}
+      />
       <ActivityTracker type="page_view" page="home" />
 
       <div

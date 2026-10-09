@@ -18,7 +18,10 @@ import DruckButton from "../_components/DruckButton";
  */
 
 export const metadata: Metadata = {
-  title: "Anleitung für Lehrpersonen — Lernumgebung zu KI",
+  title: { absolute: "Anleitung für Lehrpersonen: KI-Unterrichtsmaterial einsetzen · Lernumgebung zu KI" },
+  description:
+    "Schritt für Schritt KI im Unterricht einsetzen: Klasse registrieren, Code teilen, Fortschritt im Report verfolgen. Anleitung zur Lernumgebung zu KI des hep Verlags.",
+  alternates: { canonical: "/lehrperson/anleitung" },
 };
 
 const INHALT = [

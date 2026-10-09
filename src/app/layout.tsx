@@ -1,9 +1,51 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+/**
+ * Such- und Vorschau-Metadaten (Christof, 2026-10-09: gefunden werden soll die
+ * Lernumgebung bei «KI Unterrichtsmaterial», «KI und Lernen», «KI Grundlagen»
+ * und «KI im Unterricht»). Bewusst KEIN `alternates.canonical` hier: Es würde
+ * an alle Seiten vererbt und jede auf die Startseite zeigen lassen. Kanonische
+ * Adressen setzen die Seiten selbst.
+ */
 export const metadata: Metadata = {
-  title: "Lernumgebung zu KI",
-  description: "Interaktive Lernmodule rund um Künstliche Intelligenz",
+  metadataBase: new URL("https://hep-ki.vercel.app"),
+  title: {
+    default: "KI-Unterrichtsmaterial: Grundlagen der künstlichen Intelligenz · Lernumgebung zu KI",
+    template: "%s · Lernumgebung zu KI",
+  },
+  description:
+    "Frei zugängliches Unterrichtsmaterial zur künstlichen Intelligenz vom hep Verlag. Grundlagen der KI interaktiv lernen und im Unterricht einsetzen, für Berufsfachschulen und die Sekundarstufe II, mit Anleitung und Leitfaden für Lehrpersonen.",
+  keywords: [
+    "KI Unterrichtsmaterial",
+    "KI im Unterricht",
+    "KI und Lernen",
+    "KI Grundlagen",
+    "künstliche Intelligenz Unterricht",
+    "Lehrmittel künstliche Intelligenz",
+    "KI Berufsfachschule",
+    "Allgemeinbildender Unterricht",
+    "hep Verlag",
+  ],
+  applicationName: "Lernumgebung zu KI",
+  authors: [{ name: "Pietro Rossi" }, { name: "Christof Glaus" }],
+  publisher: "hep Verlag",
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    locale: "de_CH",
+    siteName: "Lernumgebung zu KI",
+    title: "KI-Unterrichtsmaterial: Grundlagen der künstlichen Intelligenz",
+    description:
+      "Interaktive Lernumgebung des hep Verlags: KI-Grundlagen lernen und im Unterricht einsetzen, mit Anleitung für Lehrpersonen.",
+    url: "/",
+  },
+  twitter: {
+    card: "summary",
+    title: "KI-Unterrichtsmaterial: Grundlagen der künstlichen Intelligenz",
+    description:
+      "Interaktive Lernumgebung des hep Verlags: KI-Grundlagen lernen und im Unterricht einsetzen.",
+  },
 };
 
 export default function RootLayout({
