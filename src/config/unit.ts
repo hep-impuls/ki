@@ -36,7 +36,7 @@ export const unit: UnitConfig = {
   shortTitle: "KI",
   subtitle: "Interaktive Lehrmittel",
   description:
-    "Eine kompakte Lernumgebung mit interaktiven Modulen rund um Künstliche Intelligenz.",
+    "Frei zugängliches Unterrichtsmaterial zur künstlichen Intelligenz. Interaktive Module vermitteln die Grundlagen der KI und lassen sich im Unterricht einsetzen.",
   modules: [
     {
       slug: "lernseite-1",
