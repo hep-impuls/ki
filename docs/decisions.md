@@ -10,6 +10,16 @@ Verzicht auf Features) — hier festhalten.
 
 ---
 
+## 2026-10-13 — Keine feste Schulstufe als Zielgruppe (Christof)
+
+Die Lernumgebung richtet sich nicht nur an Berufsfachschulen, die Zielgruppe
+bleibt offen. Darum nennen die Such-Metadaten keine Schulstufe mehr:
+Beschreibung und Stichwort «KI Berufsfachschule» in `src/app/layout.tsx`,
+`educationalLevel` in den Strukturdaten von `src/app/page.tsx`. Die
+Orakel-Prompts (`api/orakel/*`, `api/teacher/rhizom-deutung`) nennen die
+Berufsfachschule weiterhin als Kontext für die KI-Deutung, das ist kein
+Suchtext.
+
 ## 2026-10-09 — Suchmaschinen finden die öffentlichen Seiten (Christof)
 
 **Ziel.** Gefunden werden bei «KI Unterrichtsmaterial», «KI und Lernen», «KI

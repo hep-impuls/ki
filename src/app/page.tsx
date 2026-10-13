@@ -23,7 +23,6 @@ const STRUKTURDATEN = {
   url: "https://hep-ki.vercel.app/",
   inLanguage: "de-CH",
   learningResourceType: "Interaktive Lernumgebung",
-  educationalLevel: "Sekundarstufe II, Berufsfachschule",
   about: { "@type": "Thing", name: "Künstliche Intelligenz" },
   keywords:
     "KI Unterrichtsmaterial, KI im Unterricht, KI und Lernen, KI Grundlagen, künstliche Intelligenz, Lehrmittel",

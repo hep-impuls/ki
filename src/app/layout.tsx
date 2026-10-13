@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: "%s · Lernumgebung zu KI",
   },
   description:
-    "Frei zugängliches Unterrichtsmaterial zur künstlichen Intelligenz vom hep Verlag. Grundlagen der KI interaktiv lernen und im Unterricht einsetzen, für Berufsfachschulen und die Sekundarstufe II, mit Anleitung und Leitfaden für Lehrpersonen.",
+    "Frei zugängliches Unterrichtsmaterial zur künstlichen Intelligenz vom hep Verlag. Grundlagen der KI interaktiv lernen und im Unterricht einsetzen, mit Anleitung und Leitfaden für Lehrpersonen.",
   keywords: [
     "KI Unterrichtsmaterial",
     "KI im Unterricht",
@@ -23,8 +23,6 @@ export const metadata: Metadata = {
     "KI Grundlagen",
     "künstliche Intelligenz Unterricht",
     "Lehrmittel künstliche Intelligenz",
-    "KI Berufsfachschule",
-    "Allgemeinbildender Unterricht",
     "hep Verlag",
   ],
   applicationName: "Lernumgebung zu KI",
